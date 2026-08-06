@@ -19,10 +19,11 @@
  }
  
  /**
-@@ -594,12 +603,16 @@
+@@ -594,13 +603,17 @@
  
      // infieldHitAbility 側で、最終走力zで説明できる分を除いて得能を判定する。
      infieldHitSpecial = infieldHitAbility(gbSingleExcess, speedZFinal, cfg);
++    // 走塁得能には自作の走塁指標も渡す（仕様04 §3が名指しする材料。走力に対する残差として使う）
 +    const baserunningGate = ctx.modelGates?.baserunning_ability;
 +    const baserunning = baserunningGate?.enabled === false ? null
 +      : baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, speedZFinal, runNorm, cfg,
@@ -31,6 +32,7 @@
        speed: speedState.rating,
        speedDetail: speedState.detail,
        stealing: stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, speedZFinal, runNorm, cfg),
+-      // 走塁得能には自作の走塁指標も渡す（仕様04 §3が名指しする材料。走力に対する残差として使う）
 -      baserunning: baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, speedZFinal, runNorm, cfg,
 -        { advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 }),
 +      baserunning,
@@ -38,7 +40,7 @@
        _z: speedZFinal,
        _singleYearZ: sc.score,
        _infieldHitExcess: gbSingleExcess,
-@@ -930,6 +943,9 @@
+@@ -931,6 +944,9 @@
      speedOverride: runRec?.scouting ? runRec : blendDirect(run?.speed, directs.走力),
      powerOverride: blendDirect(batAdjusted?.power, directs.パワー),
      powerDisplay: conventions.power_display,
@@ -48,7 +50,7 @@
      specialAbilities: {
        strikeout: strikeoutSpecial,
        infieldHit: infieldHitSpecial,
-@@ -1015,6 +1031,8 @@
+@@ -1016,6 +1032,8 @@
        ...(clutch?.diff == null && splits ? [`チャンス: ${clutch?.reason ?? '得点圏打数不足'}`] : []),
        ...(platoon?.meetDiff == null && splits ? [`対左: ${platoon?.reason ?? '対左打数不足'}`] : []),
        ...(!goldHistorical ? ['金特: outputs/derived/gold_historical_distribution.json が無いため未査定'] : []),
