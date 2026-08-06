@@ -14,6 +14,7 @@ branch: agent/satei-phase1-safety
 2. 走塁・守備得点が未接続なのに「総合ピーク」「総合全盛期」として自動選定する経路
 3. 同じカード内で、表示走力と盗塁・走塁・内野安打・守備が別の走力zを使う経路
 4. 明示年度カードまで総合ピークの安全ゲートを通り、生成不能になる副作用
+5. 循環・機会選択バイアス・縮小不足を持つ走塁得能が確定値として出力される経路
 
 この変更は走塁得能や全盛期合成の設計を完成させるものではない。まず同じ概念を同じ内部値で計算し、未完成の自動経路を安全に停止するものである。
 
@@ -75,18 +76,51 @@ node scripts/build_card.mjs 村上 2024
 - `_speed_z_final`: カード内の全計算で実際に使った値
 - `_speed_z_single_year`: 対象年単年の代理指標
 
+### 6. 走塁得能を安全停止
+
+- `configs/model_gates.json`
+- `src/cards/pipeline.mjs`
+- `src/cards/ability_sheet.mjs`
+- `src/ratings/runfield_log.mjs`
+
+走塁得能は削除せず、再較正が完了するまで`PAUSED`として未査定に戻した。カードには単なる欠損ではなく、停止理由と再開条件を残す。
+
+判明した問題:
+
+1. **循環**: UBR・追加進塁を含む走力スコアを作り、その走力で同じUBR・追加進塁を差し引いていた
+2. **較正と本番の不一致**: 追加進塁の較正スクリプトは対象材料を除外していたが、本番は含めていた
+3. **機会選択バイアス**: 俊足選手ほど盗塁し、一塁走者として追加進塁を試す機会が減る
+4. **縮小不足**: 再現性が低い残差を信頼度で縮めず、100段階へ広げていた
+
+年跨ぎのleave-one-component-out検証:
+
+```text
+UBR残差             0.209
+追加進塁残差         0.181
+2材料の合成          0.238
+```
+
+再開条件:
+
+- 各材料の残差を、その材料を除いた走力で計算する
+- 追加進塁の機会選択をイベント単位で統制する
+- 機会数・打席数に応じた縮小を導入する
+- ホールドアウトまたは年跨ぎ検証で目盛りを確定する
+
 ## テスト結果
 
 ローカル再構成環境とGitHub Actionsの両方で確認した。
 
 ```text
-scripts/test_speed_z_final.mjs       12 checks passed
-scripts/test_phase1_safety.mjs        5 checks passed
-scripts/test_cards.mjs               12 PASS
-scripts/test_ledger_regressions.mjs  22 PASS
-scripts/test_qa_remaining.mjs       176 PASS
-scripts/validate.mjs                 完走
-scripts/build_card.mjs 近本 2024     生成成功
+scripts/test_baserunning_gate.mjs      9 checks passed
+scripts/test_speed_z_final.mjs        12 checks passed
+scripts/test_phase1_safety.mjs         5 checks passed
+scripts/test_cards.mjs                12 PASS
+scripts/test_ledger_regressions.mjs   22 PASS
+scripts/test_qa_remaining.mjs        176 PASS
+scripts/validate.mjs                  完走
+scripts/build_card.mjs 近本 2024      生成成功
+scripts/build_card.mjs 周東 2024      生成成功・走塁は未査定
 ```
 
 追加で、ローカルでは次も通過した。
@@ -98,13 +132,13 @@ scripts/test_interactions.mjs          6 PASS
 scripts/test_fielding_regressions.mjs 25 PASS
 ```
 
-近本2024の計算ログでは、最終走力zと単年zが分離して記録され、守備計算が最終走力zを参照することを確認した。
+近本2024の計算ログでは、最終走力zと単年zが分離して記録され、守備計算が最終走力zを参照することを確認した。周東2024では走塁得能が`null`となり、未査定理由・停止状態・再開条件がカードに残ることを確認した。
 
 ## 査定値への影響
 
 代表9選手では表示走力はほぼ不変だった。一方、走塁得能は選手によって大きく動いた。表示だけでなく残差計算も複数年走力へ揃えたためである。
 
-これはコード上の不整合解消として正しいが、同時に**現行の走塁得能モデルが走力zの選び方に敏感**であることを示す。走塁得能はまだ確定扱いしない。
+この感度と上記の構造欠陥を踏まえ、現行の走塁得能値は採用せず、再設計完了まで未査定とする。走力・盗塁得能・守備力は今回の安全停止の対象外で、従来どおり出力する。
 
 ## 残る論点
 
