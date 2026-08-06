@@ -18,6 +18,8 @@
 
 import { seasonScore } from './season_score.mjs';
 
+const finite = v => Number.isFinite(v);
+
 /**
  * 全盛期の連続窓を選ぶ。
  *
@@ -31,6 +33,21 @@ export function selectPrimeWindow(seasons, rv, opts = {}) {
   const W = opts.windowYears ?? 3;
   const mode = opts.mode ?? 'total';
   const minPa = opts.minPaPerYear ?? 200;
+
+  // 2026-08-06 フェイルファスト:
+  // 現行パイプラインは年度候補へ走塁・守備得点を渡していない。
+  // 0として黙って通すと、打撃中心の窓を「総合全盛期」と誤表示するため停止する。
+  if (mode === 'total') {
+    const eligible = seasons.filter(s => s.line.PA >= minPa);
+    const missing = eligible.filter(s => !finite(s.runRuns) || !finite(s.fldRuns));
+    if (missing.length) {
+      const years = missing.map(s => s.season).join(', ');
+      throw new Error(
+        `全盛期の総合窓選定を停止: 走塁得点または守備得点が未接続の年度があります（${years}）。`
+        + ' runRuns/fldRunsを年度候補へ接続するまでprimeカードを生成しないでください。'
+      );
+    }
+  }
 
   const scored = seasons
     .map(s => ({ ...s, _score: seasonScore({ ...s, rv })[mode] }))
