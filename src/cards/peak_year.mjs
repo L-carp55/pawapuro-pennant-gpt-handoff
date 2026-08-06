@@ -10,6 +10,8 @@
 
 import { seasonScore } from './season_score.mjs';
 
+const finite = v => Number.isFinite(v);
+
 /**
  * 年度候補を評価して並べる。
  *
@@ -21,8 +23,23 @@ import { seasonScore } from './season_score.mjs';
 export function rankSeasons(seasons, rv, opts = {}) {
   const mode = opts.mode ?? 'total';
   const minPa = opts.minPa ?? 200;
-  return seasons
-    .filter(s => s.line.PA >= minPa)
+  const eligible = seasons.filter(s => s.line.PA >= minPa);
+
+  // 2026-08-06 フェイルファスト:
+  // 「総合ピーク」を名乗るなら、打撃だけでなく走塁・守備得点が全候補年に必要。
+  // 未接続のまま0扱いすると、実質的な打撃ピークを総合ピークとして出してしまう。
+  if (mode === 'total') {
+    const missing = eligible.filter(s => !finite(s.runRuns) || !finite(s.fldRuns));
+    if (missing.length) {
+      const years = missing.map(s => s.season).join(', ');
+      throw new Error(
+        `総合ピーク選定を停止: 走塁得点または守備得点が未接続の年度があります（${years}）。`
+        + ' runRuns/fldRunsを年度候補へ接続するか、明示年度またはmode=battingを使用してください。'
+      );
+    }
+  }
+
+  return eligible
     .map(s => {
       const scores = seasonScore({ ...s, rv });
       return { season: s.season, scores, score: scores[mode], line: s.line, position: s.position };
