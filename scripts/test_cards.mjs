@@ -33,6 +33,8 @@ function seasonsOf(name) {
     season: p.season, position: p.position,
     line: { PA: p.pa, AB: p.ab, H: p.h, B2: p.b2, B3: p.b3, HR: p.hr, BB: p.bb, HBP: p.hbp, SO: p.so, SH: p.sh, SF: p.sf, GDP: p.gdp, SB: p.sb, CS: p.cs },
     lgRate: LG[p.season], envFactors: { avg: 1, hr: 1 },
+    // 安全ゲート用の明示値。カード種別テストでは走守の大小を検証しないため中立0。
+    runRuns: 0, fldRuns: 0,
   }));
 }
 

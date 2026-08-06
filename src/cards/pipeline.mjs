@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { fitLogDist } from '../ratings/scale.mjs';
 import { appraiseBatting, playerParkFactor, applyEnvironment, gammaForLevel } from '../ratings/from_rates.mjs';
 import { selectPrior } from '../ratings/shrinkage.mjs';
-import { speedComponents, speedRating, stealingAbility, baserunningAbility } from '../ratings/running.mjs';
+import { speedComponents, resolveFinalSpeed, stealingAbility, baserunningAbility } from '../ratings/running.mjs';
 import { appraiseAllPositions } from '../ratings/fielding.mjs';
 import {
   buildMeetLedger, buildPowerLedger,
@@ -470,9 +470,15 @@ export function appraiseCard(ctx, opts) {
     cardType = 'prime_composite'; seasonLabel = null; seasonsUsed = c.seasonsUsed;
     line = c.line; formula = c.formula; targetSeason = win.end;
   } else {
-    const ranked = rankSeasons(seasons, rv, { mode: 'total' });
-    const c = buildPeakYearCard(ranked, { mode: 'total' });
-    const y = mode === 'peak' ? c.seasonLabel : Number(mode);
+    // 明示年度はピーク選定を通さない。安全ゲート導入後も「2024」のような単年指定は独立して動く。
+    let y;
+    if (mode === 'peak') {
+      const ranked = rankSeasons(seasons, rv, { mode: 'total' });
+      const c = buildPeakYearCard(ranked, { mode: 'total' });
+      y = c.seasonLabel;
+    } else {
+      y = Number(mode);
+    }
     const s = seasons.find(x => x.season === y);
     if (!s) return { error: `${y}年のデータなし（あるのは ${seasons.map(x => x.season).join(', ')}）` };
     cardType = 'peak_single_year'; seasonLabel = y; seasonsUsed = [y]; line = s.line; targetSeason = y;
@@ -574,23 +580,31 @@ export function appraiseCard(ctx, opts) {
         ?? runNorm.infieldHit?.bySeason?.[targetSeason]
         ?? null;
     // NF3内野安打率から同年・同打席の平均を引いた「超過」を実データで作る。
-    // infieldHitAbility 側で、さらに走力zで説明できる分を除いて得能を判定する。
     const gbSingleExcess = sc.raw.infieldHit != null && ihNorm
       ? sc.raw.infieldHit - ihNorm.mean
       : null;
-    infieldHitSpecial = infieldHitAbility(gbSingleExcess, sc.score, cfg);
-    // 走力は多年で均した推定を使う（単年だと観測のブレが能力差として出る）
-    const pooledSpeed = durable.speed ?? { z: sc.score, weight: line.PA, years: 1, seasons: [targetSeason], isMultiYear: false };
-    run = {
-      speed: speedRating(pooledSpeed.z, cfg),
-      speedDetail: pooledSpeed,
-      stealing: stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, sc.score, runNorm, cfg),
+
+    // ★2026-08-06: カード内で使う走力zを一本化する。
+    // 以前は表示だけ複数年、盗塁・走塁・内野安打・守備は単年sc.scoreだったため、
+    // 同じカードの中で別の脚力を前提にしていた。以後はspeedZFinalを全経路へ渡す。
+    const speedState = resolveFinalSpeed(sc.score, durable.speed, {
+      weight: line.PA, season: targetSeason,
+    }, cfg);
+    const speedZFinal = speedState?.zFinal ?? null;
+
+    // infieldHitAbility 側で、最終走力zで説明できる分を除いて得能を判定する。
+    infieldHitSpecial = infieldHitAbility(gbSingleExcess, speedZFinal, cfg);
+    run = speedState ? {
+      speed: speedState.rating,
+      speedDetail: speedState.detail,
+      stealing: stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, speedZFinal, runNorm, cfg),
       // 走塁得能には自作の走塁指標も渡す（仕様04 §3が名指しする材料。走力に対する残差として使う）
-      baserunning: baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, sc.score, runNorm, cfg,
+      baserunning: baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, speedZFinal, runNorm, cfg,
         { advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 }),
-      _z: sc.score,
+      _z: speedZFinal,
+      _singleYearZ: sc.score,
       _infieldHitExcess: gbSingleExcess,
-    };
+    } : null;
   }
   const fldRows = prep(`
     SELECT f.season, f.pos, f.inn, f.rngr, f.errr, f.arm, f.dpr, f.framing, f.blocking
