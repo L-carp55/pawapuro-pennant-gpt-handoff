@@ -28,6 +28,7 @@ export function buildRunFieldLog({ line, run, fld, bm }) {
     steal_residual_vs_speed: r3(run.stealing?.residZ ?? null),
     stealing_ability: r3(run.stealing?.rating ?? null),
     baserunning_ability: r3(run.baserunning?.rating ?? null),
+    baserunning_status: run.baserunningStatus ?? null,
     _speed_z_final: r3(run._z),
     _speed_z_single_year: r3(run._singleYearZ ?? null),
     _raw: { ubr: r3(bm?.ubr ?? null), wsb: r3(bm?.wsb ?? null) },

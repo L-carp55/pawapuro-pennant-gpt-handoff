@@ -369,8 +369,17 @@ export function makeContext(db, cfg) {
     if (existsSync(p)) parkAliases = JSON.parse(readFileSync(p, 'utf8'));
   } catch { /* 無くても動くが、改称をまたぐ年の補正が効かなくなる */ }
 
+  // 未完成モデルを「値は出るから使う」で通さないための安全ゲート。
+  // 小さな独立設定にし、ratings.json の較正値と混ぜない。
+  let modelGates = {};
+  try {
+    const p = path.join(ROOT, 'configs', 'model_gates.json');
+    if (existsSync(p)) modelGates = JSON.parse(readFileSync(p, 'utf8'));
+  } catch { /* 設定が無い環境では従来どおり。壊れたJSONは下流テストで検出する */ }
+
   return { db, prep, lgOf, refAvg, refHr, envFactorsOf, poolOf, parkFactors, goldHistorical,
-    catcherFielding, catcherThrow, infieldThrow, throwAccuracyTe, doublePlayOf, outContentOf, feOf, hasParkPa, parkAliases, farmHistOf };
+    catcherFielding, catcherThrow, infieldThrow, throwAccuracyTe, doublePlayOf, outContentOf, feOf, hasParkPa,
+    parkAliases, farmHistOf, modelGates };
 }
 
 /**
@@ -594,13 +603,17 @@ export function appraiseCard(ctx, opts) {
 
     // infieldHitAbility 側で、最終走力zで説明できる分を除いて得能を判定する。
     infieldHitSpecial = infieldHitAbility(gbSingleExcess, speedZFinal, cfg);
+    // 走塁得能には自作の走塁指標も渡す（仕様04 §3が名指しする材料。走力に対する残差として使う）
+    const baserunningGate = ctx.modelGates?.baserunning_ability;
+    const baserunning = baserunningGate?.enabled === false ? null
+      : baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, speedZFinal, runNorm, cfg,
+        { advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 });
     run = speedState ? {
       speed: speedState.rating,
       speedDetail: speedState.detail,
       stealing: stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, speedZFinal, runNorm, cfg),
-      // 走塁得能には自作の走塁指標も渡す（仕様04 §3が名指しする材料。走力に対する残差として使う）
-      baserunning: baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, speedZFinal, runNorm, cfg,
-        { advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 }),
+      baserunning,
+      baserunningStatus: baserunningGate?.enabled === false ? baserunningGate : null,
       _z: speedZFinal,
       _singleYearZ: sc.score,
       _infieldHitExcess: gbSingleExcess,
@@ -931,6 +944,9 @@ export function appraiseCard(ctx, opts) {
     speedOverride: runRec?.scouting ? runRec : blendDirect(run?.speed, directs.走力),
     powerOverride: blendDirect(batAdjusted?.power, directs.パワー),
     powerDisplay: conventions.power_display,
+    unappraisedReasons: ctx.modelGates?.baserunning_ability?.enabled === false
+      ? { 走塁: ctx.modelGates.baserunning_ability.reason }
+      : {},
     specialAbilities: {
       strikeout: strikeoutSpecial,
       infieldHit: infieldHitSpecial,
@@ -1016,6 +1032,8 @@ export function appraiseCard(ctx, opts) {
       ...(clutch?.diff == null && splits ? [`チャンス: ${clutch?.reason ?? '得点圏打数不足'}`] : []),
       ...(platoon?.meetDiff == null && splits ? [`対左: ${platoon?.reason ?? '対左打数不足'}`] : []),
       ...(!goldHistorical ? ['金特: outputs/derived/gold_historical_distribution.json が無いため未査定'] : []),
+      ...(ctx.modelGates?.baserunning_ability?.enabled === false
+        ? [`走塁: ${ctx.modelGates.baserunning_ability.reason}`] : []),
     ],
   });
   card.provenance.by_value = provenanceByValue;

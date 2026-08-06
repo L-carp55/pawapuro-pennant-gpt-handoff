@@ -85,6 +85,7 @@ export function buildAbilitySheet(a, cfg) {
     bat, trajectory, trajectoryEstimated = false, trajectorySource = null,
     run, fld = [], splits, durability, powerDisplay,
     arm = null, speedOverride = null, powerOverride = null, specialAbilities = {},
+    unappraisedReasons = {},
   } = a;
 
   const primary = fld.find(f => f.isPrimary) ?? null;
@@ -183,7 +184,7 @@ export function buildAbilitySheet(a, cfg) {
     //    仕様04 §10.2 は捕手の守備力を「捕球からリリースまでの速さ」と定義しており、
     //    そもそも守備範囲の式を当てるのが誤り。材料の取得は別タスク）。
     //   キーが**存在しない**（捕手以外のフレーミング等）のと、キーはあるが**値が null**なのは別物として扱う。
-    未査定: collectUnappraised([base, extended, abilities], primary),
+    未査定: collectUnappraised([base, extended, abilities], primary, unappraisedReasons),
   };
 }
 
@@ -220,13 +221,13 @@ const UNAPPRAISED_REASONS = {
   ブロッキング: '捕手のブロッキングのデータが無い年',
 };
 
-export function collectUnappraised(groups, primary) {
+export function collectUnappraised(groups, primary, overrides = {}) {
   const out = [];
   for (const g of groups) {
     if (!g) continue;
     for (const [name, value] of Object.entries(g)) {
       if (value != null) continue;                 // 査定できている
-      let reason = UNAPPRAISED_REASONS[name] ?? '材料が無い';
+      let reason = overrides[name] ?? UNAPPRAISED_REASONS[name] ?? '材料が無い';
       // 捕手の守備力だけは原因が構造的なので、その場で理由を言い換える
       // （守備範囲の指標が捕手には存在しない。仕様は「捕球からリリースまでの速さ」と定義しており式の当て先が違う）
       if (name === '守備力' && primary?.pos === 'C') {

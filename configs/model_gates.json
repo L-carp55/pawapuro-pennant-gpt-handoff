@@ -1,0 +1,20 @@
+{
+  "_comment": "未完成・構造欠陥が判明したモデルを、値が出るという理由だけで本番利用しないための安全ゲート。",
+  "baserunning_ability": {
+    "enabled": false,
+    "status": "PAUSED",
+    "reason": "走塁得能モデルを再較正中。UBR・追加進塁が走力スコア自身に含まれる循環、機会選択バイアス、標本量の縮小不足があるため未査定",
+    "evidence": {
+      "ubr_leave_one_out_repeatability": 0.209,
+      "advance_leave_one_out_repeatability": 0.181,
+      "combined_repeatability": 0.238,
+      "measured_at": "2026-08-06"
+    },
+    "reopen_conditions": [
+      "各残差を対象材料抜きの走力（leave-one-component-out）で較正・計算する",
+      "追加進塁の機会選択バイアスをイベント単位で統制する",
+      "機会数・打席数に応じた信頼度縮小を導入する",
+      "ホールドアウトまたは年跨ぎ検証で目盛りを確定する"
+    ]
+  }
+}
