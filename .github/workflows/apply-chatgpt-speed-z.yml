@@ -1,0 +1,44 @@
+name: Apply ChatGPT speed_z_final patch
+
+on:
+  push:
+    branches:
+      - agent/satei-phase1-safety
+    paths:
+      - .chatgpt/speed_z_final.patch
+
+permissions:
+  contents: write
+
+jobs:
+  apply-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply patch
+        run: |
+          git apply --check .chatgpt/speed_z_final.patch
+          git apply .chatgpt/speed_z_final.patch
+      - name: Run regression tests
+        run: |
+          node scripts/test_speed_z_final.mjs
+          node scripts/test_phase1_safety.mjs
+          node scripts/test_cards.mjs
+          node scripts/test_ledger_regressions.mjs
+          node scripts/test_qa_remaining.mjs
+          node scripts/validate.mjs
+          node scripts/build_card.mjs 近本 2024
+      - name: Commit tested changes
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm .chatgpt/speed_z_final.patch
+          git add scripts/test_cards.mjs scripts/test_speed_z_final.mjs src/cards/card_schema.mjs src/cards/pipeline.mjs src/ratings/runfield_log.mjs src/ratings/running.mjs outputs/cards/近本光司_2024.json
+          git commit -m "fix: unify speed z across appraisal paths"
+          git push origin HEAD:agent/satei-phase1-safety
