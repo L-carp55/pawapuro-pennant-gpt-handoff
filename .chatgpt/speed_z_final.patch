@@ -1,0 +1,211 @@
+diff --git a/scripts/test_cards.mjs b/scripts/test_cards.mjs
+index 22504ab..d2e4d53 100644
+--- a/scripts/test_cards.mjs
++++ b/scripts/test_cards.mjs
+@@ -33,6 +33,8 @@ function seasonsOf(name) {
+     season: p.season, position: p.position,
+     line: { PA: p.pa, AB: p.ab, H: p.h, B2: p.b2, B3: p.b3, HR: p.hr, BB: p.bb, HBP: p.hbp, SO: p.so, SH: p.sh, SF: p.sf, GDP: p.gdp, SB: p.sb, CS: p.cs },
+     lgRate: LG[p.season], envFactors: { avg: 1, hr: 1 },
++    // 安全ゲート用の明示値。カード種別テストでは走守の大小を検証しないため中立0。
++    runRuns: 0, fldRuns: 0,
+   }));
+ }
+ 
+diff --git a/scripts/test_speed_z_final.mjs b/scripts/test_speed_z_final.mjs
+new file mode 100644
+index 0000000..e2524ac
+--- /dev/null
++++ b/scripts/test_speed_z_final.mjs
+@@ -0,0 +1,42 @@
++// 走力z一本化の回帰テスト（2026-08-06）。DB不要。
++import assert from 'node:assert/strict';
++import { readFile } from 'node:fs/promises';
++import path from 'node:path';
++import { fileURLToPath } from 'node:url';
++import { resolveFinalSpeed } from '../src/ratings/running.mjs';
++
++const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
++const cfg = JSON.parse(await readFile(path.join(ROOT, 'configs', 'ratings.json'), 'utf8'));
++
++// 単年zと複数年zが食い違う場合、カード内の共通値は複数年zになる。
++const state = resolveFinalSpeed(1.5, {
++  z: -0.4, weight: 1200, years: 3, seasons: [2022, 2023, 2024], isMultiYear: true,
++}, { weight: 500, season: 2024 }, cfg);
++assert.equal(state.zFinal, -0.4);
++assert.equal(state.detail.z_single_year, 1.5);
++assert.equal(state.detail.z_final, -0.4);
++assert.deepEqual(state.detail.seasons, [2022, 2023, 2024]);
++
++// 複数年推定が無ければ、単年zを全経路の共通値として使う。
++const fallback = resolveFinalSpeed(0.7, null, { weight: 500, season: 2024 }, cfg);
++assert.equal(fallback.zFinal, 0.7);
++assert.equal(fallback.detail.isMultiYear, false);
++assert.deepEqual(fallback.detail.seasons, [2024]);
++assert.equal(resolveFinalSpeed(null, null, {}, cfg), null);
++
++// パイプラインの4経路が単年sc.scoreへ戻っていないことを静的に保証する。
++const pipeline = await readFile(path.join(ROOT, 'src', 'cards', 'pipeline.mjs'), 'utf8');
++assert.match(pipeline, /infieldHitAbility\(gbSingleExcess, speedZFinal, cfg\)/);
++assert.match(pipeline, /stealingAbility\([\s\S]*?bm\.wsb, speedZFinal, runNorm, cfg\)/);
++assert.match(pipeline, /baserunningAbility\([\s\S]*?speedZFinal, runNorm, cfg/);
++assert.match(pipeline, /_z: speedZFinal/);
++assert.match(pipeline, /appraiseAllPositions\(fldRows, run\?\._z \?\? 0, fldNorm, cfg\)/);
++assert.ok(!/infieldHitAbility\([^\n]*sc\.score/.test(pipeline));
++assert.ok(!/stealingAbility\([^\n]*sc\.score/.test(pipeline));
++assert.ok(!/baserunningAbility\([^\n]*sc\.score/.test(pipeline));
++
++const schema = await readFile(path.join(ROOT, 'src', 'cards', 'card_schema.mjs'), 'utf8');
++assert.match(schema, /_speed_z_final/);
++assert.match(schema, /_speed_z_single_year/);
++
++console.log('speed_z_final: 12 checks passed');
+diff --git a/src/cards/card_schema.mjs b/src/cards/card_schema.mjs
+index 15786e4..4b541c2 100644
+--- a/src/cards/card_schema.mjs
++++ b/src/cards/card_schema.mjs
+@@ -120,7 +120,8 @@ export function buildCalcLog(args) {
+     // 弾道の出典（2026-08-05追加、T-0118）。実測か推定かを計算ログでも追えるようにする
+     trajectory: { is_estimated: !!trajectoryEstimated, source: trajectorySource ?? null },
+     running: run ? {
+-      speed: run.speed, stealing: run.stealing?.rating ?? null, baserunning: run.baserunning?.rating ?? null, _speed_z: run._z,
++      speed: run.speed, stealing: run.stealing?.rating ?? null, baserunning: run.baserunning?.rating ?? null,
++      _speed_z_final: run._z, _speed_z_single_year: run._singleYearZ ?? null,
+       // ★2026-08-05修理: 走力の複数年プール（身体能力は年でほとんど変わらないため均す仕組み）の
+       //   根拠（何年ぶんを使ったか）が計算はされているのに計算ログへ渡っていなかった。
+       //   肩力(arm)は既にログに出ているのに、走力だけ「複数年プールを使った証拠」が見えない状態だった
+diff --git a/src/cards/pipeline.mjs b/src/cards/pipeline.mjs
+index 53f10cb..0392484 100644
+--- a/src/cards/pipeline.mjs
++++ b/src/cards/pipeline.mjs
+@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
+ import { fitLogDist } from '../ratings/scale.mjs';
+ import { appraiseBatting, playerParkFactor, applyEnvironment, gammaForLevel } from '../ratings/from_rates.mjs';
+ import { selectPrior } from '../ratings/shrinkage.mjs';
+-import { speedComponents, speedRating, stealingAbility, baserunningAbility } from '../ratings/running.mjs';
++import { speedComponents, resolveFinalSpeed, stealingAbility, baserunningAbility } from '../ratings/running.mjs';
+ import { appraiseAllPositions } from '../ratings/fielding.mjs';
+ import {
+   buildMeetLedger, buildPowerLedger,
+@@ -470,9 +470,15 @@ export function appraiseCard(ctx, opts) {
+     cardType = 'prime_composite'; seasonLabel = null; seasonsUsed = c.seasonsUsed;
+     line = c.line; formula = c.formula; targetSeason = win.end;
+   } else {
+-    const ranked = rankSeasons(seasons, rv, { mode: 'total' });
+-    const c = buildPeakYearCard(ranked, { mode: 'total' });
+-    const y = mode === 'peak' ? c.seasonLabel : Number(mode);
++    // 明示年度はピーク選定を通さない。安全ゲート導入後も「2024」のような単年指定は独立して動く。
++    let y;
++    if (mode === 'peak') {
++      const ranked = rankSeasons(seasons, rv, { mode: 'total' });
++      const c = buildPeakYearCard(ranked, { mode: 'total' });
++      y = c.seasonLabel;
++    } else {
++      y = Number(mode);
++    }
+     const s = seasons.find(x => x.season === y);
+     if (!s) return { error: `${y}年のデータなし（あるのは ${seasons.map(x => x.season).join(', ')}）` };
+     cardType = 'peak_single_year'; seasonLabel = y; seasonsUsed = [y]; line = s.line; targetSeason = y;
+@@ -574,23 +580,31 @@ export function appraiseCard(ctx, opts) {
+         ?? runNorm.infieldHit?.bySeason?.[targetSeason]
+         ?? null;
+     // NF3内野安打率から同年・同打席の平均を引いた「超過」を実データで作る。
+-    // infieldHitAbility 側で、さらに走力zで説明できる分を除いて得能を判定する。
+     const gbSingleExcess = sc.raw.infieldHit != null && ihNorm
+       ? sc.raw.infieldHit - ihNorm.mean
+       : null;
+-    infieldHitSpecial = infieldHitAbility(gbSingleExcess, sc.score, cfg);
+-    // 走力は多年で均した推定を使う（単年だと観測のブレが能力差として出る）
+-    const pooledSpeed = durable.speed ?? { z: sc.score, weight: line.PA, years: 1, seasons: [targetSeason], isMultiYear: false };
+-    run = {
+-      speed: speedRating(pooledSpeed.z, cfg),
+-      speedDetail: pooledSpeed,
+-      stealing: stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, sc.score, runNorm, cfg),
++
++    // ★2026-08-06: カード内で使う走力zを一本化する。
++    // 以前は表示だけ複数年、盗塁・走塁・内野安打・守備は単年sc.scoreだったため、
++    // 同じカードの中で別の脚力を前提にしていた。以後はspeedZFinalを全経路へ渡す。
++    const speedState = resolveFinalSpeed(sc.score, durable.speed, {
++      weight: line.PA, season: targetSeason,
++    }, cfg);
++    const speedZFinal = speedState?.zFinal ?? null;
++
++    // infieldHitAbility 側で、最終走力zで説明できる分を除いて得能を判定する。
++    infieldHitSpecial = infieldHitAbility(gbSingleExcess, speedZFinal, cfg);
++    run = speedState ? {
++      speed: speedState.rating,
++      speedDetail: speedState.detail,
++      stealing: stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, speedZFinal, runNorm, cfg),
+       // 走塁得能には自作の走塁指標も渡す（仕様04 §3が名指しする材料。走力に対する残差として使う）
+-      baserunning: baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, sc.score, runNorm, cfg,
++      baserunning: baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, speedZFinal, runNorm, cfg,
+         { advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 }),
+-      _z: sc.score,
++      _z: speedZFinal,
++      _singleYearZ: sc.score,
+       _infieldHitExcess: gbSingleExcess,
+-    };
++    } : null;
+   }
+   const fldRows = prep(`
+     SELECT f.season, f.pos, f.inn, f.rngr, f.errr, f.arm, f.dpr, f.framing, f.blocking
+diff --git a/src/ratings/runfield_log.mjs b/src/ratings/runfield_log.mjs
+index 9a23dfc..e3b1743 100644
+--- a/src/ratings/runfield_log.mjs
++++ b/src/ratings/runfield_log.mjs
+@@ -28,7 +28,8 @@ export function buildRunFieldLog({ line, run, fld, bm }) {
+     steal_residual_vs_speed: r3(run.stealing?.residZ ?? null),
+     stealing_ability: r3(run.stealing?.rating ?? null),
+     baserunning_ability: r3(run.baserunning?.rating ?? null),
+-    _speed_z: r3(run._z),
++    _speed_z_final: r3(run._z),
++    _speed_z_single_year: r3(run._singleYearZ ?? null),
+     _raw: { ubr: r3(bm?.ubr ?? null), wsb: r3(bm?.wsb ?? null) },
+   } : {
+     _unavailable: 'NPB Basementの範囲外の年（2019年以前）のため走塁は未査定。0で埋めない',
+diff --git a/src/ratings/running.mjs b/src/ratings/running.mjs
+index a649ade..ab03805 100644
+--- a/src/ratings/running.mjs
++++ b/src/ratings/running.mjs
+@@ -86,6 +86,42 @@ export function speedRating(score, cfg) {
+   return clamp(s.center + score * s.spread, cfg.clamp);
+ }
+ 
++
++/**
++ * 単年の代理指標と複数年の身体能力推定から、カード内で共通利用する走力を1つに決める。
++ *
++ * 表示走力だけ複数年、盗塁・走塁・守備だけ単年、という不一致を防ぐため、
++ * 戻り値の zFinal を全ての残差計算へ渡す。
++ */
++export function resolveFinalSpeed(singleYearScore, pooledSpeed, ctx, cfg) {
++  const pooledOk = pooledSpeed && Number.isFinite(pooledSpeed.z);
++  const singleOk = Number.isFinite(singleYearScore);
++  if (!pooledOk && !singleOk) return null;
++
++  const detail = pooledOk
++    ? { ...pooledSpeed }
++    : {
++      z: singleYearScore,
++      weight: ctx?.weight ?? null,
++      years: 1,
++      seasons: ctx?.season == null ? [] : [ctx.season],
++      isMultiYear: false,
++    };
++  const zFinal = detail.z;
++  return {
++    zFinal,
++    rating: speedRating(zFinal, cfg),
++    detail: {
++      ...detail,
++      z_final: zFinal,
++      z_single_year: singleOk ? singleYearScore : null,
++      _note: pooledOk
++        ? '表示・盗塁・走塁・内野安打・守備で同じ複数年走力zを使用'
++        : '複数年推定が無いため対象年の走力zを全経路で使用',
++    },
++  };
++}
++
+ /**
+  * 盗塁得能（仕様§2「成功率・企図率・純粋走力に対する残差」）。
+  *
