@@ -1,0 +1,423 @@
+{
+  "_meta": {
+    "purpose": "捕手の送球（精度）を得能として判定する",
+    "spec": "docs/satei_handoff/04_RUNNING_DEFENSE_CATCHER.md §4.3「精度: 送球得能」／§10.2",
+    "source": "Nippon Baseball Data Repository（MIT License）の1球データ 2020-2026",
+    "attribution": "This uses data sourced from the Nippon Baseball Data Repository.",
+    "metric": "盗塁を許したうえで走者がさらに進塁した割合（＝二塁への送球が逸れた）",
+    "league_rate": 0.023796097891056727,
+    "total_events": 8867,
+    "min_events": 50,
+    "alpha": 0.05,
+    "_why_ability_not_scale": "★事象が稀（リーグ全体2.38%、最多の捕手でも14件）。100段階の連続値にすると偶然のばらつきを能力差として読む。二項分布で「偶然ではこうならない」と言える両端だけに印を付ける（2026-08-05 オーナー裁定）",
+    "_honest_limit": "50件以上の45人のうち、判別できたのは2人だけ。残りは中間＝得能なし。**全員に何かを付けるために基準を緩めることはしない**",
+    "_not_double_counted": "肩力（送球速度）・守備力（捕球からリリースまでの速さ）とは別の材料を使っている。仕様04 §4.3が3つを別能力と定めているとおりに分離した"
+  },
+  "judged": [
+    {
+      "catcher": "下妻貴寛",
+      "events": 57,
+      "wild_throws": 0,
+      "wild_rate": 0,
+      "ability": null,
+      "p_value": null,
+      "basis": "57件中0件（0.0%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "海野隆司",
+      "events": 158,
+      "wild_throws": 0,
+      "wild_rate": 0,
+      "ability": "送球○",
+      "p_value": 0.022253852697590344,
+      "basis": "盗塁を許した後の余分な進塁 0/158件（0.0%）。リーグ平均2.38%に対し、偶然でこうなる確率は2.23%"
+    },
+    {
+      "catcher": "大城卓三",
+      "events": 287,
+      "wild_throws": 3,
+      "wild_rate": 0.010452961672473868,
+      "ability": null,
+      "p_value": null,
+      "basis": "287件中3件（1.0%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "石原貴規",
+      "events": 93,
+      "wild_throws": 1,
+      "wild_rate": 0.010752688172043012,
+      "ability": null,
+      "p_value": null,
+      "basis": "93件中1件（1.1%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "森友哉",
+      "events": 368,
+      "wild_throws": 4,
+      "wild_rate": 0.010869565217391304,
+      "ability": null,
+      "p_value": null,
+      "basis": "368件中4件（1.1%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "坂本誠志郎",
+      "events": 228,
+      "wild_throws": 3,
+      "wild_rate": 0.013157894736842105,
+      "ability": null,
+      "p_value": null,
+      "basis": "228件中3件（1.3%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "甲斐拓也",
+      "events": 449,
+      "wild_throws": 6,
+      "wild_rate": 0.013363028953229399,
+      "ability": null,
+      "p_value": null,
+      "basis": "449件中6件（1.3%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "嶺井博希",
+      "events": 138,
+      "wild_throws": 2,
+      "wild_rate": 0.014492753623188406,
+      "ability": null,
+      "p_value": null,
+      "basis": "138件中2件（1.4%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "中村悠平",
+      "events": 308,
+      "wild_throws": 5,
+      "wild_rate": 0.016233766233766232,
+      "ability": null,
+      "p_value": null,
+      "basis": "308件中5件（1.6%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "郡司裕也",
+      "events": 60,
+      "wild_throws": 1,
+      "wild_rate": 0.016666666666666666,
+      "ability": null,
+      "p_value": null,
+      "basis": "60件中1件（1.7%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "伏見寅威",
+      "events": 299,
+      "wild_throws": 5,
+      "wild_rate": 0.016722408026755852,
+      "ability": null,
+      "p_value": null,
+      "basis": "299件中5件（1.7%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "内山壮真",
+      "events": 59,
+      "wild_throws": 1,
+      "wild_rate": 0.01694915254237288,
+      "ability": null,
+      "p_value": null,
+      "basis": "59件中1件（1.7%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "西田明央",
+      "events": 58,
+      "wild_throws": 1,
+      "wild_rate": 0.017241379310344827,
+      "ability": null,
+      "p_value": null,
+      "basis": "58件中1件（1.7%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "炭谷銀仁朗",
+      "events": 227,
+      "wild_throws": 4,
+      "wild_rate": 0.01762114537444934,
+      "ability": null,
+      "p_value": null,
+      "basis": "227件中4件（1.8%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "堀内謙伍",
+      "events": 56,
+      "wild_throws": 1,
+      "wild_rate": 0.017857142857142856,
+      "ability": null,
+      "p_value": null,
+      "basis": "56件中1件（1.8%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "會澤翼",
+      "events": 164,
+      "wild_throws": 3,
+      "wild_rate": 0.018292682926829267,
+      "ability": null,
+      "p_value": null,
+      "basis": "164件中3件（1.8%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "石橋康太",
+      "events": 52,
+      "wild_throws": 1,
+      "wild_rate": 0.019230769230769232,
+      "ability": null,
+      "p_value": null,
+      "basis": "52件中1件（1.9%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "松本直樹",
+      "events": 52,
+      "wild_throws": 1,
+      "wild_rate": 0.019230769230769232,
+      "ability": null,
+      "p_value": null,
+      "basis": "52件中1件（1.9%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "戸柱恭孝",
+      "events": 207,
+      "wild_throws": 4,
+      "wild_rate": 0.01932367149758454,
+      "ability": null,
+      "p_value": null,
+      "basis": "207件中4件（1.9%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "宇佐見真吾",
+      "events": 250,
+      "wild_throws": 5,
+      "wild_rate": 0.02,
+      "ability": null,
+      "p_value": null,
+      "basis": "250件中5件（2.0%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "太田光",
+      "events": 346,
+      "wild_throws": 7,
+      "wild_rate": 0.02023121387283237,
+      "ability": null,
+      "p_value": null,
+      "basis": "346件中7件（2.0%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "伊藤光",
+      "events": 146,
+      "wild_throws": 3,
+      "wild_rate": 0.02054794520547945,
+      "ability": null,
+      "p_value": null,
+      "basis": "146件中3件（2.1%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "田宮裕涼",
+      "events": 146,
+      "wild_throws": 3,
+      "wild_rate": 0.02054794520547945,
+      "ability": null,
+      "p_value": null,
+      "basis": "146件中3件（2.1%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "山本祐大",
+      "events": 238,
+      "wild_throws": 5,
+      "wild_rate": 0.02100840336134454,
+      "ability": null,
+      "p_value": null,
+      "basis": "238件中5件（2.1%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "木下拓哉",
+      "events": 319,
+      "wild_throws": 7,
+      "wild_rate": 0.0219435736677116,
+      "ability": null,
+      "p_value": null,
+      "basis": "319件中7件（2.2%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "松尾汐恩",
+      "events": 89,
+      "wild_throws": 2,
+      "wild_rate": 0.02247191011235955,
+      "ability": null,
+      "p_value": null,
+      "basis": "89件中2件（2.2%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "柿沼友哉",
+      "events": 83,
+      "wild_throws": 2,
+      "wild_rate": 0.024096385542168676,
+      "ability": null,
+      "p_value": null,
+      "basis": "83件中2件（2.4%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "古賀優大",
+      "events": 163,
+      "wild_throws": 4,
+      "wild_rate": 0.024539877300613498,
+      "ability": null,
+      "p_value": null,
+      "basis": "163件中4件（2.5%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "坂倉将吾",
+      "events": 268,
+      "wild_throws": 7,
+      "wild_rate": 0.026119402985074626,
+      "ability": null,
+      "p_value": null,
+      "basis": "268件中7件（2.6%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "梅野隆太郎",
+      "events": 263,
+      "wild_throws": 7,
+      "wild_rate": 0.026615969581749048,
+      "ability": null,
+      "p_value": null,
+      "basis": "263件中7件（2.7%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "田村龍弘",
+      "events": 246,
+      "wild_throws": 7,
+      "wild_rate": 0.028455284552845527,
+      "ability": null,
+      "p_value": null,
+      "basis": "246件中7件（2.8%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "松川虎生",
+      "events": 101,
+      "wild_throws": 3,
+      "wild_rate": 0.0297029702970297,
+      "ability": null,
+      "p_value": null,
+      "basis": "101件中3件（3.0%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "岸田行倫",
+      "events": 131,
+      "wild_throws": 4,
+      "wild_rate": 0.030534351145038167,
+      "ability": null,
+      "p_value": null,
+      "basis": "131件中4件（3.1%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "古賀悠斗",
+      "events": 257,
+      "wild_throws": 8,
+      "wild_rate": 0.0311284046692607,
+      "ability": null,
+      "p_value": null,
+      "basis": "257件中8件（3.1%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "若月健矢",
+      "events": 352,
+      "wild_throws": 12,
+      "wild_rate": 0.03409090909090909,
+      "ability": null,
+      "p_value": null,
+      "basis": "352件中12件（3.4%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "石原彪",
+      "events": 84,
+      "wild_throws": 3,
+      "wild_rate": 0.03571428571428571,
+      "ability": null,
+      "p_value": null,
+      "basis": "84件中3件（3.6%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "加藤匠馬",
+      "events": 81,
+      "wild_throws": 3,
+      "wild_rate": 0.037037037037037035,
+      "ability": null,
+      "p_value": null,
+      "basis": "81件中3件（3.7%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "小林誠司",
+      "events": 75,
+      "wild_throws": 3,
+      "wild_rate": 0.04,
+      "ability": null,
+      "p_value": null,
+      "basis": "75件中3件（4.0%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "佐藤都志也",
+      "events": 346,
+      "wild_throws": 14,
+      "wild_rate": 0.04046242774566474,
+      "ability": "送球△",
+      "p_value": 0.03967029705182046,
+      "basis": "盗塁を許した後の余分な進塁 14/346件（4.0%）。リーグ平均2.38%に対し、偶然でこうなる確率は3.97%"
+    },
+    {
+      "catcher": "柘植世那",
+      "events": 123,
+      "wild_throws": 5,
+      "wild_rate": 0.04065040650406504,
+      "ability": null,
+      "p_value": null,
+      "basis": "123件中5件（4.1%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "清水優心",
+      "events": 196,
+      "wild_throws": 8,
+      "wild_rate": 0.04081632653061224,
+      "ability": null,
+      "p_value": null,
+      "basis": "196件中8件（4.1%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "石川亮",
+      "events": 91,
+      "wild_throws": 4,
+      "wild_rate": 0.04395604395604396,
+      "ability": null,
+      "p_value": null,
+      "basis": "91件中4件（4.4%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "頓宮裕真",
+      "events": 64,
+      "wild_throws": 3,
+      "wild_rate": 0.046875,
+      "ability": null,
+      "p_value": null,
+      "basis": "64件中3件（4.7%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "寺地隆成",
+      "events": 84,
+      "wild_throws": 4,
+      "wild_rate": 0.047619047619047616,
+      "ability": null,
+      "p_value": null,
+      "basis": "84件中4件（4.8%）。リーグ平均と偶然の範囲で区別できない"
+    },
+    {
+      "catcher": "石伊雄太",
+      "events": 93,
+      "wild_throws": 5,
+      "wild_rate": 0.053763440860215055,
+      "ability": null,
+      "p_value": null,
+      "basis": "93件中5件（5.4%）。リーグ平均と偶然の範囲で区別できない"
+    }
+  ]
+}

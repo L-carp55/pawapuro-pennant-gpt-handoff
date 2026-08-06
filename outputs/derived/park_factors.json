@@ -1,0 +1,1707 @@
+{
+  "measured_at": "2026-08-01",
+  "method": "同一打者内の比（その球場での率 ÷ 同じ打者の他球場での率）を打数で加重平均する。球場ごとの生の率を比べると、その球場に多く出る打者の顔ぶれが混ざるため",
+  "source": "NF3 球場別成績 2023-2025",
+  "thresholds": {
+    "min_ab_at_park": 30,
+    "min_ab_elsewhere": 150,
+    "min_player_seasons": 20
+  },
+  "caveats": [
+    "本拠地の球場は自軍打者の打席が多く、「他球場」の中身が球団ごとに違う（対戦相手の偏り）",
+    "3年分なので、年による球場改修・ボールの変更は分けられていない",
+    "打者の左右による球場相性は分けていない"
+  ],
+  "hr": {
+    "label": "本塁打",
+    "parks": {
+      "マツダスタジアム": {
+        "_raw_ratio": 0.8138960197431653,
+        "n_player_seasons": 96,
+        "ab": 7240,
+        "here_rate": 0.02058011049723757,
+        "elsewhere_rate": 0.025285921048897465,
+        "_rel_se": 0.08756279486313319,
+        "factor": 0.8369602297707033,
+        "se": 0.07328657690801291
+      },
+      "神宮": {
+        "_raw_ratio": 1.9370082454629314,
+        "n_player_seasons": 102,
+        "ab": 6878,
+        "here_rate": 0.04158185519046234,
+        "elsewhere_rate": 0.021467051205310988,
+        "_rel_se": 0.06775936536326335,
+        "factor": 1.9918992437166492,
+        "se": 0.13496982862180437
+      },
+      "横浜": {
+        "_raw_ratio": 1.0766042933449793,
+        "n_player_seasons": 94,
+        "ab": 7004,
+        "here_rate": 0.026270702455739578,
+        "elsewhere_rate": 0.02440144686226101,
+        "_rel_se": 0.0802481778955911,
+        "factor": 1.1071131383766746,
+        "se": 0.08884381207899755
+      },
+      "甲子園": {
+        "_raw_ratio": 0.6280630966318567,
+        "n_player_seasons": 75,
+        "ab": 6151,
+        "here_rate": 0.016420094293610795,
+        "elsewhere_rate": 0.02614402021336328,
+        "_rel_se": 0.10509806916683573,
+        "factor": 0.6458611676628887,
+        "se": 0.06787876167120756
+      },
+      "東京ドーム": {
+        "_raw_ratio": 1.2576551407095669,
+        "n_player_seasons": 90,
+        "ab": 6394,
+        "here_rate": 0.030340944635595873,
+        "elsewhere_rate": 0.02412501142282738,
+        "_rel_se": 0.07893293319674878,
+        "factor": 1.2932946101306015,
+        "se": 0.10208353706515404
+      },
+      "バンテリンドーム": {
+        "_raw_ratio": 0.6206002599107373,
+        "n_player_seasons": 96,
+        "ab": 6637,
+        "here_rate": 0.015971071267138766,
+        "elsewhere_rate": 0.025734876858472363,
+        "_rel_se": 0.1017715775107864,
+        "factor": 0.6381868488490181,
+        "se": 0.06494928235400237
+      },
+      "京セラD大阪": {
+        "_raw_ratio": 0.7150897237288479,
+        "n_player_seasons": 118,
+        "ab": 7794,
+        "here_rate": 0.01796253528355145,
+        "elsewhere_rate": 0.025119274809160305,
+        "_rel_se": 0.08910873118783269,
+        "factor": 0.735353957951078,
+        "se": 0.06552645816697143
+      },
+      "PayPayドーム": {
+        "_raw_ratio": 1.2452995773091087,
+        "n_player_seasons": 33,
+        "ab": 2518,
+        "here_rate": 0.03177124702144559,
+        "elsewhere_rate": 0.025512934879571812,
+        "_rel_se": 0.12453978016169347,
+        "factor": 1.2805889144007498,
+        "se": 0.15948426187697107
+      },
+      "ベルーナドーム": {
+        "_raw_ratio": 0.779953987274212,
+        "n_player_seasons": 83,
+        "ab": 5409,
+        "here_rate": 0.01959696801626918,
+        "elsewhere_rate": 0.025125800157464143,
+        "_rel_se": 0.10284576652537906,
+        "factor": 0.8020563469589108,
+        "se": 0.08248809979953457
+      },
+      "楽天モバイル": {
+        "_raw_ratio": 0.721732239325384,
+        "n_player_seasons": 98,
+        "ab": 6959,
+        "here_rate": 0.01753125449058773,
+        "elsewhere_rate": 0.02429052429052429,
+        "_rel_se": 0.09623192680440945,
+        "factor": 0.7421847093555224,
+        "se": 0.07142186462605253
+      },
+      "ZOZOマリン": {
+        "_raw_ratio": 1.0708858094133988,
+        "n_player_seasons": 103,
+        "ab": 7171,
+        "here_rate": 0.024403848835587785,
+        "elsewhere_rate": 0.02278846971457725,
+        "_rel_se": 0.08240310902043739,
+        "factor": 1.1012326038744589,
+        "se": 0.09074499031392717
+      },
+      "エスコンＦ": {
+        "_raw_ratio": 1.411543769769759,
+        "n_player_seasons": 103,
+        "ab": 7384,
+        "here_rate": 0.031960996749729145,
+        "elsewhere_rate": 0.022642582847390128,
+        "_rel_se": 0.07300476788854689,
+        "factor": 1.4515441398161761,
+        "se": 0.10596964300726039
+      },
+      "みずほPayPay": {
+        "_raw_ratio": 1.375151473509313,
+        "n_player_seasons": 59,
+        "ab": 4213,
+        "here_rate": 0.029907429385236172,
+        "elsewhere_rate": 0.02174846186865074,
+        "_rel_se": 0.09921913044693459,
+        "factor": 1.414120557563448,
+        "se": 0.14030781206857962
+      }
+    },
+    "_method": "同じ選手集団の合計で比を取る（その球場の率 ÷ 同じ選手たちの他球場での率）。選手ごとの比にすると本塁打0の選手を捨てることになり係数が上へ偏るため",
+    "_centering": "打数で重み付けした全球場平均が1になるよう基準化"
+  },
+  "avg": {
+    "label": "打率",
+    "parks": {
+      "マツダスタジアム": {
+        "_raw_ratio": 1.0350143750508067,
+        "n_player_seasons": 96,
+        "ab": 7240,
+        "here_rate": 0.2774861878453039,
+        "elsewhere_rate": 0.2680988733433607,
+        "_rel_se": 0.020907247126686845,
+        "factor": 1.033823488585285,
+        "se": 0.02161440316122607
+      },
+      "神宮": {
+        "_raw_ratio": 1.0665598091519246,
+        "n_player_seasons": 102,
+        "ab": 6878,
+        "here_rate": 0.2843849956382669,
+        "elsewhere_rate": 0.2666376448821897,
+        "_rel_se": 0.020992599531206132,
+        "factor": 1.0653326265426724,
+        "se": 0.0223641011965383
+      },
+      "横浜": {
+        "_raw_ratio": 1.041978972943422,
+        "n_player_seasons": 94,
+        "ab": 7004,
+        "here_rate": 0.27998286693318103,
+        "elsewhere_rate": 0.26870299133030945,
+        "_rel_se": 0.021102094010771066,
+        "factor": 1.0407800730187948,
+        "se": 0.021962638945379784
+      },
+      "甲子園": {
+        "_raw_ratio": 0.9825757412932966,
+        "n_player_seasons": 75,
+        "ab": 6151,
+        "here_rate": 0.2662981629003414,
+        "elsewhere_rate": 0.2710204941044357,
+        "_rel_se": 0.023287682071883562,
+        "factor": 0.9814451906653416,
+        "se": 0.022855583571193622
+      },
+      "東京ドーム": {
+        "_raw_ratio": 0.9317372949320338,
+        "n_player_seasons": 90,
+        "ab": 6394,
+        "here_rate": 0.2530497341257429,
+        "elsewhere_rate": 0.2715891437448597,
+        "_rel_se": 0.02330981327847321,
+        "factor": 0.9306652389676886,
+        "se": 0.02169363294510247
+      },
+      "バンテリンドーム": {
+        "_raw_ratio": 0.9587606729931409,
+        "n_player_seasons": 96,
+        "ab": 6637,
+        "here_rate": 0.2593039023655266,
+        "elsewhere_rate": 0.2704573828169334,
+        "_rel_se": 0.02251495491345079,
+        "factor": 0.9576575239580506,
+        "se": 0.02156161597444243
+      },
+      "京セラD大阪": {
+        "_raw_ratio": 1.0077924235900682,
+        "n_player_seasons": 118,
+        "ab": 7794,
+        "here_rate": 0.2631511419040287,
+        "elsewhere_rate": 0.26111641221374043,
+        "_rel_se": 0.02065831137157418,
+        "factor": 1.006632858673639,
+        "se": 0.02079533503133786
+      },
+      "PayPayドーム": {
+        "_raw_ratio": 1.0190830721433615,
+        "n_player_seasons": 33,
+        "ab": 2518,
+        "here_rate": 0.26290706910246225,
+        "elsewhere_rate": 0.25798394290811777,
+        "_rel_se": 0.037013630333429144,
+        "factor": 1.0179105162184274,
+        "se": 0.0376765635598189
+      },
+      "ベルーナドーム": {
+        "_raw_ratio": 0.9629520553367422,
+        "n_player_seasons": 83,
+        "ab": 5409,
+        "here_rate": 0.2536513218709558,
+        "elsewhere_rate": 0.2634101256290008,
+        "_rel_se": 0.025292471163544147,
+        "factor": 0.9618440837014782,
+        "se": 0.02432741375084518
+      },
+      "楽天モバイル": {
+        "_raw_ratio": 1.0318741613841789,
+        "n_player_seasons": 98,
+        "ab": 6959,
+        "here_rate": 0.2665612875413134,
+        "elsewhere_rate": 0.25832732082732085,
+        "_rel_se": 0.02194757419878002,
+        "factor": 1.0306868880452422,
+        "se": 0.02262107695108263
+      },
+      "ZOZOマリン": {
+        "_raw_ratio": 0.9862496621764723,
+        "n_player_seasons": 103,
+        "ab": 7171,
+        "here_rate": 0.25575233579696,
+        "elsewhere_rate": 0.25931804654063095,
+        "_rel_se": 0.02206271517471214,
+        "factor": 0.9851148843389629,
+        "se": 0.021734309107540033
+      },
+      "エスコンＦ": {
+        "_raw_ratio": 1.005383298188321,
+        "n_player_seasons": 103,
+        "ab": 7384,
+        "here_rate": 0.2611050920910076,
+        "elsewhere_rate": 0.25970701180486416,
+        "_rel_se": 0.021548267127405155,
+        "factor": 1.0042265052090784,
+        "se": 0.021639340990665747
+      },
+      "みずほPayPay": {
+        "_raw_ratio": 0.9744217753788114,
+        "n_player_seasons": 59,
+        "ab": 4213,
+        "here_rate": 0.2542131497745075,
+        "elsewhere_rate": 0.2608861544331569,
+        "_rel_se": 0.028835180362661795,
+        "factor": 0.9733006066955733,
+        "se": 0.028065298541155005
+      }
+    },
+    "_method": "同じ選手集団の合計で比を取る（その球場の率 ÷ 同じ選手たちの他球場での率）。選手ごとの比にすると本塁打0の選手を捨てることになり係数が上へ偏るため",
+    "_centering": "打数で重み付けした全球場平均が1になるよう基準化"
+  },
+  "xbh": {
+    "label": "長打（2B+3B+HR）",
+    "parks": {
+      "マツダスタジアム": {
+        "_raw_ratio": 0.9545951581522497,
+        "n_player_seasons": 96,
+        "ab": 7240,
+        "here_rate": 0.07292817679558011,
+        "elsewhere_rate": 0.07639696909498539,
+        "_rel_se": 0.0458138582942064,
+        "factor": 0.955998298695466,
+        "se": 0.043797970585936485
+      },
+      "神宮": {
+        "_raw_ratio": 1.3470336149063353,
+        "n_player_seasons": 102,
+        "ab": 6878,
+        "here_rate": 0.09697586507705729,
+        "elsewhere_rate": 0.07199216411819122,
+        "_rel_se": 0.04128656317930082,
+        "factor": 1.3490135929755818,
+        "se": 0.05569613493612196
+      },
+      "横浜": {
+        "_raw_ratio": 1.1195960654292494,
+        "n_player_seasons": 94,
+        "ab": 7004,
+        "here_rate": 0.08395202741290692,
+        "elsewhere_rate": 0.07498421082850089,
+        "_rel_se": 0.04372694275589238,
+        "factor": 1.1212417375427244,
+        "se": 0.04902847327304802
+      },
+      "甲子園": {
+        "_raw_ratio": 0.7790115863466425,
+        "n_player_seasons": 75,
+        "ab": 6151,
+        "here_rate": 0.06129084701674525,
+        "elsewhere_rate": 0.07867770915216171,
+        "_rel_se": 0.05385984021842344,
+        "factor": 0.780156640070311,
+        "se": 0.04201911197952904
+      },
+      "東京ドーム": {
+        "_raw_ratio": 1.0424961001058637,
+        "n_player_seasons": 90,
+        "ab": 6394,
+        "here_rate": 0.07929308726931499,
+        "elsewhere_rate": 0.0760607999025252,
+        "_rel_se": 0.04675478231819334,
+        "factor": 1.0440284445051742,
+        "se": 0.048813322656841414
+      },
+      "バンテリンドーム": {
+        "_raw_ratio": 0.8444523395381638,
+        "n_player_seasons": 96,
+        "ab": 6637,
+        "here_rate": 0.06478830797046858,
+        "elsewhere_rate": 0.07672227896946998,
+        "_rel_se": 0.05016333096021878,
+        "factor": 0.8456935833306772,
+        "se": 0.04242280711155012
+      },
+      "京セラD大阪": {
+        "_raw_ratio": 0.9896004445934148,
+        "n_player_seasons": 118,
+        "ab": 7794,
+        "here_rate": 0.07108031819348216,
+        "elsewhere_rate": 0.07182729007633588,
+        "_rel_se": 0.04455346162262898,
+        "factor": 0.9910550387148449,
+        "se": 0.04415493263329492
+      },
+      "PayPayドーム": {
+        "_raw_ratio": 1.1023866258179205,
+        "n_player_seasons": 33,
+        "ab": 2518,
+        "here_rate": 0.08260524225575853,
+        "elsewhere_rate": 0.07493309545049064,
+        "_rel_se": 0.07424164494667355,
+        "factor": 1.1040070021164747,
+        "se": 0.0819632958697728
+      },
+      "ベルーナドーム": {
+        "_raw_ratio": 0.9097694146933472,
+        "n_player_seasons": 83,
+        "ab": 5409,
+        "here_rate": 0.06692549454612683,
+        "elsewhere_rate": 0.07356313969807962,
+        "_rel_se": 0.054851210196262636,
+        "factor": 0.9111066667628059,
+        "se": 0.04997530328982289
+      },
+      "楽天モバイル": {
+        "_raw_ratio": 0.8081360834207338,
+        "n_player_seasons": 98,
+        "ab": 6959,
+        "here_rate": 0.05906020980025866,
+        "elsewhere_rate": 0.07308201058201058,
+        "_rel_se": 0.0516786420051678,
+        "factor": 0.8093239466666344,
+        "se": 0.04182476250599452
+      },
+      "ZOZOマリン": {
+        "_raw_ratio": 1.0753136699259478,
+        "n_player_seasons": 103,
+        "ab": 7171,
+        "here_rate": 0.07586110723748431,
+        "elsewhere_rate": 0.0705478869646552,
+        "_rel_se": 0.045521518425496815,
+        "factor": 1.0768942522220788,
+        "se": 0.04902186154483897
+      },
+      "エスコンＦ": {
+        "_raw_ratio": 1.0942173490188856,
+        "n_player_seasons": 103,
+        "ab": 7384,
+        "here_rate": 0.0790899241603467,
+        "elsewhere_rate": 0.07227990328545016,
+        "_rel_se": 0.04406814276829465,
+        "factor": 1.095825717459043,
+        "se": 0.04829100416615401
+      },
+      "みずほPayPay": {
+        "_raw_ratio": 1.1028973506282542,
+        "n_player_seasons": 59,
+        "ab": 4213,
+        "here_rate": 0.07643009731782578,
+        "elsewhere_rate": 0.06929937520866122,
+        "_rel_se": 0.059234844152811696,
+        "factor": 1.1045184776311063,
+        "se": 0.06542597988637941
+      }
+    },
+    "_method": "同じ選手集団の合計で比を取る（その球場の率 ÷ 同じ選手たちの他球場での率）。選手ごとの比にすると本塁打0の選手を捨てることになり係数が上へ偏るため",
+    "_centering": "打数で重み付けした全球場平均が1になるよう基準化"
+  },
+  "historical": {
+    "_comment": "Web収集した2006-2022年の球場係数を、自前の実測(2023-2025)と同じ目盛りへ揃えたもの",
+    "_source": "NF3 年度別球場データ（Codexが2026-08-05に収集。出典URLは各値に保持）",
+    "_why_scaled": "収集値は一般的なパークファクター（チーム単位の比）、自前の実測は同一打者内の比。後者の方が幅が広い（標準偏差 0.414 vs 0.232）。そのまま混ぜると2022年以前だけ補正が弱くなるため、幅の比だけを掛けて揃えた。順位・中心は変えない",
+    "_scaling": {
+      "ratio": 1.7856178927748154,
+      "formula": "揃えた値 = 1.0 + (収集値 - 1.0) × ratio"
+    },
+    "_agreement": {
+      "compared_seasons": {
+        "web": 2022,
+        "own": "2023-2025"
+      },
+      "parks": 11,
+      "rank_correlation": 0.8785204882385548
+    },
+    "_assumption": "★比較に使った年が重なっていない（収集2022 vs 実測2023-25）。「球場の性質は1年で大きく変わらない」という仮定に依存する。実際、神宮・みずほPayPay・ベルーナドーム・楽天モバイル・ZOZOマリン は0.2以上動いており、この球場では仮定が成り立っていない可能性がある（11球場中5球場）",
+    "_status": "★暫定。年が重なるデータが手に入れば揃え方を測り直すこと",
+    "bySeason": {
+      "2006": {
+        "バンテリンドーム": {
+          "factor": 0.12504723254034045,
+          "_raw": 0.51,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "甲子園": {
+          "factor": 0.6964449582282812,
+          "_raw": 0.83,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "神宮": {
+          "factor": 2.142795451375882,
+          "_raw": 1.64,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "東京ドーム": {
+          "factor": 1.732103336037674,
+          "_raw": 1.41,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "広島": {
+          "factor": 2.3749257774366077,
+          "_raw": 1.77,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "横浜": {
+          "factor": 1.249986504988474,
+          "_raw": 1.14,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "札幌ドーム": {
+          "factor": 0.5178831689507999,
+          "_raw": 0.73,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "インボイス": {
+          "factor": 1.0535685367832446,
+          "_raw": 1.03,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "ヤフードーム": {
+          "factor": 0.3393213796733183,
+          "_raw": 0.63,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "千葉マリン": {
+          "factor": 0.6250202425172888,
+          "_raw": 0.79,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "スカイマーク": {
+          "factor": 1.0357123578554963,
+          "_raw": 1.02,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "フルスタ宮城": {
+          "factor": 1.0535685367832446,
+          "_raw": 1.03,
+          "source_url": "https://nf3.sakura.ne.jp/2006/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        }
+      },
+      "2007": {
+        "東京ドーム": {
+          "factor": 1.6785347992544297,
+          "_raw": 1.38,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "バンテリンドーム": {
+          "factor": 0.25004048503457743,
+          "_raw": 0.58,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "甲子園": {
+          "factor": 0.5000269900230516,
+          "_raw": 0.72,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "横浜": {
+          "factor": 1.732103336037674,
+          "_raw": 1.41,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "広島": {
+          "factor": 1.5356853678324447,
+          "_raw": 1.3,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "神宮": {
+          "factor": 2.0535145567371416,
+          "_raw": 1.59,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "札幌ドーム": {
+          "factor": 0.41074609538431095,
+          "_raw": 0.67,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "千葉マリン": {
+          "factor": 1.0714247157109926,
+          "_raw": 1.04,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "ヤフードーム": {
+          "factor": 0.7143011371560295,
+          "_raw": 0.84,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "フルスタ宮城": {
+          "factor": 0.5000269900230516,
+          "_raw": 0.72,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "グッドウィル": {
+          "factor": 1.0178561789277483,
+          "_raw": 1.01,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "京セラドーム": {
+          "factor": 0.767869673939274,
+          "_raw": 0.87,
+          "source_url": "https://nf3.sakura.ne.jp/2007/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        }
+      },
+      "2008": {
+        "東京ドーム": {
+          "factor": 2.2320763460146225,
+          "_raw": 1.69,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "甲子園": {
+          "factor": -0.07137073566488916,
+          "_raw": 0.4,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "バンテリンドーム": {
+          "factor": 0.4643146321675553,
+          "_raw": 0.7,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "広島": {
+          "factor": 1.5892539046156893,
+          "_raw": 1.33,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "神宮": {
+          "factor": 0.9821438210722518,
+          "_raw": 0.99,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "横浜": {
+          "factor": 1.5356853678324447,
+          "_raw": 1.3,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "西武ドーム": {
+          "factor": 1.2856988628439703,
+          "_raw": 1.16,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "京セラドーム": {
+          "factor": 0.6250202425172888,
+          "_raw": 0.79,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "札幌ドーム": {
+          "factor": 0.5893078846617925,
+          "_raw": 0.77,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "千葉マリン": {
+          "factor": 0.7857258528670221,
+          "_raw": 0.88,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "Ｋスタ宮城": {
+          "factor": 1.5178291889046966,
+          "_raw": 1.29,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "ヤフードーム": {
+          "factor": 0.5178831689507999,
+          "_raw": 0.73,
+          "source_url": "https://nf3.sakura.ne.jp/2008/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        }
+      },
+      "2009": {
+        "東京ドーム": {
+          "factor": 1.7499595149654223,
+          "_raw": 1.42,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "バンテリンドーム": {
+          "factor": 0.23218430610682927,
+          "_raw": 0.57,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "神宮": {
+          "factor": 1.4464044731937038,
+          "_raw": 1.25,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "甲子園": {
+          "factor": 0.9821438210722518,
+          "_raw": 0.99,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "マツダスタジアム": {
+          "factor": 0.6607326003727851,
+          "_raw": 0.81,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "横浜": {
+          "factor": 1.6071100835434375,
+          "_raw": 1.34,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "札幌ドーム": {
+          "factor": 0.8571505685780149,
+          "_raw": 0.92,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "Ｋスタ宮城": {
+          "factor": 0.5714517057340442,
+          "_raw": 0.76,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "ヤフードーム": {
+          "factor": 0.7500134950115258,
+          "_raw": 0.86,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "西武ドーム": {
+          "factor": 1.0357123578554963,
+          "_raw": 1.02,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "千葉マリン": {
+          "factor": 0.48217081109530346,
+          "_raw": 0.71,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "京セラドーム": {
+          "factor": 0.8214382107225184,
+          "_raw": 0.9,
+          "source_url": "https://nf3.sakura.ne.jp/2009/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        }
+      },
+      "2010": {
+        "バンテリンドーム": {
+          "factor": 0.3393213796733183,
+          "_raw": 0.63,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "甲子園": {
+          "factor": 0.6607326003727851,
+          "_raw": 0.81,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "東京ドーム": {
+          "factor": 1.7856718728209187,
+          "_raw": 1.44,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "神宮": {
+          "factor": 1.7678156938931706,
+          "_raw": 1.43,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "マツダスタジアム": {
+          "factor": 1.1607056103497335,
+          "_raw": 1.09,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "横浜": {
+          "factor": 1.464260652121452,
+          "_raw": 1.26,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "ヤフードーム": {
+          "factor": 0.892862926433511,
+          "_raw": 0.94,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "西武ドーム": {
+          "factor": 0.9285752842890074,
+          "_raw": 0.96,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "千葉マリン": {
+          "factor": 0.3571775586010665,
+          "_raw": 0.64,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "札幌ドーム": {
+          "factor": 0.5178831689507999,
+          "_raw": 0.73,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "京セラD大阪": {
+          "factor": 1.2321303260607257,
+          "_raw": 1.13,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "Ｋスタ宮城": {
+          "factor": 0.767869673939274,
+          "_raw": 0.87,
+          "source_url": "https://nf3.sakura.ne.jp/2010/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        }
+      },
+      "2011": {
+        "バンテリンドーム": {
+          "factor": -0.10708309352038548,
+          "_raw": 0.38,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "神宮": {
+          "factor": 2.2320763460146225,
+          "_raw": 1.69,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "東京ドーム": {
+          "factor": 1.5178291889046966,
+          "_raw": 1.29,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "甲子園": {
+          "factor": 0.5893078846617925,
+          "_raw": 0.77,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "マツダスタジアム": {
+          "factor": 0.9642876421445037,
+          "_raw": 0.98,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "横浜": {
+          "factor": 1.5178291889046966,
+          "_raw": 1.29,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "ヤフードーム": {
+          "factor": 0.6964449582282812,
+          "_raw": 0.83,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "札幌ドーム": {
+          "factor": 0.7321573160837777,
+          "_raw": 0.85,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "西武ドーム": {
+          "factor": 1.1785617892774818,
+          "_raw": 1.1,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "京セラD大阪": {
+          "factor": 1.3214112206994666,
+          "_raw": 1.18,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "Ｋスタ宮城": {
+          "factor": 0.6607326003727851,
+          "_raw": 0.81,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "QVCマリン": {
+          "factor": 0.7321573160837777,
+          "_raw": 0.85,
+          "source_url": "https://nf3.sakura.ne.jp/2011/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        }
+      },
+      "2012": {
+        "東京ドーム": {
+          "factor": 1.3392673996272149,
+          "_raw": 1.19,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "バンテリンドーム": {
+          "factor": 0.4643146321675553,
+          "_raw": 0.7,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "神宮": {
+          "factor": 2.3749257774366077,
+          "_raw": 1.77,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "マツダスタジアム": {
+          "factor": 0.5000269900230516,
+          "_raw": 0.72,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "甲子園": {
+          "factor": 0.48217081109530346,
+          "_raw": 0.71,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "横浜": {
+          "factor": 1.660678620326682,
+          "_raw": 1.37,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "札幌ドーム": {
+          "factor": 0.5178831689507999,
+          "_raw": 0.73,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "西武ドーム": {
+          "factor": 1.6249662624711856,
+          "_raw": 1.35,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "ヤフードーム": {
+          "factor": 0.44645845323980715,
+          "_raw": 0.69,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "Kスタ宮城": {
+          "factor": 0.12504723254034045,
+          "_raw": 0.51,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "QVCマリン": {
+          "factor": 1.4999730099769484,
+          "_raw": 1.28,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "京セラD大阪": {
+          "factor": 0.9107191053612591,
+          "_raw": 0.95,
+          "source_url": "https://nf3.sakura.ne.jp/2012/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        }
+      },
+      "2013": {
+        "東京ドーム": {
+          "factor": 1.821384230676415,
+          "_raw": 1.46,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "甲子園": {
+          "factor": 0.5714517057340442,
+          "_raw": 0.76,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "マツダスタジアム": {
+          "factor": 0.8214382107225184,
+          "_raw": 0.9,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "バンテリンドーム": {
+          "factor": 0.16075959039583676,
+          "_raw": 0.53,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "横浜": {
+          "factor": 1.5535415467601927,
+          "_raw": 1.31,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "神宮": {
+          "factor": 2.1249392724481337,
+          "_raw": 1.63,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "Kスタ宮城": {
+          "factor": 0.9642876421445037,
+          "_raw": 0.98,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "西武ドーム": {
+          "factor": 1.4999730099769484,
+          "_raw": 1.28,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "QVCマリン": {
+          "factor": 0.5535955268062962,
+          "_raw": 0.75,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "ヤフオクドーム": {
+          "factor": 0.5000269900230516,
+          "_raw": 0.72,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "京セラD大阪": {
+          "factor": 0.8571505685780149,
+          "_raw": 0.92,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "札幌ドーム": {
+          "factor": 0.4643146321675553,
+          "_raw": 0.7,
+          "source_url": "https://nf3.sakura.ne.jp/2013/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        }
+      },
+      "2014": {
+        "東京ドーム": {
+          "factor": 1.5535415467601927,
+          "_raw": 1.31,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "甲子園": {
+          "factor": 0.37503373752881464,
+          "_raw": 0.65,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "マツダスタジアム": {
+          "factor": 0.767869673939274,
+          "_raw": 0.87,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "バンテリンドーム": {
+          "factor": 0.32146520074557017,
+          "_raw": 0.62,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "横浜": {
+          "factor": 1.6071100835434375,
+          "_raw": 1.34,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "神宮": {
+          "factor": 1.8570965885319115,
+          "_raw": 1.48,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "ヤフオクドーム": {
+          "factor": 0.4643146321675553,
+          "_raw": 0.7,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "京セラD大阪": {
+          "factor": 1.0714247157109926,
+          "_raw": 1.04,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "札幌ドーム": {
+          "factor": 0.8035820317947704,
+          "_raw": 0.89,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "QVCマリン": {
+          "factor": 0.7857258528670221,
+          "_raw": 0.88,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "西武ドーム": {
+          "factor": 1.3035550417717185,
+          "_raw": 1.17,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "コボスタ宮城": {
+          "factor": 1.249986504988474,
+          "_raw": 1.14,
+          "source_url": "https://nf3.sakura.ne.jp/2014/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        }
+      },
+      "2015": {
+        "神宮": {
+          "factor": 1.714247157109926,
+          "_raw": 1.4,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "東京ドーム": {
+          "factor": 1.3928359364104592,
+          "_raw": 1.22,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "甲子園": {
+          "factor": 0.3928899164565628,
+          "_raw": 0.66,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "マツダスタジアム": {
+          "factor": 0.892862926433511,
+          "_raw": 0.94,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "バンテリンドーム": {
+          "factor": 0.23218430610682927,
+          "_raw": 0.57,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "横浜": {
+          "factor": 1.8928089463874076,
+          "_raw": 1.5,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "ヤフオクドーム": {
+          "factor": 1.8570965885319115,
+          "_raw": 1.48,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "札幌ドーム": {
+          "factor": 0.6250202425172888,
+          "_raw": 0.79,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "QVCマリン": {
+          "factor": 0.6785887793005332,
+          "_raw": 0.82,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "西武プリンス": {
+          "factor": 1.3035550417717185,
+          "_raw": 1.17,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "京セラD大阪": {
+          "factor": 0.5714517057340442,
+          "_raw": 0.76,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        },
+        "コボスタ宮城": {
+          "factor": 0.9821438210722518,
+          "_raw": 0.99,
+          "source_url": "https://nf3.sakura.ne.jp/2015/Stats/team_etc.htm",
+          "source_name": "プロ野球ヌルデータ置き場f3"
+        }
+      },
+      "2016": {
+        "マツダスタジアム": {
+          "factor": 0.9642876421445037,
+          "_raw": 0.98,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "東京ドーム": {
+          "factor": 1.0535685367832446,
+          "_raw": 1.03,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "横浜": {
+          "factor": 1.4106921153382075,
+          "_raw": 1.23,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "甲子園": {
+          "factor": 0.5714517057340442,
+          "_raw": 0.76,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "神宮": {
+          "factor": 2.517775208858593,
+          "_raw": 1.85,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "バンテリンドーム": {
+          "factor": 0.21432812717908134,
+          "_raw": 0.56,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "札幌ドーム": {
+          "factor": 0.48217081109530346,
+          "_raw": 0.71,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "みずほPayPay": {
+          "factor": 2.267788703870119,
+          "_raw": 1.71,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "ZOZOマリン": {
+          "factor": 0.17861576932358492,
+          "_raw": 0.54,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "ベルーナドーム": {
+          "factor": 1.2321303260607257,
+          "_raw": 1.13,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "楽天モバイル": {
+          "factor": 1.4285482942659558,
+          "_raw": 1.24,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        },
+        "京セラD大阪": {
+          "factor": 0.2678966639623256,
+          "_raw": 0.59,
+          "source_url": "https://baseball-chronicle.jp/stadium/2016",
+          "source_name": "Baseball Chronicle"
+        }
+      },
+      "2017": {
+        "マツダスタジアム": {
+          "factor": 0.9464314632167555,
+          "_raw": 0.97,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "甲子園": {
+          "factor": 0.44645845323980715,
+          "_raw": 0.69,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "横浜": {
+          "factor": 1.571397725687941,
+          "_raw": 1.32,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "東京ドーム": {
+          "factor": 1.464260652121452,
+          "_raw": 1.26,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "バンテリンドーム": {
+          "factor": 0.44645845323980715,
+          "_raw": 0.69,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "神宮": {
+          "factor": 2.0892269145926377,
+          "_raw": 1.61,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "みずほPayPay": {
+          "factor": 1.3749797574827112,
+          "_raw": 1.21,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "ベルーナドーム": {
+          "factor": 1.5178291889046966,
+          "_raw": 1.29,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "楽天モバイル": {
+          "factor": 1.107137073566489,
+          "_raw": 1.06,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "京セラD大阪": {
+          "factor": 0.5178831689507999,
+          "_raw": 0.73,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "札幌ドーム": {
+          "factor": 0.642876421445037,
+          "_raw": 0.8,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        },
+        "ZOZOマリン": {
+          "factor": 0.2678966639623256,
+          "_raw": 0.59,
+          "source_url": "https://baseball-chronicle.jp/stadium/2017",
+          "source_name": "Baseball Chronicle"
+        }
+      },
+      "2018": {
+        "マツダスタジアム": {
+          "factor": 0.9285752842890074,
+          "_raw": 0.96,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "神宮": {
+          "factor": 2.3570695985088594,
+          "_raw": 1.76,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "東京ドーム": {
+          "factor": 1.2678426839162222,
+          "_raw": 1.15,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "横浜": {
+          "factor": 1.4464044731937038,
+          "_raw": 1.25,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "バンテリンドーム": {
+          "factor": 0.19647194825133318,
+          "_raw": 0.55,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "甲子園": {
+          "factor": 0.32146520074557017,
+          "_raw": 0.62,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "ベルーナドーム": {
+          "factor": 1.4285482942659558,
+          "_raw": 1.24,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "みずほPayPay": {
+          "factor": 1.1785617892774818,
+          "_raw": 1.1,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "札幌ドーム": {
+          "factor": 0.4286022743120591,
+          "_raw": 0.68,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "京セラD大阪": {
+          "factor": 0.9107191053612591,
+          "_raw": 0.95,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "ZOZOマリン": {
+          "factor": 0.6785887793005332,
+          "_raw": 0.82,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        },
+        "楽天モバイル": {
+          "factor": 1.0535685367832446,
+          "_raw": 1.03,
+          "source_url": "https://baseball-chronicle.jp/stadium/2018",
+          "source_name": "Baseball Chronicle"
+        }
+      },
+      "2019": {
+        "東京ドーム": {
+          "factor": 1.9285213042429041,
+          "_raw": 1.52,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "横浜": {
+          "factor": 1.249986504988474,
+          "_raw": 1.14,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "甲子園": {
+          "factor": 0.6250202425172888,
+          "_raw": 0.79,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "マツダスタジアム": {
+          "factor": 0.6071640635895407,
+          "_raw": 0.78,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "バンテリンドーム": {
+          "factor": 0.07147869575709598,
+          "_raw": 0.48,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "神宮": {
+          "factor": 1.9285213042429041,
+          "_raw": 1.52,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "ベルーナドーム": {
+          "factor": 1.1607056103497335,
+          "_raw": 1.09,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "みずほPayPay": {
+          "factor": 1.7499595149654223,
+          "_raw": 1.42,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "楽天モバイル": {
+          "factor": 0.8571505685780149,
+          "_raw": 0.92,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "ZOZOマリン": {
+          "factor": 0.9642876421445037,
+          "_raw": 0.98,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "札幌ドーム": {
+          "factor": 0.5178831689507999,
+          "_raw": 0.73,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        },
+        "京セラD大阪": {
+          "factor": 0.4286022743120591,
+          "_raw": 0.68,
+          "source_url": "https://baseball-chronicle.jp/stadium/2019",
+          "source_name": "Baseball Chronicle"
+        }
+      },
+      "2020": {
+        "東京ドーム": {
+          "factor": 1.1964179682052298,
+          "_raw": 1.11,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "甲子園": {
+          "factor": 0.8035820317947704,
+          "_raw": 0.89,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "バンテリンドーム": {
+          "factor": 0.5357393478785479,
+          "_raw": 0.74,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "横浜": {
+          "factor": 1.1428494314219853,
+          "_raw": 1.08,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "マツダスタジアム": {
+          "factor": 0.642876421445037,
+          "_raw": 0.8,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "神宮": {
+          "factor": 1.8570965885319115,
+          "_raw": 1.48,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "みずほPayPay": {
+          "factor": 1.3571235785549631,
+          "_raw": 1.2,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "ZOZOマリン": {
+          "factor": 1.3571235785549631,
+          "_raw": 1.2,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "ベルーナドーム": {
+          "factor": 0.7857258528670221,
+          "_raw": 0.88,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "楽天モバイル": {
+          "factor": 1.2321303260607257,
+          "_raw": 1.13,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "札幌ドーム": {
+          "factor": 0.41074609538431095,
+          "_raw": 0.67,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        },
+        "京セラD大阪": {
+          "factor": 0.875006747505763,
+          "_raw": 0.93,
+          "source_url": "https://baseball-chronicle.jp/stadium/2020",
+          "source_name": "Baseball Chronicle"
+        }
+      },
+      "2021": {
+        "神宮": {
+          "factor": 1.6071100835434375,
+          "_raw": 1.34,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "甲子園": {
+          "factor": 0.9285752842890074,
+          "_raw": 0.96,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "東京ドーム": {
+          "factor": 1.5535415467601927,
+          "_raw": 1.31,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "マツダスタジアム": {
+          "factor": 0.48217081109530346,
+          "_raw": 0.71,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "バンテリンドーム": {
+          "factor": 0.37503373752881464,
+          "_raw": 0.65,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "横浜": {
+          "factor": 1.089280894638741,
+          "_raw": 1.05,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "京セラD大阪": {
+          "factor": 0.6250202425172888,
+          "_raw": 0.79,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "ZOZOマリン": {
+          "factor": 1.714247157109926,
+          "_raw": 1.4,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "楽天モバイル": {
+          "factor": 0.3393213796733183,
+          "_raw": 0.63,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "みずほPayPay": {
+          "factor": 1.6785347992544297,
+          "_raw": 1.38,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "札幌ドーム": {
+          "factor": 0.6071640635895407,
+          "_raw": 0.78,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        },
+        "ベルーナドーム": {
+          "factor": 0.9107191053612591,
+          "_raw": 0.95,
+          "source_url": "https://baseball-chronicle.jp/stadium/2021",
+          "source_name": "Baseball Chronicle"
+        }
+      },
+      "2022": {
+        "神宮": {
+          "factor": 1.8392404096041632,
+          "_raw": 1.47,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "横浜": {
+          "factor": 0.8571505685780149,
+          "_raw": 0.92,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "甲子園": {
+          "factor": 0.48217081109530346,
+          "_raw": 0.71,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "東京ドーム": {
+          "factor": 1.4821168310492001,
+          "_raw": 1.27,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "マツダスタジアム": {
+          "factor": 0.8392943896502667,
+          "_raw": 0.91,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "バンテリンドーム": {
+          "factor": 0.5357393478785479,
+          "_raw": 0.74,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "京セラD大阪": {
+          "factor": 0.7321573160837777,
+          "_raw": 0.85,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "みずほPayPay": {
+          "factor": 1.3571235785549631,
+          "_raw": 1.2,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "ベルーナドーム": {
+          "factor": 1.1249932524942372,
+          "_raw": 1.07,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "楽天モバイル": {
+          "factor": 1.0178561789277483,
+          "_raw": 1.01,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "ZOZOマリン": {
+          "factor": 0.8214382107225184,
+          "_raw": 0.9,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        },
+        "札幌ドーム": {
+          "factor": 0.48217081109530346,
+          "_raw": 0.71,
+          "source_url": "https://baseball-chronicle.jp/stadium/2022",
+          "source_name": "Baseball Chronicle"
+        }
+      }
+    },
+    "_usable_range": "★係数は2006-2022年ぶんあるが、**実際に補正できるのは2020年以降**。選手ごとの補正には「その選手がどの球場で何打数立ったか」が要るところ、球場別の打数は NF3 が2023-2025年、1球データ（npb_pbp）が2020-2026年しか無い。2006-2019年は係数だけあって使えない状態。この年代を補正するには球場別の打席数を別経路で入手する必要がある（未着手）",
+    "_assumption_detail": "幅を揃える比 1.786 は2022年(収集)と2023-25年(実測)の11球場から求めた。年が重なっていないため「球場の性質は1年で大きく変わらない」に依存する。★11球場中5球場で0.2以上動いている（神宮1.47→1.99 / みずほPayPay1.2→1.41 / ベルーナ1.07→0.80 / 楽天モバイル1.01→0.74 / ZOZOマリン0.9→1.10）。半数近くで仮定が疑わしく、この揃え方は暫定と考えるべき"
+  }
+}

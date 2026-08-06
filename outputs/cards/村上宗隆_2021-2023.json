@@ -1,0 +1,647 @@
+{
+  "player_id": "41845136",
+  "name_ja": "村上 宗隆",
+  "name_en": null,
+  "card_type": "prime_composite",
+  "season_label": null,
+  "seasons_used": [
+    2021,
+    2022,
+    2023
+  ],
+  "team": "東京ヤクルトスワローズ",
+  "league": "セ",
+  "team_games": 143,
+  "primary_position": "三",
+  "secondary_positions": [
+    "3B",
+    "1B"
+  ],
+  "bats": null,
+  "throws": null,
+  "source_freeze_commit": null,
+  "ratings": {
+    "meet": 65,
+    "power": 97.2,
+    "contact": 33.6,
+    "eye": 80.6,
+    "power_display": 97.2,
+    "game_convention_adjustments": [],
+    "speed": 45.8,
+    "stealing": 51.2,
+    "baserunning": 64.1,
+    "fielding": [
+      {
+        "pos": "3B",
+        "innings": 1215.7,
+        "is_primary": true,
+        "fielding": 49.5,
+        "catching": 47.8,
+        "arm": 48.8,
+        "arm_is_estimated": true,
+        "aptitude": "A",
+        "catcher": null
+      },
+      {
+        "pos": "1B",
+        "innings": 5,
+        "is_primary": false,
+        "fielding": 50.8,
+        "catching": 50.2,
+        "arm": 48.8,
+        "arm_is_estimated": true,
+        "aptitude": "D",
+        "catcher": null
+      }
+    ]
+  },
+  "composition": {
+    "method": "rolling_weighted_posterior",
+    "description": "連続3年（2021-2023）の成績を、各年の率を基準年環境へ補正した上で1つの標本として合算。重みは打数のみ",
+    "windowSelection": "得点貢献の合計が最大になる連続窓を全位置から選択（合計 190.2点）",
+    "rejectedAlternative": "0.50×Best3 + 0.30×Best1 + 0.20×Best5（Sol仕様02 §3.2でREJECTED。係数が未校正で、飛び飛びの好成績年を拾うと上振れの寄せ集めになるため）",
+    "noArbitraryCoefficients": true
+  },
+  "confidence": {
+    "sample": "A",
+    "source_quality": "B",
+    "context_match": "D",
+    "prior_quality": "A",
+    "game_calibration": "D",
+    "overall": "B",
+    "_note": null,
+    "_legend": "A=直接計測・十分サンプル・完全文脈 / B=公式集計・一部近似 / C=周辺値 / D=推定が大きい"
+  },
+  "calc_log": {
+    "inputs": {
+      "PA": 1824,
+      "AB": 1483,
+      "H": 433,
+      "B2": 72,
+      "B3": 1,
+      "HR": 154,
+      "BB": 314,
+      "HBP": 20,
+      "SO": 429,
+      "SH": 0,
+      "SF": 7,
+      "GDP": 25,
+      "SB": 29,
+      "CS": 17
+    },
+    "context_tier": "C",
+    "environment": {
+      "reference_season": 2019,
+      "applied": true,
+      "gamma_avg": 0.91,
+      "gamma_hr_used": 0.118,
+      "_gamma_hr_note": "本塁打のgammaは水準別（強打者ほど環境に流されない）。実測=中央値1.106/上位5%0.626/上位1%0.118",
+      "league_avg": 0.24264770432797822,
+      "league_hr_rate": 0.02194715125976648,
+      "ref_avg": 0.25205702506539174,
+      "ref_hr_rate": 0.029240069982158015
+    },
+    "prior": {
+      "kind": "self_recent",
+      "basis": "一軍周辺5年・重み計1552",
+      "avg": 0.28975171137024736,
+      "hr": 0.11609249323942628
+    },
+    "shrinkage": {
+      "kappa_meet": 300,
+      "kappa_power": 200,
+      "_method": "post = (AB×観測 + kappa×Prior)/(AB+kappa)（仕様03 §4.3）"
+    },
+    "meat": {
+      "context_avg": 0.29197572488199597,
+      "env_avg": 0.30226114897378953,
+      "post_avg": 0.3001563641835132,
+      "mean_ability": 65,
+      "adjustments": [
+        {
+          "component": "strikeout_red_delta",
+          "delta": 0,
+          "reason": "[調整不要] 本設計ではミートは打率から、三振率は独立のコンタクト能力から決めるため、三振の多さがミートを押し下げる構造が無い。戻す必要がない",
+          "source": null,
+          "provisional": false,
+          "informationSource": null
+        },
+        {
+          "component": "chance_delta",
+          "delta": 0,
+          "reason": "[調整不要] Tier C。得点圏の分割データ不足のため調整なし",
+          "source": null,
+          "provisional": false,
+          "informationSource": null
+        },
+        {
+          "component": "vs_left_delta",
+          "delta": 0,
+          "reason": "[調整不要] Tier C。対左右の分割データ不足のため調整なし",
+          "source": null,
+          "provisional": false,
+          "informationSource": null
+        },
+        {
+          "component": "power_interaction_delta",
+          "delta": 0,
+          "reason": "[調整不要] 打球中間層（外野フライは本塁打.089と同時に二塁打.149を生む）により、高パワーが打率に寄与する関係が式から導かれる。係数での上乗せは二重計上になる",
+          "source": null,
+          "provisional": false,
+          "informationSource": null
+        },
+        {
+          "component": "infield_hit_delta",
+          "delta": 0,
+          "reason": "[調整不要] 内野安打○の付与条件に達しないため、ゴロ単打はミートに含めたまま（仕様§7「ゼロ扱いにもしない」）",
+          "source": null,
+          "provisional": false,
+          "informationSource": null
+        }
+      ],
+      "final": 65
+    },
+    "power": {
+      "hr_rate": 0.10384356035064059,
+      "hr_500paeq_raw": 50.883344571813886,
+      "env": 52.73566969519504,
+      "post": 53.228795303290575,
+      "mean_ability": 97.2,
+      "_ab_ref": 490,
+      "_ab_ref_note": "基準打数。2026-08-01にオーナー承認で436.25→490（規定到達者の実平均）",
+      "adjustments": [
+        {
+          "component": "platoon_power_delta",
+          "delta": 0,
+          "reason": "[調整不要] 検証の結果、反映しないと決めた（configs/ratings.json special_abilities.base_reflection.power_from_platoon）。対左右の本塁打率差は観測の92.4%が雑音で、パワプロ141人との誤差も5.15→5.55と悪化した。対左の得能は表示側で従来どおり出る",
+          "source": null,
+          "provisional": false,
+          "informationSource": null
+        }
+      ],
+      "final": 97.2
+    },
+    "other_batting": {
+      "contact": 33.6,
+      "eye": 80.6
+    },
+    "running": {
+      "speed": 45.78961819144509,
+      "stealing": 51.15078783444022,
+      "baserunning": 64.10390873773126,
+      "_speed_z": -0.6135005650189053
+    },
+    "fielding": [
+      {
+        "pos": "3B",
+        "inn": 1215.7,
+        "isPrimary": true,
+        "fielding": {
+          "rating": 49.450078502189946,
+          "residZ": -0.0813535809076901,
+          "reliability": 0.4506431404529785,
+          "per1000": -1.8014312741630334,
+          "expected": -1.1054663838283336,
+          "speedAdjusted": true,
+          "note": null
+        },
+        "catching": {
+          "rating": 47.80171924862939,
+          "z": -0.5595547017431363,
+          "reliability": 0.26190835254324923,
+          "per1000": -2.2127169531956894,
+          "normBasis": "3B×2023年"
+        },
+        "arm": {
+          "rating": 48.805946889988675,
+          "z": -0.10579537768886478,
+          "reliability": 0.7524292876152752,
+          "is_estimated": true,
+          "basis": "守備位置からの推定（下限＝3Bを1216イニング）",
+          "estimation_method": "infield_position_prior_from_measured_of_arm",
+          "positions": [
+            {
+              "pos": "3B",
+              "inn": 1215.7
+            }
+          ]
+        },
+        "catcher": null,
+        "aptitude": {
+          "grade": "A",
+          "innings": 1215.7,
+          "is_primary": true,
+          "_legend": "A=主位置 / B=常時併用(128イニング以上) / C=時々(51以上) / D=わずか"
+        }
+      },
+      {
+        "pos": "1B",
+        "inn": 5,
+        "isPrimary": false,
+        "fielding": {
+          "rating": 50.82462512467416,
+          "residZ": 16.349567471872994,
+          "reliability": 0.0033624747814391394,
+          "per1000": 108.00000000000001,
+          "expected": -0.29848545952377525,
+          "speedAdjusted": true,
+          "note": null
+        },
+        "catching": {
+          "rating": 50.191680185563996,
+          "z": 8.768729555600867,
+          "reliability": 0.001457301078402798,
+          "per1000": 16,
+          "normBasis": "1B×2023年"
+        },
+        "arm": {
+          "rating": 48.805946889988675,
+          "z": -0.10579537768886478,
+          "reliability": 0.7524292876152752,
+          "is_estimated": true,
+          "basis": "守備位置からの推定（下限＝3Bを1216イニング）",
+          "estimation_method": "infield_position_prior_from_measured_of_arm",
+          "positions": [
+            {
+              "pos": "3B",
+              "inn": 1215.7
+            }
+          ]
+        },
+        "catcher": null,
+        "aptitude": {
+          "grade": "D",
+          "innings": 5,
+          "is_primary": false,
+          "_legend": "A=主位置 / B=常時併用(128イニング以上) / C=時々(51以上) / D=わずか"
+        }
+      }
+    ],
+    "special_abilities": [],
+    "run_field_log": {
+      "running": {
+        "primary_speed_metric": "UBR（走塁による得点貢献）",
+        "secondary_metrics": [
+          "三塁打率",
+          "内野安打率",
+          "併殺回避率"
+        ],
+        "_note": "Sprint Speedは公開が2026年以降のみのため第1階層を使えない（仕様04 §1の第2-3階層で代替）",
+        "speed_rating": 45.79,
+        "steal_attempt_rate": 0.025,
+        "steal_success_rate": 0.63,
+        "steal_residual_vs_speed": 0.097,
+        "stealing_ability": 51.151,
+        "baserunning_ability": 64.104,
+        "_speed_z": -0.614,
+        "_raw": {
+          "ubr": 0.96,
+          "wsb": -0.13
+        }
+      },
+      "fielding": [
+        {
+          "position": "3B",
+          "range_metric": "RngR（守備範囲による得点貢献）",
+          "range_component_only": -1.801,
+          "speed_rating_fixed": -0.614,
+          "inferred_fielding_rating": 49.45,
+          "error_rate": -2.213,
+          "catching_rating": 47.802,
+          "arm_metric": "守備位置からの推定（ARM実測なし）",
+          "arm_rating": 48.806,
+          "arm_is_estimated": true,
+          "throwing_error_rate": null,
+          "_throwing_error_note": "送球失策と捕球失策を分けたデータが公開されていないため未取得。総失策は肩へ入れない（仕様§4.3）",
+          "throwing_ability": null,
+          "_throwing_ability_note": "送球の精度は送球得能。専用データが無いため未査定（肩力で代用しない）",
+          "innings": 1215.7,
+          "confidence": 0.451,
+          "aptitude": "A"
+        },
+        {
+          "position": "1B",
+          "range_metric": "RngR（守備範囲による得点貢献）",
+          "range_component_only": 108,
+          "speed_rating_fixed": -0.614,
+          "inferred_fielding_rating": 50.825,
+          "error_rate": 16,
+          "catching_rating": 50.192,
+          "arm_metric": "守備位置からの推定（ARM実測なし）",
+          "arm_rating": 48.806,
+          "arm_is_estimated": true,
+          "throwing_error_rate": null,
+          "_throwing_error_note": "送球失策と捕球失策を分けたデータが公開されていないため未取得。総失策は肩へ入れない（仕様§4.3）",
+          "throwing_ability": null,
+          "_throwing_ability_note": "送球の精度は送球得能。専用データが無いため未査定（肩力で代用しない）",
+          "innings": 5,
+          "confidence": 0.003,
+          "aptitude": "D"
+        }
+      ],
+      "catcher": null
+    }
+  },
+  "provenance": {
+    "sources": [
+      "プロEYE球（基礎成績）",
+      "NPB Basement（走塁・守備・打球）"
+    ],
+    "estimated": [
+      "内野手の肩力は守備位置からの推定値（実測ではない）"
+    ],
+    "retrieved_note": "プロEYE球（https://proeyekyuu.com）／NPB Basement（https://npbbasement.com）",
+    "by_value": {
+      "meet": {
+        "value": 65,
+        "source_name": "プロEYE球",
+        "source_url": "https://proeyekyuu.com/ja/csvs-jp/",
+        "retrieved_at": "2026-07-31",
+        "season": 2023,
+        "league": null,
+        "context": "文脈Tier C（総合（対左右の分割が無い、または打数不足））",
+        "is_estimated": false,
+        "estimation_method": null,
+        "confidence": null,
+        "notes": "基礎成績（打撃・投手・守備）。公式集計の再計算"
+      },
+      "power": {
+        "value": 97.2,
+        "source_name": "プロEYE球",
+        "source_url": "https://proeyekyuu.com/ja/csvs-jp/",
+        "retrieved_at": "2026-07-31",
+        "season": 2023,
+        "league": null,
+        "context": "総合",
+        "is_estimated": false,
+        "estimation_method": null,
+        "confidence": null,
+        "notes": "基礎成績（打撃・投手・守備）。公式集計の再計算"
+      },
+      "contact": {
+        "value": 33.6,
+        "source_name": "プロEYE球",
+        "source_url": "https://proeyekyuu.com/ja/csvs-jp/",
+        "retrieved_at": "2026-07-31",
+        "season": 2023,
+        "league": null,
+        "context": null,
+        "is_estimated": false,
+        "estimation_method": null,
+        "confidence": null,
+        "notes": "基礎成績（打撃・投手・守備）。公式集計の再計算"
+      },
+      "eye": {
+        "value": 80.6,
+        "source_name": "プロEYE球",
+        "source_url": "https://proeyekyuu.com/ja/csvs-jp/",
+        "retrieved_at": "2026-07-31",
+        "season": 2023,
+        "league": null,
+        "context": null,
+        "is_estimated": false,
+        "estimation_method": null,
+        "confidence": null,
+        "notes": "基礎成績（打撃・投手・守備）。公式集計の再計算"
+      },
+      "speed": {
+        "value": 45.8,
+        "source_name": "NPB Basement",
+        "source_url": "https://npbbasement.com/",
+        "retrieved_at": "2026-07-31",
+        "season": 2023,
+        "league": null,
+        "context": null,
+        "is_estimated": true,
+        "estimation_method": "Sprint Speedが無いためUBR・三塁打率・内野安打から推定（仕様04 §1の第2-3階層）",
+        "confidence": null,
+        "notes": "高度指標（守備成分・打球性質・走塁・選球眼）。2020年以降のみ"
+      },
+      "stealing": {
+        "value": 51.2,
+        "source_name": "NPB Basement",
+        "source_url": "https://npbbasement.com/",
+        "retrieved_at": "2026-07-31",
+        "season": 2023,
+        "league": null,
+        "context": null,
+        "is_estimated": false,
+        "estimation_method": null,
+        "confidence": null,
+        "notes": "高度指標（守備成分・打球性質・走塁・選球眼）。2020年以降のみ"
+      },
+      "baserunning": {
+        "value": 64.1,
+        "source_name": "NPB Basement",
+        "source_url": "https://npbbasement.com/",
+        "retrieved_at": "2026-07-31",
+        "season": 2023,
+        "league": null,
+        "context": null,
+        "is_estimated": false,
+        "estimation_method": null,
+        "confidence": null,
+        "notes": "高度指標（守備成分・打球性質・走塁・選球眼）。2020年以降のみ"
+      },
+      "fielding_3B": {
+        "value": {
+          "fielding": 49.5,
+          "catching": 47.8,
+          "arm": 48.8
+        },
+        "source_name": "本プロジェクトの較正",
+        "source_url": null,
+        "retrieved_at": "2026-08-01",
+        "season": 2023,
+        "league": null,
+        "context": null,
+        "is_estimated": true,
+        "estimation_method": "infield_position_prior_from_measured_of_arm",
+        "confidence": null,
+        "notes": "守備位置からの推定（下限＝3Bを1216イニング）"
+      },
+      "fielding_1B": {
+        "value": {
+          "fielding": 50.8,
+          "catching": 50.2,
+          "arm": 48.8
+        },
+        "source_name": "本プロジェクトの較正",
+        "source_url": null,
+        "retrieved_at": "2026-08-01",
+        "season": 2023,
+        "league": null,
+        "context": null,
+        "is_estimated": true,
+        "estimation_method": "infield_position_prior_from_measured_of_arm",
+        "confidence": null,
+        "notes": "守備位置からの推定（下限＝3Bを1216イニング）"
+      }
+    }
+  },
+  "unresolved": [
+    "対左右・得点圏の分割成績が無い年のため、チャンス・対左の得能は未査定"
+  ],
+  "generated_by": "pawapuro-pennant appraisal v0 (2026-08-01)",
+  "ability_evidence": {
+    "_direct_measurement_status": {
+      "available": false,
+      "source_candidate": "NPB+（日本野球機構公認アプリ、2026-02-26正式サービス開始）",
+      "fields": [
+        "スプリントスピード",
+        "最速一塁到達タイム",
+        "最高送球速度",
+        "打球速度",
+        "打球角度",
+        "バレル率"
+      ],
+      "coverage": "実質2025年以降。それ以前への遡及提供は未確認",
+      "blocker": "利用規約がBOT等による操作とリバースエンジニアリングを禁止。一括取得は行わない。取得可否と方法はオーナー判断（NPBへの許諾照会を含む）",
+      "_recorded_at": "2026-08-01"
+    },
+    "走力": {
+      "ability": "走力",
+      "posterior_rating": 45.8,
+      "confidence": 0.12,
+      "direct_measurement": null,
+      "scouting_prior": null,
+      "outcome_proxies": {
+        "value": 45.8,
+        "components": [
+          "三塁打率",
+          "併殺回避率",
+          "UBR"
+        ],
+        "reliability": 0.35,
+        "_role": "直接測定を予測する説明変数。これ単独を能力値と断定しない（GPT回答 Q1/Q3）"
+      },
+      "provenance": {
+        "decided_by": "outcome_proxy",
+        "decided_by_label": "結果指標（成果から推定）",
+        "alternatives": [],
+        "note": "結果指標のみ。測りたい能力（純粋な脚力・肩の強さ）とは別の量を測っている点に注意"
+      }
+    },
+    "肩力": {
+      "ability": "肩力",
+      "posterior_rating": null,
+      "confidence": 0,
+      "direct_measurement": null,
+      "scouting_prior": null,
+      "outcome_proxies": null,
+      "provenance": {
+        "decided_by": null,
+        "note": "どの階層の証拠も無い"
+      }
+    }
+  },
+  "abilities": {
+    "_scale": "基礎能力・得能とも内部は100段階の連続値。rank は表示用の変換（オーナー確定 2026-08-01）",
+    "基礎能力": {
+      "弾道": {
+        "value": 3,
+        "scale": "1-4",
+        "_note": "打球のゴロ／ライナー／フライの構成比から逆算（仕様02 §7）。パワプロ143人で分布を較正"
+      },
+      "ミート": {
+        "value": 65.8,
+        "rank": "C",
+        "uncalibrated": 65,
+        "_scale": "パワプロ143人で中心と幅を較正済み"
+      },
+      "パワー": {
+        "value": 84.7,
+        "rank": "A",
+        "uncalibrated": 97.2,
+        "_scale": "パワプロ143人で中心と幅を較正済み"
+      },
+      "走力": {
+        "value": 58.9,
+        "rank": "D",
+        "uncalibrated": 45.8,
+        "_scale": "パワプロ143人で中心と幅を較正済み"
+      },
+      "肩力": {
+        "value": 48.8,
+        "rank": "E",
+        "is_estimated": true,
+        "basis": "守備位置からの推定（下限＝3Bを1216イニング）"
+      },
+      "守備力": {
+        "value": 49.5,
+        "rank": "E",
+        "position": "3B"
+      },
+      "捕球": {
+        "value": 47.8,
+        "rank": "E",
+        "position": "3B"
+      }
+    },
+    "独自の基礎能力": {
+      "三振のしにくさ": {
+        "value": 33.6,
+        "rank": "F",
+        "_note": "本家に無い独自項目。ゾーン別のコンタクト率から測る"
+      },
+      "選球眼": {
+        "value": 80.6,
+        "rank": "A",
+        "_note": "本家に無い独自項目（プロスピにはランクである）。ボール球に手を出さない度合い"
+      }
+    },
+    "得能": {
+      "チャンス": null,
+      "対左": null,
+      "盗塁": {
+        "value": 51.2,
+        "rank": "D"
+      },
+      "走塁": {
+        "value": 64.1,
+        "rank": "C"
+      },
+      "送球": null,
+      "けがしにくさ": {
+        "value": 67.7,
+        "rank": "C",
+        "rate": 1,
+        "_note": "規定の出場量に対してどれだけ出続けたか。能力への加点には使わない（仕様02 §8.2）"
+      }
+    },
+    "守備適性": [
+      {
+        "position": "3B",
+        "grade": "A",
+        "innings": 1215.7
+      },
+      {
+        "position": "1B",
+        "grade": "D",
+        "innings": 5
+      }
+    ],
+    "_fielding_by_position": [
+      {
+        "position": "3B",
+        "innings": 1215.7,
+        "is_primary": true,
+        "守備力": 49.5,
+        "捕球": 47.8
+      },
+      {
+        "position": "1B",
+        "innings": 5,
+        "is_primary": false,
+        "守備力": 50.8,
+        "捕球": 50.2
+      }
+    ],
+    "未査定": [
+      "送球（送球エラーだけを取り出したデータが公開されていない）",
+      "チャンス（得点圏の分割成績が無い年）",
+      "対左（対左右の分割成績が無い年）"
+    ]
+  },
+  "splits": null
+}

@@ -1,0 +1,465 @@
+{
+  "season": 2024,
+  "minPa": 200,
+  "players": 119,
+  "errors": {
+    "meet": {
+      "max": 0,
+      "p99": 0,
+      "median": 0,
+      "n": 119
+    },
+    "power": {
+      "max": 0,
+      "p99": 0,
+      "median": 0,
+      "n": 119
+    },
+    "contact": {
+      "max": 0,
+      "p99": 0,
+      "median": 0,
+      "n": 119
+    },
+    "eye": {
+      "max": 0,
+      "p99": 0,
+      "median": 0,
+      "n": 119
+    },
+    "avg": {
+      "max": 0.0001873417721519055,
+      "p99": 0.0001851239669420357,
+      "median": 0.00006738544474393926,
+      "n": 119
+    },
+    "hr": {
+      "max": 0.00009840905363293906,
+      "p99": 0.00009548773637896302,
+      "median": 0.00001766091051804558,
+      "n": 119
+    }
+  },
+  "sample": [
+    {
+      "name": "小郷　裕哉",
+      "pa": 642,
+      "avg": 0.25663716814159293,
+      "hr": 7,
+      "meet": 48.9,
+      "power": 46.2,
+      "contact": 44.3,
+      "eye": 66.8,
+      "observed": {
+        "avg": 0.25663716814159293,
+        "hrPer500": 6.070796460176991,
+        "soRate": 0.18691588785046728,
+        "bbRate": 0.1059190031152648,
+        "hbpRate": 0.004672897196261682,
+        "PA": 642,
+        "AB": 565,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.25663716814159293,
+          "hrPer500": 6.070796460176991
+        },
+        "preShrink": {
+          "avg": 0.25663716814159293,
+          "hrPer500": 6.070796460176991
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "近本　光司",
+      "pa": 639,
+      "avg": 0.2846975088967972,
+      "hr": 6,
+      "meet": 61.2,
+      "power": 43.3,
+      "contact": 56.6,
+      "eye": 67,
+      "observed": {
+        "avg": 0.2846975088967972,
+        "hrPer500": 5.2313167259786475,
+        "soRate": 0.14553990610328638,
+        "bbRate": 0.10641627543035993,
+        "hbpRate": 0.00782472613458529,
+        "PA": 639,
+        "AB": 562,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.2846975088967972,
+          "hrPer500": 5.2313167259786475
+        },
+        "preShrink": {
+          "avg": 0.2846975088967972,
+          "hrPer500": 5.2313167259786475
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "中野　拓夢",
+      "pa": 634,
+      "avg": 0.23217550274223034,
+      "hr": 1,
+      "meet": 40.7,
+      "power": 28.1,
+      "contact": 54.1,
+      "eye": 51.7,
+      "observed": {
+        "avg": 0.23217550274223034,
+        "hrPer500": 0.8957952468007313,
+        "soRate": 0.1529968454258675,
+        "bbRate": 0.07255520504731862,
+        "hbpRate": 0.007886435331230283,
+        "PA": 634,
+        "AB": 547,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.23217550274223034,
+          "hrPer500": 0.8957952468007313
+        },
+        "preShrink": {
+          "avg": 0.23217550274223034,
+          "hrPer500": 0.8957952468007313
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "岡本　和真",
+      "pa": 611,
+      "avg": 0.2803738317757009,
+      "hr": 27,
+      "meet": 60.1,
+      "power": 74.7,
+      "contact": 52.3,
+      "eye": 67.6,
+      "observed": {
+        "avg": 0.2803738317757009,
+        "hrPer500": 24.72897196261682,
+        "soRate": 0.15875613747954173,
+        "bbRate": 0.10801963993453355,
+        "hbpRate": 0.008183306055646482,
+        "PA": 611,
+        "AB": 535,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.2803738317757009,
+          "hrPer500": 24.72897196261682
+        },
+        "preShrink": {
+          "avg": 0.2803738317757009,
+          "hrPer500": 24.72897196261682
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "山川　穂高",
+      "pa": 611,
+      "avg": 0.24727272727272728,
+      "hr": 34,
+      "meet": 45.8,
+      "power": 80.2,
+      "contact": 28.3,
+      "eye": 54.8,
+      "observed": {
+        "avg": 0.24727272727272728,
+        "hrPer500": 30.290909090909093,
+        "soRate": 0.25859247135842883,
+        "bbRate": 0.07855973813420622,
+        "hbpRate": 0.016366612111292964,
+        "PA": 611,
+        "AB": 550,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.24727272727272728,
+          "hrPer500": 30.290909090909093
+        },
+        "preShrink": {
+          "avg": 0.24727272727272728,
+          "hrPer500": 30.290909090909093
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "長岡　秀樹",
+      "pa": 611,
+      "avg": 0.2879858657243816,
+      "hr": 6,
+      "meet": 62,
+      "power": 43.2,
+      "contact": 68.3,
+      "eye": 34.7,
+      "observed": {
+        "avg": 0.2879858657243816,
+        "hrPer500": 5.194346289752651,
+        "soRate": 0.11456628477905073,
+        "bbRate": 0.04746317512274959,
+        "hbpRate": 0.004909983633387889,
+        "PA": 611,
+        "AB": 566,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.2879858657243816,
+          "hrPer500": 5.194346289752651
+        },
+        "preShrink": {
+          "avg": 0.2879858657243816,
+          "hrPer500": 5.194346289752651
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "村上　宗隆",
+      "pa": 610,
+      "avg": 0.244,
+      "hr": 33,
+      "meet": 44.7,
+      "power": 81.5,
+      "contact": 21.8,
+      "eye": 86.3,
+      "observed": {
+        "avg": 0.244,
+        "hrPer500": 32.34,
+        "soRate": 0.29508196721311475,
+        "bbRate": 0.1721311475409836,
+        "hbpRate": 0.006557377049180328,
+        "PA": 610,
+        "AB": 500,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.244,
+          "hrPer500": 32.34
+        },
+        "preShrink": {
+          "avg": 0.244,
+          "hrPer500": 32.34
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "吉川　尚輝",
+      "pa": 602,
+      "avg": 0.2873134328358209,
+      "hr": 5,
+      "meet": 61.8,
+      "power": 41,
+      "contact": 74.4,
+      "eye": 49.1,
+      "observed": {
+        "avg": 0.2873134328358209,
+        "hrPer500": 4.570895522388059,
+        "soRate": 0.10132890365448505,
+        "bbRate": 0.0681063122923588,
+        "hbpRate": 0.009966777408637873,
+        "PA": 602,
+        "AB": 536,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.2873134328358209,
+          "hrPer500": 4.570895522388059
+        },
+        "preShrink": {
+          "avg": 0.2873134328358209,
+          "hrPer500": 4.570895522388059
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "細川　成也",
+      "pa": 600,
+      "avg": 0.29213483146067415,
+      "hr": 23,
+      "meet": 63,
+      "power": 71.1,
+      "contact": 27.1,
+      "eye": 64.5,
+      "observed": {
+        "avg": 0.29213483146067415,
+        "hrPer500": 21.10486891385768,
+        "soRate": 0.265,
+        "bbRate": 0.1,
+        "hbpRate": 0.008333333333333333,
+        "PA": 600,
+        "AB": 534,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.29213483146067415,
+          "hrPer500": 21.10486891385768
+        },
+        "preShrink": {
+          "avg": 0.29213483146067415,
+          "hrPer500": 21.10486891385768
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "栗原　陵矢",
+      "pa": 598,
+      "avg": 0.2732447817836812,
+      "hr": 20,
+      "meet": 56.6,
+      "power": 68.6,
+      "contact": 50.2,
+      "eye": 56.5,
+      "observed": {
+        "avg": 0.2732447817836812,
+        "hrPer500": 18.59582542694497,
+        "soRate": 0.16555183946488294,
+        "bbRate": 0.08193979933110368,
+        "hbpRate": 0.008361204013377926,
+        "PA": 598,
+        "AB": 527,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.2732447817836812,
+          "hrPer500": 18.59582542694497
+        },
+        "preShrink": {
+          "avg": 0.2732447817836812,
+          "hrPer500": 18.59582542694497
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "辰己　涼介",
+      "pa": 597,
+      "avg": 0.2942271880819367,
+      "hr": 7,
+      "meet": 63.6,
+      "power": 47.4,
+      "contact": 45.9,
+      "eye": 52.3,
+      "observed": {
+        "avg": 0.2942271880819367,
+        "hrPer500": 6.38733705772812,
+        "soRate": 0.18090452261306533,
+        "bbRate": 0.07370184254606366,
+        "hbpRate": 0.01340033500837521,
+        "PA": 597,
+        "AB": 537,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.2942271880819367,
+          "hrPer500": 6.38733705772812
+        },
+        "preShrink": {
+          "avg": 0.2942271880819367,
+          "hrPer500": 6.38733705772812
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    },
+    {
+      "name": "丸　佳浩",
+      "pa": 595,
+      "avg": 0.2780952380952381,
+      "hr": 14,
+      "meet": 59,
+      "power": 63.1,
+      "contact": 53.1,
+      "eye": 68.1,
+      "observed": {
+        "avg": 0.2780952380952381,
+        "hrPer500": 13.066666666666668,
+        "soRate": 0.15630252100840336,
+        "bbRate": 0.1092436974789916,
+        "hbpRate": 0.005042016806722689,
+        "PA": 595,
+        "AB": 525,
+        "avgContext": null,
+        "raw": {
+          "avg": 0.2780952380952381,
+          "hrPer500": 13.066666666666668
+        },
+        "preShrink": {
+          "avg": 0.2780952380952381,
+          "hrPer500": 13.066666666666668
+        },
+        "envApplied": false,
+        "parkFactor": null,
+        "parkSkipped": null,
+        "gammaUsed": null,
+        "kappaUsed": null,
+        "priorKind": null,
+        "priorBasis": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "errr": {
+    "n_pairs": 817,
+    "year_to_year_correlation": 0.09953305388046002,
+    "regular_regime": {
+      "min_innings": 500,
+      "n_pairs": 246,
+      "correlation": 0.20833770338650404,
+      "mean_innings": 901.6776422764228,
+      "kappa_from_reliability": 3426,
+      "_note": "細切れ起用を除いた regime での信頼度。ここから逆算した kappa は「縮小の下限側」"
+    },
+    "league_mean_prior": {
+      "best_kappa": 3725,
+      "mse": {
+        "no_shrinkage": 1.5887403952400307,
+        "kappa_400_current": 0.9844629408838587,
+        "best": 0.8788264520332909,
+        "everyone_at_average": 0.8884294948355087
+      },
+      "improvement_vs_current": 0.10730367235126848,
+      "beats_flat_average": true
+    },
+    "self_prior": {
+      "pairs_with_other_years": 695,
+      "best_kappa": 950,
+      "mse": 1.0462318624916864,
+      "improvement_vs_league_mean_prior": -0.1904874507032408,
+      "_note": "対象年と予測年を除いた本人の他年（同一ポジション）を守備イニングで加重平均したものをPriorにする（打撃の仕様02 §8.2と同じ考え方）"
+    },
+    "self_prior_verdict": "周辺年Priorでは改善しない（守備は年ごとのブレが大きく、他年も当てにならない）。リーグ平均への縮小を続ける",
+    "adopted_kappa": 3426,
+    "_kappa_bounds": {
+      "lower": 3426,
+      "upper": 3725,
+      "why_lower": "翌年予測の誤差を最小にする kappa（上限側）には、観測のブレだけでなく**本人の実力そのものの年変化**（加齢・守備位置の慣れ・起用の変化）が混ざる。その分だけ縮小しすぎになるため、同じ規模の標本の信頼度から逆算した下限側を採る"
+    }
+  },
+  "rngr": {
+    "n_pairs": 678,
+    "year_to_year_correlation": 0.15140814944513323,
+    "regular_regime": {
+      "min_innings": 500,
+      "n_pairs": 204,
+      "correlation": 0.385020787704642,
+      "mean_innings": 927.5426470588236,
+      "kappa_from_reliability": 1482,
+      "_note": "細切れ起用を除いた regime での信頼度。ここから逆算した kappa は「縮小の下限側」"
+    },
+    "league_mean_prior": {
+      "best_kappa": 2325,
+      "mse": {
+        "no_shrinkage": 1.3619983237351538,
+        "kappa_400_current": 0.8954528523690237,
+        "best": 0.8211238047871968,
+        "everyone_at_average": 0.842954549100266
+      },
+      "improvement_vs_current": 0.08300721515954843,
+      "beats_flat_average": true
+    },
+    "self_prior": {
+      "pairs_with_other_years": 566,
+      "best_kappa": 750,
+      "mse": 0.9558768515599558,
+      "improvement_vs_league_mean_prior": -0.16410807479595813,
+      "_note": "対象年と予測年を除いた本人の他年（同一ポジション）を守備イニングで加重平均したものをPriorにする（打撃の仕様02 §8.2と同じ考え方）"
+    },
+    "self_prior_verdict": "周辺年Priorでは改善しない（守備は年ごとのブレが大きく、他年も当てにならない）。リーグ平均への縮小を続ける",
+    "adopted_kappa": 1482,
+    "_kappa_bounds": {
+      "lower": 1482,
+      "upper": 2325,
+      "why_lower": "翌年予測の誤差を最小にする kappa（上限側）には、観測のブレだけでなく**本人の実力そのものの年変化**（加齢・守備位置の慣れ・起用の変化）が混ざる。その分だけ縮小しすぎになるため、同じ規模の標本の信頼度から逆算した下限側を採る"
+    }
+  }
+}

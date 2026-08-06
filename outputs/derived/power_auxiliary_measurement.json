@@ -1,0 +1,177 @@
+{
+  "_meta": {
+    "source_db": "data/pennant.db",
+    "source_db_sha256": "e33acc0bae4df1b44cee00e8bb3b6d0d4485ece55e247f4318f08bdd9aa088c7",
+    "specification": "docs/satei_handoff/02_CURRENT_SPEC_V2.md §6.4",
+    "evaluation_target": "翌年の環境補正済み実本塁打率",
+    "eligibility": "当年・翌年ともAB>=200",
+    "validation": "目的年を丸ごと1年ずつ除外して学習するleave-one-target-season-out",
+    "coefficient_policy": "係数は各学習fold内で推定。production設定へは書かない",
+    "adoption_policy": "採否は決めず測定結果のみ",
+    "konami_values_used": false
+  },
+  "availability": {
+    "ISO": "取得可: v_batting.b2,b3,hr,abから全期間で導出。bm_bat.isoにも直接列あり",
+    "SLG": "取得可: batting.slg / v_batting.tb,ab",
+    "2B/3B": "取得可: v_batting.b2,b3",
+    "Barrel%": "限定取得可: npb_plus_measurement.barrel_pct（2026途中のみ）",
+    "Hard-Hit%": "限定取得可: npb_plus_measurement.hard_hit_pct（2026途中のみ）",
+    "EV/Max EV": "限定取得可: npb_plus_measurement.exit_velo_avg,exit_velo_max（2026途中のみ）",
+    "xSLG": "取得不可: DB全表・ビューに該当列なし",
+    "HR/FB": "取得可: bm_bat.hr_fb_pct（2020-2026）",
+    "FB%": "導出可: bm_bat.offb_pct + bm_bat.iffb_pct（2020-2026）",
+    "Launch Angle": "限定取得可: npb_plus_measurement.launch_angle_avg（2026途中のみ）",
+    "Park Factor": "導出可: nf3_split.section=park のab,hrとoutputs/derived/park_factors.json（2023-2025）"
+  },
+  "coverage": {
+    "batting_non_pitchers": {
+      "rows": 9677,
+      "players": 1276,
+      "minSeason": 2006,
+      "maxSeason": 2025,
+      "extraBaseParts": 9270,
+      "slg": 9270
+    },
+    "bm_bat_one_gun": {
+      "rows": 2419,
+      "players": 661,
+      "minSeason": 2020,
+      "maxSeason": 2026,
+      "iso": 2417,
+      "slg": 2418,
+      "hrFb": 2328,
+      "fbParts": 2389
+    },
+    "npb_plus": {
+      "rows": 109,
+      "barrel": 101,
+      "hardHit": 101,
+      "evAvg": 99,
+      "evMax": 99,
+      "launch": 101
+    },
+    "park_split": {
+      "rows": 29372,
+      "minSeason": 2023,
+      "maxSeason": 2025
+    },
+    "xslg_columns": 0
+  },
+  "next_year_prediction": {
+    "core_pairs": 1436,
+    "core": {
+      "ISO": {
+        "n": 1436,
+        "held_out_target_seasons": 19,
+        "baseline_rmse": 0.01449780615595757,
+        "augmented_rmse": 0.014491993260219873,
+        "rmse_change_pct": -0.04009500247944553,
+        "improves": true,
+        "improved_folds": 8,
+        "worsened_or_equal_folds": 11,
+        "median_fold_rmse_change_pct": 0.18198376025695406,
+        "correlation_with_iso": 1
+      },
+      "SLG": {
+        "n": 1436,
+        "held_out_target_seasons": 19,
+        "baseline_rmse": 0.01449780615595757,
+        "augmented_rmse": 0.014503431300241131,
+        "rmse_change_pct": 0.0387999689266838,
+        "improves": false,
+        "improved_folds": 13,
+        "worsened_or_equal_folds": 6,
+        "median_fold_rmse_change_pct": -0.07568628719084591,
+        "correlation_with_iso": 0.9285210070211779
+      },
+      "2B/3B": {
+        "n": 1436,
+        "held_out_target_seasons": 19,
+        "baseline_rmse": 0.01449780615595757,
+        "augmented_rmse": 0.014497617857282735,
+        "rmse_change_pct": -0.0012988080597131635,
+        "improves": true,
+        "improved_folds": 9,
+        "worsened_or_equal_folds": 10,
+        "median_fold_rmse_change_pct": 0.01439895354038434,
+        "correlation_with_iso": 0.39988194486153583
+      }
+    },
+    "advanced_pairs": 360,
+    "advanced": {
+      "HR/FB": {
+        "n": 360,
+        "held_out_target_seasons": 5,
+        "baseline_rmse": 0.015274137250406909,
+        "augmented_rmse": 0.015590347966966966,
+        "rmse_change_pct": 2.0702361866732133,
+        "improves": false,
+        "improved_folds": 1,
+        "worsened_or_equal_folds": 4,
+        "median_fold_rmse_change_pct": 1.937268693417371,
+        "correlation_with_iso": 0.9400328680352333
+      },
+      "FB%": {
+        "n": 360,
+        "held_out_target_seasons": 5,
+        "baseline_rmse": 0.015274137250406909,
+        "augmented_rmse": 0.015136068592624143,
+        "rmse_change_pct": -0.9039375220953105,
+        "improves": true,
+        "improved_folds": 4,
+        "worsened_or_equal_folds": 1,
+        "median_fold_rmse_change_pct": -3.597728517969978,
+        "correlation_with_iso": 0.6356761762832531
+      }
+    },
+    "park_factor": {
+      "n": 141,
+      "seasons": [
+        2023,
+        2024
+      ],
+      "unadjusted_rmse": 0.017749634671649524,
+      "adjusted_rmse": 0.016842306936608254,
+      "rmse_change_pct": -5.11181076019831,
+      "improves": true,
+      "correlation_with_iso": 0.25113122540971594,
+      "note": "既にpipelineで適用済み。未補正同士と、当年・翌年をそれぞれの球場係数で補正した値同士を比較"
+    }
+  },
+  "current_only_2026": {
+    "rows_in_source": 109,
+    "uniquely_linked_to_bm_2026": 108,
+    "correlations": {
+      "barrel_pct": {
+        "n": 100,
+        "correlation_with_iso": 0.8432384552167128,
+        "correlation_with_hr_fb": 0.829217408264241,
+        "accuracy_verdict": "判定不能（2026途中の1時点のみで翌年実績がまだ無い）"
+      },
+      "hard_hit_pct": {
+        "n": 100,
+        "correlation_with_iso": 0.7313533524961598,
+        "correlation_with_hr_fb": 0.7172135156032668,
+        "accuracy_verdict": "判定不能（2026途中の1時点のみで翌年実績がまだ無い）"
+      },
+      "exit_velo_avg": {
+        "n": 99,
+        "correlation_with_iso": 0.693234836413097,
+        "correlation_with_hr_fb": 0.65384731593075,
+        "accuracy_verdict": "判定不能（2026途中の1時点のみで翌年実績がまだ無い）"
+      },
+      "exit_velo_max": {
+        "n": 99,
+        "correlation_with_iso": 0.5456807436048856,
+        "correlation_with_hr_fb": 0.5378673535087767,
+        "accuracy_verdict": "判定不能（2026途中の1時点のみで翌年実績がまだ無い）"
+      },
+      "launch_angle_avg": {
+        "n": 100,
+        "correlation_with_iso": 0.5164539249310306,
+        "correlation_with_hr_fb": 0.38863071828197343,
+        "accuracy_verdict": "判定不能（2026途中の1時点のみで翌年実績がまだ無い）"
+      }
+    }
+  }
+}

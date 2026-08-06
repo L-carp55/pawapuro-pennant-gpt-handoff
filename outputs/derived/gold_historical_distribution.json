@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "source_db": "data/pennant.db",
+    "source_view": "v_batting",
+    "seasons": [
+      2006,
+      2025
+    ],
+    "population": "全打者年（投手登録を除く、AB>0）",
+    "rows_read": 6621,
+    "eligibility": "AB >= 200",
+    "rows_used": 2186,
+    "exclusion_reason": "少打数の1安打・1本塁打を歴代級と誤認しないため",
+    "metric_definition": {
+      "hrPer500": "(HR/AB)を年度リーグ本塁打率で環境補正し、基準打数490へ換算。gammaは水準別",
+      "avgEnv": "H/ABを年度リーグ打率で環境補正"
+    },
+    "percentile_method": "R-7 linear interpolation",
+    "generated_by": "scripts/build_gold_historical_distribution.mjs"
+  },
+  "hrPer500": {
+    "p995": 48.550415491634105,
+    "p999": 53.49950144727032,
+    "max": 72.65648404205487,
+    "n": 2186,
+    "max_record": {
+      "player_id": "13315133",
+      "name": "Ｗ．バレンティン",
+      "season": 2013,
+      "ab": 439,
+      "value": 72.65648404205487
+    }
+  },
+  "avgEnv": {
+    "p995": 0.3424956070303919,
+    "p999": 0.3580194748426224,
+    "max": 0.3619814899789136,
+    "n": 2186,
+    "max_record": {
+      "player_id": "31835133",
+      "name": "柳田　悠岐",
+      "season": 2015,
+      "ab": 502,
+      "value": 0.3619814899789136
+    }
+  }
+}

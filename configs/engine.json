@@ -1,0 +1,33 @@
+{
+  "_comment": "エンジンの可変パラメータ。マジックナンバーをコードに埋めない（Sol仕様 08 §5）。値はPhase 2でリーグ実測に合わせて較正する",
+  "baserunning": {
+    "_comment": "走者の進塁確率と副次イベントの発生率。gdp/sf/sh/roe/steal は scripts/calibrate.mjs が実測の年間発生数（併殺1183・犠飛373・犠打1328・失策855・盗塁820・盗塁刺372 ＝2024年）に合わせて自動調整する。進塁3種は野球の一般水準を初期値に置く",
+    "single_runner1_to_3rd": 0.28,
+    "single_runner2_scores": 0.62,
+    "double_runner1_scores": 0.45,
+    "out_runner_advance": 0.06,
+    "roe_rate": 0.019272645601479524,
+    "bunt_rate": 0.16207338685043945,
+    "gdp_rate": 0.21077970961257578,
+    "sacfly_rate": 0.42172704584322385,
+    "steal_attempt_rate_2nd": 0.0676579852139251,
+    "steal_attempt_rate_3rd": 0.027063194085570043,
+    "steal_success_rate": 0.688
+  },
+  "game": {
+    "innings": 9,
+    "max_extra_innings": 12,
+    "outs_per_inning": 3
+  },
+  "season": {
+    "games_per_team": 143,
+    "teams": 12
+  },
+  "pitching": {
+    "_comment": "先発の降板判定。球数の代わりに対戦打者数で近似する。**starter_bf_targetは実データの先発シェアに合わせて較正した値**（2026-08-04）: 2024年の実データで先発が対戦打者の68.9%を占めるのに対し、25では65.6%・26では67.7%・27では70.8%となり26が最も近い。25のままだと救援を実際より3.3pt多く使うことになり、救援は先発と能力が違う（K% 19.92 vs 17.90、四球 8.14 vs 6.10、被本塁打 1.18 vs 1.61）ため成績分布が系統的にずれる。再較正=scripts/run_season_test.mjs の先発シェア出力で確認する",
+    "starter_bf_target": 26,
+    "starter_bf_variance": 6,
+    "reliever_bf_target": 4,
+    "_starter_share_target": "0.689（2024年実データ）"
+  }
+}
