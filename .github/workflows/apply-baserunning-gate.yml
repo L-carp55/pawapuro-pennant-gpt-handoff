@@ -1,0 +1,46 @@
+name: Apply baserunning safety gate
+
+on:
+  push:
+    branches:
+      - agent/satei-phase1-safety
+    paths:
+      - .chatgpt/baserunning_gate.patch
+
+permissions:
+  contents: write
+
+jobs:
+  apply-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply patch
+        run: |
+          git apply --check .chatgpt/baserunning_gate.patch
+          git apply .chatgpt/baserunning_gate.patch
+      - name: Run regression tests
+        run: |
+          node scripts/test_baserunning_gate.mjs
+          node scripts/test_speed_z_final.mjs
+          node scripts/test_phase1_safety.mjs
+          node scripts/test_cards.mjs
+          node scripts/test_ability_sheet.mjs
+          node scripts/test_qa_remaining.mjs
+          node scripts/validate.mjs
+          node scripts/build_card.mjs 周東 2024
+          node -e "const c=require('./outputs/cards/周東佑京_2024.json'); if(c.abilities.得能.走塁!==null) process.exit(1); if(!c.abilities.未査定.some(x=>x.startsWith('走塁（走塁得能モデルを再較正中'))) process.exit(1)"
+      - name: Commit tested changes
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm .chatgpt/baserunning_gate.patch
+          git add configs/model_gates.json scripts/test_baserunning_gate.mjs src/cards/ability_sheet.mjs src/cards/pipeline.mjs src/ratings/runfield_log.mjs
+          git commit -m "fix: pause invalid baserunning ability model"
+          git push origin HEAD:agent/satei-phase1-safety
