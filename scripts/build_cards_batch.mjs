@@ -1,9 +1,10 @@
 // オーナー確定の検証題材を一括査定する（Sol仕様 02 §3.3／06 §1／07 §3）。
 //
-// 年度選定は 2026-08-01 オーナー裁定により**得点貢献による機械選定**を採る
-// （引継ぎ資料の候補年は「確定値ではない」と明記されているため）。
+// 2026-08-06 安全停止:
+//   自動 peak / prime は、総合得点への走守未接続・能力ごとの年度混在が解消するまで停止する。
+//   この一括CLIは明示年度を受け取る用途ではないため、現在は実行を拒否する。
 //
-// 使い方: node scripts/build_cards_batch.mjs carp|wbc|all [peak|prime]
+// 使い方（修理後に再開予定）: node scripts/build_cards_batch.mjs carp|wbc|all [peak|prime]
 import { DatabaseSync } from 'node:sqlite';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
@@ -15,6 +16,18 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const GROUP = process.argv[2] ?? 'all';
 const MODE = process.argv[3] ?? 'peak';
 
+if (MODE === 'peak' || MODE === 'prime') {
+  console.error(
+    `一括${MODE}生成は一時停止中です。\n`
+    + '理由: peakの総合得点に走塁・守備が未接続、primeは能力ごとの参照期間と環境補正が未統一。\n'
+    + '個別カードは node scripts/build_card.mjs <選手名> <4桁年度> で生成してください。'
+  );
+  process.exit(2);
+}
+console.error(`未対応の一括生成モード: ${MODE}`);
+process.exit(2);
+
+// 以下は安全停止解除後に再利用する実装。到達しないが、復旧時の差分を小さくするため保持する。
 const CARP = ['田中　広輔', '菊池　涼介', '丸　佳浩', '鈴木　誠也', '新井　貴浩', '松山　竜平',
   'エルドレッド', '安部　友裕', '會澤　翼', '石原　慶幸', '西川　龍馬', '野間　峻祥', 'バティスタ'];
 const WBC = ['小林　誠司', '大野　奨太', '炭谷　銀仁朗', '松田　宣浩', '菊池　涼介', '坂本　勇人',
