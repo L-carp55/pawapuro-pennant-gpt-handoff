@@ -1,14 +1,14 @@
 # Runner identity / physical-skill plumbing
 
 日付: 2026-08-07
-状態: **構造接続済み。player-specific event responseは未較正のため無効。**
+状態: **runner identity・event resolver・runtime config接続済み。player-specific event係数は未較正のため本番無効。**
 
 ## 問題
 
 旧 `src/engine/baserunning.mjs` は塁上状態を `[true/false, true/false, true/false]` で保持していた。
 そのため打者が出塁した瞬間に「誰が走者か」を失い、選手別の走力・盗塁・走塁skillをエンジンへ接続できなかった。
 
-## 修正
+## 1. runner identity
 
 - `emptyBases()` のlegacy表現は維持。
 - `advance(..., { batter })` を追加し、新engine経路では出塁者objectをそのまま塁上へ保持。
@@ -16,9 +16,9 @@
 - 盗塁成功時も同じrunner objectを次塁へ移す。
 - legacy呼び出し（batter contextなし）は従来どおりboolean runnerを使える。
 
-## physical / skill schema
+## 2. physical / skill schema
 
-`src/engine/runner_context.mjs` を追加。
+`src/engine/runner_context.mjs`:
 
 ```js
 runner.running = {
@@ -40,7 +40,41 @@ runner.running = {
 
 加速欠損は0=平均と仮定せず、complete performanceはnull。
 
-## safety gate
+## 3. event response API
+
+`src/engine/running_event_response.mjs` と `configs/running_event_responses.json` を追加。
+
+現在別eventとして用意したもの:
+
+```text
+steal_attempt_2nd
+steal_attempt_3rd
+steal_success
+single_1st_to_3rd
+single_2nd_to_home
+double_1st_to_home
+```
+
+各eventは:
+
+```text
+global league probability
++ physical running performance
++ event-specific skill
+```
+
+という構造を受けられる。
+実装形式は、将来較正された係数をglobal base probabilityのlogitへ差分として加える `delta_logit_from_global_base`。
+
+ただしproduction registryは全event `calibrated=false`。
+**本番係数は1つも入れていない。**
+
+未較正・ゲートOFF・physical欠損・skill欠損のどれでも、必ずglobal probabilityへfallbackする。
+
+GDPは現段階でplayer-specific化しない。
+理由は、GDPには打席から一塁への0→5ft離脱が重要で、現在較正した5→90ft physical responseだけでは不足するため。
+
+## 4. safety gate
 
 `configs/engine.json`:
 
@@ -49,11 +83,35 @@ player_running.enabled = false
 player_running.status = PLUMBING_READY_EVENT_RESPONSES_UNCALIBRATED
 ```
 
-塁上にrunner profileが存在しても、このゲートが閉じている間は盗塁・追加進塁・併殺等の確率を変えない。
+塁上にrunner profileが存在しても、このゲートが閉じている間は盗塁・追加進塁等の確率を変えない。
 
-次に必要なのはイベント別responseの実データ較正であり、仮係数は置かない。
+## 5. runtime config loader
 
-## 検証
+`src/engine/config.mjs` を追加。
+
+主要シミュ入口:
+
+```text
+scripts/run_pennant.mjs
+scripts/run_identity_test.mjs
+scripts/run_season_test.mjs
+```
+
+は `loadEngineConfig(ROOT)` を使う。
+
+loaderは:
+
+- `configs/baseball_running_response.json`
+- `configs/running_event_responses.json`
+
+をruntime objectとしてhydrateする。
+
+さらに `player_running.enabled=true` なのにphysical/event responseが未較正なら、**シミュ開始前にthrowして停止**する。
+「ゲートを開けたのにconfigを読み忘れて黙ってglobal確率のまま走る」状態を禁止する。
+
+## 6. 検証
+
+### runner identity導入
 
 GitHub Actions `31180533917` SUCCESS。
 
@@ -67,6 +125,45 @@ qa_remaining              173 PASS
 phase1 safety               5 PASS
 ```
 
+### event resolver
+
+GitHub Actions `31181050803` SUCCESS。
+
+```text
+runner state               PASS
+physical response          PASS
+running event response     17 checks passed
+engine identity            PASS
+2024 season engine         PASS
+cards                      13 PASS
+qa_remaining              173 PASS
+phase1 safety               5 PASS
+```
+
+テスト専用synthetic係数でのみ:
+
+- 同じphysicalでもbaserunning skill差が別に効く
+- physical成分はskill差で変わらない
+- acceleration欠損を0扱いしない
+- skill欠損を0扱いしない
+- production gate OFFでは従来確率のまま
+
+を確認した。synthetic係数はproduction configへ保存していない。
+
+### runtime loader
+
+GitHub Actions `31181273840` SUCCESS。
+
+```text
+engine config loader        9 checks passed
+engine runner state        18 checks passed
+running event response     17 checks passed
+engine identity             完走
+2024 season engine          完走
+```
+
+loader接続後も同一seedの出力は変わっていない。
+
 2024 engine identity:
 
 ```text
@@ -79,12 +176,19 @@ phase1 safety               5 PASS
 得点/試合(1チーム) 3.2395 vs 実測3.2861 = -1.4%
 ```
 
-今回のplumbingだけで既存の確率モデルを変えていないことを確認した。
+## 7. 現在のデータ制約
+
+修正版 `scripts/build_baserunning_advances.mjs` は存在するが、handoff repositoryには `data/raw/npb_pbp` が含まれていない。
+現在DBに残る旧 `baserunning_advances` は、打席開始状態を最終投球行から取っていた失効版なので較正へ使わない。
+
+したがって現時点でevent response係数を推定してはいけない。
 
 ## 次
 
-1. event decisionへrunner contextを渡す。
-2. single 1→3、single 2→home、double 1→home、盗塁企図、盗塁成功、GDP回避を別responseとして扱う。
-3. 各responseで `physical running performance` と固有skillを別説明変数にする。
-4. player-level holdoutで改善しないeventはplayer-specific化しない。
-5. 最後に143試合リーグ分布を再較正する。
+1. Nippon Baseball Data Repository等の元PBPを再取得できるか確認する。
+2. 修正版builderで `baserunning_advances` を再生成する。
+3. 打球方向/深さ・アウト数・外野守備文脈を追加する。
+4. physical performanceとbaserunning skillを別係数でeventごとにplayer-holdout較正する。
+5. 盗塁は投手/捕手文脈を別途接続する。
+6. 改善しないeventはglobal probabilityのまま維持する。
+7. 最後に143試合リーグ分布を再較正する。
