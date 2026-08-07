@@ -40,7 +40,7 @@
     "evidence": {
       "npb_plus_direct_matched": 98,
       "old_proxy_cv_best_rmse_kmh": 0.868,
-      "grounder_event_proxy_rmse_kmh": 0.860,
+      "grounder_event_proxy_rmse_kmh": 0.86,
       "grounder_event_proxy_spearman": 0.715,
       "temporal_pool_holdout_best_rmse_kmh": 0.904,
       "temporal_pool_holdout_best_method": "pa_weighted_3y",
@@ -119,54 +119,52 @@
   },
   "baserunning_advance_source": {
     "enabled": false,
-    "status": "STALE_REBUILD_REQUIRED",
-    "reason": "既存baserunning_advancesは打席の最終行を開始走者状態として使って構築されており、保存kind/successが説明文の明示状態と矛盾するため、走力・走塁得能の材料として使用停止",
+    "status": "REBUILT_VALIDATED_RESEARCH_ONLY",
+    "reason": "旧baserunning_advancesは失効。Nippon Baseball Data Repositoryのraw PBPから打席内盗塁・暴投等をreconcileして2020-2026を再構築し、説明文明示ケースで開始塁・success矛盾0%まで検証済み。ただし追加進塁残差から身体走力を除いた単年split-half再現性がほぼ0のため、本番走力・走塁得能の材料にはまだ使わない。",
     "evidence": {
-      "events_total": 22459,
-      "explicit_start_states_checked": 3590,
-      "explicit_start_mismatches": 175,
-      "explicit_outcomes_reclassified": 3062,
-      "outcome_label_contradictions": 262,
-      "outcome_label_contradiction_rate": 0.0856,
-      "first_to_third_explicit_start_checked": 126,
-      "first_to_third_explicit_start_mismatches": 126,
-      "first_to_home_on_double_explicit_start_checked": 23,
-      "first_to_home_on_double_explicit_start_mismatches": 23,
-      "speed_impact_2024_players": 182,
-      "speed_rating_absolute_mean_impact": 0.562,
-      "speed_rating_absolute_p90_impact": 1.619,
-      "speed_rating_absolute_p95_impact": 2.342,
-      "speed_rating_max_impact": 3.853,
-      "speed_rating_shift_ge_1pt_players": 42,
-      "speed_rating_shift_ge_2pt_players": 15,
-      "label_audit_github_actions_run": 31141951553,
-      "speed_impact_github_actions_run": 31142478987,
+      "old_source_valid": false,
+      "rebuilt_source_valid_for_research": true,
+      "rebuilt_events_2020_2025": 20787,
+      "rebuilt_events_2026_partial": 2231,
+      "yearly_label_audit_2020_2025_bad_start_rate": 0.0,
+      "yearly_label_audit_2020_2025_success_contradiction_rate": 0.0,
+      "direct_speed_matched_players_2026": 82,
+      "corr_direct_top_speed_vs_context_residual_2026": 0.259,
+      "split_half_common_players_2026": 46,
+      "split_half_raw_residual_pearson": 0.122,
+      "split_half_speed_adjusted_pearson": 0.039,
+      "split_half_raw_residual_spearman": 0.096,
+      "split_half_speed_adjusted_spearman": 0.029,
       "measured_at": "2026-08-07"
     },
     "reopen_conditions": [
-      "PBPの打席開始状態を各打席のfirst rowから、結果をnext PAのfirst rowから再構築する",
-      "走者消失時はアウト数変化を使い、生還と走塁死を区別する",
-      "説明文で開始塁・終了塁を明示できる監査サンプルとの矛盾を解消する",
-      "再構築後にadvanceの再現性・走力への追加価値・走塁得能残差を再較正する"
+      "再構築済みイベントはcontext難度モデルの研究入力としてのみ利用する",
+      "最高走行速度・加速など身体走力を先に説明変数として分離する",
+      "追加進塁単独ではなくタッチアップ・走塁死・UBR等の独立情報を統合し、技術latentを再設計する",
+      "player/game holdoutまたはsplit-halfで身体補正後skillの再現性を確認する",
+      "十分な再現性が出るまでは100段階の走塁得能へ変換しない"
     ]
   },
   "baserunning_ability": {
     "enabled": false,
-    "status": "PAUSED",
-    "reason": "走塁得能モデルを再較正中。UBR・追加進塁が走力スコア自身に含まれる循環、機会選択バイアス、標本量の縮小不足に加え、追加進塁の元テーブル自体にも構築不整合が確認されたため未査定",
+    "status": "PAUSED_LOW_SKILL_RELIABILITY_AFTER_SPEED_SEPARATION",
+    "reason": "再構築PBP自体は検証を通過したが、2026 NPB+最高走行速度を使って身体成分を除くと追加進塁残差の試合split-half再現性はPearson 0.039 / Spearman 0.029。単年追加進塁から安定した走塁技術を100段階化する根拠が無いため停止継続。",
     "evidence": {
-      "ubr_leave_one_out_repeatability": 0.209,
-      "advance_leave_one_out_repeatability": 0.181,
-      "combined_repeatability": 0.238,
-      "advance_source_valid": false,
+      "advance_source_rebuilt_valid_for_research": true,
+      "events_2020_2025": 20787,
+      "events_2026_partial": 2231,
+      "direct_speed_context_residual_corr": 0.259,
+      "split_half_raw_pearson": 0.122,
+      "split_half_speed_adjusted_pearson": 0.039,
+      "split_half_raw_spearman": 0.096,
+      "split_half_speed_adjusted_spearman": 0.029,
       "measured_at": "2026-08-07"
     },
     "reopen_conditions": [
-      "baserunning_advance_sourceを正しく再構築する",
-      "各残差を対象材料抜きの走力（leave-one-component-out）で較正・計算する",
-      "追加進塁の機会選択バイアスをイベント単位で統制する",
-      "機会数・打席数に応じた信頼度縮小を導入する",
-      "ホールドアウトまたは年跨ぎ検証で目盛りを確定する"
+      "追加進塁以外の走塁イベント（タッチアップ・走塁死・ベース回り等）をイベント単位で追加する",
+      "身体走力を直接観測または独立latentとして先に分離する",
+      "複数年階層モデルで技術成分と年ノイズを分ける",
+      "独立holdoutで技術成分の再現性が十分か確認する"
     ]
   }
 }
