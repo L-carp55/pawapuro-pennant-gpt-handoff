@@ -1,0 +1,46 @@
+name: Apply baserunning event metadata
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths:
+      - .github/workflows/apply-baserunning-event-metadata.yml
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply metadata-only patch
+        run: python .chatgpt/patch_baserunning_metadata.py
+      - name: Syntax and pure tests
+        run: |
+          node --check scripts/build_baserunning_advances.mjs
+          node scripts/test_baserunning_events.mjs
+      - name: Revalidate 2024 labels
+        run: |
+          node scripts/fetch_npb_pbp_release.mjs 2024 /tmp/pbp2024
+          PBP_RAW_DIR=/tmp/pbp2024 PBP_DB_PATH=/tmp/rebuilt2024.sqlite node scripts/build_baserunning_advances.mjs
+          PBP_DB_PATH=/tmp/rebuilt2024.sqlite node scripts/audit_baserunning_event_labels.mjs | tee /tmp/audit2024.txt
+          grep -q '開始塁の明確な不一致: 0 (0.00%)' /tmp/audit2024.txt
+          grep -q 'そのうち保存successと矛盾: 0 (0.00%)' /tmp/audit2024.txt
+          rm -rf /tmp/pbp2024 /tmp/rebuilt2024.sqlite
+      - name: Revalidate 2026 direct-speed audit
+        run: |
+          node scripts/fetch_npb_pbp_release.mjs 2026 /tmp/pbp2026
+          PBP_RAW_DIR=/tmp/pbp2026 PBP_DB_PATH=/tmp/rebuilt2026.sqlite node scripts/build_baserunning_advances.mjs
+          PBP_DB_PATH=/tmp/rebuilt2026.sqlite PENNANT_DB_PATH=data/pennant.db node scripts/audit_baserunning_direct_speed_2026.mjs >/tmp/direct2026.txt
+          grep -q 'matched_players_n>=5:' /tmp/direct2026.txt
+          rm -rf /tmp/pbp2026 /tmp/rebuilt2026.sqlite
+      - name: Commit verified metadata patch
+        run: |
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add scripts/build_baserunning_advances.mjs
+          git commit -m "refactor: retain game date and fielder on baserunning events"
+          git push origin HEAD:agent/satei-phase1-safety
