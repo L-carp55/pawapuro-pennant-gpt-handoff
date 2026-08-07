@@ -1,19 +1,20 @@
 // Phase 2 検証: 実選手の実成績から確率ベクトルを作り、1シーズン回して
 // リーグ全体の分布が実測と一致するかを見る。能力値変換は挟まない（エンジン単体の検証）。
 import { DatabaseSync } from 'node:sqlite';
-import { readFile, writeFile } from 'node:fs/promises';
+import { writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { makeRng } from '../src/engine/rng.mjs';
 import { rateVectorFromCounts, OUTCOMES, poolBaseline } from '../src/engine/odds.mjs';
 import { playSeason } from '../src/engine/season.mjs';
 import { drawLineup } from '../src/engine/lineup.mjs';
+import { loadEngineConfig } from '../src/engine/config.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SEASON = Number(process.argv[2] || 2024);
 const SEED = Number(process.argv[3] || 20260731);
 
-const cfg = JSON.parse(await readFile(path.join(ROOT, 'configs', 'engine.json'), 'utf8'));
+const cfg = await loadEngineConfig(ROOT);
 const db = new DatabaseSync(path.join(ROOT, 'data', 'pennant.db'));
 
 // --- 打者 ---

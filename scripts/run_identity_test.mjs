@@ -2,18 +2,18 @@
 // 打撃結果の分布は定義上リーグ平均と一致するはずで、一致しなければ打席解決の実装バグ。
 // その上で「得点/試合」だけがズレるなら、原因は進塁ロジック（configs/engine.json の baserunning）に特定できる。
 import { DatabaseSync } from 'node:sqlite';
-import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { makeRng } from '../src/engine/rng.mjs';
 import { rateVectorFromCounts } from '../src/engine/odds.mjs';
 import { playSeason } from '../src/engine/season.mjs';
+import { loadEngineConfig } from '../src/engine/config.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SEASON = Number(process.argv[2] || 2024);
 const SEED = Number(process.argv[3] || 20260731);
 
-const cfg = JSON.parse(await readFile(path.join(ROOT, 'configs', 'engine.json'), 'utf8'));
+const cfg = await loadEngineConfig(ROOT);
 const db = new DatabaseSync(path.join(ROOT, 'data', 'pennant.db'));
 
 const lg = db.prepare(`

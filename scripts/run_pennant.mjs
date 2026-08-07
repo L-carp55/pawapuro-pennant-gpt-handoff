@@ -9,7 +9,6 @@
 //     タイトルの分布で、記録層が引ける形になっているかの確認が目的
 //   - 選手の移籍も無い（Phase 6 のCPU球団頭脳で扱う）
 
-import { readFile } from 'node:fs/promises';
 import { DatabaseSync } from 'node:sqlite';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -17,6 +16,7 @@ import { makeRng } from '../src/engine/rng.mjs';
 import { rateVectorFromCounts, poolBaseline } from '../src/engine/odds.mjs';
 import { playSeason } from '../src/engine/season.mjs';
 import { drawLineup } from '../src/engine/lineup.mjs';
+import { loadEngineConfig } from '../src/engine/config.mjs';
 import { openStore, writeSeason, careerBatting, titles, teamHistory } from '../src/records/store.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -25,7 +25,7 @@ const BASE_SEASON = Number(process.argv[3] || 2024);
 const SEED = Number(process.argv[4] || 20260805);
 const RUN_ID = process.env.RUN_ID ?? `run_${BASE_SEASON}_${YEARS}y_${SEED}`;
 
-const cfg = JSON.parse(await readFile(path.join(ROOT, 'configs', 'engine.json'), 'utf8'));
+const cfg = await loadEngineConfig(ROOT);
 const db = new DatabaseSync(path.join(ROOT, 'data', 'pennant.db'));
 const store = openStore(path.join(ROOT, 'data', 'pennant_sim.db'));
 
