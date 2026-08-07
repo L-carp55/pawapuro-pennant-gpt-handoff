@@ -61,7 +61,7 @@
   uncertain state exclusions current=4 next=0
   reconciliation explicitResolved=4758 explicitUncertain=5 noPattern=240487
   regular-season rows 2024:348685
-  mode WRITE /tmp/pawapuro-baserunning-2024-GcwOCm/rebuilt_2024.sqlite
+  mode WRITE /tmp/pawapuro-baserunning-2024-JPJXJ6/rebuilt_2024.sqlite
 
 注意: 旧baserunning_advancesは再利用しない。上記生データから再構築後に較正をやり直すこと。
 出典: This uses data sourced from the Nippon Baseball Data Repository (MIT License)
@@ -72,7 +72,7 @@
 
 ```text
 # 追加進塁イベント 状態整合監査（説明文明示ケース）
-db=/tmp/pawapuro-baserunning-2024-GcwOCm/rebuilt_2024.sqlite
+db=/tmp/pawapuro-baserunning-2024-JPJXJ6/rebuilt_2024.sqlite
 total=3620
 開始塁を明示文から読めた: 1033 (28.54%)
 開始塁の明確な不一致: 0 (0.00%)
