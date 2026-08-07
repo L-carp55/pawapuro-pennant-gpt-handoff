@@ -5,13 +5,11 @@
 // 2026-08-07 重要修正:
 //   1) Release PBPには打席ヘッダー等の非投球行が混ざるため、first/last任意行は使わない。
 //   2) 追加進塁の起点は「打席開始時」ではなく**打球が発生した最終投球の直前**の塁状態。
-//      打席途中の盗塁・暴投等で走者が動くため、firstPitchを起点にすると誤分類する。
-//   3) 現在は必ず
-//        - 現打席の lastPitch = 安打直前の塁状態 + 打球結果
-//        - 次打席の firstPitch = 打球後状態
-//      を使う。
-//   4) Release PBPは on_* のplayer IDが空でも on_*_name が入ることがある。
-//      塁占有はID OR 名前で認識し、走者照合は「双方にIDがあればID、片側欠損なら名前」で行う。
+//   3) on_*列のplayer ID欠損はnameで補うが、塁位置自体は打席途中の盗塁/暴投後も
+//      staleな場合がある。そのため各実投球のdescription_japに明示された
+//      「一塁/二塁/一二塁…から」を使ってknown runner identityを保守的に再配置する。
+//   4) 複数走者で割当が一意に決まらない、後退が必要、人数が食い違う場合は推測せず除外。
+//   5) 打球後状態は次打席の最初の実投球を同じ規律でreconcileして使う。
 //
 // 走者が次打席で消え、同時にアウト数も増えた場合は、生還と走塁死を
 // 現データだけで一意に区別できないため、成功/失敗を捏造せず標本から除外する。
@@ -39,6 +37,8 @@ import {
   addPitchRowToPlateAppearance,
   classifyAdvanceOutcome,
   makeRunnerIdentity,
+  explicitPreplayBasePattern,
+  reconcileRunnerStateWithPattern,
 } from '../src/ratings/baserunning_events.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -75,6 +75,8 @@ const REGULAR = new Set(['1', '2', '26']);
 const events = [];
 const excludedAmbiguous = { '1st_to_3rd': 0, '2nd_to_home': 0, '1st_to_home_on_2b': 0 };
 const excludedNoPitchState = { current: 0, next: 0 };
+const excludedUncertainState = { current: 0, next: 0 };
+const reconciliation = { explicitResolved: 0, explicitUncertain: 0, noPattern: 0 };
 const rowsBySeason = new Map();
 
 for (const fn of files) {
@@ -94,6 +96,44 @@ for (const fn of files) {
   if (missing.length) throw new Error(`${fn}: 必須列がありません: ${missing.join(', ')}`);
 
   const occupant = (r, idCol, nameCol) => makeRunnerIdentity(r[idCol], r[nameCol]);
+  const rawState = r => ({
+    first: occupant(r, c.on1, c.on1n),
+    second: occupant(r, c.on2, c.on2n),
+    third: occupant(r, c.on3, c.on3n),
+  });
+
+  function reconstructPaStates(entry) {
+    if (!entry?.firstPitch || !entry.pitchRows?.length) return { first: null, last: null };
+    let state = rawState(entry.firstPitch);
+    let uncertain = false;
+    let first = null;
+    let last = null;
+
+    for (let i = 0; i < entry.pitchRows.length; i++) {
+      const row = entry.pitchRows[i];
+      const observed = rawState(row);
+      const pattern = explicitPreplayBasePattern(row[c.desc]);
+      if (pattern) {
+        const rec = reconcileRunnerStateWithPattern(state, pattern, observed);
+        if (rec.status === 'RESOLVED') {
+          state = rec.state;
+          uncertain = false; // 後続の明示状態で、それ以前の曖昧さを解消できる。
+          reconciliation.explicitResolved++;
+        } else {
+          uncertain = true;
+          reconciliation.explicitUncertain++;
+        }
+      } else {
+        reconciliation.noPattern++;
+        // 最初の実投球はraw hybrid identityを初期状態として採用。
+        if (i === 0) state = observed;
+      }
+
+      if (i === 0) first = uncertain ? null : state;
+      if (i === entry.pitchRows.length - 1) last = uncertain ? null : state;
+    }
+    return { first, last };
+  }
 
   const pa = new Map();
   for (let i = 1; i < lines.length; i++) {
@@ -105,10 +145,13 @@ for (const fn of files) {
     const key = `${r[c.game]}|${String(Number(r[c.inn])).padStart(3, '0')}|${r[c.state]}|${String(Number(r[c.ab])).padStart(4, '0')}`;
     addPitchRowToPlateAppearance(pa, key, r, isRealPitch(r, c));
   }
+  const paStates = new Map([...pa].map(([key, entry]) => [key, reconstructPaStates(entry)]));
 
   const keys = [...pa.keys()].sort();
   for (let i = 0; i < keys.length - 1; i++) {
     const cur = pa.get(keys[i]), nxt = pa.get(keys[i + 1]);
+    const curState = paStates.get(keys[i]);
+    const nxtState = paStates.get(keys[i + 1]);
 
     const [g1, in1, st1] = keys[i].split('|'), [g2, in2, st2] = keys[i + 1].split('|');
     if (g1 !== g2 || in1 !== in2 || st1 !== st2) continue;
@@ -123,14 +166,14 @@ for (const fn of files) {
     const isDouble = /二塁打|ツーベース/.test(d);
     if (!isSingle && !isDouble) continue;
 
-    const r1 = occupant(curLast, c.on1, c.on1n);
-    const r2 = occupant(curLast, c.on2, c.on2n);
-    const r3 = occupant(curLast, c.on3, c.on3n);
-    const nextBases = {
-      first: occupant(nxtFirst, c.on1, c.on1n),
-      second: occupant(nxtFirst, c.on2, c.on2n),
-      third: occupant(nxtFirst, c.on3, c.on3n),
-    };
+    if (!curState?.last) { excludedUncertainState.current++; continue; }
+    if (!nxtState?.first) { excludedUncertainState.next++; continue; }
+
+    // ★打球直前・打球後とも、raw on_*位置ではなくreconstructed stateを使う。
+    const r1 = curState.last.first;
+    const r2 = curState.last.second;
+    const r3 = curState.last.third;
+    const nextBases = nxtState.first;
     const outsBefore = Number(curLast[c.outs]);
     const outsAfter = Number(nxtFirst[c.outs]);
 
@@ -202,6 +245,8 @@ const uniqueRunnerKeys = new Set(events.map(e => e.runner_id ? `id:${e.runner_id
 console.log(`  走者 ${uniqueRunnerKeys.size}人`);
 console.log(`  seasons ${[...new Set(events.map(e => e.season))].sort((a,b)=>a-b).join(', ') || 'none'}`);
 console.log(`  non-pitch state exclusions current=${excludedNoPitchState.current} next=${excludedNoPitchState.next}`);
+console.log(`  uncertain state exclusions current=${excludedUncertainState.current} next=${excludedUncertainState.next}`);
+console.log(`  reconciliation explicitResolved=${reconciliation.explicitResolved} explicitUncertain=${reconciliation.explicitUncertain} noPattern=${reconciliation.noPattern}`);
 console.log(`  regular-season rows ${[...rowsBySeason.entries()].sort((a,b)=>a[0]-b[0]).map(([y,n])=>`${y}:${n}`).join(' / ')}`);
 console.log(`  mode ${DRY_RUN ? 'DRY_RUN_NO_DB_WRITE' : `WRITE ${DB_PATH}`}`);
 console.log('\n注意: 旧baserunning_advancesは再利用しない。上記生データから再構築後に較正をやり直すこと。');
