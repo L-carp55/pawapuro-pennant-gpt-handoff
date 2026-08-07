@@ -15,7 +15,15 @@
       "first_to_third_explicit_start_mismatches": 126,
       "first_to_home_on_double_explicit_start_checked": 23,
       "first_to_home_on_double_explicit_start_mismatches": 23,
-      "github_actions_run": 31141951553,
+      "speed_impact_2024_players": 182,
+      "speed_rating_absolute_mean_impact": 0.562,
+      "speed_rating_absolute_p90_impact": 1.619,
+      "speed_rating_absolute_p95_impact": 2.342,
+      "speed_rating_max_impact": 3.853,
+      "speed_rating_shift_ge_1pt_players": 42,
+      "speed_rating_shift_ge_2pt_players": 15,
+      "label_audit_github_actions_run": 31141951553,
+      "speed_impact_github_actions_run": 31142478987,
       "measured_at": "2026-08-07"
     },
     "reopen_conditions": [
