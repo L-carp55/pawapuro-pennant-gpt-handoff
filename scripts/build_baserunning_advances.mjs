@@ -10,8 +10,8 @@
 //        - 現打席の lastPitch = 安打直前の塁状態 + 打球結果
 //        - 次打席の firstPitch = 打球後状態
 //      を使う。
-//   4) 走者同一性は名前ではなく on_1b/on_2b/on_3b のplayer IDを正本にする。
-//      名前は表示・後段名寄せ用にだけ保持する。
+//   4) Release PBPは on_* のplayer IDが空でも on_*_name が入ることがある。
+//      塁占有はID OR 名前で認識し、走者照合は「双方にIDがあればID、片側欠損なら名前」で行う。
 //
 // 走者が次打席で消え、同時にアウト数も増えた場合は、生還と走塁死を
 // 現データだけで一意に区別できないため、成功/失敗を捏造せず標本から除外する。
@@ -35,7 +35,11 @@ import { DatabaseSync } from 'node:sqlite';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { addPitchRowToPlateAppearance, classifyAdvanceOutcome } from '../src/ratings/baserunning_events.mjs';
+import {
+  addPitchRowToPlateAppearance,
+  classifyAdvanceOutcome,
+  makeRunnerIdentity,
+} from '../src/ratings/baserunning_events.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const RAW = process.env.PBP_RAW_DIR
@@ -58,12 +62,6 @@ function splitCsvLine(line) {
   out.push(f); return out;
 }
 
-const normName = s => (s ?? '').replace(/[\s　]/g, '');
-const normId = s => {
-  const v = String(s ?? '').trim();
-  if (!v || v === '0' || v === '0.0' || v === 'nan' || v === 'None') return null;
-  return v.replace(/\.0$/, '');
-};
 const isRealPitch = (r, c) => {
   const pn = c.pitch >= 0 ? Number(r[c.pitch]) : NaN;
   if (Number.isFinite(pn) && pn > 0) return true;
@@ -95,7 +93,8 @@ for (const fn of files) {
   const missing = required.filter(k => c[k] < 0);
   if (missing.length) throw new Error(`${fn}: 必須列がありません: ${missing.join(', ')}`);
 
-  // 打席ごとに全行と実投球first/lastを分けて保持する。
+  const occupant = (r, idCol, nameCol) => makeRunnerIdentity(r[idCol], r[nameCol]);
+
   const pa = new Map();
   for (let i = 1; i < lines.length; i++) {
     if (!lines[i].trim()) continue;
@@ -111,7 +110,6 @@ for (const fn of files) {
   for (let i = 0; i < keys.length - 1; i++) {
     const cur = pa.get(keys[i]), nxt = pa.get(keys[i + 1]);
 
-    // 同じ試合・同じイニング・同じ攻撃（表裏）の中でだけ比べる。
     const [g1, in1, st1] = keys[i].split('|'), [g2, in2, st2] = keys[i + 1].split('|');
     if (g1 !== g2 || in1 !== in2 || st1 !== st2) continue;
 
@@ -125,14 +123,13 @@ for (const fn of files) {
     const isDouble = /二塁打|ツーベース/.test(d);
     if (!isSingle && !isDouble) continue;
 
-    // ★安打直前の走者は最終実投球行のpre-pitch stateを使う。
-    // 打席途中の盗塁・暴投等を打球による追加進塁へ誤帰属しない。
-    const r1 = normId(curLast[c.on1]), r2 = normId(curLast[c.on2]), r3 = normId(curLast[c.on3]);
-    const r1Name = normName(curLast[c.on1n]), r2Name = normName(curLast[c.on2n]);
+    const r1 = occupant(curLast, c.on1, c.on1n);
+    const r2 = occupant(curLast, c.on2, c.on2n);
+    const r3 = occupant(curLast, c.on3, c.on3n);
     const nextBases = {
-      first: normId(nxtFirst[c.on1]),
-      second: normId(nxtFirst[c.on2]),
-      third: normId(nxtFirst[c.on3]),
+      first: occupant(nxtFirst, c.on1, c.on1n),
+      second: occupant(nxtFirst, c.on2, c.on2n),
+      third: occupant(nxtFirst, c.on3, c.on3n),
     };
     const outsBefore = Number(curLast[c.outs]);
     const outsAfter = Number(nxtFirst[c.outs]);
@@ -145,12 +142,12 @@ for (const fn of files) {
       return Number.isFinite(v) ? v : null;
     };
 
-    const push = (kind, runnerId, runnerName, success) => events.push({
+    const push = (kind, runner, success) => events.push({
       season: Number(curLast[c.season]), park: c.park >= 0 ? curLast[c.park] : null,
       kind,
-      runner_id: runnerId,
-      runner: runnerName || runnerId,
-      runner_norm: runnerName || runnerId,
+      runner_id: runner.id,
+      runner: runner.name || runner.id,
+      runner_norm: runner.name || runner.id,
       outs: Number.isFinite(outsBefore) ? outsBefore : null,
       success,
       hc_x: numericOrNull(c.hx),
@@ -159,15 +156,15 @@ for (const fn of files) {
       description: d.slice(0, 120),
     });
 
-    const classifyAndPush = (kind, runnerId, runnerName) => {
-      const success = classifyAdvanceOutcome(kind, runnerId, nextBases, outsBefore, outsAfter);
+    const classifyAndPush = (kind, runner) => {
+      const success = classifyAdvanceOutcome(kind, runner, nextBases, outsBefore, outsAfter);
       if (success == null) { excludedAmbiguous[kind]++; return; }
-      push(kind, runnerId, runnerName, success);
+      push(kind, runner, success);
     };
 
-    if (isSingle && r1 && !r2 && !r3) classifyAndPush('1st_to_3rd', r1, r1Name);
-    if (isSingle && r2 && !r3) classifyAndPush('2nd_to_home', r2, r2Name);
-    if (isDouble && r1 && !r2 && !r3) classifyAndPush('1st_to_home_on_2b', r1, r1Name);
+    if (isSingle && r1 && !r2 && !r3) classifyAndPush('1st_to_3rd', r1);
+    if (isSingle && r2 && !r3) classifyAndPush('2nd_to_home', r2);
+    if (isDouble && r1 && !r2 && !r3) classifyAndPush('1st_to_home_on_2b', r1);
   }
   console.error(`  ${fn}`);
 }
@@ -201,7 +198,8 @@ for (const k of Object.keys(LABEL)) {
   const rate = v.n ? `${(v.s / v.n * 100).toFixed(1)}%` : '—';
   console.log(`  ${LABEL[k].padEnd(20)} ${String(v.n).padStart(6)}件  成功 ${rate}  判定不能除外 ${excludedAmbiguous[k]}`);
 }
-console.log(`  走者ID ${new Set(events.map(e => e.runner_id)).size}人`);
+const uniqueRunnerKeys = new Set(events.map(e => e.runner_id ? `id:${e.runner_id}` : `name:${e.runner_norm}`));
+console.log(`  走者 ${uniqueRunnerKeys.size}人`);
 console.log(`  seasons ${[...new Set(events.map(e => e.season))].sort((a,b)=>a-b).join(', ') || 'none'}`);
 console.log(`  non-pitch state exclusions current=${excludedNoPitchState.current} next=${excludedNoPitchState.next}`);
 console.log(`  regular-season rows ${[...rowsBySeason.entries()].sort((a,b)=>a[0]-b[0]).map(([y,n])=>`${y}:${n}`).join(' / ')}`);
