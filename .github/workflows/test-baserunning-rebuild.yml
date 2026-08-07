@@ -1,0 +1,34 @@
+name: Test baserunning rebuild logic
+
+on:
+  push:
+    branches:
+      - agent/satei-phase1-safety
+    paths:
+      - .github/workflows/test-baserunning-rebuild.yml
+      - src/ratings/baserunning_events.mjs
+      - scripts/test_baserunning_events.mjs
+      - scripts/build_baserunning_advances.mjs
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test pure event inference
+        run: node scripts/test_baserunning_events.mjs
+      - name: Syntax check raw-data builder
+        run: node --check scripts/build_baserunning_advances.mjs
+      - name: Regression safety tests
+        run: |
+          node scripts/test_baserunning_gate.mjs
+          node scripts/test_speed_z_final.mjs
+          node scripts/test_cards.mjs
