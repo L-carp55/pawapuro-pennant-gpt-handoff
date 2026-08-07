@@ -14,6 +14,19 @@
     "steal_attempt_rate_3rd": 0.027063194085570043,
     "steal_success_rate": 0.688
   },
+  "player_running": {
+    "enabled": false,
+    "status": "PLUMBING_READY_EVENT_RESPONSES_UNCALIBRATED",
+    "_comment": "塁上runner identityと running.physical / running.skills の分離schemaは接続済み。ただし盗塁企図・盗塁成功・一→三塁・二塁→本塁・併殺回避など各イベントのresponseは未較正。enabled=falseの間はrunner profileがあっても既存のリーグ較正確率を変えない。",
+    "physical_response_config": "configs/baseball_running_response.json",
+    "reopen_conditions": [
+      "各イベントで身体的な走行時間とskillを別説明変数として較正する",
+      "player-level holdoutでリーグ共通確率より改善する",
+      "身体速度とskillの同じ証拠を二重計上しない",
+      "欠損physical axisまたはskillを0=平均で埋めない",
+      "全体143試合分布を再較正して既存リーグ整合を維持する"
+    ]
+  },
   "game": {
     "innings": 9,
     "max_extra_innings": 12,
