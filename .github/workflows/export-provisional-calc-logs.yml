@@ -1,0 +1,44 @@
+name: Export provisional calc logs
+on:
+  push:
+    branches: [agent/satei-phase1-clean]
+    paths: [.github/workflows/export-provisional-calc-logs.yml]
+permissions:
+  contents: write
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-clean
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate exact 2024 cards
+        run: |
+          for n in 村上宗隆 山川穂高 周東佑京 近本光司 源田壮亮 甲斐拓也 岡本和真 牧秀悟; do
+            node scripts/build_card.mjs "$n" 2024 >/dev/null
+          done
+          mkdir -p /tmp/cards
+          cp outputs/cards/村上宗隆_2024.json /tmp/cards/
+          cp outputs/cards/山川穂高_2024.json /tmp/cards/
+          cp outputs/cards/周東佑京_2024.json /tmp/cards/
+          cp outputs/cards/近本光司_2024.json /tmp/cards/
+          cp outputs/cards/源田壮亮_2024.json /tmp/cards/
+          cp outputs/cards/甲斐拓也_2024.json /tmp/cards/
+          cp outputs/cards/岡本和真_2024.json /tmp/cards/
+          cp outputs/cards/牧秀悟_2024.json /tmp/cards/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: provisional-calc-logs
+          path: /tmp/cards
+          retention-days: 1
+      - name: Remove temporary workflow
+        run: |
+          rm .github/workflows/export-provisional-calc-logs.yml
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add -A
+          git commit -m "chore: remove temporary calc-log export workflow"
+          git push origin HEAD:agent/satei-phase1-clean
