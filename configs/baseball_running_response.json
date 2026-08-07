@@ -1,0 +1,46 @@
+{
+  "_purpose": "純粋な身体軸(top speed / short acceleration)を、野球距離の直線走パフォーマンスへ変換する較正済みresponse。最終100段階能力の目盛りではない。",
+  "status": "CALIBRATED_MLB_2017_2025",
+  "calibrated": true,
+  "target": {
+    "name": "post_exit_5_to_90ft_performance_z",
+    "distance_ft": 85,
+    "distance_m_approx": 25.9,
+    "definition": "Statcast 90-foot Running Splitsの5ft時点から90ft時点までの経過時間を年度内標準化し、短いほど高いzへ反転。0→5ftの打席離脱を除く。",
+    "why": "ベース間90ftに近い野球距離で、50m走そのものではない身体的直線走性能を表すため。"
+  },
+  "axes": {
+    "top_speed_z": "年度内Statcast Sprint Speed z。高いほど速い。",
+    "acceleration_z": "5→30ft timeをSprint Speed・打席左右・年度で説明した残差を反転・標準化。高いほど同じ最高速度でも短距離加速が速い。"
+  },
+  "model": {
+    "type": "linear_standardized",
+    "intercept": 0.0,
+    "top_speed_coef": 0.95612,
+    "acceleration_coef": 0.21059,
+    "interaction": null,
+    "equation": "post_exit_performance_z = intercept + top_speed_coef*top_speed_z + acceleration_coef*acceleration_z"
+  },
+  "validation": {
+    "source": "Baseball Savant official 90-foot Running Splits + Sprint Speed CSV",
+    "seasons": [2017,2018,2019,2020,2021,2022,2023,2024,2025],
+    "player_years": 4710,
+    "players": 1222,
+    "method": "player-level 5-fold; each fold fits year standardization, acceleration nuisance model, and response on train players only",
+    "top_only": {"r":0.9565,"rmse_z":0.2925},
+    "top_plus_acceleration": {"r":0.9795,"rmse_z":0.2021},
+    "with_interaction": {"r":0.9794,"rmse_z":0.2024},
+    "rmse_improvement_vs_top_only": 0.309,
+    "top_speed_vs_acceleration_r": 0.0,
+    "github_actions_run": 31179113924,
+    "audit_script": "scripts/audit_running_response_from_physical_axes.mjs"
+  },
+  "interpretation": {
+    "relative_abs_coefficient_share": {"top_speed":0.819,"acceleration":0.181},
+    "warning": "82:18を恣意的な能力重みとして採用したのではない。実測5→90ft performanceの応答式を標準化した結果であり、最終表示はこの予測走行性能を経由する。"
+  },
+  "missing_data_policy": {
+    "acceleration_missing": "0=平均と仮定しない。完全なpost_exit_performance_zはnull。top speedのみをpartial evidenceとして保持。",
+    "top_speed_missing": "完全なpost_exit_performance_zはnull。集約成績proxyから推定する場合も別のspeed-skill factorの検証を通す。"
+  }
+}
