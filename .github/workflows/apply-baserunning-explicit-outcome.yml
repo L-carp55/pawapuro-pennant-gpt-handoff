@@ -25,6 +25,7 @@ jobs:
         run: |
           git config user.name "L-carp55"
           git config user.email "amilaleon1@gmail.com"
-          git add scripts/build_baserunning_advances.mjs scripts/test_baserunning_events.mjs
+          git add scripts/build_baserunning_advances.mjs
           git commit -m "fix: prefer explicit post-play state for advancement labels"
           git push origin HEAD:agent/satei-phase1-safety
+# rerun after pattern-test update
