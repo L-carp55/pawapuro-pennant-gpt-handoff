@@ -40,13 +40,13 @@ const zFromDisplay = (rawFromDisplay - zs.center) / zs.spread;
 close(calc._speed_z_final, zFromDisplay, 0.002);
 close(calc.speed_evidence.final_z, calc._speed_z_final, 0.002);
 
-// 守備ログも同じzを使う。外野守備の無い場合はスキップしないため青木2024を選んでいる。
+// 守備ログも同じzを使う。
 const field = c.calc_log.run_field_log?.fielding ?? [];
 assert.ok(field.length > 0, '守備ログがない');
 for (const f of field) close(f.speed_rating_fixed, calc._speed_z_final, 0.002);
 
 // ability_evidenceのproxyとdirectは同じ最終目盛り。内部rawをproxyへ混ぜない。
-const proxy = c.ability_evidence.走力.proxy_bundle;
+const proxy = c.ability_evidence.走力.outcome_proxies;
 assert.ok(proxy?.value != null);
 close(proxy.value, ev.statistical_final_scale, 0.11);
 
