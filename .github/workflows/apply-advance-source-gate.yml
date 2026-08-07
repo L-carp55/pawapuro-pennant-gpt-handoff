@@ -1,0 +1,44 @@
+name: Apply advancement source gate
+
+on:
+  push:
+    branches:
+      - agent/satei-phase1-safety
+    paths:
+      - .chatgpt/advance_source_gate.patch
+
+permissions:
+  contents: write
+
+jobs:
+  apply-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply patch
+        run: |
+          git apply --check .chatgpt/advance_source_gate.patch
+          git apply .chatgpt/advance_source_gate.patch
+      - name: Run regression tests
+        run: |
+          node scripts/test_baserunning_gate.mjs
+          node scripts/test_speed_z_final.mjs
+          node scripts/test_phase1_safety.mjs
+          node scripts/test_cards.mjs
+          node scripts/test_qa_remaining.mjs
+          node scripts/validate.mjs
+          node scripts/build_card.mjs 周東 2024
+      - name: Commit tested changes
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm .chatgpt/advance_source_gate.patch
+          git add src/cards/durable_estimate.mjs src/cards/pipeline.mjs scripts/test_baserunning_gate.mjs
+          git commit -m "fix: remove stale advancement metric from speed"
+          git push origin HEAD:agent/satei-phase1-safety
