@@ -142,14 +142,16 @@ t('Q1 得点価値の序列が保たれている',
     win ? win.seasons.map(s => `${s.season}:${s.line.PA}PA`).join(' ') : '該当窓なし');
 }
 
-// Q12 位置調整は打席数に比例する（フル出場でない年に満額を与えない）
+// Q12 未較正ポジション補正は本番既定では無効。診断時だけ明示的に有効化する。
 {
   const lr = LG[2024];
   const base = { PA: 600, AB: 520, H: 140, B2: 25, B3: 2, HR: 20, BB: 60, HBP: 5, SH: 0, SF: 5, SB: 5, CS: 2 };
-  const full = seasonScore({ line: base, lgRate: lr, rv, position: '捕', teamGames: 143 });
-  const half = seasonScore({ line: { ...base, PA: 300 }, lgRate: lr, rv, position: '捕', teamGames: 143 });
-  t('Q12 位置調整が出場量に比例する', full.parts.posAdj > half.parts.posAdj,
-    `フル${full.parts.posAdj.toFixed(1)}点 vs 半分${half.parts.posAdj.toFixed(1)}点`);
+  const normal = seasonScore({ line: base, lgRate: lr, rv, position: '捕', teamGames: 143 });
+  const diagnostic = seasonScore({ line: base, lgRate: lr, rv, position: '捕', teamGames: 143, includeProvisionalPositionAdjustment: true });
+  t('Q12 未較正の位置調整が本番既定では無効', normal.parts.posAdj === 0 && normal.parts.positionAdjustmentApplied === false,
+    `既定${normal.parts.posAdj.toFixed(1)}点`);
+  t('Q12b 診断指定時だけ位置調整を確認できる', diagnostic.parts.posAdj > 0 && diagnostic.parts.positionAdjustmentApplied === true,
+    `診断${diagnostic.parts.posAdj.toFixed(1)}点`);
 }
 
 console.log(`\n合計: ${pass} PASS / ${fail} FAIL`);
