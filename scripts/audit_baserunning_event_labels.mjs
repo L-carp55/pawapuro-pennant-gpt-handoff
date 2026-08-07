@@ -1,5 +1,5 @@
 // 追加進塁イベントの success ラベル監査。
-// 保存済み description に含まれる「打席開始時の塁状況」と「打球後の塁状況」を使い、
+// 保存済み description に明示された「打席開始時の塁状況」と「打球後の塁状況」を使い、
 // baserunning_advances の kind / success と整合するかを検査する。
 
 import { DatabaseSync } from 'node:sqlite';
@@ -16,18 +16,29 @@ const rows = db.prepare(`
 `).all();
 
 const pct = (n, d) => d ? `${(100 * n / d).toFixed(2)}%` : '—';
+const BASE = '(満塁|1,2,3塁|1,2塁|1,3塁|2,3塁|1塁|2塁|3塁)';
+const BASE_RE = new RegExp(BASE, 'g');
+const START_PATTERNS = [
+  new RegExp(`ランナー${BASE}から`),
+  new RegExp(`[012]アウト${BASE}から`),
+  new RegExp(`[012]アウト${BASE}の[^ ]{0,16}から`),
+];
 
-// description 例:
-//   "1アウト1塁からライトへのヒットを放つ 1,3塁"
-//   "2アウト1,2塁の2-1からライトへのタイムリーヒット ... 1,2塁"
-// 最初の塁表現は打席開始時、最後の塁表現は打球後の塁状況として扱える。
-const BASE_RE = /(満塁|1,2,3塁|1,2塁|1,3塁|2,3塁|1塁|2塁|3塁)/g;
-const baseMatches = d => [...String(d ?? '').matchAll(BASE_RE)].map(m => m[1]);
-const startBase = d => baseMatches(d)[0] ?? null;
-const endBase = d => {
-  const x = baseMatches(d);
-  return x.length >= 2 ? x.at(-1) : null;
-};
+function startBase(d) {
+  const s = String(d ?? '');
+  for (const re of START_PATTERNS) {
+    const m = s.match(re);
+    if (m) return { base: m[1], endIndex: (m.index ?? 0) + m[0].length };
+  }
+  return null;
+}
+
+function endBase(d, startInfo) {
+  if (!startInfo) return null;
+  const tail = String(d ?? '').slice(startInfo.endIndex);
+  const xs = [...tail.matchAll(BASE_RE)];
+  return xs.length ? xs.at(-1)[1] : null;
+}
 
 const allowedStarts = {
   // builder は r1 && !r2 && !r3 を要求
@@ -39,29 +50,28 @@ const allowedStarts = {
 };
 
 // 開始状態が説明文と一致すると仮定したとき、終了塁だけで明確に判定できるケース。
-// ambiguous は無理に判定しない。
 function impliedSuccess(kind, start, end) {
   if (!start || !end) return null;
   if (kind === '1st_to_3rd' && start === '1塁') {
-    if (end === '1,3塁') return 1; // 打者1塁＋元走者3塁
-    if (end === '1,2塁') return 0; // 打者1塁＋元走者2塁
-    if (end === '1塁') return 1;   // 元走者は生還したとみなせる
+    if (end === '1,3塁') return 1;
+    if (end === '1,2塁') return 0;
+    if (end === '1塁') return 1;
     return null;
   }
   if (kind === '1st_to_home_on_2b' && start === '1塁') {
-    if (end === '2塁') return 1;   // 打者2塁、元走者は生還
-    if (end === '2,3塁') return 0; // 打者2塁、元走者3塁止まり
+    if (end === '2塁') return 1;
+    if (end === '2,3塁') return 0;
     return null;
   }
   if (kind === '2nd_to_home') {
     if (start === '2塁') {
-      if (end === '1塁') return 1;   // 打者1塁、元走者生還
-      if (end === '1,3塁') return 0; // 打者1塁、元走者3塁止まり
+      if (end === '1塁') return 1;
+      if (end === '1,3塁') return 0;
       return null;
     }
     if (start === '1,2塁') {
-      if (end === '満塁' || end === '1,2,3塁') return 0; // 2塁走者は3塁止まり
-      if (end === '1,2塁') return 1; // 2塁走者生還、1塁走者→2塁、打者→1塁
+      if (end === '満塁' || end === '1,2,3塁') return 0;
+      if (end === '1,2塁') return 1;
       return null;
     }
   }
@@ -76,7 +86,9 @@ let parseableOutcome = 0;
 
 for (const r of rows) {
   const d = r.description ?? '';
-  const st = startBase(d), en = endBase(d);
+  const sInfo = startBase(d);
+  const st = sInfo?.base ?? null;
+  const en = endBase(d, sInfo);
   if (!byKind.has(r.kind)) byKind.set(r.kind, { n: 0, success: 0, parseStart: 0, badStart: 0, parseOutcome: 0, contradiction: 0 });
   const x = byKind.get(r.kind);
   x.n++;
@@ -99,9 +111,9 @@ for (const r of rows) {
   }
 }
 
-console.log('# 追加進塁イベント 状態整合監査');
+console.log('# 追加進塁イベント 状態整合監査（開始塁を明示文だけから判定）');
 console.log(`total=${rows.length}`);
-console.log(`開始塁を説明文から読めた: ${parseableStart} (${pct(parseableStart, rows.length)})`);
+console.log(`開始塁を明示文から読めた: ${parseableStart} (${pct(parseableStart, rows.length)})`);
 console.log(`開始塁の明確な不一致: ${badStart.length} (${pct(badStart.length, parseableStart)})`);
 console.log(`終了塁からsuccessを明確に再判定できた: ${parseableOutcome} (${pct(parseableOutcome, rows.length)})`);
 console.log(`そのうち保存successと矛盾: ${outcomeContradictions.length} (${pct(outcomeContradictions.length, parseableOutcome)})`);
