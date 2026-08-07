@@ -1,0 +1,73 @@
+name: Audit rebuilt baserunning 2020-2025
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths:
+      - .github/workflows/audit-rebuilt-baserunning-2020-2025.yml
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Pure tests first
+        run: |
+          node --check src/ratings/baserunning_events.mjs
+          node --check scripts/fetch_npb_pbp_release.mjs
+          node --check scripts/build_baserunning_advances.mjs
+          node --check scripts/audit_baserunning_event_labels.mjs
+          node --check scripts/write_baserunning_rebuild_audit.mjs
+          node scripts/test_baserunning_events.mjs
+      - name: Rebuild and audit each season
+        run: |
+          set -euo pipefail
+          for year in 2020 2021 2022 2023 2024 2025; do
+            raw="/tmp/npb_pbp_${year}"
+            report="docs/audits/2026-08-07_baserunning_rebuild_${year}.md"
+            echo "=== ${year}: fetch ==="
+            node scripts/fetch_npb_pbp_release.mjs "$year" "$raw"
+            echo "=== ${year}: rebuild + independent label audit ==="
+            PBP_RAW_DIR="$raw" node scripts/write_baserunning_rebuild_audit.mjs "$year" "$report"
+            if ! grep -q 'PASS_FOR_MULTIYEAR_REBUILD' "$report"; then
+              echo "${year}: acceptance criteria failed"
+              exit 1
+            fi
+            rm -rf "$raw"
+          done
+      - name: Build summary
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          rows=[]
+          for y in range(2020, 2026):
+              p=Path(f'docs/audits/2026-08-07_baserunning_rebuild_{y}.md')
+              s=p.read_text(encoding='utf-8')
+              def get(pat, default='—'):
+                  m=re.search(pat,s)
+                  return m.group(1) if m else default
+              rows.append((y,
+                  get(r'\| 確定可能イベント \| ([\d,]+) \|'),
+                  get(r'\| 開始塁の明確な不一致 \| \d+ \| ([0-9.]+%) \|'),
+                  get(r'\| 保存successとの矛盾 \| \d+ \| ([0-9.]+%) \|')))
+          lines=['# 2020–2025 追加進塁PBP再構築サマリー','', '日付: 2026-08-07','',
+                 '判定: **PASS_FOR_CALIBRATION_RESEARCH**','',
+                 '| season | events | bad start | success contradiction |','|---:|---:|---:|---:|']
+          lines += [f'| {y} | {n} | {b} | {c} |' for y,n,b,c in rows]
+          lines += ['', '全年度で年別受入基準（開始塁不一致<=1.0%、success矛盾<=0.5%）を満たした場合のみ、このサマリーをcommitする。',
+                    '本番player-specific走塁responseはまだ有効化しない。次工程は打球位置・守備側条件・身体走行性能を分離した較正。']
+          Path('docs/audits/2026-08-07_baserunning_rebuild_2020_2025.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+          PY
+      - name: Commit verified reports
+        run: |
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add docs/audits/2026-08-07_baserunning_rebuild_202*.md
+          git commit -m "audit: validate rebuilt baserunning across 2020-2025"
+          git push origin HEAD:agent/satei-phase1-safety
