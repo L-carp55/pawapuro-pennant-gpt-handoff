@@ -8,6 +8,8 @@
 // - on_* の「塁位置」は打席途中の盗塁/暴投後も古い位置を保持する場合がある。
 //   description_jap が「二塁から」「一二塁から」等の打球直前配置を明示する場合は、
 //   known runner identityをその配置へ保守的にreconcileする。
+// - description_jap が打球後の「一三塁」「二塁」等まで明示する場合は、
+//   identity追跡より独立した強い結果ラベルとして使う。
 // - 複数runnerでも走者順序は入れ替わらないので、人数が同じなら塁順を保った前進だけ許す。
 // - 人数が変わる/後退が必要/identity不足なら推測せず uncertain とする。
 // - 「次打席で走者が消えた」だけでは生還と判定しない。
@@ -80,15 +82,72 @@ function addUniqueRunner(list, runner) {
   if (!list.some(x => sameRunner(x, runner))) list.push(runner);
 }
 
+function normalizedDescription(description) {
+  return String(description ?? '').replace(/^\d+球目:/, '');
+}
+
 /** description_japから「プレー直前」の明示塁配置を読む。 */
 export function explicitPreplayBasePattern(description) {
-  const s = String(description ?? '').replace(/^\d+球目:/, '');
+  const s = normalizedDescription(description);
   for (const re of PREPLAY_PATTERNS) {
     const m = s.match(re);
     if (!m) continue;
     const token = m[1];
     const bases = BASE_PATTERN_MAP.get(token);
-    if (bases) return { token, bases: [...bases] };
+    if (bases) {
+      const start = m.index ?? 0;
+      return { token, bases: [...bases], match_start: start, match_end: start + m[0].length };
+    }
+  }
+  return null;
+}
+
+/**
+ * description_japのプレー直前表現より後ろに現れる最後の塁配置を、打球後明示状態として読む。
+ * 例: 「二塁から…ヒットで出塁 一三塁」 -> [1,3]
+ */
+export function explicitPostplayBasePattern(description) {
+  const s = normalizedDescription(description);
+  const pre = explicitPreplayBasePattern(s);
+  if (!pre) return null;
+  const tail = s.slice(pre.match_end);
+  const re = new RegExp(BASE_PATTERN_TOKEN, 'g');
+  const found = [...tail.matchAll(re)];
+  if (!found.length) return null;
+  const token = found.at(-1)[1];
+  const bases = BASE_PATTERN_MAP.get(token);
+  return bases ? { token, bases: [...bases] } : null;
+}
+
+/**
+ * kindと説明文の開始/終了塁が十分明確なときだけsuccessを独立判定する。
+ * identityを必要としないため、次打席のrunner ID/name欠損とは独立したラベルになる。
+ */
+export function classifyAdvanceOutcomeFromPatterns(kind, startPattern, endPattern) {
+  if (!startPattern || !endPattern) return null;
+  const sk = startPattern.bases.join(',');
+  const ek = endPattern.bases.join(',');
+
+  if (kind === '1st_to_3rd' && sk === '1') {
+    if (ek === '1,3') return 1;
+    if (ek === '1,2') return 0;
+    return null;
+  }
+  if (kind === '2nd_to_home') {
+    if (sk === '2') {
+      if (ek === '1') return 1;
+      if (ek === '1,3') return 0;
+    }
+    if (sk === '1,2') {
+      if (ek === '1,2') return 1;
+      if (ek === '1,2,3') return 0;
+    }
+    return null;
+  }
+  if (kind === '1st_to_home_on_2b' && sk === '1') {
+    if (ek === '2') return 1;
+    if (ek === '2,3') return 0;
+    return null;
   }
   return null;
 }
@@ -110,7 +169,6 @@ export function reconcileRunnerStateWithPattern(state, pattern, observedState = 
     return { status: 'RESOLVED', state: observedState, pattern, basis: 'explicit_pattern_matches_raw_positions' };
   }
 
-  // stateにidentityが足りない時だけobservedから補う。位置が明示配置と一致しない複数runnerは割当不能。
   if (current.length < targets.length) {
     const pool = current.map(([, r]) => r);
     for (const [, r] of observed) addUniqueRunner(pool, r);
@@ -129,7 +187,6 @@ export function reconcileRunnerStateWithPattern(state, pattern, observedState = 
     return { status: 'UNCERTAIN', state: null, pattern, reason: `runner_count_${current.length}_targets_${targets.length}` };
   }
 
-  // 野球走者は塁を後退せず、互いを追い越さない。i番目の走者をi番目のtargetへ対応。
   for (let i = 0; i < current.length; i++) {
     if (targets[i] < current[i][0]) {
       return { status: 'UNCERTAIN', state: null, pattern, reason: `backward_move_${current[i][0]}_to_${targets[i]}` };
