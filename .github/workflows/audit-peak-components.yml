@@ -7,6 +7,7 @@ on:
     paths:
       - .github/workflows/audit-peak-components.yml
       - scripts/audit_peak_components.mjs
+      - scripts/audit_fielding_run_components.mjs
 
 permissions:
   contents: read
@@ -21,4 +22,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node scripts/audit_peak_components.mjs
+      - name: Audit component availability
+        run: node scripts/audit_fielding_run_components.mjs
+      - name: Audit peak coverage
+        run: node scripts/audit_peak_components.mjs
