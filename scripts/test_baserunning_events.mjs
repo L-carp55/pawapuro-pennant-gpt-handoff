@@ -29,20 +29,31 @@ assert.equal(classifyAdvanceOutcome('1st_to_home_on_2b', 'R', B(null, null, 'R')
 assert.equal(classifyAdvanceOutcome('1st_to_home_on_2b', 'R', B(), 2, 2), 1);
 assert.equal(classifyAdvanceOutcome('1st_to_home_on_2b', 'R', B(), 1, 2), null);
 
-// first / last を別に保持すること。
+// 非投球ヘッダーが先に来ても「最初の実投球行」を開始状態として保持する。
 const m = new Map();
-addPitchRowToPlateAppearance(m, 'pa', { pitch: 1, on1: 'R' });
-addPitchRowToPlateAppearance(m, 'pa', { pitch: 2, on1: null });
-assert.equal(m.get('pa').first.pitch, 1);
-assert.equal(m.get('pa').first.on1, 'R');
-assert.equal(m.get('pa').last.pitch, 2);
+addPitchRowToPlateAppearance(m, 'pa', { kind: 'header', on1: null }, false);
+addPitchRowToPlateAppearance(m, 'pa', { kind: 'pitch', pitch: 1, on1: 'R' }, true);
+addPitchRowToPlateAppearance(m, 'pa', { kind: 'pitch', pitch: 2, on1: 'R' }, true);
+addPitchRowToPlateAppearance(m, 'pa', { kind: 'substitution', on1: null }, false);
+assert.equal(m.get('pa').first.kind, 'header');
+assert.equal(m.get('pa').firstPitch.pitch, 1);
+assert.equal(m.get('pa').firstPitch.on1, 'R');
+assert.equal(m.get('pa').lastPitch.pitch, 2);
+assert.equal(m.get('pa').last.kind, 'substitution');
 
-// ビルダーが再び「最終行を開始状態」に戻っていないことを静的にも固定する。
+// 旧呼び出し（isPitch省略）は互換維持。
+const legacy = new Map();
+addPitchRowToPlateAppearance(legacy, 'pa', { pitch: 1, on1: 'R' });
+addPitchRowToPlateAppearance(legacy, 'pa', { pitch: 2, on1: null });
+assert.equal(legacy.get('pa').firstPitch.pitch, 1);
+assert.equal(legacy.get('pa').lastPitch.pitch, 2);
+
+// ビルダーが非投球first/lastへ戻らないことを静的にも固定する。
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const builder = await readFile(path.join(ROOT, 'scripts', 'build_baserunning_advances.mjs'), 'utf8');
 assert.match(builder, /addPitchRowToPlateAppearance/);
-assert.match(builder, /cur\.first/);
-assert.match(builder, /nxt\.first/);
+assert.match(builder, /firstPitch/);
+assert.match(builder, /lastPitch/);
 assert.ok(!builder.includes("const r1 = norm(cur[c.on1n])"));
 
-console.log('baserunning event inference: 17 checks passed');
+console.log('baserunning event inference: 24 checks passed');
