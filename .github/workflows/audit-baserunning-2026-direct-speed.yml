@@ -1,0 +1,47 @@
+name: Audit baserunning 2026 direct speed
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths:
+      - .github/workflows/audit-baserunning-2026-direct-speed.yml
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax
+        run: |
+          node --check scripts/fetch_npb_pbp_release.mjs
+          node --check scripts/build_baserunning_advances.mjs
+          node --check scripts/audit_baserunning_direct_speed_2026.mjs
+          node scripts/test_baserunning_events.mjs
+      - name: Fetch 2026 PBP
+        run: node scripts/fetch_npb_pbp_release.mjs 2026 /tmp/npb_pbp_2026
+      - name: Rebuild 2026 to temporary DB
+        env:
+          PBP_RAW_DIR: /tmp/npb_pbp_2026
+          PBP_DB_PATH: /tmp/rebuilt_2026.sqlite
+        run: node scripts/build_baserunning_advances.mjs
+      - name: Validate 2026 labels
+        env:
+          PBP_DB_PATH: /tmp/rebuilt_2026.sqlite
+        run: node scripts/audit_baserunning_event_labels.mjs
+      - name: Audit direct-speed separation
+        env:
+          PBP_DB_PATH: /tmp/rebuilt_2026.sqlite
+          PENNANT_DB_PATH: data/pennant.db
+        run: node scripts/audit_baserunning_direct_speed_2026.mjs docs/audits/2026-08-07_baserunning_direct_speed_2026.md
+      - name: Commit research audit
+        run: |
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add docs/audits/2026-08-07_baserunning_direct_speed_2026.md
+          git commit -m "audit: compare 2026 baserunning residuals with direct speed"
+          git push origin HEAD:agent/satei-phase1-safety
