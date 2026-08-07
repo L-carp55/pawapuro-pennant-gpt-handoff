@@ -1,0 +1,59 @@
+name: Apply peak component wiring
+
+on:
+  push:
+    branches:
+      - agent/satei-phase1-safety
+    paths:
+      - .github/workflows/apply-peak-component-wiring.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply guarded edit
+        run: |
+          python3 .chatgpt/apply_peak_component_wiring.py
+          node --check src/cards/pipeline.mjs
+      - name: Run peak component tests
+        run: |
+          node scripts/test_season_defense_runs.mjs
+          node scripts/test_season_score_safety.mjs
+          node scripts/test_peak_component_wiring.mjs
+          node scripts/test_phase1_safety.mjs
+          node scripts/test_cards.mjs
+      - name: Run full regression tests
+        run: |
+          node scripts/test_asof_evidence.mjs
+          node scripts/test_direct_measurement_temporal.mjs
+          node scripts/test_speed_evidence.mjs
+          node scripts/test_speed_external_integration.mjs
+          node scripts/test_speed_override_population.mjs
+          node scripts/test_scouting_application.mjs
+          node scripts/test_scouting_evidence_only_integration.mjs
+          node scripts/test_baserunning_gate.mjs
+          node scripts/test_speed_z_final.mjs
+          node scripts/test_ability_sheet.mjs
+          node scripts/test_ledger_regressions.mjs
+          node scripts/test_interactions.mjs
+          node scripts/test_fielding_regressions.mjs
+          node scripts/test_qa_remaining.mjs
+          node scripts/validate.mjs
+      - name: Commit tested changes
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm .chatgpt/apply_peak_component_wiring.py .github/workflows/apply-peak-component-wiring.yml .github/workflows/audit-peak-components.yml
+          git add src/cards/pipeline.mjs
+          git commit -m "feat: wire observed run-field contributions into peak candidates"
+          git push origin HEAD:agent/satei-phase1-safety
