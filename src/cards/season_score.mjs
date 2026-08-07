@@ -50,14 +50,17 @@ export function leagueRates(agg) {
 }
 
 /**
- * ポジションの守備的価値（点/シーズン）。
- * 捕手や遊撃は守備負担が重く、同じ打撃なら価値が高い。逆に一塁・指名打者は低い。
- * 値は「シーズンフル出場あたりの調整点」。
+ * ポジションの守備的価値（点/シーズン）の旧・診断用候補。
+ *
+ * 2026-08-07監査で、この未較正値だけで2020+のピーク年が170人中23人(13.5%)変わり、
+ * 絶対値平均6.02点と実測守備得点6.03点に匹敵した。
+ * 「一般的な序列」から置いた数値を本番の総合ピークへ入れるには影響が大きすぎるため、
+ * **本番既定では使用しない**。NPB実データで較正した後に再検討する。
  */
 export const POSITION_ADJUSTMENT = {
-  _comment: 'ポジション別の守備位置調整。守備の難しいポジションほど加点する',
-  _status: 'PROVISIONAL。NPB実データからの推定は未実施（各ポジションの平均打撃力の差から導出できる。Phase 3b以降）',
-  _source: '野球分析で一般に使われる序列（捕手>遊撃>二塁/三塁/中堅>右翼/左翼>一塁>指名打者）を採用。数値はシーズン換算',
+  _comment: '診断用の未較正ポジション別調整。本番総合点ではデフォルト無効',
+  _status: 'PROVISIONAL_DIAGNOSTIC_ONLY。NPB実データからの推定は未実施',
+  _source: '野球分析で一般に使われる序列を参考にした旧候補。数値自体は本プロジェクトで未較正',
   values: { 捕: 12.5, 遊: 7.5, 二: 2.5, 三: 2.5, 中: 2.5, 右: -7.5, 左: -7.5, 一: -12.5, 指: -17.5 },
 };
 
@@ -66,19 +69,25 @@ export const POSITION_ADJUSTMENT = {
  *
  * @param {object} args
  *   line: 実成績 / lgRate: リーグ率 / rv: 得点価値
- *   runRuns: 走塁の得点貢献（UBR等。無ければ0）
- *   fldRuns: 守備の得点貢献（RngR+ErrR+ARM+DPR等。無ければ0）
+ *   runRuns: 走塁の得点貢献（UBR等）
+ *   fldRuns: 守備の得点貢献（位置別の加算可能なrun成分）
  *   position: 主位置 / teamGames: チーム試合数
+ *   includeProvisionalPositionAdjustment: 診断時だけtrue。本番既定=false
  * @returns {{batting, total, game, parts}}
  *   batting = 打撃ピーク（打撃の得点貢献のみ）
- *   total   = 総合ピーク（打撃＋走塁＋守備＋位置調整）※既定
+ *   total   = 観測総合ピーク（打撃＋走塁＋守備）。未較正の位置調整は既定で含めない
  *   game    = パワプロとして強い年（能力値が高く出る年＝打席あたりの質を重視）
  */
 export function seasonScore(args) {
-  const { line, lgRate, rv, runRuns = 0, fldRuns = 0, position = null, teamGames = 143 } = args;
+  const {
+    line, lgRate, rv, runRuns = 0, fldRuns = 0,
+    position = null, teamGames = 143,
+    includeProvisionalPositionAdjustment = false,
+  } = args;
   const bat = battingRuns(line, lgRate, rv);
 
-  const posAdj = position && POSITION_ADJUSTMENT.values[position] != null
+  const posAdj = includeProvisionalPositionAdjustment
+    && position && POSITION_ADJUSTMENT.values[position] != null
     ? POSITION_ADJUSTMENT.values[position] * Math.min(1, line.PA / (teamGames * 3.1))
     : 0;
 
@@ -87,6 +96,15 @@ export function seasonScore(args) {
     total: bat.vsLeague + runRuns + fldRuns + posAdj,
     // 打席あたりの質。少打席の好成績年が上位に来やすいので、単年カード選定の既定にはしない
     game: bat.perPa * 600,
-    parts: { battingRuns: bat.vsLeague, runRuns, fldRuns, posAdj, pa: line.PA, perPa: bat.perPa },
+    parts: {
+      battingRuns: bat.vsLeague,
+      runRuns,
+      fldRuns,
+      posAdj,
+      positionAdjustmentApplied: includeProvisionalPositionAdjustment && posAdj !== 0,
+      positionAdjustmentStatus: includeProvisionalPositionAdjustment ? 'provisional_diagnostic' : 'disabled_uncalibrated',
+      pa: line.PA,
+      perPa: bat.perPa,
+    },
   };
 }
