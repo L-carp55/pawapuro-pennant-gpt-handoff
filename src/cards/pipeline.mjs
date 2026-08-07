@@ -565,7 +565,8 @@ export function appraiseCard(ctx, opts) {
   // 走る速さ・肩の強さは年でほとんど変わらないのに、1年分の観測だけで査定すると
   // 観測のブレがそのまま能力差として出る（西川龍馬の走力が年により F〜D で振れていた）。
   // 肩はさらに材料を2つ（ARMと補殺）使う——ARM単独では強肩ほど走者が走ってこず機会が減るため。
-  const durable = estimateDurableTraits(db, p.player_id, targetSeason, { cfg, runNorm, fldNorm, lgOf, envFactorsOf });
+  const durable = estimateDurableTraits(db, p.player_id, targetSeason,
+    { cfg, runNorm, fldNorm, lgOf, envFactorsOf, modelGates: ctx.modelGates });
 
   const bm = prep(`
     SELECT b.ubr, b.wsb, m.gb_pct, m.ld_pct, m.offb_pct, m.iffb_pct FROM v_bm_by_player b
@@ -582,7 +583,9 @@ export function appraiseCard(ctx, opts) {
   let run = null;
   let infieldHitSpecial = null;
   if (bm) {
-    const adv = advanceOf(db, normName(p.name), targetSeason);
+    const advanceGate = ctx.modelGates?.baserunning_advance_source;
+    const adv = advanceGate?.enabled === false
+      ? null : advanceOf(db, normName(p.name), targetSeason);
     const sc = speedComponents(line, { gbPct: bm.gb_pct, infieldHits: ihRow?.ih ?? null, bats: ihRow?.bats ?? null, season: targetSeason, advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 }, bm.ubr, runNorm);
     const ihNorm = ihRow?.bats == null ? null
       : runNorm.infieldHit?.byCell?.[`${targetSeason}|${ihRow.bats}`]
@@ -614,6 +617,7 @@ export function appraiseCard(ctx, opts) {
       stealing: stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, speedZFinal, runNorm, cfg),
       baserunning,
       baserunningStatus: baserunningGate?.enabled === false ? baserunningGate : null,
+      advanceSourceStatus: advanceGate?.enabled === false ? advanceGate : null,
       _z: speedZFinal,
       _singleYearZ: sc.score,
       _infieldHitExcess: gbSingleExcess,

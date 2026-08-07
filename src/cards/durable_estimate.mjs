@@ -25,7 +25,8 @@ const prep = (db, sql) => {
  * @returns {{speed, arm}} それぞれ null または {z, weight, years, seasons, ...}
  */
 export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
-  const { runNorm, fldNorm } = ctx;
+  const { runNorm, fldNorm, modelGates = {} } = ctx;
+  const advanceEnabled = modelGates?.baserunning_advance_source?.enabled !== false;
 
   // --- 走力: 対象年以前の打撃＋走塁データから各年のzを出して畳む ---
   const runRows = prep(db, `
@@ -41,7 +42,7 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
 
   const nrm = s2 => (s2 ?? '').normalize('NFKC').replace(/\s+/g, '');
   const speedObs = runRows.map(r => {
-    const adv = advanceOf(db, nrm(r.name), r.season);
+    const adv = advanceEnabled ? advanceOf(db, nrm(r.name), r.season) : null;
     const sc = speedComponents(
       { AB: r.ab, SO: r.so, B2: r.b2, B3: r.b3, HR: r.hr, GDP: r.gdp, PA: r.pa },
       { gbPct: r.gb_pct, infieldHits: r.ih, bats: r.bats, season: r.season,
