@@ -19,22 +19,29 @@ function splitCsvLine(line) {
 }
 const add=(m,k)=>m.set(k,(m.get(k)??0)+1);
 const top=(m,n=20)=>[...m.entries()].sort((a,b)=>b[1]-a[1]).slice(0,n);
+const nonempty=v=>v!=null&&v!==''&&v!=='0'&&v!=='0.0'&&v!=='nan'&&v!=='None';
 
-const freq={type:new Map(),state:new Map(),bresult:new Map(),presult:new Map(),desc:new Map()};
-let rows=0, regular=0, nonemptyBresult=0, paCount=0, paWithBresult=0, paWithHitWord=0, paWithBaseRunner=0, adjacentSameHalf=0;
-const sampleB=[]; const sampleHit=[]; const sampleRunner=[];
+const freq={type:new Map(),state:new Map(),bresult:new Map(),presult:new Map(),on1:new Map(),on2:new Map(),on3:new Map(),on1n:new Map(),on2n:new Map(),on3n:new Map()};
+let rows=0, regular=0, nonemptyBresult=0, paCount=0, paWithBresult=0, paWithHitWord=0;
+let paWithRunnerName=0,paWithRunnerId=0,rowsWithRunnerId=0,rowsWithRunnerName=0,adjacentSameHalf=0;
+const sampleB=[]; const sampleHit=[]; const sampleRunnerName=[]; const sampleRunnerId=[];
 
 for(const fn of files){
   const lines=readFileSync(path.join(RAW,fn),'utf8').split(/\r?\n/);
   const h=splitCsvLine(lines[0].replace(/^\uFEFF/,''));
   const I=n=>h.indexOf(n);
-  const ix={season:I('season'),game:I('game_id'),inn:I('inning'),ab:I('inning_ab_num'),type:I('game_type_id'),state:I('game_state_name'),desc:I('description_jap'),bresult:I('bresult'),presult:I('presult'),on1n:I('on_1b_name'),on2n:I('on_2b_name'),on3n:I('on_3b_name')};
+  const ix={season:I('season'),game:I('game_id'),inn:I('inning'),ab:I('inning_ab_num'),type:I('game_type_id'),state:I('game_state_name'),desc:I('description_jap'),bresult:I('bresult'),presult:I('presult'),on1:I('on_1b'),on1n:I('on_1b_name'),on2:I('on_2b'),on2n:I('on_2b_name'),on3:I('on_3b'),on3n:I('on_3b_name'),batter:I('batter'),batterName:I('PlayInfo_PlayerName')};
   const pa=new Map();
   for(let i=1;i<lines.length;i++){
     if(!lines[i])continue; rows++;
     const r=splitCsvLine(lines[i]);
     add(freq.type,r[ix.type]); add(freq.state,r[ix.state]); add(freq.bresult,r[ix.bresult]); add(freq.presult,r[ix.presult]);
+    for(const k of ['on1','on2','on3','on1n','on2n','on3n']) add(freq[k],r[ix[k]]);
     if(!new Set(['1','2','26']).has(r[ix.type]))continue; regular++;
+    const hasId=[ix.on1,ix.on2,ix.on3].some(j=>j>=0&&nonempty(r[j]));
+    const hasName=[ix.on1n,ix.on2n,ix.on3n].some(j=>j>=0&&nonempty(r[j]));
+    if(hasId){rowsWithRunnerId++;if(sampleRunnerId.length<30)sampleRunnerId.push({fn,on1:r[ix.on1],on1n:r[ix.on1n],on2:r[ix.on2],on2n:r[ix.on2n],on3:r[ix.on3],on3n:r[ix.on3n],batter:r[ix.batter],batterName:r[ix.batterName],d:(r[ix.desc]??'').slice(0,120)});}
+    if(hasName)rowsWithRunnerName++;
     const br=r[ix.bresult]??'', d=r[ix.desc]??'';
     if(br){nonemptyBresult++; if(sampleB.length<20)sampleB.push({fn,br,d:d.slice(0,120)});}
     if(/ヒット|安打|二塁打|ツーベース|三塁打|本塁打|ホームラン/.test(d) && sampleHit.length<20) sampleHit.push({fn,br,d:d.slice(0,120)});
@@ -46,9 +53,12 @@ for(const fn of files){
     const p=pa.get(k), br=p.last[ix.bresult]??'',d=p.last[ix.desc]??'';
     if(br)paWithBresult++;
     if(/ヒット|安打|二塁打|ツーベース|三塁打|本塁打|ホームラン/.test(d))paWithHitWord++;
-    if(p.first[ix.on1n]||p.first[ix.on2n]||p.first[ix.on3n]){
-      paWithBaseRunner++; if(sampleRunner.length<20)sampleRunner.push({fn,key:k,on1:p.first[ix.on1n],on2:p.first[ix.on2n],on3:p.first[ix.on3n],br,d:d.slice(0,100)});
+    const hasName=[ix.on1n,ix.on2n,ix.on3n].some(j=>j>=0&&nonempty(p.first[j]));
+    const hasId=[ix.on1,ix.on2,ix.on3].some(j=>j>=0&&nonempty(p.first[j]));
+    if(hasName){
+      paWithRunnerName++; if(sampleRunnerName.length<20)sampleRunnerName.push({fn,key:k,on1:p.first[ix.on1],on1n:p.first[ix.on1n],on2:p.first[ix.on2],on2n:p.first[ix.on2n],on3:p.first[ix.on3],on3n:p.first[ix.on3n],br,d:d.slice(0,100)});
     }
+    if(hasId)paWithRunnerId++;
   }
   for(let i=0;i<keys.length-1;i++){
     const a=keys[i].split('|'),b=keys[i+1].split('|');
@@ -58,11 +68,18 @@ for(const fn of files){
 
 console.log(`# files=${files.length} rows=${rows} regular=${regular} pa=${paCount}`);
 console.log(`nonemptyBresult rows=${nonemptyBresult} paWithBresult=${paWithBresult}`);
-console.log(`paWithHitWord=${paWithHitWord} paWithBaseRunner=${paWithBaseRunner} adjacentSameHalf=${adjacentSameHalf}`);
+console.log(`paWithHitWord=${paWithHitWord} adjacentSameHalf=${adjacentSameHalf}`);
+console.log(`rowsWithRunnerId=${rowsWithRunnerId} rowsWithRunnerName=${rowsWithRunnerName}`);
+console.log(`paWithRunnerId=${paWithRunnerId} paWithRunnerName=${paWithRunnerName}`);
 console.log('\n## game_type_id'); console.log(top(freq.type,20));
 console.log('\n## game_state_name'); console.log(top(freq.state,20));
 console.log('\n## bresult'); console.log(top(freq.bresult,40));
 console.log('\n## presult'); console.log(top(freq.presult,30));
+console.log('\n## runner ID columns');
+console.log('on_1b',top(freq.on1,20)); console.log('on_2b',top(freq.on2,20)); console.log('on_3b',top(freq.on3,20));
+console.log('\n## runner name columns');
+console.log('on_1b_name',top(freq.on1n,20)); console.log('on_2b_name',top(freq.on2n,20)); console.log('on_3b_name',top(freq.on3n,20));
+console.log('\n## sample rows with runner ID'); for(const x of sampleRunnerId)console.log(JSON.stringify(x));
 console.log('\n## sample nonempty bresult'); for(const x of sampleB)console.log(JSON.stringify(x));
 console.log('\n## sample description hit words'); for(const x of sampleHit)console.log(JSON.stringify(x));
-console.log('\n## sample PA with base runner'); for(const x of sampleRunner)console.log(JSON.stringify(x));
+console.log('\n## sample PA with runner name'); for(const x of sampleRunnerName)console.log(JSON.stringify(x));
