@@ -31,8 +31,8 @@ eq(g2.season_def_pitches_before, 120);
 
 const g3 = m.get(key(2024,'g3','源田 壮亮'));
 eq(g3.prev_def_game_gap_days, 6);
-eq(g3.prior_def_games_7d, 1); // 3/30だけが7日以内。3/29は7日超
-eq(g3.prior_def_pitches_7d, 110);
+eq(g3.prior_def_games_7d, 2); // 3/29はちょうど7日前、3/30は6日前。<=7日なので両方含む
+eq(g3.prior_def_pitches_7d, 230);
 eq(g3.prior_def_games_14d, 2);
 eq(g3.prior_def_pitches_14d, 230);
 eq(g3.season_def_pitches_before, 230);
