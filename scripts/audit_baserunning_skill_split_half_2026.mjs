@@ -15,7 +15,7 @@ const eventDbPath=path.resolve(process.env.PBP_DB_PATH ?? path.join(ROOT,'data',
 const sourceDbPath=path.resolve(process.env.PENNANT_DB_PATH ?? path.join(ROOT,'data','pennant.db'));
 const outPath=process.argv[2] ? path.resolve(process.argv[2]) : null;
 const normName=s=>String(s??'').normalize('NFKC').replace(/[\s　]/g,'');
-const finite=x=>Number.isFinite(Number(x));
+const finite=x=>x!==null&&x!==undefined&&x!==''&&Number.isFinite(Number(x));
 const mean=a=>a.length?a.reduce((s,x)=>s+x,0)/a.length:null;
 const sd=a=>{if(a.length<2)return null;const m=mean(a);return Math.sqrt(a.reduce((s,x)=>s+(x-m)**2,0)/(a.length-1));};
 function pearson(xs,ys){if(xs.length<3||xs.length!==ys.length)return null;const mx=mean(xs),my=mean(ys);let n=0,dx=0,dy=0;for(let i=0;i<xs.length;i++){const a=xs[i]-mx,b=ys[i]-my;n+=a*b;dx+=a*a;dy+=b*b;}return dx>0&&dy>0?n/Math.sqrt(dx*dy):null;}
@@ -61,7 +61,7 @@ function halfModel(rows){
 const halves=[events.filter(e=>hashParity(e.game_id)===0),events.filter(e=>hashParity(e.game_id)===1)];
 const A=halfModel(halves[0]), B=halfModel(halves[1]);
 const common=[];
-for(const [name,a] of A.players){const b=B.players.get(name);if(!b||a.n<5||b.n<5)continue;common.push({name,a,b,speed:speedByName.get(name)});}
+for(const [name,a] of A.players){const b=B.players.get(name);const speed=speedByName.get(name);if(!b||a.n<5||b.n<5||!finite(speed))continue;common.push({name,a,b,speed:Number(speed)});}
 const rawA=common.map(x=>x.a.raw),rawB=common.map(x=>x.b.raw),adjA=common.map(x=>x.a.adj),adjB=common.map(x=>x.b.adj);
 const rawR=pearson(rawA,rawB),adjR=pearson(adjA,adjB),rawS=spearman(rawA,rawB),adjS=spearman(adjA,adjB);
 
