@@ -1,0 +1,33 @@
+name: Audit rebuilt baserunning 2024
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths: [.github/workflows/audit-rebuilt-baserunning-2024.yml]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax
+        run: |
+          node --check scripts/fetch_npb_pbp_release.mjs
+          node --check scripts/build_baserunning_advances.mjs
+      - name: Fetch 2024 PBP release assets
+        run: node scripts/fetch_npb_pbp_release.mjs 2024 /tmp/npb_pbp_2024
+      - name: Inspect download
+        run: |
+          ls -lh /tmp/npb_pbp_2024
+          du -sh /tmp/npb_pbp_2024
+          head -1 /tmp/npb_pbp_2024/2024-02_pbp.csv
+      - name: Rebuild events without touching repository DB
+        env:
+          PBP_RAW_DIR: /tmp/npb_pbp_2024
+          PBP_DRY_RUN: '1'
+        run: node scripts/build_baserunning_advances.mjs
