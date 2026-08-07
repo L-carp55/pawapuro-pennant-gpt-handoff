@@ -1,0 +1,16 @@
+name: Inspect running splits CSV
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths: [.github/workflows/inspect-running-splits-csv.yml]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect official Baseball Savant CSV
+        run: |
+          curl -fLsS 'https://baseballsavant.mlb.com/running_splits?type=raw&bats=&year=2025&position=&team=&min=5&csv=true' -o /tmp/running.csv
+          wc -l /tmp/running.csv
+          head -3 /tmp/running.csv
