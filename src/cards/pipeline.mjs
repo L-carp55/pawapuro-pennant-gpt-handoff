@@ -14,6 +14,7 @@ import { fitLogDist } from '../ratings/scale.mjs';
 import { appraiseBatting, playerParkFactor, applyEnvironment, gammaForLevel } from '../ratings/from_rates.mjs';
 import { selectPrior } from '../ratings/shrinkage.mjs';
 import { speedComponents, resolveFinalSpeed, stealingAbility, baserunningAbility } from '../ratings/running.mjs';
+import { reconcileSpeedEvidence } from '../ratings/speed_evidence.mjs';
 import { appraiseAllPositions } from '../ratings/fielding.mjs';
 import {
   buildMeetLedger, buildPowerLedger,
@@ -568,6 +569,31 @@ export function appraiseCard(ctx, opts) {
   const durable = estimateDurableTraits(db, p.player_id, targetSeason,
     { cfg, runNorm, fldNorm, lgOf, envFactorsOf, modelGates: ctx.modelGates });
 
+  // ---- 走力の上位証拠を、残差計算より前に組み立てる（2026-08-07）----
+  // 統計走力はscale_calibration前の内部目盛り、直接計測/スカウティングは最終目盛りなので、
+  // reconcileSpeedEvidence() で同じ最終目盛りへ写してから統合し、共通zへ逆変換する。
+  // これにより「表示だけ実測、盗塁・守備は統計z」という二重の脚力を作らない。
+  const scout = opts.scoutingLedger ?? null;
+  const dbName = p.name;
+  const speedScout = scout ? scoutLookup(scout, dbName, targetSeason, '走力') : null;
+  const bridgeRow = (() => {
+    try {
+      return db.prepare(`SELECT sprint_speed_avg, sprint_years, arm_mph_avg, arm_years, detail
+                         FROM mlb_bridge WHERE proeye_id=?`).get(p.player_id) ?? null;
+    } catch { return null; }
+  })();
+  const npbPlusBaseRow = (() => {
+    try { return db.prepare(`SELECT * FROM npb_plus_measurement WHERE player_id=?`).get(p.player_id) ?? null; }
+    catch { return null; }
+  })();
+  const directCfg = {
+    ...cfg.direct_measurement,
+    npb_plus_direct: cfg.npb_plus_direct,
+    scale_calibration: cfg.scale_calibration,
+  };
+  const speedDirect = buildDirectMeasurements(
+    { ...(bridgeRow ?? {}), ...(npbPlusBaseRow ?? {}) }, directCfg, targetSeason).走力;
+
   const bm = prep(`
     SELECT b.ubr, b.wsb, m.gb_pct, m.ld_pct, m.offb_pct, m.iffb_pct FROM v_bm_by_player b
     LEFT JOIN player_link l ON l.proeye_id=b.proeye_id AND l.season=b.season
@@ -599,9 +625,13 @@ export function appraiseCard(ctx, opts) {
     // ★2026-08-06: カード内で使う走力zを一本化する。
     // 以前は表示だけ複数年、盗塁・走塁・内野安打・守備は単年sc.scoreだったため、
     // 同じカードの中で別の脚力を前提にしていた。以後はspeedZFinalを全経路へ渡す。
-    const speedState = resolveFinalSpeed(sc.score, durable.speed, {
+    const statisticalSpeedState = resolveFinalSpeed(sc.score, durable.speed, {
       weight: line.PA, season: targetSeason,
     }, cfg);
+    const speedState = reconcileSpeedEvidence(
+      statisticalSpeedState,
+      { direct: speedDirect, scouting: speedScout },
+      cfg);
     const speedZFinal = speedState?.zFinal ?? null;
 
     // infieldHitAbility 側で、最終走力zで説明できる分を除いて得能を判定する。
@@ -612,7 +642,11 @@ export function appraiseCard(ctx, opts) {
       : baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, speedZFinal, runNorm, cfg,
         { advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 });
     run = speedState ? {
+      // speed は内部raw目盛り。speedDisplay はscale_calibration後の最終目盛り。
+      // _z はこの最終表示値と同じ潜在脚力へ逆変換した共通z。
       speed: speedState.rating,
+      speedDisplay: speedState.finalRating,
+      speedEvidence: speedState.evidence,
       speedDetail: speedState.detail,
       stealing: stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, speedZFinal, runNorm, cfg),
       baserunning,
@@ -846,9 +880,16 @@ export function appraiseCard(ctx, opts) {
 
   // スカウティング評価（仕様04 §1.2 第2階層）との突き合わせ。
   // 統計は「走塁の成果」、スカウティングは「脚力そのもの」で別の量。片方で上書きせず両方残す
-  const scout = opts.scoutingLedger ?? null;
-  const dbName = p.name;
-  const runRec = scout ? scoutReconcile(r1(run?.speed), scoutLookup(scout, dbName, targetSeason, '走力')) : null;
+  // 走力は上で既に統計・直接計測・スカウティングを統合済み。
+  // ability_evidence用には、統計の最終目盛りとスカウティング原票を別々に残す。
+  const runRec = speedScout ? {
+    value: r1(run?.speedDisplay),
+    statistical_value: r1(run?.speedEvidence?.statistical_final_scale),
+    gap: Number.isFinite(run?.speedDisplay) && Number.isFinite(run?.speedEvidence?.statistical_final_scale)
+      ? r1(run.speedDisplay - run.speedEvidence.statistical_final_scale) : null,
+    scouting: speedScout,
+    scouting_value: speedScout.value,
+  } : null;
   const armRec = scout ? scoutReconcile(r1(armForSheet?.rating), scoutLookup(scout, dbName, targetSeason, '肩力')) : null;
 
   // ---- 直接計測（第1階層）を能力欄へ届ける ----
@@ -858,39 +899,19 @@ export function appraiseCard(ctx, opts) {
   //   証拠を先に組み立て、能力欄へ渡す。
   // 現在つながっているのは**捕手の肩力（NPB+の送球速度）だけ**。走力（MLB Sprint Speed）は
   //   置き換えると現行より悪化する実測があるため保留（T-0107で設計してから繋ぐ）。
-  const bridgeRow = (() => {
-    try {
-      return db.prepare(`SELECT sprint_speed_avg, sprint_years, arm_mph_avg, arm_years, detail
-                         FROM mlb_bridge WHERE proeye_id=?`).get(p.player_id) ?? null;
-    } catch { return null; }   // mlb_bridge が無いDBでも査定は動く
-  })();
-
   // 捕手の送球速度（NPB+アプリ、オーナー撮影）。2026-08-05 オーナー裁定で肩力へ接続。
   // ★捕手だけに適用する——守備位置で層別すると捕手 r=0.676 / 内野 +0.137 / 外野 -0.135 と
   //   層で符号すら違い、混ぜると打ち消し合って全体 r=0.036 になる（層別漏れをCCが一度やった）。
   const npbPlusRow = (() => {
-    try {
-      // ★2026-08-05修理: ここは捕手の送球速度だけを取る作りだった。
-      //   パワー・走力の実測（打球速度・ハードヒット率・瞬間最高速度など）を足したので、
-      //   全選手・全項目を取る。送球速度だけは捕手にしか使わないので、その印だけ残す。
-      const r = db.prepare(`SELECT * FROM npb_plus_measurement WHERE player_id=?`).get(p.player_id);
-      if (!r) return null;
-      const isCatcher = fldRows.some(f => f.pos === 'C') || p.position === '捕';
-      return { ...r, is_catcher: isCatcher };
-    } catch { return null; }
+    if (!npbPlusBaseRow) return null;
+    // 送球速度だけは捕手にしか使わないので、守備行が揃った後で印を足す。
+    const isCatcher = fldRows.some(f => f.pos === 'C') || p.position === '捕';
+    return { ...npbPlusBaseRow, is_catcher: isCatcher };
   })();
 
   // 査定対象年を渡す。実測年から3年以上離れていれば直接計測として扱わない（加齢で変わるため）
   const directs = buildDirectMeasurements(
-    { ...(bridgeRow ?? {}), ...(npbPlusRow ?? {}) },
-    {
-      ...cfg.direct_measurement,
-      npb_plus_direct: cfg.npb_plus_direct,
-      // ★仕様アンカーを持つ能力（ミート・パワー）を渡す。NPB+のモデルはパワプロの能力値を
-      //   目標に当てはめた式なので、アンカーで作った値へ混ぜると目盛りが2つになる（2026-08-06）。
-      //   ここで抜き出して渡さないと、direct_measurement 側からは scale_calibration が見えない。
-      scale_calibration: cfg.scale_calibration,
-    }, targetSeason);
+    { ...(bridgeRow ?? {}), ...(npbPlusRow ?? {}) }, directCfg, targetSeason);
 
   // ★2026-08-05修理: 実測を能力欄へ据える処理が**肩力にしか無かった**。
   //   走力とパワーは ability_evidence（証拠）には入るが能力欄は統計由来のままで、
@@ -927,6 +948,37 @@ export function appraiseCard(ctx, opts) {
         _direct: armDirect, _statistical_rating: r1(armForSheet?.rating) }
     : armForSheet;
 
+  // 走力の能力欄には、上で共通zへ反映済みの最終目盛りを渡す。
+  // ここで再びblendDirect()すると同じ実測を二重適用するため禁止。
+  const speedOverride = (() => {
+    const e = run?.speedEvidence;
+    if (!e || e.decided_by === 'statistical') return null;
+    if (e.decided_by === 'direct_blend') return {
+      value: r1(run.speedDisplay),
+      _direct: e.direct,
+      _statistical_rating: r1(e.statistical_final_scale),
+      _weight: e.external_weight,
+    };
+    if (e.decided_by === 'scouting') return {
+      value: r1(run.speedDisplay),
+      scouting: e.scouting,
+      statistical_value: r1(e.statistical_final_scale),
+      gap: Number.isFinite(run.speedDisplay) && Number.isFinite(e.statistical_final_scale)
+        ? r1(run.speedDisplay - e.statistical_final_scale) : null,
+    };
+    return null;
+  })();
+
+  // 外部証拠を使った走力のprovenanceを、Basement単独と誤表示しない。
+  if (run?.speedEvidence?.decided_by && run.speedEvidence.decided_by !== 'statistical') {
+    provenanceByValue.speed = withProvenance(r1(run.speedDisplay), SOURCES.derived, {
+      season: targetSeason, isEstimated: true,
+      method: '統計走力を最終目盛りへ変換し、直接計測/スカウティングと統合後に共通zへ逆変換',
+      notes: `決定=${run.speedEvidence.decided_by}; 外部=${run.speedEvidence.external_source ?? 'scouting'}; `
+        + `統計最終目盛り=${r1(run.speedEvidence.statistical_final_scale)} → 最終=${r1(run.speedDisplay)}`,
+    });
+  }
+
   // 能力欄をゲームの構成どおりに組み立てる（オーナー確定 2026-08-01）。
   // ミート・パワーは得能付与Phase3b(2026-08-04)で台帳反映後の値(batAdjusted)を使う
   const abilitySheet = buildAbilitySheet({
@@ -945,7 +997,7 @@ export function appraiseCard(ctx, opts) {
     //   そこで**実測の確からしさ（ホールドアウトでの一致）を重みにして混ぜる**。
     //   Sprint Speed のように一致0.945の実測はほぼそのまま効き、
     //   ハードヒット率のような0.5前後の実測は半分ほどしか動かさない。
-    speedOverride: runRec?.scouting ? runRec : blendDirect(run?.speed, directs.走力),
+    speedOverride,
     powerOverride: blendDirect(batAdjusted?.power, directs.パワー),
     powerDisplay: conventions.power_display,
     unappraisedReasons: ctx.modelGates?.baserunning_ability?.enabled === false
@@ -1010,7 +1062,9 @@ export function appraiseCard(ctx, opts) {
       // 表示用（ゲーム側の慣習を当てた後）。査定値 power とは別欄（仕様02 §6.6）
       power_display: conventions.power_display,
       game_convention_adjustments: conventions.adjustments,
-      speed: r1(run?.speed), stealing: r1(run?.stealing?.rating), baserunning: r1(run?.baserunning?.rating),
+      speed: r1(run?.speed), speed_display: r1(run?.speedDisplay),
+      speed_evidence: run?.speedEvidence ?? null,
+      stealing: r1(run?.stealing?.rating), baserunning: r1(run?.baserunning?.rating),
       fielding: fld.map(f => ({
         pos: f.pos, innings: f.inn, is_primary: f.isPrimary,
         fielding: r1(f.fielding?.rating), catching: r1(f.catching?.rating), arm: r1(f.arm?.rating),
@@ -1057,7 +1111,9 @@ export function appraiseCard(ctx, opts) {
   });
   card.ability_evidence = {
     _direct_measurement_status: DIRECT_MEASUREMENT_STATUS,
-    走力: evOf('走力', runRec, r1(run?.speed), ['三塁打率', '併殺回避率', 'UBR']),
+    // proxyは直接計測と同じ最終目盛りに揃える。run.speed（内部raw）を渡すと単位が混ざる。
+    走力: evOf('走力', runRec, r1(run?.speedEvidence?.statistical_final_scale ?? run?.speedDisplay),
+      ['三塁打率', '併殺回避率', 'UBR', '内野安打率']),
     肩力: evOf('肩力', armRec, armRec?.statistical_value ?? r1(armForSheet?.rating), ['ARM', '補殺率']),
   };
 

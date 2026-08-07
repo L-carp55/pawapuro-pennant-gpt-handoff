@@ -120,7 +120,10 @@ export function buildCalcLog(args) {
     // 弾道の出典（2026-08-05追加、T-0118）。実測か推定かを計算ログでも追えるようにする
     trajectory: { is_estimated: !!trajectoryEstimated, source: trajectorySource ?? null },
     running: run ? {
-      speed: run.speed, stealing: run.stealing?.rating ?? null, baserunning: run.baserunning?.rating ?? null,
+      speed: run.speed,
+      speed_display: run.speedDisplay ?? null,
+      speed_evidence: run.speedEvidence ?? null,
+      stealing: run.stealing?.rating ?? null, baserunning: run.baserunning?.rating ?? null,
       _speed_z_final: run._z, _speed_z_single_year: run._singleYearZ ?? null,
       // ★2026-08-05修理: 走力の複数年プール（身体能力は年でほとんど変わらないため均す仕組み）の
       //   根拠（何年ぶんを使ったか）が計算はされているのに計算ログへ渡っていなかった。
