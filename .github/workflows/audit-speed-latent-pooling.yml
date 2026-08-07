@@ -1,0 +1,19 @@
+name: Audit latent speed pooling
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths: [.github/workflows/audit-speed-latent-pooling.yml]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check scripts/audit_speed_latent_pooling.mjs
+      - run: node scripts/audit_speed_latent_pooling.mjs
