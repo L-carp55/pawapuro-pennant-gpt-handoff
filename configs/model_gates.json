@@ -18,6 +18,26 @@
       "policy": "targetSeason>=2026のときだけ本人証拠として利用。過去年は年別再構築まで未使用"
     }
   },
+  "speed_ability": {
+    "enabled": true,
+    "status": "PROVISIONAL_REDESIGN",
+    "reason": "2026 NPB+直接走力へのproxy再較正で三塁打除外は支持されたが、2024 sanity checkが周東>源田>近本となり、オーナー基準の周東>近本>源田を満たさないため未確定。現値は比較用の暫定値としてのみ表示する。",
+    "evidence": {
+      "npb_plus_direct_matched": 98,
+      "proxy_cv_best_rmse_kmh": 0.868,
+      "temporal_pool_holdout_best_rmse_kmh": 0.904,
+      "temporal_pool_holdout_best_method": "pa_weighted_3y",
+      "sanity_order_current": "周東 > 源田 > 近本",
+      "sanity_order_required": "周東 > 近本 > 源田",
+      "measured_at": "2026-08-07"
+    },
+    "reopen_conditions": [
+      "盗塁行動に依存しない追加の速度proxyを探索する",
+      "2026 NPB+直接速度のplayer-holdoutで現行proxy以上を確認する",
+      "周東>近本>源田を教師ラベルにせずsanity checkとして満たす",
+      "自作エンジン内の速度目盛りと結びつけて100段階を確定する"
+    ]
+  },
   "fielding_ability": {
     "enabled": false,
     "status": "PAUSED_REDEFINE",

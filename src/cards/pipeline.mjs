@@ -1034,6 +1034,10 @@ export function appraiseCard(ctx, opts) {
     unappraisedReasons: ctx.modelGates?.baserunning_ability?.enabled === false
       ? { 走塁: ctx.modelGates.baserunning_ability.reason }
       : {},
+    provisionalStatus: {
+      走力: ctx.modelGates?.speed_ability ?? null,
+      捕球: ctx.modelGates?.catching_ability ?? null,
+    },
     specialAbilities: {
       strikeout: strikeoutSpecial,
       infieldHit: infieldHitSpecial,

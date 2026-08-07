@@ -53,7 +53,7 @@ const file = path.join(ROOT, 'outputs', 'cards', `${card.name_ja.replace(/ /g, '
 await writeFile(file, JSON.stringify(card, null, 2), 'utf8');
 
 const A = card.abilities;
-const show = (v) => v == null ? '—' : (v.scale === '1-4' ? String(v.value) : `${v.rank}${v.value}${v.is_estimated ? '推' : ''}`);
+const show = (v) => v == null ? '—' : (v.scale === '1-4' ? String(v.value) : `${v.rank}${v.value}${v.is_estimated ? '推' : ''}${v.provisional ? '暫' : ''}`);
 
 console.log(`${card.name_ja}  [${card.card_type}]  ${card.season_label ?? card.seasons_used.join('-')}  ${card.team} ${card.primary_position}`);
 console.log(`  基礎能力  ${Object.entries(A.基礎能力).map(([k, v]) => `${k} ${show(v)}`).join(' / ')}`);

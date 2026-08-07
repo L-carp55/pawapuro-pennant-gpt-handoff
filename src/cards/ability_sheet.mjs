@@ -85,10 +85,16 @@ export function buildAbilitySheet(a, cfg) {
     bat, trajectory, trajectoryEstimated = false, trajectorySource = null,
     run, fld = [], splits, durability, powerDisplay,
     arm = null, speedOverride = null, powerOverride = null, specialAbilities = {},
-    unappraisedReasons = {},
+    unappraisedReasons = {}, provisionalStatus = {},
   } = a;
 
   const primary = fld.find(f => f.isPrimary) ?? null;
+  const provisionalMeta = name => {
+    const g = provisionalStatus?.[name];
+    return g?.status?.startsWith('PROVISIONAL')
+      ? { provisional: true, _status: g.status, _note_provisional: g.reason }
+      : {};
+  };
   // 肩力は選手の属性。守備位置ごとに繰り返さない。
   // その年の守備データが無くても、補殺は2006年から取れるので arm を直接受け取る
   const armSrc = arm ?? fld.map(f => f.arm).find(x => x && !x.is_estimated) ?? fld.map(f => f.arm).find(Boolean) ?? null;
@@ -118,16 +124,17 @@ export function buildAbilitySheet(a, cfg) {
     // スカウティング評価があればそちらを表に出す（統計値は provenance 側に残る）
     // スカウティング評価があればそちらを優先（較正は当てない＝評価はすでにパワプロの目盛り）
     走力: speedOverride
-      ? graded(speedOverride.value, cfg, speedOverride._direct
+      ? graded(speedOverride.value, cfg, { ...(speedOverride._direct
           ? { from_direct_measurement: true, statistical_value: speedOverride._statistical_rating,
               source: speedOverride._direct.source, measured: speedOverride._direct.measured }
-          : { from_scouting: true, statistical_value: speedOverride.statistical_value, gap: speedOverride.gap })
-      : graded(run?.speed, cfg, {}, '走力'),
+          : { from_scouting: true, statistical_value: speedOverride.statistical_value, gap: speedOverride.gap }),
+          ...provisionalMeta('走力') })
+      : graded(run?.speed, cfg, provisionalMeta('走力'), '走力'),
     肩力: graded(armSrc?.rating, cfg,
       armSrc?._reconciled?.scouting ? { from_scouting: true, statistical_value: armSrc._reconciled.statistical_value, gap: armSrc._reconciled.gap }
         : armSrc?.is_estimated ? { is_estimated: true, basis: armSrc.basis } : {}),
     守備力: graded(primary?.fielding?.rating, cfg, primary ? { position: primary.pos } : {}),
-    捕球: graded(primary?.catching?.rating, cfg, primary ? { position: primary.pos } : {}),
+    捕球: graded(primary?.catching?.rating, cfg, { ...(primary ? { position: primary.pos } : {}), ...provisionalMeta('捕球') }),
   };
 
   // 本家に無いが、データから測れるので残す独自の基礎能力（オーナー確定 2026-08-01）
