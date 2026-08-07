@@ -8,7 +8,8 @@
 // - on_* の「塁位置」は打席途中の盗塁/暴投後も古い位置を保持する場合がある。
 //   description_jap が「二塁から」「一二塁から」等の打球直前配置を明示する場合は、
 //   known runner identityをその配置へ保守的にreconcileする。
-// - 複数runnerの割当が一意に決まらない場合は推測せず uncertain とする。
+// - 複数runnerでも走者順序は入れ替わらないので、人数が同じなら塁順を保った前進だけ許す。
+// - 人数が変わる/後退が必要/identity不足なら推測せず uncertain とする。
 // - 「次打席で走者が消えた」だけでは生還と判定しない。
 //   同じプレーでアウト数が増えた場合は走塁死等と区別できないため null（除外）にする。
 
@@ -66,6 +67,14 @@ export function runnerStateOccupants(state) {
   return [state?.first, state?.second, state?.third].filter(Boolean);
 }
 
+export function runnerStateEntries(state) {
+  return [
+    [1, state?.first ?? null],
+    [2, state?.second ?? null],
+    [3, state?.third ?? null],
+  ].filter(([, runner]) => !!runner);
+}
+
 function addUniqueRunner(list, runner) {
   if (!runner) return;
   if (!list.some(x => sameRunner(x, runner))) list.push(runner);
@@ -90,65 +99,53 @@ export function explicitPreplayBasePattern(description) {
 /**
  * 現在のidentity stateを、説明文が明示する塁配置へ保守的に再配置する。
  * observedStateは同一PBP行のon_*由来identity pool補完用で、位置そのものは補助証拠に留める。
- * 複数identityの割当が一意に決まらない場合はUNCERTAIN。
+ *
+ * 走者人数が同じなら「後ろの走者が前の走者を追い越さない」順序保存で割当可能。
+ * 例: [1:A,2:B] -> 明示[2,3] は A→2, B→3。
+ * 人数が変わる場合は、明示された個別イベントなしに誰が消えた/増えたか決めない。
  */
 export function reconcileRunnerStateWithPattern(state, pattern, observedState = null) {
   if (!pattern) return { status: 'NO_PATTERN', state, pattern: null };
   const targets = [...new Set(pattern.bases)].sort((a, b) => a - b);
   if (targets.length === 0) return { status: 'RESOLVED', state: emptyRunnerState(), pattern };
 
-  const pool = [];
-  for (const r of runnerStateOccupants(state)) addUniqueRunner(pool, r);
-  for (const r of runnerStateOccupants(observedState)) addUniqueRunner(pool, r);
-  if (pool.length < targets.length) {
-    return { status: 'UNCERTAIN', state: null, pattern, reason: `identity_pool_${pool.length}_lt_targets_${targets.length}` };
+  let current = runnerStateEntries(state);
+  const observed = runnerStateEntries(observedState);
+
+  // stateにidentityが足りない時だけobservedから補う。位置はここでは確定根拠にしない。
+  if (current.length < targets.length) {
+    const pool = current.map(([, r]) => r);
+    for (const [, r] of observed) addUniqueRunner(pool, r);
+    if (pool.length !== targets.length) {
+      return { status: 'UNCERTAIN', state: null, pattern, reason: `identity_pool_${pool.length}_targets_${targets.length}` };
+    }
+    // current位置が完全でないので複数runnerは割当不能。1人だけなら一意。
+    if (pool.length === 1 && targets.length === 1) {
+      const out = emptyRunnerState();
+      out[targets[0] === 1 ? 'first' : targets[0] === 2 ? 'second' : 'third'] = pool[0];
+      return { status: 'RESOLVED', state: out, pattern };
+    }
+    return { status: 'UNCERTAIN', state: null, pattern, reason: 'identity_positions_incomplete_for_multiple_runners' };
+  }
+
+  if (current.length !== targets.length) {
+    return { status: 'UNCERTAIN', state: null, pattern, reason: `runner_count_${current.length}_targets_${targets.length}` };
+  }
+
+  current = current.sort((a, b) => a[0] - b[0]);
+  // 野球走者は塁を後退せず、互いを追い越さない。i番目の走者をi番目のtargetへ対応。
+  for (let i = 0; i < current.length; i++) {
+    if (targets[i] < current[i][0]) {
+      return { status: 'UNCERTAIN', state: null, pattern, reason: `backward_move_${current[i][0]}_to_${targets[i]}` };
+    }
   }
 
   const out = emptyRunnerState();
-  const key = b => b === 1 ? 'first' : b === 2 ? 'second' : 'third';
-  const used = [];
-
-  // まず現在stateで明示target baseにいるrunnerを固定する。
-  for (const b of targets) {
-    const k = key(b);
-    const r = state?.[k];
-    if (r && !used.some(x => sameRunner(x, r))) {
-      out[k] = r;
-      used.push(r);
-    }
+  for (let i = 0; i < current.length; i++) {
+    const k = targets[i] === 1 ? 'first' : targets[i] === 2 ? 'second' : 'third';
+    out[k] = current[i][1];
   }
-
-  // 同一行のraw stateも、まだ空いているtarget baseだけidentity補助証拠に使う。
-  for (const b of targets) {
-    const k = key(b);
-    if (out[k]) continue;
-    const r = observedState?.[k];
-    if (r && pool.some(x => sameRunner(x, r)) && !used.some(x => sameRunner(x, r))) {
-      out[k] = r;
-      used.push(r);
-    }
-  }
-
-  const openBases = targets.filter(b => !out[key(b)]);
-  const remaining = pool.filter(r => !used.some(x => sameRunner(x, r)));
-
-  if (openBases.length === 0) return { status: 'RESOLVED', state: out, pattern };
-  if (openBases.length === 1 && remaining.length === 1) {
-    out[key(openBases[0])] = remaining[0];
-    return { status: 'RESOLVED', state: out, pattern };
-  }
-  // 走者1人なら、raw positionが古くても明示された唯一のbaseへ一意に移せる。
-  if (targets.length === 1 && pool.length === 1) {
-    out[key(targets[0])] = pool[0];
-    return { status: 'RESOLVED', state: out, pattern };
-  }
-
-  return {
-    status: 'UNCERTAIN',
-    state: null,
-    pattern,
-    reason: `ambiguous_assignment_open_${openBases.length}_remaining_${remaining.length}_pool_${pool.length}`,
-  };
+  return { status: 'RESOLVED', state: out, pattern };
 }
 
 /** 次打席開始時の塁上に、対象走者がどこにいるかを返す。 */
