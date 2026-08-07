@@ -1,6 +1,6 @@
 // MLB Statcast 90ft Running Splitsを使い、打席離脱と身体的な短距離加速を分けられるか監査する。
 // 公式Baseball Savant CSVを実行時に読むだけで、rawファイルは保存しない。
-// 2017-2025 = 9 CSV。
+// 2017-2025: Running Splits 9 CSV + Sprint Speed 9 CSV = 18 CSV。
 //
 // 目的:
 //   0->5ft   : contactからの離脱/初動を強く含む
@@ -31,22 +31,22 @@ function splitCsvLine(line){
   }
   out.push(f);return out;
 }
-function parseCsv(text,year){
-  const lines=text.replace(/^\uFEFF/,'').trim().split(/\r?\n/);if(lines.length<2)return[];
+function csvLines(text){return text.replace(/^\uFEFF/,'').trim().split(/\r?\n/).filter(Boolean);}
+function parseSplits(text,year){
+  const lines=csvLines(text);if(lines.length<2)return[];
   const h=splitCsvLine(lines[0]);const I=n=>h.indexOf(n);
   const time={};for(let ft=0;ft<=90;ft+=5)time[ft]=I(`seconds_since_hit_${String(ft).padStart(3,'0')}`);
-  return lines.slice(1).filter(Boolean).map(line=>{
+  return lines.slice(1).map(line=>{
     const r=splitCsvLine(line);const get=ft=>{const v=Number(r[time[ft]]);return finite(v)?v:null;};
     const t={};for(let ft=0;ft<=90;ft+=5)t[ft]=get(ft);
-    return {
-      year,
-      name:r[I('last_name, first_name')],
-      key:norm(r[I('last_name, first_name')]),
-      mlb_id:r[I('player_id')],
-      bats:r[I('bat_side')],
-      t,
-    };
+    return {year,name:r[I('last_name, first_name')],key:norm(r[I('last_name, first_name')]),mlb_id:String(r[I('player_id')]),bats:r[I('bat_side')],t};
   }).filter(r=>r.name&&r.t[5]!=null&&r.t[30]!=null&&r.t[60]!=null&&r.t[90]!=null);
+}
+function parseSprint(text,year){
+  const lines=csvLines(text);if(lines.length<2)return[];
+  const h=splitCsvLine(lines[0]);const I=n=>h.indexOf(n);
+  return lines.slice(1).map(line=>{const r=splitCsvLine(line);return {year,mlb_id:String(r[I('player_id')]),sprint:Number(r[I('sprint_speed')]),h1:Number(r[I('hp_to_1b')])};})
+    .filter(r=>r.mlb_id&&finite(r.sprint));
 }
 function cor(pairs){
   if(pairs.length<3)return null;const mx=pairs.reduce((s,x)=>s+x[0],0)/pairs.length,my=pairs.reduce((s,x)=>s+x[1],0)/pairs.length;
@@ -69,68 +69,66 @@ function adjacent(rows,value){
   const by=new Map();for(const r of rows){if(!finite(r[value]))continue;const k=r.mlb_id;if(!by.has(k))by.set(k,new Map());by.get(k).set(r.year,r[value]);}
   const pairs=[];for(const m of by.values())for(const [y,v] of m)if(m.has(y+1))pairs.push([v,m.get(y+1)]);return pairs;
 }
+async function fetchText(url,label){const res=await fetch(url,{headers:{'user-agent':'pawapuro-pennant-gpt-handoff research audit'}});if(!res.ok)throw new Error(`${label}: HTTP ${res.status}`);return res.text();}
 
-const all=[];
+const all=[], sprintAll=[];
 for(const year of YEARS){
-  const url=`https://baseballsavant.mlb.com/running_splits?type=raw&bats=&year=${year}&position=&team=&min=5&csv=true`;
-  const res=await fetch(url,{headers:{'user-agent':'pawapuro-pennant-gpt-handoff research audit'}});
-  if(!res.ok)throw new Error(`Baseball Savant ${year}: HTTP ${res.status}`);
-  const rows=parseCsv(await res.text(),year);all.push(...rows);console.log(`download ${year}: ${rows.length} players`);
+  const splitUrl=`https://baseballsavant.mlb.com/running_splits?type=raw&bats=&year=${year}&position=&team=&min=5&csv=true`;
+  const sprintUrl=`https://baseballsavant.mlb.com/sprint_speed_leaderboard?year=${year}&position=&team=&min=5&csv=true`;
+  const [splits,sprints]=await Promise.all([fetchText(splitUrl,`splits ${year}`),fetchText(sprintUrl,`sprint ${year}`)]);
+  const a=parseSplits(splits,year),b=parseSprint(sprints,year);all.push(...a);sprintAll.push(...b);
+  console.log(`download ${year}: splits=${a.length} / sprint=${b.length}`);
 }
-console.log(`total split rows=${all.length}`);
+console.log(`total split rows=${all.length} / sprint rows=${sprintAll.length}`);
 
 for(const r of all){
   r.launch_0_5=r.t[5]-r.t[0];
   r.early_5_30=r.t[30]-r.t[5];
   r.mid_30_60=r.t[60]-r.t[30];
   r.late_60_90=r.t[90]-r.t[60];
-  r.v_5_30=25/r.early_5_30;
-  r.v_30_60=30/r.mid_30_60;
-  r.v_60_90=30/r.late_60_90;
-  const v510=5/(r.t[10]-r.t[5]),v2530=5/(r.t[30]-r.t[25]);
-  r.accel_gain_5_30=v2530-v510;
+  r.v_5_30=25/r.early_5_30;r.v_30_60=30/r.mid_30_60;r.v_60_90=30/r.late_60_90;
+  const v510=5/(r.t[10]-r.t[5]),v2530=5/(r.t[30]-r.t[25]);r.accel_gain_5_30=v2530-v510;
 }
-
-// mlb_bridge年別Sprint Speedへ結ぶ。
-const bridge=db.prepare(`SELECT mlb_name,detail FROM mlb_bridge WHERE detail IS NOT NULL AND mlb_name IS NOT NULL`).all();
-const directByNameYear=new Map();
-for(const b of bridge){let j;try{j=JSON.parse(b.detail);}catch{continue;}for(const x of j.sprint_speed??[]){if(finite(x.year)&&finite(x.sprint_speed))directByNameYear.set(`${norm(b.mlb_name)}|${x.year}`,{sprint:x.sprint_speed,h1:finite(x.hp_to_1b)?x.hp_to_1b:null});}}
-const linked=all.map(r=>({...r,...(directByNameYear.get(`${r.key}|${r.year}`)??{})})).filter(r=>finite(r.sprint));
-console.log(`mlb_bridge linked split+sprint rows=${linked.length}`);
+const sprintBy=new Map(sprintAll.map(r=>[`${r.mlb_id}|${r.year}`,r]));
+const full=all.map(r=>({...r,...(sprintBy.get(`${r.mlb_id}|${r.year}`)??{})})).filter(r=>finite(r.sprint));
+console.log(`full MLB split+sprint matched=${full.length}`);
 
 for(const k of ['launch_0_5','early_5_30','mid_30_60','late_60_90','accel_gain_5_30']){
   const p=adjacent(all,k);console.log(`${k.padEnd(17)} adjacent pairs=${p.length} r=${cor(p)?.toFixed(3)}`);
 }
-console.log('\ncorrelation with Sprint Speed (linked NPB/MLB bridge players)');
+console.log('\ncorrelation with Sprint Speed (full MLB)');
 for(const k of ['launch_0_5','early_5_30','mid_30_60','late_60_90','v_5_30','v_30_60','v_60_90','accel_gain_5_30']){
-  const p=linked.filter(r=>finite(r[k])).map(r=>[r[k],r.sprint]);console.log(`${k.padEnd(17)} n=${p.length} r=${cor(p)?.toFixed(3)}`);
+  const p=full.map(r=>[r[k],r.sprint]);console.log(`${k.padEnd(17)} n=${p.length} r=${cor(p)?.toFixed(3)}`);
 }
 
-// 5->30ftをSprint Speed・左右・年度で説明し、その残差を「最高速度とは別のearly acceleration profile」候補にする。
-const years=[...new Set(linked.map(r=>r.year))].sort();
-const earlyRows=linked.map(r=>({...r,target:r.early_5_30}));
-const earlyModel=fit(earlyRows,r=>[1,r.sprint,r.bats==='L'?1:0,...years.slice(1).map(y=>r.year===y?1:0)],'target');
-for(const r of linked)r.early_resid=r.early_5_30-earlyModel(r);
-const ep=adjacent(linked,'early_resid');
-console.log(`\nearly 5->30 residual after Sprint+bat side+year: adjacent pairs=${ep.length} r=${cor(ep)?.toFixed(3)}`);
+const years=[...new Set(full.map(r=>r.year))].sort();
+const earlyModel=fit(full.map(r=>({...r,target:r.early_5_30})),r=>[1,r.sprint,r.bats==='L'?1:0,...years.slice(1).map(y=>r.year===y?1:0)],'target');
+for(const r of full)r.early_resid=r.early_5_30-earlyModel(r);
+const ep=adjacent(full,'early_resid');
+console.log(`\nFULL MLB early 5->30 residual after Sprint+bat side+year: pairs=${ep.length} r=${cor(ep)?.toFixed(3)}`);
 
-// 0->5ftも年・左右で残差化。early_residとの独立性と、90ft残差をどちらが説明するかを見る。
-const launchRows=linked.map(r=>({...r,target:r.launch_0_5}));
-const launchModel=fit(launchRows,r=>[1,r.bats==='L'?1:0,...years.slice(1).map(y=>r.year===y?1:0)],'target');
-for(const r of linked)r.launch_resid=r.launch_0_5-launchModel(r);
-const lp=adjacent(linked,'launch_resid');
-console.log(`launch 0->5 residual after bat side+year: adjacent pairs=${lp.length} r=${cor(lp)?.toFixed(3)}`);
-console.log(`launch residual vs early residual r=${cor(linked.map(r=>[r.launch_resid,r.early_resid]))?.toFixed(3)}`);
+const launchModel=fit(full.map(r=>({...r,target:r.launch_0_5})),r=>[1,r.bats==='L'?1:0,...years.slice(1).map(y=>r.year===y?1:0)],'target');
+for(const r of full)r.launch_resid=r.launch_0_5-launchModel(r);
+const lp=adjacent(full,'launch_resid');
+console.log(`FULL MLB launch 0->5 residual after bat side+year: pairs=${lp.length} r=${cor(lp)?.toFixed(3)}`);
+console.log(`FULL MLB launch residual vs early residual r=${cor(full.map(r=>[r.launch_resid,r.early_resid]))?.toFixed(3)}`);
 
-// 90ft全体をSprint+side+yearで説明した残差を分解。
-const totalRows=linked.map(r=>({...r,total:r.t[90],target:r.t[90]}));
-const totalModel=fit(totalRows,r=>[1,r.sprint,r.bats==='L'?1:0,...years.slice(1).map(y=>r.year===y?1:0)],'target');
-for(const r of linked)r.total_resid=r.t[90]-totalModel(r);
-console.log(`90ft residual vs launch residual r=${cor(linked.map(r=>[r.total_resid,r.launch_resid]))?.toFixed(3)}`);
-console.log(`90ft residual vs early 5->30 residual r=${cor(linked.map(r=>[r.total_resid,r.early_resid]))?.toFixed(3)}`);
+const totalModel=fit(full.map(r=>({...r,target:r.t[90]})),r=>[1,r.sprint,r.bats==='L'?1:0,...years.slice(1).map(y=>r.year===y?1:0)],'target');
+for(const r of full)r.total_resid=r.t[90]-totalModel(r);
+console.log(`FULL MLB 90ft residual vs launch residual r=${cor(full.map(r=>[r.total_resid,r.launch_resid]))?.toFixed(3)}`);
+console.log(`FULL MLB 90ft residual vs early 5->30 residual r=${cor(full.map(r=>[r.total_resid,r.early_resid]))?.toFixed(3)}`);
 
-console.log('\n判定ガイド:');
-console.log('- early 5->30 residualが年跨ぎで安定するなら、0->5の打席離脱とは別の直接加速特性候補。');
-console.log('- ただし5->30も走路・計測定義の影響を受けるので、最終100段階へはまだ直結しない。');
-console.log('- この直接加速ラベルをNPB結果proxyへ橋渡ししてholdout検証してから、baseball speed latentへ統合する。');
+// NPB bridge subsetで、full-MLB式をそのまま適用できるか確認。
+const bridge=db.prepare(`SELECT mlb_name FROM mlb_bridge WHERE mlb_name IS NOT NULL`).all();
+const bridgeNames=new Set(bridge.map(r=>norm(r.mlb_name)));
+const linked=full.filter(r=>bridgeNames.has(r.key));
+console.log(`\nNPB bridge subset under FULL model n=${linked.length}`);
+const bep=adjacent(linked,'early_resid'),blp=adjacent(linked,'launch_resid');
+console.log(`bridge early residual adjacent pairs=${bep.length} r=${cor(bep)?.toFixed(3)}`);
+console.log(`bridge launch residual adjacent pairs=${blp.length} r=${cor(blp)?.toFixed(3)}`);
+
+console.log('\n判定:');
+console.log('- 0->5より5->30が大幅に安定し、Sprintで説明した後の5->30残差も安定するなら、直接的な短距離加速ラベルとして採用候補。');
+console.log('- 0->5はbatter-box exit/初動技術側に残す。');
+console.log('- 次はこのfull-MLB由来のtop-speed + accelerationラベルをNPB在籍前後の選手へ橋渡しし、NPB proxyが両軸を別々に予測できるかplayer-holdoutで検証する。');
 db.close();
