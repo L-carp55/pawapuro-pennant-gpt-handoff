@@ -1,0 +1,15 @@
+{
+  "_purpose": "走力×守備力×打球難度からアウト確率を返す自作エンジン応答曲面。係数を仮置きせず、実データ/エンジン較正後のlookup tableだけを保存する。",
+  "status": "PAUSED_UNCALIBRATED",
+  "calibrated": false,
+  "axes": null,
+  "probabilities": null,
+  "_requirements": [
+    "difficultyは打球位置・滞空/到達時間・方向・守備位置等から作り、大きいほど難しい共通尺度にする",
+    "speed軸とfielding軸は自作エンジンの最終能力目盛りと同じ尺度を使う",
+    "P(out)は同じ難度でspeed/fieldingに対して非減少、difficultyに対して非増加を満たす",
+    "未観測領域を外挿せず、十分な被覆が無ければ未査定を維持する",
+    "較正後は12球団×143試合の守備結果・リーグ分布でも検証する"
+  ],
+  "_no_defaults": "反応時間・加速秒数・係数・speed/fielding重みはここに仮置きしない。較正結果ができるまでsrc/engine/fielding_response.mjsは本番でフェイルファストする。"
+}
