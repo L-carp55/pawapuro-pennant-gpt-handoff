@@ -1,0 +1,49 @@
+name: Apply defense redesign gates
+
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths: [.github/workflows/apply-defense-redesign-gates.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  apply-test-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply guarded code edits
+        run: |
+          python3 .chatgpt/apply_defense_redesign_gates.py
+          node --check src/ratings/fielding.mjs
+          node --check src/cards/pipeline.mjs
+          node --check src/cards/ability_sheet.mjs
+      - name: Run new safety tests
+        run: |
+          node scripts/test_defense_redesign_gates.mjs
+          node scripts/audit_speed_vs_npbplus.mjs
+          node scripts/audit_infield_arm_deep_throws.mjs
+      - name: Run regressions
+        run: |
+          node scripts/test_fielding_regressions.mjs
+          node scripts/test_ability_sheet.mjs
+          node scripts/test_cards.mjs
+          node scripts/test_qa_remaining.mjs
+          node scripts/test_interactions.mjs
+          node scripts/test_phase1_safety.mjs
+          node scripts/validate.mjs
+      - name: Commit tested code and remove temporary workflow
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm .chatgpt/apply_defense_redesign_gates.py .github/workflows/apply-defense-redesign-gates.yml
+          git add src/ratings/fielding.mjs src/cards/pipeline.mjs src/cards/ability_sheet.mjs
+          git commit -m "safety: pause rejected fielding and infield arm ratings"
+          git push origin HEAD:agent/satei-phase1-safety
