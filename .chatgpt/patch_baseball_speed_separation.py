@@ -47,3 +47,13 @@ repl(
 
 p.write_text(s, encoding='utf-8')
 print('patched src/cards/pipeline.mjs')
+
+q = Path('scripts/test_qa_remaining.mjs')
+t = q.read_text(encoding='utf-8')
+old = """    // 2024カードには2026年NPB+を入れない。外部実測の混合規律は計測年/過去年証拠で別テストする。\n    t('§NPB実測-f 2024能力欄まで2026年NPB+が漏れない',\n      sp != null && sp.from_direct_measurement !== true,\n      sp ? `走力=${sp.value} / direct=${sp.from_direct_measurement ?? false}` : 'null');\n"""
+new = """    // 2024カードには2026年NPB+を入れない。さらに2026-08-07以降は、\n    // 旧speedComponents自体が走塁技術混入で停止中なので、最終走力はnullが正しい。\n    // 直接計測・旧proxyは ability_evidence / calc log にだけ残す。\n    const speedGate = ctx6.modelGates?.speed_ability;\n    t('§NPB実測-f 2024能力欄まで2026年NPB+が漏れず、停止中の旧走力も最終値に出ない',\n      speedGate?.enabled === false && sp == null,\n      `speed_gate=${speedGate?.status ?? '—'} / ability=${sp?.value ?? 'null'}`);\n"""
+if t.count(old) != 1:
+    raise SystemExit(f'qa speed pause: expected exactly 1 match, got {t.count(old)}')
+t = t.replace(old, new)
+q.write_text(t, encoding='utf-8')
+print('patched scripts/test_qa_remaining.mjs')
