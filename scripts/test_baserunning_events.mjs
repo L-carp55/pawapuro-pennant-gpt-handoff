@@ -5,10 +5,12 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
   classifyAdvanceOutcome,
+  classifyAdvanceOutcomeFromPatterns,
   runnerBase,
   sameRunner,
   makeRunnerIdentity,
   explicitPreplayBasePattern,
+  explicitPostplayBasePattern,
   reconcileRunnerStateWithPattern,
   addPitchRowToPlateAppearance,
 } from '../src/ratings/baserunning_events.mjs';
@@ -34,11 +36,25 @@ assert.equal(sameRunner(rFull, rConflictId), false, '双方IDありで不一致�
 assert.equal(runnerBase(rFull, B(null, rNameOnly, null)), 'second', 'next stateがname-onlyでも同一走者を追える');
 assert.equal(makeRunnerIdentity('', ''), null, 'IDも名前も無ければ空塁');
 
-// descriptionの打球直前base pattern。
-assert.deepEqual(explicitPreplayBasePattern('2球目:2アウト二塁からセンターへのヒット'), { token: '二塁', bases: [2] });
-assert.deepEqual(explicitPreplayBasePattern('1アウト一二塁の山田からレフトへのヒット'), { token: '一二塁', bases: [1, 2] });
-assert.deepEqual(explicitPreplayBasePattern('ノーアウト走者なしからライトフライ'), { token: '走者なし', bases: [] });
+// descriptionの打球直前base pattern。match位置metadataの有無には依存しない。
+let pat = explicitPreplayBasePattern('2球目:2アウト二塁からセンターへのヒット');
+assert.equal(pat.token, '二塁'); assert.deepEqual(pat.bases, [2]);
+pat = explicitPreplayBasePattern('1アウト一二塁の山田からレフトへのヒット');
+assert.equal(pat.token, '一二塁'); assert.deepEqual(pat.bases, [1, 2]);
+pat = explicitPreplayBasePattern('ノーアウト走者なしからライトフライ');
+assert.equal(pat.token, '走者なし'); assert.deepEqual(pat.bases, []);
 assert.equal(explicitPreplayBasePattern('センターへのヒット'), null);
+
+// descriptionの打球後base patternと、identity非依存のexplicit success判定。
+assert.deepEqual(explicitPostplayBasePattern('1アウト二塁からレフトへのヒットで出塁 一三塁'), { token: '一三塁', bases: [1, 3] });
+assert.deepEqual(explicitPostplayBasePattern('0アウト一塁からライトへのツーベース 二三塁'), { token: '二三塁', bases: [2, 3] });
+assert.equal(explicitPostplayBasePattern('1アウト二塁からセンターへのヒット'), null);
+assert.equal(classifyAdvanceOutcomeFromPatterns('2nd_to_home', { bases: [2] }, { bases: [1, 3] }), 0);
+assert.equal(classifyAdvanceOutcomeFromPatterns('2nd_to_home', { bases: [2] }, { bases: [1] }), 1);
+assert.equal(classifyAdvanceOutcomeFromPatterns('1st_to_home_on_2b', { bases: [1] }, { bases: [2, 3] }), 0);
+assert.equal(classifyAdvanceOutcomeFromPatterns('1st_to_home_on_2b', { bases: [1] }, { bases: [2] }), 1);
+assert.equal(classifyAdvanceOutcomeFromPatterns('1st_to_3rd', { bases: [1] }, { bases: [1, 3] }), 1);
+assert.equal(classifyAdvanceOutcomeFromPatterns('1st_to_3rd', { bases: [1] }, { bases: [1, 2] }), 0);
 
 // stale on_*位置を明示baseへreconcile。1人なら一意に移せる。
 let rec = reconcileRunnerStateWithPattern(B(A, null, null), { token: '二塁', bases: [2] }, B(A, null, null));
@@ -111,4 +127,4 @@ assert.match(builder, /pitchRows/);
 assert.match(builder, /nxt\.firstPitch/);
 assert.ok(!builder.includes('const r1 = normId(curLast[c.on1])'));
 
-console.log('baserunning event inference: 47 checks passed');
+console.log('baserunning event inference: 56 checks passed');
