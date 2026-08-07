@@ -1,0 +1,19 @@
+name: Audit NPB proxies vs physical speed
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths: [.github/workflows/audit-npb-proxies-physical-speed.yml]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check scripts/audit_npb_proxies_vs_physical_speed_axes.mjs
+      - run: node scripts/audit_npb_proxies_vs_physical_speed_axes.mjs
