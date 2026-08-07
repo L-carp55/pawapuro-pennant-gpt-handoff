@@ -39,6 +39,7 @@ import { lookup as scoutLookup, reconcile as scoutReconcile } from '../ratings/s
 import { buildAbilityEvidence, DIRECT_MEASUREMENT_STATUS } from '../ratings/ability_evidence.mjs';
 import { buildDirectMeasurements } from '../ratings/direct_measurement.mjs';
 import { advanceOf } from '../ratings/baserunning_advance.mjs';
+import { recordEvidenceEndsBy, aggregateEvidenceAvailable } from '../ratings/evidence_time.mjs';
 
 /** 出典の定義（仕様03 §1.1）。値ごとの provenance はここを参照する */
 export const SOURCES = {
@@ -344,7 +345,7 @@ export function makeContext(db, cfg) {
       if (farmCache.has(k)) return farmCache.get(k);
       const out = [];
       for (const f of all.get(playerId) ?? []) {
-        if (f.season < season - 3 || f.season > season + 3) continue;
+        if (f.season < season - 3 || f.season > season) continue;
         const L = lgOf(f.season);
         if (!L || f.slg == null || f.iso == null) continue;
         const avg = f.slg - f.iso;
@@ -495,6 +496,18 @@ export function appraiseCard(ctx, opts) {
   }
 
   const p = all.find(x => x.season === targetSeason) ?? all[all.length - 1];
+
+  // ---- 本人証拠のas-of cutoff（2026-08-07）----
+  // 後年のリーグ分布を較正基準として使うことは許すが、対象選手本人の未来結果は過去年カードへ入れない。
+  const aggregateEvidenceAllowed = key => {
+    const maxSeason = Number(ctx.modelGates?.asof_aggregate_evidence?.[key]?.max_evidence_season);
+    return aggregateEvidenceAvailable(maxSeason, targetSeason);
+  };
+  const throwAccuracyEvidence = pos => {
+    const rec = ctx.throwAccuracyTe?.get(`${normName(p.name)}|${pos}`) ?? null;
+    return recordEvidenceEndsBy(rec, targetSeason) ? rec : null;
+  };
+
   const L = lgOf(targetSeason);
   const env = { lgAvg: L.h / L.ab, lgHrRate: L.hr / L.ab, refAvg, refHrRate: refHr };
 
@@ -502,7 +515,7 @@ export function appraiseCard(ctx, opts) {
   const dists = { contact: fitLogDist(pool.map(r => r.so / r.pa)), eye: fitLogDist(pool.map(r => r.bb / r.pa)) };
 
   const hist = prep(`SELECT season, ab, h, hr FROM v_batting WHERE player_id=? AND season BETWEEN ? AND ? AND ab>0`)
-    .all(p.player_id, targetSeason - 3, targetSeason + 3)
+    .all(p.player_id, targetSeason - 3, targetSeason)
     .filter(h => lgOf(h.season))
     .map(h => {
       const f = envFactorsOf(h.season);
@@ -676,7 +689,7 @@ export function appraiseCard(ctx, opts) {
       const dp = ctx.doublePlayOf?.get(`${normName(p.name)}|${targetSeason}|${pj}`);
       if (dp) { f.dps = dp.dps ?? null; f.dpt = dp.dpt ?? null; }
       // 案2: 送球得能（TE基準）が確定している選手だけ、捕球の材料をFEへ差し替える
-      const hasThrowAbility = ctx.throwAccuracyTe?.get(`${normName(p.name)}|${pj}`);
+      const hasThrowAbility = throwAccuracyEvidence(pj);
       if (hasThrowAbility) {
         const feVal = ctx.feOf?.get(`${normName(p.name)}|${targetSeason}|${pj}`);
         // ★fld.pos は bm_fld由来の英語表記(2B等)、norm.fe.byPosのキーはv_fielding由来の
@@ -720,7 +733,8 @@ export function appraiseCard(ctx, opts) {
   // 守備範囲（RngR）は捕手に存在せず `fieldingRating` が必ず null を返すので、ここで埋める。
   // 仕様04 §10.2 が定める「捕球からリリースまでの速さ」＝盗塁阻止から投手・走者・肩を
   // 差し引いた残差。肩を引いてあるので肩力との二重計上にならない。
-  const catcherFld = ctx.catcherFielding?.get(normName(p.name));
+  const catcherFld = aggregateEvidenceAllowed('catcher_fielding')
+    ? ctx.catcherFielding?.get(normName(p.name)) : null;
   if (catcherFld) {
     const cRow = fld.find(f => f.pos === 'C');
     if (cRow && cRow.fielding == null) {
@@ -1013,7 +1027,7 @@ export function appraiseCard(ctx, opts) {
       // 中間の選手にはキー自体が作られない
       throwAccuracy: (() => {
         // ①送球失策（TE）から判定したもの。全守備位置・2014-2026年で最もサンプルが大きい
-        const byTe = ctx.throwAccuracyTe?.get(`${normName(p.name)}|${p.position}`);
+        const byTe = throwAccuracyEvidence(p.position);
         if (byTe) {
           return {
             ability: byTe.ability, color: byTe.ability === '送球◎' ? 'blue' : 'red',
@@ -1025,7 +1039,8 @@ export function appraiseCard(ctx, opts) {
           };
         }
         // ②捕手だけの別経路（盗塁を許した後の余分な進塁＝二塁送球の精度）
-        const t = ctx.catcherThrow?.get(normName(p.name));
+        const t = aggregateEvidenceAllowed('catcher_throw_accuracy')
+          ? ctx.catcherThrow?.get(normName(p.name)) : null;
         if (t) {
           return {
             ability: t.ability, color: t.ability === '送球○' ? 'blue' : 'red',
@@ -1036,7 +1051,8 @@ export function appraiseCard(ctx, opts) {
         // 内野手の送球（精度）。仕様04 §4.3の同じ枠を、内野ゴロの悪送球から判定する（2026-08-05）。
         // 守備範囲（RngR）とは相関 -0.13 で重ならないので、守備力と二重計上にならない。
         // 捕手と同じく事象が稀（112打球に1回）なので100段階にせず得能。64人中2人だけ判別できた
-        const f = ctx.infieldThrow?.get(normName(p.name));
+        const f = aggregateEvidenceAllowed('infield_throw_accuracy')
+          ? ctx.infieldThrow?.get(normName(p.name)) : null;
         if (!f) return null;
         return {
           ability: f.ability, color: f.ability === '送球◎' ? 'blue' : 'red',
