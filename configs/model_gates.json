@@ -19,23 +19,42 @@
     }
   },
   "speed_ability": {
-    "enabled": true,
-    "status": "PROVISIONAL_REDESIGN",
-    "reason": "2026 NPB+直接走力へのproxy再較正で三塁打除外は支持されたが、2024 sanity checkが周東>源田>近本となり、オーナー基準の周東>近本>源田を満たさないため未確定。現値は比較用の暫定値としてのみ表示する。",
+    "enabled": false,
+    "status": "PAUSED_REDEFINE_BASEBALL_SPEED",
+    "reason": "現行speedComponentsはUBR・内野安打・併殺回避など走塁技術を含む結果指標を直接合成しており、2026-08-07オーナー確定の『純粋な野球上の脚力と走塁技術を完全分離する』定義に反するため停止。走力は50m走タイムそのものではなく、野球の直線走で必要な初速・加速・最高速度・短距離での速度維持を表す潜在身体能力として再設計する。",
+    "definition": {
+      "include": [
+        "野球の直線走での初速",
+        "27〜30m程度での加速能力",
+        "競技中の最高走行速度",
+        "ベース間距離で速度を維持する身体能力"
+      ],
+      "exclude_to_special_abilities": {
+        "内野安打○": "打席から走りへの移行、一塁駆け抜け等。同じ走力・同じ打球文脈で内野安打を増やす残差",
+        "走塁": "打球判断、進塁判断、ベースの回り方、曲線走、減速抑制、スライディング等",
+        "盗塁": "投手/捕手を読む、スタート判断、加速の使い方、スライディング等",
+        "併殺": "同じ走力・同じゴロ/走者文脈で併殺になりやすい残差"
+      },
+      "not_definition": "陸上50m走タイムの単純変換ではない"
+    },
     "evidence": {
       "npb_plus_direct_matched": 98,
-      "proxy_cv_best_rmse_kmh": 0.868,
+      "old_proxy_cv_best_rmse_kmh": 0.868,
+      "grounder_event_proxy_rmse_kmh": 0.860,
+      "grounder_event_proxy_spearman": 0.715,
       "temporal_pool_holdout_best_rmse_kmh": 0.904,
       "temporal_pool_holdout_best_method": "pa_weighted_3y",
-      "sanity_order_current": "周東 > 源田 > 近本",
+      "sanity_order_2022_2024": "周東 > 源田 > 近本",
       "sanity_order_required": "周東 > 近本 > 源田",
       "measured_at": "2026-08-07"
     },
     "reopen_conditions": [
-      "盗塁行動に依存しない追加の速度proxyを探索する",
-      "2026 NPB+直接速度のplayer-holdoutで現行proxy以上を確認する",
+      "直接計測の最高走行速度と一塁到達時間を別観測として持ち、最高速度と加速を同一視しない",
+      "一塁到達時間から打席左右・打席から走りへの移行技術を分離する",
+      "内野安打・UBR・盗塁・併殺・三塁打は走力へ直接足さず、走力と各技術得能が共同で結果を作る構造モデルにする",
+      "2026 NPB+直接速度のplayer-holdoutで旧proxy以上を確認する",
       "周東>近本>源田を教師ラベルにせずsanity checkとして満たす",
-      "自作エンジン内の速度目盛りと結びつけて100段階を確定する"
+      "自作エンジン内の野球走速度応答と結びつけて100段階を確定する"
     ]
   },
   "fielding_ability": {
