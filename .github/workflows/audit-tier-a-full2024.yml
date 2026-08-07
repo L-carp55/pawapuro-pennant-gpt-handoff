@@ -1,0 +1,178 @@
+name: Audit Tier A full 2024
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch 2024 PBP
+        run: node scripts/fetch_npb_pbp.mjs 2024 02,03,04,05,06,07,08,09,10,11
+      - name: Validate reconstructed splits
+        run: |
+          python - <<'PY'
+          import csv, glob, re, sqlite3, math, collections, json, os
+
+          REGULAR={'1','2','26','1.0','2.0','26.0'}
+          def norm(s):
+              return re.sub(r'[\s　]+','',str(s or ''))
+          def num(v):
+              try: return float(v)
+              except: return None
+          def filled(row, key):
+              v=row.get(key)
+              return v not in (None,'','nan','None')
+          def risp(row):
+              return filled(row,'on_2b') or filled(row,'on_2b_name') or filled(row,'on_3b') or filled(row,'on_3b_name')
+          HIT_RE=re.compile(r'内野安打|安打|ヒット|二塁打|ツーベース|三塁打|スリーベース|本塁打|ホームラン')
+          NONAB_RE=re.compile(r'フォアボール|四球|敬遠|死球|デッドボール|犠牲フライ|犠飛|犠打|送りバント|犠牲バント|スクイズ|打撃妨害')
+
+          pa={}
+          type_counts=collections.Counter()
+          for fn in sorted(glob.glob('data/raw/npb_pbp/2024-*_pbp.csv')):
+              with open(fn,encoding='utf-8-sig',newline='') as f:
+                  r=csv.DictReader(f)
+                  for row in r:
+                      gt=str(row.get('game_type_id',''))
+                      type_counts[(gt,row.get('game_type_name',''))]+=1
+                      if gt not in REGULAR: continue
+                      k=(row.get('game_id'),row.get('inning'),row.get('inning_ab_num'))
+                      obj=pa.setdefault(k,{'first_pitch':None,'last_pitch':None,'terminal':None,'batter':None,'hands':set()})
+                      if row.get('PlayInfo_PlayerName'): obj['batter']=row.get('PlayInfo_PlayerName')
+                      pn=num(row.get('pitch_number'))
+                      if pn is not None and pn>0:
+                          if obj['first_pitch'] is None or pn < num(obj['first_pitch'].get('pitch_number')):
+                              obj['first_pitch']=row
+                          if obj['last_pitch'] is None or pn >= num(obj['last_pitch'].get('pitch_number')):
+                              obj['last_pitch']=row
+                          h=(row.get('pitcher_hand') or '').strip().lower()
+                          if h: obj['hands'].add(h)
+                      br=num(row.get('bresult'))
+                      if br is not None and br>0:
+                          obj['terminal']=row
+
+          agg=collections.defaultdict(lambda: collections.Counter())
+          skipped=collections.Counter()
+          hand_changed=0
+          result_codes=collections.Counter()
+          result_examples=collections.defaultdict(list)
+          for obj in pa.values():
+              first,last,term=obj['first_pitch'],obj['last_pitch'],obj['terminal']
+              if first is None or last is None or term is None:
+                  skipped['missing_pitch_or_terminal']+=1; continue
+              batter=norm(obj['batter'] or term.get('PlayInfo_PlayerName'))
+              if not batter:
+                  skipped['missing_batter']+=1; continue
+              desc=term.get('description_jap') or ''
+              br=num(term.get('bresult'))
+              if br is None or br<=0:
+                  skipped['no_result']+=1; continue
+              result_codes[int(br)]+=1
+              if len(result_examples[int(br)])<2: result_examples[int(br)].append(desc[:100])
+              nonab=bool(NONAB_RE.search(desc))
+              ab=0 if nonab else 1
+              hit=1 if (ab and HIT_RE.search(desc)) else 0
+              if len(obj['hands'])>1: hand_changed+=1
+              hand=(last.get('pitcher_hand') or term.get('pitcher_hand') or '').strip().lower()
+              is_right=hand.startswith('right') or hand in ('r','右','1','1.0')
+              r0=risp(first); r1=risp(last)
+              a=agg[batter]
+              a['AB']+=ab; a['H']+=hit
+              if is_right: a['R_AB']+=ab; a['R_H']+=hit
+              if r0: a['RISP0_AB']+=ab; a['RISP0_H']+=hit
+              if r1: a['RISP1_AB']+=ab; a['RISP1_H']+=hit
+              if is_right and not r0: a['TIERA0_AB']+=ab; a['TIERA0_H']+=hit
+              if is_right and not r1: a['TIERA1_AB']+=ab; a['TIERA1_H']+=hit
+
+          db=sqlite3.connect('data/pennant.db')
+          # Official batting totals
+          bat={}
+          for name,ab,h in db.execute("select name,ab,h from v_batting where season=2024 and ab>=1"):
+              bat[norm(name)]=(int(round(ab or 0)),int(round(h or 0)))
+          # NF3 split rows
+          split={}
+          for name_norm,label,ab,h in db.execute("select name_norm,label,ab,h from nf3_split where season=2024 and label in ('対右投手','得点圏')"):
+              split[(norm(name_norm),label)]=(int(round(ab or 0)),int(round(h or 0)))
+
+          def compare_total(field_ab,field_h,ref,minimum=30):
+              rows=[]
+              for name,(rab,rh) in ref.items():
+                  if rab<minimum or name not in agg: continue
+                  pab=int(agg[name][field_ab]); ph=int(agg[name][field_h])
+                  rows.append((name,pab,ph,rab,rh))
+              if not rows: return None,[]
+              mae_ab=sum(abs(x[1]-x[3]) for x in rows)/len(rows)
+              mae_h=sum(abs(x[2]-x[4]) for x in rows)/len(rows)
+              exact_ab=sum(x[1]==x[3] for x in rows)/len(rows)
+              within2=sum(abs(x[1]-x[3])<=2 for x in rows)/len(rows)
+              sum_pab=sum(x[1] for x in rows); sum_rab=sum(x[3] for x in rows)
+              sum_ph=sum(x[2] for x in rows); sum_rh=sum(x[4] for x in rows)
+              return {
+                  'n':len(rows),'mae_ab':mae_ab,'mae_h':mae_h,'exact_ab':exact_ab,'within2_ab':within2,
+                  'sum_pab':sum_pab,'sum_rab':sum_rab,'sum_ph':sum_ph,'sum_rh':sum_rh,
+                  'ab_ratio':sum_pab/sum_rab if sum_rab else None,
+                  'h_ratio':sum_ph/sum_rh if sum_rh else None,
+              },rows
+
+          total_ref={k:v for k,v in bat.items()}
+          right_ref={k[0]:v for k,v in split.items() if k[1]=='対右投手'}
+          risp_ref={k[0]:v for k,v in split.items() if k[1]=='得点圏'}
+          total_stat,total_rows=compare_total('AB','H',total_ref,30)
+          right_stat,right_rows=compare_total('R_AB','R_H',right_ref,30)
+          risp0_stat,risp0_rows=compare_total('RISP0_AB','RISP0_H',risp_ref,20)
+          risp1_stat,risp1_rows=compare_total('RISP1_AB','RISP1_H',risp_ref,20)
+
+          def score(s): return 1e9 if not s else s['mae_ab']+s['mae_h']
+          chosen='start' if score(risp0_stat)<=score(risp1_stat) else 'terminal'
+          targets=['村上宗隆','山川穂高','周東佑京','近本光司','源田壮亮','甲斐拓也','岡本和真','牧秀悟']
+
+          def statline(s):
+              if not s: return 'NO DATA'
+              return (f"n={s['n']} MAE_AB={s['mae_ab']:.3f} MAE_H={s['mae_h']:.3f} "
+                      f"AB_exact={s['exact_ab']*100:.1f}% AB_within2={s['within2_ab']*100:.1f}% "
+                      f"sumAB={s['sum_pab']}/{s['sum_rab']}({s['ab_ratio']:.4f}) "
+                      f"sumH={s['sum_ph']}/{s['sum_rh']}({s['h_ratio']:.4f})")
+
+          print('FILES',len(glob.glob('data/raw/npb_pbp/2024-*_pbp.csv')),'PA_KEYS',len(pa),'HAND_CHANGED_PA',hand_changed)
+          print('TOTAL ',statline(total_stat))
+          print('RIGHT ',statline(right_stat))
+          print('RISP_START ',statline(risp0_stat))
+          print('RISP_TERMINAL ',statline(risp1_stat))
+          print('CHOSEN_RISP_BASIS',chosen)
+          print('TARGETS')
+          for n in targets:
+              a=agg.get(n,collections.Counter())
+              rr=right_ref.get(n)
+              sr=risp_ref.get(n)
+              ta_ab=a['TIERA0_AB'] if chosen=='start' else a['TIERA1_AB']
+              ta_h=a['TIERA0_H'] if chosen=='start' else a['TIERA1_H']
+              print(json.dumps({
+                  'name':n,
+                  'pbp_total':[a['AB'],a['H']], 'official_total':bat.get(n),
+                  'pbp_right':[a['R_AB'],a['R_H']], 'nf3_right':rr,
+                  'pbp_risp_start':[a['RISP0_AB'],a['RISP0_H']],
+                  'pbp_risp_terminal':[a['RISP1_AB'],a['RISP1_H']], 'nf3_risp':sr,
+                  'tierA_right_nonrisp':[ta_ab,ta_h, (ta_h/ta_ab if ta_ab else None)]
+              },ensure_ascii=False))
+          print('SKIPPED',dict(skipped))
+          print('TOP_RESULT_CODES')
+          for code,n in result_codes.most_common():
+              print(code,n,result_examples[code])
+          PY
+      - name: Clean temporary raw files and workflow
+        run: |
+          rm -rf data/raw/npb_pbp
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git rm .github/workflows/audit-tier-a-full2024.yml
+          git commit -m "chore: remove temporary full-season Tier A audit workflow"
+          git push origin HEAD:agent/satei-phase1-safety
