@@ -48,12 +48,24 @@ assert.equal(blended.evidence.decided_by, 'direct_blend');
 const oldWrong = 60 * (1 - w) + 80 * w;
 assert.ok(Math.abs(blended.finalRating - oldWrong) > 1, '異なる目盛りを直接混ぜる旧式へ戻っている');
 
-// 現行裁定を維持し、スカウティングがあれば最終目盛り値を採用してzへ戻す。
-const scouting = { value: 68, evaluator: 'owner', source: 'owner' };
-const scout = reconcileSpeedEvidence(stat, { direct, scouting }, cfg);
-close(scout.finalRating, 68);
-close(speedRawToFinalScale(scout.rating, cfg), 68);
-close(scout.zFinal, speedRawToZ(scout.rating, cfg));
-assert.equal(scout.evidence.decided_by, 'scouting');
+// 仕様04 §1.2: 直接計測（第1階層）はdecisionスカウティング（第2階層）より優先。
+const scoutingDecision = { value: 68, evaluator: 'owner', source: 'owner', application: 'decision' };
+const both = reconcileSpeedEvidence(stat, { direct, scouting: scoutingDecision }, cfg);
+close(both.finalRating, expectedFinal);
+assert.equal(both.evidence.decided_by, 'direct_blend');
+assert.equal(both.evidence.scouting.value, 68); // 採用しなくても証拠は消さない
 
-console.log('speed evidence: 24 checks passed');
+// directが無い場合だけdecisionスカウティングを数値判断へ使える。
+const scoutOnly = reconcileSpeedEvidence(stat, { scouting: scoutingDecision }, cfg);
+close(scoutOnly.finalRating, 68);
+close(speedRawToFinalScale(scoutOnly.rating, cfg), 68);
+assert.equal(scoutOnly.evidence.decided_by, 'scouting');
+
+// evidence_onlyは値決定に使わない。
+const scoutingEvidence = { ...scoutingDecision, application: 'evidence_only' };
+const evidenceOnly = reconcileSpeedEvidence(stat, { scouting: scoutingEvidence }, cfg);
+close(evidenceOnly.finalRating, statFinal);
+assert.equal(evidenceOnly.evidence.decided_by, 'statistical');
+assert.equal(evidenceOnly.evidence.scouting.value, 68);
+
+console.log('speed evidence: 30 checks passed');
