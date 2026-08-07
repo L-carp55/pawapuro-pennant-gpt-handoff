@@ -1,3 +1,4 @@
+# rerun after dry-run summary scope fix
 name: Apply fielding error builder safety
 on:
   push:
@@ -35,6 +36,7 @@ jobs:
           grep -q 'fielding_error_events' /tmp/fielding2024.txt
           grep -q 'FE ' /tmp/fielding2024.txt
           grep -q '負荷contextあり' /tmp/fielding2024.txt
+          grep -q 'mode DRY_RUN' /tmp/fielding2024.txt
       - name: Commit verified builder patch
         run: |
           git config user.name "L-carp55"
