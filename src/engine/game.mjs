@@ -9,7 +9,8 @@ function playHalfInning(offense, defense, league, rng, cfg, state, tally) {
   let runs = 0;
 
   while (outs < cfg.game.outs_per_inning) {
-    // 打席前の盗塁企図
+    // 打席前の盗塁企図。塁上にはrunner objectが残るため、後続のplayer-specific
+    // running responseを接続できる。未接続時の確率は従来どおりリーグ較正値。
     const st = trySteal(bases, outs, rng, cfg.baserunning);
     bases = st.bases; outs = st.outs;
     tally.sb += st.sb; tally.cs += st.cs;
@@ -29,7 +30,10 @@ function playHalfInning(offense, defense, league, rng, cfg, state, tally) {
     state.log.push({ batter: batter.id, pitcher: pitcher.id, outcome });
     defense.pitcherBF++;
 
-    const res = advance(bases, outs, outcome, rng, cfg.baserunning);
+    // 出塁時にtrueだけでなくbatter objectそのものを保持する。
+    // これにより次の打席で「誰が塁上にいるか」を失わず、身体走行性能と
+    // 盗塁/走塁skillを別々に参照できる。
+    const res = advance(bases, outs, outcome, rng, cfg.baserunning, { batter });
     bases = res.bases;
     outs = res.outs;
     runs += res.runs;
