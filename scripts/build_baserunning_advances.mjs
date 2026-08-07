@@ -10,15 +10,18 @@
 //   仕様04 §1.2は走力の第3階層に「追加進塁率」を挙げているが、日本では公開されていない。
 //   盗塁は走力と混ぜない規律があり（開発原則）、三塁打・内野安打は打撃の要素が混ざる。
 //   **単打で一塁から三塁まで行けたか**は、打球の行方を揃えれば走る速さと判断だけが残る。
-//   MLBでは First-to-Third% として標準的に使われている指標。
 //
-// 測り方:
-//   打席の開始時点の走者（on_1b/on_2b/on_3b）は各打席の行に入っている。
-//   **次の打席の開始時点**と見比べれば、その打席で走者がどこまで進んだかが分かる。
-//   イニングが変わる・試合が終わる場合は追えないので除く。
+// 2026-08-07 重要修正:
+//   旧版は各打席の「最終投球行」の on_1b/on_2b/on_3b を打席開始状態として使っていた。
+//   保存済み22,459件を説明文で監査すると、明示状態との矛盾が確認されたため旧テーブルは失効。
+//   新版は必ず
+//     - 現打席の first row = 打席開始状態
+//     - 次打席の first row = 打球後状態
+//   を使う。走者が次打席で消え、同時にアウト数も増えた場合は、生還と走塁死を
+//   現データだけで一意に区別できないため、成功/失敗を捏造せず標本から除外する。
 //
 // 数える型:
-//   1st→3rd  … 一塁に走者、二塁三塁が空、打者が単打。その走者が三塁へ行ったか（本塁生還も成功）
+//   1st→3rd  … 一塁に走者、二塁三塁が空、打者が単打。その走者が三塁へ行ったか（明確な生還も成功）
 //   2nd→home … 二塁に走者、三塁が空、打者が単打。その走者が生還したか
 //   1st→home … 一塁に走者、打者が二塁打。その走者が生還したか
 //
@@ -32,6 +35,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { addPitchRowToPlateAppearance, classifyAdvanceOutcome } from '../src/ratings/baserunning_events.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const RAW = path.join(ROOT, 'data', 'raw', 'npb_pbp');
@@ -53,6 +57,7 @@ const files = readdirSync(RAW).filter(f => f.endsWith('_pbp.csv')).sort();
 const REGULAR = new Set(['1', '2', '26']);
 const norm = s => (s ?? '').replace(/[\s　]/g, '');
 const events = [];
+const excludedAmbiguous = { '1st_to_3rd': 0, '2nd_to_home': 0, '1st_to_home_on_2b': 0 };
 
 for (const fn of files) {
   const lines = readFileSync(path.join(RAW, fn), 'utf8').split('\n');
@@ -65,67 +70,64 @@ for (const fn of files) {
     on3: I('on_3b'), on3n: I('on_3b_name'), outs: I('outs_when_up'),
     hx: I('hc_x'), hy: I('hc_y'), hl: I('hit_location'), park: I('stadium_name'),
   };
-  // 打席ごとの最終行を、試合・イニング・打席番号の順に並べる
-  const last = new Map();
+
+  // 打席ごとに first row（開始状態）と last row（打球結果・説明文）を別々に保持する。
+  const pa = new Map();
   for (let i = 1; i < lines.length; i++) {
     if (!lines[i].trim()) continue;
     const r = splitCsvLine(lines[i]);
     if (!REGULAR.has(r[c.type])) continue;
-    last.set(`${r[c.game]}|${r[c.inn]}|${r[c.state]}|${String(r[c.ab]).padStart(3, '0')}`, r);
+    const key = `${r[c.game]}|${String(Number(r[c.inn])).padStart(3, '0')}|${r[c.state]}|${String(Number(r[c.ab])).padStart(4, '0')}`;
+    addPitchRowToPlateAppearance(pa, key, r);
   }
-  const keys = [...last.keys()].sort();
+
+  const keys = [...pa.keys()].sort();
   for (let i = 0; i < keys.length - 1; i++) {
-    const cur = last.get(keys[i]), nxt = last.get(keys[i + 1]);
-    // 同じ試合・同じイニング・同じ攻撃（表裏）の中でだけ比べる
+    const cur = pa.get(keys[i]), nxt = pa.get(keys[i + 1]);
+    const curFirst = cur.first, curLast = cur.last, nxtFirst = nxt.first;
+
+    // 同じ試合・同じイニング・同じ攻撃（表裏）の中でだけ比べる。
     const [g1, in1, st1] = keys[i].split('|'), [g2, in2, st2] = keys[i + 1].split('|');
     if (g1 !== g2 || in1 !== in2 || st1 !== st2) continue;
 
-    const d = (cur[c.desc] ?? '').replace(/^\d+球目:/, '');
+    const d = (curLast[c.desc] ?? '').replace(/^\d+球目:/, '');
     const isSingle = /ヒット|内野安打|安打/.test(d) && !/二塁打|三塁打|本塁打|ホームラン|タイムリーツーベース/.test(d);
     const isDouble = /二塁打|ツーベース/.test(d);
     if (!isSingle && !isDouble) continue;
 
-    const r1 = norm(cur[c.on1n]), r2 = norm(cur[c.on2n]), r3 = norm(cur[c.on3n]);
-    const n1 = norm(nxt[c.on1n]), n2 = norm(nxt[c.on2n]), n3 = norm(nxt[c.on3n]);
-    const stillOnBase = who => [n1, n2, n3].includes(who);
+    // ★開始走者は必ず current PA の first row から取る。
+    const r1 = norm(curFirst[c.on1n]), r2 = norm(curFirst[c.on2n]), r3 = norm(curFirst[c.on3n]);
+    // ★打球後の塁状態は next PA の first row から取る。
+    const nextBases = {
+      first: norm(nxtFirst[c.on1n]) || null,
+      second: norm(nxtFirst[c.on2n]) || null,
+      third: norm(nxtFirst[c.on3n]) || null,
+    };
+    const outsBefore = Number(curFirst[c.outs]);
+    const outsAfter = Number(nxtFirst[c.outs]);
 
-    const push = (kind, runner) => events.push({
-      season: Number(cur[c.season]), park: cur[c.park], kind, runner, runner_norm: runner,
-      outs: Number(cur[c.outs] ?? 0),
-      hc_x: cur[c.hx] ? Number(cur[c.hx]) : null, hc_y: cur[c.hy] ? Number(cur[c.hy]) : null,
-      hit_location: cur[c.hl] ? Number(cur[c.hl]) : null,
-      description: d.slice(0, 60),
+    const push = (kind, runner, success) => events.push({
+      season: Number(curFirst[c.season]), park: curFirst[c.park], kind, runner, runner_norm: runner,
+      outs: Number.isFinite(outsBefore) ? outsBefore : null,
+      success,
+      hc_x: curLast[c.hx] ? Number(curLast[c.hx]) : null,
+      hc_y: curLast[c.hy] ? Number(curLast[c.hy]) : null,
+      hit_location: curLast[c.hl] ? Number(curLast[c.hl]) : null,
+      description: d.slice(0, 120),
     });
 
+    const classifyAndPush = (kind, runner) => {
+      const success = classifyAdvanceOutcome(kind, runner, nextBases, outsBefore, outsAfter);
+      if (success == null) { excludedAmbiguous[kind]++; return; }
+      push(kind, runner, success);
+    };
+
     // 一塁走者のみ × 単打 → 三塁まで行けたか
-    if (isSingle && r1 && !r2 && !r3) {
-      const e = { ...{}, };
-      const reached3 = (n3 === r1);
-      const scored = !stillOnBase(r1);          // 塁上にいない＝生還した（アウトの可能性は下で除く）
-      const stopped2 = (n2 === r1);
-      if (reached3 || scored || stopped2) {
-        push('1st_to_3rd', r1);
-        events[events.length - 1].success = (reached3 || scored) ? 1 : 0;
-      }
-    }
-    // 二塁走者のみ × 単打 → 生還できたか
-    if (isSingle && r2 && !r3) {
-      const scored = !stillOnBase(r2);
-      const stopped3 = (n3 === r2);
-      if (scored || stopped3) {
-        push('2nd_to_home', r2);
-        events[events.length - 1].success = scored ? 1 : 0;
-      }
-    }
-    // 一塁走者 × 二塁打 → 生還できたか
-    if (isDouble && r1 && !r2 && !r3) {
-      const scored = !stillOnBase(r1);
-      const stopped3 = (n3 === r1);
-      if (scored || stopped3) {
-        push('1st_to_home_on_2b', r1);
-        events[events.length - 1].success = scored ? 1 : 0;
-      }
-    }
+    if (isSingle && r1 && !r2 && !r3) classifyAndPush('1st_to_3rd', r1);
+    // 二塁走者あり・三塁空 × 単打 → 生還できたか（1塁走者の有無は問わない）
+    if (isSingle && r2 && !r3) classifyAndPush('2nd_to_home', r2);
+    // 一塁走者のみ × 二塁打 → 生還できたか
+    if (isDouble && r1 && !r2 && !r3) classifyAndPush('1st_to_home_on_2b', r1);
   }
   console.error(`  ${fn}`);
 }
@@ -138,21 +140,24 @@ db.exec(`CREATE TABLE baserunning_advances (
 const ins = db.prepare(`INSERT INTO baserunning_advances VALUES (?,?,?,?,?,?,?,?,?,?,?)`);
 db.exec('BEGIN');
 for (const e of events) ins.run(e.season, e.park, e.kind, e.runner, e.runner_norm,
-  e.outs, e.success ?? 0, e.hc_x, e.hc_y, e.hit_location, e.description);
+  e.outs, e.success, e.hc_x, e.hc_y, e.hit_location, e.description);
 db.exec('COMMIT');
 db.exec(`CREATE INDEX idx_bra ON baserunning_advances(runner_norm, season)`);
 
-console.log(`\n走塁の機会: ${events.length.toLocaleString()}件`);
+console.log(`\n走塁の確定可能な機会: ${events.length.toLocaleString()}件`);
 const byKind = {};
 for (const e of events) {
   byKind[e.kind] ??= { n: 0, s: 0 };
-  byKind[e.kind].n++; byKind[e.kind].s += (e.success ?? 0);
+  byKind[e.kind].n++; byKind[e.kind].s += e.success;
 }
 console.log('型ごとの成功率:');
 const LABEL = { '1st_to_3rd': '単打で一塁→三塁', '2nd_to_home': '単打で二塁→生還', '1st_to_home_on_2b': '二塁打で一塁→生還' };
-for (const [k, v] of Object.entries(byKind)) {
-  console.log(`  ${(LABEL[k] ?? k).padEnd(20)} ${String(v.n).padStart(6)}件  成功 ${(v.s / v.n * 100).toFixed(1)}%`);
+for (const k of Object.keys(LABEL)) {
+  const v = byKind[k] ?? { n: 0, s: 0 };
+  const rate = v.n ? `${(v.s / v.n * 100).toFixed(1)}%` : '—';
+  console.log(`  ${LABEL[k].padEnd(20)} ${String(v.n).padStart(6)}件  成功 ${rate}  判定不能除外 ${excludedAmbiguous[k]}`);
 }
 console.log(`  走者 ${new Set(events.map(e => e.runner_norm)).size}人`);
-console.log('\n出典: This uses data sourced from the Nippon Baseball Data Repository (MIT License)');
+console.log('\n注意: 旧baserunning_advancesは再利用しない。上記生データから再構築後に較正をやり直すこと。');
+console.log('出典: This uses data sourced from the Nippon Baseball Data Repository (MIT License)');
 db.close();
