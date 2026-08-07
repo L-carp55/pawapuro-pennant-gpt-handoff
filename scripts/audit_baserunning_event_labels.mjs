@@ -1,13 +1,19 @@
 // 追加進塁イベントの success ラベル監査。
 // 保存済み description に明示された「打席開始時の塁状況」と「打球後の塁状況」を使い、
 // baserunning_advances の kind / success と整合するかを検査する。
+//
+// Release PBPでは「一二塁」「一三塁」等の漢数字表記を使うため、旧「1,2塁」表記と両対応する。
+// PBP_DB_PATHを指定すれば一時DBを監査でき、repository DBを触らない。
 
 import { DatabaseSync } from 'node:sqlite';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const db = new DatabaseSync(path.join(ROOT, 'data', 'pennant.db'), { readOnly: true });
+const DB_PATH = process.env.PBP_DB_PATH
+  ? path.resolve(process.env.PBP_DB_PATH)
+  : path.join(ROOT, 'data', 'pennant.db');
+const db = new DatabaseSync(DB_PATH, { readOnly: true });
 
 const rows = db.prepare(`
   SELECT season, kind, runner_norm, outs, success, hc_x, hc_y, hit_location, description
@@ -16,19 +22,27 @@ const rows = db.prepare(`
 `).all();
 
 const pct = (n, d) => d ? `${(100 * n / d).toFixed(2)}%` : '—';
-const BASE = '(満塁|1,2,3塁|1,2塁|1,3塁|2,3塁|1塁|2塁|3塁)';
-const BASE_RE = new RegExp(BASE, 'g');
+const BASE_TOKEN = '(満塁|一二三塁|一二塁|一三塁|二三塁|一塁|二塁|三塁|1,2,3塁|1,2塁|1,3塁|2,3塁|1塁|2塁|3塁)';
+const BASE_RE = new RegExp(BASE_TOKEN, 'g');
 const START_PATTERNS = [
-  new RegExp(`ランナー${BASE}から`),
-  new RegExp(`[012]アウト${BASE}から`),
-  new RegExp(`[012]アウト${BASE}の[^ ]{0,16}から`),
+  new RegExp(`ランナー${BASE_TOKEN}から`),
+  new RegExp(`[012]アウト${BASE_TOKEN}から`),
+  new RegExp(`[012]アウト${BASE_TOKEN}の[^ ]{0,16}から`),
 ];
+const CANON = new Map([
+  ['満塁','1,2,3塁'], ['一二三塁','1,2,3塁'], ['1,2,3塁','1,2,3塁'],
+  ['一二塁','1,2塁'], ['1,2塁','1,2塁'],
+  ['一三塁','1,3塁'], ['1,3塁','1,3塁'],
+  ['二三塁','2,3塁'], ['2,3塁','2,3塁'],
+  ['一塁','1塁'], ['1塁','1塁'], ['二塁','2塁'], ['2塁','2塁'], ['三塁','3塁'], ['3塁','3塁'],
+]);
+const canon = x => x ? (CANON.get(x) ?? x) : null;
 
 function startBase(d) {
   const s = String(d ?? '');
   for (const re of START_PATTERNS) {
     const m = s.match(re);
-    if (m) return { base: m[1], endIndex: (m.index ?? 0) + m[0].length };
+    if (m) return { base: canon(m[1]), raw: m[1], endIndex: (m.index ?? 0) + m[0].length };
   }
   return null;
 }
@@ -37,15 +51,12 @@ function endBase(d, startInfo) {
   if (!startInfo) return null;
   const tail = String(d ?? '').slice(startInfo.endIndex);
   const xs = [...tail.matchAll(BASE_RE)];
-  return xs.length ? xs.at(-1)[1] : null;
+  return xs.length ? canon(xs.at(-1)[1]) : null;
 }
 
 const allowedStarts = {
-  // builder は r1 && !r2 && !r3 を要求
   '1st_to_3rd': new Set(['1塁']),
-  // builder は r1 && !r2 && !r3 を要求
   '1st_to_home_on_2b': new Set(['1塁']),
-  // builder は r2 && !r3。1塁走者はいてもよい
   '2nd_to_home': new Set(['2塁', '1,2塁']),
 };
 
@@ -55,6 +66,7 @@ function impliedSuccess(kind, start, end) {
   if (kind === '1st_to_3rd' && start === '1塁') {
     if (end === '1,3塁') return 1;
     if (end === '1,2塁') return 0;
+    // 打者だけ一塁に残るなら元一塁走者は生還した明示ケース。
     if (end === '1塁') return 1;
     return null;
   }
@@ -70,7 +82,8 @@ function impliedSuccess(kind, start, end) {
       return null;
     }
     if (start === '1,2塁') {
-      if (end === '満塁' || end === '1,2,3塁') return 0;
+      if (end === '1,2,3塁') return 0;
+      // 元二塁走者が生還し、元一塁走者+打者が一二塁に残る。
       if (end === '1,2塁') return 1;
       return null;
     }
@@ -111,7 +124,8 @@ for (const r of rows) {
   }
 }
 
-console.log('# 追加進塁イベント 状態整合監査（開始塁を明示文だけから判定）');
+console.log('# 追加進塁イベント 状態整合監査（説明文明示ケース）');
+console.log(`db=${DB_PATH}`);
 console.log(`total=${rows.length}`);
 console.log(`開始塁を明示文から読めた: ${parseableStart} (${pct(parseableStart, rows.length)})`);
 console.log(`開始塁の明確な不一致: ${badStart.length} (${pct(badStart.length, parseableStart)})`);
