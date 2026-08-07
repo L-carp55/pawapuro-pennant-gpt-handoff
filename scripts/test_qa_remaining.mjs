@@ -844,10 +844,13 @@ console.log('=== 未整備だった回帰テスト ===\n');
     const ctx6 = mk3(db, cfg);
     const card = ac3(ctx6, { name: '山川　穂高', mode: '2024', cfg, rv: rv2, runNorm, fldNorm }).card;
     const sp = card?.abilities?.基礎能力?.走力;
-    // 2024カードには2026年NPB+を入れない。外部実測の混合規律は計測年/過去年証拠で別テストする。
-    t('§NPB実測-f 2024能力欄まで2026年NPB+が漏れない',
-      sp != null && sp.from_direct_measurement !== true,
-      sp ? `走力=${sp.value} / direct=${sp.from_direct_measurement ?? false}` : 'null');
+    // 2024カードには2026年NPB+を入れない。さらに2026-08-07以降は、
+    // 旧speedComponents自体が走塁技術混入で停止中なので、最終走力はnullが正しい。
+    // 直接計測・旧proxyは ability_evidence / calc log にだけ残す。
+    const speedGate = ctx6.modelGates?.speed_ability;
+    t('§NPB実測-f 2024能力欄まで2026年NPB+が漏れず、停止中の旧走力も最終値に出ない',
+      speedGate?.enabled === false && sp == null,
+      `speed_gate=${speedGate?.status ?? '—'} / ability=${sp?.value ?? 'null'}`);
 
     // ★アンカーがそのまま能力値になること（パワプロ較正・実測混合のどちらでも上書きされない）
     const mura = ac3(ctx6, { name: '村上　宗隆', mode: '2024', cfg, rv: rv2, runNorm, fldNorm }).card;

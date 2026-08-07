@@ -632,6 +632,9 @@ export function appraiseCard(ctx, opts) {
 
   let run = null;
   let infieldHitSpecial = null;
+  const speedGate = ctx.modelGates?.speed_ability;
+  const stealingGate = ctx.modelGates?.stealing_ability;
+  const infieldHitGate = ctx.modelGates?.infield_hit_ability;
   if (bm) {
     const advanceGate = ctx.modelGates?.baserunning_advance_source;
     const adv = advanceGate?.enabled === false
@@ -658,25 +661,43 @@ export function appraiseCard(ctx, opts) {
       cfg);
     const speedZFinal = speedState?.zFinal ?? null;
 
-    // infieldHitAbility 側で、最終走力zで説明できる分を除いて得能を判定する。
-    infieldHitSpecial = infieldHitAbility(gbSingleExcess, speedZFinal, cfg);
+    // 内野安打○は純粋走力で説明できる分を引いた残差として作る。
+    // 旧走力は内野安打自身を材料に含んでおり循環するため、新baseball speed確定まで停止。
+    infieldHitSpecial = (speedGate?.enabled === false || infieldHitGate?.enabled === false)
+      ? null
+      : infieldHitAbility(gbSingleExcess, speedZFinal, cfg);
     // 走塁得能には自作の走塁指標も渡す（仕様04 §3が名指しする材料。走力に対する残差として使う）
     const baserunningGate = ctx.modelGates?.baserunning_ability;
     const baserunning = baserunningGate?.enabled === false ? null
       : baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, speedZFinal, runNorm, cfg,
         { advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 });
     run = speedState ? {
-      // speed は内部raw目盛り。speedDisplay はscale_calibration後の最終目盛り。
-      // _z はこの最終表示値と同じ潜在脚力へ逆変換した共通z。
-      speed: speedState.rating,
-      speedDisplay: speedState.finalRating,
+      // 旧proxyは研究/evidence用に残すが、最終走力は新baseball speedの較正まで出さない。
+      speed: speedGate?.enabled === false ? null : speedState.rating,
+      speedDisplay: speedGate?.enabled === false ? null : speedState.finalRating,
       speedEvidence: speedState.evidence,
-      speedDetail: speedState.detail,
-      stealing: stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, speedZFinal, runNorm, cfg),
+      speedDetail: {
+        ...speedState.detail,
+        ...(speedGate?.enabled === false ? {
+          legacy_only: true,
+          legacy_rating: speedState.rating,
+          legacy_final_rating: speedState.finalRating,
+          _pause_reason: speedGate.reason,
+        } : {}),
+      },
+      stealing: (speedGate?.enabled === false || stealingGate?.enabled === false)
+        ? null
+        : stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, speedZFinal, runNorm, cfg),
       baserunning,
       baserunningStatus: baserunningGate?.enabled === false ? baserunningGate : null,
+      stealingStatus: (speedGate?.enabled === false || stealingGate?.enabled === false)
+        ? (stealingGate ?? speedGate) : null,
+      infieldHitStatus: (speedGate?.enabled === false || infieldHitGate?.enabled === false)
+        ? (infieldHitGate ?? speedGate) : null,
       advanceSourceStatus: advanceGate?.enabled === false ? advanceGate : null,
+      // legacy fielding evidenceの再現用。最終走力としては使わない。
       _z: speedZFinal,
+      _legacySpeedZ: speedZFinal,
       _singleYearZ: sc.score,
       _infieldHitExcess: gbSingleExcess,
     } : null;
@@ -977,6 +998,7 @@ export function appraiseCard(ctx, opts) {
   // 走力の能力欄には、上で共通zへ反映済みの最終目盛りを渡す。
   // ここで再びblendDirect()すると同じ実測を二重適用するため禁止。
   const speedOverride = (() => {
+    if (ctx.modelGates?.speed_ability?.enabled === false) return null;
     const e = run?.speedEvidence;
     if (!e || e.decided_by === 'statistical') return null;
     if (e.decided_by === 'direct_blend') return {
@@ -996,7 +1018,8 @@ export function appraiseCard(ctx, opts) {
   })();
 
   // 外部証拠を使った走力のprovenanceを、Basement単独と誤表示しない。
-  if (run?.speedEvidence?.decided_by && run.speedEvidence.decided_by !== 'statistical') {
+  if (ctx.modelGates?.speed_ability?.enabled !== false
+      && run?.speedEvidence?.decided_by && run.speedEvidence.decided_by !== 'statistical') {
     provenanceByValue.speed = withProvenance(r1(run.speedDisplay), SOURCES.derived, {
       season: targetSeason, isEstimated: true,
       method: '統計走力を最終目盛りへ変換し、直接計測/スカウティングと統合後に共通zへ逆変換',
@@ -1031,9 +1054,14 @@ export function appraiseCard(ctx, opts) {
     speedOverride,
     powerOverride: blendDirect(batAdjusted?.power, directs.パワー),
     powerDisplay: conventions.power_display,
-    unappraisedReasons: ctx.modelGates?.baserunning_ability?.enabled === false
-      ? { 走塁: ctx.modelGates.baserunning_ability.reason }
-      : {},
+    unappraisedReasons: {
+      ...(ctx.modelGates?.speed_ability?.enabled === false
+        ? { 走力: ctx.modelGates.speed_ability.reason } : {}),
+      ...(ctx.modelGates?.stealing_ability?.enabled === false
+        ? { 盗塁: ctx.modelGates.stealing_ability.reason } : {}),
+      ...(ctx.modelGates?.baserunning_ability?.enabled === false
+        ? { 走塁: ctx.modelGates.baserunning_ability.reason } : {}),
+    },
     provisionalStatus: {
       走力: ctx.modelGates?.speed_ability ?? null,
       捕球: ctx.modelGates?.catching_ability ?? null,
@@ -1127,6 +1155,12 @@ export function appraiseCard(ctx, opts) {
       ...(clutch?.diff == null && splits ? [`チャンス: ${clutch?.reason ?? '得点圏打数不足'}`] : []),
       ...(platoon?.meetDiff == null && splits ? [`対左: ${platoon?.reason ?? '対左打数不足'}`] : []),
       ...(!goldHistorical ? ['金特: outputs/derived/gold_historical_distribution.json が無いため未査定'] : []),
+      ...(ctx.modelGates?.speed_ability?.enabled === false
+        ? [`走力: ${ctx.modelGates.speed_ability.reason}`] : []),
+      ...(ctx.modelGates?.stealing_ability?.enabled === false
+        ? [`盗塁: ${ctx.modelGates.stealing_ability.reason}`] : []),
+      ...(ctx.modelGates?.infield_hit_ability?.enabled === false
+        ? [`内野安打○: ${ctx.modelGates.infield_hit_ability.reason}`] : []),
       ...(ctx.modelGates?.baserunning_ability?.enabled === false
         ? [`走塁: ${ctx.modelGates.baserunning_ability.reason}`] : []),
     ],
