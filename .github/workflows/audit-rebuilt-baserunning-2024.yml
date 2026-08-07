@@ -4,7 +4,10 @@ on:
     branches: [agent/satei-phase1-safety]
     paths:
       - .github/workflows/audit-rebuilt-baserunning-2024.yml
+      - src/ratings/baserunning_events.mjs
+      - scripts/test_baserunning_events.mjs
       - scripts/audit_pbp_baserunning_schema.mjs
+      - scripts/audit_baserunning_event_labels.mjs
       - scripts/build_baserunning_advances.mjs
       - scripts/fetch_npb_pbp_release.mjs
 permissions:
@@ -19,19 +22,25 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Syntax
+      - name: Syntax and pure tests
         run: |
           node --check scripts/fetch_npb_pbp_release.mjs
           node --check scripts/audit_pbp_baserunning_schema.mjs
+          node --check scripts/audit_baserunning_event_labels.mjs
           node --check scripts/build_baserunning_advances.mjs
+          node scripts/test_baserunning_events.mjs
       - name: Fetch 2024 PBP release assets
         run: node scripts/fetch_npb_pbp_release.mjs 2024 /tmp/npb_pbp_2024
       - name: Diagnose release PBP schema/value semantics
         env:
           PBP_RAW_DIR: /tmp/npb_pbp_2024
         run: node scripts/audit_pbp_baserunning_schema.mjs
-      - name: Rebuild events without touching repository DB
+      - name: Rebuild events into temporary DB only
         env:
           PBP_RAW_DIR: /tmp/npb_pbp_2024
-          PBP_DRY_RUN: '1'
+          PBP_DB_PATH: /tmp/rebuilt_baserunning_2024.sqlite
         run: node scripts/build_baserunning_advances.mjs
+      - name: Independently audit labels against explicit Japanese descriptions
+        env:
+          PBP_DB_PATH: /tmp/rebuilt_baserunning_2024.sqlite
+        run: node scripts/audit_baserunning_event_labels.mjs
