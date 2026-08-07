@@ -1,10 +1,13 @@
-# validate the directly-updated builder; no patch application or write-back
+# validate current builder; no DB or source write-back
 name: Validate fielding error builder safety
 on:
   push:
     branches: [agent/satei-phase1-safety]
     paths:
       - .github/workflows/apply-fielding-error-builder-safety.yml
+      - scripts/build_fielding_error_events.mjs
+      - src/ratings/fielding_workload.mjs
+      - scripts/test_fielding_workload.mjs
 permissions:
   contents: read
 jobs:
