@@ -1,0 +1,31 @@
+name: Validate redesign research utilities
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths: [.github/workflows/validate-redesign-research.yml]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax and gate regression
+        run: |
+          node --check scripts/build_fielding_error_events.mjs
+          node --check scripts/audit_speed_temporal_drift.mjs
+          node scripts/test_defense_redesign_gates.mjs
+      - name: Temporal speed audit
+        run: node scripts/audit_speed_temporal_drift.mjs
+      - name: Post-gate 2024 sample
+        run: |
+          set -e
+          for p in "村上 宗隆" "山川 穂高" "周東 佑京" "近本 光司" "源田 壮亮" "甲斐 拓也" "岡本 和真" "牧 秀悟"; do
+            echo "===== $p ====="
+            node scripts/build_card.mjs "$p" 2024 | sed -n '1,7p'
+          done
