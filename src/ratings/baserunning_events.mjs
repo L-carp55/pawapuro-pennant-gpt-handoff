@@ -80,10 +80,7 @@ function addUniqueRunner(list, runner) {
   if (!list.some(x => sameRunner(x, runner))) list.push(runner);
 }
 
-/**
- * description_japから「プレー直前」の明示塁配置を読む。
- * 最初のpre-play表現だけを採用し、打球後の「一三塁」等は拾わない。
- */
+/** description_japから「プレー直前」の明示塁配置を読む。 */
 export function explicitPreplayBasePattern(description) {
   const s = String(description ?? '').replace(/^\d+球目:/, '');
   for (const re of PREPLAY_PATTERNS) {
@@ -98,32 +95,32 @@ export function explicitPreplayBasePattern(description) {
 
 /**
  * 現在のidentity stateを、説明文が明示する塁配置へ保守的に再配置する。
- * observedStateは同一PBP行のon_*由来identity pool補完用で、位置そのものは補助証拠に留める。
- *
- * 走者人数が同じなら「後ろの走者が前の走者を追い越さない」順序保存で割当可能。
- * 例: [1:A,2:B] -> 明示[2,3] は A→2, B→3。
- * 人数が変わる場合は、明示された個別イベントなしに誰が消えた/増えたか決めない。
+ * observedStateは同一PBP行のon_*由来identity pool補完用。
+ * raw位置と明示配置が完全一致する時だけobserved位置をそのまま採用する。
  */
 export function reconcileRunnerStateWithPattern(state, pattern, observedState = null) {
   if (!pattern) return { status: 'NO_PATTERN', state, pattern: null };
   const targets = [...new Set(pattern.bases)].sort((a, b) => a - b);
   if (targets.length === 0) return { status: 'RESOLVED', state: emptyRunnerState(), pattern };
 
-  let current = runnerStateEntries(state);
-  const observed = runnerStateEntries(observedState);
+  let current = runnerStateEntries(state).sort((a, b) => a[0] - b[0]);
+  const observed = runnerStateEntries(observedState).sort((a, b) => a[0] - b[0]);
+  const observedBases = observed.map(([b]) => b);
+  if (observed.length === targets.length && observedBases.every((b, i) => b === targets[i])) {
+    return { status: 'RESOLVED', state: observedState, pattern, basis: 'explicit_pattern_matches_raw_positions' };
+  }
 
-  // stateにidentityが足りない時だけobservedから補う。位置はここでは確定根拠にしない。
+  // stateにidentityが足りない時だけobservedから補う。位置が明示配置と一致しない複数runnerは割当不能。
   if (current.length < targets.length) {
     const pool = current.map(([, r]) => r);
     for (const [, r] of observed) addUniqueRunner(pool, r);
     if (pool.length !== targets.length) {
       return { status: 'UNCERTAIN', state: null, pattern, reason: `identity_pool_${pool.length}_targets_${targets.length}` };
     }
-    // current位置が完全でないので複数runnerは割当不能。1人だけなら一意。
     if (pool.length === 1 && targets.length === 1) {
       const out = emptyRunnerState();
       out[targets[0] === 1 ? 'first' : targets[0] === 2 ? 'second' : 'third'] = pool[0];
-      return { status: 'RESOLVED', state: out, pattern };
+      return { status: 'RESOLVED', state: out, pattern, basis: 'single_runner_identity_pool' };
     }
     return { status: 'UNCERTAIN', state: null, pattern, reason: 'identity_positions_incomplete_for_multiple_runners' };
   }
@@ -132,7 +129,6 @@ export function reconcileRunnerStateWithPattern(state, pattern, observedState = 
     return { status: 'UNCERTAIN', state: null, pattern, reason: `runner_count_${current.length}_targets_${targets.length}` };
   }
 
-  current = current.sort((a, b) => a[0] - b[0]);
   // 野球走者は塁を後退せず、互いを追い越さない。i番目の走者をi番目のtargetへ対応。
   for (let i = 0; i < current.length; i++) {
     if (targets[i] < current[i][0]) {
@@ -145,7 +141,7 @@ export function reconcileRunnerStateWithPattern(state, pattern, observedState = 
     const k = targets[i] === 1 ? 'first' : targets[i] === 2 ? 'second' : 'third';
     out[k] = current[i][1];
   }
-  return { status: 'RESOLVED', state: out, pattern };
+  return { status: 'RESOLVED', state: out, pattern, basis: 'order_preserving_forward_relocation' };
 }
 
 /** 次打席開始時の塁上に、対象走者がどこにいるかを返す。 */
