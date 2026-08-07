@@ -16,7 +16,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --check scripts/audit_fielding_error_label_recall_2024.mjs
+      - run: |
+          node --check scripts/audit_fielding_error_label_recall_2024.mjs
+          python -m py_compile scripts/audit_bresult_error_share.py
       - name: Fetch 2024 raw PBP
         run: node scripts/fetch_npb_pbp_release.mjs 2024 /tmp/pbp2024
       - name: Audit label recall
@@ -24,10 +26,14 @@ jobs:
           PBP_RAW_DIR: /tmp/pbp2024
           PENNANT_DB_PATH: data/pennant.db
         run: node scripts/audit_fielding_error_label_recall_2024.mjs docs/audits/2026-08-07_fielding_error_label_recall_2024.md
-      - name: Commit audit
+      - name: Audit bresult semantics
+        env:
+          PBP_RAW_DIR: /tmp/pbp2024
+        run: python scripts/audit_bresult_error_share.py docs/audits/2026-08-07_bresult_error_share_2024.md
+      - name: Commit audits
         run: |
           git config user.name "L-carp55"
           git config user.email "amilaleon1@gmail.com"
-          git add docs/audits/2026-08-07_fielding_error_label_recall_2024.md
-          git commit -m "audit: measure 2024 PBP fielding error label recall"
+          git add docs/audits/2026-08-07_fielding_error_label_recall_2024.md docs/audits/2026-08-07_bresult_error_share_2024.md
+          git commit -m "audit: inspect 2024 bresult semantics around errors"
           git push origin HEAD:agent/satei-phase1-safety
