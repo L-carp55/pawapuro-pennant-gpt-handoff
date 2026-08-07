@@ -738,7 +738,7 @@ export function appraiseCard(ctx, opts) {
     }
   }
 
-  const fld = fldRows.length ? appraiseAllPositions(fldRows, run?._z ?? 0, fldNorm, cfg) : [];
+  const fld = fldRows.length ? appraiseAllPositions(fldRows, run?._z ?? 0, fldNorm, cfg, ctx.modelGates) : [];
 
   // 捕手の守備力を差し込む（2026-08-05）。
   // 守備範囲（RngR）は捕手に存在せず `fieldingRating` が必ず null を返すので、ここで埋める。
@@ -746,7 +746,7 @@ export function appraiseCard(ctx, opts) {
   // 差し引いた残差。肩を引いてあるので肩力との二重計上にならない。
   const catcherFld = aggregateEvidenceAllowed('catcher_fielding')
     ? ctx.catcherFielding?.get(normName(p.name)) : null;
-  if (catcherFld) {
+  if (catcherFld && ctx.modelGates?.fielding_ability?.enabled !== false) {
     const cRow = fld.find(f => f.pos === 'C');
     if (cRow && cRow.fielding == null) {
       cRow.fielding = {

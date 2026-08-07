@@ -272,7 +272,7 @@ export function inferredInfieldArm(fieldRows, norm, cfg) {
  * 肩力は**選手の属性**であってポジションの属性ではないため、
  * 実測ARM（外野・捕手）があればそれを、無ければ内野位置からの推定値を選手単位で1つ持つ。
  */
-export function appraiseAllPositions(fieldRows, speedScore, norm, cfg) {
+export function appraiseAllPositions(fieldRows, speedScore, norm, cfg, modelGates = {}) {
   // 守備イニングが無くても、捕逸だけで捕球を査定できる行は残す（2026-08-05）。
   // 捕手のイニングはNPB Basementに2020年以降しか無く、それ以前を inn>0 で落とすと
   // 捕逸を2006年から使えるようにした意味が消える（実例: 小林誠司2015は捕逸3・68試合）。
@@ -283,14 +283,30 @@ export function appraiseAllPositions(fieldRows, speedScore, norm, cfg) {
 
   // 実測ARMが1つも無い選手にだけ、内野位置からの推定を当てる
   const hasMeasuredArm = rows.some(f => armRating(f, norm, cfg) != null);
-  const inferredArm = hasMeasuredArm ? null : inferredInfieldArm(rows, norm, cfg);
+  const inferredArmLegacy = hasMeasuredArm ? null : inferredInfieldArm(rows, norm, cfg);
+  const inferredArm = modelGates?.infield_arm_ability?.enabled === false && inferredArmLegacy
+    ? { ...inferredArmLegacy, legacy_rating: inferredArmLegacy.rating, rating: null,
+        _status: modelGates.infield_arm_ability.status,
+        _note: modelGates.infield_arm_ability.reason }
+    : inferredArmLegacy;
 
   return rows.map((f, i) => {
     const measured = armRating(f, norm, cfg);
+    const fieldingLegacy = fieldingRating(f, speedScore, norm, cfg);
+    const fielding = modelGates?.fielding_ability?.enabled === false && fieldingLegacy
+      ? { ...fieldingLegacy, legacy_rating: fieldingLegacy.rating, rating: null,
+          _status: modelGates.fielding_ability.status,
+          _note: modelGates.fielding_ability.reason }
+      : fieldingLegacy;
+    const catchingLegacy = catchingRating(f, norm, cfg);
+    const catching = catchingLegacy && modelGates?.catching_ability
+      ? { ...catchingLegacy, _status: modelGates.catching_ability.status,
+          _note_redesign: modelGates.catching_ability.reason }
+      : catchingLegacy;
     return {
       pos: f.pos, inn: f.inn, isPrimary: i === 0,
-      fielding: fieldingRating(f, speedScore, norm, cfg),
-      catching: catchingRating(f, norm, cfg),
+      fielding,
+      catching,
       arm: measured ?? (INFIELD.includes(f.pos) ? inferredArm : null),
       catcher: f.pos === 'C' ? catcherAbilities(f, norm, cfg) : null,
       // 仕様§12「ゲーム仕様上の適性値も別管理する」
