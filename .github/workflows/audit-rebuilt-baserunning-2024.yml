@@ -13,8 +13,9 @@ on:
       - scripts/audit_baserunning_event_labels.mjs
       - scripts/build_baserunning_advances.mjs
       - scripts/fetch_npb_pbp_release.mjs
+      - scripts/write_baserunning_rebuild_audit.mjs
 permissions:
-  contents: read
+  contents: write
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -34,6 +35,7 @@ jobs:
           node --check scripts/audit_pbp_mismatch_plate_appearances.mjs
           node --check scripts/audit_baserunning_event_labels.mjs
           node --check scripts/build_baserunning_advances.mjs
+          node --check scripts/write_baserunning_rebuild_audit.mjs
           node scripts/test_baserunning_events.mjs
       - name: Fetch 2024 PBP release assets
         run: node scripts/fetch_npb_pbp_release.mjs 2024 /tmp/npb_pbp_2024
@@ -53,12 +55,18 @@ jobs:
         env:
           PBP_RAW_DIR: /tmp/npb_pbp_2024
         run: node scripts/audit_pbp_mismatch_plate_appearances.mjs
-      - name: Rebuild events into temporary DB only
+      - name: Write persistent rebuild audit from temporary DB
         env:
           PBP_RAW_DIR: /tmp/npb_pbp_2024
-          PBP_DB_PATH: /tmp/rebuilt_baserunning_2024.sqlite
-        run: node scripts/build_baserunning_advances.mjs
-      - name: Independently audit labels against explicit Japanese descriptions
-        env:
-          PBP_DB_PATH: /tmp/rebuilt_baserunning_2024.sqlite
-        run: node scripts/audit_baserunning_event_labels.mjs
+        run: node scripts/write_baserunning_rebuild_audit.mjs 2024 docs/audits/2026-08-07_baserunning_rebuild_2024.md
+      - name: Commit audit report
+        run: |
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add docs/audits/2026-08-07_baserunning_rebuild_2024.md
+          if git diff --cached --quiet; then
+            echo "no report changes"
+          else
+            git commit -m "audit: persist 2024 baserunning rebuild validation"
+            git push origin HEAD:agent/satei-phase1-safety
+          fi
