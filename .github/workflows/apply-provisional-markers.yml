@@ -1,0 +1,44 @@
+name: Apply provisional rating markers
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths: [.github/workflows/apply-provisional-markers.yml]
+permissions:
+  contents: write
+jobs:
+  apply-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply guarded edits
+        run: |
+          python3 .chatgpt/apply_provisional_markers.py
+          node --check src/cards/ability_sheet.mjs
+          node --check src/cards/pipeline.mjs
+          node --check scripts/build_card.mjs
+      - name: Tests
+        run: |
+          node scripts/test_provisional_markers.mjs
+          node scripts/test_defense_redesign_gates.mjs
+          node scripts/test_ability_sheet.mjs
+          node scripts/test_cards.mjs
+          node scripts/test_qa_remaining.mjs
+          node scripts/test_phase1_safety.mjs
+      - name: Visible sample
+        run: |
+          node scripts/build_card.mjs "源田 壮亮" 2024 | sed -n '1,7p'
+          node scripts/build_card.mjs "近本 光司" 2024 | sed -n '1,7p'
+      - name: Commit tested changes
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm .chatgpt/apply_provisional_markers.py .github/workflows/apply-provisional-markers.yml
+          git add configs/model_gates.json src/cards/ability_sheet.mjs src/cards/pipeline.mjs scripts/build_card.mjs
+          git commit -m "safety: mark provisional speed and catching ratings"
+          git push origin HEAD:agent/satei-phase1-safety
