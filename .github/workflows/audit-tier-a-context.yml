@@ -1,0 +1,69 @@
+name: Audit Tier A context
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths: [.github/workflows/audit-tier-a-context.yml]
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fetch April 2024 PBP
+        run: node scripts/fetch_npb_pbp.mjs 2024 04
+      - name: Inspect fields and reconstruct Tier A sample
+        run: |
+          python - <<'PY'
+          import csv, glob, json, collections, math, re
+          fn=glob.glob('data/raw/npb_pbp/2024-04_pbp.csv')[0]
+          with open(fn,encoding='utf-8-sig',newline='') as f:
+              r=csv.DictReader(f)
+              fields=r.fieldnames
+              print('FIELDS', [x for x in fields if x in ['game_id','inning','inning_ab_num','pitch_number','pitcher','pitcher_hand','batter','batter_hand','on_1b','on_2b','on_3b','bresult','description_jap','PlayInfo_PlayerName']])
+              rows=list(r)
+          # data coverage on actual pitch rows
+          pitch=[x for x in rows if str(x.get('pitch_number','')).strip() not in ('','0','nan','None')]
+          print('ROWS',len(rows),'PITCH_ROWS',len(pitch))
+          for col in ['pitcher_hand','batter','on_2b','on_3b','bresult']:
+              vals=[x.get(col) for x in pitch]
+              filled=sum(v not in (None,'','nan','None') for v in vals)
+              print(col,'filled',filled,'/',len(vals), 'sample', collections.Counter(v for v in vals if v not in (None,'','nan','None')).most_common(8))
+          # group PA and compare first vs last pitch state; use terminal bresult/desc to show AB/H reconstructability
+          pa={}
+          for x in pitch:
+              k=(x.get('game_id'),x.get('inning'),x.get('inning_ab_num'))
+              pa.setdefault(k,[]).append(x)
+          terms=[]
+          for k,rr in pa.items():
+              rr.sort(key=lambda x:int(float(x.get('pitch_number') or 0)))
+              first,last=rr[0],rr[-1]
+              terms.append((first,last))
+          print('PA',len(terms))
+          right=sum((last.get('pitcher_hand') or '').upper().startswith('R') or last.get('pitcher_hand') in ('右','1') for first,last in terms)
+          nonrisp_first=sum(not first.get('on_2b') and not first.get('on_3b') for first,last in terms)
+          nonrisp_last=sum(not last.get('on_2b') and not last.get('on_3b') for first,last in terms)
+          print('RIGHT_PA',right,'NONRISP_FIRST',nonrisp_first,'NONRISP_LAST',nonrisp_last)
+          # Print bresult mapping samples paired with Japanese descriptions for terminal pitches
+          by=collections.defaultdict(list)
+          for first,last in terms:
+              b=last.get('bresult')
+              d=last.get('description_jap') or ''
+              if b not in ('',None,'0') and len(by[b])<3: by[b].append(d[:120])
+          print('BRESULT_SAMPLES')
+          for k in sorted(by,key=lambda x:int(float(x)) if str(x).replace('.','',1).isdigit() else 9999)[:40]:
+              print(k, by[k])
+          PY
+      - name: Remove temporary workflow
+        run: |
+          rm .github/workflows/audit-tier-a-context.yml
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add -A
+          git commit -m "chore: remove temporary Tier A audit workflow"
+          git push origin HEAD:agent/satei-phase1-safety
