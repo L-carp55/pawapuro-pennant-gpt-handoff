@@ -93,8 +93,9 @@ for (const fn of files) {
     on1: I('on_1b'), on1n: I('on_1b_name'), on2: I('on_2b'), on2n: I('on_2b_name'),
     on3: I('on_3b'), on3n: I('on_3b_name'), outs: I('outs_when_up'),
     hx: I('hc_x'), hy: I('hc_y'), hl: I('hit_location'), park: I('stadium_name'),
+    date: I('game_date'), fielder: I('fielder_name'),
   };
-  const required = ['season','game','inn','ab','type','state','desc','pitch','on1','on1n','on2','on2n','on3','on3n','outs'];
+  const required = ['season','game','inn','ab','type','state','desc','pitch','on1','on1n','on2','on2n','on3','on3n','outs','date'];
   const missing = required.filter(k => c[k] < 0);
   if (missing.length) throw new Error(`${fn}: 必須列がありません: ${missing.join(', ')}`);
 
@@ -191,7 +192,11 @@ for (const fn of files) {
     };
 
     const push = (kind, runner, success) => events.push({
-      season: Number(curLast[c.season]), park: c.park >= 0 ? curLast[c.park] : null,
+      season: Number(curLast[c.season]),
+      game_id: c.game >= 0 ? curLast[c.game] : g1,
+      date: c.date >= 0 ? curLast[c.date] : null,
+      park: c.park >= 0 ? curLast[c.park] : null,
+      fielder: c.fielder >= 0 ? curLast[c.fielder] : null,
       kind,
       runner_id: runner.id,
       runner: runner.name || runner.id,
@@ -229,15 +234,18 @@ if (!DRY_RUN) {
   const db = new DatabaseSync(DB_PATH);
   db.exec(`DROP TABLE IF EXISTS baserunning_advances`);
   db.exec(`CREATE TABLE baserunning_advances (
-    season INTEGER, park TEXT, kind TEXT, runner_id TEXT, runner TEXT, runner_norm TEXT,
-    outs INTEGER, success INTEGER, hc_x REAL, hc_y REAL, hit_location INTEGER, description TEXT)`);
-  const ins = db.prepare(`INSERT INTO baserunning_advances VALUES (?,?,?,?,?,?,?,?,?,?,?,?)`);
+    season INTEGER, game_id TEXT, date TEXT, park TEXT, fielder TEXT, kind TEXT,
+    runner_id TEXT, runner TEXT, runner_norm TEXT, outs INTEGER, success INTEGER,
+    hc_x REAL, hc_y REAL, hit_location INTEGER, description TEXT)`);
+  const ins = db.prepare(`INSERT INTO baserunning_advances VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`);
   db.exec('BEGIN');
-  for (const e of events) ins.run(e.season, e.park, e.kind, e.runner_id, e.runner, e.runner_norm,
-    e.outs, e.success, e.hc_x, e.hc_y, e.hit_location, e.description);
+  for (const e of events) ins.run(e.season, e.game_id, e.date, e.park, e.fielder, e.kind,
+    e.runner_id, e.runner, e.runner_norm, e.outs, e.success, e.hc_x, e.hc_y, e.hit_location, e.description);
   db.exec('COMMIT');
   db.exec(`CREATE INDEX idx_bra_name ON baserunning_advances(runner_norm, season)`);
   db.exec(`CREATE INDEX idx_bra_id ON baserunning_advances(runner_id, season)`);
+  db.exec(`CREATE INDEX idx_bra_game ON baserunning_advances(game_id, season)`);
+  db.exec(`CREATE INDEX idx_bra_date ON baserunning_advances(date, season)`);
   db.close();
 }
 
