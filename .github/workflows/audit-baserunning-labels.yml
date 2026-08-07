@@ -1,4 +1,4 @@
-name: Audit baserunning event labels
+name: Audit baserunning source
 
 on:
   push:
@@ -7,6 +7,7 @@ on:
     paths:
       - .github/workflows/audit-baserunning-labels.yml
       - scripts/audit_baserunning_event_labels.mjs
+      - scripts/audit_advance_speed_impact.mjs
 
 permissions:
   contents: read
@@ -23,3 +24,5 @@ jobs:
           node-version: '22'
       - name: Audit saved baserunning labels
         run: node scripts/audit_baserunning_event_labels.mjs
+      - name: Measure stale advancement impact on speed
+        run: node scripts/audit_advance_speed_impact.mjs
