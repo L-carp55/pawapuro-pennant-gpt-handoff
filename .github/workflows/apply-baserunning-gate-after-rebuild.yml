@@ -1,3 +1,4 @@
+# rerun with existing test files only
 name: Apply baserunning gate after rebuild
 on:
   push:
@@ -20,9 +21,9 @@ jobs:
       - name: Validate JSON and safety tests
         run: |
           python -m json.tool configs/model_gates.json >/dev/null
-          node scripts/test_running_gates.mjs
           node scripts/test_cards.mjs
           node scripts/test_phase1_safety.mjs
+          node scripts/test_baserunning_events.mjs
       - name: Commit verified gate update
         run: |
           git config user.name "L-carp55"
