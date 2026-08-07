@@ -20,11 +20,15 @@ jobs:
           node --check src/engine/baserunning.mjs
           node --check src/engine/game.mjs
           node --check src/engine/runner_context.mjs
+          node --check src/engine/running_event_response.mjs
           node --check scripts/test_engine_runner_state.mjs
+          node --check scripts/test_running_event_response.mjs
       - name: Runner state
         run: node scripts/test_engine_runner_state.mjs
       - name: Physical response
         run: node scripts/test_running_response.mjs
+      - name: Running event response
+        run: node scripts/test_running_event_response.mjs
       - name: Engine identity
         run: node scripts/run_identity_test.mjs 2024 20260731
       - name: Season engine
