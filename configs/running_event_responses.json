@@ -1,0 +1,58 @@
+{
+  "_purpose": "身体的な野球距離走行性能と、イベント固有の走塁skillを別説明変数として各進塁イベント確率へ接続するresponse台帳。係数未較正のイベントは本番利用しない。",
+  "status": "UNCALIBRATED",
+  "calibrated": false,
+  "model_type": "delta_logit_from_global_base",
+  "events": {
+    "steal_attempt_2nd": {
+      "calibrated": false,
+      "actor": "runner_on_1b",
+      "physical_axis": "post_exit_5_to_90ft_performance_z",
+      "skill_key": "stealingZ",
+      "note": "企図は身体能力だけでなく投手読み・慎重性・ゲーム状況を含む。文脈モデル完成まで未較正。"
+    },
+    "steal_attempt_3rd": {
+      "calibrated": false,
+      "actor": "runner_on_2b",
+      "physical_axis": "post_exit_5_to_90ft_performance_z",
+      "skill_key": "stealingZ",
+      "note": "二盗と三盗は別responseとして較正する。"
+    },
+    "steal_success": {
+      "calibrated": false,
+      "actor": "stealing_runner",
+      "physical_axis": "post_exit_5_to_90ft_performance_z",
+      "skill_key": "stealingZ",
+      "note": "投手・捕手・スタート・スライディング文脈を統制するまで未較正。"
+    },
+    "single_1st_to_3rd": {
+      "calibrated": false,
+      "actor": "runner_on_1b",
+      "physical_axis": "post_exit_5_to_90ft_performance_z",
+      "skill_key": "baserunningZ",
+      "note": "打球方向・深さ・外野手/肩・アウト数を統制して較正する。"
+    },
+    "single_2nd_to_home": {
+      "calibrated": false,
+      "actor": "runner_on_2b",
+      "physical_axis": "post_exit_5_to_90ft_performance_z",
+      "skill_key": "baserunningZ",
+      "note": "打球方向・深さ・外野手/肩・アウト数を統制して較正する。"
+    },
+    "double_1st_to_home": {
+      "calibrated": false,
+      "actor": "runner_on_1b",
+      "physical_axis": "post_exit_5_to_90ft_performance_z",
+      "skill_key": "baserunningZ",
+      "note": "二塁打の位置・処理時間・外野手/肩・アウト数を統制して較正する。"
+    }
+  },
+  "missing_data_policy": "必要なphysical axisまたはskillが欠ける場合は0=平均と仮定せず、そのイベントではglobal base probabilityへfallbackする。",
+  "reopen_conditions": [
+    "失効したbaserunning_advancesを修正版PBPから再構築する",
+    "打球方向/深さ・アウト数・守備側文脈を含める",
+    "physical performanceとskillを別係数で推定する",
+    "player-level holdoutでglobal base probabilityを上回る",
+    "143試合リーグ全体を再較正する"
+  ]
+}
