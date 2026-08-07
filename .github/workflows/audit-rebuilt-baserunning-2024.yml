@@ -2,7 +2,11 @@ name: Audit rebuilt baserunning 2024
 on:
   push:
     branches: [agent/satei-phase1-safety]
-    paths: [.github/workflows/audit-rebuilt-baserunning-2024.yml]
+    paths:
+      - .github/workflows/audit-rebuilt-baserunning-2024.yml
+      - scripts/audit_pbp_baserunning_schema.mjs
+      - scripts/build_baserunning_advances.mjs
+      - scripts/fetch_npb_pbp_release.mjs
 permissions:
   contents: read
 jobs:
