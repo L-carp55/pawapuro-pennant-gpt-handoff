@@ -15,5 +15,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --check scripts/audit_mlb_running_splits_acceleration.mjs
-      - run: node scripts/audit_mlb_running_splits_acceleration.mjs
+      - name: Full MLB 2017-2025 audit
+        run: |
+          node --check scripts/audit_mlb_running_splits_acceleration.mjs
+          node scripts/audit_mlb_running_splits_acceleration.mjs
