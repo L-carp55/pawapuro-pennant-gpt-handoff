@@ -903,6 +903,7 @@ export function appraiseCard(ctx, opts) {
       ? r1(run.speedDisplay - run.speedEvidence.statistical_final_scale) : null,
     scouting: speedScout,
     scouting_value: speedScout.value,
+    scouting_application: speedScout.application,
   } : null;
   const armRec = scout ? scoutReconcile(r1(armForSheet?.rating), scoutLookup(scout, dbName, targetSeason, '肩力')) : null;
 
@@ -999,8 +1000,13 @@ export function appraiseCard(ctx, opts) {
     bat: batAdjusted, trajectory, trajectoryEstimated, trajectorySource, run, fld,
     splits: { clutch, platoon },
     durability,
-    // 優先順: スカウティング評価 > 直接計測 > 統計（仕様04 §1.2 の階層どおり）
-    arm: (armRec?.scouting ? { ...armForSheetFinal, rating: armRec.value, _reconciled: armRec } : armForSheetFinal),
+    // 優先順: 直接計測（第1階層） > decisionスカウティング（第2階層） > 統計。
+    // evidence_only は証拠束へ残すだけで能力値を上書きしない。
+    arm: (armDirect
+      ? armForSheetFinal
+      : armRec?.source?.startsWith('scouting:')
+        ? { ...armForSheetFinal, rating: armRec.value, _reconciled: armRec }
+        : armForSheetFinal),
     // 走力・パワーの実測（NPB+アプリ／MLB Statcast）を能力欄へ据える。
     // スカウティング評価があればそちらが優先（仕様04 §1.2の階層どおり）
     // ★実測で統計値を丸ごと置き換えない（2026-08-05）。
@@ -1122,6 +1128,7 @@ export function appraiseCard(ctx, opts) {
     prior: scoutRec?.scouting ? {
       value: scoutRec.scouting_value, tier: 'scouting_document',
       source: scoutRec.scouting.source, basis: scoutRec.scouting.basis, dated: scoutRec.scouting.dated,
+      application: scoutRec.scouting.application ?? scoutRec.scouting_application ?? 'decision',
     } : null,
     proxies: statVal == null ? null : { value: statVal, components, reliability: 0.35 },
   });

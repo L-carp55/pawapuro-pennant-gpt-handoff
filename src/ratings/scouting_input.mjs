@@ -55,8 +55,13 @@ export function validateEntry(e) {
   if (!(e.value >= 1 && e.value <= 100)) {
     throw new ScoutingProvenanceError(`値は1-100の範囲（${e.player} の ${e.ability} = ${e.value}）`);
   }
+  const application = e.application ?? 'decision';
+  if (!['decision', 'evidence_only'].includes(application)) {
+    throw new ScoutingProvenanceError(`applicationが不正: ${application}（decision / evidence_only）`);
+  }
   return {
     ...e,
+    application,
     _weight: EVALUATOR_KINDS[e.evaluator].weight,
     _kind_desc: EVALUATOR_KINDS[e.evaluator].desc,
   };
@@ -81,7 +86,8 @@ export function reconcile(statValue, scouting, opts = {}) {
     };
   }
   const gap = statValue == null ? null : Math.round((scouting.value - statValue) * 10) / 10;
-  const useStat = opts.preferStatistical === true;
+  // evidence_only は値そのものをPrior候補・常識チェックとして残すが、最終能力へ全置換しない。
+  const useStat = opts.preferStatistical === true || scouting.application === 'evidence_only';
   return {
     value: useStat ? statValue : scouting.value,
     source: useStat ? 'statistical' : `scouting:${scouting.evaluator}`,
@@ -92,8 +98,11 @@ export function reconcile(statValue, scouting, opts = {}) {
       evaluator: scouting.evaluator, basis: scouting.basis,
       source: scouting.source ?? null, dated: scouting.dated ?? null,
       confidence: scouting._weight,
+      application: scouting.application,
     },
-    note: gap == null ? null
+    note: scouting.application === 'evidence_only'
+      ? `スカウティング${scouting.value}はevidence_only。統計値${statValue ?? '—'}を上書きせず、Prior候補・常識チェックとして保持`
+      : gap == null ? null
       : Math.abs(gap) >= 15
         ? `統計と${Math.abs(gap)}点食い違う。統計は走塁の成果、スカウティングは脚力そのものを見ており、別の量である可能性が高い`
         : `統計との差 ${gap >= 0 ? '+' : ''}${gap}点`,

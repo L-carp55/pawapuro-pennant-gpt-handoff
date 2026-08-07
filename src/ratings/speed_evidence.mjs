@@ -68,18 +68,17 @@ export function reconcileSpeedEvidence(statistical, evidence = {}, cfg) {
   let weight = null;
   let external = null;
 
-  // 現行カードの裁定を保つため、この修正では既存の優先順
-  // 「スカウティング > 直接計測 > 統計」は変えない。
-  // 直接計測とスカウティングの優先順位そのものは別監査で扱う。
-  if (scouting) {
-    finalRating = scouting.value;
-    decidedBy = 'scouting';
-    external = scouting;
-  } else if (direct) {
+  // 仕様04 §1.2の階層どおり、直接計測（第1階層）をスカウティング（第2階層）より優先する。
+  // evidence_only のスカウティングは値決定に使わず、証拠束にだけ残す。
+  if (direct) {
     weight = directSpeedWeight(direct, cfg);
     finalRating = statFinal * (1 - weight) + direct.value * weight;
     decidedBy = 'direct_blend';
     external = direct;
+  } else if (scouting && scouting.application !== 'evidence_only') {
+    finalRating = scouting.value;
+    decidedBy = 'scouting';
+    external = scouting;
   }
 
   const rawFinal = speedFinalScaleToRaw(finalRating, cfg);
@@ -98,11 +97,13 @@ export function reconcileSpeedEvidence(statistical, evidence = {}, cfg) {
       final_raw_rating: rawFinal,
       final_z: zFinal,
       external_weight: weight,
-      external_source: direct?.source ?? scouting?.source ?? null,
+      external_source: external?.source ?? null,
       direct: direct ?? null,
       scouting: scouting ?? null,
       _note: decidedBy === 'statistical'
-        ? '外部証拠なし。統計由来の複数年走力を使用'
+        ? (scouting?.application === 'evidence_only'
+          ? 'スカウティングはevidence_onlyとして保持し、数値決定は統計由来の複数年走力を使用'
+          : '外部証拠なし。統計由来の複数年走力を使用')
         : '統計・外部証拠を同じ最終目盛りで統合し、逆変換したzを表示・盗塁・内野安打・守備で共通利用',
     },
     detail: {
@@ -114,7 +115,7 @@ export function reconcileSpeedEvidence(statistical, evidence = {}, cfg) {
       rating_final_scale: finalRating,
       external_decided_by: decidedBy,
       external_weight: weight,
-      external_source: direct?.source ?? scouting?.source ?? null,
+      external_source: external?.source ?? null,
     },
   };
 }

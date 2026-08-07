@@ -47,7 +47,8 @@ export function buildAbilityEvidence(a) {
     // direct.tier は「実測年と査定年の隔たり」で決まる（direct_measurement.mjs tierForYearGap）。
     // 6年前のMLB実測を「同年度の直接計測」と呼ばないため、呼び出し側の指定を優先する
     direct && { tier: direct.tier ?? 'direct_same_year', value: direct.value, src: direct },
-    prior && { tier: prior.tier ?? 'scouting_document', value: prior.value, src: prior },
+    prior && prior.application !== 'evidence_only'
+      && { tier: prior.tier ?? 'scouting_document', value: prior.value, src: prior },
     proxies && { tier: 'outcome_proxy', value: proxies.value, src: proxies },
   ].filter(c => c && Number.isFinite(c.value));
 
@@ -73,7 +74,12 @@ export function buildAbilityEvidence(a) {
     posterior_rating: Math.round(best.value * 10) / 10,
     confidence: Math.round(conf * 100) / 100,
     direct_measurement: direct,
-    scouting_prior: prior,
+    scouting_prior: prior ? {
+      ...prior,
+      _role: prior.application === 'evidence_only'
+        ? 'Prior候補・常識チェック。最終能力の直接決定には使わない'
+        : '数値決定に利用可能なスカウティング証拠',
+    } : null,
     // 代理指標は「能力そのもの」ではなく、直接測定を予測する材料として残す
     outcome_proxies: proxies ? {
       ...proxies,
