@@ -343,7 +343,7 @@ export function makeContext(db, cfg) {
       if (farmCache.has(k)) return farmCache.get(k);
       const out = [];
       for (const f of all.get(playerId) ?? []) {
-        if (f.season < season - 3 || f.season > season + 3) continue;
+        if (f.season < season - 3 || f.season > season) continue;
         const L = lgOf(f.season);
         if (!L || f.slg == null || f.iso == null) continue;
         const avg = f.slg - f.iso;
@@ -501,7 +501,7 @@ export function appraiseCard(ctx, opts) {
   const dists = { contact: fitLogDist(pool.map(r => r.so / r.pa)), eye: fitLogDist(pool.map(r => r.bb / r.pa)) };
 
   const hist = prep(`SELECT season, ab, h, hr FROM v_batting WHERE player_id=? AND season BETWEEN ? AND ? AND ab>0`)
-    .all(p.player_id, targetSeason - 3, targetSeason + 3)
+    .all(p.player_id, targetSeason - 3, targetSeason)
     .filter(h => lgOf(h.season))
     .map(h => {
       const f = envFactorsOf(h.season);
@@ -581,6 +581,9 @@ export function appraiseCard(ctx, opts) {
 
   let run = null;
   let infieldHitSpecial = null;
+  const speedGate = ctx.modelGates?.speed_ability;
+  const stealingGate = ctx.modelGates?.stealing_ability;
+  const infieldHitGate = ctx.modelGates?.infield_hit_ability;
   if (bm) {
     const adv = advanceOf(db, normName(p.name), targetSeason);
     const sc = speedComponents(line, { gbPct: bm.gb_pct, infieldHits: ihRow?.ih ?? null, bats: ihRow?.bats ?? null, season: targetSeason, advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 }, bm.ubr, runNorm);
@@ -602,16 +605,18 @@ export function appraiseCard(ctx, opts) {
     const speedZFinal = speedState?.zFinal ?? null;
 
     // infieldHitAbility 側で、最終走力zで説明できる分を除いて得能を判定する。
-    infieldHitSpecial = infieldHitAbility(gbSingleExcess, speedZFinal, cfg);
+    infieldHitSpecial = (speedGate?.enabled === false || infieldHitGate?.enabled === false)
+      ? null : infieldHitAbility(gbSingleExcess, speedZFinal, cfg);
     // 走塁得能には自作の走塁指標も渡す（仕様04 §3が名指しする材料。走力に対する残差として使う）
     const baserunningGate = ctx.modelGates?.baserunning_ability;
     const baserunning = baserunningGate?.enabled === false ? null
       : baserunningAbility(bm.ubr != null ? bm.ubr / line.PA : null, speedZFinal, runNorm, cfg,
         { advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 });
     run = speedState ? {
-      speed: speedState.rating,
-      speedDetail: speedState.detail,
-      stealing: stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, speedZFinal, runNorm, cfg),
+      speed: speedGate?.enabled === false ? null : speedState.rating,
+      speedDetail: { ...speedState.detail, ...(speedGate?.enabled === false ? { legacy_only: true, legacy_rating: speedState.rating, _pause_reason: speedGate.reason } : {}) },
+      stealing: (speedGate?.enabled === false || stealingGate?.enabled === false)
+        ? null : stealingAbility({ SB: line.SB, CS: line.CS, PA: line.PA }, bm.wsb, speedZFinal, runNorm, cfg),
       baserunning,
       baserunningStatus: baserunningGate?.enabled === false ? baserunningGate : null,
       _z: speedZFinal,
@@ -677,13 +682,24 @@ export function appraiseCard(ctx, opts) {
   }
 
   const fld = fldRows.length ? appraiseAllPositions(fldRows, run?._z ?? 0, fldNorm, cfg) : [];
+  const fieldingGate = ctx.modelGates?.fielding_ability;
+  const infieldArmGate = ctx.modelGates?.infield_arm_ability;
+  const aggregateEvidenceAllowed = key => {
+    const maxSeason = Number(ctx.modelGates?.asof_aggregate_evidence?.[key]?.max_evidence_season);
+    return !Number.isFinite(maxSeason) || targetSeason >= maxSeason;
+  };
+  const recordEvidenceEndsBy = rec => {
+    const ys = rec?.seasons;
+    const end = Array.isArray(ys) && ys.length ? Number(ys[ys.length - 1]) : null;
+    return Number.isFinite(end) && end <= targetSeason;
+  };
 
   // 捕手の守備力を差し込む（2026-08-05）。
   // 守備範囲（RngR）は捕手に存在せず `fieldingRating` が必ず null を返すので、ここで埋める。
   // 仕様04 §10.2 が定める「捕球からリリースまでの速さ」＝盗塁阻止から投手・走者・肩を
   // 差し引いた残差。肩を引いてあるので肩力との二重計上にならない。
-  const catcherFld = ctx.catcherFielding?.get(normName(p.name));
-  if (catcherFld) {
+  const catcherFld = aggregateEvidenceAllowed('catcher_fielding') ? ctx.catcherFielding?.get(normName(p.name)) : null;
+  if (catcherFld && fieldingGate?.enabled !== false) {
     const cRow = fld.find(f => f.pos === 'C');
     if (cRow && cRow.fielding == null) {
       cRow.fielding = {
@@ -697,6 +713,10 @@ export function appraiseCard(ctx, opts) {
           + '★暫定——採否の正式な物差し（エンジンでのリーグ分布一致）は未実装',
       };
     }
+  }
+
+  if (fieldingGate?.enabled === false) {
+    for (const f of fld) { if (f.fielding) f._legacy_fielding = f.fielding; f.fielding = null; }
   }
 
   // ---- チャンス・対左の素点（splits と ctxSel は査定の前で決めてある） ----
@@ -797,6 +817,9 @@ export function appraiseCard(ctx, opts) {
     basis: durable.arm.basis, components: durable.arm.components,
   };
   if (armForSheet) for (const f of fld) f.arm = armForSheet;
+  const primaryIsInfield = ['一','二','三','遊'].includes(p.position);
+  const pauseInfieldArm = primaryIsInfield && infieldArmGate?.enabled === false;
+  if (pauseInfieldArm) for (const f of fld) { if (f.arm) f._legacy_arm = f.arm; f.arm = null; }
 
   // ゲーム側の約束（仕様02 §6.6）。査定値は書き換えず、表示用の値を別に持つ。
   // 台帳反映後（batAdjusted）のパワーに対して適用する——ゲーム側の下限は「最終的に査定した値」に効くべきもので、
@@ -929,8 +952,10 @@ export function appraiseCard(ctx, opts) {
     bat: batAdjusted, trajectory, trajectoryEstimated, trajectorySource, run, fld,
     splits: { clutch, platoon },
     durability,
-    // 優先順: スカウティング評価 > 直接計測 > 統計（仕様04 §1.2 の階層どおり）
-    arm: (armRec?.scouting ? { ...armForSheetFinal, rating: armRec.value, _reconciled: armRec } : armForSheetFinal),
+    // 優先順: 直接計測 > decisionスカウティング > 統計。evidence_onlyは上書きしない。
+    arm: pauseInfieldArm && !armDirect ? null : (armDirect
+      ? armForSheetFinal
+      : armRec?.source?.startsWith('scouting:') ? { ...armForSheetFinal, rating: armRec.value, _reconciled: armRec } : armForSheetFinal),
     // 走力・パワーの実測（NPB+アプリ／MLB Statcast）を能力欄へ据える。
     // スカウティング評価があればそちらが優先（仕様04 §1.2の階層どおり）
     // ★実測で統計値を丸ごと置き換えない（2026-08-05）。
@@ -941,12 +966,18 @@ export function appraiseCard(ctx, opts) {
     //   そこで**実測の確からしさ（ホールドアウトでの一致）を重みにして混ぜる**。
     //   Sprint Speed のように一致0.945の実測はほぼそのまま効き、
     //   ハードヒット率のような0.5前後の実測は半分ほどしか動かさない。
-    speedOverride: runRec?.scouting ? runRec : blendDirect(run?.speed, directs.走力),
+    speedOverride: speedGate?.enabled === false ? null
+      : (runRec?.source?.startsWith('scouting:') ? runRec : blendDirect(run?.speed, directs.走力)),
     powerOverride: blendDirect(batAdjusted?.power, directs.パワー),
     powerDisplay: conventions.power_display,
-    unappraisedReasons: ctx.modelGates?.baserunning_ability?.enabled === false
-      ? { 走塁: ctx.modelGates.baserunning_ability.reason }
-      : {},
+    unappraisedReasons: {
+      ...(speedGate?.enabled === false ? { 走力: speedGate.reason } : {}),
+      ...(stealingGate?.enabled === false ? { 盗塁: stealingGate.reason } : {}),
+      ...(ctx.modelGates?.baserunning_ability?.enabled === false ? { 走塁: ctx.modelGates.baserunning_ability.reason } : {}),
+      ...(fieldingGate?.enabled === false ? { 守備力: fieldingGate.reason } : {}),
+      ...(pauseInfieldArm ? { 肩力: infieldArmGate.reason } : {}),
+    },
+    provisionalStatus: { 捕球: ctx.modelGates?.catching_ability ?? null },
     specialAbilities: {
       strikeout: strikeoutSpecial,
       infieldHit: infieldHitSpecial,
@@ -957,7 +988,8 @@ export function appraiseCard(ctx, opts) {
       // 中間の選手にはキー自体が作られない
       throwAccuracy: (() => {
         // ①送球失策（TE）から判定したもの。全守備位置・2014-2026年で最もサンプルが大きい
-        const byTe = ctx.throwAccuracyTe?.get(`${normName(p.name)}|${p.position}`);
+        const byTeRaw = ctx.throwAccuracyTe?.get(`${normName(p.name)}|${p.position}`);
+        const byTe = recordEvidenceEndsBy(byTeRaw) ? byTeRaw : null;
         if (byTe) {
           return {
             ability: byTe.ability, color: byTe.ability === '送球◎' ? 'blue' : 'red',
@@ -969,7 +1001,7 @@ export function appraiseCard(ctx, opts) {
           };
         }
         // ②捕手だけの別経路（盗塁を許した後の余分な進塁＝二塁送球の精度）
-        const t = ctx.catcherThrow?.get(normName(p.name));
+        const t = aggregateEvidenceAllowed('catcher_throw_accuracy') ? ctx.catcherThrow?.get(normName(p.name)) : null;
         if (t) {
           return {
             ability: t.ability, color: t.ability === '送球○' ? 'blue' : 'red',
@@ -980,7 +1012,7 @@ export function appraiseCard(ctx, opts) {
         // 内野手の送球（精度）。仕様04 §4.3の同じ枠を、内野ゴロの悪送球から判定する（2026-08-05）。
         // 守備範囲（RngR）とは相関 -0.13 で重ならないので、守備力と二重計上にならない。
         // 捕手と同じく事象が稀（112打球に1回）なので100段階にせず得能。64人中2人だけ判別できた
-        const f = ctx.infieldThrow?.get(normName(p.name));
+        const f = aggregateEvidenceAllowed('infield_throw_accuracy') ? ctx.infieldThrow?.get(normName(p.name)) : null;
         if (!f) return null;
         return {
           ability: f.ability, color: f.ability === '送球◎' ? 'blue' : 'red',
@@ -1032,8 +1064,12 @@ export function appraiseCard(ctx, opts) {
       ...(clutch?.diff == null && splits ? [`チャンス: ${clutch?.reason ?? '得点圏打数不足'}`] : []),
       ...(platoon?.meetDiff == null && splits ? [`対左: ${platoon?.reason ?? '対左打数不足'}`] : []),
       ...(!goldHistorical ? ['金特: outputs/derived/gold_historical_distribution.json が無いため未査定'] : []),
-      ...(ctx.modelGates?.baserunning_ability?.enabled === false
-        ? [`走塁: ${ctx.modelGates.baserunning_ability.reason}`] : []),
+      ...(speedGate?.enabled === false ? [`走力: ${speedGate.reason}`] : []),
+      ...(stealingGate?.enabled === false ? [`盗塁: ${stealingGate.reason}`] : []),
+      ...(infieldHitGate?.enabled === false ? [`内野安打○: ${infieldHitGate.reason}`] : []),
+      ...(ctx.modelGates?.baserunning_ability?.enabled === false ? [`走塁: ${ctx.modelGates.baserunning_ability.reason}`] : []),
+      ...(fieldingGate?.enabled === false ? [`守備力: ${fieldingGate.reason}`] : []),
+      ...(pauseInfieldArm ? [`肩力: ${infieldArmGate.reason}`] : []),
     ],
   });
   card.provenance.by_value = provenanceByValue;

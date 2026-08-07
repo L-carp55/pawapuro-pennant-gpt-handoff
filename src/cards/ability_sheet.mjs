@@ -85,7 +85,7 @@ export function buildAbilitySheet(a, cfg) {
     bat, trajectory, trajectoryEstimated = false, trajectorySource = null,
     run, fld = [], splits, durability, powerDisplay,
     arm = null, speedOverride = null, powerOverride = null, specialAbilities = {},
-    unappraisedReasons = {},
+    unappraisedReasons = {}, provisionalStatus = {},
   } = a;
 
   const primary = fld.find(f => f.isPrimary) ?? null;
@@ -127,7 +127,8 @@ export function buildAbilitySheet(a, cfg) {
       armSrc?._reconciled?.scouting ? { from_scouting: true, statistical_value: armSrc._reconciled.statistical_value, gap: armSrc._reconciled.gap }
         : armSrc?.is_estimated ? { is_estimated: true, basis: armSrc.basis } : {}),
     守備力: graded(primary?.fielding?.rating, cfg, primary ? { position: primary.pos } : {}),
-    捕球: graded(primary?.catching?.rating, cfg, primary ? { position: primary.pos } : {}),
+    捕球: graded(primary?.catching?.rating, cfg, primary ? { position: primary.pos,
+      ...(provisionalStatus?.捕球 ? { provisional: true, status: provisionalStatus.捕球.status, _note: provisionalStatus.捕球.reason } : {}) } : {}),
   };
 
   // 本家に無いが、データから測れるので残す独自の基礎能力（オーナー確定 2026-08-01）

@@ -1,42 +1,54 @@
 {
-  "player_id": "71075138",
-  "name_ja": "近本 光司",
+  "player_id": "21425139",
+  "name_ja": "山川 穂高",
   "name_en": null,
   "card_type": "peak_single_year",
   "season_label": 2024,
   "seasons_used": [
     2024
   ],
-  "team": "阪神タイガース",
-  "league": "セ",
+  "team": "福岡ソフトバンクホークス",
+  "league": "パ",
   "team_games": 143,
-  "primary_position": "中",
+  "primary_position": "一",
   "secondary_positions": [
-    "CF"
+    "1B",
+    "DH"
   ],
   "bats": null,
   "throws": null,
   "source_freeze_commit": null,
   "ratings": {
-    "meet": 45.4,
-    "power": 60.8,
-    "contact": 56.6,
-    "eye": 67,
-    "power_display": 60.8,
+    "meet": 60.7,
+    "power": 88.5,
+    "contact": 28.3,
+    "eye": 54.8,
+    "power_display": 88.5,
     "game_convention_adjustments": [],
     "speed": null,
     "stealing": null,
     "baserunning": null,
     "fielding": [
       {
-        "pos": "CF",
-        "innings": 1262.7,
+        "pos": "1B",
+        "innings": 802.3,
         "is_primary": true,
         "fielding": null,
-        "catching": 54.9,
-        "arm": 63,
+        "catching": 53.8,
+        "arm": null,
         "arm_is_estimated": false,
         "aptitude": "A",
+        "catcher": null
+      },
+      {
+        "pos": "DH",
+        "innings": 394.7,
+        "is_primary": false,
+        "fielding": null,
+        "catching": null,
+        "arm": null,
+        "arm_is_estimated": false,
+        "aptitude": "B",
         "catcher": null
       }
     ]
@@ -54,27 +66,27 @@
   },
   "calc_log": {
     "inputs": {
-      "PA": 639,
-      "AB": 562,
-      "H": 160,
-      "B2": 16,
-      "B3": 5,
-      "HR": 6,
-      "BB": 68,
-      "HBP": 5,
-      "SO": 93,
+      "PA": 611,
+      "AB": 550,
+      "H": 136,
+      "B2": 26,
+      "B3": 1,
+      "HR": 34,
+      "BB": 48,
+      "HBP": 10,
+      "SO": 158,
       "SH": 0,
-      "SF": 4,
-      "GDP": 7,
-      "SB": 19,
-      "CS": 9
+      "SF": 3,
+      "GDP": 17,
+      "SB": 0,
+      "CS": 0
     },
     "context_tier": "B",
     "environment": {
       "reference_season": 2019,
       "applied": true,
       "gamma_avg": 0.91,
-      "gamma_hr_used": 1.106,
+      "gamma_hr_used": 0.8424672058593765,
       "_gamma_hr_note": "本塁打のgammaは水準別（強打者ほど環境に流されない）。実測=中央値1.106/上位5%0.626/上位1%0.118",
       "league_avg": 0.24294370773689294,
       "league_hr_rate": 0.017124791428822343,
@@ -83,9 +95,9 @@
     },
     "prior": {
       "kind": "self_recent",
-      "basis": "一軍周辺3年・重み計1021",
-      "avg": 0.3023919156215464,
-      "hr": 0.016328190019495457
+      "basis": "一軍周辺3年・重み計457",
+      "avg": 0.2618659595047545,
+      "hr": 0.0884713805300582
     },
     "shrinkage": {
       "kappa_meet": 300,
@@ -97,17 +109,17 @@
         "power": 0,
         "shortfall": 0,
         "full_season_ab": 359,
-        "season_ab": 562
+        "season_ab": 550
       }
     },
     "meat": {
-      "context_avg": 0.23622047244094488,
+      "context_avg": 0.27134146341463417,
       "context_tier_used": "B",
-      "context_ab": 381,
+      "context_ab": 328,
       "context_league_avg": 0.24646519896075483,
-      "env_avg": 0.24628581858628118,
-      "post_avg": 0.24628581858628118,
-      "mean_ability": 45.4,
+      "env_avg": 0.2829033137683675,
+      "post_avg": 0.2829033137683675,
+      "mean_ability": 60.7,
       "adjustments": [
         {
           "component": "strikeout_red_delta",
@@ -150,75 +162,75 @@
           "informationSource": null
         }
       ],
-      "final": 45.4
+      "final": 60.7
     },
     "power": {
-      "hr_rate": 0.010676156583629894,
-      "hr_500paeq_raw": 5.2313167259786475,
+      "hr_rate": 0.06181818181818182,
+      "hr_500paeq_raw": 30.290909090909093,
       "park": {
-        "factor": 0.8482617071164396,
-        "coverage": 0.9875444839857651,
-        "covered_ab": 555,
-        "total_ab": 562,
+        "factor": 1.097291043517214,
+        "coverage": 0.9654545454545455,
+        "covered_ab": 531,
+        "total_ab": 550,
         "parks": [
           {
-            "park": "甲子園",
-            "ab": 243,
-            "factor": 0.6030410013490284
-          },
-          {
-            "park": "横浜",
-            "ab": 53,
-            "factor": 1.0337122728546073
-          },
-          {
-            "park": "マツダスタジアム",
-            "ab": 50,
-            "factor": 0.7814703226029535
-          },
-          {
-            "park": "東京ドーム",
-            "ab": 49,
-            "factor": 1.207550036727921
-          },
-          {
-            "park": "バンテリンドーム",
-            "ab": 47,
-            "factor": 0.5958754847737947
-          },
-          {
-            "park": "神宮",
-            "ab": 46,
-            "factor": 1.859837647251511
-          },
-          {
-            "park": "京セラD大阪",
-            "ab": 44,
-            "factor": 0.6866004790990162
-          },
-          {
             "park": "みずほPayPay",
-            "ab": 13,
+            "ab": 239,
             "factor": 1.3203653041212382
           },
           {
+            "park": "京セラD大阪",
+            "ab": 58,
+            "factor": 0.6866004790990162
+          },
+          {
+            "park": "エスコンＦ",
+            "ab": 53,
+            "factor": 1.3553077277343768
+          },
+          {
+            "park": "ベルーナドーム",
+            "ab": 49,
+            "factor": 0.7488805440318738
+          },
+          {
             "park": "ZOZOマリン",
-            "ab": 10,
+            "ab": 45,
             "factor": 1.028221613882934
+          },
+          {
+            "park": "楽天モバイル",
+            "ab": 45,
+            "factor": 0.6929783562236129
+          },
+          {
+            "park": "東京ドーム",
+            "ab": 18,
+            "factor": 1.207550036727921
+          },
+          {
+            "park": "横浜",
+            "ab": 12,
+            "factor": 1.0337122728546073
+          },
+          {
+            "park": "バンテリンドーム",
+            "ab": 12,
+            "factor": 0.5958754847737947
           }
         ],
         "unmatched_parks": [
           {
-            "park": "Ce その他",
-            "ab": 7
+            "park": "Pa その他",
+            "ab": 19
           }
         ],
         "_note": "本塁打率をこの係数で割る。打ちやすい球場（>1）の選手ほど割り引かれる"
       },
       "park_skipped": null,
-      "env": 10.769304882976355,
-      "post": 10.769304882976355,
-      "mean_ability": 60.8,
+      "env": 43.38257044947205,
+      "post": 43.38257044947205,
+      "mean_ability": 88.5,
       "_ab_ref": 490,
       "_ab_ref_note": "基準打数。2026-08-01にオーナー承認で436.25→490（規定到達者の実平均）",
       "adjustments": [
@@ -231,11 +243,11 @@
           "informationSource": null
         }
       ],
-      "final": 60.8
+      "final": 88.5
     },
     "other_batting": {
-      "contact": 56.6,
-      "eye": 67
+      "contact": 28.3,
+      "eye": 54.8
     },
     "trajectory": {
       "is_estimated": false,
@@ -245,92 +257,84 @@
       "speed": null,
       "stealing": null,
       "baserunning": null,
-      "_speed_z_final": 0.955875022209767,
-      "_speed_z_single_year": 1.0279144815850363,
+      "_speed_z_final": -1.0813202108203992,
+      "_speed_z_single_year": -1.0899846529599397,
       "speed_is_multi_year": true,
-      "speed_years": 4,
+      "speed_years": 3,
       "speed_seasons": [
         2021,
         2022,
-        2023,
         2024
       ]
     },
     "fielding": [
       {
-        "pos": "CF",
-        "inn": 1262.7,
+        "pos": "1B",
+        "inn": 802.3,
         "isPrimary": true,
         "fielding": null,
         "catching": {
-          "rating": 54.8731316603219,
-          "z": 0.2408976751274416,
-          "reliability": 0.26930705739330735,
-          "per1000": 0.09503444998812069,
-          "normBasis": "CF×2024年"
+          "rating": 53.80147132785485,
+          "z": -0.03389825352723138,
+          "reliability": 0.19377334993773349,
+          "per1000": 5.141388174807197,
+          "material": "fe_only",
+          "normBasis": "一（FE単独・案2）",
+          "_note": "送球得能が確定しているため、二重計上を避けて捕球以外の失策(FE)だけで判定"
         },
-        "arm": {
-          "rating": 63.01229396559989,
-          "z": -0.24603814462581405,
-          "reliability": 0.7824548340642797,
-          "years": 4,
-          "seasons": [
-            2021,
-            2022,
-            2023,
-            2024
-          ],
-          "is_multi_year": true,
-          "is_estimated": false,
-          "basis": "ARMと補殺の平均（2つは別のものを測っており、合わせた方が翌年を当てる）",
-          "components": [
-            {
-              "source": "ARM（送球で防いだ失点）",
-              "z": -0.303,
-              "years": 4,
-              "seasons": [
-                2021,
-                2022,
-                2023,
-                2024
-              ]
-            },
-            {
-              "source": "補殺（送球でアウトにした数）",
-              "z": -0.189,
-              "years": 4,
-              "seasons": [
-                2021,
-                2022,
-                2023,
-                2024
-              ]
-            }
-          ]
-        },
+        "arm": null,
         "catcher": null,
         "aptitude": {
           "grade": "A",
-          "innings": 1262.7,
+          "innings": 802.3,
           "is_primary": true,
           "_legend": "A=主位置 / B=常時併用(128イニング以上) / C=時々(51以上) / D=わずか"
         },
         "_legacy_fielding": {
-          "rating": 56.12423302114885,
-          "residZ": -0.184873558082034,
-          "combinedZ": -0.184873558082034,
-          "reliability": 0.46005027871898574,
-          "per1000": -3.0886196246139224,
-          "expected": -0.9725081612907235,
+          "rating": 64.53047793382163,
+          "residZ": 1.3534547130523698,
+          "combinedZ": 1.3534547130523698,
+          "reliability": 0.35122356958367984,
+          "per1000": 8.188956749345632,
+          "expected": -0.7762403920338051,
           "components": [
             {
               "name": "range",
-              "z": -0.184873558082034,
+              "z": 1.3534547130523698,
               "weight": 0.256
             }
           ],
           "speedAdjusted": true,
           "note": null
+        },
+        "_legacy_arm": {
+          "rating": 62.734888770543655,
+          "z": -0.3162086693402611,
+          "reliability": 0.667304333361058,
+          "is_estimated": true,
+          "basis": "守備位置からの推定（下限＝1Bを802イニング）",
+          "estimation_method": "infield_position_prior_from_measured_of_arm",
+          "positions": [
+            {
+              "pos": "1B",
+              "inn": 802.3
+            }
+          ]
+        }
+      },
+      {
+        "pos": "DH",
+        "inn": 394.7,
+        "isPrimary": false,
+        "fielding": null,
+        "catching": null,
+        "arm": null,
+        "catcher": null,
+        "aptitude": {
+          "grade": "B",
+          "innings": 394.7,
+          "is_primary": false,
+          "_legend": "A=主位置 / B=常時併用(128イニング以上) / C=時々(51以上) / D=わずか"
         }
       }
     ],
@@ -345,8 +349,8 @@
         ],
         "_note": "Sprint Speedは公開が2026年以降のみのため第1階層を使えない（仕様04 §1の第2-3階層で代替）",
         "speed_rating": null,
-        "steal_attempt_rate": 0.044,
-        "steal_success_rate": 0.679,
+        "steal_attempt_rate": 0,
+        "steal_success_rate": null,
         "steal_residual_vs_speed": null,
         "stealing_ability": null,
         "baserunning_ability": null,
@@ -355,32 +359,51 @@
           "status": "PAUSED",
           "reason": "走塁得能は走力との循環・機会選択・低再現性があるため未査定"
         },
-        "_speed_z_final": 0.956,
-        "_speed_z_single_year": 1.028,
+        "_speed_z_final": -1.081,
+        "_speed_z_single_year": -1.09,
         "_raw": {
-          "ubr": 5.31,
-          "wsb": -0.25
+          "ubr": -1.68,
+          "wsb": 0.08
         }
       },
       "fielding": [
         {
-          "position": "CF",
+          "position": "1B",
           "range_metric": "RngR（守備範囲による得点貢献）",
           "range_component_only": null,
-          "speed_rating_fixed": 0.956,
+          "speed_rating_fixed": -1.081,
           "inferred_fielding_rating": null,
-          "error_rate": 0.095,
-          "catching_rating": 54.873,
+          "error_rate": 5.141,
+          "catching_rating": 53.801,
           "arm_metric": "ARM（送球による得点貢献）",
-          "arm_rating": 63.012,
+          "arm_rating": null,
           "arm_is_estimated": false,
           "throwing_error_rate": null,
           "_throwing_error_note": "送球失策と捕球失策を分けたデータが公開されていないため未取得。総失策は肩へ入れない（仕様§4.3）",
           "throwing_ability": null,
           "_throwing_ability_note": "送球の精度は送球得能。専用データが無いため未査定（肩力で代用しない）",
-          "innings": 1262.7,
-          "confidence": 0.269,
+          "innings": 802.3,
+          "confidence": 0.194,
           "aptitude": "A"
+        },
+        {
+          "position": "DH",
+          "range_metric": "RngR（守備範囲による得点貢献）",
+          "range_component_only": null,
+          "speed_rating_fixed": -1.081,
+          "inferred_fielding_rating": null,
+          "error_rate": null,
+          "catching_rating": null,
+          "arm_metric": "ARM（送球による得点貢献）",
+          "arm_rating": null,
+          "arm_is_estimated": false,
+          "throwing_error_rate": null,
+          "_throwing_error_note": "送球失策と捕球失策を分けたデータが公開されていないため未取得。総失策は肩へ入れない（仕様§4.3）",
+          "throwing_ability": null,
+          "_throwing_ability_note": "送球の精度は送球得能。専用データが無いため未査定（肩力で代用しない）",
+          "innings": 394.7,
+          "confidence": null,
+          "aptitude": "B"
         }
       ],
       "catcher": null
@@ -395,7 +418,7 @@
     "retrieved_note": "プロEYE球（https://proeyekyuu.com）／NPB Basement（https://npbbasement.com）",
     "by_value": {
       "meet": {
-        "value": 45.4,
+        "value": 60.7,
         "source_name": "プロEYE球",
         "source_url": "https://proeyekyuu.com/ja/csvs-jp/",
         "retrieved_at": "2026-07-31",
@@ -408,7 +431,7 @@
         "notes": "基礎成績（打撃・投手・守備）。公式集計の再計算"
       },
       "power": {
-        "value": 60.8,
+        "value": 88.5,
         "source_name": "プロEYE球",
         "source_url": "https://proeyekyuu.com/ja/csvs-jp/",
         "retrieved_at": "2026-07-31",
@@ -421,7 +444,7 @@
         "notes": "基礎成績（打撃・投手・守備）。公式集計の再計算"
       },
       "contact": {
-        "value": 56.6,
+        "value": 28.3,
         "source_name": "プロEYE球",
         "source_url": "https://proeyekyuu.com/ja/csvs-jp/",
         "retrieved_at": "2026-07-31",
@@ -434,7 +457,7 @@
         "notes": "基礎成績（打撃・投手・守備）。公式集計の再計算"
       },
       "eye": {
-        "value": 67,
+        "value": 54.8,
         "source_name": "プロEYE球",
         "source_url": "https://proeyekyuu.com/ja/csvs-jp/",
         "retrieved_at": "2026-07-31",
@@ -485,11 +508,28 @@
         "confidence": null,
         "notes": "高度指標（守備成分・打球性質・走塁・選球眼）。2020年以降のみ"
       },
-      "fielding_CF": {
+      "fielding_1B": {
         "value": {
           "fielding": null,
-          "catching": 54.9,
-          "arm": 61.2
+          "catching": 53.8,
+          "arm": 62.7
+        },
+        "source_name": "本プロジェクトの較正",
+        "source_url": null,
+        "retrieved_at": "2026-08-01",
+        "season": 2024,
+        "league": null,
+        "context": null,
+        "is_estimated": true,
+        "estimation_method": "infield_position_prior_from_measured_of_arm",
+        "confidence": null,
+        "notes": "守備位置からの推定（下限＝1Bを802イニング）"
+      },
+      "fielding_DH": {
+        "value": {
+          "fielding": null,
+          "catching": null,
+          "arm": null
         },
         "source_name": "NPB Basement",
         "source_url": "https://npbbasement.com/",
@@ -509,7 +549,8 @@
     "盗塁: 盗塁技術は純粋走力で説明できる分を除いた残差として再設計するため、新走力確定まで未査定",
     "内野安打○: 内野安打○は純粋走力と打球難度を除いた技術残差として再設計するため未査定",
     "走塁: 走塁得能は走力との循環・機会選択・低再現性があるため未査定",
-    "守備力: 旧RngR−走力残差の定義を撤回。反応・一歩目・加速・判断等を含み走力と共同で範囲を作るモデルへ再設計するため未査定"
+    "守備力: 旧RngR−走力残差の定義を撤回。反応・一歩目・加速・判断等を含み走力と共同で範囲を作るモデルへ再設計するため未査定",
+    "肩力: 内野肩の守備位置ベース推定は外部検証で無効。直接根拠のない内野肩は未査定"
   ],
   "generated_by": "pawapuro-pennant appraisal v0 (2026-08-01)",
   "ability_evidence": {
@@ -542,24 +583,14 @@
     },
     "肩力": {
       "ability": "肩力",
-      "posterior_rating": 63,
-      "confidence": 0.12,
+      "posterior_rating": null,
+      "confidence": 0,
       "direct_measurement": null,
       "scouting_prior": null,
-      "outcome_proxies": {
-        "value": 63,
-        "components": [
-          "ARM",
-          "補殺率"
-        ],
-        "reliability": 0.35,
-        "_role": "直接測定を予測する説明変数。これ単独を能力値と断定しない（GPT回答 Q1/Q3）"
-      },
+      "outcome_proxies": null,
       "provenance": {
-        "decided_by": "outcome_proxy",
-        "decided_by_label": "結果指標（成果から推定）",
-        "alternatives": [],
-        "note": "結果指標のみ。測りたい能力（純粋な脚力・肩の強さ）とは別の量を測っている点に注意"
+        "decided_by": null,
+        "note": "どの階層の証拠も無い"
       }
     }
   },
@@ -567,30 +598,27 @@
     "_scale": "基礎能力・得能とも内部は100段階の連続値。rank は表示用の変換（オーナー確定 2026-08-01）",
     "基礎能力": {
       "弾道": {
-        "value": 2,
+        "value": 4,
         "scale": "1-4",
         "is_estimated": false,
         "estimation_source": null,
         "_note": "打球のゴロ／ライナー／フライの構成比から逆算（仕様02 §7）。パワプロ143人で分布を較正"
       },
       "ミート": {
-        "value": 45.4,
-        "rank": "E"
+        "value": 60.7,
+        "rank": "C"
       },
       "パワー": {
-        "value": 60.8,
-        "rank": "C"
+        "value": 88.5,
+        "rank": "A"
       },
       "走力": null,
-      "肩力": {
-        "value": 63,
-        "rank": "C"
-      },
+      "肩力": null,
       "守備力": null,
       "捕球": {
-        "value": 54.9,
+        "value": 53.8,
         "rank": "D",
-        "position": "CF",
+        "position": "1B",
         "provisional": true,
         "status": "PROVISIONAL_REDESIGN",
         "_note": "捕球は現行ErrR/FE値を暫定表示。難易度調整expected-error研究は本番未採用"
@@ -598,29 +626,29 @@
     },
     "独自の基礎能力": {
       "三振のしにくさ": {
-        "value": 56.6,
-        "rank": "D",
+        "value": 28.3,
+        "rank": "F",
         "_note": "本家に無い独自項目。ゾーン別のコンタクト率から測る"
       },
       "選球眼": {
-        "value": 67,
-        "rank": "C",
+        "value": 54.8,
+        "rank": "D",
         "_note": "本家に無い独自項目（プロスピにはランクである）。ボール球に手を出さない度合い"
       }
     },
     "得能": {
       "チャンス": {
-        "value": 55.1,
-        "rank": "D",
-        "differential": 0.0459,
-        "reliability": 0.359,
+        "value": 49.9,
+        "rank": "E",
+        "differential": -0.0008,
+        "reliability": 0.429,
         "basis": "得点圏と非得点圏の打率差"
       },
       "対左": {
-        "value": 71.4,
-        "rank": "B",
-        "differential": 0.1505,
-        "reliability": 0.475,
+        "value": 40.6,
+        "rank": "E",
+        "differential": -0.0596,
+        "reliability": 0.526,
         "basis": "対左と対右のミート差"
       },
       "盗塁": null,
@@ -631,26 +659,44 @@
         "rank": "C",
         "rate": 1,
         "_note": "規定の出場量に対してどれだけ出続けたか。能力への加点には使わない（仕様02 §8.2）"
+      },
+      "三振": {
+        "ability": "三振",
+        "color": "red",
+        "basis": "コンタクト28"
       }
     },
     "守備適性": [
       {
-        "position": "CF",
+        "position": "1B",
         "grade": "A",
-        "innings": 1262.7
+        "innings": 802.3
+      },
+      {
+        "position": "DH",
+        "grade": "B",
+        "innings": 394.7
       }
     ],
     "_fielding_by_position": [
       {
-        "position": "CF",
-        "innings": 1262.7,
+        "position": "1B",
+        "innings": 802.3,
         "is_primary": true,
         "守備力": null,
-        "捕球": 54.9
+        "捕球": 53.8
+      },
+      {
+        "position": "DH",
+        "innings": 394.7,
+        "is_primary": false,
+        "守備力": null,
+        "捕球": null
       }
     ],
     "未査定": [
       "走力（旧走力は内野安打・UBR・併殺回避等の走塁結果を含み、純粋な野球上の脚力と技術を分離できていないため未査定）",
+      "肩力（内野肩の守備位置ベース推定は外部検証で無効。直接根拠のない内野肩は未査定）",
       "守備力（旧RngR−走力残差の定義を撤回。反応・一歩目・加速・判断等を含み走力と共同で範囲を作るモデルへ再設計するため未査定）",
       "盗塁（盗塁技術は純粋走力で説明できる分を除いた残差として再設計するため、新走力確定まで未査定）",
       "走塁（走塁得能は走力との循環・機会選択・低再現性があるため未査定）",
@@ -660,9 +706,9 @@
   "splits": {
     "context": {
       "tier": "B",
-      "AB": 381,
-      "H": 90,
-      "avg": 0.23622047244094488,
+      "AB": 328,
+      "H": 89,
+      "avg": 0.27134146341463417,
       "basis": "対右投手の合計（非得点圏との交差は不明なので作らない）",
       "available": {
         "total": true,
@@ -677,22 +723,22 @@
       ]
     },
     "clutch": {
-      "diff": 0.0458730158730159,
-      "rispAvg": 0.32142857142857145,
-      "nonRispAvg": 0.27555555555555555,
-      "rispAb": 112,
-      "weight": 0.199288256227758,
-      "reliability": 0.358974358974359,
+      "diff": -0.0008333333333333248,
+      "rispAvg": 0.24666666666666667,
+      "nonRispAvg": 0.2475,
+      "rispAb": 150,
+      "weight": 0.2727272727272727,
+      "reliability": 0.42857142857142855,
       "_note": "打点(RBI)は入力に使わない（仕様05 §3）"
     },
     "platoon": {
-      "meetDiff": 0.15051985905076784,
-      "sluggingDiff": 0.13282870027986832,
-      "hrRateDiff": -0.007598497701599455,
-      "vsLAb": 181,
-      "vsRAb": 381,
-      "weight": 0.3220640569395018,
-      "reliability": 0.47506561679790027,
+      "meetDiff": -0.05962975170292245,
+      "sluggingDiff": -0.09341353548670622,
+      "hrRateDiff": -0.013019116677653264,
+      "vsLAb": 222,
+      "vsRAb": 328,
+      "weight": 0.4036363636363636,
+      "reliability": 0.5260663507109005,
       "_note": "ミート差と長打差を別々に返す（仕様05 §4）"
     },
     "source": {

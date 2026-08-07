@@ -65,6 +65,25 @@ export function measuredYearsFromDetail(detail, key) {
   } catch { return []; }
 }
 
+/** 査定年以前に実際に存在した直接計測だけを返す。未来観測は証拠にしない。 */
+export function eligibleMeasurementObservations(detail, key, targetSeason = null) {
+  if (!detail) return [];
+  try {
+    const d = typeof detail === 'string' ? JSON.parse(detail) : detail;
+    const arr = d?.[key];
+    if (!Array.isArray(arr)) return [];
+    if (!Number.isFinite(targetSeason)) return arr.filter(x => Number.isFinite(x?.year));
+    return arr.filter(x => Number.isFinite(x?.year) && x.year <= targetSeason);
+  } catch { return []; }
+}
+
+/** detail内の観測を査定年以前だけで再平均する。対象年以前が0件ならnull。 */
+export function averageMeasurementAtOrBefore(detail, key, valueField, targetSeason = null) {
+  const obs = eligibleMeasurementObservations(detail, key, targetSeason);
+  const vals = obs.map(x => x?.[valueField]).filter(Number.isFinite);
+  return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+}
+
 /**
  * 選手1人分の直接計測を、ability_evidence が受け取る形へ組み立てる。
  *
@@ -77,23 +96,37 @@ export function buildDirectMeasurements(row, cfg, targetSeason = null) {
   const out = { 走力: null, 肩力: null };
   if (!row || !cfg) return out;
 
+  // NPB+は設定に計測年を持つ。査定対象年より後なら、走力・捕手肩力のどちらにも使わない。
+  const npbPlusSeason = Number(cfg.npb_plus_direct?._season);
+  const npbPlusAllowed = !Number.isFinite(targetSeason)
+    || !Number.isFinite(npbPlusSeason)
+    || npbPlusSeason <= targetSeason;
+
   const speedCfg = cfg.speed;
-  if (speedCfg?.enabled && row.sprint_speed_avg != null) {
-    const value = measurementToRating(row.sprint_speed_avg, speedCfg);
-    if (value != null) {
-      const years = measuredYearsFromDetail(row.detail, 'sprint_speed');
+  if (speedCfg?.enabled) {
+    // mlb_bridgeのsprint_speed_avgは全MLB年の平均なので、過去年カードではそのまま使わない。
+    // detailから査定年以前の観測だけを再平均する。過去観測が0件なら未来平均へフォールバックしない。
+    const eligible = eligibleMeasurementObservations(row.detail, 'sprint_speed', targetSeason);
+    const measured = Number.isFinite(targetSeason)
+      ? averageMeasurementAtOrBefore(row.detail, 'sprint_speed', 'sprint_speed', targetSeason)
+      : (Number.isFinite(row.sprint_speed_avg)
+          ? row.sprint_speed_avg
+          : averageMeasurementAtOrBefore(row.detail, 'sprint_speed', 'sprint_speed', null));
+    if (measured != null) {
+      const value = measurementToRating(measured, speedCfg);
+      const years = eligible.map(x => x.year);
       const t = tierForYearGap(years, targetSeason);
       out.走力 = {
         value: Math.round(value * 10) / 10,
         tier: t.tier,
         source: 'MLB Statcast Sprint Speed',
-        measured: row.sprint_speed_avg,
+        measured,
         unit: 'ft/s',
-        seasons: row.sprint_years ?? null,
-        measured_years: years.length ? years : null,
+        seasons: eligible.length || (!Number.isFinite(targetSeason) ? row.sprint_years ?? null : null),
+        measured_years: years.length ? [...new Set(years)].sort() : null,
         year_gap: t.gap,
-        note: `実測${row.sprint_speed_avg.toFixed(1)} ft/s（${row.sprint_years ?? '?'}年分の平均`
-          + `${years.length ? `／${Math.min(...years)}-${Math.max(...years)}年` : ''}）を`
+        evidence_cutoff: Number.isFinite(targetSeason) ? targetSeason : null,
+        note: `査定年以前の実測${measured.toFixed(1)} ft/s（${eligible.length || row.sprint_years || '?'}年分）を`
           + `${speedCfg.slope}×実測${speedCfg.intercept >= 0 ? '+' : ''}${speedCfg.intercept} で能力値へ変換。`
           + `較正=${speedCfg.calibrated_on}${t.note ? `。${t.note}` : ''}`,
       };
@@ -103,17 +136,31 @@ export function buildDirectMeasurements(row, cfg, targetSeason = null) {
   // 肩力は係数が独立2系で一致しなかったため既定で無効。
   // 有効化するには configs 側で enabled を立てる（その時は根拠も併せて更新すること）
   const armCfg = cfg.arm;
-  if (armCfg?.enabled && row.arm_mph_avg != null) {
-    const value = measurementToRating(row.arm_mph_avg, armCfg);
-    if (value != null) {
-      out.肩力 = {
-        value: Math.round(value * 10) / 10,
-        source: 'MLB Statcast Arm Strength',
-        measured: row.arm_mph_avg,
-        unit: 'mph',
-        seasons: row.arm_years ?? null,
-        note: `実測${row.arm_mph_avg.toFixed(1)} mph を能力値へ変換。較正=${armCfg.calibrated_on}`,
-      };
+  if (armCfg?.enabled) {
+    const eligibleArm = eligibleMeasurementObservations(row.detail, 'arm', targetSeason);
+    const measuredArm = Number.isFinite(targetSeason)
+      ? averageMeasurementAtOrBefore(row.detail, 'arm', 'arm_mph', targetSeason)
+      : (Number.isFinite(row.arm_mph_avg)
+          ? row.arm_mph_avg
+          : averageMeasurementAtOrBefore(row.detail, 'arm', 'arm_mph', null));
+    if (measuredArm != null) {
+      const value = measurementToRating(measuredArm, armCfg);
+      if (value != null) {
+        const years = eligibleArm.map(x => x.year);
+        const t = tierForYearGap(years, targetSeason);
+        out.肩力 = {
+          value: Math.round(value * 10) / 10,
+          tier: t.tier,
+          source: 'MLB Statcast Arm Strength',
+          measured: measuredArm,
+          unit: 'mph',
+          seasons: eligibleArm.length || (!Number.isFinite(targetSeason) ? row.arm_years ?? null : null),
+          measured_years: years.length ? [...new Set(years)].sort() : null,
+          year_gap: t.gap,
+          evidence_cutoff: Number.isFinite(targetSeason) ? targetSeason : null,
+          note: `査定年以前の実測${measuredArm.toFixed(1)} mph を能力値へ変換。較正=${armCfg.calibrated_on}`,
+        };
+      }
     }
   }
   // 捕手の肩力（NPB+アプリの送球速度）。2026-08-05 オーナー裁定で有効化。
@@ -126,12 +173,12 @@ export function buildDirectMeasurements(row, cfg, targetSeason = null) {
   // ★観測量が効く: 打席数で絞るほど相関が上がる（全14人 0.676 → 100打席以上10人 0.846 → 200打席以上4人 0.955）。
   //   関係が無いのではなく、観測量の少ない選手が薄めていただけ。したがって縮約が要る。
   const cArm = cfg.catcher_arm;
-  if (cArm?.enabled && row.throw_speed_kmh != null && row.is_catcher) {
+  if (cArm?.enabled && npbPlusAllowed && row.throw_speed_kmh != null && row.is_catcher) {
     const value = measurementToRating(row.throw_speed_kmh, cArm);
     if (value != null) {
       out.肩力 = {
         value: Math.round(value * 10) / 10,
-        tier: 'direct_near_year',   // 実測2026 × 査定2024＝2年ずれ（tierForYearGapの規律と同じ扱い）
+        tier: tierForYearGap(Number.isFinite(npbPlusSeason) ? [npbPlusSeason] : [], targetSeason).tier,
         source: 'NPB+アプリ 送球速度（平均）',
         measured: row.throw_speed_kmh,
         unit: 'km/h',
@@ -158,7 +205,7 @@ export function buildDirectMeasurements(row, cfg, targetSeason = null) {
   // 同じ能力に複数の実測があるときは、test での一致が高い順に**1つだけ**使う。
   // 平均すると「同じ打球の強さを別の切り口で見た値」を重ねることになり、二重に効く。
   const npbPlus = cfg.npb_plus_direct?.models;
-  if (npbPlus) {
+  if (npbPlus && npbPlusAllowed) {
     const HOLDOUT_MIN = 0.30;          // test でこれ未満なら使わない
     // ★2026-08-06 オーナー指摘で追加。**仕様アンカーを持つ能力にはこの経路を使わない**。
     //   NPB+のモデルは scripts/calibrate_npb_plus_direct.mjs が
@@ -190,7 +237,9 @@ export function buildDirectMeasurements(row, cfg, targetSeason = null) {
       const value = Math.max(1, Math.min(100, m.intercept + m.slope * measured));
       out[ability] = {
         value: Math.round(value * 10) / 10,
-        tier: 'direct_near_year',      // 実測2026 × 査定年が離れる
+        tier: tierForYearGap(Number.isFinite(npbPlusSeason) ? [npbPlusSeason] : [], targetSeason).tier,
+        measurement_year: Number.isFinite(npbPlusSeason) ? npbPlusSeason : null,
+        year_gap: Number.isFinite(npbPlusSeason) && Number.isFinite(targetSeason) ? targetSeason - npbPlusSeason : null,
         source: `NPB+アプリ ${metric}`,
         measured, unit: m.unit,
         note: `${metric} ${measured}${m.unit} を ${m.slope.toFixed(3)}×実測`
