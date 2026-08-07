@@ -8,6 +8,14 @@ def replace_once(path, old, new):
         raise SystemExit(f'{path}: expected 1 match, got {n}: {old[:120]!r}')
     p.write_text(s.replace(old, new, 1))
 
+def replace_exact_count(path, old, new, expected):
+    p = Path(path)
+    s = p.read_text()
+    n = s.count(old)
+    if n != expected:
+        raise SystemExit(f'{path}: expected {expected} matches, got {n}: {old[:120]!r}')
+    p.write_text(s.replace(old, new))
+
 # scouting_input: applicationを検証し、evidence_onlyは数値決定に使わない。
 replace_once('src/ratings/scouting_input.mjs',
 """  if (!(e.value >= 1 && e.value <= 100)) {
@@ -94,17 +102,11 @@ replace_once('src/ratings/speed_evidence.mjs',
     external = scouting;
   }
 """)
-replace_once('src/ratings/speed_evidence.mjs',
+replace_exact_count('src/ratings/speed_evidence.mjs',
 """      external_source: direct?.source ?? scouting?.source ?? null,
 """,
 """      external_source: external?.source ?? null,
-""")
-# second occurrence in detail
-replace_once('src/ratings/speed_evidence.mjs',
-"""      external_source: direct?.source ?? scouting?.source ?? null,
-""",
-"""      external_source: external?.source ?? null,
-""")
+""", 2)
 replace_once('src/ratings/speed_evidence.mjs',
 """      _note: decidedBy === 'statistical'
         ? '外部証拠なし。統計由来の複数年走力を使用'
