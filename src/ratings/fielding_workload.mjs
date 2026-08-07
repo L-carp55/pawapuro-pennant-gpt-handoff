@@ -7,6 +7,7 @@
 // 重要:
 // - current game の最終球数は、そのプレーより後の情報を含むので説明変数にしない。
 // - 直近7/14日も「当該試合より前の守備試合」だけを数える。
+// - 日付が不明なら直近7/14日は0ではなくnull（休養十分と欠損を混同しない）。
 // - 疲労効果があるか、各列をどう重み付けるかは expected-error の較正で決める。
 
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -65,8 +66,9 @@ export function buildDefensiveWorkloadContexts(rows) {
         ? Math.max(0, (r.dateMs - prev.dateMs) / DAY_MS)
         : null;
 
-      let games7 = 0, games14 = 0, pitches7 = 0, pitches14 = 0;
+      let games7 = null, games14 = null, pitches7 = null, pitches14 = null;
       if (r.dateMs != null) {
+        games7 = 0; games14 = 0; pitches7 = 0; pitches14 = 0;
         for (const p of prior) {
           if (p.dateMs == null) continue;
           const days = (r.dateMs - p.dateMs) / DAY_MS;
