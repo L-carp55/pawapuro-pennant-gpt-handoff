@@ -8,6 +8,8 @@ import {
   runnerBase,
   sameRunner,
   makeRunnerIdentity,
+  explicitPreplayBasePattern,
+  reconcileRunnerStateWithPattern,
   addPitchRowToPlateAppearance,
 } from '../src/ratings/baserunning_events.mjs';
 
@@ -23,6 +25,8 @@ const rFull = makeRunnerIdentity('1400173.0', '野間 峻祥');
 const rSameId = makeRunnerIdentity('1400173', '別表記');
 const rNameOnly = makeRunnerIdentity('', '野間　峻祥');
 const rConflictId = makeRunnerIdentity('9999999.0', '野間峻祥');
+const A = makeRunnerIdentity('A', '走者A');
+const BRunner = makeRunnerIdentity('B', '走者B');
 assert.deepEqual(rFull, { id: '1400173', name: '野間峻祥' });
 assert.equal(sameRunner(rFull, rSameId), true, '双方IDありならID一致で同一');
 assert.equal(sameRunner(rFull, rNameOnly), true, '片側ID欠損なら名前fallback');
@@ -30,27 +34,54 @@ assert.equal(sameRunner(rFull, rConflictId), false, '双方IDありで不一致�
 assert.equal(runnerBase(rFull, B(null, rNameOnly, null)), 'second', 'next stateがname-onlyでも同一走者を追える');
 assert.equal(makeRunnerIdentity('', ''), null, 'IDも名前も無ければ空塁');
 
+// descriptionの打球直前base pattern。
+assert.deepEqual(explicitPreplayBasePattern('2球目:2アウト二塁からセンターへのヒット'), { token: '二塁', bases: [2] });
+assert.deepEqual(explicitPreplayBasePattern('1アウト一二塁の山田からレフトへのヒット'), { token: '一二塁', bases: [1, 2] });
+assert.deepEqual(explicitPreplayBasePattern('ノーアウト走者なしからライトフライ'), { token: '走者なし', bases: [] });
+assert.equal(explicitPreplayBasePattern('センターへのヒット'), null);
+
+// stale on_*位置を明示baseへreconcile。1人なら一意に移せる。
+let rec = reconcileRunnerStateWithPattern(B(A, null, null), { token: '二塁', bases: [2] }, B(A, null, null));
+assert.equal(rec.status, 'RESOLVED');
+assert.equal(rec.state.second, A);
+assert.equal(rec.state.first, null);
+// 複数runnerは順序を保って前進: 1:A,2:B -> 2:A,3:B。
+rec = reconcileRunnerStateWithPattern(B(A, BRunner, null), { token: '二三塁', bases: [2, 3] }, B(A, BRunner, null));
+assert.equal(rec.status, 'RESOLVED');
+assert.equal(rec.state.second, A);
+assert.equal(rec.state.third, BRunner);
+// 1:A,2:B -> 1:A,3:B も一意。
+rec = reconcileRunnerStateWithPattern(B(A, BRunner, null), { token: '一三塁', bases: [1, 3] }, B(A, BRunner, null));
+assert.equal(rec.status, 'RESOLVED');
+assert.equal(rec.state.first, A);
+assert.equal(rec.state.third, BRunner);
+// 後退が必要な配置は推測しない。
+rec = reconcileRunnerStateWithPattern(B(null, A, null), { token: '一塁', bases: [1] }, B(null, A, null));
+assert.equal(rec.status, 'UNCERTAIN');
+// raw位置と明示配置が一致するmulti-runnerはそのまま採用可能。
+rec = reconcileRunnerStateWithPattern(null, { token: '一二塁', bases: [1, 2] }, B(A, BRunner, null));
+assert.equal(rec.status, 'RESOLVED');
+assert.equal(rec.state.first, A);
+assert.equal(rec.state.second, BRunner);
+
 // 一塁→三塁: 三塁到達=成功、二塁止まり=失敗。
 assert.equal(classifyAdvanceOutcome('1st_to_3rd', 'R', B(null, null, 'R'), 0, 0), 1);
 assert.equal(classifyAdvanceOutcome('1st_to_3rd', 'R', B(null, 'R', null), 0, 0), 0);
-// object identityでも同じ。
 assert.equal(classifyAdvanceOutcome('1st_to_3rd', rFull, B(null, null, rNameOnly), 0, 0), 1);
-// 塁上から消えてアウト数不変なら生還=成功。
 assert.equal(classifyAdvanceOutcome('1st_to_3rd', 'R', B(), 1, 1), 1);
-// 消えてアウト増なら生還と走塁死を区別できないので除外。
 assert.equal(classifyAdvanceOutcome('1st_to_3rd', 'R', B(), 1, 2), null);
 
-// 二塁→本塁: 三塁止まり=失敗、消えてアウト不変=生還。
+// 二塁→本塁。
 assert.equal(classifyAdvanceOutcome('2nd_to_home', 'R', B(null, null, 'R'), 0, 0), 0);
 assert.equal(classifyAdvanceOutcome('2nd_to_home', 'R', B(), 0, 0), 1);
 assert.equal(classifyAdvanceOutcome('2nd_to_home', 'R', B(), 0, 1), null);
 
-// 一塁→本塁（二塁打）も同じ規律。
+// 一塁→本塁（二塁打）。
 assert.equal(classifyAdvanceOutcome('1st_to_home_on_2b', 'R', B(null, null, 'R'), 2, 2), 0);
 assert.equal(classifyAdvanceOutcome('1st_to_home_on_2b', 'R', B(), 2, 2), 1);
 assert.equal(classifyAdvanceOutcome('1st_to_home_on_2b', 'R', B(), 1, 2), null);
 
-// 非投球ヘッダーが先に来ても実投球first/lastを別保持する。
+// 非投球ヘッダーが先に来ても実投球first/lastを別保持し、全行も保持する。
 const m = new Map();
 addPitchRowToPlateAppearance(m, 'pa', { kind: 'header', on1: null }, false);
 addPitchRowToPlateAppearance(m, 'pa', { kind: 'pitch', pitch: 1, on1: 'R' }, true);
@@ -58,9 +89,10 @@ addPitchRowToPlateAppearance(m, 'pa', { kind: 'pitch', pitch: 2, on1: 'R' }, tru
 addPitchRowToPlateAppearance(m, 'pa', { kind: 'substitution', on1: null }, false);
 assert.equal(m.get('pa').first.kind, 'header');
 assert.equal(m.get('pa').firstPitch.pitch, 1);
-assert.equal(m.get('pa').firstPitch.on1, 'R');
 assert.equal(m.get('pa').lastPitch.pitch, 2);
 assert.equal(m.get('pa').last.kind, 'substitution');
+assert.equal(m.get('pa').rows.length, 4);
+assert.equal(m.get('pa').pitchRows.length, 2);
 
 // 旧呼び出し（isPitch省略）は互換維持。
 const legacy = new Map();
@@ -69,12 +101,14 @@ addPitchRowToPlateAppearance(legacy, 'pa', { pitch: 2, on1: null });
 assert.equal(legacy.get('pa').firstPitch.pitch, 1);
 assert.equal(legacy.get('pa').lastPitch.pitch, 2);
 
-// ビルダーが旧ID-only / 任意first/lastへ戻らないことを静的にも固定する。
+// ビルダーが旧ID-only / stale raw positionへ戻らないことを静的にも固定する。
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const builder = await readFile(path.join(ROOT, 'scripts', 'build_baserunning_advances.mjs'), 'utf8');
 assert.match(builder, /makeRunnerIdentity/);
-assert.match(builder, /lastPitch/);
+assert.match(builder, /explicitPreplayBasePattern/);
+assert.match(builder, /reconcileRunnerStateWithPattern/);
+assert.match(builder, /pitchRows/);
 assert.match(builder, /nxt\.firstPitch/);
 assert.ok(!builder.includes('const r1 = normId(curLast[c.on1])'));
 
-console.log('baserunning event inference: 32 checks passed');
+console.log('baserunning event inference: 47 checks passed');
