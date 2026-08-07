@@ -1,0 +1,37 @@
+name: Audit baserunning skill split-half 2026
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths:
+      - .github/workflows/audit-baserunning-skill-split-half-2026.yml
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: |
+          node --check scripts/audit_baserunning_skill_split_half_2026.mjs
+          node scripts/test_baserunning_events.mjs
+      - name: Fetch and rebuild 2026
+        run: |
+          node scripts/fetch_npb_pbp_release.mjs 2026 /tmp/pbp2026
+          PBP_RAW_DIR=/tmp/pbp2026 PBP_DB_PATH=/tmp/rebuilt2026.sqlite node scripts/build_baserunning_advances.mjs
+      - name: Split-half audit
+        env:
+          PBP_DB_PATH: /tmp/rebuilt2026.sqlite
+          PENNANT_DB_PATH: data/pennant.db
+        run: node scripts/audit_baserunning_skill_split_half_2026.mjs docs/audits/2026-08-07_baserunning_skill_split_half_2026.md
+      - name: Commit audit
+        run: |
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add docs/audits/2026-08-07_baserunning_skill_split_half_2026.md
+          git commit -m "audit: measure 2026 baserunning skill split-half reliability"
+          git push origin HEAD:agent/satei-phase1-safety
