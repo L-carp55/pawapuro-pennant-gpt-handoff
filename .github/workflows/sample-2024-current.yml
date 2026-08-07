@@ -1,0 +1,30 @@
+name: Current 2024 appraisal sample
+
+on:
+  push:
+    branches:
+      - agent/satei-phase1-safety
+    paths:
+      - .github/workflows/sample-2024-current.yml
+
+permissions:
+  contents: read
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate eight explicit-year cards
+        run: |
+          set -e
+          for p in 村上 山川 周東 近本 源田 甲斐 岡本 牧; do
+            echo "===== ${p} 2024 ====="
+            node scripts/build_card.mjs "${p}" 2024
+            echo
+          done
