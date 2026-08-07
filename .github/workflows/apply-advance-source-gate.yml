@@ -6,6 +6,7 @@ on:
       - agent/satei-phase1-safety
     paths:
       - .chatgpt/advance_source_gate.patch
+      - .github/workflows/apply-advance-source-gate.yml
 
 permissions:
   contents: write
