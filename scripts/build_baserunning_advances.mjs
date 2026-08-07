@@ -38,6 +38,8 @@ import {
   classifyAdvanceOutcome,
   makeRunnerIdentity,
   explicitPreplayBasePattern,
+  explicitPostplayBasePattern,
+  classifyAdvanceOutcomeFromPatterns,
   reconcileRunnerStateWithPattern,
 } from '../src/ratings/baserunning_events.mjs';
 
@@ -77,6 +79,7 @@ const excludedAmbiguous = { '1st_to_3rd': 0, '2nd_to_home': 0, '1st_to_home_on_2
 const excludedNoPitchState = { current: 0, next: 0 };
 const excludedUncertainState = { current: 0, next: 0 };
 const reconciliation = { explicitResolved: 0, explicitUncertain: 0, noPattern: 0 };
+const outcomeLabels = { explicit: 0, nextState: 0, explicitVsStateDisagreement: 0 };
 const rowsBySeason = new Map();
 
 for (const fn of files) {
@@ -165,6 +168,8 @@ for (const fn of files) {
     const isSingle = /ヒット|内野安打|安打/.test(d) && !/二塁打|三塁打|本塁打|ホームラン|タイムリーツーベース/.test(d);
     const isDouble = /二塁打|ツーベース/.test(d);
     if (!isSingle && !isDouble) continue;
+    const explicitStartPattern = explicitPreplayBasePattern(d);
+    const explicitEndPattern = explicitPostplayBasePattern(d);
 
     if (!curState?.last) { excludedUncertainState.current++; continue; }
     if (!nxtState?.first) { excludedUncertainState.next++; continue; }
@@ -200,9 +205,17 @@ for (const fn of files) {
     });
 
     const classifyAndPush = (kind, runner) => {
-      const success = classifyAdvanceOutcome(kind, runner, nextBases, outsBefore, outsAfter);
-      if (success == null) { excludedAmbiguous[kind]++; return; }
-      push(kind, runner, success);
+      const stateSuccess = classifyAdvanceOutcome(kind, runner, nextBases, outsBefore, outsAfter);
+      const explicitSuccess = classifyAdvanceOutcomeFromPatterns(kind, explicitStartPattern, explicitEndPattern);
+      if (explicitSuccess != null) {
+        if (stateSuccess != null && stateSuccess !== explicitSuccess) outcomeLabels.explicitVsStateDisagreement++;
+        outcomeLabels.explicit++;
+        push(kind, runner, explicitSuccess);
+        return;
+      }
+      if (stateSuccess == null) { excludedAmbiguous[kind]++; return; }
+      outcomeLabels.nextState++;
+      push(kind, runner, stateSuccess);
     };
 
     if (isSingle && r1 && !r2 && !r3) classifyAndPush('1st_to_3rd', r1);
@@ -247,6 +260,7 @@ console.log(`  seasons ${[...new Set(events.map(e => e.season))].sort((a,b)=>a-b
 console.log(`  non-pitch state exclusions current=${excludedNoPitchState.current} next=${excludedNoPitchState.next}`);
 console.log(`  uncertain state exclusions current=${excludedUncertainState.current} next=${excludedUncertainState.next}`);
 console.log(`  reconciliation explicitResolved=${reconciliation.explicitResolved} explicitUncertain=${reconciliation.explicitUncertain} noPattern=${reconciliation.noPattern}`);
+console.log(`  outcome labels explicit=${outcomeLabels.explicit} nextState=${outcomeLabels.nextState} explicitVsStateDisagreement=${outcomeLabels.explicitVsStateDisagreement}`);
 console.log(`  regular-season rows ${[...rowsBySeason.entries()].sort((a,b)=>a[0]-b[0]).map(([y,n])=>`${y}:${n}`).join(' / ')}`);
 console.log(`  mode ${DRY_RUN ? 'DRY_RUN_NO_DB_WRITE' : `WRITE ${DB_PATH}`}`);
 console.log('\n注意: 旧baserunning_advancesは再利用しない。上記生データから再構築後に較正をやり直すこと。');
