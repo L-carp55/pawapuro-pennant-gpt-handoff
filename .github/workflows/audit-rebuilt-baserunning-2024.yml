@@ -18,14 +18,14 @@ jobs:
       - name: Syntax
         run: |
           node --check scripts/fetch_npb_pbp_release.mjs
+          node --check scripts/audit_pbp_baserunning_schema.mjs
           node --check scripts/build_baserunning_advances.mjs
       - name: Fetch 2024 PBP release assets
         run: node scripts/fetch_npb_pbp_release.mjs 2024 /tmp/npb_pbp_2024
-      - name: Inspect download
-        run: |
-          ls -lh /tmp/npb_pbp_2024
-          du -sh /tmp/npb_pbp_2024
-          head -1 /tmp/npb_pbp_2024/2024-02_pbp.csv
+      - name: Diagnose release PBP schema/value semantics
+        env:
+          PBP_RAW_DIR: /tmp/npb_pbp_2024
+        run: node scripts/audit_pbp_baserunning_schema.mjs
       - name: Rebuild events without touching repository DB
         env:
           PBP_RAW_DIR: /tmp/npb_pbp_2024
