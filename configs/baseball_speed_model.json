@@ -1,0 +1,40 @@
+{
+  "_purpose": "純粋な野球上の脚力と、内野安打・走塁・盗塁等の技術を構造的に分離するための速度モデル契約。",
+  "status": "PAUSED_UNCALIBRATED",
+  "calibrated": false,
+  "definition": {
+    "baseball_speed": "野球の直線走で発揮する身体能力。50m走タイムの単純変換ではなく、初速・加速・競技中の最高速度・27〜30m程度での速度維持をまとめた潜在能力。",
+    "direct_observations": {
+      "top_speed": "競技中の最高走行速度。最高速度側の直接観測。",
+      "home_to_first": "打席から一塁までの到達時間。短距離加速の情報を持つが、打席左右・スイング後の走り出し・一塁駆け抜け技術を含むため、そのまま走力へ変換しない。"
+    },
+    "excluded_skill_axes": {
+      "infield_hit": "同じ走力・同じ打球文脈で内野安打を増やす技術。打席から走りへの移行、一塁駆け抜け等。",
+      "baserunning": "打球判断、進塁判断、ベースの回り方、曲線走、減速抑制、スライディング。",
+      "stealing": "投手/捕手を読む、スタート判断、加速の使い方、スライディング。",
+      "double_play_avoidance": "同じ走力・同じゴロ/走者文脈で併殺になりやすい/なりにくい残差。",
+      "triples": "打球方向・長打力・球場形状・外野守備・走塁判断が混ざるため、純粋走力の直接材料にしない。"
+    }
+  },
+  "structural_equations": [
+    "top_speed_observed ~ latent_baseball_speed(top-speed component) + measurement_noise",
+    "home_to_first_time ~ latent_baseball_speed(acceleration component) + batter_side + batter_box_exit_skill + measurement_noise",
+    "P(infield_hit) ~ latent_baseball_speed + infield_hit_skill + batted_ball_context + fielder_context",
+    "extra_base_result ~ latent_baseball_speed + baserunning_skill + hit/outfielder/park/context",
+    "steal_result ~ latent_baseball_speed + stealing_skill + pitcher/catcher/context",
+    "GDP_result ~ latent_baseball_speed + GDP_skill + grounder/runner/defense/context"
+  ],
+  "constraints": [
+    "内野安打・UBR・盗塁・併殺・三塁打を走力へ固定重みで直接加算しない",
+    "同じ観測を走力と得能へ二重計上しない。共同モデル内で共通の走力成分と技術残差へ分解する",
+    "50m走の公称タイムをそのまま100段階へ写さない",
+    "対象年より後の本人直接計測を過去年カードへ使わない",
+    "直接計測がない選手は、直接計測あり選手で学習した構造を通じて潜在走力を推定する",
+    "モデルが未較正なら最終走力を出さず、旧proxyはlegacy evidenceにだけ残す"
+  ],
+  "sanity_checks": [
+    "2024: 周東佑京 > 近本光司 > 源田壮亮（教師ラベルには使わない）",
+    "高走力でも盗塁得能が低い選手、高走力でも内野安打○が付かない選手を表現できる",
+    "走力が同じでも走塁・盗塁・内野安打の得能差で実際の結果が変わる"
+  ]
+}
