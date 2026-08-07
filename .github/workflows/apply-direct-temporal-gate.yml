@@ -22,7 +22,9 @@ jobs:
         with:
           node-version: '22'
       - name: Apply guarded edits
-        run: python3 .chatgpt/apply_direct_temporal_gate.py
+        run: |
+          python3 .chatgpt/apply_direct_temporal_gate.py
+          python3 .chatgpt/update_temporal_qa.py
       - name: Run regression tests
         run: |
           node scripts/test_direct_measurement_temporal.mjs
@@ -36,7 +38,7 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git rm .chatgpt/apply_direct_temporal_gate.py .github/workflows/apply-direct-temporal-gate.yml
-          git add src/ratings/direct_measurement.mjs
+          git rm .chatgpt/apply_direct_temporal_gate.py .chatgpt/update_temporal_qa.py .github/workflows/apply-direct-temporal-gate.yml
+          git add src/ratings/direct_measurement.mjs scripts/test_qa_remaining.mjs
           git commit -m "fix: block future direct measurements from past cards"
           git push origin HEAD:agent/satei-phase1-safety
