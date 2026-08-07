@@ -1,0 +1,20 @@
+name: Test fielding response surface scaffold
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths: [.github/workflows/test-fielding-response-surface.yml]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check src/engine/fielding_response.mjs
+      - run: node scripts/test_fielding_response_surface.mjs
+      - run: node scripts/test_defense_redesign_gates.mjs
