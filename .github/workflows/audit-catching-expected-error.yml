@@ -1,0 +1,49 @@
+name: Audit catching expected error
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths:
+      - .github/workflows/audit-catching-expected-error.yml
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Python deps
+        run: |
+          python - <<'PY' || pip install -q pandas scikit-learn
+          import pandas, sklearn
+          print('deps ok')
+          PY
+      - name: Syntax and pure tests
+        run: |
+          python -m py_compile scripts/audit_catching_expected_error_model.py
+          node --check scripts/build_fielding_error_events.mjs
+          node scripts/test_fielding_error_labels.mjs
+          node scripts/test_fielding_workload.mjs
+      - name: Fetch 2020-2025 PBP
+        run: |
+          for y in 2020 2021 2022 2023 2024 2025; do node scripts/fetch_npb_pbp_release.mjs "$y" /tmp/pbp_all; done
+      - name: Build temporary event DB
+        env:
+          PBP_RAW_DIR: /tmp/pbp_all
+          PBP_DB_PATH: /tmp/fielding_events.sqlite
+        run: node scripts/build_fielding_error_events.mjs | tee /tmp/build.txt
+      - name: Expected-error audit
+        env:
+          PBP_DB_PATH: /tmp/fielding_events.sqlite
+        run: python scripts/audit_catching_expected_error_model.py docs/audits/2026-08-07_catching_expected_error_model.md
+      - name: Commit research audit
+        run: |
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add docs/audits/2026-08-07_catching_expected_error_model.md
+          git commit -m "audit: test event-level catching expected-error model"
+          git push origin HEAD:agent/satei-phase1-safety
