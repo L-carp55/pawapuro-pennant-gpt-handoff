@@ -18,6 +18,46 @@
       "policy": "targetSeason>=2026のときだけ本人証拠として利用。過去年は年別再構築まで未使用"
     }
   },
+  "fielding_ability": {
+    "enabled": false,
+    "status": "PAUSED_REDEFINE",
+    "reason": "旧本番式はRngRから走力で説明できる分を差し引いた残差を守備力としていたが、2026-08-07オーナー判断で定義を撤回。守備力は反応・一歩目・加速・打球判断・ポジショニング等を含み、走力と共同で守備範囲を作る能力として再設計する。",
+    "evidence_policy": "旧fieldingRatingは診断用legacy evidenceとしてのみ保持し、最終能力値には出さない",
+    "reopen_conditions": [
+      "自作エンジンにspeed×fielding×play-contextの守備到達応答曲面を実装する",
+      "同じ走力でも守備力を上げると初動・到達率が改善することを検証する",
+      "現実のRngR/OAA等と既知の走力から守備力を逆算する",
+      "2024品質サンプルとリーグ全体の守備分布で妥当性を確認する"
+    ]
+  },
+  "infield_arm_ability": {
+    "enabled": false,
+    "status": "PAUSED_INVALID_POSITION_PRIOR",
+    "reason": "ARM実測が無い内野手へ守備位置だけから肩力を推定する旧方式は外部検証でほぼ無相関。NPB+平均送球速度も送球距離・プレー要求の影響が強く、内野肩の教師として既に棄却済み。",
+    "evidence": {
+      "position_prior_rank_correlation": -0.043,
+      "npb_plus_average_throw_speed_infield_validation": "failed",
+      "deep_shortstop_grounder_external_signal": "promising but n=6 and annual repeatability weak",
+      "measured_at": "2026-08-07"
+    },
+    "reopen_conditions": [
+      "深い内野ゴロのアウト結果から捕球位置・打者走力・捕球/持ち替え・球場/年度を統制する",
+      "多年のlatent arm成分を推定する",
+      "DELTA等の独立外部データまたはholdoutで再現する",
+      "条件を満たさなければ内野肩は未査定を維持する"
+    ]
+  },
+  "catching_ability": {
+    "enabled": true,
+    "status": "PROVISIONAL_REDESIGN",
+    "reason": "現行ErrR/FEモデルは翌年再現性を目的に強く50へ縮小し、当年のプレー難度・守備機会・負荷を十分に扱わない。値は診断用provisionalとして保持し、イベント単位expected-errorモデルへ置換する。",
+    "reopen_conditions": [
+      "生PBPから捕球/処理失策FEと送球失策TEをイベント単位で分離する",
+      "打球位置・種類・守備位置・難度・負荷からexpected FEを推定する",
+      "実FE-expected FEの残差が単純ErrR/FEより有用か検証する",
+      "TEとの二重計上をしない"
+    ]
+  },
   "baserunning_advance_source": {
     "enabled": false,
     "status": "STALE_REBUILD_REQUIRED",
