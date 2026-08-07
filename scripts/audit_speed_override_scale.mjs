@@ -5,7 +5,7 @@
 //   直接計測/スカウティング値はすでに最終目盛りなので scale_calibration を再適用しない。
 //   しかし pipeline の blendDirect() は run.speed（較正前）と direct.value（較正後）を直接混ぜる。
 //
-// このスクリプトは2024年カードを本番経路で生成し、
+// 使い方: node scripts/audit_speed_override_scale.mjs [year]
 // 1) 何人にoverrideが効くか
 // 2) 表示走力と残差計算のspeed_z_finalがどれだけ食い違うか
 // 3) direct混合を同一目盛りで行った場合との差
@@ -19,6 +19,8 @@ import { makeContext, appraiseCard } from '../src/cards/pipeline.mjs';
 import { loadLedger } from '../src/ratings/scouting_input.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const YEAR = Number(process.argv[2] ?? 2024);
+if (!Number.isInteger(YEAR)) throw new Error(`invalid year: ${process.argv[2]}`);
 const cfg = JSON.parse(await readFile(path.join(ROOT, 'configs', 'ratings.json'), 'utf8'));
 const rv = JSON.parse(await readFile(path.join(ROOT, 'configs', 'run_values.json'), 'utf8')).values;
 const runNorm = JSON.parse(await readFile(path.join(ROOT, 'configs', 'running_norms.json'), 'utf8'));
@@ -29,9 +31,9 @@ const ctx = makeContext(db, cfg);
 
 const players = db.prepare(`
   SELECT player_id, name, pa FROM v_batting
-  WHERE season=2024 AND position<>'投' AND pa>=100
+  WHERE season=? AND position<>'投' AND pa>=100
   ORDER BY pa DESC
-`).all();
+`).all(YEAR);
 
 const cal = cfg.scale_calibration?.applied?.走力;
 const zs = cfg.zscore_ratings.speed;
@@ -50,7 +52,7 @@ const directWeight = direct => {
 const rows = [];
 for (const p of players) {
   const r = appraiseCard(ctx, {
-    playerId: p.player_id, mode: '2024', cfg, rv, runNorm, fldNorm, scoutingLedger,
+    playerId: p.player_id, mode: String(YEAR), cfg, rv, runNorm, fldNorm, scoutingLedger,
   });
   if (r.error) continue;
   const c = r.card;
@@ -99,7 +101,7 @@ const q = (a, p) => {
 };
 const fmt = x => x == null ? '—' : x.toFixed(3);
 
-console.log('# 2024 走力override 目盛り監査');
+console.log(`# ${YEAR} 走力override 目盛り監査`);
 console.log(`cards=${rows.length} overridden=${overridden.length} direct=${directRows.length} scouting=${scoutRows.length}`);
 console.log(`override比率=${(100 * overridden.length / Math.max(1, rows.length)).toFixed(1)}%`);
 console.log('');
