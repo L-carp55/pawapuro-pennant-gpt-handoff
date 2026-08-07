@@ -7,11 +7,18 @@ function playHalfInning(offense, defense, league, rng, cfg, state, tally) {
   let outs = 0;
   let bases = emptyBases();
   let runs = 0;
+  const runningCtx = {
+    playerRunningCfg: cfg.player_running ?? null,
+    // engine.jsonにはpathだけを保存し、実際の較正objectはruntime loaderが後で注入する。
+    // gate OFFの現在はnullでもglobal probabilityへ必ずfallbackする。
+    runningResponseCfg: cfg.player_running?.running_response ?? null,
+    eventResponseCfg: cfg.player_running?.event_responses ?? null,
+  };
 
   while (outs < cfg.game.outs_per_inning) {
     // 打席前の盗塁企図。塁上にはrunner objectが残るため、後続のplayer-specific
-    // running responseを接続できる。未接続時の確率は従来どおりリーグ較正値。
-    const st = trySteal(bases, outs, rng, cfg.baserunning);
+    // running responseを接続できる。未較正/gate OFFなら従来のリーグ較正値。
+    const st = trySteal(bases, outs, rng, cfg.baserunning, runningCtx);
     bases = st.bases; outs = st.outs;
     tally.sb += st.sb; tally.cs += st.cs;
     if (outs >= cfg.game.outs_per_inning) break;
@@ -33,7 +40,7 @@ function playHalfInning(offense, defense, league, rng, cfg, state, tally) {
     // 出塁時にtrueだけでなくbatter objectそのものを保持する。
     // これにより次の打席で「誰が塁上にいるか」を失わず、身体走行性能と
     // 盗塁/走塁skillを別々に参照できる。
-    const res = advance(bases, outs, outcome, rng, cfg.baserunning, { batter });
+    const res = advance(bases, outs, outcome, rng, cfg.baserunning, { batter, ...runningCtx });
     bases = res.bases;
     outs = res.outs;
     runs += res.runs;
