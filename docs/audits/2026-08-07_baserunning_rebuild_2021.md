@@ -1,4 +1,4 @@
-# 2024 追加進塁PBP再構築監査
+# 2021 追加進塁PBP再構築監査
 
 日付: 2026-08-07
 
@@ -16,27 +16,27 @@
 
 | 指標 | 値 |
 |---|---:|
-| 確定可能イベント | 3,620 |
-| 走者 | 322 |
-| uncertain current除外 | 4 |
+| 確定可能イベント | 3,522 |
+| 走者 | 314 |
+| uncertain current除外 | 1 |
 | uncertain next除外 | 0 |
-| 明示配置reconcile成功 | 4758 |
+| 明示配置reconcile成功 | 4806 |
 | 明示配置reconcile不確定 | 5 |
-| 明示配置なしpitch | 240487 |
+| 明示配置なしpitch | 247560 |
 
 | event | n | success | ambiguity excluded |
 |---|---:|---:|---:|
-| 単打 一→三 | 1887 | 28.4% | 20 |
-| 単打 二→本 | 1338 | 48.1% | 25 |
-| 二塁打 一→本 | 395 | 37.2% | 10 |
+| 単打 一→三 | 1856 | 32.2% | 17 |
+| 単打 二→本 | 1248 | 54.4% | 22 |
+| 二塁打 一→本 | 418 | 41.6% | 9 |
 
 ## 独立ラベル監査
 
 | 指標 | 件数 | 率 |
 |---|---:|---:|
-| 説明文から開始塁を読めた | 1033 | 28.54% |
+| 説明文から開始塁を読めた | 922 | 26.18% |
 | 開始塁の明確な不一致 | 0 | 0.00% |
-| successを独立再判定できた | 902 | 24.92% |
+| successを独立再判定できた | 800 | 22.71% |
 | 保存successとの矛盾 | 0 | 0.00% |
 
 ## 受入基準
@@ -50,19 +50,19 @@
 <details><summary>builder</summary>
 
 ```text
-走塁の確定可能な機会: 3,620件
+走塁の確定可能な機会: 3,522件
 型ごとの成功率:
-  単打で一塁→三塁               1887件  成功 28.4%  判定不能除外 20
-  単打で二塁→生還               1338件  成功 48.1%  判定不能除外 25
-  二塁打で一塁→生還               395件  成功 37.2%  判定不能除外 10
-  走者 322人
-  seasons 2024
-  non-pitch state exclusions current=183 next=205
-  uncertain state exclusions current=4 next=0
-  reconciliation explicitResolved=4758 explicitUncertain=5 noPattern=240487
-  outcome labels explicit=1107 nextState=2513 explicitVsStateDisagreement=3
-  regular-season rows 2024:348685
-  mode WRITE /tmp/pawapuro-baserunning-2024-ZTsraY/rebuilt_2024.sqlite
+  単打で一塁→三塁               1856件  成功 32.2%  判定不能除外 17
+  単打で二塁→生還               1248件  成功 54.4%  判定不能除外 22
+  二塁打で一塁→生還               418件  成功 41.6%  判定不能除外 9
+  走者 314人
+  seasons 2021
+  non-pitch state exclusions current=154 next=166
+  uncertain state exclusions current=1 next=0
+  reconciliation explicitResolved=4806 explicitUncertain=5 noPattern=247560
+  outcome labels explicit=1027 nextState=2495 explicitVsStateDisagreement=9
+  regular-season rows 2021:355497
+  mode WRITE /tmp/pawapuro-baserunning-2021-0pORVe/rebuilt_2021.sqlite
 
 注意: 旧baserunning_advancesは再利用しない。上記生データから再構築後に較正をやり直すこと。
 出典: This uses data sourced from the Nippon Baseball Data Repository (MIT License)
@@ -73,18 +73,18 @@
 
 ```text
 # 追加進塁イベント 状態整合監査（説明文明示ケース）
-db=/tmp/pawapuro-baserunning-2024-ZTsraY/rebuilt_2024.sqlite
-total=3620
-開始塁を明示文から読めた: 1033 (28.54%)
+db=/tmp/pawapuro-baserunning-2021-0pORVe/rebuilt_2021.sqlite
+total=3522
+開始塁を明示文から読めた: 922 (26.18%)
 開始塁の明確な不一致: 0 (0.00%)
-終了塁からsuccessを明確に再判定できた: 902 (24.92%)
+終了塁からsuccessを明確に再判定できた: 800 (22.71%)
 そのうち保存successと矛盾: 0 (0.00%)
 
 | kind | events | success% | parsed start | bad start | parsed outcome | contradiction |
 |---|---:|---:|---:|---:|---:|---:|
-| 1st_to_3rd | 1887 | 28.40% | 0 | 0 (—) | 0 | 0 (—) |
-| 1st_to_home_on_2b | 395 | 37.22% | 0 | 0 (—) | 0 | 0 (—) |
-| 2nd_to_home | 1338 | 48.13% | 1033 | 0 (0.00%) | 902 | 0 (0.00%) |
+| 1st_to_3rd | 1856 | 32.17% | 0 | 0 (—) | 0 | 0 (—) |
+| 1st_to_home_on_2b | 418 | 41.63% | 0 | 0 (—) | 0 | 0 (—) |
+| 2nd_to_home | 1248 | 54.41% | 922 | 0 (0.00%) | 800 | 0 (0.00%) |
 
 ## 開始塁が kind と矛盾する例
 
