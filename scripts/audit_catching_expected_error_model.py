@@ -19,12 +19,11 @@ df=pd.read_sql_query('''SELECT season,game_id,park,bats,fielder_norm,pos,hc_x,hc
  FROM fielding_error_events
  WHERE season BETWEEN 2020 AND 2025 AND field_error_label IS NOT NULL''',con)
 con.close()
-df=df[df.pos.isin(['一','二','三','遊','左','中','右'])].copy()
+df=df[df.pos.isin(['一','二','三','遊','左','中','右'])].copy().reset_index(drop=True)
 df['y']=df.field_error_label.astype(int)
 for c in ['hc_x','hc_y','has_runner','prev_def_game_gap_days','prior_def_games_7d','prior_def_games_14d','prior_def_pitches_7d','prior_def_pitches_14d','season_def_games_before','season_def_pitches_before']:
     df[c]=pd.to_numeric(df[c],errors='coerce')
 df['hc_x2']=df.hc_x**2; df['hc_y2']=df.hc_y**2; df['hc_xy']=df.hc_x*df.hc_y
-# Workload scale is numeric only; no hand-set effect direction.
 df['season_def_pitches_before_k']=df.season_def_pitches_before/1000.0
 
 def model(cols_cat,cols_num):
@@ -40,34 +39,30 @@ variants={
  'context_workload': (['pos','ball_type','park','bats'],['has_runner','hc_x','hc_y','hc_x2','hc_y2','hc_xy','prev_def_game_gap_days','prior_def_games_7d','prior_def_games_14d','prior_def_pitches_7d','prior_def_pitches_14d','season_def_games_before','season_def_pitches_before_k']),
 }
 
-# Same-season, whole-fielder holdout. A player's own errors never fit the probabilities used for that player.
 preds={k:np.full(len(df),np.nan) for k in variants}
 for season,ix in df.groupby('season').groups.items():
-    ids=np.array(list(ix)); sub=df.loc[ids]; groups=sub.fielder_norm.astype(str)
+    ids=np.array(list(ix),dtype=int); sub=df.iloc[ids]; groups=sub.fielder_norm.astype(str)
     n_groups=groups.nunique(); n_splits=min(5,n_groups)
     if n_splits<3: continue
     gkf=GroupKFold(n_splits=n_splits)
     for tr_local,te_local in gkf.split(sub,sub.y,groups):
         tr_ids=ids[tr_local]; te_ids=ids[te_local]
         for name,(cats,nums) in variants.items():
-            m=model(cats,nums); m.fit(df.loc[tr_ids,cats+nums],df.loc[tr_ids,'y'])
-            preds[name][te_ids]=m.predict_proba(df.loc[te_ids,cats+nums])[:,1]
+            m=model(cats,nums); m.fit(df.iloc[tr_ids][cats+nums],df.iloc[tr_ids]['y'])
+            preds[name][te_ids]=m.predict_proba(df.iloc[te_ids][cats+nums])[:,1]
 
 metrics=[]
 for name,p in preds.items():
     ok=np.isfinite(p); y=df.y.to_numpy()[ok]; q=p[ok]
     metrics.append((name,int(ok.sum()),float(y.mean()),brier_score_loss(y,q),log_loss(y,q,labels=[0,1]),roc_auc_score(y,q),average_precision_score(y,q)))
     df[f'p_{name}']=p
-    df[f'resid_{name}']=p-df.y # positive = fewer errors than expected
+    df[f'resid_{name}']=p-df.y
 
-# Reliability of player residuals: split games A/B within player-season, and adjacent-year correlation.
 def parity(x): return int(hashlib.sha1(str(x).encode()).hexdigest()[-1],16)&1
 df['half']=df.game_id.map(parity)
-
 def corr(a,b):
     if len(a)<3 or np.std(a)==0 or np.std(b)==0:return np.nan
     return float(np.corrcoef(a,b)[0,1])
-
 def reliability(col):
     d=df[np.isfinite(df[col])].copy()
     g=d.groupby(['season','fielder_norm','half']).agg(n=(col,'size'),v=(col,'mean')).reset_index()
@@ -78,11 +73,8 @@ def reliability(col):
     nxt=fy.merge(fy,on='fielder_norm',suffixes=('_a','_b')); nxt=nxt[nxt.season_b==nxt.season_a+1]
     year=corr(nxt.v_a,nxt.v_b)
     return len(ab),split,len(nxt),year
-rel=[]
-for name in variants:
-    rel.append((name,*reliability(f'resid_{name}')))
+rel=[(name,*reliability(f'resid_{name}')) for name in variants]
 
-# Does workload add useful information beyond context? Also inspect event-level error rates by workload decile descriptively.
 work=df[df.prior_def_pitches_14d.notna()].copy()
 if len(work):
     try: work['load_decile']=pd.qcut(work.prior_def_pitches_14d,10,duplicates='drop')
