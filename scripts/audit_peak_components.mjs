@@ -1,10 +1,12 @@
 // 総合ピーク再開前の年度別走塁・守備得点の被覆監査。
 // DBは変更しない。
 //
-// 調べること:
-// 1) PA>=200の選手年にUBRと守備得点がどれだけ存在するか
-// 2) 守備得点を RngR+ErrR+ARM+DPR として年内全守備位置で合算できるか
-// 3) 既存の未較正 POSITION_ADJUSTMENT が年度選定へどの程度影響するか
+// 守備得点はbm_fldの位置別non-nullパターンに従う:
+//   IF(1B/2B/3B/SS): RngR + ErrR + DPR
+//   OF(LF/CF/RF):     RngR + ErrR + ARM
+//   C:                ErrR + ARM + Framing + Blocking
+//   DH:               0（守備機会なしを0点として扱う。欠損の0埋めとは区別）
+// このパターンは scripts/audit_fielding_run_components.mjs で全行100%一貫していることを確認する。
 
 import { DatabaseSync } from 'node:sqlite';
 import { readFile } from 'node:fs/promises';
@@ -16,7 +18,6 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const db = new DatabaseSync(path.join(ROOT, 'data', 'pennant.db'), { readOnly: true });
 const rv = JSON.parse(await readFile(path.join(ROOT, 'configs', 'run_values.json'), 'utf8')).values;
 
-// player-seasonごとの走塁・守備を先にSQLで集約し、N+1クエリを避ける。
 const all = db.prepare(`
   WITH run AS (
     SELECT proeye_id player_id, season, MAX(ubr) ubr
@@ -24,10 +25,26 @@ const all = db.prepare(`
   ), fld AS (
     SELECT l.proeye_id player_id, f.season,
       COUNT(*) fld_rows,
-      MIN(CASE WHEN f.rngr IS NOT NULL AND f.errr IS NOT NULL AND f.arm IS NOT NULL AND f.dpr IS NOT NULL
-        THEN 1 ELSE 0 END) fld_complete,
-      SUM(CASE WHEN f.rngr IS NOT NULL AND f.errr IS NOT NULL AND f.arm IS NOT NULL AND f.dpr IS NOT NULL
-        THEN f.rngr+f.errr+f.arm+f.dpr ELSE 0 END) fld_runs
+      MIN(CASE
+        WHEN f.pos IN ('1B','2B','3B','SS')
+          THEN CASE WHEN f.rngr IS NOT NULL AND f.errr IS NOT NULL AND f.dpr IS NOT NULL THEN 1 ELSE 0 END
+        WHEN f.pos IN ('LF','CF','RF')
+          THEN CASE WHEN f.rngr IS NOT NULL AND f.errr IS NOT NULL AND f.arm IS NOT NULL THEN 1 ELSE 0 END
+        WHEN f.pos='C'
+          THEN CASE WHEN f.errr IS NOT NULL AND f.arm IS NOT NULL AND f.framing IS NOT NULL AND f.blocking IS NOT NULL THEN 1 ELSE 0 END
+        WHEN f.pos='DH' THEN 1
+        ELSE 0
+      END) fld_complete,
+      SUM(CASE
+        WHEN f.pos IN ('1B','2B','3B','SS') AND f.rngr IS NOT NULL AND f.errr IS NOT NULL AND f.dpr IS NOT NULL
+          THEN f.rngr+f.errr+f.dpr
+        WHEN f.pos IN ('LF','CF','RF') AND f.rngr IS NOT NULL AND f.errr IS NOT NULL AND f.arm IS NOT NULL
+          THEN f.rngr+f.errr+f.arm
+        WHEN f.pos='C' AND f.errr IS NOT NULL AND f.arm IS NOT NULL AND f.framing IS NOT NULL AND f.blocking IS NOT NULL
+          THEN f.errr+f.arm+f.framing+f.blocking
+        WHEN f.pos='DH' THEN 0
+        ELSE 0
+      END) fld_runs
     FROM bm_fld f
     JOIN player_link l ON l.bm_id=f.player_id AND l.season=f.season
     WHERE f.farm=0 AND f.inn>0
@@ -52,12 +69,13 @@ const records = all.map(b => {
     SB:b.sb, CS:b.cs, SH:b.sh, SF:b.sf };
   const bat = battingRuns(line, lgMap.get(b.season), rv).vsLeague;
   const posRaw = POSITION_ADJUSTMENT.values[b.position] ?? null;
-  const posAdj = Number.isFinite(posRaw) ? posRaw * Math.min(1, b.pa / (143 * 3.1)) : 0;
+  const posAdj = Number.isFinite(posRaw) ? posRaw * Math.min(1, b.pa / (143 * 3.1)) : null;
   const fldRuns = b.fld_complete === 1 && b.fld_rows > 0 && Number.isFinite(b.fld_runs) ? b.fld_runs : null;
   return {
     ...b, bat,
     runRuns: Number.isFinite(b.ubr) ? b.ubr : null,
     fldRuns,
+    positionAdjustmentMatched: Number.isFinite(posRaw),
     posAdj,
     complete: Number.isFinite(b.ubr) && Number.isFinite(fldRuns),
   };
@@ -80,8 +98,20 @@ const post2020 = records.filter(r=>r.season>=2020);
 console.log(`\npre2020 complete=${pre2020.filter(r=>r.complete).length}/${pre2020.length}`);
 console.log(`2020+ complete=${post2020.filter(r=>r.complete).length}/${post2020.length}`);
 
+console.log('\n# v_batting.position と POSITION_ADJUSTMENT の接続');
+const posCounts = new Map();
+for (const r of records) {
+  const k=String(r.position);
+  const x=posCounts.get(k)??{n:0,matched:0}; x.n++; if(r.positionAdjustmentMatched)x.matched++; posCounts.set(k,x);
+}
+for(const [pos,x] of [...posCounts.entries()].sort()) {
+  console.log(`${JSON.stringify(pos)}\tn=${x.n}\tPOSITION_ADJUSTMENT direct-key match=${x.matched}`);
+}
+console.log(`position adjustment direct-key coverage=${records.filter(r=>r.positionAdjustmentMatched).length}/${records.length}`);
+
+// 未較正position adjustmentは、現状のposition表記で直接キーが一致するplayer-seasonだけ比較する。
 const byPlayer = new Map();
-for (const r of records.filter(r=>r.complete)) {
+for (const r of records.filter(r=>r.complete && r.positionAdjustmentMatched)) {
   if (!byPlayer.has(r.player_id)) byPlayer.set(r.player_id, []);
   byPlayer.get(r.player_id).push(r);
 }
@@ -98,16 +128,18 @@ for (const rs of byPlayer.values()) {
       noPosPA:noPos.pa,withPosPA:withPos.pa,noPosPos:noPos.position,withPosPos:withPos.position});
   }
 }
-console.log(`\n複数のcomplete seasonを持つ選手=${eligiblePlayers}`);
-console.log(`未較正position adjustmentの有無でピーク年が変わる=${changed} (${eligiblePlayers? (100*changed/eligiblePlayers).toFixed(1):'0'}%)`);
-console.log('\n## 変化例');
+console.log(`\n複数のcomplete+position-key-matched seasonを持つ選手=${eligiblePlayers}`);
+console.log(`未較正position adjustmentの有無でピーク年が変わる=${changed} (${eligiblePlayers? (100*changed/eligiblePlayers).toFixed(1):'—'}%)`);
 for (const e of examples.slice(0,40)) {
   console.log(`${e.name}\tnoPos=${e.noPos}(${e.noPosPos},PA${e.noPosPA})\twithPos=${e.withPos}(${e.withPosPos},PA${e.withPosPA})`);
 }
 
 const complete=records.filter(r=>r.complete);
-const absMean = key => complete.length ? complete.reduce((s,r)=>s+Math.abs(r[key]),0)/complete.length : 0;
-console.log('\n## complete player-seasonでの絶対値平均（点）');
-console.log(`batting=${absMean('bat').toFixed(2)} run=${absMean('runRuns').toFixed(2)} field=${absMean('fldRuns').toFixed(2)} posAdj=${absMean('posAdj').toFixed(2)}`);
+const absMean = key => {
+  const xs=complete.map(r=>r[key]).filter(Number.isFinite);
+  return xs.length ? xs.reduce((s,v)=>s+Math.abs(v),0)/xs.length : 0;
+};
+console.log('\n# complete player-seasonでの絶対値平均（点）');
+console.log(`n=${complete.length} batting=${absMean('bat').toFixed(2)} run=${absMean('runRuns').toFixed(2)} field=${absMean('fldRuns').toFixed(2)} posAdj(matched only)=${absMean('posAdj').toFixed(2)}`);
 
 db.close();
