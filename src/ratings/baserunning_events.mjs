@@ -1,14 +1,17 @@
 // 1球データから追加進塁イベントを作るための純粋関数。
 //
 // 重要な規律:
-// - 打席開始状態はその打席の first row から取る。
-// - 打球後状態は次打席の first row から取る。
+// - PBPには打席見出し・投手交代等の非投球行が混ざる。
+// - 打席開始状態はその打席の「最初の実投球行」から取る。
+// - 打球結果はその打席の「最後の実投球行」から取る。
+// - 打球後状態は次打席の「最初の実投球行」から取る。
+// - 走者同一性は可能なら選手IDで追い、表示名の空白差等へ依存しない。
 // - 「次打席で走者が消えた」だけでは生還と判定しない。
 //   同じプレーでアウト数が増えた場合は走塁死等と区別できないため null（除外）にする。
 
 /**
  * 次打席開始時の塁上に、対象走者がどこにいるかを返す。
- * @param {string} runner 正規化済みの走者識別子
+ * @param {string} runner 正規化済みの走者識別子（原則player ID）
  * @param {{first:string|null,second:string|null,third:string|null}} bases
  * @returns {'first'|'second'|'third'|null}
  */
@@ -53,11 +56,23 @@ export function classifyAdvanceOutcome(kind, runner, nextBases, outsBefore, outs
 }
 
 /**
- * 打席の各投球行から first / last を保持するための小さなヘルパー。
- * これにより「最終行の on_1b を打席開始状態として使う」回帰を防ぐ。
+ * 打席内の全行と実投球行を分離して保持する。
+ *
+ * @param {Map} map
+ * @param {string} key
+ * @param {Array|string|object} row
+ * @param {boolean} [isPitch=true] 実投球行ならtrue。旧テスト/旧呼び出し互換のため既定true。
  */
-export function addPitchRowToPlateAppearance(map, key, row) {
-  const x = map.get(key);
-  if (!x) map.set(key, { first: row, last: row });
-  else x.last = row;
+export function addPitchRowToPlateAppearance(map, key, row, isPitch = true) {
+  let x = map.get(key);
+  if (!x) {
+    x = { first: row, last: row, firstPitch: null, lastPitch: null };
+    map.set(key, x);
+  } else {
+    x.last = row;
+  }
+  if (isPitch) {
+    if (x.firstPitch == null) x.firstPitch = row;
+    x.lastPitch = row;
+  }
 }
