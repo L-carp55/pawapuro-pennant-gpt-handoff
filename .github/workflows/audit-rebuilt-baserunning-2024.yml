@@ -70,3 +70,4 @@ jobs:
             git commit -m "audit: persist 2024 baserunning rebuild validation"
             git push origin HEAD:agent/satei-phase1-safety
           fi
+# explicit-outcome audit rerun 2026-08-07
