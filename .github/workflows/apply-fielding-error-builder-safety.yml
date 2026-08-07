@@ -1,0 +1,44 @@
+name: Apply fielding error builder safety
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths:
+      - .github/workflows/apply-fielding-error-builder-safety.yml
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Apply patch
+        run: python .chatgpt/patch_fielding_error_builder_safety.py
+      - name: Syntax and workload tests
+        run: |
+          node --check scripts/build_fielding_error_events.mjs
+          node --check src/ratings/fielding_workload.mjs
+          node scripts/test_fielding_workload.mjs
+      - name: Fetch 2024 raw PBP
+        run: node scripts/fetch_npb_pbp_release.mjs 2024 /tmp/pbp2024
+      - name: Non-destructive 2024 dry run
+        env:
+          PBP_RAW_DIR: /tmp/pbp2024
+          PBP_DRY_RUN: '1'
+        run: node scripts/build_fielding_error_events.mjs | tee /tmp/fielding2024.txt
+      - name: Acceptance sanity
+        run: |
+          grep -q 'fielding_error_events' /tmp/fielding2024.txt
+          grep -q 'FE ' /tmp/fielding2024.txt
+          grep -q '負荷contextあり' /tmp/fielding2024.txt
+      - name: Commit verified builder patch
+        run: |
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add scripts/build_fielding_error_events.mjs
+          git commit -m "fix: make fielding-error builder pitch-safe and non-destructive"
+          git push origin HEAD:agent/satei-phase1-safety
