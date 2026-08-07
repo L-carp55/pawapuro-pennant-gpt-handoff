@@ -1,16 +1,43 @@
 {
   "_comment": "未完成・構造欠陥が判明したモデルを、値が出るという理由だけで本番利用しないための安全ゲート。",
+  "baserunning_advance_source": {
+    "enabled": false,
+    "status": "STALE_REBUILD_REQUIRED",
+    "reason": "既存baserunning_advancesは打席の最終行を開始走者状態として使って構築されており、保存kind/successが説明文の明示状態と矛盾するため、走力・走塁得能の材料として使用停止",
+    "evidence": {
+      "events_total": 22459,
+      "explicit_start_states_checked": 3590,
+      "explicit_start_mismatches": 175,
+      "explicit_outcomes_reclassified": 3062,
+      "outcome_label_contradictions": 262,
+      "outcome_label_contradiction_rate": 0.0856,
+      "first_to_third_explicit_start_checked": 126,
+      "first_to_third_explicit_start_mismatches": 126,
+      "first_to_home_on_double_explicit_start_checked": 23,
+      "first_to_home_on_double_explicit_start_mismatches": 23,
+      "github_actions_run": 31141951553,
+      "measured_at": "2026-08-07"
+    },
+    "reopen_conditions": [
+      "PBPの打席開始状態を各打席のfirst rowから、結果をnext PAのfirst rowから再構築する",
+      "走者消失時はアウト数変化を使い、生還と走塁死を区別する",
+      "説明文で開始塁・終了塁を明示できる監査サンプルとの矛盾を解消する",
+      "再構築後にadvanceの再現性・走力への追加価値・走塁得能残差を再較正する"
+    ]
+  },
   "baserunning_ability": {
     "enabled": false,
     "status": "PAUSED",
-    "reason": "走塁得能モデルを再較正中。UBR・追加進塁が走力スコア自身に含まれる循環、機会選択バイアス、標本量の縮小不足があるため未査定",
+    "reason": "走塁得能モデルを再較正中。UBR・追加進塁が走力スコア自身に含まれる循環、機会選択バイアス、標本量の縮小不足に加え、追加進塁の元テーブル自体にも構築不整合が確認されたため未査定",
     "evidence": {
       "ubr_leave_one_out_repeatability": 0.209,
       "advance_leave_one_out_repeatability": 0.181,
       "combined_repeatability": 0.238,
-      "measured_at": "2026-08-06"
+      "advance_source_valid": false,
+      "measured_at": "2026-08-07"
     },
     "reopen_conditions": [
+      "baserunning_advance_sourceを正しく再構築する",
       "各残差を対象材料抜きの走力（leave-one-component-out）で較正・計算する",
       "追加進塁の機会選択バイアスをイベント単位で統制する",
       "機会数・打席数に応じた信頼度縮小を導入する",
