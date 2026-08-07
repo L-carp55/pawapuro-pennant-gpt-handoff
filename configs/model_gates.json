@@ -57,6 +57,26 @@
       "自作エンジン内の野球走速度応答と結びつけて100段階を確定する"
     ]
   },
+  "stealing_ability": {
+    "enabled": false,
+    "status": "PAUSED_DEPENDS_ON_NEW_SPEED",
+    "reason": "盗塁得能は純粋走力で説明できる分を引いた残差で定義する。現行走力が走塁技術を含むため、旧走力を基準に残差化した盗塁得能も分離不十分。新しい野球走力が確定するまで未査定。",
+    "reopen_conditions": [
+      "新しいbaseball speed latentを先に確定する",
+      "投手・捕手・カウント等の盗塁文脈を可能な範囲で統制する",
+      "成功率と企図のうち純粋走力で説明できる部分を除き、残差だけを盗塁技術へ入れる"
+    ]
+  },
+  "infield_hit_ability": {
+    "enabled": false,
+    "status": "PAUSED_DEPENDS_ON_NEW_SPEED",
+    "reason": "内野安打○は純粋走力そのものではなく、同じ脚力・同じ打球難度でも内野安打を増やす打席から走りへの移行や一塁駆け抜け等の技術として分離する。現行走力が内野安打自身を材料に含むため循環しており、新走力確定まで未査定。",
+    "reopen_conditions": [
+      "新しいbaseball speed latentを先に確定する",
+      "打球位置・打球種類・打席左右・守備者をイベント単位で統制する",
+      "純粋走力で説明できる内野安打確率を引いた選手残差だけを内野安打○/×へ使う"
+    ]
+  },
   "fielding_ability": {
     "enabled": false,
     "status": "PAUSED_REDEFINE",
