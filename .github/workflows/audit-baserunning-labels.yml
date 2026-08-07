@@ -6,6 +6,7 @@ on:
       - agent/satei-phase1-safety
     paths:
       - .github/workflows/audit-baserunning-labels.yml
+      - scripts/audit_baserunning_event_labels.mjs
 
 permissions:
   contents: read
