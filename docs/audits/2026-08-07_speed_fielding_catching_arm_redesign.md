@@ -1,90 +1,107 @@
 # 走力・守備力・捕球・内野肩の再設計監査
 
 日付: 2026-08-07
-状態: **設計変更を確定。旧守備力・内野位置推定肩は本番出力を安全停止済み**
+状態: **設計変更を確定。旧走力・旧守備力・内野位置推定肩を本番出力から安全停止済み**
 
 ## オーナー判断
 
-2024年の品質サンプルを見た結果、以下を確定した。
-
-1. 走力のsanity checkは **周東佑京 > 近本光司 > 源田壮亮**。
-   - これは3人へ手で値を合わせる教師ラベルではない。
-   - 代理指標モデルが純粋な速度を拾えているかの常識チェックに使う。
-2. 守備力を `RngR - 走力で説明できる範囲` と定義する旧方式は撤回。
-   - 守備力の主成分は打球認識、反応、一歩目、加速、ルート/判断、ポジショニング、球際、処理速度。
-   - 俊足でも反応が悪ければ広い範囲は守れず、俊足かつ守備力が高い選手も普通に存在できる設計にする。
-3. 捕球は同じ守備率でもプレー難度・守備機会・守備範囲・負荷が違えば同じ能力にしない。
-   - 単純に出場量を加点するのではなく、難度を調整した expected error と実際の捕球失策との差を使う。
-4. NPB+の**平均送球速度**を内野肩の直接材料にする案は、Claude Code側で既に不合格。
-   - 位置内調整をしても肩力との一致が改善せず、送球距離/プレー要求を強く反映する。
-   - 再提案しない。
+1. 走力のsanity checkは **周東佑京 > 近本光司 > 源田壮亮**。教師ラベルではなく常識チェック。
+2. 走力と `内野安打○ / 走塁 / 盗塁 / 併殺` 等の技術を完全分離する。走力は50m走そのものではなく、野球の直線走で使う身体能力。
+3. 守備力を `RngR - 走力で説明できる範囲` と定義する旧方式は撤回。守備力は反応、一歩目、加速、判断、ポジショニング等を含み、走力と共同で範囲を作る。
+4. 捕球は同じ守備率でもプレー難度・守備機会・守備範囲・負荷が違えば同じ能力にしない。固定仕事量ボーナスではなくexpected errorで扱う。
+5. NPB+平均送球速度を内野肩の直接材料にする案はClaude Code側で既に不合格。再提案しない。
 
 ## 1. 走力
 
-### 現在の問題
+### 旧方式を停止した理由
 
-旧 `speedComponents` は三塁打割合・併殺回避・内野安打・UBR等を翌年再現性で加重していた。
-三塁打割合は再現性こそ高いが、打球方向・球場形状・長打力・走塁技術を強く含むため、純粋速度の教師で再検証する必要がある。
-
-### NPB+直接計測での監査
-
-GitHub Actionsで `scripts/audit_speed_vs_npbplus.mjs` を実行。2026 NPB+の最高走行速度100人中、2023-2025年の代理統計を98人で対応できた。
+旧 `speedComponents` は三塁打割合・併殺回避・内野安打・UBR等を直接合成していた。
+しかしこれらは純粋速度以外の技術・文脈を含む。
 
 ```text
-最高走行速度との相関
-三塁打割合          +0.467
-併殺回避            +0.591
-UBR/PA              +0.621
-内野安打 / in-play  +0.659
-
-一塁到達タイムとの相関（小さいほど速い）
-三塁打割合          -0.560
-併殺回避            -0.624
-UBR/PA              -0.458
-内野安打 / in-play  -0.712
+三塁打   -> 打球・球場・外野守備・走塁判断
+内野安打 -> 打球＋打席から走りへの移行＋一塁駆け抜け
+UBR      -> 打球判断・進塁判断・ベースランニング
+併殺回避 -> ゴロ/走者状況・守備・一塁走技術
 ```
 
-5-fold Ridge CVの最良付近:
+相関があっても、これらを固定重みで平均して「純粋な足の速さ」とすることは定義違反。
+
+### 新しい身体軸
+
+詳細: `docs/audits/2026-08-07_baseball_speed_definition.md` / `2026-08-07_baseball_speed_direct_axes.md`
 
 ```text
-4特徴 = 三塁打 + 併殺回避 + UBR/PA + 内野安打
-alpha=30: RMSE 0.874 km/h, Pearson 0.711, Spearman 0.729
-
-3特徴 = 併殺回避 + UBR/PA + 内野安打
-alpha=10: RMSE 0.868 km/h, Pearson 0.713, Spearman 0.729
-alpha=30: RMSE 0.872 km/h, Pearson 0.714, Spearman 0.731
+physical baseball speed
+  ├─ top speed
+  └─ short acceleration
 ```
 
-三塁打を外した方がCV RMSE・順位相関とも同等以上。よって**三塁打割合を純粋走力の主要材料から外す方向がデータでも支持された**。
+最高速度:
+- NPB+ / MLB Statcast Sprint Speedを直接アンカー候補とする。
 
-ただし年度プールの設計は未解決。同じ3特徴モデルでも:
+短距離加速:
+- Baseball Savant 90-foot Running Splitsの **5→30ft** を使う。
+- 2017-2025、4,710選手年。
+- 5→30ft timeの隣接年一致 r=.914。
+- Sprint Speed・打席左右・年度を除いた5→30ft残差も隣接年 r=.747。
+- 0→5ft残差はr=.493なので、5→30ftの方が打席離脱の影響を減らした身体的加速軸として安定。
+
+一塁到達H1:
+- Sprintと強く相関するが打席左右・打席離脱・駆け抜け等を混ぜる。
+- H1残差は年跨ぎで安定しているが、真の5→30ft加速をplayer-holdoutで予測する相関は約.31しかない。
+- **H1を加速力として代用しない。**
+
+### speed + skill分離
+
+2026 NPB+ Sprintを身体速度アンカーとして、結果ごとに:
 
 ```text
-2022-2024窓: 周東 33.02 > 源田 32.64 > 近本 32.41 km/h
-2023-2025窓: 周東 33.10 > 近本 32.55 > 源田 32.48 km/h
+outcome_z = loading * physical_speed_z + stable_skill + annual_noise
 ```
 
-となる。sanity orderが窓で入れ替わるため、恣意的に2023-25を採ることはしない。現在の `poolAcrossYears` はPA重みの単純平均で、身体能力の経年変化や直近性を扱わないことが次の論点。
+へ分解すると、速度除去後の残差にも年跨ぎ再現性が残る。
 
-### 再開条件
+```text
+内野安打 skill残差 repeat ≈ .174
+UBR/走塁 skill残差 repeat ≈ .083
+併殺残差 repeat ≈ .247
+```
 
-- 2026 NPB+最高走行速度・一塁到達を教師に代理指標を再較正する。
-- 三塁打を抜いたモデルと含むモデルをholdout/CVで比較する。
-- 年度プールは、複数年の直接速度を持つ選手から経年・直近性を推定し、恣意的なdecay係数を置かない。
-- sanity checkとして周東 > 近本 > 源田を確認するが、その順序を学習ラベルにはしない。
+しかも3残差の相互相関は約.13〜.18で、かなり別々の技術軸。
 
-再現スクリプト: `scripts/audit_speed_vs_npbplus.mjs`
+joint factorのplayer-holdoutは r=.751、長期較正でr=.760まで改善したが、2024はまだ `周東 > 源田 > 近本`。
+年度窓・skill較正期間を変えても直らない。
+
+結論:
+**集約成績だけでは近本と源田のような近い純粋速度差を識別できない。無理に順位を作らず未査定を維持する。**
+
+### 実装
+
+- `configs/baseball_speed_model.json`
+- `src/ratings/speed_skill_factor.mjs`
+- `scripts/test_speed_skill_factor.mjs`
+
+最終カードでは現在:
+
+```text
+走力       未査定
+盗塁       未査定
+走塁       未査定
+内野安打○  未査定
+```
+
+旧proxyはlegacy evidenceとして保持。
 
 ## 2. 守備力
 
-### 撤回する旧定義
+### 撤回した旧定義
 
 ```text
 Fielding_old = standardized(RngR - E[RngR | speed])
 ```
 
-これは「現実の守備範囲のうち足で説明できる分は守備力ではない」という定義だった。
-オーナー判断ではゲーム内守備力は**反応・初動・加速・打球判断等を含み、走力と共同で範囲を作る能力**であるため不適合。
+俊足だから守備力を下げるという意味になり、反応・初動を主とするオーナー定義と不適合。
 
 ### 新しい構造
 
@@ -100,60 +117,68 @@ P(play converted to out)
     )
 ```
 
-現実側のRngR/OAA等はこの結果を要約した観測値。
-自作エンジン側で `speed × fielding × play context` の応答曲面を作り、既知の走力と現実Rangeから守備力を逆算する。
+走力と守備力が共同で守備範囲を作る。
 
-重要:
-- 走力を守備力から完全に引かない。
-- 走力と守備力を別能力として保ちつつ、守備範囲を共同生成する。
-- 新応答曲面ができるまでは旧残差式を最終能力として扱わない。
+`src/engine/fielding_response.mjs` / `configs/fielding_response_surface.json` に、較正済みlookup tableだけを受け取る骨格を追加。
+反応秒数・speed/fielding重み等の仮係数は置かない。較正表が無ければフェイルファスト。
 
-### 安全ゲート適用済み
+`fielding_ability.enabled=false`。旧値はlegacy evidenceのみ。
 
-`configs/model_gates.json -> fielding_ability.enabled=false`。
-旧計算は `legacy_rating` として監査用に残すが、カードの最終守備力は `null / 未査定` にする。
+### PBPイベント探索
+
+既存31,003件の内野ゴロを位置・打者・年度等で調整したevent residualはRngRと約+.3〜+.5で整合する一方、隣接年安定性がほぼ0。
+現在のPBPにはハングタイム・打球速度・初期守備位置がなく、同じ座標でも難度差を取り切れない可能性が高い。
+
+本番未採用。
 
 ## 3. 捕球
 
-### 現在の問題
+現行ErrR/FEは翌年再現性を目的に強く50へ縮小しており、当年の難度・範囲・負荷を十分扱わない。
 
-現行はErrR/FE等を年×位置で標準化し、翌年再現性が低いため強く50へ縮小する。
-これは翌年予測には意味があるが、**当年にどの難度の打球をどれだけ処理したか**を十分に反映しない。
-
-### 新しい構造
-
-まず送球失策TEを除き、捕球・処理失策FEを対象にする。
+新構造:
 
 ```text
-P(fielding error on play)
+P(field error on play)
   = f(
       position,
       batted-ball location/type,
-      estimated play difficulty,
+      play difficulty,
       range/reach context,
-      workload / rest context,
-      season / park context
+      workload/rest,
+      season/park,
+      ...
     )
 
-catching evidence
-  = actual FE - expected FE
+catching evidence = actual FE - expected FE
 ```
 
-「守備範囲が広いから捕球+X」「1200イニングだから+Y」の固定加点はしない。
-広い範囲・難しい打球・高負荷が**expected errorを高くすることを実データで確認できた場合だけ**補正する。
+固定の「1200イニングなら+Y」は入れない。
 
-現ハンドオフDBの集約 `fielding_plays` だけではプレー難度を再現できないため、生PBPからイベント単位テーブルの再構築が必要。
+### workload context
 
-現値は `catching_ability.status=PROVISIONAL_REDESIGN` として残す。旧値を確定扱いしないが、守備力・内野肩のように全面停止はまだしない。
+PBPの `fielder_2_name`〜`fielder_9_name` から各試合の守備球数を復元できるため、`build_fielding_error_events.mjs`へ以下を追加:
+
+- 前回守備試合からの日数
+- 直近7/14日の守備試合数
+- 直近7/14日の守備球数
+- 当該プレー前のシーズン累積守備試合数/守備球数
+
+現在試合の後半情報は使わない。日付欠損は0でなくnull。
+固定疲労点へ変換せず、生説明変数としてexpected-error較正へ渡す。
+
+`src/ratings/fielding_workload.mjs` / `scripts/test_fielding_workload.mjs` を追加、28 checks PASS。
+
+生PBPは公開handoff repoに無いため、実テーブル再生成は元Claude Code環境で行う。
+捕球は `PROVISIONAL_REDESIGN` のまま。
 
 ## 4. 内野肩
 
 ### 棄却済み
 
-- 守備位置からの推定: 外部/パワプロ照合でほぼ無相関（既知の監査で順位相関約-0.04）。
-- NPB+平均送球速度: 内野手では肩そのものより送球距離・プレー要求を強く反映し、位置内補正でも不合格。
+- 守備位置からの推定: 外部照合でほぼ無相関（順位相関約-.04）。
+- NPB+平均送球速度: 送球距離・プレー要求を強く反映し、位置内補正でも不合格。
 
-### Claude Codeが既に作った材料
+### 既存PBP
 
 `infield_grounder_events`:
 
@@ -166,98 +191,68 @@ throw_error     276
 other_miss       12
 ```
 
-守備位置・捕球位置座標・打者・アウト/内野安打/送球失策を分けている。
+raw深部アウト率はDELTA 2017遠投評価6人と最大+.66程度だが単年再現性がほぼ0〜負。
+深さへの傾きモデルは外部相関が逆で棄却。
 
-### 深い遊撃ゴロの探索 — GitHub Actions再現済み
-
-PBPの姓キーをDELTAのフルネームへ正しく名寄せした後、外部6人すべてで再現できた。
-
-```text
-最深20%  r = +0.441
-最深25%  r = +0.626
-最深30%  r = +0.657
-最深35%  r = +0.657
-最深40%  r = +0.545
-```
-
-最深30%のサンプル例:
+現在残す唯一の研究候補は**文脈調整した深部アウト残差の複数年pool**。
 
 ```text
-源田 85.1% (215件)
-京田 86.7% (113件)
-今宮 82.0% (172件)
-田中広 80.9% (47件)
-倉本 86.2% (29件)
-坂本 88.8% (107件)
+外部DELTA corr 最大 +.688
+偶数年/奇数年poolの安定性 一部条件 +.3〜+.45
 ```
 
-外部DELTA遠投アウト評価との方向は有望だが、外部答え合わせが6人しかない。
-さらに最深30%の単年値の隣接年相関は:
-
-```text
-min10件: 61ペア  r=+0.026
-min15件: 46ペア  r=-0.183
-min20件: 36ペア  r=-0.163
-min25件: 23ペア  r=-0.274
-```
-
-と非常に弱い。したがって**raw深部アウト率をそのまま肩力へ変換することは禁止**。
-
-次のモデルでは:
-
-```text
-out result
-~ catch location / depth
-+ batter running ability
-+ fielding / exchange / handling context
-+ park/year
-+ latent fielder arm component
-```
-
-を使い、肩成分だけを多年で推定する。
-
-再現スクリプト: `scripts/audit_infield_arm_deep_throws.mjs`
-
-### 安全ゲート適用済み
-
-`configs/model_gates.json -> infield_arm_ability.enabled=false`。
-実測ARM等が無い内野手は、旧守備位置推定値を `legacy_rating` に残すだけで最終肩力は未査定。
-外野・捕手など有効な実測肩は停止しない。
+ただし外部6人のみなので本番未採用。
+`infield_arm_ability.enabled=false` を維持。
 
 ## 検証
 
-GitHub Actions `31157691757` で以下を確認:
+主要なGitHub Actions:
 
 ```text
-新安全ゲート                  12 checks PASS
-走力NPB+監査                  完走
-内野肩深部ゴロ監査            完走（初回名寄せ問題は後で修正・再実行）
-fielding regressions           25 PASS
-ability sheet                  20 PASS
-cards                          13 PASS
-qa_remaining                  173 PASS
-interactions                    6 PASS
-phase1 safety                   5 PASS
-validate                        完走
+守備/内野肩安全ゲート              31157691757 SUCCESS
+修正版深部ゴロ外部監査             31157870610 SUCCESS
+走力定義分離パッチ全回帰           31175187526 SUCCESS
+直接Sprint/H1軸監査                 31175508932 SUCCESS
+MLB 5→30ft加速監査                  31176115981 SUCCESS
+NPB proxy→身体加速監査              31176286546 SUCCESS（加速は不合格）
+H1→5→30ft加速holdout                31176592430 SUCCESS（r≈.31で不合格）
+speed/skill残差分離                 31176767512 SUCCESS
+joint speed+skill factor            31176920402 SUCCESS
+証拠窓holdout                       31177058741 SUCCESS
+長期skill較正                       31177303742 SUCCESS
+speed_skill_factor汎用部品全回帰    31177734971 SUCCESS
 ```
 
-修正版内野肩監査は GitHub Actions `31157870610` で成功し、上記6人の外部比較を再現した。
+走力定義分離後の全回帰例:
+
+```text
+fielding workload 28 PASS
+fielding/defense gates 12 PASS
+cards 13 PASS
+qa_remaining 173 PASS
+phase1 safety 5 PASS
+```
 
 ## 本番への安全方針
 
-新モデルの検証が終わるまで:
-
-- 旧 `RngR-speed` 守備力は最終能力として停止する。
-- 実測ARM等が無い内野手に「守備位置から推定した肩力」を最終値として出さない。
-- 捕球は現値を診断用/provisionalとして保持し、新expected-errorモデル完成後に置換する。
-- 研究用のproxy値はprovenance/evidenceに残しても、最終100段階能力へ直結させない。
+- 走力: **未査定**。旧proxyはlegacy evidenceのみ。
+- 盗塁: **未査定**。新しいphysical speed確定後に残差化し直す。
+- 走塁: **未査定**。
+- 内野安打○: **未査定**。新しいphysical speed確定後にイベント残差で再構築。
+- 守備力: **未査定**。
+- 捕球: **provisional**。event-level expected-errorへ置換予定。
+- 内野肩: 有効な直接証拠が無ければ**未査定**。
+- 外野/捕手肩: 有効な実測ARM等は継続。
 
 ## 受入条件
 
 ### 走力
-- 直接速度のholdout/CVで現行より改善。
-- 三塁打を外しても性能を維持または改善。
-- 周東 > 近本 > 源田のsanity checkを満たす。
+- physical speedをtop speedとshort accelerationへ内部分解できる。
+- 内野安打/UBR/盗塁/GDP/三塁打を固定重みでspeedへ直接加えない。
+- skill残差をspeedへ足し戻さない。
+- player-holdoutで十分な精度を持つ。
+- 周東 > 近本 > 源田を学習ラベルにせずsanityとして満たす。
+- 最終1つの走力へのtop speed/acceleration合成は、自作エンジンの27〜30m走応答から決める。
 
 ### 守備力
 - エンジン上で同じ走力でも守備力を上げれば初動・到達率が改善する。
@@ -265,11 +260,11 @@ validate                        完走
 - 現実Range分布をシーズン単位で再現できる。
 
 ### 捕球
-- play difficultyを調整したFEモデルが単純FE/ErrRより説明力・安定性を持つ。
-- 同じ守備率でも難しい機会を処理した選手を区別できる。
+- play difficultyを調整したFEモデルが単純FE/ErrRより説明力を持つ。
+- 同じ守備率でも難しい機会・高負荷を処理した選手を区別できる。
 - TEとの二重計上をしない。
 
 ### 内野肩
 - NPB+平均送球速度を教師にしない。
-- 深いゴロ由来指標が外部データで再現可能かつ年跨ぎ/holdoutで安定する。
-- 条件を満たせなければ内野肩は未査定を維持する。
+- 文脈調整した深部プレー由来指標を独立データで検証する。
+- 条件を満たせなければ未査定を維持する。
