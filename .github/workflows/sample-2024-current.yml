@@ -1,3 +1,4 @@
+# rerun-remaining-and-genda-audit
 name: Current 2024 appraisal sample
 
 on:
@@ -20,11 +21,25 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Generate eight explicit-year cards
+      - name: Generate remaining explicit-year cards
         run: |
           set -e
-          for p in 村上 山川 周東 近本 源田 甲斐 岡本 牧; do
+          for p in "甲斐 拓也" "岡本 和真" "牧 秀悟"; do
             echo "===== ${p} 2024 ====="
             node scripts/build_card.mjs "${p}" 2024
             echo
           done
+      - name: Inspect Genda speed calculation
+        run: |
+          node scripts/build_card.mjs "源田 壮亮" 2024 >/dev/null
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+          const c = JSON.parse(await readFile('outputs/cards/源田壮亮_2024.json', 'utf8'));
+          console.log('===== 源田 壮亮 2024 speed audit =====');
+          console.log(JSON.stringify({
+            display: c.abilities?.基礎能力?.走力,
+            running: c.calc_log?.running,
+            unresolved: c.unresolved,
+            confidence: c.confidence,
+          }, null, 2));
+          NODE
