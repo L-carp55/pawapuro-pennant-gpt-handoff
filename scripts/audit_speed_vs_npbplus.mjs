@@ -1,5 +1,6 @@
 // 走力の代理指標を、NPB+の直接計測（最高走行速度）で答え合わせする研究用監査。
-// 最終能力値は生成しない。特に三塁打割合を主要材料に残す価値があるかを検査する。
+// 最終能力値は生成しない。特に三塁打割合を主要材料に残す価値と、
+// 1球データの内野ゴロ結果が既存proxyへ独立情報を足せるかを検査する。
 //
 // 使い方: node scripts/audit_speed_vs_npbplus.mjs
 
@@ -44,6 +45,20 @@ const statStmt = db.prepare(`
   WHERE b.player_id=? AND b.season BETWEEN ? AND ? AND b.position<>'投' AND b.pa>=50
   ORDER BY b.season`);
 
+const grounderStmt = db.prepare(`
+  SELECT COUNT(*) n,
+         SUM(CASE WHEN kind='infield_hit' THEN 1 ELSE 0 END) ih
+  FROM infield_grounder_events
+  WHERE batter_norm=? AND season BETWEEN ? AND ?
+    AND kind IN ('out','infield_hit')`);
+
+function grounderEventRate(name, y0, y1) {
+  const r = grounderStmt.get(normName(name), y0, y1);
+  // 少数イベントをそのまま速度の証拠にしない。10件未満は欠損として比較から外す。
+  if (!(r?.n >= 10)) return { rate: null, n: r?.n ?? 0 };
+  return { rate: (r.ih ?? 0) / r.n, n: r.n };
+}
+
 function features(playerId, y0, y1) {
   const rows = statStmt.all(playerId,y0,y1);
   if (!rows.length) return null;
@@ -65,14 +80,21 @@ function features(playerId, y0, y1) {
   };
 }
 
+function fullFeatures(playerId, name, y0, y1) {
+  const f = features(playerId, y0, y1);
+  if (!f) return null;
+  const ge = grounderEventRate(name, y0, y1);
+  return { ...f, event_ih_rate: ge.rate, event_ih_n: ge.n };
+}
+
 const rows=[];
 for (const d of direct) {
-  const f=features(d.player_id,2023,2025);
+  const f=fullFeatures(d.player_id,d.name,2023,2025);
   if (f) rows.push({...d,...f});
 }
 console.log('# NPB+ direct speed proxy audit');
 console.log(`direct=${direct.length} / matched recent stats=${rows.length}`);
-for (const k of ['triple_share','gdp_avoid','ubr_pa','ih_inplay']) {
+for (const k of ['triple_share','gdp_avoid','ubr_pa','ih_inplay','event_ih_rate']) {
   const p=rows.filter(r=>Number.isFinite(r[k])).map(r=>[r[k],r.top_speed_kmh]);
   const q=rows.filter(r=>Number.isFinite(r[k]) && Number.isFinite(r.hp_to_1b_sec)).map(r=>[r[k],r.hp_to_1b_sec]);
   console.log(`${k.padEnd(14)} top_speed r=${pearson(p)?.toFixed(3) ?? '—'} n=${p.length}`
@@ -115,12 +137,21 @@ function cv(keys,alpha) {
   const rmse=Math.sqrt(pred.reduce((s,[p,y])=>s+(p-y)**2,0)/pred.length);
   return {n:pred.length,rmse,r:pearson(pred),rho:spearman(pred)};
 }
+const ALPHAS=[0,1,3,10,30,100];
+function bestCv(keys) {
+  const all=ALPHAS.map(alpha=>({alpha,...cv(keys,alpha)}));
+  return all.reduce((a,b)=>b.rmse<a.rmse?b:a);
+}
+
+const BASE_KEYS=['gdp_avoid','ubr_pa','ih_inplay'];
+const EVENT_KEYS=[...BASE_KEYS,'event_ih_rate'];
 for (const keys of [
   ['triple_share','gdp_avoid','ubr_pa','ih_inplay'],
-  ['gdp_avoid','ubr_pa','ih_inplay'],
+  BASE_KEYS,
+  EVENT_KEYS,
 ]) {
   console.log(`\nfeatures=${keys.join('+')}`);
-  for (const a of [0,1,3,10,30,100]) {
+  for (const a of ALPHAS) {
     const v=cv(keys,a);
     console.log(`  alpha=${String(a).padStart(3)} n=${v.n} rmse=${v.rmse.toFixed(3)} r=${v.r?.toFixed(3)} rho=${v.rho?.toFixed(3)}`);
   }
@@ -128,18 +159,27 @@ for (const keys of [
 
 // sanity checkは教師ラベルにしない。2023-25の直接計測学習モデルを使い、
 // 2022-24/2023-25の統計窓で3選手の相対順だけ表示する。
-const keys=['gdp_avoid','ubr_pa','ih_inplay'];
-const train=rows.filter(r=>keys.every(k=>Number.isFinite(r[k])));
-const model=ridgeFit(train,keys,30);
+// event版も同時表示し、追加proxyで順位問題が本当に解けるかを確認する。
+const baseBest=bestCv(BASE_KEYS);
+const eventBest=bestCv(EVENT_KEYS);
+const baseTrain=rows.filter(r=>BASE_KEYS.every(k=>Number.isFinite(r[k])));
+const eventTrain=rows.filter(r=>EVENT_KEYS.every(k=>Number.isFinite(r[k])));
+const baseModel=ridgeFit(baseTrain,BASE_KEYS,baseBest.alpha);
+const eventModel=ridgeFit(eventTrain,EVENT_KEYS,eventBest.alpha);
 console.log('\n# sanity ordering (not training labels)');
+console.log(`base best alpha=${baseBest.alpha} rmse=${baseBest.rmse.toFixed(3)} / event best alpha=${eventBest.alpha} rmse=${eventBest.rmse.toFixed(3)}`);
 for (const [y0,y1] of [[2022,2024],[2023,2025]]) {
-  const xs=[];
+  const base=[], evt=[];
   for (const [name,id] of [['周東 佑京','21925136'],['近本 光司',db.prepare(`SELECT player_id FROM v_batting WHERE season=2024 AND name LIKE '%近本%' LIMIT 1`).get()?.player_id],['源田 壮亮','71775134']]) {
     if (!id) continue;
-    const f=features(id,y0,y1); if(f && keys.every(k=>Number.isFinite(f[k]))) xs.push({name,p:model(f)});
+    const f=fullFeatures(id,name,y0,y1); if(!f)continue;
+    if(BASE_KEYS.every(k=>Number.isFinite(f[k]))) base.push({name,p:baseModel(f)});
+    if(EVENT_KEYS.every(k=>Number.isFinite(f[k]))) evt.push({name,p:eventModel(f),n:f.event_ih_n});
   }
-  xs.sort((a,b)=>b.p-a.p);
-  console.log(`${y0}-${y1}: ${xs.map(x=>`${x.name} ${x.p.toFixed(2)}km/h`).join(' > ')}`);
+  base.sort((a,b)=>b.p-a.p); evt.sort((a,b)=>b.p-a.p);
+  console.log(`${y0}-${y1} base : ${base.map(x=>`${x.name} ${x.p.toFixed(2)}km/h`).join(' > ')}`);
+  console.log(`${y0}-${y1} event: ${evt.map(x=>`${x.name} ${x.p.toFixed(2)}km/h(n=${x.n})`).join(' > ')}`);
 }
 
+console.log('\n判定: event_ih_rateは既存3特徴に対する追加価値だけを見る。CVが改善してもsanity順が直らなければ本番走力には採用しない。');
 db.close();
