@@ -32,12 +32,12 @@ jobs:
           node scripts/test_cards.mjs
       - name: Build 2024 provisional sample
         run: |
-          for n in 村上 山川 周東 近本 源田 甲斐拓也 岡本 牧; do
+          for n in 村上 山川 周東 近本 源田 甲斐拓也 岡本 牧秀悟; do
             node scripts/build_card.mjs "$n" 2024
           done
           node --input-type=module <<'NODE'
           import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-          const wanted=['村上','山川','周東','近本','源田','甲斐拓也','岡本','牧'];
+          const wanted=['村上','山川','周東','近本','源田','甲斐拓也','岡本','牧秀悟'];
           const files=readdirSync('outputs/cards').filter(f=>f.endsWith('_2024.json'));
           const cards=[];
           for(const key of wanted){
