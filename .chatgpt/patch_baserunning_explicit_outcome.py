@@ -37,26 +37,3 @@ repl(
 
 p.write_text(s, encoding='utf-8')
 print('patched builder explicit outcome')
-
-p = Path('scripts/test_baserunning_events.mjs')
-s = p.read_text(encoding='utf-8')
-
-def repl2(old, new, label):
-    global s
-    n = s.count(old)
-    if n != 1:
-        raise SystemExit(f'{label}: expected 1 match, got {n}')
-    s = s.replace(old, new)
-
-repl2(
-"""  explicitPreplayBasePattern,\n  reconcileRunnerStateWithPattern,\n""",
-"""  explicitPreplayBasePattern,\n  explicitPostplayBasePattern,\n  classifyAdvanceOutcomeFromPatterns,\n  reconcileRunnerStateWithPattern,\n""",
-'test import explicit outcome helpers')
-
-anchor = """assert.equal(explicitPreplayBasePattern('センターへのヒット'), null);\n"""
-addition = """assert.equal(explicitPreplayBasePattern('センターへのヒット'), null);\nassert.deepEqual(explicitPostplayBasePattern('1アウト二塁からレフトへのヒットで出塁 一三塁'), { token: '一三塁', bases: [1, 3] });\nassert.deepEqual(explicitPostplayBasePattern('0アウト一塁からライトへのツーベース 二三塁'), { token: '二三塁', bases: [2, 3] });\nassert.equal(explicitPostplayBasePattern('1アウト二塁からセンターへのヒット'), null);\nassert.equal(classifyAdvanceOutcomeFromPatterns('2nd_to_home', { bases: [2] }, { bases: [1, 3] }), 0);\nassert.equal(classifyAdvanceOutcomeFromPatterns('2nd_to_home', { bases: [2] }, { bases: [1] }), 1);\nassert.equal(classifyAdvanceOutcomeFromPatterns('1st_to_home_on_2b', { bases: [1] }, { bases: [2, 3] }), 0);\nassert.equal(classifyAdvanceOutcomeFromPatterns('1st_to_home_on_2b', { bases: [1] }, { bases: [2] }), 1);\nassert.equal(classifyAdvanceOutcomeFromPatterns('1st_to_3rd', { bases: [1] }, { bases: [1, 3] }), 1);\nassert.equal(classifyAdvanceOutcomeFromPatterns('1st_to_3rd', { bases: [1] }, { bases: [1, 2] }), 0);\n"""
-repl2(anchor, addition, 'add explicit outcome tests')
-
-s = s.replace("baserunning event inference: 47 checks passed", "baserunning event inference: 56 checks passed")
-p.write_text(s, encoding='utf-8')
-print('patched tests explicit outcome')
