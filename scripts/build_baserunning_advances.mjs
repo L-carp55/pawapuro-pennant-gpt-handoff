@@ -29,7 +29,14 @@
 //   打球の方向と深さ。右前打なら三塁は難しく、左前打なら易しい。
 //   打球位置（hc_x/hc_y）を持っているので、次の工程で揃える。
 //
-// 使い方: node scripts/build_baserunning_advances.mjs
+// 使い方:
+//   node scripts/build_baserunning_advances.mjs
+//
+// 非破壊監査:
+//   PBP_RAW_DIR=/tmp/npb_pbp PBP_DRY_RUN=1 node scripts/build_baserunning_advances.mjs
+//
+// DB差し替え（明示時のみ）:
+//   PBP_DB_PATH=/tmp/pennant.db node scripts/build_baserunning_advances.mjs
 
 import { DatabaseSync } from 'node:sqlite';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
@@ -38,7 +45,13 @@ import { fileURLToPath } from 'node:url';
 import { addPitchRowToPlateAppearance, classifyAdvanceOutcome } from '../src/ratings/baserunning_events.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const RAW = path.join(ROOT, 'data', 'raw', 'npb_pbp');
+const RAW = process.env.PBP_RAW_DIR
+  ? path.resolve(process.env.PBP_RAW_DIR)
+  : path.join(ROOT, 'data', 'raw', 'npb_pbp');
+const DB_PATH = process.env.PBP_DB_PATH
+  ? path.resolve(process.env.PBP_DB_PATH)
+  : path.join(ROOT, 'data', 'pennant.db');
+const DRY_RUN = process.env.PBP_DRY_RUN === '1';
 
 function splitCsvLine(line) {
   const out = []; let f = '', q = false;
@@ -52,16 +65,18 @@ function splitCsvLine(line) {
   out.push(f); return out;
 }
 
-if (!existsSync(RAW)) { console.error('1球データがありません'); process.exit(1); }
+if (!existsSync(RAW)) { console.error(`1球データがありません: ${RAW}`); process.exit(1); }
 const files = readdirSync(RAW).filter(f => f.endsWith('_pbp.csv')).sort();
+if (!files.length) { console.error(`*_pbp.csv がありません: ${RAW}`); process.exit(1); }
 const REGULAR = new Set(['1', '2', '26']);
 const norm = s => (s ?? '').replace(/[\s　]/g, '');
 const events = [];
 const excludedAmbiguous = { '1st_to_3rd': 0, '2nd_to_home': 0, '1st_to_home_on_2b': 0 };
+const rowsBySeason = new Map();
 
 for (const fn of files) {
   const lines = readFileSync(path.join(RAW, fn), 'utf8').split('\n');
-  const hdr = splitCsvLine(lines[0]);
+  const hdr = splitCsvLine(lines[0].replace(/^\uFEFF/, ''));
   const I = n => hdr.indexOf(n);
   const c = {
     season: I('season'), game: I('game_id'), inn: I('inning'), ab: I('inning_ab_num'),
@@ -70,6 +85,11 @@ for (const fn of files) {
     on3: I('on_3b'), on3n: I('on_3b_name'), outs: I('outs_when_up'),
     hx: I('hc_x'), hy: I('hc_y'), hl: I('hit_location'), park: I('stadium_name'),
   };
+  const required = ['season','game','inn','ab','type','state','desc','on1n','on2n','on3n','outs'];
+  const missing = required.filter(k => c[k] < 0);
+  if (missing.length) {
+    throw new Error(`${fn}: 必須列がありません: ${missing.join(', ')}`);
+  }
 
   // 打席ごとに first row（開始状態）と last row（打球結果・説明文）を別々に保持する。
   const pa = new Map();
@@ -77,6 +97,8 @@ for (const fn of files) {
     if (!lines[i].trim()) continue;
     const r = splitCsvLine(lines[i]);
     if (!REGULAR.has(r[c.type])) continue;
+    const season = Number(r[c.season]);
+    if (Number.isFinite(season)) rowsBySeason.set(season, (rowsBySeason.get(season) ?? 0) + 1);
     const key = `${r[c.game]}|${String(Number(r[c.inn])).padStart(3, '0')}|${r[c.state]}|${String(Number(r[c.ab])).padStart(4, '0')}`;
     addPitchRowToPlateAppearance(pa, key, r);
   }
@@ -106,13 +128,21 @@ for (const fn of files) {
     const outsBefore = Number(curFirst[c.outs]);
     const outsAfter = Number(nxtFirst[c.outs]);
 
+    const numericOrNull = idx => {
+      if (idx < 0) return null;
+      const s = curLast[idx];
+      if (s == null || s === '') return null;
+      const v = Number(s);
+      return Number.isFinite(v) ? v : null;
+    };
+
     const push = (kind, runner, success) => events.push({
-      season: Number(curFirst[c.season]), park: curFirst[c.park], kind, runner, runner_norm: runner,
+      season: Number(curFirst[c.season]), park: c.park >= 0 ? curFirst[c.park] : null, kind, runner, runner_norm: runner,
       outs: Number.isFinite(outsBefore) ? outsBefore : null,
       success,
-      hc_x: curLast[c.hx] ? Number(curLast[c.hx]) : null,
-      hc_y: curLast[c.hy] ? Number(curLast[c.hy]) : null,
-      hit_location: curLast[c.hl] ? Number(curLast[c.hl]) : null,
+      hc_x: numericOrNull(c.hx),
+      hc_y: numericOrNull(c.hy),
+      hit_location: numericOrNull(c.hl),
       description: d.slice(0, 120),
     });
 
@@ -132,17 +162,20 @@ for (const fn of files) {
   console.error(`  ${fn}`);
 }
 
-const db = new DatabaseSync(path.join(ROOT, 'data', 'pennant.db'));
-db.exec(`DROP TABLE IF EXISTS baserunning_advances`);
-db.exec(`CREATE TABLE baserunning_advances (
-  season INTEGER, park TEXT, kind TEXT, runner TEXT, runner_norm TEXT,
-  outs INTEGER, success INTEGER, hc_x REAL, hc_y REAL, hit_location INTEGER, description TEXT)`);
-const ins = db.prepare(`INSERT INTO baserunning_advances VALUES (?,?,?,?,?,?,?,?,?,?,?)`);
-db.exec('BEGIN');
-for (const e of events) ins.run(e.season, e.park, e.kind, e.runner, e.runner_norm,
-  e.outs, e.success, e.hc_x, e.hc_y, e.hit_location, e.description);
-db.exec('COMMIT');
-db.exec(`CREATE INDEX idx_bra ON baserunning_advances(runner_norm, season)`);
+if (!DRY_RUN) {
+  const db = new DatabaseSync(DB_PATH);
+  db.exec(`DROP TABLE IF EXISTS baserunning_advances`);
+  db.exec(`CREATE TABLE baserunning_advances (
+    season INTEGER, park TEXT, kind TEXT, runner TEXT, runner_norm TEXT,
+    outs INTEGER, success INTEGER, hc_x REAL, hc_y REAL, hit_location INTEGER, description TEXT)`);
+  const ins = db.prepare(`INSERT INTO baserunning_advances VALUES (?,?,?,?,?,?,?,?,?,?,?)`);
+  db.exec('BEGIN');
+  for (const e of events) ins.run(e.season, e.park, e.kind, e.runner, e.runner_norm,
+    e.outs, e.success, e.hc_x, e.hc_y, e.hit_location, e.description);
+  db.exec('COMMIT');
+  db.exec(`CREATE INDEX idx_bra ON baserunning_advances(runner_norm, season)`);
+  db.close();
+}
 
 console.log(`\n走塁の確定可能な機会: ${events.length.toLocaleString()}件`);
 const byKind = {};
@@ -158,6 +191,8 @@ for (const k of Object.keys(LABEL)) {
   console.log(`  ${LABEL[k].padEnd(20)} ${String(v.n).padStart(6)}件  成功 ${rate}  判定不能除外 ${excludedAmbiguous[k]}`);
 }
 console.log(`  走者 ${new Set(events.map(e => e.runner_norm)).size}人`);
+console.log(`  seasons ${[...new Set(events.map(e => e.season))].sort((a,b)=>a-b).join(', ') || 'none'}`);
+console.log(`  regular-season pitch rows ${[...rowsBySeason.entries()].sort((a,b)=>a[0]-b[0]).map(([y,n])=>`${y}:${n}`).join(' / ')}`);
+console.log(`  mode ${DRY_RUN ? 'DRY_RUN_NO_DB_WRITE' : `WRITE ${DB_PATH}`}`);
 console.log('\n注意: 旧baserunning_advancesは再利用しない。上記生データから再構築後に較正をやり直すこと。');
 console.log('出典: This uses data sourced from the Nippon Baseball Data Repository (MIT License)');
-db.close();
