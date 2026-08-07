@@ -46,4 +46,4 @@ assert.equal(fieldingRunsForSeason([
 ]), null);
 assert.equal(fieldingRunsForSeason([]), null);
 
-console.log('season defense runs: 16 checks passed');
+console.log('season defense runs: 13 checks passed');
