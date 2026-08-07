@@ -3,12 +3,11 @@
 // 出典: Nippon Baseball Data Repository（MIT License）
 //
 // 2026-08-07 重要修正:
-//   1) 旧版は各打席の最終行を開始状態として使っていたため失効。
-//   2) Release PBPには「＜打者＞一死一塁」等の非投球ヘッダー行があり、その行では
-//      on_1b/on_2b/on_3b が空。したがって単なる first row も開始状態には使えない。
+//   1) Release PBPには打席ヘッダー等の非投球行が混ざるため、first/last任意行は使わない。
+//   2) 追加進塁の起点は「打席開始時」ではなく**打球が発生した最終投球の直前**の塁状態。
+//      打席途中の盗塁・暴投等で走者が動くため、firstPitchを起点にすると誤分類する。
 //   3) 現在は必ず
-//        - 現打席の firstPitch = 打席開始状態
-//        - 現打席の lastPitch  = 打球結果
+//        - 現打席の lastPitch = 安打直前の塁状態 + 打球結果
 //        - 次打席の firstPitch = 打球後状態
 //      を使う。
 //   4) 走者同一性は名前ではなく on_1b/on_2b/on_3b のplayer IDを正本にする。
@@ -18,9 +17,9 @@
 // 現データだけで一意に区別できないため、成功/失敗を捏造せず標本から除外する。
 //
 // 数える型:
-//   1st→3rd  … 一塁に走者、二塁三塁が空、打者が単打。その走者が三塁へ行ったか（明確な生還も成功）
-//   2nd→home … 二塁に走者、三塁が空、打者が単打。その走者が生還したか
-//   1st→home … 一塁に走者、打者が二塁打。その走者が生還したか
+//   1st→3rd  … 打球直前に一塁走者のみ、打者が単打。その走者が三塁へ行ったか（明確な生還も成功）
+//   2nd→home … 打球直前に二塁走者あり・三塁空、打者が単打。その走者が生還したか
+//   1st→home … 打球直前に一塁走者のみ、打者が二塁打。その走者が生還したか
 //
 // 交絡（この時点では分離しない）:
 //   打球の方向と深さ。右前打なら三塁は難しく、左前打なら易しい。
@@ -116,10 +115,9 @@ for (const fn of files) {
     const [g1, in1, st1] = keys[i].split('|'), [g2, in2, st2] = keys[i + 1].split('|');
     if (g1 !== g2 || in1 !== in2 || st1 !== st2) continue;
 
-    const curFirst = cur.firstPitch;
     const curLast = cur.lastPitch;
     const nxtFirst = nxt.firstPitch;
-    if (!curFirst || !curLast) { excludedNoPitchState.current++; continue; }
+    if (!curLast) { excludedNoPitchState.current++; continue; }
     if (!nxtFirst) { excludedNoPitchState.next++; continue; }
 
     const d = (curLast[c.desc] ?? '').replace(/^\d+球目:/, '');
@@ -127,15 +125,16 @@ for (const fn of files) {
     const isDouble = /二塁打|ツーベース/.test(d);
     if (!isSingle && !isDouble) continue;
 
-    // ★開始走者・次打席走者はplayer IDを正本にする。
-    const r1 = normId(curFirst[c.on1]), r2 = normId(curFirst[c.on2]), r3 = normId(curFirst[c.on3]);
-    const r1Name = normName(curFirst[c.on1n]), r2Name = normName(curFirst[c.on2n]);
+    // ★安打直前の走者は最終実投球行のpre-pitch stateを使う。
+    // 打席途中の盗塁・暴投等を打球による追加進塁へ誤帰属しない。
+    const r1 = normId(curLast[c.on1]), r2 = normId(curLast[c.on2]), r3 = normId(curLast[c.on3]);
+    const r1Name = normName(curLast[c.on1n]), r2Name = normName(curLast[c.on2n]);
     const nextBases = {
       first: normId(nxtFirst[c.on1]),
       second: normId(nxtFirst[c.on2]),
       third: normId(nxtFirst[c.on3]),
     };
-    const outsBefore = Number(curFirst[c.outs]);
+    const outsBefore = Number(curLast[c.outs]);
     const outsAfter = Number(nxtFirst[c.outs]);
 
     const numericOrNull = idx => {
@@ -147,7 +146,7 @@ for (const fn of files) {
     };
 
     const push = (kind, runnerId, runnerName, success) => events.push({
-      season: Number(curFirst[c.season]), park: c.park >= 0 ? curFirst[c.park] : null,
+      season: Number(curLast[c.season]), park: c.park >= 0 ? curLast[c.park] : null,
       kind,
       runner_id: runnerId,
       runner: runnerName || runnerId,
