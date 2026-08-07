@@ -1,0 +1,33 @@
+name: Audit bresult error share multiyear
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths:
+      - .github/workflows/audit-bresult-error-share-multiyear.yml
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m py_compile scripts/audit_bresult_error_share_multiyear.py
+      - name: Fetch 2020-2025 PBP
+        run: |
+          for y in 2020 2021 2022 2023 2024 2025; do node scripts/fetch_npb_pbp_release.mjs "$y" /tmp/pbp_all; done
+      - name: Audit
+        env:
+          PBP_RAW_DIR: /tmp/pbp_all
+        run: python scripts/audit_bresult_error_share_multiyear.py docs/audits/2026-08-07_bresult_error_share_2020_2025.md
+      - name: Commit audit
+        run: |
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add docs/audits/2026-08-07_bresult_error_share_2020_2025.md
+          git commit -m "audit: validate bresult error concentration across 2020-2025"
+          git push origin HEAD:agent/satei-phase1-safety
