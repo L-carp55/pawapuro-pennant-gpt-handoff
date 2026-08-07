@@ -1,0 +1,30 @@
+name: Apply baserunning explicit outcome
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths: [.github/workflows/apply-baserunning-explicit-outcome.yml]
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python .chatgpt/patch_baserunning_explicit_outcome.py
+      - run: |
+          node --check src/ratings/baserunning_events.mjs
+          node --check scripts/build_baserunning_advances.mjs
+          node --check scripts/test_baserunning_events.mjs
+          node scripts/test_baserunning_events.mjs
+      - name: Commit verified patch
+        run: |
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add scripts/build_baserunning_advances.mjs scripts/test_baserunning_events.mjs
+          git commit -m "fix: prefer explicit post-play state for advancement labels"
+          git push origin HEAD:agent/satei-phase1-safety
