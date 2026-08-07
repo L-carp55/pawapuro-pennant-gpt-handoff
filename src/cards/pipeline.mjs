@@ -40,6 +40,7 @@ import { buildAbilityEvidence, DIRECT_MEASUREMENT_STATUS } from '../ratings/abil
 import { buildDirectMeasurements } from '../ratings/direct_measurement.mjs';
 import { advanceOf } from '../ratings/baserunning_advance.mjs';
 import { recordEvidenceEndsBy, aggregateEvidenceAvailable } from '../ratings/evidence_time.mjs';
+import { loadSeasonRunFieldContributions } from './season_contributions.mjs';
 
 /** 出典の定義（仕様03 §1.1）。値ごとの provenance はここを参照する */
 export const SOURCES = {
@@ -468,18 +469,28 @@ export function appraiseCard(ctx, opts) {
   const all = prep(sql + ' ORDER BY season').all(...args);
   if (!all.length) return { error: `該当なし: ${name ?? playerId}${seasonRange ? `（${seasonRange.join('-')}年）` : ''}` };
 
-  const seasons = all.map(p => ({
-    season: p.season, position: p.position, line: toLine(p),
-    lgRate: leagueRates(lgOf(p.season)), envFactors: envFactorsOf(p.season),
-  }));
+  // 年度選定の「総合」は打撃だけでなく、同じrun単位のUBRと守備得点を使う。
+  // 2019年以前はNPB Basementが無いのでnullのまま。0で埋めず、rankSeasons(total)が
+  // 比較不能としてフェイルファストする。これにより2020+だけを持つ現代選手と、
+  // 歴史年を含む選手の欠損を黙って混ぜない。
+  const seasonContributions = loadSeasonRunFieldContributions(db, pid);
+  const seasons = all.map(p => {
+    const rf = seasonContributions.get(p.season) ?? null;
+    return {
+      season: p.season, position: p.position, line: toLine(p),
+      lgRate: leagueRates(lgOf(p.season)), envFactors: envFactorsOf(p.season),
+      runRuns: rf?.runRuns ?? null,
+      fldRuns: rf?.fldRuns ?? null,
+      runFieldEvidence: rf?.fieldingDetail ?? null,
+    };
+  });
 
   let cardType, seasonLabel, seasonsUsed, line, formula = null, targetSeason;
   if (mode === 'prime') {
-    const win = selectPrimeWindow(seasons, rv, { windowYears: 3, minPaPerYear: 200 });
-    if (!win) return { error: '全盛期の窓が取れない（連続3年で各200打席以上が必要）' };
-    const c = buildPrimeCompositeCard(win);
-    cardType = 'prime_composite'; seasonLabel = null; seasonsUsed = c.seasonsUsed;
-    line = c.line; formula = c.formula; targetSeason = win.end;
+    // 走守配線ができてもprimeはまだ再開しない。
+    // 打撃は複数年合成だが走力・守備・弾道等が窓末年を参照する期間混在と、
+    // 環境補正の二重適用余地が残るため、明示的に止める。
+    return { error: 'prime自動生成は再設計中のため停止中（期間混在・環境補正・得能合成が未解決）' };
   } else {
     // 明示年度はピーク選定を通さない。安全ゲート導入後も「2024」のような単年指定は独立して動く。
     let y;
