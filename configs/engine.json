@@ -17,8 +17,13 @@
   "player_running": {
     "enabled": false,
     "status": "PLUMBING_READY_EVENT_RESPONSES_UNCALIBRATED",
-    "_comment": "塁上runner identityと running.physical / running.skills の分離schemaは接続済み。ただし盗塁企図・盗塁成功・一→三塁・二塁→本塁・併殺回避など各イベントのresponseは未較正。enabled=falseの間はrunner profileがあっても既存のリーグ較正確率を変えない。",
+    "_comment": "塁上runner identityと running.physical / running.skills の分離schema、および盗塁/追加進塁event resolverは接続済み。ただし各event responseの係数は未較正。enabled=falseの間はrunner profileがあっても既存のリーグ較正確率を変えない。runtimeで有効化する時だけ下記2ファイルをobjectとして注入する。",
     "physical_response_config": "configs/baseball_running_response.json",
+    "event_response_config": "configs/running_event_responses.json",
+    "runtime_contract": {
+      "running_response": "physical_response_configのJSON object",
+      "event_responses": "event_response_configのJSON object"
+    },
     "reopen_conditions": [
       "各イベントで身体的な走行時間とskillを別説明変数として較正する",
       "player-level holdoutでリーグ共通確率より改善する",
