@@ -1,9 +1,11 @@
+# rerun with resilient PBP release downloader
 name: Audit catching range adjustment
 on:
   push:
     branches: [agent/satei-phase1-safety]
     paths:
       - .github/workflows/audit-catching-range-adjustment.yml
+      - scripts/fetch_npb_pbp_release.mjs
 permissions:
   contents: write
 jobs:
@@ -25,6 +27,7 @@ jobs:
       - name: Syntax and pure tests
         run: |
           python -m py_compile scripts/audit_catching_range_adjustment.py
+          node --check scripts/fetch_npb_pbp_release.mjs
           node --check scripts/build_fielding_error_events.mjs
           node scripts/test_fielding_error_labels.mjs
           node scripts/test_fielding_workload.mjs
