@@ -1,0 +1,40 @@
+name: Clean stale advancement QA
+
+on:
+  push:
+    branches:
+      - agent/satei-phase1-safety
+    paths:
+      - .github/workflows/cleanup-stale-advance-qa.yml
+
+permissions:
+  contents: write
+
+jobs:
+  clean-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Update stale QA text and expectations
+        run: python3 .chatgpt/update_stale_advance_qa.py
+      - name: Run QA and safety tests
+        run: |
+          node scripts/test_qa_remaining.mjs
+          node scripts/test_baserunning_gate.mjs
+          node scripts/test_baserunning_events.mjs
+          node scripts/test_speed_z_final.mjs
+          node scripts/test_cards.mjs
+      - name: Commit cleanup
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm .chatgpt/update_stale_advance_qa.py .github/workflows/cleanup-stale-advance-qa.yml
+          git add scripts/test_qa_remaining.mjs
+          git commit -m "test: align advancement QA with source gate"
+          git push origin HEAD:agent/satei-phase1-safety
