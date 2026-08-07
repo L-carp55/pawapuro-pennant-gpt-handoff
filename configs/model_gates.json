@@ -1,5 +1,23 @@
 {
   "_comment": "未完成・構造欠陥が判明したモデルを、値が出るという理由だけで本番利用しないための安全ゲート。",
+  "asof_aggregate_evidence": {
+    "_comment": "年別の本人内訳を失った集約済み証拠は、集約期間の末年より前のカードへ使わない。リーグ基準・較正分布の後年利用とは区別する。",
+    "catcher_fielding": {
+      "max_evidence_season": 2026,
+      "source": "catcher_fielding_rating.json: PBP 2020-2026 + NPB+送球速度",
+      "policy": "targetSeason>=2026のときだけ本人証拠として利用。過去年は年別再構築まで未使用"
+    },
+    "catcher_throw_accuracy": {
+      "max_evidence_season": 2026,
+      "source": "catcher_throw_accuracy.json: PBP 2020-2026",
+      "policy": "targetSeason>=2026のときだけ本人証拠として利用。過去年は年別再構築まで未使用"
+    },
+    "infield_throw_accuracy": {
+      "max_evidence_season": 2026,
+      "source": "infield_throw_accuracy.json: PBP 2020-2026集約",
+      "policy": "targetSeason>=2026のときだけ本人証拠として利用。過去年は年別再構築まで未使用"
+    }
+  },
   "baserunning_advance_source": {
     "enabled": false,
     "status": "STALE_REBUILD_REQUIRED",
