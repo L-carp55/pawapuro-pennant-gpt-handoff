@@ -5,8 +5,9 @@
   "definition": {
     "baseball_speed": "野球の直線走で発揮する身体能力。50m走タイムの単純変換ではなく、初速・加速・競技中の最高速度・27〜30m程度での速度維持をまとめた潜在能力。",
     "direct_observations": {
-      "top_speed": "競技中の最高走行速度。最高速度側の直接観測。",
-      "home_to_first": "打席から一塁までの到達時間。短距離加速の情報を持つが、打席左右・スイング後の走り出し・一塁駆け抜け技術を含むため、そのまま走力へ変換しない。"
+      "top_speed": "競技中の最高走行速度。最高速度側の直接観測。2026-08-07監査では内野安打・UBR・併殺回避・盗塁企図へ広く相関し、純粋走力の直接アンカー候補として残す。",
+      "home_to_first": "打席から一塁までの到達時間。短距離加速の情報を持つが、打席左右・スイング後の走り出し・一塁駆け抜け技術を含むため、そのまま走力へ変換しない。",
+      "home_to_first_residual": "最高速度と打席左右から期待される一塁到達を引いた残差。年跨ぎでは非常に安定するが、身体的加速と打席離脱技術を識別できないため、現時点では走力へ混ぜず未分離軸として保持する。"
     },
     "excluded_skill_axes": {
       "infield_hit": "同じ走力・同じ打球文脈で内野安打を増やす技術。打席から走りへの移行、一塁駆け抜け等。",
@@ -15,6 +16,34 @@
       "double_play_avoidance": "同じ走力・同じゴロ/走者文脈で併殺になりやすい/なりにくい残差。",
       "triples": "打球方向・長打力・球場形状・外野守備・走塁判断が混ざるため、純粋走力の直接材料にしない。"
     }
+  },
+  "direct_axis_audit_20260807": {
+    "github_actions_run": 31175508932,
+    "npb_plus_both_axes_n": 100,
+    "npb_plus_hand_matched_n": 99,
+    "top_speed_vs_home_to_first_r": -0.739,
+    "right_hitter_n": 44,
+    "right_hitter_mean_home_to_first_sec": 4.322,
+    "right_hitter_mean_top_speed_kmh": 31.35,
+    "right_hitter_r": -0.633,
+    "left_hitter_n": 55,
+    "left_hitter_mean_home_to_first_sec": 4.052,
+    "left_hitter_mean_top_speed_kmh": 31.78,
+    "left_hitter_r": -0.853,
+    "mlb_sprint_speed_adjacent_year_pairs": 179,
+    "mlb_sprint_speed_adjacent_year_r": 0.932,
+    "mlb_home_to_first_adjacent_year_pairs": 143,
+    "mlb_home_to_first_adjacent_year_r": 0.944,
+    "mlb_h1_residual_after_sprint_and_year_adjacent_year_pairs": 143,
+    "mlb_h1_residual_after_sprint_and_year_adjacent_year_r": 0.868,
+    "npb_outcome_correlations": {
+      "infield_hit_inplay": { "top_speed_r": 0.660, "faster_h1_residual_r": 0.250, "n": 98 },
+      "gdp_avoid": { "top_speed_r": 0.582, "faster_h1_residual_r": 0.111, "n": 98 },
+      "ubr_pa": { "top_speed_r": 0.619, "faster_h1_residual_r": -0.010, "n": 98 },
+      "sb_attempt": { "top_speed_r": 0.694, "faster_h1_residual_r": 0.209, "n": 98 },
+      "sb_success": { "top_speed_r": 0.284, "faster_h1_residual_r": -0.010, "n": 70 }
+    },
+    "interpretation": "最高速度は複数の野球走結果へ共通して乗る身体的な脚力アンカー。一塁到達残差は強い年跨ぎ安定性を持つ別個人差だが、UBRや盗塁成功にはほぼ乗らない。身体的短距離加速と打席離脱技術の識別ができるまで純粋走力へ統合しない。"
   },
   "structural_equations": [
     "top_speed_observed ~ latent_baseball_speed(top-speed component) + measurement_noise",
@@ -28,10 +57,19 @@
     "内野安打・UBR・盗塁・併殺・三塁打を走力へ固定重みで直接加算しない",
     "同じ観測を走力と得能へ二重計上しない。共同モデル内で共通の走力成分と技術残差へ分解する",
     "50m走の公称タイムをそのまま100段階へ写さない",
+    "最高速度で説明できない一塁到達残差を、身体的加速と識別できるまで純粋走力へ丸ごと足さない",
     "対象年より後の本人直接計測を過去年カードへ使わない",
     "直接計測がない選手は、直接計測あり選手で学習した構造を通じて潜在走力を推定する",
     "モデルが未較正なら最終走力を出さず、旧proxyはlegacy evidenceにだけ残す"
   ],
+  "next_identification_problem": {
+    "question": "一塁到達残差のうち、身体的な初速/加速と打席から走りへの移行技術をどう分けるか",
+    "required_evidence": [
+      "打席を介さない短距離加速の直接計測またはsplit-time",
+      "または複数の非打席走イベントに共通して現れる加速因子",
+      "識別できなければ残差は独立のbatter-box/first-base skillとして扱う"
+    ]
+  },
   "sanity_checks": [
     "2024: 周東佑京 > 近本光司 > 源田壮亮（教師ラベルには使わない）",
     "高走力でも盗塁得能が低い選手、高走力でも内野安打○が付かない選手を表現できる",
