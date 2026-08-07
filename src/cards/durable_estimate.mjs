@@ -1,11 +1,15 @@
-// 選手の身体能力（走力・肩力）を、対象年の前後もあわせて推定する。
+// 選手の身体能力（走力・肩力）を、対象年以前の近年データもあわせて推定する。
 // 設計と実測の根拠は src/ratings/durable_traits.mjs のコメントを参照。
+//
+// 重要（2026-08-06）:
+//   年度カードは、その年度終了時点で利用できる情報だけで作る。
+//   対象年より後の成績を使うと、過去カードへ未来情報が混入するため禁止する。
 
 import { speedComponents } from '../ratings/running.mjs';
 import { advanceOf } from '../ratings/baserunning_advance.mjs';
 import { poolAcrossYears, combineArmSources } from '../ratings/durable_traits.mjs';
 
-const MAX_GAP = 3; // 対象年から前後3年まで使う
+const MAX_GAP = 3; // 対象年を含む直近4年（対象年-3〜対象年）だけを使う
 
 // SQL文は同じ文字列なら1回だけ作って使い回す。
 // node:sqlite で毎回 db.prepare() を呼ぶと作った文が溜まり、呼ぶほど遅くなる
@@ -23,7 +27,7 @@ const prep = (db, sql) => {
 export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
   const { runNorm, fldNorm } = ctx;
 
-  // --- 走力: 対象年の前後の打撃＋走塁データから各年のzを出して畳む ---
+  // --- 走力: 対象年以前の打撃＋走塁データから各年のzを出して畳む ---
   const runRows = prep(db, `
     SELECT b.season, b.name, b.pa, b.ab, b.so, b.b2, b.b3, b.hr, b.gdp, bm.ubr, m.gb_pct, t.ih, t.bats
     FROM v_batting b
@@ -33,7 +37,7 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
     LEFT JOIN nf3_team_link tl ON tl.proeye_id=b.player_id AND tl.season=b.season
     LEFT JOIN nf3_team_bat t ON t.season=tl.season AND t.name_norm=tl.name_norm
     WHERE b.player_id=? AND b.season BETWEEN ? AND ? AND b.pa>=100 AND b.position<>'投'`)
-    .all(proeyeId, targetSeason - MAX_GAP, targetSeason + MAX_GAP);
+    .all(proeyeId, targetSeason - MAX_GAP, targetSeason);
 
   const nrm = s2 => (s2 ?? '').normalize('NFKC').replace(/\s+/g, '');
   const speedObs = runRows.map(r => {
@@ -53,7 +57,7 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
     FROM bm_fld f JOIN player_link l ON l.bm_id=f.player_id AND l.season=f.season
     WHERE l.proeye_id=? AND f.season BETWEEN ? AND ? AND f.farm=0
       AND f.arm IS NOT NULL AND f.inn>=100`)
-    .all(proeyeId, targetSeason - MAX_GAP, targetSeason + MAX_GAP);
+    .all(proeyeId, targetSeason - MAX_GAP, targetSeason);
 
   const armObs = armRows.map(r => {
     const n = fldNorm.byPos[r.pos]?.arm;
@@ -64,7 +68,7 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
   const asstRows = prep(db, `
     SELECT season, position, g, a FROM v_fielding
     WHERE player_id=? AND season BETWEEN ? AND ? AND position IN ('外','捕') AND g>=40`)
-    .all(proeyeId, targetSeason - MAX_GAP, targetSeason + MAX_GAP);
+    .all(proeyeId, targetSeason - MAX_GAP, targetSeason);
 
   const asstObs = asstRows.map(r => {
     const grp = r.position === '外' ? 'OF' : 'C';
@@ -88,7 +92,8 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
       years: Math.max(armPooled?.years ?? 0, asstPooled?.years ?? 0),
       seasons: [...new Set([...(armPooled?.seasons ?? []), ...(asstPooled?.seasons ?? [])])].sort(),
       isMultiYear: (armPooled?.isMultiYear || asstPooled?.isMultiYear) ?? false,
-      _weight_note: 'ARMのイニング + 補殺の試合数×9×(1-0.402)。2つは別の情報源だが相関0.402ぶんは重複するので割り引く',
+      evidence_cutoff: targetSeason,
+      _weight_note: 'ARMのイニング + 補殺の試合数×9×(1-0.402)。2つは別の情報源だが相関0.402ぶんは重複するので割り引く。対象年より後のデータは使わない',
     },
   };
 }

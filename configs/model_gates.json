@@ -1,0 +1,49 @@
+{
+  "_comment": "未完成・定義不一致モデルを仮査定で確定値として出さないための整理版安全ゲート。",
+  "asof_aggregate_evidence": {
+    "catcher_fielding": {
+      "max_evidence_season": 2026
+    },
+    "catcher_throw_accuracy": {
+      "max_evidence_season": 2026
+    },
+    "infield_throw_accuracy": {
+      "max_evidence_season": 2026
+    }
+  },
+  "speed_ability": {
+    "enabled": false,
+    "status": "PAUSED_REDEFINE_BASEBALL_SPEED",
+    "reason": "旧走力は内野安打・UBR・併殺回避等の走塁結果を含み、純粋な野球上の脚力と技術を分離できていないため未査定"
+  },
+  "stealing_ability": {
+    "enabled": false,
+    "status": "PAUSED_DEPENDS_ON_NEW_SPEED",
+    "reason": "盗塁技術は純粋走力で説明できる分を除いた残差として再設計するため、新走力確定まで未査定"
+  },
+  "infield_hit_ability": {
+    "enabled": false,
+    "status": "PAUSED_DEPENDS_ON_NEW_SPEED",
+    "reason": "内野安打○は純粋走力と打球難度を除いた技術残差として再設計するため未査定"
+  },
+  "baserunning_ability": {
+    "enabled": false,
+    "status": "PAUSED",
+    "reason": "走塁得能は走力との循環・機会選択・低再現性があるため未査定"
+  },
+  "fielding_ability": {
+    "enabled": false,
+    "status": "PAUSED_REDEFINE",
+    "reason": "旧RngR−走力残差の定義を撤回。反応・一歩目・加速・判断等を含み走力と共同で範囲を作るモデルへ再設計するため未査定"
+  },
+  "infield_arm_ability": {
+    "enabled": false,
+    "status": "PAUSED_INVALID_POSITION_PRIOR",
+    "reason": "内野肩の守備位置ベース推定は外部検証で無効。直接根拠のない内野肩は未査定"
+  },
+  "catching_ability": {
+    "enabled": true,
+    "status": "PROVISIONAL_REDESIGN",
+    "reason": "捕球は現行ErrR/FE値を暫定表示。難易度調整expected-error研究は本番未採用"
+  }
+}

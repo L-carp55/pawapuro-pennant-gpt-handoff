@@ -86,6 +86,42 @@ export function speedRating(score, cfg) {
   return clamp(s.center + score * s.spread, cfg.clamp);
 }
 
+
+/**
+ * 単年の代理指標と複数年の身体能力推定から、カード内で共通利用する走力を1つに決める。
+ *
+ * 表示走力だけ複数年、盗塁・走塁・守備だけ単年、という不一致を防ぐため、
+ * 戻り値の zFinal を全ての残差計算へ渡す。
+ */
+export function resolveFinalSpeed(singleYearScore, pooledSpeed, ctx, cfg) {
+  const pooledOk = pooledSpeed && Number.isFinite(pooledSpeed.z);
+  const singleOk = Number.isFinite(singleYearScore);
+  if (!pooledOk && !singleOk) return null;
+
+  const detail = pooledOk
+    ? { ...pooledSpeed }
+    : {
+      z: singleYearScore,
+      weight: ctx?.weight ?? null,
+      years: 1,
+      seasons: ctx?.season == null ? [] : [ctx.season],
+      isMultiYear: false,
+    };
+  const zFinal = detail.z;
+  return {
+    zFinal,
+    rating: speedRating(zFinal, cfg),
+    detail: {
+      ...detail,
+      z_final: zFinal,
+      z_single_year: singleOk ? singleYearScore : null,
+      _note: pooledOk
+        ? '表示・盗塁・走塁・内野安打・守備で同じ複数年走力zを使用'
+        : '複数年推定が無いため対象年の走力zを全経路で使用',
+    },
+  };
+}
+
 /**
  * 盗塁得能（仕様§2「成功率・企図率・純粋走力に対する残差」）。
  *
