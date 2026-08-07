@@ -21,15 +21,17 @@ const pearson=p=>{
 const quantile=(a,q)=>{const s=[...a].sort((x,y)=>x-y); return s[Math.min(s.length-1,Math.floor((s.length-1)*q))];};
 
 // DELTA / 1.02の2017年遊撃手「遠い位置から一塁でアウトにした割合」。
+// PBPのfielder_nameは当時の表示名が「源田」「京田」「田中広」のような短縮形なので、
+// display（外部資料のフルネーム）とeventKey（PBP側の名寄せキー）を分ける。
 // 外部答え合わせ専用。モデル係数や最終肩力には使わない。
-const DELTA={
-  '源田壮亮':80.0,
-  '京田陽太':71.7,
-  '今宮健太':75.0,
-  '田中広輔':60.7,
-  '倉本寿彦':76.5,
-  '坂本勇人':78.6,
-};
+const DELTA=[
+  {display:'源田壮亮',eventKey:'源田',target:80.0},
+  {display:'京田陽太',eventKey:'京田',target:71.7},
+  {display:'今宮健太',eventKey:'今宮',target:75.0},
+  {display:'田中広輔',eventKey:'田中広',target:60.7},
+  {display:'倉本寿彦',eventKey:'倉本',target:76.5},
+  {display:'坂本勇人',eventKey:'坂本',target:78.6},
+];
 
 const ev=db.prepare(`SELECT season,fielder_norm,hc_y,is_out,kind
   FROM infield_grounder_events
@@ -49,8 +51,9 @@ for(const frac of [0.20,0.25,0.30,0.35,0.40]){
   const rates=rateByFielder(deep,20);
   const pairs=[];
   const show=[];
-  for(const [name,target] of Object.entries(DELTA)){
-    const x=rates.get(norm(name)); if(!x)continue; pairs.push([x.rate,target]); show.push(`${name}:${(x.rate*100).toFixed(1)}%(n=${x.n})`);
+  for(const v of DELTA){
+    const x=rates.get(norm(v.eventKey)); if(!x)continue;
+    pairs.push([x.rate,v.target]); show.push(`${v.display}:${(x.rate*100).toFixed(1)}%(n=${x.n})`);
   }
   console.log(`deepest~${Math.round(frac*100)}% y<=${cut}: external n=${pairs.length} r=${pearson(pairs)?.toFixed(3)??'—'}  ${show.join(' / ')}`);
 }
