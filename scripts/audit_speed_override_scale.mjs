@@ -1,15 +1,10 @@
 // 直接計測・スカウティング走力と統計走力の「目盛り」不一致を監査する。
 //
-// 現状:
-//   統計走力 run.speed は ability_sheet で scale_calibration.走力 を受けて表示される。
-//   直接計測/スカウティング値はすでに最終目盛りなので scale_calibration を再適用しない。
-//   しかし pipeline の blendDirect() は run.speed（較正前）と direct.value（較正後）を直接混ぜる。
-//
 // 使い方: node scripts/audit_speed_override_scale.mjs [year]
 // 1) 何人にoverrideが効くか
 // 2) 表示走力と残差計算のspeed_z_finalがどれだけ食い違うか
 // 3) direct混合を同一目盛りで行った場合との差
-// を測る。DBは変更しない。
+// を測る。統合修正後は unit_mix_error と z_gap がほぼ0になることが受入条件。DBは変更しない。
 
 import { DatabaseSync } from 'node:sqlite';
 import { readFile } from 'node:fs/promises';
@@ -58,14 +53,17 @@ for (const p of players) {
   const c = r.card;
   const base = c.abilities?.基礎能力?.走力;
   const raw = c.ratings?.speed;
-  const zStat = c.calc_log?.running?._speed_z_final ?? c.calc_log?.run_field_log?.running?._speed_z ?? null;
-  if (!base || !Number.isFinite(raw) || !Number.isFinite(base.value) || !Number.isFinite(zStat)) continue;
+  const zFinal = c.calc_log?.running?._speed_z_final ?? c.calc_log?.run_field_log?.running?._speed_z ?? null;
+  if (!base || !Number.isFinite(raw) || !Number.isFinite(base.value) || !Number.isFinite(zFinal)) continue;
 
   const ev = c.ability_evidence?.走力;
+  const speedEv = c.ratings?.speed_evidence ?? null;
   const direct = ev?.direct_measurement ?? null;
   const scout = ev?.scouting_prior ?? null;
   const origin = base.from_scouting ? 'scouting' : base.from_direct_measurement ? 'direct' : 'statistical';
-  const statDisplay = statisticalDisplay(raw);
+  // 統合後のrawは外部証拠反映済みなので、統計のみの比較基準はspeed_evidenceから取る。
+  const statDisplay = Number.isFinite(speedEv?.statistical_final_scale)
+    ? speedEv.statistical_final_scale : statisticalDisplay(raw);
   const zDisplay = displayToInternalZ(base.value);
 
   let correctedSameScale = null;
@@ -78,10 +76,10 @@ for (const p of players) {
 
   rows.push({
     name: c.name_ja, pa: p.pa, origin,
-    raw_stat: raw, stat_display: statDisplay, displayed: base.value,
-    z_stat: zStat, z_display_equiv: zDisplay,
+    raw_final: raw, stat_display: statDisplay, displayed: base.value,
+    z_final: zFinal, z_display_equiv: zDisplay,
     display_minus_stat: base.value - statDisplay,
-    z_gap: zDisplay - zStat,
+    z_gap: zDisplay - zFinal,
     direct_value: direct?.value ?? null,
     direct_source: direct?.source ?? null,
     scouting_value: scout?.value ?? null,
@@ -117,7 +115,7 @@ if (directRows.length) {
 
 console.log('\n## override差が大きい選手');
 for (const r of [...overridden].sort((a, b) => Math.abs(b.display_minus_stat) - Math.abs(a.display_minus_stat)).slice(0, 40)) {
-  console.log(`${r.name}\t${r.origin}\tstatRaw=${r.raw_stat.toFixed(1)}\tstatDisplay=${r.stat_display.toFixed(1)}\tdisplay=${r.displayed.toFixed(1)}\tΔdisplay=${r.display_minus_stat >= 0 ? '+' : ''}${r.display_minus_stat.toFixed(1)}\tz ${r.z_stat.toFixed(3)} -> equiv ${r.z_display_equiv.toFixed(3)}\tunitMixErr=${r.unit_mix_error == null ? '—' : r.unit_mix_error.toFixed(1)}\t${r.direct_source ?? ''}`);
+  console.log(`${r.name}\t${r.origin}\tstatDisplay=${r.stat_display.toFixed(1)}\tdisplay=${r.displayed.toFixed(1)}\tΔdisplay=${r.display_minus_stat >= 0 ? '+' : ''}${r.display_minus_stat.toFixed(1)}\tz=${r.z_final.toFixed(3)}\tequiv=${r.z_display_equiv.toFixed(3)}\tunitMixErr=${r.unit_mix_error == null ? '—' : r.unit_mix_error.toFixed(1)}\t${r.direct_source ?? ''}`);
 }
 
 console.log('\n## directの単位混合誤差が大きい選手');
