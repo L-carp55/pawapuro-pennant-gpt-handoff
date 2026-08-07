@@ -1,0 +1,18 @@
+from pathlib import Path
+p=Path('scripts/build_fielding_error_events.mjs')
+s=p.read_text(encoding='utf-8')
+def rep(a,b,label):
+ global s
+ n=s.count(a)
+ if n!=1: raise SystemExit(f'{label}: expected 1 match got {n}')
+ s=s.replace(a,b)
+rep("import { buildDefensiveWorkloadContexts } from '../src/ratings/fielding_workload.mjs';\n", "import { buildDefensiveWorkloadContexts } from '../src/ratings/fielding_workload.mjs';\nimport { parseFieldingErrorDescription, fieldErrorTrainingLabel, BROAD_ERROR_RE } from '../src/ratings/fielding_error_labels.mjs';\n", 'import')
+rep("for(const tr of tail){const x=parseError(tr[c.desc]);if(x)tailErrors.push(x);}\n    if(tailErrors.length>1)paWithMultipleTailErrors++;\n    const err=tailErrors[0]??null;\n\n    const d=(r[c.desc]??'').replace(/^\\d+球目:/,'');\n", "for(const tr of tail){const x=parseFieldingErrorDescription(tr[c.desc]);if(x)tailErrors.push(x);}\n    if(tailErrors.length>1)paWithMultipleTailErrors++;\n    const err=tailErrors[0]??null;\n    const tailText=tail.map(tr=>String(tr[c.desc]??'')).join(' || ');\n    const broadErrorText=BROAD_ERROR_RE.test(tailText);\n\n    const d=(r[c.desc]??'').replace(/^\\d+球目:/,'');\n", 'tail parser')
+rep("    const sameResponsiblePos=!!err&&err.pos===pos;\n    events.push({\n", "    const sameResponsiblePos=!!err&&err.pos===pos;\n    const training=fieldErrorTrainingLabel({error:err,playPos:pos,bresult:r[c.bresult],broadErrorText});\n    events.push({\n", 'training label')
+rep("      is_field_error:err?.kind==='field'&&sameResponsiblePos?1:0,\n      is_throw_error:err?.kind==='throw'&&sameResponsiblePos?1:0,\n      is_unknown_error:err?.kind==='unknown'&&sameResponsiblePos?1:0,\n", "      is_field_error:err?.kind==='field'&&sameResponsiblePos?1:0,\n      is_throw_error:err?.kind==='throw'&&sameResponsiblePos?1:0,\n      is_unknown_error:err?.kind==='unknown'&&sameResponsiblePos?1:0,\n      field_error_label:training.label,\n      error_label_status:training.status,\n      is_suspected_error:training.suspected?1:0,\n", 'event fields')
+rep("    is_field_error INTEGER,is_throw_error INTEGER,is_unknown_error INTEGER,\n    prev_def_game_gap_days REAL,\n", "    is_field_error INTEGER,is_throw_error INTEGER,is_unknown_error INTEGER,\n    field_error_label INTEGER,error_label_status TEXT,is_suspected_error INTEGER,\n    prev_def_game_gap_days REAL,\n", 'schema')
+rep("  const ins=db.prepare(`INSERT INTO fielding_error_events VALUES (${Array(34).fill('?').join(',')})`);\n", "  const ins=db.prepare(`INSERT INTO fielding_error_events VALUES (${Array(37).fill('?').join(',')})`);\n", 'placeholder count')
+rep("    e.error_type,e.error_fielder,e.error_pos,e.is_field_error,e.is_throw_error,e.is_unknown_error,\n    e.prev_def_game_gap_days", "    e.error_type,e.error_fielder,e.error_pos,e.is_field_error,e.is_throw_error,e.is_unknown_error,\n    e.field_error_label,e.error_label_status,e.is_suspected_error,\n    e.prev_def_game_gap_days", 'insert values')
+rep("console.log(`  FE ${sum('is_field_error')} / TE ${sum('is_throw_error')} / unknown ${sum('is_unknown_error')}`);\n", "console.log(`  FE ${sum('is_field_error')} / TE ${sum('is_throw_error')} / unknown ${sum('is_unknown_error')}`);\nconsole.log(`  FE学習label: positive ${events.filter(e=>e.field_error_label===1).length} / negative ${events.filter(e=>e.field_error_label===0).length} / excluded ${events.filter(e=>e.field_error_label==null).length}`);\nconst statusCounts=new Map(); for(const e of events)statusCounts.set(e.error_label_status,(statusCounts.get(e.error_label_status)??0)+1);\nconsole.log(`  label status ${[...statusCounts].sort((a,b)=>b[1]-a[1]).map(([k,v])=>`${k}:${v}`).join(' / ')}`);\n", 'summary')
+p.write_text(s,encoding='utf-8')
+print('patched fielding label contract')
