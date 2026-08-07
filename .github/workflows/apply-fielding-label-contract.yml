@@ -1,0 +1,38 @@
+name: Apply fielding label contract
+on:
+  push:
+    branches: [agent/satei-phase1-safety]
+    paths:
+      - .github/workflows/apply-fielding-label-contract.yml
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/satei-phase1-safety
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python .chatgpt/patch_fielding_label_contract.py
+      - name: Pure tests
+        run: |
+          node --check src/ratings/fielding_error_labels.mjs
+          node --check scripts/build_fielding_error_events.mjs
+          node scripts/test_fielding_error_labels.mjs
+          node scripts/test_fielding_workload.mjs
+      - name: 2024 dry-run validation
+        run: |
+          node scripts/fetch_npb_pbp_release.mjs 2024 /tmp/pbp2024
+          PBP_RAW_DIR=/tmp/pbp2024 PBP_DRY_RUN=1 node scripts/build_fielding_error_events.mjs | tee /tmp/fielding.txt
+          grep -q 'FE学習label:' /tmp/fielding.txt
+          grep -q 'excluded' /tmp/fielding.txt
+      - name: Commit verified patch
+        run: |
+          git config user.name "L-carp55"
+          git config user.email "amilaleon1@gmail.com"
+          git add scripts/build_fielding_error_events.mjs
+          git commit -m "feat: exclude ambiguous errors from catching training labels"
+          git push origin HEAD:agent/satei-phase1-safety
