@@ -16,54 +16,52 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const db = new DatabaseSync(path.join(ROOT, 'data', 'pennant.db'), { readOnly: true });
 const rv = JSON.parse(await readFile(path.join(ROOT, 'configs', 'run_values.json'), 'utf8')).values;
 
-const hasView = name => db.prepare(`SELECT 1 FROM sqlite_master WHERE (type='view' OR type='table') AND name=?`).get(name);
-if (!hasView('v_batting') || !hasView('v_bm_by_player') || !hasView('bm_fld')) {
-  throw new Error('必要なv_batting/v_bm_by_player/bm_fldが無い');
-}
-
+// player-seasonごとの走塁・守備を先にSQLで集約し、N+1クエリを避ける。
 const all = db.prepare(`
-  SELECT player_id,name,season,position,pa,ab,h,b2,b3,hr,bb,hbp,sb,cs,sh,sf
-  FROM v_batting WHERE position<>'投' AND pa>=200 ORDER BY season,player_id
+  WITH run AS (
+    SELECT proeye_id player_id, season, MAX(ubr) ubr
+    FROM v_bm_by_player WHERE farm=0 GROUP BY proeye_id,season
+  ), fld AS (
+    SELECT l.proeye_id player_id, f.season,
+      COUNT(*) fld_rows,
+      MIN(CASE WHEN f.rngr IS NOT NULL AND f.errr IS NOT NULL AND f.arm IS NOT NULL AND f.dpr IS NOT NULL
+        THEN 1 ELSE 0 END) fld_complete,
+      SUM(CASE WHEN f.rngr IS NOT NULL AND f.errr IS NOT NULL AND f.arm IS NOT NULL AND f.dpr IS NOT NULL
+        THEN f.rngr+f.errr+f.arm+f.dpr ELSE 0 END) fld_runs
+    FROM bm_fld f
+    JOIN player_link l ON l.bm_id=f.player_id AND l.season=f.season
+    WHERE f.farm=0 AND f.inn>0
+    GROUP BY l.proeye_id,f.season
+  )
+  SELECT b.player_id,b.name,b.season,b.position,b.pa,b.ab,b.h,b.b2,b.b3,b.hr,b.bb,b.hbp,b.sb,b.cs,b.sh,b.sf,
+    run.ubr, fld.fld_rows, fld.fld_complete, fld.fld_runs
+  FROM v_batting b
+  LEFT JOIN run ON run.player_id=b.player_id AND run.season=b.season
+  LEFT JOIN fld ON fld.player_id=b.player_id AND fld.season=b.season
+  WHERE b.position<>'投' AND b.pa>=200
+  ORDER BY b.season,b.player_id
 `).all();
 
-const runStmt = db.prepare(`SELECT ubr FROM v_bm_by_player WHERE proeye_id=? AND season=? AND farm=0`);
-const fldStmt = db.prepare(`
-  SELECT pos,inn,rngr,errr,arm,dpr,framing,blocking
-  FROM bm_fld f JOIN player_link l ON l.bm_id=f.player_id AND l.season=f.season
-  WHERE l.proeye_id=? AND f.season=? AND f.farm=0 AND f.inn>0
-`);
-const lgStmt = db.prepare(`SELECT SUM(pa) pa,SUM(ab) ab,SUM(h) h,SUM(b2) b2,SUM(b3) b3,SUM(hr) hr,
+const lgRows = db.prepare(`SELECT season,SUM(pa) pa,SUM(ab) ab,SUM(h) h,SUM(b2) b2,SUM(b3) b3,SUM(hr) hr,
   SUM(bb) bb,SUM(hbp) hbp,SUM(sb) sb,SUM(cs) cs,SUM(sh) sh,SUM(sf) sf
-  FROM v_batting WHERE season=?`);
-const lgCache = new Map();
-const lg = y => {
-  if (!lgCache.has(y)) lgCache.set(y, leagueRates(lgStmt.get(y)));
-  return lgCache.get(y);
-};
+  FROM v_batting GROUP BY season`).all();
+const lgMap = new Map(lgRows.map(x=>[x.season,leagueRates(x)]));
 
-const records = [];
-for (const b of all) {
-  const run = runStmt.get(b.player_id, b.season);
-  const fldRows = fldStmt.all(b.player_id, b.season);
-  const fldComplete = fldRows.length > 0 && fldRows.every(f =>
-    Number.isFinite(f.rngr) && Number.isFinite(f.errr) && Number.isFinite(f.arm) && Number.isFinite(f.dpr));
-  const fldRuns = fldComplete
-    ? fldRows.reduce((s,f) => s + f.rngr + f.errr + f.arm + f.dpr, 0)
-    : null;
+const records = all.map(b => {
   const line = { PA:b.pa, AB:b.ab, H:b.h, B2:b.b2, B3:b.b3, HR:b.hr, BB:b.bb, HBP:b.hbp,
     SB:b.sb, CS:b.cs, SH:b.sh, SF:b.sf };
-  const bat = battingRuns(line, lg(b.season), rv).vsLeague;
+  const bat = battingRuns(line, lgMap.get(b.season), rv).vsLeague;
   const posRaw = POSITION_ADJUSTMENT.values[b.position] ?? null;
   const posAdj = Number.isFinite(posRaw) ? posRaw * Math.min(1, b.pa / (143 * 3.1)) : 0;
-  records.push({
+  const fldRuns = b.fld_complete === 1 && b.fld_rows > 0 && Number.isFinite(b.fld_runs) ? b.fld_runs : null;
+  return {
     ...b, bat,
-    runRuns: Number.isFinite(run?.ubr) ? run.ubr : null,
+    runRuns: Number.isFinite(b.ubr) ? b.ubr : null,
     fldRuns,
-    fldRows: fldRows.length,
     posAdj,
-    complete: Number.isFinite(run?.ubr) && Number.isFinite(fldRuns),
-  });
-}
+    complete: Number.isFinite(b.ubr) && Number.isFinite(fldRuns),
+  };
+});
 
 const years = [...new Set(records.map(r=>r.season))];
 console.log('# 総合ピーク構成要素の被覆');
@@ -82,7 +80,6 @@ const post2020 = records.filter(r=>r.season>=2020);
 console.log(`\npre2020 complete=${pre2020.filter(r=>r.complete).length}/${pre2020.length}`);
 console.log(`2020+ complete=${post2020.filter(r=>r.complete).length}/${post2020.length}`);
 
-// 選手ごとに「打撃+走塁+守備」vs「そこへ未較正position adjustment」の首位年を比較。
 const byPlayer = new Map();
 for (const r of records.filter(r=>r.complete)) {
   if (!byPlayer.has(r.player_id)) byPlayer.set(r.player_id, []);
@@ -98,8 +95,6 @@ for (const rs of byPlayer.values()) {
   if (noPos.season !== withPos.season) {
     changed++;
     examples.push({name:noPos.name,noPos:noPos.season,withPos:withPos.season,
-      noPosScore:noPos.bat+noPos.runRuns+noPos.fldRuns,
-      withPosScore:withPos.bat+withPos.runRuns+withPos.fldRuns+withPos.posAdj,
       noPosPA:noPos.pa,withPosPA:withPos.pa,noPosPos:noPos.position,withPosPos:withPos.position});
   }
 }
@@ -110,7 +105,6 @@ for (const e of examples.slice(0,40)) {
   console.log(`${e.name}\tnoPos=${e.noPos}(${e.noPosPos},PA${e.noPosPA})\twithPos=${e.withPos}(${e.withPosPos},PA${e.withPosPA})`);
 }
 
-// 成分のスケールも確認。
 const complete=records.filter(r=>r.complete);
 const absMean = key => complete.length ? complete.reduce((s,r)=>s+Math.abs(r[key]),0)/complete.length : 0;
 console.log('\n## complete player-seasonでの絶対値平均（点）');
