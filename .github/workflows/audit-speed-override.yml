@@ -21,5 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Audit speed override scale mismatch
-        run: node scripts/audit_speed_override_scale.mjs
+      - name: Audit 2024 as-of cards
+        run: node scripts/audit_speed_override_scale.mjs 2024
+      - name: Audit 2026 measurement-year cards
+        run: node scripts/audit_speed_override_scale.mjs 2026
