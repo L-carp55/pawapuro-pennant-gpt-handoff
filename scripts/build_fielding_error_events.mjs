@@ -12,6 +12,12 @@
 // TE（悪送球）は捕球へ入れない。unknown errorも勝手にFEへ振らない。
 // 生PBPが無いハンドオフrepoでは実行できない。Claude Code元環境で再生成する。
 //
+// 2026-08-07追加:
+//   PBPは各球に fielder_2_name〜fielder_9_name を持つため、処理打球だけでなく
+//   「その試合で各野手が何球守備についていたか」を復元できる。
+//   これを使い、プレー時点より前の休養・直近7/14日・シーズン累積守備負荷を保存する。
+//   固定の疲労加点は入れず、生の説明変数だけを残す。
+//
 // 出典: Nippon Baseball Data Repository（MIT License）
 // This uses data sourced from the Nippon Baseball Data Repository.
 
@@ -19,6 +25,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildDefensiveWorkloadContexts } from '../src/ratings/fielding_workload.mjs';
 
 const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const RAW=path.join(ROOT,'data','raw','npb_pbp');
@@ -50,6 +57,8 @@ const ballType=d=>/バント/.test(d)?'bunt':/ゴロ/.test(d)?'grounder':/ライ
 if(!existsSync(RAW)){console.error('1球データがありません。Claude Code元環境で実行してください');process.exit(1);}
 const files=readdirSync(RAW).filter(f=>f.endsWith('_pbp.csv')).sort();
 const events=[];
+// season|game_id -> {season,date,game_id, players: Map(playerNorm -> pitch count)}
+const gameLoads=new Map();
 
 for(const fn of files){
   const lines=readFileSync(path.join(RAW,fn),'utf8').split('\n');
@@ -60,11 +69,30 @@ for(const fn of files){
     hl:I('hit_location'),fielder:I('fielder_name'),hx:I('hc_x'),hy:I('hc_y'),desc:I('description_jap'),
     on1:I('on_1b'),on2:I('on_2b'),on3:I('on_3b'),
   };
+  const defCols=[2,3,4,5,6,7,8,9]
+    .map(no=>({idx:I(`fielder_${no}_name`),pos:POS[no]}))
+    .filter(x=>x.idx>=0);
   const last=new Map();
   for(let i=1;i<lines.length;i++){
     if(!lines[i].trim())continue; const r=splitCsvLine(lines[i]);
     if(!REGULAR.has(r[c.type]))continue;
     last.set(`${r[c.game]}|${r[c.inn]}|${r[c.ab]}`,r);
+
+    // 各球の守備配置から、その試合で何球守備についていたかを数える。
+    // 同一選手は1球につき1守備位置にだけ現れるため、1行=1守備球として加算できる。
+    const season=Number(r[c.season]);
+    const gameId=r[c.game];
+    if(Number.isFinite(season)&&gameId){
+      const gk=`${season}|${gameId}`;
+      if(!gameLoads.has(gk))gameLoads.set(gk,{season,date:r[c.date],game_id:gameId,players:new Map()});
+      const g=gameLoads.get(gk);
+      if(!g.date&&r[c.date])g.date=r[c.date];
+      for(const f of defCols){
+        const nm=norm(r[f.idx]);
+        if(!nm)continue;
+        g.players.set(nm,(g.players.get(nm)??0)+1);
+      }
+    }
   }
   for(const r of last.values()){
     const pos=POS[Number(r[c.hl])];
@@ -90,6 +118,25 @@ for(const fn of files){
   console.error(`  ${fn}`);
 }
 
+// 各選手×試合の守備球数を、プレー前に観測できる負荷コンテキストへ変換。
+const workloadRows=[];
+for(const g of gameLoads.values()){
+  for(const [player,pitches] of g.players){
+    workloadRows.push({season:g.season,date:g.date,game_id:g.game_id,player,pitches});
+  }
+}
+const workload=buildDefensiveWorkloadContexts(workloadRows);
+for(const e of events){
+  const w=workload.get(`${e.season}|${e.game_id}|${e.fielder_norm}`)??null;
+  e.prev_def_game_gap_days=w?.prev_def_game_gap_days??null;
+  e.prior_def_games_7d=w?.prior_def_games_7d??null;
+  e.prior_def_games_14d=w?.prior_def_games_14d??null;
+  e.prior_def_pitches_7d=w?.prior_def_pitches_7d??null;
+  e.prior_def_pitches_14d=w?.prior_def_pitches_14d??null;
+  e.season_def_games_before=w?.season_def_games_before??null;
+  e.season_def_pitches_before=w?.season_def_pitches_before??null;
+}
+
 const db=new DatabaseSync(path.join(ROOT,'data','pennant.db'));
 db.exec('DROP TABLE IF EXISTS fielding_error_events');
 db.exec(`CREATE TABLE fielding_error_events (
@@ -98,13 +145,20 @@ db.exec(`CREATE TABLE fielding_error_events (
   fielder TEXT,fielder_norm TEXT,pos TEXT,
   hc_x REAL,hc_y REAL,hit_location INTEGER,ball_type TEXT,has_runner INTEGER,
   error_type TEXT,error_fielder TEXT,error_pos TEXT,
-  is_field_error INTEGER,is_throw_error INTEGER,is_unknown_error INTEGER,description TEXT
+  is_field_error INTEGER,is_throw_error INTEGER,is_unknown_error INTEGER,
+  prev_def_game_gap_days REAL,
+  prior_def_games_7d INTEGER,prior_def_games_14d INTEGER,
+  prior_def_pitches_7d INTEGER,prior_def_pitches_14d INTEGER,
+  season_def_games_before INTEGER,season_def_pitches_before INTEGER,
+  description TEXT
 )`);
-const ins=db.prepare(`INSERT INTO fielding_error_events VALUES (${Array(24).fill('?').join(',')})`);
+const ins=db.prepare(`INSERT INTO fielding_error_events VALUES (${Array(31).fill('?').join(',')})`);
 db.exec('BEGIN');
 for(const e of events)ins.run(e.season,e.date,e.game_id,e.inning,e.ab_num,e.park,e.batter,e.batter_norm,e.bats,
   e.fielder,e.fielder_norm,e.pos,e.hc_x,e.hc_y,e.hit_location,e.ball_type,e.has_runner,e.error_type,e.error_fielder,e.error_pos,
-  e.is_field_error,e.is_throw_error,e.is_unknown_error,e.description);
+  e.is_field_error,e.is_throw_error,e.is_unknown_error,
+  e.prev_def_game_gap_days,e.prior_def_games_7d,e.prior_def_games_14d,e.prior_def_pitches_7d,e.prior_def_pitches_14d,
+  e.season_def_games_before,e.season_def_pitches_before,e.description);
 db.exec('COMMIT');
 db.exec('CREATE INDEX idx_fee_fielder ON fielding_error_events(fielder_norm,season,pos)');
 db.exec('CREATE INDEX idx_fee_context ON fielding_error_events(season,pos,ball_type,hc_x,hc_y)');
@@ -113,6 +167,7 @@ const sum=k=>events.reduce((s,e)=>s+(e[k]??0),0);
 console.log(`\nfielding_error_events ${events.length.toLocaleString()}件`);
 console.log(`  FE ${sum('is_field_error')} / TE ${sum('is_throw_error')} / unknown ${sum('is_unknown_error')}`);
 console.log(`  座標あり ${events.filter(e=>e.hc_x!=null&&e.hc_y!=null).length.toLocaleString()}件`);
-console.log('  ※次工程で workload/rest と打球難度を作る。ここでは固定加点・能力値化しない。');
+console.log(`  負荷contextあり ${events.filter(e=>e.season_def_pitches_before!=null).length.toLocaleString()}件`);
+console.log('  workload列は生の説明変数。固定加点はせず、expected-error較正で採否・重みを決める。');
 console.log('出典: This uses data sourced from the Nippon Baseball Data Repository (MIT License)');
 db.close();
