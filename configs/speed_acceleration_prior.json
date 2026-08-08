@@ -1,0 +1,47 @@
+{
+  "status": "candidate_only",
+  "_purpose": "標準化された光電管50mの集団内順位を、野球専用27.43m走の集団内順位へ写すPowerPro非依存の身体能力Prior。productionでは未使用。",
+  "_important": "50m秒数を27.43mへ距離比例変換しない。別プロトコル・別集団なので、標準化zを介したquantile-style priorとしてのみ使う。PowerPro値は一切使用していない。",
+  "standardized_50m": {
+    "n": 57,
+    "mean_sec": 6.354912,
+    "sd_sec": 0.265506,
+    "source_file": "data/manual/standardized_50m_electronic_reference.json",
+    "population": "侍ジャパン大学代表候補の同一セッション光電管/電光管50m（2022+2024）"
+  },
+  "baseball_27_43m_study": {
+    "source": "蔭山雅洋ほか (2017) 大学野球選手における30m全力疾走中のピッチとストライドの特徴",
+    "url": "https://sports-performance.jp/paper/1549/1549.pdf",
+    "n_all": 36,
+    "t30_all_mean_sec": 4.35,
+    "t30_all_sd_sec": 0.16,
+    "t27_43_all_mean_sec": 4.11,
+    "t27_43_all_sd_sec": 0.13,
+    "t27_43_all_range_sec": [3.79, 4.38],
+    "infielders": {"n": 15, "t30_mean_sec": 4.32, "t30_sd_sec": 0.13},
+    "outfielders": {"n": 9, "t30_mean_sec": 4.26, "t30_sd_sec": 0.11},
+    "protocol": "野球場内野土、スパイク、野球のリード姿勢から90度方向へスタート、Brower光電管0/5/.../30m、2試技の良い方"
+  },
+  "position_player_t90_prior": {
+    "mean_sec": 4.0575,
+    "sd_sec": 0.100750285,
+    "derivation": {
+      "position_player_t30_mean_sec": 4.2975,
+      "position_player_t30_pooled_sd_sec": 0.124000351,
+      "mean_method": "報告済み全体T27.43平均4.11へ、IF+OFの30m加重平均4.2975と全体30m平均4.35の差-0.0525秒を移した推定。論文が直接報告したposition-player T27.43ではない。",
+      "sd_method": "IF+OFの30m pooled SD 0.1240に、全体でのT27.43 SD/T30 SD = 0.13/0.16を乗じた推定。",
+      "uncertainty": "mean/sdとも推論値。直接報告値ではないためcandidate_only。"
+    }
+  },
+  "mapping": {
+    "z50": "(t50 - 6.354912) / 0.265506",
+    "t90_prior": "4.0575 + 0.100750285 * z50",
+    "interpretation": "50m集団で同じ相対順位の選手が、野球27.43mのposition-player集団でも同じ相対順位だと仮定したPrior。"
+  },
+  "forbidden": [
+    "generic/scouting 50m without protocol adjustment",
+    "direct raw-seconds distance conversion 50m -> 27.43m",
+    "PowerPro individual ratings as calibration target",
+    "PowerPro residuals as acceleration correction"
+  ]
+}
