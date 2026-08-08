@@ -1,0 +1,56 @@
+{
+  "status": "QA_CONFIDENCE_CLASSIFICATION_NOT_PRODUCTION_FINAL",
+  "created_at": "2026-08-09",
+  "purpose": "PowerPro非依存v3の29人評価サンプルを、選手イメージではなく物理証拠の充実度だけで分類する。",
+  "rules": {
+    "HIGH_MULTI_SOURCE_CONSISTENT": "最高速度由来T90と標準化短距離由来T90が両方あり、差が0.05秒未満。点推定を比較的信用しやすい。",
+    "RANGE_MULTI_SOURCE_DISAGREEMENT": "2系統の物理T90が0.05秒以上食い違う。1点に固定せず候補レンジで保持。",
+    "HISTORICAL_SHORT_DISTANCE_REFERENCE": "30m等の短距離記録はあるが、測定年が5年以上離れるかプロトコル不明のため現在値の数値補正には使わない。",
+    "TOP_SPEED_ONLY_PROVISIONAL": "現時点で使える物理証拠が最高速度のみ。加速profile不明なので暫定点。"
+  },
+  "summary": {
+    "n": 29,
+    "HIGH_MULTI_SOURCE_CONSISTENT": 2,
+    "RANGE_MULTI_SOURCE_DISAGREEMENT": 1,
+    "HISTORICAL_SHORT_DISTANCE_REFERENCE": 2,
+    "TOP_SPEED_ONLY_PROVISIONAL": 24
+  },
+  "players": [
+    {"name":"周東佑京","rating":96.042,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"村林一輝","rating":91.555,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"並木秀尊","rating":85.272,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"田中幹也","rating":82.580,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"村松開人","rating":81.682,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"源田壮亮","rating":77.195,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"友杉篤輝","rating":75.399,"candidate_range":[73.717887,75.399472],"qa_representative":74.558680,"class":"HIGH_MULTI_SOURCE_CONSISTENT"},
+    {"name":"細川成也","rating":75.399,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"吉川尚輝","rating":73.604,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"岡林勇希","rating":73.604,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"塩見泰隆","rating":71.809,"historical_30m_sec":3.85,"historical_year":2018,"class":"HISTORICAL_SHORT_DISTANCE_REFERENCE"},
+    {"name":"佐藤輝明","rating":70.014,"historical_30m_sec":4.00,"historical_year":2020,"class":"HISTORICAL_SHORT_DISTANCE_REFERENCE"},
+    {"name":"柳田悠岐","rating":70.014,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"林琢真","rating":69.117,"candidate_range":[69.116862,77.379030],"class":"RANGE_MULTI_SOURCE_DISAGREEMENT","profile":"acceleration_favored"},
+    {"name":"菊池涼介","rating":67.322,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"奈良間大己","rating":66.424,"candidate_range":[66.424327,66.728487],"qa_representative":66.576407,"class":"HIGH_MULTI_SOURCE_CONSISTENT"},
+    {"name":"牧秀悟","rating":65.527,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"小園海斗","rating":64.629,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"近藤健介","rating":61.937,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"矢野雅哉","rating":57.449,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"大山悠輔","rating":55.654,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"浅村栄斗","rating":55.654,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"宮﨑敏郎","rating":53.859,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"筒香嘉智","rating":52.962,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"木浪聖也","rating":51.166,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"安田尚憲","rating":47.576,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"山川穂高","rating":45.781,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"大城卓三","rating":43.986,"class":"TOP_SPEED_ONLY_PROVISIONAL"},
+    {"name":"鈴木大地","rating":42.191,"class":"TOP_SPEED_ONLY_PROVISIONAL"}
+  ],
+  "interpretation": [
+    "29人中、現在の点数を複数の独立身体データで確認できたのは友杉・奈良間の2人だけ。",
+    "林は独立データがあるが不一致のため、69.1という一点より69.1〜77.4のレンジで見るべき。",
+    "塩見・佐藤輝は古い30m記録があるため身体能力の補助証拠にはなるが、現在の数値補正には使わない。",
+    "残る24人の点数は『最高速度だけから推定したT90』であり、加速型/最高速度型の個人差を含まない暫定値。",
+    "したがって今後のQAでは、TOP_SPEED_ONLY_PROVISIONALを最終確定値として扱わない。"
+  ]
+}
