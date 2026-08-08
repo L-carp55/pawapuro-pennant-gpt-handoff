@@ -107,10 +107,12 @@ export function buildSprint30Evidence(records, playerName, targetSeason, tempora
   const temporal = year != null
     ? describeSpeedEvidenceTime(year, targetSeason, temporalConfig, { measuredValue: chosen.seconds_30m })
     : null;
+  const usableByTime = temporal?.gap_years != null && temporal.gap_years <= 4;
   // Curated team 30m tests are Tier D by default because timing/start protocol is usually unknown.
-  // They can be consumed only by an explicitly calibrated sprint30_to_t90 model.
+  // Even with a calibrated sprint30_to_t90 protocol bridge, a 5+ year-old measurement must not
+  // automatically drive the target season until an age/trajectory model exists.
   return {
-    evidence: { sprint_30m_sec: chosen.seconds_30m },
+    evidence: usableByTime ? { sprint_30m_sec: chosen.seconds_30m } : {},
     metadata: {
       source: chosen.source_name ?? 'curated 30m',
       measured_year: year,
@@ -119,7 +121,11 @@ export function buildSprint30Evidence(records, playerName, targetSeason, tempora
       protocol_class: chosen.protocol_class ?? 'unknown',
       temporal,
       tier: 'D',
-      auto_t90_usable: true,
+      auto_t90_usable: usableByTime,
+      historical_only: !usableByTime,
+      reason: usableByTime ? null : (year == null
+        ? '測定年不明のため、履歴証拠としてのみ保持'
+        : '査定年から5年以上離れるため、age/trajectory model確定まで自動T90推定には使わない'),
       note: '距離はT90に近いがプロトコル不明。絶対秒数はsprint30_to_t90のprotocol較正なしに直接T90扱いしない。',
     },
   };
