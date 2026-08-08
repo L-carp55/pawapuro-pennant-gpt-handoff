@@ -1,0 +1,15 @@
+{
+  "status": "EXISTING_DATA_ONLY_AUDIT",
+  "created_at": "2026-08-09",
+  "scope": "29-player T90 evaluation sample; no new web research",
+  "numerically_usable_now": [
+    {"player":"林琢真","evidence":"standardized 50m + NPB+ top speed","result":"rating candidate range 69.1-77.4; acceleration_favored"},
+    {"player":"友杉篤輝","evidence":"standardized 50m + NPB+ top speed","result":"73.7-75.4; QA midpoint 74.6; consistent"},
+    {"player":"奈良間大己","evidence":"standardized 50m + NPB+ top speed","result":"66.4-66.7; QA midpoint 66.6; consistent"}
+  ],
+  "existing_but_not_numeric_for_current_rating": [
+    {"player":"塩見泰隆","measurement":"30m 3.85s","season":2018,"reason":"team test protocol unspecified and 2026 target is 8 years later; 5+ year physical evidence requires age/trajectory model before numeric T90 update"},
+    {"player":"佐藤輝明","measurement":"30m 4.00s","season":2020,"reason":"team test protocol unspecified and 2026 target is 6 years later; 5+ year physical evidence requires age/trajectory model before numeric T90 update"}
+  ],
+  "verdict": "Existing repository data permits acceleration-enriched numeric QA for only three players in the current 29-player sample. Do not fabricate corrections for the remaining players."
+}
