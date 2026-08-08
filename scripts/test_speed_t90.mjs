@@ -3,6 +3,9 @@ import {
   normalInvCdf, t90FastPercentile, speedRatingFromT90,
   estimateT90, withoutSpeedEvidence, multivariatePredict,
 } from '../src/ratings/speed_t90.mjs';
+import {
+  appraiseSpeedT90, appraiseSpeedForInfieldHit, appraiseSpeedForGdp,
+} from '../src/ratings/speed_appraisal.mjs';
 
 const ref = [3.7, 3.8, 3.9, 4.0, 4.1];
 assert.ok(Math.abs(normalInvCdf(0.5)) < 1e-8);
@@ -50,5 +53,32 @@ assert.equal(bunt.t90_sec, null);
 
 const e = withoutSpeedEvidence({ infield_hit_rate: 1, gdp_avoid: 2 }, 'infield_hit_rate');
 assert.deepEqual(e, { gdp_avoid: 2 });
+
+// High-level boundary: direct T90 is not turned into a 1-100 rating before the NPB reference is frozen.
+const noRef = appraiseSpeedT90({ t90_sec: 3.9 }, {}, []);
+assert.equal(noRef.rating, null);
+assert.equal(noRef.status, 'T90_ESTIMATED_REFERENCE_NOT_FROZEN');
+assert.equal(noRef.t90_sec, 3.9);
+
+const rated = appraiseSpeedT90({ t90_sec: 3.9 }, {}, ref);
+assert.equal(rated.status, 'APPRAISED_T90');
+assert.ok(Math.abs(rated.rating - 50) < 1e-6);
+
+// Uncalibrated/no model must remain visibly unappraised, never fall back to the legacy scale.
+const unresolved = appraiseSpeedT90({ npb_plus_top_speed_kmh: 33 }, { models: {} }, ref);
+assert.equal(unresolved.rating, null);
+assert.equal(unresolved.status, 'UNAPPRAISED_NO_T90');
+
+// Leave-one-feature-out guards for downstream abilities.
+const proxyModels = {
+  proxy: { intercept: 4.5, coefficients: { infield_hit_rate: -1, gdp_avoid: -0.1 } },
+};
+const proxyEvidence = { infield_hit_rate: 0.2, gdp_avoid: 1 };
+const baseProxy = appraiseSpeedT90(proxyEvidence, proxyModels, ref);
+assert.equal(baseProxy.evidence_detail.source, 'outcome_proxy');
+const ihGuard = appraiseSpeedForInfieldHit(proxyEvidence, proxyModels, ref);
+assert.equal(ihGuard.evidence_detail.terms.includes('infield_hit_rate'), false);
+const gdpGuard = appraiseSpeedForGdp(proxyEvidence, proxyModels, ref);
+assert.equal(gdpGuard.evidence_detail.terms.includes('gdp_avoid'), false);
 
 console.log('speed_t90 tests: PASS');
