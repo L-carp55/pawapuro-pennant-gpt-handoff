@@ -105,6 +105,24 @@ function linearPredict(model, x) {
 }
 
 /**
+ * Generic config-driven multivariate linear model.
+ * Model shape: { intercept, coefficients: { evidence_key: coefficient } }
+ * All listed features are required. This prevents a partially observed multivariate model
+ * from silently turning into a different equation.
+ */
+export function multivariatePredict(model, evidence = {}) {
+  if (!model || model.enabled === false || !finite(model.intercept)) return null;
+  const coefs = model.coefficients ?? null;
+  if (!coefs || !Object.keys(coefs).length) return null;
+  let v = model.intercept;
+  for (const [key, coef] of Object.entries(coefs)) {
+    if (!finite(coef) || !finite(evidence[key])) return null;
+    v += coef * evidence[key];
+  }
+  return v;
+}
+
+/**
  * Estimate T90 from the best available evidence without hard-coded bridge coefficients.
  * `models` is deliberately external/config-driven.
  *
@@ -117,14 +135,23 @@ export function estimateT90(evidence = {}, models = {}) {
   }
 
   const candidates = [];
+  let insertion = 0;
   const add = (tier, source, value, detail = {}) => {
-    if (finite(value)) candidates.push({ tier, source, t90_sec: value, is_estimated: true, ...detail });
+    if (finite(value)) candidates.push({
+      tier, source, t90_sec: value, is_estimated: true,
+      priority: detail.priority ?? 100, _insertion: insertion++, ...detail,
+    });
   };
 
   // Tier B: direct physical-speed measurements.
-  add('B', 'mlb_sprint_speed_ftps', linearPredict(models.mlb_sprint_to_t90, evidence.mlb_sprint_speed_ftps));
-  add('B', 'npb_plus_top_speed_kmh', linearPredict(models.npb_top_speed_to_t90, evidence.npb_plus_top_speed_kmh));
-  add('B', 'acceleration_direct', linearPredict(models.acceleration_to_t90, evidence.acceleration_direct));
+  // Prefer a calibrated top-speed + acceleration model over top-speed alone when both are available.
+  // No coefficients live here; model names are contracts that configs/derived calibration must fill.
+  add('B', 'mlb_sprint_t30', multivariatePredict(models.mlb_sprint_t30_to_t90, evidence), { priority: 10 });
+  add('B', 'mlb_sprint_t10', multivariatePredict(models.mlb_sprint_t10_to_t90, evidence), { priority: 20 });
+  add('B', 'npb_top_speed_acceleration', multivariatePredict(models.npb_top_speed_acceleration_to_t90, evidence), { priority: 10 });
+  add('B', 'mlb_sprint_speed_ftps', linearPredict(models.mlb_sprint_to_t90, evidence.mlb_sprint_speed_ftps), { priority: 50 });
+  add('B', 'npb_plus_top_speed_kmh', linearPredict(models.npb_top_speed_to_t90, evidence.npb_plus_top_speed_kmh), { priority: 50 });
+  add('B', 'acceleration_direct', linearPredict(models.acceleration_to_t90, evidence.acceleration_direct), { priority: 60 });
 
   // Tier C: average / condition-controlled running times only. Fastest H->1 is intentionally absent.
   if (evidence.hp_to_1b_condition !== 'bunt' && evidence.hp_to_1b_condition !== 'unknown') {
@@ -157,7 +184,11 @@ export function estimateT90(evidence = {}, models = {}) {
       reason: 'T90を推定できる材料または較正済みモデルがない' };
   }
 
-  // Strict tier priority. We do not average lower-tier evidence into higher-tier evidence.
-  candidates.sort((a, b) => a.tier.localeCompare(b.tier));
-  return candidates[0];
+  // Strict tier priority. Within a tier, a more informative calibrated model wins.
+  candidates.sort((a, b) => a.tier.localeCompare(b.tier)
+    || a.priority - b.priority || a._insertion - b._insertion);
+  const best = { ...candidates[0] };
+  delete best.priority;
+  delete best._insertion;
+  return best;
 }
