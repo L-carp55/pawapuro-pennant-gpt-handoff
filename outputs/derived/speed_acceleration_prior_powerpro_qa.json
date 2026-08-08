@@ -1,0 +1,49 @@
+{
+  "status": "QA_AFTER_PHYSICAL_FREEZE",
+  "created_at": "2026-08-08",
+  "physical_predictions_frozen_in": "outputs/derived/speed_acceleration_prior_overlap_audit.json",
+  "important": "PowerProはこのファイルで初めて答え合わせに使う。50m mapper/physical profileの計算には使っていない。n=3なので係数調整は禁止。",
+  "players": [
+    {
+      "player": "林琢真",
+      "powerpro_2026_speed": 82,
+      "top_speed_only_rating": 69.117,
+      "standardized_50m_prior_rating": 77.104,
+      "abs_error_top_speed": 12.883,
+      "abs_error_50m_prior": 4.896,
+      "error_improvement_points": 7.987,
+      "physical_profile": "acceleration_favored"
+    },
+    {
+      "player": "友杉篤輝",
+      "powerpro_2026_speed": 87,
+      "top_speed_only_rating": 75.399,
+      "standardized_50m_prior_rating": 73.414,
+      "abs_error_top_speed": 11.601,
+      "abs_error_50m_prior": 13.586,
+      "error_improvement_points": -1.985,
+      "physical_profile": "consistent"
+    },
+    {
+      "player": "奈良間大己",
+      "powerpro_2026_speed": 64,
+      "top_speed_only_rating": 66.424,
+      "standardized_50m_prior_rating": 66.370,
+      "abs_error_top_speed": 2.424,
+      "abs_error_50m_prior": 2.370,
+      "error_improvement_points": 0.054,
+      "physical_profile": "consistent"
+    }
+  ],
+  "summary": {
+    "n": 3,
+    "mae_top_speed_only": 8.969,
+    "mae_standardized_50m_prior": 6.951,
+    "interpretation": "平均MAEは改善するがn=3で、改善の大半は林琢真1人。50m priorを全選手へ一律置換/加算する根拠にはしない。独立physical profileの不一致検出として価値がある。"
+  },
+  "decision": [
+    "standardized 50mをproductionの加点式にはまだしない",
+    "top speedと50m priorが0.05秒以上食い違う場合はprofile flagを立てる",
+    "次は重複標本を増やす。PowerPro残差を目的変数として補正係数を学習しない"
+  ]
+}
