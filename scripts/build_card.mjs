@@ -8,7 +8,8 @@ import { DatabaseSync } from 'node:sqlite';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { makeContext, appraiseCard } from '../src/cards/pipeline.mjs';
+import { makeContext } from '../src/cards/pipeline.mjs';
+import { appraiseCardT90 } from '../src/cards/t90_pipeline_adapter.mjs';
 import { loadLedger } from '../src/ratings/scouting_input.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -22,7 +23,7 @@ const fldNorm = JSON.parse(await readFile(path.join(ROOT, 'configs', 'fielding_n
 const scoutingLedger = loadLedger(JSON.parse(await readFile(path.join(ROOT, 'configs', 'scouting.json'), 'utf8')));
 const db = new DatabaseSync(path.join(ROOT, 'data', 'pennant.db'));
 
-const r = appraiseCard(makeContext(db, cfg), { name: NAME, mode: MODE, cfg, rv, runNorm, fldNorm, scoutingLedger });
+const r = appraiseCardT90(makeContext(db, cfg), { name: NAME, mode: MODE, cfg, rv, runNorm, fldNorm, scoutingLedger });
 if (r.error) { console.error(r.error); process.exit(1); }
 const card = r.card;
 
