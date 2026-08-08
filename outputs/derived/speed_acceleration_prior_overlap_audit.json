@@ -1,0 +1,62 @@
+{
+  "status": "PHYSICAL_AUDIT_FROZEN_BEFORE_POWERPRO_QA",
+  "created_at": "2026-08-08",
+  "powerpro_used_in_calculation": false,
+  "purpose": "同一条件の標準化50mとNPB+最高速度が両方ある現役3人で、最高速度だけでは見えない加速/短距離profileを物理データだけで比較する。n=3なので回帰係数は作らない。",
+  "standardized_50m_mapper": {
+    "config": "configs/speed_acceleration_prior.json",
+    "formula": "z50=(t50-6.354912)/0.265506; T90_prior=4.0575+0.100750285*z50",
+    "status": "candidate_only"
+  },
+  "top_speed_baseline": {
+    "formula": "T90=4.05-0.1015374380*(NPB+_kmh-31.6)",
+    "status": "v3 provisional physical bridge"
+  },
+  "profile_threshold_sec": 0.05,
+  "players": [
+    {
+      "player": "林琢真",
+      "standardized_50m_sec": 5.99,
+      "z50": -1.374402,
+      "t90_from_50m_prior_sec": 3.919029,
+      "rating_from_50m_prior": 77.104,
+      "npb_plus_top_speed_kmh": 32.0,
+      "t90_from_top_speed_sec": 4.009385,
+      "rating_from_top_speed": 69.117,
+      "t90_50m_minus_top_speed_sec": -0.090356,
+      "profile": "acceleration_favored",
+      "interpretation": "標準化50mの相対順位が、最高速度だけから想定する90ftより約0.09秒速い。最高速度に対して短距離/加速能力が強い候補。"
+    },
+    {
+      "player": "友杉篤輝",
+      "standardized_50m_sec": 6.10,
+      "z50": -0.960099,
+      "t90_from_50m_prior_sec": 3.960770,
+      "rating_from_50m_prior": 73.414,
+      "npb_plus_top_speed_kmh": 32.7,
+      "t90_from_top_speed_sec": 3.938309,
+      "rating_from_top_speed": 75.399,
+      "t90_50m_minus_top_speed_sec": 0.022461,
+      "profile": "consistent",
+      "interpretation": "最高速度系と標準化50m系が約0.02秒差で整合。"
+    },
+    {
+      "player": "奈良間大己",
+      "standardized_50m_sec": 6.31,
+      "z50": -0.169156,
+      "t90_from_50m_prior_sec": 4.040458,
+      "rating_from_50m_prior": 66.370,
+      "npb_plus_top_speed_kmh": 31.7,
+      "t90_from_top_speed_sec": 4.039846,
+      "rating_from_top_speed": 66.424,
+      "t90_50m_minus_top_speed_sec": 0.000611,
+      "profile": "consistent",
+      "interpretation": "2つの独立した身体速度系がほぼ完全に整合。"
+    }
+  ],
+  "verdict": [
+    "標準化50mは最高速度とは別のprofile情報を持つ可能性がある。林琢真は明確なacceleration_favored候補。",
+    "3人しか重ならないため、50m補正係数や混合weightを学習してはいけない。",
+    "productionではtop speedと50mを恣意的平均しない。モデル残差分散または同時T90観測が得られるまで別々のevidenceとして保持する。"
+  ]
+}
