@@ -1,0 +1,76 @@
+{
+  "status": "FIVE_OUTLIER_SCOPE_COMPLETE",
+  "created_at": "2026-08-09",
+  "production_rating_changed": false,
+  "powerpro_used_in_calculation": false,
+  "owner_qa_used_as_training": false,
+  "purpose": "owner QA bandから大きく外れた5人について、既存/限定追加の短距離身体情報でズレの原因候補を切り分ける。根拠のない点補正は行わない。",
+  "baseline_source": "outputs/derived/speed_t90_eval_sample_20260809.json",
+  "owner_qa_source": "outputs/derived/speed_owner_qa_bands_20260809.json",
+  "short_distance_source": "data/manual/speed_outlier_short_distance_evidence_20260809.json",
+  "players": [
+    {
+      "player": "並木秀尊",
+      "baseline_rating": 85.272,
+      "owner_qa_band": [90, 100],
+      "qa_gap": {"direction":"model_low","points_to_band":4.728},
+      "short_distance_evidence": [
+        {"value":"50m 5.32", "policy":"PROFILE_HINT_ONLY", "blocks":["PROTOCOL_MISMATCH","STALE_FOR_NUMERIC_T90"]},
+        {"value":"50m 6.06", "policy":"PROFILE_HINT_ONLY", "blocks":["UNCALIBRATED_PROTOCOL"]}
+      ],
+      "resolution": "SCALE_OR_PROFILE_UNRESOLVED",
+      "interpretation": "短距離能力が高いという独立情報はあるが、5.32は特殊スタート、6.06は計時方式不明。現在の85.3をSへ上げる数値補正量は決められない。加速profileだけでなくv3検証用1-100尺度の上端圧縮も候補。"
+    },
+    {
+      "player": "小園海斗",
+      "baseline_rating": 64.629,
+      "owner_qa_band": [70, 79],
+      "qa_gap": {"direction":"model_low","points_to_band":5.371},
+      "short_distance_evidence": [
+        {"value":"historical 50m reports 5.8-6.0", "policy":"PROFILE_HINT_ONLY", "blocks":["UNCALIBRATED_PROTOCOL","UNKNOWN_MEASUREMENT_YEAR"]}
+      ],
+      "resolution": "ACCELERATION_UNDERVALUE_CANDIDATE",
+      "interpretation": "高校時代の複数記事は俊足側の短距離能力を示すため、最高速度だけの64.6が低い方向のQAと整合する。ただし記事間で5.8/5.9/5.9-6.0と揺れ、プロトコルも不明なので現在T90へ数値変換しない。"
+    },
+    {
+      "player": "矢野雅哉",
+      "baseline_rating": 57.449,
+      "owner_qa_band": [70, 79],
+      "qa_gap": {"direction":"model_low","points_to_band":12.551},
+      "short_distance_evidence": [
+        {"value":"50m 5.9", "policy":"PROFILE_HINT_ONLY", "blocks":["UNCALIBRATED_PROTOCOL","UNKNOWN_MEASUREMENT_YEAR"]}
+      ],
+      "resolution": "ACCELERATION_UNDERVALUE_CANDIDATE",
+      "interpretation": "過去の短距離プロフィールは57.4より速い側の身体能力を疑う理由になる。今回5人で最大のQA乖離だが、現在のB相当へ直接補正する係数はまだない。"
+    },
+    {
+      "player": "村林一輝",
+      "baseline_rating": 91.555,
+      "owner_qa_band": [60, 89],
+      "qa_gap": {"direction":"model_high","points_to_band":2.555},
+      "short_distance_evidence": [
+        {"value":"historical 50m 6.2", "policy":"PROFILE_HINT_ONLY", "blocks":["UNCALIBRATED_PROTOCOL","STALE_FOR_NUMERIC_T90"]}
+      ],
+      "resolution": "TOP_SPEED_OVERWEIGHT_CANDIDATE",
+      "interpretation": "現在の瞬間最高速度34.5km/hだけでS91.6になる一方、高校時代50mは6.2秒。年代差が大きく現在値の直接補正には使えないが、最高速度だけを90ft全体能力と同一視しないQA例として残す。"
+    },
+    {
+      "player": "細川成也",
+      "baseline_rating": 75.399,
+      "owner_qa_band": [60, 69],
+      "qa_gap": {"direction":"model_high","points_to_band":6.399},
+      "short_distance_evidence": [
+        {"value":"historical 50m 6.2", "policy":"PROFILE_HINT_ONLY", "blocks":["UNCALIBRATED_PROTOCOL","UNKNOWN_MEASUREMENT_YEAR"]}
+      ],
+      "resolution": "TOP_SPEED_OVERWEIGHT_CANDIDATE",
+      "interpretation": "友杉と同じ32.7km/hだから同じ75.4になる現モデルの弱点を示す候補。過去50m6.2は補助QAになるが、現在C相当へ直接落とす材料にはしない。"
+    }
+  ],
+  "decision": [
+    "5人に対する個別の手動補正は行わない。",
+    "recent standardized short-distance evidenceがある選手だけnumeric candidate envelopeを許可する。",
+    "古い/方式不明の50mはprofile hintとして保持し、現在ratingを動かさない。",
+    "並木の低さは加速profileだけでは断定できないため、次の工程では1-100尺度上端も別軸で検証する。",
+    "小園・矢野はacceleration undervalue候補、村林・細川はtop-speed overweight候補として回帰QAに固定する。"
+  ]
+}
