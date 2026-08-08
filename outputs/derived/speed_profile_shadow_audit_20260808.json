@@ -1,0 +1,68 @@
+{
+  "status": "SHADOW_PROFILE_AUDIT",
+  "created_at": "2026-08-08",
+  "powerpro_used_in_calculation": false,
+  "production_speed_changed": false,
+  "standardized_50m_reference": {
+    "n_before": 57,
+    "n_added_2026": 31,
+    "n_after": 88,
+    "mean_sec": 6.3660225454545465,
+    "sd_sec": 0.2675713712220164,
+    "note": "2026 cohort is a same-session photoelectric 50m test and is therefore eligible for the standardized reference."
+  },
+  "profile_robustness_after_reference_expansion": [
+    {
+      "player": "林琢真",
+      "seconds_50m": 5.99,
+      "t90_from_50m_prior_sec": 3.915914,
+      "top_speed_t90_sec": 4.009385,
+      "delta_sec": -0.093471,
+      "profile": "acceleration_favored"
+    },
+    {
+      "player": "友杉篤輝",
+      "seconds_50m": 6.10,
+      "t90_from_50m_prior_sec": 3.957333,
+      "top_speed_t90_sec": 3.938309,
+      "delta_sec": 0.019024,
+      "profile": "consistent"
+    },
+    {
+      "player": "奈良間大己",
+      "seconds_50m": 6.31,
+      "t90_from_50m_prior_sec": 4.036405,
+      "top_speed_t90_sec": 4.039846,
+      "delta_sec": -0.003441,
+      "profile": "consistent"
+    }
+  ],
+  "same_trial_30m50m_public_pairs": [
+    {
+      "player": "鈴木湧陽",
+      "seconds_30m": 3.85,
+      "seconds_50m": 5.78,
+      "seconds_30_to_50m": 1.93,
+      "protocol_local_90ft_interval_sec": [3.52044, 3.602188]
+    },
+    {
+      "player": "岡田啓吾",
+      "seconds_30m": 3.89,
+      "seconds_50m": 5.83,
+      "seconds_30_to_50m": 1.94,
+      "protocol_local_90ft_interval_sec": [3.557016, 3.640904]
+    }
+  ],
+  "interval_method": {
+    "target_distance_m": 27.432,
+    "assumption": "velocity is non-decreasing from start through 50m",
+    "purpose": "derive a coefficient-free protocol-local bound, not a Statcast T90 estimate",
+    "guardrail": "The intervals appear materially faster than the known Statcast T90 scale, which is evidence that start/timing protocol equivalence cannot be assumed. Do not feed these bounds into production T90 without a protocol bridge."
+  },
+  "verdict": [
+    "Adding the independent 2026 50m cohort expands the standardized reference from 57 to 88 without changing the existing three-player profile labels.",
+    "Only two exact 30m values are verified in the official public article; the other 29 remain null and must not be inferred.",
+    "The same-trial 30m/50m pairs are valuable profile evidence but are not yet a calibrated Statcast-equivalent T90 source.",
+    "Keep all 30m/50m profile effects in shadow mode; production speed ratings remain unchanged."
+  ]
+}
