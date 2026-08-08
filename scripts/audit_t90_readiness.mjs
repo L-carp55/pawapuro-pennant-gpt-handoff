@@ -44,12 +44,14 @@ const physicalHistoryNames = new Set([...historyNames.npb_plus, ...historyNames.
 
 function sourceState(name, season) {
   const k = norm(name);
+  // Numerical time-gap variance is metric/unit specific. Never fall back NPB km/h or 30m seconds
+  // to MLB Sprint Speed's ft/s variance merely because the target-year gap is the same.
   const mlb = buildMlbSprintEvidence(mlbMap.get(k) ?? null, season,
-    temporalCfg?.mlb_sprint_speed ?? temporalCfg);
+    temporalCfg?.mlb_sprint_speed ?? null);
   const npb = buildNpbPlusEvidence(npbPlusMap.get(k) ?? null, season,
-    temporalCfg?.npb_plus_top_speed ?? temporalCfg?.mlb_sprint_speed ?? temporalCfg);
+    temporalCfg?.npb_plus_top_speed ?? null);
   const m30 = buildSprint30Evidence(sprint30.records ?? [], name, season,
-    temporalCfg?.sprint30 ?? temporalCfg?.mlb_sprint_speed ?? temporalCfg);
+    temporalCfg?.sprint30 ?? null);
   const qa = contextualHp1bQa(hp1b.records ?? [], name, season);
 
   const autoSources = {
@@ -146,6 +148,7 @@ const out = {
     auto_usable_physical: '対象年から4年以内のNPB+/MLB/30m身体測定。5年以上・測定年不明は除外。',
     physical_history: '年代を問わず物理測定が存在すること。自動T90入力可能とは限らない。',
     normal_hp1b: '同年の通常スイング単発H->1。QAのみで物理被覆に含めない。',
+    temporal_numeric_uncertainty: 'MLB Sprint / NPB+ / 30mごとに別較正。単位の違う変動SDを流用しない。',
   },
   models: modelStates,
   enabled_models: enabledModels,
