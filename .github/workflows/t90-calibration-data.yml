@@ -1,0 +1,35 @@
+name: T90 calibration data
+
+on:
+  push:
+    branches:
+      - agent/t90-speed-foundation
+    paths:
+      - '.github/workflows/t90-calibration-data.yml'
+      - 'scripts/fetch_statcast_running.mjs'
+      - 'scripts/calibrate_t90_bridge.mjs'
+      - '.t90-trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch-and-calibrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fetch 2017-2025 Savant running data
+        run: node scripts/fetch_statcast_running.mjs 2017 2025
+      - name: Build T90 bridge calibration
+        run: node scripts/calibrate_t90_bridge.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: t90-calibration
+          path: |
+            outputs/derived/statcast_running/
+            outputs/derived/t90_bridge_calibration.json
+          if-no-files-found: error
