@@ -157,9 +157,17 @@ export function buildTargetSpeedEvidence(args) {
     temporalConfig = null,
     proxyEvidence = {},
   } = args ?? {};
-  const mlb = buildMlbSprintEvidence(mlbBridgeRow, targetSeason, temporalConfig?.mlb_sprint_speed ?? temporalConfig);
-  const npb = buildNpbPlusEvidence(npbPlusRow, targetSeason, temporalConfig?.npb_plus_top_speed ?? temporalConfig?.mlb_sprint_speed ?? temporalConfig);
-  const m30 = buildSprint30Evidence(sprint30Records, playerName, targetSeason, temporalConfig?.sprint30 ?? temporalConfig?.mlb_sprint_speed ?? temporalConfig);
+
+  // Numerical temporal uncertainty is metric/unit-specific.
+  // MLB Sprint Speed is ft/s; NPB+ is km/h with an unpublished public formula; team 30m is seconds
+  // under heterogeneous protocols. Never reuse MLB's ft/s variance for the other two metrics.
+  const mlbTemporal = temporalConfig?.mlb_sprint_speed ?? null;
+  const npbTemporal = temporalConfig?.npb_plus_top_speed ?? null;
+  const sprint30Temporal = temporalConfig?.sprint30 ?? null;
+
+  const mlb = buildMlbSprintEvidence(mlbBridgeRow, targetSeason, mlbTemporal);
+  const npb = buildNpbPlusEvidence(npbPlusRow, targetSeason, npbTemporal);
+  const m30 = buildSprint30Evidence(sprint30Records, playerName, targetSeason, sprint30Temporal);
   return {
     evidence: { ...proxyEvidence, ...m30.evidence, ...mlb.evidence, ...npb.evidence },
     provenance: {
