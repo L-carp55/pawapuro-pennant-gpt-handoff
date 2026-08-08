@@ -9,10 +9,14 @@
     "labels": ["acceleration_favored", "consistent", "top_speed_favored", "insufficient", "uncalibrated"]
   },
   "standardized_50m": {
-    "n": 57,
-    "mean_sec": 6.354912,
-    "sd_sec": 0.265506,
-    "source_file": "data/manual/standardized_50m_electronic_reference.json",
+    "n": 88,
+    "mean_sec": 6.3660225454545465,
+    "sd_sec": 0.2675713712220164,
+    "source_files": [
+      "data/manual/standardized_50m_electronic_reference.json",
+      "data/manual/standardized_30m50m_photoelectric_2026.json"
+    ],
+    "cohorts": "2022年30人 + 2024年27人 + 2026年31人",
     "rule": "同一セッションの光電管/電光管測定だけを標準化referenceへ入れる。genericなスカウティング50mと混ぜない。"
   },
   "position_player_t90_prior": {
@@ -30,7 +34,7 @@
   "guardrails": [
     "shadow output must never override estimateT90()",
     "shadow output must never directly change speed rating",
-    "do not learn regression weights from top-5-only 30m publication",
+    "do not learn regression weights from partial 30m publication",
     "do not fit 30m->T90 from protocol-incompatible absolute seconds",
     "do not use PowerPro individual ratings to calibrate profile thresholds or coefficients"
   ]
