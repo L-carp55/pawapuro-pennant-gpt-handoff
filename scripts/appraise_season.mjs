@@ -6,7 +6,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { fitLogDist } from '../src/ratings/scale.mjs';
 import { durabilityRate } from '../src/ratings/shrinkage.mjs';
-import { makeContext, appraiseCard } from '../src/cards/pipeline.mjs';
+import { makeContext } from '../src/cards/pipeline.mjs';
+import { appraiseCardT90 } from '../src/cards/t90_pipeline_adapter.mjs';
 import { loadLedger } from '../src/ratings/scouting_input.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -101,7 +102,7 @@ const results = [];
 const failures = [];
 for (const r of rows) {
   // 名前ではなく選手IDで引く。同姓同名（大和・Ａ．ジョーンズ等）が名前では解決できず落ちるため
-  const res = appraiseCard(ctx, { playerId: r.player_id, mode: String(SEASON), cfg, rv, runNorm, fldNorm, scoutingLedger });
+  const res = appraiseCardT90(ctx, { playerId: r.player_id, mode: String(SEASON), cfg, rv, runNorm, fldNorm, scoutingLedger });
   if (res.error || !res.batting) { failures.push({ name: r.name, reason: res.error ?? '打撃査定なし' }); continue; }
   const b = res.batting;
   results.push({
