@@ -25,53 +25,45 @@ export function shortDistanceEvidenceUse(record = {}, targetSeason, opts = {}) {
   const gapYears = measuredYear != null && finite(targetSeason)
     ? Math.abs(targetSeason - measuredYear) : null;
   const protocol = record.protocol_class ?? 'unknown';
+  const protocolMismatch = record.start_rule_mismatch === true || protocol === 'special_first_step_start';
+  const protocolCalibrated = numericProtocols.has(protocol) && !protocolMismatch;
+  const temporalKnown = gapYears != null;
+  const temporallyRecent = temporalKnown && gapYears <= maxNumericGapYears;
+  const blocks = [];
+  if (protocolMismatch) blocks.push('PROTOCOL_MISMATCH');
+  else if (!protocolCalibrated) blocks.push('UNCALIBRATED_PROTOCOL');
+  if (!temporalKnown) blocks.push('UNKNOWN_MEASUREMENT_YEAR');
+  else if (!temporallyRecent) blocks.push('STALE_FOR_NUMERIC_T90');
 
-  if (record.start_rule_mismatch === true || protocol === 'special_first_step_start') {
+  if (!blocks.length) {
     return {
-      use: 'PROFILE_HINT_ONLY',
-      status: 'PROTOCOL_MISMATCH',
-      numeric_t90_allowed: false,
+      use: 'NUMERIC_CANDIDATE',
+      status: 'STANDARDIZED_RECENT',
+      numeric_t90_allowed: true,
       gap_years: gapYears,
-      reason: 'start/timing rule is not compatible with the standardized T90/50m path',
+      protocol_class: protocol,
+      blocks: [],
+      reason: null,
     };
   }
 
-  if (!numericProtocols.has(protocol)) {
-    return {
-      use: 'PROFILE_HINT_ONLY',
-      status: 'UNCALIBRATED_PROTOCOL',
-      numeric_t90_allowed: false,
-      gap_years: gapYears,
-      reason: 'timing/start protocol is not standardized against the project short-distance reference',
-    };
-  }
-
-  if (gapYears == null) {
-    return {
-      use: 'PROFILE_HINT_ONLY',
-      status: 'UNKNOWN_MEASUREMENT_YEAR',
-      numeric_t90_allowed: false,
-      gap_years: null,
-      reason: 'measurement year is unknown',
-    };
-  }
-
-  if (gapYears > maxNumericGapYears) {
-    return {
-      use: 'HISTORICAL_PROFILE_HINT',
-      status: 'STALE_FOR_NUMERIC_T90',
-      numeric_t90_allowed: false,
-      gap_years: gapYears,
-      reason: `measurement is ${gapYears} years from target; age/trajectory model required`,
-    };
-  }
+  const use = blocks.includes('STALE_FOR_NUMERIC_T90') && protocolCalibrated
+    ? 'HISTORICAL_PROFILE_HINT'
+    : 'PROFILE_HINT_ONLY';
+  const reasonParts = [];
+  if (blocks.includes('PROTOCOL_MISMATCH')) reasonParts.push('start/timing rule is incompatible with standardized T90/50m');
+  if (blocks.includes('UNCALIBRATED_PROTOCOL')) reasonParts.push('timing/start protocol is not standardized against the project short-distance reference');
+  if (blocks.includes('UNKNOWN_MEASUREMENT_YEAR')) reasonParts.push('measurement year is unknown');
+  if (blocks.includes('STALE_FOR_NUMERIC_T90')) reasonParts.push(`measurement is ${gapYears} years from target; age/trajectory model required`);
 
   return {
-    use: 'NUMERIC_CANDIDATE',
-    status: 'STANDARDIZED_RECENT',
-    numeric_t90_allowed: true,
+    use,
+    status: blocks[0],
+    numeric_t90_allowed: false,
     gap_years: gapYears,
-    reason: null,
+    protocol_class: protocol,
+    blocks,
+    reason: reasonParts.join('; '),
   };
 }
 
