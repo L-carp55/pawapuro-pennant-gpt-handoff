@@ -7,17 +7,22 @@ import {
 } from '../src/ratings/speed_profile_shadow.mjs';
 
 const cfg = {
-  standardized_50m: { mean_sec: 6.354912, sd_sec: 0.265506 },
+  standardized_50m: { mean_sec: 6.3660225454545465, sd_sec: 0.2675713712220164 },
   position_player_t90_prior: { mean_sec: 4.0575, sd_sec: 0.100750285 },
   profile_shadow: { threshold_sec: 0.05, target_distance_m: 27.432 },
 };
 
-// Frozen physical-only overlap audit values. PowerPro is not used in these assertions.
+// PowerPro-independent overlap values after adding the independent 2026 standardized cohort.
+// The profile verdicts remain unchanged: Hayashi acceleration-favored; Tomosugi/Narama consistent.
 const hayashi = standardized50mPrior(5.99, cfg);
-assert.ok(Math.abs(hayashi.t90_prior_sec - 3.919029) < 1e-6);
+assert.ok(Math.abs(hayashi.t90_prior_sec - 3.915914) < 1e-6);
 assert.equal(classifySpeedProfile(hayashi.t90_prior_sec, 4.009385, 0.05).profile, 'acceleration_favored');
-assert.equal(classifySpeedProfile(3.960770, 3.938309, 0.05).profile, 'consistent');
-assert.equal(classifySpeedProfile(4.040458, 4.039846, 0.05).profile, 'consistent');
+const tomosugi = standardized50mPrior(6.10, cfg);
+assert.ok(Math.abs(tomosugi.t90_prior_sec - 3.957333) < 1e-6);
+assert.equal(classifySpeedProfile(tomosugi.t90_prior_sec, 3.938309, 0.05).profile, 'consistent');
+const narama = standardized50mPrior(6.31, cfg);
+assert.ok(Math.abs(narama.t90_prior_sec - 4.036405) < 1e-6);
+assert.equal(classifySpeedProfile(narama.t90_prior_sec, 4.039846, 0.05).profile, 'consistent');
 assert.equal(classifySpeedProfile(4.12, 4.00, 0.05).profile, 'top_speed_favored');
 
 // 2026 university-camp same-trial examples: 30m and 50m can create protocol-local 90ft bounds,
@@ -37,7 +42,7 @@ const shadow = buildSpeedProfileShadow({
   standardized_50m_sec: 5.78,
   same_trial: true,
   protocol: 'photoelectric_same_trial',
-  measurement_date: '2026-06-20',
+  measurement_date: '2026-06-22',
   top_speed_t90_sec: 4.00,
 }, cfg);
 assert.equal(shadow.status, 'SHADOW_ONLY');
