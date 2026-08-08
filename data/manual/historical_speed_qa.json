@@ -1,0 +1,135 @@
+{
+  "_purpose": "走力T90モデルが歴史的な俊足選手を不自然に扱わないか確認するQAケース。数値アンカーではなく受入テスト。",
+  "_rule": "盗塁・走塁技術を基礎走力へ混ぜない。一塁到達は接触→一塁なのでTier C QA。50m/60m単独でT90の上限を固定しない。",
+  "cases": [
+    {
+      "player": "福本豊",
+      "qa_id": "QA-S01",
+      "type": "historical_acceptance",
+      "acceptance": [
+        "50m/60mやヨーイドンの順位だけを理由に走力S級を禁止しない",
+        "シーズン106盗塁・通算1065盗塁そのものを理由に基礎走力を上げない",
+        "投手観察・スタート判断は盗塁得能側へ分離する",
+        "ベースランニング技術は走塁得能側へ分離する",
+        "90ft前後の身体的移動性能を示す独立証拠が歴史的水準ならS級を許容する"
+      ],
+      "evidence": [
+        {
+          "kind": "stealing_technique",
+          "source_name": "デイリースポーツ",
+          "source_url": "https://www.daily.co.jp/baseball/2023/02/20/0016069500.shtml",
+          "summary": "福本本人が、スムーズなスタートのため投手の動きを見て反応する訓練の重要性を説明。",
+          "speed_use": "stealing_ability_only"
+        },
+        {
+          "kind": "stealing_technique",
+          "source_name": "SPORTS COMMUNICATIONS",
+          "source_url": "https://www.ninomiyasports.com/archives/5594",
+          "summary": "福本本人が盗塁では投手の責任が大きく、スタートをうまく切れればアウトになりにくいと説明。",
+          "speed_use": "stealing_ability_only"
+        },
+        {
+          "kind": "owner_provided_design_testimony",
+          "source_name": "オーナー提供",
+          "source_url": null,
+          "summary": "野村克也が『ヨーイドンなら福本より速い選手はたくさんいる』趣旨を語ったという指摘。正確な原文は未確認なので引用文として固定しない。",
+          "speed_use": "qa_only"
+        }
+      ]
+    },
+    {
+      "player": "赤星憲広",
+      "qa_id": "QA-S07",
+      "type": "historical_contextual_time",
+      "evidence": [
+        {
+          "metric": "hp_to_1b_fastest_sec",
+          "value": 3.74,
+          "condition": "過去最速値として後年記事が引用",
+          "source_name": "デイリースポーツ",
+          "source_url": "https://www.daily.co.jp/tigers/2017/10/31/0010691130.shtml",
+          "speed_use": "tier_c_qa_only",
+          "reason": "接触→一塁の最速値であり、T90直接値ではない。"
+        }
+      ],
+      "acceptance": [
+        "T90推定が平均以下になる場合は、赤星級とされた一塁到達3.74秒との整合性を再点検する",
+        "3.74秒をそのままT90へ置換しない"
+      ]
+    },
+    {
+      "player": "イチロー",
+      "qa_id": "QA-S08",
+      "type": "historical_contextual_time",
+      "evidence": [
+        {
+          "metric": "hp_to_1b_avg_sec",
+          "value": 3.70,
+          "approximate": true,
+          "season": 2001,
+          "condition": "MLB1年目当時の平均として2019年記事が記載",
+          "source_name": "日刊スポーツ",
+          "source_url": "https://www.nikkansports.com/baseball/mlb/news/201903090000463.html",
+          "speed_use": "tier_c_qa_only",
+          "reason": "平均一塁到達で安定情報はあるが、打撃→走行移行と左打席距離が混ざる。"
+        },
+        {
+          "metric": "hp_to_1b_sec",
+          "value": 3.88,
+          "season": 2019,
+          "age": 45,
+          "condition": "オープン戦二ゴロ、全力疾走。テレビ局計測。",
+          "source_name": "日刊スポーツ",
+          "source_url": "https://www.nikkansports.com/baseball/mlb/news/201903090000463.html",
+          "speed_use": "tier_c_qa_only"
+        }
+      ],
+      "acceptance": [
+        "ピーク期と45歳時を同一能力として混ぜない",
+        "左打者距離とswing-to-run transitionを補正せずT90へ変換しない"
+      ]
+    },
+    {
+      "player": "周東佑京",
+      "qa_id": "QA-S09",
+      "type": "modern_cross_system",
+      "evidence": [
+        {
+          "metric": "event_max_speed_ftps",
+          "value": 30.4,
+          "season": 2023,
+          "context": "WBC準決勝メキシコ戦、村上の二塁打で一塁から生還した走塁。Statcast担当者によるイベント速度。",
+          "source_name": "Full-Count",
+          "source_url": "https://full-count.jp/2023/03/21/post1354277/",
+          "speed_use": "tier_b_qa_only",
+          "reason": "イベント単発の最大速度であり、MLB季節Sprint Speed（上位約2/3平均）とは別定義。"
+        },
+        {
+          "metric": "npb_plus_top_speed_kmh",
+          "value": 35.0,
+          "season": 2026,
+          "source_name": "NPB+手動収集",
+          "speed_use": "tier_b_direct_evidence"
+        },
+        {
+          "metric": "hp_to_1b_normal_sec",
+          "value": 3.75,
+          "season": 2024,
+          "condition": "通常スイングの内野安打",
+          "speed_use": "tier_c_qa_only"
+        },
+        {
+          "metric": "hp_to_1b_bunt_sec",
+          "value": 3.40,
+          "season": 2024,
+          "condition": "セーフティバント",
+          "speed_use": "exclude_from_speed"
+        }
+      ],
+      "acceptance": [
+        "通常3.75秒とバント3.40秒を同じ走力材料として混ぜない",
+        "最高速度が歴史的上位でも、T90は加速を含めて評価する"
+      ]
+    }
+  ]
+}
