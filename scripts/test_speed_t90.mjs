@@ -6,6 +6,7 @@ import {
 import {
   appraiseSpeedT90, appraiseSpeedForInfieldHit, appraiseSpeedForGdp,
 } from '../src/ratings/speed_appraisal.mjs';
+import { temporalGapStats, describeSpeedEvidenceTime } from '../src/ratings/speed_temporal.mjs';
 
 const ref = [3.7, 3.8, 3.9, 4.0, 4.1];
 assert.ok(Math.abs(normalInvCdf(0.5)) < 1e-8);
@@ -80,5 +81,24 @@ const ihGuard = appraiseSpeedForInfieldHit(proxyEvidence, proxyModels, ref);
 assert.equal(ihGuard.evidence_detail.terms.includes('infield_hit_rate'), false);
 const gdpGuard = appraiseSpeedForGdp(proxyEvidence, proxyModels, ref);
 assert.equal(gdpGuard.evidence_detail.terms.includes('gdp_avoid'), false);
+
+// Source-quality tier and temporal gap are independent.
+const temporalCfg = {
+  auto_apply_mean_drift: false,
+  by_gap_years: {
+    0: { r: 1, mean_change: 0, mae_change: 0, sd_change: 0 },
+    1: { r: .93, mean_change: -.18, mae_change: .45, sd_change: .56 },
+    2: { r: .90, mean_change: -.29, mae_change: .57, sd_change: .69 },
+    4: { r: .90, mean_change: -.61, mae_change: .81, sd_change: .76 },
+  },
+};
+const gap3 = temporalGapStats(3, temporalCfg);
+assert.ok(gap3.mae_change > .57 && gap3.mae_change < .81);
+const oldMeasurement = describeSpeedEvidenceTime(2022, 2019, temporalCfg, { measuredValue: 28.3 });
+assert.equal(oldMeasurement.gap_years, 3);
+assert.equal(oldMeasurement.temporal_status, 'MATERIAL_TEMPORAL_UNCERTAINTY');
+assert.equal(oldMeasurement.adjusted_value, 28.3); // mean aging drift is not auto-applied
+const veryOld = describeSpeedEvidenceTime(2017, 2024, temporalCfg, { measuredValue: 29 });
+assert.equal(veryOld.temporal_status, 'AGE_MODEL_REQUIRED');
 
 console.log('speed_t90 tests: PASS');
