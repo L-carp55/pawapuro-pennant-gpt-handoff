@@ -1,16 +1,18 @@
 {
   "_purpose": "走力の物理実測について、証拠Tierと測定年の近さを別軸で扱うための時間信頼度。",
-  "_source": "data/pennant.db mlb_bridge.detail: NPB接続79人・MLB Sprint Speed 276 player-years",
   "_measured_at": "2026-08-08",
-  "_important": "Tier A/Bを年ズレだけでTier Dへ格下げしない。測定種別の質は維持し、年ズレはtemporal uncertaintyとして別管理する。",
+  "_important": "Tier A/Bを年ズレだけでTier Dへ格下げしない。測定種別の質は維持し、年ズレはtemporal uncertaintyとして別管理する。異なる単位・定義の指標間で数値SDを流用しない。",
   "mlb_sprint_speed": {
+    "_source": "data/pennant.db mlb_bridge.detail: NPB接続79人・MLB Sprint Speed 276 player-years",
     "unit": "ft/s",
+    "metric_definition": "MLB Statcast seasonal Sprint Speed",
     "adjacent_pairs": 179,
     "one_year_mean_forward_change": -0.1782122905,
     "one_year_mean_change_se": 0.0420225839,
     "one_year_mean_change_95ci": [-0.2605765549, -0.0958480261],
     "auto_apply_mean_drift": false,
     "auto_apply_reason": "平均低下は確認できるが、年齢依存・選手選抜を分離していない。現時点では自動補正せず、expected_shiftとuncertaintyだけ記録する。",
+    "max_auto_gap_years": 4,
     "by_gap_years": {
       "0": {"r": 1.0, "mean_change": 0.0, "mae_change": 0.0, "sd_change": 0.0},
       "1": {"n": 179, "r": 0.9316941012, "mean_change": -0.1782122905, "mae_change": 0.4508379888, "sd_change": 0.5622238545},
@@ -24,5 +26,23 @@
       "3-4": "older_or_future_physical_measurement_with_material_temporal_uncertainty",
       "5+": "retain_as_physical_history_but_require_age/trajectory_model_before_numeric_T90_update"
     }
+  },
+  "npb_plus_top_speed": {
+    "status": "NUMERIC_TEMPORAL_UNCERTAINTY_UNCALIBRATED",
+    "unit": "km/h",
+    "metric_definition": "NPB+ top/sprint speed; public formula not confirmed equivalent to MLB Sprint Speed",
+    "auto_apply_mean_drift": false,
+    "max_auto_gap_years": 4,
+    "by_gap_years": {},
+    "note": "年差ゲートだけ共有する。MLB ft/sのMAE/SDをkm/hへ流用しない。NPB+複数年データが揃ったら独立較正する。"
+  },
+  "sprint30": {
+    "status": "NUMERIC_TEMPORAL_UNCERTAINTY_UNCALIBRATED",
+    "unit": "seconds",
+    "metric_definition": "curated 30m physical test; timing/start protocol varies by source",
+    "auto_apply_mean_drift": false,
+    "max_auto_gap_years": 4,
+    "by_gap_years": {},
+    "note": "年差ゲートだけ共有する。MLB Sprint Speedのft/s変動幅を秒へ流用しない。プロトコル差と加齢変化は別途較正する。"
   }
 }
