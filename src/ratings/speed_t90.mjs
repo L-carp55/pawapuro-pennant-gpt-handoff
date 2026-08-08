@@ -43,23 +43,90 @@ export function normalInvCdf(p) {
     (((((b[0]*r+b[1])*r+b[2])*r+b[3])*r+b[4])*r+1);
 }
 
+/** Standard-normal CDF. Accuracy is ample for the 1-100 rating scale. */
+export function normalCdf(z) {
+  if (z === Infinity) return 1;
+  if (z === -Infinity) return 0;
+  if (!finite(z)) return NaN;
+  // Abramowitz-Stegun erf approximation.
+  const sign = z < 0 ? -1 : 1;
+  const x = Math.abs(z) / Math.sqrt(2);
+  const p = 0.3275911;
+  const a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741;
+  const a4 = -1.453152027, a5 = 1.061405429;
+  const t = 1 / (1 + p * x);
+  const erfAbs = 1 - (((((a5*t + a4)*t + a3)*t + a2)*t + a1)*t) * Math.exp(-x*x);
+  return 0.5 * (1 + sign * erfAbs);
+}
+
+/**
+ * Reference may be either:
+ *   [3.8, 3.9, ...]
+ * or weighted entries:
+ *   [{t90_sec: 3.8, weight: 0.01, season: 2024}, ...]
+ *
+ * Weighted entries allow each season to contribute equal total mass even when a shortened season
+ * has fewer eligible players. Weight is never inferred from PA; the reference builder owns it.
+ */
+export function normalizeT90Reference(reference) {
+  if (!Array.isArray(reference)) return [];
+  const out = [];
+  for (const x of reference) {
+    if (finite(x)) out.push({ t90_sec: x, weight: 1 });
+    else if (x && finite(x.t90_sec)) {
+      const w = x.weight == null ? 1 : Number(x.weight);
+      if (finite(w) && w > 0) out.push({ ...x, weight: w });
+    }
+  }
+  return out;
+}
+
 /**
  * Faster-side percentile in an empirical T90 reference distribution.
- * Smaller T90 is faster. Ties use mid-rank.
+ * Smaller T90 is faster. Ties use weighted mid-rank.
  */
 export function t90FastPercentile(t90Sec, referenceTimes, opts = {}) {
-  if (!finite(t90Sec) || !Array.isArray(referenceTimes)) return null;
-  const xs = referenceTimes.filter(finite);
+  if (!finite(t90Sec)) return null;
+  const xs = normalizeT90Reference(referenceTimes);
   if (!xs.length) return null;
-  let faster = 0, equal = 0, slower = 0;
+  let fasterW = 0, equalW = 0, slowerW = 0;
   const eps = opts.tieEpsilon ?? 1e-9;
   for (const x of xs) {
-    if (Math.abs(x - t90Sec) <= eps) equal++;
-    else if (x < t90Sec) faster++;
-    else slower++;
+    if (Math.abs(x.t90_sec - t90Sec) <= eps) equalW += x.weight;
+    else if (x.t90_sec < t90Sec) fasterW += x.weight;
+    else slowerW += x.weight;
   }
-  // percentile from the fast side: more players slower than target => higher percentile.
-  return (slower + 0.5 * equal) / xs.length;
+  const totalW = fasterW + equalW + slowerW;
+  // percentile from the fast side: more reference mass slower than target => higher percentile.
+  return totalW > 0 ? (slowerW + 0.5 * equalW) / totalW : null;
+}
+
+/** Weighted inverse empirical CDF on the ordinary (fast-to-slow) T90 axis. */
+export function t90WeightedQuantile(referenceTimes, q) {
+  const xs = normalizeT90Reference(referenceTimes).sort((a, b) => a.t90_sec - b.t90_sec);
+  if (!xs.length || !finite(q)) return null;
+  const totalW = xs.reduce((s, x) => s + x.weight, 0);
+  if (!(totalW > 0)) return null;
+  q = clamp(q, 0, 1);
+
+  // Mid-rank CDF coordinates, matching t90FastPercentile's tie convention.
+  let cum = 0;
+  const pts = xs.map(x => {
+    const pMid = (cum + 0.5 * x.weight) / totalW;
+    cum += x.weight;
+    return { p: pMid, t90: x.t90_sec };
+  });
+  if (q <= pts[0].p) return pts[0].t90;
+  if (q >= pts.at(-1).p) return pts.at(-1).t90;
+  for (let i = 1; i < pts.length; i++) {
+    if (q <= pts[i].p) {
+      const a = pts[i - 1], b = pts[i];
+      if (Math.abs(b.p - a.p) < 1e-15) return (a.t90 + b.t90) / 2;
+      const f = (q - a.p) / (b.p - a.p);
+      return a.t90 + (b.t90 - a.t90) * f;
+    }
+  }
+  return pts.at(-1).t90;
 }
 
 /** Convert physical T90 to the project's 1-100 speed scale via empirical CDF. */
@@ -78,6 +145,31 @@ export function speedRatingFromT90(t90Sec, referenceTimes, opts = {}) {
     percentile_fast: p0,
     z,
     t90_sec: t90Sec,
+  };
+}
+
+/**
+ * Exact conceptual inverse used by the simulation engine: speed rating -> physical T90.
+ * This closes the shared f/inverse-f design:
+ *   real T90 -> appraisal rating -> engine T90.
+ */
+export function t90FromSpeedRating(rating, referenceTimes, opts = {}) {
+  if (!finite(rating)) return null;
+  const xs = normalizeT90Reference(referenceTimes);
+  if (!xs.length) return null;
+  const probabilityClip = opts.probabilityClip ?? 0.0005;
+  const center = opts.center ?? 50;
+  const spread = opts.spread ?? 15;
+  if (!(spread > 0)) return null;
+  const z = (rating - center) / spread;
+  const pFast = clamp(normalCdf(z), probabilityClip, 1 - probabilityClip);
+  const ordinaryT90Cdf = 1 - pFast; // small T90 = fast
+  const t90 = t90WeightedQuantile(xs, ordinaryT90Cdf);
+  return {
+    t90_sec: t90,
+    percentile_fast: pFast,
+    z,
+    rating,
   };
 }
 
