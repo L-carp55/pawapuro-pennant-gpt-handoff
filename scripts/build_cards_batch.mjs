@@ -8,7 +8,8 @@ import { DatabaseSync } from 'node:sqlite';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { makeContext, appraiseCard } from '../src/cards/pipeline.mjs';
+import { makeContext } from '../src/cards/pipeline.mjs';
+import { appraiseCardT90 } from '../src/cards/t90_pipeline_adapter.mjs';
 import { loadLedger } from '../src/ratings/scouting_input.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -41,7 +42,7 @@ const rows = [];
 for (const [g, names] of Object.entries(groups)) {
   for (const name of names) {
     // DBは登録名を全角スペース区切りで持つ。空白を落とすと一致しない
-    const r = appraiseCard(ctx, { name, mode: MODE, cfg, rv, runNorm, fldNorm, seasonRange: RANGE[g], scoutingLedger });
+    const r = appraiseCardT90(ctx, { name, mode: MODE, cfg, rv, runNorm, fldNorm, seasonRange: RANGE[g], scoutingLedger });
     if (r.error) { rows.push({ group: g, name, error: r.error }); continue; }
     const c = r.card;
     const label = c.card_type === 'prime_composite'
