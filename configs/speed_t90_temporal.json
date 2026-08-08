@@ -1,0 +1,28 @@
+{
+  "_purpose": "走力の物理実測について、証拠Tierと測定年の近さを別軸で扱うための時間信頼度。",
+  "_source": "data/pennant.db mlb_bridge.detail: NPB接続79人・MLB Sprint Speed 276 player-years",
+  "_measured_at": "2026-08-08",
+  "_important": "Tier A/Bを年ズレだけでTier Dへ格下げしない。測定種別の質は維持し、年ズレはtemporal uncertaintyとして別管理する。",
+  "mlb_sprint_speed": {
+    "unit": "ft/s",
+    "adjacent_pairs": 179,
+    "one_year_mean_forward_change": -0.1782122905,
+    "one_year_mean_change_se": 0.0420225839,
+    "one_year_mean_change_95ci": [-0.2605765549, -0.0958480261],
+    "auto_apply_mean_drift": false,
+    "auto_apply_reason": "平均低下は確認できるが、年齢依存・選手選抜を分離していない。現時点では自動補正せず、expected_shiftとuncertaintyだけ記録する。",
+    "by_gap_years": {
+      "0": {"r": 1.0, "mean_change": 0.0, "mae_change": 0.0, "sd_change": 0.0},
+      "1": {"n": 179, "r": 0.9316941012, "mean_change": -0.1782122905, "mae_change": 0.4508379888, "sd_change": 0.5622238545},
+      "2": {"n": 128, "r": 0.9027278052, "mean_change": -0.28828125, "mae_change": 0.57421875, "sd_change": 0.6876435963},
+      "3": {"n": 92, "r": 0.9068262545, "mean_change": -0.5141304348, "mae_change": 0.6793478261, "sd_change": 0.6890958436},
+      "4": {"n": 54, "r": 0.8990065658, "mean_change": -0.6092592593, "mae_change": 0.8055555556, "sd_change": 0.7641170805}
+    },
+    "policy": {
+      "0": "same_year",
+      "1-2": "near_year_physical_measurement",
+      "3-4": "older_or_future_physical_measurement_with_material_temporal_uncertainty",
+      "5+": "retain_as_physical_history_but_require_age/trajectory_model_before_numeric_T90_update"
+    }
+  }
+}
