@@ -52,16 +52,18 @@
   },
   "npb_transfer_gate": {
     "audit_file": "outputs/derived/npb_plus_mlb_sprint_overlap_audit_20260809.json",
-    "historical_name_overlaps": 4,
-    "within_4_years": 1,
-    "decision": "INSUFFICIENT_FOR_NPB_REGRESSION"
+    "historical_name_overlaps": 6,
+    "within_4_years": 2,
+    "direct_public_npb_calibration_set_found": false,
+    "decision": "INSUFFICIENT_FOR_NPB_REGRESSION_GATE_CLOSED"
   },
   "decision": [
     "MLB Statcast Sprint Speed -> T90モデルは2017-2025 full-MLB leave-one-year-out検証を通過したため、MLBドメインでは較正済みとして凍結する。",
     "Sprint Speed単独でも強いが、T10/T30を加えると別の加速情報が残差を説明し、T30追加でLOYO MAEが52.7%低下する。",
     "したがって走力T90は最高速度/ Sprint Speedだけではなく加速情報を含む設計が正しい。",
     "NPB+公式名称もSprint Speedだが、公開上MLB Statcastと同一の算出式・1秒窓・集計法とは確認できない。MLB係数をNPB+へ単位換算移植しない。",
-    "直接overlapは4人、査定年±4年以内は1人だけで回帰不能。NPB+の数値MAE床も、同一定義またはNPB bridgeが較正されるまで設定しない。"
+    "直接overlapを英字名まで使って再照合すると6人、査定年±4年以内はモンテロと筒香の2人。依然として回帰・誤差分布の同定には不足する。",
+    "同時にNPBプロ選手のHawk-Eye Sprint Speedとcleanな30m/90ftを結ぶ公開一次較正セットも見つからなかったため、NPB+ bridgeは現在スコープでは未較正のまま閉じる。"
   ],
   "qa": {
     "workflow_regression_run": "SUCCESS",
