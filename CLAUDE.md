@@ -17,7 +17,10 @@
 - **UI**: ブラウザで動く画面付き（ローカル起動、公開しない）
 
 ## 正本
-- 査定思想・数式・失敗ログの正本 = `docs/satei_handoff/`（GPT-5.6 Sol Pro壁打ちの引継ぎ12ファイル、SHA256照合済み）。ただし「KONAMI再現」前提の箇所は上記の照準切替で読み替える
+- 査定思想・数式・失敗ログの正本 = `docs/satei_handoff/`。ただし、**2026-08-09以降は `docs/satei_handoff/12_APPRAISAL_PRINCIPLES_20260809.md` を最新追補として先に確認し、旧v2仕様と矛盾する場合は追補を優先する**
+- **現在の作業順・停止条件の正本 = `docs/satei_handoff/13_CURRENT_CRITICAL_PATH_20260809.md`。新しい能力テーマへ進む前に必ず読む。** このファイルが `ACTIVE` の間は一般的な「次の能力へ進む」解釈より優先する
+- **`Speed v1 complete` はT90 production architecture / MLB calibration pathの完了を意味し、2026 NPBの最終走力査定完了を意味しない。** `13_CURRENT_CRITICAL_PATH_20260809.md` の肩力移行Gateを満たすまで肩力へ進まない
+- `13_CURRENT_CRITICAL_PATH_20260809.md` がACTIVEな間、ユーザーの `進めて` は走力critical pathの次工程を意味する。Codex待ちを理由に別能力へ横展開しない
 - 統合設計 = `docs/design/integration_design_v0.md`
 - 旧仕様 `11_LEGACY_REFERENCE_V1_9.md` は歴史資料。新設計と混同しない
 
@@ -35,6 +38,15 @@
 - 欠損を0にしない（null / 0 / 推定+フラグを区別）
 - 係数のハードコード禁止。未校正値は設定ファイルに分離し根拠を記録
 - 計算ログ（入力・途中式・出典）を全選手で保存
+- **本塁打数はパワーそのものではなく結果指標。** EV/Max EV、Barrel%、Hard-Hit%、ISO、xSLG、HR/FB、Launch Angle等から長打生成能力を先に評価し、HRは整合性QAへ回す
+- **ミート/パワー相互作用は「ミートを先に確定→その後パワー」の順序で扱う。** 同じ相互作用を両能力から同時に差し引いて二重弱体化しない
+- **走力は最初の走行ステップから約90ftを移動する身体能力。** 盗塁・走塁判断・スイング後移行・内野安打結果を混ぜない
+- **NPB+ Sprint Speed→T90は未較正。** 直接T90/T30/T10、標準化電子短距離を優先し、古い/方式不明30m・50mは方向情報、HP→1BはCONTEXT_ONLYとする
+- **少出場選手の低Sprint Speedは最大努力走行の未観測を疑う。** サンプル数/走行機会、PA、試合数を信頼度に反映し、固定PA閾値で自動減点しない
+- **データ不足選手は高信頼アンカーとの相対比較で補完可能。** SNS-A/Bの複数独立・複数年コンセンサスは順位制約として利用でき、映像直接確認は矛盾時のtie-breakerへ限定する
+- PowerPro / MLB The Showは独立査定凍結後の外部QA。差そのものを補正量や教師値にしない
+- **大規模なread-heavy収集をCodexへ委任する場合、サブエージェントによる並列実行をプロンプトで明示する。** 年代/球団/ソース別Agent＋独立QA Agent、別中間ファイル、親Agentのみ最終統合を原則とする
+- **Codexの最終チャット回答は正本にしない。** 重要な結論・coverage・制約・欠損・negative finding・QA・失敗理由・重要留保は必ず `docs/audits/...md` と必要なCSV/JSONへ保存し、`final responseにしか存在しない重要知見 = 0` の状態でcommit/pushする。新しいChatGPTセッションではCodex回答全文の貼り付けを求める前にremote branch・最新commit・audit成果物を確認する。詳細は `docs/satei_handoff/13_CURRENT_CRITICAL_PATH_20260809.md` §8
 - **校正の答え合わせは「12球団×143試合を回した時のリーグ全体の成績分布が実データの分布と一致するか」**（打率.250前後、本塁打王40本台、規定防御率上位2点台など）
 
 ## 技術方針
