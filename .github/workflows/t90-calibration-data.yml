@@ -8,6 +8,7 @@ on:
       - '.github/workflows/t90-calibration-data.yml'
       - 'scripts/fetch_statcast_running.mjs'
       - 'scripts/calibrate_t90_bridge.mjs'
+      - 'scripts/calibrate_t90_bridge_v2.mjs'
       - '.t90-trigger'
   workflow_dispatch:
 
@@ -31,7 +32,7 @@ jobs:
           echo '--- sprint_speed_2022.csv ---'
           head -n 1 data/raw/statcast_running/sprint_speed_2022.csv
       - name: Build T90 bridge calibration
-        run: node scripts/calibrate_t90_bridge.mjs
+        run: node scripts/calibrate_t90_bridge_v2.mjs
       - name: Upload T90 calibration inputs and output
         if: always()
         uses: actions/upload-artifact@v4
