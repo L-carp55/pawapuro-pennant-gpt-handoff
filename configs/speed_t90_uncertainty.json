@@ -1,6 +1,7 @@
 {
   "status": "PARTIAL_UNCERTAINTY_ONLY",
   "created_at": "2026-08-09",
+  "updated_at": "2026-08-09",
   "purpose": "T90点推定の不確実性を、検証済みの誤差床と未数量化の構造的不確実性に分けて表示する。信頼区間を捏造しない。",
   "v3_evaluation_scale": {
     "fast_anchor_t90_sec": 3.66,
@@ -16,30 +17,48 @@
       "unquantified_components": ["measurement_protocol_error"]
     },
     "mlb_sprint_t30": {
-      "mae_floor_sec": 0.0212,
-      "basis": "2022 NPB-connected n=26 leave-one-out MAE",
-      "unquantified_components": ["multi_year_generalization", "measurement_noise"]
+      "mae_floor_sec": 0.021111541769587728,
+      "basis": "2017-2025 MLB full multi-year sample, n=4381 player-seasons, leave-one-year-out MAE",
+      "validation": "9 held-out seasons; yearly MAE 0.0199-0.0246s",
+      "unquantified_components": ["measurement_noise"]
     },
     "mlb_sprint_t10": {
-      "mae_floor_sec": 0.0286,
-      "basis": "2022 NPB-connected n=26 leave-one-out MAE",
-      "unquantified_components": ["multi_year_generalization", "measurement_noise"]
+      "mae_floor_sec": 0.03065224038666541,
+      "basis": "2017-2025 MLB full multi-year sample, n=4381 player-seasons, leave-one-year-out MAE",
+      "validation": "Sprint-only LOYO MAE reduced by 31.3%",
+      "unquantified_components": ["measurement_noise"]
     },
     "mlb_sprint_speed_ftps": {
-      "mae_floor_sec": 0.0387,
-      "basis": "2022 NPB-connected n=26 leave-one-out MAE",
-      "unquantified_components": ["acceleration_profile", "multi_year_generalization", "measurement_noise"]
+      "mae_floor_sec": 0.04463374331109772,
+      "basis": "2017-2025 MLB full multi-year sample, n=4381 player-seasons, leave-one-year-out MAE",
+      "validation": "9 held-out seasons; yearly MAE 0.0408-0.0472s",
+      "unquantified_components": ["acceleration_profile", "measurement_noise"]
+    },
+    "npb_plus_sprint_speed_kmh": {
+      "mae_floor_sec": null,
+      "status": "NPB_BRIDGE_UNCALIBRATED",
+      "mlb_reference_sprint_only_loyo_mae_sec": 0.04463374331109772,
+      "reference_value_is_not_npb_error_floor": true,
+      "unquantified_components": ["npb_plus_vs_mlb_metric_definition_bridge", "acceleration_profile", "npb_population_bridge", "measurement_noise"]
     },
     "npb_plus_top_speed_kmh": {
-      "mae_floor_sec": 0.0387,
-      "basis": "MLB top-speed-only structural floor only; NPB+ bridge itself is not calibrated",
-      "floor_transfer_only": true,
+      "mae_floor_sec": null,
+      "status": "LEGACY_SOURCE_ALIAS",
+      "canonical_source": "npb_plus_sprint_speed_kmh",
+      "mlb_reference_sprint_only_loyo_mae_sec": 0.04463374331109772,
+      "reference_value_is_not_npb_error_floor": true,
       "unquantified_components": ["npb_plus_vs_mlb_metric_definition_bridge", "acceleration_profile", "npb_population_bridge", "measurement_noise"]
+    },
+    "npb_sprint_speed_acceleration": {
+      "mae_floor_sec": null,
+      "status": "UNCALIBRATED",
+      "unquantified_components": ["joint_model_calibration", "npb_acceleration_measurement"]
     },
     "npb_top_speed_acceleration": {
       "mae_floor_sec": null,
-      "status": "UNCALIBRATED",
-      "unquantified_components": ["joint_model_calibration"]
+      "status": "LEGACY_SOURCE_ALIAS",
+      "canonical_source": "npb_sprint_speed_acceleration",
+      "unquantified_components": ["joint_model_calibration", "npb_acceleration_measurement"]
     },
     "hp_to_1b_avg_sec": {
       "mae_floor_sec": null,
@@ -58,8 +77,9 @@
     }
   },
   "display_rules": [
-    "mae_floor_sec is a minimum validated expected-absolute-error floor, not a confidence interval",
+    "mae_floor_sec is a validated expected-absolute-error floor for the SAME metric/model domain, not a confidence interval",
     "do not display ±mae_floor_sec as a 68% or 95% interval",
+    "do not transfer an MLB numeric MAE floor to NPB+ until public/empirical metric equivalence or an NPB bridge is calibrated",
     "if unquantified_components is non-empty, full uncertainty is wider/unknown",
     "for v3 evaluation QA only, mae_floor_sec may be converted to rating-point sensitivity using the frozen v3 linear slope",
     "final production CDF must compute rating sensitivity from that CDF rather than reuse the v3 points-per-second slope"
