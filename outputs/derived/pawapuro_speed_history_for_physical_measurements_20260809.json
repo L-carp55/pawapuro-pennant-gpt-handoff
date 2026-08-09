@@ -1,0 +1,3557 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-09",
+  "purpose": "Collect only time-aligned PowerPro speed-rating history for prior short-distance physical measurements. No calibration, correlation analysis, or rating modification is performed.",
+  "scope": {
+    "included_measurement_metrics": [
+      "T90ft / 90ft",
+      "30m",
+      "electronic/photoelectric 50m",
+      "other 50m"
+    ],
+    "inclusion_rule": "All records in npb_speed_physical_evidence_full_20260809.json with metric T90ft, 30m, or 50m and known measurement year.",
+    "excluded_rule": "Unknown-year records receive no PowerPro timepoint."
+  },
+  "timepoint_rules": {
+    "nearest": "Use the actual player-data version nearest to the measurement, not title year by itself.",
+    "pawa2024_2025": "2024 end = PS4 Ver.1.07 dated 2024-11-26; 2025 end = PS4 Ver.1.14 dated 2025-11-20. The work=2024 terminal table is never used as either endpoint.",
+    "pawa2026": "2026 opening = default player-data page at 2026-06-11 release, not later v1.10/v1.11 pages.",
+    "sources": "KONAMI official pages establish version/date. BASELESS pages establish numeric speed. Local pawapuro_full terminal snapshots supplement past-title history only."
+  },
+  "qa": {
+    "known_measurement_clusters": 16,
+    "known_measurement_players": 15,
+    "exact_measurement_dates_available": 3,
+    "nearest_pawapuro_speed_acquired": 16,
+    "nearest_to_2025_end_change_calculable": 16,
+    "unknown_measurement_year_clusters_not_assigned": 35,
+    "unknown_measurement_year_players_not_assigned": 34,
+    "within_plus_minus_1_year": 13,
+    "within_plus_minus_2_years": 14,
+    "maximum_increase_nearest_to_2025_end": [
+      {
+        "player": "塩見 泰隆",
+        "cluster": "existing_30m_塩見泰隆_2018",
+        "change": 14
+      }
+    ],
+    "maximum_decline_nearest_to_2025_end": [
+      {
+        "player": "筒香 嘉智",
+        "cluster": "mlb_statcast_running_splits_筒香嘉智_2022",
+        "change": -7
+      }
+    ],
+    "unchanged_nearest_to_2025_end": [
+      {
+        "player": "モンテロ",
+        "cluster": "mlb_statcast_running_splits_モンテロ_2024",
+        "speed": 49
+      },
+      {
+        "player": "佐藤 輝明",
+        "cluster": "existing_30m_佐藤輝明_2020",
+        "speed": 68
+      },
+      {
+        "player": "小幡 竜平",
+        "cluster": "existing_30m_小幡竜平_2018",
+        "speed": 77
+      },
+      {
+        "player": "サンタナ",
+        "cluster": "mlb_statcast_running_splits_サンタナ_2020",
+        "speed": 47
+      },
+      {
+        "player": "奈良間 大己",
+        "cluster": "standardized_50m_2022-06-19_奈良間大己",
+        "speed": 64
+      }
+    ]
+  },
+  "records": [
+    {
+      "player": "筒香 嘉智",
+      "team": "横浜DeNAベイスターズ",
+      "measurement_cluster_id": "mlb_statcast_running_splits_筒香嘉智_2022",
+      "measurement_metric": "T90ft",
+      "measurement_value": 4.2,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "T10ft",
+          "value": 0.91,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T30ft",
+          "value": 1.89,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T90ft",
+          "value": 4.2,
+          "unit": "seconds"
+        },
+        {
+          "metric": "MLB_Sprint_Speed",
+          "value": 26.1,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2022,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "Statcast_running_split",
+      "measurement_event": null,
+      "measurement_usage_class": "NUMERIC_T90_CANDIDATE",
+      "measurement_confidence": "high",
+      "measurement_source": "Baseball Savant / Statcast",
+      "measurement_source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2022",
+      "nearest_pawapuro_title": "パワフルプロ野球2024-2025",
+      "nearest_pawapuro_version": "1.01",
+      "nearest_pawapuro_date": "2024-07-18",
+      "nearest_pawapuro_speed": 52,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2024/dat_BA_1_01.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2024-2025/update/240718",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 2,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": null,
+      "pawapuro_2022_terminal_speed": null,
+      "pawapuro_2024_end_speed": 52,
+      "pawapuro_2025_opening_speed": 52,
+      "pawapuro_2025_end_speed": 45,
+      "pawapuro_2026_opening_speed": 45,
+      "speed_change_nearest_to_2025_end": -7,
+      "speed_change_nearest_to_2026": -7,
+      "source_urls": [
+        "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2022",
+        "https://www.baseless.org/data/source/2024/dat_BA_1_01.html",
+        "https://www.konami.com/pawa/2024-2025/update/240718",
+        "https://www.baseless.org/data/source/2024/dat_BA_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_BA_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_BA.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "nearest_to_measurement",
+            "major_update_snapshot"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.01",
+          "date": "2024-07-18",
+          "release_or_update_date": "2024-07-18",
+          "date_precision": "day",
+          "speed": 52,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_BA_1_01.html",
+            "https://www.konami.com/pawa/2024-2025/update/240718"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_BA_1_01.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/240718",
+          "source_date_basis": "official first-update effective date",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 52,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_BA_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_BA_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 52,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_BA_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_BA_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 45,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_BA_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_BA_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 45,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_BA.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_BA.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "林 琢真",
+      "team": "横浜DeNAベイスターズ",
+      "measurement_cluster_id": "standardized_50m_2022-06-19_林琢真",
+      "measurement_metric": "50m",
+      "measurement_value": 5.99,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "50m",
+          "value": 5.99,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2022,
+      "measurement_date": "2022-06-19",
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "electronic_photoelectric",
+      "measurement_event": "侍ジャパン大学代表選考合宿",
+      "measurement_usage_class": "STANDARDIZED_PRIOR",
+      "measurement_confidence": "high",
+      "measurement_source": "Existing standardized 50m reference",
+      "measurement_source_url": "https://www.youtube.com/watch?v=fC8_8iA7Cao",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2022",
+      "nearest_pawapuro_version": "1.09",
+      "nearest_pawapuro_date": "2023-03-30",
+      "nearest_pawapuro_speed": 87,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2022/dat_BA_1_09.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2022/update/230330",
+      "measurement_to_pawapuro_gap_days": 284,
+      "measurement_to_pawapuro_gap_years": null,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": null,
+      "pawapuro_2022_terminal_speed": 87,
+      "pawapuro_2024_end_speed": 87,
+      "pawapuro_2025_opening_speed": 87,
+      "pawapuro_2025_end_speed": 82,
+      "pawapuro_2026_opening_speed": 82,
+      "speed_change_nearest_to_2025_end": -5,
+      "speed_change_nearest_to_2026": -5,
+      "source_urls": [
+        "https://www.youtube.com/watch?v=fC8_8iA7Cao",
+        "https://www.baseless.org/data/source/2022/dat_BA_1_09.html",
+        "https://www.konami.com/pawa/2022/update/230330",
+        "https://www.baseless.org/data/source/2024/dat_BA_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_BA_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_BA.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 87,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_BA_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_BA_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "林",
+          "archive_team": "横浜DeNAベイスターズ"
+        },
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.09",
+          "date": "2023-03-30",
+          "release_or_update_date": "2023-03-30",
+          "date_precision": "day",
+          "speed": 87,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_BA_1_09.html",
+            "https://www.konami.com/pawa/2022/update/230330"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_BA_1_09.html",
+          "official_update_url": "https://www.konami.com/pawa/2022/update/230330",
+          "source_date_basis": "official update effective date",
+          "archive_work": "2022"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 87,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_BA_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_BA_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 87,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_BA_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_BA_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 82,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_BA_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_BA_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 82,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_BA.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_BA.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "モンテロ",
+      "team": "広島東洋カープ",
+      "measurement_cluster_id": "mlb_statcast_running_splits_モンテロ_2024",
+      "measurement_metric": "T90ft",
+      "measurement_value": 4.2,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "T10ft",
+          "value": 0.9,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T30ft",
+          "value": 1.88,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T90ft",
+          "value": 4.2,
+          "unit": "seconds"
+        },
+        {
+          "metric": "MLB_Sprint_Speed",
+          "value": 26.2,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2024,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "Statcast_running_split",
+      "measurement_event": null,
+      "measurement_usage_class": "NUMERIC_T90_CANDIDATE",
+      "measurement_confidence": "high",
+      "measurement_source": "Baseball Savant / Statcast",
+      "measurement_source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024",
+      "nearest_pawapuro_title": "パワフルプロ野球2024-2025",
+      "nearest_pawapuro_version": "1.08",
+      "nearest_pawapuro_date": "2025-03-27",
+      "nearest_pawapuro_speed": 49,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2024/dat_C_1_08.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 1,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": null,
+      "pawapuro_2022_terminal_speed": null,
+      "pawapuro_2024_end_speed": null,
+      "pawapuro_2025_opening_speed": 49,
+      "pawapuro_2025_end_speed": 49,
+      "pawapuro_2026_opening_speed": 49,
+      "speed_change_nearest_to_2025_end": 0,
+      "speed_change_nearest_to_2026": 0,
+      "source_urls": [
+        "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024",
+        "https://www.baseless.org/data/source/2024/dat_C_1_08.html",
+        "https://www.konami.com/pawa/2024-2025/update/250327",
+        "https://www.baseless.org/data/source/2024/dat_C_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_C_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_C.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "nearest_to_measurement",
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 49,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_C_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_C_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 49,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_C_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_C_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 49,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_C.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_C.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "秋山 翔吾",
+      "team": "広島東洋カープ",
+      "measurement_cluster_id": "mlb_statcast_running_splits_秋山翔吾_2021",
+      "measurement_metric": "T90ft",
+      "measurement_value": 3.97,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "T10ft",
+          "value": 0.86,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T30ft",
+          "value": 1.78,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T90ft",
+          "value": 3.97,
+          "unit": "seconds"
+        },
+        {
+          "metric": "MLB_Sprint_Speed",
+          "value": 28,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2021,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "Statcast_running_split",
+      "measurement_event": null,
+      "measurement_usage_class": "HISTORICAL_PROFILE_HINT",
+      "measurement_confidence": "high",
+      "measurement_source": "Baseball Savant / Statcast",
+      "measurement_source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2022",
+      "nearest_pawapuro_version": "1.07",
+      "nearest_pawapuro_date": "2022-09-29",
+      "nearest_pawapuro_speed": 72,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2022/dat_C_1_07.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2022/update/220929",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 1,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": null,
+      "pawapuro_2022_terminal_speed": 72,
+      "pawapuro_2024_end_speed": 77,
+      "pawapuro_2025_opening_speed": 77,
+      "pawapuro_2025_end_speed": 77,
+      "pawapuro_2026_opening_speed": 77,
+      "speed_change_nearest_to_2025_end": 5,
+      "speed_change_nearest_to_2026": 5,
+      "source_urls": [
+        "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021",
+        "https://www.baseless.org/data/source/2022/dat_C_1_07.html",
+        "https://www.konami.com/pawa/2022/update/220929",
+        "https://www.baseless.org/data/source/2024/dat_C_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_C_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_C.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.07",
+          "date": "2022-09-29",
+          "release_or_update_date": "2022-09-29",
+          "date_precision": "day",
+          "speed": 72,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_C_1_07.html",
+            "https://www.konami.com/pawa/2022/update/220929"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_C_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2022/update/220929",
+          "source_date_basis": "official update effective date",
+          "archive_work": "2022"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 72,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_C_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_C_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "秋　山",
+          "archive_team": "広島東洋カープ"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 77,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_C_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_C_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 77,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_C_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_C_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 77,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_C_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_C_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 77,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_C.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_C.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "佐藤 輝明",
+      "team": "阪神タイガース",
+      "measurement_cluster_id": "existing_30m_佐藤輝明_2020",
+      "measurement_metric": "30m",
+      "measurement_value": 4,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "30m",
+          "value": 4,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2020,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "team_physical_test_protocol_unspecified",
+      "measurement_event": null,
+      "measurement_usage_class": "HISTORICAL_PROFILE_HINT",
+      "measurement_confidence": "medium",
+      "measurement_source": "デイリースポーツ",
+      "measurement_source_url": "https://origin.daily.co.jp/tigers/2020/12/07/0013919463.shtml",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2020",
+      "nearest_pawapuro_version": "1.09",
+      "nearest_pawapuro_date": "2021-04-08",
+      "nearest_pawapuro_speed": 68,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2020/dat_T_1_09.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2020/update/210408",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 1,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": 68,
+      "pawapuro_2022_terminal_speed": 68,
+      "pawapuro_2024_end_speed": 68,
+      "pawapuro_2025_opening_speed": 68,
+      "pawapuro_2025_end_speed": 68,
+      "pawapuro_2026_opening_speed": 68,
+      "speed_change_nearest_to_2025_end": 0,
+      "speed_change_nearest_to_2026": 0,
+      "source_urls": [
+        "https://origin.daily.co.jp/tigers/2020/12/07/0013919463.shtml",
+        "https://www.baseless.org/data/source/2020/dat_T_1_09.html",
+        "https://www.konami.com/pawa/2020/update/210408",
+        "https://www.baseless.org/data/source/2024/dat_T_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_T_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_T.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2020",
+          "version": "1.16 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 68,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2020/dat_T_1_16.html",
+            "https://www.baseless.org/data/source/2020/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2020/dat_T_1_16.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2020",
+          "archive_name": "佐藤輝",
+          "archive_team": "阪神タイガース"
+        },
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2020",
+          "version": "1.09",
+          "date": "2021-04-08",
+          "release_or_update_date": "2021-04-08",
+          "date_precision": "day",
+          "speed": 68,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2020/dat_T_1_09.html",
+            "https://www.konami.com/pawa/2020/update/210408"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2020/dat_T_1_09.html",
+          "official_update_url": "https://www.konami.com/pawa/2020/update/210408",
+          "source_date_basis": "official update effective date",
+          "archive_work": "2020"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 68,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_T_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_T_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "佐藤輝",
+          "archive_team": "阪神タイガース"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 68,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_T_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_T_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 68,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_T_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_T_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 68,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_T_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_T_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 68,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_T.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_T.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "小幡 竜平",
+      "team": "阪神タイガース",
+      "measurement_cluster_id": "existing_30m_小幡竜平_2018",
+      "measurement_metric": "30m",
+      "measurement_value": 3.98,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "30m",
+          "value": 3.98,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2018,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "team_physical_test_protocol_unspecified",
+      "measurement_event": null,
+      "measurement_usage_class": "HISTORICAL_PROFILE_HINT",
+      "measurement_confidence": "medium",
+      "measurement_source": "スポーツ報知",
+      "measurement_source_url": "https://hochi.news/articles/20181202-OHT1T50237.html",
+      "nearest_pawapuro_title": "実況パワフルプロ野球2018",
+      "nearest_pawapuro_version": "1.10",
+      "nearest_pawapuro_date": "2019-04-23",
+      "nearest_pawapuro_speed": 77,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2018/dat_T_1_10.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2018/update/190418",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 1,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": 77,
+      "pawapuro_2020_terminal_speed": 77,
+      "pawapuro_2022_terminal_speed": 77,
+      "pawapuro_2024_end_speed": 77,
+      "pawapuro_2025_opening_speed": 77,
+      "pawapuro_2025_end_speed": 77,
+      "pawapuro_2026_opening_speed": 77,
+      "speed_change_nearest_to_2025_end": 0,
+      "speed_change_nearest_to_2026": 0,
+      "source_urls": [
+        "https://hochi.news/articles/20181202-OHT1T50237.html",
+        "https://www.baseless.org/data/source/2018/dat_T_1_10.html",
+        "https://www.konami.com/pawa/2018/update/190418",
+        "https://www.baseless.org/data/source/2024/dat_T_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_T_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_T.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "実況パワフルプロ野球2018",
+          "version": "1.15 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 77,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2018/dat_T_1_15.html",
+            "https://www.baseless.org/data/source/2018/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2018/dat_T_1_15.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2018",
+          "archive_name": "小　幡",
+          "archive_team": "阪神タイガース"
+        },
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "実況パワフルプロ野球2018",
+          "version": "1.10",
+          "date": "2019-04-23",
+          "release_or_update_date": "2019-04-23",
+          "date_precision": "day",
+          "speed": 77,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2018/dat_T_1_10.html",
+            "https://www.konami.com/pawa/2018/update/190418"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2018/dat_T_1_10.html",
+          "official_update_url": "https://www.konami.com/pawa/2018/update/190418",
+          "source_date_basis": "official update effective date",
+          "archive_work": "2018"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2020",
+          "version": "1.16 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 77,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2020/dat_T_1_16.html",
+            "https://www.baseless.org/data/source/2020/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2020/dat_T_1_16.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2020",
+          "archive_name": "小　幡",
+          "archive_team": "阪神タイガース"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 77,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_T_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_T_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "小　幡",
+          "archive_team": "阪神タイガース"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 77,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_T_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_T_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 77,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_T_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_T_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 77,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_T_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_T_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 77,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_T.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_T.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "ポランコ",
+      "team": "千葉ロッテマリーンズ",
+      "measurement_cluster_id": "mlb_statcast_running_splits_ポランコ_2021",
+      "measurement_metric": "T90ft",
+      "measurement_value": 3.99,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "T10ft",
+          "value": 0.84,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T30ft",
+          "value": 1.77,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T90ft",
+          "value": 3.99,
+          "unit": "seconds"
+        },
+        {
+          "metric": "MLB_Sprint_Speed",
+          "value": 27.2,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2021,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "Statcast_running_split",
+      "measurement_event": null,
+      "measurement_usage_class": "HISTORICAL_PROFILE_HINT",
+      "measurement_confidence": "high",
+      "measurement_source": "Baseball Savant / Statcast",
+      "measurement_source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2022",
+      "nearest_pawapuro_version": "default initial player data",
+      "nearest_pawapuro_date": "2022-04-21",
+      "nearest_pawapuro_speed": 67,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2022/dat_M.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2022/",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 1,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": null,
+      "pawapuro_2022_terminal_speed": 63,
+      "pawapuro_2024_end_speed": 63,
+      "pawapuro_2025_opening_speed": 63,
+      "pawapuro_2025_end_speed": 63,
+      "pawapuro_2026_opening_speed": 63,
+      "speed_change_nearest_to_2025_end": -4,
+      "speed_change_nearest_to_2026": -4,
+      "source_urls": [
+        "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021",
+        "https://www.baseless.org/data/source/2022/dat_M.html",
+        "https://www.konami.com/pawa/2022/",
+        "https://www.baseless.org/data/source/2024/dat_M_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_M_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_M.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "default initial player data",
+          "date": "2022-04-21",
+          "release_or_update_date": "2022-04-21",
+          "date_precision": "day",
+          "speed": 67,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_M.html",
+            "https://www.konami.com/pawa/2022/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_M.html",
+          "official_update_url": "https://www.konami.com/pawa/2022/",
+          "source_date_basis": "title release date",
+          "archive_work": "2022"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 63,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_M_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_M_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "ポランコ",
+          "archive_team": "千葉ロッテマリーンズ"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 63,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_M_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_M_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 63,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_M_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_M_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 63,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_M_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_M_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 63,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_M.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_M.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "友杉 篤輝",
+      "team": "千葉ロッテマリーンズ",
+      "measurement_cluster_id": "standardized_50m_2022-06-19_友杉篤輝",
+      "measurement_metric": "50m",
+      "measurement_value": 6.1,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "50m",
+          "value": 6.1,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2022,
+      "measurement_date": "2022-06-19",
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "electronic_photoelectric",
+      "measurement_event": "侍ジャパン大学代表選考合宿",
+      "measurement_usage_class": "STANDARDIZED_PRIOR",
+      "measurement_confidence": "high",
+      "measurement_source": "Existing standardized 50m reference",
+      "measurement_source_url": "https://www.youtube.com/watch?v=fC8_8iA7Cao",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2022",
+      "nearest_pawapuro_version": "1.09",
+      "nearest_pawapuro_date": "2023-03-30",
+      "nearest_pawapuro_speed": 81,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2022/dat_M_1_09.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2022/update/230330",
+      "measurement_to_pawapuro_gap_days": 284,
+      "measurement_to_pawapuro_gap_years": null,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": null,
+      "pawapuro_2022_terminal_speed": 87,
+      "pawapuro_2024_end_speed": 87,
+      "pawapuro_2025_opening_speed": 87,
+      "pawapuro_2025_end_speed": 87,
+      "pawapuro_2026_opening_speed": 87,
+      "speed_change_nearest_to_2025_end": 6,
+      "speed_change_nearest_to_2026": 6,
+      "source_urls": [
+        "https://www.youtube.com/watch?v=fC8_8iA7Cao",
+        "https://www.baseless.org/data/source/2022/dat_M_1_09.html",
+        "https://www.konami.com/pawa/2022/update/230330",
+        "https://www.baseless.org/data/source/2024/dat_M_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_M_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_M.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 87,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_M_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_M_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "友　杉",
+          "archive_team": "千葉ロッテマリーンズ"
+        },
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.09",
+          "date": "2023-03-30",
+          "release_or_update_date": "2023-03-30",
+          "date_precision": "day",
+          "speed": 81,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_M_1_09.html",
+            "https://www.konami.com/pawa/2022/update/230330"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_M_1_09.html",
+          "official_update_url": "https://www.konami.com/pawa/2022/update/230330",
+          "source_date_basis": "official update effective date",
+          "archive_work": "2022"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 87,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_M_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_M_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 87,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_M_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_M_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 87,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_M_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_M_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 87,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_M.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_M.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "カリステ",
+      "team": "中日ドラゴンズ",
+      "measurement_cluster_id": "mlb_statcast_running_splits_カリステ_2017",
+      "measurement_metric": "T90ft",
+      "measurement_value": 3.94,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "T10ft",
+          "value": 0.87,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T30ft",
+          "value": 1.82,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T90ft",
+          "value": 3.94,
+          "unit": "seconds"
+        },
+        {
+          "metric": "MLB_Sprint_Speed",
+          "value": 29.3,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2017,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "Statcast_running_split",
+      "measurement_event": null,
+      "measurement_usage_class": "HISTORICAL_PROFILE_HINT",
+      "measurement_confidence": "high",
+      "measurement_source": "Baseball Savant / Statcast",
+      "measurement_source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2017",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2022",
+      "nearest_pawapuro_version": "1.09",
+      "nearest_pawapuro_date": "2023-03-30",
+      "nearest_pawapuro_speed": 87,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2022/dat_D_1_09.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2022/update/230330",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 6,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": null,
+      "pawapuro_2022_terminal_speed": 82,
+      "pawapuro_2024_end_speed": 82,
+      "pawapuro_2025_opening_speed": 82,
+      "pawapuro_2025_end_speed": 82,
+      "pawapuro_2026_opening_speed": 82,
+      "speed_change_nearest_to_2025_end": -5,
+      "speed_change_nearest_to_2026": -5,
+      "source_urls": [
+        "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2017",
+        "https://www.baseless.org/data/source/2022/dat_D_1_09.html",
+        "https://www.konami.com/pawa/2022/update/230330",
+        "https://www.baseless.org/data/source/2024/dat_D_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_D_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_D.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 82,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_D_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_D_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "カリステ",
+          "archive_team": "中日ドラゴンズ"
+        },
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.09",
+          "date": "2023-03-30",
+          "release_or_update_date": "2023-03-30",
+          "date_precision": "day",
+          "speed": 87,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_D_1_09.html",
+            "https://www.konami.com/pawa/2022/update/230330"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_D_1_09.html",
+          "official_update_url": "https://www.konami.com/pawa/2022/update/230330",
+          "source_date_basis": "official update effective date",
+          "archive_work": "2022"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 82,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_D_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_D_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 82,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_D_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_D_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 82,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_D_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_D_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 82,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_D.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_D.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "岡林 勇希",
+      "team": "中日ドラゴンズ",
+      "measurement_cluster_id": "okabayashi_komono_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.8,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "50m",
+          "value": 5.8,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2019,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "profile_50m_protocol_unspecified",
+      "measurement_event": null,
+      "measurement_usage_class": "HISTORICAL_PROFILE_HINT",
+      "measurement_confidence": "medium",
+      "measurement_source": "日刊スポーツ",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/201910290000658.html",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2020",
+      "nearest_pawapuro_version": "default initial player data",
+      "nearest_pawapuro_date": "2020-07-09",
+      "nearest_pawapuro_speed": 78,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2020/dat_D.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2020/",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 1,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": 78,
+      "pawapuro_2022_terminal_speed": 81,
+      "pawapuro_2024_end_speed": 81,
+      "pawapuro_2025_opening_speed": 81,
+      "pawapuro_2025_end_speed": 81,
+      "pawapuro_2026_opening_speed": 81,
+      "speed_change_nearest_to_2025_end": 3,
+      "speed_change_nearest_to_2026": 3,
+      "source_urls": [
+        "https://www.nikkansports.com/baseball/news/201910290000658.html",
+        "https://www.baseless.org/data/source/2020/dat_D.html",
+        "https://www.konami.com/pawa/2020/",
+        "https://www.baseless.org/data/source/2024/dat_D_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_D_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_D.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2020",
+          "version": "default initial player data",
+          "date": "2020-07-09",
+          "release_or_update_date": "2020-07-09",
+          "date_precision": "day",
+          "speed": 78,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2020/dat_D.html",
+            "https://www.konami.com/pawa/2020/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2020/dat_D.html",
+          "official_update_url": "https://www.konami.com/pawa/2020/",
+          "source_date_basis": "title release date",
+          "archive_work": "2020"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2020",
+          "version": "1.16 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 78,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2020/dat_D_1_16.html",
+            "https://www.baseless.org/data/source/2020/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2020/dat_D_1_16.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2020",
+          "archive_name": "岡　林",
+          "archive_team": "中日ドラゴンズ"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 81,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_D_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_D_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "岡　林",
+          "archive_team": "中日ドラゴンズ"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 81,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_D_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_D_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 81,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_D_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_D_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 81,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_D_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_D_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 81,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_D.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_D.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "サンタナ",
+      "team": "東京ヤクルトスワローズ",
+      "measurement_cluster_id": "mlb_statcast_running_splits_サンタナ_2020",
+      "measurement_metric": "T90ft",
+      "measurement_value": 4.13,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "T10ft",
+          "value": 0.91,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T30ft",
+          "value": 1.87,
+          "unit": "seconds"
+        },
+        {
+          "metric": "T90ft",
+          "value": 4.13,
+          "unit": "seconds"
+        },
+        {
+          "metric": "MLB_Sprint_Speed",
+          "value": 26.9,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2020,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "Statcast_running_split",
+      "measurement_event": null,
+      "measurement_usage_class": "HISTORICAL_PROFILE_HINT",
+      "measurement_confidence": "high",
+      "measurement_source": "Baseball Savant / Statcast",
+      "measurement_source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2020",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2020",
+      "nearest_pawapuro_version": "1.09",
+      "nearest_pawapuro_date": "2021-04-08",
+      "nearest_pawapuro_speed": 47,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2020/dat_S_1_09.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2020/update/210408",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 1,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": 47,
+      "pawapuro_2022_terminal_speed": 47,
+      "pawapuro_2024_end_speed": 47,
+      "pawapuro_2025_opening_speed": 47,
+      "pawapuro_2025_end_speed": 47,
+      "pawapuro_2026_opening_speed": 47,
+      "speed_change_nearest_to_2025_end": 0,
+      "speed_change_nearest_to_2026": 0,
+      "source_urls": [
+        "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2020",
+        "https://www.baseless.org/data/source/2020/dat_S_1_09.html",
+        "https://www.konami.com/pawa/2020/update/210408",
+        "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_S.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2020",
+          "version": "1.16 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 47,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2020/dat_S_1_16.html",
+            "https://www.baseless.org/data/source/2020/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2020/dat_S_1_16.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2020",
+          "archive_name": "サンタナ",
+          "archive_team": "東京ヤクルトスワローズ"
+        },
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2020",
+          "version": "1.09",
+          "date": "2021-04-08",
+          "release_or_update_date": "2021-04-08",
+          "date_precision": "day",
+          "speed": 47,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2020/dat_S_1_09.html",
+            "https://www.konami.com/pawa/2020/update/210408"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2020/dat_S_1_09.html",
+          "official_update_url": "https://www.konami.com/pawa/2020/update/210408",
+          "source_date_basis": "official update effective date",
+          "archive_work": "2020"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 47,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_S_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_S_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "サンタナ",
+          "archive_team": "東京ヤクルトスワローズ"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 47,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 47,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 47,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 47,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_S.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_S.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "塩見 泰隆",
+      "team": "東京ヤクルトスワローズ",
+      "measurement_cluster_id": "existing_30m_塩見泰隆_2018",
+      "measurement_metric": "30m",
+      "measurement_value": 3.85,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "30m",
+          "value": 3.85,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2018,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "team_physical_test_protocol_unspecified",
+      "measurement_event": null,
+      "measurement_usage_class": "HISTORICAL_PROFILE_HINT",
+      "measurement_confidence": "medium",
+      "measurement_source": "デイリースポーツ",
+      "measurement_source_url": "https://www.daily.co.jp/baseball/2018/01/17/0010903502.shtml",
+      "nearest_pawapuro_title": "実況パワフルプロ野球2018",
+      "nearest_pawapuro_version": "default initial player data",
+      "nearest_pawapuro_date": "2018-04-26",
+      "nearest_pawapuro_speed": 69,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2018/dat_S.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2018/update/180412",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 0,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": 82,
+      "pawapuro_2020_terminal_speed": 83,
+      "pawapuro_2022_terminal_speed": 83,
+      "pawapuro_2024_end_speed": 83,
+      "pawapuro_2025_opening_speed": 83,
+      "pawapuro_2025_end_speed": 83,
+      "pawapuro_2026_opening_speed": 83,
+      "speed_change_nearest_to_2025_end": 14,
+      "speed_change_nearest_to_2026": 14,
+      "source_urls": [
+        "https://www.daily.co.jp/baseball/2018/01/17/0010903502.shtml",
+        "https://www.baseless.org/data/source/2018/dat_S.html",
+        "https://www.konami.com/pawa/2018/update/180412",
+        "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_S.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "実況パワフルプロ野球2018",
+          "version": "default initial player data",
+          "date": "2018-04-26",
+          "release_or_update_date": "2018-04-26",
+          "date_precision": "day",
+          "speed": 69,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2018/dat_S.html",
+            "https://www.konami.com/pawa/2018/update/180412"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2018/dat_S.html",
+          "official_update_url": "https://www.konami.com/pawa/2018/update/180412",
+          "source_date_basis": "official first-update effective date / title opening data",
+          "archive_work": "2018"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "実況パワフルプロ野球2018",
+          "version": "1.15 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 82,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2018/dat_S_1_15.html",
+            "https://www.baseless.org/data/source/2018/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2018/dat_S_1_15.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2018",
+          "archive_name": "塩　見",
+          "archive_team": "東京ヤクルトスワローズ"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2020",
+          "version": "1.16 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 83,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2020/dat_S_1_16.html",
+            "https://www.baseless.org/data/source/2020/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2020/dat_S_1_16.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2020",
+          "archive_name": "塩　見",
+          "archive_team": "東京ヤクルトスワローズ"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 83,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_S_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_S_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "塩　見",
+          "archive_team": "東京ヤクルトスワローズ"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 83,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 83,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 83,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 83,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_S.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_S.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "並木 秀尊",
+      "team": "東京ヤクルトスワローズ",
+      "measurement_cluster_id": "existing_outlier_並木秀尊_50m_5.32",
+      "measurement_metric": "50m",
+      "measurement_value": 5.32,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "50m",
+          "value": 5.32,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2019,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "special_first_step_start",
+      "measurement_event": null,
+      "measurement_usage_class": "REJECTED_FOR_SPEED",
+      "measurement_confidence": "high",
+      "measurement_source": "日刊スポーツ",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/202306230001335.html",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2022",
+      "nearest_pawapuro_version": "default initial player data",
+      "nearest_pawapuro_date": "2022-04-21",
+      "nearest_pawapuro_speed": 95,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2022/dat_S.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2022/",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 3,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": 95,
+      "pawapuro_2022_terminal_speed": 95,
+      "pawapuro_2024_end_speed": 95,
+      "pawapuro_2025_opening_speed": 95,
+      "pawapuro_2025_end_speed": 97,
+      "pawapuro_2026_opening_speed": 97,
+      "speed_change_nearest_to_2025_end": 2,
+      "speed_change_nearest_to_2026": 2,
+      "source_urls": [
+        "https://www.nikkansports.com/baseball/news/202306230001335.html",
+        "https://www.baseless.org/data/source/2022/dat_S.html",
+        "https://www.konami.com/pawa/2022/",
+        "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_S.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium (record preserved as rejected-for-speed evidence; no numerical use)",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2020",
+          "version": "1.16 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 95,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2020/dat_S_1_16.html",
+            "https://www.baseless.org/data/source/2020/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2020/dat_S_1_16.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2020",
+          "archive_name": "並　木",
+          "archive_team": "東京ヤクルトスワローズ"
+        },
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "default initial player data",
+          "date": "2022-04-21",
+          "release_or_update_date": "2022-04-21",
+          "date_precision": "day",
+          "speed": 95,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_S.html",
+            "https://www.konami.com/pawa/2022/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_S.html",
+          "official_update_url": "https://www.konami.com/pawa/2022/",
+          "source_date_basis": "title release date",
+          "archive_work": "2022"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 95,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_S_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_S_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "並　木",
+          "archive_team": "東京ヤクルトスワローズ"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 95,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 95,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 97,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 97,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_S.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_S.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "並木 秀尊",
+      "team": "東京ヤクルトスワローズ",
+      "measurement_cluster_id": "existing_outlier_並木秀尊_50m_6.06",
+      "measurement_metric": "50m",
+      "measurement_value": 6.06,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "50m",
+          "value": 6.06,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2022,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "tv_50m_protocol_unspecified",
+      "measurement_event": null,
+      "measurement_usage_class": "HISTORICAL_PROFILE_HINT",
+      "measurement_confidence": "medium",
+      "measurement_source": "日刊スポーツ",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/202306230001335.html",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2022",
+      "nearest_pawapuro_version": "default initial player data",
+      "nearest_pawapuro_date": "2022-04-21",
+      "nearest_pawapuro_speed": 95,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2022/dat_S.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2022/",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 0,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": null,
+      "pawapuro_2022_terminal_speed": 95,
+      "pawapuro_2024_end_speed": 95,
+      "pawapuro_2025_opening_speed": 95,
+      "pawapuro_2025_end_speed": 97,
+      "pawapuro_2026_opening_speed": 97,
+      "speed_change_nearest_to_2025_end": 2,
+      "speed_change_nearest_to_2026": 2,
+      "source_urls": [
+        "https://www.nikkansports.com/baseball/news/202306230001335.html",
+        "https://www.baseless.org/data/source/2022/dat_S.html",
+        "https://www.konami.com/pawa/2022/",
+        "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_S.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "default initial player data",
+          "date": "2022-04-21",
+          "release_or_update_date": "2022-04-21",
+          "date_precision": "day",
+          "speed": 95,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_S.html",
+            "https://www.konami.com/pawa/2022/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_S.html",
+          "official_update_url": "https://www.konami.com/pawa/2022/",
+          "source_date_basis": "title release date",
+          "archive_work": "2022"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 95,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_S_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_S_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "並　木",
+          "archive_team": "東京ヤクルトスワローズ"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 95,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 95,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 97,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_S_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 97,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_S.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_S.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "村林 一輝",
+      "team": "東北楽天ゴールデンイーグルス",
+      "measurement_cluster_id": "existing_outlier_村林一輝_50m_6.2",
+      "measurement_metric": "50m",
+      "measurement_value": 6.2,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "50m",
+          "value": 6.2,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2015,
+      "measurement_date": null,
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "scouting_profile_protocol_unspecified",
+      "measurement_event": null,
+      "measurement_usage_class": "HISTORICAL_PROFILE_HINT",
+      "measurement_confidence": "medium",
+      "measurement_source": "週刊ベースボールONLINE",
+      "measurement_source_url": "https://column.sp.baseball.findfriends.jp/?id=055-20151207-01&pid=column_detail",
+      "nearest_pawapuro_title": "実況パワフルプロ野球2016",
+      "nearest_pawapuro_version": "default initial player data",
+      "nearest_pawapuro_date": "2016-04-28",
+      "nearest_pawapuro_speed": 60,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2016/dat_E.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2016/",
+      "measurement_to_pawapuro_gap_days": null,
+      "measurement_to_pawapuro_gap_years": 1,
+      "pawapuro_2016_terminal_speed": 60,
+      "pawapuro_2018_terminal_speed": 60,
+      "pawapuro_2020_terminal_speed": 60,
+      "pawapuro_2022_terminal_speed": 60,
+      "pawapuro_2024_end_speed": 69,
+      "pawapuro_2025_opening_speed": 69,
+      "pawapuro_2025_end_speed": 69,
+      "pawapuro_2026_opening_speed": 69,
+      "speed_change_nearest_to_2025_end": 9,
+      "speed_change_nearest_to_2026": 9,
+      "source_urls": [
+        "https://column.sp.baseball.findfriends.jp/?id=055-20151207-01&pid=column_detail",
+        "https://www.baseless.org/data/source/2016/dat_E.html",
+        "https://www.konami.com/pawa/2016/",
+        "https://www.baseless.org/data/source/2024/dat_E_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_E_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_E.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "実況パワフルプロ野球2016",
+          "version": "default initial player data",
+          "date": "2016-04-28",
+          "release_or_update_date": "2016-04-28",
+          "date_precision": "day",
+          "speed": 60,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2016/dat_E.html",
+            "https://www.konami.com/pawa/2016/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2016/dat_E.html",
+          "official_update_url": "https://www.konami.com/pawa/2016/",
+          "source_date_basis": "title release date",
+          "archive_work": "2016"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "実況パワフルプロ野球2016",
+          "version": "1.11 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 60,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2016/dat_E_1_11.html",
+            "https://www.baseless.org/data/source/2016/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2016/dat_E_1_11.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2016",
+          "archive_name": "村　林",
+          "archive_team": "東北楽天ゴールデンイーグルス"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "実況パワフルプロ野球2018",
+          "version": "1.15 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 60,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2018/dat_E_1_15.html",
+            "https://www.baseless.org/data/source/2018/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2018/dat_E_1_15.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2018",
+          "archive_name": "村　林",
+          "archive_team": "東北楽天ゴールデンイーグルス"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2020",
+          "version": "1.16 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 60,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2020/dat_E_1_16.html",
+            "https://www.baseless.org/data/source/2020/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2020/dat_E_1_16.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2020",
+          "archive_name": "村　林",
+          "archive_team": "東北楽天ゴールデンイーグルス"
+        },
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 60,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_E_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_E_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "村　林",
+          "archive_team": "東北楽天ゴールデンイーグルス"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 69,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_E_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_E_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 69,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_E_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_E_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 69,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_E_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_E_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 69,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_E.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_E.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    },
+    {
+      "player": "奈良間 大己",
+      "team": "北海道日本ハムファイターズ",
+      "measurement_cluster_id": "standardized_50m_2022-06-19_奈良間大己",
+      "measurement_metric": "50m",
+      "measurement_value": 6.31,
+      "measurement_unit": "seconds",
+      "measurement_components": [
+        {
+          "metric": "50m",
+          "value": 6.31,
+          "unit": "seconds"
+        }
+      ],
+      "measurement_year": 2022,
+      "measurement_date": "2022-06-19",
+      "measurement_year_inferred": false,
+      "inference_basis": null,
+      "measurement_timing_method": "electronic_photoelectric",
+      "measurement_event": "侍ジャパン大学代表選考合宿",
+      "measurement_usage_class": "STANDARDIZED_PRIOR",
+      "measurement_confidence": "high",
+      "measurement_source": "Existing standardized 50m reference",
+      "measurement_source_url": "https://www.youtube.com/watch?v=fC8_8iA7Cao",
+      "nearest_pawapuro_title": "eBASEBALLパワフルプロ野球2022",
+      "nearest_pawapuro_version": "1.09",
+      "nearest_pawapuro_date": "2023-03-30",
+      "nearest_pawapuro_speed": 64,
+      "nearest_pawapuro_source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+      "nearest_pawapuro_url": "https://www.baseless.org/data/source/2022/dat_F_1_09.html",
+      "nearest_pawapuro_official_update_url": "https://www.konami.com/pawa/2022/update/230330",
+      "measurement_to_pawapuro_gap_days": 284,
+      "measurement_to_pawapuro_gap_years": null,
+      "pawapuro_2016_terminal_speed": null,
+      "pawapuro_2018_terminal_speed": null,
+      "pawapuro_2020_terminal_speed": null,
+      "pawapuro_2022_terminal_speed": 64,
+      "pawapuro_2024_end_speed": 64,
+      "pawapuro_2025_opening_speed": 64,
+      "pawapuro_2025_end_speed": 64,
+      "pawapuro_2026_opening_speed": 64,
+      "speed_change_nearest_to_2025_end": 0,
+      "speed_change_nearest_to_2026": 0,
+      "source_urls": [
+        "https://www.youtube.com/watch?v=fC8_8iA7Cao",
+        "https://www.baseless.org/data/source/2022/dat_F_1_09.html",
+        "https://www.konami.com/pawa/2022/update/230330",
+        "https://www.baseless.org/data/source/2024/dat_F_1_07.html",
+        "https://www.konami.com/pawa/2024-2025/update/241126",
+        "https://www.baseless.org/data/source/2024/dat_F_1_14.html",
+        "https://www.konami.com/pawa/2024-2025/update/251120",
+        "https://www.baseless.org/data/source/2026/dat_F.html",
+        "https://www.konami.com/pawa/2026-2027/"
+      ],
+      "confidence": "medium",
+      "pawapuro_history": [
+        {
+          "record_classes": [
+            "stored_title_terminal_snapshot"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.13 (terminal archive snapshot)",
+          "date": null,
+          "release_or_update_date": null,
+          "date_precision": "not_retained_in_local_pawapuro_full",
+          "speed": 64,
+          "source": "repository data/pennant.db pawapuro_full; exact update date is not retained in that local table",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_F_1_13.html",
+            "https://www.baseless.org/data/source/2022/work.html"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_F_1_13.html",
+          "official_update_url": null,
+          "source_date_basis": null,
+          "archive_work": "2022",
+          "archive_name": "奈良間",
+          "archive_team": "北海道日本ハムファイターズ"
+        },
+        {
+          "record_classes": [
+            "nearest_to_measurement"
+          ],
+          "title": "eBASEBALLパワフルプロ野球2022",
+          "version": "1.09",
+          "date": "2023-03-30",
+          "release_or_update_date": "2023-03-30",
+          "date_precision": "day",
+          "speed": 64,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2022/dat_F_1_09.html",
+            "https://www.konami.com/pawa/2022/update/230330"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2022/dat_F_1_09.html",
+          "official_update_url": "https://www.konami.com/pawa/2022/update/230330",
+          "source_date_basis": "official update effective date",
+          "archive_work": "2022"
+        },
+        {
+          "record_classes": [
+            "2024_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.07",
+          "date": "2024-11-26",
+          "release_or_update_date": "2024-11-26",
+          "date_precision": "day",
+          "speed": 64,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_F_1_07.html",
+            "https://www.konami.com/pawa/2024-2025/update/241126"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_F_1_07.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/241126",
+          "source_date_basis": "official 2024 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_opening_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.08",
+          "date": "2025-03-27",
+          "release_or_update_date": "2025-03-27",
+          "date_precision": "day",
+          "speed": 64,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_F_1_08.html",
+            "https://www.konami.com/pawa/2024-2025/update/250327"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_F_1_08.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/250327",
+          "source_date_basis": "official 2025 opening update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2025_end_exact"
+          ],
+          "title": "パワフルプロ野球2024-2025",
+          "version": "1.14",
+          "date": "2025-11-20",
+          "release_or_update_date": "2025-11-20",
+          "date_precision": "day",
+          "speed": 64,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2024/dat_F_1_14.html",
+            "https://www.konami.com/pawa/2024-2025/update/251120"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2024/dat_F_1_14.html",
+          "official_update_url": "https://www.konami.com/pawa/2024-2025/update/251120",
+          "source_date_basis": "official 2025 regular-season-end update",
+          "archive_work": "2024"
+        },
+        {
+          "record_classes": [
+            "2026_opening_exact"
+          ],
+          "title": "パワフルプロ野球2026-2027",
+          "version": "default initial player data",
+          "date": "2026-06-11",
+          "release_or_update_date": "2026-06-11",
+          "date_precision": "day",
+          "speed": 64,
+          "source": "BASELESS archived player-data page for speed; KONAMI official page for version and date",
+          "source_urls": [
+            "https://www.baseless.org/data/source/2026/dat_F.html",
+            "https://www.konami.com/pawa/2026-2027/"
+          ],
+          "archive_url": "https://www.baseless.org/data/source/2026/dat_F.html",
+          "official_update_url": "https://www.konami.com/pawa/2026-2027/",
+          "source_date_basis": "title release date",
+          "archive_work": "2026"
+        }
+      ]
+    }
+  ],
+  "unassigned_year_unknown_records": [
+    {
+      "player": "森 友哉",
+      "team": "オリックス・バファローズ",
+      "measurement_cluster_id": "mori_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6.2,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/professional/draft/2013/news/p-bb-tp0-20131209-1228895.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "来田 涼斗",
+      "team": "オリックス・バファローズ",
+      "measurement_cluster_id": "kita_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.9,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/column/baseballcountry/news/202003140000249.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "蝦名 達夫",
+      "team": "横浜DeNAベイスターズ",
+      "measurement_cluster_id": "ebina_aomori_u_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/201910280000575.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "梶原 昂希",
+      "team": "横浜DeNAベイスターズ",
+      "measurement_cluster_id": "kajihara_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.8,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://news.tv-asahi.co.jp/news_sports/articles/900020068.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "京田 陽太",
+      "team": "横浜DeNAベイスターズ",
+      "measurement_cluster_id": "kyoda_nihon_u_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.9,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.japan-baseball.jp/jp/news/press/20160710_5.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "林 琢真",
+      "team": "横浜DeNAベイスターズ",
+      "measurement_cluster_id": "hayashi_komazawa_postcamp_selfbest_50m",
+      "measurement_metric": "50m",
+      "measurement_value": 5.7,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/202210270001023.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "坂倉 将吾",
+      "team": "広島東洋カープ",
+      "measurement_cluster_id": "sakakura_50m_nichidai3_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6.4,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/1737870.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "小園 海斗",
+      "team": "広島東洋カープ",
+      "measurement_cluster_id": "existing_outlier_小園海斗_50m_5.8_6",
+      "measurement_metric": "50m",
+      "measurement_value": null,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://sports.yahoo.co.jp/column/detail/201607040003-spnavi?p=2",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "名原 典彦",
+      "team": "広島東洋カープ",
+      "measurement_cluster_id": "nabara_50m_setouchi_manual",
+      "measurement_metric": "50m",
+      "measurement_value": 6.2,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://sportiva.shueisha.co.jp/clm/baseball/hs_other/2022/10/02/post_85/?page=2",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "名原 典彦",
+      "team": "広島東洋カープ",
+      "measurement_cluster_id": "nabara_50m_aomoriu_electronic",
+      "measurement_metric": "50m",
+      "measurement_value": 5.9,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://sportiva.shueisha.co.jp/clm/baseball/hs_other/2022/10/02/post_85/?page=2",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "矢野 雅哉",
+      "team": "広島東洋カープ",
+      "measurement_cluster_id": "existing_outlier_矢野雅哉_50m_5.9",
+      "measurement_metric": "50m",
+      "measurement_value": 5.9,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/202208160001089.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "佐藤 輝明",
+      "team": "阪神タイガース",
+      "measurement_cluster_id": "sato_50m_kindai_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.sponichi.co.jp/baseball/news/2020/10/26/kiji/20201025s00001728678000c.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "小幡 竜平",
+      "team": "阪神タイガース",
+      "measurement_cluster_id": "obata_50m_hanshin_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6.1,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/201901100000575.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "滝澤 夏央",
+      "team": "埼玉西武ライオンズ",
+      "measurement_cluster_id": "takizawa_sekinegakuen_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.8,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://number.bunshun.jp/articles/-/851084?page=1",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "安田 尚憲",
+      "team": "千葉ロッテマリーンズ",
+      "measurement_cluster_id": "yasuda_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6.7,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/201710250000038.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "岡 大海",
+      "team": "千葉ロッテマリーンズ",
+      "measurement_cluster_id": "oka_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6.1,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://meisupo.net/news/5690/",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "佐藤 都志也",
+      "team": "千葉ロッテマリーンズ",
+      "measurement_cluster_id": "sato_toshiya_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.9,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.sponichi.co.jp/baseball/news/2019/10/25/kiji/20191024s00001173410000c.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "山口 航輝",
+      "team": "千葉ロッテマリーンズ",
+      "measurement_cluster_id": "yamaguchi_koki_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6.3,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/201810310000259.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "藤原 恭大",
+      "team": "千葉ロッテマリーンズ",
+      "measurement_cluster_id": "fujiwara_50m_5_7_highschool_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.7,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.daily.co.jp/baseball/2017/08/04/0010433505.shtml",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "友杉 篤輝",
+      "team": "千葉ロッテマリーンズ",
+      "measurement_cluster_id": "tomosugi_50m_profile_claim",
+      "measurement_metric": "50m",
+      "measurement_value": 5.9,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/202210170000769.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "髙部 瑛斗",
+      "team": "千葉ロッテマリーンズ",
+      "measurement_cluster_id": "takabe_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.8,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.tv-tokyo.co.jp/sports/articles/2022/03/022229.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "細川 成也",
+      "team": "中日ドラゴンズ",
+      "measurement_cluster_id": "existing_outlier_細川成也_50m_6.2",
+      "measurement_metric": "50m",
+      "measurement_value": 6.2,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://baseballking.jp/ns/134127/",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "田中 幹也",
+      "team": "中日ドラゴンズ",
+      "measurement_cluster_id": "tanaka_mikiya_adai_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.9,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/202210310000557.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "丸山 和郁",
+      "team": "東京ヤクルトスワローズ",
+      "measurement_cluster_id": "maruyama_50m_meiji_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.8,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://4years.asahi.com/article/12432940",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "吉川 尚輝",
+      "team": "読売ジャイアンツ",
+      "measurement_cluster_id": "yoshikawa_50m_chukyo_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.7,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/1738288.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "栗原 陵矢",
+      "team": "福岡ソフトバンクホークス",
+      "measurement_cluster_id": "kurihara_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://draft-repo.com/blog-entry-2032.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "山川 穂高",
+      "team": "福岡ソフトバンクホークス",
+      "measurement_cluster_id": "yamakawa_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6.2,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://draft-repo.com/blog-entry-1559.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "周東 佑京",
+      "team": "福岡ソフトバンクホークス",
+      "measurement_cluster_id": "shuto_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.7,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nodai.ac.jp/news/article/42017/",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "正木 智也",
+      "team": "福岡ソフトバンクホークス",
+      "measurement_cluster_id": "masaki_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6.6,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://draft-repo.com/blog-entry-3445.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "牧原 大成",
+      "team": "福岡ソフトバンクホークス",
+      "measurement_cluster_id": "makihara_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.8,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://koutaro-tajiri.theletter.jp/posts/ea6a6ac0-a6b2-11ee-b571-5fc5ffed7957",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "柳町 達",
+      "team": "福岡ソフトバンクホークス",
+      "measurement_cluster_id": "yanagimachi_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6.2,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://draft-repo.com/blog-entry-3199.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "柳田 悠岐",
+      "team": "福岡ソフトバンクホークス",
+      "measurement_cluster_id": "yanagita_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 5.94,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://sportiva.shueisha.co.jp/clm/baseball/npb/2015/07/14/post_583/",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "清宮 幸太郎",
+      "team": "北海道日本ハムファイターズ",
+      "measurement_cluster_id": "kiyomiya_50m_profile",
+      "measurement_metric": "50m",
+      "measurement_value": 6.5,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://sportiva.shueisha.co.jp/clm/baseball/hs_other/2016/04/05/post_726/?page=3",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "田宮 裕涼",
+      "team": "北海道日本ハムファイターズ",
+      "measurement_cluster_id": "tamiya_50m_profile_text",
+      "measurement_metric": "50m",
+      "measurement_value": null,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.nikkansports.com/baseball/news/202212100001143.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    },
+    {
+      "player": "奈良間 大己",
+      "team": "北海道日本ハムファイターズ",
+      "measurement_cluster_id": "narama_50m_profile_claim",
+      "measurement_metric": "50m",
+      "measurement_value": 5.8,
+      "measurement_year": "unknown",
+      "measurement_source_url": "https://www.sponichi.co.jp/baseball/news/2022/11/15/kiji/20221115s00001173066000c.html",
+      "reason": "No PowerPro timepoint assigned because the source ledger does not identify the measurement year."
+    }
+  ]
+}
