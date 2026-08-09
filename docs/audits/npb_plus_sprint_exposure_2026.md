@@ -243,3 +243,50 @@ full_effort_run_proxy_count は、次の既存レコード数の合計です。
 - NPB+のsample count・qualified run countが公開されていないため、小標本の原因やPowerProとの差の因果はこの成果物から断定できません。
 - 2025 Sprint Speed相当値も公開確認できなかったため、2025は出場量のみ保存しています。
 - npb_plus_measurement_period は正確な計測期間が公開されていないためnullです。元データの season_label は npb_plus_source_season_label に 2026途中 として保持しています。
+
+## 最終報告に必要な情報の完全記録
+
+この節は、チャット要約だけに残さずGitHub側へ保存するための最終記録です。
+
+### 正本・取得方法・sourceの問題
+
+- ユーザー指定の `07_pennant.db` はこのclone内に存在しなかったため、実在する `data/pennant.db` を読み取り専用で使用しました。`npb_plus_measurement` 全109行のうち、`season_label='2026途中' AND top_speed_kmh IS NOT NULL` は100行です。
+- 2026 games/PA/ABは、NPB公式の球団別「個人打撃成績（全選手）」ページを12球団分取得して照合しました。2025は移籍を取りこぼさないよう12球団ページを横断し、同一選手の複数球団行があれば合算しました。
+- 既存の `npb_usage_2026` はABを持たないため、最終CSVのgames/PA/ABの正本には使用していません。starts・代走・代打は公式ページから確実に取得できず、gamesやPAから推定していません。
+- NPB+アプリ内部画面の大量取得・スクレイピングは実施していません。公式公開ページではHawk-Eye由来、Sprint Speed、最速タイム（一塁到達）という表示までは確認できましたが、sample count等の内部集計値は公開されていません。
+
+### 失敗・非採用の取得方法と理由
+
+- `07_pennant.db` 直接参照: 対象ファイルが存在しないため非採用。代替としてclone内の `data/pennant.db` を使用しました。
+- 2025年の現所属球団ページだけの照合: 移籍選手を未取得とするため非採用。12球団横断・合算へ変更し、最終的な未一致を名原典彦1人まで縮小しました。
+- NPB+のsample count / qualified run count / 最低サンプル数: 公開ページに値がないため、推定・補完せずnullとしました。
+- PBPの新規大規模基盤構築: 今回は実施せず、リポジトリに既存のPBP派生テーブルだけを使用しました。そのためproxyの観測期間は2026-03-27〜2026-07-18で、公式成績の2026-08-08現在とは一致しません。
+
+### 重要な発見・定義上の留保
+
+- NPB+公式ページではSprint Speedと「最速タイム（一塁到達）」が別項目です。HP→1BをSprint Speedへ変換していません。
+- `full_effort_run_proxy_count` は内野ゴロ打者イベント、進塁イベント、牽制除外の二塁盗塁関連イベントのレコード数合計です。速度計測値でも、一意なプレー数でも、全力走行が確実に起きた回数でもありません。
+- 盗塁関連イベント、全力走行proxy、PowerPro値は走力査定へ混ぜていません。PA bucketも集計補助であり、無効判定ではありません。
+- `npb_plus_measurement_period` はnullです。`2026途中` はリポジトリのseason_labelとしてのみ `npb_plus_source_season_label` に保持しています。
+
+### Negative findings・後工程で断定してはいけないこと
+
+- このデータだけでは、「出場量が少ないほどNPB+ Sprint Speed由来査定がPowerProより下に外れやすい」という関係の有無も、因果も結論できません。
+- NPB+のsample countとqualified run countがないため、各選手のSprint Speedが能力上限を表すかどうかを今回のデータだけで信頼性判定できません。
+- 2025年のSprint Speed相当値は確認できなかったため、前年は出場量比較だけです。
+- starts、代走、代打のみの出場数はnullであり、games/PA/ABからの推定値ではありません。
+
+### 最終QAの記録
+
+- CSV 100行、JSON players 100行、DB対象100行で選手・球団・Sprint Speedを突合し、不一致0。
+- 2026 games/PA/ABは各100/100、Sprint Speed欠損0、source URL欠損0、PA<AB 0。
+- 2025 games/PAは99/100、未一致は名原典彦のみ。非null player_idは99、非null ID重複0。
+- PA bucketは `PA_0_24=0`、`PA_25_49=3`、`PA_50_99=14`、`PA_100_199=22`、`PA_200_399=50`、`PA_400_PLUS=11`です。
+- PBP proxyは100/100行に整数値を保持しています。0件の選手も「そのPBP観測範囲で該当レコード0」として保持しており、NPB+の計測サンプル数を意味しません。
+- DB integrity checkは `ok`、PowerPro値・査定値・production codeは変更していません。
+
+### GitHub保存状態
+
+- Branch: `codex/npb-sprint-exposure-audit`
+- 保存ファイル: `outputs/derived/npb_plus_sprint_exposure_2026.csv`、`outputs/derived/npb_plus_sprint_exposure_2026.json`、`docs/audits/npb_plus_sprint_exposure_2026.md`
+- 上記3ファイルだけをcommit・push対象とし、中間agentファイルや一時スクリプトはcommitしていません。

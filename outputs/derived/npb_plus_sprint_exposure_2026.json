@@ -70,6 +70,121 @@
       "retrieved_at": "2026-08-09"
     }
   ],
+  "coverage_summary": {
+    "target_rows": 100,
+    "official_2026_exposure": {
+      "as_of": "2026-08-08",
+      "games": 100,
+      "PA": 100,
+      "AB": 100,
+      "source_scope": "NPB official individual batting pages for all 12 teams"
+    },
+    "official_2025_exposure": {
+      "games": 99,
+      "PA": 99,
+      "unresolved_players": ["名原 典彦"],
+      "source_scope": "all 12 NPB team pages, aggregated across teams for transfers"
+    },
+    "npb_plus_tier_a": {
+      "sample_count": 0,
+      "qualified_run_count": 0,
+      "measurement_period": 0,
+      "reason": "NOT_PUBLICLY_DOCUMENTED"
+    },
+    "full_effort_run_proxy": {
+      "rows_with_integer_value": 100,
+      "period": "2026-03-27 through 2026-07-18",
+      "components": [
+        "infield_grounder_events",
+        "baserunning_advances",
+        "non-pickoff second-base steal-related catcher_steal_event records"
+      ],
+      "warning": "record-count proxy, not a speed measurement or unique full-effort run count"
+    }
+  },
+  "acquisition_log": [
+    {
+      "item": "requested_database",
+      "status": "SOURCE_SUBSTITUTED",
+      "requested": "07_pennant.db",
+      "used": "data/pennant.db",
+      "reason": "07_pennant.db was not present in this clone; data/pennant.db was read-only"
+    },
+    {
+      "item": "2026_games_PA_AB",
+      "status": "COLLECTED",
+      "coverage": "100/100",
+      "source": "NPB official individual batting pages",
+      "as_of": "2026-08-08"
+    },
+    {
+      "item": "2025_games_PA_AB",
+      "status": "PARTIAL",
+      "coverage": "99/100",
+      "source": "all 12 NPB official team pages, aggregated across transfers",
+      "unresolved": ["名原 典彦"]
+    },
+    {
+      "item": "starts_pinch_run_pinch_hit",
+      "status": "UNAVAILABLE_NOT_PUBLIC",
+      "coverage": "0/100",
+      "reason": "not present in the selected official pages; not inferred from games or PA"
+    },
+    {
+      "item": "npb_plus_sample_fields",
+      "status": "UNAVAILABLE_NOT_PUBLIC",
+      "coverage": "0/100",
+      "fields": ["minimum_sample", "sample_count", "qualified_run_count", "aggregation_method", "update_frequency", "measurement_period"],
+      "reason": "not disclosed in public NPB+ materials; no app bulk extraction or scraping performed"
+    },
+    {
+      "item": "large_new_pbp_pipeline",
+      "status": "NOT_PERFORMED",
+      "reason": "existing derived PBP tables were sufficient for a bounded proxy; no new large data infrastructure was added",
+      "coverage_limit": "PBP proxy ends 2026-07-18 while official exposure is 2026-08-08"
+    }
+  ],
+  "quality_findings": {
+    "conflicts_resolved": [
+      {
+        "issue": "2025 current-team-only lookup missed transferred players",
+        "resolution": "searched all 12 team pages and summed matching team rows",
+        "remaining_unresolved": ["名原 典彦"]
+      }
+    ],
+    "source_problems": [
+      "user-mentioned 07_pennant.db absent from clone",
+      "PBP-derived tables have an earlier cutoff than the official 2026 batting pages"
+    ],
+    "unresolved": [
+      "名原 典彦 has no matching 2025 official batting row",
+      "all NPB+ Tier A sample and aggregation fields are unavailable",
+      "starts, pinch-run, and pinch-hit-only appearances are unavailable",
+      "2025 Sprint Speed equivalent is unavailable"
+    ],
+    "negative_findings": [
+      "this dataset cannot establish whether low exposure causes NPB+ Sprint Speed to fall below PowerPro",
+      "this dataset cannot determine whether a player's observed Sprint Speed represents an ability ceiling",
+      "proxy counts cannot be used as NPB+ sample counts or as appraisal corrections"
+    ],
+    "postprocess_warnings": [
+      "pa_bucket is a mechanical aggregation flag, not an invalidation rule",
+      "do not convert HP-to-1B time into Sprint Speed",
+      "do not mix steal or PBP proxy counts into the speed appraisal"
+    ]
+  },
+  "publication": {
+    "branch": "codex/npb-sprint-exposure-audit",
+    "files": [
+      "outputs/derived/npb_plus_sprint_exposure_2026.csv",
+      "outputs/derived/npb_plus_sprint_exposure_2026.json",
+      "docs/audits/npb_plus_sprint_exposure_2026.md"
+    ],
+    "production_code_changed": false,
+    "powerpro_values_loaded": false,
+    "intermediate_agent_files_committed": false,
+    "commit_push_status": "COMMITTED_AND_PUSHED"
+  },
   "qa": {
     "target_rows": 100,
     "db_total_rows": 109,
