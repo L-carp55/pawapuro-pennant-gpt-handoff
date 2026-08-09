@@ -1,0 +1,87 @@
+{
+  "status": "CURATED_QA_EVIDENCE_NOT_NUMERIC_T90",
+  "created_at": "2026-08-09",
+  "target_season": 2026,
+  "purpose": "最高速度のみのT90査定とowner QA bandが大きくズレた5人について、短距離の身体情報を保存する。プロトコル・年代条件を満たさない記録は現在T90の数値補正に使わない。",
+  "guardrails": [
+    "owner QA band is not a calibration target",
+    "generic/scouting 50m is not mapped through the standardized electronic 50m formula",
+    "special first-step timing is protocol-mismatched and numeric-T90-forbidden",
+    "stale historical measurements need an age/trajectory model before numeric current-season use"
+  ],
+  "records": [
+    {
+      "player": "並木秀尊",
+      "metric": "50m",
+      "seconds": 5.32,
+      "measurement_year": 2019,
+      "protocol_class": "special_first_step_start",
+      "start_rule_mismatch": true,
+      "context": "大学日本代表候補合宿。1歩目を踏み出してから計測開始する変則ルール。",
+      "source_name": "日刊スポーツ",
+      "source_url": "https://www.nikkansports.com/baseball/news/202306230001335.html",
+      "numeric_t90_use": false
+    },
+    {
+      "player": "並木秀尊",
+      "metric": "50m",
+      "seconds": 6.06,
+      "measurement_year": 2022,
+      "protocol_class": "tv_50m_protocol_unspecified",
+      "start_rule_mismatch": false,
+      "context": "超プロ野球ULTRA収録で計測。記事では通常の50m走として紹介されるが、光電管・スタート規則等は不明。",
+      "source_name": "日刊スポーツ",
+      "source_url": "https://www.nikkansports.com/baseball/news/202306230001335.html",
+      "numeric_t90_use": false
+    },
+    {
+      "player": "小園海斗",
+      "metric": "50m",
+      "seconds_range": [5.8, 6.0],
+      "measurement_year": null,
+      "protocol_class": "scouting_profile_protocol_unspecified",
+      "context": "高校時代の紹介値。2016年記事では本人が最速5.9〜6.0秒、2018年記事は5.9秒、2019年記事は5.8秒と表記に幅がある。",
+      "source_name": "スポーツナビ",
+      "source_urls": [
+        "https://sports.yahoo.co.jp/column/detail/201607040003-spnavi?p=2",
+        "https://sports.yahoo.co.jp/column/detail/201810290003-spnavi",
+        "https://sports.yahoo.co.jp/column/detail/201907050007-spnavi"
+      ],
+      "numeric_t90_use": false
+    },
+    {
+      "player": "矢野雅哉",
+      "metric": "50m",
+      "seconds": 5.9,
+      "measurement_year": null,
+      "protocol_class": "scouting_profile_protocol_unspecified",
+      "context": "選手紹介で50m5.9秒。測定年・計時方式は記事から特定できない。",
+      "source_name": "日刊スポーツ",
+      "source_url": "https://www.nikkansports.com/baseball/news/202208160001089.html",
+      "numeric_t90_use": false
+    },
+    {
+      "player": "村林一輝",
+      "metric": "50m",
+      "seconds": 6.2,
+      "measurement_year": 2015,
+      "protocol_class": "scouting_profile_protocol_unspecified",
+      "context": "高校時代のドラフト紹介。50m6.2秒・遠投110m。",
+      "source_name": "週刊ベースボールONLINE",
+      "source_url": "https://column.sp.baseball.findfriends.jp/?id=055-20151207-01&pid=column_detail",
+      "numeric_t90_use": false
+    },
+    {
+      "player": "細川成也",
+      "metric": "50m",
+      "seconds": 6.2,
+      "measurement_year": null,
+      "reported_at_year": 2017,
+      "protocol_class": "scouting_profile_protocol_unspecified",
+      "context": "高卒新人期の紹介で50m6.2秒。測定年・計時方式は特定できない。",
+      "source_name": "BASEBALL KING",
+      "source_url": "https://baseballking.jp/ns/134127/",
+      "numeric_t90_use": false
+    }
+  ]
+}

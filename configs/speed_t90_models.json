@@ -1,0 +1,133 @@
+{
+  "_comment": "走力T90モデルの係数置き場。T90=最初の走行ステップから90ftを直線移動する時間。MLB Statcastモデルは2017-2025全体のleave-one-year-out検証を通過して凍結。NPB+公式名称はSprint SpeedだがMLBとの定義同一性は未確認のためNPBモデルは未較正のまま。",
+  "target": {
+    "name": "t90_sec",
+    "distance_ft": 90,
+    "distance_m": 27.432,
+    "definition": "最初の走行ステップから90ftを直線移動する身体的スプリント時間",
+    "rating_mapping": "NPB reference empirical CDF -> normal score -> 50 + 15z",
+    "status": "DESIGN_FIXED_REFERENCE_DISTRIBUTION_PENDING"
+  },
+  "models": {
+    "mlb_sprint_t30_to_t90": {
+      "enabled": true,
+      "status": "CALIBRATED_FULL_MLB_2017_2025_LOYO",
+      "intercept": 3.697319506986064,
+      "coefficients": {
+        "mlb_sprint_speed_ftps": -0.0697930781447413,
+        "t30_sec": 1.245601057565243
+      },
+      "evidence": "2017-2025 MLB Baseball Savant, n=4381 player-seasons / 1222 players. Leave-one-year-out MAE=0.0211115s, RMSE=0.0284223s; held-year MAE range 0.0199-0.0246s. Sprint-only MAE reduced by 52.7%.",
+      "calibration_source": "outputs/derived/t90_bridge_calibration_summary_20260809.json"
+    },
+    "mlb_sprint_t10_to_t90": {
+      "enabled": true,
+      "status": "CALIBRATED_FULL_MLB_2017_2025_LOYO",
+      "intercept": 5.489026696463511,
+      "coefficients": {
+        "mlb_sprint_speed_ftps": -0.0979597148840064,
+        "t10_sec": 1.4268327120530346
+      },
+      "evidence": "2017-2025 MLB Baseball Savant, n=4381 player-seasons / 1222 players. Leave-one-year-out MAE=0.0306522s, RMSE=0.0394759s. Sprint-only MAE reduced by 31.3%.",
+      "calibration_source": "outputs/derived/t90_bridge_calibration_summary_20260809.json"
+    },
+    "mlb_sprint_to_t90": {
+      "enabled": true,
+      "status": "CALIBRATED_FULL_MLB_2017_2025_LOYO",
+      "intercept": 7.107433259177224,
+      "slope": -0.11224837274614052,
+      "evidence": "2017-2025 MLB Baseball Savant, n=4381 player-seasons / 1222 players. Leave-one-year-out MAE=0.0446337s, RMSE=0.0554035s; held-year MAE range 0.0408-0.0472s.",
+      "calibration_source": "outputs/derived/t90_bridge_calibration_summary_20260809.json"
+    },
+    "npb_sprint_speed_acceleration_to_t90": {
+      "enabled": false,
+      "status": "UNCALIBRATED",
+      "intercept": null,
+      "coefficients": {},
+      "metric": "NPB+ Sprint Speed / スプリントスピード",
+      "reason": "MLB全体ではSprint Speedに10ft/30ft splitを加えるとT90誤差が大幅に減る構造を確認した。ただしNPB+の公開Sprint Speed定義とMLB Statcastの定義同一性、およびNPB側のclean acceleration/T30ラベルが未確認なのでMLB係数を移植しない。",
+      "required_next_gate": "NPB clean acceleration/T30 or trajectory-derived T90 training data"
+    },
+    "npb_sprint_speed_to_t90": {
+      "enabled": false,
+      "status": "UNCALIBRATED",
+      "intercept": null,
+      "slope": null,
+      "metric": "NPB+ Sprint Speed / スプリントスピード",
+      "reason": "Official NPB+ naming is Sprint Speed, but its public formula/window/aggregation has not been verified equivalent to MLB Statcast Sprint Speed. MLB係数の単位換算移植は禁止。",
+      "required_next_gate": "More same-player direct overlap or direct NPB T90 labels"
+    },
+    "npb_top_speed_acceleration_to_t90": {
+      "enabled": false,
+      "status": "LEGACY_NAME_ALIAS_DO_NOT_CALIBRATE",
+      "canonical_model": "npb_sprint_speed_acceleration_to_t90",
+      "intercept": null,
+      "coefficients": {},
+      "reason": "Compatibility name only. NPB+ official metric name is Sprint Speed."
+    },
+    "npb_top_speed_to_t90": {
+      "enabled": false,
+      "status": "LEGACY_NAME_ALIAS_DO_NOT_CALIBRATE",
+      "canonical_model": "npb_sprint_speed_to_t90",
+      "intercept": null,
+      "slope": null,
+      "reason": "Compatibility name only. NPB+ official metric name is Sprint Speed."
+    },
+    "hp1b_avg_to_t90": {
+      "enabled": false,
+      "status": "CONTEXTUAL_ONLY",
+      "intercept": null,
+      "slope": null,
+      "reason": "Season-average home-to-first is repeatable but still mixes swing-to-run transition and batting-side context. Use only after condition/batting-side calibration. Fastest home-to-first is never accepted."
+    },
+    "sprint30_to_t90": {
+      "enabled": false,
+      "status": "UNCALIBRATED",
+      "intercept": null,
+      "slope": null
+    },
+    "sprint50_to_t90": {
+      "enabled": false,
+      "status": "UNCALIBRATED",
+      "intercept": null,
+      "slope": null,
+      "note": "50m is a prior, not a direct definition of baseball speed. Fukumoto QA prohibits using 50m ranking as a hard cap."
+    },
+    "sprint60_to_t90": {
+      "enabled": false,
+      "status": "UNCALIBRATED",
+      "intercept": null,
+      "slope": null
+    },
+    "proxy": {
+      "enabled": false,
+      "status": "UNCALIBRATED",
+      "intercept": null,
+      "coefficients": {
+        "infield_hit_rate": null,
+        "gdp_avoid": null
+      },
+      "note": "Tier E fallback only. UBR / extra advance / steals / triples are intentionally excluded from base speed."
+    }
+  },
+  "guardrails": {
+    "forbid_fastest_home_to_first_as_anchor": true,
+    "forbid_safety_bunt_as_speed_anchor": true,
+    "forbid_direct_mlb_sprint_to_rating": true,
+    "forbid_direct_npb_plus_speed_to_rating": true,
+    "forbid_assuming_npb_plus_mlb_sprint_speed_equivalence": true,
+    "forbid_transferring_mlb_coefficients_to_npb_plus_without_bridge": true,
+    "canonical_npb_plus_metric_name": "Sprint Speed",
+    "legacy_npb_top_speed_keys_are_alias_only": true,
+    "forbid_pawapuro_scale_calibration": true,
+    "require_leave_one_feature_out_for_infield_hit_ability": true,
+    "require_leave_one_feature_out_for_gdp_ability": true
+  },
+  "qa": [
+    "Fukumoto: 50m/yoidon ranking alone cannot disqualify S; 106 steals cannot create S.",
+    "Safety bunt: normal-swing and bunt home-to-first times must not be pooled.",
+    "Sprint Speed vs acceleration: 2017-2025 MLB LOYO confirms same Sprint Speed can hide material T90 differences; adding T30 cuts MAE by 52.7%.",
+    "NPB+ and MLB both use the name Sprint Speed, but public formula equivalence is not established.",
+    "Suzuki Seiya 2022: MLB T90 should be evaluated through the calibrated MLB model/reference path, not direct Sprint Speed -> rating."
+  ]
+}

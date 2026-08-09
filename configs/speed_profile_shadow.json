@@ -1,0 +1,41 @@
+{
+  "status": "SHADOW_ONLY",
+  "_purpose": "最高速度系と標準化短距離走系の食い違いを加速profileとして記録する。走力点/T90 production推定には影響させない。",
+  "affects_speed_rating": false,
+  "profile_shadow": {
+    "threshold_sec": 0.05,
+    "target_distance_m": 27.432,
+    "threshold_basis": "outputs/derived/speed_acceleration_prior_overlap_audit.json でPowerPro QA前に凍結した既存閾値。新規に合わせ込んでいない。",
+    "labels": ["acceleration_favored", "consistent", "top_speed_favored", "insufficient", "uncalibrated"]
+  },
+  "standardized_50m": {
+    "n": 88,
+    "mean_sec": 6.3660225454545465,
+    "sd_sec": 0.2675713712220164,
+    "source_files": [
+      "data/manual/standardized_50m_electronic_reference.json",
+      "data/manual/standardized_30m50m_photoelectric_2026.json"
+    ],
+    "cohorts": "2022年30人 + 2024年27人 + 2026年31人",
+    "rule": "同一セッションの光電管/電光管測定だけを標準化referenceへ入れる。genericなスカウティング50mと混ぜない。"
+  },
+  "position_player_t90_prior": {
+    "mean_sec": 4.0575,
+    "sd_sec": 0.100750285,
+    "status": "CANDIDATE_ONLY",
+    "source_config": "configs/speed_acceleration_prior.json",
+    "rule": "50m秒数を距離比例で27.432mへ変換しない。集団内z順位を写す候補Priorでありproduction T90ではない。"
+  },
+  "same_trial_30m_50m": {
+    "status": "PROTOCOL_LOCAL_SHADOW_ONLY",
+    "rule": "30m/50mが同一試技なら30→50 splitを保存し、非減速仮定で90ft区間をboundsとして計算してよい。ただしstart/timing protocolがStatcast T90と同一と確認できるまでproductionへ接続しない。",
+    "important": "同一試技の30mは90ftに近いが、それだけでStatcast T90と同じ量にはならない。"
+  },
+  "guardrails": [
+    "shadow output must never override estimateT90()",
+    "shadow output must never directly change speed rating",
+    "do not learn regression weights from partial 30m publication",
+    "do not fit 30m->T90 from protocol-incompatible absolute seconds",
+    "do not use PowerPro individual ratings to calibrate profile thresholds or coefficients"
+  ]
+}

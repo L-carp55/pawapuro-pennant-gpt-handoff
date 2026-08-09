@@ -1,0 +1,52 @@
+{
+  "_purpose": "走力1-100の基準となる現代NPB T90 reference CDFの母集団・ウェイト・freeze条件。",
+  "status": "POLICY_DRAFT_REFERENCE_NOT_FROZEN",
+  "population": {
+    "unit": "player-season",
+    "seasons": [2020, 2021, 2022, 2023, 2024, 2025],
+    "exclude_pitchers": true,
+    "why_these_years": "旧running_normsの実体もUBR被覆により2020-2025の500 player-seasonsだった。T90では旧成果指標を使わないが、現代NPBの固定基準として同じ時代窓を起点にしつつ、短縮2020の参加基準だけ修正する。",
+    "eligibility": {
+      "base_min_pa_at_143_games": 300,
+      "formula": "min_pa_y = base_min_pa_at_143_games * team_games_y / 143",
+      "season_games": {
+        "2020": 120,
+        "2021": 143,
+        "2022": 143,
+        "2023": 143,
+        "2024": 143,
+        "2025": 143
+      },
+      "why": "2020だけ300打席固定にすると、143試合年より強くレギュラー層へ絞る。身体能力の基準集団なので同じシーズン参加割合に揃える。"
+    }
+  },
+  "weighting": {
+    "season_total_weight": "equal",
+    "within_season_player_weight": "equal",
+    "formula": "entry_weight = 1 / (number_of_seasons * eligible_players_in_that_season)",
+    "why": "2020短縮年や年ごとのeligible人数差で基準CDFの時代ウェイトが変わらないようにする。PAそのものでは重み付けしない。"
+  },
+  "cdf": {
+    "type": "weighted_empirical_midrank",
+    "rating_map": "p_fast -> normalInvCdf -> 50 + 15z",
+    "engine_inverse": "rating -> normalCdf -> weighted inverse T90 CDF",
+    "probability_clip": 0.0005
+  },
+  "freeze_gate": {
+    "require_all_eligible_player_seasons_have_t90": true,
+    "allow_missing_t90": 0,
+    "require_t90_uncertainty": true,
+    "reason_uncertainty": "proxy/bridge推定の点推定だけでCDFを作ると、不確実な選手が平均側へ縮み分布幅を人工的に狭める恐れがある。最終freeze前にT90 posterior/uncertaintyを持たせる。",
+    "allow_candidate_point_cdf_before_uncertainty": true,
+    "candidate_is_not_live_reference": true,
+    "require_live_pipeline_still_shadow_until_freeze": true
+  },
+  "not_allowed": [
+    "2022 MLBのT90分布をそのままNPB referenceにする",
+    "NPB+収録選手だけでCDFを作る（現役残存・収集対象バイアス）",
+    "PAでCDFを重み付けする",
+    "2020だけ300PA固定にする",
+    "T90欠損者をreferenceから黙って除外する",
+    "推定不確実性未実装のpoint CDFをfinal referenceとしてfreezeする"
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "status": "SCALE_AUDIT_COMPLETE_RETAIN_V3_EVALUATION_SCALE",
+  "created_at": "2026-08-09",
+  "production_rating_changed": false,
+  "owner_qa_used_as_training": false,
+  "purpose": "加速profileを固定したまま、T90→1-100目盛りだけを比較する。現行v3直線尺度、NPB+99人内Gaussian z、同集団empirical normal score、大学野球27.43m prior zを比較。",
+  "source": {
+    "physical_sample": "outputs/derived/speed_blind_v3_npbplus_2026.json",
+    "owner_qa": "outputs/derived/speed_owner_qa_bands_20260809.json",
+    "acceleration_prior": "configs/speed_acceleration_prior.json"
+  },
+  "sample": {
+    "n": 99,
+    "top_speed_kmh": {
+      "mean": 31.590909,
+      "sd_sample": 1.24729,
+      "min": 29.0,
+      "median": 31.6,
+      "max": 35.0
+    },
+    "warning": "NPB+収録99人は全NPB野手の無作為・完全標本ではない。sample-centered scaleは最終NPB reference CDFとして採用しない。"
+  },
+  "mappings": {
+    "v3_linear": {
+      "formula": "rating=clamp(1,100,100-99*(T90-3.66)/(4.78-3.66))",
+      "basis": "2022 MLB Statcast observed physical T90 range anchors",
+      "summary": {
+        "n": 99,
+        "mean": 65.445193,
+        "sd_sample": 11.194659,
+        "min": 42.191307,
+        "p25": 56.551601,
+        "median": 65.526786,
+        "p75": 73.604452,
+        "max": 96.042412,
+        "rank_counts": {"S": 2, "A": 9, "B": 23, "C": 34, "D": 23, "E": 8, "F": 0, "G": 0}
+      },
+      "owner_qa": {
+        "n": 18,
+        "within_band": 11,
+        "within_band_rate": 0.611111,
+        "mean_distance_to_band": 2.302729,
+        "max_distance_to_band": 12.55088
+      }
+    },
+    "sample_gaussian_z": {
+      "formula": "rating=clamp(1,100,50+15*(top_speed-sample_mean)/sample_sd)",
+      "basis": "NPB+99人内の平均・SD。選抜バイアスがあるためcomparison only",
+      "summary": {
+        "n": 99,
+        "mean": 50.0,
+        "sd_sample": 15.0,
+        "min": 18.841544,
+        "p25": 38.083257,
+        "median": 50.109328,
+        "p75": 60.932791,
+        "max": 90.997968,
+        "rank_counts": {"S": 1, "A": 1, "B": 9, "C": 15, "D": 25, "E": 19, "F": 28, "G": 1}
+      },
+      "owner_qa": {
+        "n": 18,
+        "within_band": 8,
+        "within_band_rate": 0.444444,
+        "mean_distance_to_band": 7.295107,
+        "max_distance_to_band": 30.714136
+      }
+    },
+    "sample_empirical_normal_score": {
+      "formula": "top-speed midrank p_fast -> normalInvCdf -> 50+15z",
+      "basis": "NPB+99人内の経験分布。有限標本の端点制約と選抜バイアスあり",
+      "summary": {
+        "n": 99,
+        "mean": 49.999794,
+        "sd_sample": 14.956124,
+        "min": 11.414718,
+        "p25": 39.27836,
+        "median": 50.189901,
+        "p75": 59.998464,
+        "max": 88.585282,
+        "rank_counts": {"S": 0, "A": 2, "B": 9, "C": 13, "D": 27, "E": 22, "F": 24, "G": 2}
+      },
+      "owner_qa": {
+        "n": 18,
+        "within_band": 7,
+        "within_band_rate": 0.388889,
+        "mean_distance_to_band": 7.581882,
+        "max_distance_to_band": 28.841837
+      }
+    },
+    "college_27_43m_prior_z": {
+      "formula": "rating=clamp(1,100,50+15*(4.0575-T90)/0.100750285)",
+      "basis": "大学野球position-player 27.43m priorの推論mean/sd。NPB referenceではない",
+      "summary": {
+        "n": 99,
+        "mean": 50.953788,
+        "sd_sample": 18.786952,
+        "min": 11.811919,
+        "p25": 35.999428,
+        "median": 51.116622,
+        "p75": 64.722096,
+        "max": 100.0,
+        "rank_counts": {"S": 2, "A": 3, "B": 12, "C": 14, "D": 20, "E": 17, "F": 24, "G": 7}
+      },
+      "owner_qa": {
+        "n": 18,
+        "within_band": 6,
+        "within_band_rate": 0.333333,
+        "mean_distance_to_band": 7.549362,
+        "max_distance_to_band": 32.488852
+      }
+    }
+  },
+  "selected_comparison": [
+    {"player":"周東佑京","top_speed_kmh":35.0,"v3_linear":96.042,"sample_gaussian":90.998,"empirical_normal_score":88.585,"college_prior_z":100.0,"owner_band":[90,100],"v3_gap":0.0,"gaussian_gap":0.0,"empirical_gap":1.415,"college_gap":0.0},
+    {"player":"並木秀尊","top_speed_kmh":33.8,"v3_linear":85.272,"sample_gaussian":76.567,"empirical_normal_score":79.335,"college_prior_z":84.374,"owner_band":[90,100],"v3_gap":4.728,"gaussian_gap":13.433,"empirical_gap":10.665,"college_gap":5.626},
+    {"player":"源田壮亮","top_speed_kmh":32.9,"v3_linear":77.195,"sample_gaussian":65.743,"empirical_normal_score":64.818,"college_prior_z":70.769,"owner_band":[70,89],"v3_gap":0.0,"gaussian_gap":4.257,"empirical_gap":5.182,"college_gap":0.0},
+    {"player":"村松開人","top_speed_kmh":33.4,"v3_linear":81.682,"sample_gaussian":71.756,"empirical_normal_score":70.028,"college_prior_z":78.328,"owner_band":[70,89],"v3_gap":0.0,"gaussian_gap":0.0,"empirical_gap":0.0,"college_gap":0.0},
+    {"player":"田中幹也","top_speed_kmh":33.5,"v3_linear":82.58,"sample_gaussian":72.959,"empirical_normal_score":73.246,"college_prior_z":79.839,"owner_band":[70,89],"v3_gap":0.0,"gaussian_gap":0.0,"empirical_gap":0.0,"college_gap":0.0},
+    {"player":"吉川尚輝","top_speed_kmh":32.5,"v3_linear":73.604,"sample_gaussian":60.933,"empirical_normal_score":59.998,"college_prior_z":64.722,"owner_band":[70,89],"v3_gap":0.0,"gaussian_gap":9.067,"empirical_gap":10.002,"college_gap":5.278},
+    {"player":"村林一輝","top_speed_kmh":34.5,"v3_linear":91.555,"sample_gaussian":84.985,"empirical_normal_score":82.492,"college_prior_z":94.956,"owner_band":[60,89],"v3_gap":2.555,"gaussian_gap":0.0,"empirical_gap":0.0,"college_gap":5.956},
+    {"player":"小園海斗","top_speed_kmh":31.5,"v3_linear":64.629,"sample_gaussian":48.907,"empirical_normal_score":49.05,"college_prior_z":49.605,"owner_band":[70,79],"v3_gap":5.371,"gaussian_gap":21.093,"empirical_gap":20.95,"college_gap":20.395},
+    {"player":"矢野雅哉","top_speed_kmh":30.7,"v3_linear":57.449,"sample_gaussian":39.286,"empirical_normal_score":41.158,"college_prior_z":37.511,"owner_band":[70,79],"v3_gap":12.551,"gaussian_gap":30.714,"empirical_gap":28.842,"college_gap":32.489},
+    {"player":"柳田悠岐","top_speed_kmh":32.1,"v3_linear":70.014,"sample_gaussian":56.122,"empirical_normal_score":56.67,"college_prior_z":58.675,"owner_band":[60,79],"v3_gap":0.0,"gaussian_gap":3.878,"empirical_gap":3.33,"college_gap":1.325},
+    {"player":"細川成也","top_speed_kmh":32.7,"v3_linear":75.399,"sample_gaussian":63.338,"empirical_normal_score":62.787,"college_prior_z":67.746,"owner_band":[60,69],"v3_gap":6.399,"gaussian_gap":0.0,"empirical_gap":0.0,"college_gap":0.0},
+    {"player":"牧秀悟","top_speed_kmh":31.6,"v3_linear":65.527,"sample_gaussian":50.109,"empirical_normal_score":50.19,"college_prior_z":51.117,"owner_band":[60,69],"v3_gap":0.0,"gaussian_gap":9.891,"empirical_gap":9.81,"college_gap":8.883},
+    {"player":"近藤健介","top_speed_kmh":31.2,"v3_linear":61.937,"sample_gaussian":45.299,"empirical_normal_score":45.37,"college_prior_z":45.07,"owner_band":[50,69],"v3_gap":0.0,"gaussian_gap":4.701,"empirical_gap":4.63,"college_gap":4.93},
+    {"player":"大山悠輔","top_speed_kmh":30.5,"v3_linear":55.654,"sample_gaussian":36.881,"empirical_normal_score":36.937,"college_prior_z":34.488,"owner_band":[50,59],"v3_gap":0.0,"gaussian_gap":13.119,"empirical_gap":13.063,"college_gap":15.512},
+    {"player":"鈴木大地","top_speed_kmh":29.0,"v3_linear":42.191,"sample_gaussian":18.842,"empirical_normal_score":11.415,"college_prior_z":11.812,"owner_band":[40,59],"v3_gap":0.0,"gaussian_gap":21.158,"empirical_gap":28.585,"college_gap":28.188},
+    {"player":"山川穂高","top_speed_kmh":29.4,"v3_linear":45.781,"sample_gaussian":23.652,"empirical_normal_score":24.641,"college_prior_z":17.859,"owner_band":[20,59],"v3_gap":0.0,"gaussian_gap":0.0,"empirical_gap":0.0,"college_gap":2.141},
+    {"player":"宮﨑敏郎","top_speed_kmh":30.3,"v3_linear":53.859,"sample_gaussian":34.475,"empirical_normal_score":33.548,"college_prior_z":31.464,"owner_band":[20,49],"v3_gap":4.859,"gaussian_gap":0.0,"empirical_gap":0.0,"college_gap":0.0},
+    {"player":"大城卓三","top_speed_kmh":29.2,"v3_linear":43.986,"sample_gaussian":21.247,"empirical_normal_score":20.665,"college_prior_z":14.835,"owner_band":[20,39],"v3_gap":4.986,"gaussian_gap":0.0,"empirical_gap":0.0,"college_gap":5.165}
+  ],
+  "findings": [
+    "現行v3直線尺度はowner独立QAで18人中11人がband内。比較3尺度は6-8人で、平均band距離も現行2.30点に対し7.30-7.58点へ悪化する。",
+    "NPB+99人内で平均50・SD15へ強制すると、源田・吉川・牧・大山・鈴木大地など既に妥当な中間帯を一斉に下げる。",
+    "経験分布尺度は99人という有限標本のため最速でも88.6となり、Sを表現できない。この単年小標本には不適切。",
+    "current v3の平均65.45は最終基準としては高いが、NPB+99人が無作為標本でないため、この平均だけで目盛りを全体シフトしてはいけない。",
+    "同じtop speedの友杉/細川はどの単調scaleでも同点のまま。主要な個人差問題はscaleではなくT90 bridge/profile側。",
+    "並木・宮﨑・大城だけを直す全体非線形変換は、他の多数のQA整合選手を壊す。owner bandへ合わせた曲線fitは禁止。"
+  ],
+  "decision": [
+    "現行v3直線尺度をevaluation scaleとして維持する。",
+    "最終production scaleとは呼ばず、NPB全体T90 reference CDFが完成した時だけ置換する。",
+    "現段階で全体shift、sample z-score、empirical normal-score、手動S字補正を採用しない。",
+    "走力の現在のBLOCKERは1-100目盛りではなく、top-speed-only T90 bridgeと個別acceleration profileの不確実性。"
+  ]
+}

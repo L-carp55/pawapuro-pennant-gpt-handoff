@@ -1,0 +1,140 @@
+{
+  "status": "DIRECT_OVERLAP_INSUFFICIENT_FOR_NPB_BRIDGE",
+  "created_at": "2026-08-09",
+  "purpose": "2026 NPB+ Sprint Speedと2017-2025 Baseball Savant Sprint Speed/Running Splitsを、mlb_bridge表だけに依存せず英字選手名も使って直接照合し、NPB+ Sprint Speed -> T90回帰を同定できるだけの同一選手overlapがあるか確認する。",
+  "sources": {
+    "npb_plus": "07_pennant.db::npb_plus_measurement (2026途中 snapshot)",
+    "npb_english_names": "07_pennant.db::bm_player name_en",
+    "mlb": "Baseball Savant 2017-2025 Sprint Speed + Running Splits artifact from workflow run 31292874269",
+    "official_npb_plus_tracking": "https://www.hawkeyeinnovations.com/npb",
+    "official_mlb_sprint_speed_definition": "https://www.mlb.com/glossary/statcast/sprint-speed"
+  },
+  "naming": {
+    "official_metric_name": "Sprint Speed / スプリントスピード",
+    "legacy_db_column": "top_speed_kmh",
+    "note": "DB storage name remains for compatibility; appraisal evidence canonical name is npb_plus_sprint_speed_kmh."
+  },
+  "definition_gate": {
+    "npb_plus_publicly_confirmed": "Hawk-Eye optical tracking powers NPB+ player speed / sprint speed data.",
+    "mlb_public_definition": "fastest one-second window on qualified runs; seasonal Sprint Speed averages the best approximately two-thirds of qualified runs",
+    "equivalence_status": "NOT_PUBLICLY_ESTABLISHED",
+    "decision": "Common Hawk-Eye infrastructure and the common metric name are insufficient to treat the numerical definitions as identical."
+  },
+  "overlaps": [
+    {
+      "npb_name": "モンテロ",
+      "name_en": "Elehuris Montero",
+      "npb_season": 2026,
+      "npb_plus_sprint_speed_kmh": 31.9,
+      "mlb_latest_year": 2024,
+      "year_gap": 2,
+      "mlb_sprint_speed_ftps": 26.2,
+      "mlb_sprint_speed_converted_kmh_for_unit_comparison_only": 28.748736,
+      "raw_unit_difference_npb_minus_mlb_kmh": 3.151264,
+      "temporal_bridge_candidate": true,
+      "mlb_latest_actual": {"t10_sec": 0.9, "t30_sec": 1.88, "t90_sec": 4.2},
+      "full_mlb_model_qa": {"sprint_only_pred_t90_sec": 4.166526, "sprint_plus_t30_pred_t90_sec": 4.210471},
+      "old_npb_v3_evaluation_bridge": {"pred_t90_sec": 4.019539, "difference_vs_latest_mlb_actual_sec": -0.180461, "status": "EVALUATION_ONLY_NOT_BRIDGE_VALIDATION"}
+    },
+    {
+      "npb_name": "秋山 翔吾",
+      "name_en": "Shohgo Akiyama",
+      "npb_season": 2026,
+      "npb_plus_sprint_speed_kmh": 31.6,
+      "mlb_latest_year": 2021,
+      "year_gap": 5,
+      "mlb_sprint_speed_ftps": 28.0,
+      "mlb_sprint_speed_converted_kmh_for_unit_comparison_only": 30.72384,
+      "raw_unit_difference_npb_minus_mlb_kmh": 0.87616,
+      "temporal_bridge_candidate": false,
+      "mlb_latest_actual": {"t10_sec": 0.86, "t30_sec": 1.78, "t90_sec": 3.97},
+      "full_mlb_model_qa": {"sprint_only_pred_t90_sec": 3.964479, "sprint_plus_t30_pred_t90_sec": 3.960283},
+      "old_npb_v3_evaluation_bridge": {"pred_t90_sec": 4.05, "difference_vs_latest_mlb_actual_sec": 0.08, "status": "EVALUATION_ONLY_NOT_BRIDGE_VALIDATION"},
+      "reason": "5-year gap; age/trajectory confounding"
+    },
+    {
+      "npb_name": "カリステ",
+      "name_en": "Orlando Calixte",
+      "npb_season": 2026,
+      "npb_plus_sprint_speed_kmh": 31.3,
+      "mlb_latest_year": 2017,
+      "year_gap": 9,
+      "mlb_sprint_speed_ftps": 29.3,
+      "mlb_sprint_speed_converted_kmh_for_unit_comparison_only": 32.150304,
+      "raw_unit_difference_npb_minus_mlb_kmh": -0.850304,
+      "temporal_bridge_candidate": false,
+      "mlb_latest_actual": {"t10_sec": 0.87, "t30_sec": 1.82, "t90_sec": 3.94},
+      "full_mlb_model_qa": {"sprint_only_pred_t90_sec": 3.818556, "sprint_plus_t30_pred_t90_sec": 3.919376},
+      "old_npb_v3_evaluation_bridge": {"pred_t90_sec": 4.080461, "difference_vs_latest_mlb_actual_sec": 0.140461, "status": "EVALUATION_ONLY_NOT_BRIDGE_VALIDATION"},
+      "reason": "9-year gap; age/trajectory confounding"
+    },
+    {
+      "npb_name": "筒香 嘉智",
+      "name_en": "Yoshitomo Tsutsugoh",
+      "npb_season": 2026,
+      "npb_plus_sprint_speed_kmh": 30.2,
+      "mlb_latest_year": 2022,
+      "year_gap": 4,
+      "mlb_sprint_speed_ftps": 26.1,
+      "mlb_sprint_speed_converted_kmh_for_unit_comparison_only": 28.639008,
+      "raw_unit_difference_npb_minus_mlb_kmh": 1.560992,
+      "temporal_bridge_candidate": true,
+      "mlb_latest_actual": {"t10_sec": 0.91, "t30_sec": 1.89, "t90_sec": 4.2},
+      "full_mlb_model_qa": {"sprint_only_pred_t90_sec": 4.177751, "sprint_plus_t30_pred_t90_sec": 4.229906},
+      "old_npb_v3_evaluation_bridge": {"pred_t90_sec": 4.192152, "difference_vs_latest_mlb_actual_sec": -0.007848, "status": "EVALUATION_ONLY_NOT_BRIDGE_VALIDATION"}
+    },
+    {
+      "npb_name": "サンタナ",
+      "name_en": "Domingo Santana",
+      "npb_season": 2026,
+      "npb_plus_sprint_speed_kmh": 30.8,
+      "mlb_latest_year": 2020,
+      "year_gap": 6,
+      "mlb_sprint_speed_ftps": 26.9,
+      "mlb_sprint_speed_converted_kmh_for_unit_comparison_only": 29.516832,
+      "raw_unit_difference_npb_minus_mlb_kmh": 1.283168,
+      "temporal_bridge_candidate": false,
+      "mlb_latest_actual": {"t10_sec": 0.91, "t30_sec": 1.87, "t90_sec": 4.13},
+      "full_mlb_model_qa": {"sprint_only_pred_t90_sec": 4.087952, "sprint_plus_t30_pred_t90_sec": 4.14916},
+      "old_npb_v3_evaluation_bridge": {"pred_t90_sec": 4.13123, "difference_vs_latest_mlb_actual_sec": 0.00123, "status": "EVALUATION_ONLY_NOT_BRIDGE_VALIDATION"},
+      "reason": "6-year gap; age/trajectory confounding"
+    },
+    {
+      "npb_name": "ポランコ",
+      "name_en": "Gregory Polanco",
+      "npb_season": 2026,
+      "npb_plus_sprint_speed_kmh": 31.1,
+      "mlb_latest_year": 2021,
+      "year_gap": 5,
+      "mlb_sprint_speed_ftps": 27.2,
+      "mlb_sprint_speed_converted_kmh_for_unit_comparison_only": 29.846016,
+      "raw_unit_difference_npb_minus_mlb_kmh": 1.253984,
+      "temporal_bridge_candidate": false,
+      "mlb_latest_actual": {"t10_sec": 0.84, "t30_sec": 1.77, "t90_sec": 3.99},
+      "full_mlb_model_qa": {"sprint_only_pred_t90_sec": 4.054278, "sprint_plus_t30_pred_t90_sec": 4.003662},
+      "old_npb_v3_evaluation_bridge": {"pred_t90_sec": 4.100769, "difference_vs_latest_mlb_actual_sec": 0.110769, "status": "EVALUATION_ONLY_NOT_BRIDGE_VALIDATION"},
+      "reason": "5-year gap; age/trajectory confounding"
+    }
+  ],
+  "counts": {
+    "npb_plus_rows_with_sprint_speed": 100,
+    "name_matched_mlb_2017_2025": 6,
+    "within_4_years": 2,
+    "usable_for_regression": 2
+  },
+  "targeted_public_direct_npb_search": {
+    "scope": "public primary/official sources for NPB/professional players with Hawk-Eye Sprint Speed plus clean 30m/90ft/T90 in the same calibration setting",
+    "result": "NO_USABLE_PUBLIC_CALIBRATION_SET_FOUND",
+    "closest_sources": [
+      "Hawk-Eye NPB page confirms league-wide optical player tracking and player speed data but not the Sprint Speed aggregation formula.",
+      "Japanese baseball sprint research provides standardized 30m/10m split data for university players, not concurrent NPB Hawk-Eye Sprint Speed for named NPB professionals."
+    ]
+  },
+  "decision": [
+    "Two temporally usable overlaps are still insufficient to identify a defensible NPB+ Sprint Speed -> T90 regression or error distribution.",
+    "Do not copy MLB Sprint Speed coefficients into the NPB+ model by ft/s<->km/h unit conversion.",
+    "Do not assign an NPB+ numeric MAE floor from the MLB LOYO error until an NPB bridge is calibrated.",
+    "Retain the existing NPB v3 mapping only as an evaluation-only provisional bridge, never as a validated production T90 model.",
+    "This calibration gate is closed for current scope. Reopen only when more near-season same-player overlap, a published NPB+ formula equivalent to MLB Statcast, or direct NPB trajectory/T90 labels become available."
+  ]
+}

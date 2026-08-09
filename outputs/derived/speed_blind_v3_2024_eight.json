@@ -1,0 +1,109 @@
+{
+  "status": "FROZEN_BEFORE_POWERPRO_QA",
+  "created_at": "2026-08-08",
+  "purpose": "2024年8選手の走力v3。個別のPowerPro値・PowerPro回帰係数を算出に使わず、物理走力証拠だけで中央推定を先に固定する。心理的には過去にPowerPro値を見ているため完全な情報遮断ブラインドとは呼ばない。",
+  "definition": "走力 = 最初の走行ステップから90ft（27.43m）を直線移動する身体的スプリント能力。盗塁判断・走塁判断・バント開始・スイングから走行への移行は除外。",
+  "rating_scale": {
+    "basis": "2022 MLB Statcast 90ft Running Splitsで観測されたプロ野球の物理レンジを1-100に線形対応",
+    "fast_anchor": {"t90_sec": 3.66, "rating": 100},
+    "slow_anchor": {"t90_sec": 4.78, "rating": 1},
+    "formula": "rating = clamp(1,100,100 - 99*(T90-3.66)/(4.78-3.66))",
+    "powerpro_used": false
+  },
+  "mlb_physical_bridge": {
+    "sample": "2022 MLB, Sprint Speedと実T90が両方あるNPB接続26人",
+    "formula": "T90 = 7.117945 - 0.111415 * SprintSpeed_ftps",
+    "r2": 0.933584,
+    "powerpro_used": false
+  },
+  "npb_plus_bridge": {
+    "reason": "NPB+ top_speed_kmhとMLB Sprint Speedは公開定義が同一と確認できないため、絶対値を同一指標として扱わない。",
+    "slope_sec_per_kmh": -0.1015374380,
+    "slope_basis": "MLB物理回帰の傾きだけをft/sからkm/hへ単位変換",
+    "center_alignment": "NPB+標本中央値31.6km/hを2022 MLB T90中央値付近4.05秒へ合わせる。PowerPro値は使わない。",
+    "formula": "T90 = 4.05 - 0.1015374380*(top_speed_kmh-31.6)",
+    "caveat": "NPB+標本は全NPB野手の無作為標本ではないため、特に分布端では不確実性を大きく取る。"
+  },
+  "players": [
+    {
+      "player": "周東佑京",
+      "t90_sec": 3.731,
+      "rating_v3": 94,
+      "confidence": "high",
+      "primary_evidence": "2023 WBC Statcast sprint speed 30.4 ft/s",
+      "method": "MLB物理回帰を直接適用。NPB+35.0km/hはQAのみ。",
+      "uncertainty_rating_points": 4
+    },
+    {
+      "player": "近本光司",
+      "t90_sec": 3.89,
+      "rating_v3": 80,
+      "confidence": "medium",
+      "primary_evidence": "30m 3.87秒、50m 5.8秒、一塁→二塁の走塁練習3.1秒",
+      "method": "測定プロトコルがStatcastと同一でないため秒数を直接変換せず、複数の短距離身体測定が一貫して上位級であることから2022 MLB T90上位帯の中央3.89秒をpriorとする。",
+      "uncertainty_rating_points": 8
+    },
+    {
+      "player": "源田壮亮",
+      "t90_sec": 3.918,
+      "rating_v3": 77,
+      "confidence": "medium-high",
+      "primary_evidence": "NPB+ top speed 32.9km/h",
+      "method": "NPB+ median-centered physical bridge。通常スイングH->1 3.77秒はQAのみで数値補正しない。",
+      "uncertainty_rating_points": 6
+    },
+    {
+      "player": "村上宗隆",
+      "t90_sec": 4.10,
+      "rating_v3": 61,
+      "confidence": "low-medium",
+      "primary_evidence": "高校時50m 6.1秒、走力は決して速くないという監督評価",
+      "method": "非標準50mは絶対秒へ変換せず、平均付近〜やや遅い身体速度priorとしてT90 4.10秒を中央推定。盗塁成果は不使用。",
+      "uncertainty_rating_points": 9
+    },
+    {
+      "player": "甲斐拓也",
+      "t90_sec": 4.199,
+      "rating_v3": 52,
+      "confidence": "low",
+      "primary_evidence": "直接短距離測定なし。2024 GDP回避＋内野安打率のTier-E fallback proxyのみ",
+      "method": "旧PowerProラベルを使わずに作ったGDP回避＋内野安打proxy z=-0.878を、2022 T90の概算SD 0.17秒でT90へ弱く写像。捕手送球速度・盗塁阻止は不使用。",
+      "uncertainty_rating_points": 10
+    },
+    {
+      "player": "牧秀悟",
+      "t90_sec": 4.05,
+      "rating_v3": 66,
+      "confidence": "medium-high",
+      "primary_evidence": "NPB+ top speed 31.6km/h",
+      "method": "NPB+ median-centered physical bridge。最速H->1は不使用。",
+      "uncertainty_rating_points": 6
+    },
+    {
+      "player": "岡本和真",
+      "t90_sec": 4.24,
+      "rating_v3": 49,
+      "confidence": "low-medium",
+      "primary_evidence": "2020年50m自己最速6.5秒",
+      "method": "非標準50mを絶対変換せず、明確な下位側physical priorとしてT90 4.24秒を中央推定。2024内野安打/GDP proxyは50mと矛盾するため低Tierとして採用しない。",
+      "uncertainty_rating_points": 9
+    },
+    {
+      "player": "山川穂高",
+      "t90_sec": 4.273,
+      "rating_v3": 46,
+      "confidence": "medium-high",
+      "primary_evidence": "NPB+ top speed 29.4km/h",
+      "method": "NPB+ median-centered physical bridge。最速H->1 4.76秒は不使用。",
+      "uncertainty_rating_points": 8
+    }
+  ],
+  "forbidden_inputs": [
+    "PowerPro individual ratings during construction",
+    "PowerPro population regression during construction",
+    "steal count/success/attempt rate",
+    "UBR/additional advancement",
+    "fastest home-to-first",
+    "safety bunt home-to-first"
+  ]
+}

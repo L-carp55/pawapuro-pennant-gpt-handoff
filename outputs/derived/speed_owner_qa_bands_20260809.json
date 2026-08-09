@@ -1,0 +1,35 @@
+{
+  "status": "OWNER_QA_ONLY_NOT_CALIBRATION",
+  "created_at": "2026-08-09",
+  "purpose": "オーナーの野球体感を、モデルを合わせ込む教師値ではなく、独立QA bandとして保存する。",
+  "rank_scale": {
+    "S": [90, 100],
+    "A": [80, 89],
+    "B": [70, 79],
+    "C": [60, 69],
+    "D": [50, 59],
+    "E": [40, 49],
+    "F": [20, 39]
+  },
+  "bands": [
+    {"player":"周東佑京","owner_band":"S","rating_range":[90,100]},
+    {"player":"並木秀尊","owner_band":"S","rating_range":[90,100]},
+    {"player":"源田壮亮","owner_band":"A-B","rating_range":[70,89]},
+    {"player":"村松開人","owner_band":"A-B","rating_range":[70,89]},
+    {"player":"田中幹也","owner_band":"A-B","rating_range":[70,89]},
+    {"player":"吉川尚輝","owner_band":"A-B","rating_range":[70,89]},
+    {"player":"村林一輝","owner_band":"A-C","rating_range":[60,89]},
+    {"player":"小園海斗","owner_band":"B","rating_range":[70,79]},
+    {"player":"矢野雅哉","owner_band":"B","rating_range":[70,79]},
+    {"player":"柳田悠岐","owner_band":"B-C","rating_range":[60,79]},
+    {"player":"細川成也","owner_band":"C","rating_range":[60,69]},
+    {"player":"牧秀悟","owner_band":"C","rating_range":[60,69]},
+    {"player":"近藤健介","owner_band":"C-D","rating_range":[50,69]},
+    {"player":"大山悠輔","owner_band":"D","rating_range":[50,59]},
+    {"player":"鈴木大地","owner_band":"D-E","rating_range":[40,59]},
+    {"player":"山川穂高","owner_band":"D-F","rating_range":[20,59]},
+    {"player":"宮﨑敏郎","owner_band":"E-F","rating_range":[20,49]},
+    {"player":"大城卓三","owner_band":"F","rating_range":[20,39]}
+  ],
+  "guardrail": "Do not fit coefficients, thresholds, or player corrections to these bands. Use only after a physical model is frozen to identify disagreements for review."
+}

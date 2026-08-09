@@ -1,0 +1,26 @@
+{
+  "status": "HISTORICAL_PHYSICAL_QA_ONLY",
+  "created_at": "2026-08-08",
+  "powerpro_used": false,
+  "purpose": "標準化光電管50mと2026 NPB+最高速度の追加重複。測定年が5年前なので2026査定への自動入力には使わず、物理profileの整合性確認だけに使う。",
+  "player": "村松開人",
+  "measurements": {
+    "standardized_50m_sec": 5.91,
+    "measurement_year": 2021,
+    "measurement_source": "侍ジャパン大学代表候補強化合宿・光電管",
+    "source_url": "https://www.japan-baseball.jp/jp/news/press/20211203_1.html",
+    "npb_plus_top_speed_kmh": 33.4,
+    "npb_plus_year": 2026,
+    "temporal_gap_years": 5
+  },
+  "physical_estimates": {
+    "z50": -1.675714,
+    "t90_from_50m_prior_sec": 3.888672,
+    "rating_from_50m_prior": 79.787,
+    "t90_from_top_speed_sec": 3.867233,
+    "rating_from_top_speed": 81.682,
+    "t90_50m_minus_top_speed_sec": 0.021439,
+    "profile": "consistent"
+  },
+  "decision": "2系統は整合するが5年差のため、2026走力の混合weight推定には使わない。過去の身体profileが現在の最高速度と矛盾しないというQAのみ。"
+}

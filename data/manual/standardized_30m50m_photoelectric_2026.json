@@ -1,0 +1,54 @@
+{
+  "measurement_date": "2026-06-22",
+  "event": "侍ジャパン大学代表候補選考合宿",
+  "protocol": "photoelectric_50m_with_intermediate_30m_same_trial",
+  "participants": 31,
+  "_source_protocol": "侍ジャパン公式が光電管による50m走、途中30m地点も測定、全野手＋二刀流1人の31選手参加と明記。",
+  "_source_values": "50m全31人は高校野球ドットコムのランキング。30mの具体値は侍ジャパン公式が明記した鈴木湧陽3.85秒、岡田啓吾3.89秒のみを収録。残り29人は未確認のためnull。",
+  "_guardrail": "30m未公開者を順位・50mから推定しない。このデータから30m->T90回帰を学習しない。",
+  "sources": [
+    {
+      "source_name": "野球日本代表 侍ジャパンオフィシャルサイト",
+      "source_url": "https://www.japan-baseball.jp/jp/news/press/20260622_2.html",
+      "use": "測定プロトコル、参加31人、鈴木/岡田の50m・30m"
+    },
+    {
+      "source_name": "高校野球ドットコム",
+      "source_url": "https://www.hb-nippon.com/articles/14003",
+      "use": "50m全31人ランキング"
+    }
+  ],
+  "records": [
+    {"player":"鈴木湧陽","seconds_50m":5.78,"seconds_30m":3.85},
+    {"player":"岡田啓吾","seconds_50m":5.83,"seconds_30m":3.89},
+    {"player":"境亮陽","seconds_50m":6.02,"seconds_30m":null},
+    {"player":"木津寿哉","seconds_50m":6.02,"seconds_30m":null},
+    {"player":"榊原七斗","seconds_50m":6.15,"seconds_30m":null},
+    {"player":"黒田義信","seconds_50m":6.18,"seconds_30m":null},
+    {"player":"眞邉麗生","seconds_50m":6.18,"seconds_30m":null},
+    {"player":"新保玖和","seconds_50m":6.20,"seconds_30m":null},
+    {"player":"赤堀颯","seconds_50m":6.24,"seconds_30m":null},
+    {"player":"西野啓也","seconds_50m":6.28,"seconds_30m":null},
+    {"player":"神田剛志","seconds_50m":6.28,"seconds_30m":null},
+    {"player":"井上和輝","seconds_50m":6.29,"seconds_30m":null},
+    {"player":"小林隼翔","seconds_50m":6.29,"seconds_30m":null},
+    {"player":"佐藤悠太","seconds_50m":6.33,"seconds_30m":null},
+    {"player":"山里宝","seconds_50m":6.38,"seconds_30m":null},
+    {"player":"渡部海","seconds_50m":6.43,"seconds_30m":null},
+    {"player":"渡邊晃希","seconds_50m":6.45,"seconds_30m":null},
+    {"player":"今津慶介","seconds_50m":6.46,"seconds_30m":null},
+    {"player":"宮澤圭汰","seconds_50m":6.47,"seconds_30m":null},
+    {"player":"春山陽登","seconds_50m":6.47,"seconds_30m":null},
+    {"player":"真鍋慧","seconds_50m":6.50,"seconds_30m":null},
+    {"player":"福原聖矢","seconds_50m":6.52,"seconds_30m":null},
+    {"player":"髙岡新時","seconds_50m":6.52,"seconds_30m":null},
+    {"player":"酒井成真","seconds_50m":6.56,"seconds_30m":null},
+    {"player":"三好元気","seconds_50m":6.60,"seconds_30m":null},
+    {"player":"中山優月","seconds_50m":6.60,"seconds_30m":null},
+    {"player":"林純司","seconds_50m":6.63,"seconds_30m":null},
+    {"player":"坪井蒼汰","seconds_50m":6.73,"seconds_30m":null},
+    {"player":"前嶋藍","seconds_50m":6.76,"seconds_30m":null},
+    {"player":"徳丸快晴","seconds_50m":6.88,"seconds_30m":null,"note":"ランキング採用値6.88秒。記事にはもう一つのタイム7.13秒との記載あり。"},
+    {"player":"丸山一喜","seconds_50m":6.95,"seconds_30m":null}
+  ]
+}

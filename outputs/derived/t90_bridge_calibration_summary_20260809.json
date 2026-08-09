@@ -1,0 +1,74 @@
+{
+  "status": "FULL_MLB_MULTIYEAR_VALIDATION_COMPLETE",
+  "created_at": "2026-08-09",
+  "workflow_run_id": 31292752194,
+  "successful_regression_run_id": 31292874269,
+  "source": "Baseball Savant Running Splits + Sprint Speed CSV",
+  "seasons": [2017,2018,2019,2020,2021,2022,2023,2024,2025],
+  "sample": {
+    "player_seasons": 4381,
+    "unique_players": 1222,
+    "sprint_speed_mean_ftps": 27.208103172791628,
+    "sprint_speed_sd_ftps": 1.4211563830740257,
+    "t90_mean_sec": 4.053367952522261,
+    "t90_sd_sec": 0.16871054814360678,
+    "adjacent_year_pairs": 2960,
+    "adjacent_year_t90_r": 0.9302074179067485,
+    "adjacent_year_sprint_speed_r": 0.9381074455139655
+  },
+  "models": {
+    "sprint_only": {
+      "formula": "T90 = 7.107433259177224 - 0.11224837274614052 * SprintSpeed_ftps",
+      "intercept": 7.107433259177224,
+      "sprint_speed_coefficient": -0.11224837274614052,
+      "pooled_mae_sec": 0.044234486863107075,
+      "loyo_mae_sec": 0.04463374331109772,
+      "loyo_rmse_sec": 0.05540352001757304,
+      "loyo_fold_mae_range_sec": [0.0408,0.0472]
+    },
+    "sprint_plus_t10": {
+      "formula": "T90 = 5.489026696463511 - 0.0979597148840064 * SprintSpeed_ftps + 1.4268327120530346 * T10_sec",
+      "intercept": 5.489026696463511,
+      "sprint_speed_coefficient": -0.0979597148840064,
+      "t10_coefficient": 1.4268327120530346,
+      "loyo_mae_sec": 0.03065224038666541,
+      "loyo_rmse_sec": 0.03947594711759519,
+      "mae_reduction_vs_sprint_only": 0.3132496153634498
+    },
+    "sprint_plus_t30": {
+      "formula": "T90 = 3.697319506986064 - 0.0697930781447413 * SprintSpeed_ftps + 1.245601057565243 * T30_sec",
+      "intercept": 3.697319506986064,
+      "sprint_speed_coefficient": -0.0697930781447413,
+      "t30_coefficient": 1.245601057565243,
+      "loyo_mae_sec": 0.021111541769587728,
+      "loyo_rmse_sec": 0.02842230429298698,
+      "loyo_fold_mae_range_sec": [0.0199,0.0246],
+      "mae_reduction_vs_sprint_only": 0.5270049024918203
+    }
+  },
+  "sprint_only_residual_correlations": {
+    "t10": 0.6254462394403221,
+    "t30": 0.5265052943042093
+  },
+  "npb_transfer_gate": {
+    "audit_file": "outputs/derived/npb_plus_mlb_sprint_overlap_audit_20260809.json",
+    "historical_name_overlaps": 6,
+    "within_4_years": 2,
+    "direct_public_npb_calibration_set_found": false,
+    "decision": "INSUFFICIENT_FOR_NPB_REGRESSION_GATE_CLOSED"
+  },
+  "decision": [
+    "MLB Statcast Sprint Speed -> T90モデルは2017-2025 full-MLB leave-one-year-out検証を通過したため、MLBドメインでは較正済みとして凍結する。",
+    "Sprint Speed単独でも強いが、T10/T30を加えると別の加速情報が残差を説明し、T30追加でLOYO MAEが52.7%低下する。",
+    "したがって走力T90は最高速度/ Sprint Speedだけではなく加速情報を含む設計が正しい。",
+    "NPB+公式名称もSprint Speedだが、公開上MLB Statcastと同一の算出式・1秒窓・集計法とは確認できない。MLB係数をNPB+へ単位換算移植しない。",
+    "直接overlapを英字名まで使って再照合すると6人、査定年±4年以内はモンテロと筒香の2人。依然として回帰・誤差分布の同定には不足する。",
+    "同時にNPBプロ選手のHawk-Eye Sprint Speedとcleanな30m/90ftを結ぶ公開一次較正セットも見つからなかったため、NPB+ bridgeは現在スコープでは未較正のまま閉じる。"
+  ],
+  "qa": {
+    "workflow_regression_run": "SUCCESS",
+    "npb_plus_sprint_speed_alias_test": "PASS",
+    "speed_t90_uncertainty_test": "PASS",
+    "calibration_v2": "PASS"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "status": "ACCELERATION_ENRICHED_QA_CANDIDATE",
+  "created_at": "2026-08-09",
+  "powerpro_used_in_calculation": false,
+  "affects_production_rating": false,
+  "purpose": "既存のNPB+最高速度由来T90と標準化50m由来T90が両方ある選手について、根拠のない混合weightを置かずに候補レンジとして統合する。",
+  "rating_scale": {
+    "status": "v3_evaluation_only_not_final_npb_cdf",
+    "formula": "rating = clamp(1,100,100 - 99*(T90-3.66)/(4.78-3.66))"
+  },
+  "rule": {
+    "profile_threshold_sec": 0.05,
+    "consistent": "2つのT90差が0.05秒未満なら、レンジに加えてQA用midpoint代表値を表示してよい。productionには未使用。",
+    "disagreement": "差が0.05秒以上なら1点に統合しない。2つの独立証拠が示すT90/ratingレンジを保持する。",
+    "why": "50m priorの予測誤差が未較正なので、50:50平均や任意weightは置けない。"
+  },
+  "players": [
+    {
+      "player": "林琢真",
+      "top_speed_t90_sec": 4.009385,
+      "short_distance_t90_sec": 3.915914,
+      "delta_sec": -0.093471,
+      "profile": "acceleration_favored",
+      "t90_candidate_range_sec": [3.915914, 4.009385],
+      "rating_candidate_range": [69.116862, 77.379030],
+      "representative_rating": null,
+      "interpretation": "最高速度だけの69.1は下限候補。短距離能力まで考えると77.4まで上振れ余地があるが、現時点で一点化しない。"
+    },
+    {
+      "player": "友杉篤輝",
+      "top_speed_t90_sec": 3.938309,
+      "short_distance_t90_sec": 3.957333,
+      "delta_sec": 0.019024,
+      "profile": "consistent",
+      "t90_candidate_range_sec": [3.938309, 3.957333],
+      "rating_candidate_range": [73.717887, 75.399472],
+      "representative_rating_qa_only": 74.558680,
+      "interpretation": "最高速度と標準化50mが十分整合。top-speed-only 75.4は大きく外れていない。"
+    },
+    {
+      "player": "奈良間大己",
+      "top_speed_t90_sec": 4.039846,
+      "short_distance_t90_sec": 4.036405,
+      "delta_sec": -0.003441,
+      "profile": "consistent",
+      "t90_candidate_range_sec": [4.036405, 4.039846],
+      "rating_candidate_range": [66.424327, 66.728487],
+      "representative_rating_qa_only": 66.576407,
+      "interpretation": "2系統がほぼ完全一致。最高速度由来66.4をそのまま使っても誤差は非常に小さい。"
+    }
+  ],
+  "conclusion": [
+    "加速情報を一律加点する設計は不適切。友杉・奈良間では補正不要で、林では大きな補正候補が生じる。",
+    "したがって加速補正は選手個別の短距離証拠がある場合だけ検討する。",
+    "現時点で短距離証拠の信頼度weightが未較正なので、林を74点など任意の一点に固定しない。",
+    "次のQAでは、既存29人表のうち短距離証拠が無い選手はtop-speed-only暫定値のまま明示する。"
+  ]
+}

@@ -1,0 +1,54 @@
+name: T90 calibration data
+
+on:
+  push:
+    branches:
+      - agent/t90-speed-foundation
+    paths:
+      - '.github/workflows/t90-calibration-data.yml'
+      - 'scripts/fetch_statcast_running.mjs'
+      - 'scripts/calibrate_t90_bridge.mjs'
+      - 'scripts/calibrate_t90_bridge_v2.mjs'
+      - 'scripts/test_npb_plus_sprint_speed_alias.mjs'
+      - 'scripts/test_speed_t90_uncertainty.mjs'
+      - 'src/ratings/speed_evidence.mjs'
+      - 'src/ratings/speed_appraisal.mjs'
+      - 'configs/speed_t90_models.json'
+      - 'configs/speed_t90_uncertainty.json'
+      - '.t90-trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch-and-calibrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run T90 regression tests
+        run: |
+          node scripts/test_npb_plus_sprint_speed_alias.mjs
+          node scripts/test_speed_t90_uncertainty.mjs
+      - name: Fetch 2017-2025 Savant running data
+        run: node scripts/fetch_statcast_running.mjs 2017 2025
+      - name: Show representative CSV headers
+        run: |
+          echo '--- running_splits_2022.csv ---'
+          head -n 1 data/raw/statcast_running/running_splits_2022.csv
+          echo '--- sprint_speed_2022.csv ---'
+          head -n 1 data/raw/statcast_running/sprint_speed_2022.csv
+      - name: Build T90 bridge calibration
+        run: node scripts/calibrate_t90_bridge_v2.mjs
+      - name: Upload T90 calibration inputs and output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t90-calibration
+          path: |
+            data/raw/statcast_running/
+            outputs/derived/t90_bridge_calibration.json
+          if-no-files-found: warn
