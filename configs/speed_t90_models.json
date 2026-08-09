@@ -1,5 +1,5 @@
 {
-  "_comment": "走力T90モデルの係数置き場。未較正モデルは enabled=false か status=UNCALIBRATED のままにし、値を推測で埋めない。T90=最初の走行ステップから90ftを直線移動する時間。",
+  "_comment": "走力T90モデルの係数置き場。未較正モデルは enabled=false か status=UNCALIBRATED のままにし、値を推測で埋めない。T90=最初の走行ステップから90ftを直線移動する時間。NPB+公式名称はSprint Speed。旧top_speed名は互換aliasとしてのみ残す。",
   "target": {
     "name": "t90_sec",
     "distance_ft": 90,
@@ -39,21 +39,39 @@
       "evidence": "2022 NPB-connected n=26 sanity check: r=-0.9662, R2=0.9336, leave-one-out MAE=0.0387s.",
       "required_next_gate": "2017+ full-MLB multi-year / leave-one-year-out validation"
     },
-    "npb_top_speed_acceleration_to_t90": {
+    "npb_sprint_speed_acceleration_to_t90": {
       "enabled": false,
       "status": "UNCALIBRATED",
       "intercept": null,
       "coefficients": {},
-      "reason": "NPB+ publishes Sprint Speed / fastest home-to-first from Hawk-Eye, but official public material does not disclose a formula equivalent to MLB Statcast Sprint Speed. Do not assume metric equivalence from common Hawk-Eye infrastructure.",
+      "metric": "NPB+ Sprint Speed / スプリントスピード",
+      "reason": "NPB+ publishes Sprint Speed / fastest home-to-first from Hawk-Eye, but official public material does not disclose a formula equivalent to MLB Statcast Sprint Speed. Do not assume metric equivalence from common Hawk-Eye infrastructure or identical naming.",
       "required_next_gate": "NPB clean acceleration/T30 or trajectory-derived T90 training data"
     },
-    "npb_top_speed_to_t90": {
+    "npb_sprint_speed_to_t90": {
       "enabled": false,
       "status": "UNCALIBRATED",
       "intercept": null,
       "slope": null,
-      "reason": "Only one usable 2022 MLB-Sprint / NPB+ direct overlap was available; regression is unidentified. Unit conversion alone is prohibited.",
+      "metric": "NPB+ Sprint Speed / スプリントスピード",
+      "reason": "Official NPB+ naming is Sprint Speed, but its public formula/window/aggregation has not been verified equivalent to MLB Statcast Sprint Speed. Existing same-player cross-system overlap is insufficient to identify a robust NPB+→T90 regression. Unit conversion alone is prohibited.",
       "required_next_gate": "More same-player direct overlap or direct NPB T90 labels"
+    },
+    "npb_top_speed_acceleration_to_t90": {
+      "enabled": false,
+      "status": "LEGACY_NAME_ALIAS_DO_NOT_CALIBRATE",
+      "canonical_model": "npb_sprint_speed_acceleration_to_t90",
+      "intercept": null,
+      "coefficients": {},
+      "reason": "Compatibility name only. NPB+ official metric name is Sprint Speed."
+    },
+    "npb_top_speed_to_t90": {
+      "enabled": false,
+      "status": "LEGACY_NAME_ALIAS_DO_NOT_CALIBRATE",
+      "canonical_model": "npb_sprint_speed_to_t90",
+      "intercept": null,
+      "slope": null,
+      "reason": "Compatibility name only. NPB+ official metric name is Sprint Speed."
     },
     "hp1b_avg_to_t90": {
       "enabled": false,
@@ -97,6 +115,9 @@
     "forbid_safety_bunt_as_speed_anchor": true,
     "forbid_direct_mlb_sprint_to_rating": true,
     "forbid_direct_npb_plus_speed_to_rating": true,
+    "forbid_assuming_npb_plus_mlb_sprint_speed_equivalence": true,
+    "canonical_npb_plus_metric_name": "Sprint Speed",
+    "legacy_npb_top_speed_keys_are_alias_only": true,
     "forbid_pawapuro_scale_calibration": true,
     "require_leave_one_feature_out_for_infield_hit_ability": true,
     "require_leave_one_feature_out_for_gdp_ability": true
@@ -104,7 +125,8 @@
   "qa": [
     "Fukumoto: 50m/yoidon ranking alone cannot disqualify S; 106 steals cannot create S.",
     "Safety bunt: normal-swing and bunt home-to-first times must not be pooled.",
-    "Top-speed vs acceleration: same Sprint Speed can have materially different T90.",
+    "Sprint Speed vs acceleration: same Sprint Speed can have materially different T90.",
+    "NPB+ and MLB both use the name Sprint Speed, but public formula equivalence is not established.",
     "Suzuki Seiya 2022: T90=3.96s should represent above-average but non-elite speed in 2022 MLB reference distribution."
   ]
 }
