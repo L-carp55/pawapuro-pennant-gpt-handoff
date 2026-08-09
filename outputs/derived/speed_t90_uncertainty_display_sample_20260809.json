@@ -1,0 +1,77 @@
+{
+  "status": "DISPLAY_POLICY_APPLIED_TO_29_PLAYER_QA_SAMPLE",
+  "created_at": "2026-08-09",
+  "production_rating_changed": false,
+  "purpose": "29人のv3物理QAサンプルについて、最高速度のみの点推定と短距離証拠ありの候補レンジを、誤差の意味を混同せず表示する。",
+  "top_speed_only_policy": {
+    "mae_floor_sec": 0.0387,
+    "v3_rating_mae_floor_points": 3.420804,
+    "interpretation": "MLB Sprint Speed→T90の2022 n=26 LOO MAEを構造的な最低誤差床として転用。これは信頼区間ではない。",
+    "unquantified_components": [
+      "NPB+ top speedとMLB Sprint Speedの定義ブリッジ",
+      "選手個別の加速profile",
+      "NPB母集団へのブリッジ",
+      "測定ノイズ"
+    ],
+    "automatic_correction": false
+  },
+  "special_numeric_envelopes": [
+    {
+      "player": "林琢真",
+      "display_mode": "DISAGREEMENT_RANGE",
+      "top_speed_point": 69.1,
+      "rating_range": [69.1, 77.4],
+      "profile": "acceleration_favored",
+      "automatic_correction": false
+    },
+    {
+      "player": "友杉篤輝",
+      "display_mode": "CORROBORATED_RANGE",
+      "top_speed_point": 75.4,
+      "rating_range": [73.7, 75.4],
+      "qa_representative": 74.6,
+      "profile": "consistent",
+      "automatic_correction": false
+    },
+    {
+      "player": "奈良間大己",
+      "display_mode": "CORROBORATED_RANGE",
+      "top_speed_point": 66.4,
+      "rating_range": [66.4, 66.7],
+      "qa_representative": 66.6,
+      "profile": "consistent",
+      "automatic_correction": false
+    }
+  ],
+  "profile_hint_only_outliers": [
+    {"player":"並木秀尊","point_rating":85.3,"hint":"short-distance ability strong, but protocol/scale unresolved","numeric_correction":false},
+    {"player":"小園海斗","point_rating":64.6,"hint":"acceleration undervalue candidate","numeric_correction":false},
+    {"player":"矢野雅哉","point_rating":57.4,"hint":"acceleration undervalue candidate","numeric_correction":false},
+    {"player":"村林一輝","point_rating":91.6,"hint":"top-speed overweight candidate","numeric_correction":false},
+    {"player":"細川成也","point_rating":75.4,"hint":"top-speed overweight candidate","numeric_correction":false}
+  ],
+  "ordinary_top_speed_only_players": [
+    {"player":"周東佑京","point_rating":96.0},
+    {"player":"田中幹也","point_rating":82.6},
+    {"player":"村松開人","point_rating":81.7},
+    {"player":"源田壮亮","point_rating":77.2},
+    {"player":"吉川尚輝","point_rating":73.6},
+    {"player":"岡林勇希","point_rating":73.6},
+    {"player":"塩見泰隆","point_rating":71.8},
+    {"player":"佐藤輝明","point_rating":70.0},
+    {"player":"柳田悠岐","point_rating":70.0},
+    {"player":"菊池涼介","point_rating":67.3},
+    {"player":"牧秀悟","point_rating":65.5},
+    {"player":"近藤健介","point_rating":61.9},
+    {"player":"大山悠輔","point_rating":55.7},
+    {"player":"浅村栄斗","point_rating":55.7},
+    {"player":"宮﨑敏郎","point_rating":53.9},
+    {"player":"筒香嘉智","point_rating":53.0},
+    {"player":"木浪聖也","point_rating":51.2},
+    {"player":"安田尚憲","point_rating":47.6},
+    {"player":"山川穂高","point_rating":45.8},
+    {"player":"大城卓三","point_rating":44.0},
+    {"player":"鈴木大地","point_rating":42.2}
+  ],
+  "display_rule": "最高速度しかない選手は『点推定 + MAE床3.4点相当 + 未数量化要因あり』と表示する。±3.4点の信頼区間とは表示しない。cleanな独立短距離証拠がある場合のみ候補レンジを優先し、profile hintだけでは点を補正しない。"
+}
