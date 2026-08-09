@@ -39,6 +39,7 @@
       "status": "NPB_BRIDGE_UNCALIBRATED",
       "mlb_reference_sprint_only_loyo_mae_sec": 0.04463374331109772,
       "reference_value_is_not_npb_error_floor": true,
+      "direct_overlap_audit": "4 historical name overlaps, only 1 within 4 years; insufficient for regression",
       "unquantified_components": ["npb_plus_vs_mlb_metric_definition_bridge", "acceleration_profile", "npb_population_bridge", "measurement_noise"]
     },
     "npb_plus_top_speed_kmh": {
