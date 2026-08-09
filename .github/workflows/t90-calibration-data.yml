@@ -9,6 +9,12 @@ on:
       - 'scripts/fetch_statcast_running.mjs'
       - 'scripts/calibrate_t90_bridge.mjs'
       - 'scripts/calibrate_t90_bridge_v2.mjs'
+      - 'scripts/test_npb_plus_sprint_speed_alias.mjs'
+      - 'scripts/test_speed_t90_uncertainty.mjs'
+      - 'src/ratings/speed_evidence.mjs'
+      - 'src/ratings/speed_appraisal.mjs'
+      - 'configs/speed_t90_models.json'
+      - 'configs/speed_t90_uncertainty.json'
       - '.t90-trigger'
   workflow_dispatch:
 
@@ -23,6 +29,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Run T90 regression tests
+        run: |
+          node scripts/test_npb_plus_sprint_speed_alias.mjs
+          node scripts/test_speed_t90_uncertainty.mjs
       - name: Fetch 2017-2025 Savant running data
         run: node scripts/fetch_statcast_running.mjs 2017 2025
       - name: Show representative CSV headers
