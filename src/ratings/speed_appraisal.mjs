@@ -1,13 +1,40 @@
 // High-level appraisal API for the T90 speed redesign.
 //
-// This file is intentionally NOT wired into the live card pipeline yet.
-// It is the replacement boundary that the pipeline will call only after:
-//   1) a calibrated T90 bridge model exists for the available evidence, and
-//   2) an NPB reference T90 distribution has been frozen.
-//
 // Missing calibration must remain visible. Do not fall back to the legacy Pawapuro-calibrated speed scale.
+// NPB+ officially names its running metric Sprint Speed. The old internal `top_speed` keys are accepted
+// only as compatibility aliases at this boundary; new calibration/evidence should use canonical
+// `npb_plus_sprint_speed_kmh` / `npb_sprint_speed_*` names.
 
 import { estimateT90, speedRatingFromT90, withoutSpeedEvidence } from './speed_t90.mjs';
+
+const finite = Number.isFinite;
+
+function normalizeNpbSprintEvidenceAliases(evidence = {}) {
+  const out = { ...evidence };
+  const canonical = finite(out.npb_plus_sprint_speed_kmh) ? out.npb_plus_sprint_speed_kmh : null;
+  const legacy = finite(out.npb_plus_top_speed_kmh) ? out.npb_plus_top_speed_kmh : null;
+  // Canonical value wins if both exist; the low-level estimator still consumes the legacy key.
+  if (canonical != null) out.npb_plus_top_speed_kmh = canonical;
+  else if (legacy != null) out.npb_plus_sprint_speed_kmh = legacy;
+  return out;
+}
+
+function normalizeNpbSprintModelAliases(models = {}) {
+  const out = { ...models };
+  // Canonical model contracts win when present. Copy them into the legacy low-level slots until
+  // estimateT90 itself is migrated in a future compatibility cleanup.
+  if (out.npb_sprint_speed_to_t90) out.npb_top_speed_to_t90 = out.npb_sprint_speed_to_t90;
+  if (out.npb_sprint_speed_acceleration_to_t90) {
+    out.npb_top_speed_acceleration_to_t90 = out.npb_sprint_speed_acceleration_to_t90;
+  }
+  return out;
+}
+
+function canonicalizeNpbSprintSource(source) {
+  if (source === 'npb_plus_top_speed_kmh') return 'npb_plus_sprint_speed_kmh';
+  if (source === 'npb_top_speed_acceleration') return 'npb_sprint_speed_acceleration';
+  return source;
+}
 
 /**
  * Appraise base speed through T90.
@@ -18,8 +45,11 @@ import { estimateT90, speedRatingFromT90, withoutSpeedEvidence } from './speed_t
  * @returns {object} always returns a structured result; unresolved state is explicit.
  */
 export function appraiseSpeedT90(evidence = {}, modelConfig = {}, referenceTimes = []) {
-  const models = modelConfig?.models ?? modelConfig ?? {};
-  const est = estimateT90(evidence, models);
+  const rawModels = modelConfig?.models ?? modelConfig ?? {};
+  const models = normalizeNpbSprintModelAliases(rawModels);
+  const normalizedEvidence = normalizeNpbSprintEvidenceAliases(evidence);
+  const rawEst = estimateT90(normalizedEvidence, models);
+  const est = { ...rawEst, source: canonicalizeNpbSprintSource(rawEst.source) };
 
   if (est.t90_sec == null) {
     return {
