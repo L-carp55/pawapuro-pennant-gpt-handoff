@@ -13,6 +13,7 @@ import { toRank } from './ability_sheet.mjs';
 import { buildTargetSpeedEvidence } from '../ratings/speed_evidence.mjs';
 import { appraiseSpeedT90 } from '../ratings/speed_appraisal.mjs';
 import { resolveProductionSpeed } from '../ratings/speed_production.mjs';
+import { describeT90Uncertainty, v3RatingMaeFloor } from '../ratings/speed_t90_uncertainty.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const finite = Number.isFinite;
@@ -27,6 +28,7 @@ const loadJson = rel => {
 
 const SPEED_MODELS = loadJson('configs/speed_t90_models.json') ?? { models: {} };
 const SPEED_TEMPORAL = loadJson('configs/speed_t90_temporal.json') ?? {};
+const SPEED_UNCERTAINTY = loadJson('configs/speed_t90_uncertainty.json') ?? {};
 const SPRINT30 = loadJson('data/manual/sprint_30m_measurements_curated.json') ?? { records: [] };
 const HP1B = loadJson('data/manual/hp_to_1b_measurements_curated.json') ?? { records: [] };
 
@@ -104,6 +106,8 @@ export function appraiseCardT90(ctx, opts = {}) {
     t90 = appraiseSpeedT90(built.evidence, SPEED_MODELS, FROZEN_REFERENCE.reference);
   }
 
+  const uncertainty = describeT90Uncertainty(t90, SPEED_UNCERTAINTY);
+  const v3Uncertainty = v3RatingMaeFloor(uncertainty, SPEED_UNCERTAINTY);
   const resolved = resolveProductionSpeed({ t90Appraisal: t90, existingSpeed });
   const speedCell = resolved.value != null
     ? {
@@ -113,10 +117,18 @@ export function appraiseCardT90(ctx, opts = {}) {
         speed_model_status: resolved.status,
         speed_model_source: resolved.source,
         t90_sec: resolved.t90_sec,
+        t90_uncertainty_status: uncertainty.status,
+        t90_mae_floor_sec: uncertainty.mae_floor_sec,
+        t90_full_uncertainty_quantified: uncertainty.full_uncertainty_quantified,
+        t90_unquantified_components: uncertainty.unquantified_components,
+        v3_rating_mae_floor_points: v3Uncertainty?.rating_mae_floor_points ?? null,
         provisional_speed: resolved.provisional,
         legacy_fallback: resolved.legacy_fallback,
         ...(resolved.status === 'T90_PRIMARY' ? { from_t90: true } : {}),
         _note: [existingSpeed?._note, resolved.note,
+          uncertainty.mae_floor_sec != null
+            ? `T90誤差床MAE=${uncertainty.mae_floor_sec}秒。信頼区間ではなく、未数量化要因があれば実際の不確実性はさらに大きい。`
+            : null,
           resolved.legacy_fallback ? 'T90 production未較正部分を理由に旧走力を暫定使用。完成を止めず、改善タスクとして残す。' : null]
           .filter(Boolean).join(' '),
       }
@@ -136,6 +148,10 @@ export function appraiseCardT90(ctx, opts = {}) {
       source: t90.source ?? null,
       unresolved: t90.unresolved ?? null,
     },
+    uncertainty: {
+      ...uncertainty,
+      v3_evaluation: v3Uncertainty,
+    },
     reference: {
       frozen_reference_loaded: FROZEN_REFERENCE.reference.length > 0,
       count: FROZEN_REFERENCE.reference.length,
@@ -144,7 +160,7 @@ export function appraiseCardT90(ctx, opts = {}) {
     },
     evidence_keys: Object.keys(built.evidence ?? {}),
     provenance: built.provenance ?? {},
-    _rule: 'T90 A-D > scouting > T90 Tier-E > explicit legacy fallback. Optional 30m/50m profile research cannot block production completion.',
+    _rule: 'T90 A-D > scouting > T90 Tier-E > explicit legacy fallback. T90 uncertainty stores validated MAE floors separately from unquantified structural uncertainty; MAE is never labeled as a confidence interval.',
   };
 
   card.calc_log ??= {};
@@ -156,5 +172,5 @@ export function appraiseCardT90(ctx, opts = {}) {
     if (!card.unresolved.includes(msg)) card.unresolved.push(msg);
   }
 
-  return { ...out, speedProduction: resolved, speedT90: t90, speedEvidence: built };
+  return { ...out, speedProduction: resolved, speedT90: t90, speedEvidence: built, speedUncertainty: uncertainty };
 }
