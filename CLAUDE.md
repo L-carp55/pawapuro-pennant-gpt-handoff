@@ -18,6 +18,9 @@
 
 ## 正本
 - 査定思想・数式・失敗ログの正本 = `docs/satei_handoff/`。ただし、**2026-08-09以降は `docs/satei_handoff/12_APPRAISAL_PRINCIPLES_20260809.md` を最新追補として先に確認し、旧v2仕様と矛盾する場合は追補を優先する**
+- **現在の作業順・停止条件の正本 = `docs/satei_handoff/13_CURRENT_CRITICAL_PATH_20260809.md`。新しい能力テーマへ進む前に必ず読む。** このファイルが `ACTIVE` の間は一般的な「次の能力へ進む」解釈より優先する
+- **`Speed v1 complete` はT90 production architecture / MLB calibration pathの完了を意味し、2026 NPBの最終走力査定完了を意味しない。** `13_CURRENT_CRITICAL_PATH_20260809.md` の肩力移行Gateを満たすまで肩力へ進まない
+- `13_CURRENT_CRITICAL_PATH_20260809.md` がACTIVEな間、ユーザーの `進めて` は走力critical pathの次工程を意味する。Codex待ちを理由に別能力へ横展開しない
 - 統合設計 = `docs/design/integration_design_v0.md`
 - 旧仕様 `11_LEGACY_REFERENCE_V1_9.md` は歴史資料。新設計と混同しない
 
