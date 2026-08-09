@@ -1,0 +1,88 @@
+{
+  "status": "INDEPENDENT_FREEZE_WITH_RANGES",
+  "created_at": "2026-08-10",
+  "external_qa_applied": false,
+  "universe": {
+    "target_players": 100,
+    "base_file": "outputs/derived/speed_blind_v3_npbplus_2026.json",
+    "base_file_players": 99,
+    "missing_from_base_file": ["名原 典彦"],
+    "missing_reason": "player_id absent in the original 99-player evaluation batch"
+  },
+  "evaluation_formula": {
+    "status": "evaluation_only_not_final_npb_cdf",
+    "npb_plus_to_t90": "T90 = 4.05 - 0.1015374380*(sprint_speed_kmh-31.6)",
+    "t90_to_rating": "rating = clamp(1,100,100 - 99*(T90-3.66)/(4.78-3.66))",
+    "powerpro_used": false,
+    "the_show_used": false,
+    "final_production_scale": false
+  },
+  "mechanical_completion": {
+    "player": "名原 典彦",
+    "npb_plus_sprint_speed_kmh": 33.7,
+    "t90_evaluation_sec": 3.8367713802,
+    "rating_evaluation": 84.374672643,
+    "method": "same frozen formula as the other 99 players; no individual adjustment"
+  },
+  "strong_ranges": [
+    {
+      "player": "林 琢真",
+      "base_rating": 69.116862,
+      "freeze_range": [69.1,77.4],
+      "reason": "2022 standardized electronic/photoelectric 50m 5.99 sec conflicts with current NPB+ top-speed-only estimate; 2026 exposure is thin (PA104, proxy8); arbitrary evidence weighting prohibited"
+    },
+    {
+      "player": "友杉 篤輝",
+      "base_rating": 75.399472,
+      "freeze_range": [74,75],
+      "qa_center": 74.558680,
+      "reason": "2022 standardized electronic/photoelectric 50m 6.10 sec and current NPB+ estimate agree closely"
+    },
+    {
+      "player": "奈良間 大己",
+      "base_rating": 66.424327,
+      "freeze_range": [66,67],
+      "qa_center": 66.576407,
+      "reason": "2022 standardized electronic/photoelectric 50m 6.31 sec and current NPB+ estimate are essentially identical"
+    }
+  ],
+  "ordinal_reviews": [
+    {"player":"並木 秀尊","base_rating":85.272,"reason":"very low exposure but Sprint Speed is already elite; special-start 5.32 sec record is REJECTED_FOR_SPEED"},
+    {"player":"矢野 雅哉","base_rating":57.449,"reason":"low exposure plus historical 50m 5.9 directional evidence with unknown protocol/year"},
+    {"player":"小園 海斗","base_rating":64.629,"reason":"high exposure means old-vs-current discrepancy cannot be attributed to small sample; historical 5.8-6.0 sec remains directional only"},
+    {"player":"塩見 泰隆","base_rating":71.809,"reason":"2018 30m 3.85 sec is strong directional evidence but old; 2026 exposure is limited"},
+    {"player":"梶原 昂希","base_rating":81.682,"reason":"low exposure plus historical 50m 5.8 directional evidence; current Sprint Speed is already fast"},
+    {"player":"名原 典彦","base_rating":84.374673,"reason":"multiple conflicting 50m claims and unknown measurement years; retain mechanically completed baseline pending ordinal review"}
+  ],
+  "reverted_provisional_manual_corrections": [
+    {"player":"村林 一輝","provisional_old":89,"independent_base_restored":91.555},
+    {"player":"細川 成也","provisional_old":69,"independent_base_restored":75.399},
+    {"player":"小園 海斗","provisional_old":70,"independent_base_restored":64.629},
+    {"player":"矢野 雅哉","provisional_old":60,"independent_base_restored":57.449},
+    {"player":"並木 秀尊","provisional_old":90,"independent_base_restored":85.272}
+  ],
+  "default_rule": "All players not listed in strong_ranges use their PowerPro-blind v3 evaluation point for the independent freeze; ordinal_reviews preserve review flags without pre-QA manual fitting.",
+  "temporal_policy": {
+    "fixed_age_decay_coefficient": false,
+    "old_evidence_invalidated_by_age_alone": false,
+    "five_plus_year_auto_numeric_t90": false,
+    "five_plus_year_history_or_ordinal_use_allowed": true,
+    "exposure_changes_rating_points_automatically": false,
+    "same_date_powerpro_conflicts_auto_resolved": false
+  },
+  "the_show_external_qa_readiness": {
+    "speed_history_repo": "L-carp55/claude-code-hub",
+    "speed_history_branch": "codex/mlb-the-show-speed-history",
+    "speed_history_head": "97c429521267cfb70ccdd61e40e11853d100e360",
+    "full_attributes_branch": "codex/mlb-the-show-full-attributes",
+    "full_attributes_head": "74d2a2278ab7bcea3f6368e1df6ba03e2dd82554",
+    "normalized_rows": 284282,
+    "speed_carry_forward_rows": 283884,
+    "speed_reconstructed_delta_rows": 398,
+    "observed_speed_receipts_in_attribute_change_receipts": 62,
+    "receipt_bias_note": "preserved Speed receipts are 2026 upward-change observations; do not estimate bidirectional aging/lag/smoothing from them",
+    "statcast_joined_in_codex_collection": false,
+    "use_for_numeric_decay_model": false
+  },
+  "source_audit": "docs/audits/speed_independent_freeze_2026_100_20260810.md"
+}
