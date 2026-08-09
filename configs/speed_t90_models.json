@@ -1,5 +1,5 @@
 {
-  "_comment": "走力T90モデルの係数置き場。未較正モデルは enabled=false か status=UNCALIBRATED のままにし、値を推測で埋めない。T90=最初の走行ステップから90ftを直線移動する時間。NPB+公式名称はSprint Speed。旧top_speed名は互換aliasとしてのみ残す。",
+  "_comment": "走力T90モデルの係数置き場。T90=最初の走行ステップから90ftを直線移動する時間。MLB Statcastモデルは2017-2025全体のleave-one-year-out検証を通過して凍結。NPB+公式名称はSprint SpeedだがMLBとの定義同一性は未確認のためNPBモデルは未較正のまま。",
   "target": {
     "name": "t90_sec",
     "distance_ft": 90,
@@ -10,34 +10,34 @@
   },
   "models": {
     "mlb_sprint_t30_to_t90": {
-      "enabled": false,
-      "status": "VALIDATED_STRUCTURE_NOT_CALIBRATED_FULL_POPULATION",
-      "intercept": null,
+      "enabled": true,
+      "status": "CALIBRATED_FULL_MLB_2017_2025_LOYO",
+      "intercept": 3.697319506986064,
       "coefficients": {
-        "mlb_sprint_speed_ftps": null,
-        "t30_sec": null
+        "mlb_sprint_speed_ftps": -0.0697930781447413,
+        "t30_sec": 1.245601057565243
       },
-      "evidence": "2022 NPB-connected n=26 sanity check: R2=0.9810, leave-one-out MAE=0.0212s. Coefficients from that limited sample are deliberately not frozen here.",
-      "required_next_gate": "2017+ full-MLB multi-year / leave-one-year-out validation"
+      "evidence": "2017-2025 MLB Baseball Savant, n=4381 player-seasons / 1222 players. Leave-one-year-out MAE=0.0211115s, RMSE=0.0284223s; held-year MAE range 0.0199-0.0246s. Sprint-only MAE reduced by 52.7%.",
+      "calibration_source": "outputs/derived/t90_bridge_calibration_summary_20260809.json"
     },
     "mlb_sprint_t10_to_t90": {
-      "enabled": false,
-      "status": "VALIDATED_STRUCTURE_NOT_CALIBRATED_FULL_POPULATION",
-      "intercept": null,
+      "enabled": true,
+      "status": "CALIBRATED_FULL_MLB_2017_2025_LOYO",
+      "intercept": 5.489026696463511,
       "coefficients": {
-        "mlb_sprint_speed_ftps": null,
-        "t10_sec": null
+        "mlb_sprint_speed_ftps": -0.0979597148840064,
+        "t10_sec": 1.4268327120530346
       },
-      "evidence": "2022 NPB-connected n=26 sanity check: R2=0.9675, leave-one-out MAE=0.0286s.",
-      "required_next_gate": "2017+ full-MLB multi-year / leave-one-year-out validation"
+      "evidence": "2017-2025 MLB Baseball Savant, n=4381 player-seasons / 1222 players. Leave-one-year-out MAE=0.0306522s, RMSE=0.0394759s. Sprint-only MAE reduced by 31.3%.",
+      "calibration_source": "outputs/derived/t90_bridge_calibration_summary_20260809.json"
     },
     "mlb_sprint_to_t90": {
-      "enabled": false,
-      "status": "VALIDATED_STRUCTURE_NOT_CALIBRATED_FULL_POPULATION",
-      "intercept": null,
-      "slope": null,
-      "evidence": "2022 NPB-connected n=26 sanity check: r=-0.9662, R2=0.9336, leave-one-out MAE=0.0387s.",
-      "required_next_gate": "2017+ full-MLB multi-year / leave-one-year-out validation"
+      "enabled": true,
+      "status": "CALIBRATED_FULL_MLB_2017_2025_LOYO",
+      "intercept": 7.107433259177224,
+      "slope": -0.11224837274614052,
+      "evidence": "2017-2025 MLB Baseball Savant, n=4381 player-seasons / 1222 players. Leave-one-year-out MAE=0.0446337s, RMSE=0.0554035s; held-year MAE range 0.0408-0.0472s.",
+      "calibration_source": "outputs/derived/t90_bridge_calibration_summary_20260809.json"
     },
     "npb_sprint_speed_acceleration_to_t90": {
       "enabled": false,
@@ -45,7 +45,7 @@
       "intercept": null,
       "coefficients": {},
       "metric": "NPB+ Sprint Speed / スプリントスピード",
-      "reason": "NPB+ publishes Sprint Speed / fastest home-to-first from Hawk-Eye, but official public material does not disclose a formula equivalent to MLB Statcast Sprint Speed. Do not assume metric equivalence from common Hawk-Eye infrastructure or identical naming.",
+      "reason": "MLB全体ではSprint Speedに10ft/30ft splitを加えるとT90誤差が大幅に減る構造を確認した。ただしNPB+の公開Sprint Speed定義とMLB Statcastの定義同一性、およびNPB側のclean acceleration/T30ラベルが未確認なのでMLB係数を移植しない。",
       "required_next_gate": "NPB clean acceleration/T30 or trajectory-derived T90 training data"
     },
     "npb_sprint_speed_to_t90": {
@@ -54,7 +54,7 @@
       "intercept": null,
       "slope": null,
       "metric": "NPB+ Sprint Speed / スプリントスピード",
-      "reason": "Official NPB+ naming is Sprint Speed, but its public formula/window/aggregation has not been verified equivalent to MLB Statcast Sprint Speed. Existing same-player cross-system overlap is insufficient to identify a robust NPB+→T90 regression. Unit conversion alone is prohibited.",
+      "reason": "Official NPB+ naming is Sprint Speed, but its public formula/window/aggregation has not been verified equivalent to MLB Statcast Sprint Speed. MLB係数の単位換算移植は禁止。",
       "required_next_gate": "More same-player direct overlap or direct NPB T90 labels"
     },
     "npb_top_speed_acceleration_to_t90": {
@@ -116,6 +116,7 @@
     "forbid_direct_mlb_sprint_to_rating": true,
     "forbid_direct_npb_plus_speed_to_rating": true,
     "forbid_assuming_npb_plus_mlb_sprint_speed_equivalence": true,
+    "forbid_transferring_mlb_coefficients_to_npb_plus_without_bridge": true,
     "canonical_npb_plus_metric_name": "Sprint Speed",
     "legacy_npb_top_speed_keys_are_alias_only": true,
     "forbid_pawapuro_scale_calibration": true,
@@ -125,8 +126,8 @@
   "qa": [
     "Fukumoto: 50m/yoidon ranking alone cannot disqualify S; 106 steals cannot create S.",
     "Safety bunt: normal-swing and bunt home-to-first times must not be pooled.",
-    "Sprint Speed vs acceleration: same Sprint Speed can have materially different T90.",
+    "Sprint Speed vs acceleration: 2017-2025 MLB LOYO confirms same Sprint Speed can hide material T90 differences; adding T30 cuts MAE by 52.7%.",
     "NPB+ and MLB both use the name Sprint Speed, but public formula equivalence is not established.",
-    "Suzuki Seiya 2022: T90=3.96s should represent above-average but non-elite speed in 2022 MLB reference distribution."
+    "Suzuki Seiya 2022: MLB T90 should be evaluated through the calibrated MLB model/reference path, not direct Sprint Speed -> rating."
   ]
 }
