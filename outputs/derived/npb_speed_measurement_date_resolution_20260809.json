@@ -7,6 +7,157 @@
     "excluded": "metric=hp_to_1b",
     "original_input_not_overwritten": true
   },
+  "coverage": {
+    "source_unknown_records_all_metrics": 41,
+    "in_scope_records": 35,
+    "in_scope_metric": "50m",
+    "excluded_records": 6,
+    "excluded_metric": "hp_to_1b",
+    "in_scope_unique_players": 34,
+    "resolved_unique_players": 15,
+    "unresolved_unique_players": 19,
+    "resolved_players": [
+      "安田 尚憲",
+      "蝦名 達夫",
+      "丸山 和郁",
+      "吉川 尚輝",
+      "京田 陽太",
+      "佐藤 都志也",
+      "周東 佑京",
+      "小園 海斗",
+      "小幡 竜平",
+      "滝澤 夏央",
+      "藤原 恭大",
+      "柳町 達",
+      "柳田 悠岐",
+      "友杉 篤輝",
+      "林 琢真"
+    ],
+    "unresolved_players": [
+      "岡 大海",
+      "梶原 昂希",
+      "栗原 陵矢",
+      "佐藤 輝明",
+      "細川 成也",
+      "坂倉 将吾",
+      "山口 航輝",
+      "山川 穂高",
+      "森 友哉",
+      "正木 智也",
+      "清宮 幸太郎",
+      "田宮 裕涼",
+      "田中 幹也",
+      "奈良間 大己",
+      "牧原 大成",
+      "名原 典彦",
+      "矢野 雅哉",
+      "来田 涼斗",
+      "髙部 瑛斗"
+    ]
+  },
+  "input_integrity": {
+    "data/manual/npb_speed_physical_evidence_full_20260809.json": "82c0c59b2f6431cd4d31efce3c3f62c0d601b84bf6466eb5cd17fc0b538afa1d",
+    "outputs/derived/npb_speed_evidence_coverage_20260809.csv": "1a2bd221d5ecc7822f21f45fe7f1a04f33e521b6a3c15a84bc4bf9ed2234389c",
+    "docs/audits/npb_speed_physical_evidence_full_20260809.md": "f26b7df72dac89ec30e3ec41ca1be95be863299026798e852032825c53a051fb",
+    "outputs/derived/pawapuro_speed_history_for_physical_measurements_20260809.csv": "cdd4adc556770cf70d1a4d4ef8cdb8de919339220acb0864acac902c0b0598a0"
+  },
+  "important_findings": [
+    {
+      "measurement_cluster_id": "hayashi_komazawa_postcamp_selfbest_50m",
+      "player": "林 琢真",
+      "year": 2022,
+      "status": "YEAR_INFERRED_HIGH",
+      "finding": "本文は大学日本代表合宿の5.99秒と、合宿後に計測した自己新5.7秒を別の出来事として記載する。"
+    },
+    {
+      "measurement_cluster_id": "fujiwara_50m_5_7_highschool_profile",
+      "player": "藤原 恭大",
+      "year": 2017,
+      "status": "YEAR_INFERRED_HIGH",
+      "finding": "高校2年時の練習で、50m走20本目・逆風でも5.7秒が出たという具体的状況が本文にある。"
+    },
+    {
+      "measurement_cluster_id": "yanagita_50m_profile",
+      "player": "柳田 悠岐",
+      "year": 2010,
+      "status": "YEAR_INFERRED_MEDIUM",
+      "finding": "2010年ドラフト指名直後の取材時プロフィール回答として5.94秒を確認できるが、実測日ではない。"
+    }
+  ],
+  "retrieval_constraints": [
+    "元記録の多くはhistorical profileで、元の測定会・測定日・計時方式が本文にない。",
+    "記事公開年、ドラフト年、入団年だけでは測定年に割り当てない。",
+    "学年付きプロフィールは年のみ中信頼で推定し、EXACT_DATE_FOUNDやYEAR_CONFIRMEDには昇格しない。",
+    "measurement_dateは35件すべてnullであり、exact dateは発見できなかった。"
+  ],
+  "source_problem_register": [
+    {
+      "measurement_cluster_id": "yanagimachi_50m_profile",
+      "problem": "元の日刊スポーツURLを直接取得できず、cache missとなった。",
+      "fallback": "転載本文と慶應義塾大学公式ブログで同年の大学1年在籍文脈を確認したが、測定日・測定会は確認できなかった。"
+    },
+    {
+      "measurement_cluster_id": "oka_50m_profile",
+      "problem": "明大スポーツのページ表示日は本文内容と整合しないため、表示日を測定年の根拠に使わなかった。"
+    },
+    {
+      "measurement_cluster_id": "yamakawa_50m_profile",
+      "problem": "元ページの表示日が無効値（-0001-11-30）で、測定年の根拠にできなかった。"
+    }
+  ],
+  "unconfirmed_fields": [
+    "measurement_date",
+    "measurement_event_or_test_name",
+    "timing_method",
+    "start_protocol",
+    "surface",
+    "shoe",
+    "indoor_outdoor",
+    "whether_same_value_reprints_are_same_test",
+    "whether_profile_value_was_measured_in_the_article_year"
+  ],
+  "negative_findings": [
+    "35件のどの記録についても、正確な測定日を確認できなかった。",
+    "記事公開年・ドラフト年・入団年だけから測定年を確定できる記録はなかった。",
+    "この台帳だけからPowerProの査定年やT90相当値を結論してはいけない。",
+    "50mプロフィール値の大半は計時条件不明で、数値が同じでも独立測定とは結論できない。"
+  ],
+  "data_quality_reservations": [
+    "50mプロフィール値はnumeric_t90_usable=falseのまま保持する。",
+    "小園海斗の5.8-6.0秒は既存cluster内の幅として保持し、転載を別測定に増やしていない。",
+    "林琢真の5.7秒と同年別clusterの電子計時5.99秒、友杉篤輝の5.9秒と別clusterの電子計時6.10秒は統合していない。",
+    "田宮裕涼の6秒台前半は文字列のまま保持し、数値化していない。",
+    "名原典彦は高校時代の手動6.2秒と大学時代の電子5.9秒を別clusterで保持し、別記事の約7.3秒表記との矛盾も年解決の根拠に使っていない。"
+  ],
+  "conflict_register": [
+    {
+      "players": ["名原 典彦"],
+      "conflict": "高校時代6.2秒（手動）と大学時代5.9秒（電子）、別記事の約7.3秒表記があり、測定年・同一測定性を特定できない。",
+      "disposition": "別cluster・STILL_UNKNOWNのまま保持。"
+    },
+    {
+      "players": ["林 琢真"],
+      "conflict": "同年に5.99秒電子計時clusterと5.7秒プロフィールclusterがある。",
+      "disposition": "別測定として統合しない。"
+    },
+    {
+      "players": ["友杉 篤輝"],
+      "conflict": "5.9秒プロフィールと2022-06-19の電子計時6.10秒がある。",
+      "disposition": "別clusterとして統合しない。"
+    }
+  ],
+  "postprocess_warnings": [
+    "resolved_measurement_yearは時間結合用の推定候補であり、実測日を意味しない。",
+    "走力査定、PowerPro値、50mからT90への換算は変更していない。",
+    "後工程でYEAR_INFERRED_HIGH/MEDIUMをYEAR_CONFIRMEDやexact dateとして扱わない。",
+    "元台帳data/manual/npb_speed_physical_evidence_full_20260809.jsonは上書きしていない。"
+  ],
+  "parallel_review": {
+    "agent_count": 6,
+    "intermediate_jsons_used_for_parent_integration": true,
+    "final_integration_owner": "parent_agent",
+    "intermediate_files_retained_in_final_branch": false
+  },
   "qa": {
     "unknown_source_record_count_all_metrics": 41,
     "in_scope_unknown_record_count": 35,

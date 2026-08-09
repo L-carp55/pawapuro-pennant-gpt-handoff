@@ -127,3 +127,68 @@
 - 本台帳は時期結合用の補助成果物であり、走力査定、PowerPro値、50mからT90への換算は変更していない。
 - 50mのプロフィール値は測定条件不明のため、年が推定できても既存の数値利用区分を変更していない。
 - 6担当の中間JSONを親Agentの統合に使用した。最終branchには指定された3成果物のみを残す。
+
+## 保存確認：最終回答に依存しない監査情報
+
+この節は、後工程がチャット本文を読まなくても判断できるように、調査結果・制約・未解決事項・negative finding・QAを保存するための追補である。
+
+### Coverageと主要結果
+
+- 元入力でunknownだった全種目は41レコード（50m 35、HP→1B 6）。今回の対象は50m 35レコード、34選手であり、HP→1Bは対象外とした。
+- 15レコードを年のみ推定し、20レコードはSTILL_UNKNOWN。exact dateは0、YEAR_CONFIRMEDは0、YEAR_INFERRED_HIGHは2、YEAR_INFERRED_MEDIUMは13。
+- unresolvedは19選手: 岡大海、梶原昂希、栗原陵矢、佐藤輝明、細川成也、坂倉将吾、山口航輝、山川穂高、森友哉、正木智也、清宮幸太郎、田宮裕涼、田中幹也、奈良間大己、牧原大成、名原典彦、矢野雅哉、来田涼斗、髙部瑛斗。
+- 同一cluster重複0、元source URL欠損0、矛盾する年情報0。元の data/manual/npb_speed_physical_evidence_full_20260809.json は上書きしていない。
+
+### 重要な発見
+
+- 林琢真: 2022年の大学日本代表合宿で5.99秒、その後の合宿後に自己新5.7秒を計測したと本文にあるため、5.7秒を2022年にYEAR_INFERRED_HIGHとした。([日刊スポーツ](https://www.nikkansports.com/baseball/news/202210270001023.html))
+- 藤原恭大: 2017年の高校2年時の練習で、50m走20本目・逆風でも5.7秒が出たという具体的な走行状況を確認した。([デイリースポーツ](https://www.daily.co.jp/baseball/2017/08/04/0010433505.shtml))
+- 柳田悠岐: 2015年記事が、2010年ドラフト指名直後の取材時に本人が50m5.94秒をプロフィール回答したと記載する。ただし、これは実測日ではないため中信頼の年推定に留めた。([Sportiva](https://sportiva.shueisha.co.jp/clm/baseball/npb/2015/07/14/post_583/))
+
+### データ取得上の制約とsource問題
+
+- 元記録の多くはhistorical profileで、元の測定会・測定日・計時方式が本文にない。記事内の「50m○秒」は、過去プロフィール値の転載である可能性を排除できない。
+- 来田涼斗は2020年3月記事で「高校2年」と値が併記されるが、高校2年は2019年度から2020年春にまたがり、測定会・測定日もないため単一の年へ割り当てなかった。([日刊スポーツ](https://www.nikkansports.com/baseball/column/baseballcountry/news/202003140000249.html))
+- 柳町達は元の日刊スポーツURLの直接取得がcache missとなった。転載本文と慶應義塾大学公式ブログで同年の大学1年在籍文脈は確認したが、測定日・測定会は確認できなかった。
+- 岡大海は明大スポーツのページ表示日が本文内容と整合せず、山川穂高は元ページの表示日が無効値（-0001-11-30）だったため、いずれも表示日を測定年の根拠に使わなかった。
+- 名原典彦は高校時代の手動6.2秒、大学時代の電子5.9秒、別記事の約7.3秒表記があり、測定年・同一測定性を特定できないため全て年unknownのままとした。
+
+### 定義が確認できなかった項目
+
+全35対象について、以下は原則未確認である。JSONの各recordにも元スナップショットとともに保持している。
+
+- measurement_date、measurement_event_or_test_name
+- timing_method、start_protocol、surface、shoe、indoor_outdoor
+- 同値転載が同一テストかどうか
+- プロフィール値が記事年に測定されたかどうか
+
+### Negative findingとデータ品質上の留保
+
+- 公開年・ドラフト年・入団年だけで測定年を確定できる記録はなかった。
+- 35件のどの記録についても正確な測定日を確認できなかった。
+- この台帳だけからPowerProの査定年、走力査定、または50mからT90への換算値を結論してはいけない。
+- 50mプロフィール値は計時条件不明で、numeric_t90_usable=falseのまま保持する。
+- 小園海斗の5.8–6.0秒は既存cluster内の幅として保持し、2016/2018/2019の転載を別測定に増やしていない。
+- 林琢真の5.7秒と同年別clusterの電子計時5.99秒、友杉篤輝の5.9秒と別clusterの電子計時6.10秒は統合していない。
+- 田宮裕涼の「6秒台前半」は数値化せず文字列で保持している。
+- YEAR_INFERRED_HIGH/MEDIUMは時間結合用の推定候補であり、YEAR_CONFIRMEDやexact dateとして後工程で扱ってはいけない。
+
+### QAと機械処理用の保存先
+
+- JSONにはcoverage、status別件数、unresolved選手、source問題、未確認項目、negative finding、conflict register、後工程警告、各recordのevidence_quote・source_dates_checked・conflict_notes・qa_flagsを保持した。
+- CSVには最低列に加え、inference_sources、evidence_quote、source_dates_checked、conflict_notes、qa_flags、original_measurement_confidenceを追加した。
+- 最終3ファイルのJSON/CSV/Markdownは35レコードで一致し、必須cluster、元年unknown、50m metric、元URLの整合を再検証した。
+- 6並列担当の中間JSONを親Agentが統合した。中間JSONは最終branchには残さず、指定されたCSV/JSON/Markdownだけを成果物とした。
+
+### 入力ファイルのSHA-256（作業開始時・最終確認時）
+
+- data/manual/npb_speed_physical_evidence_full_20260809.json: `82c0c59b2f6431cd4d31efce3c3f62c0d601b84bf6466eb5cd17fc0b538afa1d`
+- outputs/derived/npb_speed_evidence_coverage_20260809.csv: `1a2bd221d5ecc7822f21f45fe7f1a04f33e521b6a3c15a84bc4bf9ed2234389c`
+- docs/audits/npb_speed_physical_evidence_full_20260809.md: `f26b7df72dac89ec30e3ec41ca1be95be863299026798e852032825c53a051fb`
+- outputs/derived/pawapuro_speed_history_for_physical_measurements_20260809.csv: `cdd4adc556770cf70d1a4d4ef8cdb8de919339220acb0864acac902c0b0598a0`
+
+### Git保存範囲
+
+- branch: `codex/speed-measurement-date-resolution`
+- 成果物: 本Markdown、対応するCSV、対応するJSONの3ファイル
+- 元台帳、PowerPro値、走力査定、T90換算値は変更対象外
