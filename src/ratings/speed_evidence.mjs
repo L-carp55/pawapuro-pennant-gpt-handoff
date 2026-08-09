@@ -7,6 +7,9 @@
 // - physical observations 5+ years away remain historical evidence but do not automatically drive T90
 //   until an age/trajectory model is calibrated;
 // - single-event home-to-first records are QA only, never disguised as season-average H->1.
+// - NPB+ officially calls its running metric "Sprint Speed". The local DB column `top_speed_kmh`
+//   is retained as a storage compatibility detail; evidence uses `npb_plus_sprint_speed_kmh` as the
+//   canonical name and also emits the old key temporarily for model compatibility.
 
 import { describeSpeedEvidenceTime } from './speed_temporal.mjs';
 
@@ -73,19 +76,36 @@ function npbPlusSeason(row) {
   return m ? Number(m[1]) : null;
 }
 
-/** Build NPB+ physical-speed evidence. */
+/**
+ * Build NPB+ Sprint Speed evidence.
+ *
+ * Official NPB+ naming is Sprint Speed / スプリントスピード. Existing snapshots store the value
+ * in `top_speed_kmh`; a future importer may store `sprint_speed_kmh`. Both are accepted here.
+ * The public NPB+ material does not establish that its formula/window/aggregation is numerically
+ * identical to MLB Statcast Sprint Speed, so this function does not mark cross-system equivalence.
+ */
 export function buildNpbPlusEvidence(row, targetSeason, temporalConfig = null) {
   const year = npbPlusSeason(row);
-  if (!row || !finite(row.top_speed_kmh) || !finite(year)) return { evidence: {}, metadata: null };
+  const sprintSpeedKmh = finite(row?.sprint_speed_kmh) ? row.sprint_speed_kmh : row?.top_speed_kmh;
+  if (!row || !finite(sprintSpeedKmh) || !finite(year)) return { evidence: {}, metadata: null };
   const temporal = describeSpeedEvidenceTime(year, targetSeason, temporalConfig, {
-    measuredValue: row.top_speed_kmh,
+    measuredValue: sprintSpeedKmh,
   });
   const usable = temporal.gap_years != null && temporal.gap_years <= 4;
   return {
-    evidence: usable ? { npb_plus_top_speed_kmh: row.top_speed_kmh } : {},
+    evidence: usable ? {
+      npb_plus_sprint_speed_kmh: sprintSpeedKmh,
+      // Temporary compatibility alias. New calibration/model work should use the canonical key above.
+      npb_plus_top_speed_kmh: sprintSpeedKmh,
+    } : {},
     metadata: {
       source: 'NPB+', measured_year: year, target_season: targetSeason,
-      top_speed_kmh: row.top_speed_kmh,
+      metric_name: 'Sprint Speed',
+      sprint_speed_kmh: sprintSpeedKmh,
+      legacy_storage_field: finite(row?.sprint_speed_kmh) ? null : 'top_speed_kmh',
+      legacy_evidence_alias_emitted: usable,
+      public_formula_equivalent_to_mlb_statcast_verified: false,
+      cross_system_numeric_equivalence_assumed: false,
       // Fastest H->1 is deliberately metadata only. Never place it into model evidence.
       hp_to_1b_fastest_sec: finite(row.hp_to_1b_sec) ? row.hp_to_1b_sec : null,
       temporal,
@@ -159,10 +179,10 @@ export function buildTargetSpeedEvidence(args) {
   } = args ?? {};
 
   // Numerical temporal uncertainty is metric/unit-specific.
-  // MLB Sprint Speed is ft/s; NPB+ is km/h with an unpublished public formula; team 30m is seconds
-  // under heterogeneous protocols. Never reuse MLB's ft/s variance for the other two metrics.
+  // MLB Sprint Speed is ft/s; NPB+ Sprint Speed is km/h with an unpublished public formula; team 30m
+  // is seconds under heterogeneous protocols. Never reuse MLB's ft/s variance for the other two metrics.
   const mlbTemporal = temporalConfig?.mlb_sprint_speed ?? null;
-  const npbTemporal = temporalConfig?.npb_plus_top_speed ?? null;
+  const npbTemporal = temporalConfig?.npb_plus_sprint_speed ?? temporalConfig?.npb_plus_top_speed ?? null;
   const sprint30Temporal = temporalConfig?.sprint30 ?? null;
 
   const mlb = buildMlbSprintEvidence(mlbBridgeRow, targetSeason, mlbTemporal);
