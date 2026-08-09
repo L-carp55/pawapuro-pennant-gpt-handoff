@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "qa_role": "independent_qa",
+  "qa_snapshot": {
+    "builder_script_sha256": "9c7546951da8fe6f4cd23bec9f705a1158ebd106f6ab723a9e3da76ff547b2f6",
+    "scope": "fresh stable snapshot after the 2026-08-10 rebuild",
+    "method": "read-only, independently rebuilt from the committed input snapshots"
+  },
+  "status": "PASS",
+  "summary": "All twelve independent checks passed. The initially gated persistence/readable-audit check was corrected by saving this machine-readable matrix, rebuilding the audit, and completing a final independent read-only reflection check.",
+  "checks": [
+    {
+      "name": "master_packets_csv_and_review_queue_exactly_100",
+      "status": "PASS",
+      "detail": "master JSON=100, packets=100, master CSV=100, review queue=100."
+    },
+    {
+      "name": "roster_identity_keys_unique",
+      "status": "PASS",
+      "detail": "100 normalized name+team keys unique, 99 non-null source IDs unique, and 100 roster/join keys unique."
+    },
+    {
+      "name": "nahara_preserved_without_invented_source_id",
+      "status": "PASS",
+      "detail": "名原典彦 remains player_id=null with fallback-name-team key and blind SOURCE_ROW_ABSENT; source/output Sprint=33.7, PA=222, proxy=28."
+    },
+    {
+      "name": "sprint_values_labels_and_urls_match_exposure_source",
+      "status": "PASS",
+      "detail": "100/100 current Sprint values, labels, and URLs exactly match the exposure source."
+    },
+    {
+      "name": "exposure_and_proxy_fields_preserved",
+      "status": "PASS",
+      "detail": "PA, games, full-effort proxy, sample fields, PA bucket, and packet copies match for 100/100 players."
+    },
+    {
+      "name": "physical_evidence_and_coverage_preserved",
+      "status": "PASS",
+      "detail": "100 physical players and 101 source records equal 101 output records; raw-field, coverage, tier, and count mismatches=0."
+    },
+    {
+      "name": "measurement_date_records_attached_by_exact_cluster",
+      "status": "PASS",
+      "detail": "All 35 date-resolution records are attached exactly once by measurement cluster; 15 inferred-year records retained; evidence tier, usage, and numeric-T90 flags unmutated."
+    },
+    {
+      "name": "powerpro_clean_trajectory_excludes_same_date_conflicts",
+      "status": "PASS",
+      "detail": "95 exact-ID trajectories independently rebuilt; no clean node occurs on a target conflict date. Target receipts: 水野達稀 2024-07-18 [68,71]; 秋山翔吾 2026-06-11 and 2026-06-30 [69,77]; 塩見泰隆 2018-04-26 [69,82]. Global source registry=32."
+    },
+    {
+      "name": "no_short_distance_t90_conversion",
+      "status": "PASS",
+      "detail": "No derived short-distance T90 field exists; exactly six raw direct-T90 records are retained as six. Static builder check: direct-only classification at lines 268+, 50m ordering at lines 819+."
+    },
+    {
+      "name": "pairwise_graph_is_valid_and_excludes_game_ratings",
+      "status": "PASS",
+      "detail": "Graph=100 nodes/154 unique edges: 152 CURRENT_NPB_PLUS_ORDINAL_CANDIDATE and 2 CORROBORATED_STANDARDIZED_AND_CURRENT_NPB_PLUS. Directions/support evidence independently validate; no PowerPro/The Show value occurs in an edge; anchors resolve to edges; review priority contains no game speed/rating input. Required packet, queue, and edge fields are present."
+    },
+    {
+      "name": "independent_qa_artifact_and_audit_reflection",
+      "status": "PASS",
+      "detail": "Initial stable snapshot had no independent QA artifact and audit stated PENDING. This artifact was serialized, the audit was rebuilt, and the final independent read-only reflection check passed."
+    },
+    {
+      "name": "reproducible_rebuild_matches_delivered_artifacts",
+      "status": "PASS",
+      "detail": "Isolated copy rebuilt with Node status PASS; both CSV outputs are byte-identical and all four JSON outputs are semantic-identical after ignoring generated_at; audit is identical after ignoring generated timestamp. P0=2, P1=55, P2=43."
+    }
+  ],
+  "initial_gate_history": [
+    {
+      "check": "independent_qa_artifact_and_audit_reflection",
+      "initial_status": "GATED",
+      "finding": "The initial independent QA snapshot found no saved independent QA artifact and audit lines 136-138 reported PENDING, leaving important QA evidence only in the QA message.",
+      "correction": "Saved this machine-readable QA matrix, added readable audit rendering, rebuilt all artifacts, then requested a final independent read-only recheck.",
+      "resolution": "PASS"
+    }
+  ],
+  "source_provenance": {
+    "input_snapshot_and_origin_ref_verification": {
+      "status": "PASS",
+      "detail": "All listed local origin refs equal manifest commits; NPB input blobs match after CRLF normalization and JSON semantic parsing."
+    },
+    "the_show_external_provenance": {
+      "status": "PASS",
+      "detail": "The Show refs resolve to manifest commits 97c4295 and 74d2a22. They remain external-QA provenance only; no player-level NPB/MLB identity bridge is asserted."
+    }
+  },
+  "limitations": [
+    "This QA validates integration, preservation, provenance, and reviewability; it does not assign or approve any final PowerPro speed rating.",
+    "PowerPro and MLB The Show values were checked only as prohibited decision inputs and temporal/external-QA metadata; neither is an anchor, pairwise-edge input, or final-rating input.",
+    "No 30m or 50m record has been converted into T90; raw direct-T90 records remain distinct from standardized short-distance evidence.",
+    "The independently reread audit now includes all 12 checks, the initial gate/correction record, source provenance, and limits; no material QA result remains only in chat."
+  ]
+}

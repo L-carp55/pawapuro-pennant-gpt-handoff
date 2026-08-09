@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-09T17:15:37.814Z",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "master_roster_exactly_100",
+      "status": "PASS",
+      "detail": "rows=100"
+    },
+    {
+      "name": "decision_packets_exactly_100",
+      "status": "PASS",
+      "detail": "packets=100"
+    },
+    {
+      "name": "no_duplicate_roster_row",
+      "status": "PASS",
+      "detail": "roster_row_id unique"
+    },
+    {
+      "name": "名原典彦_included_and_source_id_uninvented",
+      "status": "PASS",
+      "detail": "player_id remains null; blind-v3 row remains absent"
+    },
+    {
+      "name": "sprint_source_join",
+      "status": "PASS",
+      "detail": "100/100 current Sprint values retained from exposure source"
+    },
+    {
+      "name": "physical_join",
+      "status": "PASS",
+      "detail": "100/100 normalized name+team joins"
+    },
+    {
+      "name": "measurement_date_cluster_join",
+      "status": "PASS",
+      "detail": "attached=35 source=35"
+    },
+    {
+      "name": "blind_v3_join_and_missing_row",
+      "status": "PASS",
+      "detail": "99 exact, 1 source absence"
+    },
+    {
+      "name": "same_date_powerpro_conflicts_excluded",
+      "status": "PASS",
+      "detail": "all exact-ID trajectories rebuilt after excluding conflict dates"
+    },
+    {
+      "name": "no_50m_or_30m_t90_conversion",
+      "status": "PASS",
+      "detail": "builder preserves metrics and emits no converted T90 values"
+    },
+    {
+      "name": "powerpro_or_the_show_not_in_pairwise_graph",
+      "status": "PASS",
+      "detail": "graph evidence contains physical / NPB+ source layers only"
+    },
+    {
+      "name": "no_final_rating_key_generated",
+      "status": "PASS",
+      "detail": "prohibited_key=none"
+    },
+    {
+      "name": "reproducible_input_presence",
+      "status": "PASS",
+      "detail": "all fixed local input snapshots present"
+    }
+  ],
+  "initial_failure_history": [
+    {
+      "run": "initial_generated_artifact_check",
+      "status": "FAIL",
+      "check": "no_final_rating_key_generated",
+      "finding": "The safeguard boolean key powerpro_rating_used_for_final matched the forbidden-key detector. No final-rating value was generated, but the name made the guard ambiguous.",
+      "correction": "Renamed the non-input safeguard to powerpro_contributes_to_final_value and final_speed_value_generated, then reran the full builder.",
+      "resolution": "PASS on rerun"
+    }
+  ],
+  "source_manifest": {
+    "appraisal_policy": {
+      "repository": "L-carp55/pawapuro-pennant-gpt-handoff",
+      "branch": "agent/appraisal-principles-20260809",
+      "commit": "179e03c76c4379f4372da722741b1a705df66974",
+      "files": [
+        "CLAUDE.md",
+        "docs/satei_handoff/12_APPRAISAL_PRINCIPLES_20260809.md",
+        "docs/satei_handoff/13_CURRENT_CRITICAL_PATH_20260809.md"
+      ]
+    },
+    "physical_evidence": {
+      "repository": "L-carp55/pawapuro-pennant-gpt-handoff",
+      "branch": "codex/speed-physical-evidence-full",
+      "commit": "94a26e7160a879ea0e13f4ddb91d4fdadc7c04e9",
+      "files": [
+        "data/manual/npb_speed_physical_evidence_full_20260809.json",
+        "outputs/derived/npb_speed_evidence_coverage_20260809.csv",
+        "data/manual/standardized_50m_electronic_reference.json",
+        "data/manual/standardized_30m50m_photoelectric_2026.json",
+        "data/manual/sprint_30m_measurements_curated.json"
+      ]
+    },
+    "measurement_date_resolution": {
+      "repository": "L-carp55/pawapuro-pennant-gpt-handoff",
+      "branch": "codex/speed-measurement-date-resolution",
+      "commit": "b374d1cb543e2035d9a18230e3b9245a616c6275",
+      "files": [
+        "outputs/derived/npb_speed_measurement_date_resolution_20260809.json"
+      ]
+    },
+    "exposure_audit": {
+      "repository": "L-carp55/pawapuro-pennant-gpt-handoff",
+      "branch": "codex/npb-sprint-exposure-audit",
+      "commit": "3be42ff62775cf98eec614f9ee733ae06d565bde",
+      "files": [
+        "outputs/derived/npb_plus_sprint_exposure_2026.json"
+      ]
+    },
+    "powerpro_history": {
+      "repository": "L-carp55/pawapuro-pennant-gpt-handoff",
+      "branch": "codex/pawapuro-speed-history-panel",
+      "commit": "19fad9848b782c95bcdd97449fa5a9768da9f9b3",
+      "files": [
+        "outputs/derived/pawapuro_speed_history_panel_2015_2026.json"
+      ],
+      "permitted_use": "external temporal QA only; never final rating, anchor, or correction input"
+    },
+    "the_show_speed_history": {
+      "repository": "L-carp55/claude-code-hub",
+      "branch": "codex/mlb-the-show-speed-history",
+      "commit": "97c429521267cfb70ccdd61e40e11853d100e360",
+      "files": [
+        "docs/audits/mlb_the_show_speed_history_audit.md",
+        "data/qa/collection_audit_summary.json"
+      ],
+      "permitted_use": "external QA methodology only; no NPB player rating, anchor, or temporal direction is inferred"
+    },
+    "the_show_full_attributes": {
+      "repository": "L-carp55/claude-code-hub",
+      "branch": "codex/mlb-the-show-full-attributes",
+      "commit": "74d2a2278ab7bcea3f6368e1df6ba03e2dd82554",
+      "files": [
+        "docs/audits/mlb_the_show_full_attribute_history_2017_2026.md",
+        "outputs/derived/mlb_the_show_full_attribute_summary_2017_2026.json",
+        "outputs/derived/mlb_the_show_live_roster_attributes_2017_2026.csv"
+      ],
+      "permitted_use": "not a substitute for the dedicated speed history; no player-level NPB join is asserted"
+    }
+  },
+  "local_input_sha256": {
+    "physical": "82c0c59b2f6431cd4d31efce3c3f62c0d601b84bf6466eb5cd17fc0b538afa1d",
+    "physicalCoverage": "1a2bd221d5ecc7822f21f45fe7f1a04f33e521b6a3c15a84bc4bf9ed2234389c",
+    "measurementDate": "a1793bd4c9f5aef5bf337eaed4ace47ea9484151a70a25cd22723ee962caa247",
+    "exposure": "f7b8886a2f18780f60cc66d54087a3e1af178d0ecc33bbda6a9a4ffeef73eb38",
+    "blind": "821f92303476002ea80ffae45ec0efb4930be211cf38bfd329cb45ddb8cc72e9",
+    "powerproHistory": "e109341db1a06d8f70c8c6b6f7caf2427a3eb35da686b2221204ac5d5ab353fa",
+    "standardized50m": "c3c9de6428394f9f85766ef545b59844fa2f9d17bdd1bcf34b415cbe305262bf",
+    "standardized30m50m": "9d34a4ce95ccba97a6395b92d10b784138f60ef12079db54d0739289eb097e82",
+    "curated30m": "8272d30f6bbfd89fc05bb25c6fdf4aee135753711da1154477e2106ece3ac0db"
+  }
+}
