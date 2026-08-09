@@ -3,40 +3,43 @@
 作成日: 2026-07-31  
 状態: **v2.0再設計フェーズ + 2026-08-09追補**  
 対象: 実在選手をパワプロ風に査定するための、再現可能・検証可能な野手査定モデル  
-直近の作業対象:  
-1. 2016〜2018年広島カープ黄金期の主力選手  
-2. 2017年WBC日本代表最終登録28人の全盛期査定
 
 ---
 
 ## 1. このパッケージの目的
 
-本パッケージは、長い対話の中で形成・修正された査定思想、誤り、検証結果、撤回事項、未解決課題を、Claude Codeで引き継げる形に整理したもの。
+本パッケージは、長い対話の中で形成・修正された査定思想、誤り、検証結果、撤回事項、未解決課題を、Claude Code / Codex / ブラウザGPT間で引き継げる形に整理したもの。
 
 最重要事項は次の通り。
 
 > **過去に出力した具体的な能力値の多くは最終版ではない。**  
 > 価値があるのは、どの指標を分離し、どの二重計上を避け、どのデータを収集すべきかという設計知見である。
 
-Claude Codeは、過去の表を部分修正するのではなく、`12_APPRAISAL_PRINCIPLES_20260809.md` を最新追補として先に確認し、その後 `02_CURRENT_SPEC_V2.md` と `03_FORMULAS_DATA_CONTRACTS.md` を読むこと。追補と旧v2仕様が矛盾する場合は追補を優先する。
+さらに、一般仕様と現在の作業順を区別する。
+
+- `12_APPRAISAL_PRINCIPLES_20260809.md` = 最新の査定設計原則
+- `13_CURRENT_CRITICAL_PATH_20260809.md` = **現在どこまで進めてよいかを拘束する運用正本**
+
+新しい能力テーマへ移る前に必ず両方読むこと。
 
 ---
 
 ## 2. 推奨読書順
 
 1. `00_README_AND_HANDOFF.md`
-2. `12_APPRAISAL_PRINCIPLES_20260809.md` **（最新追補・最優先）**
-3. `01_HISTORY_DECISION_LOG.md`
-4. `02_CURRENT_SPEC_V2.md`
-5. `03_FORMULAS_DATA_CONTRACTS.md`
-6. `04_RUNNING_DEFENSE_CATCHER.md`
-7. `05_SPECIAL_ABILITIES_KONAMI.md`
-8. `06_CARP_CASE_STUDY_AUDIT.md`
-9. `07_WBC2017_PRIME_STATUS.md`
-10. `08_CLAUDE_CODE_IMPLEMENTATION_PLAN.md`
-11. `09_QA_TESTS_OPEN_QUESTIONS.md`
-12. `10_SOURCE_CATALOG.md`
-13. `11_LEGACY_REFERENCE_V1_9.md`
+2. `12_APPRAISAL_PRINCIPLES_20260809.md` **（最新査定原則）**
+3. `13_CURRENT_CRITICAL_PATH_20260809.md` **（現在の作業順・停止条件。必読）**
+4. `01_HISTORY_DECISION_LOG.md`
+5. `02_CURRENT_SPEC_V2.md`
+6. `03_FORMULAS_DATA_CONTRACTS.md`
+7. `04_RUNNING_DEFENSE_CATCHER.md`
+8. `05_SPECIAL_ABILITIES_KONAMI.md`
+9. `06_CARP_CASE_STUDY_AUDIT.md`
+10. `07_WBC2017_PRIME_STATUS.md`
+11. `08_CLAUDE_CODE_IMPLEMENTATION_PLAN.md`
+12. `09_QA_TESTS_OPEN_QUESTIONS.md`
+13. `10_SOURCE_CATALOG.md`
+14. `11_LEGACY_REFERENCE_V1_9.md`
 
 ---
 
@@ -45,6 +48,7 @@ Claude Codeは、過去の表を部分修正するのではなく、`12_APPRAISA
 | ファイル | 役割 |
 |---|---|
 | `12_APPRAISAL_PRINCIPLES_20260809.md` | **最新追補**。ミート→パワー処理順序、HRを結果扱いする原則、T90走力定義、NPB+ transfer boundary、小標本、アンカー/SNS、PowerPro/The Show時系列QA、大規模Codex並列委任 |
+| `13_CURRENT_CRITICAL_PATH_20260809.md` | **現在の進行正本**。Speed v1 architecture完了と走力査定完了を区別し、肩力へ移るGate、待機中Codex成果、到着済み走力成果、次工程を固定する |
 | `01_HISTORY_DECISION_LOG.md` | 会話で起きた修正を時系列で記録。なぜ現在の仕様になったかを把握する |
 | `02_CURRENT_SPEC_V2.md` | v2時点の採用仕様、保留事項、撤回事項。追補と矛盾する箇所は追補優先 |
 | `03_FORMULAS_DATA_CONTRACTS.md` | 入力スキーマ、数式、データ階層、出力台帳 |
@@ -59,30 +63,27 @@ Claude Codeは、過去の表を部分修正するのではなく、`12_APPRAISA
 
 ---
 
-## 4. Claude Codeへの最初の指示
-
-以下をそのまま初期指示として利用できる。
+## 4. Claude Code / Codex / ブラウザGPTへの最初の指示
 
 ```text
-このパッケージをすべて読み、まず仕様の矛盾・未定義・未校正箇所を一覧化してください。
-最初に 12_APPRAISAL_PRINCIPLES_20260809.md を読み、旧v2仕様との矛盾は追補を優先してください。
+最初に 12_APPRAISAL_PRINCIPLES_20260809.md と
+13_CURRENT_CRITICAL_PATH_20260809.md を読んでください。
+
+12は最新の査定原則、13は現在の作業順と停止条件です。
+13がACTIVEの間は、一般仕様上「次の能力へ進める」状態に見えても、
+13のGateを満たさない限り別能力へ移らないでください。
+
+特に PR #3 の `Speed v1 complete` は、
+T90 production architecture と MLB calibration path の完了であり、
+2026 NPBの最終走力査定完了を意味しません。
+
+現在13がACTIVEな間、ユーザーの「進めて」は
+走力critical pathの次工程を進めるという意味です。
+Codex待ちを理由に肩力等へ横展開しないでください。
+
 過去に出力された能力値は正解として扱わず、ケーススタディ上の失敗例として扱ってください。
-
-次に、以下を実装してください。
-
-1. 入力データスキーマ
-2. 2019年NPBへの環境補正
-3. 経験ベイズ型の小サンプル縮小
-4. ミートを先に確定し、その後パワーを査定するM/P相互作用処理
-5. HR数を主因ではなく整合性QAとするパワー査定
-6. 得能差分の調整台帳
-7. T90中心の走力・盗塁・走塁・守備・捕球・肩・送球の分離
-8. 根拠・途中計算・信頼度を必ず出すレポート生成
-9. PowerPro / MLB The Showは独自査定を凍結した後にのみ読む外部QA
-10. 全自動テスト
-
 未校正係数を勝手に確定しないでください。
-係数がない部分は設定ファイルに分離し、根拠・校正方法・感度分析を記録してください。
+PowerPro / MLB The Showは独立査定を凍結した後の外部QAです。
 ```
 
 ---
@@ -100,6 +101,8 @@ Claude Codeは、過去の表を部分修正するのではなく、`12_APPRAISA
 - **走力は最初の走行ステップから約90ftの身体速度。盗塁・走塁技術・打席からの移行を混ぜない。**
 - **NPB+ Sprint Speedは現状provisional。少出場では最大努力走行未観測を疑う。**
 - **高信頼アンカー＋相対比較＋高品質SNSコンセンサスでデータ不足を補完してよい。**
+- **PowerPro / MLB The Showは独立査定凍結後のQA。差を教師値・補正量にしない。**
+- **大規模なread-heavy収集はCodexへ委任し、サブエージェント並列実行を明示する。**
 - **金特は歴史的水準のみ。候補乱発は禁止。**
 - **投手は未設計。野手仕様を流用して数値化しない。**
 
@@ -109,20 +112,22 @@ Claude Codeは、過去の表を部分修正するのではなく、`12_APPRAISA
 
 | 作業 | 状態 |
 |---|---|
-| 野手査定の概念設計 | 高度化済み。ただし係数校正は未完 |
-| 2019年NPB基準 | 採用 |
+| T90 production architecture | 完了 |
+| MLB 2017-2025 T90 calibration | 完了 |
+| 2026 NPB最終走力査定 | **未完。現在のcritical path** |
+| 100選手physical evidence | Codex収集済み |
+| measurement-date resolution | Codex収集済み。35件中15件年推定、20件unknown |
+| 2026 Sprint exposure audit | Codex収集済み。100人PA/games/proxy取得、NPB+ sample countは非公開 |
+| PowerPro 2015-2026 update-level long panel | **回収待ち / 統合前** |
+| MLB The Show Speed long panel | **回収待ち / 統合前** |
+| high-confidence speed anchors | **未構築** |
+| 2026 100人のanchor/SNS込み再査定 | **未実施** |
+| 肩力本格再設計 | **走力Gateを満たすまで開始しない** |
 | ミート→パワー査定順序 | 2026-08-09追補で採用、係数未校正 |
 | HRを結果扱いするパワー設計 | 2026-08-09追補で採用 |
-| 少打席補正 | 経験ベイズ＋能力発現機会不足の信頼度管理へ再設計 |
-| T90走力定義 | 採用。MLB内検証済み、NPB+ bridgeは未較正 |
-| アンカー/SNS相対比較 | 採用方向、実装未完 |
-| 疲労補正 | 数値式停止。研究課題 |
 | 守備分解 | 方向採用、ゲーム係数未校正 |
 | 捕手盗塁阻止 | 方向採用、ゲーム係数未校正 |
 | 得能寄与 | 方向採用、点数未校正 |
-| カープ能力表 | 廃版。再計算待ち |
-| WBC野手能力表 | 廃版。年度選定から再検証 |
-| WBC投手能力表 | 全面撤回。投手モデル新設が必要 |
 
 ---
 
@@ -172,5 +177,6 @@ PowerPro / The Show比較（最後）
 
 ## 9. 注意
 
-このプロジェクトは、まだ「完成済み査定表」ではなく、**厳密な査定エンジンを構築する研究開発プロジェクト**である。  
-最初にコード・データ契約・テストを作り、その後に選手査定を再開すること。
+このプロジェクトは、まだ「完成済み査定表」ではなく、**厳密な査定エンジンを構築する研究開発プロジェクト**である。
+
+現在は走力critical pathがACTIVEであり、`13_CURRENT_CRITICAL_PATH_20260809.md` の肩力移行Gateを満たすまで次能力へ進まない。
