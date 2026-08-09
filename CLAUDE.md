@@ -46,6 +46,7 @@
 - **データ不足選手は高信頼アンカーとの相対比較で補完可能。** SNS-A/Bの複数独立・複数年コンセンサスは順位制約として利用でき、映像直接確認は矛盾時のtie-breakerへ限定する
 - PowerPro / MLB The Showは独立査定凍結後の外部QA。差そのものを補正量や教師値にしない
 - **大規模なread-heavy収集をCodexへ委任する場合、サブエージェントによる並列実行をプロンプトで明示する。** 年代/球団/ソース別Agent＋独立QA Agent、別中間ファイル、親Agentのみ最終統合を原則とする
+- **Codexの最終チャット回答は正本にしない。** 重要な結論・coverage・制約・欠損・negative finding・QA・失敗理由・重要留保は必ず `docs/audits/...md` と必要なCSV/JSONへ保存し、`final responseにしか存在しない重要知見 = 0` の状態でcommit/pushする。新しいChatGPTセッションではCodex回答全文の貼り付けを求める前にremote branch・最新commit・audit成果物を確認する。詳細は `docs/satei_handoff/13_CURRENT_CRITICAL_PATH_20260809.md` §8
 - **校正の答え合わせは「12球団×143試合を回した時のリーグ全体の成績分布が実データの分布と一致するか」**（打率.250前後、本塁打王40本台、規定防御率上位2点台など）
 
 ## 技術方針
