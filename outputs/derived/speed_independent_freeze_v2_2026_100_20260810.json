@@ -1,0 +1,37 @@
+{
+  "status":"INDEPENDENT_FREEZE_V2_WITH_RANGES",
+  "created_at":"2026-08-10",
+  "universe_count":100,
+  "base":{"file":"outputs/derived/speed_blind_v3_npbplus_2026.json","count":99,"formula_same_for_missing_nabara":true,"final_production_scale":false},
+  "default_rule":"Use rounded PowerPro-blind v3 evaluation point unless overridden below. Game ratings are not used to set any endpoint.",
+  "mechanical_extra":{"player":"名原 典彦","sprint_speed_kmh":33.7,"baseline_rating":84.374673,"final_point":84},
+  "ranges":[
+    {"player":"林 琢真","low":69.1,"high":77.4,"reason":"standardized electronic 50m vs current NPB+ conflict; low exposure"},
+    {"player":"カリステ","low":63,"high":75,"reason":"2017 Statcast direct T90 3.94 vs current NPB+ conflict; old measurement + low current exposure"},
+    {"player":"秋山 翔吾","low":66,"high":73,"reason":"2021 Statcast direct T90 3.97 vs current NPB+ conflict"},
+    {"player":"ポランコ","low":61,"high":71,"reason":"2021 Statcast direct T90 3.99 vs current NPB+ conflict"},
+    {"player":"モンテロ","low":52,"high":68,"reason":"2024 Statcast direct T90 4.20 vs current NPB+ conflict; NPB+/MLB metric bridge uncalibrated"}
+  ],
+  "point_overrides":[
+    {"player":"友杉 篤輝","point":75,"reason":"standardized electronic 50m agrees with NPB+"},
+    {"player":"奈良間 大己","point":67,"reason":"standardized electronic 50m agrees with NPB+"},
+    {"player":"サンタナ","point":58,"reason":"2020 Statcast direct T90 4.13 agrees with current NPB+"},
+    {"player":"筒香 嘉智","point":53,"reason":"2022 Statcast direct T90 4.20 agrees with current NPB+"},
+    {"player":"塩見 泰隆","point":72,"reason":"current NPB+ prioritized over 2018 30m after major 2024/2025 left-knee injuries and surgeries"},
+    {"player":"並木 秀尊","point":85,"reason":"current NPB+ elite rank direction supported; special-start 5.32 record remains rejected for numeric use"},
+    {"player":"矢野 雅哉","point":57,"reason":"current NPB+ plus qualitative evidence supports fast-side but not exceptional-speed classification; historical 5.9 remains protocol-unknown"},
+    {"player":"小園 海斗","point":65,"reason":"high current exposure; old profile evidence does not override current NPB+"},
+    {"player":"梶原 昂希","point":82,"reason":"current high NPB+ plus historical fast directional evidence"},
+    {"player":"名原 典彦","point":84,"reason":"mechanical NPB+ baseline plus current qualitative fast-speed consensus; conflicting old 50m claims not used numerically"}
+  ],
+  "direct_t90_evaluation_values":[
+    {"player":"カリステ","year":2017,"t90":3.94,"eval_rating":75.25},
+    {"player":"秋山 翔吾","year":2021,"t90":3.97,"eval_rating":72.598214},
+    {"player":"ポランコ","year":2021,"t90":3.99,"eval_rating":70.830357},
+    {"player":"サンタナ","year":2020,"t90":4.13,"eval_rating":58.455357},
+    {"player":"筒香 嘉智","year":2022,"t90":4.20,"eval_rating":52.267857},
+    {"player":"モンテロ","year":2024,"t90":4.20,"eval_rating":52.267857}
+  ],
+  "external_qa_values_used_to_set_ratings":false,
+  "audit":"docs/audits/speed_independent_freeze_v2_direct_t90_correction_20260810.md"
+}
