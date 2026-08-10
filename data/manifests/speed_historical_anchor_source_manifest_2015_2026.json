@@ -1,0 +1,317 @@
+{
+  "schema_version": "speed-historical-anchor-bank/v1.0.0",
+  "as_of": "2026-08-10",
+  "purpose": "Source manifest for a player-by-measurement-era physical speed evidence bank. This is not a ratings manifest.",
+  "non_negotiable_boundaries": [
+    "No final game ability values are generated.",
+    "No 50m or 30m value is proportionally converted to 90ft.",
+    "No age decay or retrospective performance adjustment is applied.",
+    "Steals, baserunning outcomes, contact-to-first times, and event anecdotes are context-only or rejected.",
+    "No PowerPro, Prospi, MLB The Show, or other game value is read or used for anchor selection.",
+    "MLB Sprint Speed, NPB+ sprint-speed, and Statcast 90ft splits retain separate metric definitions and aggregation labels."
+  ],
+  "source_inventory": [
+    {
+      "source_manifest_id": "samurai_university_2022_06_19",
+      "source_file": "data/manual/standardized_50m_electronic_reference.json",
+      "source_tier": "A_OFFICIAL_TOP_FIVE_PLUS_C_UNVERIFIED_FULL_TABLE",
+      "primary_urls": [
+        "https://www.japan-baseball.jp/jp/news/press/20220619_1.html",
+        "https://www.youtube.com/watch?v=fC8_8iA7Cao"
+      ],
+      "protocol": "Electronic/photoelectric 50m stated in retained reference; only official top-five values admitted.",
+      "disposition": "Five official values accepted; 25 third-party full-table values retained raw and rejected from high-confidence anchors."
+    },
+    {
+      "source_manifest_id": "samurai_university_2024_11_30",
+      "source_file": "data/manual/standardized_50m_electronic_reference.json",
+      "source_tier": "A_PROTOCOL_B_FULL_VALUES",
+      "primary_urls": [
+        "https://www.japan-baseball.jp/jp/news/press/20241130_1.html",
+        "https://www.hb-nippon.com/articles/2163"
+      ],
+      "protocol": "Photoelectric 50m, common university national-team candidate camp cohort.",
+      "disposition": "Full 27-player published values accepted as same-cohort physical ordinal anchors."
+    },
+    {
+      "source_manifest_id": "samurai_university_2026_06_22",
+      "source_file": "data/manual/standardized_30m50m_photoelectric_2026.json",
+      "source_tier": "A_PROTOCOL_B_FULL_VALUES",
+      "primary_urls": [
+        "https://www.japan-baseball.jp/jp/news/press/20260622_2.html",
+        "https://www.hb-nippon.com/articles/14003"
+      ],
+      "protocol": "Photoelectric 50m with an intermediate 30m on the same trial.",
+      "disposition": "Full 31-player 50m cohort accepted; public 30m subset retained as support only."
+    },
+    {
+      "source_manifest_id": "samurai_university_2021_12_03_protocol_conflict",
+      "source_file": "data/manual/speed_historical_anchor_supplement_2015_2026.json",
+      "source_tier": "A",
+      "primary_urls": [
+        "https://www.japan-baseball.jp/jp/news/press/20211203_1.html",
+        "https://www.japan-baseball.jp/jp/news/press/20211205_1.html",
+        "https://www.japan-baseball.jp/jp/news/press/20251207_1.html"
+      ],
+      "protocol": "official report says photoelectric timing",
+      "disposition": "REJECTED_PROTOCOL_CONFLICT_PENDING_PRIMARY_RECONCILIATION: the 2021 official report says photoelectric, but the organiser's 2025 report says this camp began photoelectric timing in 2022."
+    },
+    {
+      "source_manifest_id": "samurai_university_2022_12_04",
+      "source_file": "data/manual/speed_historical_anchor_supplement_2015_2026.json",
+      "source_tier": "A",
+      "primary_urls": [
+        "https://www.japan-baseball.jp/jp/news/press/20221204_1.html"
+      ],
+      "protocol": "photoelectric 50m, shared camp session",
+      "disposition": "Accepted at source-record level; repeated session trials reduce to a documented session minimum."
+    },
+    {
+      "source_manifest_id": "samurai_university_2023_06_17",
+      "source_file": "data/manual/speed_historical_anchor_supplement_2015_2026.json",
+      "source_tier": "A",
+      "primary_urls": [
+        "https://www.japan-baseball.jp/jp/news/press/20230617_1.html"
+      ],
+      "protocol": "photoelectric 50m, shared camp session",
+      "disposition": "Accepted at source-record level; repeated session trials reduce to a documented session minimum."
+    },
+    {
+      "source_manifest_id": "samurai_university_2023_12_03",
+      "source_file": "data/manual/speed_historical_anchor_supplement_2015_2026.json",
+      "source_tier": "A",
+      "primary_urls": [
+        "https://www.japan-baseball.jp/jp/news/press/20231203_1.html"
+      ],
+      "protocol": "photoelectric 50m, shared camp session",
+      "disposition": "Accepted at source-record level; repeated session trials reduce to a documented session minimum."
+    },
+    {
+      "source_manifest_id": "samurai_university_2025_12_07",
+      "source_file": "data/manual/speed_historical_anchor_supplement_2015_2026.json",
+      "source_tier": "A_PROTOCOL_B_FULL_VALUES",
+      "primary_urls": [
+        "https://www.japan-baseball.jp/jp/news/press/20251207_1.html",
+        "https://www.hb-nippon.com/articles/10421?page=2",
+        "https://www.hb-nippon.com/articles/10421?page=3"
+      ],
+      "protocol": "photoelectric 50m, shared camp session; organiser reports all field-position participants were measured",
+      "disposition": "Accepted at source-record level; repeated session trials reduce to a documented session minimum."
+    },
+    {
+      "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810",
+      "source_file": "data/manual/speed_historical_anchor_supplement_2015_2026.json",
+      "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+      "primary_urls": [
+        "https://www.mlb.com/glossary/statcast/90-foot-running-splits",
+        "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year={year}&csv=true",
+        "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year={year}&position=&team=&min=10&csv=true"
+      ],
+      "protocol": "Official Statcast 90ft running splits start at the initial step and are standardised to 90ft. Seasonal Sprint Speed remains a distinct metric.",
+      "disposition": "Five player-season direct T90 records accepted after live CSV confirmation; 2022 Yoshitomo Tsutsugo rejected because both current official CSVs did not contain the row and no preserved snapshot was available."
+    },
+    {
+      "source_manifest_id": "existing_npb_physical_inventory_20260809",
+      "source_file": "data/manual/npb_speed_physical_evidence_full_20260809.json",
+      "source_tier": "MIXED_ARCHIVAL",
+      "primary_urls": [],
+      "protocol": "Existing repository player-by-player physical inventory.",
+      "disposition": "All rows preserved raw; duplicate direct/standard rows are superseded by canonical sources and contextual/profile records remain non-anchor evidence."
+    },
+    {
+      "source_manifest_id": "curated_30m_measurements_20260809",
+      "source_file": "data/manual/sprint_30m_measurements_curated.json",
+      "source_tier": "MIXED_PROTOCOL_UNKNOWN",
+      "primary_urls": [],
+      "protocol": "Curated 30m reporting with incomplete protocol metadata.",
+      "disposition": "Retained as directional historical evidence only."
+    },
+    {
+      "source_manifest_id": "curated_homeplate_to_first_20260809",
+      "source_file": "data/manual/hp_to_1b_measurements_curated.json",
+      "source_tier": "CONTEXT_ONLY",
+      "primary_urls": [],
+      "protocol": "Game contact-to-first timings.",
+      "disposition": "Retained and explicitly rejected as anchor input."
+    },
+    {
+      "source_manifest_id": "outlier_short_distance_context_20260809",
+      "source_file": "data/manual/speed_outlier_short_distance_evidence_20260809.json",
+      "source_tier": "PROTOCOL_MISMATCH",
+      "primary_urls": [],
+      "protocol": "Short-distance or mismatched-start outlier investigation.",
+      "disposition": "Retained and explicitly rejected as anchor input."
+    },
+    {
+      "source_manifest_id": "historical_speed_qa_20260809",
+      "source_file": "data/manual/historical_speed_qa.json",
+      "source_tier": "QA_ONLY",
+      "primary_urls": [],
+      "protocol": "Historical comparator and contextual QA cases.",
+      "disposition": "Retained as QA context only; no outcome, steal, or game-event evidence creates an anchor."
+    },
+    {
+      "source_manifest_id": "npb_plus_sprint_exposure_2026",
+      "source_file": "outputs/derived/npb_plus_sprint_exposure_2026.json",
+      "source_tier": "B_CURRENT_ORDINAL_SAMPLE_COUNT_NOT_PUBLISHED",
+      "primary_urls": [
+        "https://www.japan-baseball.jp/npb-plus/",
+        "https://www.japan-baseball.jp/npb-plus/terms/",
+        "https://github.com/armstjc/Nippon-Baseball-Data-Repository"
+      ],
+      "protocol": "Current 2026 NPB+ sprint-speed field; public row-level sample and qualified-run counts are unavailable.",
+      "disposition": "All 100 target-roster rows become moderate same-dataset ordinal anchors for human review packets only."
+    },
+    {
+      "source_manifest_id": "measurement_date_resolution_20260809",
+      "source_file": "outputs/derived/npb_speed_measurement_date_resolution_20260809.json",
+      "source_tier": "TEMPORAL_METADATA",
+      "primary_urls": [],
+      "protocol": "Existing explicit/inferred/unknown measurement-date resolution.",
+      "disposition": "Preserved as temporal metadata only; an inferred year never promotes a weak source to high confidence."
+    },
+    {
+      "source_manifest_id": "speed_acceleration_prior_guardrail",
+      "source_file": "configs/speed_acceleration_prior.json",
+      "source_sha256": "14a2fc03e87011c2579ea9dc28d6915f2af9e017531e81af4a7620929525c4aa",
+      "source_tier": "AGGREGATE_GUARDRAIL_ONLY",
+      "primary_urls": [],
+      "protocol": "Aggregate acceleration prior retained in repository.",
+      "disposition": "Hash receipt only. No value is read into raw records, anchors, bands, edges, or packets."
+    }
+  ],
+  "negative_discovery_register": [
+    {
+      "discovery_id": "kanoya_university_photoelectric_30m_2024_2025",
+      "urls": [
+        "https://blog.nifs-k.ac.jp/baseball/?p=3968",
+        "https://blog.nifs-k.ac.jp/baseball/?p=4408",
+        "https://blog.nifs-k.ac.jp/baseball/?p=4642"
+      ],
+      "finding": "Official university-team reports provide named photoelectric 30m values, but no current NPB-100 or later-NPB identity overlap was verified in this bounded task.",
+      "disposition": "NON_NPB_COHORT_CANDIDATE_NOT_ADDED_TO_NPB_CENTRIC_ANCHOR_BANK"
+    },
+    {
+      "discovery_id": "bc_league_photoelectric_30m_2025_2026",
+      "urls": [
+        "https://straightpress.jp/company_news/detail?pr=000000078.000033224"
+      ],
+      "finding": "League reporting confirms a large photoelectric-test cohort, but does not publish named player-level values usable for anchors.",
+      "disposition": "REJECTED_VALUES_NOT_PUBLIC"
+    },
+    {
+      "discovery_id": "keio_college_baseball_photocell_50m_aggregate_study",
+      "urls": [
+        "https://koara.lib.keio.ac.jp/xoonips/modules/xoonips/download.php/2022000011-20220042.pdf?file_id=184060"
+      ],
+      "finding": "An academic report confirms a 111-player dual-beam photocell 50m test but provides no named player-level values and reports a unit/format ambiguity.",
+      "disposition": "REJECTED_AGGREGATE_ONLY_NO_NAMED_VALUES"
+    },
+    {
+      "discovery_id": "witty_2018_anonymized_30m_study",
+      "urls": [
+        "https://www.jstage.jst.go.jp/article/cpjssct/2018/0/2018_28/_article/-char/ja"
+      ],
+      "finding": "An anonymized university-baseball 30m study was found; player identity cannot be joined.",
+      "disposition": "REJECTED_ANONYMIZED_NO_PLAYER_IDENTITY"
+    }
+  ],
+  "input_sha256": {
+    "standard50": "c3c9de6428394f9f85766ef545b59844fa2f9d17bdd1bcf34b415cbe305262bf",
+    "standard2026": "9d34a4ce95ccba97a6395b92d10b784138f60ef12079db54d0739289eb097e82",
+    "physicalInventory": "812323a5fe0ab95aa2c986f878987b950393975129c2d644f7801a3908f15a3a",
+    "curated30": "8272d30f6bbfd89fc05bb25c6fdf4aee135753711da1154477e2106ece3ac0db",
+    "hpTo1b": "aed9110b959ff5a976bbe35021e2fc2cd66215f77763156266ee3ee4d2faadda",
+    "outliers": "156af0b32b86f4f3c2cf8db60c834e92e6591ab9b45708e8ae5986dd299dde64",
+    "historyQa": "67d38e1ba214fb78534a0b0dff94cec98573a5b6b0dd79c7103283e4e204f001",
+    "dateResolution": "a1793bd4c9f5aef5bf337eaed4ace47ea9484151a70a25cd22723ee962caa247",
+    "npbPlus": "f7b8886a2f18780f60cc66d54087a3e1af178d0ecc33bbda6a9a4ffeef73eb38",
+    "supplement": "149dac48d1168b6c9760c70dbfef15c03de8d49dd79a106876dd885d858115a3",
+    "accelerationPrior": "14a2fc03e87011c2579ea9dc28d6915f2af9e017531e81af4a7620929525c4aa"
+  },
+  "generated_artifacts": {
+    "manifest": "data/manifests/speed_historical_anchor_source_manifest_2015_2026.json",
+    "rawCsv": "data/normalized/speed_historical_physical_measurements_2015_2026.csv",
+    "rawJson": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+    "anchorCsv": "outputs/derived/speed_high_confidence_anchor_bank_2015_2026.csv",
+    "anchorJson": "outputs/derived/speed_high_confidence_anchor_bank_2015_2026.json",
+    "rejectedCsv": "outputs/derived/speed_anchor_rejected_candidates_2015_2026.csv",
+    "coverage": "outputs/derived/speed_anchor_band_coverage_2015_2026.json",
+    "graph": "outputs/derived/speed_high_confidence_anchor_pairwise_graph_2015_2026.json",
+    "packets": "outputs/derived/speed_2026_100_anchor_relative_packets.json",
+    "snsQueue": "outputs/derived/speed_2026_100_sns_tiebreak_queue.csv",
+    "buildQa": "outputs/derived/speed_historical_anchor_build_qa_2015_2026.json",
+    "audit": "docs/audits/speed_historical_high_confidence_anchor_bank_2015_2026.md",
+    "independentQa": "outputs/derived/speed_historical_anchor_independent_qa_2015_2026.json"
+  },
+  "counts": {
+    "raw_measurements": 459,
+    "high_confidence_anchors": 113,
+    "moderate_current_ordinal_anchors": 100,
+    "rejected_or_context_rows": 202,
+    "packets": 100,
+    "sns_queue_rows": 19
+  },
+  "coverage_by_measurement_year": {
+    "2015": {
+      "raw_measurements": 3,
+      "high_confidence_anchors": 0,
+      "moderate_current_anchors": 0
+    },
+    "2016": {
+      "raw_measurements": 6,
+      "high_confidence_anchors": 0,
+      "moderate_current_anchors": 0
+    },
+    "2017": {
+      "raw_measurements": 9,
+      "high_confidence_anchors": 1,
+      "moderate_current_anchors": 0
+    },
+    "2018": {
+      "raw_measurements": 7,
+      "high_confidence_anchors": 0,
+      "moderate_current_anchors": 0
+    },
+    "2019": {
+      "raw_measurements": 8,
+      "high_confidence_anchors": 0,
+      "moderate_current_anchors": 0
+    },
+    "2020": {
+      "raw_measurements": 21,
+      "high_confidence_anchors": 1,
+      "moderate_current_anchors": 0
+    },
+    "2021": {
+      "raw_measurements": 31,
+      "high_confidence_anchors": 2,
+      "moderate_current_anchors": 0
+    },
+    "2022": {
+      "raw_measurements": 56,
+      "high_confidence_anchors": 9,
+      "moderate_current_anchors": 0
+    },
+    "2023": {
+      "raw_measurements": 18,
+      "high_confidence_anchors": 6,
+      "moderate_current_anchors": 0
+    },
+    "2024": {
+      "raw_measurements": 50,
+      "high_confidence_anchors": 28,
+      "moderate_current_anchors": 0
+    },
+    "2025": {
+      "raw_measurements": 62,
+      "high_confidence_anchors": 35,
+      "moderate_current_anchors": 0
+    },
+    "2026": {
+      "raw_measurements": 134,
+      "high_confidence_anchors": 31,
+      "moderate_current_anchors": 100
+    }
+  }
+}

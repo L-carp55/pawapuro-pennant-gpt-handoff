@@ -1,0 +1,4045 @@
+{
+  "schema_version": "speed-historical-anchor-bank/v1.0.0",
+  "as_of": "2026-08-10",
+  "purpose": "Sparse relative comparison graph. No edge creates a game rating or a cross-unit equivalence.",
+  "edge_counts": {
+    "total": 200,
+    "high": 101,
+    "moderate": 99,
+    "same_band_adjacencies": 161
+  },
+  "unconnected_high_confidence_anchors": [
+    {
+      "anchor_id": "A0109",
+      "player": "カリステ",
+      "measurement_era": 2017,
+      "reason": "No cross-era direct-T90 graph edge is emitted; that comparison would overstate current equivalence."
+    },
+    {
+      "anchor_id": "A0110",
+      "player": "サンタナ",
+      "measurement_era": 2020,
+      "reason": "No cross-era direct-T90 graph edge is emitted; that comparison would overstate current equivalence."
+    },
+    {
+      "anchor_id": "A0111",
+      "player": "秋山翔吾",
+      "measurement_era": 2021,
+      "reason": "No cross-era direct-T90 graph edge is emitted; that comparison would overstate current equivalence."
+    },
+    {
+      "anchor_id": "A0112",
+      "player": "ポランコ",
+      "measurement_era": 2021,
+      "reason": "No cross-era direct-T90 graph edge is emitted; that comparison would overstate current equivalence."
+    },
+    {
+      "anchor_id": "A0113",
+      "player": "モンテロ",
+      "measurement_era": 2024,
+      "reason": "No cross-era direct-T90 graph edge is emitted; that comparison would overstate current equivalence."
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "E0001",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2022-06-19",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2022-06-19",
+      "faster_anchor_id": "A0005",
+      "slower_anchor_id": "A0004",
+      "faster_player": "矢澤宏太",
+      "slower_player": "林琢真",
+      "faster_value": 5.98,
+      "slower_value": 5.99,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2022_06_19"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0002",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2022-06-19",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2022-06-19",
+      "faster_anchor_id": "A0004",
+      "slower_anchor_id": "A0003",
+      "faster_player": "林琢真",
+      "slower_player": "松浦佑星",
+      "faster_value": 5.99,
+      "slower_value": 6.06,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2022_06_19"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0003",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2022-06-19",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2022-06-19",
+      "faster_anchor_id": "A0003",
+      "slower_anchor_id": "A0002",
+      "faster_player": "松浦佑星",
+      "slower_player": "友杉篤輝",
+      "faster_value": 6.06,
+      "slower_value": 6.1,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2022_06_19"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0004",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2022-06-19",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2022-06-19",
+      "faster_anchor_id": "A0002",
+      "slower_anchor_id": "A0001",
+      "faster_player": "友杉篤輝",
+      "slower_player": "蛭間拓哉",
+      "faster_value": 6.1,
+      "slower_value": 6.17,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2022_06_19"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0005",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0006",
+      "slower_anchor_id": "A0007",
+      "faster_player": "岡城快生",
+      "slower_player": "松川玲央",
+      "faster_value": 5.82,
+      "slower_value": 5.89,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0006",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0007",
+      "slower_anchor_id": "A0008",
+      "faster_player": "松川玲央",
+      "slower_player": "藤森康淳",
+      "faster_value": 5.89,
+      "slower_value": 5.97,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0007",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0008",
+      "slower_anchor_id": "A0009",
+      "faster_player": "藤森康淳",
+      "slower_player": "平川蓮",
+      "faster_value": 5.97,
+      "slower_value": 5.99,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0008",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0009",
+      "slower_anchor_id": "A0010",
+      "faster_player": "平川蓮",
+      "slower_player": "立石正広",
+      "faster_value": 5.99,
+      "slower_value": 6.07,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0009",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0010",
+      "slower_anchor_id": "A0011",
+      "faster_player": "立石正広",
+      "slower_player": "大塚瑠晏",
+      "faster_value": 6.07,
+      "slower_value": 6.07,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0010",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0011",
+      "slower_anchor_id": "A0012",
+      "faster_player": "大塚瑠晏",
+      "slower_player": "黒田義信",
+      "faster_value": 6.07,
+      "slower_value": 6.1,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0011",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0012",
+      "slower_anchor_id": "A0013",
+      "faster_player": "黒田義信",
+      "slower_player": "皆川岳飛",
+      "faster_value": 6.1,
+      "slower_value": 6.12,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0012",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0013",
+      "slower_anchor_id": "A0014",
+      "faster_player": "皆川岳飛",
+      "slower_player": "秋山俊",
+      "faster_value": 6.12,
+      "slower_value": 6.13,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0013",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0014",
+      "slower_anchor_id": "A0015",
+      "faster_player": "秋山俊",
+      "slower_player": "勝田成",
+      "faster_value": 6.13,
+      "slower_value": 6.17,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0014",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0015",
+      "slower_anchor_id": "A0016",
+      "faster_player": "勝田成",
+      "slower_player": "米津煌太",
+      "faster_value": 6.17,
+      "slower_value": 6.17,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0015",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0016",
+      "slower_anchor_id": "A0017",
+      "faster_player": "米津煌太",
+      "slower_player": "繁永晟",
+      "faster_value": 6.17,
+      "slower_value": 6.19,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0016",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0017",
+      "slower_anchor_id": "A0018",
+      "faster_player": "繁永晟",
+      "slower_player": "栗山雅也",
+      "faster_value": 6.19,
+      "slower_value": 6.19,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0017",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0018",
+      "slower_anchor_id": "A0019",
+      "faster_player": "栗山雅也",
+      "slower_player": "木本圭一",
+      "faster_value": 6.19,
+      "slower_value": 6.2,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0018",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0019",
+      "slower_anchor_id": "A0020",
+      "faster_player": "木本圭一",
+      "slower_player": "那波賢人",
+      "faster_value": 6.2,
+      "slower_value": 6.22,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0019",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0020",
+      "slower_anchor_id": "A0021",
+      "faster_player": "那波賢人",
+      "slower_player": "蜷川大",
+      "faster_value": 6.22,
+      "slower_value": 6.26,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0020",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0021",
+      "slower_anchor_id": "A0022",
+      "faster_player": "蜷川大",
+      "slower_player": "若山空蒼",
+      "faster_value": 6.26,
+      "slower_value": 6.26,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0021",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0022",
+      "slower_anchor_id": "A0023",
+      "faster_player": "若山空蒼",
+      "slower_player": "小林隼翔",
+      "faster_value": 6.26,
+      "slower_value": 6.27,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0022",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0023",
+      "slower_anchor_id": "A0024",
+      "faster_player": "小林隼翔",
+      "slower_player": "谷端将伍",
+      "faster_value": 6.27,
+      "slower_value": 6.3,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0023",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0024",
+      "slower_anchor_id": "A0025",
+      "faster_player": "谷端将伍",
+      "slower_player": "前田健伸",
+      "faster_value": 6.3,
+      "slower_value": 6.36,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0024",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0025",
+      "slower_anchor_id": "A0026",
+      "faster_player": "前田健伸",
+      "slower_player": "小島大河",
+      "faster_value": 6.36,
+      "slower_value": 6.38,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0025",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0026",
+      "slower_anchor_id": "A0027",
+      "faster_player": "小島大河",
+      "slower_player": "熊谷陸",
+      "faster_value": 6.38,
+      "slower_value": 6.38,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0026",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0027",
+      "slower_anchor_id": "A0028",
+      "faster_player": "熊谷陸",
+      "slower_player": "尾瀬雄大",
+      "faster_value": 6.38,
+      "slower_value": 6.38,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0027",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0028",
+      "slower_anchor_id": "A0029",
+      "faster_player": "尾瀬雄大",
+      "slower_player": "渡辺憩",
+      "faster_value": 6.38,
+      "slower_value": 6.4,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0028",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0029",
+      "slower_anchor_id": "A0030",
+      "faster_player": "渡辺憩",
+      "slower_player": "前嶋藍",
+      "faster_value": 6.4,
+      "slower_value": 6.53,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0029",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0030",
+      "slower_anchor_id": "A0031",
+      "faster_player": "前嶋藍",
+      "slower_player": "渡部海",
+      "faster_value": 6.53,
+      "slower_value": 6.55,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0030",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2024-11-30",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2024-11-30",
+      "faster_anchor_id": "A0031",
+      "slower_anchor_id": "A0032",
+      "faster_player": "渡部海",
+      "slower_player": "辻井心",
+      "faster_value": 6.55,
+      "slower_value": 6.87,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2024_11_30"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0031",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0033",
+      "slower_anchor_id": "A0034",
+      "faster_player": "鈴木湧陽",
+      "slower_player": "岡田啓吾",
+      "faster_value": 5.78,
+      "slower_value": 5.83,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0032",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0034",
+      "slower_anchor_id": "A0035",
+      "faster_player": "岡田啓吾",
+      "slower_player": "境亮陽",
+      "faster_value": 5.83,
+      "slower_value": 6.02,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0033",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0035",
+      "slower_anchor_id": "A0036",
+      "faster_player": "境亮陽",
+      "slower_player": "木津寿哉",
+      "faster_value": 6.02,
+      "slower_value": 6.02,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0034",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0036",
+      "slower_anchor_id": "A0037",
+      "faster_player": "木津寿哉",
+      "slower_player": "榊原七斗",
+      "faster_value": 6.02,
+      "slower_value": 6.15,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0035",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0037",
+      "slower_anchor_id": "A0038",
+      "faster_player": "榊原七斗",
+      "slower_player": "黒田義信",
+      "faster_value": 6.15,
+      "slower_value": 6.18,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0036",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0038",
+      "slower_anchor_id": "A0039",
+      "faster_player": "黒田義信",
+      "slower_player": "眞邉麗生",
+      "faster_value": 6.18,
+      "slower_value": 6.18,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0037",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0039",
+      "slower_anchor_id": "A0040",
+      "faster_player": "眞邉麗生",
+      "slower_player": "新保玖和",
+      "faster_value": 6.18,
+      "slower_value": 6.2,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0038",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0040",
+      "slower_anchor_id": "A0041",
+      "faster_player": "新保玖和",
+      "slower_player": "赤堀颯",
+      "faster_value": 6.2,
+      "slower_value": 6.24,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0039",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0041",
+      "slower_anchor_id": "A0042",
+      "faster_player": "赤堀颯",
+      "slower_player": "西野啓也",
+      "faster_value": 6.24,
+      "slower_value": 6.28,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0040",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0042",
+      "slower_anchor_id": "A0043",
+      "faster_player": "西野啓也",
+      "slower_player": "神田剛志",
+      "faster_value": 6.28,
+      "slower_value": 6.28,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0041",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0043",
+      "slower_anchor_id": "A0044",
+      "faster_player": "神田剛志",
+      "slower_player": "井上和輝",
+      "faster_value": 6.28,
+      "slower_value": 6.29,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0042",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0044",
+      "slower_anchor_id": "A0045",
+      "faster_player": "井上和輝",
+      "slower_player": "小林隼翔",
+      "faster_value": 6.29,
+      "slower_value": 6.29,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0043",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0045",
+      "slower_anchor_id": "A0046",
+      "faster_player": "小林隼翔",
+      "slower_player": "佐藤悠太",
+      "faster_value": 6.29,
+      "slower_value": 6.33,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0044",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0046",
+      "slower_anchor_id": "A0047",
+      "faster_player": "佐藤悠太",
+      "slower_player": "山里宝",
+      "faster_value": 6.33,
+      "slower_value": 6.38,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0045",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0047",
+      "slower_anchor_id": "A0048",
+      "faster_player": "山里宝",
+      "slower_player": "渡部海",
+      "faster_value": 6.38,
+      "slower_value": 6.43,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0046",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0048",
+      "slower_anchor_id": "A0049",
+      "faster_player": "渡部海",
+      "slower_player": "渡邊晃希",
+      "faster_value": 6.43,
+      "slower_value": 6.45,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0047",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0049",
+      "slower_anchor_id": "A0050",
+      "faster_player": "渡邊晃希",
+      "slower_player": "今津慶介",
+      "faster_value": 6.45,
+      "slower_value": 6.46,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0048",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0050",
+      "slower_anchor_id": "A0051",
+      "faster_player": "今津慶介",
+      "slower_player": "宮澤圭汰",
+      "faster_value": 6.46,
+      "slower_value": 6.47,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0049",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0051",
+      "slower_anchor_id": "A0052",
+      "faster_player": "宮澤圭汰",
+      "slower_player": "春山陽登",
+      "faster_value": 6.47,
+      "slower_value": 6.47,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0050",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0052",
+      "slower_anchor_id": "A0053",
+      "faster_player": "春山陽登",
+      "slower_player": "真鍋慧",
+      "faster_value": 6.47,
+      "slower_value": 6.5,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0051",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0053",
+      "slower_anchor_id": "A0054",
+      "faster_player": "真鍋慧",
+      "slower_player": "福原聖矢",
+      "faster_value": 6.5,
+      "slower_value": 6.52,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0052",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0054",
+      "slower_anchor_id": "A0055",
+      "faster_player": "福原聖矢",
+      "slower_player": "髙岡新時",
+      "faster_value": 6.52,
+      "slower_value": 6.52,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0053",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0055",
+      "slower_anchor_id": "A0056",
+      "faster_player": "髙岡新時",
+      "slower_player": "酒井成真",
+      "faster_value": 6.52,
+      "slower_value": 6.56,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0054",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0056",
+      "slower_anchor_id": "A0057",
+      "faster_player": "酒井成真",
+      "slower_player": "三好元気",
+      "faster_value": 6.56,
+      "slower_value": 6.6,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0055",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0057",
+      "slower_anchor_id": "A0058",
+      "faster_player": "三好元気",
+      "slower_player": "中山優月",
+      "faster_value": 6.6,
+      "slower_value": 6.6,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0056",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0058",
+      "slower_anchor_id": "A0059",
+      "faster_player": "中山優月",
+      "slower_player": "林純司",
+      "faster_value": 6.6,
+      "slower_value": 6.63,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0057",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0059",
+      "slower_anchor_id": "A0060",
+      "faster_player": "林純司",
+      "slower_player": "坪井蒼汰",
+      "faster_value": 6.63,
+      "slower_value": 6.73,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0058",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0060",
+      "slower_anchor_id": "A0061",
+      "faster_player": "坪井蒼汰",
+      "slower_player": "前嶋藍",
+      "faster_value": 6.73,
+      "slower_value": 6.76,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0059",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0061",
+      "slower_anchor_id": "A0062",
+      "faster_player": "前嶋藍",
+      "slower_player": "徳丸快晴",
+      "faster_value": 6.76,
+      "slower_value": 6.88,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0060",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2026_06_22",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2026_06_22",
+      "faster_anchor_id": "A0062",
+      "slower_anchor_id": "A0063",
+      "faster_player": "徳丸快晴",
+      "slower_player": "丸山一喜",
+      "faster_value": 6.88,
+      "slower_value": 6.95,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2026_06_22"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0061",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2022_12_04",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2022_12_04",
+      "faster_anchor_id": "A0064",
+      "slower_anchor_id": "A0065",
+      "faster_player": "宮崎一樹",
+      "slower_player": "松浦佑星",
+      "faster_value": 5.91,
+      "slower_value": 5.95,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2022_12_04"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0062",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2022_12_04",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2022_12_04",
+      "faster_anchor_id": "A0065",
+      "slower_anchor_id": "A0066",
+      "faster_player": "松浦佑星",
+      "slower_player": "中島大輔",
+      "faster_value": 5.95,
+      "slower_value": 5.98,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2022_12_04"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0063",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2022_12_04",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2022_12_04",
+      "faster_anchor_id": "A0066",
+      "slower_anchor_id": "A0067",
+      "faster_player": "中島大輔",
+      "slower_player": "渡部聖弥",
+      "faster_value": 5.98,
+      "slower_value": 6.15,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2022_12_04"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0064",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2023_06_17",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2023_06_17",
+      "faster_anchor_id": "A0068",
+      "slower_anchor_id": "A0069",
+      "faster_player": "宮崎一樹",
+      "slower_player": "飯森太慈",
+      "faster_value": 5.94,
+      "slower_value": 5.94,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2023_06_17"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0065",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2023_06_17",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2023_06_17",
+      "faster_anchor_id": "A0069",
+      "slower_anchor_id": "A0070",
+      "faster_player": "飯森太慈",
+      "slower_player": "中島大輔",
+      "faster_value": 5.94,
+      "slower_value": 5.96,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2023_06_17"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0066",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2023_12_03",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2023_12_03",
+      "faster_anchor_id": "A0071",
+      "slower_anchor_id": "A0072",
+      "faster_player": "松川玲央",
+      "slower_player": "藤澤涼介",
+      "faster_value": 5.88,
+      "slower_value": 5.97,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2023_12_03"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0067",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2023_12_03",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2023_12_03",
+      "faster_anchor_id": "A0072",
+      "slower_anchor_id": "A0073",
+      "faster_player": "藤澤涼介",
+      "slower_player": "浦田俊輔",
+      "faster_value": 5.97,
+      "slower_value": 5.99,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2023_12_03"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0068",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0084",
+      "slower_anchor_id": "A0106",
+      "faster_player": "岡田啓吾",
+      "slower_player": "市橋昂士",
+      "faster_value": 5.69,
+      "slower_value": 5.91,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0069",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0106",
+      "slower_anchor_id": "A0099",
+      "faster_player": "市橋昂士",
+      "slower_player": "境亮陽",
+      "faster_value": 5.91,
+      "slower_value": 5.92,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0070",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0099",
+      "slower_anchor_id": "A0107",
+      "faster_player": "境亮陽",
+      "slower_player": "田上夏衣",
+      "faster_value": 5.92,
+      "slower_value": 5.92,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0071",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0107",
+      "slower_anchor_id": "A0098",
+      "faster_player": "田上夏衣",
+      "slower_player": "榊原七斗",
+      "faster_value": 5.92,
+      "slower_value": 5.99,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0072",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0098",
+      "slower_anchor_id": "A0104",
+      "faster_player": "榊原七斗",
+      "slower_player": "星野大和",
+      "faster_value": 5.99,
+      "slower_value": 6.02,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0073",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0104",
+      "slower_anchor_id": "A0101",
+      "faster_player": "星野大和",
+      "slower_player": "眞邉麗生",
+      "faster_value": 6.02,
+      "slower_value": 6.03,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0074",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0101",
+      "slower_anchor_id": "A0097",
+      "faster_player": "眞邉麗生",
+      "slower_player": "黒田義信",
+      "faster_value": 6.03,
+      "slower_value": 6.07,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0075",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0097",
+      "slower_anchor_id": "A0090",
+      "faster_player": "黒田義信",
+      "slower_player": "新保玖和",
+      "faster_value": 6.07,
+      "slower_value": 6.14,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0076",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0090",
+      "slower_anchor_id": "A0081",
+      "faster_player": "新保玖和",
+      "slower_player": "小島慎也",
+      "faster_value": 6.14,
+      "slower_value": 6.24,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0077",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0081",
+      "slower_anchor_id": "A0105",
+      "faster_player": "小島慎也",
+      "slower_player": "春山陽登",
+      "faster_value": 6.24,
+      "slower_value": 6.26,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0078",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0105",
+      "slower_anchor_id": "A0078",
+      "faster_player": "春山陽登",
+      "slower_player": "西野啓也",
+      "faster_value": 6.26,
+      "slower_value": 6.27,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0079",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0078",
+      "slower_anchor_id": "A0092",
+      "faster_player": "西野啓也",
+      "slower_player": "小林隼翔",
+      "faster_value": 6.27,
+      "slower_value": 6.27,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0080",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0092",
+      "slower_anchor_id": "A0100",
+      "faster_player": "小林隼翔",
+      "slower_player": "寺尾拳聖",
+      "faster_value": 6.27,
+      "slower_value": 6.27,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0081",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0100",
+      "slower_anchor_id": "A0082",
+      "faster_player": "寺尾拳聖",
+      "slower_player": "笹田海風",
+      "faster_value": 6.27,
+      "slower_value": 6.28,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0082",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0082",
+      "slower_anchor_id": "A0085",
+      "faster_player": "笹田海風",
+      "slower_player": "山里宝",
+      "faster_value": 6.28,
+      "slower_value": 6.28,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0083",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0085",
+      "slower_anchor_id": "A0074",
+      "faster_player": "山里宝",
+      "slower_player": "井上和輝",
+      "faster_value": 6.28,
+      "slower_value": 6.29,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0084",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0074",
+      "slower_anchor_id": "A0089",
+      "faster_player": "井上和輝",
+      "slower_player": "川合錬磨",
+      "faster_value": 6.29,
+      "slower_value": 6.29,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0085",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0089",
+      "slower_anchor_id": "A0086",
+      "faster_player": "川合錬磨",
+      "slower_player": "鈴木斗偉",
+      "faster_value": 6.29,
+      "slower_value": 6.3,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0086",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0086",
+      "slower_anchor_id": "A0075",
+      "faster_player": "鈴木斗偉",
+      "slower_player": "落合智哉",
+      "faster_value": 6.3,
+      "slower_value": 6.31,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0087",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0075",
+      "slower_anchor_id": "A0083",
+      "faster_player": "落合智哉",
+      "slower_player": "真鍋慧",
+      "faster_value": 6.31,
+      "slower_value": 6.31,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0088",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0083",
+      "slower_anchor_id": "A0102",
+      "faster_player": "真鍋慧",
+      "slower_player": "三好元気",
+      "faster_value": 6.31,
+      "slower_value": 6.34,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0089",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0102",
+      "slower_anchor_id": "A0103",
+      "faster_player": "三好元気",
+      "slower_player": "岩田悠聖",
+      "faster_value": 6.34,
+      "slower_value": 6.39,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0090",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0103",
+      "slower_anchor_id": "A0076",
+      "faster_player": "岩田悠聖",
+      "slower_player": "渡部海",
+      "faster_value": 6.39,
+      "slower_value": 6.41,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0091",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0076",
+      "slower_anchor_id": "A0091",
+      "faster_player": "渡部海",
+      "slower_player": "光弘帆高",
+      "faster_value": 6.41,
+      "slower_value": 6.42,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0092",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0091",
+      "slower_anchor_id": "A0108",
+      "faster_player": "光弘帆高",
+      "slower_player": "中山優月",
+      "faster_value": 6.42,
+      "slower_value": 6.42,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0093",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0108",
+      "slower_anchor_id": "A0095",
+      "faster_player": "中山優月",
+      "slower_player": "西浦真平",
+      "faster_value": 6.42,
+      "slower_value": 6.44,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0094",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0095",
+      "slower_anchor_id": "A0094",
+      "faster_player": "西浦真平",
+      "slower_player": "吉田祐大",
+      "faster_value": 6.44,
+      "slower_value": 6.47,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0095",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0094",
+      "slower_anchor_id": "A0080",
+      "faster_player": "吉田祐大",
+      "slower_player": "松山優太",
+      "faster_value": 6.47,
+      "slower_value": 6.48,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0096",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0080",
+      "slower_anchor_id": "A0096",
+      "faster_player": "松山優太",
+      "slower_player": "佐藤悠太",
+      "faster_value": 6.48,
+      "slower_value": 6.51,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0097",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0096",
+      "slower_anchor_id": "A0093",
+      "faster_player": "佐藤悠太",
+      "slower_player": "緒方漣",
+      "faster_value": 6.51,
+      "slower_value": 6.59,
+      "unit": "seconds",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0098",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0093",
+      "slower_anchor_id": "A0079",
+      "faster_player": "緒方漣",
+      "slower_player": "林大心",
+      "faster_value": 6.59,
+      "slower_value": 6.6,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0099",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0079",
+      "slower_anchor_id": "A0087",
+      "faster_player": "林大心",
+      "slower_player": "木切倉稜真",
+      "faster_value": 6.6,
+      "slower_value": 6.63,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0100",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0087",
+      "slower_anchor_id": "A0088",
+      "faster_player": "木切倉稜真",
+      "slower_player": "梅澤蒼空",
+      "faster_value": 6.63,
+      "slower_value": 6.63,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0101",
+      "group_key": "50M_STANDING_START_SECONDS|samurai_university_2025_12_07",
+      "metric": "50M_STANDING_START_SECONDS",
+      "cohort_id": "samurai_university_2025_12_07",
+      "faster_anchor_id": "A0088",
+      "slower_anchor_id": "A0077",
+      "faster_player": "梅澤蒼空",
+      "slower_player": "前嶋藍",
+      "faster_value": 6.63,
+      "slower_value": 6.77,
+      "unit": "seconds",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "HIGH",
+      "source_refs": [
+        "samurai_university_2025_12_07"
+      ],
+      "temporal_scope": "same measured physical cohort",
+      "limitation": "This is a same-cohort ordinal edge, not a 90ft conversion or current player rating."
+    },
+    {
+      "edge_id": "E0102",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0190",
+      "slower_anchor_id": "A0175",
+      "faster_player": "周東 佑京",
+      "slower_player": "村林 一輝",
+      "faster_value": 35,
+      "slower_value": 34.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0103",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0175",
+      "slower_anchor_id": "A0167",
+      "faster_player": "村林 一輝",
+      "slower_player": "並木 秀尊",
+      "faster_value": 34.5,
+      "slower_value": 33.8,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0104",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0167",
+      "slower_anchor_id": "A0159",
+      "faster_player": "並木 秀尊",
+      "slower_player": "名原 典彦",
+      "faster_value": 33.8,
+      "slower_value": 33.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0105",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0159",
+      "slower_anchor_id": "A0151",
+      "faster_player": "名原 典彦",
+      "slower_player": "髙部 瑛斗",
+      "faster_value": 33.7,
+      "slower_value": 33.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0106",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0151",
+      "slower_anchor_id": "A0172",
+      "faster_player": "髙部 瑛斗",
+      "slower_player": "岩田 幸宏",
+      "faster_value": 33.6,
+      "slower_value": 33.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0107",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0172",
+      "slower_anchor_id": "A0130",
+      "faster_player": "岩田 幸宏",
+      "slower_player": "田中 幹也",
+      "faster_value": 33.6,
+      "slower_value": 33.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0108",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0130",
+      "slower_anchor_id": "A0197",
+      "faster_player": "田中 幹也",
+      "slower_player": "牧原 大成",
+      "faster_value": 33.5,
+      "slower_value": 33.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0109",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0197",
+      "slower_anchor_id": "A0128",
+      "faster_player": "牧原 大成",
+      "slower_player": "村松 開人",
+      "faster_value": 33.5,
+      "slower_value": 33.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0110",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0128",
+      "slower_anchor_id": "A0136",
+      "faster_player": "村松 開人",
+      "slower_player": "水野 達稀",
+      "faster_value": 33.4,
+      "slower_value": 33.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0111",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0136",
+      "slower_anchor_id": "A0146",
+      "faster_player": "水野 達稀",
+      "slower_player": "小川 龍成",
+      "faster_value": 33.4,
+      "slower_value": 33.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0112",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0146",
+      "slower_anchor_id": "A0185",
+      "faster_player": "小川 龍成",
+      "slower_player": "梶原 昂希",
+      "faster_value": 33.4,
+      "slower_value": 33.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0113",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0185",
+      "slower_anchor_id": "A0132",
+      "faster_player": "梶原 昂希",
+      "slower_player": "福永 裕基",
+      "faster_value": 33.4,
+      "slower_value": 33,
+      "unit": "km_per_hour",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0114",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0132",
+      "slower_anchor_id": "A0149",
+      "faster_player": "福永 裕基",
+      "slower_player": "藤原 恭大",
+      "faster_value": 33,
+      "slower_value": 33,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0115",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0149",
+      "slower_anchor_id": "A0155",
+      "faster_player": "藤原 恭大",
+      "slower_player": "滝澤 夏央",
+      "faster_value": 33,
+      "slower_value": 33,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0116",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0155",
+      "slower_anchor_id": "A0200",
+      "faster_player": "滝澤 夏央",
+      "slower_player": "佐々木 俊輔",
+      "faster_value": 33,
+      "slower_value": 33,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0117",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0200",
+      "slower_anchor_id": "A0154",
+      "faster_player": "佐々木 俊輔",
+      "slower_player": "源田 壮亮",
+      "faster_value": 33,
+      "slower_value": 32.9,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0118",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0154",
+      "slower_anchor_id": "A0205",
+      "faster_player": "源田 壮亮",
+      "slower_player": "中野 拓夢",
+      "faster_value": 32.9,
+      "slower_value": 32.9,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0119",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0205",
+      "slower_anchor_id": "A0210",
+      "faster_player": "中野 拓夢",
+      "slower_player": "小幡 竜平",
+      "faster_value": 32.9,
+      "slower_value": 32.8,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0120",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0210",
+      "slower_anchor_id": "A0133",
+      "faster_player": "小幡 竜平",
+      "slower_player": "細川 成也",
+      "faster_value": 32.8,
+      "slower_value": 32.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0121",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0133",
+      "slower_anchor_id": "A0139",
+      "faster_player": "細川 成也",
+      "slower_player": "郡司 裕也",
+      "faster_value": 32.7,
+      "slower_value": 32.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0122",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0139",
+      "slower_anchor_id": "A0144",
+      "faster_player": "郡司 裕也",
+      "slower_player": "友杉 篤輝",
+      "faster_value": 32.7,
+      "slower_value": 32.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0123",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0144",
+      "slower_anchor_id": "A0114",
+      "faster_player": "友杉 篤輝",
+      "slower_player": "中川 圭太",
+      "faster_value": 32.7,
+      "slower_value": 32.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0124",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0114",
+      "slower_anchor_id": "A0148",
+      "faster_player": "中川 圭太",
+      "slower_player": "岡 大海",
+      "faster_value": 32.6,
+      "slower_value": 32.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0125",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0148",
+      "slower_anchor_id": "A0156",
+      "faster_player": "岡 大海",
+      "slower_player": "石井 一成",
+      "faster_value": 32.6,
+      "slower_value": 32.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0126",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0156",
+      "slower_anchor_id": "A0126",
+      "faster_player": "石井 一成",
+      "slower_player": "岡林 勇希",
+      "faster_value": 32.6,
+      "slower_value": 32.5,
+      "unit": "km_per_hour",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0127",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0126",
+      "slower_anchor_id": "A0201",
+      "faster_player": "岡林 勇希",
+      "slower_player": "吉川 尚輝",
+      "faster_value": 32.5,
+      "slower_value": 32.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0128",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0201",
+      "slower_anchor_id": "A0117",
+      "faster_player": "吉川 尚輝",
+      "slower_player": "来田 涼斗",
+      "faster_value": 32.5,
+      "slower_value": 32.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0129",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0117",
+      "slower_anchor_id": "A0138",
+      "faster_player": "来田 涼斗",
+      "slower_player": "田宮 裕涼",
+      "faster_value": 32.4,
+      "slower_value": 32.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0130",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0138",
+      "slower_anchor_id": "A0169",
+      "faster_player": "田宮 裕涼",
+      "slower_player": "丸山 和郁",
+      "faster_value": 32.4,
+      "slower_value": 32.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0131",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0169",
+      "slower_anchor_id": "A0153",
+      "faster_player": "丸山 和郁",
+      "slower_player": "外崎 修汰",
+      "faster_value": 32.4,
+      "slower_value": 32.3,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0132",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0153",
+      "slower_anchor_id": "A0171",
+      "faster_player": "外崎 修汰",
+      "slower_player": "塩見 泰隆",
+      "faster_value": 32.3,
+      "slower_value": 32.3,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0133",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0171",
+      "slower_anchor_id": "A0170",
+      "faster_player": "塩見 泰隆",
+      "slower_player": "古賀 優大",
+      "faster_value": 32.3,
+      "slower_value": 32.1,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0134",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0170",
+      "slower_anchor_id": "A0192",
+      "faster_player": "古賀 優大",
+      "slower_player": "柳田 悠岐",
+      "faster_value": 32.1,
+      "slower_value": 32.1,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0135",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0192",
+      "slower_anchor_id": "A0207",
+      "faster_player": "柳田 悠岐",
+      "slower_player": "佐藤 輝明",
+      "faster_value": 32.1,
+      "slower_value": 32.1,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0136",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0207",
+      "slower_anchor_id": "A0129",
+      "faster_player": "佐藤 輝明",
+      "slower_player": "板山 祐太郎",
+      "faster_value": 32.1,
+      "slower_value": 32,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0137",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0129",
+      "slower_anchor_id": "A0184",
+      "faster_player": "板山 祐太郎",
+      "slower_player": "林 琢真",
+      "faster_value": 32,
+      "slower_value": 32,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0138",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0184",
+      "slower_anchor_id": "A0116",
+      "faster_player": "林 琢真",
+      "slower_player": "宗 佑磨",
+      "faster_value": 32,
+      "slower_value": 31.9,
+      "unit": "km_per_hour",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0139",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0116",
+      "slower_anchor_id": "A0147",
+      "faster_player": "宗 佑磨",
+      "slower_player": "山口 航輝",
+      "faster_value": 31.9,
+      "slower_value": 31.9,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0140",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0147",
+      "slower_anchor_id": "A0158",
+      "faster_player": "山口 航輝",
+      "slower_player": "モンテロ",
+      "faster_value": 31.9,
+      "slower_value": 31.9,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0141",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0158",
+      "slower_anchor_id": "A0164",
+      "faster_player": "モンテロ",
+      "slower_player": "菊池 涼介",
+      "faster_value": 31.9,
+      "slower_value": 31.8,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0142",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0164",
+      "slower_anchor_id": "A0115",
+      "faster_player": "菊池 涼介",
+      "slower_player": "太田 椋",
+      "faster_value": 31.8,
+      "slower_value": 31.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0143",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0115",
+      "slower_anchor_id": "A0125",
+      "faster_player": "太田 椋",
+      "slower_player": "大島 洋平",
+      "faster_value": 31.7,
+      "slower_value": 31.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0144",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0125",
+      "slower_anchor_id": "A0135",
+      "faster_player": "大島 洋平",
+      "slower_player": "奈良間 大己",
+      "faster_value": 31.7,
+      "slower_value": 31.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0145",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0135",
+      "slower_anchor_id": "A0137",
+      "faster_player": "奈良間 大己",
+      "slower_player": "清宮 幸太郎",
+      "faster_value": 31.7,
+      "slower_value": 31.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0146",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0137",
+      "slower_anchor_id": "A0140",
+      "faster_player": "清宮 幸太郎",
+      "slower_player": "野村 佑希",
+      "faster_value": 31.7,
+      "slower_value": 31.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0147",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0140",
+      "slower_anchor_id": "A0165",
+      "faster_player": "野村 佑希",
+      "slower_player": "野間 峻祥",
+      "faster_value": 31.7,
+      "slower_value": 31.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0148",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0165",
+      "slower_anchor_id": "A0183",
+      "faster_player": "野間 峻祥",
+      "slower_player": "度会 隆輝",
+      "faster_value": 31.7,
+      "slower_value": 31.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0149",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0183",
+      "slower_anchor_id": "A0122",
+      "faster_player": "度会 隆輝",
+      "slower_player": "西野 真弘",
+      "faster_value": 31.7,
+      "slower_value": 31.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0150",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0122",
+      "slower_anchor_id": "A0163",
+      "faster_player": "西野 真弘",
+      "slower_player": "秋山 翔吾",
+      "faster_value": 31.6,
+      "slower_value": 31.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0151",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0163",
+      "slower_anchor_id": "A0173",
+      "faster_player": "秋山 翔吾",
+      "slower_player": "長岡 秀樹",
+      "faster_value": 31.6,
+      "slower_value": 31.6,
+      "unit": "km_per_hour",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0152",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0173",
+      "slower_anchor_id": "A0186",
+      "faster_player": "長岡 秀樹",
+      "slower_player": "牧 秀悟",
+      "faster_value": 31.6,
+      "slower_value": 31.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0153",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0186",
+      "slower_anchor_id": "A0161",
+      "faster_player": "牧 秀悟",
+      "slower_player": "小園 海斗",
+      "faster_value": 31.6,
+      "slower_value": 31.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0154",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0161",
+      "slower_anchor_id": "A0193",
+      "faster_player": "小園 海斗",
+      "slower_player": "柳町 達",
+      "faster_value": 31.5,
+      "slower_value": 31.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0155",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0193",
+      "slower_anchor_id": "A0157",
+      "faster_player": "柳町 達",
+      "slower_player": "ファビアン",
+      "faster_value": 31.5,
+      "slower_value": 31.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0156",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0157",
+      "slower_anchor_id": "A0188",
+      "faster_player": "ファビアン",
+      "slower_player": "蝦名 達夫",
+      "faster_value": 31.4,
+      "slower_value": 31.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0157",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0188",
+      "slower_anchor_id": "A0199",
+      "faster_player": "蝦名 達夫",
+      "slower_player": "丸 佳浩",
+      "faster_value": 31.4,
+      "slower_value": 31.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0158",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0199",
+      "slower_anchor_id": "A0204",
+      "faster_player": "丸 佳浩",
+      "slower_player": "松本 剛",
+      "faster_value": 31.4,
+      "slower_value": 31.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0159",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0204",
+      "slower_anchor_id": "A0123",
+      "faster_player": "松本 剛",
+      "slower_player": "カリステ",
+      "faster_value": 31.4,
+      "slower_value": 31.3,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0160",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0123",
+      "slower_anchor_id": "A0143",
+      "faster_player": "カリステ",
+      "slower_player": "佐藤 都志也",
+      "faster_value": 31.3,
+      "slower_value": 31.3,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0161",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0143",
+      "slower_anchor_id": "A0194",
+      "faster_player": "佐藤 都志也",
+      "slower_player": "栗原 陵矢",
+      "faster_value": 31.3,
+      "slower_value": 31.3,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0162",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0194",
+      "slower_anchor_id": "A0118",
+      "faster_player": "栗原 陵矢",
+      "slower_player": "森 友哉",
+      "faster_value": 31.3,
+      "slower_value": 31.2,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0163",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0118",
+      "slower_anchor_id": "A0124",
+      "faster_player": "森 友哉",
+      "slower_player": "土田 龍空",
+      "faster_value": 31.2,
+      "slower_value": 31.2,
+      "unit": "km_per_hour",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0164",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0124",
+      "slower_anchor_id": "A0198",
+      "faster_player": "土田 龍空",
+      "slower_player": "近藤 健介",
+      "faster_value": 31.2,
+      "slower_value": 31.2,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0165",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0198",
+      "slower_anchor_id": "A0121",
+      "faster_player": "近藤 健介",
+      "slower_player": "西川 龍馬",
+      "faster_value": 31.2,
+      "slower_value": 31.1,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0166",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0121",
+      "slower_anchor_id": "A0142",
+      "faster_player": "西川 龍馬",
+      "slower_player": "ポランコ",
+      "faster_value": 31.1,
+      "slower_value": 31.1,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0167",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0142",
+      "slower_anchor_id": "A0179",
+      "faster_player": "ポランコ",
+      "slower_player": "京田 陽太",
+      "faster_value": 31.1,
+      "slower_value": 31.1,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0168",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0179",
+      "slower_anchor_id": "A0195",
+      "faster_player": "京田 陽太",
+      "slower_player": "正木 智也",
+      "faster_value": 31.1,
+      "slower_value": 31.1,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0169",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0195",
+      "slower_anchor_id": "A0182",
+      "faster_player": "正木 智也",
+      "slower_player": "山本 祐大",
+      "faster_value": 31.1,
+      "slower_value": 31,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0170",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0182",
+      "slower_anchor_id": "A0150",
+      "faster_player": "山本 祐大",
+      "slower_player": "藤岡 裕大",
+      "faster_value": 31,
+      "slower_value": 30.8,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0171",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0150",
+      "slower_anchor_id": "A0166",
+      "faster_player": "藤岡 裕大",
+      "slower_player": "サンタナ",
+      "faster_value": 30.8,
+      "slower_value": 30.8,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0172",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0166",
+      "slower_anchor_id": "A0119",
+      "faster_player": "サンタナ",
+      "slower_player": "紅林 弘太郎",
+      "faster_value": 30.8,
+      "slower_value": 30.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0173",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0119",
+      "slower_anchor_id": "A0120",
+      "faster_player": "紅林 弘太郎",
+      "slower_player": "若月 健矢",
+      "faster_value": 30.7,
+      "slower_value": 30.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0174",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0120",
+      "slower_anchor_id": "A0162",
+      "faster_player": "若月 健矢",
+      "slower_player": "矢野 雅哉",
+      "faster_value": 30.7,
+      "slower_value": 30.7,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0175",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0162",
+      "slower_anchor_id": "A0131",
+      "faster_player": "矢野 雅哉",
+      "slower_player": "石川 昂弥",
+      "faster_value": 30.7,
+      "slower_value": 30.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0176",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0131",
+      "slower_anchor_id": "A0152",
+      "faster_player": "石川 昂弥",
+      "slower_player": "古賀 悠斗",
+      "faster_value": 30.6,
+      "slower_value": 30.6,
+      "unit": "km_per_hour",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0177",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0152",
+      "slower_anchor_id": "A0160",
+      "faster_player": "古賀 悠斗",
+      "slower_player": "坂倉 将吾",
+      "faster_value": 30.6,
+      "slower_value": 30.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0178",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0160",
+      "slower_anchor_id": "A0180",
+      "faster_player": "坂倉 将吾",
+      "slower_player": "佐野 恵太",
+      "faster_value": 30.6,
+      "slower_value": 30.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0179",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0180",
+      "slower_anchor_id": "A0212",
+      "faster_player": "佐野 恵太",
+      "slower_player": "梅野 隆太郎",
+      "faster_value": 30.6,
+      "slower_value": 30.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0180",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0212",
+      "slower_anchor_id": "A0174",
+      "faster_player": "梅野 隆太郎",
+      "slower_player": "太田 光",
+      "faster_value": 30.6,
+      "slower_value": 30.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0181",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0174",
+      "slower_anchor_id": "A0176",
+      "faster_player": "太田 光",
+      "slower_player": "浅村 栄斗",
+      "faster_value": 30.5,
+      "slower_value": 30.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0182",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0176",
+      "slower_anchor_id": "A0209",
+      "faster_player": "浅村 栄斗",
+      "slower_player": "大山 悠輔",
+      "faster_value": 30.5,
+      "slower_value": 30.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0183",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0209",
+      "slower_anchor_id": "A0213",
+      "faster_player": "大山 悠輔",
+      "slower_player": "森下 翔太",
+      "faster_value": 30.5,
+      "slower_value": 30.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0184",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0213",
+      "slower_anchor_id": "A0168",
+      "faster_player": "森下 翔太",
+      "slower_player": "中村 悠平",
+      "faster_value": 30.5,
+      "slower_value": 30.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0185",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0168",
+      "slower_anchor_id": "A0189",
+      "faster_player": "中村 悠平",
+      "slower_player": "今宮 健太",
+      "faster_value": 30.4,
+      "slower_value": 30.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0186",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0189",
+      "slower_anchor_id": "A0177",
+      "faster_player": "今宮 健太",
+      "slower_player": "渡邊 佳明",
+      "faster_value": 30.4,
+      "slower_value": 30.3,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0187",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0177",
+      "slower_anchor_id": "A0181",
+      "faster_player": "渡邊 佳明",
+      "slower_player": "宮﨑 敏郎",
+      "faster_value": 30.3,
+      "slower_value": 30.3,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0188",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0181",
+      "slower_anchor_id": "A0196",
+      "faster_player": "宮﨑 敏郎",
+      "slower_player": "海野 隆司",
+      "faster_value": 30.3,
+      "slower_value": 30.3,
+      "unit": "km_per_hour",
+      "relation": "ORDERED_FASTER_WITHIN_SAME_COHORT",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0189",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0196",
+      "slower_anchor_id": "A0187",
+      "faster_player": "海野 隆司",
+      "slower_player": "筒香 嘉智",
+      "faster_value": 30.3,
+      "slower_value": 30.2,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0190",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0187",
+      "slower_anchor_id": "A0208",
+      "faster_player": "筒香 嘉智",
+      "slower_player": "坂本 誠志郎",
+      "faster_value": 30.2,
+      "slower_value": 30.2,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0191",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0208",
+      "slower_anchor_id": "A0141",
+      "faster_player": "坂本 誠志郎",
+      "slower_player": "ソト",
+      "faster_value": 30.2,
+      "slower_value": 30.1,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0192",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0141",
+      "slower_anchor_id": "A0211",
+      "faster_player": "ソト",
+      "slower_player": "木浪 聖也",
+      "faster_value": 30.1,
+      "slower_value": 30,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0193",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0211",
+      "slower_anchor_id": "A0145",
+      "faster_player": "木浪 聖也",
+      "slower_player": "安田 尚憲",
+      "faster_value": 30,
+      "slower_value": 29.6,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0194",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0145",
+      "slower_anchor_id": "A0134",
+      "faster_player": "安田 尚憲",
+      "slower_player": "高橋 周平",
+      "faster_value": 29.6,
+      "slower_value": 29.5,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0195",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0134",
+      "slower_anchor_id": "A0127",
+      "faster_player": "高橋 周平",
+      "slower_player": "木下 拓哉",
+      "faster_value": 29.5,
+      "slower_value": 29.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0196",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0127",
+      "slower_anchor_id": "A0191",
+      "faster_player": "木下 拓哉",
+      "slower_player": "山川 穂高",
+      "faster_value": 29.4,
+      "slower_value": 29.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0197",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0191",
+      "slower_anchor_id": "A0203",
+      "faster_player": "山川 穂高",
+      "slower_player": "岸田 行倫",
+      "faster_value": 29.4,
+      "slower_value": 29.4,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0198",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0203",
+      "slower_anchor_id": "A0202",
+      "faster_player": "岸田 行倫",
+      "slower_player": "大城 卓三",
+      "faster_value": 29.4,
+      "slower_value": 29.2,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0199",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0202",
+      "slower_anchor_id": "A0206",
+      "faster_player": "大城 卓三",
+      "slower_player": "伏見 寅威",
+      "faster_value": 29.2,
+      "slower_value": 29.1,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    },
+    {
+      "edge_id": "E0200",
+      "group_key": "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "cohort_id": "npb_plus_2026_current_roster_100",
+      "faster_anchor_id": "A0206",
+      "slower_anchor_id": "A0178",
+      "faster_player": "伏見 寅威",
+      "slower_player": "鈴木 大地",
+      "faster_value": 29.1,
+      "slower_value": 29,
+      "unit": "km_per_hour",
+      "relation": "SAME_BAND_ADJACENT_ORDINAL",
+      "confidence": "MODERATE",
+      "source_refs": [
+        "npb_plus_sprint_exposure_2026"
+      ],
+      "temporal_scope": "same 2026 NPB+ target-roster snapshot only",
+      "limitation": "Public NPB+ sample and qualified-run counts are not published; edge is moderate and ordinal only."
+    }
+  ]
+}

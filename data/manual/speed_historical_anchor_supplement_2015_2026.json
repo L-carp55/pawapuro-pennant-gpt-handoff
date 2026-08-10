@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Source-first supplemental physical measurements for the historical speed anchor bank. These are player x measurement-era records, not current ratings or T90 conversions.",
+  "guardrails": [
+    "50m and 30m values remain within-session ordinal short-distance evidence and are never proportionally converted to T90.",
+    "A player measured in more than one session is represented as a separate physical state for each session.",
+    "The 2021 official photoelectric claim conflicts with the 2025 organiser statement that this camp began photoelectric timing in 2022; those raw rows are retained but not accepted.",
+    "No PowerPro, Prospi, MLB The Show, stealing, baserunning, home-to-first, or other game outcome is present in this source file."
+  ],
+  "sources": [
+    {
+      "source_id": "samurai_university_2021_12_03_protocol_conflict",
+      "measurement_date": "2021-12-03",
+      "event": "侍ジャパン大学代表候補選手強化合宿",
+      "participants": 44,
+      "participants_basis": "official report attendance; exact tested-field-player count not published",
+      "metric": "50m",
+      "protocol": "official report says photoelectric timing",
+      "timing_method": "photoelectric_claim_conflicted",
+      "source_tier": "A",
+      "evidence_class": "STANDARDIZED_SHORT_DISTANCE",
+      "accepted_for_high_confidence": false,
+      "rejection_reason": "REJECTED_PROTOCOL_CONFLICT_PENDING_PRIMARY_RECONCILIATION: the 2021 official report says photoelectric, but the organiser's 2025 report says this camp began photoelectric timing in 2022.",
+      "source_urls": [
+        "https://www.japan-baseball.jp/jp/news/press/20211203_1.html",
+        "https://www.japan-baseball.jp/jp/news/press/20211205_1.html",
+        "https://www.japan-baseball.jp/jp/news/press/20251207_1.html"
+      ],
+      "records": [
+        {"player": "矢澤宏太", "affiliation": "日本体育大", "raw_trials_seconds": [5.80], "cohort_rank": 1},
+        {"player": "道原慧", "affiliation": "立教大", "raw_trials_seconds": [5.81], "cohort_rank": null},
+        {"player": "村松開人", "affiliation": "明治大", "raw_trials_seconds": [5.91], "cohort_rank": null},
+        {"player": "蛭間拓哉", "affiliation": "早稲田大", "raw_trials_seconds": [5.93], "cohort_rank": 4}
+      ]
+    },
+    {
+      "source_id": "samurai_university_2022_12_04",
+      "measurement_date": "2022-12-04",
+      "event": "侍ジャパン大学代表候補選手強化合宿",
+      "participants": null,
+      "participants_basis": "result article does not state a tested-player count",
+      "metric": "50m",
+      "protocol": "photoelectric 50m, shared camp session",
+      "timing_method": "photoelectric",
+      "source_tier": "A",
+      "evidence_class": "STANDARDIZED_SHORT_DISTANCE",
+      "accepted_for_high_confidence": true,
+      "source_urls": ["https://www.japan-baseball.jp/jp/news/press/20221204_1.html"],
+      "records": [
+        {"player": "宮崎一樹", "affiliation": "山梨学院大", "raw_trials_seconds": [5.91], "cohort_rank": 1},
+        {"player": "松浦佑星", "affiliation": "日本体育大", "raw_trials_seconds": [5.95], "cohort_rank": 2},
+        {"player": "中島大輔", "affiliation": "青山学院大", "raw_trials_seconds": [5.98], "cohort_rank": 3},
+        {"player": "渡部聖弥", "affiliation": "大阪商業大", "raw_trials_seconds": [6.15], "cohort_rank": 5}
+      ]
+    },
+    {
+      "source_id": "samurai_university_2023_06_17",
+      "measurement_date": "2023-06-17",
+      "event": "侍ジャパン大学代表選考合宿",
+      "participants": null,
+      "participants_basis": "result article does not state a tested-player count",
+      "metric": "50m",
+      "protocol": "photoelectric 50m, shared camp session",
+      "timing_method": "photoelectric",
+      "source_tier": "A",
+      "evidence_class": "STANDARDIZED_SHORT_DISTANCE",
+      "accepted_for_high_confidence": true,
+      "source_urls": ["https://www.japan-baseball.jp/jp/news/press/20230617_1.html"],
+      "records": [
+        {"player": "宮崎一樹", "affiliation": "山梨学院大", "raw_trials_seconds": [5.94], "cohort_rank": 1},
+        {"player": "飯森太慈", "affiliation": "明治大", "raw_trials_seconds": [5.94], "cohort_rank": 1},
+        {"player": "中島大輔", "affiliation": "青山学院大", "raw_trials_seconds": [5.96], "cohort_rank": 3}
+      ]
+    },
+    {
+      "source_id": "samurai_university_2023_12_03",
+      "measurement_date": "2023-12-03",
+      "event": "侍ジャパン大学代表候補選手強化合宿",
+      "participants": null,
+      "participants_basis": "result article does not state a tested-player count",
+      "metric": "50m",
+      "protocol": "photoelectric 50m, shared camp session",
+      "timing_method": "photoelectric",
+      "source_tier": "A",
+      "evidence_class": "STANDARDIZED_SHORT_DISTANCE",
+      "accepted_for_high_confidence": true,
+      "source_urls": ["https://www.japan-baseball.jp/jp/news/press/20231203_1.html"],
+      "records": [
+        {"player": "松川玲央", "affiliation": "城西大", "raw_trials_seconds": [5.88], "cohort_rank": 1},
+        {"player": "藤澤涼介", "affiliation": "横浜国立大", "raw_trials_seconds": [5.97], "cohort_rank": 2},
+        {"player": "浦田俊輔", "affiliation": "九州産業大", "raw_trials_seconds": [5.99], "cohort_rank": 3}
+      ]
+    },
+    {
+      "source_id": "samurai_university_2025_12_07",
+      "measurement_date": "2025-12-07",
+      "event": "侍ジャパン大学代表候補選手強化合宿",
+      "participants": 35,
+      "participants_basis": "HB Nippon published 35 named field-position players and 62 displayed trial values",
+      "metric": "50m",
+      "protocol": "photoelectric 50m, shared camp session; organiser reports all field-position participants were measured",
+      "timing_method": "photoelectric",
+      "source_tier": "A_PROTOCOL_B_FULL_VALUES",
+      "evidence_class": "STANDARDIZED_SHORT_DISTANCE",
+      "accepted_for_high_confidence": true,
+      "source_urls": [
+        "https://www.japan-baseball.jp/jp/news/press/20251207_1.html",
+        "https://www.hb-nippon.com/articles/10421?page=2",
+        "https://www.hb-nippon.com/articles/10421?page=3"
+      ],
+      "records": [
+        {"player": "井上和輝", "affiliation": "法政大", "raw_trials_seconds": [6.29]},
+        {"player": "落合智哉", "affiliation": "立教大", "raw_trials_seconds": [6.31]},
+        {"player": "渡部海", "affiliation": "青山学院大", "raw_trials_seconds": [6.41]},
+        {"player": "前嶋藍", "affiliation": "亜細亜大", "raw_trials_seconds": [6.77]},
+        {"player": "西野啓也", "affiliation": "立命館大", "raw_trials_seconds": [6.27]},
+        {"player": "林大心", "affiliation": "高知工科大", "raw_trials_seconds": [6.60]},
+        {"player": "松山優太", "affiliation": "九州共立大", "raw_trials_seconds": [6.48]},
+        {"player": "小島慎也", "affiliation": "東北福祉大", "raw_trials_seconds": [6.24, 6.29]},
+        {"player": "笹田海風", "affiliation": "東海大", "raw_trials_seconds": [6.35, 6.28]},
+        {"player": "真鍋慧", "affiliation": "大阪商業大", "raw_trials_seconds": [6.32, 6.31]},
+        {"player": "岡田啓吾", "affiliation": "明治大", "raw_trials_seconds": [5.69, 5.80], "cohort_rank": 1},
+        {"player": "山里宝", "affiliation": "亜細亜大", "raw_trials_seconds": [6.28]},
+        {"player": "鈴木斗偉", "affiliation": "日本体育大", "raw_trials_seconds": [6.30, 6.32]},
+        {"player": "木切倉稜真", "affiliation": "日本経済大", "raw_trials_seconds": [6.63, 6.68]},
+        {"player": "梅澤蒼空", "affiliation": "桐蔭横浜大", "raw_trials_seconds": [6.63, 6.70]},
+        {"player": "川合錬磨", "affiliation": "金沢学院大", "raw_trials_seconds": [6.29, 6.57]},
+        {"player": "新保玖和", "affiliation": "仙台大", "raw_trials_seconds": [6.14, 6.23]},
+        {"player": "光弘帆高", "affiliation": "明治大", "raw_trials_seconds": [6.45, 6.42]},
+        {"player": "小林隼翔", "affiliation": "立教大", "raw_trials_seconds": [6.29, 6.27]},
+        {"player": "緒方漣", "affiliation": "国学院大", "raw_trials_seconds": [6.61, 6.59]},
+        {"player": "吉田祐大", "affiliation": "近畿大学工学部", "raw_trials_seconds": [6.47, 6.55]},
+        {"player": "西浦真平", "affiliation": "北海道文教大", "raw_trials_seconds": [6.69, 6.44]},
+        {"player": "佐藤悠太", "affiliation": "東北福祉大", "raw_trials_seconds": [6.55, 6.51]},
+        {"player": "黒田義信", "affiliation": "東日本国際大", "raw_trials_seconds": [6.20, 6.07]},
+        {"player": "榊原七斗", "affiliation": "明治大", "raw_trials_seconds": [6.05, 5.99]},
+        {"player": "境亮陽", "affiliation": "法政大", "raw_trials_seconds": [5.92, 5.93], "cohort_rank": 3},
+        {"player": "寺尾拳聖", "affiliation": "早稲田大", "raw_trials_seconds": [6.43, 6.27]},
+        {"player": "眞邉麗生", "affiliation": "駒澤大", "raw_trials_seconds": [6.03, 6.17]},
+        {"player": "三好元気", "affiliation": "立正大", "raw_trials_seconds": [6.34, 6.40]},
+        {"player": "岩田悠聖", "affiliation": "神奈川大", "raw_trials_seconds": [6.39, 6.39]},
+        {"player": "星野大和", "affiliation": "立命館大", "raw_trials_seconds": [6.10, 6.02]},
+        {"player": "春山陽登", "affiliation": "大阪商業大", "raw_trials_seconds": [6.52, 6.26]},
+        {"player": "市橋昂士", "affiliation": "龍谷大", "raw_trials_seconds": [5.99, 5.91], "cohort_rank": 2},
+        {"player": "田上夏衣", "affiliation": "明治大", "raw_trials_seconds": [5.92, 6.00], "cohort_rank": 3},
+        {"player": "中山優月", "affiliation": "大阪商業大", "raw_trials_seconds": [6.46, 6.42]}
+      ]
+    }
+  ],
+  "direct_running_revalidation": {
+    "source_id": "mlb_statcast_running_splits_live_revalidation_20260810",
+    "collection_date": "2026-08-10",
+    "method": "Official Baseball Savant CSV exports re-read with the same minimum filters; this is a live verification, not an inference from a game value.",
+    "definition_url": "https://www.mlb.com/glossary/statcast/90-foot-running-splits",
+    "sprint_definition_url": "https://www.mlb.com/glossary/statcast/sprint-speed",
+    "running_splits_csv_template": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year={year}&csv=true",
+    "sprint_speed_csv_template": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year={year}&position=&team=&min=10&csv=true",
+    "records": [
+      {"player":"Orlando Calixte","player_id":"593525","measurement_year":2017,"team":"SF","t10ft_seconds":0.87,"t30ft_seconds":1.82,"t90ft_seconds":3.94,"sprint_speed_ft_per_sec":29.3,"accepted_for_high_confidence":true},
+      {"player":"Domingo Santana","player_id":"570267","measurement_year":2020,"team":"CLE","t10ft_seconds":0.91,"t30ft_seconds":1.87,"t90ft_seconds":4.13,"sprint_speed_ft_per_sec":26.9,"accepted_for_high_confidence":true},
+      {"player":"Shogo Akiyama","player_id":"673451","measurement_year":2021,"team":"CIN","t10ft_seconds":0.86,"t30ft_seconds":1.78,"t90ft_seconds":3.97,"sprint_speed_ft_per_sec":28.0,"accepted_for_high_confidence":true},
+      {"player":"Gregory Polanco","player_id":"570256","measurement_year":2021,"team":"PIT","t10ft_seconds":0.84,"t30ft_seconds":1.77,"t90ft_seconds":3.99,"sprint_speed_ft_per_sec":27.2,"accepted_for_high_confidence":true},
+      {"player":"Elehuris Montero","player_id":"660707","measurement_year":2024,"team":"COL","t10ft_seconds":0.90,"t30ft_seconds":1.88,"t90ft_seconds":4.20,"sprint_speed_ft_per_sec":26.2,"accepted_for_high_confidence":true},
+      {"player":"Yoshitomo Tsutsugo","player_id":"660294","measurement_year":2022,"team":"PIT","t10ft_seconds":0.91,"t30ft_seconds":1.89,"t90ft_seconds":4.20,"sprint_speed_ft_per_sec":26.1,"accepted_for_high_confidence":false,"rejection_reason":"REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT"}
+    ]
+  },
+  "additional_directional_records": [
+    {"source_id":"university_manual_50m_directional_2019","player":"Namiki Hidekazu","measurement_date":"2019-10-01","metric":"50m","value":5.32,"unit":"seconds","protocol":"hand_timed_runner_initiated","rejection_reason":"REJECTED_PROTOCOL_MANUAL_START_NOT_COMPARABLE"},
+    {"source_id":"university_manual_50m_directional_2019","player":"Isobata Yohei","measurement_date":"2019-10-01","metric":"50m","value":5.42,"unit":"seconds","protocol":"hand_timed_runner_initiated","rejection_reason":"REJECTED_PROTOCOL_MANUAL_START_NOT_COMPARABLE"},
+    {"source_id":"university_manual_50m_directional_2019","player":"Yazawa Koutaro","measurement_date":"2019-10-01","metric":"50m","value":5.53,"unit":"seconds","protocol":"hand_timed_runner_initiated","rejection_reason":"REJECTED_PROTOCOL_MANUAL_START_NOT_COMPARABLE"}
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "schema_version": "speed-historical-anchor-bank/v1.0.0",
+  "as_of": "2026-08-10",
+  "band_definition": {
+    "name": "Within-cohort octile label",
+    "rule": "For a same-metric, same-cohort ordered list, B1 is fastest and B8 slowest. A band is ordinal support, not a game rating and not a cross-metric conversion.",
+    "comparable_groups": "High-confidence 50m cohorts and the separate 2026 NPB+ 100-player snapshot. Direct T90 player-seasons are intentionally unbanded across eras."
+  },
+  "accepted_anchor_counts": {
+    "high_confidence": 113,
+    "moderate_current_ordinal": 100,
+    "by_metric_high_confidence": {
+      "50M_STANDING_START_SECONDS": 108,
+      "T90FT_SECONDS": 5
+    },
+    "by_source_high_confidence": {
+      "mlb_statcast_running_splits_live_revalidation_20260810": 5,
+      "samurai_university_2022_06_19": 5,
+      "samurai_university_2022_12_04": 4,
+      "samurai_university_2023_06_17": 3,
+      "samurai_university_2023_12_03": 3,
+      "samurai_university_2024_11_30": 27,
+      "samurai_university_2025_12_07": 35,
+      "samurai_university_2026_06_22": 31
+    }
+  },
+  "high_confidence_physical_band_coverage": {
+    "B1_FASTEST_COHORT_OCTILE": 10,
+    "B2_UPPER_COHORT_OCTILE": 13,
+    "B3_UPPER_MID_COHORT_OCTILE": 15,
+    "B4_MID_UPPER_COHORT_OCTILE": 13,
+    "B5_MID_LOWER_COHORT_OCTILE": 12,
+    "B6_LOWER_MID_COHORT_OCTILE": 16,
+    "B7_LOWER_COHORT_OCTILE": 12,
+    "B8_SLOWEST_COHORT_OCTILE": 17
+  },
+  "current_npb_plus_2026_band_coverage": {
+    "B1_FASTEST_COHORT_OCTILE": 12,
+    "B2_UPPER_COHORT_OCTILE": 13,
+    "B3_UPPER_MID_COHORT_OCTILE": 12,
+    "B4_MID_UPPER_COHORT_OCTILE": 13,
+    "B5_MID_LOWER_COHORT_OCTILE": 12,
+    "B6_LOWER_MID_COHORT_OCTILE": 13,
+    "B7_LOWER_COHORT_OCTILE": 12,
+    "B8_SLOWEST_COHORT_OCTILE": 13
+  },
+  "cohort_coverage": {
+    "50M_STANDING_START_SECONDS|samurai_university_2022-06-19": {
+      "count": 5,
+      "confidence": "HIGH",
+      "metric": "50M_STANDING_START_SECONDS",
+      "bands": {
+        "B2_UPPER_COHORT_OCTILE": 1,
+        "B4_MID_UPPER_COHORT_OCTILE": 1,
+        "B5_MID_LOWER_COHORT_OCTILE": 1,
+        "B7_LOWER_COHORT_OCTILE": 1,
+        "B8_SLOWEST_COHORT_OCTILE": 1
+      },
+      "completeness": "OFFICIAL_TOP_FIVE_ONLY"
+    },
+    "50M_STANDING_START_SECONDS|samurai_university_2024-11-30": {
+      "count": 27,
+      "confidence": "HIGH",
+      "metric": "50M_STANDING_START_SECONDS",
+      "bands": {
+        "B1_FASTEST_COHORT_OCTILE": 3,
+        "B2_UPPER_COHORT_OCTILE": 3,
+        "B3_UPPER_MID_COHORT_OCTILE": 4,
+        "B4_MID_UPPER_COHORT_OCTILE": 3,
+        "B5_MID_LOWER_COHORT_OCTILE": 3,
+        "B6_LOWER_MID_COHORT_OCTILE": 4,
+        "B7_LOWER_COHORT_OCTILE": 3,
+        "B8_SLOWEST_COHORT_OCTILE": 4
+      },
+      "completeness": "FULL_PUBLISHED_TABLE_27"
+    },
+    "50M_STANDING_START_SECONDS|samurai_university_2026_06_22": {
+      "count": 31,
+      "confidence": "HIGH",
+      "metric": "50M_STANDING_START_SECONDS",
+      "bands": {
+        "B1_FASTEST_COHORT_OCTILE": 3,
+        "B2_UPPER_COHORT_OCTILE": 4,
+        "B3_UPPER_MID_COHORT_OCTILE": 4,
+        "B4_MID_UPPER_COHORT_OCTILE": 4,
+        "B5_MID_LOWER_COHORT_OCTILE": 4,
+        "B6_LOWER_MID_COHORT_OCTILE": 4,
+        "B7_LOWER_COHORT_OCTILE": 4,
+        "B8_SLOWEST_COHORT_OCTILE": 4
+      },
+      "completeness": "FULL_PUBLISHED_50M_TABLE_31"
+    },
+    "50M_STANDING_START_SECONDS|samurai_university_2022_12_04": {
+      "count": 4,
+      "confidence": "HIGH",
+      "metric": "50M_STANDING_START_SECONDS",
+      "bands": {
+        "B2_UPPER_COHORT_OCTILE": 1,
+        "B4_MID_UPPER_COHORT_OCTILE": 1,
+        "B6_LOWER_MID_COHORT_OCTILE": 1,
+        "B8_SLOWEST_COHORT_OCTILE": 1
+      },
+      "completeness": "OFFICIAL_REPORTED_VALUES_ONLY"
+    },
+    "50M_STANDING_START_SECONDS|samurai_university_2023_06_17": {
+      "count": 3,
+      "confidence": "HIGH",
+      "metric": "50M_STANDING_START_SECONDS",
+      "bands": {
+        "B3_UPPER_MID_COHORT_OCTILE": 1,
+        "B6_LOWER_MID_COHORT_OCTILE": 1,
+        "B8_SLOWEST_COHORT_OCTILE": 1
+      },
+      "completeness": "OFFICIAL_REPORTED_VALUES_ONLY"
+    },
+    "50M_STANDING_START_SECONDS|samurai_university_2023_12_03": {
+      "count": 3,
+      "confidence": "HIGH",
+      "metric": "50M_STANDING_START_SECONDS",
+      "bands": {
+        "B3_UPPER_MID_COHORT_OCTILE": 1,
+        "B6_LOWER_MID_COHORT_OCTILE": 1,
+        "B8_SLOWEST_COHORT_OCTILE": 1
+      },
+      "completeness": "OFFICIAL_REPORTED_VALUES_ONLY"
+    },
+    "50M_STANDING_START_SECONDS|samurai_university_2025_12_07": {
+      "count": 35,
+      "confidence": "HIGH",
+      "metric": "50M_STANDING_START_SECONDS",
+      "bands": {
+        "B1_FASTEST_COHORT_OCTILE": 4,
+        "B2_UPPER_COHORT_OCTILE": 4,
+        "B3_UPPER_MID_COHORT_OCTILE": 5,
+        "B4_MID_UPPER_COHORT_OCTILE": 4,
+        "B5_MID_LOWER_COHORT_OCTILE": 4,
+        "B6_LOWER_MID_COHORT_OCTILE": 5,
+        "B7_LOWER_COHORT_OCTILE": 4,
+        "B8_SLOWEST_COHORT_OCTILE": 5
+      },
+      "completeness": "PUBLISHED_PARTICIPANT_COHORT_35"
+    },
+    "NPB_PLUS_SPRINT_SPEED_KMH|npb_plus_2026_current_roster_100": {
+      "count": 100,
+      "confidence": "MODERATE",
+      "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+      "bands": {
+        "B1_FASTEST_COHORT_OCTILE": 12,
+        "B2_UPPER_COHORT_OCTILE": 13,
+        "B3_UPPER_MID_COHORT_OCTILE": 12,
+        "B4_MID_UPPER_COHORT_OCTILE": 13,
+        "B5_MID_LOWER_COHORT_OCTILE": 12,
+        "B6_LOWER_MID_COHORT_OCTILE": 13,
+        "B7_LOWER_COHORT_OCTILE": 12,
+        "B8_SLOWEST_COHORT_OCTILE": 13
+      },
+      "completeness": "100_OF_100_TARGET_ROSTER_ROWS"
+    }
+  },
+  "coverage_by_measurement_year": {
+    "2015": {
+      "raw_measurements": 3,
+      "high_confidence_anchors": 0,
+      "moderate_current_anchors": 0
+    },
+    "2016": {
+      "raw_measurements": 6,
+      "high_confidence_anchors": 0,
+      "moderate_current_anchors": 0
+    },
+    "2017": {
+      "raw_measurements": 9,
+      "high_confidence_anchors": 1,
+      "moderate_current_anchors": 0
+    },
+    "2018": {
+      "raw_measurements": 7,
+      "high_confidence_anchors": 0,
+      "moderate_current_anchors": 0
+    },
+    "2019": {
+      "raw_measurements": 8,
+      "high_confidence_anchors": 0,
+      "moderate_current_anchors": 0
+    },
+    "2020": {
+      "raw_measurements": 21,
+      "high_confidence_anchors": 1,
+      "moderate_current_anchors": 0
+    },
+    "2021": {
+      "raw_measurements": 31,
+      "high_confidence_anchors": 2,
+      "moderate_current_anchors": 0
+    },
+    "2022": {
+      "raw_measurements": 56,
+      "high_confidence_anchors": 9,
+      "moderate_current_anchors": 0
+    },
+    "2023": {
+      "raw_measurements": 18,
+      "high_confidence_anchors": 6,
+      "moderate_current_anchors": 0
+    },
+    "2024": {
+      "raw_measurements": 50,
+      "high_confidence_anchors": 28,
+      "moderate_current_anchors": 0
+    },
+    "2025": {
+      "raw_measurements": 62,
+      "high_confidence_anchors": 35,
+      "moderate_current_anchors": 0
+    },
+    "2026": {
+      "raw_measurements": 134,
+      "high_confidence_anchors": 31,
+      "moderate_current_anchors": 100
+    }
+  },
+  "direct_absolute_t90": {
+    "accepted_count": 5,
+    "band_status": "UNBANDED_CROSS_ERA_BY_DESIGN",
+    "reason": "Direct values are real 90ft observations but different player-season eras are not treated as one current physical cohort."
+  }
+}

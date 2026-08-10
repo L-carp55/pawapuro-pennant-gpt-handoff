@@ -1,0 +1,114 @@
+{
+  "schema_version": "speed-historical-anchor-bank-independent-qa/v1.0.0",
+  "as_of": "2026-08-10",
+  "independent": true,
+  "reviewer": "historical_physical independent subagent review; final JSON packaging by root after the reviewer reported individual receipts",
+  "review_scope": [
+    "source manifest and raw/accepted/rejected separation",
+    "absolute direct Statcast disposition",
+    "standardized cohort protocol/source-tier disposition",
+    "pairwise graph direction and confidence counts",
+    "100-player packet and SNS queue completeness",
+    "absence of prohibited conversion, age-decay, and game-rating inputs"
+  ],
+  "passed": true,
+  "checks": [
+    {
+      "id": "IQ-01",
+      "name": "raw_inventory_count",
+      "passed": true,
+      "receipt": "normalized raw JSON contains 459 records; CSV row count is 459."
+    },
+    {
+      "id": "IQ-02",
+      "name": "accepted_anchor_counts",
+      "passed": true,
+      "receipt": "anchor JSON contains 113 HIGH and 100 MODERATE current-ordinal anchors (213 total)."
+    },
+    {
+      "id": "IQ-03",
+      "name": "live_direct_t90",
+      "passed": true,
+      "receipt": "Exactly five accepted T90FT_SECONDS anchors: カリステ 2017 3.94, サンタナ 2020 4.13, 秋山翔吾 2021 3.97, ポランコ 2021 3.99, モンテロ 2024 4.20."
+    },
+    {
+      "id": "IQ-04",
+      "name": "tsutsugo_live_csv_rejection",
+      "passed": true,
+      "receipt": "筒香嘉智 has no accepted high-confidence anchor; raw rejection code is REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT."
+    },
+    {
+      "id": "IQ-05",
+      "name": "2021_protocol_conflict",
+      "passed": true,
+      "receipt": "The 2021-12 source retains four raw records and zero HIGH anchors."
+    },
+    {
+      "id": "IQ-06",
+      "name": "2022_june_source_tier_boundary",
+      "passed": true,
+      "receipt": "2022-06 retains 30 raw values but admits exactly five official top-five anchors; the remaining 25 carry the Tier-C rejection."
+    },
+    {
+      "id": "IQ-07",
+      "name": "2025_trial_preservation",
+      "passed": true,
+      "receipt": "2025-12 retains 62 raw displayed trials for 35 players and emits 35 documented same-session representative anchors."
+    },
+    {
+      "id": "IQ-08",
+      "name": "packet_join_completeness",
+      "passed": true,
+      "receipt": "100 packets exist for 100 unique target-roster players; status counts are 1 ANCHOR_CONTEXT_HIGH_EVIDENCE, 80 ANCHOR_RESOLVED_MODERATE, and 19 SNS_TIEBREAK."
+    },
+    {
+      "id": "IQ-09",
+      "name": "sns_queue_exactness",
+      "passed": true,
+      "receipt": "SNS CSV has 19 rows and exactly mirrors packets whose status is SNS_TIEBREAK."
+    },
+    {
+      "id": "IQ-10",
+      "name": "pairwise_graph_integrity",
+      "passed": true,
+      "receipt": "Graph contains 200 edges: 101 HIGH cohort edges and 99 MODERATE NPB+ edges; all lower-is-faster and higher-is-faster direction checks pass."
+    },
+    {
+      "id": "IQ-11",
+      "name": "cross_metric_boundary",
+      "passed": true,
+      "receipt": "Accepted direct T90 anchors are intentionally unbanded across eras; graph edges remain within same metric and same cohort/snapshot."
+    },
+    {
+      "id": "IQ-12",
+      "name": "prohibited_methods_absent",
+      "passed": true,
+      "receipt": "No generated raw, anchor, graph, or packet field carries a proportional 50m/30m-to-T90 conversion, age decay, steal/baserun outcome, or game-rating value."
+    },
+    {
+      "id": "IQ-13",
+      "name": "json_csv_parseability",
+      "passed": true,
+      "receipt": "Required generated JSON files parse successfully; raw, anchor, rejected, and SNS CSV counts match their corresponding JSON-derived counts."
+    },
+    {
+      "id": "IQ-14",
+      "name": "reproducible_rebuild",
+      "passed": true,
+      "receipt": "A root-side deterministic rebuild comparison found no SHA256 changes across all generated principal artifacts."
+    }
+  ],
+  "counts": {
+    "raw_measurements": 459,
+    "high_confidence_anchors": 113,
+    "moderate_current_ordinal_anchors": 100,
+    "rejected_rows": 202,
+    "graph_edges_total": 200,
+    "graph_edges_high": 101,
+    "graph_edges_moderate": 99,
+    "packets": 100,
+    "sns_queue_rows": 19
+  },
+  "non_blocking_execution_note": "The independent reviewer had one failed consolidated PowerShell recomputation caused by an argument-position/string-processing issue. Individual source and artifact receipts above completed successfully; no data discrepancy was observed. This note is retained so the QA evidence does not overstate the failed command as a data validation result.",
+  "blockers": []
+}

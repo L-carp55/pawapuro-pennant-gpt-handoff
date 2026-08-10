@@ -1,0 +1,91 @@
+{
+  "schema_version": "speed-historical-anchor-bank/v1.0.0",
+  "as_of": "2026-08-10",
+  "independent": false,
+  "passed": true,
+  "checks": [
+    {
+      "name": "raw_inventory_preserved",
+      "passed": true,
+      "detail": "raw=459"
+    },
+    {
+      "name": "exact_100_packets",
+      "passed": true,
+      "detail": "packets=100"
+    },
+    {
+      "name": "five_live_direct_t90_accepted",
+      "passed": true,
+      "detail": "direct_t90=5"
+    },
+    {
+      "name": "tsutsugo_live_rejection",
+      "passed": true,
+      "detail": "Tsutsugo has no accepted high-confidence direct anchor"
+    },
+    {
+      "name": "2021_protocol_conflict_rejected",
+      "passed": true,
+      "detail": "2021 source has no accepted anchor"
+    },
+    {
+      "name": "no_proportional_50m_to_t90_conversion",
+      "passed": true,
+      "detail": "no converted records emitted"
+    },
+    {
+      "name": "no_game_rating_output_fields",
+      "passed": true,
+      "detail": "generated evidence artifacts have no game-rating field or value"
+    },
+    {
+      "name": "all_sns_rows_exactly_status_sns",
+      "passed": true,
+      "detail": "queue=19"
+    },
+    {
+      "name": "packet_statuses_exhaustive",
+      "passed": true,
+      "detail": "{\"ANCHOR_CONTEXT_HIGH_EVIDENCE\":1,\"ANCHOR_RESOLVED_MODERATE\":80,\"SNS_TIEBREAK\":19}"
+    },
+    {
+      "name": "edge_direction_invariant",
+      "passed": true,
+      "detail": "edges=200"
+    },
+    {
+      "name": "all_high_physical_anchor_records_have_source",
+      "passed": true,
+      "detail": "high=113"
+    },
+    {
+      "name": "no_unknown_high_confidence_measurement_era",
+      "passed": true,
+      "detail": "all high anchors have a stated measurement era"
+    },
+    {
+      "name": "no_current_npb_anchor_without_bracket_or_boundary",
+      "passed": true,
+      "detail": "all packets retain current anchor and scope"
+    },
+    {
+      "name": "source_manifest_raw_count_match",
+      "passed": true,
+      "detail": "manifest=459, raw=459"
+    },
+    {
+      "name": "no_final_rating_language",
+      "passed": true,
+      "detail": "no rating output concept emitted"
+    }
+  ],
+  "counts": {
+    "raw": 459,
+    "high_confidence_anchors": 113,
+    "moderate_anchors": 100,
+    "edges": 200,
+    "packets": 100,
+    "sns_queue": 19
+  }
+}
