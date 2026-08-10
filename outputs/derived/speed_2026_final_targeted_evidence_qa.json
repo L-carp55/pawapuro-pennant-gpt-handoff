@@ -1,0 +1,199 @@
+{
+  "schema_version": "speed-2026-final-targeted-evidence-qa/v1.0.0",
+  "as_of": "2026-08-11",
+  "overall_status": "PASS",
+  "final_chat_only_knowledge": 0,
+  "input_receipts": {
+    "baseline100": {
+      "path": "outputs/derived/speed_2026_100_post_sns_decision_support.json",
+      "sha256": "e02b5d02ef9ba2f64f952108a674508931143c334829f874be430f40cac55392"
+    },
+    "existingLedger": {
+      "path": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+      "sha256": "4e4d7e1cfe9690014b1ab5dc78bde22bff16d2335c10b704fef3711a926f5fbd"
+    },
+    "new6Physical": {
+      "path": "data/manual/speed_2026_new6_current_physical_and_t90_provenance_research_20260811.json",
+      "sha256": "d57ab7d89badce2218cccb802191fb1c27127891ce4ae18e812bf2d368905343"
+    },
+    "physical": {
+      "path": "data/normalized/speed_2026_final_targeted_physical_evidence.json",
+      "sha256": "937fb470cadc35fcabf4bac61f3e4636a10ac50eb76a003788373f4ee79de064"
+    },
+    "grok": {
+      "path": "data/normalized/speed_2026_new6_grok_x_temporal_sources.json",
+      "sha256": "318ddc2d05c8ac0347ee53fcb93c5ed5cedf91043c259f7f7258280a422d58b0"
+    },
+    "packets": {
+      "path": "outputs/derived/speed_2026_final_targeted_evidence_packets.json",
+      "sha256": "238db57db51c0666343023ef3db5467ca8b0b93ff73fd9a25cdb304092ccf343"
+    },
+    "resolution": {
+      "path": "outputs/derived/speed_2026_final_targeted_evidence_resolution.csv",
+      "sha256": "69185b5d52d820fe45a20a1173b3e182a87425fc01b3b2c9f9d9982273496af4"
+    },
+    "video": {
+      "path": "outputs/derived/speed_2026_final_video_tiebreak_queue.csv",
+      "sha256": "e3b748fc44e8b51042d2d4799bec0f01036ea357b8da635f19027b7f0bd08d10"
+    },
+    "support": {
+      "path": "outputs/derived/speed_2026_100_pre_video_decision_support.json",
+      "sha256": "879cfbb048c014275167141b902ad4c104061825aca06ff1373c392601fa4c50"
+    },
+    "audit": {
+      "path": "docs/audits/speed_2026_final_targeted_evidence_rescue.md",
+      "sha256": "aa52a6139c1b0af4cdbe15ced51e020234e653a65d9efb85b4c9071cb1368483"
+    },
+    "independentReview": {
+      "path": "data/manual/speed_2026_final_targeted_independent_qa_20260811.json",
+      "sha256": "db699ad49073b474440007d4b8f437c882a0c6060f1e96a6efe704b776daefab"
+    }
+  },
+  "summary": {
+    "active_coverage": "18/18",
+    "new6_grok_coverage": "6/6",
+    "raw_x_hits": 45,
+    "accepted_x_sources": 7,
+    "independent_x_at_least_2_players": 0,
+    "independent_x_at_least_3_players": 0,
+    "current_physical_measurements": 1,
+    "current_t90_measurements": 1,
+    "current_30m_measurements": 0,
+    "current_50m_measurements": 0,
+    "resolution_counts": {
+      "INSUFFICIENT_EVIDENCE_REMAINS": 13,
+      "MIXED_EVIDENCE_REMAINS": 2,
+      "METRIC_CONSTRUCT_CONFLICT_REMAINS": 2,
+      "RESOLVED_CURRENT_PHYSICAL_MEASUREMENT": 1
+    },
+    "video_queue_count": 17,
+    "independent_qa_verdict": "PASS"
+  },
+  "checks": [
+    {
+      "id": "QA01_ACTIVE_CANONICAL_18_ONLY",
+      "passed": true,
+      "detail": "packets=18; physical=18; unique=18"
+    },
+    {
+      "id": "QA02_PHYSICAL_AND_PACKET_SCOPE_MATCH",
+      "passed": true,
+      "detail": "Every final packet has exactly one physical evidence record."
+    },
+    {
+      "id": "QA03_NEW6_GROK_SCOPE_EXACT",
+      "passed": true,
+      "detail": "Grok scope=6; new6 scope=6"
+    },
+    {
+      "id": "QA04_MULTIPLE_SEMANTIC_X_QUERIES_PER_NEW6_PLAYER",
+      "passed": true,
+      "detail": "{\"筒香嘉智\":9,\"モンテロ\":10,\"秋山翔吾\":10,\"ポランコ\":8,\"サンタナ\":8,\"奈良間大己\":8}"
+    },
+    {
+      "id": "QA05_X_RECEIPTS_SAVED_AND_WELL_SCOPED",
+      "passed": true,
+      "detail": "receipts=54"
+    },
+    {
+      "id": "QA06_ACTUAL_X_POST_ID_URL_FOR_ACCEPTED",
+      "passed": true,
+      "detail": "accepted=7"
+    },
+    {
+      "id": "QA06B_TEXT_OR_MINIMAL_EXCERPT_RETAINED_PER_X_POST",
+      "passed": true,
+      "detail": "sources=38; missing=0"
+    },
+    {
+      "id": "QA07_INACCESSIBLE_OR_DELETED_NOT_ACCEPTED",
+      "passed": true,
+      "detail": "inaccessible=0"
+    },
+    {
+      "id": "QA08_X_SOURCE_SCOPE_AND_RECEIPT_TRACEABILITY",
+      "passed": true,
+      "detail": "sources=38"
+    },
+    {
+      "id": "QA09_EXCLUDED_CONSTRUCTS_NOT_CLASSIFICATION_EVIDENCE",
+      "passed": true,
+      "detail": "classification sources=7"
+    },
+    {
+      "id": "QA10_REPOST_AND_SAME_ORIGIN_DEDUPLICATED",
+      "passed": true,
+      "detail": "{}"
+    },
+    {
+      "id": "QA11_EXISTING_LEDGER_DUPLICATE_NOT_NEW_INDEPENDENT_SOURCE",
+      "passed": true,
+      "detail": "accepted existing-post overlaps=0"
+    },
+    {
+      "id": "QA12_CURRENT_PHYSICAL_MEASUREMENT_COVERAGE",
+      "passed": true,
+      "detail": "confirmed=1"
+    },
+    {
+      "id": "QA13_NO_UNSUPPORTED_30M_OR_50M_CURRENT_VALUES",
+      "passed": true,
+      "detail": "Every retained current physical measurement uses an allowed metric."
+    },
+    {
+      "id": "QA14_TSUTSUGO_T90_SEPARATE_PROVENANCE_CONFIRMED_PRIMARY",
+      "passed": true,
+      "detail": "Tsutsugo correction is separate from the baseline anchor bank."
+    },
+    {
+      "id": "QA15_CURRENT_HISTORICAL_BOUNDARY_RETAINED",
+      "passed": true,
+      "detail": "Current measurements and the 2022 historical T90 are not conflated."
+    },
+    {
+      "id": "QA16_NO_T90_CONVERSION_OR_NUMERIC_GAME_RATING",
+      "passed": true,
+      "detail": "No conversion or numeric game-rating field is generated."
+    },
+    {
+      "id": "QA17_100_BASELINE_PLAYER_OBJECTS_UNCHANGED",
+      "passed": true,
+      "detail": "All 100 frozen player objects exactly match the pre-rescue support input."
+    },
+    {
+      "id": "QA18_18_ACTIVE_AND_7_RETAINED_GROK_OVERLAYS",
+      "passed": true,
+      "detail": "active=18; retained=7"
+    },
+    {
+      "id": "QA19_RESIDUAL_IS_SCOPE_ONLY_NOT_DECISION_INPUT",
+      "passed": true,
+      "detail": "Residual audit is explicitly bounded to scope selection."
+    },
+    {
+      "id": "QA20_ALLOWED_RESOLUTION_CLASSES_AND_TOTAL",
+      "passed": true,
+      "detail": "{\"INSUFFICIENT_EVIDENCE_REMAINS\":13,\"MIXED_EVIDENCE_REMAINS\":2,\"METRIC_CONSTRUCT_CONFLICT_REMAINS\":2,\"RESOLVED_CURRENT_PHYSICAL_MEASUREMENT\":1}"
+    },
+    {
+      "id": "QA21_VIDEO_QUEUE_ONLY_UNRESOLVED_AND_COMPLETE",
+      "passed": true,
+      "detail": "expected=17; actual=17"
+    },
+    {
+      "id": "QA22_RESOLUTION_CSV_REPRODUCIBLE_FROM_PACKETS",
+      "passed": true,
+      "detail": "rows=18"
+    },
+    {
+      "id": "QA23_NO_FINAL_CHAT_ONLY_KNOWLEDGE",
+      "passed": true,
+      "detail": "All conclusions are represented by retained file paths, source records, or explicitly recorded negative findings."
+    },
+    {
+      "id": "QA24_INDEPENDENT_QA_AGENT_PASS",
+      "passed": true,
+      "detail": "independent verdict=PASS"
+    }
+  ]
+}

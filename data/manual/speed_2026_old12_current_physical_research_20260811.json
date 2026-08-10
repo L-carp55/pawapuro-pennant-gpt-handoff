@@ -1,0 +1,300 @@
+{
+  "schema_version": "speed-2026-old12-current-physical-research/v1.0.0",
+  "research_date": "2026-08-11",
+  "research_tool": "web search (non-X; targeted queries only)",
+  "scope": {
+    "canonical_players_only": [
+      "西野真弘",
+      "カリステ",
+      "土田龍空",
+      "大島洋平",
+      "友杉篤輝",
+      "外崎修汰",
+      "矢野雅哉",
+      "野間峻祥",
+      "中村悠平",
+      "林琢真",
+      "梶原昂希",
+      "梅野隆太郎"
+    ],
+    "disallowed": [
+      "PowerPro residual",
+      "new broad X search",
+      "stolen-base or baserunning-judgment evidence",
+      "infield-hit evidence",
+      "game ratings",
+      "home-to-first as rating input",
+      "50m/30m to T90 conversion",
+      "fixed age adjustment"
+    ],
+    "old_grok_x_evidence_researched_again": false
+  },
+  "method": {
+    "accepted_measurement_priority": [
+      "direct 90ft/T90",
+      "protocol-documented electronic or photocell standardized 30m",
+      "protocol-documented standardized 50m",
+      "current organization-published sprint measurement with protocol"
+    ],
+    "current_window": "2024-2026",
+    "minimum_search_paths_per_player": 4,
+    "total_targeted_queries": 56,
+    "acceptance_rule": "A numerical value or direct observed physical-speed result must be current and carry enough distance/protocol/context to support physical running ability. A schedule that merely says a sprint would be measured is not an individual result."
+  },
+  "summary": {
+    "players_covered": 12,
+    "accepted_current_physical_measurements": 0,
+    "accepted_current_physical_ability_claims": 0,
+    "protocol_only_current_sources_rejected": 1,
+    "historical_or_undated_numeric_profile_values_rejected": 1,
+    "all_player_outcome": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND"
+  },
+  "players": [
+    {
+      "player": "西野真弘",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"西野真弘\" (30m OR 30メートル OR 50m OR 50メートル) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "No current player-specific sprint measurement located."},
+        {"route": "club_official", "query": "site:orixbuffaloes.jp \"西野真弘\" (走力 OR スプリント OR 30m OR 50m OR タイム OR 計測)", "outcome": "No official current measurement result located."},
+        {"route": "conditioning", "query": "\"西野真弘\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "No current individual speed result located."},
+        {"route": "test_terms", "query": "\"西野真弘\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "linear_speed", "query": "\"西野真弘\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "Only excluded game-rating and unrelated same-name results; no physical-speed source."}
+      ],
+      "candidate_sources": [],
+      "accepted_evidence": [],
+      "negative_finding": "Five targeted routes, including official-club, test terminology, conditioning, and linear-speed routes, produced no current protocol-documented individual measurement."
+    },
+    {
+      "player": "カリステ",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"カリステ\" (30m OR 30メートル OR 50m OR 50メートル) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "No current player-specific sprint measurement located."},
+        {"route": "club_official", "query": "site:dragons.jp \"カリステ\" (走力 OR スプリント OR 30m OR 50m OR タイム OR 計測)", "outcome": "No official current measurement result located."},
+        {"route": "conditioning", "query": "\"カリステ\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "No current individual speed result located."},
+        {"route": "test_terms", "query": "\"カリステ\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "linear_speed", "query": "\"カリステ\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "Returned pitch-speed or game material, not player running speed."}
+      ],
+      "candidate_sources": [],
+      "accepted_evidence": [],
+      "negative_finding": "No current measured sprint, top-speed, or protocol-documented organization result was found."
+    },
+    {
+      "player": "土田龍空",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"土田龍空\" (30m OR 30メートル OR 50m OR 50メートル) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "No current player-specific sprint measurement located."},
+        {"route": "club_official", "query": "site:dragons.jp \"土田龍空\" (走力 OR スプリント OR 30m OR 50m OR タイム OR 計測)", "outcome": "No official current measurement result located."},
+        {"route": "conditioning", "query": "\"土田龍空\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "Only a 2020-2021 pre-professional training reference; outside current window and without time."},
+        {"route": "test_terms", "query": "\"土田龍空\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "linear_speed", "query": "\"土田龍空\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "Only pitch-speed and game material, not player running speed."}
+      ],
+      "candidate_sources": [
+        {
+          "source_name": "中日ドラゴンズ公式 2020年ドラフト入団選手",
+          "source_url": "https://www.dragons.jp/teamdata/draft/2020/d_tsuchida_r.html",
+          "observed_year": 2020,
+          "source_tier": "A_OFFICIAL_CLUB",
+          "current_or_historical": "HISTORICAL",
+          "directness": "NON_NUMERIC_QUALITATIVE_RUNNING_ABILITY_STATEMENT",
+          "accepted": false,
+          "rejection_reason": "OUTSIDE_CURRENT_WINDOW_AND_NO_MEASUREMENT_VALUE_OR_PROTOCOL"
+        }
+      ],
+      "accepted_evidence": [],
+      "negative_finding": "The only relevant official statement is a 2020 qualitative prospect-era remark, not a 2024-2026 measurement."
+    },
+    {
+      "player": "大島洋平",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"大島洋平\" (30m OR 30メートル OR 50m OR 50メートル) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "No current player-specific sprint measurement located."},
+        {"route": "club_official", "query": "site:dragons.jp \"大島洋平\" (走力 OR スプリント OR 30m OR 50m OR タイム OR 計測)", "outcome": "No official current measurement result located."},
+        {"route": "conditioning", "query": "\"大島洋平\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "No current individual speed result located."},
+        {"route": "test_terms", "query": "\"大島洋平\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "linear_speed", "query": "\"大島洋平\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "No current player running-speed source; same-name non-baseball search noise excluded."}
+      ],
+      "candidate_sources": [],
+      "accepted_evidence": [],
+      "negative_finding": "No 2024-2026 physical running measurement or protocol-confirmed individual result was found."
+    },
+    {
+      "player": "友杉篤輝",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"友杉篤輝\" (30m OR 30メートル OR 50m OR 50メートル OR スプリント) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "No current player-specific sprint measurement located."},
+        {"route": "conditioning", "query": "\"友杉篤輝\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "No current individual speed result located."},
+        {"route": "test_terms", "query": "\"友杉篤輝\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "linear_speed", "query": "\"友杉篤輝\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "Only pitch-speed data and game material, not running speed."}
+      ],
+      "candidate_sources": [
+        {
+          "source_name": "BASEBALL KING ロッテ新人合同自主トレ",
+          "source_url": "https://baseballking.jp/ns/351822/",
+          "observed_year": 2023,
+          "metric": "30m/20m/10m dash listed as drill",
+          "source_tier": "C_REPUTABLE_MEDIA",
+          "current_or_historical": "HISTORICAL",
+          "directness": "TRAINING_MENU_ONLY",
+          "accepted": false,
+          "rejection_reason": "OUTSIDE_CURRENT_WINDOW_AND_NO_INDIVIDUAL_RESULT"
+        }
+      ],
+      "accepted_evidence": [],
+      "negative_finding": "No 2024-2026 measurement was found; the 2023 team drill report cannot resolve a current Type-B physical order."
+    },
+    {
+      "player": "外崎修汰",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"外崎修汰\" (30m OR 30メートル OR 50m OR 50メートル OR スプリント) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "No current player-specific sprint measurement located."},
+        {"route": "conditioning", "query": "\"外崎修汰\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "No current individual speed result located."},
+        {"route": "test_terms", "query": "\"外崎修汰\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "linear_speed", "query": "\"外崎修汰\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "Only pitch-speed data, video metadata, or unrelated content; no player running-speed measurement."}
+      ],
+      "candidate_sources": [],
+      "accepted_evidence": [],
+      "negative_finding": "No current physical running measurement was found despite direct metric, conditioning, test-term, and top-speed searches."
+    },
+    {
+      "player": "矢野雅哉",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"矢野雅哉\" (30m OR 30メートル OR 50m OR 50メートル OR スプリント) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "No current player-specific sprint measurement located."},
+        {"route": "conditioning", "query": "\"矢野雅哉\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "Only older fielding-video discussion, not current measured running evidence."},
+        {"route": "test_terms", "query": "\"矢野雅哉\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "event_specific", "query": "\"矢野雅哉\" \"30m\" 2024 OR 2025 OR 2026 野球", "outcome": "No current qualifying result."},
+        {"route": "linear_speed", "query": "\"矢野雅哉\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "Returned pitch-speed and game material, not player running speed."}
+      ],
+      "candidate_sources": [],
+      "accepted_evidence": [],
+      "negative_finding": "No qualifying 2024-2026 straight-line running result was located. Older university-era figures and game pages were not used."
+    },
+    {
+      "player": "野間峻祥",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"野間峻祥\" (30m OR 30メートル OR 50m OR 50メートル OR スプリント) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "No current player-specific sprint measurement located."},
+        {"route": "conditioning", "query": "\"野間峻祥\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "No current individual speed result located."},
+        {"route": "test_terms", "query": "\"野間峻祥\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "linear_speed", "query": "\"野間峻祥\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "Returned opposing-pitch velocity, game data, and not player running speed."}
+      ],
+      "candidate_sources": [],
+      "accepted_evidence": [],
+      "negative_finding": "No current measured sprint or verified current top-speed source was found."
+    },
+    {
+      "player": "中村悠平",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"中村悠平\" (30m OR 30メートル OR 50m OR 50メートル OR スプリント) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "Found official camp schedule with a testing marker, but no individual result."},
+        {"route": "conditioning", "query": "\"中村悠平\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "Found the same 2024 official schedule; no player-level outcome published."},
+        {"route": "test_terms", "query": "\"中村悠平\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "linear_speed", "query": "\"中村悠平\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "Only opposing-pitch speed and non-running results."}
+      ],
+      "candidate_sources": [
+        {
+          "source_name": "東京ヤクルトスワローズ公式 2024浦添キャンプスケジュール（2月7日）",
+          "source_url": "https://www.yakult-swallows.co.jp/img/info/special/camp2024/schedule/urasoe_0207.pdf",
+          "observed_year": 2024,
+          "metric": "30m sprint x4 (schedule says measurement)",
+          "protocol": "Schedule lists 50m acceleration x4 and 30m sprint x4 with a measurement marker; it does not publish timing method, start protocol, or player result.",
+          "source_tier": "A_OFFICIAL_CLUB",
+          "current_or_historical": "CURRENT",
+          "directness": "PROTOCOL_ONLY_NO_INDIVIDUAL_OUTCOME",
+          "accepted": false,
+          "rejection_reason": "NO_INDIVIDUAL_VALUE_OR_RESULT_AND_NO_DIRECT_CONFIRMATION_THAT_NAKAMURA_COMPLETED_THE_MARKED_BLOCK"
+        }
+      ],
+      "accepted_evidence": [],
+      "negative_finding": "A current official schedule documents that the club used a 30m measurement block, but it exposes no individual timing or outcome for 中村悠平; it cannot change the ordinal assessment."
+    },
+    {
+      "player": "林琢真",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"林琢真\" (30m OR 30メートル OR 50m OR 50メートル OR スプリント) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "No current player-specific sprint measurement located."},
+        {"route": "conditioning", "query": "\"林琢真\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "No current individual speed result located."},
+        {"route": "test_terms", "query": "\"林琢真\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "event_specific", "query": "\"林琢真\" \"30m\" 2024 OR 2025 OR 2026 野球", "outcome": "No current qualifying result."},
+        {"route": "linear_speed", "query": "\"林琢真\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "Only opposing-pitch speed and game material, not running speed."}
+      ],
+      "candidate_sources": [],
+      "accepted_evidence": [],
+      "negative_finding": "No 2024-2026 protocol-documented measurement was found; Type-B physical-order conflict remains unresolved."
+    },
+    {
+      "player": "梶原昂希",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"梶原昂希\" (30m OR 30メートル OR 50m OR 50メートル OR スプリント) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "Located an undated 50m profile claim, not a current protocol-documented measurement."},
+        {"route": "conditioning", "query": "\"梶原昂希\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "No current individual speed result located."},
+        {"route": "test_terms", "query": "\"梶原昂希\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "event_specific", "query": "\"梶原昂希\" \"超プロ野球ULTRA\" 2026 (30m OR 30メートル OR スプリント OR タイム); \"梶原昂希\" \"30m\" 2026 野球", "outcome": "Official 2026 program participation confirmed, but no sprint event result, metric, or protocol published."},
+        {"route": "linear_speed", "query": "\"梶原昂希\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "No qualifying running-speed measurement located."}
+      ],
+      "candidate_sources": [
+        {
+          "source_name": "日刊スポーツ DeNA梶原記事",
+          "source_url": "https://www.nikkansports.com/baseball/news/202503080001246.html",
+          "published_year": 2025,
+          "metric": "50m",
+          "value": "5.8 seconds",
+          "protocol": "Not stated; measurement date, timing method, start protocol, surface, and cohort absent.",
+          "source_tier": "C_REPUTABLE_MEDIA",
+          "current_or_historical": "MEASUREMENT_DATE_UNKNOWN",
+          "directness": "NUMERIC_PROFILE_CLAIM_BUT_NOT_CURRENT_VERIFIABLE",
+          "accepted": false,
+          "rejection_reason": "UNDATED_AND_UNPROTOCOLLED_PROFILE_VALUE; 2025 publication does not establish 2025 physical state"
+        },
+        {
+          "source_name": "読売テレビ 超プロ野球ULTRA 選手情報",
+          "source_url": "https://www.ytv.co.jp/chopro_ultra/player/",
+          "observed_year": 2026,
+          "source_tier": "A_EVENT_ORGANIZER",
+          "current_or_historical": "CURRENT",
+          "directness": "EVENT_PARTICIPATION_ONLY",
+          "accepted": false,
+          "rejection_reason": "NO_PUBLISHED_SPRINT_EVENT_RESULT_OR_PROTOCOL"
+        }
+      ],
+      "accepted_evidence": [],
+      "negative_finding": "No 2024-2026 direct sprint result was found. The public 50m figure is intentionally not treated as current because its test date and protocol are missing."
+    },
+    {
+      "player": "梅野隆太郎",
+      "status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "search_date": "2026-08-11",
+      "search_routes": [
+        {"route": "metric_direct", "query": "\"梅野隆太郎\" (30m OR 30メートル OR 50m OR 50メートル OR スプリント) (タイム OR 測定 OR 計測) 2024 OR 2025 OR 2026", "outcome": "No current player-specific sprint measurement located."},
+        {"route": "conditioning", "query": "\"梅野隆太郎\" (キャンプ OR 自主トレ OR トレーニング) (スプリント OR 走力測定 OR GPS OR \"30m\" OR \"50m\") 2024 OR 2025 OR 2026", "outcome": "No current individual speed result located."},
+        {"route": "test_terms", "query": "\"梅野隆太郎\" \"体力測定\" OR \"フィジカルテスト\" OR \"走力測定\" 2024 OR 2025 OR 2026", "outcome": "No results."},
+        {"route": "linear_speed", "query": "\"梅野隆太郎\" (最高速度 OR 最高時速 OR \"km/h\" OR \"スプリント速度\") 2024 OR 2025 OR 2026 野球", "outcome": "Only opposing-pitch speed, game material, and irrelevant paper-aircraft material; no running-speed result."}
+      ],
+      "candidate_sources": [],
+      "accepted_evidence": [],
+      "negative_finding": "No current physical running measurement or protocol-confirmed individual sprint result was found."
+    }
+  ],
+  "qa": {
+    "json_parse_expected": true,
+    "canonical_scope_exact": true,
+    "canonical_player_count": 12,
+    "noncanonical_players_in_players_array": [],
+    "accepted_evidence_count": 0,
+    "numeric_rating_generated": false,
+    "x_research_performed": false,
+    "powerpro_residual_used": false,
+    "no_conversion_or_age_adjustment": true
+  }
+}

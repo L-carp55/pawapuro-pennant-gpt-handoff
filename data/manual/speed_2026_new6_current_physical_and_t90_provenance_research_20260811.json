@@ -1,0 +1,364 @@
+{
+  "schema_version": "speed-2026-new6-current-physical-t90-provenance-research/v1.0.0",
+  "as_of": "2026-08-11",
+  "purpose": "Targeted 2024-2026 physical-speed measurement discovery and historical direct-T90 provenance audit for the six newly added players. This is evidence research only; it does not create a numeric game rating, convert 30m/50m to T90, or use PowerPro residuals.",
+  "scope": {
+    "canonical_players": [
+      "筒香嘉智",
+      "モンテロ",
+      "秋山翔吾",
+      "ポランコ",
+      "サンタナ",
+      "奈良間大己"
+    ],
+    "coverage": "6_OF_6",
+    "excluded_inputs": [
+      "PowerPro or other game ratings",
+      "PowerPro residuals",
+      "stolen-base outcomes or technique",
+      "home-plate-to-first game-event timings",
+      "unprotocolled profile claims",
+      "30m/50m to T90 conversion"
+    ]
+  },
+  "inputs_read": [
+    {
+      "path": "outputs/derived/speed_high_confidence_anchor_bank_2015_2026.json",
+      "use": "Checked existing anchor inclusion, source manifest identifiers, and raw-record references."
+    },
+    {
+      "path": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+      "use": "Checked retained measurement records and the existing Tsutsugo rejection note."
+    },
+    {
+      "path": "docs/audits/speed_historical_high_confidence_anchor_bank_2015_2026.md",
+      "use": "Read the existing historical-anchor audit context."
+    },
+    {
+      "path": "data/manifests/speed_historical_anchor_source_manifest_2015_2026.json",
+      "use": "Checked source priority, protocol boundaries, and the prior MLB revalidation description."
+    },
+    {
+      "path": "scripts/build_speed_historical_anchor_bank.mjs",
+      "use": "Checked builder boundaries: no T90 conversion, age decay, or game-rating creation."
+    },
+    {
+      "path": "data/manual/speed_historical_anchor_supplement_2015_2026.json",
+      "use": "Checked the original direct-running revalidation records and its name-based Tsutsugo rejection."
+    }
+  ],
+  "source_policy": {
+    "accepted_current_measurement": "Direct current 90ft split, or a 2024-2026 sprint measurement with a published time, distance, and stated protocol/source sufficient to identify the physical test.",
+    "current_year_priority": [2026, 2025, 2024],
+    "source_priority": [
+      "official league/club/measurement body",
+      "official MLB Statcast/CSV",
+      "university or official measurement organiser",
+      "first-party player/trainer disclosure with protocol"
+    ],
+    "rejection_rules": [
+      "No 30m/50m value is converted to T90.",
+      "A published training menu without the player's value and timing method is not a measurement result.",
+      "NPB+ current sprint-speed rows remain context-only here because row-level qualified-run counts and an individual measurement protocol are not public.",
+      "A historical T90 is not a 2026-current measurement unless observed in 2024-2026."
+    ]
+  },
+  "research_path": {
+    "retrieved_at": "2026-08-11",
+    "web_queries": [
+      "筒香嘉智 50m 30m タイム 2024 OR 2025 OR 2026",
+      "エレフリス・モンテロ 50m 30m タイム 2025 OR 2026 広島",
+      "秋山翔吾 50m 30m タイム 2024 OR 2025 OR 2026",
+      "グレゴリー・ポランコ 50m 30m タイム 2024 OR 2025 OR 2026 ロッテ",
+      "\"筒香嘉智\" \"50m\" OR \"50メートル\" OR \"30m\" 走力",
+      "\"エレフリス・モンテロ\" \"50m\" OR \"50メートル\" OR \"30m\" 走力",
+      "\"秋山翔吾\" \"50m\" OR \"50メートル\" OR \"30m\" 走力",
+      "\"グレゴリー・ポランコ\" \"50m\" OR \"50メートル\" OR \"30m\" 走力",
+      "\"ドミンゴ・サンタナ\" \"50m\" 野球 タイム",
+      "\"奈良間大己\" \"50m\" 野球 タイム",
+      "\"筒香嘉智\" 走力 計測 2024 2025 2026",
+      "\"秋山翔吾\" 走力 計測 2024 2025 2026",
+      "\"エレフリス・モンテロ\" 走力 計測 2025 2026",
+      "\"グレゴリー・ポランコ\" 走力 計測 2024 2025 2026",
+      "\"ドミンゴ・サンタナ\" 走力 計測 2024 2025 2026",
+      "\"奈良間大己\" 走力 計測 2024 2025 2026"
+    ],
+    "official_live_csv_revalidation": {
+      "method": "Downloaded the official Baseball Savant running-splits CSV separately for 2020, 2021, 2022, and 2024 with the existing min=5 filter; searched by player_id and displayed surname/first-name alias rather than an assumed full given name. Downloaded the official 2022 Sprint Speed CSV separately for the Tsutsugo cross-check.",
+      "running_splits_csv_template": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year={year}&csv=true",
+      "sprint_speed_csv_template": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year={year}&position=&team=&min=10&csv=true",
+      "definition_url": "https://www.mlb.com/glossary/statcast/90-foot-running-splits",
+      "definition_minimal_excerpt": "Statcast breaks down home-to-first runs in five-foot increments up to 90 feet.",
+      "access_date": "2026-08-11",
+      "identity_key_rule": "Use official player_id when it is present; display-name strings are aliases only."
+    }
+  },
+  "current_physical_measurement_research": [
+    {
+      "player": "筒香嘉智",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "accepted_current_candidate": null,
+      "rejected_candidates": [
+        {
+          "observed_year": 2026,
+          "source_name": "Nikkan Sports training report",
+          "source_url": "https://www.nikkansports.com/baseball/news/202601170000820.html",
+          "access_date": "2026-08-11",
+          "search_path": "\"筒香嘉智\" 走力 計測 2024 2025 2026",
+          "minimal_excerpt": "走る、跳ぶ、歩くなどの基本動作を繰り返す",
+          "protocol": "Training activity described, but no timed distance, value, or timing method.",
+          "rejection_reason": "CURRENT_TRAINING_NOT_A_PUBLISHED_PHYSICAL_MEASUREMENT"
+        }
+      ],
+      "negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches."
+    },
+    {
+      "player": "モンテロ",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_CONFIRMED",
+      "accepted_current_candidate": {
+        "metric": "T90FT_SECONDS",
+        "value": 4.2,
+        "unit": "seconds",
+        "observed_year": 2024,
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+        "access_date": "2026-08-11",
+        "search_path": "Official live CSV revalidation by player_id 660707 and display name `Montero, Elehuris`.",
+        "player_id": "660707",
+        "display_name": "Montero, Elehuris",
+        "team": "COL",
+        "protocol": "Official Statcast 90-foot Running Splits; separate 90-foot standard, not an NPB+ bridge.",
+        "supporting_observed_fields": {
+          "t10ft_seconds": 0.9,
+          "t30ft_seconds": 1.88
+        },
+        "acceptance_reason": "Official first-party row, direct 90ft field, live-retrieved, and within the 2024-2026 current priority window."
+      },
+      "rejected_candidates": [
+        {
+          "observed_year": 2026,
+          "source_name": "NPB+ sprint exposure row already in the repository",
+          "source_url": "https://www.japan-baseball.jp/npb-plus/",
+          "access_date": "2026-08-11",
+          "protocol": "Published sprint-speed field, but row-level sample count, qualified-run count, and directly comparable test protocol are not public.",
+          "rejection_reason": "CONTEXT_ONLY_PROTOCOL_AND_SAMPLE_DETAILS_NOT_PUBLISHED"
+        }
+      ],
+      "negative_finding": "The accepted 2024 direct T90 is the only qualifying current physical measurement found; no later 2025-2026 published timed test was found."
+    },
+    {
+      "player": "秋山翔吾",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "accepted_current_candidate": null,
+      "rejected_candidates": [
+        {
+          "observed_year": 2026,
+          "source_name": "First-Pitch training interview",
+          "source_url": "https://first-pitch.jp/article/well/training/20260112/14276/",
+          "access_date": "2026-08-11",
+          "search_path": "\"秋山翔吾\" 走力 計測 2024 2025 2026",
+          "minimal_excerpt": "走れればある程度のことは何でもできる",
+          "protocol": "Training opinion; no timed run or measurement protocol.",
+          "rejection_reason": "NON_NUMERIC_TRAINING_COMMENT"
+        }
+      ],
+      "negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches."
+    },
+    {
+      "player": "ポランコ",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "accepted_current_candidate": null,
+      "rejected_candidates": [
+        {
+          "observed_year": 2026,
+          "source_name": "NPB+ sprint exposure row already in the repository",
+          "source_url": "https://www.japan-baseball.jp/npb-plus/",
+          "access_date": "2026-08-11",
+          "protocol": "Published sprint-speed field, but row-level sample count, qualified-run count, and directly comparable test protocol are not public.",
+          "rejection_reason": "CONTEXT_ONLY_PROTOCOL_AND_SAMPLE_DETAILS_NOT_PUBLISHED"
+        }
+      ],
+      "negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches."
+    },
+    {
+      "player": "サンタナ",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "accepted_current_candidate": null,
+      "rejected_candidates": [
+        {
+          "observed_year": 2026,
+          "source_name": "NPB+ sprint exposure row already in the repository",
+          "source_url": "https://www.japan-baseball.jp/npb-plus/",
+          "access_date": "2026-08-11",
+          "protocol": "Published sprint-speed field, but row-level sample count, qualified-run count, and directly comparable test protocol are not public.",
+          "rejection_reason": "CONTEXT_ONLY_PROTOCOL_AND_SAMPLE_DETAILS_NOT_PUBLISHED"
+        },
+        {
+          "observed_year": 2024,
+          "source_name": "PowerPro reproduction page returned by search",
+          "source_url": "https://pawapuro-lab.com/entry/domingosantana-2024",
+          "access_date": "2026-08-11",
+          "protocol": "Game rating discussion, not a physical measurement.",
+          "rejection_reason": "GAME_RATING_EXCLUDED"
+        }
+      ],
+      "negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches."
+    },
+    {
+      "player": "奈良間大己",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "accepted_current_candidate": null,
+      "rejected_candidates": [
+        {
+          "observed_year": 2026,
+          "source_name": "Hokkaido Nippon-Ham Fighters official spring-camp practice menu",
+          "source_url": "https://www.fighters.co.jp/expansion/2026/springcamp/report/0203/practicemenu0203.pdf",
+          "access_date": "2026-08-11",
+          "search_path": "\"奈良間大己\" 走力 計測 2024 2025 2026",
+          "minimal_excerpt": "20ｍ×3 測定",
+          "protocol": "The official menu lists a 20m x3 measurement for fielders but publishes neither Narama's result nor timing technology/start protocol.",
+          "rejection_reason": "CURRENT_TEST_MENU_WITHOUT_PLAYER_VALUE_OR_TIMING_PROTOCOL"
+        },
+        {
+          "observed_year": 2022,
+          "source_name": "Third-party prospect video/profile result",
+          "source_url": "https://www.youtube.com/watch?v=RHBI0fHSamw",
+          "access_date": "2026-08-11",
+          "search_path": "\"奈良間大己\" \"50m\" 野球 タイム",
+          "metric": "50M_SECONDS",
+          "value": 6.31,
+          "protocol": "Timing method not established in the result page; outside the current 2024-2026 window.",
+          "rejection_reason": "HISTORICAL_THIRD_PARTY_VALUE_PROTOCOL_UNVERIFIED_NOT_CURRENT"
+        }
+      ],
+      "negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific published timed sprint result was found. The official 2026 team menu proves a test was scheduled, not a usable individual measurement."
+    }
+  ],
+  "historical_t90_provenance_audit": {
+    "tsutsugo_explicit_verdict": {
+      "player": "筒香嘉智",
+      "metric": "T90FT_SECONDS",
+      "value": 4.2,
+      "unit": "seconds",
+      "observed_year": 2022,
+      "verdict": "CONFIRMED_PRIMARY",
+      "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+      "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2022&csv=true",
+      "access_date": "2026-08-11",
+      "protocol": "Official Statcast 90-foot Running Splits; retain as direct historical T90 only, not a current 2026 measurement or an NPB+ conversion input.",
+      "official_identity": {
+        "player_id": "660294",
+        "display_name": "Tsutsugo, Yoshi",
+        "team": "PIT"
+      },
+      "official_observed_fields": {
+        "t10ft_seconds": 0.91,
+        "t30ft_seconds": 1.89,
+        "t90ft_seconds": 4.2
+      },
+      "cross_check": {
+        "source_url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2022&position=&team=&min=10&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "660294",
+        "display_name": "Tsutsugo, Yoshi",
+        "sprint_speed_ft_per_sec": 26.1,
+        "status": "OFFICIAL_IDENTITY_CROSS_CHECK_CONFIRMED"
+      },
+      "existing_bank_discrepancy": {
+        "existing_note": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+        "likely_cause": "The preserved source supplement stores the player as `Yoshitomo Tsutsugo`, while the live official CSV uses the display-name alias `Tsutsugo, Yoshi`. A full-given-name string match can therefore miss the live row despite the stable official player_id 660294.",
+        "scope_of_correction": "This task's separate-provenance verdict corrects the evidence status only. It does not overwrite the baseline historical anchor bank."
+      },
+      "reproduction": [
+        "Download the 2022 official Running Splits CSV from the source_url with the stated min=5 filter.",
+        "Find the row using player_id 660294 or surname `Tsutsugo`; do not require the non-official full-given-name string `Yoshitomo`.",
+        "Read the 90ft column as 4.20 seconds; the same row has 10ft 0.91 and 30ft 1.89.",
+        "Download the 2022 official Sprint Speed CSV with min=10 and confirm player_id 660294 / `Tsutsugo, Yoshi` / 26.1 ft/s as an identity cross-check, not as a replacement for T90."
+      ],
+      "temporal_boundary": "Historical 2022 direct measurement. It does not satisfy the 2024-2026 current-measurement criterion."
+    },
+    "other_five_spot_checks": [
+      {
+        "player": "モンテロ",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "660707",
+        "display_name": "Montero, Elehuris",
+        "observed_year": 2024,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 4.2,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "CURRENT_WINDOW_2024_2026"
+      },
+      {
+        "player": "秋山翔吾",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "673451",
+        "display_name": "Akiyama, Shogo",
+        "observed_year": 2021,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 3.97,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "HISTORICAL_OUTSIDE_CURRENT_WINDOW"
+      },
+      {
+        "player": "ポランコ",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "570256",
+        "display_name": "Polanco, Gregory",
+        "observed_year": 2021,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 3.99,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "HISTORICAL_OUTSIDE_CURRENT_WINDOW"
+      },
+      {
+        "player": "サンタナ",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2020&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "570267",
+        "display_name": "Santana, Domingo",
+        "observed_year": 2020,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 4.13,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "HISTORICAL_OUTSIDE_CURRENT_WINDOW"
+      },
+      {
+        "player": "奈良間大己",
+        "direct_t90_status": "NO_EXISTING_DIRECT_T90_RECORD",
+        "source_name": "Historical physical-measurement ledger spot-check",
+        "source_url": null,
+        "access_date": "2026-08-11",
+        "observed_year": null,
+        "protocol": null,
+        "observed_t90ft_seconds": null,
+        "revalidation_status": "NOT_APPLICABLE_NO_DIRECT_T90_TO_REVALIDATE",
+        "temporal_status": "NO_DIRECT_T90_RECORD",
+        "note": "The ledger retains a separate 2022 50m 6.31 third-party value, but it is neither direct T90 nor an accepted current physical measurement."
+      }
+    ]
+  },
+  "summary_counts": {
+    "target_players": 6,
+    "current_physical_measurement_confirmed": 1,
+    "current_physical_measurement_not_found": 5,
+    "historical_direct_t90_confirmed_primary": 5,
+    "historical_direct_t90_not_present": 1,
+    "tsutsugo_prior_rejection_overturned": 1,
+    "numeric_game_ratings_created": 0,
+    "t90_conversions_created": 0,
+    "powerpro_residual_inputs_used": 0
+  },
+  "integration_boundary": "Use Montero's 2024 direct T90 as current physical evidence. Treat Tsutsugo's 2022 T90 as CONFIRMED_PRIMARY historical evidence with the stated temporal limit. Do not use any other searched item as a current physical measurement; do not infer a relationship from unavailable 2026 test values."
+}

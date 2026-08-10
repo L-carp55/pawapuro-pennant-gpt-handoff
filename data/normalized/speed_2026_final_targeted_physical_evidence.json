@@ -1,0 +1,473 @@
+{
+  "schema_version": "speed-2026-final-targeted-physical-evidence/v1.0.0",
+  "as_of": "2026-08-11",
+  "purpose": "Current physical measurement rescue for the fixed 18-player pre-video scope. Evidence gaps remain explicit; no numeric game rating is created.",
+  "scope": {
+    "player_count": 18,
+    "players": [
+      "西野 真弘",
+      "カリステ",
+      "土田 龍空",
+      "大島 洋平",
+      "友杉 篤輝",
+      "外崎 修汰",
+      "矢野 雅哉",
+      "野間 峻祥",
+      "中村 悠平",
+      "林 琢真",
+      "梶原 昂希",
+      "梅野 隆太郎",
+      "筒香 嘉智",
+      "モンテロ",
+      "秋山 翔吾",
+      "ポランコ",
+      "サンタナ",
+      "奈良間 大己"
+    ],
+    "old_unresolved_count": 12,
+    "new_targeted_count": 6
+  },
+  "source_inputs": {
+    "data/manual/speed_2026_old12_current_physical_research_20260811.json": {
+      "sha256": "9587fa026b002396d6a038cdbfe33fb2b751be53e39054239f6173bc5b105d6b"
+    },
+    "data/manual/speed_2026_new6_current_physical_and_t90_provenance_research_20260811.json": {
+      "sha256": "d57ab7d89badce2218cccb802191fb1c27127891ce4ae18e812bf2d368905343"
+    },
+    "outputs/derived/speed_2026_100_anchor_relative_packets.json": {
+      "sha256": "f2ff79f425731d9817db403a4d107bade2190e1ac18adafc30e39737fdbfe7e7"
+    },
+    "outputs/derived/speed_2026_targeted_additional_physical_evidence_needs.csv": {
+      "sha256": "6eee68dd8a6f33ae1e57552407a925ad9fed746dd4a71aebdadbc19d2bd80d8c"
+    }
+  },
+  "evidence_records": [
+    {
+      "player": "西野 真弘",
+      "player_id": "91495130",
+      "team": "オリックス・バファローズ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "Five targeted routes, including official-club, test terminology, conditioning, and linear-speed routes, produced no current protocol-documented individual measurement.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "カリステ",
+      "player_id": "93795157",
+      "team": "中日ドラゴンズ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No current measured sprint, top-speed, or protocol-documented organization result was found.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "土田 龍空",
+      "player_id": "51455153",
+      "team": "中日ドラゴンズ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "The only relevant official statement is a 2020 qualitative prospect-era remark, not a 2024-2026 measurement.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "大島 洋平",
+      "player_id": "01305131",
+      "team": "中日ドラゴンズ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No 2024-2026 physical running measurement or protocol-confirmed individual result was found.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "友杉 篤輝",
+      "player_id": "71275157",
+      "team": "千葉ロッテマリーンズ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No 2024-2026 measurement was found; the 2023 team drill report cannot resolve a current Type-B physical order.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "外崎 修汰",
+      "player_id": "41245130",
+      "team": "埼玉西武ライオンズ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No current physical running measurement was found despite direct metric, conditioning, test-term, and top-speed searches.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "矢野 雅哉",
+      "player_id": "93395153",
+      "team": "広島東洋カープ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No qualifying 2024-2026 straight-line running result was located. Older university-era figures and game pages were not used.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "野間 峻祥",
+      "player_id": "01405130",
+      "team": "広島東洋カープ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No current measured sprint or verified current top-speed source was found.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "中村 悠平",
+      "player_id": "51255118",
+      "team": "東京ヤクルトスワローズ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "A current official schedule documents that the club used a 30m measurement block, but it exposes no individual timing or outcome for 中村悠平; it cannot change the ordinal assessment.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "林 琢真",
+      "player_id": "91695157",
+      "team": "横浜DeNAベイスターズ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No 2024-2026 protocol-documented measurement was found; Type-B physical-order conflict remains unresolved.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "梶原 昂希",
+      "player_id": "51555155",
+      "team": "横浜DeNAベイスターズ",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No 2024-2026 direct sprint result was found. The public 50m figure is intentionally not treated as current because its test date and protocol are missing.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "梅野 隆太郎",
+      "player_id": "21325139",
+      "team": "阪神タイガース",
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No current physical running measurement or protocol-confirmed individual sprint result was found.",
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "research_provenance": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json"
+    },
+    {
+      "player": "筒香 嘉智",
+      "player_id": "41945131",
+      "team": "横浜DeNAベイスターズ",
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches.",
+      "direct_t90_provenance": {
+        "player": "筒香嘉智",
+        "metric": "T90FT_SECONDS",
+        "value": 4.2,
+        "unit": "seconds",
+        "observed_year": 2022,
+        "verdict": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2022&csv=true",
+        "access_date": "2026-08-11",
+        "protocol": "Official Statcast 90-foot Running Splits; retain as direct historical T90 only, not a current 2026 measurement or an NPB+ conversion input.",
+        "official_identity": {
+          "player_id": "660294",
+          "display_name": "Tsutsugo, Yoshi",
+          "team": "PIT"
+        },
+        "official_observed_fields": {
+          "t10ft_seconds": 0.91,
+          "t30ft_seconds": 1.89,
+          "t90ft_seconds": 4.2
+        },
+        "cross_check": {
+          "source_url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2022&position=&team=&min=10&csv=true",
+          "access_date": "2026-08-11",
+          "player_id": "660294",
+          "display_name": "Tsutsugo, Yoshi",
+          "sprint_speed_ft_per_sec": 26.1,
+          "status": "OFFICIAL_IDENTITY_CROSS_CHECK_CONFIRMED"
+        },
+        "existing_bank_discrepancy": {
+          "existing_note": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+          "likely_cause": "The preserved source supplement stores the player as `Yoshitomo Tsutsugo`, while the live official CSV uses the display-name alias `Tsutsugo, Yoshi`. A full-given-name string match can therefore miss the live row despite the stable official player_id 660294.",
+          "scope_of_correction": "This task's separate-provenance verdict corrects the evidence status only. It does not overwrite the baseline historical anchor bank."
+        },
+        "reproduction": [
+          "Download the 2022 official Running Splits CSV from the source_url with the stated min=5 filter.",
+          "Find the row using player_id 660294 or surname `Tsutsugo`; do not require the non-official full-given-name string `Yoshitomo`.",
+          "Read the 90ft column as 4.20 seconds; the same row has 10ft 0.91 and 30ft 1.89.",
+          "Download the 2022 official Sprint Speed CSV with min=10 and confirm player_id 660294 / `Tsutsugo, Yoshi` / 26.1 ft/s as an identity cross-check, not as a replacement for T90."
+        ],
+        "temporal_boundary": "Historical 2022 direct measurement. It does not satisfy the 2024-2026 current-measurement criterion."
+      },
+      "research_provenance": "data/manual/speed_2026_new6_current_physical_and_t90_provenance_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_targeted_additional_physical_evidence_needs.csv"
+    },
+    {
+      "player": "モンテロ",
+      "player_id": "53955150",
+      "team": "広島東洋カープ",
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_CONFIRMED",
+      "current_physical_evidence": {
+        "metric": "T90FT_SECONDS",
+        "value": 4.2,
+        "unit": "seconds",
+        "observed_year": 2024,
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+        "access_date": "2026-08-11",
+        "search_path": "Official live CSV revalidation by player_id 660707 and display name `Montero, Elehuris`.",
+        "player_id": "660707",
+        "display_name": "Montero, Elehuris",
+        "team": "COL",
+        "protocol": "Official Statcast 90-foot Running Splits; separate 90-foot standard, not an NPB+ bridge.",
+        "supporting_observed_fields": {
+          "t10ft_seconds": 0.9,
+          "t30ft_seconds": 1.88
+        },
+        "acceptance_reason": "Official first-party row, direct 90ft field, live-retrieved, and within the 2024-2026 current priority window."
+      },
+      "current_physical_negative_finding": "The accepted 2024 direct T90 is the only qualifying current physical measurement found; no later 2025-2026 published timed test was found.",
+      "direct_t90_provenance": {
+        "player": "モンテロ",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "660707",
+        "display_name": "Montero, Elehuris",
+        "observed_year": 2024,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 4.2,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "CURRENT_WINDOW_2024_2026"
+      },
+      "research_provenance": "data/manual/speed_2026_new6_current_physical_and_t90_provenance_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_targeted_additional_physical_evidence_needs.csv"
+    },
+    {
+      "player": "秋山 翔吾",
+      "player_id": "31135133",
+      "team": "広島東洋カープ",
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches.",
+      "direct_t90_provenance": {
+        "player": "秋山翔吾",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "673451",
+        "display_name": "Akiyama, Shogo",
+        "observed_year": 2021,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 3.97,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "HISTORICAL_OUTSIDE_CURRENT_WINDOW"
+      },
+      "research_provenance": "data/manual/speed_2026_new6_current_physical_and_t90_provenance_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_targeted_additional_physical_evidence_needs.csv"
+    },
+    {
+      "player": "ポランコ",
+      "player_id": "63065155",
+      "team": "千葉ロッテマリーンズ",
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches.",
+      "direct_t90_provenance": {
+        "player": "ポランコ",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "570256",
+        "display_name": "Polanco, Gregory",
+        "observed_year": 2021,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 3.99,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "HISTORICAL_OUTSIDE_CURRENT_WINDOW"
+      },
+      "research_provenance": "data/manual/speed_2026_new6_current_physical_and_t90_provenance_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_targeted_additional_physical_evidence_needs.csv"
+    },
+    {
+      "player": "サンタナ",
+      "player_id": "53755153",
+      "team": "東京ヤクルトスワローズ",
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches.",
+      "direct_t90_provenance": {
+        "player": "サンタナ",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2020&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "570267",
+        "display_name": "Santana, Domingo",
+        "observed_year": 2020,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 4.13,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "HISTORICAL_OUTSIDE_CURRENT_WINDOW"
+      },
+      "research_provenance": "data/manual/speed_2026_new6_current_physical_and_t90_provenance_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_targeted_additional_physical_evidence_needs.csv"
+    },
+    {
+      "player": "奈良間 大己",
+      "player_id": "31435157",
+      "team": "北海道日本ハムファイターズ",
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific published timed sprint result was found. The official 2026 team menu proves a test was scheduled, not a usable individual measurement.",
+      "direct_t90_provenance": {
+        "player": "奈良間大己",
+        "direct_t90_status": "NO_EXISTING_DIRECT_T90_RECORD",
+        "source_name": "Historical physical-measurement ledger spot-check",
+        "source_url": null,
+        "access_date": "2026-08-11",
+        "observed_year": null,
+        "protocol": null,
+        "observed_t90ft_seconds": null,
+        "revalidation_status": "NOT_APPLICABLE_NO_DIRECT_T90_TO_REVALIDATE",
+        "temporal_status": "NO_DIRECT_T90_RECORD",
+        "note": "The ledger retains a separate 2022 50m 6.31 third-party value, but it is neither direct T90 nor an accepted current physical measurement."
+      },
+      "research_provenance": "data/manual/speed_2026_new6_current_physical_and_t90_provenance_research_20260811.json",
+      "scope_provenance": "outputs/derived/speed_2026_targeted_additional_physical_evidence_needs.csv"
+    }
+  ],
+  "summary": {
+    "current_physical_measurement_confirmed": 1,
+    "current_physical_measurement_not_found": 17,
+    "current_t90_direct_measurement_count": 1,
+    "current_standardized_30m_measurement_count": 0,
+    "current_standardized_50m_measurement_count": 0,
+    "no_t90_conversion_created": true,
+    "no_numeric_game_rating_created": true
+  },
+  "tsutsugo_separate_provenance_correction": {
+    "player": "筒香嘉智",
+    "metric": "T90FT_SECONDS",
+    "value": 4.2,
+    "unit": "seconds",
+    "observed_year": 2022,
+    "verdict": "CONFIRMED_PRIMARY",
+    "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+    "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2022&csv=true",
+    "access_date": "2026-08-11",
+    "protocol": "Official Statcast 90-foot Running Splits; retain as direct historical T90 only, not a current 2026 measurement or an NPB+ conversion input.",
+    "official_identity": {
+      "player_id": "660294",
+      "display_name": "Tsutsugo, Yoshi",
+      "team": "PIT"
+    },
+    "official_observed_fields": {
+      "t10ft_seconds": 0.91,
+      "t30ft_seconds": 1.89,
+      "t90ft_seconds": 4.2
+    },
+    "cross_check": {
+      "source_url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2022&position=&team=&min=10&csv=true",
+      "access_date": "2026-08-11",
+      "player_id": "660294",
+      "display_name": "Tsutsugo, Yoshi",
+      "sprint_speed_ft_per_sec": 26.1,
+      "status": "OFFICIAL_IDENTITY_CROSS_CHECK_CONFIRMED"
+    },
+    "existing_bank_discrepancy": {
+      "existing_note": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+      "likely_cause": "The preserved source supplement stores the player as `Yoshitomo Tsutsugo`, while the live official CSV uses the display-name alias `Tsutsugo, Yoshi`. A full-given-name string match can therefore miss the live row despite the stable official player_id 660294.",
+      "scope_of_correction": "This task's separate-provenance verdict corrects the evidence status only. It does not overwrite the baseline historical anchor bank."
+    },
+    "reproduction": [
+      "Download the 2022 official Running Splits CSV from the source_url with the stated min=5 filter.",
+      "Find the row using player_id 660294 or surname `Tsutsugo`; do not require the non-official full-given-name string `Yoshitomo`.",
+      "Read the 90ft column as 4.20 seconds; the same row has 10ft 0.91 and 30ft 1.89.",
+      "Download the 2022 official Sprint Speed CSV with min=10 and confirm player_id 660294 / `Tsutsugo, Yoshi` / 26.1 ft/s as an identity cross-check, not as a replacement for T90."
+    ],
+    "temporal_boundary": "Historical 2022 direct measurement. It does not satisfy the 2024-2026 current-measurement criterion."
+  },
+  "preservation_boundary": "The historical anchor-bank output is not overwritten. The Tsutsugo finding is a separate-provenance correction record only."
+}

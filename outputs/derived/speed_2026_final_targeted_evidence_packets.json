@@ -1,0 +1,2328 @@
+{
+  "schema_version": "speed-2026-final-targeted-evidence-packets/v1.0.0",
+  "as_of": "2026-08-11",
+  "purpose": "Fixed 18-player pre-video evidence packets. Each packet contains only ordinal/temporal/current-measurement decision support and an explicit limitation.",
+  "source_inputs": {
+    "outputs/derived/speed_2026_100_post_sns_decision_support.json": {
+      "sha256": "e02b5d02ef9ba2f64f952108a674508931143c334829f874be430f40cac55392"
+    },
+    "outputs/derived/speed_2026_100_anchor_relative_packets.json": {
+      "sha256": "f2ff79f425731d9817db403a4d107bade2190e1ac18adafc30e39737fdbfe7e7"
+    },
+    "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json": {
+      "sha256": "7f50411c626718673f18da567ca81941faf55ee4995ee71226b67d7261260ad9"
+    },
+    "data/normalized/speed_2026_sns_consensus_sources_v2.json": {
+      "sha256": "4e4d7e1cfe9690014b1ab5dc78bde22bff16d2335c10b704fef3711a926f5fbd"
+    },
+    "data/normalized/speed_historical_physical_measurements_2015_2026.json": {
+      "sha256": "cd8d06927330a8928f0d576f3e92dc83d6bde71061e0deeb618a0d177b75022c"
+    },
+    "outputs/derived/speed_high_confidence_anchor_bank_2015_2026.json": {
+      "sha256": "6df9df7cc69934a6054dac093f4c75f952e2d758143d1d5adfd5d9dcddba264a"
+    },
+    "outputs/derived/speed_2026_targeted_additional_physical_evidence_needs.csv": {
+      "sha256": "6eee68dd8a6f33ae1e57552407a925ad9fed746dd4a71aebdadbc19d2bd80d8c"
+    },
+    "data/manual/speed_2026_old12_current_physical_research_20260811.json": {
+      "sha256": "9587fa026b002396d6a038cdbfe33fb2b751be53e39054239f6173bc5b105d6b"
+    },
+    "data/manual/speed_2026_new6_current_physical_and_t90_provenance_research_20260811.json": {
+      "sha256": "d57ab7d89badce2218cccb802191fb1c27127891ce4ae18e812bf2d368905343"
+    },
+    "data/manual/speed_2026_new6_grok_x_temporal_research_20260811.json": {
+      "sha256": "e99c0a7918acac0d210e7d0c1b086f4b88eabb18592d5cf5c98cbfaa2926f56f"
+    }
+  },
+  "packets": [
+    {
+      "packet_id": "FTER-01",
+      "player": "西野 真弘",
+      "player_id": "91495130",
+      "team": "オリックス・バファローズ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 31.6,
+        "unit": "km_per_hour",
+        "current_band": "B4_MID_UPPER_COHORT_OCTILE",
+        "cohort_rank": 49,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": []
+      },
+      "old_physical_evidence_years": [],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "Five targeted routes, including official-club, test terminology, conditioning, and linear-speed routes, produced no current protocol-documented individual measurement.",
+      "current_physical_rejected_candidate_count": 0,
+      "grok_x_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_accepted_source_count": 2,
+      "grok_x_independent_x_count": 2,
+      "grok_x_independent_qualifying_x_count": 1,
+      "grok_x_accepted_source_ids": [
+        "GXSR059",
+        "GXSR061"
+      ],
+      "temporal_evidence": "still unresolved",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "西野 真弘: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、現行NPB+ bandを支持・一段速い・一段遅いのいずれかだけを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-02",
+      "player": "カリステ",
+      "player_id": "93795157",
+      "team": "中日ドラゴンズ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 31.3,
+        "unit": "km_per_hour",
+        "current_band": "B5_MID_LOWER_COHORT_OCTILE",
+        "cohort_rank": 59,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [
+          {
+            "anchor_id": "A0109",
+            "player": "カリステ",
+            "player_key": "カリステ",
+            "measurement_era": 2017,
+            "measurement_date": "2017-season",
+            "metric": "T90FT_SECONDS",
+            "value": 3.94,
+            "unit": "seconds",
+            "direction": "LOWER_IS_FASTER",
+            "cohort_id": "mlb_statcast_2017_SF",
+            "cohort_completeness": "PLAYER_SEASON_OFFICIAL_CSV_ROW",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810",
+            "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+            "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2017&csv=true",
+            "source_urls": [
+              "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2017&csv=true",
+              "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2017&position=&team=&min=10&csv=true",
+              "https://www.mlb.com/glossary/statcast/90-foot-running-splits"
+            ],
+            "source_name": "Baseball Savant / MLB Statcast",
+            "timing_method": "Statcast official CSV",
+            "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+            "anchor_confidence": "HIGH",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE",
+            "raw_record_ids": [
+              "R00167"
+            ],
+            "raw_trial_count": 1,
+            "selection_method": "single_observed_value",
+            "selection_scope": "ABSOLUTE_DIRECT_HISTORICAL_OBSERVATION_ONLY",
+            "speed_band": "ABSOLUTE_DIRECT_UNBANDED_CROSS_ERA",
+            "band_basis": "No cross-era T90 band: direct observations are retained without an assumed current equivalence class.",
+            "cohort_rank": null,
+            "cohort_size": null,
+            "limitations": "Different player-season eras are not treated as a current NPB equivalence class.",
+            "integration_boundary": "NO_T90_CONVERSION_NO_AGE_DECAY_NO_GAME_RATING"
+          }
+        ],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00168",
+            "metric": "T10FT_SECONDS",
+            "value": 0.87,
+            "unit": "seconds",
+            "measurement_era": 2017,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00169",
+            "metric": "T30FT_SECONDS",
+            "value": 1.82,
+            "unit": "seconds",
+            "measurement_era": 2017,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00170",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 29.3,
+            "unit": "ft_per_second",
+            "measurement_era": 2017,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00246",
+            "metric": "T10FT_SECONDS",
+            "value": 0.87,
+            "unit": "seconds",
+            "measurement_era": 2017,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00247",
+            "metric": "T30FT_SECONDS",
+            "value": 1.82,
+            "unit": "seconds",
+            "measurement_era": 2017,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00248",
+            "metric": "T90FT_SECONDS",
+            "value": 3.94,
+            "unit": "seconds",
+            "measurement_era": 2017,
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00249",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 29.3,
+            "unit": "ft_per_second",
+            "measurement_era": 2017,
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2017
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No current measured sprint, top-speed, or protocol-documented organization result was found.",
+      "current_physical_rejected_candidate_count": 0,
+      "grok_x_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_x_count": 1,
+      "grok_x_independent_qualifying_x_count": 0,
+      "grok_x_accepted_source_ids": [
+        "GXSR002"
+      ],
+      "temporal_evidence": "still unresolved",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "カリステ: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、現行NPB+ bandを支持・一段速い・一段遅いのいずれかだけを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-03",
+      "player": "土田 龍空",
+      "player_id": "51455153",
+      "team": "中日ドラゴンズ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 31.2,
+        "unit": "km_per_hour",
+        "current_band": "B6_LOWER_MID_COHORT_OCTILE",
+        "cohort_rank": 63,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": []
+      },
+      "old_physical_evidence_years": [],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "The only relevant official statement is a 2020 qualitative prospect-era remark, not a 2024-2026 measurement.",
+      "current_physical_rejected_candidate_count": 1,
+      "grok_x_classification": "MIXED_CONSENSUS",
+      "grok_x_accepted_source_count": 4,
+      "grok_x_independent_x_count": 4,
+      "grok_x_independent_qualifying_x_count": 4,
+      "grok_x_accepted_source_ids": [
+        "GXSR091",
+        "GXSR095",
+        "GXSR099",
+        "GXSR100"
+      ],
+      "temporal_evidence": "widen uncertainty",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "MIXED_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "土田 龍空: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、相反する同時代証拠のどちらが現在の身体的走速度をより良く表すかを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-04",
+      "player": "大島 洋平",
+      "player_id": "01305131",
+      "team": "中日ドラゴンズ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 31.7,
+        "unit": "km_per_hour",
+        "current_band": "B4_MID_UPPER_COHORT_OCTILE",
+        "cohort_rank": 43,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00252",
+            "metric": "HP_TO_1B_SECONDS",
+            "value": 3.96,
+            "unit": "seconds",
+            "measurement_era": 2007,
+            "evidence_class": "CONTEXT_ONLY",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_CONTACT_TO_RUN_TRANSITION_OR_GAME_CONTEXT",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00253",
+            "metric": "HP_TO_1B_SECONDS",
+            "value": 3.79,
+            "unit": "seconds",
+            "measurement_era": 2007,
+            "evidence_class": "CONTEXT_ONLY",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_CONTACT_TO_RUN_TRANSITION_OR_GAME_CONTEXT",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2007
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No 2024-2026 physical running measurement or protocol-confirmed individual result was found.",
+      "current_physical_rejected_candidate_count": 0,
+      "grok_x_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_x_count": 1,
+      "grok_x_independent_qualifying_x_count": 1,
+      "grok_x_accepted_source_ids": [
+        "GXSR064"
+      ],
+      "temporal_evidence": "still unresolved",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "大島 洋平: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、現行NPB+ bandを支持・一段速い・一段遅いのいずれかだけを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-05",
+      "player": "友杉 篤輝",
+      "player_id": "71275157",
+      "team": "千葉ロッテマリーンズ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 32.7,
+        "unit": "km_per_hour",
+        "current_band": "B2_UPPER_COHORT_OCTILE",
+        "cohort_rank": 22,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [
+          {
+            "anchor_id": "A0002",
+            "player": "友杉篤輝",
+            "player_key": "友杉篤輝",
+            "measurement_era": 2022,
+            "measurement_date": "2022-06-19",
+            "metric": "50M_STANDING_START_SECONDS",
+            "value": 6.1,
+            "unit": "seconds",
+            "direction": "LOWER_IS_FASTER",
+            "cohort_id": "samurai_university_2022-06-19",
+            "cohort_completeness": "OFFICIAL_TOP_FIVE_ONLY",
+            "source_manifest_id": "samurai_university_2022_06_19",
+            "source_tier": "A_OFFICIAL_VALUE",
+            "source_url": "https://www.japan-baseball.jp/jp/news/press/20220619_1.html",
+            "source_urls": [
+              "https://www.japan-baseball.jp/jp/news/press/20220619_1.html",
+              "https://www.youtube.com/watch?v=fC8_8iA7Cao"
+            ],
+            "source_name": "Existing standardized 50m reference",
+            "timing_method": "electronic_photoelectric",
+            "start_protocol": "not_publicly_documented",
+            "anchor_confidence": "HIGH",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE",
+            "raw_record_ids": [
+              "R00027"
+            ],
+            "raw_trial_count": 1,
+            "selection_method": "single_observed_value",
+            "selection_scope": "WITHIN_MEASURED_COHORT_ORDINAL_ONLY",
+            "speed_band": "B7_LOWER_COHORT_OCTILE",
+            "band_basis": "WITHIN_SAME_METRIC_SAME_COHORT_OCTILE_ONLY",
+            "cohort_rank": 4,
+            "cohort_size": 5,
+            "limitations": "Only the official top five are visible; no complete-cohort distribution is claimed.",
+            "integration_boundary": "NO_T90_CONVERSION_NO_AGE_DECAY_NO_GAME_RATING"
+          }
+        ],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00242",
+            "metric": "50M_PROFILE_SECONDS",
+            "value": 6.1,
+            "unit": "seconds",
+            "measurement_era": 2022,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "DUPLICATE_OF_CANONICAL_STANDARDIZED_SOURCE_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00243",
+            "metric": "50M_PROFILE_SECONDS",
+            "value": 5.9,
+            "unit": "seconds",
+            "measurement_era": "unknown",
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_PROTOCOL_OR_DATE_NOT_PUBLICLY_DOCUMENTED",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00244",
+            "metric": "HP_TO_1B_SECONDS",
+            "value": 3.73,
+            "unit": "seconds",
+            "measurement_era": "unknown",
+            "evidence_class": "CONTEXT_ONLY",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_CONTACT_TO_RUN_TRANSITION_OR_GAME_CONTEXT",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2022,
+        "unknown"
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No 2024-2026 measurement was found; the 2023 team drill report cannot resolve a current Type-B physical order.",
+      "current_physical_rejected_candidate_count": 1,
+      "grok_x_classification": "METRIC_CONSTRUCT_CONFLICT",
+      "grok_x_accepted_source_count": 3,
+      "grok_x_independent_x_count": 3,
+      "grok_x_independent_qualifying_x_count": 3,
+      "grok_x_accepted_source_ids": [
+        "GXSR160",
+        "GXSR163",
+        "GXSR165"
+      ],
+      "temporal_evidence": "widen uncertainty",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "COHORT_ORDER_CONFLICT_WITH_CURRENT_NPB_ORDINAL"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "METRIC_CONSTRUCT_CONFLICT_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "友杉 篤輝: 2026年の同条件・全力直線走を複数プレーで確認し、現在のNPB+順序と過去年の別計測constructの差が、現時点の身体的走速度差として残るかを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-06",
+      "player": "外崎 修汰",
+      "player_id": "41245130",
+      "team": "埼玉西武ライオンズ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 32.3,
+        "unit": "km_per_hour",
+        "current_band": "B3_UPPER_MID_COHORT_OCTILE",
+        "cohort_rank": 31,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00225",
+            "metric": "HP_TO_1B_SECONDS",
+            "value": 4.13,
+            "unit": "seconds",
+            "measurement_era": 2024,
+            "evidence_class": "CONTEXT_ONLY",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_CONTACT_TO_RUN_TRANSITION_OR_GAME_CONTEXT",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00340",
+            "metric": "HP_TO_1B_SECONDS",
+            "value": 4.13,
+            "unit": "seconds",
+            "measurement_era": 2024,
+            "evidence_class": "CONTEXT_ONLY",
+            "bank_acceptance_status": "REJECTED_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_CONTACT_TO_RUN_TRANSITION_OR_GAME_CONTEXT",
+            "source_manifest_id": "curated_homeplate_to_first_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2024
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No current physical running measurement was found despite direct metric, conditioning, test-term, and top-speed searches.",
+      "current_physical_rejected_candidate_count": 0,
+      "grok_x_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_x_count": 1,
+      "grok_x_independent_qualifying_x_count": 1,
+      "grok_x_accepted_source_ids": [
+        "GXSR028"
+      ],
+      "temporal_evidence": "still unresolved",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "外崎 修汰: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、現行NPB+ bandを支持・一段速い・一段遅いのいずれかだけを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-07",
+      "player": "矢野 雅哉",
+      "player_id": "93395153",
+      "team": "広島東洋カープ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 30.7,
+        "unit": "km_per_hour",
+        "current_band": "B6_LOWER_MID_COHORT_OCTILE",
+        "cohort_rank": 74,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00220",
+            "metric": "50M_PROFILE_SECONDS",
+            "value": 5.9,
+            "unit": "seconds",
+            "measurement_era": "unknown",
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_PROTOCOL_OR_DATE_NOT_PUBLICLY_DOCUMENTED",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00350",
+            "metric": "50m",
+            "value": 5.9,
+            "unit": "seconds",
+            "measurement_era": "UNKNOWN",
+            "evidence_class": "EXCLUDED_OUTLIER_OR_PROTOCOL_MISMATCH",
+            "bank_acceptance_status": "REJECTED_PROTOCOL",
+            "rejection_reason": "REJECTED_PROTOCOL_OR_DISTANCE_MISMATCH",
+            "source_manifest_id": "outlier_short_distance_context_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        "unknown",
+        "UNKNOWN"
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No qualifying 2024-2026 straight-line running result was located. Older university-era figures and game pages were not used.",
+      "current_physical_rejected_candidate_count": 0,
+      "grok_x_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_x_count": 1,
+      "grok_x_independent_qualifying_x_count": 0,
+      "grok_x_accepted_source_ids": [
+        "GXSR158"
+      ],
+      "temporal_evidence": "still unresolved",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "矢野 雅哉: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、現行NPB+ bandを支持・一段速い・一段遅いのいずれかだけを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-08",
+      "player": "野間 峻祥",
+      "player_id": "01405130",
+      "team": "広島東洋カープ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 31.7,
+        "unit": "km_per_hour",
+        "current_band": "B4_MID_UPPER_COHORT_OCTILE",
+        "cohort_rank": 47,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": []
+      },
+      "old_physical_evidence_years": [],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No current measured sprint or verified current top-speed source was found.",
+      "current_physical_rejected_candidate_count": 0,
+      "grok_x_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_x_count": 1,
+      "grok_x_independent_qualifying_x_count": 0,
+      "grok_x_accepted_source_ids": [
+        "GXSR150"
+      ],
+      "temporal_evidence": "still unresolved",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "野間 峻祥: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、現行NPB+ bandを支持・一段速い・一段遅いのいずれかだけを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-09",
+      "player": "中村 悠平",
+      "player_id": "51255118",
+      "team": "東京ヤクルトスワローズ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 30.4,
+        "unit": "km_per_hour",
+        "current_band": "B7_LOWER_COHORT_OCTILE",
+        "cohort_rank": 84,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": []
+      },
+      "old_physical_evidence_years": [],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "A current official schedule documents that the club used a 30m measurement block, but it exposes no individual timing or outcome for 中村悠平; it cannot change the ordinal assessment.",
+      "current_physical_rejected_candidate_count": 1,
+      "grok_x_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_x_count": 1,
+      "grok_x_independent_qualifying_x_count": 1,
+      "grok_x_accepted_source_ids": [
+        "GXSR084"
+      ],
+      "temporal_evidence": "still unresolved",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "中村 悠平: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、現行NPB+ bandを支持・一段速い・一段遅いのいずれかだけを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-10",
+      "player": "林 琢真",
+      "player_id": "91695157",
+      "team": "横浜DeNAベイスターズ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 32,
+        "unit": "km_per_hour",
+        "current_band": "B3_UPPER_MID_COHORT_OCTILE",
+        "cohort_rank": 37,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [
+          {
+            "anchor_id": "A0004",
+            "player": "林琢真",
+            "player_key": "林琢真",
+            "measurement_era": 2022,
+            "measurement_date": "2022-06-19",
+            "metric": "50M_STANDING_START_SECONDS",
+            "value": 5.99,
+            "unit": "seconds",
+            "direction": "LOWER_IS_FASTER",
+            "cohort_id": "samurai_university_2022-06-19",
+            "cohort_completeness": "OFFICIAL_TOP_FIVE_ONLY",
+            "source_manifest_id": "samurai_university_2022_06_19",
+            "source_tier": "A_OFFICIAL_VALUE",
+            "source_url": "https://www.japan-baseball.jp/jp/news/press/20220619_1.html",
+            "source_urls": [
+              "https://www.japan-baseball.jp/jp/news/press/20220619_1.html",
+              "https://www.youtube.com/watch?v=fC8_8iA7Cao"
+            ],
+            "source_name": "Existing standardized 50m reference",
+            "timing_method": "electronic_photoelectric",
+            "start_protocol": "not_publicly_documented",
+            "anchor_confidence": "HIGH",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE",
+            "raw_record_ids": [
+              "R00029"
+            ],
+            "raw_trial_count": 1,
+            "selection_method": "single_observed_value",
+            "selection_scope": "WITHIN_MEASURED_COHORT_ORDINAL_ONLY",
+            "speed_band": "B4_MID_UPPER_COHORT_OCTILE",
+            "band_basis": "WITHIN_SAME_METRIC_SAME_COHORT_OCTILE_ONLY",
+            "cohort_rank": 2,
+            "cohort_size": 5,
+            "limitations": "Only the official top five are visible; no complete-cohort distribution is claimed.",
+            "integration_boundary": "NO_T90_CONVERSION_NO_AGE_DECAY_NO_GAME_RATING"
+          }
+        ],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00205",
+            "metric": "50M_PROFILE_SECONDS",
+            "value": 5.99,
+            "unit": "seconds",
+            "measurement_era": 2022,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "DUPLICATE_OF_CANONICAL_STANDARDIZED_SOURCE_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00206",
+            "metric": "50M_PROFILE_SECONDS",
+            "value": 5.7,
+            "unit": "seconds",
+            "measurement_era": "unknown",
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_PROTOCOL_OR_DATE_NOT_PUBLICLY_DOCUMENTED",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2022,
+        "unknown"
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No 2024-2026 protocol-documented measurement was found; Type-B physical-order conflict remains unresolved.",
+      "current_physical_rejected_candidate_count": 0,
+      "grok_x_classification": "METRIC_CONSTRUCT_CONFLICT",
+      "grok_x_accepted_source_count": 3,
+      "grok_x_independent_x_count": 3,
+      "grok_x_independent_qualifying_x_count": 2,
+      "grok_x_accepted_source_ids": [
+        "GXSR167",
+        "GXSR173",
+        "GXSR176"
+      ],
+      "temporal_evidence": "widen uncertainty",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "COHORT_ORDER_CONFLICT_WITH_CURRENT_NPB_ORDINAL"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "METRIC_CONSTRUCT_CONFLICT_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "林 琢真: 2026年の同条件・全力直線走を複数プレーで確認し、現在のNPB+順序と過去年の別計測constructの差が、現時点の身体的走速度差として残るかを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-11",
+      "player": "梶原 昂希",
+      "player_id": "51555155",
+      "team": "横浜DeNAベイスターズ",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 33.4,
+        "unit": "km_per_hour",
+        "current_band": "B1_FASTEST_COHORT_OCTILE",
+        "cohort_rank": 12,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00198",
+            "metric": "50M_PROFILE_SECONDS",
+            "value": 5.8,
+            "unit": "seconds",
+            "measurement_era": "unknown",
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_PROTOCOL_OR_DATE_NOT_PUBLICLY_DOCUMENTED",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00199",
+            "metric": "HP_TO_1B_SECONDS",
+            "value": 3.97,
+            "unit": "seconds",
+            "measurement_era": "unknown",
+            "evidence_class": "CONTEXT_ONLY",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_CONTACT_TO_RUN_TRANSITION_OR_GAME_CONTEXT",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        "unknown"
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No 2024-2026 direct sprint result was found. The public 50m figure is intentionally not treated as current because its test date and protocol are missing.",
+      "current_physical_rejected_candidate_count": 2,
+      "grok_x_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_accepted_source_count": 2,
+      "grok_x_independent_x_count": 2,
+      "grok_x_independent_qualifying_x_count": 1,
+      "grok_x_accepted_source_ids": [
+        "GXSR039",
+        "GXSR040"
+      ],
+      "temporal_evidence": "still unresolved",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "梶原 昂希: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、現行NPB+ bandを支持・一段速い・一段遅いのいずれかだけを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-12",
+      "player": "梅野 隆太郎",
+      "player_id": "21325139",
+      "team": "阪神タイガース",
+      "target_season": 2026,
+      "active_scope_lane": "LEGACY_12_UNRESOLVED_SNS",
+      "current_npb_plus_sprint_speed": {
+        "value": 30.6,
+        "unit": "km_per_hour",
+        "current_band": "B7_LOWER_COHORT_OCTILE",
+        "cohort_rank": 79,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": []
+      },
+      "old_physical_evidence_years": [],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No current physical running measurement or protocol-confirmed individual sprint result was found.",
+      "current_physical_rejected_candidate_count": 0,
+      "grok_x_classification": "MIXED_CONSENSUS",
+      "grok_x_accepted_source_count": 2,
+      "grok_x_independent_x_count": 2,
+      "grok_x_independent_qualifying_x_count": 2,
+      "grok_x_accepted_source_ids": [
+        "GXSR112",
+        "GXSR114"
+      ],
+      "temporal_evidence": "widen uncertainty",
+      "grok_x_negative_findings": [
+        "Existing Grok-X/SNS v2 result reused without blanket re-search; no new physical evidence required an X interpretation pass."
+      ],
+      "direct_t90_provenance": {
+        "direct_t90_status": "NOT_REVALIDATED_IN_FINAL_NEW6_T90_AUDIT",
+        "note": "No broad historical-anchor re-audit was performed for legacy twelve players."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "SNS_TIEBREAK",
+        "base_anchor_status_reasons": [
+          "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "MIXED_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "梅野 隆太郎: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、相反する同時代証拠のどちらが現在の身体的走速度をより良く表すかを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-13",
+      "player": "筒香 嘉智",
+      "player_id": "41945131",
+      "team": "横浜DeNAベイスターズ",
+      "target_season": 2026,
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_npb_plus_sprint_speed": {
+        "value": 30.2,
+        "unit": "km_per_hour",
+        "current_band": "B8_SLOWEST_COHORT_OCTILE",
+        "cohort_rank": 89,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00187",
+            "metric": "T90FT_SECONDS",
+            "value": 4.2,
+            "unit": "seconds",
+            "measurement_era": 2022,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "REJECTED_LIVE_REVALIDATION",
+            "rejection_reason": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00188",
+            "metric": "T10FT_SECONDS",
+            "value": 0.91,
+            "unit": "seconds",
+            "measurement_era": 2022,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "REJECTED_LIVE_REVALIDATION",
+            "rejection_reason": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00189",
+            "metric": "T30FT_SECONDS",
+            "value": 1.89,
+            "unit": "seconds",
+            "measurement_era": 2022,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "REJECTED_LIVE_REVALIDATION",
+            "rejection_reason": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00190",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 26.1,
+            "unit": "ft_per_second",
+            "measurement_era": 2022,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "REJECTED_LIVE_REVALIDATION",
+            "rejection_reason": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00201",
+            "metric": "T10FT_SECONDS",
+            "value": 0.91,
+            "unit": "seconds",
+            "measurement_era": 2022,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00202",
+            "metric": "T30FT_SECONDS",
+            "value": 1.89,
+            "unit": "seconds",
+            "measurement_era": 2022,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00203",
+            "metric": "T90FT_SECONDS",
+            "value": 4.2,
+            "unit": "seconds",
+            "measurement_era": 2022,
+            "evidence_class": "NUMERIC_T90_CANDIDATE",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00204",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 26.1,
+            "unit": "ft_per_second",
+            "measurement_era": 2022,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2022
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches.",
+      "current_physical_rejected_candidate_count": 1,
+      "grok_x_classification": "INSUFFICIENT_X_EVIDENCE",
+      "grok_x_accepted_source_count": 0,
+      "grok_x_independent_x_count": 0,
+      "grok_x_independent_qualifying_x_count": 0,
+      "grok_x_accepted_source_ids": [],
+      "temporal_evidence": "UNRESOLVED: no accepted temporal physical-speed evidence.",
+      "grok_x_negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold.",
+        "No post met the directness and quality threshold after exclusions."
+      ],
+      "direct_t90_provenance": {
+        "player": "筒香嘉智",
+        "metric": "T90FT_SECONDS",
+        "value": 4.2,
+        "unit": "seconds",
+        "observed_year": 2022,
+        "verdict": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2022&csv=true",
+        "access_date": "2026-08-11",
+        "protocol": "Official Statcast 90-foot Running Splits; retain as direct historical T90 only, not a current 2026 measurement or an NPB+ conversion input.",
+        "official_identity": {
+          "player_id": "660294",
+          "display_name": "Tsutsugo, Yoshi",
+          "team": "PIT"
+        },
+        "official_observed_fields": {
+          "t10ft_seconds": 0.91,
+          "t30ft_seconds": 1.89,
+          "t90ft_seconds": 4.2
+        },
+        "cross_check": {
+          "source_url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2022&position=&team=&min=10&csv=true",
+          "access_date": "2026-08-11",
+          "player_id": "660294",
+          "display_name": "Tsutsugo, Yoshi",
+          "sprint_speed_ft_per_sec": 26.1,
+          "status": "OFFICIAL_IDENTITY_CROSS_CHECK_CONFIRMED"
+        },
+        "existing_bank_discrepancy": {
+          "existing_note": "REJECTED_LIVE_OFFICIAL_CSV_NOT_FOUND_NO_PRESERVED_SNAPSHOT",
+          "likely_cause": "The preserved source supplement stores the player as `Yoshitomo Tsutsugo`, while the live official CSV uses the display-name alias `Tsutsugo, Yoshi`. A full-given-name string match can therefore miss the live row despite the stable official player_id 660294.",
+          "scope_of_correction": "This task's separate-provenance verdict corrects the evidence status only. It does not overwrite the baseline historical anchor bank."
+        },
+        "reproduction": [
+          "Download the 2022 official Running Splits CSV from the source_url with the stated min=5 filter.",
+          "Find the row using player_id 660294 or surname `Tsutsugo`; do not require the non-official full-given-name string `Yoshitomo`.",
+          "Read the 90ft column as 4.20 seconds; the same row has 10ft 0.91 and 30ft 1.89.",
+          "Download the 2022 official Sprint Speed CSV with min=10 and confirm player_id 660294 / `Tsutsugo, Yoshi` / 26.1 ft/s as an identity cross-check, not as a replacement for T90."
+        ],
+        "temporal_boundary": "Historical 2022 direct measurement. It does not satisfy the 2024-2026 current-measurement criterion."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "ANCHOR_RESOLVED_MODERATE",
+        "base_anchor_status_reasons": [
+          "CURRENT_NPB_PLUS_ORDINAL_HAS_FULL_100_ROSTER_BRACKETING_BUT_PUBLIC_SAMPLE_COUNTS_ARE_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "筒香 嘉智: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、現行NPB+ bandを支持・一段速い・一段遅いのいずれかだけを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-14",
+      "player": "モンテロ",
+      "player_id": "53955150",
+      "team": "広島東洋カープ",
+      "target_season": 2026,
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_npb_plus_sprint_speed": {
+        "value": 31.9,
+        "unit": "km_per_hour",
+        "current_band": "B4_MID_UPPER_COHORT_OCTILE",
+        "cohort_rank": 40,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [
+          {
+            "anchor_id": "A0113",
+            "player": "モンテロ",
+            "player_key": "モンテロ",
+            "measurement_era": 2024,
+            "measurement_date": "2024-season",
+            "metric": "T90FT_SECONDS",
+            "value": 4.2,
+            "unit": "seconds",
+            "direction": "LOWER_IS_FASTER",
+            "cohort_id": "mlb_statcast_2024_COL",
+            "cohort_completeness": "PLAYER_SEASON_OFFICIAL_CSV_ROW",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810",
+            "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+            "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+            "source_urls": [
+              "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+              "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2024&position=&team=&min=10&csv=true",
+              "https://www.mlb.com/glossary/statcast/90-foot-running-splits"
+            ],
+            "source_name": "Baseball Savant / MLB Statcast",
+            "timing_method": "Statcast official CSV",
+            "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+            "anchor_confidence": "HIGH",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE",
+            "raw_record_ids": [
+              "R00183"
+            ],
+            "raw_trial_count": 1,
+            "selection_method": "single_observed_value",
+            "selection_scope": "ABSOLUTE_DIRECT_HISTORICAL_OBSERVATION_ONLY",
+            "speed_band": "ABSOLUTE_DIRECT_UNBANDED_CROSS_ERA",
+            "band_basis": "No cross-era T90 band: direct observations are retained without an assumed current equivalence class.",
+            "cohort_rank": null,
+            "cohort_size": null,
+            "limitations": "Different player-season eras are not treated as a current NPB equivalence class.",
+            "integration_boundary": "NO_T90_CONVERSION_NO_AGE_DECAY_NO_GAME_RATING"
+          }
+        ],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00184",
+            "metric": "T10FT_SECONDS",
+            "value": 0.9,
+            "unit": "seconds",
+            "measurement_era": 2024,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00185",
+            "metric": "T30FT_SECONDS",
+            "value": 1.88,
+            "unit": "seconds",
+            "measurement_era": 2024,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00186",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 26.2,
+            "unit": "ft_per_second",
+            "measurement_era": 2024,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00207",
+            "metric": "T10FT_SECONDS",
+            "value": 0.9,
+            "unit": "seconds",
+            "measurement_era": 2024,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00208",
+            "metric": "T30FT_SECONDS",
+            "value": 1.88,
+            "unit": "seconds",
+            "measurement_era": 2024,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00209",
+            "metric": "T90FT_SECONDS",
+            "value": 4.2,
+            "unit": "seconds",
+            "measurement_era": 2024,
+            "evidence_class": "NUMERIC_T90_CANDIDATE",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00210",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 26.2,
+            "unit": "ft_per_second",
+            "measurement_era": 2024,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2024
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_CONFIRMED",
+      "current_physical_evidence": {
+        "metric": "T90FT_SECONDS",
+        "value": 4.2,
+        "unit": "seconds",
+        "observed_year": 2024,
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+        "access_date": "2026-08-11",
+        "search_path": "Official live CSV revalidation by player_id 660707 and display name `Montero, Elehuris`.",
+        "player_id": "660707",
+        "display_name": "Montero, Elehuris",
+        "team": "COL",
+        "protocol": "Official Statcast 90-foot Running Splits; separate 90-foot standard, not an NPB+ bridge.",
+        "supporting_observed_fields": {
+          "t10ft_seconds": 0.9,
+          "t30ft_seconds": 1.88
+        },
+        "acceptance_reason": "Official first-party row, direct 90ft field, live-retrieved, and within the 2024-2026 current priority window."
+      },
+      "current_physical_metric": "T90FT_SECONDS",
+      "current_physical_value": 4.2,
+      "current_physical_unit": "seconds",
+      "current_physical_observed_year": 2024,
+      "current_physical_source": "Baseball Savant / MLB Statcast Running Splits official CSV",
+      "current_physical_source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+      "current_physical_protocol": "Official Statcast 90-foot Running Splits; separate 90-foot standard, not an NPB+ bridge.",
+      "current_physical_negative_finding": "The accepted 2024 direct T90 is the only qualifying current physical measurement found; no later 2025-2026 published timed test was found.",
+      "current_physical_rejected_candidate_count": 1,
+      "grok_x_classification": "INSUFFICIENT_X_EVIDENCE",
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_x_count": 1,
+      "grok_x_independent_qualifying_x_count": 0,
+      "grok_x_accepted_source_ids": [
+        "N6GXS004"
+      ],
+      "temporal_evidence": "UNRESOLVED: one 2026 moderate post says he is not especially slow once moving, without a valid prior-speed comparison.",
+      "grok_x_negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold."
+      ],
+      "direct_t90_provenance": {
+        "player": "モンテロ",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "660707",
+        "display_name": "Montero, Elehuris",
+        "observed_year": 2024,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 4.2,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "CURRENT_WINDOW_2024_2026"
+      },
+      "anchor_relation": {
+        "base_anchor_status": "ANCHOR_CONTEXT_HIGH_EVIDENCE",
+        "base_anchor_status_reasons": [
+          "RECENT_STANDARDIZED_OR_DIRECT_PHYSICAL_RECORD_AVAILABLE"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "RESOLVED_CURRENT_PHYSICAL_MEASUREMENT",
+      "video_needed": false,
+      "exact_video_question": null,
+      "remaining_limitation": "Resolution is evidence-bounded and does not convert its evidence into a numeric game rating.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-15",
+      "player": "秋山 翔吾",
+      "player_id": "31135133",
+      "team": "広島東洋カープ",
+      "target_season": 2026,
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_npb_plus_sprint_speed": {
+        "value": 31.6,
+        "unit": "km_per_hour",
+        "current_band": "B4_MID_UPPER_COHORT_OCTILE",
+        "cohort_rank": 50,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [
+          {
+            "anchor_id": "A0111",
+            "player": "秋山翔吾",
+            "player_key": "秋山翔吾",
+            "measurement_era": 2021,
+            "measurement_date": "2021-season",
+            "metric": "T90FT_SECONDS",
+            "value": 3.97,
+            "unit": "seconds",
+            "direction": "LOWER_IS_FASTER",
+            "cohort_id": "mlb_statcast_2021_CIN",
+            "cohort_completeness": "PLAYER_SEASON_OFFICIAL_CSV_ROW",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810",
+            "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+            "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+            "source_urls": [
+              "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+              "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2021&position=&team=&min=10&csv=true",
+              "https://www.mlb.com/glossary/statcast/90-foot-running-splits"
+            ],
+            "source_name": "Baseball Savant / MLB Statcast",
+            "timing_method": "Statcast official CSV",
+            "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+            "anchor_confidence": "HIGH",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE",
+            "raw_record_ids": [
+              "R00175"
+            ],
+            "raw_trial_count": 1,
+            "selection_method": "single_observed_value",
+            "selection_scope": "ABSOLUTE_DIRECT_HISTORICAL_OBSERVATION_ONLY",
+            "speed_band": "ABSOLUTE_DIRECT_UNBANDED_CROSS_ERA",
+            "band_basis": "No cross-era T90 band: direct observations are retained without an assumed current equivalence class.",
+            "cohort_rank": null,
+            "cohort_size": null,
+            "limitations": "Different player-season eras are not treated as a current NPB equivalence class.",
+            "integration_boundary": "NO_T90_CONVERSION_NO_AGE_DECAY_NO_GAME_RATING"
+          }
+        ],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00176",
+            "metric": "T10FT_SECONDS",
+            "value": 0.86,
+            "unit": "seconds",
+            "measurement_era": 2021,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00177",
+            "metric": "T30FT_SECONDS",
+            "value": 1.78,
+            "unit": "seconds",
+            "measurement_era": 2021,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00178",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 28,
+            "unit": "ft_per_second",
+            "measurement_era": 2021,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00212",
+            "metric": "T10FT_SECONDS",
+            "value": 0.86,
+            "unit": "seconds",
+            "measurement_era": 2021,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00213",
+            "metric": "T30FT_SECONDS",
+            "value": 1.78,
+            "unit": "seconds",
+            "measurement_era": 2021,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00214",
+            "metric": "T90FT_SECONDS",
+            "value": 3.97,
+            "unit": "seconds",
+            "measurement_era": 2021,
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00215",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 28,
+            "unit": "ft_per_second",
+            "measurement_era": 2021,
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2021
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches.",
+      "current_physical_rejected_candidate_count": 1,
+      "grok_x_classification": "INSUFFICIENT_X_EVIDENCE",
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_x_count": 1,
+      "grok_x_independent_qualifying_x_count": 0,
+      "grok_x_accepted_source_ids": [
+        "N6GXS014"
+      ],
+      "temporal_evidence": "UNRESOLVED: one 2025 moderate post says he is still fast, without a valid prior-speed comparison.",
+      "grok_x_negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold."
+      ],
+      "direct_t90_provenance": {
+        "player": "秋山翔吾",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "673451",
+        "display_name": "Akiyama, Shogo",
+        "observed_year": 2021,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 3.97,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "HISTORICAL_OUTSIDE_CURRENT_WINDOW"
+      },
+      "anchor_relation": {
+        "base_anchor_status": "ANCHOR_RESOLVED_MODERATE",
+        "base_anchor_status_reasons": [
+          "CURRENT_NPB_PLUS_ORDINAL_HAS_FULL_100_ROSTER_BRACKETING_BUT_PUBLIC_SAMPLE_COUNTS_ARE_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "秋山 翔吾: 2026年の全力直線走を確認し、歴史的な直接T90計測の方向性が現在にも保たれているか、または現在の速度変化を示す明確な観察があるかを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-16",
+      "player": "ポランコ",
+      "player_id": "63065155",
+      "team": "千葉ロッテマリーンズ",
+      "target_season": 2026,
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_npb_plus_sprint_speed": {
+        "value": 31.1,
+        "unit": "km_per_hour",
+        "current_band": "B6_LOWER_MID_COHORT_OCTILE",
+        "cohort_rank": 66,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [
+          {
+            "anchor_id": "A0112",
+            "player": "ポランコ",
+            "player_key": "ポランコ",
+            "measurement_era": 2021,
+            "measurement_date": "2021-season",
+            "metric": "T90FT_SECONDS",
+            "value": 3.99,
+            "unit": "seconds",
+            "direction": "LOWER_IS_FASTER",
+            "cohort_id": "mlb_statcast_2021_PIT",
+            "cohort_completeness": "PLAYER_SEASON_OFFICIAL_CSV_ROW",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810",
+            "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+            "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+            "source_urls": [
+              "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+              "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2021&position=&team=&min=10&csv=true",
+              "https://www.mlb.com/glossary/statcast/90-foot-running-splits"
+            ],
+            "source_name": "Baseball Savant / MLB Statcast",
+            "timing_method": "Statcast official CSV",
+            "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+            "anchor_confidence": "HIGH",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE",
+            "raw_record_ids": [
+              "R00179"
+            ],
+            "raw_trial_count": 1,
+            "selection_method": "single_observed_value",
+            "selection_scope": "ABSOLUTE_DIRECT_HISTORICAL_OBSERVATION_ONLY",
+            "speed_band": "ABSOLUTE_DIRECT_UNBANDED_CROSS_ERA",
+            "band_basis": "No cross-era T90 band: direct observations are retained without an assumed current equivalence class.",
+            "cohort_rank": null,
+            "cohort_size": null,
+            "limitations": "Different player-season eras are not treated as a current NPB equivalence class.",
+            "integration_boundary": "NO_T90_CONVERSION_NO_AGE_DECAY_NO_GAME_RATING"
+          }
+        ],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00180",
+            "metric": "T10FT_SECONDS",
+            "value": 0.84,
+            "unit": "seconds",
+            "measurement_era": 2021,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00181",
+            "metric": "T30FT_SECONDS",
+            "value": 1.77,
+            "unit": "seconds",
+            "measurement_era": 2021,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00182",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 27.2,
+            "unit": "ft_per_second",
+            "measurement_era": 2021,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00232",
+            "metric": "T10FT_SECONDS",
+            "value": 0.84,
+            "unit": "seconds",
+            "measurement_era": 2021,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00233",
+            "metric": "T30FT_SECONDS",
+            "value": 1.77,
+            "unit": "seconds",
+            "measurement_era": 2021,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00234",
+            "metric": "T90FT_SECONDS",
+            "value": 3.99,
+            "unit": "seconds",
+            "measurement_era": 2021,
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00235",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 27.2,
+            "unit": "ft_per_second",
+            "measurement_era": 2021,
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2021
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches.",
+      "current_physical_rejected_candidate_count": 1,
+      "grok_x_classification": "INSUFFICIENT_X_EVIDENCE",
+      "grok_x_accepted_source_count": 4,
+      "grok_x_independent_x_count": 4,
+      "grok_x_independent_qualifying_x_count": 0,
+      "grok_x_accepted_source_ids": [
+        "N6GXS022",
+        "N6GXS026",
+        "N6GXS027",
+        "N6GXS028"
+      ],
+      "temporal_evidence": "UNRESOLVED: accepted 2024–2026 posts suggest non-slow/faster straight speed, while one 2026 post separately says acceleration takes time; this is not a temporal decline or recovery finding.",
+      "grok_x_negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold."
+      ],
+      "direct_t90_provenance": {
+        "player": "ポランコ",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "570256",
+        "display_name": "Polanco, Gregory",
+        "observed_year": 2021,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 3.99,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "HISTORICAL_OUTSIDE_CURRENT_WINDOW"
+      },
+      "anchor_relation": {
+        "base_anchor_status": "ANCHOR_RESOLVED_MODERATE",
+        "base_anchor_status_reasons": [
+          "CURRENT_NPB_PLUS_ORDINAL_HAS_FULL_100_ROSTER_BRACKETING_BUT_PUBLIC_SAMPLE_COUNTS_ARE_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "ポランコ: 2026年の全力直線走を確認し、歴史的な直接T90計測の方向性が現在にも保たれているか、または現在の速度変化を示す明確な観察があるかを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-17",
+      "player": "サンタナ",
+      "player_id": "53755153",
+      "team": "東京ヤクルトスワローズ",
+      "target_season": 2026,
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_npb_plus_sprint_speed": {
+        "value": 30.8,
+        "unit": "km_per_hour",
+        "current_band": "B6_LOWER_MID_COHORT_OCTILE",
+        "cohort_rank": 71,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [
+          {
+            "anchor_id": "A0110",
+            "player": "サンタナ",
+            "player_key": "サンタナ",
+            "measurement_era": 2020,
+            "measurement_date": "2020-season",
+            "metric": "T90FT_SECONDS",
+            "value": 4.13,
+            "unit": "seconds",
+            "direction": "LOWER_IS_FASTER",
+            "cohort_id": "mlb_statcast_2020_CLE",
+            "cohort_completeness": "PLAYER_SEASON_OFFICIAL_CSV_ROW",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810",
+            "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+            "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2020&csv=true",
+            "source_urls": [
+              "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2020&csv=true",
+              "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2020&position=&team=&min=10&csv=true",
+              "https://www.mlb.com/glossary/statcast/90-foot-running-splits"
+            ],
+            "source_name": "Baseball Savant / MLB Statcast",
+            "timing_method": "Statcast official CSV",
+            "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+            "anchor_confidence": "HIGH",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE",
+            "raw_record_ids": [
+              "R00171"
+            ],
+            "raw_trial_count": 1,
+            "selection_method": "single_observed_value",
+            "selection_scope": "ABSOLUTE_DIRECT_HISTORICAL_OBSERVATION_ONLY",
+            "speed_band": "ABSOLUTE_DIRECT_UNBANDED_CROSS_ERA",
+            "band_basis": "No cross-era T90 band: direct observations are retained without an assumed current equivalence class.",
+            "cohort_rank": null,
+            "cohort_size": null,
+            "limitations": "Different player-season eras are not treated as a current NPB equivalence class.",
+            "integration_boundary": "NO_T90_CONVERSION_NO_AGE_DECAY_NO_GAME_RATING"
+          }
+        ],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00172",
+            "metric": "T10FT_SECONDS",
+            "value": 0.91,
+            "unit": "seconds",
+            "measurement_era": 2020,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00173",
+            "metric": "T30FT_SECONDS",
+            "value": 1.87,
+            "unit": "seconds",
+            "measurement_era": 2020,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00174",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 26.9,
+            "unit": "ft_per_second",
+            "measurement_era": 2020,
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "bank_acceptance_status": "RETAINED_SUPPORT_ONLY",
+            "rejection_reason": "RETAINED_METRIC_SUPPORT_NOT_A_SECOND_ANCHOR",
+            "source_manifest_id": "mlb_statcast_running_splits_live_revalidation_20260810"
+          },
+          {
+            "raw_id": "R00255",
+            "metric": "T10FT_SECONDS",
+            "value": 0.91,
+            "unit": "seconds",
+            "measurement_era": 2020,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00256",
+            "metric": "T30FT_SECONDS",
+            "value": 1.87,
+            "unit": "seconds",
+            "measurement_era": 2020,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00257",
+            "metric": "T90FT_SECONDS",
+            "value": 4.13,
+            "unit": "seconds",
+            "measurement_era": 2020,
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00258",
+            "metric": "MLB_SPRINT_SPEED_FTPS",
+            "value": 26.9,
+            "unit": "ft_per_second",
+            "measurement_era": 2020,
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "SUPERSEDED_BY_LIVE_REVALIDATION_CANONICAL_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2020
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific timed sprint result was found in the bounded searches.",
+      "current_physical_rejected_candidate_count": 2,
+      "grok_x_classification": "INSUFFICIENT_X_EVIDENCE",
+      "grok_x_accepted_source_count": 0,
+      "grok_x_independent_x_count": 0,
+      "grok_x_independent_qualifying_x_count": 0,
+      "grok_x_accepted_source_ids": [],
+      "temporal_evidence": "UNRESOLVED: no accepted temporal physical-speed evidence.",
+      "grok_x_negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold.",
+        "No post met the directness and quality threshold after exclusions."
+      ],
+      "direct_t90_provenance": {
+        "player": "サンタナ",
+        "direct_t90_status": "CONFIRMED_PRIMARY",
+        "source_name": "Baseball Savant / MLB Statcast Running Splits official CSV",
+        "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2020&csv=true",
+        "access_date": "2026-08-11",
+        "player_id": "570267",
+        "display_name": "Santana, Domingo",
+        "observed_year": 2020,
+        "protocol": "Official Statcast direct 90-foot running split.",
+        "observed_t90ft_seconds": 4.13,
+        "revalidation_status": "LIVE_OFFICIAL_CSV_ROW_CONFIRMED",
+        "temporal_status": "HISTORICAL_OUTSIDE_CURRENT_WINDOW"
+      },
+      "anchor_relation": {
+        "base_anchor_status": "ANCHOR_RESOLVED_MODERATE",
+        "base_anchor_status_reasons": [
+          "CURRENT_NPB_PLUS_ORDINAL_HAS_FULL_100_ROSTER_BRACKETING_BUT_PUBLIC_SAMPLE_COUNTS_ARE_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "サンタナ: 2026年の全力直線走を確認し、歴史的な直接T90計測の方向性が現在にも保たれているか、または現在の速度変化を示す明確な観察があるかを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    },
+    {
+      "packet_id": "FTER-18",
+      "player": "奈良間 大己",
+      "player_id": "31435157",
+      "team": "北海道日本ハムファイターズ",
+      "target_season": 2026,
+      "active_scope_lane": "NEW_6_TARGETED_PHYSICAL_SCOPE",
+      "current_npb_plus_sprint_speed": {
+        "value": 31.7,
+        "unit": "km_per_hour",
+        "current_band": "B4_MID_UPPER_COHORT_OCTILE",
+        "cohort_rank": 44,
+        "cohort_size": 100,
+        "source_lane": "npb_plus_sprint_exposure_2026",
+        "limitation": "The public source does not publish per-player run sample counts or qualified-run counts. This is never converted or treated as an MLB-equivalent metric."
+      },
+      "old_physical_evidence": {
+        "high_confidence_physical_anchors": [],
+        "historical_or_rejected_physical_evidence": [
+          {
+            "raw_id": "R00023",
+            "metric": "50M_STANDING_START_SECONDS",
+            "value": 6.31,
+            "unit": "seconds",
+            "measurement_era": 2022,
+            "evidence_class": "STANDARDIZED_SHORT_DISTANCE",
+            "bank_acceptance_status": "REJECTED_SOURCE_TIER",
+            "rejection_reason": "REJECTED_TIER_C_FULL_TABLE_NOT_INDEPENDENTLY_VERIFIED",
+            "source_manifest_id": "samurai_university_2022_06_19"
+          },
+          {
+            "raw_id": "R00293",
+            "metric": "50M_PROFILE_SECONDS",
+            "value": 6.31,
+            "unit": "seconds",
+            "measurement_era": 2022,
+            "evidence_class": "STANDARDIZED_PRIOR",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "DUPLICATE_OF_CANONICAL_STANDARDIZED_SOURCE_RECORD",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          },
+          {
+            "raw_id": "R00294",
+            "metric": "50M_PROFILE_SECONDS",
+            "value": 5.8,
+            "unit": "seconds",
+            "measurement_era": "unknown",
+            "evidence_class": "HISTORICAL_PROFILE_HINT",
+            "bank_acceptance_status": "REJECTED_OR_CONTEXT_ONLY",
+            "rejection_reason": "REJECTED_PROTOCOL_OR_DATE_NOT_PUBLICLY_DOCUMENTED",
+            "source_manifest_id": "existing_npb_physical_inventory_20260809"
+          }
+        ]
+      },
+      "old_physical_evidence_years": [
+        2022,
+        "unknown"
+      ],
+      "current_physical_status": "CURRENT_PHYSICAL_MEASUREMENT_NOT_FOUND",
+      "current_physical_evidence": [],
+      "current_physical_metric": null,
+      "current_physical_value": null,
+      "current_physical_unit": null,
+      "current_physical_observed_year": null,
+      "current_physical_source": null,
+      "current_physical_source_url": null,
+      "current_physical_protocol": null,
+      "current_physical_negative_finding": "No 2024-2026 direct T90, protocol-stated electronic/photoelectric 30m/50m, or other player-specific published timed sprint result was found. The official 2026 team menu proves a test was scheduled, not a usable individual measurement.",
+      "current_physical_rejected_candidate_count": 2,
+      "grok_x_classification": "INSUFFICIENT_X_EVIDENCE",
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_x_count": 1,
+      "grok_x_independent_qualifying_x_count": 0,
+      "grok_x_accepted_source_ids": [
+        "N6GXS034"
+      ],
+      "temporal_evidence": "UNRESOLVED: one 2025 post qualitatively calls his running ability fast, but its 50m assertion is not independently verified and provides no temporal comparison.",
+      "grok_x_negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold."
+      ],
+      "direct_t90_provenance": {
+        "player": "奈良間大己",
+        "direct_t90_status": "NO_EXISTING_DIRECT_T90_RECORD",
+        "source_name": "Historical physical-measurement ledger spot-check",
+        "source_url": null,
+        "access_date": "2026-08-11",
+        "observed_year": null,
+        "protocol": null,
+        "observed_t90ft_seconds": null,
+        "revalidation_status": "NOT_APPLICABLE_NO_DIRECT_T90_TO_REVALIDATE",
+        "temporal_status": "NO_DIRECT_T90_RECORD",
+        "note": "The ledger retains a separate 2022 50m 6.31 third-party value, but it is neither direct T90 nor an accepted current physical measurement."
+      },
+      "anchor_relation": {
+        "base_anchor_status": "ANCHOR_RESOLVED_MODERATE",
+        "base_anchor_status_reasons": [
+          "CURRENT_NPB_PLUS_ORDINAL_HAS_FULL_100_ROSTER_BRACKETING_BUT_PUBLIC_SAMPLE_COUNTS_ARE_NOT_PUBLISHED"
+        ],
+        "current_metric_boundary": "NPB+ is retained as an ordinal-only current signal. No T90 conversion or cross-metric numeric inference is made.",
+        "historical_anchor_boundary": "Historical physical evidence is context only unless separately identified above as a current-window direct measurement."
+      },
+      "resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS",
+      "video_needed": true,
+      "exact_video_question": "奈良間 大己: 2025–2026年の一歩目から約90ftまでの全力直線走を複数プレーで確認し、現行NPB+ bandを支持・一段速い・一段遅いのいずれかだけを判定する。",
+      "remaining_limitation": "No qualifying evidence resolves the remaining current physical-speed uncertainty without video review.",
+      "decision_boundary": "No final PowerPro numeric rating or numeric adjustment is generated by this packet."
+    }
+  ],
+  "classification_transitions": [
+    {
+      "player": "西野 真弘",
+      "pre_grok_or_pre_rescue_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "カリステ",
+      "pre_grok_or_pre_rescue_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "土田 龍空",
+      "pre_grok_or_pre_rescue_classification": "MIXED_CONSENSUS",
+      "post_rescue_resolution_classification": "MIXED_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "大島 洋平",
+      "pre_grok_or_pre_rescue_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "友杉 篤輝",
+      "pre_grok_or_pre_rescue_classification": "METRIC_CONSTRUCT_CONFLICT",
+      "post_rescue_resolution_classification": "METRIC_CONSTRUCT_CONFLICT_REMAINS"
+    },
+    {
+      "player": "外崎 修汰",
+      "pre_grok_or_pre_rescue_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "矢野 雅哉",
+      "pre_grok_or_pre_rescue_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "野間 峻祥",
+      "pre_grok_or_pre_rescue_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "中村 悠平",
+      "pre_grok_or_pre_rescue_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "林 琢真",
+      "pre_grok_or_pre_rescue_classification": "METRIC_CONSTRUCT_CONFLICT",
+      "post_rescue_resolution_classification": "METRIC_CONSTRUCT_CONFLICT_REMAINS"
+    },
+    {
+      "player": "梶原 昂希",
+      "pre_grok_or_pre_rescue_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "梅野 隆太郎",
+      "pre_grok_or_pre_rescue_classification": "MIXED_CONSENSUS",
+      "post_rescue_resolution_classification": "MIXED_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "筒香 嘉智",
+      "pre_grok_or_pre_rescue_classification": "NOT_PREVIOUSLY_IN_GROK_X_V2_SCOPE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "モンテロ",
+      "pre_grok_or_pre_rescue_classification": "NOT_PREVIOUSLY_IN_GROK_X_V2_SCOPE",
+      "post_rescue_resolution_classification": "RESOLVED_CURRENT_PHYSICAL_MEASUREMENT"
+    },
+    {
+      "player": "秋山 翔吾",
+      "pre_grok_or_pre_rescue_classification": "NOT_PREVIOUSLY_IN_GROK_X_V2_SCOPE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "ポランコ",
+      "pre_grok_or_pre_rescue_classification": "NOT_PREVIOUSLY_IN_GROK_X_V2_SCOPE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "サンタナ",
+      "pre_grok_or_pre_rescue_classification": "NOT_PREVIOUSLY_IN_GROK_X_V2_SCOPE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    },
+    {
+      "player": "奈良間 大己",
+      "pre_grok_or_pre_rescue_classification": "NOT_PREVIOUSLY_IN_GROK_X_V2_SCOPE",
+      "post_rescue_resolution_classification": "INSUFFICIENT_EVIDENCE_REMAINS"
+    }
+  ],
+  "resolution_counts": {
+    "INSUFFICIENT_EVIDENCE_REMAINS": 13,
+    "MIXED_EVIDENCE_REMAINS": 2,
+    "METRIC_CONSTRUCT_CONFLICT_REMAINS": 2,
+    "RESOLVED_CURRENT_PHYSICAL_MEASUREMENT": 1
+  },
+  "video_queue_count": 17,
+  "boundary": {
+    "no_final_numeric_rating": true,
+    "no_video_collected_or_analyzed": true,
+    "no_powerpro_residual_decision_input": true,
+    "no_cross_metric_t90_conversion": true,
+    "no_fixed_age_decay": true
+  }
+}

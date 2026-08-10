@@ -1,0 +1,94 @@
+{
+  "schema_version": "speed-2026-final-targeted-independent-qa/v1.0.0",
+  "as_of": "2026-08-11",
+  "reviewer": "independent QA agent",
+  "read_only_review": true,
+  "overall_verdict": "PASS",
+  "scope": {
+    "active_players": 18,
+    "new6_grok_x_players": 6,
+    "baseline_players": 100
+  },
+  "checks": [
+    {
+      "id": "scope_18_only",
+      "passed": true,
+      "detail": "18人・重複なし・指定外なし。"
+    },
+    {
+      "id": "new6_x_scope_and_receipts",
+      "passed": true,
+      "detail": "新6人限定、54 query plan / 54 receipt。"
+    },
+    {
+      "id": "x_post_traceability",
+      "passed": true,
+      "detail": "38/38で実X post ID・URL・receiptリンク・最小抜粋あり。"
+    },
+    {
+      "id": "duplicate_control",
+      "passed": true,
+      "detail": "X post重複なし、accepted同一origin重複なし、既存SNS/Grok ledgerとのpost ID重複なし。same-event / same-origin候補は拒否済み。"
+    },
+    {
+      "id": "strict_x_consensus",
+      "passed": true,
+      "detail": "新6人は独立qualifying Xが全員0で、2件未満を解決扱いにしていない。"
+    },
+    {
+      "id": "excluded_constructs",
+      "passed": true,
+      "detail": "盗塁技術・走塁判断・ゲーム査定は受理根拠に使われていない。"
+    },
+    {
+      "id": "current_vs_historical",
+      "passed": true,
+      "detail": "current physical は18人中モンテロの2024 direct T90 1件のみ。30m/50m current確認は0。"
+    },
+    {
+      "id": "tsutsugo_provenance_boundary",
+      "passed": true,
+      "detail": "筒香2022 T90=4.20はCONFIRMED_PRIMARY、historical 2022と明示。baseline anchor bankは上書きせずseparate-provenance correction。"
+    },
+    {
+      "id": "no_forbidden_inference",
+      "passed": true,
+      "detail": "T90換算、数値rating、固定年齢減衰、PowerPro residualの決定入力なし。"
+    },
+    {
+      "id": "baseline_100_preserved",
+      "passed": true,
+      "detail": "100 baseline player objectsは完全一致。"
+    },
+    {
+      "id": "overlays",
+      "passed": true,
+      "detail": "active 18件 + retained Grok-X v2 7件。"
+    },
+    {
+      "id": "packet_and_resolution_consistency",
+      "passed": true,
+      "detail": "18 packet、CSV 18行、分類一致。"
+    },
+    {
+      "id": "video_queue_consistency",
+      "passed": true,
+      "detail": "未解決3分類のみ17人、全行NO、各人に具体的video questionあり。"
+    },
+    {
+      "id": "source_hash_integrity",
+      "passed": true,
+      "detail": "packet記載の全入力SHAが現ファイルと一致。"
+    }
+  ],
+  "summary": {
+    "resolution_counts": {
+      "INSUFFICIENT_EVIDENCE_REMAINS": 13,
+      "MIXED_EVIDENCE_REMAINS": 2,
+      "METRIC_CONSTRUCT_CONFLICT_REMAINS": 2,
+      "RESOLVED_CURRENT_PHYSICAL_MEASUREMENT": 1
+    },
+    "video_queue_count": 17
+  },
+  "review_boundary": "Read-only independent QA. This record transcribes the review verdict; it does not alter evidence or classifications."
+}

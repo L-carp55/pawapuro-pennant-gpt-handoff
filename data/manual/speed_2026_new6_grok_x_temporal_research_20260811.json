@@ -1,0 +1,3956 @@
+{
+  "schema_version": "speed-2026-new6-grok-x-temporal-research/v1.1.0",
+  "as_of": "2026-08-11",
+  "provenance": "GROK_X_SUPPLEMENT",
+  "scope": {
+    "target_players": [
+      "筒香嘉智",
+      "モンテロ",
+      "秋山翔吾",
+      "ポランコ",
+      "サンタナ",
+      "奈良間大己"
+    ],
+    "scope_check": "PASS: only fixed new six in query plan, receipts, raw candidates, reviews, and player results.",
+    "prohibited": [
+      "outside fixed six players",
+      "old twelve-player re-search",
+      "PowerPro residual-driven search or classification",
+      "numeric speed rating generation"
+    ]
+  },
+  "method": {
+    "primary_discovery": "grok-x MCP x_search",
+    "retrieval_method": "mcp__grok_x__x_search",
+    "query_count_contract": "planned_query_count equals executed_query_count; all raw direct-MCP responses are retained.",
+    "temporal_rule": "2026 > 2025 > 2024. X supplies ordinal temporal constraints only; no medical inference or numeric rating is generated.",
+    "strict_rule": "Only independent accepted sources with qualifies_for_strict_consensus=true count. None of the accepted MODERATE posts qualifies."
+  },
+  "query_plan": [
+    {
+      "receipt_id": "N6GX001",
+      "player": "筒香嘉智",
+      "query_kind": "current_2026",
+      "semantic_theme": "current_2026",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、2026年の現在の足の速さ、直線速度、加速、全力疾走を具体的に観察した投稿を探してください。対象年は2026年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。"
+    },
+    {
+      "receipt_id": "N6GX002",
+      "player": "筒香嘉智",
+      "query_kind": "current_2025",
+      "semantic_theme": "current_2025",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、2025年時点の足の速さ、直線速度、加速、全力疾走を具体的に観察した投稿を探してください。対象年は2025年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。"
+    },
+    {
+      "receipt_id": "N6GX003",
+      "player": "筒香嘉智",
+      "query_kind": "current_2024",
+      "semantic_theme": "current_2024",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、2024年時点の足の速さ、直線速度、加速、全力疾走を具体的に観察した投稿を探してください。対象年は2024年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。"
+    },
+    {
+      "receipt_id": "N6GX004",
+      "player": "筒香嘉智",
+      "query_kind": "decline",
+      "semantic_theme": "decline",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、以前・若い頃・故障前と比べて足が遅くなった、スピードが落ちた、加速が落ちたという直接の比較観察を探してください。優先期間は2026年、次に2025年、次に2024年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。"
+    },
+    {
+      "receipt_id": "N6GX005",
+      "player": "筒香嘉智",
+      "query_kind": "recovery",
+      "semantic_theme": "recovery",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、故障後・復帰後に足やスピードが戻った又は戻っていないという、投稿者が直接述べた走る速さの観察を探してください。優先期間は2026年、次に2025年、次に2024年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。"
+    },
+    {
+      "receipt_id": "N6GX006",
+      "player": "筒香嘉智",
+      "query_kind": "injury_before_after",
+      "semantic_theme": "injury_before_after",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、怪我前後で全力疾走、直線速度、加速、足の速さが変わったかを具体的に比較した投稿を探してください。優先期間は2026年、次に2025年、次に2024年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。"
+    },
+    {
+      "receipt_id": "N6GX007",
+      "player": "筒香嘉智",
+      "query_kind": "all_out_linear",
+      "semantic_theme": "all_out_linear",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、一塁まで等の結果だけでなく、全力疾走、直線での速さ、加速そのものを具体的に見た投稿を探してください。優先期間は2026年、次に2025年、次に2024年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。"
+    },
+    {
+      "receipt_id": "N6GX008",
+      "player": "筒香嘉智",
+      "query_kind": "measurement_comparison_broad",
+      "semantic_theme": "measurement_comparison",
+      "query": "Xで「筒香嘉智 50m 足」「筒香嘉智 スプリント 走力」「筒香嘉智 過去 足 速い 遅い」を検索。2026、2025、2024を優先。実在する投稿だけを、post URL、投稿者、日時、本文とともに返す。盗塁、走塁判断、ゲーム査定、記事転載は不要。"
+    },
+    {
+      "receipt_id": "N6GX009",
+      "player": "筒香嘉智",
+      "query_kind": "measurement_comparison",
+      "semantic_theme": "measurement_comparison",
+      "query": "Xで「筒香嘉智 50m 足」「筒香嘉智 スプリント 走力」「筒香嘉智 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX010",
+      "player": "筒香嘉智",
+      "query_kind": "first_step_acceleration",
+      "semantic_theme": "first_step_acceleration",
+      "query": "Xで「筒香嘉智 一歩目 初速 加速 足」を検索。2024–2026を優先し、一歩目・初速・加速・直線速度を身体的な速さとして直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁技術、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX011",
+      "player": "モンテロ",
+      "query_kind": "current_2026",
+      "semantic_theme": "current_2026",
+      "query": "Xで「モンテロ 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX012",
+      "player": "モンテロ",
+      "query_kind": "current_2025",
+      "semantic_theme": "current_2025",
+      "query": "Xで「モンテロ 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX013",
+      "player": "モンテロ",
+      "query_kind": "current_2024",
+      "semantic_theme": "current_2024",
+      "query": "Xで「モンテロ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX014",
+      "player": "モンテロ",
+      "query_kind": "decline",
+      "semantic_theme": "decline",
+      "query": "Xで「モンテロ 以前 より 足 遅い」「モンテロ スピード 落ちた」を検索。2024–2026を優先し、過去と現在の身体的な走る速さを直接比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX015",
+      "player": "モンテロ",
+      "query_kind": "recovery",
+      "semantic_theme": "recovery",
+      "query": "Xで「モンテロ 足 戻った」「モンテロ スピード 戻った」を検索。2024–2026を優先し、故障後・復帰後の身体的な走る速さの回復／未回復を投稿者が直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX016",
+      "player": "モンテロ",
+      "query_kind": "injury_before_after",
+      "semantic_theme": "injury_before_after",
+      "query": "Xで「モンテロ 故障 足 スピード 全力疾走」を検索。2024–2026を優先し、怪我前後の身体的な足の速さ、加速、直線速度の比較を直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX017",
+      "player": "モンテロ",
+      "query_kind": "all_out_linear",
+      "semantic_theme": "all_out_linear",
+      "query": "Xで「モンテロ 全力疾走 足」「モンテロ 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX018",
+      "player": "モンテロ",
+      "query_kind": "current_vs_past",
+      "semantic_theme": "current_vs_past",
+      "query": "Xで「モンテロ 過去 現在 足」「モンテロ 若い頃 足 現在」を検索。2024–2026を優先し、過去と現在の身体的な足の速さを比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX019",
+      "player": "モンテロ",
+      "query_kind": "measurement_comparison",
+      "semantic_theme": "measurement_comparison",
+      "query": "Xで「モンテロ 50m 足」「モンテロ スプリント 走力」「モンテロ 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX020",
+      "player": "モンテロ",
+      "query_kind": "first_step_acceleration",
+      "semantic_theme": "first_step_acceleration",
+      "query": "Xで「モンテロ 一歩目 初速 加速 足」を検索。2024–2026を優先し、一歩目・初速・加速・直線速度を身体的な速さとして直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁技術、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX021",
+      "player": "秋山翔吾",
+      "query_kind": "current_2026",
+      "semantic_theme": "current_2026",
+      "query": "Xで「秋山翔吾 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX022",
+      "player": "秋山翔吾",
+      "query_kind": "current_2025",
+      "semantic_theme": "current_2025",
+      "query": "Xで「秋山翔吾 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX023",
+      "player": "秋山翔吾",
+      "query_kind": "current_2024",
+      "semantic_theme": "current_2024",
+      "query": "Xで「秋山翔吾 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX024",
+      "player": "秋山翔吾",
+      "query_kind": "decline",
+      "semantic_theme": "decline",
+      "query": "Xで「秋山翔吾 以前 より 足 遅い」「秋山翔吾 スピード 落ちた」を検索。2024–2026を優先し、過去と現在の身体的な走る速さを直接比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX025",
+      "player": "秋山翔吾",
+      "query_kind": "recovery",
+      "semantic_theme": "recovery",
+      "query": "Xで「秋山翔吾 足 戻った」「秋山翔吾 スピード 戻った」を検索。2024–2026を優先し、故障後・復帰後の身体的な走る速さの回復／未回復を投稿者が直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX026",
+      "player": "秋山翔吾",
+      "query_kind": "injury_before_after",
+      "semantic_theme": "injury_before_after",
+      "query": "Xで「秋山翔吾 故障 足 スピード 全力疾走」を検索。2024–2026を優先し、怪我前後の身体的な足の速さ、加速、直線速度の比較を直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX027",
+      "player": "秋山翔吾",
+      "query_kind": "all_out_linear",
+      "semantic_theme": "all_out_linear",
+      "query": "Xで「秋山翔吾 全力疾走 足」「秋山翔吾 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX028",
+      "player": "秋山翔吾",
+      "query_kind": "current_vs_past",
+      "semantic_theme": "current_vs_past",
+      "query": "Xで「秋山翔吾 過去 現在 足」「秋山翔吾 若い頃 足 現在」を検索。2024–2026を優先し、過去と現在の身体的な足の速さを比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX029",
+      "player": "秋山翔吾",
+      "query_kind": "measurement_comparison",
+      "semantic_theme": "measurement_comparison",
+      "query": "Xで「秋山翔吾 50m 足」「秋山翔吾 スプリント 走力」「秋山翔吾 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX030",
+      "player": "秋山翔吾",
+      "query_kind": "first_step_acceleration",
+      "semantic_theme": "first_step_acceleration",
+      "query": "Xで「秋山翔吾 一歩目 初速 加速 足」を検索。2024–2026を優先し、一歩目・初速・加速・直線速度を身体的な速さとして直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁技術、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX031",
+      "player": "ポランコ",
+      "query_kind": "current_2026",
+      "semantic_theme": "current_2026",
+      "query": "Xで「ポランコ 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX032",
+      "player": "ポランコ",
+      "query_kind": "current_2025",
+      "semantic_theme": "current_2025",
+      "query": "Xで「ポランコ 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX033",
+      "player": "ポランコ",
+      "query_kind": "current_2024",
+      "semantic_theme": "current_2024",
+      "query": "Xで「ポランコ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX034",
+      "player": "ポランコ",
+      "query_kind": "decline",
+      "semantic_theme": "decline",
+      "query": "Xで「ポランコ 以前 より 足 遅い」「ポランコ スピード 落ちた」を検索。2024–2026を優先し、過去と現在の身体的な走る速さを直接比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX035",
+      "player": "ポランコ",
+      "query_kind": "recovery",
+      "semantic_theme": "recovery",
+      "query": "Xで「ポランコ 足 戻った」「ポランコ スピード 戻った」を検索。2024–2026を優先し、故障後・復帰後の身体的な走る速さの回復／未回復を投稿者が直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX036",
+      "player": "ポランコ",
+      "query_kind": "injury_before_after",
+      "semantic_theme": "injury_before_after",
+      "query": "Xで「ポランコ 故障 足 スピード 全力疾走」を検索。2024–2026を優先し、怪我前後の身体的な足の速さ、加速、直線速度の比較を直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX037",
+      "player": "ポランコ",
+      "query_kind": "all_out_linear",
+      "semantic_theme": "all_out_linear",
+      "query": "Xで「ポランコ 全力疾走 足」「ポランコ 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX039",
+      "player": "ポランコ",
+      "query_kind": "measurement_comparison",
+      "semantic_theme": "measurement_comparison",
+      "query": "Xで「ポランコ 50m 足」「ポランコ スプリント 走力」「ポランコ 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX041",
+      "player": "サンタナ",
+      "query_kind": "current_2026",
+      "semantic_theme": "current_2026",
+      "query": "Xで「サンタナ 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX042",
+      "player": "サンタナ",
+      "query_kind": "current_2025",
+      "semantic_theme": "current_2025",
+      "query": "Xで「サンタナ 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX043",
+      "player": "サンタナ",
+      "query_kind": "current_2024",
+      "semantic_theme": "current_2024",
+      "query": "Xで「サンタナ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX044",
+      "player": "サンタナ",
+      "query_kind": "decline",
+      "semantic_theme": "decline",
+      "query": "Xで「サンタナ 以前 より 足 遅い」「サンタナ スピード 落ちた」を検索。2024–2026を優先し、過去と現在の身体的な走る速さを直接比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX045",
+      "player": "サンタナ",
+      "query_kind": "recovery",
+      "semantic_theme": "recovery",
+      "query": "Xで「サンタナ 足 戻った」「サンタナ スピード 戻った」を検索。2024–2026を優先し、故障後・復帰後の身体的な走る速さの回復／未回復を投稿者が直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX046",
+      "player": "サンタナ",
+      "query_kind": "injury_before_after",
+      "semantic_theme": "injury_before_after",
+      "query": "Xで「サンタナ 故障 足 スピード 全力疾走」を検索。2024–2026を優先し、怪我前後の身体的な足の速さ、加速、直線速度の比較を直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX047",
+      "player": "サンタナ",
+      "query_kind": "all_out_linear",
+      "semantic_theme": "all_out_linear",
+      "query": "Xで「サンタナ 全力疾走 足」「サンタナ 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX049",
+      "player": "サンタナ",
+      "query_kind": "measurement_comparison",
+      "semantic_theme": "measurement_comparison",
+      "query": "Xで「サンタナ 50m 足」「サンタナ スプリント 走力」「サンタナ 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX051",
+      "player": "奈良間大己",
+      "query_kind": "current_2026",
+      "semantic_theme": "current_2026",
+      "query": "Xで「奈良間大己 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX052",
+      "player": "奈良間大己",
+      "query_kind": "current_2025",
+      "semantic_theme": "current_2025",
+      "query": "Xで「奈良間大己 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX053",
+      "player": "奈良間大己",
+      "query_kind": "current_2024",
+      "semantic_theme": "current_2024",
+      "query": "Xで「奈良間大己 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX054",
+      "player": "奈良間大己",
+      "query_kind": "decline",
+      "semantic_theme": "decline",
+      "query": "Xで「奈良間大己 以前 より 足 遅い」「奈良間大己 スピード 落ちた」を検索。2024–2026を優先し、過去と現在の身体的な走る速さを直接比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX055",
+      "player": "奈良間大己",
+      "query_kind": "recovery",
+      "semantic_theme": "recovery",
+      "query": "Xで「奈良間大己 足 戻った」「奈良間大己 スピード 戻った」を検索。2024–2026を優先し、故障後・復帰後の身体的な走る速さの回復／未回復を投稿者が直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX056",
+      "player": "奈良間大己",
+      "query_kind": "injury_before_after",
+      "semantic_theme": "injury_before_after",
+      "query": "Xで「奈良間大己 故障 足 スピード 全力疾走」を検索。2024–2026を優先し、怪我前後の身体的な足の速さ、加速、直線速度の比較を直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX057",
+      "player": "奈良間大己",
+      "query_kind": "all_out_linear",
+      "semantic_theme": "all_out_linear",
+      "query": "Xで「奈良間大己 全力疾走 足」「奈良間大己 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    },
+    {
+      "receipt_id": "N6GX059",
+      "player": "奈良間大己",
+      "query_kind": "measurement_comparison",
+      "semantic_theme": "measurement_comparison",
+      "query": "Xで「奈良間大己 50m 足」「奈良間大己 スプリント 走力」「奈良間大己 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。"
+    }
+  ],
+  "query_receipts": [
+    {
+      "player": "筒香嘉智",
+      "query_kind": "current_2026",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、2026年の現在の足の速さ、直線速度、加速、全力疾走を具体的に観察した投稿を探してください。対象年は2026年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。",
+      "receipt_id": "N6GX001",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:03:00.000Z",
+      "retrieved_at": "2026-08-10T17:03:00.000Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Nothing found.\n\n(cost: $0.0176)"
+          }
+        ]
+      },
+      "raw_response_text": "Nothing found.\n\n(cost: $0.0176)",
+      "semantic_theme": "current_2026"
+    },
+    {
+      "player": "筒香嘉智",
+      "query_kind": "current_2025",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、2025年時点の足の速さ、直線速度、加速、全力疾走を具体的に観察した投稿を探してください。対象年は2025年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。",
+      "receipt_id": "N6GX002",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:10:15.329Z",
+      "retrieved_at": "2026-08-10T17:10:32.300Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Nothing found\n\n(cost: $0.0160)"
+          }
+        ]
+      },
+      "raw_response_text": "Nothing found\n\n(cost: $0.0160)",
+      "semantic_theme": "current_2025"
+    },
+    {
+      "player": "筒香嘉智",
+      "query_kind": "current_2024",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、2024年時点の足の速さ、直線速度、加速、全力疾走を具体的に観察した投稿を探してください。対象年は2024年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。",
+      "receipt_id": "N6GX003",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:10:15.943Z",
+      "retrieved_at": "2026-08-10T17:10:48.411Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Nothing found.\n\n(cost: $0.0187)"
+          }
+        ]
+      },
+      "raw_response_text": "Nothing found.\n\n(cost: $0.0187)",
+      "semantic_theme": "current_2024"
+    },
+    {
+      "player": "筒香嘉智",
+      "query_kind": "decline",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、以前・若い頃・故障前と比べて足が遅くなった、スピードが落ちた、加速が落ちたという直接の比較観察を探してください。優先期間は2026年、次に2025年、次に2024年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。",
+      "receipt_id": "N6GX004",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:10:15.943Z",
+      "retrieved_at": "2026-08-10T17:11:05.176Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Nothing found.\n\n(cost: $0.0364)"
+          }
+        ]
+      },
+      "raw_response_text": "Nothing found.\n\n(cost: $0.0364)",
+      "semantic_theme": "decline"
+    },
+    {
+      "player": "筒香嘉智",
+      "query_kind": "recovery",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、故障後・復帰後に足やスピードが戻った又は戻っていないという、投稿者が直接述べた走る速さの観察を探してください。優先期間は2026年、次に2025年、次に2024年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。",
+      "receipt_id": "N6GX005",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:10:15.943Z",
+      "retrieved_at": "2026-08-10T17:11:25.898Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Nothing found\n\n(cost: $0.0292)"
+          }
+        ]
+      },
+      "raw_response_text": "Nothing found\n\n(cost: $0.0292)",
+      "semantic_theme": "recovery"
+    },
+    {
+      "player": "筒香嘉智",
+      "query_kind": "injury_before_after",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、怪我前後で全力疾走、直線速度、加速、足の速さが変わったかを具体的に比較した投稿を探してください。優先期間は2026年、次に2025年、次に2024年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。",
+      "receipt_id": "N6GX006",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:10:15.943Z",
+      "retrieved_at": "2026-08-10T17:11:42.375Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Nothing found.\n\n(cost: $0.0357)"
+          }
+        ]
+      },
+      "raw_response_text": "Nothing found.\n\n(cost: $0.0357)",
+      "semantic_theme": "injury_before_after"
+    },
+    {
+      "player": "筒香嘉智",
+      "query_kind": "all_out_linear",
+      "query": "X（Twitter）で、野球選手「筒香嘉智」について、一塁まで等の結果だけでなく、全力疾走、直線での速さ、加速そのものを具体的に見た投稿を探してください。優先期間は2026年、次に2025年、次に2024年です。 野球で一歩目から約90ftまでを走る純粋な身体的running abilityへの直接言及だけを返してください。盗塁技術・盗塁数、走塁判断・スタート技術、内野安打・三塁打だけ、守備範囲、バント後一塁到達、ゲーム査定、記事転載・bot・集約投稿は除外してください。各結果には実在するx.com/status URL、@handle、投稿日時、必要最小限の本文を付け、該当がなければNothing foundのみ返してください。",
+      "receipt_id": "N6GX007",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:10:15.943Z",
+      "retrieved_at": "2026-08-10T17:12:03.826Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Nothing found.\n\n(cost: $0.0332)"
+          }
+        ]
+      },
+      "raw_response_text": "Nothing found.\n\n(cost: $0.0332)",
+      "semantic_theme": "all_out_linear"
+    },
+    {
+      "player": "筒香嘉智",
+      "query_kind": "measurement_comparison_broad",
+      "query": "Xで「筒香嘉智 50m 足」「筒香嘉智 スプリント 走力」「筒香嘉智 過去 足 速い 遅い」を検索。2026、2025、2024を優先。実在する投稿だけを、post URL、投稿者、日時、本文とともに返す。盗塁、走塁判断、ゲーム査定、記事転載は不要。",
+      "receipt_id": "N6GX008",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:04:00.000Z",
+      "retrieved_at": "2026-08-10T17:04:00.000Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Posts found (prioritizing 2024–2026; only relevant original posts matching criteria):**\n\n- **@tracking_now**  \n  Wed, 24 Jun 2026 10:28:12 GMT  \n  宮﨑敏郎、佐野恵太、筒香嘉智という『打撃力は十分だが足の遅い中軸』の時代は終わった。  \n  https://x.com/tracking_now/status/2069729296177144023\n\n- **@kmkmkzg**  \n  Tue, 17 Jun 2025 11:19:22 GMT  \n  筒香嘉智さん ・速球打てません ・逃げる球打てません ・守備下手です ・足遅いです  \n  https://x.com/kmkmkzg/status/1934933887966388609\n\n- **@gudaksantha**  \n  Sat, 11 Jan 2025 09:52:46 GMT  \n  横浜 筒香嘉智 ... 基本的にでかくて足が遅い(遅そうな人)が好きです  \n  https://x.com/gudaksantha/status/1878017197827670025\n\n(No other matching posts found for the exact search terms in 2024–2026.)\n\n(cost: $0.0318)"
+          }
+        ]
+      },
+      "raw_response_text": "**Posts found (prioritizing 2024–2026; only relevant original posts matching criteria):**\n\n- **@tracking_now**  \n  Wed, 24 Jun 2026 10:28:12 GMT  \n  宮﨑敏郎、佐野恵太、筒香嘉智という『打撃力は十分だが足の遅い中軸』の時代は終わった。  \n  https://x.com/tracking_now/status/2069729296177144023\n\n- **@kmkmkzg**  \n  Tue, 17 Jun 2025 11:19:22 GMT  \n  筒香嘉智さん ・速球打てません ・逃げる球打てません ・守備下手です ・足遅いです  \n  https://x.com/kmkmkzg/status/1934933887966388609\n\n- **@gudaksantha**  \n  Sat, 11 Jan 2025 09:52:46 GMT  \n  横浜 筒香嘉智 ... 基本的にでかくて足が遅い(遅そうな人)が好きです  \n  https://x.com/gudaksantha/status/1878017197827670025\n\n(No other matching posts found for the exact search terms in 2024–2026.)\n\n(cost: $0.0318)",
+      "semantic_theme": "measurement_comparison"
+    },
+    {
+      "player": "筒香嘉智",
+      "query_kind": "measurement_comparison",
+      "query": "Xで「筒香嘉智 50m 足」「筒香嘉智 スプリント 走力」「筒香嘉智 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX009",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:16:03.441Z",
+      "retrieved_at": "2026-08-10T17:16:26.983Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No posts found matching all criteria** (specific physical running speed mentions like 50m/sprint/足速い・遅い for 筒香嘉智, 2024–2026 priority, excluding 盗塁/走塁/守備/ゲーム査定/記事転載). \n\nThe only two relevant posts returned by the search (both referencing physical \"slow feet\" in non-excluded contexts) are below:\n\n- **@tracking_now**  \n  Wed, 24 Jun 2026 10:28:12 GMT  \n  宮﨑敏郎、佐野恵太、筒香嘉智という『打撃力は十分だが足の遅い中軸』の時代は終わった。  \n  これからは“相川チルドレン”候補生の度会隆輝や勝又温史、梶原昂希のように打力と機動力を併せ持つ選手の時代と言える。  \n  フロントは監督の妊娠・出産のサポートに全力を。  \n  #相川亮二監督の懐妊を希望します  \n  https://x.com/tracking_now/status/2069729296177144023\n\n- **@gudaksantha**  \n  Sat, 11 Jan 2025 09:52:46 GMT  \n  パリーグ  \n  福岡 柳田悠岐  \n  日公 郡司裕也,山﨑福也  \n  千葉 角中勝也  \n  楽天 安田悠馬  \n  オリ 山岡泰輔  \n  西武 滝澤夏央,栗山巧  \n\n  セリーグ  \n  巨人 大城卓三  \n  阪神 岩崎優  \n  横浜 筒香嘉智  \n  広島 會澤翼  \n  ヤク 山田哲人  \n  中日 大野雄大,根尾昂  \n\n  基本的にでかくて足が遅い(遅そうな人)が好きです  \n   #12球団で好きな選手  \n  https://x.com/gudaksantha/status/1878017197827670025\n\n(cost: $0.0212)"
+          }
+        ]
+      },
+      "raw_response_text": "**No posts found matching all criteria** (specific physical running speed mentions like 50m/sprint/足速い・遅い for 筒香嘉智, 2024–2026 priority, excluding 盗塁/走塁/守備/ゲーム査定/記事転載). \n\nThe only two relevant posts returned by the search (both referencing physical \"slow feet\" in non-excluded contexts) are below:\n\n- **@tracking_now**  \n  Wed, 24 Jun 2026 10:28:12 GMT  \n  宮﨑敏郎、佐野恵太、筒香嘉智という『打撃力は十分だが足の遅い中軸』の時代は終わった。  \n  これからは“相川チルドレン”候補生の度会隆輝や勝又温史、梶原昂希のように打力と機動力を併せ持つ選手の時代と言える。  \n  フロントは監督の妊娠・出産のサポートに全力を。  \n  #相川亮二監督の懐妊を希望します  \n  https://x.com/tracking_now/status/2069729296177144023\n\n- **@gudaksantha**  \n  Sat, 11 Jan 2025 09:52:46 GMT  \n  パリーグ  \n  福岡 柳田悠岐  \n  日公 郡司裕也,山﨑福也  \n  千葉 角中勝也  \n  楽天 安田悠馬  \n  オリ 山岡泰輔  \n  西武 滝澤夏央,栗山巧  \n\n  セリーグ  \n  巨人 大城卓三  \n  阪神 岩崎優  \n  横浜 筒香嘉智  \n  広島 會澤翼  \n  ヤク 山田哲人  \n  中日 大野雄大,根尾昂  \n\n  基本的にでかくて足が遅い(遅そうな人)が好きです  \n   #12球団で好きな選手  \n  https://x.com/gudaksantha/status/1878017197827670025\n\n(cost: $0.0212)",
+      "semantic_theme": "measurement_comparison"
+    },
+    {
+      "player": "筒香嘉智",
+      "query_kind": "first_step_acceleration",
+      "query": "Xで「筒香嘉智 一歩目 初速 加速 足」を検索。2024–2026を優先し、一歩目・初速・加速・直線速度を身体的な速さとして直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁技術、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX010",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:16:03.441Z",
+      "retrieved_at": "2026-08-10T17:16:47.431Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No posts found matching the criteria.**\n\nNo real X posts from 2024–2026 directly stating 筒香嘉智’s physical speed (一歩目, 初速, 加速, or straight-line speed) were located via keyword search. Posts referencing “足速い” or “足の遅い” were either idiomatic, group-based, or did not meet the exact physical descriptors required. All other results were unrelated (idioms, articles, or excluded topics).\n\n(cost: $0.0220)"
+          }
+        ]
+      },
+      "raw_response_text": "**No posts found matching the criteria.**\n\nNo real X posts from 2024–2026 directly stating 筒香嘉智’s physical speed (一歩目, 初速, 加速, or straight-line speed) were located via keyword search. Posts referencing “足速い” or “足の遅い” were either idiomatic, group-based, or did not meet the exact physical descriptors required. All other results were unrelated (idioms, articles, or excluded topics).\n\n(cost: $0.0220)",
+      "semantic_theme": "first_step_acceleration"
+    },
+    {
+      "player": "モンテロ",
+      "query_kind": "current_2026",
+      "query": "Xで「モンテロ 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX011",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:16:03.441Z",
+      "retrieved_at": "2026-08-10T17:17:19.220Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Posts found (all from 2026, direct physical speed/sprint mentions only):**\n\n- **@CASEY80sFAN**  \n  Thu, 06 Aug 2026 10:25:31 GMT  \n  なんかアナウンサーの人たちモンテロさんの足が遅いと思っているようだがその勘違いは見た目？走りだしたらそんなに遅くはない。  \n  https://x.com/CASEY80sFAN/status/2085311299387527235\n\n- **@cto19s**  \n  Sun, 09 Aug 2026 10:20:44 GMT  \n  最近モンテロの全力疾走が見れない  \n  https://x.com/cto19s/status/2086397259948884200\n\n- **@CARPLOVE896692**  \n  Fri, 07 Aug 2026 11:42:42 GMT  \n  モンテロよう走るわ日々の全力疾走があるから昨日のもそんな責める気になれない  \n  https://x.com/CARPLOVE896692/status/2085693109812502839\n\n(No other matching posts found within the criteria.)\n\n(cost: $0.0314)"
+          }
+        ]
+      },
+      "raw_response_text": "**Posts found (all from 2026, direct physical speed/sprint mentions only):**\n\n- **@CASEY80sFAN**  \n  Thu, 06 Aug 2026 10:25:31 GMT  \n  なんかアナウンサーの人たちモンテロさんの足が遅いと思っているようだがその勘違いは見た目？走りだしたらそんなに遅くはない。  \n  https://x.com/CASEY80sFAN/status/2085311299387527235\n\n- **@cto19s**  \n  Sun, 09 Aug 2026 10:20:44 GMT  \n  最近モンテロの全力疾走が見れない  \n  https://x.com/cto19s/status/2086397259948884200\n\n- **@CARPLOVE896692**  \n  Fri, 07 Aug 2026 11:42:42 GMT  \n  モンテロよう走るわ日々の全力疾走があるから昨日のもそんな責める気になれない  \n  https://x.com/CARPLOVE896692/status/2085693109812502839\n\n(No other matching posts found within the criteria.)\n\n(cost: $0.0314)",
+      "semantic_theme": "current_2026"
+    },
+    {
+      "player": "モンテロ",
+      "query_kind": "current_2025",
+      "query": "Xで「モンテロ 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX012",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:17:44.848Z",
+      "retrieved_at": "2026-08-10T17:18:11.990Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Relevant 2025 posts only (filtered for direct physical mentions of foot speed / full sprint; baserunning judgment, defense, etc. excluded):**\n\n- **@gen_20130806**  \n  Tue, 19 Sep 2025 12:07:02 GMT  \n  惜しかったーー！モンテロさんの全力疾走でもぎ取ったチャンス、羽月さんの足で活かしたかったですね。  \n  https://x.com/gen_20130806/status/1969010342727422345\n\n- **@consommesecond**  \n  Sat, 13 Sep 2025 07:29:38 GMT  \n  モンテロの足遅い、は禁止ですよ　#carp  \n  https://x.com/consommesecond/status/1966766204095525315\n\n- **@kimutaku_lovely**  \n  Fri, 12 Sep 2025 11:29:14 GMT  \n  いやモンテロ足遅いよ💦  \n  https://x.com/kimutaku_lovely/status/1966464114445955456\n\n(No other matching posts found in the 2025 results that meet the exact criteria of direct physical speed/acceleration/sprint references.)\n\n(cost: $0.0202)"
+          }
+        ]
+      },
+      "raw_response_text": "**Relevant 2025 posts only (filtered for direct physical mentions of foot speed / full sprint; baserunning judgment, defense, etc. excluded):**\n\n- **@gen_20130806**  \n  Tue, 19 Sep 2025 12:07:02 GMT  \n  惜しかったーー！モンテロさんの全力疾走でもぎ取ったチャンス、羽月さんの足で活かしたかったですね。  \n  https://x.com/gen_20130806/status/1969010342727422345\n\n- **@consommesecond**  \n  Sat, 13 Sep 2025 07:29:38 GMT  \n  モンテロの足遅い、は禁止ですよ　#carp  \n  https://x.com/consommesecond/status/1966766204095525315\n\n- **@kimutaku_lovely**  \n  Fri, 12 Sep 2025 11:29:14 GMT  \n  いやモンテロ足遅いよ💦  \n  https://x.com/kimutaku_lovely/status/1966464114445955456\n\n(No other matching posts found in the 2025 results that meet the exact criteria of direct physical speed/acceleration/sprint references.)\n\n(cost: $0.0202)",
+      "semantic_theme": "current_2025"
+    },
+    {
+      "player": "モンテロ",
+      "query_kind": "current_2024",
+      "query": "Xで「モンテロ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX013",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:17:44.848Z",
+      "retrieved_at": "2026-08-10T17:18:41.926Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Posts found (2 relevant, both from 2024):**\n\n- **@8181yasoiti**  \n  Fri, 15 Nov 2024 04:49:00 GMT  \n  カープのストーブリーグ 九里がFA 佐野選手横浜残留 新助っ人モンテロ内野手加入 ハーン、ハッチの両投手と来季契約結ばず かな？ さて、モンテロがどんなもんか 足はあまり上げず、腕もタイミング取るのに大きく上げ下げしない コンパクトな構えから豪快なフォロースルー 足は遅い 一塁専ぽい  \n  https://x.com/8181yasoiti/status/1857284645177729488\n\n- **@ponkazu123**  \n  Fri, 08 Nov 2024 10:26:20 GMT  \n  広島モンテロ獲得なんや 百活躍せんけどな 守備下手やしほぼ1塁専、足遅い、k%高すぎ、パワーありそうやけどクアーズフィールド本拠地ですからねえ  \n  https://x.com/ponkazu123/status/1854832823552950754\n\nNo other posts matched the criteria (direct physical foot speed mentions only; 2024 priority; game mechanics/assessments excluded).\n\n(cost: $0.0244)"
+          }
+        ]
+      },
+      "raw_response_text": "**Posts found (2 relevant, both from 2024):**\n\n- **@8181yasoiti**  \n  Fri, 15 Nov 2024 04:49:00 GMT  \n  カープのストーブリーグ 九里がFA 佐野選手横浜残留 新助っ人モンテロ内野手加入 ハーン、ハッチの両投手と来季契約結ばず かな？ さて、モンテロがどんなもんか 足はあまり上げず、腕もタイミング取るのに大きく上げ下げしない コンパクトな構えから豪快なフォロースルー 足は遅い 一塁専ぽい  \n  https://x.com/8181yasoiti/status/1857284645177729488\n\n- **@ponkazu123**  \n  Fri, 08 Nov 2024 10:26:20 GMT  \n  広島モンテロ獲得なんや 百活躍せんけどな 守備下手やしほぼ1塁専、足遅い、k%高すぎ、パワーありそうやけどクアーズフィールド本拠地ですからねえ  \n  https://x.com/ponkazu123/status/1854832823552950754\n\nNo other posts matched the criteria (direct physical foot speed mentions only; 2024 priority; game mechanics/assessments excluded).\n\n(cost: $0.0244)",
+      "semantic_theme": "current_2024"
+    },
+    {
+      "player": "モンテロ",
+      "query_kind": "decline",
+      "query": "Xで「モンテロ 以前 より 足 遅い」「モンテロ スピード 落ちた」を検索。2024–2026を優先し、過去と現在の身体的な走る速さを直接比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX014",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:17:44.848Z",
+      "retrieved_at": "2026-08-10T17:19:13.087Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nSearches for the specified phrases and direct past-vs-current physical running speed comparisons (2024–2026 priority, excluding 盗塁/走塁/守備/査定/記事) returned zero results on X.\n\n(cost: $0.0142)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nSearches for the specified phrases and direct past-vs-current physical running speed comparisons (2024–2026 priority, excluding 盗塁/走塁/守備/査定/記事) returned zero results on X.\n\n(cost: $0.0142)",
+      "semantic_theme": "decline"
+    },
+    {
+      "player": "モンテロ",
+      "query_kind": "recovery",
+      "query": "Xで「モンテロ 足 戻った」「モンテロ スピード 戻った」を検索。2024–2026を優先し、故障後・復帰後の身体的な走る速さの回復／未回復を投稿者が直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX015",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:20:07.594Z",
+      "retrieved_at": "2026-08-10T17:20:24.058Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo real X posts from 2024–2026 were located via search that directly state (in the poster's own words) the physical recovery or non-recovery of Montero's running speed/foot speed after injury. All results were irrelevant (batting-order mentions, stolen bases, game assessments, article links, or unrelated).\n\n(cost: $0.0390)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo real X posts from 2024–2026 were located via search that directly state (in the poster's own words) the physical recovery or non-recovery of Montero's running speed/foot speed after injury. All results were irrelevant (batting-order mentions, stolen bases, game assessments, article links, or unrelated).\n\n(cost: $0.0390)",
+      "semantic_theme": "recovery"
+    },
+    {
+      "player": "モンテロ",
+      "query_kind": "injury_before_after",
+      "query": "Xで「モンテロ 故障 足 スピード 全力疾走」を検索。2024–2026を優先し、怪我前後の身体的な足の速さ、加速、直線速度の比較を直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX016",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:20:46.835Z",
+      "retrieved_at": "2026-08-10T17:21:13.245Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo X posts from 2024–2026 were located that directly compare Montero’s pre- and post-injury foot speed, acceleration, or straight-line velocity (e.g., “全力疾走” changes). All results were unrelated, speculative, or excluded per the rules (stolen bases, baserunning judgment, defense, etc.).\n\n(cost: $0.0170)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo X posts from 2024–2026 were located that directly compare Montero’s pre- and post-injury foot speed, acceleration, or straight-line velocity (e.g., “全力疾走” changes). All results were unrelated, speculative, or excluded per the rules (stolen bases, baserunning judgment, defense, etc.).\n\n(cost: $0.0170)",
+      "semantic_theme": "injury_before_after"
+    },
+    {
+      "player": "モンテロ",
+      "query_kind": "all_out_linear",
+      "query": "Xで「モンテロ 全力疾走 足」「モンテロ 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX017",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:21:21.851Z",
+      "retrieved_at": "2026-08-10T17:21:44.807Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No qualifying posts found.**\n\nNo real X posts from 2024–2026 match the strict criteria: concrete, direct observations of Montero’s full sprint, straight-line speed, or acceleration itself (excluding any mention of reaching first base, stolen bases, baserunning decisions, defense, game ratings, or reposts of articles). All returned results were either tangential, critical, defensive, or unrelated to the requested specifics.\n\n(cost: $0.0204)"
+          }
+        ]
+      },
+      "raw_response_text": "**No qualifying posts found.**\n\nNo real X posts from 2024–2026 match the strict criteria: concrete, direct observations of Montero’s full sprint, straight-line speed, or acceleration itself (excluding any mention of reaching first base, stolen bases, baserunning decisions, defense, game ratings, or reposts of articles). All returned results were either tangential, critical, defensive, or unrelated to the requested specifics.\n\n(cost: $0.0204)",
+      "semantic_theme": "all_out_linear"
+    },
+    {
+      "player": "モンテロ",
+      "query_kind": "current_vs_past",
+      "query": "Xで「モンテロ 過去 現在 足」「モンテロ 若い頃 足 現在」を検索。2024–2026を優先し、過去と現在の身体的な足の速さを比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX018",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:22:33.724Z",
+      "retrieved_at": "2026-08-10T17:22:59.206Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo real X posts from 2024–2026 were located that compare Montero’s past (younger days) vs. current physical foot/running speed while meeting all criteria. Posts about current speed impressions, stolen bases, defense, or reposts were excluded.\n\n(cost: $0.0285)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo real X posts from 2024–2026 were located that compare Montero’s past (younger days) vs. current physical foot/running speed while meeting all criteria. Posts about current speed impressions, stolen bases, defense, or reposts were excluded.\n\n(cost: $0.0285)",
+      "semantic_theme": "current_vs_past"
+    },
+    {
+      "player": "モンテロ",
+      "query_kind": "measurement_comparison",
+      "query": "Xで「モンテロ 50m 足」「モンテロ スプリント 走力」「モンテロ 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX019",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:23:13.874Z",
+      "retrieved_at": "2026-08-10T17:23:52.246Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**1 post found matching criteria:**\n\n- **@molcarp3150**  \n  **2026-06-10 12:31:10 GMT**  \n  **Text:** 小園の足でヒットが生まれるたび、カープの走力tier表みたいなポストで小園がモンテロ以下、持丸と同等だったの思い出して笑ってしまう 普通に節穴すぎるでしょ  \n  **URL:** https://x.com/molcarp3150/status/2064686810928955417\n\n(No other matching posts found in the specified searches for 2024–2026.)\n\n(cost: $0.0230)"
+          }
+        ]
+      },
+      "raw_response_text": "**1 post found matching criteria:**\n\n- **@molcarp3150**  \n  **2026-06-10 12:31:10 GMT**  \n  **Text:** 小園の足でヒットが生まれるたび、カープの走力tier表みたいなポストで小園がモンテロ以下、持丸と同等だったの思い出して笑ってしまう 普通に節穴すぎるでしょ  \n  **URL:** https://x.com/molcarp3150/status/2064686810928955417\n\n(No other matching posts found in the specified searches for 2024–2026.)\n\n(cost: $0.0230)",
+      "semantic_theme": "measurement_comparison"
+    },
+    {
+      "player": "モンテロ",
+      "query_kind": "first_step_acceleration",
+      "query": "Xで「モンテロ 一歩目 初速 加速 足」を検索。2024–2026を優先し、一歩目・初速・加速・直線速度を身体的な速さとして直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁技術、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX020",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:23:48.712Z",
+      "retrieved_at": "2026-08-10T17:24:11.546Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo real X posts from the tool results (2024–2026) directly discuss \"モンテロ\" in terms of 一歩目・初速・加速・直線速度 as physical speed attributes while meeting all criteria. The broader search returned unrelated mentions of \"足\" (mostly injuries, base-running outcomes, or game situations), which were excluded per instructions.\n\n(cost: $0.0291)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo real X posts from the tool results (2024–2026) directly discuss \"モンテロ\" in terms of 一歩目・初速・加速・直線速度 as physical speed attributes while meeting all criteria. The broader search returned unrelated mentions of \"足\" (mostly injuries, base-running outcomes, or game situations), which were excluded per instructions.\n\n(cost: $0.0291)",
+      "semantic_theme": "first_step_acceleration"
+    },
+    {
+      "player": "秋山翔吾",
+      "query_kind": "current_2026",
+      "query": "Xで「秋山翔吾 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX021",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:25:17.161Z",
+      "retrieved_at": "2026-08-10T17:25:45.589Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**1 post found (2026 only, direct physical speed mention only):**\n\n- **@a0i_shiba**  \n  **2026-07-31 11:26 GMT**  \n  秋山翔吾の全力疾走に涙出ました。  \n  なんか何見ても涙出る。  \n  https://x.com/a0i_shiba/status/2083152191985225957\n\nNo other posts matched the criteria (physical foot speed / linear speed / acceleration / full sprint of 秋山翔吾; all other results were excluded per rules).\n\n(cost: $0.0316)"
+          }
+        ]
+      },
+      "raw_response_text": "**1 post found (2026 only, direct physical speed mention only):**\n\n- **@a0i_shiba**  \n  **2026-07-31 11:26 GMT**  \n  秋山翔吾の全力疾走に涙出ました。  \n  なんか何見ても涙出る。  \n  https://x.com/a0i_shiba/status/2083152191985225957\n\nNo other posts matched the criteria (physical foot speed / linear speed / acceleration / full sprint of 秋山翔吾; all other results were excluded per rules).\n\n(cost: $0.0316)",
+      "semantic_theme": "current_2026"
+    },
+    {
+      "player": "秋山翔吾",
+      "query_kind": "current_2025",
+      "query": "Xで「秋山翔吾 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX022",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:25:52.129Z",
+      "retrieved_at": "2026-08-10T17:26:25.232Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No additional matching posts found beyond the two below that directly reference Akiyama Shogo's physical foot speed or full sprint (all others in results were excluded per criteria: no stolen bases, baserunning judgment, defense, game stats, or reprints).**\n\n- **@Yamamo408**  \n  秋山翔吾は怪我してたのかね？🤔 ほぼ全打席、ヒット性の当たりを飛ばしてるけどまだ14安打か😳 足もまだまだ速いし守備範囲も広いし、 そもそもMLBでも活躍してたしな😅 怖い(好きやから複雑)🙃  \n  https://x.com/Yamamo408/status/1967168240972595288  \n  (2025-06-04)\n\n- **@a0i_shiba**  \n  秋山翔吾の全力疾走に涙出ました。 なんか何見ても涙出る。  \n  https://x.com/a0i_shiba/status/2083152191985225957  \n  (2026-07-31)\n\n(cost: $0.0384)"
+          }
+        ]
+      },
+      "raw_response_text": "**No additional matching posts found beyond the two below that directly reference Akiyama Shogo's physical foot speed or full sprint (all others in results were excluded per criteria: no stolen bases, baserunning judgment, defense, game stats, or reprints).**\n\n- **@Yamamo408**  \n  秋山翔吾は怪我してたのかね？🤔 ほぼ全打席、ヒット性の当たりを飛ばしてるけどまだ14安打か😳 足もまだまだ速いし守備範囲も広いし、 そもそもMLBでも活躍してたしな😅 怖い(好きやから複雑)🙃  \n  https://x.com/Yamamo408/status/1967168240972595288  \n  (2025-06-04)\n\n- **@a0i_shiba**  \n  秋山翔吾の全力疾走に涙出ました。 なんか何見ても涙出る。  \n  https://x.com/a0i_shiba/status/2083152191985225957  \n  (2026-07-31)\n\n(cost: $0.0384)",
+      "semantic_theme": "current_2025"
+    },
+    {
+      "player": "秋山翔吾",
+      "query_kind": "current_2024",
+      "query": "Xで「秋山翔吾 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX023",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:26:25.172Z",
+      "retrieved_at": "2026-08-10T17:26:52.383Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No qualifying posts found.**\n\nNo real X posts from 2024 (or matching the date filter) directly mention Shogo Akiyama's own physical foot speed, straight-line velocity, acceleration, or full sprint in the required sense. Posts referencing stolen bases, base-running decisions, defense, game stats, or article quotes were excluded per instructions. Searches via keyword and semantic tools returned only unrelated or non-qualifying results.\n\n(cost: $0.0288)"
+          }
+        ]
+      },
+      "raw_response_text": "**No qualifying posts found.**\n\nNo real X posts from 2024 (or matching the date filter) directly mention Shogo Akiyama's own physical foot speed, straight-line velocity, acceleration, or full sprint in the required sense. Posts referencing stolen bases, base-running decisions, defense, game stats, or article quotes were excluded per instructions. Searches via keyword and semantic tools returned only unrelated or non-qualifying results.\n\n(cost: $0.0288)",
+      "semantic_theme": "current_2024"
+    },
+    {
+      "player": "秋山翔吾",
+      "query_kind": "decline",
+      "query": "Xで「秋山翔吾 以前 より 足 遅い」「秋山翔吾 スピード 落ちた」を検索。2024–2026を優先し、過去と現在の身体的な走る速さを直接比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX024",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:27:51.385Z",
+      "retrieved_at": "2026-08-10T17:28:20.724Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo real X posts from the tool results (prioritizing 2024–2026) directly compare Shogo Akiyama’s past vs. current physical running speed in the requested way. All results were either unrelated, about injuries/conditioning/stats, or outside the criteria.\n\n(cost: $0.0288)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo real X posts from the tool results (prioritizing 2024–2026) directly compare Shogo Akiyama’s past vs. current physical running speed in the requested way. All results were either unrelated, about injuries/conditioning/stats, or outside the criteria.\n\n(cost: $0.0288)",
+      "semantic_theme": "decline"
+    },
+    {
+      "player": "秋山翔吾",
+      "query_kind": "recovery",
+      "query": "Xで「秋山翔吾 足 戻った」「秋山翔吾 スピード 戻った」を検索。2024–2026を優先し、故障後・復帰後の身体的な走る速さの回復／未回復を投稿者が直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX025",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:28:27.889Z",
+      "retrieved_at": "2026-08-10T17:28:46.047Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No matching posts found.\n\n(cost: $0.0136)"
+          }
+        ]
+      },
+      "raw_response_text": "No matching posts found.\n\n(cost: $0.0136)",
+      "semantic_theme": "recovery"
+    },
+    {
+      "player": "秋山翔吾",
+      "query_kind": "injury_before_after",
+      "query": "Xで「秋山翔吾 故障 足 スピード 全力疾走」を検索。2024–2026を優先し、怪我前後の身体的な足の速さ、加速、直線速度の比較を直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX026",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:28:56.163Z",
+      "retrieved_at": "2026-08-10T17:29:20.284Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo X posts from the searches (2024–2026) directly compare Shogo Akiyama’s pre- vs. post-injury physical leg speed, acceleration, or straight-line velocity in the required way. All results were either unrelated, speculative, or fell into excluded categories (e.g., stolen bases, game assessment, or general injury mentions without speed comparisons).\n\n(cost: $0.0170)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo X posts from the searches (2024–2026) directly compare Shogo Akiyama’s pre- vs. post-injury physical leg speed, acceleration, or straight-line velocity in the required way. All results were either unrelated, speculative, or fell into excluded categories (e.g., stolen bases, game assessment, or general injury mentions without speed comparisons).\n\n(cost: $0.0170)",
+      "semantic_theme": "injury_before_after"
+    },
+    {
+      "player": "秋山翔吾",
+      "query_kind": "all_out_linear",
+      "query": "Xで「秋山翔吾 全力疾走 足」「秋山翔吾 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX027",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:30:16.613Z",
+      "retrieved_at": "2026-08-10T17:30:50.362Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Relevant posts found (prioritizing 2024–2026, strictly observing Akiyama Shogo’s own full sprint / straight-line speed / acceleration):**\n\n- **@a0i_shiba**  \n  秋山翔吾の全力疾走に涙出ました。  \n  なんか何見ても涙出る。  \n  https://x.com/a0i_shiba/status/2083152191985225957  \n  (31 Jul 2026 11:26 GMT)\n\n- **@Tenko_10325**  \n  エスピノーザちゃん、秋山翔吾選手の打球を自ら捌いて二塁送球でアウト取りました！  \n  一塁送球がちょっと逸れましたが、秋山翔吾選手の全力疾走もあって、タイミング的にも間に合わなかったようです。  \n  https://x.com/Tenko_10325/status/1812600486211830050  \n  (14 Jul 2024 21:30 GMT)\n\n- **@CARP_GAKUEN**  \n  すべてに全力疾走　秋山翔吾さん  \n  頭が下がります  \n  https://x.com/CARP_GAKUEN/status/1815721736601559123  \n  (23 Jul 2024 12:12 GMT)\n\n- **@carp_buun**  \n  ➡カープ秋山翔吾、シャトルランで20代選手をぶっちぎる！  \n  ※平川、勝田、佐々木、渡辺、前川ら20代前半と競争した37歳の秋山がぶっちぎった。シャトルランで息が上がる若者を横目に加速「負けないつもりでやっている」  \n  https://x.com/carp_buun/status/2018288694332207136  \n  (2 Feb 2026 11:41 GMT)\n\nNo other posts met the exact criteria (specific observation of his sprint/speed/acceleration; all exclusions applied).\n\n(cost: $0.0355)"
+          }
+        ]
+      },
+      "raw_response_text": "**Relevant posts found (prioritizing 2024–2026, strictly observing Akiyama Shogo’s own full sprint / straight-line speed / acceleration):**\n\n- **@a0i_shiba**  \n  秋山翔吾の全力疾走に涙出ました。  \n  なんか何見ても涙出る。  \n  https://x.com/a0i_shiba/status/2083152191985225957  \n  (31 Jul 2026 11:26 GMT)\n\n- **@Tenko_10325**  \n  エスピノーザちゃん、秋山翔吾選手の打球を自ら捌いて二塁送球でアウト取りました！  \n  一塁送球がちょっと逸れましたが、秋山翔吾選手の全力疾走もあって、タイミング的にも間に合わなかったようです。  \n  https://x.com/Tenko_10325/status/1812600486211830050  \n  (14 Jul 2024 21:30 GMT)\n\n- **@CARP_GAKUEN**  \n  すべてに全力疾走　秋山翔吾さん  \n  頭が下がります  \n  https://x.com/CARP_GAKUEN/status/1815721736601559123  \n  (23 Jul 2024 12:12 GMT)\n\n- **@carp_buun**  \n  ➡カープ秋山翔吾、シャトルランで20代選手をぶっちぎる！  \n  ※平川、勝田、佐々木、渡辺、前川ら20代前半と競争した37歳の秋山がぶっちぎった。シャトルランで息が上がる若者を横目に加速「負けないつもりでやっている」  \n  https://x.com/carp_buun/status/2018288694332207136  \n  (2 Feb 2026 11:41 GMT)\n\nNo other posts met the exact criteria (specific observation of his sprint/speed/acceleration; all exclusions applied).\n\n(cost: $0.0355)",
+      "semantic_theme": "all_out_linear"
+    },
+    {
+      "player": "秋山翔吾",
+      "query_kind": "current_vs_past",
+      "query": "Xで「秋山翔吾 過去 現在 足」「秋山翔吾 若い頃 足 現在」を検索。2024–2026を優先し、過去と現在の身体的な足の速さを比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX028",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:30:53.871Z",
+      "retrieved_at": "2026-08-10T17:31:16.290Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nSearches for the specified terms (「秋山翔吾 過去 現在 足」「秋山翔吾 若い頃 足 現在」) with date filters (2024–2026), keyword combinations, and exclusions for 盗塁/走塁判断/守備/ゲーム査定/記事転載 returned zero results on X. No real posts comparing Akiyama Shogo's past vs. current leg speed were located.\n\n(cost: $0.0153)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nSearches for the specified terms (「秋山翔吾 過去 現在 足」「秋山翔吾 若い頃 足 現在」) with date filters (2024–2026), keyword combinations, and exclusions for 盗塁/走塁判断/守備/ゲーム査定/記事転載 returned zero results on X. No real posts comparing Akiyama Shogo's past vs. current leg speed were located.\n\n(cost: $0.0153)",
+      "semantic_theme": "current_vs_past"
+    },
+    {
+      "player": "秋山翔吾",
+      "query_kind": "measurement_comparison",
+      "query": "Xで「秋山翔吾 50m 足」「秋山翔吾 スプリント 走力」「秋山翔吾 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX029",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:31:28.603Z",
+      "retrieved_at": "2026-08-10T17:31:49.880Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nSearches via X tools for the specified terms (prioritizing 2024–2026) returned zero real posts discussing 秋山翔吾’s physical 50m dash time, sprint/running speed, or past foot speed (fast/slow). All results were either irrelevant, about other players, or excluded topics (e.g., baserunning stats).\n\n(cost: $0.0223)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nSearches via X tools for the specified terms (prioritizing 2024–2026) returned zero real posts discussing 秋山翔吾’s physical 50m dash time, sprint/running speed, or past foot speed (fast/slow). All results were either irrelevant, about other players, or excluded topics (e.g., baserunning stats).\n\n(cost: $0.0223)",
+      "semantic_theme": "measurement_comparison"
+    },
+    {
+      "player": "秋山翔吾",
+      "query_kind": "first_step_acceleration",
+      "query": "Xで「秋山翔吾 一歩目 初速 加速 足」を検索。2024–2026を優先し、一歩目・初速・加速・直線速度を身体的な速さとして直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁技術、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX030",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:32:45.074Z",
+      "retrieved_at": "2026-08-10T17:33:06.601Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo X posts from 2024–2026 (or otherwise) directly address 秋山翔吾's physical speed via 一歩目, 初速, 加速, or 足 in the required sense. All results were unrelated (injuries, other players, game context, or non-speed mentions of \"足\").\n\n(cost: $0.0191)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo X posts from 2024–2026 (or otherwise) directly address 秋山翔吾's physical speed via 一歩目, 初速, 加速, or 足 in the required sense. All results were unrelated (injuries, other players, game context, or non-speed mentions of \"足\").\n\n(cost: $0.0191)",
+      "semantic_theme": "first_step_acceleration"
+    },
+    {
+      "player": "ポランコ",
+      "query_kind": "current_2026",
+      "query": "Xで「ポランコ 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX031",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:33:15.449Z",
+      "retrieved_at": "2026-08-10T17:33:34.470Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Only 1 qualifying post found (2026, direct mention of full-speed sprint; no matches for foot speed/acceleration terms):**\n\n- **@megr84_31**  \n  **Date/Time:** Sun, 05 Apr 2026 13:48:21 GMT  \n  **Text:** タイムリー内野安打をもぎ取って ベンチに戻りながら めっちゃ走ったで！！とジェスチャーしてた ポランコの全力疾走、大好き 2026.4.5  \n  **URL:** https://x.com/megr84_31/status/2040788638058103161\n\n(cost: $0.0293)"
+          }
+        ]
+      },
+      "raw_response_text": "**Only 1 qualifying post found (2026, direct mention of full-speed sprint; no matches for foot speed/acceleration terms):**\n\n- **@megr84_31**  \n  **Date/Time:** Sun, 05 Apr 2026 13:48:21 GMT  \n  **Text:** タイムリー内野安打をもぎ取って ベンチに戻りながら めっちゃ走ったで！！とジェスチャーしてた ポランコの全力疾走、大好き 2026.4.5  \n  **URL:** https://x.com/megr84_31/status/2040788638058103161\n\n(cost: $0.0293)",
+      "semantic_theme": "current_2026"
+    },
+    {
+      "player": "ポランコ",
+      "query_kind": "current_2025",
+      "query": "Xで「ポランコ 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX032",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:33:39.296Z",
+      "retrieved_at": "2026-08-10T17:33:54.180Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No qualifying posts found.**\n\nThe search for 「ポランコ 2025 足 速い 遅い 全力疾走」 (prioritizing 2025 posts with direct references to physical foot speed, linear velocity, acceleration, or full sprint) returned only game-assessment posts about baserunning (e.g., full sprint to second base on a hit), which are excluded per your instructions. No posts met the strict criteria.\n\n(cost: $0.0160)"
+          }
+        ]
+      },
+      "raw_response_text": "**No qualifying posts found.**\n\nThe search for 「ポランコ 2025 足 速い 遅い 全力疾走」 (prioritizing 2025 posts with direct references to physical foot speed, linear velocity, acceleration, or full sprint) returned only game-assessment posts about baserunning (e.g., full sprint to second base on a hit), which are excluded per your instructions. No posts met the strict criteria.\n\n(cost: $0.0160)",
+      "semantic_theme": "current_2025"
+    },
+    {
+      "player": "ポランコ",
+      "query_kind": "current_2024",
+      "query": "Xで「ポランコ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX033",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:34:09.370Z",
+      "retrieved_at": "2026-08-10T17:34:53.328Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Selected real 2024 posts** (filtered for direct mentions of Polanco’s physical foot speed/sprinting; game stats, baserunning judgments, defense, and reprints excluded):\n\n- **@kyo2uza**  \n  Sat, 21 Sep 2024 12:18:58 GMT  \n  石川慎吾さん、ポランコよりは足が速いらしい角中勝也さん  \n  https://x.com/kyo2uza/status/1837466551391605147\n\n- **@mm__098765**  \n  Wed, 28 Aug 2024 12:20:36 GMT  \n  どーすっかね？塁埋める🤔❓ ポランコなら奇策も少ないし足遅いから ゲッツーは取りやすいけど。  \n  https://x.com/mm__098765/status/1828788517448937661\n\n- **@doigakibaseball**  \n  Sun, 11 Aug 2024 10:20:18 GMT  \n  ポランコあるある ・普通に足は速い部類(走力Cだし)  \n  https://x.com/doigakibaseball/status/1824711148257640541\n\n- **@vamomisho**  \n  Sun, 11 Aug 2024 09:18:21 GMT  \n  ポランコは意外と足速い  \n  https://x.com/vamomisho/status/1822563193706942903\n\n- **@marinavi2006**  \n  Sun, 11 Aug 2024 09:17:04 GMT  \n  べーやんもタイムリースリーベースヒットを放つ🥰 初回から珍しく得点しているというか、ポランコ意外と足が速い。  \n  https://x.com/marinavi2006/status/1822562868468064651\n\n- **@asys2024**  \n  Wed, 22 May 2024 09:19:18 GMT  \n  ポランコ選手、比較的浅いレフトフライで帰ってこれるんだから、やっぱり足速いよね…。  \n  https://x.com/asys2024/status/1793210016675287065\n\n- **@asys2024**  \n  Sat, 13 Apr 2024 08:38:40 GMT  \n  ポランコ選手…フェン直…でツーベースになるかと思ったけど小郷選手の返球がよくてアウトになった…もったいない。 ポランコ選手足遅い方ではないから、まぁ、仕方ない。  \n  https://x.com/asys2024/status/1779066661246804443\n\n- **@asys2024**  \n  Wed, 10 Apr 2024 09:02:53 GMT  \n  ポランコ選手、やっぱり足速いな。いや、すごい速いわけじゃないけど…走塁は実はしっかりしてるよね。  \n  https://x.com/asys2024/status/1777985594981011703\n\n(cost: $0.0217)"
+          }
+        ]
+      },
+      "raw_response_text": "**Selected real 2024 posts** (filtered for direct mentions of Polanco’s physical foot speed/sprinting; game stats, baserunning judgments, defense, and reprints excluded):\n\n- **@kyo2uza**  \n  Sat, 21 Sep 2024 12:18:58 GMT  \n  石川慎吾さん、ポランコよりは足が速いらしい角中勝也さん  \n  https://x.com/kyo2uza/status/1837466551391605147\n\n- **@mm__098765**  \n  Wed, 28 Aug 2024 12:20:36 GMT  \n  どーすっかね？塁埋める🤔❓ ポランコなら奇策も少ないし足遅いから ゲッツーは取りやすいけど。  \n  https://x.com/mm__098765/status/1828788517448937661\n\n- **@doigakibaseball**  \n  Sun, 11 Aug 2024 10:20:18 GMT  \n  ポランコあるある ・普通に足は速い部類(走力Cだし)  \n  https://x.com/doigakibaseball/status/1824711148257640541\n\n- **@vamomisho**  \n  Sun, 11 Aug 2024 09:18:21 GMT  \n  ポランコは意外と足速い  \n  https://x.com/vamomisho/status/1822563193706942903\n\n- **@marinavi2006**  \n  Sun, 11 Aug 2024 09:17:04 GMT  \n  べーやんもタイムリースリーベースヒットを放つ🥰 初回から珍しく得点しているというか、ポランコ意外と足が速い。  \n  https://x.com/marinavi2006/status/1822562868468064651\n\n- **@asys2024**  \n  Wed, 22 May 2024 09:19:18 GMT  \n  ポランコ選手、比較的浅いレフトフライで帰ってこれるんだから、やっぱり足速いよね…。  \n  https://x.com/asys2024/status/1793210016675287065\n\n- **@asys2024**  \n  Sat, 13 Apr 2024 08:38:40 GMT  \n  ポランコ選手…フェン直…でツーベースになるかと思ったけど小郷選手の返球がよくてアウトになった…もったいない。 ポランコ選手足遅い方ではないから、まぁ、仕方ない。  \n  https://x.com/asys2024/status/1779066661246804443\n\n- **@asys2024**  \n  Wed, 10 Apr 2024 09:02:53 GMT  \n  ポランコ選手、やっぱり足速いな。いや、すごい速いわけじゃないけど…走塁は実はしっかりしてるよね。  \n  https://x.com/asys2024/status/1777985594981011703\n\n(cost: $0.0217)",
+      "semantic_theme": "current_2024"
+    },
+    {
+      "player": "ポランコ",
+      "query_kind": "decline",
+      "query": "Xで「ポランコ 以前 より 足 遅い」「ポランコ スピード 落ちた」を検索。2024–2026を優先し、過去と現在の身体的な走る速さを直接比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX034",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:34:28.872Z",
+      "retrieved_at": "2026-08-10T17:34:44.514Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo real X posts from 2024–2026 (or any period) directly compare Polanco’s past vs. current physical running speed while meeting all criteria (no stolen bases, baserunning judgment, defense, game assessment, or article reprints).\n\n(cost: $0.0340)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo real X posts from 2024–2026 (or any period) directly compare Polanco’s past vs. current physical running speed while meeting all criteria (no stolen bases, baserunning judgment, defense, game assessment, or article reprints).\n\n(cost: $0.0340)",
+      "semantic_theme": "decline"
+    },
+    {
+      "player": "ポランコ",
+      "query_kind": "recovery",
+      "query": "Xで「ポランコ 足 戻った」「ポランコ スピード 戻った」を検索。2024–2026を優先し、故障後・復帰後の身体的な走る速さの回復／未回復を投稿者が直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX035",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:34:47.059Z",
+      "retrieved_at": "2026-08-10T17:35:16.152Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo X posts from 2024–2026 were located that contain direct statements by the poster about Polanco’s physical running speed/leg recovery (or lack thereof) after injury, while excluding all prohibited categories (medical speculation, stolen bases, base-running decisions, defense, game stats, or article reprints).\n\n(cost: $0.0392)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo X posts from 2024–2026 were located that contain direct statements by the poster about Polanco’s physical running speed/leg recovery (or lack thereof) after injury, while excluding all prohibited categories (medical speculation, stolen bases, base-running decisions, defense, game stats, or article reprints).\n\n(cost: $0.0392)",
+      "semantic_theme": "recovery"
+    },
+    {
+      "player": "ポランコ",
+      "query_kind": "injury_before_after",
+      "query": "Xで「ポランコ 故障 足 スピード 全力疾走」を検索。2024–2026を優先し、怪我前後の身体的な足の速さ、加速、直線速度の比較を直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX036",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:36:01.478Z",
+      "retrieved_at": "2026-08-10T17:36:13.522Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No posts found matching the criteria.\n\n(cost: $0.0204)"
+          }
+        ]
+      },
+      "raw_response_text": "No posts found matching the criteria.\n\n(cost: $0.0204)",
+      "semantic_theme": "injury_before_after"
+    },
+    {
+      "player": "ポランコ",
+      "query_kind": "all_out_linear",
+      "query": "Xで「ポランコ 全力疾走 足」「ポランコ 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX037",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:36:33.122Z",
+      "retrieved_at": "2026-08-10T17:36:52.477Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Found posts (filtered to exact matches on full sprint / straight-line speed / acceleration observation, 2024–2026 only):**\n\n- **@8711Kyo**  \n  ポランコは単純な足の速さならかなり速いと思うぞw 身体でかいから加速に時間かかるだけw  \n  https://x.com/8711Kyo/status/2040662350899093677  \n  (2026-04-05)\n\n- **@akila30**  \n  ポランコ久々の全力疾走で、思ったより自分が足早いの忘れてた。  \n  https://x.com/akila30/status/1974661662897766747  \n  (2025-10-05)\n\nNo additional qualifying posts found in the results.\n\n(cost: $0.0251)"
+          }
+        ]
+      },
+      "raw_response_text": "**Found posts (filtered to exact matches on full sprint / straight-line speed / acceleration observation, 2024–2026 only):**\n\n- **@8711Kyo**  \n  ポランコは単純な足の速さならかなり速いと思うぞw 身体でかいから加速に時間かかるだけw  \n  https://x.com/8711Kyo/status/2040662350899093677  \n  (2026-04-05)\n\n- **@akila30**  \n  ポランコ久々の全力疾走で、思ったより自分が足早いの忘れてた。  \n  https://x.com/akila30/status/1974661662897766747  \n  (2025-10-05)\n\nNo additional qualifying posts found in the results.\n\n(cost: $0.0251)",
+      "semantic_theme": "all_out_linear"
+    },
+    {
+      "player": "ポランコ",
+      "query_kind": "measurement_comparison",
+      "query": "Xで「ポランコ 50m 足」「ポランコ スプリント 走力」「ポランコ 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX039",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:36:51.251Z",
+      "retrieved_at": "2026-08-10T17:37:03.106Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No relevant posts found.**\n\nNo X posts from 2024–2026 matched the search criteria for physical running speed mentions (50m, sprint power, past fast/slow legs) about ポランコ while excluding stolen bases, baserunning judgment, defense, game assessment, or article reprints.\n\n(cost: $0.0198)"
+          }
+        ]
+      },
+      "raw_response_text": "**No relevant posts found.**\n\nNo X posts from 2024–2026 matched the search criteria for physical running speed mentions (50m, sprint power, past fast/slow legs) about ポランコ while excluding stolen bases, baserunning judgment, defense, game assessment, or article reprints.\n\n(cost: $0.0198)",
+      "semantic_theme": "measurement_comparison"
+    },
+    {
+      "player": "サンタナ",
+      "query_kind": "current_2026",
+      "query": "Xで「サンタナ 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX041",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:37:22.506Z",
+      "retrieved_at": "2026-08-10T17:37:38.780Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No matching posts found.\n\n(cost: $0.0333)"
+          }
+        ]
+      },
+      "raw_response_text": "No matching posts found.\n\n(cost: $0.0333)",
+      "semantic_theme": "current_2026"
+    },
+    {
+      "player": "サンタナ",
+      "query_kind": "current_2025",
+      "query": "Xで「サンタナ 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX042",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:37:40.582Z",
+      "retrieved_at": "2026-08-10T17:37:51.939Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No matching posts found.\n\n(cost: $0.0217)"
+          }
+        ]
+      },
+      "raw_response_text": "No matching posts found.\n\n(cost: $0.0217)",
+      "semantic_theme": "current_2025"
+    },
+    {
+      "player": "サンタナ",
+      "query_kind": "current_2024",
+      "query": "Xで「サンタナ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX043",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:37:58.540Z",
+      "retrieved_at": "2026-08-10T17:38:18.711Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**4 qualifying posts found (prioritizing 2024; only direct physical foot speed / sprint mentions retained; all others excluded per criteria):**\n\n- **@G10__September**  \n  Wed, 24 Jul 2024 10:07:24 GMT  \n  サンタナ、足大丈夫か？  \n  全力疾走は無理そう…？  \n  https://x.com/G10__September/status/1816052554096337046\n\n- **@love_dunkel**  \n  Mon, 29 Apr 2024 05:23:22 GMT  \n  サンタナ、足は遅いがベースタッチは素晴らしく上手い‼️  \n  https://x.com/love_dunkel/status/1784815721576345755\n\n- **@mocchan_chan_10**  \n  Fri, 31 May 2024 11:25:32 GMT  \n  サンタナ、足遅いねー。 #swallows  \n  https://x.com/mocchan_chan_10/status/1796503271903019310\n\n- **@milk_tsubame**  \n  Sat, 27 Apr 2024 05:18:53 GMT  \n  サンタナ実は足速い？！w  \n  https://x.com/milk_tsubame/status/1784089815178449231\n\n(cost: $0.0254)"
+          }
+        ]
+      },
+      "raw_response_text": "**4 qualifying posts found (prioritizing 2024; only direct physical foot speed / sprint mentions retained; all others excluded per criteria):**\n\n- **@G10__September**  \n  Wed, 24 Jul 2024 10:07:24 GMT  \n  サンタナ、足大丈夫か？  \n  全力疾走は無理そう…？  \n  https://x.com/G10__September/status/1816052554096337046\n\n- **@love_dunkel**  \n  Mon, 29 Apr 2024 05:23:22 GMT  \n  サンタナ、足は遅いがベースタッチは素晴らしく上手い‼️  \n  https://x.com/love_dunkel/status/1784815721576345755\n\n- **@mocchan_chan_10**  \n  Fri, 31 May 2024 11:25:32 GMT  \n  サンタナ、足遅いねー。 #swallows  \n  https://x.com/mocchan_chan_10/status/1796503271903019310\n\n- **@milk_tsubame**  \n  Sat, 27 Apr 2024 05:18:53 GMT  \n  サンタナ実は足速い？！w  \n  https://x.com/milk_tsubame/status/1784089815178449231\n\n(cost: $0.0254)",
+      "semantic_theme": "current_2024"
+    },
+    {
+      "player": "サンタナ",
+      "query_kind": "decline",
+      "query": "Xで「サンタナ 以前 より 足 遅い」「サンタナ スピード 落ちた」を検索。2024–2026を優先し、過去と現在の身体的な走る速さを直接比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX044",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:38:31.416Z",
+      "retrieved_at": "2026-08-10T17:38:43.119Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nSearches for the exact phrases and related terms (with 2024–2026 date filters) returned zero results on X. No real posts directly comparing Santana’s past vs. current physical running speed were located.\n\n(cost: $0.0185)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nSearches for the exact phrases and related terms (with 2024–2026 date filters) returned zero results on X. No real posts directly comparing Santana’s past vs. current physical running speed were located.\n\n(cost: $0.0185)",
+      "semantic_theme": "decline"
+    },
+    {
+      "player": "サンタナ",
+      "query_kind": "recovery",
+      "query": "Xで「サンタナ 足 戻った」「サンタナ スピード 戻った」を検索。2024–2026を優先し、故障後・復帰後の身体的な走る速さの回復／未回復を投稿者が直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX045",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:38:50.098Z",
+      "retrieved_at": "2026-08-10T17:38:59.422Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No posts found matching the criteria.\n\n(cost: $0.0195)"
+          }
+        ]
+      },
+      "raw_response_text": "No posts found matching the criteria.\n\n(cost: $0.0195)",
+      "semantic_theme": "recovery"
+    },
+    {
+      "player": "サンタナ",
+      "query_kind": "injury_before_after",
+      "query": "Xで「サンタナ 故障 足 スピード 全力疾走」を検索。2024–2026を優先し、怪我前後の身体的な足の速さ、加速、直線速度の比較を直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX046",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:39:06.711Z",
+      "retrieved_at": "2026-08-10T17:39:19.562Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo real X posts from 2024–2026 (or any period) directly compare Santana's pre- vs. post-injury physical foot speed, acceleration, or straight-line velocity while meeting all exclusion criteria.\n\n(cost: $0.0223)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo real X posts from 2024–2026 (or any period) directly compare Santana's pre- vs. post-injury physical foot speed, acceleration, or straight-line velocity while meeting all exclusion criteria.\n\n(cost: $0.0223)",
+      "semantic_theme": "injury_before_after"
+    },
+    {
+      "player": "サンタナ",
+      "query_kind": "all_out_linear",
+      "query": "Xで「サンタナ 全力疾走 足」「サンタナ 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX047",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:40:01.144Z",
+      "retrieved_at": "2026-08-10T17:40:17.832Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Only 1 qualifying post found** (matches criteria: specific observation of full sprint/speed/acceleration in 2024–2026; excludes all other categories).\n\n- **@nekomachimakoto**  \n  **Date/Time:** Sat, 06 Dec 2025 16:23:41 GMT  \n  **Text:** サンタナ、ウエイトが上がったのか、全力疾走すると戦車みたいだな。  \n  **URL:** https://x.com/nekomachimakoto/status/1997341181672624332\n\n(cost: $0.0352)"
+          }
+        ]
+      },
+      "raw_response_text": "**Only 1 qualifying post found** (matches criteria: specific observation of full sprint/speed/acceleration in 2024–2026; excludes all other categories).\n\n- **@nekomachimakoto**  \n  **Date/Time:** Sat, 06 Dec 2025 16:23:41 GMT  \n  **Text:** サンタナ、ウエイトが上がったのか、全力疾走すると戦車みたいだな。  \n  **URL:** https://x.com/nekomachimakoto/status/1997341181672624332\n\n(cost: $0.0352)",
+      "semantic_theme": "all_out_linear"
+    },
+    {
+      "player": "サンタナ",
+      "query_kind": "measurement_comparison",
+      "query": "Xで「サンタナ 50m 足」「サンタナ スプリント 走力」「サンタナ 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX049",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:40:19.282Z",
+      "retrieved_at": "2026-08-10T17:40:32.694Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No relevant posts found.**\n\nAll results from the specified searches (2024–2026) were either unrelated to physical sprint/50m running speed or directly referenced 盗塁/走塁 (stolen bases/baserunning), which are excluded per the query rules. No qualifying real posts exist in the tool results.\n\n(cost: $0.0223)"
+          }
+        ]
+      },
+      "raw_response_text": "**No relevant posts found.**\n\nAll results from the specified searches (2024–2026) were either unrelated to physical sprint/50m running speed or directly referenced 盗塁/走塁 (stolen bases/baserunning), which are excluded per the query rules. No qualifying real posts exist in the tool results.\n\n(cost: $0.0223)",
+      "semantic_theme": "measurement_comparison"
+    },
+    {
+      "player": "奈良間大己",
+      "query_kind": "current_2026",
+      "query": "Xで「奈良間大己 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX051",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:40:52.415Z",
+      "retrieved_at": "2026-08-10T17:41:06.182Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No posts found matching the criteria.\n\n(cost: $0.0174)"
+          }
+        ]
+      },
+      "raw_response_text": "No posts found matching the criteria.\n\n(cost: $0.0174)",
+      "semantic_theme": "current_2026"
+    },
+    {
+      "player": "奈良間大己",
+      "query_kind": "current_2025",
+      "query": "Xで「奈良間大己 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX052",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:41:10.698Z",
+      "retrieved_at": "2026-08-10T17:41:32.677Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Qualifying posts (2025 only, direct mentions of physical leg speed / 50m time / full-speed sprint; all others filtered out per criteria):**\n\n- **@namaranaramania**  \n  Fri, 25 Apr 2025 09:51:49 GMT  \n  奈良間大己って小股だから足遅いように見えて走力自体はちゃんとあるくらい速いです。50mも5.8秒なので。  \n  https://x.com/namaranaramania/status/1915705298582724670\n\n- **@bitboss6009**  \n  Tue, 27 May 2025 12:13:04 GMT  \n  奈良間大己の全力疾走からのホームベースの踏み方好き民  \n  https://x.com/bitboss6009/status/1927337253656813569\n\n(No additional matching posts found.)\n\n(cost: $0.0184)"
+          }
+        ]
+      },
+      "raw_response_text": "**Qualifying posts (2025 only, direct mentions of physical leg speed / 50m time / full-speed sprint; all others filtered out per criteria):**\n\n- **@namaranaramania**  \n  Fri, 25 Apr 2025 09:51:49 GMT  \n  奈良間大己って小股だから足遅いように見えて走力自体はちゃんとあるくらい速いです。50mも5.8秒なので。  \n  https://x.com/namaranaramania/status/1915705298582724670\n\n- **@bitboss6009**  \n  Tue, 27 May 2025 12:13:04 GMT  \n  奈良間大己の全力疾走からのホームベースの踏み方好き民  \n  https://x.com/bitboss6009/status/1927337253656813569\n\n(No additional matching posts found.)\n\n(cost: $0.0184)",
+      "semantic_theme": "current_2025"
+    },
+    {
+      "player": "奈良間大己",
+      "query_kind": "current_2024",
+      "query": "Xで「奈良間大己 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX053",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:41:29.346Z",
+      "retrieved_at": "2026-08-10T17:41:47.310Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Posts found (all from 2024, direct mentions of 全力疾走 / full sprint only):**\n\n- **@FightersPR**  \n  Sun, 28 Jul 2024 03:52:45 GMT  \n  今日の声出しも奈良間大己選手📢「初心を忘れずに全力疾走で勝ちましょう😤」  \n  https://x.com/FightersPR/status/1817407823934034228\n\n- **@fuji20_JF7**  \n  Thu, 21 Mar 2024 07:13:20 GMT  \n  3月21日鎌スタ。チェンジベンチ戻る奈良間大己選手。全力疾走😂 #奈良間大己  \n  https://x.com/fuji20_JF7/status/1770710265807393020\n\n- **@aoipanda333**  \n  Sun, 17 Mar 2024 12:58:29 GMT  \n  ［24.03.17　ベルーナドーム］ サードでスタメン出場の奈良間大己くん🐻 一球一球投手に声かけて、ベンチに戻る時は全力疾走⚾️  \n  https://x.com/aoipanda333/status/1769347575063449908\n\nNo other matching posts found.\n\n(cost: $0.0170)"
+          }
+        ]
+      },
+      "raw_response_text": "**Posts found (all from 2024, direct mentions of 全力疾走 / full sprint only):**\n\n- **@FightersPR**  \n  Sun, 28 Jul 2024 03:52:45 GMT  \n  今日の声出しも奈良間大己選手📢「初心を忘れずに全力疾走で勝ちましょう😤」  \n  https://x.com/FightersPR/status/1817407823934034228\n\n- **@fuji20_JF7**  \n  Thu, 21 Mar 2024 07:13:20 GMT  \n  3月21日鎌スタ。チェンジベンチ戻る奈良間大己選手。全力疾走😂 #奈良間大己  \n  https://x.com/fuji20_JF7/status/1770710265807393020\n\n- **@aoipanda333**  \n  Sun, 17 Mar 2024 12:58:29 GMT  \n  ［24.03.17　ベルーナドーム］ サードでスタメン出場の奈良間大己くん🐻 一球一球投手に声かけて、ベンチに戻る時は全力疾走⚾️  \n  https://x.com/aoipanda333/status/1769347575063449908\n\nNo other matching posts found.\n\n(cost: $0.0170)",
+      "semantic_theme": "current_2024"
+    },
+    {
+      "player": "奈良間大己",
+      "query_kind": "decline",
+      "query": "Xで「奈良間大己 以前 より 足 遅い」「奈良間大己 スピード 落ちた」を検索。2024–2026を優先し、過去と現在の身体的な走る速さを直接比較する実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX054",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:42:03.478Z",
+      "retrieved_at": "2026-08-10T17:42:17.475Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**No matching posts found.**\n\nNo real X posts from 2024–2026 were located that directly compare Nara ma Daiki’s past vs. current physical running speed using the specified phrases/keywords while meeting all criteria (direct speed decline comparison only; all other topics and content types excluded).\n\n(cost: $0.0202)"
+          }
+        ]
+      },
+      "raw_response_text": "**No matching posts found.**\n\nNo real X posts from 2024–2026 were located that directly compare Nara ma Daiki’s past vs. current physical running speed using the specified phrases/keywords while meeting all criteria (direct speed decline comparison only; all other topics and content types excluded).\n\n(cost: $0.0202)",
+      "semantic_theme": "decline"
+    },
+    {
+      "player": "奈良間大己",
+      "query_kind": "recovery",
+      "query": "Xで「奈良間大己 足 戻った」「奈良間大己 スピード 戻った」を検索。2024–2026を優先し、故障後・復帰後の身体的な走る速さの回復／未回復を投稿者が直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX055",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:42:21.613Z",
+      "retrieved_at": "2026-08-10T17:42:34.475Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No matching posts found.\n\n(cost: $0.0137)"
+          }
+        ]
+      },
+      "raw_response_text": "No matching posts found.\n\n(cost: $0.0137)",
+      "semantic_theme": "recovery"
+    },
+    {
+      "player": "奈良間大己",
+      "query_kind": "injury_before_after",
+      "query": "Xで「奈良間大己 故障 足 スピード 全力疾走」を検索。2024–2026を優先し、怪我前後の身体的な足の速さ、加速、直線速度の比較を直接述べた実在投稿だけを、URL、投稿者、日時、本文付きで返す。医療推測、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX056",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:42:43.263Z",
+      "retrieved_at": "2026-08-10T17:42:54.008Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "No posts matching the specified criteria were found via X search.\n\n(cost: $0.0150)"
+          }
+        ]
+      },
+      "raw_response_text": "No posts matching the specified criteria were found via X search.\n\n(cost: $0.0150)",
+      "semantic_theme": "injury_before_after"
+    },
+    {
+      "player": "奈良間大己",
+      "query_kind": "all_out_linear",
+      "query": "Xで「奈良間大己 全力疾走 足」「奈良間大己 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX057",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:43:11.290Z",
+      "retrieved_at": "2026-08-10T17:43:32.051Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Posts found (strictly matching criteria only; 2024–2026 prioritized; no other qualifying posts located):**\n\n- **@bitboss6009**  \n  奈良間大己の全力疾走からのホームベースの踏み方好き民  \n  #lovefighters  \n  Tue, 27 May 2025 12:13:04 GMT  \n  https://x.com/bitboss6009/status/1927337253656813569\n\n- **@fuji20_JF7**  \n  3月21日鎌スタ。  \n  チェンジベンチ戻る奈良間大己選手。  \n  全力疾走😂  \n  #奈良間大己  \n  Thu, 21 Mar 2024 07:13:20 GMT  \n  https://x.com/fuji20_JF7/status/1770710265807393020\n\n(cost: $0.0341)"
+          }
+        ]
+      },
+      "raw_response_text": "**Posts found (strictly matching criteria only; 2024–2026 prioritized; no other qualifying posts located):**\n\n- **@bitboss6009**  \n  奈良間大己の全力疾走からのホームベースの踏み方好き民  \n  #lovefighters  \n  Tue, 27 May 2025 12:13:04 GMT  \n  https://x.com/bitboss6009/status/1927337253656813569\n\n- **@fuji20_JF7**  \n  3月21日鎌スタ。  \n  チェンジベンチ戻る奈良間大己選手。  \n  全力疾走😂  \n  #奈良間大己  \n  Thu, 21 Mar 2024 07:13:20 GMT  \n  https://x.com/fuji20_JF7/status/1770710265807393020\n\n(cost: $0.0341)",
+      "semantic_theme": "all_out_linear"
+    },
+    {
+      "player": "奈良間大己",
+      "query_kind": "measurement_comparison",
+      "query": "Xで「奈良間大己 50m 足」「奈良間大己 スプリント 走力」「奈良間大己 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_id": "N6GX059",
+      "provenance": "GROK_X_SUPPLEMENT",
+      "retrieval_method": "mcp__grok_x__x_search",
+      "started_at": "2026-08-10T17:43:29.940Z",
+      "retrieved_at": "2026-08-10T17:43:48.866Z",
+      "status": "OK",
+      "grok_x_search_receipt": {
+        "content": [
+          {
+            "type": "text",
+            "text": "**Found 1 matching post** (only real result from tool searches; others returned nothing relevant within date range and criteria):\n\n- **@namaranaramania**  \n  **2025-04-25 09:51:49 GMT**  \n  **Text:** 奈良間大己って小股だから足遅いように見えて走力自体はちゃんとあるくらい速いです。50mも5.8秒なので。  \n  **URL:** https://x.com/namaranaramania/status/1915705298582724670\n\n(cost: $0.0203)"
+          }
+        ]
+      },
+      "raw_response_text": "**Found 1 matching post** (only real result from tool searches; others returned nothing relevant within date range and criteria):\n\n- **@namaranaramania**  \n  **2025-04-25 09:51:49 GMT**  \n  **Text:** 奈良間大己って小股だから足遅いように見えて走力自体はちゃんとあるくらい速いです。50mも5.8秒なので。  \n  **URL:** https://x.com/namaranaramania/status/1915705298582724670\n\n(cost: $0.0203)",
+      "semantic_theme": "measurement_comparison"
+    }
+  ],
+  "collection_summary": {
+    "planned_query_count": 54,
+    "executed_query_count": 54,
+    "successful_queries": 54,
+    "failed_queries": 0,
+    "raw_x_hit_occurrences": 45,
+    "unique_x_post_candidates": 38,
+    "retrieved_at_max": "2026-08-10T17:43:48.866Z",
+    "semantic_theme_counts": {
+      "筒香嘉智": 9,
+      "モンテロ": 10,
+      "秋山翔吾": 10,
+      "ポランコ": 8,
+      "サンタナ": 8,
+      "奈良間大己": 8
+    },
+    "semantic_themes_by_player": {
+      "筒香嘉智": [
+        "current_2026",
+        "current_2025",
+        "current_2024",
+        "decline",
+        "recovery",
+        "injury_before_after",
+        "all_out_linear",
+        "measurement_comparison",
+        "first_step_acceleration"
+      ],
+      "モンテロ": [
+        "current_2026",
+        "current_2025",
+        "current_2024",
+        "decline",
+        "recovery",
+        "injury_before_after",
+        "all_out_linear",
+        "current_vs_past",
+        "measurement_comparison",
+        "first_step_acceleration"
+      ],
+      "秋山翔吾": [
+        "current_2026",
+        "current_2025",
+        "current_2024",
+        "decline",
+        "recovery",
+        "injury_before_after",
+        "all_out_linear",
+        "current_vs_past",
+        "measurement_comparison",
+        "first_step_acceleration"
+      ],
+      "ポランコ": [
+        "current_2026",
+        "current_2025",
+        "current_2024",
+        "decline",
+        "recovery",
+        "injury_before_after",
+        "all_out_linear",
+        "measurement_comparison"
+      ],
+      "サンタナ": [
+        "current_2026",
+        "current_2025",
+        "current_2024",
+        "decline",
+        "recovery",
+        "injury_before_after",
+        "all_out_linear",
+        "measurement_comparison"
+      ],
+      "奈良間大己": [
+        "current_2026",
+        "current_2025",
+        "current_2024",
+        "decline",
+        "recovery",
+        "injury_before_after",
+        "all_out_linear",
+        "measurement_comparison"
+      ]
+    },
+    "semantic_duplicate_control": {
+      "player": "筒香嘉智",
+      "receipt_ids": [
+        "N6GX008",
+        "N6GX009"
+      ],
+      "shared_semantic_theme": "measurement_comparison",
+      "treatment": "Both raw receipts retained; counted once for semantic diversity."
+    }
+  },
+  "raw_x_post_candidates": [
+    {
+      "post_id": "2069729296177144023",
+      "post_url": "https://x.com/tracking_now/status/2069729296177144023",
+      "author": "@tracking_now",
+      "author_id": null,
+      "players": [
+        "筒香嘉智"
+      ],
+      "receipt_ids": [
+        "N6GX008",
+        "N6GX009"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX008",
+          "query_kind": "measurement_comparison_broad",
+          "semantic_theme": "measurement_comparison",
+          "retrieved_at": "2026-08-10T17:04:00.000Z",
+          "text_or_excerpt": "- **@tracking_now** Wed, 24 Jun 2026 10:28:12 GMT 宮﨑敏郎、佐野恵太、筒香嘉智という『打撃力は十分だが足の遅い中軸』の時代は終わった。 https://x.com/tracking_now/status/2069729296177144023"
+        },
+        {
+          "receipt_id": "N6GX009",
+          "query_kind": "measurement_comparison",
+          "semantic_theme": "measurement_comparison",
+          "retrieved_at": "2026-08-10T17:16:26.983Z",
+          "text_or_excerpt": "- **@tracking_now** Wed, 24 Jun 2026 10:28:12 GMT 宮﨑敏郎、佐野恵太、筒香嘉智という『打撃力は十分だが足の遅い中軸』の時代は終わった。 これからは“相川チルドレン”候補生の度会隆輝や勝又温史、梶原昂希のように打力と機動力を併せ持つ選手の時代と言える。 フロントは監督の妊娠・出産のサポートに全力を。 #相川亮二監督の懐妊を希望します https://x.com/tracking_now/status/2069729296177144023"
+        }
+      ]
+    },
+    {
+      "post_id": "1934933887966388609",
+      "post_url": "https://x.com/kmkmkzg/status/1934933887966388609",
+      "author": "@kmkmkzg",
+      "author_id": null,
+      "players": [
+        "筒香嘉智"
+      ],
+      "receipt_ids": [
+        "N6GX008"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX008",
+          "query_kind": "measurement_comparison_broad",
+          "semantic_theme": "measurement_comparison",
+          "retrieved_at": "2026-08-10T17:04:00.000Z",
+          "text_or_excerpt": "- **@kmkmkzg** Tue, 17 Jun 2025 11:19:22 GMT 筒香嘉智さん ・速球打てません ・逃げる球打てません ・守備下手です ・足遅いです https://x.com/kmkmkzg/status/1934933887966388609"
+        }
+      ]
+    },
+    {
+      "post_id": "1878017197827670025",
+      "post_url": "https://x.com/gudaksantha/status/1878017197827670025",
+      "author": "@gudaksantha",
+      "author_id": null,
+      "players": [
+        "筒香嘉智"
+      ],
+      "receipt_ids": [
+        "N6GX008",
+        "N6GX009"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX008",
+          "query_kind": "measurement_comparison_broad",
+          "semantic_theme": "measurement_comparison",
+          "retrieved_at": "2026-08-10T17:04:00.000Z",
+          "text_or_excerpt": "- **@gudaksantha** Sat, 11 Jan 2025 09:52:46 GMT 横浜 筒香嘉智 ... 基本的にでかくて足が遅い(遅そうな人)が好きです https://x.com/gudaksantha/status/1878017197827670025 (No other matching posts found for the exact search terms in 2024–2026.) (cost: $0.0318)"
+        },
+        {
+          "receipt_id": "N6GX009",
+          "query_kind": "measurement_comparison",
+          "semantic_theme": "measurement_comparison",
+          "retrieved_at": "2026-08-10T17:16:26.983Z",
+          "text_or_excerpt": "- **@gudaksantha** Sat, 11 Jan 2025 09:52:46 GMT パリーグ 福岡 柳田悠岐 日公 郡司裕也,山﨑福也 千葉 角中勝也 楽天 安田悠馬 オリ 山岡泰輔 西武 滝澤夏央,栗山巧 セリーグ 巨人 大城卓三 阪神 岩崎優 横浜 筒香嘉智 広島 會澤翼 ヤク 山田哲人 中日 大野雄大,根尾昂 基本的にでかくて足が遅い(遅そうな人)が好きです #12球団で好きな選手 https://x.com/gudaksantha/status/1878017197827670025 (cost: $0.0212)"
+        }
+      ]
+    },
+    {
+      "post_id": "2085311299387527235",
+      "post_url": "https://x.com/CASEY80sFAN/status/2085311299387527235",
+      "author": "@CASEY80sFAN",
+      "author_id": null,
+      "players": [
+        "モンテロ"
+      ],
+      "receipt_ids": [
+        "N6GX011"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX011",
+          "query_kind": "current_2026",
+          "semantic_theme": "current_2026",
+          "retrieved_at": "2026-08-10T17:17:19.220Z",
+          "text_or_excerpt": "- **@CASEY80sFAN** Thu, 06 Aug 2026 10:25:31 GMT なんかアナウンサーの人たちモンテロさんの足が遅いと思っているようだがその勘違いは見た目？走りだしたらそんなに遅くはない。 https://x.com/CASEY80sFAN/status/2085311299387527235"
+        }
+      ]
+    },
+    {
+      "post_id": "2086397259948884200",
+      "post_url": "https://x.com/cto19s/status/2086397259948884200",
+      "author": "@cto19s",
+      "author_id": null,
+      "players": [
+        "モンテロ"
+      ],
+      "receipt_ids": [
+        "N6GX011"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX011",
+          "query_kind": "current_2026",
+          "semantic_theme": "current_2026",
+          "retrieved_at": "2026-08-10T17:17:19.220Z",
+          "text_or_excerpt": "- **@cto19s** Sun, 09 Aug 2026 10:20:44 GMT 最近モンテロの全力疾走が見れない https://x.com/cto19s/status/2086397259948884200"
+        }
+      ]
+    },
+    {
+      "post_id": "2085693109812502839",
+      "post_url": "https://x.com/CARPLOVE896692/status/2085693109812502839",
+      "author": "@CARPLOVE896692",
+      "author_id": null,
+      "players": [
+        "モンテロ"
+      ],
+      "receipt_ids": [
+        "N6GX011"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX011",
+          "query_kind": "current_2026",
+          "semantic_theme": "current_2026",
+          "retrieved_at": "2026-08-10T17:17:19.220Z",
+          "text_or_excerpt": "- **@CARPLOVE896692** Fri, 07 Aug 2026 11:42:42 GMT モンテロよう走るわ日々の全力疾走があるから昨日のもそんな責める気になれない https://x.com/CARPLOVE896692/status/2085693109812502839 (No other matching posts found within the criteria.) (cost: $0.0314)"
+        }
+      ]
+    },
+    {
+      "post_id": "1969010342727422345",
+      "post_url": "https://x.com/gen_20130806/status/1969010342727422345",
+      "author": "@gen_20130806",
+      "author_id": null,
+      "players": [
+        "モンテロ"
+      ],
+      "receipt_ids": [
+        "N6GX012"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX012",
+          "query_kind": "current_2025",
+          "semantic_theme": "current_2025",
+          "retrieved_at": "2026-08-10T17:18:11.990Z",
+          "text_or_excerpt": "- **@gen_20130806** Tue, 19 Sep 2025 12:07:02 GMT 惜しかったーー！モンテロさんの全力疾走でもぎ取ったチャンス、羽月さんの足で活かしたかったですね。 https://x.com/gen_20130806/status/1969010342727422345"
+        }
+      ]
+    },
+    {
+      "post_id": "1966766204095525315",
+      "post_url": "https://x.com/consommesecond/status/1966766204095525315",
+      "author": "@consommesecond",
+      "author_id": null,
+      "players": [
+        "モンテロ"
+      ],
+      "receipt_ids": [
+        "N6GX012"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX012",
+          "query_kind": "current_2025",
+          "semantic_theme": "current_2025",
+          "retrieved_at": "2026-08-10T17:18:11.990Z",
+          "text_or_excerpt": "- **@consommesecond** Sat, 13 Sep 2025 07:29:38 GMT モンテロの足遅い、は禁止ですよ #carp https://x.com/consommesecond/status/1966766204095525315"
+        }
+      ]
+    },
+    {
+      "post_id": "1966464114445955456",
+      "post_url": "https://x.com/kimutaku_lovely/status/1966464114445955456",
+      "author": "@kimutaku_lovely",
+      "author_id": null,
+      "players": [
+        "モンテロ"
+      ],
+      "receipt_ids": [
+        "N6GX012"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX012",
+          "query_kind": "current_2025",
+          "semantic_theme": "current_2025",
+          "retrieved_at": "2026-08-10T17:18:11.990Z",
+          "text_or_excerpt": "- **@kimutaku_lovely** Fri, 12 Sep 2025 11:29:14 GMT いやモンテロ足遅いよ💦 https://x.com/kimutaku_lovely/status/1966464114445955456 (No other matching posts found in the 2025 results that meet the exact criteria of direct physical speed/acceleration/sprint references.) (cost: $0.0202)"
+        }
+      ]
+    },
+    {
+      "post_id": "1857284645177729488",
+      "post_url": "https://x.com/8181yasoiti/status/1857284645177729488",
+      "author": "@8181yasoiti",
+      "author_id": null,
+      "players": [
+        "モンテロ"
+      ],
+      "receipt_ids": [
+        "N6GX013"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX013",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:18:41.926Z",
+          "text_or_excerpt": "- **@8181yasoiti** Fri, 15 Nov 2024 04:49:00 GMT カープのストーブリーグ 九里がFA 佐野選手横浜残留 新助っ人モンテロ内野手加入 ハーン、ハッチの両投手と来季契約結ばず かな？ さて、モンテロがどんなもんか 足はあまり上げず、腕もタイミング取るのに大きく上げ下げしない コンパクトな構えから豪快なフォロースルー 足は遅い 一塁専ぽい https://x.com/8181yasoiti/status/1857284645177729488"
+        }
+      ]
+    },
+    {
+      "post_id": "1854832823552950754",
+      "post_url": "https://x.com/ponkazu123/status/1854832823552950754",
+      "author": "@ponkazu123",
+      "author_id": null,
+      "players": [
+        "モンテロ"
+      ],
+      "receipt_ids": [
+        "N6GX013"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX013",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:18:41.926Z",
+          "text_or_excerpt": "- **@ponkazu123** Fri, 08 Nov 2024 10:26:20 GMT 広島モンテロ獲得なんや 百活躍せんけどな 守備下手やしほぼ1塁専、足遅い、k%高すぎ、パワーありそうやけどクアーズフィールド本拠地ですからねえ https://x.com/ponkazu123/status/1854832823552950754 No other posts matched the criteria (direct physical foot speed mentions only; 2024 priority; game mechanics/assessments excluded). (cost: $0.0244)"
+        }
+      ]
+    },
+    {
+      "post_id": "2064686810928955417",
+      "post_url": "https://x.com/molcarp3150/status/2064686810928955417",
+      "author": "@molcarp3150",
+      "author_id": null,
+      "players": [
+        "モンテロ"
+      ],
+      "receipt_ids": [
+        "N6GX019"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX019",
+          "query_kind": "measurement_comparison",
+          "semantic_theme": "measurement_comparison",
+          "retrieved_at": "2026-08-10T17:23:52.246Z",
+          "text_or_excerpt": "- **@molcarp3150** **2026-06-10 12:31:10 GMT** **Text:** 小園の足でヒットが生まれるたび、カープの走力tier表みたいなポストで小園がモンテロ以下、持丸と同等だったの思い出して笑ってしまう 普通に節穴すぎるでしょ **URL:** https://x.com/molcarp3150/status/2064686810928955417 (No other matching posts found in the specified searches for 2024–2026.) (cost: $0.0230)"
+        }
+      ]
+    },
+    {
+      "post_id": "2083152191985225957",
+      "post_url": "https://x.com/a0i_shiba/status/2083152191985225957",
+      "author": "@a0i_shiba",
+      "author_id": null,
+      "players": [
+        "秋山翔吾"
+      ],
+      "receipt_ids": [
+        "N6GX021",
+        "N6GX022",
+        "N6GX027"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX021",
+          "query_kind": "current_2026",
+          "semantic_theme": "current_2026",
+          "retrieved_at": "2026-08-10T17:25:45.589Z",
+          "text_or_excerpt": "- **@a0i_shiba** **2026-07-31 11:26 GMT** 秋山翔吾の全力疾走に涙出ました。 なんか何見ても涙出る。 https://x.com/a0i_shiba/status/2083152191985225957 No other posts matched the criteria (physical foot speed / linear speed / acceleration / full sprint of 秋山翔吾; all other results were excluded per rules). (cost: $0.0316)"
+        },
+        {
+          "receipt_id": "N6GX022",
+          "query_kind": "current_2025",
+          "semantic_theme": "current_2025",
+          "retrieved_at": "2026-08-10T17:26:25.232Z",
+          "text_or_excerpt": "- **@a0i_shiba** 秋山翔吾の全力疾走に涙出ました。 なんか何見ても涙出る。 https://x.com/a0i_shiba/status/2083152191985225957 (2026-07-31) (cost: $0.0384)"
+        },
+        {
+          "receipt_id": "N6GX027",
+          "query_kind": "all_out_linear",
+          "semantic_theme": "all_out_linear",
+          "retrieved_at": "2026-08-10T17:30:50.362Z",
+          "text_or_excerpt": "- **@a0i_shiba** 秋山翔吾の全力疾走に涙出ました。 なんか何見ても涙出る。 https://x.com/a0i_shiba/status/2083152191985225957 (31 Jul 2026 11:26 GMT)"
+        }
+      ]
+    },
+    {
+      "post_id": "1967168240972595288",
+      "post_url": "https://x.com/Yamamo408/status/1967168240972595288",
+      "author": "@Yamamo408",
+      "author_id": null,
+      "players": [
+        "秋山翔吾"
+      ],
+      "receipt_ids": [
+        "N6GX022"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX022",
+          "query_kind": "current_2025",
+          "semantic_theme": "current_2025",
+          "retrieved_at": "2026-08-10T17:26:25.232Z",
+          "text_or_excerpt": "- **@Yamamo408** 秋山翔吾は怪我してたのかね？🤔 ほぼ全打席、ヒット性の当たりを飛ばしてるけどまだ14安打か😳 足もまだまだ速いし守備範囲も広いし、 そもそもMLBでも活躍してたしな😅 怖い(好きやから複雑)🙃 https://x.com/Yamamo408/status/1967168240972595288 (2025-06-04)"
+        }
+      ]
+    },
+    {
+      "post_id": "1812600486211830050",
+      "post_url": "https://x.com/Tenko_10325/status/1812600486211830050",
+      "author": "@Tenko_10325",
+      "author_id": null,
+      "players": [
+        "秋山翔吾"
+      ],
+      "receipt_ids": [
+        "N6GX027"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX027",
+          "query_kind": "all_out_linear",
+          "semantic_theme": "all_out_linear",
+          "retrieved_at": "2026-08-10T17:30:50.362Z",
+          "text_or_excerpt": "- **@Tenko_10325** エスピノーザちゃん、秋山翔吾選手の打球を自ら捌いて二塁送球でアウト取りました！ 一塁送球がちょっと逸れましたが、秋山翔吾選手の全力疾走もあって、タイミング的にも間に合わなかったようです。 https://x.com/Tenko_10325/status/1812600486211830050 (14 Jul 2024 21:30 GMT)"
+        }
+      ]
+    },
+    {
+      "post_id": "1815721736601559123",
+      "post_url": "https://x.com/CARP_GAKUEN/status/1815721736601559123",
+      "author": "@CARP_GAKUEN",
+      "author_id": null,
+      "players": [
+        "秋山翔吾"
+      ],
+      "receipt_ids": [
+        "N6GX027"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX027",
+          "query_kind": "all_out_linear",
+          "semantic_theme": "all_out_linear",
+          "retrieved_at": "2026-08-10T17:30:50.362Z",
+          "text_or_excerpt": "- **@CARP_GAKUEN** すべてに全力疾走 秋山翔吾さん 頭が下がります https://x.com/CARP_GAKUEN/status/1815721736601559123 (23 Jul 2024 12:12 GMT)"
+        }
+      ]
+    },
+    {
+      "post_id": "2018288694332207136",
+      "post_url": "https://x.com/carp_buun/status/2018288694332207136",
+      "author": "@carp_buun",
+      "author_id": null,
+      "players": [
+        "秋山翔吾"
+      ],
+      "receipt_ids": [
+        "N6GX027"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX027",
+          "query_kind": "all_out_linear",
+          "semantic_theme": "all_out_linear",
+          "retrieved_at": "2026-08-10T17:30:50.362Z",
+          "text_or_excerpt": "- **@carp_buun** ➡カープ秋山翔吾、シャトルランで20代選手をぶっちぎる！ ※平川、勝田、佐々木、渡辺、前川ら20代前半と競争した37歳の秋山がぶっちぎった。シャトルランで息が上がる若者を横目に加速「負けないつもりでやっている」 https://x.com/carp_buun/status/2018288694332207136 (2 Feb 2026 11:41 GMT) No other posts met the exact criteria (specific observation of his sprint/speed/acceleration; all exclusions applied). (cost: $0.0355)"
+        }
+      ]
+    },
+    {
+      "post_id": "2040788638058103161",
+      "post_url": "https://x.com/megr84_31/status/2040788638058103161",
+      "author": "@megr84_31",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX031"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX031",
+          "query_kind": "current_2026",
+          "semantic_theme": "current_2026",
+          "retrieved_at": "2026-08-10T17:33:34.470Z",
+          "text_or_excerpt": "- **@megr84_31** **Date/Time:** Sun, 05 Apr 2026 13:48:21 GMT **Text:** タイムリー内野安打をもぎ取って ベンチに戻りながら めっちゃ走ったで！！とジェスチャーしてた ポランコの全力疾走、大好き 2026.4.5 **URL:** https://x.com/megr84_31/status/2040788638058103161 (cost: $0.0293)"
+        }
+      ]
+    },
+    {
+      "post_id": "1837466551391605147",
+      "post_url": "https://x.com/kyo2uza/status/1837466551391605147",
+      "author": "@kyo2uza",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX033",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:34:53.328Z",
+          "text_or_excerpt": "- **@kyo2uza** Sat, 21 Sep 2024 12:18:58 GMT 石川慎吾さん、ポランコよりは足が速いらしい角中勝也さん https://x.com/kyo2uza/status/1837466551391605147"
+        }
+      ]
+    },
+    {
+      "post_id": "1828788517448937661",
+      "post_url": "https://x.com/mm__098765/status/1828788517448937661",
+      "author": "@mm__098765",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX033",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:34:53.328Z",
+          "text_or_excerpt": "- **@mm__098765** Wed, 28 Aug 2024 12:20:36 GMT どーすっかね？塁埋める🤔❓ ポランコなら奇策も少ないし足遅いから ゲッツーは取りやすいけど。 https://x.com/mm__098765/status/1828788517448937661"
+        }
+      ]
+    },
+    {
+      "post_id": "1824711148257640541",
+      "post_url": "https://x.com/doigakibaseball/status/1824711148257640541",
+      "author": "@doigakibaseball",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX033",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:34:53.328Z",
+          "text_or_excerpt": "- **@doigakibaseball** Sun, 11 Aug 2024 10:20:18 GMT ポランコあるある ・普通に足は速い部類(走力Cだし) https://x.com/doigakibaseball/status/1824711148257640541"
+        }
+      ]
+    },
+    {
+      "post_id": "1822563193706942903",
+      "post_url": "https://x.com/vamomisho/status/1822563193706942903",
+      "author": "@vamomisho",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX033",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:34:53.328Z",
+          "text_or_excerpt": "- **@vamomisho** Sun, 11 Aug 2024 09:18:21 GMT ポランコは意外と足速い https://x.com/vamomisho/status/1822563193706942903"
+        }
+      ]
+    },
+    {
+      "post_id": "1822562868468064651",
+      "post_url": "https://x.com/marinavi2006/status/1822562868468064651",
+      "author": "@marinavi2006",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX033",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:34:53.328Z",
+          "text_or_excerpt": "- **@marinavi2006** Sun, 11 Aug 2024 09:17:04 GMT べーやんもタイムリースリーベースヒットを放つ🥰 初回から珍しく得点しているというか、ポランコ意外と足が速い。 https://x.com/marinavi2006/status/1822562868468064651"
+        }
+      ]
+    },
+    {
+      "post_id": "1793210016675287065",
+      "post_url": "https://x.com/asys2024/status/1793210016675287065",
+      "author": "@asys2024",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX033",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:34:53.328Z",
+          "text_or_excerpt": "- **@asys2024** Wed, 22 May 2024 09:19:18 GMT ポランコ選手、比較的浅いレフトフライで帰ってこれるんだから、やっぱり足速いよね…。 https://x.com/asys2024/status/1793210016675287065"
+        }
+      ]
+    },
+    {
+      "post_id": "1779066661246804443",
+      "post_url": "https://x.com/asys2024/status/1779066661246804443",
+      "author": "@asys2024",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX033",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:34:53.328Z",
+          "text_or_excerpt": "- **@asys2024** Sat, 13 Apr 2024 08:38:40 GMT ポランコ選手…フェン直…でツーベースになるかと思ったけど小郷選手の返球がよくてアウトになった…もったいない。 ポランコ選手足遅い方ではないから、まぁ、仕方ない。 https://x.com/asys2024/status/1779066661246804443"
+        }
+      ]
+    },
+    {
+      "post_id": "1777985594981011703",
+      "post_url": "https://x.com/asys2024/status/1777985594981011703",
+      "author": "@asys2024",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX033",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:34:53.328Z",
+          "text_or_excerpt": "- **@asys2024** Wed, 10 Apr 2024 09:02:53 GMT ポランコ選手、やっぱり足速いな。いや、すごい速いわけじゃないけど…走塁は実はしっかりしてるよね。 https://x.com/asys2024/status/1777985594981011703 (cost: $0.0217)"
+        }
+      ]
+    },
+    {
+      "post_id": "2040662350899093677",
+      "post_url": "https://x.com/8711Kyo/status/2040662350899093677",
+      "author": "@8711Kyo",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX037"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX037",
+          "query_kind": "all_out_linear",
+          "semantic_theme": "all_out_linear",
+          "retrieved_at": "2026-08-10T17:36:52.477Z",
+          "text_or_excerpt": "- **@8711Kyo** ポランコは単純な足の速さならかなり速いと思うぞw 身体でかいから加速に時間かかるだけw https://x.com/8711Kyo/status/2040662350899093677 (2026-04-05)"
+        }
+      ]
+    },
+    {
+      "post_id": "1974661662897766747",
+      "post_url": "https://x.com/akila30/status/1974661662897766747",
+      "author": "@akila30",
+      "author_id": null,
+      "players": [
+        "ポランコ"
+      ],
+      "receipt_ids": [
+        "N6GX037"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX037",
+          "query_kind": "all_out_linear",
+          "semantic_theme": "all_out_linear",
+          "retrieved_at": "2026-08-10T17:36:52.477Z",
+          "text_or_excerpt": "- **@akila30** ポランコ久々の全力疾走で、思ったより自分が足早いの忘れてた。 https://x.com/akila30/status/1974661662897766747 (2025-10-05) No additional qualifying posts found in the results. (cost: $0.0251)"
+        }
+      ]
+    },
+    {
+      "post_id": "1816052554096337046",
+      "post_url": "https://x.com/G10__September/status/1816052554096337046",
+      "author": "@G10__September",
+      "author_id": null,
+      "players": [
+        "サンタナ"
+      ],
+      "receipt_ids": [
+        "N6GX043"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX043",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:38:18.711Z",
+          "text_or_excerpt": "- **@G10__September** Wed, 24 Jul 2024 10:07:24 GMT サンタナ、足大丈夫か？ 全力疾走は無理そう…？ https://x.com/G10__September/status/1816052554096337046"
+        }
+      ]
+    },
+    {
+      "post_id": "1784815721576345755",
+      "post_url": "https://x.com/love_dunkel/status/1784815721576345755",
+      "author": "@love_dunkel",
+      "author_id": null,
+      "players": [
+        "サンタナ"
+      ],
+      "receipt_ids": [
+        "N6GX043"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX043",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:38:18.711Z",
+          "text_or_excerpt": "- **@love_dunkel** Mon, 29 Apr 2024 05:23:22 GMT サンタナ、足は遅いがベースタッチは素晴らしく上手い‼️ https://x.com/love_dunkel/status/1784815721576345755"
+        }
+      ]
+    },
+    {
+      "post_id": "1796503271903019310",
+      "post_url": "https://x.com/mocchan_chan_10/status/1796503271903019310",
+      "author": "@mocchan_chan_10",
+      "author_id": null,
+      "players": [
+        "サンタナ"
+      ],
+      "receipt_ids": [
+        "N6GX043"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX043",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:38:18.711Z",
+          "text_or_excerpt": "- **@mocchan_chan_10** Fri, 31 May 2024 11:25:32 GMT サンタナ、足遅いねー。 #swallows https://x.com/mocchan_chan_10/status/1796503271903019310"
+        }
+      ]
+    },
+    {
+      "post_id": "1784089815178449231",
+      "post_url": "https://x.com/milk_tsubame/status/1784089815178449231",
+      "author": "@milk_tsubame",
+      "author_id": null,
+      "players": [
+        "サンタナ"
+      ],
+      "receipt_ids": [
+        "N6GX043"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX043",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:38:18.711Z",
+          "text_or_excerpt": "- **@milk_tsubame** Sat, 27 Apr 2024 05:18:53 GMT サンタナ実は足速い？！w https://x.com/milk_tsubame/status/1784089815178449231 (cost: $0.0254)"
+        }
+      ]
+    },
+    {
+      "post_id": "1997341181672624332",
+      "post_url": "https://x.com/nekomachimakoto/status/1997341181672624332",
+      "author": "@nekomachimakoto",
+      "author_id": null,
+      "players": [
+        "サンタナ"
+      ],
+      "receipt_ids": [
+        "N6GX047"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX047",
+          "query_kind": "all_out_linear",
+          "semantic_theme": "all_out_linear",
+          "retrieved_at": "2026-08-10T17:40:17.832Z",
+          "text_or_excerpt": "- **@nekomachimakoto** **Date/Time:** Sat, 06 Dec 2025 16:23:41 GMT **Text:** サンタナ、ウエイトが上がったのか、全力疾走すると戦車みたいだな。 **URL:** https://x.com/nekomachimakoto/status/1997341181672624332 (cost: $0.0352)"
+        }
+      ]
+    },
+    {
+      "post_id": "1915705298582724670",
+      "post_url": "https://x.com/namaranaramania/status/1915705298582724670",
+      "author": "@namaranaramania",
+      "author_id": null,
+      "players": [
+        "奈良間大己"
+      ],
+      "receipt_ids": [
+        "N6GX052",
+        "N6GX059"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX052",
+          "query_kind": "current_2025",
+          "semantic_theme": "current_2025",
+          "retrieved_at": "2026-08-10T17:41:32.677Z",
+          "text_or_excerpt": "- **@namaranaramania** Fri, 25 Apr 2025 09:51:49 GMT 奈良間大己って小股だから足遅いように見えて走力自体はちゃんとあるくらい速いです。50mも5.8秒なので。 https://x.com/namaranaramania/status/1915705298582724670"
+        },
+        {
+          "receipt_id": "N6GX059",
+          "query_kind": "measurement_comparison",
+          "semantic_theme": "measurement_comparison",
+          "retrieved_at": "2026-08-10T17:43:48.866Z",
+          "text_or_excerpt": "- **@namaranaramania** **2025-04-25 09:51:49 GMT** **Text:** 奈良間大己って小股だから足遅いように見えて走力自体はちゃんとあるくらい速いです。50mも5.8秒なので。 **URL:** https://x.com/namaranaramania/status/1915705298582724670 (cost: $0.0203)"
+        }
+      ]
+    },
+    {
+      "post_id": "1927337253656813569",
+      "post_url": "https://x.com/bitboss6009/status/1927337253656813569",
+      "author": "@bitboss6009",
+      "author_id": null,
+      "players": [
+        "奈良間大己"
+      ],
+      "receipt_ids": [
+        "N6GX052",
+        "N6GX057"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX052",
+          "query_kind": "current_2025",
+          "semantic_theme": "current_2025",
+          "retrieved_at": "2026-08-10T17:41:32.677Z",
+          "text_or_excerpt": "- **@bitboss6009** Tue, 27 May 2025 12:13:04 GMT 奈良間大己の全力疾走からのホームベースの踏み方好き民 https://x.com/bitboss6009/status/1927337253656813569 (No additional matching posts found.) (cost: $0.0184)"
+        },
+        {
+          "receipt_id": "N6GX057",
+          "query_kind": "all_out_linear",
+          "semantic_theme": "all_out_linear",
+          "retrieved_at": "2026-08-10T17:43:32.051Z",
+          "text_or_excerpt": "- **@bitboss6009** 奈良間大己の全力疾走からのホームベースの踏み方好き民 #lovefighters Tue, 27 May 2025 12:13:04 GMT https://x.com/bitboss6009/status/1927337253656813569"
+        }
+      ]
+    },
+    {
+      "post_id": "1817407823934034228",
+      "post_url": "https://x.com/FightersPR/status/1817407823934034228",
+      "author": "@FightersPR",
+      "author_id": null,
+      "players": [
+        "奈良間大己"
+      ],
+      "receipt_ids": [
+        "N6GX053"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX053",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:41:47.310Z",
+          "text_or_excerpt": "- **@FightersPR** Sun, 28 Jul 2024 03:52:45 GMT 今日の声出しも奈良間大己選手📢「初心を忘れずに全力疾走で勝ちましょう😤」 https://x.com/FightersPR/status/1817407823934034228"
+        }
+      ]
+    },
+    {
+      "post_id": "1770710265807393020",
+      "post_url": "https://x.com/fuji20_JF7/status/1770710265807393020",
+      "author": "@fuji20_JF7",
+      "author_id": null,
+      "players": [
+        "奈良間大己"
+      ],
+      "receipt_ids": [
+        "N6GX053",
+        "N6GX057"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX053",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:41:47.310Z",
+          "text_or_excerpt": "- **@fuji20_JF7** Thu, 21 Mar 2024 07:13:20 GMT 3月21日鎌スタ。チェンジベンチ戻る奈良間大己選手。全力疾走😂 #奈良間大己 https://x.com/fuji20_JF7/status/1770710265807393020"
+        },
+        {
+          "receipt_id": "N6GX057",
+          "query_kind": "all_out_linear",
+          "semantic_theme": "all_out_linear",
+          "retrieved_at": "2026-08-10T17:43:32.051Z",
+          "text_or_excerpt": "- **@fuji20_JF7** 3月21日鎌スタ。 チェンジベンチ戻る奈良間大己選手。 全力疾走😂 #奈良間大己 Thu, 21 Mar 2024 07:13:20 GMT https://x.com/fuji20_JF7/status/1770710265807393020 (cost: $0.0341)"
+        }
+      ]
+    },
+    {
+      "post_id": "1769347575063449908",
+      "post_url": "https://x.com/aoipanda333/status/1769347575063449908",
+      "author": "@aoipanda333",
+      "author_id": null,
+      "players": [
+        "奈良間大己"
+      ],
+      "receipt_ids": [
+        "N6GX053"
+      ],
+      "returned_contexts": [
+        {
+          "receipt_id": "N6GX053",
+          "query_kind": "current_2024",
+          "semantic_theme": "current_2024",
+          "retrieved_at": "2026-08-10T17:41:47.310Z",
+          "text_or_excerpt": "- **@aoipanda333** Sun, 17 Mar 2024 12:58:29 GMT ［24.03.17 ベルーナドーム］ サードでスタメン出場の奈良間大己くん🐻 一球一球投手に声かけて、ベンチに戻る時は全力疾走⚾️ https://x.com/aoipanda333/status/1769347575063449908 No other matching posts found. (cost: $0.0170)"
+        }
+      ]
+    }
+  ],
+  "existing_ledger_duplicate_control": {
+    "ledger_path": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+    "existing_target_player_records": 0,
+    "matched_existing_post_ids": [],
+    "matched_existing_origins": [],
+    "same_author_distinct_post_controls": [
+      {
+        "candidate_post_id": "2069729296177144023",
+        "candidate_author": "@tracking_now",
+        "existing_source_id": "GXSR178",
+        "existing_post_id": "2040603137187471860",
+        "disposition": "NOT_DUPLICATE: different post ID and no shared origin material returned."
+      },
+      {
+        "candidate_post_id": "2085693109812502839",
+        "candidate_author": "@CARPLOVE896692",
+        "existing_source_id": "GXSR151",
+        "existing_post_id": "2066618217506955481",
+        "disposition": "NOT_DUPLICATE: different post ID and no shared origin material returned."
+      }
+    ],
+    "status": "NO_EXACT_POST_ORIGIN_MATCHES"
+  },
+  "reviewed_candidates": [
+    {
+      "source_id": "N6GXS001",
+      "player": "筒香嘉智",
+      "post_id": "2069729296177144023",
+      "post_url": "https://x.com/tracking_now/status/2069729296177144023",
+      "author": "@tracking_now",
+      "author_id": null,
+      "posted_at": "Wed, 24 Jun 2026 10:28:12 GMT",
+      "query": "Xで「筒香嘉智 50m 足」「筒香嘉智 スプリント 走力」「筒香嘉智 過去 足 速い 遅い」を検索。2026、2025、2024を優先。実在する投稿だけを、post URL、投稿者、日時、本文とともに返す。盗塁、走塁判断、ゲーム査定、記事転載は不要。",
+      "receipt_ids": [
+        "N6GX008",
+        "N6GX009"
+      ],
+      "retrieved_at": "2026-08-10T17:16:26.983Z",
+      "text_or_excerpt": "- **@tracking_now** Wed, 24 Jun 2026 10:28:12 GMT 宮﨑敏郎、佐野恵太、筒香嘉智という『打撃力は十分だが足の遅い中軸』の時代は終わった。 https://x.com/tracking_now/status/2069729296177144023",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@tracking_now",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "GENERIC_ROSTER_LABEL_NOT_SPECIFIC_PHYSICAL_OBSERVATION",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX008",
+          "N6GX009"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS002",
+      "player": "筒香嘉智",
+      "post_id": "1934933887966388609",
+      "post_url": "https://x.com/kmkmkzg/status/1934933887966388609",
+      "author": "@kmkmkzg",
+      "author_id": null,
+      "posted_at": "Tue, 17 Jun 2025 11:19:22 GMT",
+      "query": "Xで「筒香嘉智 50m 足」「筒香嘉智 スプリント 走力」「筒香嘉智 過去 足 速い 遅い」を検索。2026、2025、2024を優先。実在する投稿だけを、post URL、投稿者、日時、本文とともに返す。盗塁、走塁判断、ゲーム査定、記事転載は不要。",
+      "receipt_ids": [
+        "N6GX008"
+      ],
+      "retrieved_at": "2026-08-10T17:04:00.000Z",
+      "text_or_excerpt": "- **@kmkmkzg** Tue, 17 Jun 2025 11:19:22 GMT 筒香嘉智さん ・速球打てません ・逃げる球打てません ・守備下手です ・足遅いです https://x.com/kmkmkzg/status/1934933887966388609",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@kmkmkzg",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "GENERIC_MULTI_SKILL_INSULT_NOT_OBSERVED_SPEED_EVIDENCE",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX008"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS003",
+      "player": "筒香嘉智",
+      "post_id": "1878017197827670025",
+      "post_url": "https://x.com/gudaksantha/status/1878017197827670025",
+      "author": "@gudaksantha",
+      "author_id": null,
+      "posted_at": "Sat, 11 Jan 2025 09:52:46 GMT",
+      "query": "Xで「筒香嘉智 50m 足」「筒香嘉智 スプリント 走力」「筒香嘉智 過去 足 速い 遅い」を検索。2026、2025、2024を優先。実在する投稿だけを、post URL、投稿者、日時、本文とともに返す。盗塁、走塁判断、ゲーム査定、記事転載は不要。",
+      "receipt_ids": [
+        "N6GX008",
+        "N6GX009"
+      ],
+      "retrieved_at": "2026-08-10T17:16:26.983Z",
+      "text_or_excerpt": "- **@gudaksantha** Sat, 11 Jan 2025 09:52:46 GMT 横浜 筒香嘉智 ... 基本的にでかくて足が遅い(遅そうな人)が好きです https://x.com/gudaksantha/status/1878017197827670025 (No other matching posts found for the exact search terms in 2024–2026.) (cost: $0.0318)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@gudaksantha",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "PREFERENCE_LIST_NOT_PHYSICAL_SPEED_EVIDENCE",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX008",
+          "N6GX009"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS004",
+      "player": "モンテロ",
+      "post_id": "2085311299387527235",
+      "post_url": "https://x.com/CASEY80sFAN/status/2085311299387527235",
+      "author": "@CASEY80sFAN",
+      "author_id": null,
+      "posted_at": "Thu, 06 Aug 2026 10:25:31 GMT",
+      "query": "Xで「モンテロ 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX011"
+      ],
+      "retrieved_at": "2026-08-10T17:17:19.220Z",
+      "text_or_excerpt": "- **@CASEY80sFAN** Thu, 06 Aug 2026 10:25:31 GMT なんかアナウンサーの人たちモンテロさんの足が遅いと思っているようだがその勘違いは見た目？走りだしたらそんなに遅くはない。 https://x.com/CASEY80sFAN/status/2085311299387527235",
+      "paraphrased_physical_speed_claim": "A 2026 observer says Montero is not especially slow once he starts running.",
+      "current_or_historical": "CURRENT_2026",
+      "evidence_direction": "CURRENT_SUPPORT",
+      "directness": "DIRECT_PHYSICAL_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "ORIGIN:@casey80sfan",
+      "accepted": true,
+      "rejected": false,
+      "accepted_for_classification": true,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": null,
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX011"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS005",
+      "player": "モンテロ",
+      "post_id": "2086397259948884200",
+      "post_url": "https://x.com/cto19s/status/2086397259948884200",
+      "author": "@cto19s",
+      "author_id": null,
+      "posted_at": "Sun, 09 Aug 2026 10:20:44 GMT",
+      "query": "Xで「モンテロ 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX011"
+      ],
+      "retrieved_at": "2026-08-10T17:17:19.220Z",
+      "text_or_excerpt": "- **@cto19s** Sun, 09 Aug 2026 10:20:44 GMT 最近モンテロの全力疾走が見れない https://x.com/cto19s/status/2086397259948884200",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@cto19s",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "FULL_SPRINT_FREQUENCY_NOT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX011"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS006",
+      "player": "モンテロ",
+      "post_id": "2085693109812502839",
+      "post_url": "https://x.com/CARPLOVE896692/status/2085693109812502839",
+      "author": "@CARPLOVE896692",
+      "author_id": null,
+      "posted_at": "Fri, 07 Aug 2026 11:42:42 GMT",
+      "query": "Xで「モンテロ 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX011"
+      ],
+      "retrieved_at": "2026-08-10T17:17:19.220Z",
+      "text_or_excerpt": "- **@CARPLOVE896692** Fri, 07 Aug 2026 11:42:42 GMT モンテロよう走るわ日々の全力疾走があるから昨日のもそんな責める気になれない https://x.com/CARPLOVE896692/status/2085693109812502839 (No other matching posts found within the criteria.) (cost: $0.0314)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@carplove896692",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "EFFORT_OR_HUSTLE_NOT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX011"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS007",
+      "player": "モンテロ",
+      "post_id": "1969010342727422345",
+      "post_url": "https://x.com/gen_20130806/status/1969010342727422345",
+      "author": "@gen_20130806",
+      "author_id": null,
+      "posted_at": "Tue, 19 Sep 2025 12:07:02 GMT",
+      "query": "Xで「モンテロ 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX012"
+      ],
+      "retrieved_at": "2026-08-10T17:18:11.990Z",
+      "text_or_excerpt": "- **@gen_20130806** Tue, 19 Sep 2025 12:07:02 GMT 惜しかったーー！モンテロさんの全力疾走でもぎ取ったチャンス、羽月さんの足で活かしたかったですね。 https://x.com/gen_20130806/status/1969010342727422345",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@gen_20130806",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "FULL_SPRINT_EFFORT_NOT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX012"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS008",
+      "player": "モンテロ",
+      "post_id": "1966766204095525315",
+      "post_url": "https://x.com/consommesecond/status/1966766204095525315",
+      "author": "@consommesecond",
+      "author_id": null,
+      "posted_at": "Sat, 13 Sep 2025 07:29:38 GMT",
+      "query": "Xで「モンテロ 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX012"
+      ],
+      "retrieved_at": "2026-08-10T17:18:11.990Z",
+      "text_or_excerpt": "- **@consommesecond** Sat, 13 Sep 2025 07:29:38 GMT モンテロの足遅い、は禁止ですよ #carp https://x.com/consommesecond/status/1966766204095525315",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@consommesecond",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "SLOGAN_OR_GENERIC_LABEL_NOT_OBSERVED_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX012"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS009",
+      "player": "モンテロ",
+      "post_id": "1966464114445955456",
+      "post_url": "https://x.com/kimutaku_lovely/status/1966464114445955456",
+      "author": "@kimutaku_lovely",
+      "author_id": null,
+      "posted_at": "Fri, 12 Sep 2025 11:29:14 GMT",
+      "query": "Xで「モンテロ 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX012"
+      ],
+      "retrieved_at": "2026-08-10T17:18:11.990Z",
+      "text_or_excerpt": "- **@kimutaku_lovely** Fri, 12 Sep 2025 11:29:14 GMT いやモンテロ足遅いよ💦 https://x.com/kimutaku_lovely/status/1966464114445955456 (No other matching posts found in the 2025 results that meet the exact criteria of direct physical speed/acceleration/sprint references.) (cost: $0.0202)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@kimutaku_lovely",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "GENERIC_LABEL_NOT_OBSERVED_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX012"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS010",
+      "player": "モンテロ",
+      "post_id": "1857284645177729488",
+      "post_url": "https://x.com/8181yasoiti/status/1857284645177729488",
+      "author": "@8181yasoiti",
+      "author_id": null,
+      "posted_at": "Fri, 15 Nov 2024 04:49:00 GMT",
+      "query": "Xで「モンテロ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX013"
+      ],
+      "retrieved_at": "2026-08-10T17:18:41.926Z",
+      "text_or_excerpt": "- **@8181yasoiti** Fri, 15 Nov 2024 04:49:00 GMT カープのストーブリーグ 九里がFA 佐野選手横浜残留 新助っ人モンテロ内野手加入 ハーン、ハッチの両投手と来季契約結ばず かな？ さて、モンテロがどんなもんか 足はあまり上げず、腕もタイミング取るのに大きく上げ下げしない コンパクトな構えから豪快なフォロースルー 足は遅い 一塁専ぽい https://x.com/8181yasoiti/status/1857284645177729488",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@8181yasoiti",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "PRE_SIGNING_SPECULATION_NOT_CURRENT_NPB_OBSERVATION",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX013"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS011",
+      "player": "モンテロ",
+      "post_id": "1854832823552950754",
+      "post_url": "https://x.com/ponkazu123/status/1854832823552950754",
+      "author": "@ponkazu123",
+      "author_id": null,
+      "posted_at": "Fri, 08 Nov 2024 10:26:20 GMT",
+      "query": "Xで「モンテロ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX013"
+      ],
+      "retrieved_at": "2026-08-10T17:18:41.926Z",
+      "text_or_excerpt": "- **@ponkazu123** Fri, 08 Nov 2024 10:26:20 GMT 広島モンテロ獲得なんや 百活躍せんけどな 守備下手やしほぼ1塁専、足遅い、k%高すぎ、パワーありそうやけどクアーズフィールド本拠地ですからねえ https://x.com/ponkazu123/status/1854832823552950754 No other posts matched the criteria (direct physical foot speed mentions only; 2024 priority; game mechanics/assessments excluded). (cost: $0.0244)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@ponkazu123",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "PRE_SIGNING_SPECULATION_NOT_CURRENT_NPB_OBSERVATION",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX013"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS012",
+      "player": "モンテロ",
+      "post_id": "2064686810928955417",
+      "post_url": "https://x.com/molcarp3150/status/2064686810928955417",
+      "author": "@molcarp3150",
+      "author_id": null,
+      "posted_at": "2026-06-10 12:31:10 GMT",
+      "query": "Xで「モンテロ 50m 足」「モンテロ スプリント 走力」「モンテロ 過去 足 速い 遅い」を検索。2024–2026を優先し、身体的な走る速さへの言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX019"
+      ],
+      "retrieved_at": "2026-08-10T17:23:52.246Z",
+      "text_or_excerpt": "- **@molcarp3150** **2026-06-10 12:31:10 GMT** **Text:** 小園の足でヒットが生まれるたび、カープの走力tier表みたいなポストで小園がモンテロ以下、持丸と同等だったの思い出して笑ってしまう 普通に節穴すぎるでしょ **URL:** https://x.com/molcarp3150/status/2064686810928955417 (No other matching posts found in the specified searches for 2024–2026.) (cost: $0.0230)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@molcarp3150",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "UNVERIFIABLE_THIRD_PARTY_TIER_TABLE_REFERENCE",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX019"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS013",
+      "player": "秋山翔吾",
+      "post_id": "2083152191985225957",
+      "post_url": "https://x.com/a0i_shiba/status/2083152191985225957",
+      "author": "@a0i_shiba",
+      "author_id": null,
+      "posted_at": "2026-07-31 11:26 GMT",
+      "query": "Xで「秋山翔吾 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX021",
+        "N6GX022",
+        "N6GX027"
+      ],
+      "retrieved_at": "2026-08-10T17:30:50.362Z",
+      "text_or_excerpt": "- **@a0i_shiba** **2026-07-31 11:26 GMT** 秋山翔吾の全力疾走に涙出ました。 なんか何見ても涙出る。 https://x.com/a0i_shiba/status/2083152191985225957 No other posts matched the criteria (physical foot speed / linear speed / acceleration / full sprint of 秋山翔吾; all other results were excluded per rules). (cost: $0.0316)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@a0i_shiba",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "EMOTIONAL_REACTION_TO_EFFORT_NOT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX021",
+          "N6GX022",
+          "N6GX027"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS014",
+      "player": "秋山翔吾",
+      "post_id": "1967168240972595288",
+      "post_url": "https://x.com/Yamamo408/status/1967168240972595288",
+      "author": "@Yamamo408",
+      "author_id": null,
+      "posted_at": "2025-06-04",
+      "query": "Xで「秋山翔吾 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX022"
+      ],
+      "retrieved_at": "2026-08-10T17:26:25.232Z",
+      "text_or_excerpt": "- **@Yamamo408** 秋山翔吾は怪我してたのかね？🤔 ほぼ全打席、ヒット性の当たりを飛ばしてるけどまだ14安打か😳 足もまだまだ速いし守備範囲も広いし、 そもそもMLBでも活躍してたしな😅 怖い(好きやから複雑)🙃 https://x.com/Yamamo408/status/1967168240972595288 (2025-06-04)",
+      "paraphrased_physical_speed_claim": "A 2025 observer says Akiyama is still fast.",
+      "current_or_historical": "HISTORICAL_2025",
+      "evidence_direction": "CURRENT_SUPPORT",
+      "directness": "DIRECT_PHYSICAL_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "ORIGIN:@yamamo408",
+      "accepted": true,
+      "rejected": false,
+      "accepted_for_classification": true,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": null,
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX022"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS015",
+      "player": "秋山翔吾",
+      "post_id": "1812600486211830050",
+      "post_url": "https://x.com/Tenko_10325/status/1812600486211830050",
+      "author": "@Tenko_10325",
+      "author_id": null,
+      "posted_at": null,
+      "query": "Xで「秋山翔吾 全力疾走 足」「秋山翔吾 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX027"
+      ],
+      "retrieved_at": "2026-08-10T17:30:50.362Z",
+      "text_or_excerpt": "- **@Tenko_10325** エスピノーザちゃん、秋山翔吾選手の打球を自ら捌いて二塁送球でアウト取りました！ 一塁送球がちょっと逸れましたが、秋山翔吾選手の全力疾走もあって、タイミング的にも間に合わなかったようです。 https://x.com/Tenko_10325/status/1812600486211830050 (14 Jul 2024 21:30 GMT)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@tenko_10325",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "PLAY_OUTCOME_NOT_DIRECT_SPEED_MEASUREMENT",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX027"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS016",
+      "player": "秋山翔吾",
+      "post_id": "1815721736601559123",
+      "post_url": "https://x.com/CARP_GAKUEN/status/1815721736601559123",
+      "author": "@CARP_GAKUEN",
+      "author_id": null,
+      "posted_at": null,
+      "query": "Xで「秋山翔吾 全力疾走 足」「秋山翔吾 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX027"
+      ],
+      "retrieved_at": "2026-08-10T17:30:50.362Z",
+      "text_or_excerpt": "- **@CARP_GAKUEN** すべてに全力疾走 秋山翔吾さん 頭が下がります https://x.com/CARP_GAKUEN/status/1815721736601559123 (23 Jul 2024 12:12 GMT)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@carp_gakuen",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "EFFORT_OR_HUSTLE_NOT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX027"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS017",
+      "player": "秋山翔吾",
+      "post_id": "2018288694332207136",
+      "post_url": "https://x.com/carp_buun/status/2018288694332207136",
+      "author": "@carp_buun",
+      "author_id": null,
+      "posted_at": null,
+      "query": "Xで「秋山翔吾 全力疾走 足」「秋山翔吾 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX027"
+      ],
+      "retrieved_at": "2026-08-10T17:30:50.362Z",
+      "text_or_excerpt": "- **@carp_buun** ➡カープ秋山翔吾、シャトルランで20代選手をぶっちぎる！ ※平川、勝田、佐々木、渡辺、前川ら20代前半と競争した37歳の秋山がぶっちぎった。シャトルランで息が上がる若者を横目に加速「負けないつもりでやっている」 https://x.com/carp_buun/status/2018288694332207136 (2 Feb 2026 11:41 GMT) No other posts met the exact criteria (specific observation of his sprint/speed/acceleration; all exclusions applied). (cost: $0.0355)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@carp_buun",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "AGGREGATION_OR_ARTICLE_REPRINT",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX027"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS018",
+      "player": "ポランコ",
+      "post_id": "2040788638058103161",
+      "post_url": "https://x.com/megr84_31/status/2040788638058103161",
+      "author": "@megr84_31",
+      "author_id": null,
+      "posted_at": "Sun, 05 Apr 2026 13:48:21 GMT",
+      "query": "Xで「ポランコ 2026 足 速い 遅い 全力疾走」を検索。2026年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX031"
+      ],
+      "retrieved_at": "2026-08-10T17:33:34.470Z",
+      "text_or_excerpt": "- **@megr84_31** **Date/Time:** Sun, 05 Apr 2026 13:48:21 GMT **Text:** タイムリー内野安打をもぎ取って ベンチに戻りながら めっちゃ走ったで！！とジェスチャーしてた ポランコの全力疾走、大好き 2026.4.5 **URL:** https://x.com/megr84_31/status/2040788638058103161 (cost: $0.0293)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@megr84_31",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "EFFORT_OR_HUSTLE_NOT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX031"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS019",
+      "player": "ポランコ",
+      "post_id": "1837466551391605147",
+      "post_url": "https://x.com/kyo2uza/status/1837466551391605147",
+      "author": "@kyo2uza",
+      "author_id": null,
+      "posted_at": "Sat, 21 Sep 2024 12:18:58 GMT",
+      "query": "Xで「ポランコ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "retrieved_at": "2026-08-10T17:34:53.328Z",
+      "text_or_excerpt": "- **@kyo2uza** Sat, 21 Sep 2024 12:18:58 GMT 石川慎吾さん、ポランコよりは足が速いらしい角中勝也さん https://x.com/kyo2uza/status/1837466551391605147",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@kyo2uza",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "HEARSAY_COMPARISON_NOT_DIRECT_OBSERVATION",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX033"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS020",
+      "player": "ポランコ",
+      "post_id": "1828788517448937661",
+      "post_url": "https://x.com/mm__098765/status/1828788517448937661",
+      "author": "@mm__098765",
+      "author_id": null,
+      "posted_at": "Wed, 28 Aug 2024 12:20:36 GMT",
+      "query": "Xで「ポランコ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "retrieved_at": "2026-08-10T17:34:53.328Z",
+      "text_or_excerpt": "- **@mm__098765** Wed, 28 Aug 2024 12:20:36 GMT どーすっかね？塁埋める🤔❓ ポランコなら奇策も少ないし足遅いから ゲッツーは取りやすいけど。 https://x.com/mm__098765/status/1828788517448937661",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@mm__098765",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "GAME_SITUATION_INFERENCE_NOT_DIRECT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX033"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS021",
+      "player": "ポランコ",
+      "post_id": "1824711148257640541",
+      "post_url": "https://x.com/doigakibaseball/status/1824711148257640541",
+      "author": "@doigakibaseball",
+      "author_id": null,
+      "posted_at": "Sun, 11 Aug 2024 10:20:18 GMT",
+      "query": "Xで「ポランコ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "retrieved_at": "2026-08-10T17:34:53.328Z",
+      "text_or_excerpt": "- **@doigakibaseball** Sun, 11 Aug 2024 10:20:18 GMT ポランコあるある ・普通に足は速い部類(走力Cだし) https://x.com/doigakibaseball/status/1824711148257640541",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@doigakibaseball",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "GAME_RATING_REFERENCE",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX033"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS022",
+      "player": "ポランコ",
+      "post_id": "1822563193706942903",
+      "post_url": "https://x.com/vamomisho/status/1822563193706942903",
+      "author": "@vamomisho",
+      "author_id": null,
+      "posted_at": "Sun, 11 Aug 2024 09:18:21 GMT",
+      "query": "Xで「ポランコ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "retrieved_at": "2026-08-10T17:34:53.328Z",
+      "text_or_excerpt": "- **@vamomisho** Sun, 11 Aug 2024 09:18:21 GMT ポランコは意外と足速い https://x.com/vamomisho/status/1822563193706942903",
+      "paraphrased_physical_speed_claim": "A 2024 observer calls Polanco surprisingly fast.",
+      "current_or_historical": "HISTORICAL_2024",
+      "evidence_direction": "FASTER",
+      "directness": "DIRECT_PHYSICAL_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "ORIGIN:@vamomisho",
+      "accepted": true,
+      "rejected": false,
+      "accepted_for_classification": true,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": null,
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX033"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS023",
+      "player": "ポランコ",
+      "post_id": "1822562868468064651",
+      "post_url": "https://x.com/marinavi2006/status/1822562868468064651",
+      "author": "@marinavi2006",
+      "author_id": null,
+      "posted_at": "Sun, 11 Aug 2024 09:17:04 GMT",
+      "query": "Xで「ポランコ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "retrieved_at": "2026-08-10T17:34:53.328Z",
+      "text_or_excerpt": "- **@marinavi2006** Sun, 11 Aug 2024 09:17:04 GMT べーやんもタイムリースリーベースヒットを放つ🥰 初回から珍しく得点しているというか、ポランコ意外と足が速い。 https://x.com/marinavi2006/status/1822562868468064651",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@marinavi2006",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "SAME_EVENT_DUPLICATE_OF_1822563193706942903",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX033"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS024",
+      "player": "ポランコ",
+      "post_id": "1793210016675287065",
+      "post_url": "https://x.com/asys2024/status/1793210016675287065",
+      "author": "@asys2024",
+      "author_id": null,
+      "posted_at": "Wed, 22 May 2024 09:19:18 GMT",
+      "query": "Xで「ポランコ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "retrieved_at": "2026-08-10T17:34:53.328Z",
+      "text_or_excerpt": "- **@asys2024** Wed, 22 May 2024 09:19:18 GMT ポランコ選手、比較的浅いレフトフライで帰ってこれるんだから、やっぱり足速いよね…。 https://x.com/asys2024/status/1793210016675287065",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@asys2024",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "RUNNING_OUTCOME_NOT_DIRECT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX033"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS025",
+      "player": "ポランコ",
+      "post_id": "1779066661246804443",
+      "post_url": "https://x.com/asys2024/status/1779066661246804443",
+      "author": "@asys2024",
+      "author_id": null,
+      "posted_at": "Sat, 13 Apr 2024 08:38:40 GMT",
+      "query": "Xで「ポランコ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "retrieved_at": "2026-08-10T17:34:53.328Z",
+      "text_or_excerpt": "- **@asys2024** Sat, 13 Apr 2024 08:38:40 GMT ポランコ選手…フェン直…でツーベースになるかと思ったけど小郷選手の返球がよくてアウトになった…もったいない。 ポランコ選手足遅い方ではないから、まぁ、仕方ない。 https://x.com/asys2024/status/1779066661246804443",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@asys2024",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "SAME_ORIGIN_LOWER_SPECIFICITY_DUPLICATE_OF_1777985594981011703",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX033"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS026",
+      "player": "ポランコ",
+      "post_id": "1777985594981011703",
+      "post_url": "https://x.com/asys2024/status/1777985594981011703",
+      "author": "@asys2024",
+      "author_id": null,
+      "posted_at": "Wed, 10 Apr 2024 09:02:53 GMT",
+      "query": "Xで「ポランコ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX033"
+      ],
+      "retrieved_at": "2026-08-10T17:34:53.328Z",
+      "text_or_excerpt": "- **@asys2024** Wed, 10 Apr 2024 09:02:53 GMT ポランコ選手、やっぱり足速いな。いや、すごい速いわけじゃないけど…走塁は実はしっかりしてるよね。 https://x.com/asys2024/status/1777985594981011703 (cost: $0.0217)",
+      "paraphrased_physical_speed_claim": "A 2024 observer says Polanco is fast but not exceptionally fast; the baserunning remark is not used.",
+      "current_or_historical": "HISTORICAL_2024",
+      "evidence_direction": "CURRENT_SUPPORT",
+      "directness": "DIRECT_PHYSICAL_COMPARISON",
+      "evidence_strength": "MODERATE",
+      "independence_group": "ORIGIN:@asys2024",
+      "accepted": true,
+      "rejected": false,
+      "accepted_for_classification": true,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": null,
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX033"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS027",
+      "player": "ポランコ",
+      "post_id": "2040662350899093677",
+      "post_url": "https://x.com/8711Kyo/status/2040662350899093677",
+      "author": "@8711Kyo",
+      "author_id": null,
+      "posted_at": "2026-04-05",
+      "query": "Xで「ポランコ 全力疾走 足」「ポランコ 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX037"
+      ],
+      "retrieved_at": "2026-08-10T17:36:52.477Z",
+      "text_or_excerpt": "- **@8711Kyo** ポランコは単純な足の速さならかなり速いと思うぞw 身体でかいから加速に時間かかるだけw https://x.com/8711Kyo/status/2040662350899093677 (2026-04-05)",
+      "paraphrased_physical_speed_claim": "A 2026 observer distinguishes Polanco’s fast pure speed from slower acceleration.",
+      "current_or_historical": "CURRENT_2026",
+      "evidence_direction": "MIXED",
+      "directness": "DIRECT_PHYSICAL_COMPARISON",
+      "evidence_strength": "MODERATE",
+      "independence_group": "ORIGIN:@8711kyo",
+      "accepted": true,
+      "rejected": false,
+      "accepted_for_classification": true,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": null,
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX037"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS028",
+      "player": "ポランコ",
+      "post_id": "1974661662897766747",
+      "post_url": "https://x.com/akila30/status/1974661662897766747",
+      "author": "@akila30",
+      "author_id": null,
+      "posted_at": "2025-10-05",
+      "query": "Xで「ポランコ 全力疾走 足」「ポランコ 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX037"
+      ],
+      "retrieved_at": "2026-08-10T17:36:52.477Z",
+      "text_or_excerpt": "- **@akila30** ポランコ久々の全力疾走で、思ったより自分が足早いの忘れてた。 https://x.com/akila30/status/1974661662897766747 (2025-10-05) No additional qualifying posts found in the results. (cost: $0.0251)",
+      "paraphrased_physical_speed_claim": "A 2025 observer, after a full sprint, says Polanco was faster than remembered.",
+      "current_or_historical": "HISTORICAL_2025",
+      "evidence_direction": "CURRENT_SUPPORT",
+      "directness": "DIRECT_PHYSICAL_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "ORIGIN:@akila30",
+      "accepted": true,
+      "rejected": false,
+      "accepted_for_classification": true,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": null,
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX037"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS029",
+      "player": "サンタナ",
+      "post_id": "1816052554096337046",
+      "post_url": "https://x.com/G10__September/status/1816052554096337046",
+      "author": "@G10__September",
+      "author_id": null,
+      "posted_at": "Wed, 24 Jul 2024 10:07:24 GMT",
+      "query": "Xで「サンタナ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX043"
+      ],
+      "retrieved_at": "2026-08-10T17:38:18.711Z",
+      "text_or_excerpt": "- **@G10__September** Wed, 24 Jul 2024 10:07:24 GMT サンタナ、足大丈夫か？ 全力疾走は無理そう…？ https://x.com/G10__September/status/1816052554096337046",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@g10__september",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "QUESTION_FORM_NOT_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX043"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS030",
+      "player": "サンタナ",
+      "post_id": "1784815721576345755",
+      "post_url": "https://x.com/love_dunkel/status/1784815721576345755",
+      "author": "@love_dunkel",
+      "author_id": null,
+      "posted_at": "Mon, 29 Apr 2024 05:23:22 GMT",
+      "query": "Xで「サンタナ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX043"
+      ],
+      "retrieved_at": "2026-08-10T17:38:18.711Z",
+      "text_or_excerpt": "- **@love_dunkel** Mon, 29 Apr 2024 05:23:22 GMT サンタナ、足は遅いがベースタッチは素晴らしく上手い‼️ https://x.com/love_dunkel/status/1784815721576345755",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@love_dunkel",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "BASERUNNING_TECHNIQUE_CONTEXT_NOT_ISOLATABLE_AS_DIRECT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX043"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS031",
+      "player": "サンタナ",
+      "post_id": "1796503271903019310",
+      "post_url": "https://x.com/mocchan_chan_10/status/1796503271903019310",
+      "author": "@mocchan_chan_10",
+      "author_id": null,
+      "posted_at": "Fri, 31 May 2024 11:25:32 GMT",
+      "query": "Xで「サンタナ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX043"
+      ],
+      "retrieved_at": "2026-08-10T17:38:18.711Z",
+      "text_or_excerpt": "- **@mocchan_chan_10** Fri, 31 May 2024 11:25:32 GMT サンタナ、足遅いねー。 #swallows https://x.com/mocchan_chan_10/status/1796503271903019310",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@mocchan_chan_10",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "GENERIC_LABEL_NOT_OBSERVED_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX043"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS032",
+      "player": "サンタナ",
+      "post_id": "1784089815178449231",
+      "post_url": "https://x.com/milk_tsubame/status/1784089815178449231",
+      "author": "@milk_tsubame",
+      "author_id": null,
+      "posted_at": "Sat, 27 Apr 2024 05:18:53 GMT",
+      "query": "Xで「サンタナ 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX043"
+      ],
+      "retrieved_at": "2026-08-10T17:38:18.711Z",
+      "text_or_excerpt": "- **@milk_tsubame** Sat, 27 Apr 2024 05:18:53 GMT サンタナ実は足速い？！w https://x.com/milk_tsubame/status/1784089815178449231 (cost: $0.0254)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@milk_tsubame",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "QUESTION_FORM_NOT_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX043"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS033",
+      "player": "サンタナ",
+      "post_id": "1997341181672624332",
+      "post_url": "https://x.com/nekomachimakoto/status/1997341181672624332",
+      "author": "@nekomachimakoto",
+      "author_id": null,
+      "posted_at": "Sat, 06 Dec 2025 16:23:41 GMT",
+      "query": "Xで「サンタナ 全力疾走 足」「サンタナ 直線 スピード 加速」を検索。2024–2026を優先し、全力疾走・直線速度・加速そのものを具体的に観察した実在投稿だけを、URL、投稿者、日時、本文付きで返す。一塁到達だけ、盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX047"
+      ],
+      "retrieved_at": "2026-08-10T17:40:17.832Z",
+      "text_or_excerpt": "- **@nekomachimakoto** **Date/Time:** Sat, 06 Dec 2025 16:23:41 GMT **Text:** サンタナ、ウエイトが上がったのか、全力疾走すると戦車みたいだな。 **URL:** https://x.com/nekomachimakoto/status/1997341181672624332 (cost: $0.0352)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@nekomachimakoto",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "METAPHOR_NOT_VERIFIABLE_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX047"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS034",
+      "player": "奈良間大己",
+      "post_id": "1915705298582724670",
+      "post_url": "https://x.com/namaranaramania/status/1915705298582724670",
+      "author": "@namaranaramania",
+      "author_id": null,
+      "posted_at": "Fri, 25 Apr 2025 09:51:49 GMT",
+      "query": "Xで「奈良間大己 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX052",
+        "N6GX059"
+      ],
+      "retrieved_at": "2026-08-10T17:43:48.866Z",
+      "text_or_excerpt": "- **@namaranaramania** Fri, 25 Apr 2025 09:51:49 GMT 奈良間大己って小股だから足遅いように見えて走力自体はちゃんとあるくらい速いです。50mも5.8秒なので。 https://x.com/namaranaramania/status/1915705298582724670",
+      "paraphrased_physical_speed_claim": "A 2025 post asserts Narama’s running ability is fairly fast and states an unverified 50m claim; only the qualitative assertion is retained.",
+      "current_or_historical": "HISTORICAL_2025",
+      "evidence_direction": "CURRENT_SUPPORT",
+      "directness": "DIRECT_PHYSICAL_CLAIM_WITH_UNVERIFIED_MEASUREMENT",
+      "evidence_strength": "MODERATE",
+      "independence_group": "ORIGIN:@namaranaramania",
+      "accepted": true,
+      "rejected": false,
+      "accepted_for_classification": true,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": null,
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX052",
+          "N6GX059"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS035",
+      "player": "奈良間大己",
+      "post_id": "1927337253656813569",
+      "post_url": "https://x.com/bitboss6009/status/1927337253656813569",
+      "author": "@bitboss6009",
+      "author_id": null,
+      "posted_at": "Tue, 27 May 2025 12:13:04 GMT",
+      "query": "Xで「奈良間大己 2025 足 速い 遅い 全力疾走」を検索。2025年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX052",
+        "N6GX057"
+      ],
+      "retrieved_at": "2026-08-10T17:43:32.051Z",
+      "text_or_excerpt": "- **@bitboss6009** Tue, 27 May 2025 12:13:04 GMT 奈良間大己の全力疾走からのホームベースの踏み方好き民 https://x.com/bitboss6009/status/1927337253656813569 (No additional matching posts found.) (cost: $0.0184)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@bitboss6009",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "FULL_SPRINT_EFFORT_AND_HOME_TOUCH_TECHNIQUE_NOT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX052",
+          "N6GX057"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS036",
+      "player": "奈良間大己",
+      "post_id": "1817407823934034228",
+      "post_url": "https://x.com/FightersPR/status/1817407823934034228",
+      "author": "@FightersPR",
+      "author_id": null,
+      "posted_at": "Sun, 28 Jul 2024 03:52:45 GMT",
+      "query": "Xで「奈良間大己 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX053"
+      ],
+      "retrieved_at": "2026-08-10T17:41:47.310Z",
+      "text_or_excerpt": "- **@FightersPR** Sun, 28 Jul 2024 03:52:45 GMT 今日の声出しも奈良間大己選手📢「初心を忘れずに全力疾走で勝ちましょう😤」 https://x.com/FightersPR/status/1817407823934034228",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@fighterspr",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "TEAM_EXHORTATION_NOT_PLAYER_SPEED_OBSERVATION",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX053"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS037",
+      "player": "奈良間大己",
+      "post_id": "1770710265807393020",
+      "post_url": "https://x.com/fuji20_JF7/status/1770710265807393020",
+      "author": "@fuji20_JF7",
+      "author_id": null,
+      "posted_at": "Thu, 21 Mar 2024 07:13:20 GMT",
+      "query": "Xで「奈良間大己 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX053",
+        "N6GX057"
+      ],
+      "retrieved_at": "2026-08-10T17:43:32.051Z",
+      "text_or_excerpt": "- **@fuji20_JF7** Thu, 21 Mar 2024 07:13:20 GMT 3月21日鎌スタ。チェンジベンチ戻る奈良間大己選手。全力疾走😂 #奈良間大己 https://x.com/fuji20_JF7/status/1770710265807393020",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@fuji20_jf7",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "BENCH_RETURN_EFFORT_NOT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX053",
+          "N6GX057"
+        ]
+      }
+    },
+    {
+      "source_id": "N6GXS038",
+      "player": "奈良間大己",
+      "post_id": "1769347575063449908",
+      "post_url": "https://x.com/aoipanda333/status/1769347575063449908",
+      "author": "@aoipanda333",
+      "author_id": null,
+      "posted_at": "Sun, 17 Mar 2024 12:58:29 GMT",
+      "query": "Xで「奈良間大己 2024 足 速い 遅い 全力疾走」を検索。2024年の投稿を優先し、身体的な足の速さ、直線速度、加速、全力疾走への直接言及がある実在投稿だけを、URL、投稿者、日時、本文付きで返す。盗塁、走塁判断、守備、ゲーム査定、記事転載は除外。",
+      "receipt_ids": [
+        "N6GX053"
+      ],
+      "retrieved_at": "2026-08-10T17:41:47.310Z",
+      "text_or_excerpt": "- **@aoipanda333** Sun, 17 Mar 2024 12:58:29 GMT ［24.03.17 ベルーナドーム］ サードでスタメン出場の奈良間大己くん🐻 一球一球投手に声かけて、ベンチに戻る時は全力疾走⚾️ https://x.com/aoipanda333/status/1769347575063449908 No other matching posts found. (cost: $0.0170)",
+      "paraphrased_physical_speed_claim": null,
+      "current_or_historical": "UNRESOLVED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_DIRECT",
+      "evidence_strength": "NONE",
+      "independence_group": "ORIGIN:@aoipanda333",
+      "accepted": false,
+      "rejected": true,
+      "accepted_for_classification": false,
+      "qualifies_for_strict_consensus": false,
+      "inaccessible_or_deleted": false,
+      "rejection_reason": "BENCH_RETURN_EFFORT_NOT_SPEED",
+      "grok_x_search_receipt_or_provenance": {
+        "provenance": "GROK_X_SUPPLEMENT",
+        "retrieval_method": "mcp__grok_x__x_search",
+        "receipt_ids": [
+          "N6GX053"
+        ]
+      }
+    }
+  ],
+  "player_results": [
+    {
+      "player": "筒香嘉智",
+      "independent_x_count": 0,
+      "independent_qualifying_x_count": 0,
+      "accepted_x_count": 0,
+      "temporal_ordinal_constraint": "UNRESOLVED: no accepted temporal physical-speed evidence.",
+      "proposed_classification": "INSUFFICIENT_X_EVIDENCE",
+      "accepted_source_ids": [],
+      "negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold.",
+        "No post met the directness and quality threshold after exclusions."
+      ]
+    },
+    {
+      "player": "モンテロ",
+      "independent_x_count": 1,
+      "independent_qualifying_x_count": 0,
+      "accepted_x_count": 1,
+      "temporal_ordinal_constraint": "UNRESOLVED: one 2026 moderate post says he is not especially slow once moving, without a valid prior-speed comparison.",
+      "proposed_classification": "INSUFFICIENT_X_EVIDENCE",
+      "accepted_source_ids": [
+        "N6GXS004"
+      ],
+      "negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold."
+      ]
+    },
+    {
+      "player": "秋山翔吾",
+      "independent_x_count": 1,
+      "independent_qualifying_x_count": 0,
+      "accepted_x_count": 1,
+      "temporal_ordinal_constraint": "UNRESOLVED: one 2025 moderate post says he is still fast, without a valid prior-speed comparison.",
+      "proposed_classification": "INSUFFICIENT_X_EVIDENCE",
+      "accepted_source_ids": [
+        "N6GXS014"
+      ],
+      "negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold."
+      ]
+    },
+    {
+      "player": "ポランコ",
+      "independent_x_count": 4,
+      "independent_qualifying_x_count": 0,
+      "accepted_x_count": 4,
+      "temporal_ordinal_constraint": "UNRESOLVED: accepted 2024–2026 posts suggest non-slow/faster straight speed, while one 2026 post separately says acceleration takes time; this is not a temporal decline or recovery finding.",
+      "proposed_classification": "INSUFFICIENT_X_EVIDENCE",
+      "accepted_source_ids": [
+        "N6GXS022",
+        "N6GXS026",
+        "N6GXS027",
+        "N6GXS028"
+      ],
+      "negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold."
+      ]
+    },
+    {
+      "player": "サンタナ",
+      "independent_x_count": 0,
+      "independent_qualifying_x_count": 0,
+      "accepted_x_count": 0,
+      "temporal_ordinal_constraint": "UNRESOLVED: no accepted temporal physical-speed evidence.",
+      "proposed_classification": "INSUFFICIENT_X_EVIDENCE",
+      "accepted_source_ids": [],
+      "negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold.",
+        "No post met the directness and quality threshold after exclusions."
+      ]
+    },
+    {
+      "player": "奈良間大己",
+      "independent_x_count": 1,
+      "independent_qualifying_x_count": 0,
+      "accepted_x_count": 1,
+      "temporal_ordinal_constraint": "UNRESOLVED: one 2025 post qualitatively calls his running ability fast, but its 50m assertion is not independently verified and provides no temporal comparison.",
+      "proposed_classification": "INSUFFICIENT_X_EVIDENCE",
+      "accepted_source_ids": [
+        "N6GXS034"
+      ],
+      "negative_findings": [
+        "No accepted X post directly compares current speed with an earlier verified physical-speed observation.",
+        "No two independent qualifying X origins were found; accepted MODERATE posts do not meet the strict-consensus threshold."
+      ]
+    }
+  ],
+  "negative_findings": {
+    "all_players": "No player reached independent_qualifying_x_count >= 2; no new strict X consensus is asserted.",
+    "technical_collection_note": "A preliminary task-local Node bridge was discarded because its file text was malformed; it is not included as evidence. This artifact contains only direct MCP x_search receipts with correct Japanese queries.",
+    "inaccessible_or_deleted_posts": 0,
+    "rejection_reason_counts": {
+      "GENERIC_ROSTER_LABEL_NOT_SPECIFIC_PHYSICAL_OBSERVATION": 1,
+      "GENERIC_MULTI_SKILL_INSULT_NOT_OBSERVED_SPEED_EVIDENCE": 1,
+      "PREFERENCE_LIST_NOT_PHYSICAL_SPEED_EVIDENCE": 1,
+      "FULL_SPRINT_FREQUENCY_NOT_SPEED": 1,
+      "EFFORT_OR_HUSTLE_NOT_SPEED": 3,
+      "FULL_SPRINT_EFFORT_NOT_SPEED": 1,
+      "SLOGAN_OR_GENERIC_LABEL_NOT_OBSERVED_SPEED": 1,
+      "GENERIC_LABEL_NOT_OBSERVED_SPEED": 2,
+      "PRE_SIGNING_SPECULATION_NOT_CURRENT_NPB_OBSERVATION": 2,
+      "UNVERIFIABLE_THIRD_PARTY_TIER_TABLE_REFERENCE": 1,
+      "EMOTIONAL_REACTION_TO_EFFORT_NOT_SPEED": 1,
+      "PLAY_OUTCOME_NOT_DIRECT_SPEED_MEASUREMENT": 1,
+      "AGGREGATION_OR_ARTICLE_REPRINT": 1,
+      "HEARSAY_COMPARISON_NOT_DIRECT_OBSERVATION": 1,
+      "GAME_SITUATION_INFERENCE_NOT_DIRECT_SPEED": 1,
+      "GAME_RATING_REFERENCE": 1,
+      "SAME_EVENT_DUPLICATE_OF_1822563193706942903": 1,
+      "RUNNING_OUTCOME_NOT_DIRECT_SPEED": 1,
+      "SAME_ORIGIN_LOWER_SPECIFICITY_DUPLICATE_OF_1777985594981011703": 1,
+      "QUESTION_FORM_NOT_DIRECT_PHYSICAL_SPEED_CLAIM": 2,
+      "BASERUNNING_TECHNIQUE_CONTEXT_NOT_ISOLATABLE_AS_DIRECT_SPEED": 1,
+      "METAPHOR_NOT_VERIFIABLE_SPEED": 1,
+      "FULL_SPRINT_EFFORT_AND_HOME_TOUCH_TECHNIQUE_NOT_SPEED": 1,
+      "TEAM_EXHORTATION_NOT_PLAYER_SPEED_OBSERVATION": 1,
+      "BENCH_RETURN_EFFORT_NOT_SPEED": 2
+    }
+  },
+  "limitations": [
+    "A direct MCP receipt establishes that Grok-X returned the URL/text; no separate authenticated X page fetch was used.",
+    "Accepted MODERATE posts are retained as context but not as strict-consensus evidence.",
+    "A lack of accepted X evidence is not evidence that no relevant X information exists.",
+    "No SNS/X evidence was converted to a numeric speed rating."
+  ]
+}
