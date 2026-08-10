@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-08-10",
+  "freeze_commit": "a77c419613ed33b2d463ad309e755d32df2f632f",
+  "comparison": "Independent 100-row final speed freeze vs PowerPro 2026, external QA only",
+  "guards": {
+    "powerpro_used_to_set_freeze_values": false,
+    "post_qa_rating_changes": 0,
+    "meaning": "Diagnostic external comparison only; residuals are not correction targets."
+  },
+  "match": {
+    "frozen_players": 100,
+    "matched_powerpro_2026": 99,
+    "unmatched": ["名原 典彦"],
+    "method": "same team plus normalized roster-name match against local pawapuro_full 2026; no forced match for 名原典彦"
+  },
+  "summary": {
+    "n": 99,
+    "final_mean": 65.444444,
+    "powerpro_mean": 65.666667,
+    "mean_final_minus_powerpro": -0.222222,
+    "mae": 7.676768,
+    "rmse": 9.755599,
+    "corr": 0.780709,
+    "within5": 0.444444,
+    "within10": 0.686869,
+    "abs_diff_gt10": 31,
+    "abs_diff_gt15": 11
+  },
+  "old_blind_v3_reference": {
+    "n": 99,
+    "mae": 7.946619,
+    "rmse": 10.018189,
+    "corr": 0.766143,
+    "within5": 0.424242,
+    "within10": 0.636364,
+    "abs_diff_gt10": 36,
+    "abs_diff_gt15": 13,
+    "note": "Reference only. Improvement was not an optimization target and was not used to alter the freeze."
+  },
+  "largest_final_above_powerpro": [
+    {"player":"古賀 優大","final":70,"powerpro":46,"diff":24},
+    {"player":"村林 一輝","final":92,"powerpro":69,"diff":23},
+    {"player":"宮﨑 敏郎","final":54,"powerpro":33,"diff":21},
+    {"player":"浅村 栄斗","final":56,"powerpro":35,"diff":21},
+    {"player":"大城 卓三","final":44,"powerpro":24,"diff":20},
+    {"player":"山口 航輝","final":68,"powerpro":52,"diff":16},
+    {"player":"石川 昂弥","final":57,"powerpro":41,"diff":16},
+    {"player":"細川 成也","final":75,"powerpro":60,"diff":15}
+  ],
+  "largest_final_below_powerpro": [
+    {"player":"野間 峻祥","final":66,"powerpro":88,"diff":-22},
+    {"player":"矢野 雅哉","final":57,"powerpro":78,"diff":-21},
+    {"player":"カリステ","final":64,"powerpro":82,"diff":-18},
+    {"player":"京田 陽太","final":61,"powerpro":78,"diff":-17},
+    {"player":"小園 海斗","final":65,"powerpro":79,"diff":-14},
+    {"player":"岩田 幸宏","final":83,"powerpro":96,"diff":-13},
+    {"player":"丸山 和郁","final":73,"powerpro":86,"diff":-13},
+    {"player":"来田 涼斗","final":73,"powerpro":85,"diff":-12},
+    {"player":"友杉 篤輝","final":75,"powerpro":87,"diff":-12},
+    {"player":"並木 秀尊","final":85,"powerpro":97,"diff":-12}
+  ],
+  "the_show_external_qa": {
+    "player_level_comparison_run": false,
+    "reason": "No verified player-level NPB/MLB identity bridge for this 100-player roster, and the historical The Show speed panel is dominated by carry-forward snapshots with insufficient identifiable Speed-change history.",
+    "permitted_conclusion": "Negative-result/methodology QA only; no numeric correction to NPB speed appraisal."
+  }
+}
