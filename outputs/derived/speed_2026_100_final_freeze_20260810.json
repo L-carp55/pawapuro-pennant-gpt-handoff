@@ -1,1 +1,27 @@
-__LARGE_CONTENT_PLACEHOLDER__
+{
+  "schema_version": "1.0",
+  "created_at": "2026-08-10",
+  "status": "INDEPENDENT_100_ROW_FREEZE_BEFORE_EXTERNAL_GAME_QA",
+  "source_decision_packet_commit": "501f2d6ea638404a71a0026c530ead4cd6567e03",
+  "scope": "Pure physical running ability from the first running step through roughly 90 ft.",
+  "guards": {
+    "powerpro_as_rating_input": false,
+    "the_show_as_rating_input": false,
+    "pa_or_proxy_point_adjustment": false,
+    "distance_ratio_50m_or_30m_to_t90": false,
+    "fixed_age_decay": false,
+    "human_reviewed_100_of_100": true
+  },
+  "review_counts": {"P0": 2, "P1": 55, "P2": 43},
+  "evidence_tier_counts": {
+    "SPRINT_ONLY": 56,
+    "HISTORICAL_PROFILE_HINT": 35,
+    "STANDARDIZED_SHORT_DISTANCE_PRIOR": 7,
+    "CURRENT_DIRECT_T90_CANDIDATE": 2
+  },
+  "explicit_point_changes_vs_rounded_blind_baseline": 6,
+  "production_npb_cdf_status": "UNCALIBRATED_NOT_FABRICATED",
+  "player_table": "outputs/derived/speed_2026_100_final_freeze_20260810.csv",
+  "audit": "docs/audits/speed_2026_100_row_level_final_freeze_20260810.md",
+  "note": "The earlier placeholder-only commit 1516c176efafe5a220eda2a54034c438abf32756 is explicitly superseded and is not a freeze commit."
+}
