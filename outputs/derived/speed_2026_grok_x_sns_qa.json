@@ -1,0 +1,137 @@
+{
+  "schema_version": "speed-2026-grok-x-sns-rescue/v1.0.0/qa",
+  "as_of": "2026-08-10",
+  "final_chat_only_knowledge_count": 0,
+  "independent_qa": {
+    "agent": "grok_x_independent_qa",
+    "status": "PASS",
+    "rerun_after_required_fix": true,
+    "required_fix_verified": "Question-form candidate 2035030093240967369 rejected; general player-type labels cannot alone satisfy strict SNS consensus.",
+    "scope": "Receipt-to-post traceability, canonical scope, baseline preservation, duplicate/origin controls, exclusions, classifications, video queue, and residual-audit isolation."
+  },
+  "checks": [
+    {
+      "id": 1,
+      "name": "canonical_19_only",
+      "pass": true,
+      "evidence": "All Grok and consensus records resolve to the fixed canonical 19."
+    },
+    {
+      "id": 2,
+      "name": "x_search_receipts_saved",
+      "pass": true,
+      "evidence": "175 stored x_search receipts; all status OK."
+    },
+    {
+      "id": 3,
+      "name": "actual_post_id_and_url_saved",
+      "pass": true,
+      "evidence": "191/191 unique candidate records retain a status ID and x.com URL; every accepted URL exactly appears in a stored Grok-X receipt."
+    },
+    {
+      "id": 4,
+      "name": "repost_duplicate_control",
+      "pass": true,
+      "evidence": "Known same-event/broadcast repetitions rejected; accepted records are not marked reposts."
+    },
+    {
+      "id": 5,
+      "name": "same_origin_control",
+      "pass": true,
+      "evidence": "Umeno and Suzuki same-event/broadcast groups collapsed."
+    },
+    {
+      "id": 6,
+      "name": "existing_ledger_duplicate_control",
+      "pass": true,
+      "evidence": "The matching Suzuki X origin is linked as duplicate of SNSR040 and not counted anew."
+    },
+    {
+      "id": 7,
+      "name": "stolen_base_technique_excluded",
+      "pass": true,
+      "evidence": "No accepted Grok source uses stolen-base technique."
+    },
+    {
+      "id": 8,
+      "name": "baserunning_judgment_excluded",
+      "pass": true,
+      "evidence": "No accepted Grok source rests on start or decision quality."
+    },
+    {
+      "id": 9,
+      "name": "game_rating_excluded",
+      "pass": true,
+      "evidence": "No accepted Grok source is a game rating/discussion."
+    },
+    {
+      "id": 10,
+      "name": "current_historical_separated",
+      "pass": true,
+      "evidence": "All accepted sources have explicit current/historical context."
+    },
+    {
+      "id": 11,
+      "name": "old_posts_not_overweighted",
+      "pass": true,
+      "evidence": "Directional/current-support outcomes each retain at least one 2025/26 accepted Grok source."
+    },
+    {
+      "id": 12,
+      "name": "no_numeric_sns_rating_generated",
+      "pass": true,
+      "evidence": "v2 consensus stores bands and ordinal constraints only, not SNS-derived numeric ratings."
+    },
+    {
+      "id": 13,
+      "name": "insufficient_not_forced",
+      "pass": true,
+      "evidence": "All players remaining explicitly insufficient stay in the video queue; the count is 8."
+    },
+    {
+      "id": 14,
+      "name": "deleted_inaccessible_not_confirmed",
+      "pass": true,
+      "evidence": "No metadata-incomplete or identity-conflicted result was accepted as confirmed evidence."
+    },
+    {
+      "id": 15,
+      "name": "powerpro_residual_not_used",
+      "pass": true,
+      "evidence": "Builder inputs contain only baseline SNS, canonical consensus, and Grok-X evidence; no residual audit input."
+    },
+    {
+      "id": 16,
+      "name": "reproducible_integration",
+      "pass": true,
+      "evidence": "Deterministic inputs, fixed manual decision table, and one output row per candidate."
+    },
+    {
+      "id": 17,
+      "name": "final_chat_only_knowledge_zero",
+      "pass": true,
+      "evidence": "All claims and counts used for the deliverable are stored in repository artifacts; chat-only knowledge count is 0."
+    },
+    {
+      "id": 18,
+      "name": "question_form_not_accepted",
+      "pass": true,
+      "evidence": "Question-form candidate 2035030093240967369 is rejected and no accepted source has question-form directness."
+    },
+    {
+      "id": 19,
+      "name": "generic_labels_do_not_create_strict_consensus_alone",
+      "pass": true,
+      "evidence": "Strict consensus is based on two qualifying independent X origins; general player-type labels are retained as context but cannot satisfy it alone."
+    }
+  ],
+  "summary": {
+    "passed": 19,
+    "failed": 0,
+    "raw_x_hit_occurrences": 267,
+    "unique_x_post_candidates": 191,
+    "accepted_x_sources": 41,
+    "rejected_x_sources": 150,
+    "video_queue_count": 12
+  }
+}

@@ -1,0 +1,996 @@
+{
+  "schema_version": "speed-2026-grok-x-sns-rescue/v1.0.0/combined-consensus-v2",
+  "as_of": "2026-08-10",
+  "no_numeric_rating_generated_from_sns": true,
+  "integration_inputs": {
+    "pre_grok_consensus": "outputs/derived/speed_2026_sns_tiebreak_consensus.json",
+    "pre_grok_ledger": "data/normalized/speed_2026_sns_consensus_sources.json",
+    "grok_x_ledger": "data/normalized/speed_2026_grok_x_sources.json",
+    "provenance_separation": [
+      "EXISTING_SNS_BASELINE",
+      "GROK_X_SUPPLEMENT"
+    ]
+  },
+  "consensus": [
+    {
+      "player": "西野 真弘",
+      "team": "オリックス・バファローズ",
+      "packet_id": "P009",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B4_MID_UPPER_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "combined_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_raw_candidate_count": 13,
+      "grok_x_accepted_source_count": 2,
+      "grok_x_independent_source_count": 2,
+      "grok_x_qualifying_independent_x_count": 1,
+      "independent_x_count": 2,
+      "independent_qualifying_x_count": 1,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 2,
+      "strict_sns_requirement_met": false,
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "2026年の一般的な俊足類型と単発の足が速い評価は残るが、一般ラベルだけでstrict 2起源を満たしたとは扱わない。",
+      "accepted_grok_source_ids": [
+        "GXSR059",
+        "GXSR061"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR059",
+        "GXSR061"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR050",
+        "GXSR051",
+        "GXSR052",
+        "GXSR053",
+        "GXSR054",
+        "GXSR055",
+        "GXSR056",
+        "GXSR057",
+        "GXSR058",
+        "GXSR060",
+        "GXSR062"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_neko_carp",
+        "X_AUTHOR_PEVRPFCeVa34034"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_PEVRPFCeVa34034"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "カリステ",
+      "team": "中日ドラゴンズ",
+      "packet_id": "P010",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B5_MID_LOWER_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "combined_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_raw_candidate_count": 4,
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_source_count": 1,
+      "grok_x_qualifying_independent_x_count": 0,
+      "independent_x_count": 1,
+      "independent_qualifying_x_count": 0,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 1,
+      "strict_sns_requirement_met": false,
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "2026年の質問形式投稿は直接評価ではないため除外し、残る一般的な俊足類型ラベル1起源では方向を決着しない。",
+      "accepted_grok_source_ids": [
+        "GXSR002"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR002"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR001",
+        "GXSR003",
+        "GXSR004"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_MukeshSLive"
+      ],
+      "independent_qualifying_x_groups": [],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "土田 龍空",
+      "team": "中日ドラゴンズ",
+      "packet_id": "P011",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B6_LOWER_MID_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "MIXED_CONSENSUS",
+      "combined_classification": "MIXED_CONSENSUS",
+      "grok_x_raw_candidate_count": 13,
+      "grok_x_accepted_source_count": 4,
+      "grok_x_independent_source_count": 4,
+      "grok_x_qualifying_independent_x_count": 4,
+      "independent_x_count": 4,
+      "independent_qualifying_x_count": 4,
+      "independent_other_sns_count": 1,
+      "total_independent_sns_count": 5,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "widen uncertainty",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "2025–26年に速い・普通・遅いのいずれの直接評価も独立にあり、方向を固定できない。",
+      "accepted_grok_source_ids": [
+        "GXSR091",
+        "GXSR095",
+        "GXSR099",
+        "GXSR100"
+      ],
+      "accepted_combined_source_ids": [
+        "SNSR005",
+        "GXSR091",
+        "GXSR095",
+        "GXSR099",
+        "GXSR100"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR090",
+        "GXSR092",
+        "GXSR093",
+        "GXSR094",
+        "GXSR096",
+        "GXSR097",
+        "GXSR098",
+        "GXSR101",
+        "GXSR102"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_myomotora4123k",
+        "X_AUTHOR_Goodicious97",
+        "X_AUTHOR_n2929ikukyuu",
+        "X_AUTHOR_yasu_zehn"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_myomotora4123k",
+        "X_AUTHOR_Goodicious97",
+        "X_AUTHOR_n2929ikukyuu",
+        "X_AUTHOR_yasu_zehn"
+      ],
+      "independent_other_sns_groups": [
+        "PUBLIC_COMMENT_20250425_TSUTSUDA"
+      ]
+    },
+    {
+      "player": "大島 洋平",
+      "team": "中日ドラゴンズ",
+      "packet_id": "P012",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B4_MID_UPPER_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "combined_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_raw_candidate_count": 14,
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_source_count": 1,
+      "grok_x_qualifying_independent_x_count": 1,
+      "independent_x_count": 1,
+      "independent_qualifying_x_count": 1,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 1,
+      "strict_sns_requirement_met": false,
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "日付と本文が揃う有効なGrok-X根拠は1起源のみで、現在帯を解像できない。",
+      "accepted_grok_source_ids": [
+        "GXSR064"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR064"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR063",
+        "GXSR065",
+        "GXSR066",
+        "GXSR067",
+        "GXSR068",
+        "GXSR069",
+        "GXSR070",
+        "GXSR071",
+        "GXSR072",
+        "GXSR073",
+        "GXSR074",
+        "GXSR075",
+        "GXSR076"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_yoheisuki8"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_yoheisuki8"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "木下 拓哉",
+      "team": "中日ドラゴンズ",
+      "packet_id": "P014",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B8_SLOWEST_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "SUPPORTS_CURRENT_ORDINAL",
+      "combined_classification": "SUPPORTS_CURRENT_ORDINAL",
+      "grok_x_raw_candidate_count": 19,
+      "grok_x_accepted_source_count": 5,
+      "grok_x_independent_source_count": 5,
+      "grok_x_qualifying_independent_x_count": 5,
+      "independent_x_count": 5,
+      "independent_qualifying_x_count": 5,
+      "independent_other_sns_count": 1,
+      "total_independent_sns_count": 6,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "current band supported",
+      "video_tiebreak_recommended": false,
+      "classification_reason": "2025–26年の別作者5起源が一貫して遅い側と直接評価し、最遅帯の現行順序を支持する。",
+      "accepted_grok_source_ids": [
+        "GXSR136",
+        "GXSR137",
+        "GXSR138",
+        "GXSR140",
+        "GXSR141"
+      ],
+      "accepted_combined_source_ids": [
+        "SNSR011",
+        "GXSR136",
+        "GXSR137",
+        "GXSR138",
+        "GXSR140",
+        "GXSR141"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR128",
+        "GXSR129",
+        "GXSR130",
+        "GXSR131",
+        "GXSR132",
+        "GXSR133",
+        "GXSR134",
+        "GXSR135",
+        "GXSR139",
+        "GXSR142",
+        "GXSR143",
+        "GXSR144",
+        "GXSR145",
+        "GXSR146"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_35dragons35",
+        "X_AUTHOR_kotarodra",
+        "X_AUTHOR_Dragons_tam",
+        "X_AUTHOR_chocomintlove36",
+        "X_AUTHOR_hayaken_pprz"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_35dragons35",
+        "X_AUTHOR_kotarodra",
+        "X_AUTHOR_Dragons_tam",
+        "X_AUTHOR_chocomintlove36",
+        "X_AUTHOR_hayaken_pprz"
+      ],
+      "independent_other_sns_groups": [
+        "KINOSHITA_20260301_SINGLE_RUN_EVENT"
+      ]
+    },
+    {
+      "player": "友杉 篤輝",
+      "team": "千葉ロッテマリーンズ",
+      "packet_id": "P031",
+      "case_type": "TYPE_B_PHYSICAL_ORDER_CONFLICT",
+      "baseline_current_band": "B2_UPPER_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "METRIC_CONSTRUCT_CONFLICT",
+      "combined_classification": "METRIC_CONSTRUCT_CONFLICT",
+      "grok_x_raw_candidate_count": 6,
+      "grok_x_accepted_source_count": 3,
+      "grok_x_independent_source_count": 3,
+      "grok_x_qualifying_independent_x_count": 3,
+      "independent_x_count": 3,
+      "independent_qualifying_x_count": 3,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 3,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "widen uncertainty",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "現行の速さ支持は得たが、指定pairwise検索4件は全て結果なしで、Type Bの身体的順序衝突を解消できない。",
+      "accepted_grok_source_ids": [
+        "GXSR160",
+        "GXSR163",
+        "GXSR165"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR160",
+        "GXSR163",
+        "GXSR165"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR161",
+        "GXSR162",
+        "GXSR164"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_jef_marcos2008",
+        "X_AUTHOR_YOKOHAMA_PRIDE",
+        "X_AUTHOR_JOXAR57"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_jef_marcos2008",
+        "X_AUTHOR_YOKOHAMA_PRIDE",
+        "X_AUTHOR_JOXAR57"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "岡 大海",
+      "team": "千葉ロッテマリーンズ",
+      "packet_id": "P035",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B2_UPPER_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "SUPPORTS_CURRENT_ORDINAL",
+      "combined_classification": "SUPPORTS_CURRENT_ORDINAL",
+      "grok_x_raw_candidate_count": 8,
+      "grok_x_accepted_source_count": 4,
+      "grok_x_independent_source_count": 4,
+      "grok_x_qualifying_independent_x_count": 4,
+      "independent_x_count": 4,
+      "independent_qualifying_x_count": 4,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 4,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "current band supported",
+      "video_tiebreak_recommended": false,
+      "classification_reason": "2025–26年の別作者による速さ・加速の直接観察が複数あり、現行上位帯を定性的に支持する。",
+      "accepted_grok_source_ids": [
+        "GXSR019",
+        "GXSR020",
+        "GXSR023",
+        "GXSR024"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR019",
+        "GXSR020",
+        "GXSR023",
+        "GXSR024"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR017",
+        "GXSR018",
+        "GXSR021",
+        "GXSR022"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_minn_810",
+        "X_AUTHOR_Dec046adE",
+        "X_AUTHOR_MotaMarines12",
+        "X_AUTHOR_USAMOND1348"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_minn_810",
+        "X_AUTHOR_Dec046adE",
+        "X_AUTHOR_MotaMarines12",
+        "X_AUTHOR_USAMOND1348"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "藤岡 裕大",
+      "team": "千葉ロッテマリーンズ",
+      "packet_id": "P037",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B6_LOWER_MID_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "TEMPORAL_CHANGE_SUPPORTED",
+      "combined_classification": "TEMPORAL_CHANGE_SUPPORTED",
+      "grok_x_raw_candidate_count": 9,
+      "grok_x_accepted_source_count": 3,
+      "grok_x_independent_source_count": 3,
+      "grok_x_qualifying_independent_x_count": 2,
+      "independent_x_count": 3,
+      "independent_qualifying_x_count": 2,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 3,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "temporal decline supported",
+      "video_tiebreak_recommended": false,
+      "classification_reason": "2024–25年の別作者が脚力・足の速さの低下を直接言及し、低下という時間的変化のみを支持する。",
+      "accepted_grok_source_ids": [
+        "GXSR104",
+        "GXSR107",
+        "GXSR110"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR104",
+        "GXSR107",
+        "GXSR110"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR103",
+        "GXSR105",
+        "GXSR106",
+        "GXSR108",
+        "GXSR109",
+        "GXSR111"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_hryr_shkt",
+        "X_AUTHOR_marinittai836",
+        "X_AUTHOR_baseball_lili"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_hryr_shkt",
+        "X_AUTHOR_marinittai836"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "外崎 修汰",
+      "team": "埼玉西武ライオンズ",
+      "packet_id": "P040",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B3_UPPER_MID_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "combined_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_raw_candidate_count": 6,
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_source_count": 1,
+      "grok_x_qualifying_independent_x_count": 1,
+      "independent_x_count": 1,
+      "independent_qualifying_x_count": 1,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 1,
+      "strict_sns_requirement_met": false,
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "2026年の脚力評価は1起源のみで、現行順位の決着には足りない。",
+      "accepted_grok_source_ids": [
+        "GXSR028"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR028"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR025",
+        "GXSR026",
+        "GXSR027",
+        "GXSR029",
+        "GXSR030"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_tatsumin_lions"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_tatsumin_lions"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "矢野 雅哉",
+      "team": "広島東洋カープ",
+      "packet_id": "P049",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B6_LOWER_MID_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "combined_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_raw_candidate_count": 6,
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_source_count": 1,
+      "grok_x_qualifying_independent_x_count": 0,
+      "independent_x_count": 1,
+      "independent_qualifying_x_count": 0,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 1,
+      "strict_sns_requirement_met": false,
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "2026年の俊足評価は1起源のみで、走塁結果由来の投稿は除外した。",
+      "accepted_grok_source_ids": [
+        "GXSR158"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR158"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR154",
+        "GXSR155",
+        "GXSR156",
+        "GXSR157",
+        "GXSR159"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_G__Blue"
+      ],
+      "independent_qualifying_x_groups": [],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "野間 峻祥",
+      "team": "広島東洋カープ",
+      "packet_id": "P052",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B4_MID_UPPER_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "combined_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_raw_candidate_count": 7,
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_source_count": 1,
+      "grok_x_qualifying_independent_x_count": 0,
+      "independent_x_count": 2,
+      "independent_qualifying_x_count": 0,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 2,
+      "strict_sns_requirement_met": false,
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "既存とGrok-Xの2件はいずれも一般的な速さラベルで、直接観察を伴うstrict consensusにはしない。",
+      "accepted_grok_source_ids": [
+        "GXSR150"
+      ],
+      "accepted_combined_source_ids": [
+        "SNSR027",
+        "GXSR150"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR147",
+        "GXSR148",
+        "GXSR149",
+        "GXSR151",
+        "GXSR152",
+        "GXSR153"
+      ],
+      "independent_x_groups": [
+        "X_HANASADA_20260616_NOMA",
+        "X_AUTHOR_mugi___334"
+      ],
+      "independent_qualifying_x_groups": [],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "並木 秀尊",
+      "team": "東京ヤクルトスワローズ",
+      "packet_id": "P054",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B1_FASTEST_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "combined_classification": "SUPPORTS_CURRENT_ORDINAL",
+      "grok_x_raw_candidate_count": 12,
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_source_count": 1,
+      "grok_x_qualifying_independent_x_count": 1,
+      "independent_x_count": 2,
+      "independent_qualifying_x_count": 2,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 2,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "current band supported",
+      "video_tiebreak_recommended": false,
+      "classification_reason": "Grok-Xは1起源だが、既存の別X起源と合わせると現在の速さ支持が2起源となる。",
+      "accepted_grok_source_ids": [
+        "GXSR127"
+      ],
+      "accepted_combined_source_ids": [
+        "SNSR033",
+        "GXSR127"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR116",
+        "GXSR117",
+        "GXSR118",
+        "GXSR119",
+        "GXSR120",
+        "GXSR121",
+        "GXSR122",
+        "GXSR123",
+        "GXSR124",
+        "GXSR125",
+        "GXSR126"
+      ],
+      "independent_x_groups": [
+        "X_OKAOKA_20260513_NAMIKI",
+        "X_AUTHOR_nanha_BBTF"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_OKAOKA_20260513_NAMIKI",
+        "X_AUTHOR_nanha_BBTF"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "中村 悠平",
+      "team": "東京ヤクルトスワローズ",
+      "packet_id": "P055",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B7_LOWER_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "combined_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_raw_candidate_count": 13,
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_source_count": 1,
+      "grok_x_qualifying_independent_x_count": 1,
+      "independent_x_count": 1,
+      "independent_qualifying_x_count": 1,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 1,
+      "strict_sns_requirement_met": false,
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "現在の遅さ言及は同一出来事群の1起源に留まり、複数の実況転載を票として数えない。",
+      "accepted_grok_source_ids": [
+        "GXSR084"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR084"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR077",
+        "GXSR078",
+        "GXSR079",
+        "GXSR080",
+        "GXSR081",
+        "GXSR082",
+        "GXSR083",
+        "GXSR085",
+        "GXSR086",
+        "GXSR087",
+        "GXSR088",
+        "GXSR089"
+      ],
+      "independent_x_groups": [
+        "X_EVENT_20260503_NAKAMURA_SLOW_DISCUSSION"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_EVENT_20260503_NAKAMURA_SLOW_DISCUSSION"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "塩見 泰隆",
+      "team": "東京ヤクルトスワローズ",
+      "packet_id": "P058",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B3_UPPER_MID_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "SUPPORTS_CURRENT_ORDINAL",
+      "combined_classification": "SUPPORTS_CURRENT_ORDINAL",
+      "grok_x_raw_candidate_count": 12,
+      "grok_x_accepted_source_count": 3,
+      "grok_x_independent_source_count": 3,
+      "grok_x_qualifying_independent_x_count": 3,
+      "independent_x_count": 3,
+      "independent_qualifying_x_count": 3,
+      "independent_other_sns_count": 1,
+      "total_independent_sns_count": 4,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "current band supported",
+      "video_tiebreak_recommended": false,
+      "classification_reason": "2025–26年の別作者が足の速さ・加速を直接言及する。故障前後の医療的推測は行わない。",
+      "accepted_grok_source_ids": [
+        "GXSR012",
+        "GXSR013",
+        "GXSR014"
+      ],
+      "accepted_combined_source_ids": [
+        "SNSR037",
+        "GXSR012",
+        "GXSR013",
+        "GXSR014"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR005",
+        "GXSR006",
+        "GXSR007",
+        "GXSR008",
+        "GXSR009",
+        "GXSR010",
+        "GXSR011",
+        "GXSR015",
+        "GXSR016"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_ocha_vnlover",
+        "X_AUTHOR_yosshiisland23",
+        "X_AUTHOR_Deepan_offl"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_ocha_vnlover",
+        "X_AUTHOR_yosshiisland23",
+        "X_AUTHOR_Deepan_offl"
+      ],
+      "independent_other_sns_groups": [
+        "NOTE_MYLIFE_20260530_SHIOMI"
+      ]
+    },
+    {
+      "player": "鈴木 大地",
+      "team": "東北楽天ゴールデンイーグルス",
+      "packet_id": "P065",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B8_SLOWEST_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "combined_classification": "SUPPORTS_CURRENT_ORDINAL",
+      "grok_x_raw_candidate_count": 9,
+      "grok_x_accepted_source_count": 1,
+      "grok_x_independent_source_count": 1,
+      "grok_x_qualifying_independent_x_count": 1,
+      "independent_x_count": 2,
+      "independent_qualifying_x_count": 2,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 2,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "current band supported",
+      "video_tiebreak_recommended": false,
+      "classification_reason": "Grok-Xの新規根拠は1出来事群だが、既存の別X起源と合わせると遅い側の現在支持が2起源となる。",
+      "accepted_grok_source_ids": [
+        "GXSR190"
+      ],
+      "accepted_combined_source_ids": [
+        "SNSR040",
+        "GXSR190"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR183",
+        "GXSR184",
+        "GXSR185",
+        "GXSR186",
+        "GXSR187",
+        "GXSR188",
+        "GXSR189",
+        "GXSR191"
+      ],
+      "independent_x_groups": [
+        "X_YASUHIRO_20260601_SUZUKI",
+        "X_EVENT_20260602_SUZUKI_BROADCAST_SPEED_CALL"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_YASUHIRO_20260601_SUZUKI",
+        "X_EVENT_20260602_SUZUKI_BROADCAST_SPEED_CALL"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "林 琢真",
+      "team": "横浜DeNAベイスターズ",
+      "packet_id": "P071",
+      "case_type": "TYPE_B_PHYSICAL_ORDER_CONFLICT",
+      "baseline_current_band": "B3_UPPER_MID_COHORT_OCTILE",
+      "pre_grok_classification": "METRIC_CONSTRUCT_CONFLICT",
+      "grok_x_only_classification": "METRIC_CONSTRUCT_CONFLICT",
+      "combined_classification": "METRIC_CONSTRUCT_CONFLICT",
+      "grok_x_raw_candidate_count": 17,
+      "grok_x_accepted_source_count": 3,
+      "grok_x_independent_source_count": 3,
+      "grok_x_qualifying_independent_x_count": 2,
+      "independent_x_count": 3,
+      "independent_qualifying_x_count": 2,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 3,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "widen uncertainty",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "速さ支持はあるが、指定pairwise検索で友杉等との順序根拠は得られず、Type B衝突を解消できない。",
+      "accepted_grok_source_ids": [
+        "GXSR167",
+        "GXSR173",
+        "GXSR176"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR167",
+        "GXSR173",
+        "GXSR176"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR166",
+        "GXSR168",
+        "GXSR169",
+        "GXSR170",
+        "GXSR171",
+        "GXSR172",
+        "GXSR174",
+        "GXSR175",
+        "GXSR177",
+        "GXSR178",
+        "GXSR179",
+        "GXSR180",
+        "GXSR181",
+        "GXSR182"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_hamanoooenoouji",
+        "X_AUTHOR_0417_Incidents",
+        "X_AUTHOR_ikomariny"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_hamanoooenoouji",
+        "X_AUTHOR_0417_Incidents"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "梶原 昂希",
+      "team": "横浜DeNAベイスターズ",
+      "packet_id": "P072",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B1_FASTEST_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "combined_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_raw_candidate_count": 11,
+      "grok_x_accepted_source_count": 2,
+      "grok_x_independent_source_count": 2,
+      "grok_x_qualifying_independent_x_count": 1,
+      "independent_x_count": 2,
+      "independent_qualifying_x_count": 1,
+      "independent_other_sns_count": 1,
+      "total_independent_sns_count": 3,
+      "strict_sns_requirement_met": false,
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "2025–26年の速いという一般評価は残るが、プレー観察・比較を欠く類型ラベルだけで最上位帯を決着しない。",
+      "accepted_grok_source_ids": [
+        "GXSR039",
+        "GXSR040"
+      ],
+      "accepted_combined_source_ids": [
+        "SNSR048",
+        "GXSR039",
+        "GXSR040"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR031",
+        "GXSR032",
+        "GXSR033",
+        "GXSR034",
+        "GXSR035",
+        "GXSR036",
+        "GXSR037",
+        "GXSR038",
+        "GXSR041"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_ipushiondado",
+        "X_AUTHOR_bayashi1008"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_bayashi1008"
+      ],
+      "independent_other_sns_groups": [
+        "YOUTUBE_20250304_KAJIHARA"
+      ]
+    },
+    {
+      "player": "丸 佳浩",
+      "team": "読売ジャイアンツ",
+      "packet_id": "P086",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B5_MID_LOWER_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "TEMPORAL_CHANGE_SUPPORTED",
+      "combined_classification": "TEMPORAL_CHANGE_SUPPORTED",
+      "grok_x_raw_candidate_count": 8,
+      "grok_x_accepted_source_count": 2,
+      "grok_x_independent_source_count": 2,
+      "grok_x_qualifying_independent_x_count": 2,
+      "independent_x_count": 2,
+      "independent_qualifying_x_count": 2,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 2,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "temporal decline supported",
+      "video_tiebreak_recommended": false,
+      "classification_reason": "2024年の脚力低下言及と2025年の遅い側評価があり、時間的低下のみを支持する。",
+      "accepted_grok_source_ids": [
+        "GXSR042",
+        "GXSR046"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR042",
+        "GXSR046"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR043",
+        "GXSR044",
+        "GXSR045",
+        "GXSR047",
+        "GXSR048",
+        "GXSR049"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_bsblchannel",
+        "X_AUTHOR_izumi2025811"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_bsblchannel",
+        "X_AUTHOR_izumi2025811"
+      ],
+      "independent_other_sns_groups": []
+    },
+    {
+      "player": "梅野 隆太郎",
+      "team": "阪神タイガース",
+      "packet_id": "P099",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "baseline_current_band": "B7_LOWER_COHORT_OCTILE",
+      "pre_grok_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "grok_x_only_classification": "MIXED_CONSENSUS",
+      "combined_classification": "MIXED_CONSENSUS",
+      "grok_x_raw_candidate_count": 4,
+      "grok_x_accepted_source_count": 2,
+      "grok_x_independent_source_count": 2,
+      "grok_x_qualifying_independent_x_count": 2,
+      "independent_x_count": 2,
+      "independent_qualifying_x_count": 2,
+      "independent_other_sns_count": 0,
+      "total_independent_sns_count": 2,
+      "strict_sns_requirement_met": true,
+      "decision_constraint": "widen uncertainty",
+      "video_tiebreak_recommended": true,
+      "classification_reason": "2024年の遅い評価と2026年の速い評価が両立し、2026年側は同一出来事群として1起源に留める。",
+      "accepted_grok_source_ids": [
+        "GXSR112",
+        "GXSR114"
+      ],
+      "accepted_combined_source_ids": [
+        "GXSR112",
+        "GXSR114"
+      ],
+      "rejected_grok_source_ids": [
+        "GXSR113",
+        "GXSR115"
+      ],
+      "independent_x_groups": [
+        "X_AUTHOR_jun_sky_walkers",
+        "X_EVENT_20260531_UMENO_SPEED_DISCUSSION"
+      ],
+      "independent_qualifying_x_groups": [
+        "X_AUTHOR_jun_sky_walkers",
+        "X_EVENT_20260531_UMENO_SPEED_DISCUSSION"
+      ],
+      "independent_other_sns_groups": []
+    }
+  ],
+  "classification_counts": {
+    "before": {
+      "INSUFFICIENT_SNS_EVIDENCE": 18,
+      "METRIC_CONSTRUCT_CONFLICT": 1
+    },
+    "grok_x_only": {
+      "INSUFFICIENT_SNS_EVIDENCE": 10,
+      "METRIC_CONSTRUCT_CONFLICT": 2,
+      "MIXED_CONSENSUS": 2,
+      "SUPPORTS_CURRENT_ORDINAL": 3,
+      "TEMPORAL_CHANGE_SUPPORTED": 2
+    },
+    "combined": {
+      "INSUFFICIENT_SNS_EVIDENCE": 8,
+      "METRIC_CONSTRUCT_CONFLICT": 2,
+      "MIXED_CONSENSUS": 2,
+      "SUPPORTS_CURRENT_ORDINAL": 5,
+      "TEMPORAL_CHANGE_SUPPORTED": 2
+    }
+  },
+  "strict_sns_counts": {
+    "grok_x_only_at_least_2_independent_x_players": 11,
+    "grok_x_only_at_least_3_independent_x_players": 7,
+    "grok_x_only_strict_quality_requirement_met_players": 9,
+    "combined_at_least_2_independent_x_players": 14,
+    "combined_at_least_3_independent_x_players": 7,
+    "combined_strict_quality_requirement_met_players": 11
+  },
+  "video_queue_count": 12
+}

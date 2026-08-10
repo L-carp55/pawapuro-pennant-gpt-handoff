@@ -1,0 +1,3718 @@
+{
+  "schema_version": "speed-2026-grok-x-sns-rescue/v1.0.0/reviewed-evidence",
+  "as_of": "2026-08-10",
+  "provenance": "GROK_X_SUPPLEMENT",
+  "review_scope": "Only the 19 canonical players; one record per 191 unique status-ID candidates returned by the 175 stored x_search receipts.",
+  "acceptance_policy": [
+    "Accept only a stable post ID/URL, returned text, returned timestamp, and an isolated physical-speed clause.",
+    "Do not accept stolen-base skill, baserunning judgment, infield-hit or home-to-first outcome, triples, defensive range, game ratings, or unverified/malformed output.",
+    "Collapse same author and known same-event/broadcast origin through independence_group; do not count repost or duplicate material as another vote.",
+    "A generic 俊足 label is at most MODERATE and never creates a numeric rating."
+  ],
+  "candidate_decisions": [
+    {
+      "source_id": "GXSR001",
+      "player": "カリステ",
+      "post_id": "1870797395510087861",
+      "post_url": "https://x.com/kawasemi501/status/1870797395510087861",
+      "author": "@kawasemi501",
+      "posted_at": null,
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_kawasemi501",
+      "grok_x_search_receipt_ids": [
+        "GXQ013"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR002",
+      "player": "カリステ",
+      "post_id": "1946407809144484272",
+      "post_url": "https://x.com/MukeshSLive/status/1946407809144484272",
+      "author": "@MukeshSLive",
+      "posted_at": "2025-07-19 03:12:38 GMT",
+      "text_excerpt": "🧢フォードはMLB経験豊富な左打ちスラッガー、カリステは俊足巧打の助っ人",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "GENERIC_CURRENT_PLAYER_TYPE_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_MukeshSLive",
+      "grok_x_search_receipt_ids": [
+        "GXQ011"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR003",
+      "player": "カリステ",
+      "post_id": "2035030093240967369",
+      "post_url": "https://x.com/jpxneezd/status/2035030093240967369",
+      "author": "@jpxneezd",
+      "posted_at": "2026-03-20 16:25:57 GMT",
+      "text_excerpt": "カリステみたいな内外野全ポジション守れる俊足巧打タイプの助っ人はNPBでは珍しいですか。",
+      "accepted": false,
+      "rejection_reason": "QUESTION_FORM_NOT_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_jpxneezd",
+      "grok_x_search_receipt_ids": [
+        "GXQ011"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR004",
+      "player": "カリステ",
+      "post_id": "2038966073568154036",
+      "post_url": "https://x.com/NoKick/status/2038966073568154036",
+      "author": "@NoKick",
+      "posted_at": "2026-03-31 13:06:08 GMT",
+      "text_excerpt": "中日はなんで俊足好守の二塁手みたいな打撃成績しか、残してない助っ人と契約してるの？カリステのことだけど　#dragons",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_NoKick",
+      "grok_x_search_receipt_ids": [
+        "GXQ011"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR005",
+      "player": "塩見 泰隆",
+      "post_id": "1774791555674751464",
+      "post_url": "https://x.com/yutakah2/status/1774791555674751464",
+      "author": "@yutakah2",
+      "posted_at": "2024-04-01 13:30:55 GMT",
+      "text_excerpt": "塩見泰隆　イノシシ並みの脚力",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_yutakah2",
+      "grok_x_search_receipt_ids": [
+        "GXQ120"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR006",
+      "player": "塩見 泰隆",
+      "post_id": "1789576660419027362",
+      "post_url": "https://x.com/zanshin5439/status/1789576660419027362",
+      "author": "@zanshin5439",
+      "posted_at": "2024-05-12",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_zanshin5439",
+      "grok_x_search_receipt_ids": [
+        "GXQ121"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR007",
+      "player": "塩見 泰隆",
+      "post_id": "1844874767167533273",
+      "post_url": "https://x.com/hoshunodaryoku/status/1844874767167533273",
+      "author": "@hoshunodaryoku",
+      "posted_at": "2024-10-11",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_hoshunodaryoku",
+      "grok_x_search_receipt_ids": [
+        "GXQ121"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR008",
+      "player": "塩見 泰隆",
+      "post_id": "1857932605469110395",
+      "post_url": "https://x.com/swa39chacha/status/1857932605469110395",
+      "author": "@swa39chacha",
+      "posted_at": "2024-11-16",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_swa39chacha",
+      "grok_x_search_receipt_ids": [
+        "GXQ121"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR009",
+      "player": "塩見 泰隆",
+      "post_id": "1896682767947370912",
+      "post_url": "https://x.com/TsubameZoku/status/1896682767947370912",
+      "author": "@TsubameZoku",
+      "posted_at": "2025-03-03",
+      "text_excerpt": "そして、本日より塩見泰隆が1軍に復帰予定。あの快足好打が炸裂するか見ものです🐎",
+      "accepted": false,
+      "rejection_reason": "NO_CLEAR_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_TsubameZoku",
+      "grok_x_search_receipt_ids": [
+        "GXQ118"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR010",
+      "player": "塩見 泰隆",
+      "post_id": "1918305639656505507",
+      "post_url": "https://x.com/epachinko/status/1918305639656505507",
+      "author": "@epachinko",
+      "posted_at": "2025-05-02",
+      "text_excerpt": "足の速い外野手 \n 塩見泰隆・周東佑京",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_epachinko",
+      "grok_x_search_receipt_ids": [
+        "GXQ118"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR011",
+      "player": "塩見 泰隆",
+      "post_id": "1957404644805841126",
+      "post_url": "https://x.com/webSportiva/status/1957404644805841126",
+      "author": "@webSportiva",
+      "posted_at": "2025-08-18",
+      "text_excerpt": "実力派芸人が語る先輩・塩見泰隆の「バケモノ」ぶり…「足も速いし、肩も強い。…」",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_webSportiva",
+      "grok_x_search_receipt_ids": [
+        "GXQ118"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR012",
+      "player": "塩見 泰隆",
+      "post_id": "1986398016539140170",
+      "post_url": "https://x.com/ocha_vnlover/status/1986398016539140170",
+      "author": "@ocha_vnlover",
+      "posted_at": "2025-11-06",
+      "text_excerpt": "塩見泰隆！ \n 打てるし足も速いから一番好きです😊",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_ocha_vnlover",
+      "grok_x_search_receipt_ids": [
+        "GXQ118",
+        "GXQ125"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR013",
+      "player": "塩見 泰隆",
+      "post_id": "2012895625709547785",
+      "post_url": "https://x.com/yosshiisland23/status/2012895625709547785",
+      "author": "@yosshiisland23",
+      "posted_at": "2026-01-18",
+      "text_excerpt": "近本周東論争は贔屓球団の足が速い選手をちゃんと呼ばないから産まれるんだ \n 足が速い近本や塩見泰隆、和田康士朗を侍ジャパンに呼べばすべて解決する",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "CURRENT_GROUP_SPEED_REFERENCE",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_yosshiisland23",
+      "grok_x_search_receipt_ids": [
+        "GXQ118",
+        "GXQ120"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR014",
+      "player": "塩見 泰隆",
+      "post_id": "2060600428744626584",
+      "post_url": "https://x.com/Deepan_offl/status/2060600428744626584",
+      "author": "@Deepan_offl",
+      "posted_at": "2026-05-30 05:53:20 GMT",
+      "text_excerpt": "塩見泰隆、ここから加速！",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "DIRECT_ACCELERATION_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_Deepan_offl",
+      "grok_x_search_receipt_ids": [
+        "GXQ120",
+        "GXQ121"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR015",
+      "player": "塩見 泰隆",
+      "post_id": "2072549548715835602",
+      "post_url": "https://x.com/oeghak/status/2072549548715835602",
+      "author": "@oeghak",
+      "posted_at": "2026-07-02 05:14:53 GMT",
+      "text_excerpt": "長打力＋走力を兼ね備えた選手であり",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_oeghak",
+      "grok_x_search_receipt_ids": [
+        "GXQ120"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR016",
+      "player": "塩見 泰隆",
+      "post_id": "2080979468202733637",
+      "post_url": "https://x.com/Bwcv8gbqSK93045/status/2080979468202733637",
+      "author": "@Bwcv8gbqSK93045",
+      "posted_at": "2026-07-25 11:32:22 GMT",
+      "text_excerpt": "塩見泰隆ー！！全力疾走！！おみくんが勝った！！😆💚 おみくん頑張ったね😌💚",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Bwcv8gbqSK93045",
+      "grok_x_search_receipt_ids": [
+        "GXQ120",
+        "GXQ121",
+        "GXQ124"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR017",
+      "player": "岡 大海",
+      "post_id": "1928342837265125767",
+      "post_url": "https://x.com/io_sono_yuccaP/status/1928342837265125767",
+      "author": "@io_sono_yuccaP",
+      "posted_at": "2025-05-30",
+      "text_excerpt": ": 上下ユニ姿で疾走する岡大海さん極上プライスレス",
+      "accepted": false,
+      "rejection_reason": "NO_CLEAR_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_io_sono_yuccaP",
+      "grok_x_search_receipt_ids": [
+        "GXQ060"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR018",
+      "player": "岡 大海",
+      "post_id": "1935690653222216142",
+      "post_url": "https://x.com/notyu_baseball/status/1935690653222216142",
+      "author": "@notyu_baseball",
+      "posted_at": "2025-06-19 13:26:29 GMT",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_notyu_baseball",
+      "grok_x_search_receipt_ids": [
+        "GXQ059"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR019",
+      "player": "岡 大海",
+      "post_id": "1971140422090228203",
+      "post_url": "https://x.com/minn_810/status/1971140422090228203",
+      "author": "@minn_810",
+      "posted_at": "2025-09-25",
+      "text_excerpt": ": 岡大海さん足が速いのは嬉しいのですが大丈夫でしょうか………？？？",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "DIRECT_CURRENT_SPEED_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_minn_810",
+      "grok_x_search_receipt_ids": [
+        "GXQ055",
+        "GXQ060"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR020",
+      "player": "岡 大海",
+      "post_id": "1972618657919586580",
+      "post_url": "https://x.com/Dec046adE/status/1972618657919586580",
+      "author": "@Dec046adE",
+      "posted_at": "2025-09-29",
+      "text_excerpt": ": 岡大海さんどこかケガしとるんか？足速いのに代走だされとる。",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "DIRECT_CURRENT_SPEED_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_Dec046adE",
+      "grok_x_search_receipt_ids": [
+        "GXQ055",
+        "GXQ060"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR021",
+      "player": "岡 大海",
+      "post_id": "2025167379848986704",
+      "post_url": "https://x.com/jun_jun1980/status/2025167379848986704",
+      "author": "@jun_jun1980",
+      "posted_at": "2026-02-21",
+      "text_excerpt": ": ひろみー♪( ´θ｀)ノ 疾走とても良かった☺️",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_jun_jun1980",
+      "grok_x_search_receipt_ids": [
+        "GXQ060"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR022",
+      "player": "岡 大海",
+      "post_id": "2027416132739825932",
+      "post_url": "https://x.com/happy_days0709/status/2027416132739825932",
+      "author": "@happy_days0709",
+      "posted_at": "2026-02-27",
+      "text_excerpt": "YouTubeで検索したら守備範囲が広く、足が速い。",
+      "accepted": false,
+      "rejection_reason": "ARTICLE_OR_VIDEO_REPOST_NOT_INDEPENDENT_SNS_ORIGIN",
+      "evidence_direction": "FASTER",
+      "directness": "ARTICLE_OR_VIDEO_REPOST",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_happy_days0709",
+      "grok_x_search_receipt_ids": [
+        "GXQ055"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR023",
+      "player": "岡 大海",
+      "post_id": "2072743192558968907",
+      "post_url": "https://x.com/MotaMarines12/status/2072743192558968907",
+      "author": "@MotaMarines12",
+      "posted_at": "2026-07-02",
+      "text_excerpt": ": 岡大海の走塁やばい。あの加速好きすぎる",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "DIRECT_ACCELERATION_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_MotaMarines12",
+      "grok_x_search_receipt_ids": [
+        "GXQ055",
+        "GXQ056",
+        "GXQ060"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR024",
+      "player": "岡 大海",
+      "post_id": "2081325276282409176",
+      "post_url": "https://x.com/USAMOND1348/status/2081325276282409176",
+      "author": "@USAMOND1348",
+      "posted_at": "2026-07-26 10:26:29 GMT",
+      "text_excerpt": "ソフトバンクには周東がいる。 \nマリーンズにも周東より速い和田康士朗と岡大海がいるのに、固定レギュラーで使わない。 \n足の遅い安田は… \nこれがマリーンズが弱い原因の一つ。 \n#chibalotte #マリーンズ",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "DIRECT_COMPARATIVE_SPEED_CLAIM",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_USAMOND1348",
+      "grok_x_search_receipt_ids": [
+        "GXQ055",
+        "GXQ056"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR025",
+      "player": "外崎 修汰",
+      "post_id": "1864122569328349199",
+      "post_url": "https://x.com/ysblr/status/1864122569328349199",
+      "author": "@ysblr",
+      "posted_at": "2024-12-04",
+      "text_excerpt": "走力等を考えると逆だと思う。",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_ysblr",
+      "grok_x_search_receipt_ids": [
+        "GXQ075"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR026",
+      "player": "外崎 修汰",
+      "post_id": "1966499694495834147",
+      "post_url": "https://x.com/xxxmiraclesxxx/status/1966499694495834147",
+      "author": "@xxxmiraclesxxx",
+      "posted_at": null,
+      "text_excerpt": "梅野はもともと俊足である。2018年には右打者の一塁到達タイムで12球団6位の最速4秒07を記録。プロ野球統計のデルタ社がインスタグラムで公開していた。トップは菊池涼介（広島）と外崎修汰（西武）の3秒97。植田海（阪神）4秒09、坂本勇人（巨人）4秒10を上回っていた。 \nMon, 01 Jun 2026 07:19:40 GMT\n\n**",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "FASTER",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_xxxmiraclesxxx",
+      "grok_x_search_receipt_ids": [
+        "GXQ074",
+        "GXQ075"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR027",
+      "player": "外崎 修汰",
+      "post_id": "1974476633840234720",
+      "post_url": "https://x.com/i_yodonoki/status/1974476633840234720",
+      "author": "@i_yodonoki",
+      "posted_at": "2025-10-04",
+      "text_excerpt": "内外野ほぼ全てのポジションを守る事ができ 打力と走力も備えた全盛期の外崎修汰さん",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_i_yodonoki",
+      "grok_x_search_receipt_ids": [
+        "GXQ075"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR028",
+      "player": "外崎 修汰",
+      "post_id": "2021161047982264331",
+      "post_url": "https://x.com/tatsumin_lions/status/2021161047982264331",
+      "author": "@tatsumin_lions",
+      "posted_at": "2026-02-10",
+      "text_excerpt": "やっぱり打球の質、脚力、スローイングと走攻守においてチーム内ではトップレベルだよね、外崎修汰さん。シンプルに身体が強いのか。",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "CURRENT_SUPPORT",
+      "directness": "EXPLICIT_CURRENT_LEG_ABILITY_DESCRIPTION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_tatsumin_lions",
+      "grok_x_search_receipt_ids": [
+        "GXQ075"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR029",
+      "player": "外崎 修汰",
+      "post_id": "2061346928575795370",
+      "post_url": "https://x.com/mickeycoco_kazu/status/2061346928575795370",
+      "author": "@mickeycoco_kazu",
+      "posted_at": null,
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_mickeycoco_kazu",
+      "grok_x_search_receipt_ids": [
+        "GXQ074"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR030",
+      "player": "外崎 修汰",
+      "post_id": "2080662691337883730",
+      "post_url": "https://x.com/YouTube08049738/status/2080662691337883730",
+      "author": "@YouTube08049738",
+      "posted_at": "2026-07-24",
+      "text_excerpt": "小濱佑斗さん パンチ力と走力を兼ね備えた選手は球界でも希少な選手 外野も守れるようになれば出場機会増えそうなんだけどな 将来的には外崎修汰のようになってほしいな",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_YouTube08049738",
+      "grok_x_search_receipt_ids": [
+        "GXQ075"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR031",
+      "player": "梶原 昂希",
+      "post_id": "1849792582282510413",
+      "post_url": "https://x.com/fp_jn12766tm/status/1849792582282510413",
+      "author": "@fp_jn12766tm",
+      "posted_at": "2024-10-25",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_fp_jn12766tm",
+      "grok_x_search_receipt_ids": [
+        "GXQ153"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR032",
+      "player": "梶原 昂希",
+      "post_id": "1851220870720860493",
+      "post_url": "https://x.com/muscat_delice/status/1851220870720860493",
+      "author": "@muscat_delice",
+      "posted_at": "2024-10-29",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_muscat_delice",
+      "grok_x_search_receipt_ids": [
+        "GXQ153"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR033",
+      "player": "梶原 昂希",
+      "post_id": "1851221033165918396",
+      "post_url": "https://x.com/rOBnMurEyosentW/status/1851221033165918396",
+      "author": "@rOBnMurEyosentW",
+      "posted_at": "2024-10-29",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_rOBnMurEyosentW",
+      "grok_x_search_receipt_ids": [
+        "GXQ153"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR034",
+      "player": "梶原 昂希",
+      "post_id": "1851913371744129464",
+      "post_url": "https://x.com/baystars51/status/1851913371744129464",
+      "author": "@baystars51",
+      "posted_at": "2024-10-31",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_baystars51",
+      "grok_x_search_receipt_ids": [
+        "GXQ153"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR035",
+      "player": "梶原 昂希",
+      "post_id": "1853551646703595975",
+      "post_url": "https://x.com/dokayamaBB/status/1853551646703595975",
+      "author": "@dokayamaBB",
+      "posted_at": "2024-11-04",
+      "text_excerpt": "この動画面白い😃 \n セ界最速クラスか？梶原昂希の走力はヤバかった！内野安打、二塁打、本塁生還をタイム測定！2024年 横浜DeNAベイスターズ",
+      "accepted": false,
+      "rejection_reason": "CONFLICTING_RETURNED_URL_FOR_SAME_POST_ID",
+      "evidence_direction": "FASTER",
+      "directness": "IDENTITY_CONFLICT",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_dokayamaBB",
+      "grok_x_search_receipt_ids": [
+        "GXQ146",
+        "GXQ153"
+      ],
+      "identity_status": "CONFLICTING_RETURNED_URL_FOR_SAME_POST_ID"
+    },
+    {
+      "source_id": "GXSR036",
+      "player": "梶原 昂希",
+      "post_id": "1924656865788756229",
+      "post_url": "https://x.com/zatsuteira/status/1924656865788756229",
+      "author": "@zatsuteira",
+      "posted_at": null,
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_zatsuteira",
+      "grok_x_search_receipt_ids": [
+        "GXQ149"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR037",
+      "player": "梶原 昂希",
+      "post_id": "1953379729048015277",
+      "post_url": "https://x.com/baystars51/status/1953379729048015277",
+      "author": "@baystars51",
+      "posted_at": "2025-08-07",
+      "text_excerpt": "「足は速い」",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "FASTER",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_baystars51",
+      "grok_x_search_receipt_ids": [
+        "GXQ145"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR038",
+      "player": "梶原 昂希",
+      "post_id": "1969003439414731188",
+      "post_url": "https://x.com/bk_wanko/status/1969003439414731188",
+      "author": "@bk_wanko",
+      "posted_at": "2025-09-19",
+      "text_excerpt": "「足も速いし」",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "FASTER",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_bk_wanko",
+      "grok_x_search_receipt_ids": [
+        "GXQ145"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR039",
+      "player": "梶原 昂希",
+      "post_id": "1975885392705630299",
+      "post_url": "https://x.com/ipushiondado/status/1975885392705630299",
+      "author": "@ipushiondado",
+      "posted_at": "2025-10-08",
+      "text_excerpt": "梶原昂希がここまで評価低い理由がわからないよな \n ... \n 足速い若手なんてそうそういないのに",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_ipushiondado",
+      "grok_x_search_receipt_ids": [
+        "GXQ145",
+        "GXQ146"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR040",
+      "player": "梶原 昂希",
+      "post_id": "2062168627009458373",
+      "post_url": "https://x.com/bayashi1008/status/2062168627009458373",
+      "author": "@bayashi1008",
+      "posted_at": "2026-06-03",
+      "text_excerpt": "マジで森敬斗と梶原昂希は何をしてるんや \n ... \n ましてやこの2人すごく足が速いんやぞ",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_bayashi1008",
+      "grok_x_search_receipt_ids": [
+        "GXQ145",
+        "GXQ146",
+        "GXQ148"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR041",
+      "player": "梶原 昂希",
+      "post_id": "2066081062422503509",
+      "post_url": "https://x.com/mejiro9banchi/status/2066081062422503509",
+      "author": "@mejiro9banchi",
+      "posted_at": "2026-06-14",
+      "text_excerpt": "梶原昂希は本当に可哀想、牧秀悟に「練習で一番打球を飛ばすのは梶原」と言わせるほどのパワーがあるのに俊足と盗塁のセンスも兼ね備えてたせいで出塁が役割だの、主軸に繋げろだのバントしろだのごちゃごちゃ言われて完全に良さ失ってるもん",
+      "accepted": false,
+      "rejection_reason": "BASERUNNING_DECISION_OR_STOLEN_BASE_CONTEXT_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "FASTER",
+      "directness": "BASERUNNING_OR_STOLEN_BASE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_mejiro9banchi",
+      "grok_x_search_receipt_ids": [
+        "GXQ146"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR042",
+      "player": "丸 佳浩",
+      "post_id": "1837089284576170203",
+      "post_url": "https://x.com/bsblchannel/status/1837089284576170203",
+      "author": "@bsblchannel",
+      "posted_at": "2024-09-20",
+      "text_excerpt": "丸佳浩、絶対に脚力は衰えてるはずなんだけど技術でカバーしてるよな",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "EXPLICIT_TEMPORAL_PHYSICAL_SPEED_DECLINE",
+      "evidence_strength": "MODERATE_HISTORICAL",
+      "independence_group": "X_AUTHOR_bsblchannel",
+      "grok_x_search_receipt_ids": [
+        "GXQ156"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR043",
+      "player": "丸 佳浩",
+      "post_id": "1846861419775684963",
+      "post_url": "https://x.com/giants_is_4ever/status/1846861419775684963",
+      "author": "@giants_is_4ever",
+      "posted_at": null,
+      "text_excerpt": ": ベテラン丸佳浩の全力疾走とヘッドスライディング。この負けん気と熱い闘志に泣けてしまう。大好きすぎる丸。#giants #ジャイアンツ #丸佳浩",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_giants_is_4ever",
+      "grok_x_search_receipt_ids": [
+        "GXQ155"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR044",
+      "player": "丸 佳浩",
+      "post_id": "1856965524414218540",
+      "post_url": "https://x.com/cun_song14143/status/1856965524414218540",
+      "author": "@cun_song14143",
+      "posted_at": null,
+      "text_excerpt": ": ８丸佳浩（読売ジャイアンツ） 誰より強く 更なる高みへ この大歓声が 君の味方だ さあ我らと行こう 丸佳浩 ↓ 赤城 誰より強く 更なる食欲 この艦載機が 君の味方だ さあミッドウェーに行こう 空母赤城 (context includes \"俊足でもあります。\")",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "FASTER",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_cun_song14143",
+      "grok_x_search_receipt_ids": [
+        "GXQ155"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR045",
+      "player": "丸 佳浩",
+      "post_id": "1862751774286963105",
+      "post_url": "https://x.com/EM8040/status/1862751774286963105",
+      "author": "@EM8040",
+      "posted_at": null,
+      "text_excerpt": ": 丸佳浩 全力疾走し、借り物競争の借り物難題すぎてこの表情",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_EM8040",
+      "grok_x_search_receipt_ids": [
+        "GXQ155",
+        "GXQ156",
+        "GXQ162"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR046",
+      "player": "丸 佳浩",
+      "post_id": "1969629117290332632",
+      "post_url": "https://x.com/izumi2025811/status/1969629117290332632",
+      "author": "@izumi2025811",
+      "posted_at": "2025-09-21",
+      "text_excerpt": "いや だから丸佳浩は 走力無いんだから 走らせるなよ アホなの？",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_izumi2025811",
+      "grok_x_search_receipt_ids": [
+        "GXQ156"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR047",
+      "player": "丸 佳浩",
+      "post_id": "2051881673625854452",
+      "post_url": "https://x.com/hirosatou1717/status/2051881673625854452",
+      "author": "@hirosatou1717",
+      "posted_at": null,
+      "text_excerpt": "読売ジャイアンツ2026 スプリント(瞬間最速速度) 足が遅い選手 ※外国人除く 1位 小林誠司 27.6km/h 2位 山瀬慎之助 27.9km/h 3位 大城卓三 29.2km/h 4位 岸田行倫 29.4km/h 5位 萩尾匡也 30.1km/h 6位 増田陸 30.2km/h 7位 丸佳浩 30.4km/h 8位 坂本勇人 30.8km/h 結論：捕手は基本鈍足",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "SLOWER",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_hirosatou1717",
+      "grok_x_search_receipt_ids": [
+        "GXQ156",
+        "GXQ157",
+        "GXQ159"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR048",
+      "player": "丸 佳浩",
+      "post_id": "2051891392386114024",
+      "post_url": "https://x.com/hirosatou1717/status/2051891392386114024",
+      "author": "@hirosatou1717",
+      "posted_at": null,
+      "text_excerpt": ": 読売ジャイアンツ2026 スプリント(瞬間最速速度) 外野登録選手　外国人除く 1位 佐々木俊輔 32.6km/h 2位 若林楽人 32.0km/h 3位 皆川岳飛 31.5km/h 4位 中山礼都 31.3km/h 5位 松本剛 31.0km/h 6位 丸佳浩 30.4km/h 7位 萩野匡也 30.1km/h 俊足と言われる部類の松本剛より礼都の方が瞬間速度は速い",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "FASTER",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_hirosatou1717",
+      "grok_x_search_receipt_ids": [
+        "GXQ155",
+        "GXQ156",
+        "GXQ157",
+        "GXQ159"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR049",
+      "player": "丸 佳浩",
+      "post_id": "2084616070565159325",
+      "post_url": "https://x.com/hirosatou1717/status/2084616070565159325",
+      "author": "@hirosatou1717",
+      "posted_at": null,
+      "text_excerpt": "増田大輝の今年のトップスピードって、最高31.4km/hで丸佳浩と同じなんだよな。完全にイメージだけでスピードはもうない。",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_hirosatou1717",
+      "grok_x_search_receipt_ids": [
+        "GXQ157"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR050",
+      "player": "西野 真弘",
+      "post_id": "1796157628340445533",
+      "post_url": "https://x.com/131468yasu/status/1796157628340445533",
+      "author": "@131468yasu",
+      "posted_at": "2024-05-30 12:32:04 GMT",
+      "text_excerpt": "西野真弘さん全力疾走!",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_131468yasu",
+      "grok_x_search_receipt_ids": [
+        "GXQ006"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR051",
+      "player": "西野 真弘",
+      "post_id": "1843269053936504843",
+      "post_url": "https://x.com/Kokudo357/status/1843269053936504843",
+      "author": "@Kokudo357",
+      "posted_at": "2024-10-07 12:36:03 GMT",
+      "text_excerpt": "お手本のような全力疾走、全力プレー",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Kokudo357",
+      "grok_x_search_receipt_ids": [
+        "GXQ006"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR052",
+      "player": "西野 真弘",
+      "post_id": "1856988323786698775",
+      "post_url": "https://x.com/G6zOb/status/1856988323786698775",
+      "author": "@G6zOb",
+      "posted_at": "2024-11-14",
+      "text_excerpt": "まーさんも圭太もかわいくてマンチカンの子猫動画みたぐらいセロトニン出てる",
+      "accepted": false,
+      "rejection_reason": "ARTICLE_OR_VIDEO_REPOST_NOT_INDEPENDENT_SNS_ORIGIN",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "ARTICLE_OR_VIDEO_REPOST",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_G6zOb",
+      "grok_x_search_receipt_ids": [
+        "GXQ004"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR053",
+      "player": "西野 真弘",
+      "post_id": "1857011850585440589",
+      "post_url": "https://x.com/jubi94221412/status/1857011850585440589",
+      "author": "@jubi94221412",
+      "posted_at": "2024-11-14",
+      "text_excerpt": "めっちゃ癒されたけどスピード感どこ😂",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_jubi94221412",
+      "grok_x_search_receipt_ids": [
+        "GXQ004"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR054",
+      "player": "西野 真弘",
+      "post_id": "1857088025856966944",
+      "post_url": "https://x.com/PH_phBB/status/1857088025856966944",
+      "author": "@PH_phBB",
+      "posted_at": "2024-11-14",
+      "text_excerpt": "スピード対決 西野真弘/中川圭太 ショートver.｜BsTV - オリックス・バファローズ 公式",
+      "accepted": false,
+      "rejection_reason": "ARTICLE_OR_VIDEO_REPOST_NOT_INDEPENDENT_SNS_ORIGIN",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "ARTICLE_OR_VIDEO_REPOST",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_PH_phBB",
+      "grok_x_search_receipt_ids": [
+        "GXQ004"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR055",
+      "player": "西野 真弘",
+      "post_id": "1966819704489845245",
+      "post_url": "https://x.com/Petalenco/status/1966819704489845245",
+      "author": "@Petalenco",
+      "posted_at": "2025-09-13",
+      "text_excerpt": "オリックスちゃんあの打球で併殺になること多すぎて西野真弘が俊足に見えるな",
+      "accepted": false,
+      "rejection_reason": "CONFLICTING_RETURNED_URL_FOR_SAME_POST_ID",
+      "evidence_direction": "FASTER",
+      "directness": "IDENTITY_CONFLICT",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Petalenco",
+      "grok_x_search_receipt_ids": [
+        "GXQ001",
+        "GXQ003",
+        "GXQ004",
+        "GXQ006",
+        "GXQ008"
+      ],
+      "identity_status": "CONFLICTING_RETURNED_URL_FOR_SAME_POST_ID"
+    },
+    {
+      "source_id": "GXSR056",
+      "player": "西野 真弘",
+      "post_id": "1966820123337015685",
+      "post_url": "https://x.com/taka_ori_bz/status/1966820123337015685",
+      "author": "@taka_ori_bz",
+      "posted_at": "2025-09-13",
+      "text_excerpt": "１点１点言うけど、今日の🐮スタメンの走力どないなっとんねん🤔 来田涼斗でなんとか… 森友哉もケガ明けだと走塁能力は期待できんし 西野真弘は全力疾走は正直こわい",
+      "accepted": false,
+      "rejection_reason": "CONFLICTING_RETURNED_URL_FOR_SAME_POST_ID",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "IDENTITY_CONFLICT",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_taka_ori_bz",
+      "grok_x_search_receipt_ids": [
+        "GXQ002",
+        "GXQ008"
+      ],
+      "identity_status": "CONFLICTING_RETURNED_URL_FOR_SAME_POST_ID"
+    },
+    {
+      "source_id": "GXSR057",
+      "player": "西野 真弘",
+      "post_id": "1967904417220587687",
+      "post_url": "https://x.com/sozaryata/status/1967904417220587687",
+      "author": "@sozaryata",
+      "posted_at": "2025-09-16",
+      "text_excerpt": "西野真弘さん 若手時代　俊足のアベレージヒッター 中堅時代　ファールで粘って出塁するクセ者 現在　長距離砲　これもう分かんねえな",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_sozaryata",
+      "grok_x_search_receipt_ids": [
+        "GXQ002",
+        "GXQ008"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR058",
+      "player": "西野 真弘",
+      "post_id": "2002274269816860915",
+      "post_url": "https://x.com/non__m05/status/2002274269816860915",
+      "author": "@non__m05",
+      "posted_at": "2025-12-20",
+      "text_excerpt": "【真弘！】西野真弘『3塁打 → 好判断で本塁生還！佐々木朗希から“足”で先制点を奪う』 左中間抜けて3塁足速いし、最後のホームも足速い。昔より体おっきくなったのに足の速さそのままなんすごいまじ。天才🫶🏻",
+      "accepted": false,
+      "rejection_reason": "PLAY_OUTCOME_OR_TRANSITION_METRIC_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "FASTER",
+      "directness": "PLAY_OUTCOME_OR_TRANSITION",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_non__m05",
+      "grok_x_search_receipt_ids": [
+        "GXQ003",
+        "GXQ008"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR059",
+      "player": "西野 真弘",
+      "post_id": "2017891717354320224",
+      "post_url": "https://x.com/neko_carp/status/2017891717354320224",
+      "author": "@neko_carp",
+      "posted_at": "2026-02-01 09:24:10 GMT",
+      "text_excerpt": "福田周平や西野真弘みたいな小兵の左打ち俊足巧打型内野手が好きなので、勝田成がきている。",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "GENERIC_CURRENT_PLAYER_TYPE_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_neko_carp",
+      "grok_x_search_receipt_ids": [
+        "GXQ002",
+        "GXQ007"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR060",
+      "player": "西野 真弘",
+      "post_id": "2028425938837618752",
+      "post_url": "https://x.com/zen_daseki_ute/status/2028425938837618752",
+      "author": "@zen_daseki_ute",
+      "posted_at": "2026-03-02 11:03:24 GMT",
+      "text_excerpt": "西野真弘は野手最年長だけどこの全力疾走でセーフになる動きまわる元気を持つ",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_zen_daseki_ute",
+      "grok_x_search_receipt_ids": [
+        "GXQ001",
+        "GXQ002",
+        "GXQ003",
+        "GXQ004",
+        "GXQ006",
+        "GXQ007"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR061",
+      "player": "西野 真弘",
+      "post_id": "2046895729910886521",
+      "post_url": "https://x.com/PEVRPFCeVa34034/status/2046895729910886521",
+      "author": "@PEVRPFCeVa34034",
+      "posted_at": "2026-04-22 10:15:46 GMT",
+      "text_excerpt": "俺たちの西野真弘足が速い✨ \nあと次の塁狙うの上手い✨ \n#Bs2026",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_PEVRPFCeVa34034",
+      "grok_x_search_receipt_ids": [
+        "GXQ001",
+        "GXQ002",
+        "GXQ007"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR062",
+      "player": "西野 真弘",
+      "post_id": "2062135844832776356",
+      "post_url": "https://x.com/PEVRPFCeVa34034/status/2062135844832776356",
+      "author": "@PEVRPFCeVa34034",
+      "posted_at": "2026-06-03 11:34:32 GMT",
+      "text_excerpt": "足引きずってるし…今年休憩して来年またキャリアハイ更新してもらっても…今年契約最終年やから契約更改何卒… \n俺たちの西野真弘…去年頑張りすぎたよ",
+      "accepted": false,
+      "rejection_reason": "NO_CLEAR_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_PEVRPFCeVa34034",
+      "grok_x_search_receipt_ids": [
+        "GXQ007"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR063",
+      "player": "大島 洋平",
+      "post_id": "1928076101546389666",
+      "post_url": "https://x.com/nLbSDgU2oRDQZZk/status/1928076101546389666",
+      "author": "@nLbSDgU2oRDQZZk",
+      "posted_at": null,
+      "text_excerpt": ": さすが大島洋平 マジ普通に足速いよねまだまだ",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "FASTER",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_nLbSDgU2oRDQZZk",
+      "grok_x_search_receipt_ids": [
+        "GXQ028"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR064",
+      "player": "大島 洋平",
+      "post_id": "1952577489009573973",
+      "post_url": "https://x.com/yoheisuki8/status/1952577489009573973",
+      "author": "@yoheisuki8",
+      "posted_at": "2025-08-05",
+      "text_excerpt": "大島洋平様今年40歳であの足の速さはエグい \n (",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "CURRENT_SUPPORT",
+      "directness": "DIRECT_CURRENT_SPEED_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_yoheisuki8",
+      "grok_x_search_receipt_ids": [
+        "GXQ030"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR065",
+      "player": "大島 洋平",
+      "post_id": "1961034113336721852",
+      "post_url": "https://x.com/vangosear/status/1961034113336721852",
+      "author": "@vangosear",
+      "posted_at": "2025-08-28",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_vangosear",
+      "grok_x_search_receipt_ids": [
+        "GXQ035"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR066",
+      "player": "大島 洋平",
+      "post_id": "1984583596867534981",
+      "post_url": "https://x.com/SABR_lions/status/1984583596867534981",
+      "author": "@SABR_lions",
+      "posted_at": "2025-11-01",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_SABR_lions",
+      "grok_x_search_receipt_ids": [
+        "GXQ035"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR067",
+      "player": "大島 洋平",
+      "post_id": "1987294059426419108",
+      "post_url": "https://x.com/scorebook_apps/status/1987294059426419108",
+      "author": "@scorebook_apps",
+      "posted_at": "2025-11-08",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_scorebook_apps",
+      "grok_x_search_receipt_ids": [
+        "GXQ035"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR068",
+      "player": "大島 洋平",
+      "post_id": "1999155428270502329",
+      "post_url": "https://x.com/kenzaki810/status/1999155428270502329",
+      "author": "@kenzaki810",
+      "posted_at": "2025-12-11",
+      "text_excerpt": "大島洋平さん　走力B，ホーム突入付き \n (",
+      "accepted": false,
+      "rejection_reason": "GAME_RATING_OR_GAME_DISCUSSION_EXCLUDED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "GAME_RATING",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_kenzaki810",
+      "grok_x_search_receipt_ids": [
+        "GXQ030",
+        "GXQ035"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR069",
+      "player": "大島 洋平",
+      "post_id": "2003351521573130500",
+      "post_url": "https://x.com/yzT8HrsBPF40476/status/2003351521573130500",
+      "author": "@yzT8HrsBPF40476",
+      "posted_at": "2025-12-23",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_yzT8HrsBPF40476",
+      "grok_x_search_receipt_ids": [
+        "GXQ035"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR070",
+      "player": "大島 洋平",
+      "post_id": "2044398359260369133",
+      "post_url": "https://x.com/kunoichimonme/status/2044398359260369133",
+      "author": "@kunoichimonme",
+      "posted_at": null,
+      "text_excerpt": ": 今日一番のポジ 大島洋平まだ足速い",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "FASTER",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_kunoichimonme",
+      "grok_x_search_receipt_ids": [
+        "GXQ028",
+        "GXQ029"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR071",
+      "player": "大島 洋平",
+      "post_id": "2046901979390308565",
+      "post_url": "https://x.com/miyagi_kaccyan/status/2046901979390308565",
+      "author": "@miyagi_kaccyan",
+      "posted_at": null,
+      "text_excerpt": ": 足が速い！ 大島洋平最高！",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "FASTER",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_miyagi_kaccyan",
+      "grok_x_search_receipt_ids": [
+        "GXQ028",
+        "GXQ029"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR072",
+      "player": "大島 洋平",
+      "post_id": "2046902265500610885",
+      "post_url": "https://x.com/KKKO_002/status/2046902265500610885",
+      "author": "@KKKO_002",
+      "posted_at": "2026-04-22",
+      "text_excerpt": "大島洋平40歳で全力疾走素晴らしすぎるよ \n (",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_KKKO_002",
+      "grok_x_search_receipt_ids": [
+        "GXQ029",
+        "GXQ030"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR073",
+      "player": "大島 洋平",
+      "post_id": "2047616061420556430",
+      "post_url": "https://x.com/kohei6d/status/2047616061420556430",
+      "author": "@kohei6d",
+      "posted_at": "2026-04-24",
+      "text_excerpt": "普通脚力とか衰えるやろ \n (",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "SLOWER",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_kohei6d",
+      "grok_x_search_receipt_ids": [
+        "GXQ030"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR074",
+      "player": "大島 洋平",
+      "post_id": "2051268651354108020",
+      "post_url": "https://x.com/kohei6d/status/2051268651354108020",
+      "author": "@kohei6d",
+      "posted_at": "2026-05-04",
+      "text_excerpt": "脚力衰えてないのバグ \n (",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "SLOWER",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_kohei6d",
+      "grok_x_search_receipt_ids": [
+        "GXQ030"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR075",
+      "player": "大島 洋平",
+      "post_id": "2076283957562548236",
+      "post_url": "https://x.com/Kanemasa0613/status/2076283957562548236",
+      "author": "@Kanemasa0613",
+      "posted_at": "2026-07-12",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Kanemasa0613",
+      "grok_x_search_receipt_ids": [
+        "GXQ029"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR076",
+      "player": "大島 洋平",
+      "post_id": "2082002395740230106",
+      "post_url": "https://x.com/lovelyokada/status/2082002395740230106",
+      "author": "@lovelyokada",
+      "posted_at": "2026-07-28",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_lovelyokada",
+      "grok_x_search_receipt_ids": [
+        "GXQ029"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR077",
+      "player": "中村 悠平",
+      "post_id": "1834940075224056147",
+      "post_url": "https://x.com/get_win_ys/status/1834940075224056147",
+      "author": "@get_win_ys",
+      "posted_at": "2024-09-14 12:59:40 GMT",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_get_win_ys",
+      "grok_x_search_receipt_ids": [
+        "GXQ117"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR078",
+      "player": "中村 悠平",
+      "post_id": "1972243918206206443",
+      "post_url": "https://x.com/hisshi0913/status/1972243918206206443",
+      "author": "@hisshi0913",
+      "posted_at": "2025-09-28",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_hisshi0913",
+      "grok_x_search_receipt_ids": [
+        "GXQ111"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR079",
+      "player": "中村 悠平",
+      "post_id": "1972244526967468469",
+      "post_url": "https://x.com/035sk_y/status/1972244526967468469",
+      "author": "@035sk_y",
+      "posted_at": "2025-09-28",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_035sk_y",
+      "grok_x_search_receipt_ids": [
+        "GXQ111"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR080",
+      "player": "中村 悠平",
+      "post_id": "1972292245765468519",
+      "post_url": "https://x.com/93244104Diony/status/1972292245765468519",
+      "author": "@93244104Diony",
+      "posted_at": "2025-09-28",
+      "text_excerpt": ": 今季第1号本塁打を放った中村悠平選手はベースを一周したあとベンチ前まで疾走",
+      "accepted": false,
+      "rejection_reason": "NO_CLEAR_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_93244104Diony",
+      "grok_x_search_receipt_ids": [
+        "GXQ114"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR081",
+      "player": "中村 悠平",
+      "post_id": "1975876232735764610",
+      "post_url": "https://x.com/false_denkibran/status/1975876232735764610",
+      "author": "@false_denkibran",
+      "posted_at": "2025-10-08",
+      "text_excerpt": ": ムーチョがホームランの時全力ベースランニングしたのは...",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_false_denkibran",
+      "grok_x_search_receipt_ids": [
+        "GXQ111",
+        "GXQ114"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR082",
+      "player": "中村 悠平",
+      "post_id": "1988814671588229398",
+      "post_url": "https://x.com/CHOCO720ys/status/1988814671588229398",
+      "author": "@CHOCO720ys",
+      "posted_at": "2025-11-13",
+      "text_excerpt": ": 神宮ホームラン集見てるけど何度見ても最終戦の中村悠平さんの全力疾走ホームラン面白い🤣",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_CHOCO720ys",
+      "grok_x_search_receipt_ids": [
+        "GXQ111",
+        "GXQ114"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR083",
+      "player": "中村 悠平",
+      "post_id": "2049143271365156874",
+      "post_url": "https://x.com/N_mayukoro/status/2049143271365156874",
+      "author": "@N_mayukoro",
+      "posted_at": "2026-04-28",
+      "text_excerpt": ": ホームランでも全力疾走する ムーチョでいて欲しい",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_N_mayukoro",
+      "grok_x_search_receipt_ids": [
+        "GXQ114"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR084",
+      "player": "中村 悠平",
+      "post_id": "2050897068861051385",
+      "post_url": "https://x.com/yakurutotuyoi/status/2050897068861051385",
+      "author": "@yakurutotuyoi",
+      "posted_at": "2026-05-03 11:15:39 GMT",
+      "text_excerpt": "中村悠平「足遅くてすみませんね」",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "QUOTED_CURRENT_SELF_DESCRIPTION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_EVENT_20260503_NAKAMURA_SLOW_DISCUSSION",
+      "grok_x_search_receipt_ids": [
+        "GXQ113"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR085",
+      "player": "中村 悠平",
+      "post_id": "2050897151962870194",
+      "post_url": "https://x.com/Genmai_rice/status/2050897151962870194",
+      "author": "@Genmai_rice",
+      "posted_at": "2026-05-03 11:15:59 GMT",
+      "text_excerpt": "中村悠平さん足遅い😭",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "SLOWER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Genmai_rice",
+      "grok_x_search_receipt_ids": [
+        "GXQ113"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR086",
+      "player": "中村 悠平",
+      "post_id": "2050897172787527695",
+      "post_url": "https://x.com/swbiPpOTea48605/status/2050897172787527695",
+      "author": "@swbiPpOTea48605",
+      "posted_at": "2026-05-03 11:16:04 GMT",
+      "text_excerpt": "中村悠平さんの足遅い瞬間を見る無駄時間",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "SLOWER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_swbiPpOTea48605",
+      "grok_x_search_receipt_ids": [
+        "GXQ113"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR087",
+      "player": "中村 悠平",
+      "post_id": "2050897223928754237",
+      "post_url": "https://x.com/h_sorewata/status/2050897223928754237",
+      "author": "@h_sorewata",
+      "posted_at": "2026-05-03 11:16:16 GMT",
+      "text_excerpt": "中村悠平さん足が遅い…",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "SLOWER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_h_sorewata",
+      "grok_x_search_receipt_ids": [
+        "GXQ113"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR088",
+      "player": "中村 悠平",
+      "post_id": "2050897297895223498",
+      "post_url": "https://x.com/335L0mfydzCPETQ/status/2050897297895223498",
+      "author": "@335L0mfydzCPETQ",
+      "posted_at": "2026-05-03",
+      "text_excerpt": ": あー惜しかったな中村悠平😓 やっぱり膝が悪いから加速力がないわな、でもいい当たりやった！",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_335L0mfydzCPETQ",
+      "grok_x_search_receipt_ids": [
+        "GXQ111",
+        "GXQ112",
+        "GXQ114"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR089",
+      "player": "中村 悠平",
+      "post_id": "2074817218777649412",
+      "post_url": "https://x.com/Baya45_0814/status/2074817218777649412",
+      "author": "@Baya45_0814",
+      "posted_at": "2026-07-08 11:25:47 GMT",
+      "text_excerpt": "中村悠平、大城とか宮﨑くらい足が遅いランナーじゃないともう刺せないんじゃね？ってレベルに酷いな",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "SLOWER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Baya45_0814",
+      "grok_x_search_receipt_ids": [
+        "GXQ113"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR090",
+      "player": "土田 龍空",
+      "post_id": "1758309489835655376",
+      "post_url": "https://x.com/dragons_080203/status/1758309489835655376",
+      "author": "@dragons_080203",
+      "posted_at": "2024-02-16",
+      "text_excerpt": "周平がセカンドでは守備範囲が狭すぎて無謀 田中、村松、土田龍空ら俊足な若手にやらせるのが無難",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_dragons_080203",
+      "grok_x_search_receipt_ids": [
+        "GXQ020",
+        "GXQ027"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR091",
+      "player": "土田 龍空",
+      "post_id": "1909102442538758204",
+      "post_url": "https://x.com/myomotora4123k/status/1909102442538758204",
+      "author": "@myomotora4123k",
+      "posted_at": "2025-04-07 04:34:26 GMT",
+      "text_excerpt": "土田龍空選手→内野手としては破格の守備力+打撃でのプラスも十分見込める（去年は2軍でOPS.800くらい）足も速い",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_myomotora4123k",
+      "grok_x_search_receipt_ids": [
+        "GXQ019"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR092",
+      "player": "土田 龍空",
+      "post_id": "1918891882144301197",
+      "post_url": "https://x.com/_d_s_7_/status/1918891882144301197",
+      "author": "@_d_s_7_",
+      "posted_at": "2025-05-04",
+      "text_excerpt": "土田龍空は全力疾走しないなら交代しろ",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR__d_s_7_",
+      "grok_x_search_receipt_ids": [
+        "GXQ019",
+        "GXQ022"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR093",
+      "player": "土田 龍空",
+      "post_id": "1976806522450805142",
+      "post_url": "https://x.com/ohtsyu/status/1976806522450805142",
+      "author": "@ohtsyu",
+      "posted_at": "2025-10-11",
+      "text_excerpt": "土田龍空選手、スプリントの最高速度が30.7km/hと少し速いレベルなのに一塁到達時間は3.84secとかなり速い👀✨️ \n ここでもセンス魅せてくるか",
+      "accepted": false,
+      "rejection_reason": "PLAY_OUTCOME_OR_TRANSITION_METRIC_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "FASTER",
+      "directness": "PLAY_OUTCOME_OR_TRANSITION",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_ohtsyu",
+      "grok_x_search_receipt_ids": [
+        "GXQ022"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR094",
+      "player": "土田 龍空",
+      "post_id": "2044705791194886509",
+      "post_url": "https://x.com/yazannokame/status/2044705791194886509",
+      "author": "@yazannokame",
+      "posted_at": "2026-04-16 09:13:44 GMT",
+      "text_excerpt": "打てないから　内野しかできないから　そんな足速くないから　全部を否定する土田龍空　わろた",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_yazannokame",
+      "grok_x_search_receipt_ids": [
+        "GXQ023"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR095",
+      "player": "土田 龍空",
+      "post_id": "2047545369530094027",
+      "post_url": "https://x.com/Goodicious97/status/2047545369530094027",
+      "author": "@Goodicious97",
+      "posted_at": "2026-04-24",
+      "text_excerpt": "土田龍空が中日ドラゴンズの1軍に合流⚾️🐲 \n 守備力とスピードが強みの選手なので、1軍での起用にも注目だね👍",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_ATTRIBUTE",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_Goodicious97",
+      "grok_x_search_receipt_ids": [
+        "GXQ022"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR096",
+      "player": "土田 龍空",
+      "post_id": "2049395897323397441",
+      "post_url": "https://x.com/Jt4ivTh/status/2049395897323397441",
+      "author": "@Jt4ivTh",
+      "posted_at": "2026-04-29 07:50:32 GMT",
+      "text_excerpt": "土田龍空の方が足は遅いかも知らんけど尾田より盗塁のセンスはあると思うで。 \n#中日ドラゴンズ",
+      "accepted": false,
+      "rejection_reason": "BASERUNNING_DECISION_OR_STOLEN_BASE_CONTEXT_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "SLOWER",
+      "directness": "BASERUNNING_OR_STOLEN_BASE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Jt4ivTh",
+      "grok_x_search_receipt_ids": [
+        "GXQ023"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR097",
+      "player": "土田 龍空",
+      "post_id": "2049409629340475763",
+      "post_url": "https://x.com/dragons_080203/status/2049409629340475763",
+      "author": "@dragons_080203",
+      "posted_at": "2026-04-29",
+      "text_excerpt": "土田龍空もそれなりに俊足ではある。むしろ尾田なんかより速いはず。",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_dragons_080203",
+      "grok_x_search_receipt_ids": [
+        "GXQ020"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR098",
+      "player": "土田 龍空",
+      "post_id": "2050423606560309310",
+      "post_url": "https://x.com/dragons_080203/status/2050423606560309310",
+      "author": "@dragons_080203",
+      "posted_at": "2026-05-02",
+      "text_excerpt": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない",
+      "accepted": false,
+      "rejection_reason": "BASERUNNING_DECISION_OR_STOLEN_BASE_CONTEXT_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "FASTER",
+      "directness": "BASERUNNING_OR_STOLEN_BASE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_dragons_080203",
+      "grok_x_search_receipt_ids": [
+        "GXQ020"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR099",
+      "player": "土田 龍空",
+      "post_id": "2051557334015734132",
+      "post_url": "https://x.com/n2929ikukyuu/status/2051557334015734132",
+      "author": "@n2929ikukyuu",
+      "posted_at": "2026-05-05",
+      "text_excerpt": "土田龍空あるあるなんだけど、シンプルに足の速さは普通という。大島と岡林が速いから余計に目立つ😀",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "CURRENT_SUPPORT",
+      "directness": "DIRECT_COMPARATIVE_SPEED_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_n2929ikukyuu",
+      "grok_x_search_receipt_ids": [
+        "GXQ019",
+        "GXQ022"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR100",
+      "player": "土田 龍空",
+      "post_id": "2054869070378586471",
+      "post_url": "https://x.com/yasu_zehn/status/2054869070378586471",
+      "author": "@yasu_zehn",
+      "posted_at": "2026-05-14",
+      "text_excerpt": "例えば田中幹也はあの脚力とスピードを存分に活かしてすごいプレーしてるけど、土田龍空はその足の遅さでなんでそんなプレーできるんやって思うし打球感とかそういうのが天才なんやと思う",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "DIRECT_COMPARATIVE_SPEED_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_yasu_zehn",
+      "grok_x_search_receipt_ids": [
+        "GXQ020",
+        "GXQ022"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR101",
+      "player": "土田 龍空",
+      "post_id": "2068822689092129103",
+      "post_url": "https://x.com/Tayousei_dayo/status/2068822689092129103",
+      "author": "@Tayousei_dayo",
+      "posted_at": "2026-06-21 22:25:40 GMT",
+      "text_excerpt": "土田龍空から学んでくれ、普通に 足が早いのはすごく強みなんだから",
+      "accepted": false,
+      "rejection_reason": "NO_CLEAR_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Tayousei_dayo",
+      "grok_x_search_receipt_ids": [
+        "GXQ025"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR102",
+      "player": "土田 龍空",
+      "post_id": "2080907150042501612",
+      "post_url": "https://x.com/pttt0gqm/status/2080907150042501612",
+      "author": "@pttt0gqm",
+      "posted_at": "2026-07-25 06:45:00 GMT",
+      "text_excerpt": "爆発的走力があれば案外何とかなるけどなこれ 中村奨成といい土田龍空といい森敬斗といい短期間で3人も出来てるし再現性自体はあるよ",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_pttt0gqm",
+      "grok_x_search_receipt_ids": [
+        "GXQ025"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR103",
+      "player": "藤岡 裕大",
+      "post_id": "1813549311038472198",
+      "post_url": "https://x.com/BlackMarines/status/1813549311038472198",
+      "author": "@BlackMarines",
+      "posted_at": "2024-07-17 12:20:24 GMT",
+      "text_excerpt": "一年半前くらいから明らかにピークを過ぎた中村奨吾、結局色んな人の猿真似をしながら何者にもなれずに中途半端な福浦崩れに戻った安田尚憲、遅筋を付けすぎて守備においても打撃においてもスピードを欠いた貪重な近藤もどきと化した藤岡裕大、続",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "SLOWER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_BlackMarines",
+      "grok_x_search_receipt_ids": [
+        "GXQ067"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR104",
+      "player": "藤岡 裕大",
+      "post_id": "1818281774700716047",
+      "post_url": "https://x.com/hryr_shkt/status/1818281774700716047",
+      "author": "@hryr_shkt",
+      "posted_at": "2024-07-30 13:45:31 GMT",
+      "text_excerpt": "藤岡裕大さんの守備範囲と足の速さ落ちてる……？大丈夫……？",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "DIRECT_OBSERVED_POSSIBLE_SPEED_DECLINE",
+      "evidence_strength": "MODERATE_HISTORICAL",
+      "independence_group": "X_AUTHOR_hryr_shkt",
+      "grok_x_search_receipt_ids": [
+        "GXQ067"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR105",
+      "player": "藤岡 裕大",
+      "post_id": "1935626258051919993",
+      "post_url": "https://x.com/mosamosa1216/status/1935626258051919993",
+      "author": "@mosamosa1216",
+      "posted_at": "2025-06-19 09:10:36 GMT",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_mosamosa1216",
+      "grok_x_search_receipt_ids": [
+        "GXQ068"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR106",
+      "player": "藤岡 裕大",
+      "post_id": "1935990810061025464",
+      "post_url": "https://x.com/LOTTE_Nicha____/status/1935990810061025464",
+      "author": "@LOTTE_Nicha____",
+      "posted_at": "2025-06-20 09:19:12 GMT",
+      "text_excerpt": "ところで藤岡裕大さんの走力に称号つけて+3とかできないの？",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_LOTTE_Nicha____",
+      "grok_x_search_receipt_ids": [
+        "GXQ066"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR107",
+      "player": "藤岡 裕大",
+      "post_id": "1947266818105643228",
+      "post_url": "https://x.com/marinittai836/status/1947266818105643228",
+      "author": "@marinittai836",
+      "posted_at": "2025-07-21 12:06:02 GMT",
+      "text_excerpt": "前半の誤算は岡大海と藤岡裕大かな。藤岡は前から脚力落ちてたが、岡も守備走塁の劣化が顕著になって野手としての計算がしにくくなった。",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "EXPLICIT_TEMPORAL_PHYSICAL_SPEED_DECLINE",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_marinittai836",
+      "grok_x_search_receipt_ids": [
+        "GXQ066"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR108",
+      "player": "藤岡 裕大",
+      "post_id": "1955583711711547601",
+      "post_url": "https://x.com/Y_Marines_26/status/1955583711711547601",
+      "author": "@Y_Marines_26",
+      "posted_at": null,
+      "text_excerpt": ": 6回、セカンド併殺打 藤岡裕大、全力疾走してない。船下りよう",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Y_Marines_26",
+      "grok_x_search_receipt_ids": [
+        "GXQ066",
+        "GXQ069"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR109",
+      "player": "藤岡 裕大",
+      "post_id": "1967517436858757269",
+      "post_url": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "author": "@Y_Marines_26",
+      "posted_at": null,
+      "text_excerpt": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Y_Marines_26",
+      "grok_x_search_receipt_ids": [
+        "GXQ066",
+        "GXQ069"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR110",
+      "player": "藤岡 裕大",
+      "post_id": "2005626940854874273",
+      "post_url": "https://x.com/baseball_lili/status/2005626940854874273",
+      "author": "@baseball_lili",
+      "posted_at": "2025-12-29 13:08:20 GMT",
+      "text_excerpt": "藤岡裕大はサードかショートだよな セカンドしっくりこないは 肩強くて足は普通なイメージ セカンドはある程度スピードある人がなるイメージ",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "CURRENT_SUPPORT",
+      "directness": "GENERIC_CURRENT_SPEED_PROFILE",
+      "evidence_strength": "LOW",
+      "independence_group": "X_AUTHOR_baseball_lili",
+      "grok_x_search_receipt_ids": [
+        "GXQ067"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR111",
+      "player": "藤岡 裕大",
+      "post_id": "2043200297158459507",
+      "post_url": "https://x.com/mariiiinsfuck/status/2043200297158459507",
+      "author": "@mariiiinsfuck",
+      "posted_at": null,
+      "text_excerpt": ": チームを負けに導く藤岡裕大さん。せめて全力疾走しろよ。",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_mariiiinsfuck",
+      "grok_x_search_receipt_ids": [
+        "GXQ066",
+        "GXQ069",
+        "GXQ070"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR112",
+      "player": "梅野 隆太郎",
+      "post_id": "1830902587383861592",
+      "post_url": "https://x.com/jun_sky_walkers/status/1830902587383861592",
+      "author": "@jun_sky_walkers",
+      "posted_at": "2024-09-03",
+      "text_excerpt": "意外と足遅いな梅野隆太郎。",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "EXPLICIT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE_HISTORICAL",
+      "independence_group": "X_AUTHOR_jun_sky_walkers",
+      "grok_x_search_receipt_ids": [
+        "GXQ167"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR113",
+      "player": "梅野 隆太郎",
+      "post_id": "1871212154067755104",
+      "post_url": "https://x.com/martesuperuna/status/1871212154067755104",
+      "author": "@martesuperuna",
+      "posted_at": "2024-12-23 15:11:57 GMT",
+      "text_excerpt": "俊足野手なら梅野隆太郎がいるやろ",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_martesuperuna",
+      "grok_x_search_receipt_ids": [
+        "GXQ164"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR114",
+      "player": "梅野 隆太郎",
+      "post_id": "2060952602855276715",
+      "post_url": "https://x.com/NobuK45346192/status/2060952602855276715",
+      "author": "@NobuK45346192",
+      "posted_at": "2026-05-31 05:12:45 GMT",
+      "text_excerpt": "梅野隆太郎 \n足が速いことも覚えておいてほしい",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_EVENT_20260531_UMENO_SPEED_DISCUSSION",
+      "grok_x_search_receipt_ids": [
+        "GXQ163",
+        "GXQ164",
+        "GXQ166"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR115",
+      "player": "梅野 隆太郎",
+      "post_id": "2060953071811977349",
+      "post_url": "https://x.com/Brazell_6_7/status/2060953071811977349",
+      "author": "@Brazell_6_7",
+      "posted_at": "2026-05-31 05:14:37 GMT",
+      "text_excerpt": "虎の正捕手で最も足の速い男・梅野隆太郎",
+      "accepted": false,
+      "rejection_reason": "SAME_EVENT_ORIGIN_DUPLICATE_OF_2060952602855276715",
+      "evidence_direction": "FASTER",
+      "directness": "SAME_EVENT_ORIGIN_DUPLICATE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Brazell_6_7",
+      "grok_x_search_receipt_ids": [
+        "GXQ163"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR116",
+      "player": "並木 秀尊",
+      "post_id": "1862825373559603230",
+      "post_url": "https://x.com/iwakibb/status/1862825373559603230",
+      "author": "@iwakibb",
+      "posted_at": "2024-11-30",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_iwakibb",
+      "grok_x_search_receipt_ids": [
+        "GXQ108"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR117",
+      "player": "並木 秀尊",
+      "post_id": "1862863426567180613",
+      "post_url": "https://x.com/SVictory82/status/1862863426567180613",
+      "author": "@SVictory82",
+      "posted_at": "2024-11-30",
+      "text_excerpt": ": ヤクルト・並木秀尊、「ファン感謝DAY」で俊足みせつけた　脚力自慢のファンと50メートル走で対戦、最後は流して6秒01で1着（中日スポーツ）",
+      "accepted": false,
+      "rejection_reason": "PLAY_OUTCOME_OR_TRANSITION_METRIC_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "FASTER",
+      "directness": "PLAY_OUTCOME_OR_TRANSITION",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_SVictory82",
+      "grok_x_search_receipt_ids": [
+        "GXQ101",
+        "GXQ108"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR118",
+      "player": "並木 秀尊",
+      "post_id": "1863546351184978306",
+      "post_url": "https://x.com/ys_osfk/status/1863546351184978306",
+      "author": "@ys_osfk",
+      "posted_at": "2024-12-02",
+      "text_excerpt": ": 西川遥輝 塩見泰隆 並木秀尊 丸山和郁 岩田幸宏 ヤクルト外野手は 12球団トップクラスで足が速い",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_ys_osfk",
+      "grok_x_search_receipt_ids": [
+        "GXQ101",
+        "GXQ108"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR119",
+      "player": "並木 秀尊",
+      "post_id": "1868867449522975029",
+      "post_url": "https://x.com/miyanishizono/status/1868867449522975029",
+      "author": "@miyanishizono",
+      "posted_at": "2024-12-17",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_miyanishizono",
+      "grok_x_search_receipt_ids": [
+        "GXQ108"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR120",
+      "player": "並木 秀尊",
+      "post_id": "1940335977115070875",
+      "post_url": "https://x.com/midget_ys/status/1940335977115070875",
+      "author": "@midget_ys",
+      "posted_at": "2025-07-02",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_midget_ys",
+      "grok_x_search_receipt_ids": [
+        "GXQ103"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR121",
+      "player": "並木 秀尊",
+      "post_id": "1940338099818823824",
+      "post_url": "https://x.com/RiZtyKPkwob0tml/status/1940338099818823824",
+      "author": "@RiZtyKPkwob0tml",
+      "posted_at": "2025-07-02",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_RiZtyKPkwob0tml",
+      "grok_x_search_receipt_ids": [
+        "GXQ103"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR122",
+      "player": "並木 秀尊",
+      "post_id": "1968896068118008031",
+      "post_url": "https://x.com/Jin_jahannam/status/1968896068118008031",
+      "author": "@Jin_jahannam",
+      "posted_at": "2025-09-17",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Jin_jahannam",
+      "grok_x_search_receipt_ids": [
+        "GXQ103"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR123",
+      "player": "並木 秀尊",
+      "post_id": "1974695431889383757",
+      "post_url": "https://x.com/1_55_Policy/status/1974695431889383757",
+      "author": "@1_55_Policy",
+      "posted_at": "2025-10-05",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_1_55_Policy",
+      "grok_x_search_receipt_ids": [
+        "GXQ103"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR124",
+      "player": "並木 秀尊",
+      "post_id": "1987481318792503785",
+      "post_url": "https://x.com/Yana_ys_0224/status/1987481318792503785",
+      "author": "@Yana_ys_0224",
+      "posted_at": "2025-11-09",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Yana_ys_0224",
+      "grok_x_search_receipt_ids": [
+        "GXQ103"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR125",
+      "player": "並木 秀尊",
+      "post_id": "2005636348645167111",
+      "post_url": "https://x.com/DesFrieden/status/2005636348645167111",
+      "author": "@DesFrieden",
+      "posted_at": "2025-12-29",
+      "text_excerpt": ": 並木くんの高校の先輩である秋本さん、いつも素敵な記事をありがとうございます😊【ヤクルト】並木秀尊が「かわぐちプロ野球教室２０２５」に参加　球界トップクラスの俊足が教えた足が速くなるための方法とは（スポーツ報知）",
+      "accepted": false,
+      "rejection_reason": "ARTICLE_OR_VIDEO_REPOST_NOT_INDEPENDENT_SNS_ORIGIN",
+      "evidence_direction": "FASTER",
+      "directness": "ARTICLE_OR_VIDEO_REPOST",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_DesFrieden",
+      "grok_x_search_receipt_ids": [
+        "GXQ101",
+        "GXQ107"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR126",
+      "player": "並木 秀尊",
+      "post_id": "2005660370783141899",
+      "post_url": "https://x.com/mnbv99015/status/2005660370783141899",
+      "author": "@mnbv99015",
+      "posted_at": "2025-12-29",
+      "text_excerpt": ": 【ヤクルト】並木秀尊が「かわぐちプロ野球教室２０２５」に参加　球界トップクラスの俊足が教えた足が速くなるための方法とは(スポーツ報知)",
+      "accepted": false,
+      "rejection_reason": "ARTICLE_OR_VIDEO_REPOST_NOT_INDEPENDENT_SNS_ORIGIN",
+      "evidence_direction": "FASTER",
+      "directness": "ARTICLE_OR_VIDEO_REPOST",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_mnbv99015",
+      "grok_x_search_receipt_ids": [
+        "GXQ101",
+        "GXQ107"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR127",
+      "player": "並木 秀尊",
+      "post_id": "2063782942892331043",
+      "post_url": "https://x.com/nanha_BBTF/status/2063782942892331043",
+      "author": "@nanha_BBTF",
+      "posted_at": "2026-06-08",
+      "text_excerpt": ": 並木秀尊さん、足がめっちゃ速い点に注目されがちだけど、そこそこパンチ力があり打撃もいいので不在なのが本当に痛いんすよね",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_nanha_BBTF",
+      "grok_x_search_receipt_ids": [
+        "GXQ101"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR128",
+      "player": "木下 拓哉",
+      "post_id": "1784772401240432711",
+      "post_url": "https://x.com/223superdry/status/1784772401240432711",
+      "author": "@223superdry",
+      "posted_at": "2024-04-29 02:31:14 GMT",
+      "text_excerpt": "木下拓哉の全力疾走最高にキュートだな。(余韻)",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_223superdry",
+      "grok_x_search_receipt_ids": [
+        "GXQ042"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR129",
+      "player": "木下 拓哉",
+      "post_id": "1822936573731844199",
+      "post_url": "https://x.com/benchihey/status/1822936573731844199",
+      "author": "@benchihey",
+      "posted_at": "2024-08-12 10:02:02 GMT",
+      "text_excerpt": "加藤匠馬が木下拓哉に勝ってる所は肩と走力だけ定期",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_benchihey",
+      "grok_x_search_receipt_ids": [
+        "GXQ039"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR130",
+      "player": "木下 拓哉",
+      "post_id": "1823294180853944590",
+      "post_url": "https://x.com/2DMdzvNxMscJWdO/status/1823294180853944590",
+      "author": "@2DMdzvNxMscJWdO",
+      "posted_at": "2024-08-13",
+      "text_excerpt": "木下拓哉さん痩せたのに鈍足に磨きをかけてませんか⁉️",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "SLOWER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_2DMdzvNxMscJWdO",
+      "grok_x_search_receipt_ids": [
+        "GXQ045"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR131",
+      "player": "木下 拓哉",
+      "post_id": "1823294254137188780",
+      "post_url": "https://x.com/gurumezushi2148/status/1823294254137188780",
+      "author": "@gurumezushi2148",
+      "posted_at": "2024-08-13",
+      "text_excerpt": "木下拓哉より足は速かったと見栄を張る谷繁",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_gurumezushi2148",
+      "grok_x_search_receipt_ids": [
+        "GXQ045"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR132",
+      "player": "木下 拓哉",
+      "post_id": "1823684390674948519",
+      "post_url": "https://x.com/kota_rainbow321/status/1823684390674948519",
+      "author": "@kota_rainbow321",
+      "posted_at": "2024-08-14",
+      "text_excerpt": "木下拓哉のここがダメ ・鈍足のくせに単打狙いのバッティング、しかもポップフライかゲッツー",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "SLOWER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_kota_rainbow321",
+      "grok_x_search_receipt_ids": [
+        "GXQ045"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR133",
+      "player": "木下 拓哉",
+      "post_id": "1831652914731139154",
+      "post_url": "https://x.com/Pokkaori/status/1831652914731139154",
+      "author": "@Pokkaori",
+      "posted_at": "2024-09-05",
+      "text_excerpt": "ゴロゴーなんだろうな 木下拓哉さんの足を考えるとな",
+      "accepted": false,
+      "rejection_reason": "NO_CLEAR_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Pokkaori",
+      "grok_x_search_receipt_ids": [
+        "GXQ045"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR134",
+      "player": "木下 拓哉",
+      "post_id": "1837066926415032393",
+      "post_url": "https://x.com/pasan111211/status/1837066926415032393",
+      "author": "@pasan111211",
+      "posted_at": "2024-09-20",
+      "text_excerpt": "俊足・木下拓哉",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_pasan111211",
+      "grok_x_search_receipt_ids": [
+        "GXQ045"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR135",
+      "player": "木下 拓哉",
+      "post_id": "1893904045607121203",
+      "post_url": "https://x.com/a_maka_b/status/1893904045607121203",
+      "author": "@a_maka_b",
+      "posted_at": "2025-02-24 06:01:26 GMT",
+      "text_excerpt": "プロスピで見ても木下拓哉の走力Fやった()",
+      "accepted": false,
+      "rejection_reason": "GAME_RATING_OR_GAME_DISCUSSION_EXCLUDED",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "GAME_RATING",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_a_maka_b",
+      "grok_x_search_receipt_ids": [
+        "GXQ039"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR136",
+      "player": "木下 拓哉",
+      "post_id": "1917114584466686203",
+      "post_url": "https://x.com/35dragons35/status/1917114584466686203",
+      "author": "@35dragons35",
+      "posted_at": "2025-04-29 07:11:49 GMT",
+      "text_excerpt": "木下拓哉さんは足は遅いけど天才です✨",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_35dragons35",
+      "grok_x_search_receipt_ids": [
+        "GXQ041"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR137",
+      "player": "木下 拓哉",
+      "post_id": "1927330130390610265",
+      "post_url": "https://x.com/kotarodra/status/1927330130390610265",
+      "author": "@kotarodra",
+      "posted_at": "2025-05-27 11:44:45 GMT",
+      "text_excerpt": "木下拓哉、分かっているけど足が遅い。",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_kotarodra",
+      "grok_x_search_receipt_ids": [
+        "GXQ041"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR138",
+      "player": "木下 拓哉",
+      "post_id": "2027352201530909151",
+      "post_url": "https://x.com/Dragons_tam/status/2027352201530909151",
+      "author": "@Dragons_tam",
+      "posted_at": "2026-02-27 11:56:45 GMT",
+      "text_excerpt": "木下拓哉、福田永将より足遅い人久々に見たかも",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "DIRECT_COMPARATIVE_SPEED_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_Dragons_tam",
+      "grok_x_search_receipt_ids": [
+        "GXQ041"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR139",
+      "player": "木下 拓哉",
+      "post_id": "2028085797224952083",
+      "post_url": "https://x.com/devu_chin/status/2028085797224952083",
+      "author": "@devu_chin",
+      "posted_at": null,
+      "text_excerpt": "今日の試合の1番の見どころ \n木下拓哉全力疾走アウト",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_devu_chin",
+      "grok_x_search_receipt_ids": [
+        "GXQ038",
+        "GXQ042"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR140",
+      "player": "木下 拓哉",
+      "post_id": "2035237638966521957",
+      "post_url": "https://x.com/chocomintlove36/status/2035237638966521957",
+      "author": "@chocomintlove36",
+      "posted_at": "2026-03-21 06:10:40 GMT",
+      "text_excerpt": "木下拓哉足遅すぎて神",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_chocomintlove36",
+      "grok_x_search_receipt_ids": [
+        "GXQ041"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR141",
+      "player": "木下 拓哉",
+      "post_id": "2038941065110343706",
+      "post_url": "https://x.com/hayaken_pprz/status/2038941065110343706",
+      "author": "@hayaken_pprz",
+      "posted_at": "2026-03-31 11:26:46 GMT",
+      "text_excerpt": "木下拓哉、足遅すぎやろ。笑",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_hayaken_pprz",
+      "grok_x_search_receipt_ids": [
+        "GXQ041"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR142",
+      "player": "木下 拓哉",
+      "post_id": "2042540211490742632",
+      "post_url": "https://x.com/q9wc0ddNvxfmc/status/2042540211490742632",
+      "author": "@q9wc0ddNvxfmc",
+      "posted_at": null,
+      "text_excerpt": "俊足木下拓哉ぁぁぁぁぃぁぅあ！！！",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "FASTER",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_q9wc0ddNvxfmc",
+      "grok_x_search_receipt_ids": [
+        "GXQ038"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR143",
+      "player": "木下 拓哉",
+      "post_id": "2045104911399231544",
+      "post_url": "https://x.com/pasan111211/status/2045104911399231544",
+      "author": "@pasan111211",
+      "posted_at": null,
+      "text_excerpt": "俊足の木下拓哉",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "FASTER",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_pasan111211",
+      "grok_x_search_receipt_ids": [
+        "GXQ038"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR144",
+      "player": "木下 拓哉",
+      "post_id": "2068694192268951963",
+      "post_url": "https://x.com/19dra77/status/2068694192268951963",
+      "author": "@19dra77",
+      "posted_at": "2026-06-21",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_19dra77",
+      "grok_x_search_receipt_ids": [
+        "GXQ040"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR145",
+      "player": "木下 拓哉",
+      "post_id": "2080565020254228660",
+      "post_url": "https://x.com/togetokage803/status/2080565020254228660",
+      "author": "@togetokage803",
+      "posted_at": null,
+      "text_excerpt": "走力の査定あんま良く知らないですが木下拓哉と同じくらいです",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_togetokage803",
+      "grok_x_search_receipt_ids": [
+        "GXQ038",
+        "GXQ039",
+        "GXQ043"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR146",
+      "player": "木下 拓哉",
+      "post_id": "2080573398347133119",
+      "post_url": "https://x.com/MIH11616512/status/2080573398347133119",
+      "author": "@MIH11616512",
+      "posted_at": null,
+      "text_excerpt": "(現実のサノーって木下拓哉と同じ走力か…？)",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_MIH11616512",
+      "grok_x_search_receipt_ids": [
+        "GXQ038",
+        "GXQ039",
+        "GXQ043"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR147",
+      "player": "野間 峻祥",
+      "post_id": "1795444505690386510",
+      "post_url": "https://x.com/RURI_SEIKAIHADO/status/1795444505690386510",
+      "author": "@RURI_SEIKAIHADO",
+      "posted_at": "2024-05-28 13:18:22 GMT",
+      "text_excerpt": "「野間峻祥という周東選手と「100m徒競走(ルビ:うまぴょい伝説)」して欲しい野手もいますが、彼も懐かしの「ノマノマイェイ」を流すので、是非とも覚えてください(笑)そして、足速いので気をつけて。」",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_RURI_SEIKAIHADO",
+      "grok_x_search_receipt_ids": [
+        "GXQ091"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR148",
+      "player": "野間 峻祥",
+      "post_id": "1829059665671663729",
+      "post_url": "https://x.com/JINJIN13480843/status/1829059665671663729",
+      "author": "@JINJIN13480843",
+      "posted_at": "2024-08-29",
+      "text_excerpt": "大学時代の野間の脚力やっぱヤバいわ \n(",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_JINJIN13480843",
+      "grok_x_search_receipt_ids": [
+        "GXQ093"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR149",
+      "player": "野間 峻祥",
+      "post_id": "1979822981338820791",
+      "post_url": "https://x.com/Donden_Suenaga/status/1979822981338820791",
+      "author": "@Donden_Suenaga",
+      "posted_at": "2025-10-19 08:12:36 GMT",
+      "text_excerpt": "「松川、大学時代の野間峻祥くらい足速いな」",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Donden_Suenaga",
+      "grok_x_search_receipt_ids": [
+        "GXQ091",
+        "GXQ093",
+        "GXQ098"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR150",
+      "player": "野間 峻祥",
+      "post_id": "2034214641895923757",
+      "post_url": "https://x.com/mugi___334/status/2034214641895923757",
+      "author": "@mugi___334",
+      "posted_at": "2026-03-18",
+      "text_excerpt": "野間峻祥、足が速すぎる \n(",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_mugi___334",
+      "grok_x_search_receipt_ids": [
+        "GXQ093"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR151",
+      "player": "野間 峻祥",
+      "post_id": "2066618217506955481",
+      "post_url": "https://x.com/CARPLOVE896692/status/2066618217506955481",
+      "author": "@CARPLOVE896692",
+      "posted_at": null,
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_CARPLOVE896692",
+      "grok_x_search_receipt_ids": [
+        "GXQ097"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR152",
+      "player": "野間 峻祥",
+      "post_id": "2066743741269049502",
+      "post_url": "https://x.com/hanasada1997/status/2066743741269049502",
+      "author": "@hanasada1997",
+      "posted_at": "2026-06-16 04:44:40 GMT",
+      "text_excerpt": "「むぎは大きいの打ててなお足も速い肩もいい、というタイプなのだけど」",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "FASTER",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_hanasada1997",
+      "grok_x_search_receipt_ids": [
+        "GXQ091"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR153",
+      "player": "野間 峻祥",
+      "post_id": "2071900289846890838",
+      "post_url": "https://x.com/jsports_carp/status/2071900289846890838",
+      "author": "@jsports_carp",
+      "posted_at": null,
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_jsports_carp",
+      "grok_x_search_receipt_ids": [
+        "GXQ097"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR154",
+      "player": "矢野 雅哉",
+      "post_id": "1830195362889699449",
+      "post_url": "https://x.com/suzukiikuz/status/1830195362889699449",
+      "author": "@suzukiikuz",
+      "posted_at": "2024-09-01",
+      "text_excerpt": "矢野雅哉、まさかの2試合連続ホームラン。足速すぎや。",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_suzukiikuz",
+      "grok_x_search_receipt_ids": [
+        "GXQ082"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR155",
+      "player": "矢野 雅哉",
+      "post_id": "1830196024226226345",
+      "post_url": "https://x.com/ureshisounainu/status/1830196024226226345",
+      "author": "@ureshisounainu",
+      "posted_at": "2024-09-01",
+      "text_excerpt": "矢野雅哉ランニングホームランすごー！足速すぎる！",
+      "accepted": false,
+      "rejection_reason": "PLAY_OUTCOME_OR_TRANSITION_METRIC_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "FASTER",
+      "directness": "PLAY_OUTCOME_OR_TRANSITION",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_ureshisounainu",
+      "grok_x_search_receipt_ids": [
+        "GXQ082"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR156",
+      "player": "矢野 雅哉",
+      "post_id": "1830198668605219039",
+      "post_url": "https://x.com/100ten___chan/status/1830198668605219039",
+      "author": "@100ten___chan",
+      "posted_at": "2024-09-01",
+      "text_excerpt": "ランニングホームランの映像見たけど矢野雅哉足速すぎる 前進してたとはいえ、後逸したわけでもなくランニングホームランになるの初めてみたかも",
+      "accepted": false,
+      "rejection_reason": "PLAY_OUTCOME_OR_TRANSITION_METRIC_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "FASTER",
+      "directness": "PLAY_OUTCOME_OR_TRANSITION",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_100ten___chan",
+      "grok_x_search_receipt_ids": [
+        "GXQ082"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR157",
+      "player": "矢野 雅哉",
+      "post_id": "1953753262613827850",
+      "post_url": "https://x.com/QsVMjnz95GFeUyR/status/1953753262613827850",
+      "author": "@QsVMjnz95GFeUyR",
+      "posted_at": "2025-08-08 09:40:51 GMT",
+      "text_excerpt": "矢野雅哉選手が推し！ 全力疾走と泥だらけの守備が胸アツすぎます🔥",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_QsVMjnz95GFeUyR",
+      "grok_x_search_receipt_ids": [
+        "GXQ083",
+        "GXQ087"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR158",
+      "player": "矢野 雅哉",
+      "post_id": "2049093263114817747",
+      "post_url": "https://x.com/G__Blue/status/2049093263114817747",
+      "author": "@G__Blue",
+      "posted_at": "2026-04-28 11:47:58 GMT",
+      "text_excerpt": "矢野雅哉にナイス３ラン‼️ ウチの俊足はパンチがあるわぁ",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PLAYER_TYPE_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_G__Blue",
+      "grok_x_search_receipt_ids": [
+        "GXQ083"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR159",
+      "player": "矢野 雅哉",
+      "post_id": "2082738224334795170",
+      "post_url": "https://x.com/jpdc_ishii/status/2082738224334795170",
+      "author": "@jpdc_ishii",
+      "posted_at": "2026-07-30 08:01:02 GMT",
+      "text_excerpt": "強肩俊足で期待されていましたが、なかなか厳しいですね",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "FASTER",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_jpdc_ishii",
+      "grok_x_search_receipt_ids": [
+        "GXQ083"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR160",
+      "player": "友杉 篤輝",
+      "post_id": "1846721603666866456",
+      "post_url": "https://x.com/jef_marcos2008/status/1846721603666866456",
+      "author": "@jef_marcos2008",
+      "posted_at": "2024-10-17 01:15:15 GMT",
+      "text_excerpt": "友杉 篤輝（天理大）スカウトコメント 巨人・岸敬祐スカウト 「走攻守にバランスのとれた選手。スピードに魅力がある。...足もうちの増田大輝と遜色ない」",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "QUOTED_SCOUT_PHYSICAL_COMPARISON",
+      "evidence_strength": "MODERATE_HISTORICAL",
+      "independence_group": "X_AUTHOR_jef_marcos2008",
+      "grok_x_search_receipt_ids": [
+        "GXQ047"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR161",
+      "player": "友杉 篤輝",
+      "post_id": "1968275891861307575",
+      "post_url": "https://x.com/KeyKey_Marines/status/1968275891861307575",
+      "author": "@KeyKey_Marines",
+      "posted_at": "2025-09-17 11:28:36 GMT",
+      "text_excerpt": "友杉篤輝の足が光る✨",
+      "accepted": false,
+      "rejection_reason": "NO_CLEAR_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_KeyKey_Marines",
+      "grok_x_search_receipt_ids": [
+        "GXQ047"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR162",
+      "player": "友杉 篤輝",
+      "post_id": "1983518718589313525",
+      "post_url": "https://x.com/eagleshibakawa/status/1983518718589313525",
+      "author": "@eagleshibakawa",
+      "posted_at": "2025-10-29 12:58:09 GMT",
+      "text_excerpt": "打者・大津亮介選手の1塁到達タイム3.93って、かなり速いと思う。だって、近本光司選手の1塁到達最速タイムは3.94。ロッテで俊足のイメージある友杉篤輝選手も3.94だった。",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_eagleshibakawa",
+      "grok_x_search_receipt_ids": [
+        "GXQ047"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR163",
+      "player": "友杉 篤輝",
+      "post_id": "2060842707459952666",
+      "post_url": "https://x.com/YOKOHAMA_PRIDE/status/2060842707459952666",
+      "author": "@YOKOHAMA_PRIDE",
+      "posted_at": "2026-05-30 21:56:04 GMT",
+      "text_excerpt": "足、速っ！ \n超〜快足やん。 \nロッテ友杉篤輝選手か〜 \nインプットした！",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "DIRECT_CURRENT_SPEED_OBSERVATION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_YOKOHAMA_PRIDE",
+      "grok_x_search_receipt_ids": [
+        "GXQ046"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR164",
+      "player": "友杉 篤輝",
+      "post_id": "2066476109252936061",
+      "post_url": "https://x.com/maaar_kun5/status/2066476109252936061",
+      "author": "@maaar_kun5",
+      "posted_at": "2026-06-15 11:01:12 GMT",
+      "text_excerpt": "これはパテレのようなまとめ！攻守で流れを作る小川龍成、期待の若き主軸西川史礁、俊足デキ杉君友杉篤輝、幕張の大砲安田尚憲",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_maaar_kun5",
+      "grok_x_search_receipt_ids": [
+        "GXQ047"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR165",
+      "player": "友杉 篤輝",
+      "post_id": "2067557631825490302",
+      "post_url": "https://x.com/JOXAR57/status/2067557631825490302",
+      "author": "@JOXAR57",
+      "posted_at": "2026-06-18 10:38:47 GMT",
+      "text_excerpt": "友杉はすごいんです！！！打てますし、守備もすごいんです！！！足もめちゃくちゃ速いです！！！",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_JOXAR57",
+      "grok_x_search_receipt_ids": [
+        "GXQ047"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR166",
+      "player": "林 琢真",
+      "post_id": "1794296337779073194",
+      "post_url": "https://x.com/abcabcabcabc07/status/1794296337779073194",
+      "author": "@abcabcabcabc07",
+      "posted_at": "2024-05-25 09:15:57 GMT",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_abcabcabcabc07",
+      "grok_x_search_receipt_ids": [
+        "GXQ141"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR167",
+      "player": "林 琢真",
+      "post_id": "1838020676210528686",
+      "post_url": "https://x.com/hamanoooenoouji/status/1838020676210528686",
+      "author": "@hamanoooenoouji",
+      "posted_at": "2024-09-23",
+      "text_excerpt": "サードしか出来ない柴田ってマジで一軍に必要ないんだけどだったら正直セカンドサードショートできて足速い林琢真選手で充分だわ",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE_HISTORICAL",
+      "independence_group": "X_AUTHOR_hamanoooenoouji",
+      "grok_x_search_receipt_ids": [
+        "GXQ136"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR168",
+      "player": "林 琢真",
+      "post_id": "1851241118618566775",
+      "post_url": "https://x.com/ross_hoenn/status/1851241118618566775",
+      "author": "@ross_hoenn",
+      "posted_at": "2024-10-29",
+      "text_excerpt": "瞬足林琢真最高宝石",
+      "accepted": false,
+      "rejection_reason": "NO_CLEAR_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_ross_hoenn",
+      "grok_x_search_receipt_ids": [
+        "GXQ138"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR169",
+      "player": "林 琢真",
+      "post_id": "1851248880589168963",
+      "post_url": "https://x.com/sunsun465363/status/1851248880589168963",
+      "author": "@sunsun465363",
+      "posted_at": "2024-10-29 13:05:02 GMT",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_sunsun465363",
+      "grok_x_search_receipt_ids": [
+        "GXQ139"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR170",
+      "player": "林 琢真",
+      "post_id": "1863856841413025998",
+      "post_url": "https://x.com/Nor1suK_99/status/1863856841413025998",
+      "author": "@Nor1suK_99",
+      "posted_at": "2024-12-03",
+      "text_excerpt": "林琢真さん、実際にセカンドはめちゃくちゃ上手いしな ショートだとどうしても肩よええのが足引っ張ってるしセカンドの自覚があるのはいいこと",
+      "accepted": false,
+      "rejection_reason": "NO_CLEAR_DIRECT_PHYSICAL_SPEED_CLAIM",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Nor1suK_99",
+      "grok_x_search_receipt_ids": [
+        "GXQ138"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR171",
+      "player": "林 琢真",
+      "post_id": "1976888917992570915",
+      "post_url": "https://x.com/_Shifttrr/status/1976888917992570915",
+      "author": "@_Shifttrr",
+      "posted_at": "2025-10-11 05:53:41 GMT",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR__Shifttrr",
+      "grok_x_search_receipt_ids": [
+        "GXQ141"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR172",
+      "player": "林 琢真",
+      "post_id": "1977714872176545971",
+      "post_url": "https://x.com/AgwKG6cngIAMytE/status/1977714872176545971",
+      "author": "@AgwKG6cngIAMytE",
+      "posted_at": null,
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_AgwKG6cngIAMytE",
+      "grok_x_search_receipt_ids": [
+        "GXQ143"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR173",
+      "player": "林 琢真",
+      "post_id": "1978418232542290258",
+      "post_url": "https://x.com/0417_Incidents/status/1978418232542290258",
+      "author": "@0417_Incidents",
+      "posted_at": "2025-10-15",
+      "text_excerpt": "林琢真足が速い！",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "EXPLICIT_CURRENT_PHYSICAL_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_0417_Incidents",
+      "grok_x_search_receipt_ids": [
+        "GXQ136",
+        "GXQ139",
+        "GXQ143"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR174",
+      "player": "林 琢真",
+      "post_id": "1978418339215982609",
+      "post_url": "https://x.com/iipyon0507/status/1978418339215982609",
+      "author": "@iipyon0507",
+      "posted_at": null,
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_iipyon0507",
+      "grok_x_search_receipt_ids": [
+        "GXQ143"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR175",
+      "player": "林 琢真",
+      "post_id": "1990736218078818702",
+      "post_url": "https://x.com/cun_song14143/status/1990736218078818702",
+      "author": "@cun_song14143",
+      "posted_at": null,
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_cun_song14143",
+      "grok_x_search_receipt_ids": [
+        "GXQ143"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR176",
+      "player": "林 琢真",
+      "post_id": "1994367143262208295",
+      "post_url": "https://x.com/ikomariny/status/1994367143262208295",
+      "author": "@ikomariny",
+      "posted_at": "2025-11-28",
+      "text_excerpt": "琢真は今年も本当によく 頑張ってくれた✨ ありがとうね！ 守備も安心 粘りのプレーや打撃もよくなって 足も速いし 来季も期待しかないですね😊",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "FASTER",
+      "directness": "GENERIC_CURRENT_PLAYER_SPEED_LABEL",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_AUTHOR_ikomariny",
+      "grok_x_search_receipt_ids": [
+        "GXQ136",
+        "GXQ138",
+        "GXQ143"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR177",
+      "player": "林 琢真",
+      "post_id": "2035692370558349456",
+      "post_url": "https://x.com/Tao_0322/status/2035692370558349456",
+      "author": "@Tao_0322",
+      "posted_at": "2026-03-22 12:17:37 GMT",
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Tao_0322",
+      "grok_x_search_receipt_ids": [
+        "GXQ139"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR178",
+      "player": "林 琢真",
+      "post_id": "2040603137187471860",
+      "post_url": "https://x.com/tracking_now/status/2040603137187471860",
+      "author": "@tracking_now",
+      "posted_at": null,
+      "text_excerpt": null,
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_tracking_now",
+      "grok_x_search_receipt_ids": [
+        "GXQ140"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR179",
+      "player": "林 琢真",
+      "post_id": "2041867789183676641",
+      "post_url": "https://x.com/6d0WLgoKfP20737/status/2041867789183676641",
+      "author": "@6d0WLgoKfP20737",
+      "posted_at": "2026-04-08",
+      "text_excerpt": "石上よりも足も速いだろうし",
+      "accepted": false,
+      "rejection_reason": "TARGET_NOT_VERIFIABLE_FROM_RETURNED_POST_TEXT",
+      "evidence_direction": "FASTER",
+      "directness": "TARGET_NOT_VERIFIABLE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_6d0WLgoKfP20737",
+      "grok_x_search_receipt_ids": [
+        "GXQ136"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR180",
+      "player": "林 琢真",
+      "post_id": "2049700341634187360",
+      "post_url": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "author": "@Lysenko_Yoshida",
+      "posted_at": "2026-04-30",
+      "text_excerpt": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。",
+      "accepted": false,
+      "rejection_reason": "BASERUNNING_DECISION_OR_STOLEN_BASE_CONTEXT_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "FASTER",
+      "directness": "BASERUNNING_OR_STOLEN_BASE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Lysenko_Yoshida",
+      "grok_x_search_receipt_ids": [
+        "GXQ136"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR181",
+      "player": "林 琢真",
+      "post_id": "2078423711078846672",
+      "post_url": "https://x.com/makishi23/status/2078423711078846672",
+      "author": "@makishi23",
+      "posted_at": "2026-07-18",
+      "text_excerpt": "今日ハマスタのライスタの近くなんだけど、さっきのもう少しでホームランの林琢真の3ベース、打球が当たった時のゴンって音が聞こえてきて感動した！そして、足の速さにも感動！今日も勝つぞ！ベイスターズ！",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "FASTER",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_makishi23",
+      "grok_x_search_receipt_ids": [
+        "GXQ138"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR182",
+      "player": "林 琢真",
+      "post_id": "2079163315524399553",
+      "post_url": "https://x.com/kakkii_bay/status/2079163315524399553",
+      "author": "@kakkii_bay",
+      "posted_at": "2026-07-20",
+      "text_excerpt": "林琢真の努力を踏みにじるかのような送りバント指示 お前は背が低いし足速いんだから1アウト1塁でもバント！ですか",
+      "accepted": false,
+      "rejection_reason": "BASERUNNING_DECISION_OR_STOLEN_BASE_CONTEXT_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "FASTER",
+      "directness": "BASERUNNING_OR_STOLEN_BASE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_kakkii_bay",
+      "grok_x_search_receipt_ids": [
+        "GXQ138"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR183",
+      "player": "鈴木 大地",
+      "post_id": "1865031178421731550",
+      "post_url": "https://x.com/toinera_/status/1865031178421731550",
+      "author": "@toinera_",
+      "posted_at": null,
+      "text_excerpt": "足速そうな名前と選手像なのの実は全然足が速くない男、その名は鈴木大地 \n2024-12-06 13:50:58 GMT",
+      "accepted": false,
+      "rejection_reason": "MISSING_VERIFIABLE_POST_TEXT_OR_TIMESTAMP",
+      "evidence_direction": "FASTER",
+      "directness": "INCOMPLETE_RETURNED_METADATA",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_toinera_",
+      "grok_x_search_receipt_ids": [
+        "GXQ128",
+        "GXQ132"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR184",
+      "player": "鈴木 大地",
+      "post_id": "1971877407171952704",
+      "post_url": "https://x.com/aobata_jpn/status/1971877407171952704",
+      "author": "@aobata_jpn",
+      "posted_at": "2024-12-06 13:50:58 GMT",
+      "text_excerpt": "鈴木大地36歳、全力疾走！ \n2025-09-27 09:59:44 GMT",
+      "accepted": false,
+      "rejection_reason": "ALL_OUT_EFFORT_WITHOUT_SPEED_OBSERVATION",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "EFFORT_NOT_SPEED",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_aobata_jpn",
+      "grok_x_search_receipt_ids": [
+        "GXQ128",
+        "GXQ129",
+        "GXQ132",
+        "GXQ134"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR185",
+      "player": "鈴木 大地",
+      "post_id": "1991514528610414964",
+      "post_url": "https://x.com/jerryandjimmy/status/1991514528610414964",
+      "author": "@jerryandjimmy",
+      "posted_at": "2025-11-20 14:30:38 GMT",
+      "text_excerpt": "荻野A→D \n柳田C→E \n島内岡島鈴木大地の走力はF \n栗山は余裕のG",
+      "accepted": false,
+      "rejection_reason": "GENERIC_OR_AMBIGUOUS_SPEED_LABEL_NOT_SUFFICIENT_FOR_ACCEPTANCE",
+      "evidence_direction": "NON_DIRECTIONAL",
+      "directness": "NOT_ACCEPTED_AFTER_REVIEW",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_jerryandjimmy",
+      "grok_x_search_receipt_ids": [
+        "GXQ129"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR186",
+      "player": "鈴木 大地",
+      "post_id": "2040609735112823266",
+      "post_url": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "author": "@Roku7_AIMS",
+      "posted_at": "2026-04-05 01:57:28 GMT",
+      "text_excerpt": "平良の代走専に感じることはあるけど \n守備鈴木大地未満 \n打撃伊藤裕季也未満 \n走力そこそこ普通 \nこんな感じだからな \nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな",
+      "accepted": false,
+      "rejection_reason": "BASERUNNING_DECISION_OR_STOLEN_BASE_CONTEXT_NOT_ISOLATED_TO_PHYSICAL_SPEED",
+      "evidence_direction": "FASTER",
+      "directness": "BASERUNNING_OR_STOLEN_BASE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_Roku7_AIMS",
+      "grok_x_search_receipt_ids": [
+        "GXQ129"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR187",
+      "player": "鈴木 大地",
+      "post_id": "2061747891946050004",
+      "post_url": "https://x.com/yasuhiro926/status/2061747891946050004",
+      "author": "@yasuhiro926",
+      "posted_at": "2026-06-02 09:52:57 GMT",
+      "text_excerpt": "鈴木大地の何が凄いって、別にとりたててパンチ力があるワケでも足が速いワケでもなく、3割打者の常連でもなく(1度も打ってない)せいぜい.270の7本塁打くらいの打者で、守備も別に上手いワケでもないのに、約15年も現役を続けていて1500安打も打ってるトコよな。ある意味で野球少年の希望だと思う。",
+      "accepted": false,
+      "rejection_reason": "DUPLICATE_OF_EXISTING_SOURCE:SNSR040",
+      "evidence_direction": "FASTER",
+      "directness": "DUPLICATE_OF_EXISTING_SOURCE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_yasuhiro926",
+      "grok_x_search_receipt_ids": [
+        "GXQ129"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR188",
+      "player": "鈴木 大地",
+      "post_id": "2061780209557524582",
+      "post_url": "https://x.com/nmstyn/status/2061780209557524582",
+      "author": "@nmstyn",
+      "posted_at": "2026-06-02 12:01:22 GMT",
+      "text_excerpt": "鈴木大地が俊足…?",
+      "accepted": false,
+      "rejection_reason": "SAME_EVENT_ORIGIN_DUPLICATE_OF_2061780501363671339",
+      "evidence_direction": "FASTER",
+      "directness": "SAME_EVENT_ORIGIN_DUPLICATE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_nmstyn",
+      "grok_x_search_receipt_ids": [
+        "GXQ128"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR189",
+      "player": "鈴木 大地",
+      "post_id": "2061780328046633243",
+      "post_url": "https://x.com/maru_maru1359/status/2061780328046633243",
+      "author": "@maru_maru1359",
+      "posted_at": "2026-06-02 12:01:50 GMT",
+      "text_excerpt": "実況←鈴木大地は俊足です！",
+      "accepted": false,
+      "rejection_reason": "SAME_EVENT_ORIGIN_DUPLICATE_OF_2061780501363671339",
+      "evidence_direction": "FASTER",
+      "directness": "SAME_EVENT_ORIGIN_DUPLICATE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_maru_maru1359",
+      "grok_x_search_receipt_ids": [
+        "GXQ128"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR190",
+      "player": "鈴木 大地",
+      "post_id": "2061780501363671339",
+      "post_url": "https://x.com/BFIVyOpxnt2128/status/2061780501363671339",
+      "author": "@BFIVyOpxnt2128",
+      "posted_at": "2026-06-02 12:02:32 GMT",
+      "text_excerpt": "鈴木（大地）は俊足という怪実況を聞いてしまった",
+      "accepted": true,
+      "rejection_reason": null,
+      "evidence_direction": "SLOWER",
+      "directness": "LIVE_BROADCAST_SPEED_CLAIM_CORRECTION",
+      "evidence_strength": "MODERATE",
+      "independence_group": "X_EVENT_20260602_SUZUKI_BROADCAST_SPEED_CALL",
+      "grok_x_search_receipt_ids": [
+        "GXQ128"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    },
+    {
+      "source_id": "GXSR191",
+      "player": "鈴木 大地",
+      "post_id": "2061781203922059668",
+      "post_url": "https://x.com/NWGN1971/status/2061781203922059668",
+      "author": "@NWGN1971",
+      "posted_at": "2026-06-02 12:05:19 GMT",
+      "text_excerpt": "でも実況の人が俊足の鈴木大地！！って言ったから",
+      "accepted": false,
+      "rejection_reason": "SAME_EVENT_ORIGIN_DUPLICATE_OF_2061780501363671339",
+      "evidence_direction": "FASTER",
+      "directness": "SAME_EVENT_ORIGIN_DUPLICATE",
+      "evidence_strength": "NONE_FOR_ACCEPTANCE",
+      "independence_group": "X_AUTHOR_NWGN1971",
+      "grok_x_search_receipt_ids": [
+        "GXQ128"
+      ],
+      "identity_status": "SINGLE_RETURNED_URL"
+    }
+  ]
+}
