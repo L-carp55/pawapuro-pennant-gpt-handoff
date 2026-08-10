@@ -1,0 +1,68 @@
+{
+  "schema_version": "speed-2026-agent-d-execution-qa/v2.0.0",
+  "owner": "AGENT_D_ONLY",
+  "generated_at": "2026-08-10T12:05:00.000Z",
+  "initial_runtime_failure": {
+    "observed": true,
+    "invoking_command": "node scripts\\build_speed_2026_powerpro_discrepancy_register.mjs --generated-at=2026-08-10T12:00:00.000Z",
+    "failed_child_command": "git -C C:\\Users\\amila\\Desktop\\Claude Code\\.codex-worktrees\\speed-powerpro-residual-structure-audit show dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3:outputs/derived/speed_2026_100_sns_tiebreak_queue.csv",
+    "error_code": "EPERM",
+    "error_text": "spawnSync git EPERM",
+    "status": "FAILED_BEFORE_ARTIFACT_GENERATION",
+    "scope": "Sandbox runtime process-spawn restriction; not a source-data or matching failure."
+  },
+  "remediation": {
+    "applied": true,
+    "replacement_input": "outputs/derived/speed_2026_blind_physical_construct_stage1_qa.json:physical_only_sns_queue",
+    "source_derived_queue_commit": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+    "source_derived_queue_path": "outputs/derived/speed_2026_100_sns_tiebreak_queue.csv",
+    "semantic_identity": "For the original queue, the frozen Stage 1 QA preserves the same 19 retained player+team members after the Stage 1 builder read the physical-only source queue.",
+    "no_powerpro_introduction": "The consumed frozen entries contain only player/team and physical-queue metadata, each asserts no_game_ratings_read=true, and the Stage 2 queue builder accepts only Stage 1 profiles plus this membership projection.",
+    "original_source_membership_count": 19,
+    "original_source_membership_all_retained": true,
+    "source_membership_all_game_rating_free": true
+  },
+  "v1_supersession_v2_rerun": {
+    "status": "V1_SUPERSEDED_V2_RERUN_PASS",
+    "supersession_reason": "STAGE1_TEMPORAL_BOUNDARY_QA_FAILURE",
+    "v1_agent_d_artifacts_used_for_calculation": false,
+    "v2_stage1_profile_sha256": "18b44bf3cd3e929a86082ce9c5bab196380436b09a3e48a496f6ce5e2d05b53d",
+    "v2_stage1_qa_sha256": "f2075f1ab5d507cf4629ab1e77ac29e79662a3668d8666889068a99b002d2a63",
+    "v2_stage1_manifest_sha256": "6f9bd97f121d0b6f51e4b1952d4b89ddd0709e4a26fcd4a69cc8c16993094252",
+    "known_non_2026_temporal_construct_conflicts": 9,
+    "unknown_only_measurement_eras_treated_as_temporal_conflict": false,
+    "stage1_v2_frozen_queue_membership": {
+      "total": 25,
+      "retained": 19,
+      "added_for_temporal_conflict": 6
+    }
+  },
+  "post_remediation_validation": {
+    "build_status": "PASS",
+    "exact_team_aware_powerpro_matches": 99,
+    "unmatched_not_forced": 1,
+    "discrepancy_rows": 100,
+    "high_discrepancy_rows": 34,
+    "sns_queue_external_game_or_residual_token_check": "PASS",
+    "sns_queue_reconciliation": {
+      "original_physical_queue_rows_retained_by_stage1_v2": 19,
+      "stage1_v2_frozen_physical_queue_rows": 25,
+      "stage1_v2_temporal_additions": 6,
+      "v2_rows": 25,
+      "retained": 19,
+      "added": 6,
+      "removed": 0,
+      "temporal_uncertainty_known_non_2026": 9,
+      "standardized_cohort_current_conflict": 0,
+      "direct_t90_current_conflict": 0,
+      "anchor_relative_unresolved": 19
+    },
+    "targeted_evidence_needs": 25,
+    "output_sha256": {
+      "discrepancy_csv": "d8665d7f57dc76efab5ab20273c1c1461b8fe9afc28c7c2479f3b44c7ed9c259",
+      "discrepancy_json": "c098b220e5df423d11cf2d8f15284a3ae50cd8b6176222775f39584a3c31f506",
+      "sns_queue_v2_csv": "133983c63791eb87e9596644f1faead7dbf5ee4cc8af09993415a6d25f9788b0",
+      "targeted_evidence_needs_csv": "e76f2b90e3fb0c57fdfa006795641c666d71680afad281fc0ac84f40f6c574c7"
+    }
+  }
+}
