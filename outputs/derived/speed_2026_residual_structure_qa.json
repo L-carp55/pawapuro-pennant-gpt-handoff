@@ -1,0 +1,465 @@
+{
+  "schema_version": "speed-2026-residual-structure-qa/v2.0.0",
+  "generated_at": "2026-08-10T12:50:00.000Z",
+  "status": "PASS",
+  "summary": {
+    "passed": 29,
+    "failed": 0,
+    "total": 29,
+    "stage1_profiles": 100,
+    "powerpro_exact_matches": 99,
+    "acceleration_subset_n": 0,
+    "high_discrepancy_union": 34,
+    "sns_queue_v2_rows": 25,
+    "targeted_evidence_needs": 25,
+    "global_verdict": "NOT_IDENTIFIABLE"
+  },
+  "checks": [
+    {
+      "id": "STAGE1_SHA_build_speed_2026_blind_physical_construct_profiles.mjs",
+      "pass": true,
+      "detail": {
+        "expected": "f6bc3c4dcf6fd2e47042a9bde55b7f03ba2aed098af5fe3550013a222ae3aacc",
+        "actual": "f6bc3c4dcf6fd2e47042a9bde55b7f03ba2aed098af5fe3550013a222ae3aacc"
+      }
+    },
+    {
+      "id": "STAGE1_SHA_speed_2026_blind_physical_construct_profiles.json",
+      "pass": true,
+      "detail": {
+        "expected": "18b44bf3cd3e929a86082ce9c5bab196380436b09a3e48a496f6ce5e2d05b53d",
+        "actual": "18b44bf3cd3e929a86082ce9c5bab196380436b09a3e48a496f6ce5e2d05b53d"
+      }
+    },
+    {
+      "id": "STAGE1_SHA_speed_2026_blind_physical_construct_profiles.csv",
+      "pass": true,
+      "detail": {
+        "expected": "ed6f6a57346d456f4feadfaaf38b07f8f0138d89be20c7774a59ddf4b0f5bd6b",
+        "actual": "ed6f6a57346d456f4feadfaaf38b07f8f0138d89be20c7774a59ddf4b0f5bd6b"
+      }
+    },
+    {
+      "id": "STAGE1_SHA_speed_2026_acceleration_evidence_subset.csv",
+      "pass": true,
+      "detail": {
+        "expected": "18585ee18c6c41d6781ef8191a42e5ab245823b2dc260ae9219b64c31b65bf55",
+        "actual": "18585ee18c6c41d6781ef8191a42e5ab245823b2dc260ae9219b64c31b65bf55"
+      }
+    },
+    {
+      "id": "STAGE1_PROFILE_100",
+      "pass": true,
+      "detail": {
+        "declared": 100,
+        "actual": 100
+      }
+    },
+    {
+      "id": "STAGE1_UNIQUE_IDS_100",
+      "pass": true,
+      "detail": {
+        "unique_ids": 100
+      }
+    },
+    {
+      "id": "STAGE1_ALL_QA_CHECKS_TRUE",
+      "pass": true,
+      "detail": {
+        "exact_100_profiles": true,
+        "unique_100_player_ids": true,
+        "anchor_packet_roster_100": true,
+        "sanitized_master_roster_100": true,
+        "sanitized_exposure_roster_100": true,
+        "only_allowed_class_labels": true,
+        "acceleration_subset_has_only_standardized_short_distance_evidence": true,
+        "forbidden_keys_removed_before_parse": true,
+        "profile_outputs_have_no_game_rating_or_residual_tokens": true,
+        "no_cross_metric_conversion_or_percentile_subtraction": true,
+        "no_fixed_age_decay": true,
+        "hp_to_1b_context_only": true,
+        "known_non_2026_comparison_measurement_is_always_temporal": true,
+        "unknown_only_comparison_measurement_era_is_insufficient": true,
+        "no_known_non_2026_measurement_has_forbidden_non_temporal_classification": true,
+        "acceleration_subset_excludes_temporal_conflicts": true,
+        "acceleration_subset_is_explicitly_current_2026_only": true
+      }
+    },
+    {
+      "id": "STAGE1_GUARD_TRIP_PRESERVED",
+      "pass": true,
+      "detail": [
+        {
+          "guard_id": "STAGE1_TEMPORAL_BOUNDARY_QA_FAIL_002",
+          "state": "V1_SUPERSEDED_AND_V2_VALIDATED",
+          "detection": "The V1 freeze did not apply the explicit current-signal temporal boundary to all dated comparison evidence.",
+          "game_value_handling": "No external game value was read or used while repairing this Stage 1 boundary.",
+          "remediation": "V2 preserves physical measurement years, makes known non-2026 comparison evidence temporal-conflicted, and removes such rows from the usable acceleration subset.",
+          "rerun_status": "PASS_ON_THIS_V2_FREEZE"
+        },
+        {
+          "guard_id": "STAGE1_OUTPUT_TEXT_GUARD_TRIP_001",
+          "state": "DETECTED_AND_REMEDIATED",
+          "detection": "A pre-finalization lexical self-test stopped the first Stage 1 build after restricted nonphysical source text reached a provisional output.",
+          "game_value_handling": "No prohibited game value was parsed, retained, emitted, or used for a Stage 1 classification.",
+          "remediation": "All Stage 1 output free-text fields are scrubbed before serialization; only physical evidence and neutral classifications remain.",
+          "rerun_status": "PASS_ON_THIS_FREEZE"
+        }
+      ]
+    },
+    {
+      "id": "STAGE1_V2_TEMPORAL_BOUNDARY",
+      "pass": true,
+      "detail": {
+        "stage": "STAGE_1_V2_FREEZE",
+        "classification_counts": {
+          "DIRECT_T90_TOP_SPEED_CONFLICT": 0,
+          "INSUFFICIENT_SHORT_DISTANCE_EVIDENCE": 91,
+          "METRIC_CONSTRUCT_CONFLICT": 0,
+          "SHORT_DISTANCE_AND_TOP_SPEED_AGREE": 0,
+          "SHORT_DISTANCE_FASTER_THAN_TOP_SPEED_SIGNAL": 0,
+          "SHORT_DISTANCE_SLOWER_THAN_TOP_SPEED_SIGNAL": 0,
+          "TEMPORAL_CONSTRUCT_CONFLICT": 9
+        },
+        "temporal_checks": {
+          "known_non_2026": true,
+          "unknown_only": true,
+          "subset_excludes_temporal": true,
+          "subset_current_only": true
+        }
+      }
+    },
+    {
+      "id": "STAGE1_OUTPUT_BARRIER_speed_2026_blind_physical_construct_profiles.csv",
+      "pass": true,
+      "detail": {
+        "forbidden_pattern": "(pawapuro|powerpro|prospi|mlb the show|residual)"
+      }
+    },
+    {
+      "id": "STAGE1_OUTPUT_BARRIER_speed_2026_blind_physical_construct_profiles.json",
+      "pass": true,
+      "detail": {
+        "forbidden_pattern": "(pawapuro|powerpro|prospi|mlb the show|residual)"
+      }
+    },
+    {
+      "id": "STAGE1_OUTPUT_BARRIER_speed_2026_acceleration_evidence_subset.csv",
+      "pass": true,
+      "detail": {
+        "forbidden_pattern": "(pawapuro|powerpro|prospi|mlb the show|residual)"
+      }
+    },
+    {
+      "id": "POSITION_STAGE1_V2_HASH_MATCH",
+      "pass": true,
+      "detail": {
+        "required_99_of_100_boundary_passed": true,
+        "stage1_profile_100_rows_passed": true,
+        "stage1_profile_hash_matches_manifest": true,
+        "required_stage1_v2_profile_sha256_passed": true,
+        "final_freeze_100_rows_passed": true,
+        "residual_a_definition_passed": true,
+        "residual_b_definition_passed": true,
+        "all_requested_position_levels_emitted": true,
+        "all_requested_matched_speed_cells_emitted": true,
+        "rating_changes_made": 0
+      }
+    },
+    {
+      "id": "EXACT_POWERPRO_MATCH_BOUNDARY",
+      "pass": true,
+      "detail": {
+        "stage1_profiles": 100,
+        "final_freeze_rows": 100,
+        "blind_v3_rows": 99,
+        "dataset_rows": 100,
+        "powerpro_exact_canonical_team_matches": 99,
+        "powerpro_unmatched": [
+          {
+            "player": "名原 典彦",
+            "team": "広島東洋カープ",
+            "status": "UNMATCHED_NO_UNIQUE_CANONICAL_ROSTER_LABEL"
+          }
+        ],
+        "residual_a_usable": 99,
+        "residual_b_usable": 99,
+        "exact_position_usable": 99,
+        "exact_position_counts": {
+          "C": 16,
+          "1B": 12,
+          "2B": 14,
+          "3B": 10,
+          "SS": 14,
+          "LF": 10,
+          "CF": 12,
+          "RF": 11
+        },
+        "frozen_age_available": 0,
+        "matched_speed_pair_rows": 883
+      }
+    },
+    {
+      "id": "RESIDUAL_FORMULAS_AND_NO_RATING_CHANGE",
+      "pass": true,
+      "detail": {
+        "required_99_of_100_boundary_passed": true,
+        "stage1_profile_100_rows_passed": true,
+        "stage1_profile_hash_matches_manifest": true,
+        "required_stage1_v2_profile_sha256_passed": true,
+        "final_freeze_100_rows_passed": true,
+        "residual_a_definition_passed": true,
+        "residual_b_definition_passed": true,
+        "all_requested_position_levels_emitted": true,
+        "all_requested_matched_speed_cells_emitted": true,
+        "rating_changes_made": 0
+      }
+    },
+    {
+      "id": "ALL_POSITION_AND_MATCHED_SPEED_CELLS",
+      "pass": true,
+      "detail": {
+        "cells": 27,
+        "validation": {
+          "required_99_of_100_boundary_passed": true,
+          "stage1_profile_100_rows_passed": true,
+          "stage1_profile_hash_matches_manifest": true,
+          "required_stage1_v2_profile_sha256_passed": true,
+          "final_freeze_100_rows_passed": true,
+          "residual_a_definition_passed": true,
+          "residual_b_definition_passed": true,
+          "all_requested_position_levels_emitted": true,
+          "all_requested_matched_speed_cells_emitted": true,
+          "rating_changes_made": 0
+        }
+      }
+    },
+    {
+      "id": "MATCHED_SPEED_UNRESTRICTED_PAIR_COUNT",
+      "pass": true,
+      "detail": {
+        "pair_rows": 883
+      }
+    },
+    {
+      "id": "AGE_SENSITIVITY_EXPLICITLY_NOT_FEASIBLE",
+      "pass": true,
+      "detail": {
+        "frozen_age_available": 0
+      }
+    },
+    {
+      "id": "ACCELERATION_SUBSET_AND_NONFIT",
+      "pass": true,
+      "detail": {
+        "subset_n": 0,
+        "residual_a_status": "NOT_IDENTIFIABLE_NO_USABLE_CURRENT_ACCELERATION_EVIDENCE",
+        "residual_b_status": "NOT_IDENTIFIABLE_NO_USABLE_CURRENT_ACCELERATION_EVIDENCE",
+        "conclusion": "NOT_IDENTIFIABLE / NO_USABLE_CURRENT_ACCELERATION_EVIDENCE for an acceleration-component claim. V2 supports no acceleration-related model and no PowerPro-based speed correction."
+      }
+    },
+    {
+      "id": "HP_TO_1B_CONTEXT_ONLY",
+      "pass": true,
+      "detail": "HP→1B remains diagnostic/context-only. Neither its correlations nor any sensitivity result may be turned into an acceleration correction."
+    },
+    {
+      "id": "DISCREPANCY_REGISTER_100_AND_HIGH_UNION_34",
+      "pass": true,
+      "detail": {
+        "stage1_profiles": 100,
+        "powerpro_2026_source_rows": 389,
+        "exact_team_aware_matches": 99,
+        "unmatched_excluded_without_forcing": [
+          "名原 典彦"
+        ],
+        "residual_a_coverage": 99,
+        "residual_b_coverage": 99,
+        "high_discrepancy_any_residual": 34,
+        "high_discrepancy_residual_a": 34,
+        "high_discrepancy_residual_b": 31,
+        "high_discrepancy_label_counts": {
+          "INSUFFICIENT_PHYSICAL_EVIDENCE": 14,
+          "POWERPRO_HIGH_AND_PHYSICAL_SUPPORTS_FASTER": 2,
+          "POWERPRO_HIGH_BUT_PHYSICAL_CONFLICTED": 4,
+          "POWERPRO_HIGH_WITHOUT_PHYSICAL_SUPPORT": 2,
+          "POWERPRO_LOW_AND_PHYSICAL_SUPPORTS_SLOWER": 5,
+          "POWERPRO_LOW_BUT_PHYSICAL_CONFLICTED": 2,
+          "POWERPRO_LOW_WITHOUT_PHYSICAL_SUPPORT": 5
+        }
+      }
+    },
+    {
+      "id": "DISCREPANCY_UNMATCHED_HAS_NULL_RESIDUALS",
+      "pass": true,
+      "detail": [
+        {
+          "residual_a": null,
+          "residual_b": null,
+          "match_status": "NO_UNIQUE_EXACT_TEAM_NORMALIZED_ROSTER_NAME_MATCH"
+        }
+      ]
+    },
+    {
+      "id": "SNS_QUEUE_V2_25",
+      "pass": true,
+      "detail": {
+        "rows": 25
+      }
+    },
+    {
+      "id": "TARGETED_NEEDS_25",
+      "pass": true,
+      "detail": {
+        "rows": 25
+      }
+    },
+    {
+      "id": "SNS_QUEUE_EXTERNAL_GAME_SEPARATION",
+      "pass": true,
+      "detail": {
+        "separate_artifact": "outputs/derived/speed_2026_sns_tiebreak_queue_v2.csv",
+        "queue_inputs": [
+          "frozen Stage 1 V2 physical profiles",
+          "frozen Stage 1 V2 physical-only queue source"
+        ],
+        "external_game_field_read_by_queue_builder": false,
+        "external_game_field_emitted_in_queue": false,
+        "reconciliation": {
+          "original_physical_queue_rows_retained_by_stage1_v2": 19,
+          "stage1_v2_frozen_physical_queue_rows": 25,
+          "stage1_v2_temporal_additions": 6,
+          "v2_rows": 25,
+          "retained": 19,
+          "added": 6,
+          "removed": 0,
+          "temporal_uncertainty_known_non_2026": 9,
+          "standardized_cohort_current_conflict": 0,
+          "direct_t90_current_conflict": 0,
+          "anchor_relative_unresolved": 19
+        }
+      }
+    },
+    {
+      "id": "AGENT_D_FIRST_FAILURE_PRESERVED",
+      "pass": true,
+      "detail": {
+        "schema_version": "speed-2026-agent-d-execution-qa/v2.0.0",
+        "owner": "AGENT_D_ONLY",
+        "generated_at": "2026-08-10T12:05:00.000Z",
+        "initial_runtime_failure": {
+          "observed": true,
+          "invoking_command": "node scripts\\build_speed_2026_powerpro_discrepancy_register.mjs --generated-at=2026-08-10T12:00:00.000Z",
+          "failed_child_command": "git -C C:\\Users\\amila\\Desktop\\Claude Code\\.codex-worktrees\\speed-powerpro-residual-structure-audit show dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3:outputs/derived/speed_2026_100_sns_tiebreak_queue.csv",
+          "error_code": "EPERM",
+          "error_text": "spawnSync git EPERM",
+          "status": "FAILED_BEFORE_ARTIFACT_GENERATION",
+          "scope": "Sandbox runtime process-spawn restriction; not a source-data or matching failure."
+        },
+        "remediation": {
+          "applied": true,
+          "replacement_input": "outputs/derived/speed_2026_blind_physical_construct_stage1_qa.json:physical_only_sns_queue",
+          "source_derived_queue_commit": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+          "source_derived_queue_path": "outputs/derived/speed_2026_100_sns_tiebreak_queue.csv",
+          "semantic_identity": "For the original queue, the frozen Stage 1 QA preserves the same 19 retained player+team members after the Stage 1 builder read the physical-only source queue.",
+          "no_powerpro_introduction": "The consumed frozen entries contain only player/team and physical-queue metadata, each asserts no_game_ratings_read=true, and the Stage 2 queue builder accepts only Stage 1 profiles plus this membership projection.",
+          "original_source_membership_count": 19,
+          "original_source_membership_all_retained": true,
+          "source_membership_all_game_rating_free": true
+        },
+        "v1_supersession_v2_rerun": {
+          "status": "V1_SUPERSEDED_V2_RERUN_PASS",
+          "supersession_reason": "STAGE1_TEMPORAL_BOUNDARY_QA_FAILURE",
+          "v1_agent_d_artifacts_used_for_calculation": false,
+          "v2_stage1_profile_sha256": "18b44bf3cd3e929a86082ce9c5bab196380436b09a3e48a496f6ce5e2d05b53d",
+          "v2_stage1_qa_sha256": "f2075f1ab5d507cf4629ab1e77ac29e79662a3668d8666889068a99b002d2a63",
+          "v2_stage1_manifest_sha256": "6f9bd97f121d0b6f51e4b1952d4b89ddd0709e4a26fcd4a69cc8c16993094252",
+          "known_non_2026_temporal_construct_conflicts": 9,
+          "unknown_only_measurement_eras_treated_as_temporal_conflict": false,
+          "stage1_v2_frozen_queue_membership": {
+            "total": 25,
+            "retained": 19,
+            "added_for_temporal_conflict": 6
+          }
+        },
+        "post_remediation_validation": {
+          "build_status": "PASS",
+          "exact_team_aware_powerpro_matches": 99,
+          "unmatched_not_forced": 1,
+          "discrepancy_rows": 100,
+          "high_discrepancy_rows": 34,
+          "sns_queue_external_game_or_residual_token_check": "PASS",
+          "sns_queue_reconciliation": {
+            "original_physical_queue_rows_retained_by_stage1_v2": 19,
+            "stage1_v2_frozen_physical_queue_rows": 25,
+            "stage1_v2_temporal_additions": 6,
+            "v2_rows": 25,
+            "retained": 19,
+            "added": 6,
+            "removed": 0,
+            "temporal_uncertainty_known_non_2026": 9,
+            "standardized_cohort_current_conflict": 0,
+            "direct_t90_current_conflict": 0,
+            "anchor_relative_unresolved": 19
+          },
+          "targeted_evidence_needs": 25,
+          "output_sha256": {
+            "discrepancy_csv": "d8665d7f57dc76efab5ab20273c1c1461b8fe9afc28c7c2479f3b44c7ed9c259",
+            "discrepancy_json": "c098b220e5df423d11cf2d8f15284a3ae50cd8b6176222775f39584a3c31f506",
+            "sns_queue_v2_csv": "133983c63791eb87e9596644f1faead7dbf5ee4cc8af09993415a6d25f9788b0",
+            "targeted_evidence_needs_csv": "e76f2b90e3fb0c57fdfa006795641c666d71680afad281fc0ac84f40f6c574c7"
+          }
+        }
+      }
+    },
+    {
+      "id": "REPRODUCIBILITY_SCRIPT_INPUTS_PRESENT",
+      "pass": true,
+      "detail": {
+        "scripts_checked": 5
+      }
+    },
+    {
+      "id": "AUDIT_HAS_REQUIRED_DECISION_RECORD",
+      "pass": true,
+      "detail": {
+        "audit_path": "docs/audits/speed_2026_powerpro_residual_structure_audit.md"
+      }
+    },
+    {
+      "id": "FINAL_VERDICT_CONSISTENT_WITH_V2_ARTIFACTS",
+      "pass": true,
+      "detail": {
+        "status": "FINAL_QA_PASS",
+        "global_verdict": "NOT_IDENTIFIABLE",
+        "stage1_profiles": 100,
+        "acceleration_rows": 0,
+        "exact_matches": 99,
+        "high_discrepancy_union": 34,
+        "sns_queue_v2_rows": 25,
+        "targeted_needs": 25,
+        "independent_qa_required_checks": 18
+      }
+    }
+  ],
+  "qa_history": [
+    {
+      "id": "QA_INITIAL_SCHEMA_FIELD_CHECK_001",
+      "state": "DETECTED_AND_REMEDIATED",
+      "detection": "The first integrated QA run used shortened residual field aliases for the unmatched-player null check.",
+      "impact": "Validator-only false failure. The register already contained explicit null residual fields under its documented full names; no source record, classification, or rating changed.",
+      "remediation": "The QA now checks the documented full residual field names and preserves this initial failure history."
+    },
+    {
+      "id": "STAGE1_TEMPORAL_BOUNDARY_QA_FAIL_002",
+      "state": "V1_SUPERSEDED_AND_V2_VALIDATED",
+      "detection": "Independent QA found V1 historical short-distance comparisons that lacked a current-signal temporal classification.",
+      "impact": "V1 Stage 1 and V1 Stage 2 were invalidated for final use before any rating change or publication.",
+      "remediation": "V2 retains dated physical evidence, classifies known non-2026 comparisons as temporal conflict, freezes a zero-row current acceleration subset, and regenerates all V2 Stage 2 artifacts."
+    }
+  ],
+  "limits": [
+    "This QA validates artifact integrity and declared boundaries. It does not transform an external residual into a rating correction.",
+    "The final independent read-only QA passed 18 required checks; this generated QA remains an integration self-check rather than a rating-correction mechanism."
+  ]
+}

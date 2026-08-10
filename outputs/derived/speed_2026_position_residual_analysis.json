@@ -1,0 +1,4806 @@
+{
+  "schema_version": "speed-2026-position-and-matched-residual-analysis/v2.0.0",
+  "stage": "STAGE_2_EXTERNAL_RESIDUAL_DIAGNOSTIC_ONLY_V2",
+  "generated_at": "2026-08-10T12:32:30.374Z",
+  "status": "COMPLETE_V2_NO_POSITION_CORRECTIONS_OR_RATING_CHANGES",
+  "supersession": {
+    "version": "V2",
+    "supersedes": "V1 Stage 2 position/matched-speed outputs",
+    "reason": "Stage 1 temporal-boundary QA failure superseded the prior Stage 1 freeze.",
+    "v1_stage2_outputs_read_or_used": false,
+    "v2_stage1_profile_sha256": "18b44bf3cd3e929a86082ce9c5bab196380436b09a3e48a496f6ce5e2d05b53d"
+  },
+  "analysis_contract": {
+    "residual_a": "rounded blind-v3 baseline minus PowerPro 2026 Speed",
+    "residual_b": "provisional final freeze minus PowerPro 2026 Speed",
+    "powerpro_role": "read-only external comparator; never a rating teacher or correction target",
+    "matching": "same team plus unique canonical local PowerPro roster-label resolution; no fuzzy matching and no forced match",
+    "required_unmatched_player": "名原 典彦",
+    "position_role": "descriptive residual grouping only; position adjustments are prohibited",
+    "matched_speed_role": "all predefined group contrasts, every requested speed threshold, and every requested age band are emitted; player-level clustered bootstrap addresses repeated-player dyads"
+  },
+  "reproducibility": {
+    "seed": 20260810,
+    "bootstrap_iterations": 10000,
+    "permutation_iterations": 10000,
+    "player_cluster_bootstrap_iterations": 5000,
+    "statistic_precision_decimals": 6
+  },
+  "input_provenance": {
+    "historical_source_commits": {
+      "blind_v3_npb_plus_and_aggregate_powerpro_qa": "3be42ff62775cf98eec614f9ee733ae06d565bde",
+      "final_freeze_branch_base": "648f75670d4b97bccce1efeb3ebbab3a06068347",
+      "stage1_manifest_sources": {
+        "historical_anchor_bank": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+        "decision_packets": "501f2d6ea638404a71a0026c530ead4cd6567e03",
+        "exposure": "3be42ff62775cf98eec614f9ee733ae06d565bde"
+      }
+    },
+    "files": {
+      "stage1_profile": {
+        "path": "outputs\\derived\\speed_2026_blind_physical_construct_profiles.json",
+        "sha256": "18b44bf3cd3e929a86082ce9c5bab196380436b09a3e48a496f6ce5e2d05b53d",
+        "required_v2_sha256": "18b44bf3cd3e929a86082ce9c5bab196380436b09a3e48a496f6ce5e2d05b53d",
+        "manifest_declared_sha256": "18b44bf3cd3e929a86082ce9c5bab196380436b09a3e48a496f6ce5e2d05b53d"
+      },
+      "stage1_manifest": {
+        "path": "outputs\\derived\\speed_2026_blind_physical_construct_freeze_manifest.json",
+        "sha256": "6f9bd97f121d0b6f51e4b1952d4b89ddd0709e4a26fcd4a69cc8c16993094252"
+      },
+      "blind_v3_npb_plus": {
+        "path": "outputs\\derived\\speed_blind_v3_npbplus_2026.json",
+        "sha256": "821f92303476002ea80ffae45ec0efb4930be211cf38bfd329cb45ddb8cc72e9",
+        "player_rows": 99
+      },
+      "final_freeze_csv": {
+        "path": "outputs\\derived\\speed_2026_100_final_freeze_20260810.csv",
+        "sha256": "9dc1cf6ca4ca7831b9741818058183918e75e5aaee5fe0559c520d34e48b1e29",
+        "player_rows": 100
+      },
+      "final_freeze_json": {
+        "path": "outputs\\derived\\speed_2026_100_final_freeze_20260810.json",
+        "sha256": "906233015a4297370b37cb5fdddcf710281404a27c402409eb8cb582b800cfc5",
+        "source_decision_packet_commit": "501f2d6ea638404a71a0026c530ead4cd6567e03"
+      },
+      "post_freeze_powerpro_qa": {
+        "path": "outputs\\derived\\speed_2026_100_post_freeze_powerpro_qa_20260810.json",
+        "sha256": "dd74bc922404b378b53bbe485fa87e2669f1e1952892cedcac997666827c8acc",
+        "stated_powerpro_match_count": 99
+      },
+      "powerpro_external_roster": {
+        "path": "data\\pennant.db",
+        "table": "pawapuro_full",
+        "work": "2026",
+        "sha256": "1bcbe9d3260367fa732ed0571573de52a87afd725e9796f2c8d3eb77c671449d",
+        "bytes": 97140736,
+        "roster_rows": 389
+      },
+      "position_source": {
+        "path": "data\\pennant.db",
+        "table": "npb_usage_2026",
+        "rows": 490
+      }
+    },
+    "unavailable_aggregate_input_note": "The historical speed_blind_v3_powerpro_qa_2026.json is an aggregate QA receipt at its stated source commit and is not needed for row-level residual construction. Row-level Residual A is reconstructed only from frozen blind-v3 values plus the external 2026 roster comparator."
+  },
+  "coverage": {
+    "stage1_profiles": 100,
+    "final_freeze_rows": 100,
+    "blind_v3_rows": 99,
+    "dataset_rows": 100,
+    "powerpro_exact_canonical_team_matches": 99,
+    "powerpro_unmatched": [
+      {
+        "player": "名原 典彦",
+        "team": "広島東洋カープ",
+        "status": "UNMATCHED_NO_UNIQUE_CANONICAL_ROSTER_LABEL"
+      }
+    ],
+    "residual_a_usable": 99,
+    "residual_b_usable": 99,
+    "exact_position_usable": 99,
+    "exact_position_counts": {
+      "C": 16,
+      "1B": 12,
+      "2B": 14,
+      "3B": 10,
+      "SS": 14,
+      "LF": 10,
+      "CF": 12,
+      "RF": 11
+    },
+    "frozen_age_available": 0,
+    "matched_speed_pair_rows": 883
+  },
+  "powerpro_exact_match_receipts": [
+    {
+      "player_id": "51255138",
+      "player": "中川 圭太",
+      "team": "オリックス・バファローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "中川圭",
+      "external_speed": 74
+    },
+    {
+      "player_id": "91395138",
+      "player": "太田 椋",
+      "team": "オリックス・バファローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "太　田",
+      "external_speed": 64
+    },
+    {
+      "player_id": "11815130",
+      "player": "宗 佑磨",
+      "team": "オリックス・バファローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "宗",
+      "external_speed": 76
+    },
+    {
+      "player_id": "51955153",
+      "player": "来田 涼斗",
+      "team": "オリックス・バファローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "来　田",
+      "external_speed": 85
+    },
+    {
+      "player_id": "91495139",
+      "player": "森 友哉",
+      "team": "オリックス・バファローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "森　友",
+      "external_speed": 65
+    },
+    {
+      "player_id": "91995151",
+      "player": "紅林 弘太郎",
+      "team": "オリックス・バファローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "紅　林",
+      "external_speed": 56
+    },
+    {
+      "player_id": "41645139",
+      "player": "若月 健矢",
+      "team": "オリックス・バファローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "若　月",
+      "external_speed": 48
+    },
+    {
+      "player_id": "71475132",
+      "player": "西川 龍馬",
+      "team": "オリックス・バファローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "西　川",
+      "external_speed": 72
+    },
+    {
+      "player_id": "91495130",
+      "player": "西野 真弘",
+      "team": "オリックス・バファローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "西　野",
+      "external_speed": 76
+    },
+    {
+      "player_id": "93795157",
+      "player": "カリステ",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "カリステ",
+      "external_speed": 82
+    },
+    {
+      "player_id": "51455153",
+      "player": "土田 龍空",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "土　田",
+      "external_speed": 66
+    },
+    {
+      "player_id": "01305131",
+      "player": "大島 洋平",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "大　島",
+      "external_speed": 74
+    },
+    {
+      "player_id": "81585151",
+      "player": "岡林 勇希",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "岡　林",
+      "external_speed": 81
+    },
+    {
+      "player_id": "31735132",
+      "player": "木下 拓哉",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "木下拓",
+      "external_speed": 39
+    },
+    {
+      "player_id": "03105157",
+      "player": "村松 開人",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "村　松",
+      "external_speed": 80
+    },
+    {
+      "player_id": "91395132",
+      "player": "板山 祐太郎",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "板　山",
+      "external_speed": 72
+    },
+    {
+      "player_id": "21025157",
+      "player": "田中 幹也",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "田　中",
+      "external_speed": 83
+    },
+    {
+      "player_id": "91195151",
+      "player": "石川 昂弥",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "石川昂",
+      "external_speed": 41
+    },
+    {
+      "player_id": "81685157",
+      "player": "福永 裕基",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "福　永",
+      "external_speed": 64
+    },
+    {
+      "player_id": "31835134",
+      "player": "細川 成也",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "細　川",
+      "external_speed": 60
+    },
+    {
+      "player_id": "91095135",
+      "player": "高橋 周平",
+      "team": "中日ドラゴンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "高橋周",
+      "external_speed": 46
+    },
+    {
+      "player_id": "31435157",
+      "player": "奈良間 大己",
+      "team": "北海道日本ハムファイターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "奈良間",
+      "external_speed": 64
+    },
+    {
+      "player_id": "63165155",
+      "player": "水野 達稀",
+      "team": "北海道日本ハムファイターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "水　野",
+      "external_speed": 71
+    },
+    {
+      "player_id": "41545136",
+      "player": "清宮 幸太郎",
+      "team": "北海道日本ハムファイターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "清　宮",
+      "external_speed": 56
+    },
+    {
+      "player_id": "51055138",
+      "player": "田宮 裕涼",
+      "team": "北海道日本ハムファイターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "田　宮",
+      "external_speed": 68
+    },
+    {
+      "player_id": "21925151",
+      "player": "郡司 裕也",
+      "team": "北海道日本ハムファイターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "郡　司",
+      "external_speed": 61
+    },
+    {
+      "player_id": "31435138",
+      "player": "野村 佑希",
+      "team": "北海道日本ハムファイターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "野　村",
+      "external_speed": 52
+    },
+    {
+      "player_id": "03505133",
+      "player": "ソト",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "ソ　ト",
+      "external_speed": 40
+    },
+    {
+      "player_id": "63065155",
+      "player": "ポランコ",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "ポランコ",
+      "external_speed": 63
+    },
+    {
+      "player_id": "71075151",
+      "player": "佐藤 都志也",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "佐　藤",
+      "external_speed": 71
+    },
+    {
+      "player_id": "71275157",
+      "player": "友杉 篤輝",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "友　杉",
+      "external_speed": 87
+    },
+    {
+      "player_id": "81885136",
+      "player": "安田 尚憲",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "安　田",
+      "external_speed": 46
+    },
+    {
+      "player_id": "11715153",
+      "player": "小川 龍成",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "小　川",
+      "external_speed": 86
+    },
+    {
+      "player_id": "91895138",
+      "player": "山口 航輝",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "山　口",
+      "external_speed": 52
+    },
+    {
+      "player_id": "11515139",
+      "player": "岡 大海",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "岡",
+      "external_speed": 82
+    },
+    {
+      "player_id": "31635138",
+      "player": "藤原 恭大",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "藤　原",
+      "external_speed": 85
+    },
+    {
+      "player_id": "41645136",
+      "player": "藤岡 裕大",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "藤　岡",
+      "external_speed": 65
+    },
+    {
+      "player_id": "11215151",
+      "player": "髙部 瑛斗",
+      "team": "千葉ロッテマリーンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "髙　部",
+      "external_speed": 90
+    },
+    {
+      "player_id": "81785155",
+      "player": "古賀 悠斗",
+      "team": "埼玉西武ライオンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "古賀悠",
+      "external_speed": 47
+    },
+    {
+      "player_id": "41245130",
+      "player": "外崎 修汰",
+      "team": "埼玉西武ライオンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "外　崎",
+      "external_speed": 68
+    },
+    {
+      "player_id": "71775134",
+      "player": "源田 壮亮",
+      "team": "埼玉西武ライオンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "源　田",
+      "external_speed": 80
+    },
+    {
+      "player_id": "51255155",
+      "player": "滝澤 夏央",
+      "team": "埼玉西武ライオンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "滝　澤",
+      "external_speed": 85
+    },
+    {
+      "player_id": "21125134",
+      "player": "石井 一成",
+      "team": "埼玉西武ライオンズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "石　井",
+      "external_speed": 79
+    },
+    {
+      "player_id": "43745150",
+      "player": "ファビアン",
+      "team": "広島東洋カープ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "ファビアン",
+      "external_speed": 61
+    },
+    {
+      "player_id": "53955150",
+      "player": "モンテロ",
+      "team": "広島東洋カープ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "モンテロ",
+      "external_speed": 49
+    },
+    {
+      "player_id": "null",
+      "player": "名原 典彦",
+      "team": "広島東洋カープ",
+      "status": "UNMATCHED_NO_UNIQUE_CANONICAL_ROSTER_LABEL",
+      "method": null,
+      "candidate_count": 0,
+      "external_roster_display_name": null,
+      "external_speed": null
+    },
+    {
+      "player_id": "11915134",
+      "player": "坂倉 将吾",
+      "team": "広島東洋カープ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "坂　倉",
+      "external_speed": 68
+    },
+    {
+      "player_id": "01705138",
+      "player": "小園 海斗",
+      "team": "広島東洋カープ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "小　園",
+      "external_speed": 79
+    },
+    {
+      "player_id": "93395153",
+      "player": "矢野 雅哉",
+      "team": "広島東洋カープ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "矢　野",
+      "external_speed": 78
+    },
+    {
+      "player_id": "31135133",
+      "player": "秋山 翔吾",
+      "team": "広島東洋カープ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "秋　山",
+      "external_speed": 77
+    },
+    {
+      "player_id": "61565135",
+      "player": "菊池 涼介",
+      "team": "広島東洋カープ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "菊　池",
+      "external_speed": 72
+    },
+    {
+      "player_id": "01405130",
+      "player": "野間 峻祥",
+      "team": "広島東洋カープ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "野　間",
+      "external_speed": 88
+    },
+    {
+      "player_id": "53755153",
+      "player": "サンタナ",
+      "team": "東京ヤクルトスワローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "サンタナ",
+      "external_speed": 47
+    },
+    {
+      "player_id": "91695153",
+      "player": "並木 秀尊",
+      "team": "東京ヤクルトスワローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "並　木",
+      "external_speed": 97
+    },
+    {
+      "player_id": "51255118",
+      "player": "中村 悠平",
+      "team": "東京ヤクルトスワローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "中村悠",
+      "external_speed": 56
+    },
+    {
+      "player_id": "93195155",
+      "player": "丸山 和郁",
+      "team": "東京ヤクルトスワローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "丸山和",
+      "external_speed": 86
+    },
+    {
+      "player_id": "01705134",
+      "player": "古賀 優大",
+      "team": "東京ヤクルトスワローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "古　賀",
+      "external_speed": 46
+    },
+    {
+      "player_id": "71975136",
+      "player": "塩見 泰隆",
+      "team": "東京ヤクルトスワローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "塩　見",
+      "external_speed": 83
+    },
+    {
+      "player_id": "51355155",
+      "player": "岩田 幸宏",
+      "team": "東京ヤクルトスワローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "岩　田",
+      "external_speed": 96
+    },
+    {
+      "player_id": "51455151",
+      "player": "長岡 秀樹",
+      "team": "東京ヤクルトスワローズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "長　岡",
+      "external_speed": 58
+    },
+    {
+      "player_id": "71375138",
+      "player": "太田 光",
+      "team": "東北楽天ゴールデンイーグルス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "太　田",
+      "external_speed": 44
+    },
+    {
+      "player_id": "41845132",
+      "player": "村林 一輝",
+      "team": "東北楽天ゴールデンイーグルス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "村　林",
+      "external_speed": 69
+    },
+    {
+      "player_id": "51155118",
+      "player": "浅村 栄斗",
+      "team": "東北楽天ゴールデンイーグルス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "浅　村",
+      "external_speed": 35
+    },
+    {
+      "player_id": "73175138",
+      "player": "渡邊 佳明",
+      "team": "東北楽天ゴールデンイーグルス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "渡邊佳明",
+      "external_speed": 50
+    },
+    {
+      "player_id": "81985135",
+      "player": "鈴木 大地",
+      "team": "東北楽天ゴールデンイーグルス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "鈴　木",
+      "external_speed": 49
+    },
+    {
+      "player_id": "81585134",
+      "player": "京田 陽太",
+      "team": "横浜DeNAベイスターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "京　田",
+      "external_speed": 78
+    },
+    {
+      "player_id": "91995134",
+      "player": "佐野 恵太",
+      "team": "横浜DeNAベイスターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "佐　野",
+      "external_speed": 48
+    },
+    {
+      "player_id": "51455137",
+      "player": "宮﨑 敏郎",
+      "team": "横浜DeNAベイスターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "宮　﨑",
+      "external_speed": 33
+    },
+    {
+      "player_id": "23125136",
+      "player": "山本 祐大",
+      "team": "横浜DeNAベイスターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "山　本",
+      "external_speed": 61
+    },
+    {
+      "player_id": "33535159",
+      "player": "度会 隆輝",
+      "team": "横浜DeNAベイスターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "度　会",
+      "external_speed": 65
+    },
+    {
+      "player_id": "91695157",
+      "player": "林 琢真",
+      "team": "横浜DeNAベイスターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "林",
+      "external_speed": 82
+    },
+    {
+      "player_id": "51555155",
+      "player": "梶原 昂希",
+      "team": "横浜DeNAベイスターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "梶　原",
+      "external_speed": 90
+    },
+    {
+      "player_id": "13115153",
+      "player": "牧 秀悟",
+      "team": "横浜DeNAベイスターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "牧",
+      "external_speed": 67
+    },
+    {
+      "player_id": "41945131",
+      "player": "筒香 嘉智",
+      "team": "横浜DeNAベイスターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "筒　香",
+      "external_speed": 45
+    },
+    {
+      "player_id": "51555151",
+      "player": "蝦名 達夫",
+      "team": "横浜DeNAベイスターズ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "蝦　名",
+      "external_speed": 75
+    },
+    {
+      "player_id": "31335131",
+      "player": "今宮 健太",
+      "team": "福岡ソフトバンクホークス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "今　宮",
+      "external_speed": 66
+    },
+    {
+      "player_id": "21925136",
+      "player": "周東 佑京",
+      "team": "福岡ソフトバンクホークス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "周　東",
+      "external_speed": 96
+    },
+    {
+      "player_id": "21425139",
+      "player": "山川 穂高",
+      "team": "福岡ソフトバンクホークス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "山　川",
+      "external_speed": 47
+    },
+    {
+      "player_id": "31835133",
+      "player": "柳田 悠岐",
+      "team": "福岡ソフトバンクホークス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "柳　田",
+      "external_speed": 67
+    },
+    {
+      "player_id": "73175151",
+      "player": "柳町 達",
+      "team": "福岡ソフトバンクホークス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "柳　町",
+      "external_speed": 67
+    },
+    {
+      "player_id": "01705130",
+      "player": "栗原 陵矢",
+      "team": "福岡ソフトバンクホークス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "栗　原",
+      "external_speed": 59
+    },
+    {
+      "player_id": "81885155",
+      "player": "正木 智也",
+      "team": "福岡ソフトバンクホークス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "正　木",
+      "external_speed": 48
+    },
+    {
+      "player_id": "81385151",
+      "player": "海野 隆司",
+      "team": "福岡ソフトバンクホークス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "海　野",
+      "external_speed": 52
+    },
+    {
+      "player_id": "61465133",
+      "player": "牧原 大成",
+      "team": "福岡ソフトバンクホークス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "牧原大",
+      "external_speed": 82
+    },
+    {
+      "player_id": "41745135",
+      "player": "近藤 健介",
+      "team": "福岡ソフトバンクホークス",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "近　藤",
+      "external_speed": 64
+    },
+    {
+      "player_id": "21425116",
+      "player": "丸 佳浩",
+      "team": "読売ジャイアンツ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "丸",
+      "external_speed": 65
+    },
+    {
+      "player_id": "51955159",
+      "player": "佐々木 俊輔",
+      "team": "読売ジャイアンツ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "佐々木",
+      "external_speed": 76
+    },
+    {
+      "player_id": "73375134",
+      "player": "吉川 尚輝",
+      "team": "読売ジャイアンツ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "吉川尚",
+      "external_speed": 80
+    },
+    {
+      "player_id": "21325136",
+      "player": "大城 卓三",
+      "team": "読売ジャイアンツ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "大　城",
+      "external_speed": 24
+    },
+    {
+      "player_id": "91595136",
+      "player": "岸田 行倫",
+      "team": "読売ジャイアンツ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "岸　田",
+      "external_speed": 55
+    },
+    {
+      "player_id": "21625135",
+      "player": "松本 剛",
+      "team": "読売ジャイアンツ",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "松本剛",
+      "external_speed": 69
+    },
+    {
+      "player_id": "41445153",
+      "player": "中野 拓夢",
+      "team": "阪神タイガース",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "中　野",
+      "external_speed": 75
+    },
+    {
+      "player_id": "61065137",
+      "player": "伏見 寅威",
+      "team": "阪神タイガース",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "伏　見",
+      "external_speed": 40
+    },
+    {
+      "player_id": "41045153",
+      "player": "佐藤 輝明",
+      "team": "阪神タイガース",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "佐藤輝",
+      "external_speed": 68
+    },
+    {
+      "player_id": "11915132",
+      "player": "坂本 誠志郎",
+      "team": "阪神タイガース",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "坂　本",
+      "external_speed": 56
+    },
+    {
+      "player_id": "21325134",
+      "player": "大山 悠輔",
+      "team": "阪神タイガース",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "大　山",
+      "external_speed": 58
+    },
+    {
+      "player_id": "31535138",
+      "player": "小幡 竜平",
+      "team": "阪神タイガース",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "小　幡",
+      "external_speed": 77
+    },
+    {
+      "player_id": "31735138",
+      "player": "木浪 聖也",
+      "team": "阪神タイガース",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "木　浪",
+      "external_speed": 59
+    },
+    {
+      "player_id": "21325139",
+      "player": "梅野 隆太郎",
+      "team": "阪神タイガース",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "梅　野",
+      "external_speed": 57
+    },
+    {
+      "player_id": "43145157",
+      "player": "森下 翔太",
+      "team": "阪神タイガース",
+      "status": "EXACT_CANONICAL_TEAM_MATCH",
+      "method": "SAME_TEAM_UNIQUE_CANONICAL_ROSTER_LABEL_RESOLUTION",
+      "candidate_count": 1,
+      "external_roster_display_name": "森　下",
+      "external_speed": 60
+    }
+  ],
+  "position_analysis": {
+    "analysis_population": "PowerPro exact canonical-team matches with a mapped current primary position and both residuals available",
+    "exact_positions": {
+      "C": {
+        "positions": [
+          "C"
+        ],
+        "players": [
+          {
+            "player_id": "91495139",
+            "player": "森 友哉",
+            "team": "オリックス・バファローズ"
+          },
+          {
+            "player_id": "41645139",
+            "player": "若月 健矢",
+            "team": "オリックス・バファローズ"
+          },
+          {
+            "player_id": "31735132",
+            "player": "木下 拓哉",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "51055138",
+            "player": "田宮 裕涼",
+            "team": "北海道日本ハムファイターズ"
+          },
+          {
+            "player_id": "71075151",
+            "player": "佐藤 都志也",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "81785155",
+            "player": "古賀 悠斗",
+            "team": "埼玉西武ライオンズ"
+          },
+          {
+            "player_id": "51255118",
+            "player": "中村 悠平",
+            "team": "東京ヤクルトスワローズ"
+          },
+          {
+            "player_id": "01705134",
+            "player": "古賀 優大",
+            "team": "東京ヤクルトスワローズ"
+          },
+          {
+            "player_id": "71375138",
+            "player": "太田 光",
+            "team": "東北楽天ゴールデンイーグルス"
+          },
+          {
+            "player_id": "23125136",
+            "player": "山本 祐大",
+            "team": "横浜DeNAベイスターズ"
+          },
+          {
+            "player_id": "81385151",
+            "player": "海野 隆司",
+            "team": "福岡ソフトバンクホークス"
+          },
+          {
+            "player_id": "21325136",
+            "player": "大城 卓三",
+            "team": "読売ジャイアンツ"
+          },
+          {
+            "player_id": "91595136",
+            "player": "岸田 行倫",
+            "team": "読売ジャイアンツ"
+          },
+          {
+            "player_id": "61065137",
+            "player": "伏見 寅威",
+            "team": "阪神タイガース"
+          },
+          {
+            "player_id": "11915132",
+            "player": "坂本 誠志郎",
+            "team": "阪神タイガース"
+          },
+          {
+            "player_id": "21325139",
+            "player": "梅野 隆太郎",
+            "team": "阪神タイガース"
+          }
+        ],
+        "residual_a": {
+          "n": 16,
+          "mean": 4.1875,
+          "median": 2.5,
+          "bootstrap_mean_ci_95": {
+            "lower": -0.0625,
+            "upper": 8.75,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -1.5,
+            "upper": 9,
+            "iterations": 10000
+          },
+          "complement_n": 83,
+          "complement_mean": -1,
+          "group_minus_complement_mean": 5.1875,
+          "hedges_g_vs_complement": 0.518147,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": 5.1875,
+            "two_sided_p_value": 0.061194,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 16,
+            "positive": 9,
+            "negative": 6,
+            "zero": 1,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.5625,
+            "nonzero_direction_fraction": 0.6
+          }
+        },
+        "residual_b": {
+          "n": 16,
+          "mean": 4.1875,
+          "median": 2.5,
+          "bootstrap_mean_ci_95": {
+            "lower": 0,
+            "upper": 8.75,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -1,
+            "upper": 9,
+            "iterations": 10000
+          },
+          "complement_n": 83,
+          "complement_mean": -1.072289,
+          "group_minus_complement_mean": 5.259789,
+          "hedges_g_vs_complement": 0.540438,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": 5.259789,
+            "two_sided_p_value": 0.054795,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 16,
+            "positive": 9,
+            "negative": 6,
+            "zero": 1,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.5625,
+            "nonzero_direction_fraction": 0.6
+          }
+        }
+      },
+      "1B": {
+        "positions": [
+          "1B"
+        ],
+        "players": [
+          {
+            "player_id": "41545136",
+            "player": "清宮 幸太郎",
+            "team": "北海道日本ハムファイターズ"
+          },
+          {
+            "player_id": "03505133",
+            "player": "ソト",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "11515139",
+            "player": "岡 大海",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "53955150",
+            "player": "モンテロ",
+            "team": "広島東洋カープ"
+          },
+          {
+            "player_id": "11915134",
+            "player": "坂倉 将吾",
+            "team": "広島東洋カープ"
+          },
+          {
+            "player_id": "51155118",
+            "player": "浅村 栄斗",
+            "team": "東北楽天ゴールデンイーグルス"
+          },
+          {
+            "player_id": "73175138",
+            "player": "渡邊 佳明",
+            "team": "東北楽天ゴールデンイーグルス"
+          },
+          {
+            "player_id": "81985135",
+            "player": "鈴木 大地",
+            "team": "東北楽天ゴールデンイーグルス"
+          },
+          {
+            "player_id": "91995134",
+            "player": "佐野 恵太",
+            "team": "横浜DeNAベイスターズ"
+          },
+          {
+            "player_id": "21425139",
+            "player": "山川 穂高",
+            "team": "福岡ソフトバンクホークス"
+          },
+          {
+            "player_id": "81885155",
+            "player": "正木 智也",
+            "team": "福岡ソフトバンクホークス"
+          },
+          {
+            "player_id": "21325134",
+            "player": "大山 悠輔",
+            "team": "阪神タイガース"
+          }
+        ],
+        "residual_a": {
+          "n": 12,
+          "mean": 5,
+          "median": 6.5,
+          "bootstrap_mean_ci_95": {
+            "lower": -0.666667,
+            "upper": 10.75,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -4.5,
+            "upper": 12.5,
+            "iterations": 10000
+          },
+          "complement_n": 87,
+          "complement_mean": -0.873563,
+          "group_minus_complement_mean": 5.873563,
+          "hedges_g_vs_complement": 0.58676,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": 5.873563,
+            "two_sided_p_value": 0.059394,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 12,
+            "positive": 7,
+            "negative": 5,
+            "zero": 0,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.583333,
+            "nonzero_direction_fraction": 0.583333
+          }
+        },
+        "residual_b": {
+          "n": 12,
+          "mean": 3.666667,
+          "median": 3.5,
+          "bootstrap_mean_ci_95": {
+            "lower": -1.583333,
+            "upper": 8.833333,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -4.5,
+            "upper": 11,
+            "iterations": 10000
+          },
+          "complement_n": 87,
+          "complement_mean": -0.758621,
+          "group_minus_complement_mean": 4.425287,
+          "hedges_g_vs_complement": 0.450613,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": 4.425287,
+            "two_sided_p_value": 0.149385,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 12,
+            "positive": 7,
+            "negative": 5,
+            "zero": 0,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.583333,
+            "nonzero_direction_fraction": 0.583333
+          }
+        }
+      },
+      "2B": {
+        "positions": [
+          "2B"
+        ],
+        "players": [
+          {
+            "player_id": "91395138",
+            "player": "太田 椋",
+            "team": "オリックス・バファローズ"
+          },
+          {
+            "player_id": "91495130",
+            "player": "西野 真弘",
+            "team": "オリックス・バファローズ"
+          },
+          {
+            "player_id": "21025157",
+            "player": "田中 幹也",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "31435157",
+            "player": "奈良間 大己",
+            "team": "北海道日本ハムファイターズ"
+          },
+          {
+            "player_id": "11715153",
+            "player": "小川 龍成",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "41645136",
+            "player": "藤岡 裕大",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "41245130",
+            "player": "外崎 修汰",
+            "team": "埼玉西武ライオンズ"
+          },
+          {
+            "player_id": "21125134",
+            "player": "石井 一成",
+            "team": "埼玉西武ライオンズ"
+          },
+          {
+            "player_id": "61565135",
+            "player": "菊池 涼介",
+            "team": "広島東洋カープ"
+          },
+          {
+            "player_id": "91695157",
+            "player": "林 琢真",
+            "team": "横浜DeNAベイスターズ"
+          },
+          {
+            "player_id": "13115153",
+            "player": "牧 秀悟",
+            "team": "横浜DeNAベイスターズ"
+          },
+          {
+            "player_id": "61465133",
+            "player": "牧原 大成",
+            "team": "福岡ソフトバンクホークス"
+          },
+          {
+            "player_id": "73375134",
+            "player": "吉川 尚輝",
+            "team": "読売ジャイアンツ"
+          },
+          {
+            "player_id": "41445153",
+            "player": "中野 拓夢",
+            "team": "阪神タイガース"
+          }
+        ],
+        "residual_a": {
+          "n": 14,
+          "mean": -2.785714,
+          "median": -2.5,
+          "bootstrap_mean_ci_95": {
+            "lower": -5.428571,
+            "upper": -0.355357,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -6,
+            "upper": 1.5,
+            "iterations": 10000
+          },
+          "complement_n": 85,
+          "complement_mean": 0.270588,
+          "group_minus_complement_mean": -3.056303,
+          "hedges_g_vs_complement": -0.301385,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -3.056303,
+            "two_sided_p_value": 0.30007,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 14,
+            "positive": 5,
+            "negative": 8,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.571429,
+            "nonzero_direction_fraction": 0.615385
+          }
+        },
+        "residual_b": {
+          "n": 14,
+          "mean": -2.357143,
+          "median": -2.5,
+          "bootstrap_mean_ci_95": {
+            "lower": -4.571429,
+            "upper": -0.142857,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -6,
+            "upper": 1.5,
+            "iterations": 10000
+          },
+          "complement_n": 85,
+          "complement_mean": 0.129412,
+          "group_minus_complement_mean": -2.486555,
+          "hedges_g_vs_complement": -0.2514,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -2.486555,
+            "two_sided_p_value": 0.388061,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 14,
+            "positive": 5,
+            "negative": 8,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.571429,
+            "nonzero_direction_fraction": 0.615385
+          }
+        }
+      },
+      "3B": {
+        "positions": [
+          "3B"
+        ],
+        "players": [
+          {
+            "player_id": "11815130",
+            "player": "宗 佑磨",
+            "team": "オリックス・バファローズ"
+          },
+          {
+            "player_id": "91195151",
+            "player": "石川 昂弥",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "81685157",
+            "player": "福永 裕基",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "91095135",
+            "player": "高橋 周平",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "21925151",
+            "player": "郡司 裕也",
+            "team": "北海道日本ハムファイターズ"
+          },
+          {
+            "player_id": "81885136",
+            "player": "安田 尚憲",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "51455137",
+            "player": "宮﨑 敏郎",
+            "team": "横浜DeNAベイスターズ"
+          },
+          {
+            "player_id": "41945131",
+            "player": "筒香 嘉智",
+            "team": "横浜DeNAベイスターズ"
+          },
+          {
+            "player_id": "01705130",
+            "player": "栗原 陵矢",
+            "team": "福岡ソフトバンクホークス"
+          },
+          {
+            "player_id": "41045153",
+            "player": "佐藤 輝明",
+            "team": "阪神タイガース"
+          }
+        ],
+        "residual_a": {
+          "n": 10,
+          "mean": 7.4,
+          "median": 6,
+          "bootstrap_mean_ci_95": {
+            "lower": 2.2,
+            "upper": 12.6,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": 1.9875,
+            "upper": 15,
+            "iterations": 10000
+          },
+          "complement_n": 89,
+          "complement_mean": -1.011236,
+          "group_minus_complement_mean": 8.411236,
+          "hedges_g_vs_complement": 0.852482,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": 8.411236,
+            "two_sided_p_value": 0.012299,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 10,
+            "positive": 9,
+            "negative": 1,
+            "zero": 0,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.9,
+            "nonzero_direction_fraction": 0.9
+          }
+        },
+        "residual_b": {
+          "n": 10,
+          "mean": 7.4,
+          "median": 6,
+          "bootstrap_mean_ci_95": {
+            "lower": 2.2,
+            "upper": 12.6,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": 1.5,
+            "upper": 14,
+            "iterations": 10000
+          },
+          "complement_n": 89,
+          "complement_mean": -1.078652,
+          "group_minus_complement_mean": 8.478652,
+          "hedges_g_vs_complement": 0.884733,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": 8.478652,
+            "two_sided_p_value": 0.008699,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 10,
+            "positive": 9,
+            "negative": 1,
+            "zero": 0,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.9,
+            "nonzero_direction_fraction": 0.9
+          }
+        }
+      },
+      "SS": {
+        "positions": [
+          "SS"
+        ],
+        "players": [
+          {
+            "player_id": "91995151",
+            "player": "紅林 弘太郎",
+            "team": "オリックス・バファローズ"
+          },
+          {
+            "player_id": "03105157",
+            "player": "村松 開人",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "63165155",
+            "player": "水野 達稀",
+            "team": "北海道日本ハムファイターズ"
+          },
+          {
+            "player_id": "71275157",
+            "player": "友杉 篤輝",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "71775134",
+            "player": "源田 壮亮",
+            "team": "埼玉西武ライオンズ"
+          },
+          {
+            "player_id": "51255155",
+            "player": "滝澤 夏央",
+            "team": "埼玉西武ライオンズ"
+          },
+          {
+            "player_id": "01705138",
+            "player": "小園 海斗",
+            "team": "広島東洋カープ"
+          },
+          {
+            "player_id": "93395153",
+            "player": "矢野 雅哉",
+            "team": "広島東洋カープ"
+          },
+          {
+            "player_id": "51455151",
+            "player": "長岡 秀樹",
+            "team": "東京ヤクルトスワローズ"
+          },
+          {
+            "player_id": "41845132",
+            "player": "村林 一輝",
+            "team": "東北楽天ゴールデンイーグルス"
+          },
+          {
+            "player_id": "81585134",
+            "player": "京田 陽太",
+            "team": "横浜DeNAベイスターズ"
+          },
+          {
+            "player_id": "31335131",
+            "player": "今宮 健太",
+            "team": "福岡ソフトバンクホークス"
+          },
+          {
+            "player_id": "31535138",
+            "player": "小幡 竜平",
+            "team": "阪神タイガース"
+          },
+          {
+            "player_id": "31735138",
+            "player": "木浪 聖也",
+            "team": "阪神タイガース"
+          }
+        ],
+        "residual_a": {
+          "n": 14,
+          "mean": -3.5,
+          "median": -5,
+          "bootstrap_mean_ci_95": {
+            "lower": -9.357143,
+            "upper": 2.642857,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -12,
+            "upper": 2,
+            "iterations": 10000
+          },
+          "complement_n": 85,
+          "complement_mean": 0.388235,
+          "group_minus_complement_mean": -3.888235,
+          "hedges_g_vs_complement": -0.384786,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -3.888235,
+            "two_sided_p_value": 0.182682,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 14,
+            "positive": 5,
+            "negative": 9,
+            "zero": 0,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.642857,
+            "nonzero_direction_fraction": 0.642857
+          }
+        },
+        "residual_b": {
+          "n": 14,
+          "mean": -3.5,
+          "median": -5,
+          "bootstrap_mean_ci_95": {
+            "lower": -9.071429,
+            "upper": 2.714286,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -12,
+            "upper": 2,
+            "iterations": 10000
+          },
+          "complement_n": 85,
+          "complement_mean": 0.317647,
+          "group_minus_complement_mean": -3.817647,
+          "hedges_g_vs_complement": -0.38808,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -3.817647,
+            "two_sided_p_value": 0.184482,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 14,
+            "positive": 5,
+            "negative": 9,
+            "zero": 0,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.642857,
+            "nonzero_direction_fraction": 0.642857
+          }
+        }
+      },
+      "LF": {
+        "positions": [
+          "LF"
+        ],
+        "players": [
+          {
+            "player_id": "71475132",
+            "player": "西川 龍馬",
+            "team": "オリックス・バファローズ"
+          },
+          {
+            "player_id": "31835134",
+            "player": "細川 成也",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "31435138",
+            "player": "野村 佑希",
+            "team": "北海道日本ハムファイターズ"
+          },
+          {
+            "player_id": "63065155",
+            "player": "ポランコ",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "91895138",
+            "player": "山口 航輝",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "43745150",
+            "player": "ファビアン",
+            "team": "広島東洋カープ"
+          },
+          {
+            "player_id": "31135133",
+            "player": "秋山 翔吾",
+            "team": "広島東洋カープ"
+          },
+          {
+            "player_id": "53755153",
+            "player": "サンタナ",
+            "team": "東京ヤクルトスワローズ"
+          },
+          {
+            "player_id": "31835133",
+            "player": "柳田 悠岐",
+            "team": "福岡ソフトバンクホークス"
+          },
+          {
+            "player_id": "41745135",
+            "player": "近藤 健介",
+            "team": "福岡ソフトバンクホークス"
+          }
+        ],
+        "residual_a": {
+          "n": 10,
+          "mean": 3.6,
+          "median": 3,
+          "bootstrap_mean_ci_95": {
+            "lower": -2.6025,
+            "upper": 9.5,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -6.5,
+            "upper": 14,
+            "iterations": 10000
+          },
+          "complement_n": 89,
+          "complement_mean": -0.58427,
+          "group_minus_complement_mean": 4.18427,
+          "hedges_g_vs_complement": 0.413566,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": 4.18427,
+            "two_sided_p_value": 0.212879,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 10,
+            "positive": 6,
+            "negative": 4,
+            "zero": 0,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.6,
+            "nonzero_direction_fraction": 0.6
+          }
+        },
+        "residual_b": {
+          "n": 10,
+          "mean": 3.9,
+          "median": 3,
+          "bootstrap_mean_ci_95": {
+            "lower": -2.1,
+            "upper": 9.6,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -5,
+            "upper": 14,
+            "iterations": 10000
+          },
+          "complement_n": 89,
+          "complement_mean": -0.685393,
+          "group_minus_complement_mean": 4.585393,
+          "hedges_g_vs_complement": 0.466473,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": 4.585393,
+            "two_sided_p_value": 0.169983,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 10,
+            "positive": 6,
+            "negative": 3,
+            "zero": 1,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.6,
+            "nonzero_direction_fraction": 0.666667
+          }
+        }
+      },
+      "CF": {
+        "positions": [
+          "CF"
+        ],
+        "players": [
+          {
+            "player_id": "51255138",
+            "player": "中川 圭太",
+            "team": "オリックス・バファローズ"
+          },
+          {
+            "player_id": "51455153",
+            "player": "土田 龍空",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "01305131",
+            "player": "大島 洋平",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "81585151",
+            "player": "岡林 勇希",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "11215151",
+            "player": "髙部 瑛斗",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "91695153",
+            "player": "並木 秀尊",
+            "team": "東京ヤクルトスワローズ"
+          },
+          {
+            "player_id": "51355155",
+            "player": "岩田 幸宏",
+            "team": "東京ヤクルトスワローズ"
+          },
+          {
+            "player_id": "51555155",
+            "player": "梶原 昂希",
+            "team": "横浜DeNAベイスターズ"
+          },
+          {
+            "player_id": "51555151",
+            "player": "蝦名 達夫",
+            "team": "横浜DeNAベイスターズ"
+          },
+          {
+            "player_id": "21925136",
+            "player": "周東 佑京",
+            "team": "福岡ソフトバンクホークス"
+          },
+          {
+            "player_id": "51955159",
+            "player": "佐々木 俊輔",
+            "team": "読売ジャイアンツ"
+          },
+          {
+            "player_id": "21625135",
+            "player": "松本 剛",
+            "team": "読売ジャイアンツ"
+          }
+        ],
+        "residual_a": {
+          "n": 12,
+          "mean": -6,
+          "median": -7,
+          "bootstrap_mean_ci_95": {
+            "lower": -8.583333,
+            "upper": -3.25,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -9.5,
+            "upper": -2,
+            "iterations": 10000
+          },
+          "complement_n": 87,
+          "complement_mean": 0.643678,
+          "group_minus_complement_mean": -6.643678,
+          "hedges_g_vs_complement": -0.667247,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -6.643678,
+            "two_sided_p_value": 0.029997,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 12,
+            "positive": 2,
+            "negative": 9,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.75,
+            "nonzero_direction_fraction": 0.818182
+          }
+        },
+        "residual_b": {
+          "n": 12,
+          "mean": -6,
+          "median": -7,
+          "bootstrap_mean_ci_95": {
+            "lower": -8.583333,
+            "upper": -3.25,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -9.5,
+            "upper": -2,
+            "iterations": 10000
+          },
+          "complement_n": 87,
+          "complement_mean": 0.574713,
+          "group_minus_complement_mean": -6.574713,
+          "hedges_g_vs_complement": -0.678732,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -6.574713,
+            "two_sided_p_value": 0.028897,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 12,
+            "positive": 2,
+            "negative": 9,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.75,
+            "nonzero_direction_fraction": 0.818182
+          }
+        }
+      },
+      "RF": {
+        "positions": [
+          "RF"
+        ],
+        "players": [
+          {
+            "player_id": "51955153",
+            "player": "来田 涼斗",
+            "team": "オリックス・バファローズ"
+          },
+          {
+            "player_id": "93795157",
+            "player": "カリステ",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "91395132",
+            "player": "板山 祐太郎",
+            "team": "中日ドラゴンズ"
+          },
+          {
+            "player_id": "31635138",
+            "player": "藤原 恭大",
+            "team": "千葉ロッテマリーンズ"
+          },
+          {
+            "player_id": "01405130",
+            "player": "野間 峻祥",
+            "team": "広島東洋カープ"
+          },
+          {
+            "player_id": "93195155",
+            "player": "丸山 和郁",
+            "team": "東京ヤクルトスワローズ"
+          },
+          {
+            "player_id": "71975136",
+            "player": "塩見 泰隆",
+            "team": "東京ヤクルトスワローズ"
+          },
+          {
+            "player_id": "33535159",
+            "player": "度会 隆輝",
+            "team": "横浜DeNAベイスターズ"
+          },
+          {
+            "player_id": "73175151",
+            "player": "柳町 達",
+            "team": "福岡ソフトバンクホークス"
+          },
+          {
+            "player_id": "21425116",
+            "player": "丸 佳浩",
+            "team": "読売ジャイアンツ"
+          },
+          {
+            "player_id": "43145157",
+            "player": "森下 翔太",
+            "team": "阪神タイガース"
+          }
+        ],
+        "residual_a": {
+          "n": 11,
+          "mean": -8.454545,
+          "median": -7,
+          "bootstrap_mean_ci_95": {
+            "lower": -12.818182,
+            "upper": -4.363636,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -13,
+            "upper": -2,
+            "iterations": 10000
+          },
+          "complement_n": 88,
+          "complement_mean": 0.875,
+          "group_minus_complement_mean": -9.329545,
+          "hedges_g_vs_complement": -0.956682,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -9.329545,
+            "two_sided_p_value": 0.0034,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 11,
+            "positive": 1,
+            "negative": 10,
+            "zero": 0,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.909091,
+            "nonzero_direction_fraction": 0.909091
+          }
+        },
+        "residual_b": {
+          "n": 11,
+          "mean": -8.363636,
+          "median": -7,
+          "bootstrap_mean_ci_95": {
+            "lower": -12.727273,
+            "upper": -4.363636,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -13,
+            "upper": -2,
+            "iterations": 10000
+          },
+          "complement_n": 88,
+          "complement_mean": 0.795455,
+          "group_minus_complement_mean": -9.159091,
+          "hedges_g_vs_complement": -0.965358,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -9.159091,
+            "two_sided_p_value": 0.0032,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 11,
+            "positive": 1,
+            "negative": 10,
+            "zero": 0,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.909091,
+            "nonzero_direction_fraction": 0.909091
+          }
+        }
+      }
+    },
+    "predefined_groups": {
+      "MIDDLE_PREMIUM": {
+        "positions": [
+          "SS",
+          "CF",
+          "RF"
+        ],
+        "players": [
+          {
+            "player_id": "51255138",
+            "player": "中川 圭太",
+            "team": "オリックス・バファローズ",
+            "position": "CF"
+          },
+          {
+            "player_id": "51955153",
+            "player": "来田 涼斗",
+            "team": "オリックス・バファローズ",
+            "position": "RF"
+          },
+          {
+            "player_id": "91995151",
+            "player": "紅林 弘太郎",
+            "team": "オリックス・バファローズ",
+            "position": "SS"
+          },
+          {
+            "player_id": "93795157",
+            "player": "カリステ",
+            "team": "中日ドラゴンズ",
+            "position": "RF"
+          },
+          {
+            "player_id": "51455153",
+            "player": "土田 龍空",
+            "team": "中日ドラゴンズ",
+            "position": "CF"
+          },
+          {
+            "player_id": "01305131",
+            "player": "大島 洋平",
+            "team": "中日ドラゴンズ",
+            "position": "CF"
+          },
+          {
+            "player_id": "81585151",
+            "player": "岡林 勇希",
+            "team": "中日ドラゴンズ",
+            "position": "CF"
+          },
+          {
+            "player_id": "03105157",
+            "player": "村松 開人",
+            "team": "中日ドラゴンズ",
+            "position": "SS"
+          },
+          {
+            "player_id": "91395132",
+            "player": "板山 祐太郎",
+            "team": "中日ドラゴンズ",
+            "position": "RF"
+          },
+          {
+            "player_id": "63165155",
+            "player": "水野 達稀",
+            "team": "北海道日本ハムファイターズ",
+            "position": "SS"
+          },
+          {
+            "player_id": "71275157",
+            "player": "友杉 篤輝",
+            "team": "千葉ロッテマリーンズ",
+            "position": "SS"
+          },
+          {
+            "player_id": "31635138",
+            "player": "藤原 恭大",
+            "team": "千葉ロッテマリーンズ",
+            "position": "RF"
+          },
+          {
+            "player_id": "11215151",
+            "player": "髙部 瑛斗",
+            "team": "千葉ロッテマリーンズ",
+            "position": "CF"
+          },
+          {
+            "player_id": "71775134",
+            "player": "源田 壮亮",
+            "team": "埼玉西武ライオンズ",
+            "position": "SS"
+          },
+          {
+            "player_id": "51255155",
+            "player": "滝澤 夏央",
+            "team": "埼玉西武ライオンズ",
+            "position": "SS"
+          },
+          {
+            "player_id": "01705138",
+            "player": "小園 海斗",
+            "team": "広島東洋カープ",
+            "position": "SS"
+          },
+          {
+            "player_id": "93395153",
+            "player": "矢野 雅哉",
+            "team": "広島東洋カープ",
+            "position": "SS"
+          },
+          {
+            "player_id": "01405130",
+            "player": "野間 峻祥",
+            "team": "広島東洋カープ",
+            "position": "RF"
+          },
+          {
+            "player_id": "91695153",
+            "player": "並木 秀尊",
+            "team": "東京ヤクルトスワローズ",
+            "position": "CF"
+          },
+          {
+            "player_id": "93195155",
+            "player": "丸山 和郁",
+            "team": "東京ヤクルトスワローズ",
+            "position": "RF"
+          },
+          {
+            "player_id": "71975136",
+            "player": "塩見 泰隆",
+            "team": "東京ヤクルトスワローズ",
+            "position": "RF"
+          },
+          {
+            "player_id": "51355155",
+            "player": "岩田 幸宏",
+            "team": "東京ヤクルトスワローズ",
+            "position": "CF"
+          },
+          {
+            "player_id": "51455151",
+            "player": "長岡 秀樹",
+            "team": "東京ヤクルトスワローズ",
+            "position": "SS"
+          },
+          {
+            "player_id": "41845132",
+            "player": "村林 一輝",
+            "team": "東北楽天ゴールデンイーグルス",
+            "position": "SS"
+          },
+          {
+            "player_id": "81585134",
+            "player": "京田 陽太",
+            "team": "横浜DeNAベイスターズ",
+            "position": "SS"
+          },
+          {
+            "player_id": "33535159",
+            "player": "度会 隆輝",
+            "team": "横浜DeNAベイスターズ",
+            "position": "RF"
+          },
+          {
+            "player_id": "51555155",
+            "player": "梶原 昂希",
+            "team": "横浜DeNAベイスターズ",
+            "position": "CF"
+          },
+          {
+            "player_id": "51555151",
+            "player": "蝦名 達夫",
+            "team": "横浜DeNAベイスターズ",
+            "position": "CF"
+          },
+          {
+            "player_id": "31335131",
+            "player": "今宮 健太",
+            "team": "福岡ソフトバンクホークス",
+            "position": "SS"
+          },
+          {
+            "player_id": "21925136",
+            "player": "周東 佑京",
+            "team": "福岡ソフトバンクホークス",
+            "position": "CF"
+          },
+          {
+            "player_id": "73175151",
+            "player": "柳町 達",
+            "team": "福岡ソフトバンクホークス",
+            "position": "RF"
+          },
+          {
+            "player_id": "21425116",
+            "player": "丸 佳浩",
+            "team": "読売ジャイアンツ",
+            "position": "RF"
+          },
+          {
+            "player_id": "51955159",
+            "player": "佐々木 俊輔",
+            "team": "読売ジャイアンツ",
+            "position": "CF"
+          },
+          {
+            "player_id": "21625135",
+            "player": "松本 剛",
+            "team": "読売ジャイアンツ",
+            "position": "CF"
+          },
+          {
+            "player_id": "31535138",
+            "player": "小幡 竜平",
+            "team": "阪神タイガース",
+            "position": "SS"
+          },
+          {
+            "player_id": "31735138",
+            "player": "木浪 聖也",
+            "team": "阪神タイガース",
+            "position": "SS"
+          },
+          {
+            "player_id": "43145157",
+            "player": "森下 翔太",
+            "team": "阪神タイガース",
+            "position": "RF"
+          }
+        ],
+        "residual_a": {
+          "n": 37,
+          "mean": -5.783784,
+          "median": -7,
+          "bootstrap_mean_ci_95": {
+            "lower": -8.513514,
+            "upper": -2.864865,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -11,
+            "upper": -3,
+            "iterations": 10000
+          },
+          "complement_n": 62,
+          "complement_mean": 3.193548,
+          "group_minus_complement_mean": -8.977332,
+          "hedges_g_vs_complement": -0.976845,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -8.977332,
+            "two_sided_p_value": 0.0001,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 37,
+            "positive": 8,
+            "negative": 28,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.756757,
+            "nonzero_direction_fraction": 0.777778
+          }
+        },
+        "residual_b": {
+          "n": 37,
+          "mean": -5.756757,
+          "median": -7,
+          "bootstrap_mean_ci_95": {
+            "lower": -8.486486,
+            "upper": -2.729054,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -11,
+            "upper": -3,
+            "iterations": 10000
+          },
+          "complement_n": 62,
+          "complement_mean": 3.080645,
+          "group_minus_complement_mean": -8.837402,
+          "hedges_g_vs_complement": -0.990176,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -8.837402,
+            "two_sided_p_value": 0.0001,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 37,
+            "positive": 8,
+            "negative": 28,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.756757,
+            "nonzero_direction_fraction": 0.777778
+          }
+        }
+      },
+      "MIDDLE_NEUTRAL": {
+        "positions": [
+          "2B"
+        ],
+        "players": [
+          {
+            "player_id": "91395138",
+            "player": "太田 椋",
+            "team": "オリックス・バファローズ",
+            "position": "2B"
+          },
+          {
+            "player_id": "91495130",
+            "player": "西野 真弘",
+            "team": "オリックス・バファローズ",
+            "position": "2B"
+          },
+          {
+            "player_id": "21025157",
+            "player": "田中 幹也",
+            "team": "中日ドラゴンズ",
+            "position": "2B"
+          },
+          {
+            "player_id": "31435157",
+            "player": "奈良間 大己",
+            "team": "北海道日本ハムファイターズ",
+            "position": "2B"
+          },
+          {
+            "player_id": "11715153",
+            "player": "小川 龍成",
+            "team": "千葉ロッテマリーンズ",
+            "position": "2B"
+          },
+          {
+            "player_id": "41645136",
+            "player": "藤岡 裕大",
+            "team": "千葉ロッテマリーンズ",
+            "position": "2B"
+          },
+          {
+            "player_id": "41245130",
+            "player": "外崎 修汰",
+            "team": "埼玉西武ライオンズ",
+            "position": "2B"
+          },
+          {
+            "player_id": "21125134",
+            "player": "石井 一成",
+            "team": "埼玉西武ライオンズ",
+            "position": "2B"
+          },
+          {
+            "player_id": "61565135",
+            "player": "菊池 涼介",
+            "team": "広島東洋カープ",
+            "position": "2B"
+          },
+          {
+            "player_id": "91695157",
+            "player": "林 琢真",
+            "team": "横浜DeNAベイスターズ",
+            "position": "2B"
+          },
+          {
+            "player_id": "13115153",
+            "player": "牧 秀悟",
+            "team": "横浜DeNAベイスターズ",
+            "position": "2B"
+          },
+          {
+            "player_id": "61465133",
+            "player": "牧原 大成",
+            "team": "福岡ソフトバンクホークス",
+            "position": "2B"
+          },
+          {
+            "player_id": "73375134",
+            "player": "吉川 尚輝",
+            "team": "読売ジャイアンツ",
+            "position": "2B"
+          },
+          {
+            "player_id": "41445153",
+            "player": "中野 拓夢",
+            "team": "阪神タイガース",
+            "position": "2B"
+          }
+        ],
+        "residual_a": {
+          "n": 14,
+          "mean": -2.785714,
+          "median": -2.5,
+          "bootstrap_mean_ci_95": {
+            "lower": -5.428571,
+            "upper": -0.357143,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -6,
+            "upper": 2,
+            "iterations": 10000
+          },
+          "complement_n": 85,
+          "complement_mean": 0.270588,
+          "group_minus_complement_mean": -3.056303,
+          "hedges_g_vs_complement": -0.301385,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -3.056303,
+            "two_sided_p_value": 0.30287,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 14,
+            "positive": 5,
+            "negative": 8,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.571429,
+            "nonzero_direction_fraction": 0.615385
+          }
+        },
+        "residual_b": {
+          "n": 14,
+          "mean": -2.357143,
+          "median": -2.5,
+          "bootstrap_mean_ci_95": {
+            "lower": -4.642857,
+            "upper": -0.142857,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": -6,
+            "upper": 1.5,
+            "iterations": 10000
+          },
+          "complement_n": 85,
+          "complement_mean": 0.129412,
+          "group_minus_complement_mean": -2.486555,
+          "hedges_g_vs_complement": -0.2514,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": -2.486555,
+            "two_sided_p_value": 0.382262,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 14,
+            "positive": 5,
+            "negative": 8,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.571429,
+            "nonzero_direction_fraction": 0.615385
+          }
+        }
+      },
+      "CORNER_CATCHER": {
+        "positions": [
+          "C",
+          "1B",
+          "3B",
+          "LF"
+        ],
+        "players": [
+          {
+            "player_id": "11815130",
+            "player": "宗 佑磨",
+            "team": "オリックス・バファローズ",
+            "position": "3B"
+          },
+          {
+            "player_id": "91495139",
+            "player": "森 友哉",
+            "team": "オリックス・バファローズ",
+            "position": "C"
+          },
+          {
+            "player_id": "41645139",
+            "player": "若月 健矢",
+            "team": "オリックス・バファローズ",
+            "position": "C"
+          },
+          {
+            "player_id": "71475132",
+            "player": "西川 龍馬",
+            "team": "オリックス・バファローズ",
+            "position": "LF"
+          },
+          {
+            "player_id": "31735132",
+            "player": "木下 拓哉",
+            "team": "中日ドラゴンズ",
+            "position": "C"
+          },
+          {
+            "player_id": "91195151",
+            "player": "石川 昂弥",
+            "team": "中日ドラゴンズ",
+            "position": "3B"
+          },
+          {
+            "player_id": "81685157",
+            "player": "福永 裕基",
+            "team": "中日ドラゴンズ",
+            "position": "3B"
+          },
+          {
+            "player_id": "31835134",
+            "player": "細川 成也",
+            "team": "中日ドラゴンズ",
+            "position": "LF"
+          },
+          {
+            "player_id": "91095135",
+            "player": "高橋 周平",
+            "team": "中日ドラゴンズ",
+            "position": "3B"
+          },
+          {
+            "player_id": "41545136",
+            "player": "清宮 幸太郎",
+            "team": "北海道日本ハムファイターズ",
+            "position": "1B"
+          },
+          {
+            "player_id": "51055138",
+            "player": "田宮 裕涼",
+            "team": "北海道日本ハムファイターズ",
+            "position": "C"
+          },
+          {
+            "player_id": "21925151",
+            "player": "郡司 裕也",
+            "team": "北海道日本ハムファイターズ",
+            "position": "3B"
+          },
+          {
+            "player_id": "31435138",
+            "player": "野村 佑希",
+            "team": "北海道日本ハムファイターズ",
+            "position": "LF"
+          },
+          {
+            "player_id": "03505133",
+            "player": "ソト",
+            "team": "千葉ロッテマリーンズ",
+            "position": "1B"
+          },
+          {
+            "player_id": "63065155",
+            "player": "ポランコ",
+            "team": "千葉ロッテマリーンズ",
+            "position": "LF"
+          },
+          {
+            "player_id": "71075151",
+            "player": "佐藤 都志也",
+            "team": "千葉ロッテマリーンズ",
+            "position": "C"
+          },
+          {
+            "player_id": "81885136",
+            "player": "安田 尚憲",
+            "team": "千葉ロッテマリーンズ",
+            "position": "3B"
+          },
+          {
+            "player_id": "91895138",
+            "player": "山口 航輝",
+            "team": "千葉ロッテマリーンズ",
+            "position": "LF"
+          },
+          {
+            "player_id": "11515139",
+            "player": "岡 大海",
+            "team": "千葉ロッテマリーンズ",
+            "position": "1B"
+          },
+          {
+            "player_id": "81785155",
+            "player": "古賀 悠斗",
+            "team": "埼玉西武ライオンズ",
+            "position": "C"
+          },
+          {
+            "player_id": "43745150",
+            "player": "ファビアン",
+            "team": "広島東洋カープ",
+            "position": "LF"
+          },
+          {
+            "player_id": "53955150",
+            "player": "モンテロ",
+            "team": "広島東洋カープ",
+            "position": "1B"
+          },
+          {
+            "player_id": "11915134",
+            "player": "坂倉 将吾",
+            "team": "広島東洋カープ",
+            "position": "1B"
+          },
+          {
+            "player_id": "31135133",
+            "player": "秋山 翔吾",
+            "team": "広島東洋カープ",
+            "position": "LF"
+          },
+          {
+            "player_id": "53755153",
+            "player": "サンタナ",
+            "team": "東京ヤクルトスワローズ",
+            "position": "LF"
+          },
+          {
+            "player_id": "51255118",
+            "player": "中村 悠平",
+            "team": "東京ヤクルトスワローズ",
+            "position": "C"
+          },
+          {
+            "player_id": "01705134",
+            "player": "古賀 優大",
+            "team": "東京ヤクルトスワローズ",
+            "position": "C"
+          },
+          {
+            "player_id": "71375138",
+            "player": "太田 光",
+            "team": "東北楽天ゴールデンイーグルス",
+            "position": "C"
+          },
+          {
+            "player_id": "51155118",
+            "player": "浅村 栄斗",
+            "team": "東北楽天ゴールデンイーグルス",
+            "position": "1B"
+          },
+          {
+            "player_id": "73175138",
+            "player": "渡邊 佳明",
+            "team": "東北楽天ゴールデンイーグルス",
+            "position": "1B"
+          },
+          {
+            "player_id": "81985135",
+            "player": "鈴木 大地",
+            "team": "東北楽天ゴールデンイーグルス",
+            "position": "1B"
+          },
+          {
+            "player_id": "91995134",
+            "player": "佐野 恵太",
+            "team": "横浜DeNAベイスターズ",
+            "position": "1B"
+          },
+          {
+            "player_id": "51455137",
+            "player": "宮﨑 敏郎",
+            "team": "横浜DeNAベイスターズ",
+            "position": "3B"
+          },
+          {
+            "player_id": "23125136",
+            "player": "山本 祐大",
+            "team": "横浜DeNAベイスターズ",
+            "position": "C"
+          },
+          {
+            "player_id": "41945131",
+            "player": "筒香 嘉智",
+            "team": "横浜DeNAベイスターズ",
+            "position": "3B"
+          },
+          {
+            "player_id": "21425139",
+            "player": "山川 穂高",
+            "team": "福岡ソフトバンクホークス",
+            "position": "1B"
+          },
+          {
+            "player_id": "31835133",
+            "player": "柳田 悠岐",
+            "team": "福岡ソフトバンクホークス",
+            "position": "LF"
+          },
+          {
+            "player_id": "01705130",
+            "player": "栗原 陵矢",
+            "team": "福岡ソフトバンクホークス",
+            "position": "3B"
+          },
+          {
+            "player_id": "81885155",
+            "player": "正木 智也",
+            "team": "福岡ソフトバンクホークス",
+            "position": "1B"
+          },
+          {
+            "player_id": "81385151",
+            "player": "海野 隆司",
+            "team": "福岡ソフトバンクホークス",
+            "position": "C"
+          },
+          {
+            "player_id": "41745135",
+            "player": "近藤 健介",
+            "team": "福岡ソフトバンクホークス",
+            "position": "LF"
+          },
+          {
+            "player_id": "21325136",
+            "player": "大城 卓三",
+            "team": "読売ジャイアンツ",
+            "position": "C"
+          },
+          {
+            "player_id": "91595136",
+            "player": "岸田 行倫",
+            "team": "読売ジャイアンツ",
+            "position": "C"
+          },
+          {
+            "player_id": "61065137",
+            "player": "伏見 寅威",
+            "team": "阪神タイガース",
+            "position": "C"
+          },
+          {
+            "player_id": "41045153",
+            "player": "佐藤 輝明",
+            "team": "阪神タイガース",
+            "position": "3B"
+          },
+          {
+            "player_id": "11915132",
+            "player": "坂本 誠志郎",
+            "team": "阪神タイガース",
+            "position": "C"
+          },
+          {
+            "player_id": "21325134",
+            "player": "大山 悠輔",
+            "team": "阪神タイガース",
+            "position": "1B"
+          },
+          {
+            "player_id": "21325139",
+            "player": "梅野 隆太郎",
+            "team": "阪神タイガース",
+            "position": "C"
+          }
+        ],
+        "residual_a": {
+          "n": 48,
+          "mean": 4.9375,
+          "median": 3.5,
+          "bootstrap_mean_ci_95": {
+            "lower": 2.291667,
+            "upper": 7.583333,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": 1,
+            "upper": 9,
+            "iterations": 10000
+          },
+          "complement_n": 51,
+          "complement_mean": -4.960784,
+          "group_minus_complement_mean": 9.898284,
+          "hedges_g_vs_complement": 1.116156,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": 9.898284,
+            "two_sided_p_value": 0.0001,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 48,
+            "positive": 31,
+            "negative": 16,
+            "zero": 1,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.645833,
+            "nonzero_direction_fraction": 0.659574
+          }
+        },
+        "residual_b": {
+          "n": 48,
+          "mean": 4.666667,
+          "median": 3,
+          "bootstrap_mean_ci_95": {
+            "lower": 2.104167,
+            "upper": 7.208333,
+            "iterations": 10000
+          },
+          "bootstrap_median_ci_95": {
+            "lower": 1,
+            "upper": 9,
+            "iterations": 10000
+          },
+          "complement_n": 51,
+          "complement_mean": -4.823529,
+          "group_minus_complement_mean": 9.490196,
+          "hedges_g_vs_complement": 1.093741,
+          "permutation_test_vs_complement": {
+            "observed_group_minus_complement": 9.490196,
+            "two_sided_p_value": 0.0001,
+            "iterations": 10000,
+            "null": "exchangeable player residuals across this group and its complement"
+          },
+          "sign_consistency": {
+            "n": 48,
+            "positive": 31,
+            "negative": 15,
+            "zero": 2,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.645833,
+            "nonzero_direction_fraction": 0.673913
+          }
+        }
+      }
+    }
+  },
+  "matched_speed_analysis": {
+    "group_comparisons": [
+      {
+        "id": "MIDDLE_PREMIUM_MINUS_MIDDLE_NEUTRAL",
+        "left": "MIDDLE_PREMIUM",
+        "right": "MIDDLE_NEUTRAL"
+      },
+      {
+        "id": "MIDDLE_PREMIUM_MINUS_CORNER_CATCHER",
+        "left": "MIDDLE_PREMIUM",
+        "right": "CORNER_CATCHER"
+      },
+      {
+        "id": "MIDDLE_NEUTRAL_MINUS_CORNER_CATCHER",
+        "left": "MIDDLE_NEUTRAL",
+        "right": "CORNER_CATCHER"
+      }
+    ],
+    "speed_thresholds_kmh": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "age_bands": [
+      {
+        "id": "AGE_PLUS_MINUS_2",
+        "maxGap": 2
+      },
+      {
+        "id": "AGE_PLUS_MINUS_4",
+        "maxGap": 4
+      },
+      {
+        "id": "AGE_UNRESTRICTED",
+        "maxGap": null
+      }
+    ],
+    "age_data_status": "NOT_FEASIBLE_FOR_PLUS_MINUS_2_OR_PLUS_MINUS_4_NO_FROZEN_AGE_FIELD",
+    "player_dependence_control": "node/cluster bootstrap of players; dyad means are recomputed using endpoint multiplicity-product weights",
+    "cells": [
+      {
+        "speed_threshold_kmh": 0.1,
+        "age_band": "AGE_PLUS_MINUS_2",
+        "age_max_gap_years": 2,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_MIDDLE_NEUTRAL",
+        "left_group_n": 37,
+        "right_group_n": 14,
+        "n_speed_matched_before_age_filter": 54,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.1,
+        "age_band": "AGE_PLUS_MINUS_2",
+        "age_max_gap_years": 2,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_CORNER_CATCHER",
+        "left_group_n": 37,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 97,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.1,
+        "age_band": "AGE_PLUS_MINUS_2",
+        "age_max_gap_years": 2,
+        "group_comparison": "MIDDLE_NEUTRAL_MINUS_CORNER_CATCHER",
+        "left_group_n": 14,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 32,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.1,
+        "age_band": "AGE_PLUS_MINUS_4",
+        "age_max_gap_years": 4,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_MIDDLE_NEUTRAL",
+        "left_group_n": 37,
+        "right_group_n": 14,
+        "n_speed_matched_before_age_filter": 54,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.1,
+        "age_band": "AGE_PLUS_MINUS_4",
+        "age_max_gap_years": 4,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_CORNER_CATCHER",
+        "left_group_n": 37,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 97,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.1,
+        "age_band": "AGE_PLUS_MINUS_4",
+        "age_max_gap_years": 4,
+        "group_comparison": "MIDDLE_NEUTRAL_MINUS_CORNER_CATCHER",
+        "left_group_n": 14,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 32,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.1,
+        "age_band": "AGE_UNRESTRICTED",
+        "age_max_gap_years": null,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_MIDDLE_NEUTRAL",
+        "left_group_n": 37,
+        "right_group_n": 14,
+        "n_speed_matched_before_age_filter": 54,
+        "n_pairs": 54,
+        "unique_players_in_pairs": 39,
+        "status": "ANALYZED",
+        "residual_a": {
+          "n_pairs": 54,
+          "mean_left_minus_right": -3.351852,
+          "median_left_minus_right": -3.5,
+          "sign_consistency": {
+            "n": 54,
+            "positive": 19,
+            "negative": 34,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.62963,
+            "nonzero_direction_fraction": 0.641509
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -9.107513,
+            "upper": 2.401058,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "residual_b": {
+          "n_pairs": 54,
+          "mean_left_minus_right": -3.518519,
+          "median_left_minus_right": -3.5,
+          "sign_consistency": {
+            "n": 54,
+            "positive": 19,
+            "negative": 34,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.62963,
+            "nonzero_direction_fraction": 0.641509
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -9.153879,
+            "upper": 1.87955,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "powerpro": {
+          "n_pairs": 54,
+          "mean_left_minus_right": 3.111111,
+          "median_left_minus_right": 2.5,
+          "sign_consistency": {
+            "n": 54,
+            "positive": 34,
+            "negative": 19,
+            "zero": 1,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.62963,
+            "nonzero_direction_fraction": 0.641509
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -2.650143,
+            "upper": 8.972335,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.1,
+        "age_band": "AGE_UNRESTRICTED",
+        "age_max_gap_years": null,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_CORNER_CATCHER",
+        "left_group_n": 37,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 97,
+        "n_pairs": 97,
+        "unique_players_in_pairs": 67,
+        "status": "ANALYZED",
+        "residual_a": {
+          "n_pairs": 97,
+          "mean_left_minus_right": -12.072165,
+          "median_left_minus_right": -13,
+          "sign_consistency": {
+            "n": 97,
+            "positive": 13,
+            "negative": 83,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.85567,
+            "nonzero_direction_fraction": 0.864583
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -17.398066,
+            "upper": -6.863861,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "residual_b": {
+          "n_pairs": 97,
+          "mean_left_minus_right": -11.958763,
+          "median_left_minus_right": -13,
+          "sign_consistency": {
+            "n": 97,
+            "positive": 13,
+            "negative": 83,
+            "zero": 1,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.85567,
+            "nonzero_direction_fraction": 0.864583
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -17.135269,
+            "upper": -6.543171,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "powerpro": {
+          "n_pairs": 97,
+          "mean_left_minus_right": 12.072165,
+          "median_left_minus_right": 13,
+          "sign_consistency": {
+            "n": 97,
+            "positive": 83,
+            "negative": 14,
+            "zero": 0,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.85567,
+            "nonzero_direction_fraction": 0.85567
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": 6.885226,
+            "upper": 17.392136,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.1,
+        "age_band": "AGE_UNRESTRICTED",
+        "age_max_gap_years": null,
+        "group_comparison": "MIDDLE_NEUTRAL_MINUS_CORNER_CATCHER",
+        "left_group_n": 14,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 32,
+        "n_pairs": 32,
+        "unique_players_in_pairs": 27,
+        "status": "ANALYZED",
+        "residual_a": {
+          "n_pairs": 32,
+          "mean_left_minus_right": -11.6875,
+          "median_left_minus_right": -13.5,
+          "sign_consistency": {
+            "n": 32,
+            "positive": 7,
+            "negative": 25,
+            "zero": 0,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.78125,
+            "nonzero_direction_fraction": 0.78125
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -20.047899,
+            "upper": -1.726684,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "residual_b": {
+          "n_pairs": 32,
+          "mean_left_minus_right": -9.78125,
+          "median_left_minus_right": -11,
+          "sign_consistency": {
+            "n": 32,
+            "positive": 6,
+            "negative": 24,
+            "zero": 2,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.75,
+            "nonzero_direction_fraction": 0.8
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -16.333333,
+            "upper": -1.147893,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "powerpro": {
+          "n_pairs": 32,
+          "mean_left_minus_right": 11.625,
+          "median_left_minus_right": 13,
+          "sign_consistency": {
+            "n": 32,
+            "positive": 24,
+            "negative": 7,
+            "zero": 1,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.75,
+            "nonzero_direction_fraction": 0.774194
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": 1.821347,
+            "upper": 20.117736,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.2,
+        "age_band": "AGE_PLUS_MINUS_2",
+        "age_max_gap_years": 2,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_MIDDLE_NEUTRAL",
+        "left_group_n": 37,
+        "right_group_n": 14,
+        "n_speed_matched_before_age_filter": 75,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.2,
+        "age_band": "AGE_PLUS_MINUS_2",
+        "age_max_gap_years": 2,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_CORNER_CATCHER",
+        "left_group_n": 37,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 162,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.2,
+        "age_band": "AGE_PLUS_MINUS_2",
+        "age_max_gap_years": 2,
+        "group_comparison": "MIDDLE_NEUTRAL_MINUS_CORNER_CATCHER",
+        "left_group_n": 14,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 55,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.2,
+        "age_band": "AGE_PLUS_MINUS_4",
+        "age_max_gap_years": 4,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_MIDDLE_NEUTRAL",
+        "left_group_n": 37,
+        "right_group_n": 14,
+        "n_speed_matched_before_age_filter": 75,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.2,
+        "age_band": "AGE_PLUS_MINUS_4",
+        "age_max_gap_years": 4,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_CORNER_CATCHER",
+        "left_group_n": 37,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 162,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.2,
+        "age_band": "AGE_PLUS_MINUS_4",
+        "age_max_gap_years": 4,
+        "group_comparison": "MIDDLE_NEUTRAL_MINUS_CORNER_CATCHER",
+        "left_group_n": 14,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 55,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.2,
+        "age_band": "AGE_UNRESTRICTED",
+        "age_max_gap_years": null,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_MIDDLE_NEUTRAL",
+        "left_group_n": 37,
+        "right_group_n": 14,
+        "n_speed_matched_before_age_filter": 75,
+        "n_pairs": 75,
+        "unique_players_in_pairs": 42,
+        "status": "ANALYZED",
+        "residual_a": {
+          "n_pairs": 75,
+          "mean_left_minus_right": -3.586667,
+          "median_left_minus_right": -4,
+          "sign_consistency": {
+            "n": 75,
+            "positive": 24,
+            "negative": 49,
+            "zero": 2,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.653333,
+            "nonzero_direction_fraction": 0.671233
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -8.620091,
+            "upper": 1.456987,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "residual_b": {
+          "n_pairs": 75,
+          "mean_left_minus_right": -3.733333,
+          "median_left_minus_right": -4,
+          "sign_consistency": {
+            "n": 75,
+            "positive": 24,
+            "negative": 49,
+            "zero": 2,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.653333,
+            "nonzero_direction_fraction": 0.671233
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -8.588343,
+            "upper": 1.151016,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "powerpro": {
+          "n_pairs": 75,
+          "mean_left_minus_right": 3.186667,
+          "median_left_minus_right": 3,
+          "sign_consistency": {
+            "n": 75,
+            "positive": 48,
+            "negative": 25,
+            "zero": 2,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.64,
+            "nonzero_direction_fraction": 0.657534
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -1.667123,
+            "upper": 8.03453,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.2,
+        "age_band": "AGE_UNRESTRICTED",
+        "age_max_gap_years": null,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_CORNER_CATCHER",
+        "left_group_n": 37,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 162,
+        "n_pairs": 162,
+        "unique_players_in_pairs": 69,
+        "status": "ANALYZED",
+        "residual_a": {
+          "n_pairs": 162,
+          "mean_left_minus_right": -12.364198,
+          "median_left_minus_right": -13,
+          "sign_consistency": {
+            "n": 162,
+            "positive": 22,
+            "negative": 136,
+            "zero": 4,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.839506,
+            "nonzero_direction_fraction": 0.860759
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -17.271187,
+            "upper": -7.446737,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "residual_b": {
+          "n_pairs": 162,
+          "mean_left_minus_right": -12.012346,
+          "median_left_minus_right": -12.5,
+          "sign_consistency": {
+            "n": 162,
+            "positive": 22,
+            "negative": 137,
+            "zero": 3,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.845679,
+            "nonzero_direction_fraction": 0.861635
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -16.97918,
+            "upper": -7.321254,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "powerpro": {
+          "n_pairs": 162,
+          "mean_left_minus_right": 12.376543,
+          "median_left_minus_right": 13,
+          "sign_consistency": {
+            "n": 162,
+            "positive": 137,
+            "negative": 24,
+            "zero": 1,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.845679,
+            "nonzero_direction_fraction": 0.850932
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": 7.543752,
+            "upper": 17.314557,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.2,
+        "age_band": "AGE_UNRESTRICTED",
+        "age_max_gap_years": null,
+        "group_comparison": "MIDDLE_NEUTRAL_MINUS_CORNER_CATCHER",
+        "left_group_n": 14,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 55,
+        "n_pairs": 55,
+        "unique_players_in_pairs": 34,
+        "status": "ANALYZED",
+        "residual_a": {
+          "n_pairs": 55,
+          "mean_left_minus_right": -10.618182,
+          "median_left_minus_right": -13,
+          "sign_consistency": {
+            "n": 55,
+            "positive": 13,
+            "negative": 42,
+            "zero": 0,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.763636,
+            "nonzero_direction_fraction": 0.763636
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -17.012732,
+            "upper": -3.483714,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "residual_b": {
+          "n_pairs": 55,
+          "mean_left_minus_right": -8.890909,
+          "median_left_minus_right": -11,
+          "sign_consistency": {
+            "n": 55,
+            "positive": 12,
+            "negative": 40,
+            "zero": 3,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.727273,
+            "nonzero_direction_fraction": 0.769231
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -14.48987,
+            "upper": -2.399914,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "powerpro": {
+          "n_pairs": 55,
+          "mean_left_minus_right": 10.690909,
+          "median_left_minus_right": 12,
+          "sign_consistency": {
+            "n": 55,
+            "positive": 42,
+            "negative": 11,
+            "zero": 2,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.763636,
+            "nonzero_direction_fraction": 0.792453
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": 3.48755,
+            "upper": 17.039299,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.3,
+        "age_band": "AGE_PLUS_MINUS_2",
+        "age_max_gap_years": 2,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_MIDDLE_NEUTRAL",
+        "left_group_n": 37,
+        "right_group_n": 14,
+        "n_speed_matched_before_age_filter": 101,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.3,
+        "age_band": "AGE_PLUS_MINUS_2",
+        "age_max_gap_years": 2,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_CORNER_CATCHER",
+        "left_group_n": 37,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 227,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.3,
+        "age_band": "AGE_PLUS_MINUS_2",
+        "age_max_gap_years": 2,
+        "group_comparison": "MIDDLE_NEUTRAL_MINUS_CORNER_CATCHER",
+        "left_group_n": 14,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 80,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.3,
+        "age_band": "AGE_PLUS_MINUS_4",
+        "age_max_gap_years": 4,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_MIDDLE_NEUTRAL",
+        "left_group_n": 37,
+        "right_group_n": 14,
+        "n_speed_matched_before_age_filter": 101,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.3,
+        "age_band": "AGE_PLUS_MINUS_4",
+        "age_max_gap_years": 4,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_CORNER_CATCHER",
+        "left_group_n": 37,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 227,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.3,
+        "age_band": "AGE_PLUS_MINUS_4",
+        "age_max_gap_years": 4,
+        "group_comparison": "MIDDLE_NEUTRAL_MINUS_CORNER_CATCHER",
+        "left_group_n": 14,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 80,
+        "n_pairs": 0,
+        "unique_players_in_pairs": 0,
+        "status": "NOT_FEASIBLE_NO_FROZEN_AGE_FIELD",
+        "residual_a": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "residual_b": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        },
+        "powerpro": {
+          "n_pairs": 0,
+          "mean_left_minus_right": null,
+          "median_left_minus_right": null,
+          "sign_consistency": {
+            "n": 0,
+            "positive": 0,
+            "negative": 0,
+            "zero": 0,
+            "direction": "TIED_OR_ZERO",
+            "dominant_sign_fraction": null,
+            "nonzero_direction_fraction": null
+          },
+          "player_cluster_bootstrap_mean_ci_95": null
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.3,
+        "age_band": "AGE_UNRESTRICTED",
+        "age_max_gap_years": null,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_MIDDLE_NEUTRAL",
+        "left_group_n": 37,
+        "right_group_n": 14,
+        "n_speed_matched_before_age_filter": 101,
+        "n_pairs": 101,
+        "unique_players_in_pairs": 46,
+        "status": "ANALYZED",
+        "residual_a": {
+          "n_pairs": 101,
+          "mean_left_minus_right": -3.861386,
+          "median_left_minus_right": -4,
+          "sign_consistency": {
+            "n": 101,
+            "positive": 31,
+            "negative": 68,
+            "zero": 2,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.673267,
+            "nonzero_direction_fraction": 0.686869
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -8.000495,
+            "upper": 0.25,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "residual_b": {
+          "n_pairs": 101,
+          "mean_left_minus_right": -4.188119,
+          "median_left_minus_right": -5,
+          "sign_consistency": {
+            "n": 101,
+            "positive": 29,
+            "negative": 69,
+            "zero": 3,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.683168,
+            "nonzero_direction_fraction": 0.704082
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -8.08164,
+            "upper": -0.205467,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "powerpro": {
+          "n_pairs": 101,
+          "mean_left_minus_right": 3.386139,
+          "median_left_minus_right": 4,
+          "sign_consistency": {
+            "n": 101,
+            "positive": 68,
+            "negative": 31,
+            "zero": 2,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.673267,
+            "nonzero_direction_fraction": 0.686869
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -0.898065,
+            "upper": 7.300089,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.3,
+        "age_band": "AGE_UNRESTRICTED",
+        "age_max_gap_years": null,
+        "group_comparison": "MIDDLE_PREMIUM_MINUS_CORNER_CATCHER",
+        "left_group_n": 37,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 227,
+        "n_pairs": 227,
+        "unique_players_in_pairs": 69,
+        "status": "ANALYZED",
+        "residual_a": {
+          "n_pairs": 227,
+          "mean_left_minus_right": -12.599119,
+          "median_left_minus_right": -13,
+          "sign_consistency": {
+            "n": 227,
+            "positive": 32,
+            "negative": 189,
+            "zero": 6,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.832599,
+            "nonzero_direction_fraction": 0.855204
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -17.160416,
+            "upper": -7.992161,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "residual_b": {
+          "n_pairs": 227,
+          "mean_left_minus_right": -12.299559,
+          "median_left_minus_right": -13,
+          "sign_consistency": {
+            "n": 227,
+            "positive": 32,
+            "negative": 190,
+            "zero": 5,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.837004,
+            "nonzero_direction_fraction": 0.855856
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -16.729343,
+            "upper": -7.801084,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "powerpro": {
+          "n_pairs": 227,
+          "mean_left_minus_right": 12.867841,
+          "median_left_minus_right": 13,
+          "sign_consistency": {
+            "n": 227,
+            "positive": 194,
+            "negative": 31,
+            "zero": 2,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.854626,
+            "nonzero_direction_fraction": 0.862222
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": 8.290356,
+            "upper": 17.241056,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        }
+      },
+      {
+        "speed_threshold_kmh": 0.3,
+        "age_band": "AGE_UNRESTRICTED",
+        "age_max_gap_years": null,
+        "group_comparison": "MIDDLE_NEUTRAL_MINUS_CORNER_CATCHER",
+        "left_group_n": 14,
+        "right_group_n": 48,
+        "n_speed_matched_before_age_filter": 80,
+        "n_pairs": 80,
+        "unique_players_in_pairs": 42,
+        "status": "ANALYZED",
+        "residual_a": {
+          "n_pairs": 80,
+          "mean_left_minus_right": -10.425,
+          "median_left_minus_right": -12,
+          "sign_consistency": {
+            "n": 80,
+            "positive": 18,
+            "negative": 62,
+            "zero": 0,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.775,
+            "nonzero_direction_fraction": 0.775
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -16.556532,
+            "upper": -3.493602,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "residual_b": {
+          "n_pairs": 80,
+          "mean_left_minus_right": -8.725,
+          "median_left_minus_right": -10.5,
+          "sign_consistency": {
+            "n": 80,
+            "positive": 17,
+            "negative": 59,
+            "zero": 4,
+            "direction": "NEGATIVE",
+            "dominant_sign_fraction": 0.7375,
+            "nonzero_direction_fraction": 0.776316
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": -14.281021,
+            "upper": -2.674508,
+            "iterations": 5000,
+            "successful_replicates": 4999,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        },
+        "powerpro": {
+          "n_pairs": 80,
+          "mean_left_minus_right": 10.4375,
+          "median_left_minus_right": 12,
+          "sign_consistency": {
+            "n": 80,
+            "positive": 61,
+            "negative": 16,
+            "zero": 3,
+            "direction": "POSITIVE",
+            "dominant_sign_fraction": 0.7625,
+            "nonzero_direction_fraction": 0.792208
+          },
+          "player_cluster_bootstrap_mean_ci_95": {
+            "lower": 3.768889,
+            "upper": 16.657874,
+            "iterations": 5000,
+            "successful_replicates": 5000,
+            "resampling_unit": "player; dyad weight is the product of endpoint multiplicities"
+          }
+        }
+      }
+    ]
+  },
+  "negative_findings_and_limits": [
+    "All 99 available residual records have an exact canonical-team external comparison; 名原典彦 is retained as the only unmatched player rather than being force-matched.",
+    "The frozen Stage 1 profile contains no age field. Therefore the plus/minus-2 and plus/minus-4 age analyses are explicitly emitted as not feasible; only age-unrestricted matched-speed analyses are estimable from permitted frozen inputs.",
+    "PowerPro roster display names abbreviate several given names. Canonical identity resolution permits only a unique same-team display-label prefix of the frozen full player name; no edit distance, cross-team matching, or ambiguity resolution is used.",
+    "Position is a current-usage descriptor from npb_usage_2026, not a rating input. Position-correlated residuals do not identify a causal source or justify a position correction.",
+    "Matched-speed pair rows are not independent because players recur across dyads. Reported matched-speed uncertainty uses player-level clustered bootstrap rather than a naive pair bootstrap.",
+    "No PowerPro value was used to set or revise the final freeze, and this script writes no production rating artifact."
+  ],
+  "validation": {
+    "required_99_of_100_boundary_passed": true,
+    "stage1_profile_100_rows_passed": true,
+    "stage1_profile_hash_matches_manifest": true,
+    "required_stage1_v2_profile_sha256_passed": true,
+    "final_freeze_100_rows_passed": true,
+    "residual_a_definition_passed": true,
+    "residual_b_definition_passed": true,
+    "all_requested_position_levels_emitted": true,
+    "all_requested_matched_speed_cells_emitted": true,
+    "rating_changes_made": 0
+  }
+}

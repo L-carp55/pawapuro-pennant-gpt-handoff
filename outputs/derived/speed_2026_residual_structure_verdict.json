@@ -1,0 +1,122 @@
+{
+  "schema_version": "speed-2026-residual-structure-verdict/v2.0.0",
+  "generated_at": "2026-08-10T12:45:00.000Z",
+  "status": "FINAL_QA_PASS",
+  "global_verdict": "NOT_IDENTIFIABLE",
+  "supported_statement": "position-correlated residual supported; causal source not fully identified.",
+  "scope": {
+    "powerpro_role": "read-only external comparator only; never a teacher value or correction target",
+    "final_rating_changes": 0,
+    "sns_video_web_collection_performed": false,
+    "cross_metric_conversion_performed": false,
+    "acceleration_claim_supported": false
+  },
+  "stage1": {
+    "stage": "STAGE_1_V2_FREEZE",
+    "profile_count": 100,
+    "unique_player_ids": 100,
+    "profile_sha256": "18b44bf3cd3e929a86082ce9c5bab196380436b09a3e48a496f6ce5e2d05b53d",
+    "acceleration_subset_sha256": "18585ee18c6c41d6781ef8191a42e5ab245823b2dc260ae9219b64c31b65bf55",
+    "acceleration_evidence_available_rows": 0,
+    "classification_counts": {
+      "TEMPORAL_CONSTRUCT_CONFLICT": 9,
+      "INSUFFICIENT_SHORT_DISTANCE_EVIDENCE": 91
+    },
+    "temporal_boundary": "Known non-2026 comparison measurements are temporal conflicts and cannot enter the usable current-2026 acceleration subset."
+  },
+  "residual_matching": {
+    "target_players": 100,
+    "exact_powerpro_matches": 99,
+    "unmatched_players": 1,
+    "sole_unmatched_player": "\u540d\u539f\u5178\u5f66",
+    "forced_match": false,
+    "residual_a_usable_rows": 99,
+    "residual_b_usable_rows": 99
+  },
+  "position_pattern": {
+    "status": "DESCRIPTIVE_EXTERNAL_PATTERN_ONLY",
+    "matched_speed_cells_emitted": 27,
+    "unrestricted_pair_rows": 883,
+    "age_limited_cells_not_feasible": 18,
+    "group_means": {
+      "MIDDLE_PREMIUM": {
+        "n": 37,
+        "residual_a_mean": -5.784,
+        "residual_b_mean": -5.757
+      },
+      "MIDDLE_NEUTRAL": {
+        "n": 14,
+        "residual_a_mean": -2.786,
+        "residual_b_mean": -2.357
+      },
+      "CORNER_CATCHER": {
+        "n": 48,
+        "residual_a_mean": 4.938,
+        "residual_b_mean": 4.667
+      }
+    },
+    "interpretation": "The position/matched-speed result is robust across the two residual definitions but is not a position correction or causal explanation."
+  },
+  "acceleration": {
+    "status": "NOT_IDENTIFIABLE_NO_USABLE_CURRENT_ACCELERATION_EVIDENCE",
+    "usable_current_evidence_rows": 0,
+    "acceleration_family_models_fit": false,
+    "interpretation": "The result does not show that acceleration is absent; it shows that no comparable current-2026 short-distance evidence is available to identify it."
+  },
+  "hp_to_1b_diagnostic": {
+    "status": "DIAGNOSTIC_CONTEXT_ONLY_NO_RATING_CORRECTION",
+    "raw_correlation_residual_a": 0.269307,
+    "raw_correlation_residual_b": 0.253815,
+    "position_group_controlled_correlation_residual_a": -0.016961,
+    "position_group_controlled_correlation_residual_b": -0.033706,
+    "interpretation": "HP-to-1B is neither an acceleration measure nor a rating input."
+  },
+  "archetype_diagnostic": {
+    "status": "DIAGNOSTIC_ONLY_NONCAUSAL",
+    "exit_velocity_partial_r_squared_residual_a": 0.084127,
+    "exit_velocity_partial_r_squared_residual_b": 0.075541,
+    "interpretation": "The association is not a causal explanation or a rating correction."
+  },
+  "discrepancy": {
+    "abs_residual_gt_10_union": 34,
+    "all_high_discrepancy_players_classified": true,
+    "classification_counts": {
+      "INSUFFICIENT_PHYSICAL_EVIDENCE": 14,
+      "POWERPRO_HIGH_AND_PHYSICAL_SUPPORTS_FASTER": 2,
+      "POWERPRO_HIGH_BUT_PHYSICAL_CONFLICTED": 4,
+      "POWERPRO_HIGH_WITHOUT_PHYSICAL_SUPPORT": 2,
+      "POWERPRO_LOW_AND_PHYSICAL_SUPPORTS_SLOWER": 5,
+      "POWERPRO_LOW_BUT_PHYSICAL_CONFLICTED": 2,
+      "POWERPRO_LOW_WITHOUT_PHYSICAL_SUPPORT": 5
+    }
+  },
+  "sns_queue": {
+    "old_physical_only_source_rows": 19,
+    "v2_rows": 25,
+    "retained_rows": 19,
+    "added_temporal_rows": 6,
+    "removed_rows": 0,
+    "targeted_additional_evidence_needs": 25,
+    "external_game_or_residual_field_read_or_emitted": false
+  },
+  "v1_supersession": {
+    "failure_id": "STAGE1_TEMPORAL_BOUNDARY_QA_FAIL_002",
+    "v1_final_use": "INVALIDATED",
+    "v2_remediation": "Classify all known non-2026 comparison measurements as temporal conflicts, freeze a zero-row usable acceleration subset, and regenerate every Stage 2 artifact from the V2 freeze."
+  },
+  "independent_read_only_qa": {
+    "status": "PASS",
+    "required_checks_passed": 18,
+    "required_checks_failed": 0,
+    "nonblocking_issues": 0
+  },
+  "principal_artifacts": {
+    "audit": "docs/audits/speed_2026_powerpro_residual_structure_audit.md",
+    "stage1_manifest": "outputs/derived/speed_2026_blind_physical_construct_freeze_manifest.json",
+    "position_analysis": "outputs/derived/speed_2026_position_residual_analysis.json",
+    "acceleration_analysis": "outputs/derived/speed_2026_residual_model_comparison.json",
+    "discrepancy_register": "outputs/derived/speed_2026_powerpro_discrepancy_register.json",
+    "integrated_qa": "outputs/derived/speed_2026_residual_structure_qa.json"
+  },
+  "final_rating_changes": 0
+}

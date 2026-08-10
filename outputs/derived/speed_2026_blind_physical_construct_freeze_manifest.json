@@ -1,0 +1,210 @@
+{
+  "schema_version": "speed-2026-stage1-blind-physical-construct-freeze/v2.0.0",
+  "stage": "STAGE_1_V2_FREEZE",
+  "generated_at": "2026-08-10T00:00:02.000Z",
+  "source_commits": {
+    "historical_anchor_bank": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+    "decision_packets": "501f2d6ea638404a71a0026c530ead4cd6567e03",
+    "exposure": "3be42ff62775cf98eec614f9ee733ae06d565bde"
+  },
+  "source_inputs": {
+    "appraisal_policy": {
+      "commit": "648f75670d4b97bccce1efeb3ebbab3a06068347",
+      "path": "CLAUDE.md",
+      "raw_source_sha256": "6e78ca93f818031946aa57f4086a9dd7289d8ce93b0f9818970c44e42b6acaff",
+      "raw_source_bytes": 7688
+    },
+    "appraisal_addendum": {
+      "commit": "648f75670d4b97bccce1efeb3ebbab3a06068347",
+      "path": "docs/satei_handoff/12_APPRAISAL_PRINCIPLES_20260809.md",
+      "raw_source_sha256": "c633248cf26c8c3b975ab52750f56814e1bacb5f223bad216cdb3a777eb25ce7",
+      "raw_source_bytes": 11557
+    },
+    "critical_path": {
+      "commit": "648f75670d4b97bccce1efeb3ebbab3a06068347",
+      "path": "docs/satei_handoff/13_CURRENT_CRITICAL_PATH_20260809.md",
+      "raw_source_sha256": "b0d71880d6b4a1997c4a84ee783518ed5a2f669d26a63cbc434501c198915796",
+      "raw_source_bytes": 9896
+    },
+    "historical_anchor_audit": {
+      "commit": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+      "path": "docs/audits/speed_historical_high_confidence_anchor_bank_2015_2026.md",
+      "raw_source_sha256": "998f89e415a99f1f1a4bebb639ebb7b5701ad5b7e13c64ce76cbecc1fb7af483",
+      "raw_source_bytes": 6670
+    },
+    "historical_measurements": {
+      "commit": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+      "path": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+      "raw_source_sha256": "a9ee33462b0577add21e5e1c8bd8f447791d88e15d8f5f8b38c71112720495bc",
+      "raw_source_bytes": 1035133
+    },
+    "historical_anchor_bank": {
+      "commit": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+      "path": "outputs/derived/speed_high_confidence_anchor_bank_2015_2026.json",
+      "raw_source_sha256": "e1e82e326ad3e6bab0af6443d266d872ebe89932d4badedafb0972f9697036d3",
+      "raw_source_bytes": 365128
+    },
+    "historical_anchor_graph": {
+      "commit": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+      "path": "outputs/derived/speed_high_confidence_anchor_pairwise_graph_2015_2026.json",
+      "raw_source_sha256": "7f1e01ce7d310bb6fc967d5a9bbbb6aa56f95452a908250c2a034b338034442f",
+      "raw_source_bytes": 156788
+    },
+    "anchor_relative_packets": {
+      "commit": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+      "path": "outputs/derived/speed_2026_100_anchor_relative_packets.json",
+      "raw_source_sha256": "d9afb3a71e6b9c0edf299bc66ca7de11aa40f17532e56edcc07610c0da015273",
+      "raw_source_bytes": 1387347
+    },
+    "physical_sns_queue": {
+      "commit": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+      "path": "outputs/derived/speed_2026_100_sns_tiebreak_queue.csv",
+      "raw_source_sha256": "7df77471e394ccc7a1d9a8d516cad5120f37c76d850060774861726221896d98",
+      "raw_source_bytes": 15268
+    },
+    "master_evidence_physical_projection": {
+      "commit": "501f2d6ea638404a71a0026c530ead4cd6567e03",
+      "path": "outputs/derived/speed_2026_100_master_evidence.json",
+      "raw_source_sha256": "99f59978ff6ed603e1178704a00f2239e701aab9bacc013391cee59fb4bd73f2",
+      "raw_source_bytes": 2616422,
+      "sanitized_source_sha256": "274780015e0b38c8827fb393c516c612ef5e9c78814b59971e806af0ea652d6d",
+      "omitted_before_parse": {
+        "_pairwisePhysicalAgreement": 100,
+        "blind_v3": 100,
+        "corroborating_source_urls": 2,
+        "evidence": 100,
+        "evidence_strength": 100,
+        "exposure_confidence": 100,
+        "flags": 100,
+        "global_powerpro_same_date_conflict_registry": 1,
+        "history": 100,
+        "human_judgment_required": 100,
+        "human_review_necessity": 100,
+        "injury_status": 100,
+        "powerpro_history": 1,
+        "powerproHistory": 1,
+        "rating_effect": 100,
+        "reason": 237,
+        "recommended_review_status": 100,
+        "source_artifact_references": 100,
+        "temporal": 100,
+        "the_show_full_attributes": 1,
+        "the_show_speed_history": 1
+      }
+    },
+    "npb_plus_exposure": {
+      "commit": "3be42ff62775cf98eec614f9ee733ae06d565bde",
+      "path": "outputs/derived/npb_plus_sprint_exposure_2026.json",
+      "raw_source_sha256": "282ac82f868d5c787724077e4b45fe5fddcade1eaf5a0a55663869edcfcb3683",
+      "raw_source_bytes": 155324,
+      "sanitized_source_sha256": "234c0fab504f691e5ad78849739ef4fbccb54afe9bd6d085a837c5f5a27af432",
+      "omitted_before_parse": {
+        "pawapuro_2026_speed": 100,
+        "powerpro_values_loaded": 1
+      }
+    }
+  },
+  "excluded_artifacts_to_preserve_blind_barrier": [
+    {
+      "commit": "501f2d6ea638404a71a0026c530ead4cd6567e03",
+      "path": "outputs/derived/speed_2026_100_decision_packets.json",
+      "reason": "Composite packet contains external-QA and provisional appraisal fields; equivalent physical fields are read from the sanitized master-evidence projection."
+    },
+    {
+      "commit": "501f2d6ea638404a71a0026c530ead4cd6567e03",
+      "path": "outputs/derived/speed_2026_anchor_pairwise_graph.json",
+      "reason": "Not needed after the physical-only historical anchor graph and frozen 2026 anchor-relative packets were loaded."
+    },
+    {
+      "commit": "501f2d6ea638404a71a0026c530ead4cd6567e03",
+      "path": "docs/audits/speed_2026_100_decision_packet_audit.md",
+      "reason": "Composite audit may discuss external-QA outputs; Stage 1 uses its cited physical source artifacts directly."
+    },
+    {
+      "commit": "3be42ff62775cf98eec614f9ee733ae06d565bde",
+      "path": "outputs/derived/speed_blind_v3_npbplus_2026.json",
+      "reason": "Contains a blind-rating/T90 projection and is not a raw physical input for this construct audit."
+    },
+    {
+      "commit": "3be42ff62775cf98eec614f9ee733ae06d565bde",
+      "path": "outputs/derived/speed_blind_v3_powerpro_qa_2026.json",
+      "reason": "External game-QA artifact; prohibited until after the Stage 1 freeze."
+    }
+  ],
+  "blind_barrier_proof": {
+    "removal_happened_before_json_parse": true,
+    "raw_source_hash_is_file_level_only": true,
+    "npb_plus_exposure_sensitive_field_rule": "Exclude pawapuro_2026_speed before parsing; do not retain, emit, or derive from its values.",
+    "composite_master_sensitive_key_rule": "Exclude keys matching powerpro|pawapuro|the_show|rating|blind_v3|temporal_candidate and nonphysical composite blocks before parsing.",
+    "parsed_forbidden_key_self_test": "PASS",
+    "output_game_rating_or_residual_self_test": "PASS"
+  },
+  "classification_policy": {
+    "allowed_labels": [
+      "DIRECT_T90_TOP_SPEED_CONFLICT",
+      "INSUFFICIENT_SHORT_DISTANCE_EVIDENCE",
+      "METRIC_CONSTRUCT_CONFLICT",
+      "SHORT_DISTANCE_AND_TOP_SPEED_AGREE",
+      "SHORT_DISTANCE_FASTER_THAN_TOP_SPEED_SIGNAL",
+      "SHORT_DISTANCE_SLOWER_THAN_TOP_SPEED_SIGNAL",
+      "TEMPORAL_CONSTRUCT_CONFLICT"
+    ],
+    "temporal_precedence_rule": "For the current 2026 signal, any comparably relevant direct-T90 or standardized-short-distance measurement explicitly dated other than 2026 is TEMPORAL_CONSTRUCT_CONFLICT.",
+    "unknown_era_rule": "Unknown comparison-measurement era is INSUFFICIENT_SHORT_DISTANCE_EVIDENCE unless an explicitly known non-2026 measurement independently triggers temporal precedence.",
+    "directional_agreement_rule": "Use SHORT_DISTANCE_AND_TOP_SPEED_AGREE only for existing shared-standardized-cohort directional agreement when all comparison-relevant measurements are explicitly 2026.",
+    "directional_conflict_rule": "Use METRIC_CONSTRUCT_CONFLICT only for existing shared-standardized-cohort directional conflict when all comparison-relevant measurements are explicitly 2026.",
+    "fallback_rule": "Use INSUFFICIENT_SHORT_DISTANCE_EVIDENCE where the available physical evidence does not support a direction without a prohibited cross-metric bridge.",
+    "prohibited": [
+      "NO_CROSS_METRIC_PERCENTILE_SUBTRACTION",
+      "NO_50M_TO_T90_CONVERSION",
+      "NO_NPB_PLUS_TO_T90_CONVERSION",
+      "NO_FIXED_AGE_DECAY",
+      "NO_HP_TO_1B_ACCELERATION_INPUT"
+    ]
+  },
+  "coverage": {
+    "profiles": 100,
+    "unique_player_ids": 100,
+    "direct_t90_available": 6,
+    "standardized_short_distance_available": 0,
+    "standardized_30m_available": 0,
+    "standardized_50m_available": 3,
+    "temporal_construct_conflicts": 9,
+    "known_non_2026_comparison_measurements": 9,
+    "unknown_comparison_measurement_eras": 0,
+    "physical_only_sns_queue_current": 25,
+    "physical_only_sns_queue_retained": 19,
+    "physical_only_sns_queue_added": 6,
+    "physical_only_sns_queue_removed": 0,
+    "classification_counts": {
+      "DIRECT_T90_TOP_SPEED_CONFLICT": 0,
+      "INSUFFICIENT_SHORT_DISTANCE_EVIDENCE": 91,
+      "METRIC_CONSTRUCT_CONFLICT": 0,
+      "SHORT_DISTANCE_AND_TOP_SPEED_AGREE": 0,
+      "SHORT_DISTANCE_FASTER_THAN_TOP_SPEED_SIGNAL": 0,
+      "SHORT_DISTANCE_SLOWER_THAN_TOP_SPEED_SIGNAL": 0,
+      "TEMPORAL_CONSTRUCT_CONFLICT": 9
+    }
+  },
+  "v1_supersession": {
+    "record_id": "STAGE1_TEMPORAL_BOUNDARY_QA_FAIL_002",
+    "state": "V1_SUPERSEDED_BY_V2",
+    "finding": "The prior freeze did not enforce the current-signal temporal boundary for explicitly dated non-current comparison evidence.",
+    "remediation": "V2 retains measurement years, assigns known non-2026 comparison evidence to TEMPORAL_CONSTRUCT_CONFLICT, and excludes temporal-conflict rows from the usable acceleration subset.",
+    "affected_artifacts_overwritten_in_place": [
+      "scripts/build_speed_2026_blind_physical_construct_profiles.mjs",
+      "outputs/derived/speed_2026_blind_physical_construct_profiles.json",
+      "outputs/derived/speed_2026_blind_physical_construct_profiles.csv",
+      "outputs/derived/speed_2026_acceleration_evidence_subset.csv",
+      "outputs/derived/speed_2026_blind_physical_construct_freeze_manifest.json",
+      "outputs/derived/speed_2026_blind_physical_construct_stage1_qa.json"
+    ]
+  },
+  "frozen_artifact_sha256": {
+    "scripts/build_speed_2026_blind_physical_construct_profiles.mjs": "f6bc3c4dcf6fd2e47042a9bde55b7f03ba2aed098af5fe3550013a222ae3aacc",
+    "outputs/derived/speed_2026_blind_physical_construct_profiles.json": "18b44bf3cd3e929a86082ce9c5bab196380436b09a3e48a496f6ce5e2d05b53d",
+    "outputs/derived/speed_2026_blind_physical_construct_profiles.csv": "ed6f6a57346d456f4feadfaaf38b07f8f0138d89be20c7774a59ddf4b0f5bd6b",
+    "outputs/derived/speed_2026_acceleration_evidence_subset.csv": "18585ee18c6c41d6781ef8191a42e5ab245823b2dc260ae9219b64c31b65bf55"
+  },
+  "manifest_self_hash_note": "The manifest cannot contain its own final SHA-256 without a circular rewrite. Its final SHA-256 is recorded in the Stage-1-only QA companion."
+}
