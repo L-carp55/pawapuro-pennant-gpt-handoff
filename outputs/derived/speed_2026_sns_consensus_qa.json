@@ -1,0 +1,164 @@
+{
+  "schema_version": "speed-2026-sns-consensus-tiebreak/v1.0.0",
+  "as_of": "2026-08-10",
+  "independent": false,
+  "passed": true,
+  "internal": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "canonical_target_exactly_19",
+        "passed": true,
+        "detail": "consensus=19"
+      },
+      {
+        "name": "canonical_target_matches_queue",
+        "passed": true,
+        "detail": "queue and consensus player sets are identical"
+      },
+      {
+        "name": "minimum_source_requirement_handled",
+        "passed": true,
+        "detail": "all records either meet the strict SNS threshold or retain a constrained exception"
+      },
+      {
+        "name": "no_accepted_reposts",
+        "passed": true,
+        "detail": "accepted=21"
+      },
+      {
+        "name": "no_accepted_syndicated_copies",
+        "passed": true,
+        "detail": "accepted=21"
+      },
+      {
+        "name": "one_accepted_vote_per_player_origin",
+        "passed": true,
+        "detail": "accepted groups=21"
+      },
+      {
+        "name": "no_duplicate_accepted_source_urls",
+        "passed": true,
+        "detail": "accepted urls=21"
+      },
+      {
+        "name": "accepted_sources_are_physical_speed_only",
+        "passed": true,
+        "detail": "accepted=21"
+      },
+      {
+        "name": "no_accepted_game_or_baserunning_construct",
+        "passed": true,
+        "detail": "accepted=21"
+      },
+      {
+        "name": "no_game_rating_input_in_accepted_sources",
+        "passed": true,
+        "detail": "accepted=21"
+      },
+      {
+        "name": "all_source_dates_and_periods_saved",
+        "passed": true,
+        "detail": "sources=52; unavailable day-level dates retain explicit precision"
+      },
+      {
+        "name": "current_and_historical_are_explicit",
+        "passed": true,
+        "detail": "sources=52"
+      },
+      {
+        "name": "type_a_type_b_alignment",
+        "passed": true,
+        "detail": "all 19 cases classified"
+      },
+      {
+        "name": "no_final_speed_rating_generated",
+        "passed": true,
+        "detail": "decision-support output has ordinal constraints only"
+      },
+      {
+        "name": "directional_classifications_match_raw_direction",
+        "passed": true,
+        "detail": "directional decisions are reconciled to raw accepted-source directions"
+      },
+      {
+        "name": "insufficient_not_forced_directional",
+        "passed": true,
+        "detail": "insufficient cases preserve uncertainty"
+      },
+      {
+        "name": "all_urls_preserved",
+        "passed": true,
+        "detail": "sources=52"
+      },
+      {
+        "name": "post_sns_support_100_of_100",
+        "passed": true,
+        "detail": "players=100"
+      },
+      {
+        "name": "post_sns_lane_counts_81_19",
+        "passed": true,
+        "detail": "81 non-SNS and 19 SNS"
+      },
+      {
+        "name": "video_queue_matches_flags",
+        "passed": true,
+        "detail": "video=19"
+      },
+      {
+        "name": "reproducible_input_fingerprints_present",
+        "passed": true,
+        "detail": "all input SHA-256 values computed"
+      }
+    ]
+  },
+  "independent_review": {
+    "status": "PASS",
+    "reviewer": "independent QA agent",
+    "checks": [
+      "canonical 19-player target and 100-player 81+19 integration agree",
+      "岡 大海 and 並木 秀尊 are INSUFFICIENT_SNS_EVIDENCE with video follow-up rather than directional classifications",
+      "accepted ledger excludes baserunning results, same-event material, and unreproducible search-index sources",
+      "林 琢真 alone is METRIC_CONSTRUCT_CONFLICT with two independent accepted sources and a video flag",
+      "unavailable day-level dates remain null with a precision field; no unit conversion or final ability value is present"
+    ],
+    "summary": "Independent review passed after removing outcome-based running claims and the unreproducible Namiki search-index candidate."
+  },
+  "counts": {
+    "canonical_targets": 19,
+    "accepted_raw_sources": 21,
+    "rejected_raw_sources": 31,
+    "accepted_sns_platform_sources": 7,
+    "rejected_sns_platform_sources": 23,
+    "accepted_independent_source_2_or_more": 6,
+    "accepted_independent_source_3_or_more": 3,
+    "accepted_independent_sns_source_2_or_more": 0,
+    "classification_counts": {
+      "INSUFFICIENT_SNS_EVIDENCE": 18,
+      "METRIC_CONSTRUCT_CONFLICT": 1
+    },
+    "video_tiebreak_recommended": 19
+  },
+  "reproducibility": {
+    "inputs": {
+      "packets": {
+        "path": "outputs/derived/speed_2026_100_anchor_relative_packets.json",
+        "sha256": "f2ff79f425731d9817db403a4d107bade2190e1ac18adafc30e39737fdbfe7e7"
+      },
+      "queue": {
+        "path": "outputs/derived/speed_2026_100_sns_tiebreak_queue.csv",
+        "sha256": "fa504e1001c4391611c307d7e1f1506f5d8b37ef7aa8f5f283e412d2c650e204"
+      },
+      "reviewed_evidence": {
+        "path": "data/manual/speed_2026_sns_consensus_reviewed_evidence_20260810.json",
+        "sha256": "cdcfb84e919e432d8bc9fecc9b1f79d48beb7843e7c38645e94a249a76031d32"
+      }
+    },
+    "builder": {
+      "path": "scripts/build_speed_2026_sns_consensus_tiebreak.mjs",
+      "sha256": "55716c5999799f727b8f544f57521be8bd587d16d75b4050a5e6fd6487b07cce"
+    },
+    "deterministic_order": "canonical queue order for player outputs; queue order then URL then author for source records"
+  }
+}

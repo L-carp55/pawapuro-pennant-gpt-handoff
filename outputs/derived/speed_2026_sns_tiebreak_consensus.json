@@ -1,0 +1,1366 @@
+{
+  "schema_version": "speed-2026-sns-consensus-tiebreak/v1.0.0",
+  "as_of": "2026-08-10",
+  "target_scope": {
+    "canonical_queue": "outputs/derived/speed_2026_100_sns_tiebreak_queue.csv",
+    "player_count": 19,
+    "restriction": "No player outside the canonical SNS_TIEBREAK queue is researched or assigned a new consensus."
+  },
+  "source_ledger": {
+    "path_json": "data/normalized/speed_2026_sns_consensus_sources.json",
+    "path_csv": "data/normalized/speed_2026_sns_consensus_sources.csv",
+    "accepted_raw_source_count": 21,
+    "rejected_raw_source_count": 31,
+    "accepted_sns_platform_source_count": 7,
+    "rejected_sns_platform_source_count": 23,
+    "accepted_platform_counts": {
+      "PUBLIC_WEB_POST": 3,
+      "SPORTS_ARTICLE": 14,
+      "X_TWITTER": 3,
+      "YOUTUBE": 1
+    },
+    "accepted_source_class_counts": {
+      "SNS": 7,
+      "SUPPLEMENTAL_SPORTS_ARTICLE": 14
+    },
+    "source_year_counts": {
+      "2018": 1,
+      "2019": 1,
+      "2021": 1,
+      "2022": 2,
+      "2024": 5,
+      "2025": 15,
+      "2026": 27
+    }
+  },
+  "consensus": [
+    {
+      "player": "西野 真弘",
+      "team": "オリックス・バファローズ",
+      "packet_id": "P009",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 31.6,
+      "current_band": "B4_MID_UPPER_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "度会 隆輝",
+          "value": 31.7,
+          "band": "B4_MID_UPPER_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "秋山 翔吾",
+          "value": 31.6,
+          "band": "B4_MID_UPPER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "宗 佑磨",
+            "value": 31.9
+          },
+          {
+            "player": "山口 航輝",
+            "value": 31.9
+          },
+          {
+            "player": "モンテロ",
+            "value": 31.9
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR001",
+        "SNSR002"
+      ],
+      "accepted_source_record_ids": [],
+      "rejected_source_record_ids": [
+        "SNSR001",
+        "SNSR002"
+      ],
+      "accepted_raw_source_count": 0,
+      "rejected_raw_source_count": 2,
+      "accepted_independent_source_count": 0,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "再投稿の一般プロフィールと走塁・バントの候補しか確認できず、現在の純粋な走力を示す独立SNSが最低2件に届かない。",
+      "short_reason": "独立SNSの速度観察不足。",
+      "limitations": "バント後の一塁到達、走塁判断、転載は速度合意に使わない。"
+    },
+    {
+      "player": "カリステ",
+      "team": "中日ドラゴンズ",
+      "packet_id": "P010",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 31.3,
+      "current_band": "B5_MID_LOWER_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "松本 剛",
+          "value": 31.4,
+          "band": "B5_MID_LOWER_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "佐藤 都志也",
+          "value": 31.3,
+          "band": "B5_MID_LOWER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "長岡 秀樹",
+            "value": 31.6
+          },
+          {
+            "player": "牧 秀悟",
+            "value": 31.6
+          },
+          {
+            "player": "小園 海斗",
+            "value": 31.5
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR003",
+        "SNSR004"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR004"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR003"
+      ],
+      "accepted_raw_source_count": 1,
+      "rejected_raw_source_count": 1,
+      "accepted_independent_source_count": 1,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 1,
+        "current": 0,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "2024年の補助記事は速い方向を示すが、2025年SNSは走塁意識・積極性に偏り、物理走速度として独立2件を満たさない。",
+      "short_reason": "SNS最低件数に未達。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "土田 龍空",
+      "team": "中日ドラゴンズ",
+      "packet_id": "P011",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 31.2,
+      "current_band": "B6_LOWER_MID_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "森 友哉",
+          "value": 31.2,
+          "band": "B5_MID_LOWER_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "近藤 健介",
+          "value": 31.2,
+          "band": "B6_LOWER_MID_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "近藤 健介",
+            "value": 31.2
+          },
+          {
+            "player": "西川 龍馬",
+            "value": 31.1
+          },
+          {
+            "player": "ポランコ",
+            "value": 31.1
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR005",
+        "SNSR006",
+        "SNSR007"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR005",
+        "SNSR006"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR007"
+      ],
+      "accepted_raw_source_count": 2,
+      "rejected_raw_source_count": 1,
+      "accepted_independent_source_count": 2,
+      "accepted_independent_sns_source_count": 1,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": true,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 2,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "遅い方向の公開コメントと2021年の補助証言はあるが、現在時点の独立SNSは1件のみで、高校時代の一塁到達は別構成のため使わない。",
+      "short_reason": "現在SNSが1起源のみ。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "大島 洋平",
+      "team": "中日ドラゴンズ",
+      "packet_id": "P012",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 31.7,
+      "current_band": "B4_MID_UPPER_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "太田 椋",
+          "value": 31.7,
+          "band": "B4_MID_UPPER_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "奈良間 大己",
+          "value": 31.7,
+          "band": "B4_MID_UPPER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "宗 佑磨",
+            "value": 31.9
+          },
+          {
+            "player": "山口 航輝",
+            "value": 31.9
+          },
+          {
+            "player": "モンテロ",
+            "value": 31.9
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR008",
+        "SNSR009",
+        "SNSR010"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR010"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR008",
+        "SNSR009"
+      ],
+      "accepted_raw_source_count": 1,
+      "rejected_raw_source_count": 2,
+      "accepted_independent_source_count": 1,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 1,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "2026年の実走観察と補助記事は現行帯と整合するが、独立SNSは1件だけで、速度の最低件数を満たさない。",
+      "short_reason": "SNS最低件数に未達。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "木下 拓哉",
+      "team": "中日ドラゴンズ",
+      "packet_id": "P014",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 29.4,
+      "current_band": "B8_SLOWEST_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "高橋 周平",
+          "value": 29.5,
+          "band": "B8_SLOWEST_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "山川 穂高",
+          "value": 29.4,
+          "band": "B8_SLOWEST_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "海野 隆司",
+            "value": 30.3
+          },
+          {
+            "player": "筒香 嘉智",
+            "value": 30.2
+          },
+          {
+            "player": "坂本 誠志郎",
+            "value": 30.2
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR011",
+        "SNSR012"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR011"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR012"
+      ],
+      "accepted_raw_source_count": 1,
+      "rejected_raw_source_count": 1,
+      "accepted_independent_source_count": 1,
+      "accepted_independent_sns_source_count": 1,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 1,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "2026年の同一走行に対する複数コメントは一つの出来事群として扱うため、独立SNSの最低2起源には届かない。",
+      "short_reason": "同一出来事群のみ。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "友杉 篤輝",
+      "team": "千葉ロッテマリーンズ",
+      "packet_id": "P031",
+      "case_type": "TYPE_B_PHYSICAL_ORDER_CONFLICT",
+      "current_npb_plus_sprint_speed_kmh": 32.7,
+      "current_band": "B2_UPPER_COHORT_OCTILE",
+      "reason_codes": "COHORT_ORDER_CONFLICT_WITH_CURRENT_NPB_ORDINAL",
+      "confirmation_target": "Resolve whether the current NPB+ ordinal and the historical same-cohort physical order can be reconciled without a unit conversion.",
+      "decision_hypothesis": "Historical 50m and current in-game NPB+ may reflect different eras or measurement constructs; do not force a numerical bridge.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "郡司 裕也",
+          "value": 32.7,
+          "band": "B2_UPPER_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "中川 圭太",
+          "value": 32.6,
+          "band": "B2_UPPER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "福永 裕基",
+            "value": 33
+          },
+          {
+            "player": "藤原 恭大",
+            "value": 33
+          },
+          {
+            "player": "滝澤 夏央",
+            "value": 33
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR013",
+        "SNSR014",
+        "SNSR015"
+      ],
+      "accepted_source_record_ids": [],
+      "rejected_source_record_ids": [
+        "SNSR013",
+        "SNSR014",
+        "SNSR015"
+      ],
+      "accepted_raw_source_count": 0,
+      "rejected_raw_source_count": 3,
+      "accepted_independent_source_count": 0,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "2026年の一具体例は現行帯と整合するが、同日の同一映像に集中している。歴史的測定と現NPB+の相対順を方向的に解消する独立SNSはない。",
+      "short_reason": "同一映像以外のSNS不足。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "岡 大海",
+      "team": "千葉ロッテマリーンズ",
+      "packet_id": "P035",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 32.6,
+      "current_band": "B2_UPPER_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "中川 圭太",
+          "value": 32.6,
+          "band": "B2_UPPER_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "石井 一成",
+          "value": 32.6,
+          "band": "B2_UPPER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "福永 裕基",
+            "value": 33
+          },
+          {
+            "player": "藤原 恭大",
+            "value": 33
+          },
+          {
+            "player": "滝澤 夏央",
+            "value": 33
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR016",
+        "SNSR017",
+        "SNSR018"
+      ],
+      "accepted_source_record_ids": [],
+      "rejected_source_record_ids": [
+        "SNSR016",
+        "SNSR017",
+        "SNSR018"
+      ],
+      "accepted_raw_source_count": 0,
+      "rejected_raw_source_count": 3,
+      "accepted_independent_source_count": 0,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "確認できた公式投稿はホームイン又はランニング本塁打の走塁結果であり、守備・走塁文脈から純粋な走力を分離できない。有効な独立SNS速度観察は残らない。",
+      "short_reason": "走塁結果を除外するとSNS根拠なし。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "藤岡 裕大",
+      "team": "千葉ロッテマリーンズ",
+      "packet_id": "P037",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 30.8,
+      "current_band": "B6_LOWER_MID_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "山本 祐大",
+          "value": 31,
+          "band": "B6_LOWER_MID_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "サンタナ",
+          "value": 30.8,
+          "band": "B6_LOWER_MID_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "土田 龍空",
+            "value": 31.2
+          },
+          {
+            "player": "近藤 健介",
+            "value": 31.2
+          },
+          {
+            "player": "西川 龍馬",
+            "value": 31.1
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR019",
+        "SNSR020"
+      ],
+      "accepted_source_record_ids": [],
+      "rejected_source_record_ids": [
+        "SNSR019",
+        "SNSR020"
+      ],
+      "accepted_raw_source_count": 0,
+      "rejected_raw_source_count": 2,
+      "accepted_independent_source_count": 0,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "2024年から2026年の純粋な走力を示すSNS観察を確認できない。古い短距離プロフィールや故障情報から現在の速さを推定しない。",
+      "short_reason": "有効な現在SNSなし。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "外崎 修汰",
+      "team": "埼玉西武ライオンズ",
+      "packet_id": "P040",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 32.3,
+      "current_band": "B3_UPPER_MID_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "丸山 和郁",
+          "value": 32.4,
+          "band": "B3_UPPER_MID_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "塩見 泰隆",
+          "value": 32.3,
+          "band": "B3_UPPER_MID_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "岡林 勇希",
+            "value": 32.5
+          },
+          {
+            "player": "吉川 尚輝",
+            "value": 32.5
+          },
+          {
+            "player": "来田 涼斗",
+            "value": 32.4
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR021",
+        "SNSR022"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR021"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR022"
+      ],
+      "accepted_raw_source_count": 1,
+      "rejected_raw_source_count": 1,
+      "accepted_independent_source_count": 1,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 0,
+        "mixed": 1,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "widen uncertainty",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "2026年のコーチ証言は過去比の低下と速い初動を併記するが、独立SNSは0件で、術後の現在直線走を確認できない。",
+      "short_reason": "SNS不足と時点の混在。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "矢野 雅哉",
+      "team": "広島東洋カープ",
+      "packet_id": "P049",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 30.7,
+      "current_band": "B6_LOWER_MID_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "若月 健矢",
+          "value": 30.7,
+          "band": "B6_LOWER_MID_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "石川 昂弥",
+          "value": 30.6,
+          "band": "B6_LOWER_MID_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "土田 龍空",
+            "value": 31.2
+          },
+          {
+            "player": "近藤 健介",
+            "value": 31.2
+          },
+          {
+            "player": "西川 龍馬",
+            "value": 31.1
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR023",
+        "SNSR024",
+        "SNSR025"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR024"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR023",
+        "SNSR025"
+      ],
+      "accepted_raw_source_count": 1,
+      "rejected_raw_source_count": 2,
+      "accepted_independent_source_count": 1,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 1,
+        "current": 0,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "widen uncertainty",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "2024年の走行描写と2025年の補助紹介は速い方向だが、独立SNSは1件で、2026年の現在走力を確定できない。",
+      "short_reason": "速い方向だがSNS1件。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "野間 峻祥",
+      "team": "広島東洋カープ",
+      "packet_id": "P052",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 31.7,
+      "current_band": "B4_MID_UPPER_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "野村 佑希",
+          "value": 31.7,
+          "band": "B4_MID_UPPER_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "度会 隆輝",
+          "value": 31.7,
+          "band": "B4_MID_UPPER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "宗 佑磨",
+            "value": 31.9
+          },
+          {
+            "player": "山口 航輝",
+            "value": 31.9
+          },
+          {
+            "player": "モンテロ",
+            "value": 31.9
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR026",
+        "SNSR027",
+        "SNSR028",
+        "SNSR029"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR027",
+        "SNSR028",
+        "SNSR029"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR026"
+      ],
+      "accepted_raw_source_count": 3,
+      "rejected_raw_source_count": 1,
+      "accepted_independent_source_count": 3,
+      "accepted_independent_sns_source_count": 1,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": true,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 3,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "独立した3起源は速い方向で整合するが、SNSは1件のみで、現行帯の変更又は細順位を制約するには足りない。",
+      "short_reason": "補助記事はあるがSNS1件。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "並木 秀尊",
+      "team": "東京ヤクルトスワローズ",
+      "packet_id": "P054",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 33.8,
+      "current_band": "B1_FASTEST_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "村林 一輝",
+          "value": 34.5,
+          "band": "B1_FASTEST_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "名原 典彦",
+          "value": 33.7,
+          "band": "B1_FASTEST_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "周東 佑京",
+            "value": 35
+          },
+          {
+            "player": "村林 一輝",
+            "value": 34.5
+          },
+          {
+            "player": "名原 典彦",
+            "value": 33.7
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR030",
+        "SNSR031",
+        "SNSR032",
+        "SNSR033",
+        "SNSR034"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR031",
+        "SNSR032",
+        "SNSR033"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR030",
+        "SNSR034"
+      ],
+      "accepted_raw_source_count": 3,
+      "rejected_raw_source_count": 2,
+      "accepted_independent_source_count": 3,
+      "accepted_independent_sns_source_count": 1,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": true,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 3,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "直接確認できるSNSは1件。2票目は原投稿・文脈・日付を再確認できない検索索引であるため、補助記事が同方向でもSNS最低件数を満たさない。",
+      "short_reason": "再現不能な検索索引を除外。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "中村 悠平",
+      "team": "東京ヤクルトスワローズ",
+      "packet_id": "P055",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 30.4,
+      "current_band": "B7_LOWER_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "森下 翔太",
+          "value": 30.5,
+          "band": "B7_LOWER_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "今宮 健太",
+          "value": 30.4,
+          "band": "B7_LOWER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "古賀 悠斗",
+            "value": 30.6
+          },
+          {
+            "player": "坂倉 将吾",
+            "value": 30.6
+          },
+          {
+            "player": "佐野 恵太",
+            "value": 30.6
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR035",
+        "SNSR036"
+      ],
+      "accepted_source_record_ids": [],
+      "rejected_source_record_ids": [
+        "SNSR035",
+        "SNSR036"
+      ],
+      "accepted_raw_source_count": 0,
+      "rejected_raw_source_count": 2,
+      "accepted_independent_source_count": 0,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "2024年から2026年に本人の加速又は直線走を直接観察した有効SNSを回収できない。古い自己評価と他選手の速度記述は使わない。",
+      "short_reason": "対象本人の有効SNSなし。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "塩見 泰隆",
+      "team": "東京ヤクルトスワローズ",
+      "packet_id": "P058",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 32.3,
+      "current_band": "B3_UPPER_MID_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "外崎 修汰",
+          "value": 32.3,
+          "band": "B3_UPPER_MID_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "古賀 優大",
+          "value": 32.1,
+          "band": "B3_UPPER_MID_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "岡林 勇希",
+            "value": 32.5
+          },
+          {
+            "player": "吉川 尚輝",
+            "value": 32.5
+          },
+          {
+            "player": "来田 涼斗",
+            "value": 32.4
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR037",
+        "SNSR038"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR037"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR038"
+      ],
+      "accepted_raw_source_count": 1,
+      "rejected_raw_source_count": 1,
+      "accepted_independent_source_count": 1,
+      "accepted_independent_sns_source_count": 1,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 1,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "現在も速いという公開投稿は1件あるが、復帰後の加速・直線走を独立して確認するSNSが不足する。故障や総合活躍予測は速度の代替にしない。",
+      "short_reason": "復帰後のSNS速度観察不足。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "鈴木 大地",
+      "team": "東北楽天ゴールデンイーグルス",
+      "packet_id": "P065",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 29,
+      "current_band": "B8_SLOWEST_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "伏見 寅威",
+          "value": 29.1,
+          "band": "B8_SLOWEST_COHORT_OCTILE"
+        },
+        "slower": null,
+        "same_band": [
+          {
+            "player": "海野 隆司",
+            "value": 30.3
+          },
+          {
+            "player": "筒香 嘉智",
+            "value": 30.2
+          },
+          {
+            "player": "坂本 誠志郎",
+            "value": 30.2
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR039",
+        "SNSR040",
+        "SNSR041"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR040",
+        "SNSR041"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR039"
+      ],
+      "accepted_raw_source_count": 2,
+      "rejected_raw_source_count": 1,
+      "accepted_independent_source_count": 2,
+      "accepted_independent_sns_source_count": 1,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": true,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 2,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "現行帯と整合する遅い方向のSNSと単発記事はあるが、独立SNSは1件で、単一事象を平常速度へ一般化しない。",
+      "short_reason": "SNS1件で単発事象のみ。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "林 琢真",
+      "team": "横浜DeNAベイスターズ",
+      "packet_id": "P071",
+      "case_type": "TYPE_B_PHYSICAL_ORDER_CONFLICT",
+      "current_npb_plus_sprint_speed_kmh": 32,
+      "current_band": "B3_UPPER_MID_COHORT_OCTILE",
+      "reason_codes": "COHORT_ORDER_CONFLICT_WITH_CURRENT_NPB_ORDINAL",
+      "confirmation_target": "Resolve whether the current NPB+ ordinal and the historical same-cohort physical order can be reconciled without a unit conversion.",
+      "decision_hypothesis": "Historical 50m and current in-game NPB+ may reflect different eras or measurement constructs; do not force a numerical bridge.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "板山 祐太郎",
+          "value": 32,
+          "band": "B3_UPPER_MID_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "宗 佑磨",
+          "value": 31.9,
+          "band": "B4_MID_UPPER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "岡林 勇希",
+            "value": 32.5
+          },
+          {
+            "player": "吉川 尚輝",
+            "value": 32.5
+          },
+          {
+            "player": "来田 涼斗",
+            "value": 32.4
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR042",
+        "SNSR043",
+        "SNSR044"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR042",
+        "SNSR043"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR044"
+      ],
+      "accepted_raw_source_count": 2,
+      "rejected_raw_source_count": 1,
+      "accepted_independent_source_count": 2,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": true,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 1,
+        "slower": 0,
+        "mixed": 1,
+        "not_directional": 0
+      },
+      "consensus_classification": "METRIC_CONSTRUCT_CONFLICT",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "2025年の現在の俊足評価と2022年の短距離記録は、現NPB+順序とは別の構成を示す。距離・時点・測定構成を数値変換せず、映像確認へ残す。",
+      "short_reason": "歴史的短距離値と現順位は別構成。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "梶原 昂希",
+      "team": "横浜DeNAベイスターズ",
+      "packet_id": "P072",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 33.4,
+      "current_band": "B1_FASTEST_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "小川 龍成",
+          "value": 33.4,
+          "band": "B1_FASTEST_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "福永 裕基",
+          "value": 33,
+          "band": "B2_UPPER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "周東 佑京",
+            "value": 35
+          },
+          {
+            "player": "村林 一輝",
+            "value": 34.5
+          },
+          {
+            "player": "並木 秀尊",
+            "value": 33.8
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR045",
+        "SNSR046",
+        "SNSR047",
+        "SNSR048"
+      ],
+      "accepted_source_record_ids": [
+        "SNSR046",
+        "SNSR047",
+        "SNSR048"
+      ],
+      "rejected_source_record_ids": [
+        "SNSR045"
+      ],
+      "accepted_raw_source_count": 3,
+      "rejected_raw_source_count": 1,
+      "accepted_independent_source_count": 3,
+      "accepted_independent_sns_source_count": 1,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": true,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 3,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "2024年から2025年のSNS1件と補助記事は速い方向で一致するが、独立SNSが2件に達しない。短距離値は別指標に変換しない。",
+      "short_reason": "SNS1件で現行最速帯を確定しない。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "丸 佳浩",
+      "team": "読売ジャイアンツ",
+      "packet_id": "P086",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 31.4,
+      "current_band": "B5_MID_LOWER_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "蝦名 達夫",
+          "value": 31.4,
+          "band": "B5_MID_LOWER_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "松本 剛",
+          "value": 31.4,
+          "band": "B5_MID_LOWER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "長岡 秀樹",
+            "value": 31.6
+          },
+          {
+            "player": "牧 秀悟",
+            "value": 31.6
+          },
+          {
+            "player": "小園 海斗",
+            "value": 31.5
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR049",
+        "SNSR050"
+      ],
+      "accepted_source_record_ids": [],
+      "rejected_source_record_ids": [
+        "SNSR049",
+        "SNSR050"
+      ],
+      "accepted_raw_source_count": 0,
+      "rejected_raw_source_count": 2,
+      "accepted_independent_source_count": 0,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "走行結果や痛みの候補はあるが、2024年から2026年の純粋な身体速度を直接示す独立SNS又は補助観察を確認できない。",
+      "short_reason": "有効な身体速度根拠なし。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    },
+    {
+      "player": "梅野 隆太郎",
+      "team": "阪神タイガース",
+      "packet_id": "P099",
+      "case_type": "TYPE_A_CURRENT_SAMPLE_INSTABILITY",
+      "current_npb_plus_sprint_speed_kmh": 30.6,
+      "current_band": "B7_LOWER_COHORT_OCTILE",
+      "reason_codes": "SOURCE_PA_UNDER_100_AND_QUALIFIED_RUN_COUNT_NOT_PUBLISHED",
+      "confirmation_target": "Obtain a second independent current-season speed observation or published NPB+ sample/qualified-run count.",
+      "decision_hypothesis": "The public current NPB+ rank may be unstable because PA is under 100 and run-count metadata are not published.",
+      "comparison_anchors": {
+        "faster": {
+          "player": "佐野 恵太",
+          "value": 30.6,
+          "band": "B7_LOWER_COHORT_OCTILE"
+        },
+        "slower": {
+          "player": "太田 光",
+          "value": 30.5,
+          "band": "B7_LOWER_COHORT_OCTILE"
+        },
+        "same_band": [
+          {
+            "player": "古賀 悠斗",
+            "value": 30.6
+          },
+          {
+            "player": "坂倉 将吾",
+            "value": 30.6
+          },
+          {
+            "player": "佐野 恵太",
+            "value": 30.6
+          }
+        ]
+      },
+      "recommended_period": "2026 regular season; retain source date and measurement definition with every check",
+      "minimum_independent_source_count": 2,
+      "all_source_record_ids": [
+        "SNSR051",
+        "SNSR052"
+      ],
+      "accepted_source_record_ids": [],
+      "rejected_source_record_ids": [
+        "SNSR051",
+        "SNSR052"
+      ],
+      "accepted_raw_source_count": 0,
+      "rejected_raw_source_count": 2,
+      "accepted_independent_source_count": 0,
+      "accepted_independent_sns_source_count": 0,
+      "strict_sns_minimum_met": false,
+      "full_source_minimum_met": false,
+      "source_evidence_status": "INSUFFICIENT_SNS_EVIDENCE",
+      "direction_counts": {
+        "faster": 0,
+        "current": 0,
+        "slower": 0,
+        "mixed": 0,
+        "not_directional": 0
+      },
+      "consensus_classification": "INSUFFICIENT_SNS_EVIDENCE",
+      "decision_constraint": "still unresolved",
+      "video_tiebreak_recommended": true,
+      "weighted_evidence_reason": "走り込みや他選手の俊足に関する候補はあるが、梅野本人の現在の加速又は直線走を示す有効SNSを確認できない。",
+      "short_reason": "対象本人の有効SNSなし。",
+      "limitations": "SNS and public-web collection is directional evidence only. It is not a numerical speed conversion or a final game ability value."
+    }
+  ]
+}
