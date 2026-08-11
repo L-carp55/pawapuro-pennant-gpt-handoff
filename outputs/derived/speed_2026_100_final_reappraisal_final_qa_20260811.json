@@ -1,0 +1,62 @@
+{
+  "schema_version": "speed-2026-100-final-reappraisal-final-qa/v1.0.0",
+  "as_of": "2026-08-11",
+  "stage": "STAGE_2_POST_FREEZE_EXTERNAL_QA_AND_GATE",
+  "status": "PASS",
+  "required_check_count": 12,
+  "passed_check_count": 12,
+  "checks": [
+    {
+      "name": "blind_freeze_sha_precedes_external_qa",
+      "passed": true
+    },
+    {
+      "name": "freeze_file_hashes_unchanged",
+      "passed": true
+    },
+    {
+      "name": "stage2_rating_changes_zero",
+      "passed": true
+    },
+    {
+      "name": "powerpro_exact_match_only",
+      "passed": true
+    },
+    {
+      "name": "nahara_not_forced",
+      "passed": true
+    },
+    {
+      "name": "the_show_not_teacher",
+      "passed": true
+    },
+    {
+      "name": "legacy_gate_superseded",
+      "passed": true
+    },
+    {
+      "name": "new_gate_lists_all_steps",
+      "passed": true
+    },
+    {
+      "name": "uncertainty_not_misclassified_as_incomplete",
+      "passed": true
+    },
+    {
+      "name": "no_new_research_scope",
+      "passed": true
+    },
+    {
+      "name": "reproducible_build",
+      "passed": true
+    },
+    {
+      "name": "final_chat_only_knowledge_zero",
+      "passed": true
+    }
+  ],
+  "blind_final_freeze_sha": "7b82bb2030bf94f40d5983618f6e7362d8f2a06b",
+  "stage2_build_head": "7b82bb2030bf94f40d5983618f6e7362d8f2a06b",
+  "deterministic_command": "node scripts/build_speed_2026_final_reappraisal_external_qa.mjs",
+  "final_chat_only_knowledge": 0
+}
