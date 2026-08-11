@@ -1,0 +1,149 @@
+{
+  "schema_version": "speed-2026-video-tiebreak-qa/v1.0.0",
+  "as_of": "2026-08-11",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "canonical_17_only",
+      "pass": true,
+      "detail": "No source player is outside the canonical 17."
+    },
+    {
+      "id": "target_17_of_17",
+      "pass": true,
+      "detail": "Each canonical target has one final result."
+    },
+    {
+      "id": "actual_video_url_saved",
+      "pass": true,
+      "detail": "Every source record stores an exact URL and video ID."
+    },
+    {
+      "id": "same_play_repost_dedup",
+      "pass": true,
+      "detail": "No exact video ID is counted twice."
+    },
+    {
+      "id": "edited_or_slow_motion_only_rejection",
+      "pass": true,
+      "detail": "Edited/montage candidates are retained with rejection reasons rather than upgraded."
+    },
+    {
+      "id": "normal_speed_verification",
+      "pass": true,
+      "detail": "No accepted ordinal-use source lacks normal-speed confirmation."
+    },
+    {
+      "id": "effort_uncertainty_retained",
+      "pass": true,
+      "detail": "Uncertain effort is explicitly preserved."
+    },
+    {
+      "id": "swing_to_run_not_pure",
+      "pass": true,
+      "detail": "Transition-contaminated observations are not usable pure-running evidence."
+    },
+    {
+      "id": "stolen_base_technique_excluded",
+      "pass": true,
+      "detail": "Technique-contaminated observations are not usable."
+    },
+    {
+      "id": "baserunning_judgment_excluded",
+      "pass": true,
+      "detail": "Route/turn/judgment contamination is not treated as physical direction."
+    },
+    {
+      "id": "fielding_range_excluded",
+      "pass": true,
+      "detail": "Defensive range clips are excluded."
+    },
+    {
+      "id": "powerpro_residual_unused",
+      "pass": true,
+      "detail": "Video overlays carry an explicit no-PowerPro-residual flag."
+    },
+    {
+      "id": "position_prior_unused",
+      "pass": true,
+      "detail": "No result derives a conclusion from fielding position."
+    },
+    {
+      "id": "no_video_numeric_output",
+      "pass": true,
+      "detail": "No video-derived speed number is emitted."
+    },
+    {
+      "id": "no_fixed_age_decay",
+      "pass": true,
+      "detail": "No age-decay field or calculation exists in this build."
+    },
+    {
+      "id": "current_historical_separation",
+      "pass": true,
+      "detail": "Historical context is not converted into a current video conclusion."
+    },
+    {
+      "id": "one_video_not_strong",
+      "pass": true,
+      "detail": "No one-video or zero-video result is STRONG."
+    },
+    {
+      "id": "unresolved_not_forced",
+      "pass": true,
+      "detail": "All unresolved players remain unresolved."
+    },
+    {
+      "id": "final_numeric_rating_absent",
+      "pass": true,
+      "detail": "No final game rating is generated."
+    },
+    {
+      "id": "reproducible_integration",
+      "pass": true,
+      "detail": "The builder consumes only listed checked-in inputs and writes deterministic outputs."
+    },
+    {
+      "id": "final_chat_only_knowledge_zero",
+      "pass": true,
+      "detail": "Every source is stored in a checked-in manual or normalized artifact."
+    }
+  ],
+  "counts": {
+    "target_players": 17,
+    "videos_discovered": 32,
+    "accepted_video_sources": 1,
+    "rejected_video_sources": 31,
+    "usable_video_sources": 0,
+    "exact_video_id_duplicate_records": 0,
+    "remaining_unresolved": 17
+  },
+  "reproducibility": {
+    "builder": "scripts/build_speed_2026_final_video_tiebreak.mjs",
+    "inputs": {
+      "queue": "outputs/derived/speed_2026_final_video_tiebreak_queue.csv",
+      "preVideo": "outputs/derived/speed_2026_100_pre_video_decision_support.json",
+      "conflict": "data/manual/speed_2026_video_tiebreak_conflict_research_20260811.json",
+      "temporal": "data/manual/speed_2026_video_tiebreak_temporal_research_20260811.json",
+      "currentA": "data/manual/speed_2026_video_tiebreak_current_a_research_20260811.json",
+      "currentB": "data/manual/speed_2026_video_tiebreak_current_b_research_20260811.json",
+      "independentQa": "data/manual/speed_2026_video_tiebreak_independent_qa_20260811.json"
+    },
+    "input_sha256": {
+      "queue": "e3b748fc44e8b51042d2d4799bec0f01036ea357b8da635f19027b7f0bd08d10",
+      "preVideo": "02b52ae117493cf7532fd42df63b6b77c260d93b698220f1628418a03a73b5e2",
+      "conflict": "6f01b436db0a11c7094e5605b31c1614061073ee778287475e381e3d832169f6",
+      "temporal": "4052dedf359a0514a124138bd47f35e9e4068a378ed961d5639fe5029d5bcdd6",
+      "currentA": "284a3b35371527fa5400e86732d5fad620320e17981b447e34f2c5ee4a157794",
+      "currentB": "1f49c7945047e5c232ff7a9a35b6d5e72ac45deb173af0d43a003277b326da14",
+      "independentQa": "3bc21cb70fcf1666b6f7075dd8fae6e5fb23bfcc13e98a0bb316d6a8817cab17"
+    }
+  },
+  "independent_qa": {
+    "path": "data/manual/speed_2026_video_tiebreak_independent_qa_20260811.json",
+    "status": "PASS",
+    "required_check_count": 21,
+    "passed_check_count": 21,
+    "limitation": "The QA environment could not re-download four sampled YouTube URLs because of a retrieval-side error. This does not establish deletion or inaccessibility; the PASS is based on stored exact ID/URL integrity and the saved source-body review records."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "review_type": "independent_read_only_qa",
+  "reviewed_at": "2026-08-11T00:00:00+09:00",
+  "reviewer": "Independent QA Agent",
+  "status": "PASS",
+  "required_check_count": 21,
+  "passed_check_count": 21,
+  "findings": {
+    "canonical_scope": "17 players only; each has exactly one final result.",
+    "source_integrity": "32 video candidates retain exact IDs and URLs. Exact-video, same-play, same-game/event, and same-origin duplicate counts are zero.",
+    "acceptance_boundary": "The one accepted source is the normal-speed, context-only 奈良間大己 observation; usable pure ordinal sources remain zero.",
+    "conclusion_boundary": "All 17 remain VIDEO_INCONCLUSIVE. No strong conclusion, video-derived numeric measure, or numeric game rating is present.",
+    "construct_exclusions": "Contaminated baserunning, stolen-base technique, fielding, batter-to-first transition, position priors, and edited imagery are not used as ordinal evidence.",
+    "baseline_integration": "The 100-player baseline player array matches the pre-video artifact; only overlays change from 25 to 42.",
+    "reproducibility": "All six listed input hashes match. Re-running the builder exited successfully and left all eight final output SHA-256 values unchanged."
+  },
+  "limitation": "The QA environment could not re-download four sampled YouTube URLs because of a retrieval-side error. This does not establish deletion or inaccessibility; the PASS is based on stored exact ID/URL integrity and the saved source-body review records."
+}
