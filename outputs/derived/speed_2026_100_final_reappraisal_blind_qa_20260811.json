@@ -1,0 +1,118 @@
+{
+  "schema_version": "speed-2026-100-final-reappraisal-blind-qa/v1.0.0",
+  "as_of": "2026-08-11",
+  "stage": "STAGE_1_BLIND_FINAL_FREEZE",
+  "status": "PASS",
+  "required_check_count": 21,
+  "passed_check_count": 21,
+  "checks": [
+    {
+      "name": "exactly_100_players",
+      "passed": true
+    },
+    {
+      "name": "exactly_100_unique_target_identities",
+      "passed": true
+    },
+    {
+      "name": "nahara_retained",
+      "passed": true
+    },
+    {
+      "name": "no_invented_id",
+      "passed": true
+    },
+    {
+      "name": "powerpro_not_read_or_used_stage1",
+      "passed": true
+    },
+    {
+      "name": "powerpro_fields_absent_from_final_rows",
+      "passed": true
+    },
+    {
+      "name": "game_rating_not_used",
+      "passed": true
+    },
+    {
+      "name": "no_30m_or_50m_to_t90_conversion",
+      "passed": true
+    },
+    {
+      "name": "no_fixed_age_decay",
+      "passed": true
+    },
+    {
+      "name": "no_pa_adjustment",
+      "passed": true
+    },
+    {
+      "name": "no_stealing_or_baserunning_judgment",
+      "passed": true
+    },
+    {
+      "name": "no_video_numeric_generation",
+      "passed": true
+    },
+    {
+      "name": "no_sns_numeric_generation",
+      "passed": true
+    },
+    {
+      "name": "current_historical_separated",
+      "passed": true
+    },
+    {
+      "name": "tsutsugo_t90_provenance_correction_preserved",
+      "passed": true
+    },
+    {
+      "name": "montero_recent_t90_precedence",
+      "passed": true
+    },
+    {
+      "name": "video_inconclusive_not_forced_directional",
+      "passed": true
+    },
+    {
+      "name": "all_100_have_short_rationale",
+      "passed": true
+    },
+    {
+      "name": "unchanged_rows_are_explicit_decisions",
+      "passed": true
+    },
+    {
+      "name": "reproducible_build_inputs_hashed",
+      "passed": true
+    },
+    {
+      "name": "final_chat_only_knowledge_zero",
+      "passed": true
+    }
+  ],
+  "isolation_receipt": {
+    "allowed_input_paths": [
+      "outputs/derived/speed_2026_100_decision_packets.json",
+      "outputs/derived/speed_2026_100_master_evidence.json",
+      "outputs/derived/speed_2026_100_post_video_decision_support.json",
+      "outputs/derived/speed_high_confidence_anchor_bank_2015_2026.json",
+      "outputs/derived/speed_high_confidence_anchor_pairwise_graph_2015_2026.json",
+      "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json",
+      "outputs/derived/speed_2026_final_targeted_evidence_packets.json",
+      "outputs/derived/speed_2026_video_tiebreak_results.json"
+    ],
+    "prohibited_stage1_inputs_not_opened": [
+      "PowerPro 2026 ability values",
+      "PowerPro residuals and discrepancy registers",
+      "speed_2026_100_post_freeze_powerpro_qa_20260810.json",
+      "speed_blind_v3_powerpro_qa_2026.json",
+      "PowerPro position residual analysis",
+      "other-game consistency or difference data"
+    ],
+    "output_player_record_forbidden_key_scan": "PASS",
+    "external_game_teacher_used": false,
+    "final_chat_only_knowledge": 0
+  },
+  "deterministic_command": "node scripts/build_speed_2026_final_reappraisal_freeze.mjs"
+}

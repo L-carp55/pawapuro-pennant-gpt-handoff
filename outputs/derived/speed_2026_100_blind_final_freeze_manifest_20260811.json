@@ -1,0 +1,124 @@
+{
+  "schema_version": "speed-2026-100-blind-final-freeze-manifest/v1.0.0",
+  "as_of": "2026-08-11",
+  "stage": "STAGE_1_BLIND_FINAL_FREEZE",
+  "status": "READY_FOR_BLIND_FREEZE_COMMIT",
+  "blind_final_freeze_sha": null,
+  "source_commits": {
+    "decision_packets": "501f2d6ea638404a71a0026c530ead4cd6567e03",
+    "historical_anchor_bank": "dcf8637f4e94ae51af3bd8f9a99927bfb37bdef3",
+    "grok_x_sns": "063f0013b2dc044d71c9cec6ed6209978805d2f5",
+    "targeted_physical_rescue": "9f664bfadd03fdbb8f3bc31790193abfd8de0f94",
+    "final_video_tiebreak_base": "50a28cc77c7c71a8d3101990555165ebb0428d36",
+    "blind_v3_scale_reference": "94a26e7160a879ea0e13f4ddb91d4fdadc7c04e9"
+  },
+  "stage1_isolation": {
+    "powerpro_not_read": true,
+    "powerpro_fields_absent_from_final_rows": true,
+    "the_show_not_used": true,
+    "no_post_freeze_external_qa_read_before_commit": true
+  },
+  "final_row_count": 100,
+  "rating_distribution": {
+    "42": 1,
+    "43": 1,
+    "44": 1,
+    "46": 3,
+    "47": 1,
+    "48": 1,
+    "51": 1,
+    "52": 2,
+    "53": 2,
+    "54": 3,
+    "55": 2,
+    "56": 4,
+    "57": 8,
+    "58": 2,
+    "60": 1,
+    "61": 4,
+    "62": 3,
+    "63": 3,
+    "64": 4,
+    "65": 2,
+    "66": 11,
+    "67": 1,
+    "68": 2,
+    "69": 2,
+    "70": 3,
+    "72": 2,
+    "73": 3,
+    "74": 2,
+    "75": 6,
+    "76": 1,
+    "77": 2,
+    "78": 4,
+    "82": 4,
+    "83": 4,
+    "84": 1,
+    "85": 1,
+    "92": 1,
+    "96": 1
+  },
+  "confidence_counts": {
+    "LOW": 7,
+    "LOW_MEDIUM": 87,
+    "MEDIUM": 6
+  },
+  "decision_class_counts": {
+    "AFFIRMED_CURRENT_ORDINAL_WITH_HISTORICAL_DIRECT_CONTEXT": 5,
+    "AFFIRMED_CURRENT_ORDINAL_WITH_SNS_SUPPORT": 5,
+    "AFFIRMED_CURRENT_ORDINAL_WITH_UNRESOLVED_TARGETED_GAP": 8,
+    "REANCHORED_TO_RECENT_DIRECT_T90": 1,
+    "SAME_SCALE_ORDINAL_FALLBACK_FOR_MISSING_BLIND_BASELINE": 1,
+    "UNCHANGED_AFTER_FULL_REAPPRAISAL": 74,
+    "UNCHANGED_AFTER_FULL_REAPPRAISAL_CONFLICT_BAND_WIDENED": 2,
+    "UNCHANGED_AFTER_FULL_REAPPRAISAL_MIXED_BAND_WIDENED": 2,
+    "UNCHANGED_AFTER_FULL_REAPPRAISAL_TEMPORAL_CONSTRAINT": 2
+  },
+  "point_changes_vs_prior_provisional": {
+    "compared_rows": 99,
+    "changed_player_count": 1,
+    "unchanged_count": 98,
+    "no_prior_baseline_count": 1,
+    "mean_absolute_change_compared_rows": 0.162,
+    "largest_moves": [
+      {
+        "player": "モンテロ",
+        "prior_provisional_rounded_rating": 68,
+        "final_rating": 52,
+        "change": -16,
+        "reason_category": "RECENT_DIRECT_T90_PRECEDENCE"
+      }
+    ],
+    "no_prior_baseline_rows": [
+      {
+        "player": "名原 典彦",
+        "final_rating": 84,
+        "reason_category": "SAME_SCALE_CURRENT_ORDINAL_INTERPOLATION_SOURCE_ID_NULL"
+      }
+    ]
+  },
+  "qa": {
+    "internal": {
+      "path": "outputs/derived/speed_2026_100_final_reappraisal_blind_qa_20260811.json",
+      "status": "PASS",
+      "passed_check_count": 21,
+      "required_check_count": 21
+    },
+    "independent": {
+      "path": "data/manual/speed_2026_final_reappraisal_blind_independent_qa_20260811.json",
+      "status": "PASS",
+      "passed_check_count": 21,
+      "required_check_count": 21
+    }
+  },
+  "files_sha256": {
+    "finalCsv": "a27f9557fb1b3f75e3d10779c6a03354a06b778e11554c46d37398fbd2515de4",
+    "finalJson": "5be59ad824b164bc78d7a6c873b07a2df0b0d789d0291eade0c768bb1f50063d",
+    "audit": "7e1334be25198a887c0f3b4df1c0f564d927a9de3ca4c0967a2ea39c83fa296a",
+    "internalQa": "f46f21eaaba438e35f9b3e4af1b6e8def998572e10835d802e6157b8ebdb5867",
+    "builder": "b3a18ece1a72ef52372eb34758ea12b4cf07ce8f4dce3eb01394a259f97678be",
+    "finalizer": "ccc728afc5d35bc42626ce1fd08099a037f0023e1dc14494768d826f59385527"
+  },
+  "finalization_rule": "This manifest is committed and pushed before any PowerPro or other external QA file is opened."
+}

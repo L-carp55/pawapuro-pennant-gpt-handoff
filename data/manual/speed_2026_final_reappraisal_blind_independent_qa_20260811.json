@@ -1,0 +1,155 @@
+{
+  "schema_version": "speed-2026-final-reappraisal-blind-independent-qa/v1.0.0",
+  "as_of": "2026-08-11",
+  "stage": "STAGE_1_BLIND_FINAL_FREEZE",
+  "status": "PASS",
+  "required_check_count": 21,
+  "passed_check_count": 21,
+  "independence_boundary": {
+    "permitted_inputs_reviewed": [
+      "outputs/derived/speed_2026_100_final_reappraisal_freeze_20260811.json",
+      "outputs/derived/speed_2026_100_final_reappraisal_freeze_20260811.csv",
+      "docs/audits/speed_2026_100_final_reappraisal_freeze_20260811.md",
+      "outputs/derived/speed_2026_100_final_reappraisal_blind_qa_20260811.json",
+      "outputs/derived/speed_2026_100_post_video_decision_support.json",
+      "outputs/derived/speed_2026_100_decision_packets.json (non-game fields only)",
+      "outputs/derived/speed_2026_final_targeted_evidence_packets.json",
+      "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json",
+      "outputs/derived/speed_2026_video_tiebreak_results.json",
+      "scripts/build_speed_2026_final_reappraisal_freeze.mjs"
+    ],
+    "forbidden_input_files_opened": [],
+    "new_external_research_performed": false,
+    "powerpro_or_other_game_value_inspected": false,
+    "decision_packet_fields_inspected": [
+      "player",
+      "player_id",
+      "sprint_speed",
+      "blind_v3_baseline",
+      "evidence_tier"
+    ]
+  },
+  "checks": [
+    {
+      "name": "exactly_100_final_rows",
+      "passed": true,
+      "evidence": "Final JSON has 100 player rows; CSV has 100 data rows."
+    },
+    {
+      "name": "unique_target_identities",
+      "passed": true,
+      "evidence": "Normalized final player identities are 100/100 unique; CSV identities are also 100/100 unique."
+    },
+    {
+      "name": "nahara_preserved_with_null_id",
+      "passed": true,
+      "evidence": "The sole null-ID row is 名原 典彦; final player_id remains null and the explicit no-baseline ordinal-fallback derivation is recorded."
+    },
+    {
+      "name": "no_invented_player_ids",
+      "passed": true,
+      "evidence": "All 100 final player_id and sprint_kmh values exactly join to the 100 permitted decision-packet rows; there are zero mismatches."
+    },
+    {
+      "name": "stage1_forbidden_input_non_use_verifiable",
+      "passed": true,
+      "evidence": "Static closed-reader trace has exactly eight readJson(inputs.*) bindings and zero literal JSON-path reads; none is a prohibited Stage 1 game/residual/discrepancy input. Independent QA opened none of those files."
+    },
+    {
+      "name": "forbidden_powerpro_fields_absent_from_final_records",
+      "passed": true,
+      "evidence": "Recursive final-record key scan found zero keys matching powerpro, prospi, the show, or game_rating."
+    },
+    {
+      "name": "no_external_game_input_used",
+      "passed": true,
+      "evidence": "The closed reader list contains no external-game data path. The approved packet blind_v3_baseline is used only as the pre-existing blind scale reference, not as a game-data input."
+    },
+    {
+      "name": "no_30m_or_50m_to_t90_conversion",
+      "passed": true,
+      "evidence": "Builder review found direct-T90 scaling only for the current direct measurement path; 50m appears only as historical context/conflict text and an explicit no-carry-forward statement. NPB+ is retained as same-scale ordinal information."
+    },
+    {
+      "name": "no_fixed_age_decay",
+      "passed": true,
+      "evidence": "All 100 final rows set uses_fixed_age_decay=false; builder has no age input and documents no fixed age decay."
+    },
+    {
+      "name": "no_pa_adjustment",
+      "passed": true,
+      "evidence": "All 100 final rows set uses_pa_adjustment=false; no PA input is read."
+    },
+    {
+      "name": "stealing_and_baserunning_constructs_excluded",
+      "passed": true,
+      "evidence": "Final method_boundary explicitly excludes stealing technique, lead/start judgment, baserunning judgment, swing-to-run transition, infield-hit result, triples, fielding range, and position prior."
+    },
+    {
+      "name": "no_numeric_video_generation",
+      "passed": true,
+      "evidence": "All 100 final rows set uses_video_numeric_adjustment=false. The 17 permitted video records are all VIDEO_INCONCLUSIVE with usable_current_full_effort_play_count=0, and all classifications join exactly."
+    },
+    {
+      "name": "no_numeric_sns_generation",
+      "passed": true,
+      "evidence": "All 100 final rows set uses_sns_numeric_adjustment=false. Static builder review uses SNS combined_classification and strict_sns_requirement_met only, with no SNS numeric/rating/score/value field reference."
+    },
+    {
+      "name": "current_and_historical_evidence_separated",
+      "passed": true,
+      "evidence": "Final method_boundary states dated historical context is not automatically carried forward; temporal_status and metric_conflict explicitly distinguish the 2024 current-window direct T90 from historical context."
+    },
+    {
+      "name": "tsutsugo_provenance_correction_preserved_as_context_only",
+      "passed": true,
+      "evidence": "筒香 嘉智 is recorded as HISTORICAL_DIRECT_T90_2022_PROVENANCE_CORRECTED_CONTEXT_ONLY with no cross-metric averaging."
+    },
+    {
+      "name": "montero_recent_direct_t90_precedence",
+      "passed": true,
+      "evidence": "モンテロ is the unique RECENT_DIRECT_T90_2024 row: targeted evidence confirms current T90FT_SECONDS=4.2, final_rating=52, and rating_derivation=RECENT_DIRECT_T90_SCALE."
+    },
+    {
+      "name": "all_17_video_results_inconclusive_not_directionized",
+      "passed": true,
+      "evidence": "Video result rows=17, all VIDEO_INCONCLUSIVE, all usable current full-effort count=0, final inconclusive count=17, and join mismatches=0."
+    },
+    {
+      "name": "all_100_rows_have_rationales",
+      "passed": true,
+      "evidence": "100/100 final short_rationale values are non-empty."
+    },
+    {
+      "name": "unchanged_rows_are_explicit_decisions",
+      "passed": true,
+      "evidence": "Change summary records 98 unchanged rows, one recent-direct-T90 change, and one no-prior-baseline row; every final row has a non-empty decision_class."
+    },
+    {
+      "name": "reproducible_double_build_core_hashes",
+      "passed": true,
+      "evidence": "Two builder reruns were byte-identical to the pre-run state for final CSV, final JSON, audit, manifest, and internal QA."
+    },
+    {
+      "name": "final_chat_only_knowledge_zero",
+      "passed": true,
+      "evidence": "Static reader trace has only the declared repository inputs and no chat/environment data source; final source_inputs hashes all declared inputs."
+    }
+  ],
+  "reproducibility": {
+    "command": "node scripts/build_speed_2026_final_reappraisal_freeze.mjs",
+    "pre_run_equals_first_run": true,
+    "first_run_equals_second_run": true,
+    "core_sha256": {
+      "outputs/derived/speed_2026_100_final_reappraisal_freeze_20260811.csv": "a27f9557fb1b3f75e3d10779c6a03354a06b778e11554c46d37398fbd2515de4",
+      "outputs/derived/speed_2026_100_final_reappraisal_freeze_20260811.json": "5be59ad824b164bc78d7a6c873b07a2df0b0d789d0291eade0c768bb1f50063d",
+      "docs/audits/speed_2026_100_final_reappraisal_freeze_20260811.md": "527b83adc28dff3e01337ffffa267cccf8d686aaf4f01c815ae671e05fcb3aca",
+      "outputs/derived/speed_2026_100_blind_final_freeze_manifest_20260811.json": "cb0d256f3d2100d4607c9246786b3bce0f48dee15340659e1268b59f86ccb229",
+      "outputs/derived/speed_2026_100_final_reappraisal_blind_qa_20260811.json": "f46f21eaaba438e35f9b3e4af1b6e8def998572e10835d802e6157b8ebdb5867"
+    }
+  },
+  "limitations": [
+    "Forbidden-input non-use is verified from the closed reader list, static builder trace, and this QA agent's access boundary; it is not an operating-system-wide historical file-access audit.",
+    "This independent QA did not appraise the substantive correctness of any external physical measurement beyond the permitted artifacts; it verified Stage 1 boundary, provenance routing, and deterministic integration."
+  ]
+}
