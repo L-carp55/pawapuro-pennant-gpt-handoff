@@ -1,0 +1,28 @@
+item,category,gpt_status,claude_verdict,reason,evidence,action
+2026 NPB 100人 roster / NPB+ speed,data,done,RETAIN,基礎台帳として妥当,codex/npb-sprint-exposure-audit,再利用
+100人 physical evidence ledger (459件),data,done,RETAIN,収集と出典管理は妥当,codex/speed-physical-evidence-full,再利用
+measurement-date resolution (15解決/20未解決),data,partial,RETAIN,未解決を未解決のまま残したのが正しい,codex/speed-measurement-date-resolution,再利用
+exposure audit (qualified run count非公開),data,done,RETAIN,negative findingとして価値あり,codex/npb-sprint-exposure-audit,再利用
+PowerPro 2015-2026 long panel (23206観測/2972ID/58版),data,done,RETAIN,stale検出の材料として必須,codex/pawapuro-speed-history-panel,stale detectorへ転用
+The Show 2021-2026 collection,data,done,RETAIN,将来の橋渡し材料,codex/mlb-the-show-speed-history,保留
+The Show temporal rescue = INSUFFICIENT,analysis,done,RETAIN,negative findingとして妥当,ab5adbfee,結論維持
+Grok-X SNS (191候補/41採用),data,done,RETAIN,順位制約の材料として有効,codex/speed-2026-grok-x-sns-rescue,順位制約に限定して再利用
+個別物理証拠(モンテロ2024 T90 4.20 ほか),data,done,RETAIN,最重要の実測,codex/speed-2026-final-targeted-evidence-rescue,再利用
+video tie-break 17/17 INCONCLUSIVE,analysis,done,RETAIN,取得経路の限界という再解釈が正しい,50a28cc77,再挑戦は費用対効果低
+blind final freeze (100人),output,done,FIX,実用最終査定でない。既存モデルをcontrolに置いた比較が無い,7b82bb203,物理ベンチマークとして保存。性能主張に使わない
+PowerPro QA (MAE 7.758 / r 0.776),validation,done,FIX,比較対象が自分の前版のみ。既存モデル較正後RMSE 10.94と同水準,1db37ed11,negative findingとして記録
+pairwise anchor 154本,method,done,FIX,physical corroborated 2本のみ。実質NPB+順位,dcf8637f4,anchor手法としては不成立
+PowerProを強いpriorにする設計,design,proposed,REDO,priorとQAが同一情報源で循環。オーナー2026-07-31確定方針の例外化,gap audit 3.1/5-B,アンカー新設に置換
+Tier F outcome proxies 低〜中重み,design,proposed,REDO,既存は測定済み再現性0.586-0.695で主力。格下げの根拠なし,configs/running_norms.json,既存重みを出発点にする
+三塁打の走塁分離(原則2.1),design,proposed,REDO,実測で悪化 r0.653→0.472,outputs/triple_rate_separation_20260805.md,原則2.1を修正
+H2Fを加速材料として点数へ,design,proposed,REDO,test_r 0.588だがtest_mae 12.9。相関だけで採否を決めている,configs/ratings.json npb_plus_direct,MAE改善後に再検討
+SNS Rating Consensusを入力に置く,design,proposed,REDO,PowerProについての意見であり走力の証拠でない,gap audit 5-B,stale detector材料へ移動
+owner review母数=PowerPro乖離>=5,design,proposed,REDO,人間の労力が同化方向にしか使われない,gap audit 2.8,証拠が弱い順へ変更
+validation設計,design,proposed,REDO,代替指標が全て入力と重複,gap audit 8,時間ホールドアウト+エンジン整合へ
+Statcast intermediary (The Show bridge),design,proposed,REDO,原則9.2の二重カウント禁止に抵触,12_APPRAISAL_PRINCIPLES 9.2,先に裁定が必要
+走力アンカーの新設,design,missing,NEW,パワプロ同化の真因。パワー/ミートには存在し走力に無い,configs/ratings.json power_anchors,オーナー裁定が必要
+100人と非100人の目盛り整合,validation,missing,NEW,リーグ分布の合否基準が評価不能になる,CLAUDE.md 校正の答え合わせ,DoDへ追加
+既存統計モデルをcontrolに置いた比較,validation,missing,NEW,15ブランチの成果が既存を上回ったか誰も測っていない,configs/running_norms.json,DoDへ追加
+advance二重計上の検査,validation,missing,NEW,advanceは既に走力材料でその残差が走塁得能,src/ratings/running.mjs,DoDへ追加
+NPB+定義未確認のまま軸にしている,design,missing,NEW,原則4がNPB+をT90とみなすことを禁止,12_APPRAISAL_PRINCIPLES 4,bridge較正可否を先に判定
+2026-08-06〜08-09のClaudeセッション成果物ゼロ,process,missing,NEW,DoD final chat only knowledge=0 に最初の引継ぎで違反,git log,再発防止を正本化
