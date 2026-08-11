@@ -337,7 +337,7 @@ const finalQa = {
   passed_check_count: finalQaChecks.filter((check) => check.passed).length,
   checks: finalQaChecks,
   blind_final_freeze_sha: blindFreezeSha,
-  stage2_build_head: headSha,
+  build_context_rule: "Builder verifies BLIND_FINAL_FREEZE_SHA is an ancestor of the invoking HEAD; the execution HEAD is intentionally not serialized so identical frozen inputs reproduce byte-identical Stage 2 artifacts.",
   deterministic_command: "node scripts/build_speed_2026_final_reappraisal_external_qa.mjs",
   final_chat_only_knowledge: 0
 };
