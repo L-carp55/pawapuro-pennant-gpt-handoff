@@ -1168,6 +1168,37 @@ console.log('=== 未整備だった回帰テスト ===\n');
   }
 }
 
+// ── §窓 多年プールの上限（T-0198 後方漏れの修理、2026-08-13）──────────
+// 走力の多年プールは既定で対象年の前後を使う（身体の性質の推定としては正しい）。
+// だが対象年より後を含むため、過去年の査定に後知恵が入り**時間ホールドアウトが成立しない**。
+// maxSeason を渡した時だけ上限を切る。既定の挙動は変えない＝既存の査定値は動かない。
+{
+  const { poolAcrossYears } = await import('../src/ratings/durable_traits.mjs');
+  const obs = [2021, 2022, 2023, 2024, 2025].map(y => ({ z: 0.5, weight: 400, season: y }));
+
+  t('§窓-a 既定では対象年より後の年も入る（従来の挙動を変えていない）',
+    poolAcrossYears(obs, 2023).seasons.includes(2025),
+    JSON.stringify(poolAcrossYears(obs, 2023).seasons));
+  t('§窓-b maxSeasonを渡すとその年より後は入らない',
+    poolAcrossYears(obs, 2023, { maxSeason: 2023 }).seasons.every(y => y <= 2023),
+    JSON.stringify(poolAcrossYears(obs, 2023, { maxSeason: 2023 }).seasons));
+  t('§窓-c maxSeasonで観測が全部消えたらnull（0で埋めない）',
+    poolAcrossYears(obs, 2023, { maxSeason: 2019 }) === null, 'null');
+
+  const { makeContext: mkW, appraiseCard: acW } = await import('../src/cards/pipeline.mjs');
+  const { readFileSync: rfW } = await import('node:fs');
+  const rvW = JSON.parse(rfW('configs/run_values.json', 'utf8')).values;
+  const ctxW = mkW(db, cfg);
+  const base = acW(ctxW, { name: '村上　宗隆', mode: '2024', cfg, rv: rvW, runNorm, fldNorm }).card;
+  const held = acW(ctxW, { name: '村上　宗隆', mode: '2024', maxSeason: 2024, cfg, rv: rvW, runNorm, fldNorm }).card;
+  t('§窓-d カード査定でも既定では対象年より後が混ざる（漏れの再発検知）',
+    base.calc_log.running.speed_seasons.some(y => y > 2024),
+    JSON.stringify(base.calc_log.running.speed_seasons));
+  t('§窓-e maxSeasonを渡すと混ざらない（時間ホールドアウトが成立する）',
+    held.calc_log.running.speed_seasons.every(y => y <= 2024),
+    JSON.stringify(held.calc_log.running.speed_seasons));
+}
+
 console.log(`\n合計: ${pass} PASS / ${fail} FAIL`);
 db.close();
 process.exit(fail ? 1 : 0);
