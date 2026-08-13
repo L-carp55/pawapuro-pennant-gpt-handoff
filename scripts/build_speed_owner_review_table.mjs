@@ -145,16 +145,36 @@ for (const r of reg.rows) {
 }
 db.close();
 
-// ── 目盛りのずれと、選手個別の食い違いを分ける ──────────────────────
+// ── AI側の診断結果を取り込む（scripts/diagnose_speed_conflicts.mjs の出力）──
+// 2026-08-13 GPT指示: オーナーへ渡す前にAI側で原因を4種へ分離し、材料衝突を調査する。
+const diagPath = path.join(ROOT, 'outputs', 'derived', 'speed_conflict_diagnosis_2026.csv');
+const diagBy = new Map();
+if (existsSync(diagPath)) {
+  for (const d of toObjs(readFileSync(diagPath, 'utf8'))) diagBy.set(norm(d.player), d);
+} else {
+  console.warn('★診断CSVが無い。先に node scripts/diagnose_speed_conflicts.mjs を実行すること');
+}
+for (const r of rows) {
+  const d = diagBy.get(norm(r.player));
+  r.causes = d?.causes ? d.causes.split('|').filter(Boolean) : [];
+  r.stale = d?.stale ?? '';
+  r.conflictVerdict = d?.conflictVerdict ?? '';
+  r.conflictResid = d ? num(d.conflictResid) : null;
+  r.scalePart = d ? num(d.scalePart) : null;
+}
+
+// ── 目盛りのずれと、選手個別の差を分ける（診断専用）────────────────
 //
-// ★これをやらないとレビュー対象が82人になり、レビューが成立しない。
-//   実測: 順序の一致は相関0.83と良いのに、こちらの幅がパワプロの1/1.67しかない。
+// ★名称について（2026-08-13 GPT指示）:
+//   この値は「本当の食い違い」ではない。PowerProの標準偏差へ合わせて計算した
+//   **診断専用値** であり、PowerProの幅を正解として採用したことにはしない。
+//   raw_diff（自作査定 − PowerPro）は必ず併記する。
+//
+//   実測: 順序の一致は相関0.83と良いのに、こちらの幅がPowerProの1/1.67しかない。
 //   幅が違うだけで、上位の選手は低く・下位の選手は高く出て「差」になる。
-//   その分を引いた残りが、本当に食い違っている量。
-//
-//   ※これは目盛りを直したのではなく**差を分解しただけ**。
-//     目盛りの正本はオーナー裁定のアンカー（speed_anchors）で作る。
-//     ここでパワプロへ合わせて固定してはいけない（それは参考チェックの物差し化＝禁止）。
+//   raw |diff|>=5 が82人なのは「レビュー対象が82人」という意味ではなく、
+//   **まず自作査定の全体スケール問題をAI側で解決する必要がある**という診断。
+//   原因の詳細は outputs/speed_scale_diagnosis_2026.md。
 const paired = rows.filter(r => r.mine != null && r.pp != null);
 const stat = a => { const N = a.length, mu = a.reduce((x, y) => x + y, 0) / N;
   return { N, mu, sd: Math.sqrt(a.reduce((x, y) => x + (y - mu) ** 2, 0) / N) }; };
@@ -204,83 +224,111 @@ const t3 = rows.filter(r => r.tier === 3);
 
 const L = [];
 const push = s => L.push(s);
-push('# 走力 オーナーレビュー表 — 2026年 100人\n');
+push('# 走力 100人マスター表 — 2026年\n');
 push(`生成日: ${new Date().toISOString().slice(0, 10)}\n`);
+push('状態: **AI側の診断中。オーナーレビューはまだ開始しない**（2026-08-13 GPT指示）\n');
 
-push('## 先に読んでほしい診断\n');
-push('100人をこちらで査定し、パワプロ2026と突き合わせた結果:\n');
+push('## 全体診断\n');
 push('```text');
-push(`順序の一致（相関）      : ${corr.toFixed(3)}   ← 良い。誰が速いかの並びはほぼ合っている`);
-push(`中心のずれ              : ${(SM.mu - SP.mu).toFixed(1)}点   ← 小さい`);
-push(`幅（ばらつき）の比      : ${(SP.sd / SM.sd).toFixed(2)}倍   ← ★こちらの幅が狭すぎる`);
-push(`  こちらの幅 ${SM.sd.toFixed(1)} / パワプロの幅 ${SP.sd.toFixed(1)}`);
+push(`順序の一致（相関）  : ${corr.toFixed(3)}   ← 良い。誰が速いかの並びはほぼ合っている`);
+push(`中心のずれ          : ${(SM.mu - SP.mu).toFixed(1)}点`);
+push(`幅（ばらつき）の比  : ${(SP.sd / SM.sd).toFixed(2)}倍   ← ★自作査定の幅が狭い`);
+push(`  自作 ${SM.sd.toFixed(1)} / PowerPro ${SP.sd.toFixed(1)}`);
 push('```\n');
-push('**差の大半は選手個別の問題ではなく、目盛りの幅が違うことの機械的な結果です。**');
-push('幅が狭いと、速い選手は自動的に低く・遅い選手は自動的に高く出ます。');
-push('この分を引かずにレビューすると、82人分の「差」を1人ずつ見ることになり、');
-push('**目盛りの問題を選手ごとに手で直す**ことになってしまいます。\n');
-push('そこで下の表では差を2つに分けました。\n');
-push('- **生の差** = 私の査定 − パワプロ（目盛りのずれを含む）');
-push('- **本当の食い違い** = 幅を揃えたうえで残った差。**こちらがレビューの対象**\n');
-push('※ 幅を揃えたのは差を分解するためで、パワプロに合わせて確定したわけではありません。');
-push('目盛りの正本はアンカー（別途裁定いただく目安表）で作ります。\n');
+push('**raw |diff| >= 5 が82人なのは、レビュー対象が82人という意味ではない。**');
+push('まず自作査定の全体スケール問題をAI側で解決する必要があるという診断である。');
+push('原因は `outputs/speed_scale_diagnosis_2026.md` に分解した（要点: 合成zは必ず縮み、');
+push('その縮みを戻す較正が98人中1人にしか掛かっていない）。\n');
 
-push('## 読み方\n');
-push('- **私の査定** = 実際のプレー結果（三塁打割合・併殺回避・内野安打・進塁・走塁貢献）を');
-push('  2021-2025年でまとめた値に、NPB+アプリの実測（最高速度）を確からしさに応じて混ぜたもの');
-push('- **内訳** = 「プレー結果だけの値 / NPB+実測だけの値」。**この2つが離れているほど材料が割れている**');
-push('- **パワプロの推移** = 2015-2026年の査定履歴。長く据え置きなら「実力が変わったのに直していない」疑い');
-push('- **信頼度** = こちらの査定の確からしさ（出場量・使えた年数・材料の食い違いから判定）\n');
-push(`**1段目（優先してレビュー）: ${t1.length}人** / 2段目（余力があれば）: ${t2.length}人 / 通す: ${t3.length}人\n`);
+push('## 列の意味\n');
+push('| 列 | 意味 |');
+push('|---|---|');
+push('| `raw_diff` | 自作査定 − PowerPro。**これが実際の差** |');
+push('| `scale_adj_diagnostic` | `scale_adjusted_powerpro_residual_diagnostic`。PowerProの標準偏差へ合わせて計算した**診断専用値**。**PowerProの幅を正解として採用したものではない** |');
+push('| 内訳 | プレー結果由来 / NPB+実測由来。系統的に後者が+14.4点高い |');
+push('| 原因 | MODEL_SCALE / PROJECT_EVIDENCE_CONFLICT / POWERPRO_STALE_OR_ODD / CURRENT_EVIDENCE_WEAK（複数可） |');
+push('| stale | POWERPRO_STALE_SUPPORTED / POSSIBLE / NO_STALE_EVIDENCE。据え置き年数だけで断定せず、各作品で観測が続いているかを見て判定 |\n');
+push(`**1段目: ${t1.length}人** / 2段目: ${t2.length}人 / それ以外: ${t3.length}人\n`);
 push('---\n');
 
 const table = (list) => {
-  push('| 選手 | 私の査定 | 内訳(プレー結果/NPB+) | パワプロ | 生の差 | **本当の食い違い** | 信頼度 | パワプロの推移 | 差が生まれた理由 |');
-  push('|---|---|---|---|---|---|---|---|---|');
+  push('| 選手 | 自作 | 内訳(プレー結果/NPB+) | PowerPro | raw_diff | scale_adj_diagnostic | 信頼度 | 原因 | stale | PowerProの推移 |');
+  push('|---|---|---|---|---|---|---|---|---|---|');
   for (const r of list) {
     const trend = r.ppFirst != null
       ? `${f1(r.ppFirst)}→${f1(r.ppLast)}（${r.ppChanges ?? '-'}回変更${r.ppUnchanged != null ? `・最長${(r.ppUnchanged / 365).toFixed(1)}年据置` : ''}）`
       : '履歴なし';
     const conf = r.confidence + (r.lowFlags.length ? `（${r.lowFlags.join('・')}）`
       : r.midFlags.length ? `（${r.midFlags.join('・')}）` : '');
-    const reason = r.reasons.length ? r.reasons.join('／')
-      : (r.confidence === '低' ? 'こちらの信頼度が低い' : (r.mine == null ? `査定不能（${r.err}）` : '-'));
-    push(`| ${r.player} | ${f1(r.mine)} | ${f1(r.mineStat)} / ${f1(r.npbDerived)} | ${f1(r.pp)} | ${sg(r.diff)} | **${sg(r.adj)}** | ${conf} | ${trend} | ${reason} |`);
+    push(`| ${r.player} | ${f1(r.mine)} | ${f1(r.mineStat)} / ${f1(r.npbDerived)} | ${f1(r.pp)} | ${sg(r.diff)} | ${sg(r.adj)} | ${conf} | ${r.causes.join('+') || '-'} | ${r.stale || '-'} | ${trend} |`);
   }
   push('');
 };
 
-push('## 1段目 — 優先してレビューしてほしい選手\n');
+push('## 1段目\n');
 table(t1);
-push('### 記入欄（1段目）\n');
-push('**気になる選手だけ**、あなたの点数か「こちらでよい」を書いてください。全部埋める必要はありません。\n');
-push('| 選手 | 私の査定 | パワプロ | あなたの判断 |');
-push('|---|---|---|---|');
-for (const r of t1) push(`| ${r.player} | ${f1(r.mine)} | ${f1(r.pp)} | |`);
-push('');
-push('---\n');
-push('## 2段目 — 余力があれば\n');
+push('## 2段目\n');
 table(t2);
-push('---\n');
-push('## 通す選手（レビュー不要・参考）\n');
-push('| 選手 | 私の査定 | パワプロ | 生の差 | 本当の食い違い | 信頼度 |');
-push('|---|---|---|---|---|---|');
-for (const r of t3) push(`| ${r.player} | ${f1(r.mine)} | ${f1(r.pp)} | ${sg(r.diff)} | ${sg(r.adj)} | ${r.confidence} |`);
+push('## それ以外\n');
+push('| 選手 | 自作 | PowerPro | raw_diff | scale_adj_diagnostic | 信頼度 | 原因 |');
+push('|---|---|---|---|---|---|---|');
+for (const r of t3) push(`| ${r.player} | ${f1(r.mine)} | ${f1(r.pp)} | ${sg(r.diff)} | ${sg(r.adj)} | ${r.confidence} | ${r.causes.join('+') || '-'} |`);
+push('');
 
-writeFileSync(path.join(ROOT, 'outputs', 'speed_owner_review_table_2026.md'), L.join('\n'), 'utf8');
+// ── オーナーレビュー待ち行列（まだ送らない）──────────────────────
+// 条件（GPT指示）: 修正後もPowerProとの差が5以上 / confidence LOW /
+//   強いphysical evidence conflict / PowerPro stale・odd疑い / AI側で解決できなかった
+const queue = rows.filter(r =>
+  (Math.abs(r.diff ?? 0) >= 5)
+  || r.confidence === '低'
+  || (r.conflictResid != null && Math.abs(r.conflictResid) >= 15)
+  || r.stale === 'POWERPRO_STALE_SUPPORTED'
+  || r.conflictVerdict === 'UNRESOLVED_PROJECT_CONFLICT');
+
+const Q = [];
+Q.push('# 走力 オーナーレビュー待ち行列（案）\n');
+Q.push(`生成日: ${new Date().toISOString().slice(0, 10)}\n`);
+Q.push('状態: **未送信。AI側のスケール問題を解決してから再抽出する**\n');
+Q.push('抽出条件（いずれか該当）:\n');
+Q.push('- 修正後もPowerProとの差が5以上');
+Q.push('- confidence LOW');
+Q.push('- 強い材料衝突（系統ずれを除いて15点以上）');
+Q.push('- PowerPro据え置きの疑いが裏付けられた（POWERPRO_STALE_SUPPORTED）');
+Q.push('- AI側で原因を解決できなかった（UNRESOLVED_PROJECT_CONFLICT）\n');
+Q.push(`**現時点の該当: ${queue.length}人**（スケール修正後に再抽出する）\n`);
+Q.push('## 回答のしかた\n');
+Q.push('点数を決めていただく必要はありません。次から選ぶだけで構いません。\n');
+Q.push('- `PowerProの方が自然`');
+Q.push('- `自作査定の方が自然`');
+Q.push('- `その中間`');
+Q.push('- `どちらも違和感`');
+Q.push('- `判断できない`\n');
+Q.push('必要に応じて任意の点数・コメントを添えていただけると助かります。\n');
+Q.push('| 選手 | 自作 | PowerPro | raw_diff | 原因 | stale | あなたの判断 | 任意の点数・コメント |');
+Q.push('|---|---|---|---|---|---|---|---|');
+for (const r of queue.sort((a, b) => Math.abs(b.diff ?? 0) - Math.abs(a.diff ?? 0)))
+  Q.push(`| ${r.player} | ${f1(r.mine)} | ${f1(r.pp)} | ${sg(r.diff)} | ${r.causes.join('+') || '-'} | ${r.stale || '-'} | | |`);
+Q.push('');
+writeFileSync(path.join(ROOT, 'outputs', 'speed_owner_review_queue_2026.md'), Q.join('\n'), 'utf8');
 
 // CSV（全100人・機械可読）
-const cols = ['player', 'team', 'mine', 'mineStat', 'npbUsed', 'npbDerived', 'materialGap', 'pp', 'diff', 'adj', 'tier',
+const cols = ['player', 'team', 'mine', 'mineStat', 'npbUsed', 'npbDerived', 'materialGap', 'pp',
+  'raw_diff', 'scale_adjusted_powerpro_residual_diagnostic', 'causes', 'stale', 'conflictVerdict', 'tier',
   'years', 'games', 'pa', 'ppFirst', 'ppLast', 'ppTotal', 'ppChanges', 'ppUnchanged', 'ppObs',
   'confidence', 'directT90', 'shortDist', 'bigDiff', 'needReview'];
 const csv = [cols.join(',')];
 for (const r of rows) csv.push(cols.map(c => {
-  const v = r[c]; if (v == null) return '';
+  let v = r[c];
+  if (c === 'raw_diff') v = r.diff;
+  if (c === 'scale_adjusted_powerpro_residual_diagnostic') v = r.adj;
+  if (Array.isArray(v)) v = v.join('|');
+  if (v == null) return '';
   return typeof v === 'string' && /[",\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v;
 }).join(','));
 csv.push('');
 writeFileSync(path.join(ROOT, 'outputs', 'derived', 'speed_owner_review_table_2026.csv'), csv.join('\n'), 'utf8');
 
-console.log(`1段目 ${t1.length}人 / 2段目 ${t2.length}人 / 通す ${t3.length}人 / 合計 ${rows.length}人`);
+console.log(`1段目 ${t1.length}人 / 2段目 ${t2.length}人 / それ以外 ${t3.length}人 / 合計 ${rows.length}人`);
+console.log(`レビュー待ち行列(案) ${queue.length}人 → outputs/speed_owner_review_queue_2026.md`);
 console.log(`相関 ${corr.toFixed(3)} 中心差 ${(SM.mu-SP.mu).toFixed(1)} 幅比 ${(SP.sd/SM.sd).toFixed(2)}`);
 console.log('査定できなかった:', rows.filter(r => r.mine == null).map(r => `${r.player}(${r.err})`).join(', ') || 'なし');
