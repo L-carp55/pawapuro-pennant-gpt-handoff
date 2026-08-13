@@ -26,6 +26,9 @@ import { makeContext, appraiseCard } from '../src/cards/pipeline.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = process.argv[2];
+// ★relative model候補（正本22 §5-C）。第2引数に --stat-primary を渡すと
+//   走力のNPB+自動blendを行わず較正済み統計モデルをprimaryにする。既定=production同等。
+const STAT_PRIMARY = process.argv.includes('--stat-primary');
 if (!SRC || !existsSync(SRC)) { console.error('GPT成果物のディレクトリを渡す'); process.exit(1); }
 
 const J = f => JSON.parse(readFileSync(path.join(ROOT, 'configs', f), 'utf8'));
@@ -83,18 +86,33 @@ const resolveDb = p => { const k = norm(p); if (dbByNorm.has(k)) return dbByNorm
   const h = dbNames.filter(n => norm(n).endsWith(k)); return h.length === 1 ? h[0] : null; };
 const ctx = makeContext(db, cfg);
 const M = cfg.npb_plus_direct.models.top_speed_kmh;
+// ★NPB+のraw測定はblendの有無と無関係に保持する（正本22 §5-C）。
+//   候補モデルではblendしないが、材料衝突の evidence としては測り続ける。
+const npbRawBy = new Map();
+for (const x of db.prepare('SELECT player_id, top_speed_kmh FROM npb_plus_measurement WHERE top_speed_kmh IS NOT NULL').all())
+  npbRawBy.set(x.player_id, x.top_speed_kmh);
+const npbRawByName = new Map();
+for (const [pid, spd] of npbRawBy) {
+  const nm = db.prepare('SELECT name FROM v_batting WHERE player_id=? ORDER BY season DESC LIMIT 1').get(pid)?.name;
+  if (nm) npbRawByName.set(norm(nm), spd);
+}
 
 const rows = [];
 for (const r of reg.rows) {
   const m = masterBy.get(norm(r.player)) ?? {};
   const dn = resolveDb(r.player);
-  let mine = null, stat = null, npbUsed = null, years = null, zc = null, used = null, err = null;
+  let mine = null, stat = null, npbUsed = null, years = null, zc = null, used = null, err = null, calibrated = false;
   if (dn) {
     try {
-      const card = appraiseCard(ctx, { name: dn, mode: '2025', cfg, rv, runNorm, fldNorm }).card;
+      const card = appraiseCard(ctx, { name: dn, mode: '2025', cfg, rv, runNorm, fldNorm, statPrimarySpeed: STAT_PRIMARY }).card;
       const B = card?.abilities?.基礎能力?.走力, R = card?.calc_log?.running;
       mine = B?.value ?? null; stat = B?.statistical_value ?? B?.value ?? null;
       npbUsed = B?.measured ?? null; years = R?.speed_years ?? null; zc = R?._speed_z ?? null;
+      calibrated = B?.uncalibrated != null;
+      // blendしない候補モデルでは card に measured が載らないので、raw値から補う
+      if (npbUsed == null) npbUsed = npbRawByName.get(norm(r.player)) ?? npbRawByName.get(norm(dn)) ?? null;
+      // 候補モデルでは mine が較正後、stat は素点。材料衝突は「較正後の統計値」と比べる
+      if (B?.statistical_value == null) stat = mine;
     } catch (e) { err = e.message; }
   } else err = 'DB名寄せ不可';
   const pp = num(r.powerpro_2026_speed);
@@ -103,7 +121,7 @@ for (const r of reg.rows) {
     rawDiff: (mine != null && pp != null) ? mine - pp : null,
     years, zc, games: num(m.games), pa: num(m.PA),
     directT90: num(m.direct_t90_current_count) ?? 0, shortD: num(m.standardized_short_distance_count) ?? 0,
-    exposure: m.exposure_class ?? '', undersample: m.undersampling_suspicion ?? '', err });
+    exposure: m.exposure_class ?? '', undersample: m.undersampling_suspicion ?? '', calibrated, err });
 }
 db.close();
 
@@ -116,11 +134,11 @@ const SDm = sd(paired.map(r => r.mine)), SDp = sd(paired.map(r => r.pp));
 const MUm = mean(paired.map(r => r.mine)), MUp = mean(paired.map(r => r.pp));
 const zsd = sd(rows.filter(r => Number.isFinite(r.zc)).map(r => r.zc));
 const S = cfg.zscore_ratings.speed, CAL = cfg.scale_calibration.applied['走力'];
-const calibratedCount = paired.filter(r => r.npbUsed == null).length;
+const calibratedCount = paired.filter(r => r.calibrated).length;
 
 // 材料間の系統的なずれ（プレー結果由来 vs NPB+由来）
 const both = rows.filter(r => r.stat != null && r.npbDerived != null);
-const offset = mean(both.map(r => r.npbDerived - r.stat));
+const offset = both.length ? mean(both.map(r => r.npbDerived - r.stat)) : 0;
 
 for (const r of rows) {
   // 目盛りを揃えた診断値（★パワプロの幅を正解として採用したわけではない）
@@ -162,7 +180,7 @@ for (const r of rows) {
     const corrob = [];
     if (ageNow != null && ageNow >= 30) corrob.push(`年齢${ageNow}歳（衰えが出やすい）`);
     if (r.directT90 > 0 || r.shortD > 0) corrob.push('現在の身体計測あり');
-    if (r.conflictResid != null && Math.abs(r.scaleAdj ?? 0) >= 10) corrob.push('現在証拠と乖離');
+    if (Math.abs(r.scaleAdj ?? 0) >= 10) corrob.push('現在証拠と乖離');
     stale = corrob.length ? 'POWERPRO_STALE_SUPPORTED' : 'POWERPRO_STALE_POSSIBLE';
     why.push(`${recentObsYears.length}年分の観測が続く中で${neverChanged ? '一度も変更なし' : `最長${(unchangedDays / 365).toFixed(1)}年据え置き`}`);
     why.push(...corrob);
