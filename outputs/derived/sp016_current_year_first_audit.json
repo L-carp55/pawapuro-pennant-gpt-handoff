@@ -1,0 +1,1639 @@
+{
+  "generated_at": "2026-08-13",
+  "sufficient_pa": 50,
+  "reliability_curve": [
+    {
+      "lo": 50,
+      "hi": 100,
+      "n": 270,
+      "obsVar": 1.1957733172903984,
+      "errVar": 0.4781219577554078,
+      "reliability": 0.6001566928765196
+    },
+    {
+      "lo": 100,
+      "hi": 150,
+      "n": 174,
+      "obsVar": 1.0202409929665617,
+      "errVar": 0.2945504028554659,
+      "reliability": 0.7112933072812535
+    },
+    {
+      "lo": 150,
+      "hi": 200,
+      "n": 132,
+      "obsVar": 0.7245369254795012,
+      "errVar": 0.24845434537618247,
+      "reliability": 0.6570853235509639
+    },
+    {
+      "lo": 200,
+      "hi": 300,
+      "n": 171,
+      "obsVar": 0.5666223135177009,
+      "errVar": 0.17103406750322336,
+      "reliability": 0.6981515492367203
+    },
+    {
+      "lo": 300,
+      "hi": 400,
+      "n": 133,
+      "obsVar": 0.5727384240407684,
+      "errVar": 0.1269048758035709,
+      "reliability": 0.7784243723195048
+    },
+    {
+      "lo": 400,
+      "hi": 500,
+      "n": 153,
+      "obsVar": 0.467754609767227,
+      "errVar": 0.09177393348086531,
+      "reliability": 0.8037989758635717
+    },
+    {
+      "lo": 500,
+      "hi": 9999,
+      "n": 141,
+      "obsVar": 0.4537457988842204,
+      "errVar": 0.07147072360448656,
+      "reliability": 0.842487305050017
+    }
+  ],
+  "impact_summary": {
+    "n": 157,
+    "moved": 122,
+    "big": 51
+  },
+  "impact": [
+    {
+      "name": "野間　峻祥",
+      "pa": 166,
+      "before": 80.3,
+      "after": 95.5,
+      "delta": 15.200000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "平沼　翔太",
+      "pa": 164,
+      "before": 78.3,
+      "after": 81.7,
+      "delta": 3.4000000000000057,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "増田　陸",
+      "pa": 286,
+      "before": 53.5,
+      "after": 58.6,
+      "delta": 5.100000000000001,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "栗原　陵矢",
+      "pa": 332,
+      "before": 59.8,
+      "after": 60.5,
+      "delta": 0.7000000000000028,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "古賀　優大",
+      "pa": 291,
+      "before": 40.3,
+      "after": 40.3,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "小園　海斗",
+      "pa": 573,
+      "before": 78.3,
+      "after": 72.9,
+      "delta": -5.3999999999999915,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "黒川　史陽",
+      "pa": 343,
+      "before": 68.3,
+      "after": 68.3,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "Ｌ．ボイト",
+      "pa": 276,
+      "before": 41.8,
+      "after": 41.8,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "村松　開人",
+      "pa": 186,
+      "before": 75.6,
+      "after": 73.3,
+      "delta": -2.299999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "Ｎ．ソト",
+      "pa": 367,
+      "before": 42.7,
+      "after": 50.3,
+      "delta": 7.599999999999994,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "リチャード",
+      "pa": 275,
+      "before": 46.7,
+      "after": 46.7,
+      "delta": 0,
+      "reason": 2,
+      "years_after": 2,
+      "years_before": 2
+    },
+    {
+      "name": "リチャード",
+      "pa": 275,
+      "before": 46.7,
+      "after": 46.7,
+      "delta": 0,
+      "reason": 2,
+      "years_after": 2,
+      "years_before": 2
+    },
+    {
+      "name": "辰己　涼介",
+      "pa": 422,
+      "before": 71.8,
+      "after": 65,
+      "delta": -6.799999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "佐々木　泰",
+      "pa": 187,
+      "before": 74.4,
+      "after": 74.4,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "中村　晃",
+      "pa": 431,
+      "before": 61.9,
+      "after": 71.8,
+      "delta": 9.899999999999999,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "髙部　瑛斗",
+      "pa": 384,
+      "before": 93.7,
+      "after": 93.9,
+      "delta": 0.20000000000000284,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "五十幡　亮汰",
+      "pa": 307,
+      "before": 100,
+      "after": 100,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "岡本　和真",
+      "pa": 293,
+      "before": 55.3,
+      "after": 54.9,
+      "delta": -0.3999999999999986,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "岡　大海",
+      "pa": 181,
+      "before": 75.3,
+      "after": 85.5,
+      "delta": 10.200000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "門脇　誠",
+      "pa": 176,
+      "before": 76.2,
+      "after": 77.8,
+      "delta": 1.5999999999999943,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "野村　勇",
+      "pa": 413,
+      "before": 72.9,
+      "after": 65,
+      "delta": -7.900000000000006,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "川瀬　晃",
+      "pa": 224,
+      "before": 77.2,
+      "after": 64.5,
+      "delta": -12.700000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "小川　龍成",
+      "pa": 202,
+      "before": 75.2,
+      "after": 53.3,
+      "delta": -21.900000000000006,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "宗　佑磨",
+      "pa": 388,
+      "before": 61.4,
+      "after": 67.4,
+      "delta": 6.000000000000007,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "堀内　謙伍",
+      "pa": 194,
+      "before": 70.2,
+      "after": 70.2,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "万波　中正",
+      "pa": 465,
+      "before": 57.5,
+      "after": 49.2,
+      "delta": -8.299999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "坂本　誠志郎",
+      "pa": 414,
+      "before": 58.9,
+      "after": 48.5,
+      "delta": -10.399999999999999,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "坂倉　将吾",
+      "pa": 399,
+      "before": 62.4,
+      "after": 49,
+      "delta": -13.399999999999999,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "牧　秀悟",
+      "pa": 391,
+      "before": 60.4,
+      "after": 60.9,
+      "delta": 0.5,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "Ｌ．セデーニョ",
+      "pa": 243,
+      "before": 40.7,
+      "after": 47.1,
+      "delta": 6.399999999999999,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "田中　幹也",
+      "pa": 365,
+      "before": 79.9,
+      "after": 84.3,
+      "delta": 4.3999999999999915,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "石井　一成",
+      "pa": 364,
+      "before": 73.4,
+      "after": 71.8,
+      "delta": -1.6000000000000085,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "石伊　雄太",
+      "pa": 270,
+      "before": 59.5,
+      "after": 59.5,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "池田　来翔",
+      "pa": 249,
+      "before": 66.1,
+      "after": 53,
+      "delta": -13.099999999999994,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "大山　悠輔",
+      "pa": 587,
+      "before": 52.7,
+      "after": 47.6,
+      "delta": -5.100000000000001,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "大盛　穂",
+      "pa": 173,
+      "before": 79.2,
+      "after": 79.2,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "丸　佳浩",
+      "pa": 369,
+      "before": 58.2,
+      "after": 51.3,
+      "delta": -6.900000000000006,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "山川　穂高",
+      "pa": 496,
+      "before": 42.1,
+      "after": 44.4,
+      "delta": 2.299999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "中島　大輔",
+      "pa": 491,
+      "before": 87.5,
+      "after": 93.9,
+      "delta": 6.400000000000006,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "廣岡　大志",
+      "pa": 453,
+      "before": 71.9,
+      "after": 67.2,
+      "delta": -4.700000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "松本　剛",
+      "pa": 185,
+      "before": 65.3,
+      "after": 62.7,
+      "delta": -2.5999999999999943,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "西川　史礁",
+      "pa": 444,
+      "before": 68.8,
+      "after": 68.8,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "前川　右京",
+      "pa": 209,
+      "before": 63.4,
+      "after": 75,
+      "delta": 11.600000000000001,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "松尾　汐恩",
+      "pa": 191,
+      "before": 52,
+      "after": 52,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "周東　佑京",
+      "pa": 430,
+      "before": 94.8,
+      "after": 90.2,
+      "delta": -4.599999999999994,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "郡司　裕也",
+      "pa": 422,
+      "before": 60.5,
+      "after": 62,
+      "delta": 1.5,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "山本　祐大",
+      "pa": 344,
+      "before": 61.8,
+      "after": 64.7,
+      "delta": 2.9000000000000057,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "Ｊ．オスナ",
+      "pa": 574,
+      "before": 51.3,
+      "after": 53,
+      "delta": 1.7000000000000028,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "秋山　翔吾",
+      "pa": 157,
+      "before": 74.1,
+      "after": 79.7,
+      "delta": 5.6000000000000085,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "今宮　健太",
+      "pa": 182,
+      "before": 59.7,
+      "after": 55.4,
+      "delta": -4.300000000000004,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "野村　佑希",
+      "pa": 369,
+      "before": 57.3,
+      "after": 55.2,
+      "delta": -2.0999999999999943,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "小幡　竜平",
+      "pa": 297,
+      "before": 70.5,
+      "after": 66.2,
+      "delta": -4.299999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "藤原　恭大",
+      "pa": 452,
+      "before": 84.2,
+      "after": 87.6,
+      "delta": 3.3999999999999915,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "木浪　聖也",
+      "pa": 203,
+      "before": 59.1,
+      "after": 71.6,
+      "delta": 12.499999999999993,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "細川　成也",
+      "pa": 428,
+      "before": 56.2,
+      "after": 52.3,
+      "delta": -3.9000000000000057,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "水谷　瞬",
+      "pa": 321,
+      "before": 77,
+      "after": 80.9,
+      "delta": 3.9000000000000057,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "三森　大貴",
+      "pa": 179,
+      "before": 89.6,
+      "after": 77.1,
+      "delta": -12.5,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "麦谷　祐介",
+      "pa": 153,
+      "before": 96.8,
+      "after": 96.8,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "Ｅ．ヘルナンデス",
+      "pa": 171,
+      "before": 50.8,
+      "after": 55.2,
+      "delta": 4.400000000000006,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "山本　大斗",
+      "pa": 417,
+      "before": 52.8,
+      "after": 52.8,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "度会　隆輝",
+      "pa": 301,
+      "before": 68.1,
+      "after": 73.5,
+      "delta": 5.400000000000006,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "佐藤　輝明",
+      "pa": 597,
+      "before": 67.4,
+      "after": 65.9,
+      "delta": -1.5,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "外崎　修汰",
+      "pa": 415,
+      "before": 61.4,
+      "after": 55.5,
+      "delta": -5.899999999999999,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "髙寺　望夢",
+      "pa": 160,
+      "before": 68.9,
+      "after": 68.9,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "中野　拓夢",
+      "pa": 625,
+      "before": 83.4,
+      "after": 90.6,
+      "delta": 7.199999999999989,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "清宮　幸太郎",
+      "pa": 577,
+      "before": 60.8,
+      "after": 59.9,
+      "delta": -0.8999999999999986,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "藤岡　裕大",
+      "pa": 373,
+      "before": 53.9,
+      "after": 44.6,
+      "delta": -9.299999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "若月　健矢",
+      "pa": 400,
+      "before": 61.3,
+      "after": 60.6,
+      "delta": -0.6999999999999957,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "近藤　健介",
+      "pa": 307,
+      "before": 57.1,
+      "after": 53,
+      "delta": -4.100000000000001,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "村林　一輝",
+      "pa": 557,
+      "before": 64.7,
+      "after": 61.8,
+      "delta": -2.9000000000000057,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "村上　宗隆",
+      "pa": 224,
+      "before": 62.4,
+      "after": 52.3,
+      "delta": -10.100000000000001,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "筒香　嘉智",
+      "pa": 257,
+      "before": 46.8,
+      "after": 43.1,
+      "delta": -3.6999999999999957,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "森下　翔太",
+      "pa": 620,
+      "before": 62.7,
+      "after": 66.7,
+      "delta": 4,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "Ｊ．ダウンズ",
+      "pa": 168,
+      "before": 82.9,
+      "after": 82.9,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "Ｓ．ファビアン",
+      "pa": 572,
+      "before": 51.5,
+      "after": 51.5,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "田宮　裕涼",
+      "pa": 274,
+      "before": 66.3,
+      "after": 68.5,
+      "delta": 2.200000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "末包　昇大",
+      "pa": 477,
+      "before": 65.1,
+      "after": 68.2,
+      "delta": 3.1000000000000085,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "浅村　栄斗",
+      "pa": 389,
+      "before": 49.9,
+      "after": 41.3,
+      "delta": -8.600000000000001,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "赤羽　由紘",
+      "pa": 290,
+      "before": 78.1,
+      "after": 78.1,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "中村　悠平",
+      "pa": 221,
+      "before": 52.4,
+      "after": 40.3,
+      "delta": -12.100000000000001,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "中川　圭太",
+      "pa": 463,
+      "before": 72.1,
+      "after": 62.8,
+      "delta": -9.299999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "滝澤　夏央",
+      "pa": 438,
+      "before": 87.5,
+      "after": 80.5,
+      "delta": -7,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "岩田　幸宏",
+      "pa": 401,
+      "before": 100,
+      "after": 100,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "西川　愛也",
+      "pa": 553,
+      "before": 75.5,
+      "after": 76.6,
+      "delta": 1.0999999999999943,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "宮﨑　敏郎",
+      "pa": 352,
+      "before": 53.4,
+      "after": 58.2,
+      "delta": 4.800000000000004,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "長岡　秀樹",
+      "pa": 261,
+      "before": 59.6,
+      "after": 66.4,
+      "delta": 6.800000000000004,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "寺地　隆成",
+      "pa": 445,
+      "before": 52.9,
+      "after": 52.9,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "蝦名　達夫",
+      "pa": 401,
+      "before": 71.2,
+      "after": 73,
+      "delta": 1.7999999999999972,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "梶原　昂希",
+      "pa": 170,
+      "before": 84.7,
+      "after": 79.3,
+      "delta": -5.400000000000006,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "中山　礼都",
+      "pa": 312,
+      "before": 52.1,
+      "after": 47.4,
+      "delta": -4.700000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "桑原　将志",
+      "pa": 447,
+      "before": 74.4,
+      "after": 79.4,
+      "delta": 5,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "坂本　勇人",
+      "pa": 173,
+      "before": 51.7,
+      "after": 25.9,
+      "delta": -25.800000000000004,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "佐々木　俊輔",
+      "pa": 161,
+      "before": 79.6,
+      "after": 77.6,
+      "delta": -2,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "宗山　塁",
+      "pa": 460,
+      "before": 58.6,
+      "after": 58.6,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "若林　楽人",
+      "pa": 241,
+      "before": 82.7,
+      "after": 96,
+      "delta": 13.299999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "Ｔ．ネビン",
+      "pa": 570,
+      "before": 47.4,
+      "after": 47.4,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "Ｄ．サンタナ",
+      "pa": 240,
+      "before": 51.6,
+      "after": 54.2,
+      "delta": 2.6000000000000014,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "Ｅ．モンテロ",
+      "pa": 396,
+      "before": 46.5,
+      "after": 46.5,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "伏見　寅威",
+      "pa": 175,
+      "before": 47.1,
+      "after": 41.6,
+      "delta": -5.5,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "泉口　友汰",
+      "pa": 573,
+      "before": 67.8,
+      "after": 69,
+      "delta": 1.2000000000000028,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "牧原　大成",
+      "pa": 443,
+      "before": 84,
+      "after": 88.5,
+      "delta": 4.5,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "菊池　涼介",
+      "pa": 389,
+      "before": 68.6,
+      "after": 60.6,
+      "delta": -7.999999999999993,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "茂木　栄五郎",
+      "pa": 172,
+      "before": 64.3,
+      "after": 66.2,
+      "delta": 1.9000000000000057,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "杉本　裕太郎",
+      "pa": 455,
+      "before": 56.6,
+      "after": 60.9,
+      "delta": 4.299999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "小深田　大翔",
+      "pa": 357,
+      "before": 91.7,
+      "after": 87.3,
+      "delta": -4.400000000000006,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "Ｇ．ポランコ",
+      "pa": 154,
+      "before": 59.1,
+      "after": 64.3,
+      "delta": 5.199999999999996,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "山縣　秀",
+      "pa": 198,
+      "before": 70.5,
+      "after": 70.5,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "水野　達稀",
+      "pa": 332,
+      "before": 86.5,
+      "after": 86.8,
+      "delta": 0.29999999999999716,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "近本　光司",
+      "pa": 638,
+      "before": 84.6,
+      "after": 85.5,
+      "delta": 0.9000000000000057,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "佐藤　都志也",
+      "pa": 224,
+      "before": 61.6,
+      "after": 70.8,
+      "delta": 9.199999999999996,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "友杉　篤輝",
+      "pa": 319,
+      "before": 75.9,
+      "after": 71.7,
+      "delta": -4.200000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "太田　光",
+      "pa": 231,
+      "before": 61.5,
+      "after": 57.8,
+      "delta": -3.700000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "上田　希由翔",
+      "pa": 184,
+      "before": 49.6,
+      "after": 49.6,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "西川　龍馬",
+      "pa": 412,
+      "before": 62.1,
+      "after": 61.9,
+      "delta": -0.20000000000000284,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "嶺井　博希",
+      "pa": 161,
+      "before": 49.3,
+      "after": 57.4,
+      "delta": 8.100000000000001,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "源田　壮亮",
+      "pa": 361,
+      "before": 89.9,
+      "after": 83.2,
+      "delta": -6.700000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "ブライト　健太",
+      "pa": 157,
+      "before": 59.1,
+      "after": 59.1,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "Ｆ．レイエス",
+      "pa": 531,
+      "before": 50.2,
+      "after": 46.1,
+      "delta": -4.100000000000001,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "渡邊　佳明",
+      "pa": 166,
+      "before": 65.2,
+      "after": 53.6,
+      "delta": -11.600000000000001,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "柳町　達",
+      "pa": 517,
+      "before": 66.2,
+      "after": 62.6,
+      "delta": -3.6000000000000014,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "吉川　尚輝",
+      "pa": 455,
+      "before": 74.6,
+      "after": 78.5,
+      "delta": 3.9000000000000057,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "Ｔ．オースティン",
+      "pa": 246,
+      "before": 46.7,
+      "after": 39.2,
+      "delta": -7.5,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "矢澤　宏太",
+      "pa": 182,
+      "before": 74.3,
+      "after": 80.3,
+      "delta": 6,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "Ｔ．キャベッジ",
+      "pa": 476,
+      "before": 65.7,
+      "after": 65.7,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "頓宮　裕真",
+      "pa": 525,
+      "before": 49.4,
+      "after": 49.7,
+      "delta": 0.30000000000000426,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "伊藤　琉偉",
+      "pa": 204,
+      "before": 81.8,
+      "after": 81.8,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "中村　奨成",
+      "pa": 368,
+      "before": 79.3,
+      "after": 79.3,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "小郷　裕哉",
+      "pa": 193,
+      "before": 76.1,
+      "after": 83.8,
+      "delta": 7.700000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "海野　隆司",
+      "pa": 281,
+      "before": 60.8,
+      "after": 64,
+      "delta": 3.200000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "京田　陽太",
+      "pa": 210,
+      "before": 66.4,
+      "after": 70.2,
+      "delta": 3.799999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "熊谷　敬宥",
+      "pa": 170,
+      "before": 92,
+      "after": 92,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "岡林　勇希",
+      "pa": 637,
+      "before": 86.8,
+      "after": 86,
+      "delta": -0.7999999999999972,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "長谷川　信哉",
+      "pa": 450,
+      "before": 70.5,
+      "after": 73.1,
+      "delta": 2.5999999999999943,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "古賀　悠斗",
+      "pa": 328,
+      "before": 53.6,
+      "after": 49.2,
+      "delta": -4.399999999999999,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "安田　尚憲",
+      "pa": 350,
+      "before": 47.1,
+      "after": 44.1,
+      "delta": -3,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "鈴木　大地",
+      "pa": 198,
+      "before": 63.2,
+      "after": 69.5,
+      "delta": 6.299999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "渡部　聖弥",
+      "pa": 452,
+      "before": 59.3,
+      "after": 59.3,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "山村　崇嘉",
+      "pa": 231,
+      "before": 68,
+      "after": 65.6,
+      "delta": -2.4000000000000057,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "Ｊ．ボスラー",
+      "pa": 493,
+      "before": 60.7,
+      "after": 60.7,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "佐藤　直樹",
+      "pa": 212,
+      "before": 90.6,
+      "after": 90.6,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "石上　泰輝",
+      "pa": 158,
+      "before": 59.7,
+      "after": 59.7,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "板山　祐太郎",
+      "pa": 193,
+      "before": 75.3,
+      "after": 72.2,
+      "delta": -3.0999999999999943,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "太田　椋",
+      "pa": 496,
+      "before": 59.3,
+      "after": 52.3,
+      "delta": -7,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "上林　誠知",
+      "pa": 517,
+      "before": 77.9,
+      "after": 69.5,
+      "delta": -8.400000000000006,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "西野　真弘",
+      "pa": 252,
+      "before": 68.5,
+      "after": 64.5,
+      "delta": -4,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "森　友哉",
+      "pa": 191,
+      "before": 60.7,
+      "after": 57.4,
+      "delta": -3.3000000000000043,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "甲斐　拓也",
+      "pa": 250,
+      "before": 53.5,
+      "after": 43.8,
+      "delta": -9.700000000000003,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "岸田　行倫",
+      "pa": 299,
+      "before": 56.7,
+      "after": 58.1,
+      "delta": 1.3999999999999986,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 2
+    },
+    {
+      "name": "内山　壮真",
+      "pa": 470,
+      "before": 52.1,
+      "after": 53,
+      "delta": 0.8999999999999986,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "林　琢真",
+      "pa": 290,
+      "before": 68.6,
+      "after": 69,
+      "delta": 0.4000000000000057,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "山田　哲人",
+      "pa": 377,
+      "before": 54.4,
+      "after": 57.9,
+      "delta": 3.5,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "佐野　恵太",
+      "pa": 569,
+      "before": 50.2,
+      "after": 54.7,
+      "delta": 4.5,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "紅林　弘太郎",
+      "pa": 447,
+      "before": 54.5,
+      "after": 51.2,
+      "delta": -3.299999999999997,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 4
+    },
+    {
+      "name": "Ｏ．ゴンザレス",
+      "pa": 208,
+      "before": 60.7,
+      "after": 60.7,
+      "delta": 0,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 1
+    },
+    {
+      "name": "山本　泰寛",
+      "pa": 372,
+      "before": 77.2,
+      "after": 76.1,
+      "delta": -1.1000000000000085,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "矢野　雅哉",
+      "pa": 335,
+      "before": 85.4,
+      "after": 82.1,
+      "delta": -3.3000000000000114,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    },
+    {
+      "name": "Ｏ．カリステ",
+      "pa": 192,
+      "before": 66.2,
+      "after": 68,
+      "delta": 1.7999999999999972,
+      "reason": 1,
+      "years_after": 1,
+      "years_before": 3
+    }
+  ]
+}
