@@ -2,3 +2,6 @@ node_modules/
 data/pennant.db-wal
 data/pennant.db-shm
 *.corrupt_*
+
+__pycache__/
+*.pyc
