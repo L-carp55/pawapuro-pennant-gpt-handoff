@@ -443,7 +443,12 @@ export function appraiseCard(ctx, opts) {
   const { db, prep: prep_, lgOf, refAvg, refHr, envFactorsOf, poolOf, goldHistorical = null } = ctx;
   const prep = prep_ ?? (sql => prep(sql));
   const { name, playerId, mode, cfg, rv, runNorm, fldNorm, seasonRange = null,
-    maxSeason = null } = opts;   // maxSeason: 時間ホールドアウト用の上限（既定=制限なし）T-0198
+    maxSeason = null,            // 時間ホールドアウト用の上限（既定=制限なし）T-0198
+    // ★relative model候補（2026-08-13、正本22 §5-C）。既定=false＝**productionの挙動は変えない**。
+    //   true にすると走力のNPB+自動blendを行わず、較正済み統計モデルをprimaryにする。
+    //   T-0203が判定C（統計材料が薄い層を推定できず増分を確認できない）だったため、
+    //   自動blendは採用しない方針の候補。NPB+のraw値は削除しない（review evidenceとして保持）。
+    statPrimarySpeed = false } = opts;
 
   let pid = playerId;
   if (!pid) {
@@ -916,7 +921,8 @@ export function appraiseCard(ctx, opts) {
     //   そこで**実測の確からしさ（ホールドアウトでの一致）を重みにして混ぜる**。
     //   Sprint Speed のように一致0.945の実測はほぼそのまま効き、
     //   ハードヒット率のような0.5前後の実測は半分ほどしか動かさない。
-    speedOverride: runRec?.scouting ? runRec : blendDirect(run?.speed, directs.走力),
+    speedOverride: runRec?.scouting ? runRec
+      : (statPrimarySpeed ? null : blendDirect(run?.speed, directs.走力)),
     powerOverride: blendDirect(batAdjusted?.power, directs.パワー),
     powerDisplay: conventions.power_display,
     specialAbilities: {
