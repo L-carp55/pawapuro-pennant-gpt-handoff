@@ -1,0 +1,13 @@
+debt_id	ability_or_scope	issue	status	required_before	corrective_rule	evidence
+PD-001	守備力	DPS/DPTのweightを翌年再現性で決定	REAUDIT_REQUIRED	守備力finalization	年度査定weightは翌年persistenceでなくcurrent construct・same-time reliability・confoundで再設計	configs/ratings.json;project docs 2026-08-05
+PD-002	守備力	DPFを翌年再現性0.055を主理由に不採用	REAUDIT_REQUIRED	守備力finalization	DPFが守備技術を測らないというconstruct理由は別途評価し、翌年再現性だけで棄却しない	project docs 2026-08-05
+PD-003	守備力/捕球	fielding/catching shrinkage kappaをyear-to-year相関から推定	REAUDIT_REQUIRED	守備力/捕球finalization	sample uncertaintyと翌年persistenceを分離し、年度査定のshrinkage根拠を再校正	configs/ratings.json
+PD-004	捕手捕球	捕逸/試合のkappaを翌年再現性r=0.217から逆算	REAUDIT_REQUIRED	捕球finalization	年度査定のmeasurement error/sample reliabilityから再設計	configs/ratings.json
+PD-005	肩力	NPB+送球速度を全ポジションpoolして相関ほぼ0→使えないと初期判定	ALREADY_CORRECTED_GUARDRAIL	shoulder kickoff	異質なポジション/役割をpoolしてsignalを打ち消さない。まず層別・interactionを確認	configs/ratings.json
+PD-006	送球得能	悪送球276件をparserがイベント表記不一致で丸ごと落としていた	ALREADY_CORRECTED_GUARDRAIL	送球/肩QA	0件/少数をdata absenceと断定する前にraw在庫・parser coverage・alternate spellingを検査	project docs 2026-08-05
+PD-007	打球方向	引っ張り率は公開されていないと誤認したがraw NF3に存在しparserが未対応だった	ALREADY_CORRECTED_GUARDRAIL	batting direction QA	外部再収集前にraw inventoryとparser coverageを確認。not parsed != not available	project docs 2026-08-04
+PD-008	守備力/捕球/肩力	第3階層proxyのPowerPro相関が低いことを「材料の限界」と誤報告し、第1階層を未収集のまま扱った	REOPEN_AT_ABILITY_KICKOFF	各ability kickoff	低相関を材料不存在と混同しない。直接計測/上位階層の未収集を先に精査	configs/ratings.json
+PD-009	守備力/捕球/肩力	PowerPro相関0.4未満を材料採否・scale適用判断へ強く使用	REAUDIT_REQUIRED	各ability finalization	PowerProはreference/QAでありconstruct-validityの唯一のacceptance criterionにしない	configs/ratings.json
+PD-010	肩力	Statcast arm→PowerProとStatcast arm→The Showの傾き差2.7倍でdirect armをdisabled	REASSESS_NOT_CONFIRMED_WRONG	shoulder kickoff	別ゲームscale/母集団差を分離し、position-specific current physical evidenceとengine responseで再評価。現状disabledを自動で解除しない	configs/ratings.json
+PD-011	送球得能	64人中統計的に有意な2人だけ得能付与するhard significance gate	REAUDIT_REQUIRED	送球finalization	少サンプルを0/なしへせずposterior probability・interval・confidenceで表現可能か検討	project docs 2026-08-05
+PD-012	全能力	成果物/配線が存在するが実査定に接続されていないケースを完了扱いする危険	ONGOING_GUARDRAIL	all gates	実カード/実選手で入力perturbation→出力変化を確認し、wiring coverageをDoDに含める	project docs P-00g / context-tier incident
