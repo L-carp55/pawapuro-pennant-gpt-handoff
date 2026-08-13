@@ -560,24 +560,59 @@ export function appraiseCard(ctx, opts) {
   const p = all.find(x => x.season === targetSeason) ?? all[all.length - 1];
 
   // 対象年の打数0は「打撃サンプルが無い」であってパイプライン例外ではない（SP-098 塩見泰隆2025）。
-  // 打撃点は出さず、走力は多年観測があれば計算する。
+  // ★review修正(2026-08-14): 「打撃データが無い」と「他能力を査定しない」を混同しない。
+  //   Grok初版は arm を捨て・fld を [] 固定し・buildCard を迂回していた。実測で
+  //   (a)塩見2025は durable.arm z=0.387 が算出可能なのに肩力null (b)AB=0の16選手シーズン中
+  //   12件が同年に守備イニングを持つ (c)card schemaが正常系24キー→5キーへ縮退し
+  //   player_id が card.player.player_id へ潜る、の3点を確認したため修正する。
   if (!(line.AB > 0)) {
     const durable = estimateDurableTraits(db, p.player_id, targetSeason,
       { cfg, runNorm, fldNorm, lgOf, envFactorsOf, maxSeason, currentYearFirst, sufficientWeight });
     const speedVal = durable.speed?.z == null ? null : speedRating(durable.speed.z, cfg);
-    const run = speedVal == null ? null : { speed: speedVal, speedDetail: durable.speed };
-    const abilitySheet = buildAbilitySheet({ bat: null, run, fld: [], splits: null }, cfg);
-    const card = {
-      player: {
-        player_id: p.player_id,
-        name_ja: p.name.replace(/　/g, ' '),
-        team: p.team,
-      },
-      abilities: abilitySheet,
-      speedDetail: durable.speed ?? null,
-      _no_batting_sample: true,
-      unresolved: ['対象年の打数が0。打撃査定は出さない。走力は多年観測があれば計算する'],
+    const run0 = speedVal == null ? null : { speed: speedVal, speedDetail: durable.speed };
+
+    // 守備は打撃とは別系統。打数0でも守備イニングがあれば査定する。
+    // 注: 併殺内訳・捕逸・捕手フレーミングの加算は正常系のみ（この母集団は最大3イニングで
+    //     加算の寄与が無く、78行の重複を避けるため）。適用外であることを unresolved に明示する。
+    const fldRows0 = prep(`
+      SELECT f.season, f.pos, f.inn, f.rngr, f.errr, f.arm, f.dpr, f.framing, f.blocking
+      FROM bm_fld f JOIN player_link l ON l.bm_id=f.player_id AND l.season=f.season
+      WHERE l.proeye_id=? AND f.season=? AND f.farm=0 AND f.inn>0`).all(p.player_id, targetSeason);
+    const fld0 = fldRows0.length ? appraiseAllPositions(fldRows0, durable.speed?.z ?? 0, fldNorm, cfg) : [];
+
+    // durable.arm は生のz。正常系と同じ traitRating を通してから渡す（素のzを渡すと肩力nullになる）
+    const armTrait0 = durable.arm ? traitRating(
+      durable.arm, cfg.fielding.kappa_innings_arm ?? cfg.fielding.kappa_innings_range,
+      cfg.zscore_ratings.arm, cfg.clamp, clamp) : null;
+    const armForSheet0 = armTrait0 && {
+      ...armTrait0, is_estimated: false,
+      basis: durable.arm.basis, components: durable.arm.components,
     };
+    if (armForSheet0) for (const f of fld0) f.arm = armForSheet0;
+
+    const abilitySheet = buildAbilitySheet(
+      { bat: null, run: run0, fld: fld0, splits: null, arm: armForSheet0 }, cfg);
+
+    const card = buildCard({
+      player: {
+        player_id: p.player_id, name_ja: p.name.replace(/　/g, ' '), team: p.team,
+        league: leagueOf(p.team), primary_position: p.position,
+        secondary_positions: fld0.filter(f => f.pos !== p.position).map(f => f.pos),
+        team_games: 143,
+      },
+      cardType, seasonLabel, seasonsUsed,
+      ratings: null,
+      calcLog: null,
+      confidence: { batting: 'NO_SAMPLE', speed: durable.speed ? 'POOLED' : 'NONE',
+        arm: durable.arm ? 'POOLED' : 'NONE', fielding: fld0.length ? 'LOW_INNINGS' : 'NONE' },
+      unresolved: [
+        '対象年の打数が0。打撃査定は出さない（走力・肩力・守備は算出する）',
+        ...(fldRows0.length ? ['守備の併殺内訳・捕逸・捕手フレーミング加算はこの経路では未適用'] : []),
+      ],
+    });
+    card.abilities = abilitySheet;
+    card.speedDetail = durable.speed ?? null;
+    card._no_batting_sample = true;
     return { card, batting: null, meta: { targetSeason, noBattingSample: true, hasBasement: false } };
   }
 
