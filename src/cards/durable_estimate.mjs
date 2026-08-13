@@ -22,6 +22,10 @@ const prep = (db, sql) => {
  */
 export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
   const { runNorm, fldNorm } = ctx;
+  // 時間ホールドアウト用の上限（既定=制限なし＝従来どおり）。T-0198。
+  const maxSeason = ctx.maxSeason ?? null;
+  const hi = maxSeason == null ? targetSeason + MAX_GAP : Math.min(targetSeason + MAX_GAP, maxSeason);
+  const poolOpts = { maxYearGap: MAX_GAP, maxSeason };
 
   // --- 走力: 対象年の前後の打撃＋走塁データから各年のzを出して畳む ---
   const runRows = prep(db, `
@@ -33,7 +37,7 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
     LEFT JOIN nf3_team_link tl ON tl.proeye_id=b.player_id AND tl.season=b.season
     LEFT JOIN nf3_team_bat t ON t.season=tl.season AND t.name_norm=tl.name_norm
     WHERE b.player_id=? AND b.season BETWEEN ? AND ? AND b.pa>=100 AND b.position<>'投'`)
-    .all(proeyeId, targetSeason - MAX_GAP, targetSeason + MAX_GAP);
+    .all(proeyeId, targetSeason - MAX_GAP, hi);
 
   const nrm = s2 => (s2 ?? '').normalize('NFKC').replace(/\s+/g, '');
   const speedObs = runRows.map(r => {
@@ -45,7 +49,7 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
         advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 }, r.ubr, runNorm);
     return sc.score == null ? null : { z: sc.score, weight: r.pa, season: r.season };
   }).filter(Boolean);
-  const speed = poolAcrossYears(speedObs, targetSeason, { maxYearGap: MAX_GAP });
+  const speed = poolAcrossYears(speedObs, targetSeason, poolOpts);
 
   // --- 肩: ARM（2020年以降）と補殺（2006年以降）の2つを別々に畳んでから合成 ---
   const armRows = prep(db, `
@@ -53,7 +57,7 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
     FROM bm_fld f JOIN player_link l ON l.bm_id=f.player_id AND l.season=f.season
     WHERE l.proeye_id=? AND f.season BETWEEN ? AND ? AND f.farm=0
       AND f.arm IS NOT NULL AND f.inn>=100`)
-    .all(proeyeId, targetSeason - MAX_GAP, targetSeason + MAX_GAP);
+    .all(proeyeId, targetSeason - MAX_GAP, hi);
 
   const armObs = armRows.map(r => {
     const n = fldNorm.byPos[r.pos]?.arm;
@@ -64,7 +68,7 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
   const asstRows = prep(db, `
     SELECT season, position, g, a FROM v_fielding
     WHERE player_id=? AND season BETWEEN ? AND ? AND position IN ('外','捕') AND g>=40`)
-    .all(proeyeId, targetSeason - MAX_GAP, targetSeason + MAX_GAP);
+    .all(proeyeId, targetSeason - MAX_GAP, hi);
 
   const asstObs = asstRows.map(r => {
     const grp = r.position === '外' ? 'OF' : 'C';
@@ -73,8 +77,8 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
     return { z: (r.a / r.g - n.mean) / n.sd, weight: r.g, season: r.season };
   }).filter(Boolean);
 
-  const armPooled = poolAcrossYears(armObs, targetSeason, { maxYearGap: MAX_GAP });
-  const asstPooled = poolAcrossYears(asstObs, targetSeason, { maxYearGap: MAX_GAP });
+  const armPooled = poolAcrossYears(armObs, targetSeason, poolOpts);
+  const asstPooled = poolAcrossYears(asstObs, targetSeason, poolOpts);
   const combined = combineArmSources(armPooled, asstPooled);
 
   return {
