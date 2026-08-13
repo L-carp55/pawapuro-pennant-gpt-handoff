@@ -7,11 +7,11 @@ SR-005	PowerPro長期パネルを収集だけで終わらせず、version分布�
 SR-006	秋山翔吾・松山竜平などベテランのPowerPro据え置き疑いを個別caseとして監査する	owner request
 SR-007	PowerProを無条件の正解にせず、教師値とQAの循環を避ける	Claude red-team / owner concern
 SR-008	H2F・塁間走・加速・内野ゴロ等の混合情報を、交絡と誤差を保存して評価する	owner request / gap audit
-SR-009	既存の三塁打/GIDP回避/内野安打/advance/UBRの実測再現性を無視せず再利用する	Claude red-team
+SR-009	既存の三塁打/GIDP回避/内野安打/advance/UBRを証拠資産として再利用する。ただし旧「翌年再現性をそのまま重みにする」方式はlegacy controlに限定し、final年度査定へ継承しない	owner 2026-08-05 rule / policy correction
 SR-010	NPB+ raw measurement自体と、PowerProラベルへ回帰した変換経路を分離して評価する	Claude red-team
 SR-011	時間holdoutで未来情報漏れを防ぎ、NOT_IDENTIFIABLEを無理に結論へ変えない	T-0198 / user
-SR-012	統計材料が薄い選手でNPB+に追加価値があるかを層別し、判定不能ならreview evidenceへ留める	T-0203 / current policy
-SR-013	2026終了後にT-0203を同じ事前定義で再実行する	T-0204
+SR-012	統計材料が薄い選手でNPB+に追加価値があるかの翌年/未来予測研究はdiagnosticとして保持するが、年度査定の採否・重みの直接基準にはしない	T-0203 / owner 2026-08-05 rule
+SR-013	2026終了後のT-0203再実行はprojection/diagnostic研究として扱い、年度査定Gateの必須条件にはしない	T-0204 / owner 2026-08-05 rule
 SR-014	ordinary SNS/Grok-XのPhysical Observation laneを再利用する	existing evidence
 SR-015	旧Grok-Xでゲーム査定を理由に棄却した候補をRating Consensusとして再分類する	owner explicit request
 SR-016	PowerPro公式YouTubeの能力紹介/updateコメントを体系的に収集・分類する	owner explicit request
@@ -51,3 +51,4 @@ SR-049	CURRENTを名乗る入口文書を1つのtask registryへ収束させ、�
 SR-050	DONEは成果物存在だけでなく非空・QA・coverage・completion criteriaを満たした時だけ許可する	current user request
 SR-051	旧2026-08-05 all-missing-data taskのspeed項目を子要件へマッピングし、後続成果で代替済みか未完か明示する	completeness audit
 SR-052	official scouting / pinch-runner usage / defensive straight-line chase speed等、過去に言及した補助証拠の実施/不要/blockedを明示する	completeness audit
+SR-053	翌年再現性・翌年予測力を、一年ごとの能力査定の材料採否・component weight・縮小強度・最終点の直接根拠に使わない。同時点の測定信頼性・sample誤差とは明確に区別する	owner explicit instruction 2026-08-05 / restored 2026-08-13
