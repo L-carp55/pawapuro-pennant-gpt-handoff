@@ -1,0 +1,274 @@
+{
+  "run_id": "speed-prospi-gamex-run3-20260813",
+  "created_at_utc": "2026-08-13T13:32:43.531949Z",
+  "encoding": "UTF-8",
+  "target_input": {
+    "path": "data\\manual\\npb_speed_physical_evidence_full_20260809.json",
+    "player_count": 100,
+    "identity_enrichment": "outputs\\derived\\speed_2026_100_owner_review_master_20260813.csv",
+    "canonical_id_unresolved_players": [
+      "名原 典彦"
+    ]
+  },
+  "reachability": {
+    "url": "https://gamex.jp/",
+    "tested_at_utc": "2026-08-13T13:32:34.550274Z",
+    "result": "SUCCESS",
+    "http_status": 200,
+    "effective_url": "https://gamex.jp/",
+    "content_bytes": 140714
+  },
+  "run2_urls": {
+    "current_csv_source_url_column": [
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2026-s1"
+    ],
+    "execution_log_urls": [
+      "https://gamex.jp/",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2024-s2",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2025-s1",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2025-s2",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2026-s1"
+    ],
+    "union": [
+      "https://gamex.jp/",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2024-s2",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2025-s1",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2025-s2",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2026-s1"
+    ]
+  },
+  "catalog_discovery": {
+    "requests": {
+      "prospi_top": {
+        "url": "https://gamex.jp/prospi-top",
+        "http_status": 200,
+        "effective_url": "https://gamex.jp/prospi-top",
+        "content_bytes": 76437
+      },
+      "player_index": {
+        "url": "https://gamex.jp/prospi-top/prospi-players",
+        "http_status": 200,
+        "effective_url": "https://gamex.jp/prospi-top/prospi-players",
+        "content_bytes": 69789
+      },
+      "sitemap_index": {
+        "url": "https://gamex.jp/sitemap_index.xml",
+        "http_status": 200,
+        "effective_url": "https://gamex.jp/sitemap_index.xml",
+        "content_bytes": 745
+      },
+      "page_sitemap": {
+        "url": "https://gamex.jp/page-sitemap.xml",
+        "http_status": 200,
+        "effective_url": "https://gamex.jp/page-sitemap.xml",
+        "content_bytes": 4625
+      }
+    },
+    "discovered_player_urls": [
+      "/prospi-players-2025-s1",
+      "/prospi-players-2025-s1/",
+      "/prospi-players-2025-s2",
+      "/prospi-players-2025-s2/",
+      "/prospi-players-2026-s1",
+      "/prospi-players-2026-s1/",
+      "https://gamex.jp/",
+      "https://gamex.jp/author-sitemap.xml",
+      "https://gamex.jp/breakout-8bit",
+      "https://gamex.jp/browser-game-list",
+      "https://gamex.jp/category-sitemap.xml",
+      "https://gamex.jp/famicom-chronicle",
+      "https://gamex.jp/famicom-chronicle-articles",
+      "https://gamex.jp/hsr-top",
+      "https://gamex.jp/hsr-top/hsr-beginner-guide",
+      "https://gamex.jp/hsr-top/hsr-character-build",
+      "https://gamex.jp/hsr-top/hsr-endgame-guide",
+      "https://gamex.jp/hsr-top/hsr-gacha-simulator",
+      "https://gamex.jp/hsr-top/hsr-relic-guide",
+      "https://gamex.jp/hsr-top/hsr-team-guide",
+      "https://gamex.jp/inquiry",
+      "https://gamex.jp/moujo-top",
+      "https://gamex.jp/notice",
+      "https://gamex.jp/operator-information",
+      "https://gamex.jp/p5x-persona-list",
+      "https://gamex.jp/p5x-top",
+      "https://gamex.jp/p5x-top/p5x-character-guide",
+      "https://gamex.jp/p5x-top/p5x-gacha-simulator",
+      "https://gamex.jp/page-sitemap.xml",
+      "https://gamex.jp/post-sitemap.xml",
+      "https://gamex.jp/privacy-policy",
+      "https://gamex.jp/prospi-top",
+      "https://gamex.jp/prospi-top/prospi-beginner-guide",
+      "https://gamex.jp/prospi-top/prospi-players",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2025-s1",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2025-s2",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2026-s1",
+      "https://gamex.jp/reversi"
+    ],
+    "errors": [],
+    "prospi_urls_in_catalog": [
+      "/prospi-players-2025-s1",
+      "/prospi-players-2025-s1/",
+      "/prospi-players-2025-s2",
+      "/prospi-players-2025-s2/",
+      "/prospi-players-2026-s1",
+      "/prospi-players-2026-s1/",
+      "https://gamex.jp/prospi-top",
+      "https://gamex.jp/prospi-top/prospi-beginner-guide",
+      "https://gamex.jp/prospi-top/prospi-players",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2025-s1",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2025-s2",
+      "https://gamex.jp/prospi-top/prospi-players/prospi-players-2026-s1"
+    ]
+  },
+  "edition_results": [
+    {
+      "edition": "2026 Series 1",
+      "edition_code": "2026S1",
+      "status": "SUCCESS",
+      "http_status": 200,
+      "effective_url": "https://gamex.jp/prospi-top/prospi-players/prospi-players-2026-s1",
+      "content_bytes": 111908,
+      "parsed_hitter_rows": 30,
+      "parser_issues": [],
+      "table_summary": [
+        {
+          "table_index": 0,
+          "row_count_excluding_header": 30
+        },
+        {
+          "table_index": 1,
+          "row_count_excluding_header": 41
+        }
+      ],
+      "retrieved_cards": 17,
+      "not_found_player_outcomes": 84,
+      "partial_name_candidates_not_auto_accepted": [],
+      "match_decision_counts": {
+        "DOCUMENTED_SOURCE_ALIAS": 1,
+        "NORMALIZED_NAME_AND_CURRENT_TEAM": 16
+      }
+    },
+    {
+      "edition": "2025 Series 2",
+      "edition_code": "2025S2",
+      "status": "SUCCESS",
+      "http_status": 200,
+      "effective_url": "https://gamex.jp/prospi-top/prospi-players/prospi-players-2025-s2",
+      "content_bytes": 279644,
+      "parsed_hitter_rows": 233,
+      "parser_issues": [],
+      "table_summary": [
+        {
+          "table_index": 0,
+          "row_count_excluding_header": 233
+        },
+        {
+          "table_index": 1,
+          "row_count_excluding_header": 170
+        }
+      ],
+      "retrieved_cards": 88,
+      "not_found_player_outcomes": 36,
+      "partial_name_candidates_not_auto_accepted": [],
+      "match_decision_counts": {
+        "HISTORICAL_EXACT_NAME_TEAM_DRIFT": 8,
+        "NORMALIZED_NAME_AND_CURRENT_TEAM": 80
+      }
+    },
+    {
+      "edition": "2025 Series 1",
+      "edition_code": "2025S1",
+      "status": "SUCCESS",
+      "http_status": 200,
+      "effective_url": "https://gamex.jp/prospi-top/prospi-players/prospi-players-2025-s1",
+      "content_bytes": 143582,
+      "parsed_hitter_rows": 74,
+      "parser_issues": [],
+      "table_summary": [
+        {
+          "table_index": 0,
+          "row_count_excluding_header": 74
+        },
+        {
+          "table_index": 1,
+          "row_count_excluding_header": 60
+        }
+      ],
+      "retrieved_cards": 43,
+      "not_found_player_outcomes": 57,
+      "partial_name_candidates_not_auto_accepted": [],
+      "match_decision_counts": {
+        "HISTORICAL_EXACT_NAME_TEAM_DRIFT": 4,
+        "NORMALIZED_NAME_AND_CURRENT_TEAM": 39
+      }
+    },
+    {
+      "edition": "2024 Series 2",
+      "edition_code": "2024S2",
+      "status": "NOT_COLLECTED",
+      "player_outcomes": 100,
+      "responses": [
+        {
+          "url": "https://gamex.jp/prospi-top/prospi-players/prospi-players-2024-s2",
+          "http_status": 404,
+          "effective_url": "https://gamex.jp/prospi-top/prospi-players/prospi-players-2024-s2",
+          "content_bytes": 53199,
+          "location": ""
+        },
+        {
+          "url": "https://gamex.jp/prospi-players-2024-s2/",
+          "http_status": 404,
+          "effective_url": "https://gamex.jp/prospi-players-2024-s2/",
+          "content_bytes": 53199,
+          "location": ""
+        }
+      ]
+    }
+  ],
+  "partial_name_candidates_not_auto_accepted": [],
+  "run2_retrieved_cards": {
+    "current": 17,
+    "historical": 119
+  },
+  "run3_outputs": {
+    "current": {
+      "row_count": 101,
+      "status_counts": {
+        "NOT_FOUND": 84,
+        "RETRIEVED": 17
+      },
+      "retrieved_card_count": 17,
+      "retrieved_unique_player_count": 16,
+      "not_found_player_count": 84,
+      "not_collected_player_count": 0,
+      "connection_failed_player_count": 0
+    },
+    "historical": {
+      "row_count": 324,
+      "status_counts": {
+        "NOT_COLLECTED": 100,
+        "NOT_FOUND": 93,
+        "RETRIEVED": 131
+      },
+      "retrieved_card_count": 131,
+      "retrieved_unique_player_count": 76,
+      "not_found_player_count": 69,
+      "not_collected_player_count": 100,
+      "connection_failed_player_count": 0
+    }
+  },
+  "recovery_breakdown": {
+    "A_normalization_only_cards": 0,
+    "A_historical_team_drift_cards": 12,
+    "A_total_entity_matching_cards": 12,
+    "B_new_route_cards": 0,
+    "current_card_delta": 0,
+    "historical_card_delta": 12,
+    "notes": "run2 already used the requested name normalization. The only recovered cards are historical exact-full-name matches whose source club differs from the 2026 target club; no partial-name candidate was auto-accepted."
+  },
+  "limits": [
+    "NOT_FOUND means absent from the parsed GameX edition page, not absent from ProspiA as a whole.",
+    "2024 Series 2 is NOT_COLLECTED because no GameX player page was found; it is not a game-absence conclusion.",
+    "No GameX/Prospi value is used to alter an NPB or PowerPro speed rating."
+  ]
+}
