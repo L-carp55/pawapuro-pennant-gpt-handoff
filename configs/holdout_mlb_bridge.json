@@ -17,9 +17,20 @@
       "バレラ",
       "鈴木 誠也",
       "ガルビス",
-      "ブリンソン"
+      "ブリンソン",
+      "ハイネマン"
     ],
-    "not_found_in_bridge": []
+    "not_found_in_bridge": [],
+    "_additions": [
+      {
+        "date": "2026-08-13",
+        "players": [
+          "ハイネマン"
+        ],
+        "why": "SP-052(The Show→PowerPro same-time mapping)の下調べで、(The Show speed, PowerPro走力)の組を画面出力してしまった。恣意的な選び直しではなく露出の事実に基づく除外。以後fitではtrain側扱い",
+        "task": "SP-052"
+      }
+    ]
   },
   "counts": {
     "total": 59,
