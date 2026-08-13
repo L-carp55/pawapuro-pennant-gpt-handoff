@@ -60,5 +60,5 @@ SP-091	DONE_VALIDATED	governance	SR-048	0	0		Immutable speed requirements baseli
 SP-092	DONE_VALIDATED	governance	SR-048,SR-049,SR-050	0	0		Canonical machine-readable task registry		docs/state/speed_task_registry.tsv;docs/state/speed_legacy_open_item_map.tsv
 SP-093	DONE_VALIDATED	governance	SR-048,SR-049,SR-050	0	0		Task-registry QA validator		scripts/qa_speed_task_registry.mjs
 SP-094	DONE_VALIDATED	governance	SR-048,SR-049,SR-050	0	0		CI fail-closed task-registry check		.github/workflows/speed-task-registry-qa.yml
-SP-095	NOT_STARTED	governance	SR-049	0	1		Entrypoint convergence (CLAUDE/README/MANIFEST/current-state)	Update all entrypoints to name speed_task_registry.tsv as authority and remove stale 17/18/19-first instructions.	
+SP-095	DONE_VALIDATED	governance	SR-049	0	0		Entrypoint convergence (CLAUDE/README/MANIFEST/current-state)		CLAUDE.md;docs/satei_handoff/00_README_AND_HANDOFF.md;docs/satei_handoff/MANIFEST.md;docs/satei_handoff/22_CURRENT_STATE_AND_AUTONOMOUS_CONTINUATION_20260813.md
 SP-096	DONE_VALIDATED	governance	SR-050	0	0		Zero-byte / existence / QA completion enforcement		scripts/qa_speed_task_registry.mjs
