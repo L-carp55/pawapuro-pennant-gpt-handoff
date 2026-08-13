@@ -1199,6 +1199,37 @@ console.log('=== 未整備だった回帰テスト ===\n');
     JSON.stringify(held.calc_log.running.speed_seasons));
 }
 
+// ── §候補 relative model候補: 統計モデルprimary（正本22 §5-C、2026-08-13）────
+// T-0203が判定C（統計材料が薄い層を推定できず増分を確認できない）だったため、
+// 走力のNPB+自動blendは採用しない方針。ただし**productionの既定は変えない**。
+// statPrimarySpeed:true を渡した時だけ候補の挙動になる。
+// NPB+のraw値は削除しない（低reliability選手のreview evidenceとして保持する）。
+{
+  const { makeContext: mkC, appraiseCard: acC } = await import('../src/cards/pipeline.mjs');
+  const { readFileSync: rfC } = await import('node:fs');
+  const rvC = JSON.parse(rfC('configs/run_values.json', 'utf8')).values;
+  const ctxC = mkC(db, cfg);
+  const cur = acC(ctxC, { name: '周東　佑京', mode: '2025', cfg, rv: rvC, runNorm, fldNorm }).card;
+  const cand = acC(ctxC, { name: '周東　佑京', mode: '2025', statPrimarySpeed: true, cfg, rv: rvC, runNorm, fldNorm }).card;
+  const A = cur.abilities.基礎能力.走力, B = cand.abilities.基礎能力.走力;
+
+  t('§候補-a 既定ではNPB+実測が混ざる（productionの挙動を変えていない）',
+    A.statistical_value != null && A.from_direct_measurement === true,
+    `統計${A.statistical_value} → 混合後${A.value}`);
+  t('§候補-b 候補ではNPB+を混ぜない',
+    B.statistical_value == null && B.from_direct_measurement !== true, `候補=${B.value}`);
+  t('§候補-c 候補では較正が掛かる（幅を戻す。混合経路はapplyScaleを迂回していた）',
+    B.uncalibrated != null && B.value !== B.uncalibrated,
+    `素点${B.uncalibrated} → 較正後${B.value}`);
+  t('§候補-d 候補と既定で値が違う（フラグが実際に効いている）',
+    A.value !== B.value, `既定${A.value} / 候補${B.value}`);
+
+  // NPB+のraw値を捨てていないこと（正本22 §9「raw measurementを削除しない」）
+  const npbCount = db.prepare('SELECT COUNT(*) n FROM npb_plus_measurement WHERE top_speed_kmh IS NOT NULL').get().n;
+  t('§候補-e NPB+のraw測定値はDBに保持されている（削除していない）',
+    npbCount >= 90, `${npbCount}人分`);
+}
+
 console.log(`\n合計: ${pass} PASS / ${fail} FAIL`);
 db.close();
 process.exit(fail ? 1 : 0);
