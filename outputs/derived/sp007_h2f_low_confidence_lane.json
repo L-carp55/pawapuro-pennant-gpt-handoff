@@ -1,0 +1,290 @@
+{
+  "generated_at": "2026-08-13",
+  "policy": "EX-003/EX-015是正。strict T90 pipeline（speedComponents）は無変更。走力点には配線しない、低信頼度の別レーン",
+  "scope": "docs/audits/speed_2026_reopen_comprehensive_gap_audit_20260811.md 起点、data/manual/npb_speed_physical_evidence_full_20260809.json のhp_to_1b records(n=31, 15選手が重複)",
+  "strict_negative_finding_preserved": "EX-015: strict direct-current acceleration prior は ready_players=0 のまま。本レーンはこれを上書きしない",
+  "normal_swing": {
+    "standardization": {
+      "mean": 3.962222222222222,
+      "sd": 0.13305897699150068
+    },
+    "n_players": 15,
+    "players": [
+      {
+        "player": "中川 圭太",
+        "isBunt": false,
+        "seconds": 4.01,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://pacificleague.com/news/32690"
+        ],
+        "bats": "右",
+        "z": -0.3590721863195263,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "梶原 昂希",
+        "isBunt": false,
+        "seconds": 3.97,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://baseballking.jp/ns/297434/"
+        ],
+        "bats": "左",
+        "z": -0.05845361172643707,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "小園 海斗",
+        "isBunt": false,
+        "seconds": 4.05,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://goetheweb.jp/person/article/20241128-star-kozonokaito"
+        ],
+        "bats": "左",
+        "z": -0.6596907609126189,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "外崎 修汰",
+        "isBunt": false,
+        "seconds": 4.13,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://pacificleague.com/news/61236"
+        ],
+        "bats": "右",
+        "z": -1.260927910098804,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "源田 壮亮",
+        "isBunt": false,
+        "seconds": 3.8149999999999995,
+        "n_independent_records": 4,
+        "n_raw_records": 4,
+        "sources": [
+          "https://pacificleague.com/news/32690",
+          "https://pacificleague.com/news/32690",
+          "https://pacificleague.com/news/32690",
+          "https://pacificleague.com/news/61236"
+        ],
+        "bats": "左",
+        "z": 1.1064433648218008,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "藤原 恭大",
+        "isBunt": false,
+        "seconds": 3.9,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://pacificleague.com/news/50792"
+        ],
+        "bats": "左",
+        "z": 0.4676288938114766,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "友杉 篤輝",
+        "isBunt": false,
+        "seconds": 3.73,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://4years.asahi.com/article/14723455"
+        ],
+        "bats": "右",
+        "z": 1.7452578358321182,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "大島 洋平",
+        "isBunt": false,
+        "seconds": 3.96,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://goetheweb.jp/person/article/20230907-yohei-oshima"
+        ],
+        "bats": "左",
+        "z": 0.016701031921837733,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "塩見 泰隆",
+        "isBunt": false,
+        "seconds": 4.205,
+        "n_independent_records": 2,
+        "n_raw_records": 2,
+        "sources": [
+          "https://number.bunshun.jp/articles/-/833298?page=2",
+          "https://number.bunshun.jp/articles/-/833298?page=2"
+        ],
+        "bats": "右",
+        "z": -1.8245877374608535,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "丸山 和郁",
+        "isBunt": false,
+        "seconds": 3.8,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://4years.asahi.com/article/12432940"
+        ],
+        "bats": "左",
+        "z": 1.219175330294208,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "並木 秀尊",
+        "isBunt": false,
+        "seconds": 3.96,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://number.bunshun.jp/articles/-/846891?page=2"
+        ],
+        "bats": "右",
+        "z": 0.016701031921837733,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "吉川 尚輝",
+        "isBunt": false,
+        "seconds": 4.165,
+        "n_independent_records": 2,
+        "n_raw_records": 2,
+        "sources": [
+          "https://www.nikkansports.com/baseball/news/1658951.html",
+          "https://www.nikkansports.com/baseball/news/1658951.html"
+        ],
+        "bats": "左",
+        "z": -1.5239691628677607,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "松本 剛",
+        "isBunt": false,
+        "seconds": 3.94,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://pacificleague.com/news/41022"
+        ],
+        "bats": "右",
+        "z": 0.16701031921838402,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "周東 佑京",
+        "isBunt": false,
+        "seconds": 3.8183333333333334,
+        "n_independent_records": 6,
+        "n_raw_records": 6,
+        "sources": [
+          "https://pacificleague.com/news/50792",
+          "https://pacificleague.com/news/50792",
+          "https://pacificleague.com/news/61236",
+          "https://pacificleague.com/news/61236",
+          "https://pacificleague.com/news/61236",
+          "https://goetheweb.jp/person/article/20230209-star-46"
+        ],
+        "bats": "左",
+        "z": 1.081391816939039,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      },
+      {
+        "player": "柳田 悠岐",
+        "isBunt": false,
+        "seconds": 3.98,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://goetheweb.jp/person/article/20210610-yuki_yanagita"
+        ],
+        "bats": "左",
+        "z": -0.13360825537470855,
+        "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE"
+      }
+    ]
+  },
+  "bunt": {
+    "standardization": {
+      "mean": null,
+      "sd": null,
+      "note": "サンプル不足(n<5)のため標準化しない"
+    },
+    "n_players": 4,
+    "players": [
+      {
+        "player": "源田 壮亮",
+        "isBunt": true,
+        "seconds": 3.68,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://sports.yahoo.co.jp/official/detail/202009180094-spnaviow"
+        ],
+        "bats": "左",
+        "z": null,
+        "lane": "H2F_BUNT_LOW_CONFIDENCE",
+        "note": "セーフティ/プッシュバントはスタートが速く通常スイングと同一分布で比較できない。別レーンのまま保持し、normal-swing z-scoreへ混ぜない"
+      },
+      {
+        "player": "大島 洋平",
+        "isBunt": true,
+        "seconds": 3.79,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://goetheweb.jp/person/article/20230907-yohei-oshima"
+        ],
+        "bats": "左",
+        "z": null,
+        "lane": "H2F_BUNT_LOW_CONFIDENCE",
+        "note": "セーフティ/プッシュバントはスタートが速く通常スイングと同一分布で比較できない。別レーンのまま保持し、normal-swing z-scoreへ混ぜない"
+      },
+      {
+        "player": "周東 佑京",
+        "isBunt": true,
+        "seconds": 3.53,
+        "n_independent_records": 3,
+        "n_raw_records": 3,
+        "sources": [
+          "https://sports.yahoo.co.jp/official/detail/202009180094-spnaviow",
+          "https://sports.yahoo.co.jp/official/detail/202009180094-spnaviow",
+          "https://pacificleague.com/news/61236"
+        ],
+        "bats": "左",
+        "z": null,
+        "lane": "H2F_BUNT_LOW_CONFIDENCE",
+        "note": "セーフティ/プッシュバントはスタートが速く通常スイングと同一分布で比較できない。別レーンのまま保持し、normal-swing z-scoreへ混ぜない"
+      },
+      {
+        "player": "牧原 大成",
+        "isBunt": true,
+        "seconds": 3.69,
+        "n_independent_records": 1,
+        "n_raw_records": 1,
+        "sources": [
+          "https://pacificleague.com/news/2019/8/18255"
+        ],
+        "bats": "左",
+        "z": null,
+        "lane": "H2F_BUNT_LOW_CONFIDENCE",
+        "note": "セーフティ/プッシュバントはスタートが速く通常スイングと同一分布で比較できない。別レーンのまま保持し、normal-swing z-scoreへ混ぜない"
+      }
+    ],
+    "_reason": "セーフティ/プッシュバントは通常スイングより有意に速い。normal-swingへ混ぜず別集計"
+  },
+  "usage_note": "low-to-medium confidence。単独で走力点を決めない。owner review / practical_powerpro_style_speed統合(EX-004 §5B)で他の同時点証拠と併記する材料として使う"
+}
