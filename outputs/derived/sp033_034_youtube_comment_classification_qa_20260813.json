@@ -28,12 +28,12 @@
     "current_100_player_mapped": 0,
     "distinct_events": 0,
     "label_counts": {
-      "UNCLASSIFIED_CONTEXT": 6120,
-      "JOKE_OR_NOISE": 1009,
+      "UNCLASSIFIED_CONTEXT": 6124,
+      "JOKE_OR_NOISE": 1010,
       "GENERIC_FAST": 4,
       "SPEED_TOO_HIGH": 2,
       "PROSPI_MORE_PLAUSIBLE": 1,
-      "PLAYER_COMPARISON": 6,
+      "PLAYER_COMPARISON": 1,
       "STALE_RATING": 4
     },
     "videos_as_origins": 55,
@@ -47,5 +47,19 @@
     "comments_recovered": 8715,
     "videos_failed": 0
   },
-  "verdict": "CLASSIFIED_AVAILABLE_TEXT"
+  "verdict": "CLASSIFIED_AVAILABLE_TEXT",
+  "opus_review_20260814": {
+    "reviewer": "Opus senior review",
+    "fixes": [
+      "PLAYER_COMPARISON: 「と比べ」単独判定を速度語同伴へ限定。16件中6件あったPS4/球団/他ゲーム比較の誤検出が解消(6→1)",
+      "姓のみ言及のcandidate層を新設。フルネーム完全一致のみでは「足が速い山川」(山川穂高=現行100人に実在)を取りこぼしていた。自動採用はせずreview送り",
+      "event_id: 選手が特定できた行は youtube:<video>:<player_id> へ分割。1動画内の別選手を1originへ潰さないため。現状はフルネーム一致0件のため発火せず(latent fix)"
+    ],
+    "surname_candidates": {
+      "rows": 243,
+      "with_speed_label": 1,
+      "example": "足が速い山川 → 山川穂高。ただし皮肉の可能性が高く(長距離砲で鈍足として知られる)、自動採用すると方向が反転した証拠を注入しうる"
+    },
+    "mapped_zero_verdict": "accepted evidenceとしての current_100_player_mapped=0 は妥当。ただし「100人の誰にも言及が無い」という意味ではない——姓のみ言及は243件あり、うち1件は走力方向ラベル付き。QAの表現は両者を区別すべき"
+  }
 }

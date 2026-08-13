@@ -64,7 +64,10 @@ function classifyText(text) {
   if (/(年齢|衰え|劣化)/.test(t) && /(反映|査定)/.test(t)) labels.push('AGING_NOT_REFLECTED');
   if (/プロスピ/.test(t) && /妥当|こっちが/.test(t)) labels.push('PROSPI_MORE_PLAUSIBLE');
   if (/パワプロ/.test(t) && /妥当|こっちが/.test(t)) labels.push('POWERPRO_MORE_PLAUSIBLE');
-  if (/(より速|より遅|と比べ)/.test(t)) labels.push('PLAYER_COMPARISON');
+  // ★review修正(2026-08-14): 「と比べ」単独ではPS4/球団/他ゲームとの比較まで拾う。
+  //   実測で16件中6件が誤検出だった。速度語を伴う比較に限定する。
+  if (/(より速|より遅)/.test(t)
+      || (/と比べ/.test(t) && /(足|走力|速|遅|俊足|鈍足)/.test(t))) labels.push('PLAYER_COMPARISON');
   if (/(俊足|足速|足が速)/.test(t)) labels.push('GENERIC_FAST');
   if (/(鈍足|足遅|足が遅)/.test(t)) labels.push('GENERIC_SLOW');
   if (/(草|www|笑|ネタ)/.test(t) && labels.length === 0) labels.push('JOKE_OR_NOISE');
@@ -75,6 +78,28 @@ function classifyText(text) {
 function matchPlayers(text, players) {
   const compact = String(text ?? '').normalize('NFKC').replace(/[\s　]/g, '');
   return players.filter(p => p.key.length >= 2 && compact.includes(p.key));
+}
+
+// ★review追加(2026-08-14): フルネーム完全一致だけでは姓のみの言及を取りこぼす。
+//   実測: 「足が速い山川」の山川穂高は現行100人に実在するのに mapped=null だった。
+//   ただし姓は同名他人・引退選手・皮肉を拾いうるので **自動採用しない**。
+//   ロースター内で一意な姓に限り candidate として出し、採否は人間のreviewへ回す。
+function matchSurnames(text, players, fullHits) {
+  if (fullHits.length) return [];
+  const compact = String(text ?? '').normalize('NFKC').replace(/[\s　]/g, '');
+  const bySur = new Map();
+  for (const p of players) {
+    const sur = String(p.player ?? '').normalize('NFKC').split(/[\s　]/)[0];
+    if (!sur || sur.length < 2) continue;
+    if (!bySur.has(sur)) bySur.set(sur, []);
+    bySur.get(sur).push(p);
+  }
+  const out = [];
+  for (const [sur, list] of bySur) {
+    if (list.length !== 1) continue;            // ロースター内で一意な姓だけ
+    if (compact.includes(sur)) out.push(list[0]);
+  }
+  return out;
 }
 
 const players = playersFromMaster();
@@ -103,7 +128,14 @@ const classified = commentRows.map(r => {
   const text = r.text ?? '';
   const labels = classifyText(text);
   const hits = matchPlayers(text, players);
-  const eventId = r.event_id || `youtube:${r.video_id}`;
+  const surHits = matchSurnames(text, players, hits);
+  // ★review修正(2026-08-14): 1動画=1originだと、同じ動画内の**別選手**への言及まで
+  //   1originへ潰れる。同一場面反応の水増し防止は選手ごとに閉じれば足りるので、
+  //   選手が特定できた行は event_id を選手별へ分ける。未特定行は従来どおり動画単位。
+  const mappedId = hits.length === 1 ? hits[0].player_id : null;
+  const eventId = r.event_id || (mappedId
+    ? `youtube:${r.video_id}:${mappedId}`
+    : `youtube:${r.video_id}`);
   const accepted = hits.length === 1 && labels.some(l => l !== 'UNCLASSIFIED_CONTEXT' && l !== 'JOKE_OR_NOISE');
   return {
     record_id: r.record_id || r.comment_id,
@@ -117,7 +149,13 @@ const classified = commentRows.map(r => {
     labels,
     player: hits.length === 1 ? hits[0].player : null,
     canonical_player_id: hits.length === 1 ? hits[0].player_id : null,
-    identity: hits.length === 1 ? 'UNIQUE' : hits.length ? 'AMBIGUOUS' : 'UNMAPPED',
+    identity: hits.length === 1 ? 'UNIQUE' : hits.length ? 'AMBIGUOUS'
+      : (surHits.length === 1 ? 'SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER' : 'UNMAPPED'),
+    surname_candidate_player: surHits.length === 1 ? surHits[0].player : null,
+    surname_candidate_player_id: surHits.length === 1 ? surHits[0].player_id : null,
+    surname_candidate_note: surHits.length === 1
+      ? '姓のみの言及。ロースター内で姓は一意だが同名他人・引退選手・皮肉の可能性があるため自動採用しない（要review）'
+      : null,
     acceptance_status: accepted ? 'ACCEPTED_RATING_OR_DIRECTIONAL_CONTEXT' : 'INCONCLUSIVE',
     origin_count: 0,
     reaction_volume: 1,

@@ -3,12 +3,18 @@
   "input_rows": 150,
   "classified_rows": 150,
   "by_bucket": {
-    "NOISE_OR_UNRELATED": 58,
-    "WEAK_PHYSICAL_OR_CONTEXT": 86,
-    "RATING_CONSENSUS": 6
+    "RATING_CONSENSUS": 6,
+    "WEAK_PHYSICAL_OR_CONTEXT": 87,
+    "NOISE_OR_UNRELATED": 57
   },
   "missing_reason": 0,
   "excluded_because_game_rating_mention": 0,
   "policy": "GAME_RATING_OR_GAME_DISCUSSION_EXCLUDED is not a valid destination. Game-rating mentions go to RATING_CONSENSUS.",
-  "verdict": "PASS"
+  "verdict": "PASS",
+  "review_20260814": {
+    "reviewer": "Opus senior review",
+    "change": "SP032-RUN2-GXSR096 を NOISE_OR_UNRELATED → WEAK_PHYSICAL_OR_CONTEXT へ訂正",
+    "why": "選手名と方向が本文にありSR-019の弱い方向証拠に該当。判定理由「方向が特定できない」が本文と矛盾していた",
+    "note": "「足は速い」(選手名なし)はNOISEのまま。ただし理由は方向不明ではなく選手帰属不能が正しい"
+  }
 }
