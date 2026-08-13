@@ -1,380 +1,200 @@
 # 走力再構築 — 現在地と自律継続ルール
 
-作成日: 2026-08-13
-状態: **CURRENT / これを現在の単一正本として優先**
+作成日: 2026-08-13  
+状態: **CURRENT HUMAN SUMMARY / machine registry優先**  
 対象branch: `agent/claude-speed-redteam-20260812`
 
 ---
 
-# 0. このファイルの目的
+## 0. Authority
 
-ユーザーがClaude CodeとGPTの間で毎ターン仲介しなくてよいように、現時点の事実・確定事項・未解決事項・次工程・停止条件を一つにまとめる。
+この文書は人間向け要約であり、task statusの正本ではない。
 
-**このファイルより前のhandoff / task文書に次工程の指示が残っていても、本書と衝突する場合は本書を優先する。**
+正本:
 
-ユーザーへの逐次確認は原則不要。下記の明示的な停止条件に到達するまで、自律的に調査・検証・実装候補作成を進める。
+- `docs/state/speed_task_registry.tsv`
+- `docs/state/speed_requirements_baseline_20260813.tsv`
+- `docs/state/speed_legacy_open_item_map.tsv`
 
----
+本書とregistryが衝突したらregistry優先。
 
-# 1. 引継ぎ上の既知の失敗
+新handoff / owner review ready / Gate close / 肩力開始の前に:
 
-GPTがClaude Codeへ戻す際のhandoffは不正確だった。
+```bash
+node scripts/qa_speed_task_registry.mjs
+```
 
-既に判明・訂正済み:
-
-- Claude離脱時点を探索段階として記述したが、実際には既存production speed modelが実装・較正済みだった。
-- 三塁打・GIDP回避・内野安打・advance・UBR、多年pool、走力/走塁分離、blendDirect等を十分に引き継がなかった。
-- GPT/Codex側の100人baselineは「NPB+中心」ではなく、99人でNPB+速度のほぼ完全な一次関数だった。
-- owner reviewの意図を「オーナーが走力目盛りを作る」に取り違えた。
-- **追加SNSのRating Consensus / official YouTube comments / Prospi rating commentsを未実施のまま、後続正本22から次工程として落としていた。**
-
-最後の項目は2026-08-13に再確認して復元した。既存audit `speed_2026_reopen_comprehensive_gap_audit_20260811.md` §2.5–2.10 を根拠とする。
+を必ずPASSさせる。
 
 ---
 
-# 2. 再利用する確定資産
+## 1. 現在の正式状態
 
-以下は原則やり直さない。
+```text
+2026 NPB SPEED APPRAISAL GATE: ACTIVE / REOPENED
+OWNER REVIEW: NOT READY
+SHOULDER: BLOCKED
+```
 
-- 既存Claude production speed model
-- 2021-2025等の多年pool実装
-- 三塁打 / GIDP回避 / 内野安打 / advance / UBR の既存componentと再現性重み
-- 走力で説明できる進塁成分を除いた走塁得能の分離
-- GPT/Codexの2026 NPB 100人 roster / NPB+ speed / exposure
-- physical evidence ledger 459件
-- high-confidence physical anchor候補113件
-- PowerPro 2015-2026 long panel
-- The Show collection
-- ordinary SNS / Grok-X evidence（Physical Observation laneとして再利用）
-- targeted physical rescue / video negative findings
-- 100人 owner review master table と再現スクリプト
-- Claude independent red-team
-- T-0198 `maxSeason` 修理
-- rolling holdout訂正版
-- 2026 advance追加情報テスト
-- NPB+ direct CV
-- NPB+→PowerPro label→blend の構造問題監査
-- T-0203層別検証
-
-### 既存SNSについての重要境界
-
-Grok-X rescueは:
-
-- x_search 175
-- raw hit 267
-- unique candidates 191
-- accepted X posts 41
-
-まで実施済み。
-
-ただし当時のQAで `GAME_RATING_OR_GAME_DISCUSSION_EXCLUDED` として、**PowerPro/Prospi査定への言及を意図的に除外**していた。
-
-したがって既存SNSは主に:
-
-- 足が速い/遅い
-- 加速
-- temporal decline/recovery
-- pairwise physical impression
-
-を扱う **Physical Observation Consensus** であり、後述の **Rating Consensusを完了したことにはならない**。
+既存100人master tableはpreliminary asset。旧owner review queueはSUPERSEDED。
 
 ---
 
-# 3. 現在までに確定した重要結論
+## 2. 確定済みの重要事項
 
-## 3.1 T-0198
+### Existing production control
 
-`poolAcrossYears`等へ `maxSeason` を追加し、時間holdout時に未来年を除外可能。未指定時は既存挙動不変。
+Claude離脱前からproduction statistical speed modelが存在していた。
 
-## 3.2 rolling temporal holdout
+- triple
+- GIDP avoidance
+- infield hit
+- advance
+- UBR
+- multi-year pooling
+- baserunning skill residualization
 
-NPB+には過去年snapshotがなく、統計側だけY-1で切れるため、公平なrolling holdoutによるNPB+ blend採否は **NOT_IDENTIFIABLE**。
+を持つ。再構築案はこれをcontrolとして比較する。
 
-未来情報を含む `statOpen` はdiagnosticのみ。
+### GPT/Codex旧blind baseline
 
-## 3.3 NPB+自体
+99人がNPB+最高速度のほぼ完全な一次関数だった。大量に集めた証拠が点数へほぼ接続されていなかったため、実用最終値として使わない。
 
-NPB+には実の信号がある。
+### T-0198
 
-ただし2026 advanceに対し、2021-2025統計モデルへのincremental valueは確認した閾値で0以下。
+`maxSeason`修理済み。時間holdout時に未来年を切れる。未指定時の旧挙動は維持。
 
-T-0203では最も薄い1年層がn=2のため、低reliability層での追加価値は **C = 小標本で判定不能**。
+### NPB+
 
-T-0204として2026終了後の再実行を登録するが、これは現在作業のblockerではない。
+- raw NPB+には現実アウトカムへの信号がある。
+- 現行 `NPB+ -> PowerPro label regression -> blend` は、教師値・重み・回帰による幅縮小・scale混在・循環に構造問題がある。
+- rolling temporal comparisonは過去NPB+ snapshotがなく公平化できないため `NOT_IDENTIFIABLE`。
+- T-0203はC。最も統計材料が薄い1年層がn=2で、conditional valueを判定できなかった。
+- 現時点では自動blendを使わず、raw NPB+はlow-reliability選手のreview/conflict evidenceとして保持。
+- T-0204で2026終了後に同じ事前定義を再実行する。
 
-暫定relative policy:
+### Absolute scale
 
-- 自動NPB+ blendは使用しない
-- relative modelは既存統計モデルprimary
-- raw NPB+はlow reliability / conflict / review evidenceとして保持
+relative orderingとは別問題。
 
-## 3.4 現行NPB+ blend経路
-
-`NPB+ speed -> PowerPro label regression -> rating -> blend`
-
-には:
-
-1. 教師値がPowerPro
-2. 重みもPowerPro一致度由来
-3. regression predictionによる分散縮小
-4. 異scale量の混合
-5. priorとQAの循環
-
-がある。production正当化されたdirect evidence経路として扱わない。
-
-## 3.5 Absolute scale
-
-`scale_calibration.走力` はPowerPro由来。relative modelとは分離し、最終正本とはしない。
+現行 `scale_calibration.走力` はPowerPro由来で最終正本ではない。能力値→engine走力効果の橋が未実装なので、engine responseでの最終校正は依存待ち。
 
 ---
 
-# 4. 復元された未実施工程 — Community Rating / YouTube / Prospi comments
+## 3. 今回の全数監査で復元した未完工程
 
-**これは未完であり、owner review queue確定前に必ず実施する。**
+詳細statusは `docs/state/speed_task_registry.tsv` を見る。
 
-旧critical path 18 Phase 5 と comprehensive gap audit §2.5–2.10 に存在したが、後の正本22から誤って落ちていた。
+### Community / rating evidence
 
-## 4.1 2 laneを分離
+既存ordinary SNS / Grok-X acceptedは主にPhysical Observation。
 
-### A. Physical Observation Consensus
+owner review前に必須:
 
-既存ordinary SNS / Grok-Xを再利用。
+- 旧Grok-X rejectのRating Consensus再分類
+- PowerPro公式YouTube能力紹介/update comments
+- Prospi公式YouTube comments
+- PowerPro/Prospi official X replies・rating criticism/praise
+- weak generic labelsの救済
+- same-event dedupe / reaction volume
 
-対象:
-
-- physical speed
-- first step / acceleration
-- straight-line speed
-- decline/recovery
-- pairwise physical comparison
-
-既存41 acceptedを再収集し直さない。必要な不足選手だけ追加検索する。
-
-### B. Rating Consensus — **追加収集が未実施**
-
-対象:
-
-- PowerPro走力が高すぎ / 低すぎ
-- Prospi走力が高すぎ / 低すぎ
-- stale rating / 昔の俊足イメージを引きずっている
-- aging / injuryが反映されていない
-- top speed / accelerationの取り違え
-- 走力ではなく走塁得能で表すべきという意見
-- PowerPro vs Prospiどちらが自然か
-- updateでの変更に対する賛否
-
-Rating Consensusはphysical speedの直接教師値にはしない。
-**PowerPro/Prospi appraisalの信頼度、stale/odd detector、owner review優先度の材料**として使う。
-
-## 4.2 追加収集source
-
-必須:
-
-- KONAMI公式の新能力紹介YouTube
-- KONAMI公式の選手能力公開YouTube
-- update紹介YouTube
-- プロスピ公式能力紹介YouTube
-- official X能力紹介投稿へのreply
-- X上のPowerPro/Prospi査定批評
-
-補助:
-
-- appraisal blogs / 掲示板等はsource qualityを分けて保存
-- user-provided YouTube API JSON/CSV or pasted comments
-
-## 4.3 YouTubeコメントの状態
-
-**2026-08-13時点で体系的収集は未実施。**
-
-旧video tie-breakは選手の走行映像を探した工程であり、YouTubeコメント欄のRating Consensus収集とは別物。
-
-取得経路:
-
-1. YouTube Data APIが利用可能ならAPIで収集
-2. 利用不可なら対象official動画一覧・video ID・選手・能力公開版を確定し、取得不能理由を保存
-3. userがAPI出力 / CSV / JSON / コメントcopy-pasteを提供できる場合、それをraw corpusへ追記
-
-API不可を理由にYouTube lane全体を「完了」としない。
-
-## 4.4 generic SNSを過度に捨てない
-
-旧Grok-Xの191候補→41 acceptedのstrict gateをRating Consensusへそのまま流用しない。
-
-各コメント/postを:
-
-- strong
-- medium
-- weak directional
-- rating-community
-- context
-- joke/meme/noise
-
-へ分類する。
-
-弱いdirectional evidenceは低重みで保持する。
-
-同一出来事の多数コメントは独立観察数を水増ししないが、reaction volume / likes / reply agreementは別フィールドにする。
-
-## 4.5 機械可読分類例
-
-- `RATING_TOO_HIGH`
-- `RATING_TOO_LOW`
-- `STALE_RATING`
-- `INJURY_NOT_REFLECTED`
-- `AGING_NOT_REFLECTED`
-- `ACCELERATION_NOT_REFLECTED`
-- `TOP_SPEED_OVERRATED`
-- `PROSPI_MORE_PLAUSIBLE`
-- `POWERPRO_MORE_PLAUSIBLE`
-- `COMPARE_OTHER_PLAYER`
-- `MIXED`
-- `JOKE_OR_MEME`
-
-各recordに最低限:
-
-- player
-- game (`powerpro` / `prospi`)
-- edition/update/date
-- platform
-- URL / video ID / post ID
-- comment/post text or compliant excerpt/hash/raw storage reference
-- timestamp
-- author identifier if available
-- likes/reactions if available
-- classification
-- strength
-- independence_group
-- target_rating mentioned if explicit
-- current/historical context
-
-を保持する。
-
----
-
-# 5. Codexへ委任する追加収集
-
-大規模read-heavy収集なのでCodexを主担当とする。
-
-Codex task正本:
-
+Codex task:
 `docs/tasks/CODEX_SPEED_COMMUNITY_RATING_RESCUE_20260813.md`
 
-**複数subagentを並列使用する。**
+### PowerPro temporal/stale
 
-推奨分割:
+- version conflict normalization
+- edition distribution / percentile trajectory
+- stale/inertia再判定
+- 秋山翔吾 / 松山竜平等のcase study
+- age/birth join（現データでは欠損）
+- injury/recovery join（未統合）
 
-- Agent A: PowerPro official YouTube comments
-- Agent B: Prospi official YouTube comments
-- Agent C: X PowerPro rating criticism / official replies
-- Agent D: X Prospi rating criticism / official replies
-- Agent E: existing Grok-X rejected ledger再分類（rating discussion / generic directionalを救済）
-- QA Agent: dedupe / identity / same-event grouping / source-quality / leakage / classification review
+### The Show
 
-raw corpusとfiltered/summaryを分け、旧strict ledgerを上書きしない。
+- collection自体は既存資産として保持
+- temporal response policyはnegative finding / NOT_IDENTIFIABLE
+- same-time The Show→PowerPro mappingはpartial
+- direct / quantile / isotonic / piecewise比較と正しいholdoutが未完
+- validated mappingの該当助っ人適用が未完
 
-### 対象範囲
+### Prospi
 
-1. まず2026 100-player master table全員へplayer keyを付けられるofficial/comment corpusを広く回収
-2. 特に重点:
-   - owner review候補
-   - PowerPro stale/odd候補
-   - confidence LOW
-   - project evidence conflict
-   - PowerPro / Prospi divergence
-3. 公式動画1本に複数選手コメントがある場合は動画全体を取得して後からplayer mappingする
+- current speed未完
+- historical speed未完
+- PowerProとのsame-time divergence未完
 
----
+### Flexible evidence / legacy cleanup
 
-# 6. Community追加収集と並行して進めるrelative / absolute作業
+- strict current acceleration prior alpha=0のnegative findingは保持
+- revised flexible/context acceleration laneはpartial
+- official scouting / pinch-runner usage / defensive straight-line chase speedの実施・不要・blocked判定が未完
+- 2026-08-05 `all_missing_data`親タスクは結果文書が「調査中」のままなので、後続task IDへ明示的に精算する必要がある
 
-Community collection待ちを理由にrelative/absolute model作業を停止しない。
+### Review / finalization
 
-1. relative modelは暫定的に既存統計モデルprimaryで候補化
-2. テストを通す
-3. absolute scale問題を別レーンで分析
-4. 100人表の内部再生成・差分QAまでは進めてよい
-
-ただし、**owner review queueの最終確定・PowerPro stale/odd最終分類はCommunity Rating収集完了後に行う。**
-
-理由:
-
-Rating Consensusはモデル教師値ではないが、PowerPro/Prospiの査定がstale/oddかを判断する重要材料だから。
-
----
-
-# 7. Community完了後の100人 owner review再構築
-
-100人表へ追加する:
-
-- SNS physical consensus
-- SNS rating consensus
-- YouTube rating consensus
-- Prospi current/history（取得できる範囲）
-- PowerPro stale status
-- community dispute status
-- source count / independent origin count / reaction volume
-
-owner review候補:
-
-- relative/absolute修正後も |raw project - PowerPro| >=5
-- confidence LOW
-- physical evidence conflict
-- PowerPro stale/odd supported or possible
-- community dispute
-- Prospi conflict
-- AI側で原因未解決
-
-ただしabsolute scaleだけで大量に選出される場合は、先にscaleを解く。
+- community/Prospi/The Show/temporalを入れたconflict・stale再診断
+- final owner review queue
+- owner verdict no-overwrite QA
+- final practical 100-player reappraisal
+- full-roster scale consistency
+- engine/simulation QA
+- Gate close
 
 ---
 
-# 8. Absolute scale（0-100）
+## 4. Autonomous continuation
 
-relative modelと混ぜない。
+逐次owner確認は原則不要。
 
-現行 `scale_calibration.走力` はPowerPro由来なので最終正本ではない。
+現在は、依存関係が許すものを並列に進める:
 
-最終的には:
+1. Codex Community Rating / YouTube / Prospi collection
+2. PowerPro version normalization / stale analysis
+3. The Show same-time mapping completion
+4. age/injuryについて既存sourceを先に監査し、無ければBLOCKEDを明示
+5. flexible/context evidenceの残件整理
+6. legacy all-missing-data speed子要件の精算
 
-- 自作エンジンの走力値→実プレー現象の応答
-- league simulationにおける三塁打・内野安打・進塁・盗塁等の分布
-- 能力帯のゲーム内意味
+その後:
 
-から校正する方向を優先。
+7. 100人master tableへjoin
+8. PROJECT_EVIDENCE_CONFLICT再診断
+9. PowerPro stale/odd再診断
+10. final owner review queue生成
 
-PowerPro分布はreference / QAには使えるが、教師値とQAの二重使用をしない。
-
----
-
-# 9. ユーザーへ停止して確認する条件
-
-以下まで逐次確認不要。
-
-1. Community/YouTube取得にAPI key等、ユーザーだけが提供できるcredential/outputが必要
-2. 実装候補が独立QAでも決まらない
-3. owner review queueが完成して人間の野球観が必要
-4. absolute scale候補がsimulationでも決まらない
-5. 新規大規模外部収集の費用/規模判断が必要
-
-YouTube APIが無くても、対象動画一覧と取得不能理由まで自律的に確定してから止まる。
+ownerへ戻すのは、AI側の根拠を使い切っても判断が必要なケースだけ。
 
 ---
 
-# 10. 禁止事項
+## 5. Stop conditions
 
-- ownerに走力目盛り表を作らせて停止しない
-- PowerProとの差だけでowner reviewを選ばない
-- PowerPro一致率だけでモデルを選ばない
-- NPB+ raw measurementを削除しない
-- 未来情報diagnosticをholdout validationと呼ばない
-- `NOT_IDENTIFIABLE` を無理に結論化しない
-- Rating Consensusをphysical speedの直接教師値として混ぜない
-- old Grok-X strict rejectsを削除/上書きしない
-- YouTube API不可を「YouTube comments収集完了」と扱わない
-- 重要知見をchatだけに残さない
+次のいずれかでのみownerへ確認する:
+
+- final owner review queueが完成した
+- 独立QAでも複数の実装候補の優劣が決まらない
+- absolute scaleの候補がengine QAでも決まらない
+- 新しい大規模外部取得が必要で、費用・規模・依存追加の判断が必要
+- owner自身の野球観/PowerPro違和感が最終判定に必要
+
+BLOCKED / WAITING_EXTERNALの存在だけを理由に、他の独立タスクまで停止しない。
 
 ---
 
-# 11. 現在地を一文で
+## 6. Fail-closed rules
 
-> **relative modelは既存統計モデルprimaryへ暫定移行し、NPB+はreview evidenceとして保持する段階。並行して、以前漏れたRating Consensus（PowerPro/Prospi査定へのSNS反応）と公式YouTubeコメントをCodexで追加収集し、これをPowerPro stale/odd判定とowner review packageへ統合してから最終レビューへ進む。**
+- registryに無い新タスクをchatだけで開始しない
+- 新しいowner requirementが出たらbaseline+registryへ先に追加
+- old proseから新handoffへ未完項目を手動コピーしない
+- parent label（SNS / The Show / PowerPro panel等）だけでDONEにしない
+- negative findingと未実施を区別
+- artifact存在とcompletionを区別
+- preliminary owner queueをfinalとして送らない
+- Gate blockerが1件でも残る間はGate closeしない
+- Speed Gate完了前は肩力へ進まない
+
+---
+
+## 7. 一文で現在地
+
+> **走力のデータ/既存統計モデル/NPB+検証基盤はかなり進んだが、Rating Consensus・公式YouTube/X・Prospi・PowerPro staleの完成・The Show same-time mapping・一部補助証拠・absolute scale/engine依存・final owner reviewが未完。これらをtask registryでfail-closedに追跡し、owner review前にAI側で可能な限り解決する段階。**
