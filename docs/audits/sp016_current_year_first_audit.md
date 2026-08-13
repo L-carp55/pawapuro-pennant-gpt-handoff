@@ -2,7 +2,26 @@
 
 生成日: 2026-08-13
 
-状態: **監査完了・候補実装あり。productionの既定は変えていない**
+状態（2026-08-13 更新）: **productionの既定へ適用済み。ただしSP-016はPARTIAL、閾値50は working default**
+
+> ⚠️ 本文中の「productionの既定は変えていない」「productionへの適用はまだ行っていない」という
+> 記述は**起草時点(監査段階)の記録**であり、現在のコード・registryとは一致しない。
+> 履歴として残すが、現在の状態は以下が正:
+>
+> - `src/cards/pipeline.mjs` `appraiseCard()` の `currentYearFirst` 既定を **false→true へ反転済み**、
+>   `sufficientWeight` 既定=50打席
+> - `src/cards/durable_estimate.mjs` は走力用(`speedPoolOpts`)と肩力用(`armPoolOpts`、常にlegacy)へ
+>   poolOptsを分離済み（走力是正が肩力へ波及しないため）
+> - 100人before/after再計算実施済み
+>
+> **それでもSP-016はPARTIAL**。残っているもの:
+> 1. **閾値50は working default であり最終設計として凍結していない**——hard gateは境界帯で
+>    平均9.93点・最大33.6点の落差を生む。連続形の方が良い形と実測済み。
+>    詳細=`sp016_hard_gate_vs_continuous_20260813.md`
+> 2. 故障・明らかな下振れ・temporal bridgingによる例外条件は未実装
+>    （SP-044/SP-045が BLOCKED_MISSING_DATA のため）
+>
+> EX-009はこれらが埋まるまでOPENのまま維持する。
 
 ## 1. 過去年が自動混合される経路（全列挙）
 

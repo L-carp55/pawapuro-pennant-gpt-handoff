@@ -1,0 +1,392 @@
+{
+  "generated_at": "2026-08-13",
+  "purpose": "SP-016の50打席hard gateを最終設計として凍結してよいかの検証（オーナー指摘 2026-08-13）",
+  "target_season": 2025,
+  "n_players": 303,
+  "kappa_pa": 50,
+  "component_kappa_calibration": {
+    "triple": {
+      "same_time_reliability": 0.49648301630228797,
+      "median_season_trials": 14,
+      "kappa": 14.2
+    },
+    "gdpAvoid": {
+      "same_time_reliability": 0.43340785393287107,
+      "median_season_trials": 106.3508,
+      "kappa": 139
+    },
+    "infieldHit": {
+      "same_time_reliability": 0.5331986509790801,
+      "median_season_trials": 237,
+      "kappa": 207.5
+    },
+    "advance": {
+      "same_time_reliability": 0.22075263524730496,
+      "median_season_trials": 18,
+      "kappa": 63.5
+    },
+    "ubr": {
+      "same_time_reliability": 0.496,
+      "median_season_trials": 335,
+      "kappa": 340.4
+    }
+  },
+  "discontinuity": {
+    "observed_flip": {
+      "description": "閾値を49→51打席へ動かして実際に査定が跳んだ選手（2025年に打席数が境界付近だった選手のみ該当）",
+      "n_players_flipped": 1,
+      "max_jump_pt": 1.6,
+      "caveat": "この人数は「今年たまたま境界打席だった人数」であり、設計上の不連続性の大きさではない"
+    },
+    "cliff_height": {
+      "description": "★崖の高さ。境界帯(25-100打席)の選手それぞれについて |単年のみの値 - pool版の値| ＝1打席の差で受けうる査定差",
+      "n_players_in_band": 73,
+      "mean_cliff_pt": 9.93,
+      "max_cliff_pt": 33.6,
+      "n_cliff_ge_10pt": 30,
+      "continuous_equivalent": 0,
+      "steepest": [
+        {
+          "player": "上本崇司",
+          "current_pa": 31,
+          "single_year": 20.7,
+          "pooled": 54.3,
+          "cliff": 33.6
+        },
+        {
+          "player": "C.ロドリゲス",
+          "current_pa": 34,
+          "single_year": 26.7,
+          "pooled": 59.2,
+          "cliff": 32.5
+        },
+        {
+          "player": "樋口正修",
+          "current_pa": 25,
+          "single_year": 48.5,
+          "pooled": 16.3,
+          "cliff": 32.2
+        },
+        {
+          "player": "田村俊介",
+          "current_pa": 69,
+          "single_year": 88.6,
+          "pooled": 60.3,
+          "cliff": 28.3
+        },
+        {
+          "player": "田村龍弘",
+          "current_pa": 43,
+          "single_year": 11.6,
+          "pooled": 37.7,
+          "cliff": 26.1
+        },
+        {
+          "player": "岸潤一郎",
+          "current_pa": 31,
+          "single_year": 25.5,
+          "pooled": 50.9,
+          "cliff": 25.4
+        },
+        {
+          "player": "森敬斗",
+          "current_pa": 75,
+          "single_year": 88.6,
+          "pooled": 63.6,
+          "cliff": 25
+        },
+        {
+          "player": "角中勝也",
+          "current_pa": 53,
+          "single_year": 80,
+          "pooled": 55.5,
+          "cliff": 24.5
+        },
+        {
+          "player": "大城滉二",
+          "current_pa": 79,
+          "single_year": 68.9,
+          "pooled": 46.3,
+          "cliff": 22.6
+        },
+        {
+          "player": "小林誠司",
+          "current_pa": 26,
+          "single_year": 18.1,
+          "pooled": 39.6,
+          "cliff": 21.5
+        },
+        {
+          "player": "茶谷健太",
+          "current_pa": 41,
+          "single_year": 30.5,
+          "pooled": 51.9,
+          "cliff": 21.4
+        },
+        {
+          "player": "中島卓也",
+          "current_pa": 30,
+          "single_year": 83.8,
+          "pooled": 63.2,
+          "cliff": 20.6
+        },
+        {
+          "player": "土田龍空",
+          "current_pa": 53,
+          "single_year": 32.3,
+          "pooled": 52,
+          "cliff": 19.7
+        },
+        {
+          "player": "児玉亮涼",
+          "current_pa": 53,
+          "single_year": 29,
+          "pooled": 48.3,
+          "cliff": 19.3
+        },
+        {
+          "player": "谷川原健太",
+          "current_pa": 79,
+          "single_year": 44,
+          "pooled": 62.7,
+          "cliff": 18.7
+        }
+      ]
+    }
+  },
+  "construct_validity_vs_npb_plus": {
+    "n": 92,
+    "criterion": "NPB+ sprint speed (km/h)",
+    "criterion_bias_warning": "この基準は多年poolに構造的に有利。history量の決定には使わない",
+    "correlations": {
+      "legacy": 0.7678,
+      "hard_gate_50": 0.6601,
+      "continuous_pa": 0.7081,
+      "continuous_component": 0.7564
+    },
+    "vs_hard_gate_50": {
+      "legacy": {
+        "diff": 0.1077,
+        "ci95": [
+          0.0442,
+          0.1928
+        ],
+        "ci_excludes_zero": true
+      },
+      "continuous_pa": {
+        "diff": 0.048,
+        "ci95": [
+          0.0211,
+          0.0773
+        ],
+        "ci_excludes_zero": true
+      },
+      "continuous_component": {
+        "diff": 0.0963,
+        "ci95": [
+          0.0365,
+          0.1756
+        ],
+        "ci_excludes_zero": true
+      }
+    }
+  },
+  "agreement": {
+    "hard_gate_50 vs continuous_pa": {
+      "n": 303,
+      "mean_diff": 0.162,
+      "mean_abs_diff": 2.708,
+      "max_abs_diff": 62,
+      "n_ge_5pt": 47
+    },
+    "hard_gate_50 vs continuous_component": {
+      "n": 303,
+      "mean_diff": -0.337,
+      "mean_abs_diff": 5.205,
+      "max_abs_diff": 83.9,
+      "n_ge_5pt": 92
+    },
+    "continuous_pa vs continuous_component": {
+      "n": 303,
+      "mean_diff": -0.499,
+      "mean_abs_diff": 3.59,
+      "max_abs_diff": 21.9,
+      "n_ge_5pt": 66
+    },
+    "hard_gate_50 vs legacy": {
+      "n": 303,
+      "mean_diff": -0.286,
+      "mean_abs_diff": 3.6,
+      "max_abs_diff": 28.3,
+      "n_ge_5pt": 79
+    }
+  },
+  "largest_disagreements_hard_vs_component": [
+    {
+      "player": "東妻純平",
+      "current_pa": 6,
+      "seasons_available": 2,
+      "legacy": 130,
+      "hard_gate_50": 130,
+      "hard_gate_49": 130,
+      "hard_gate_51": 130,
+      "continuous_pa": 68,
+      "continuous_component": 46.1
+    },
+    {
+      "player": "田村俊介",
+      "current_pa": 69,
+      "seasons_available": 3,
+      "legacy": 60.3,
+      "hard_gate_50": 88.6,
+      "hard_gate_49": 88.6,
+      "hard_gate_51": 88.6,
+      "continuous_pa": 70.3,
+      "continuous_component": 49.8
+    },
+    {
+      "player": "大里昂生",
+      "current_pa": 101,
+      "seasons_available": 3,
+      "legacy": 70.5,
+      "hard_gate_50": 97.1,
+      "hard_gate_49": 97.1,
+      "hard_gate_51": 97.1,
+      "continuous_pa": 83.3,
+      "continuous_component": 63.2
+    },
+    {
+      "player": "澤井廉",
+      "current_pa": 77,
+      "seasons_available": 3,
+      "legacy": 57.3,
+      "hard_gate_50": 44.5,
+      "hard_gate_49": 44.5,
+      "hard_gate_51": 44.5,
+      "continuous_pa": 55.6,
+      "continuous_component": 73.4
+    },
+    {
+      "player": "大城滉二",
+      "current_pa": 79,
+      "seasons_available": 4,
+      "legacy": 46.3,
+      "hard_gate_50": 68.9,
+      "hard_gate_49": 68.9,
+      "hard_gate_51": 68.9,
+      "continuous_pa": 56.3,
+      "continuous_component": 40.5
+    },
+    {
+      "player": "森敬斗",
+      "current_pa": 75,
+      "seasons_available": 4,
+      "legacy": 63.6,
+      "hard_gate_50": 88.6,
+      "hard_gate_49": 88.6,
+      "hard_gate_51": 88.6,
+      "continuous_pa": 76.6,
+      "continuous_component": 61.3
+    },
+    {
+      "player": "羽月隆太郎",
+      "current_pa": 119,
+      "seasons_available": 4,
+      "legacy": 67.3,
+      "hard_gate_50": 89.2,
+      "hard_gate_49": 89.2,
+      "hard_gate_51": 89.2,
+      "continuous_pa": 78.3,
+      "continuous_component": 63
+    },
+    {
+      "player": "谷川原健太",
+      "current_pa": 79,
+      "seasons_available": 4,
+      "legacy": 62.7,
+      "hard_gate_50": 44,
+      "hard_gate_49": 44,
+      "hard_gate_51": 44,
+      "continuous_pa": 55.6,
+      "continuous_component": 69.5
+    },
+    {
+      "player": "元謙太",
+      "current_pa": 10,
+      "seasons_available": 3,
+      "legacy": 66.7,
+      "hard_gate_50": 66.7,
+      "hard_gate_49": 66.7,
+      "hard_gate_51": 66.7,
+      "continuous_pa": 52,
+      "continuous_component": 42
+    },
+    {
+      "player": "角中勝也",
+      "current_pa": 53,
+      "seasons_available": 4,
+      "legacy": 55.5,
+      "hard_gate_50": 80,
+      "hard_gate_49": 80,
+      "hard_gate_51": 80,
+      "continuous_pa": 67.1,
+      "continuous_component": 56.4
+    },
+    {
+      "player": "児玉亮涼",
+      "current_pa": 53,
+      "seasons_available": 3,
+      "legacy": 48.3,
+      "hard_gate_50": 29,
+      "hard_gate_49": 29,
+      "hard_gate_51": 29,
+      "continuous_pa": 41,
+      "continuous_component": 51
+    },
+    {
+      "player": "植田将太",
+      "current_pa": 5,
+      "seasons_available": 2,
+      "legacy": 22.2,
+      "hard_gate_50": 22.2,
+      "hard_gate_49": 22.2,
+      "hard_gate_51": 22.2,
+      "continuous_pa": 40,
+      "continuous_component": 44
+    },
+    {
+      "player": "土田龍空",
+      "current_pa": 53,
+      "seasons_available": 2,
+      "legacy": 52,
+      "hard_gate_50": 32.3,
+      "hard_gate_49": 32.3,
+      "hard_gate_51": 32.3,
+      "continuous_pa": 44.1,
+      "continuous_component": 53.5
+    },
+    {
+      "player": "上田希由翔",
+      "current_pa": 184,
+      "seasons_available": 2,
+      "legacy": 47.6,
+      "hard_gate_50": 38.3,
+      "hard_gate_49": 38.3,
+      "hard_gate_51": 38.3,
+      "continuous_pa": 46,
+      "continuous_component": 58.8
+    },
+    {
+      "player": "西村瑠伊斗",
+      "current_pa": 11,
+      "seasons_available": 2,
+      "legacy": 41.9,
+      "hard_gate_50": 41.9,
+      "hard_gate_49": 41.9,
+      "hard_gate_51": 41.9,
+      "continuous_pa": 45.3,
+      "continuous_component": 61.7
+    }
+  ],
+  "status": "50打席のhard gateは working default。最終設計として凍結しない"
+}

@@ -2,7 +2,23 @@
 
 生成日: 2026-08-13
 
-状態: **監査完了・置換候補を提示。productionへは未適用**
+状態（2026-08-13 更新）: **productionへ適用済み。ただしSP-015自体はPARTIAL（完了ではない）**
+
+> ⚠️ 本文中の「productionへは未適用」「提案」という記述は**起草時点(監査段階)の記録**であり、
+> 現在のコード・registryとは一致しない。履歴として残すが、現在の状態は以下が正:
+>
+> - `configs/running_norms.json` の `componentWeights` は **same_time_reliability 値へ置換済み**
+>   （旧値は `_componentWeightsLegacyNextYearRepeatability` にlegacy controlとして保持）
+> - `src/ratings/running.mjs` の `speedComponents()` fallback既定値・コメントも更新済み
+> - `baserunningAbility()` の `ubrOnSpeed.repeatability` / `advanceOnSpeed.repeatability` 依存も
+>   同型違反として等重み(w=1)へ是正済み
+> - 100人before/after再計算実施済み（`speed_2026_100_before_after_sp015_016_20260813.md`）
+>
+> **それでもSP-015はPARTIAL**。残っているもの:
+> 1. UBRの同時点信頼性は測れておらず中央値0.496で代用したまま
+> 2. 軸1(construct directness)・軸4(confounding)・軸8(direct-anchor agreement)は未数値化
+>
+> EX-008はこれらが埋まるまでOPENのまま維持する。
 
 ## 0. 違反の内容
 

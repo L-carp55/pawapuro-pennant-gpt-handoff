@@ -456,6 +456,15 @@ export function appraiseCard(ctx, opts) {
     //   故障・明らかな下振れ・temporal bridgingによる例外は、年齢/生年月日/故障データが
     //   現状存在しないため未実装（SP-044/SP-045 BLOCKED_MISSING_DATA）。
     //   legacy再現には currentYearFirst:false を明示的に渡す（比較専用）。
+    //
+    // ★★ WORKING DEFAULT — 最終設計として凍結していない（2026-08-13 オーナー指摘）
+    //   この 50 は hard gate（閾値の上下で挙動が不連続に変わる形）である。実測では
+    //   境界帯(25-100打席)の選手が1打席の差で平均9.93点・最大33.6点の落差を受けうる。
+    //   連続形（w_cur = PA/(PA+κ) 等）ならこの落差は0になり、同じκ=50較正点を持つ
+    //   連続版の方が構造的に良い形であることも確認済み。
+    //   最終形（PA一括 or 材料別、κの値）の決定には「多年poolに構造的に有利でない」
+    //   判定基準が要り、現時点でそれが無いため hard gate を暫定継続している。
+    //   詳細と決着条件 = docs/audits/sp016_hard_gate_vs_continuous_20260813.md
     currentYearFirst = true, sufficientWeight = 50 } = opts;
 
   let pid = playerId;
