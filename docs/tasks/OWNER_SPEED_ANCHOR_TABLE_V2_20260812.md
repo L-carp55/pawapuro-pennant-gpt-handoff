@@ -1,3 +1,13 @@
+> **SUPERSEDED / 作業中止**（2026-08-13）
+>
+> 正本 `docs/satei_handoff/21_CORRECTED_CONTINUATION_AFTER_CLAUDE_REDTEAM_20260813.md` §5 により中止。
+> 理由: オーナーに量→点数の目盛りを作らせることは、今回の継続タスクとして依頼されていなかった。
+> **このファイルの記入待ちで停止してはいけない。**
+>
+> 「独立アンカーが必要」という設計論そのものは残るが、実装するかは
+> 100人比較レビュー（`docs/tasks/OWNER_SPEED_REVIEW_QUEUE_20260813.md`）と
+> 既存production modelとの比較を見た後に決める。
+
 # SUPERSEDED — OWNER_SPEED_ANCHOR_TABLE_V2_20260812
 
 状態: **SUPERSEDED / DO NOT USE / OWNER INPUT NOT REQUIRED**
