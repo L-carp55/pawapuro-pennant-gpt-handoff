@@ -30,6 +30,9 @@ import { makeContext, appraiseCard } from '../src/cards/pipeline.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = process.argv[2];
+// ★relative model候補（正本22 §5-C）。--stat-primary を渡すと
+//   走力のNPB+自動blendを行わず、較正済み統計モデルをprimaryにする。既定=production同等。
+const STAT_PRIMARY = process.argv.includes('--stat-primary');
 if (!SRC || !existsSync(SRC)) { console.error('GPT成果物のディレクトリを渡す'); process.exit(1); }
 
 const J = f => JSON.parse(readFileSync(path.join(ROOT, 'configs', f), 'utf8'));
@@ -87,7 +90,7 @@ for (const r of reg.rows) {
   let mine = null, mineStat = null, npbUsed = null, years = null, seasons = null, err = null;
   if (dbName) {
     try {
-      const card = appraiseCard(ctx, { name: dbName, mode: '2025', cfg, rv, runNorm, fldNorm }).card;
+      const card = appraiseCard(ctx, { name: dbName, mode: '2025', cfg, rv, runNorm, fldNorm, statPrimarySpeed: STAT_PRIMARY }).card;
       const B = card?.abilities?.基礎能力?.走力, R = card?.calc_log?.running;
       mine = B?.value ?? null;
       mineStat = B?.statistical_value ?? B?.value ?? null;   // 実測を混ぜる前の統計値
@@ -288,7 +291,11 @@ const queue = rows.filter(r =>
 const Q = [];
 Q.push('# 走力 オーナーレビュー待ち行列（案）\n');
 Q.push(`生成日: ${new Date().toISOString().slice(0, 10)}\n`);
-Q.push('状態: **未送信。AI側のスケール問題を解決してから再抽出する**\n');
+Q.push('状態: **AI側の工程は完了。スケール問題は主因でないことを実測で確認済み**\n');
+Q.push('（目盛りをPowerProへ完全に揃えても |差|>=5 は 51人→56人 と減らない。');
+Q.push('　つまり残りは選手個別の食い違い。詳細=outputs/speed_absolute_scale_investigation.md）\n');
+Q.push('★走力の絶対目盛り（0〜100）は**まだ正本化されていない**（PowerPro由来の暫定）。');
+Q.push('そのため「何点が正しいか」ではなく**「どちらが自然か」**でお答えください。\n');
 Q.push('抽出条件（いずれか該当）:\n');
 Q.push('- 修正後もPowerProとの差が5以上');
 Q.push('- confidence LOW');
@@ -304,10 +311,28 @@ Q.push('- `その中間`');
 Q.push('- `どちらも違和感`');
 Q.push('- `判断できない`\n');
 Q.push('必要に応じて任意の点数・コメントを添えていただけると助かります。\n');
-Q.push('| 選手 | 自作 | PowerPro | raw_diff | 原因 | stale | あなたの判断 | 任意の点数・コメント |');
-Q.push('|---|---|---|---|---|---|---|---|');
-for (const r of queue.sort((a, b) => Math.abs(b.diff ?? 0) - Math.abs(a.diff ?? 0)))
-  Q.push(`| ${r.player} | ${f1(r.mine)} | ${f1(r.pp)} | ${sg(r.diff)} | ${r.causes.join('+') || '-'} | ${r.stale || '-'} | | |`);
+Q.push('### 優先順位（上から見ていただければ十分です）\n');
+Q.push('- **A群**: 差が大きい かつ こちらの信頼度も低い（最も情報が足りない）');
+Q.push('- **B群**: 差が大きい（信頼度は中〜高）');
+Q.push('- **C群**: 差は小さいが、信頼度が低い／PowerPro据え置きの裏付けあり\n');
+{
+  const grp = (r) => {
+    const big = Math.abs(r.diff ?? 0) >= 5;
+    if (big && r.confidence === '低') return 'A';
+    if (big) return 'B';
+    return 'C';
+  };
+  for (const g of ['A', 'B', 'C']) {
+    const list = queue.filter(r => grp(r) === g)
+      .sort((a, b) => Math.abs(b.diff ?? 0) - Math.abs(a.diff ?? 0));
+    Q.push(`#### ${g}群（${list.length}人）\n`);
+    Q.push('| 選手 | 自作 | PowerPro | raw_diff | 信頼度 | 原因 | stale | あなたの判断 | 任意の点数・コメント |');
+    Q.push('|---|---|---|---|---|---|---|---|---|');
+    for (const r of list)
+      Q.push(`| ${r.player} | ${f1(r.mine)} | ${f1(r.pp)} | ${sg(r.diff)} | ${r.confidence} | ${r.causes.join('+') || '-'} | ${r.stale || '-'} | | |`);
+    Q.push('');
+  }
+}
 Q.push('');
 writeFileSync(path.join(ROOT, 'outputs', 'speed_owner_review_queue_2026.md'), Q.join('\n'), 'utf8');
 
