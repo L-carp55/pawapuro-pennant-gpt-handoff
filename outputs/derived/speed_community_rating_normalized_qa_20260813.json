@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-08-13",
+  "source_raw": "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl",
+  "source_raw_sha256": "d436cb8e48e4f31edfffb42590bf83e330c9e5507dec343290d06b2052580ba0",
+  "output": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+  "row_total": 473,
+  "raw_not_overwritten": true,
+  "schema_value_counts": {
+    "physical_or_rating_lane": {
+      "PHYSICAL": 148,
+      "RATING": 325
+    },
+    "classification_primary": {
+      "UNCLASSIFIED_CONTEXT": 441,
+      "PHYSICAL_FAST": 23,
+      "PHYSICAL_SLOW": 7,
+      "RATING_VALUE_CONTEXT": 2
+    }
+  },
+  "event_id_empty": 0,
+  "distinct_events": 442,
+  "reaction_volume_fields_present": [
+    "origin_count",
+    "comment_count",
+    "like_sum",
+    "top_like_count",
+    "agreement_ratio"
+  ],
+  "findings": [],
+  "verdict": "PASS"
+}

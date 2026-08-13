@@ -94,14 +94,69 @@ export function withProvenance(value, src, opts = {}) {
 export const normName = s => (s ?? '').normalize('NFKC').replace(/\s+/g, '');
 
 /** 正規化した名前から、DBに入っている綴りの player_id を引く */
-export function resolveName(db, name) {
+export function resolveName(db, name, opts = {}) {
   const key = normName(name);
-  const rows = db.prepare(`SELECT DISTINCT player_id, name FROM v_batting WHERE position <> '投'`).all();
+  if (opts.playerId) {
+    const row = db.prepare(
+      `SELECT DISTINCT player_id, name FROM v_batting WHERE player_id=? AND position <> '投' LIMIT 1`
+    ).get(opts.playerId);
+    if (row) return { playerId: row.player_id, dbName: row.name, disambiguation: 'player_id' };
+  }
+  const rows = db.prepare(
+    `SELECT DISTINCT player_id, name, team, season FROM v_batting WHERE position <> '投'`
+  ).all();
+  const exact = rows.filter(r => normName(r.name) === key);
+  const exactIds = [...new Set(exact.map(r => r.player_id))];
+  if (exactIds.length === 1) return { playerId: exactIds[0], dbName: exact[0].name, disambiguation: 'exact' };
+
   const hit = rows.filter(r => normName(r.name).includes(key));
   const ids = [...new Set(hit.map(r => r.player_id))];
-  if (!ids.length) return { error: `該当なし: ${name}` };
-  if (ids.length > 1) return { error: `名前が複数人に一致: ${[...new Set(hit.map(r => r.name))].join(' / ')}` };
-  return { playerId: ids[0], dbName: hit[0].name };
+  if (ids.length === 1) return { playerId: ids[0], dbName: hit[0].name, disambiguation: 'unique_includes' };
+
+  if (ids.length > 1) {
+    const season = opts.season != null ? Number(opts.season) : null;
+    if (Number.isFinite(season)) {
+      const inSeason = hit.filter(r => Number(r.season) === season);
+      const seasonIds = [...new Set(inSeason.map(r => r.player_id))];
+      if (seasonIds.length === 1) {
+        return { playerId: seasonIds[0], dbName: inSeason[0].name, disambiguation: 'season' };
+      }
+    }
+    const teamKey = opts.team ? normName(opts.team) : '';
+    if (teamKey) {
+      const inTeam = hit.filter(r => teamKey.includes(normName(r.team)) || normName(r.team).includes(teamKey));
+      const teamIds = [...new Set(inTeam.map(r => r.player_id))];
+      if (teamIds.length === 1) {
+        return { playerId: teamIds[0], dbName: inTeam[0].name, disambiguation: 'team' };
+      }
+    }
+    return { error: `名前が複数人に一致: ${[...new Set(hit.map(r => r.name))].join(' / ')}` };
+  }
+
+  const extra = describeUnresolvedIdentity(db, name);
+  return { error: extra ? `該当なし: ${name}（${extra}）` : `該当なし: ${name}` };
+}
+
+function describeUnresolvedIdentity(db, name) {
+  const key = normName(name);
+  const notes = [];
+  try {
+    const usage = db.prepare(`SELECT name, plate_appearances, games FROM npb_usage_2026`).all()
+      .filter(r => normName(r.name).includes(key));
+    if (usage.length) {
+      notes.push(`2026 usageあり PA=${usage[0].plate_appearances} G=${usage[0].games}。一軍打撃台帳(v_batting)には2025年まで無し`);
+    }
+  } catch { /* table may be absent in some checkouts */ }
+  try {
+    const farm = db.prepare(
+      `SELECT season, farm, player_id, name_ja, team FROM bm_player WHERE name_ja LIKE ? ORDER BY season`
+    ).all(`%${name.replace(/\s+/g, '%')}%`);
+    if (farm.length) {
+      const last = farm[farm.length - 1];
+      notes.push(`farm/bm_player id=${last.player_id} seasons=${[...new Set(farm.map(r => r.season))].join(',')} team=${last.team}`);
+    }
+  } catch { /* optional */ }
+  return notes.join(' / ') || null;
 }
 
 /**
@@ -469,7 +524,8 @@ export function appraiseCard(ctx, opts) {
 
   let pid = playerId;
   if (!pid) {
-    const r = resolveName(db, name);
+    const seasonHint = mode === 'peak' || mode === 'prime' ? null : Number(mode);
+    const r = resolveName(db, name, { team: opts.team, season: Number.isFinite(seasonHint) ? seasonHint : null });
     if (r.error) return { error: r.error };
     pid = r.playerId;
   }
@@ -502,6 +558,29 @@ export function appraiseCard(ctx, opts) {
   }
 
   const p = all.find(x => x.season === targetSeason) ?? all[all.length - 1];
+
+  // 対象年の打数0は「打撃サンプルが無い」であってパイプライン例外ではない（SP-098 塩見泰隆2025）。
+  // 打撃点は出さず、走力は多年観測があれば計算する。
+  if (!(line.AB > 0)) {
+    const durable = estimateDurableTraits(db, p.player_id, targetSeason,
+      { cfg, runNorm, fldNorm, lgOf, envFactorsOf, maxSeason, currentYearFirst, sufficientWeight });
+    const speedVal = durable.speed?.z == null ? null : speedRating(durable.speed.z, cfg);
+    const run = speedVal == null ? null : { speed: speedVal, speedDetail: durable.speed };
+    const abilitySheet = buildAbilitySheet({ bat: null, run, fld: [], splits: null }, cfg);
+    const card = {
+      player: {
+        player_id: p.player_id,
+        name_ja: p.name.replace(/　/g, ' '),
+        team: p.team,
+      },
+      abilities: abilitySheet,
+      speedDetail: durable.speed ?? null,
+      _no_batting_sample: true,
+      unresolved: ['対象年の打数が0。打撃査定は出さない。走力は多年観測があれば計算する'],
+    };
+    return { card, batting: null, meta: { targetSeason, noBattingSample: true, hasBasement: false } };
+  }
+
   const L = lgOf(targetSeason);
   const env = { lgAvg: L.h / L.ab, lgHrRate: L.hr / L.ab, refAvg, refHrRate: refHr };
 

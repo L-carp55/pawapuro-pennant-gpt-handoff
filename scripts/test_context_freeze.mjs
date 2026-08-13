@@ -68,6 +68,11 @@ const check = (name, ok, detail) => {
   const c = selectContext({ total });
   check('Q8-g 分割が無ければ階層Cで総合を使う', c.tier === 'C' && c.AB === total.AB,
     `tier=${c.tier} 打率=${c.avg.toFixed(3)}`);
+
+  const empty = selectContext({ total: { AB: 0, H: 0 } });
+  check('Q8-h 打数0は例外にせず NO_BATTING_SAMPLE を返す',
+    empty.tier === 'NONE' && empty.basis === 'NO_BATTING_SAMPLE' && empty.avg == null,
+    `tier=${empty.tier} basis=${empty.basis}`);
 }
 
 // ---------------- 05 §3 チャンスはRBIを使わない ----------------

@@ -38,7 +38,19 @@ export function selectContext(splits, opts = {}) {
   const min = { ...MIN_AB_FOR_TIER, ...(opts.minAb ?? {}) };
   const { total, vsR = null, vsL = null, risp = null, nonRisp = null, vsR_nonRisp = null } = splits;
 
-  if (!total || !(total.AB > 0)) throw new Error('総合の打数が無い（文脈選択の前提）');
+  // 打数0は「文脈が無い」であって例外ではない（SP-098: 塩見泰隆2025は出場1・打数0）。
+  // 空サンプルを握りつぶして0点にするのでもなく、打撃文脈が使えないと明示して返す。
+  if (!total || !(total.AB > 0)) {
+    if (opts.allowEmptyTotal === false) {
+      throw new Error('総合の打数が無い（文脈選択の前提）');
+    }
+    return {
+      tier: 'NONE', AB: 0, H: total?.H ?? 0, avg: null,
+      basis: 'NO_BATTING_SAMPLE',
+      available: availability(splits),
+      rejected: ['対象年の総合打数が0。打撃文脈は選ばない（欠損を0点にしない）'],
+    };
+  }
 
   // 交差セルは「実測である」と申告されたものだけを受け付ける。
   // 周辺値から作った値をここへ渡すのは仕様違反なので、握りつぶさず例外にする。

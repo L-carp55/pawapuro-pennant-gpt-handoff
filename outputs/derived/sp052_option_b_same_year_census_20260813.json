@@ -1,0 +1,133 @@
+{
+  "generated_at": "2026-08-13",
+  "option": "B",
+  "constraints": {
+    "same_year_only": true,
+    "cross_time_interpolation": false,
+    "the_show_series": "Live",
+    "boosted_special_excluded": true,
+    "powerpro_source": "SP-041 2,972-player long panel"
+  },
+  "search_universe": {
+    "the_show_live_hitter_rows": 4671,
+    "the_show_live_name_keys": 2034,
+    "powerpro_panel_players": 2972,
+    "identity_links_with_proeye": 73,
+    "identity_sources": [
+      "the_show_bridge",
+      "mlb_bridge with proeye_id"
+    ],
+    "not_used": "fuzzy Japanese-English name matching; WBC/special The Show series; cross-year pairing"
+  },
+  "overlap_player_count": 6,
+  "overlap_pair_count": 7,
+  "years": [
+    2021,
+    2023,
+    2024,
+    2025
+  ],
+  "speed_band_coverage": {
+    "fast": 0,
+    "mid": 4,
+    "slow": 3
+  },
+  "player_holdout": {
+    "sealed_test_players_with_same_year_pair": 1,
+    "sealed_test_pairs": 1,
+    "player_holdout_possible": false
+  },
+  "sample_size_by_band": {
+    "fast": 0,
+    "mid": 4,
+    "slow": 3
+  },
+  "pairs": [
+    {
+      "pid": "63765153",
+      "name": "ディクソン",
+      "year": 2021,
+      "identity_via": "the_show_bridge",
+      "show_live_speed": 72,
+      "show_live_n": 1,
+      "powerpro_speed": 64,
+      "show_band": "mid",
+      "powerpro_band": "mid",
+      "sealed_holdout": false
+    },
+    {
+      "pid": "23025153",
+      "name": "ハイネマン",
+      "year": 2021,
+      "identity_via": "the_show_bridge",
+      "show_live_speed": 69,
+      "show_live_n": 1,
+      "powerpro_speed": 68,
+      "show_band": "mid",
+      "powerpro_band": "mid",
+      "sealed_holdout": true
+    },
+    {
+      "pid": "93095153",
+      "name": "ラベロ",
+      "year": 2021,
+      "identity_via": "the_show_bridge",
+      "show_live_speed": 55,
+      "show_live_n": 1,
+      "powerpro_speed": 44,
+      "show_band": "mid",
+      "powerpro_band": "slow",
+      "sealed_holdout": false
+    },
+    {
+      "pid": "63565157",
+      "name": "アストゥディーヨ",
+      "year": 2023,
+      "identity_via": "the_show_bridge",
+      "show_live_speed": 7,
+      "show_live_n": 1,
+      "powerpro_speed": 35,
+      "show_band": "slow",
+      "powerpro_band": "slow",
+      "sealed_holdout": false
+    },
+    {
+      "pid": "03205159",
+      "name": "フォード",
+      "year": 2024,
+      "identity_via": "the_show_bridge",
+      "show_live_speed": 9,
+      "show_live_n": 1,
+      "powerpro_speed": 32,
+      "show_band": "slow",
+      "powerpro_band": "slow",
+      "sealed_holdout": false
+    },
+    {
+      "pid": "23225159",
+      "name": "モンテス",
+      "year": 2024,
+      "identity_via": "the_show_bridge",
+      "show_live_speed": 65,
+      "show_live_n": 1,
+      "powerpro_speed": 71,
+      "show_band": "mid",
+      "powerpro_band": "fast",
+      "sealed_holdout": false
+    },
+    {
+      "pid": "03205159",
+      "name": "フォード",
+      "year": 2025,
+      "identity_via": "the_show_bridge",
+      "show_live_speed": 0,
+      "show_live_n": 1,
+      "powerpro_speed": 32,
+      "show_band": "slow",
+      "powerpro_band": "slow",
+      "sealed_holdout": false
+    }
+  ],
+  "restart_sp052": false,
+  "verdict": "same-time numeric bridge remains NOT_IDENTIFIABLE"
+}

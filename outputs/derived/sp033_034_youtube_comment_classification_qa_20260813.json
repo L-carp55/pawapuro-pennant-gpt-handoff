@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-08-13",
+  "source_of_comment_text": "outputs/derived/speed_youtube_official_comments_recovered_20260813.jsonl",
+  "new_video_search": false,
+  "youtube_data_api": "NOT_USED",
+  "coverage": {
+    "acquired_reported_by_run2": {
+      "powerpro_comments": 257,
+      "prospi_comments": 4025,
+      "total": 4282,
+      "note": "These are run2 counted comments. Parser-derived sample sizes are not used as the official count.",
+      "parser_powerpro_sample_sum": 0,
+      "parser_prospi_retrieved_sum": 4025
+    },
+    "comment_text_classified_now": {
+      "powerpro": 251,
+      "prospi": 6894,
+      "total": 7145
+    },
+    "not_collected_or_inaccessible": {
+      "run2_prospi_videos_comments_not_attempted": 33,
+      "youtube_data_api_pagination_beyond_ytdlp_bound": "NOT_COLLECTED",
+      "comment_text_not_retained_if_recovery_failed": 0,
+      "note": "Not collected is not a negative finding that comments do not exist."
+    }
+  },
+  "accepted_evidence": {
+    "current_100_player_mapped": 0,
+    "distinct_events": 0,
+    "label_counts": {
+      "UNCLASSIFIED_CONTEXT": 6120,
+      "JOKE_OR_NOISE": 1009,
+      "GENERIC_FAST": 4,
+      "SPEED_TOO_HIGH": 2,
+      "PROSPI_MORE_PLAUSIBLE": 1,
+      "PLAYER_COMPARISON": 6,
+      "STALE_RATING": 4
+    },
+    "videos_as_origins": 55,
+    "note": "Same-video comments share one origin. reaction_volume is the comment count on that video. Labels are not independent physical measurements."
+  },
+  "inconclusive_evidence": {
+    "rows": 7145
+  },
+  "recovery_manifest_totals": {
+    "videos": 75,
+    "comments_recovered": 8715,
+    "videos_failed": 0
+  },
+  "verdict": "CLASSIFIED_AVAILABLE_TEXT"
+}

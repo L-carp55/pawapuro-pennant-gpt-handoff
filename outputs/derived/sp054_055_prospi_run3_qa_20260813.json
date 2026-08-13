@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-08-13",
+  "recollection": false,
+  "current_2026s1": {
+    "claimed": 17,
+    "observed_matched_cards": 17,
+    "accepted": 17,
+    "missing_by_hole": {
+      "PLAYER_NOT_ON_PAGE": 84
+    },
+    "note": "NOT_FOUND on GameX 2026 S1 page is PLAYER_NOT_ON_PAGE, not \"player absent from Prospi\"."
+  },
+  "historical": {
+    "claimed": {
+      "2025 Series 2": 88,
+      "2025 Series 1": 43
+    },
+    "observed_matched_by_edition": {
+      "2025 Series 2": 88,
+      "2025 Series 1": 43
+    },
+    "accepted": 131,
+    "missing_by_hole": {
+      "PLAYER_NOT_ON_PAGE": 93,
+      "PAGE_NOT_COVERED": 100
+    },
+    "note": "2024 Series 2 remains PAGE_NOT_COVERED / NOT_COLLECTED in run3 diagnosis. Not a game-absence finding."
+  },
+  "current_detail": {
+    "suspicious_cards": [],
+    "findings": []
+  },
+  "historical_detail": {
+    "suspicious_cards": [],
+    "findings": [
+      {
+        "id": "P-01",
+        "severity": "MAJOR",
+        "summary": "exact duplicate fingerprints: 1"
+      }
+    ]
+  },
+  "regular_vs_special": {
+    "current_regular": 14,
+    "current_special": 3,
+    "hist_regular": 94,
+    "hist_special": 37
+  },
+  "acceptance_sufficient_for_sp056": true,
+  "verdict": "PASS_FOR_QA_EVIDENCE"
+}

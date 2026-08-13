@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-08-13",
+  "input_rows": 150,
+  "classified_rows": 150,
+  "by_bucket": {
+    "NOISE_OR_UNRELATED": 58,
+    "WEAK_PHYSICAL_OR_CONTEXT": 86,
+    "RATING_CONSENSUS": 6
+  },
+  "missing_reason": 0,
+  "excluded_because_game_rating_mention": 0,
+  "policy": "GAME_RATING_OR_GAME_DISCUSSION_EXCLUDED is not a valid destination. Game-rating mentions go to RATING_CONSENSUS.",
+  "verdict": "PASS"
+}
