@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-08-13",
+  "policy": "CLAUDE.md 年度査定の目的関数 / speed_exclusion_reason_ledger.tsv EX-006,EX-007",
+  "ex007": {
+    "perSeason": [
+      {
+        "season": 2021,
+        "n": 116,
+        "raw_err_var": 0.006597584674541119,
+        "residual_err_var": 0.008490287674583563,
+        "added_noise_pct": 28.687816730053363
+      },
+      {
+        "season": 2022,
+        "n": 120,
+        "raw_err_var": 0.006992434896128853,
+        "residual_err_var": 0.008955225075583174,
+        "added_noise_pct": 28.070195984820103
+      },
+      {
+        "season": 2023,
+        "n": 131,
+        "raw_err_var": 0.00615584434015256,
+        "residual_err_var": 0.007993474017062092,
+        "added_noise_pct": 29.851789216359382
+      },
+      {
+        "season": 2024,
+        "n": 132,
+        "raw_err_var": 0.007967435558035769,
+        "residual_err_var": 0.009997249336408984,
+        "added_noise_pct": 25.476375222464043
+      },
+      {
+        "season": 2025,
+        "n": 137,
+        "raw_err_var": 0.008943942760373852,
+        "residual_err_var": 0.010797252911253732,
+        "added_noise_pct": 20.72139995227802
+      }
+    ],
+    "note": "残差の誤差分散は代数的に常に生の三塁打割合以上（Var(a-bX)=Var(a)+b^2*Var(X)、独立誤差前提）。観測された走塁指標側の標本誤差が三塁打側の標本誤差に比べてどれだけ大きいかで、分離の代償が決まる。"
+  },
+  "ex006": {
+    "n": 293,
+    "gb_coefficient": 0.0013029285357821906,
+    "convergence": {
+      "raw_vs_triple": 0.4145426127407283,
+      "resid_vs_triple": 0.25140994323551136,
+      "raw_vs_gdpAvoid": 0.5114527282929128,
+      "resid_vs_gdpAvoid": 0.3402795374691132,
+      "raw_vs_advance": 0.34842720383106923,
+      "resid_vs_advance": 0.20966751939894473
+    }
+  }
+}

@@ -49,13 +49,27 @@ export function speedComponents(line, ctx, ubr, norm) {
   // UBRと同じ「走塁の上手さ」を見るが、相関0.613で4割は別の情報を持ち、
   // 翌年との一致は自作0.527 > UBR0.447。だから置き換えず足す。
   // 1球データのある2020年以降のみ。無い年は null で通る（推定で埋めない）。
-  if (ctx.advance != null && ctx.advanceChances >= (norm.advance?.min_chances ?? 20)) {
+  //
+  // SP-018是正（2026-08-13、EX-005）: 旧実装は advanceChances<20 を観測値そのもの(raw.advance)の
+  // 棄却に使っていた——機会が少ないだけの選手が「情報ゼロ」扱いになっていた。
+  // advanceOf()はchances>=1の時だけ非nullを返す（chances=0は数学的に未定義でnullのまま）ため、
+  // 観測があれば必ず保持し、信頼度はz計算後にshrinkage(下記)で表す。20という数は
+  // 閾値ではなくshrinkageのkappa（reliability=chances/(chances+20)が0.5になる点）として引き継ぐ。
+  if (ctx.advance != null) {
     raw.advance = ctx.advance;
   }
 
   const z = {};
   for (const k of ['triple', 'gdpAvoid', 'ubr', 'advance']) {
     z[k] = raw[k] == null || !norm[k] ? null : (raw[k] - norm[k].mean) / norm[k].sd;
+  }
+  // SP-018是正: advanceは機会数に応じてreliability=chances/(chances+kappa)でz自体を0へ縮小する
+  // （stealingAbility()と同じ経験ベイズ形。固定閾値でnull化しない）。
+  if (z.advance != null) {
+    const kappa = norm.advance?.shrinkage_kappa ?? norm.advance?.min_chances ?? 20;
+    const chances = ctx.advanceChances ?? 0;
+    const reliability = chances / (chances + kappa);
+    z.advance *= reliability;
   }
   if (raw.infieldHit != null) {
     const n = norm.infieldHit;
@@ -175,14 +189,19 @@ export function baserunningAbility(ubrPerPa, speedScore, norm, cfg, opts = {}) {
   // 走力にも同じ指標を使っているが二重計上ではない——こちらは**走力で説明できる分を引いた残差**。
   // オーナーの例「走力B走塁E より 走力E走塁A の方が三塁到達が速い」は、
   // 脚が遅いのに進塁できている＝残差が大きい、として表れる。
-  if (opts.advance != null && norm.advanceOnSpeed
-      && opts.advanceChances >= (norm.advance?.min_chances ?? 20)) {
+  if (opts.advance != null && norm.advanceOnSpeed) {
     const a = norm.advanceOnSpeed;
     const expected = a.intercept + a.slope * (speedScore ?? 0);
-    // SP-015是正（2026-08-13）: 同上。a.repeatability（翌年再現性）を重みに使わず等重み(1)。
+    // SP-015是正: a.repeatability（翌年再現性）を重みに使わず等重み(1)を基準にする。
+    // SP-018是正（2026-08-13、EX-005）: opts.advanceChances>=20のハードカットを撤去。
+    // 機会が少ないだけで観測値ごと棄却していた分をreliability=chances/(chances+kappa)で
+    // weightへ反映する経験ベイズ形へ（stealingAbility()と同じ形）。
+    const kappa = norm.advance?.shrinkage_kappa ?? norm.advance?.min_chances ?? 20;
+    const chances = opts.advanceChances ?? 0;
+    const reliability = chances / (chances + kappa);
     parts.push({
       name: 'advance', z: (opts.advance - expected) / a.sd,
-      w: 1, expected,
+      w: 1 * reliability, expected,
     });
   }
 
