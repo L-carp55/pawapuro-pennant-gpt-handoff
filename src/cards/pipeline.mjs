@@ -449,8 +449,14 @@ export function appraiseCard(ctx, opts) {
     //   T-0203が判定C（統計材料が薄い層を推定できず増分を確認できない）だったため、
     //   自動blendは採用しない方針の候補。NPB+のraw値は削除しない（review evidenceとして保持）。
     statPrimarySpeed = false,
-    // SP-016 候補: current-year中心の走力プール。既定=false＝productionの挙動は不変
-    currentYearFirst = false, sufficientWeight = 0 } = opts;
+    // SP-016是正（2026-08-13）: 年度査定はcurrent-year中心（owner rule）。既定を true へ反転。
+    //   sufficientWeight既定=50打席＝同時点信頼性(標本誤差<選手間分散)が最初に0.5を超える点
+    //   （docs/audits/sp016_current_year_first_audit.md §2、翌年情報を使わない導出）。
+    //   50/150/300/443での感度は同ファイル§3に保存済み（単一値の決め打ちではない）。
+    //   故障・明らかな下振れ・temporal bridgingによる例外は、年齢/生年月日/故障データが
+    //   現状存在しないため未実装（SP-044/SP-045 BLOCKED_MISSING_DATA）。
+    //   legacy再現には currentYearFirst:false を明示的に渡す（比較専用）。
+    currentYearFirst = true, sufficientWeight = 50 } = opts;
 
   let pid = playerId;
   if (!pid) {

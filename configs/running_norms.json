@@ -371,13 +371,21 @@
     }
   },
   "componentWeights": {
+    "triple": 0.49648301630228797,
+    "gdpAvoid": 0.43340785393287107,
+    "infieldHit": 0.5331986509790801,
+    "ubr": 0.496,
+    "advance": 0.22075263524730496
+  },
+  "_componentWeights_basis": "SP-015是正（2026-08-13）。CLAUDE.md『年度査定の目的関数』および speed_next_year_repeatability_policy_correction_20260813.md により、翌年再現性(Year Y→Y+1相関)を年度査定のweight根拠に使うことは禁止された。同時点の測定信頼性 reliability=1-E[標本誤差の分散]/観測された選手間分散（2021-2025年、1シーズン内で完結・翌年情報を含まない）へ置き換えた。値=三塁打割合0.496 / 併殺回避0.433 / 内野安打率0.533 / advance0.221。UBRは合成指標で試行回数に分解できず同時点標本誤差を解析的に出せないため、他4材料の中央値0.496で暫定代用（分解可能なUBRが手に入れば置換）。根拠=docs/audits/sp015_same_time_reliability.md。旧重みは _componentWeightsLegacyNextYearRepeatability に保持（legacy control、比較専用・productionでは不使用）。感度: legacy vs same_time_reliability の順位相関r=0.992（2025年n=158）——置き換えで壊れていたのは順位でなく根拠",
+  "_componentWeightsLegacyNextYearRepeatability": {
     "triple": 0.695,
     "gdpAvoid": 0.62,
     "infieldHit": 0.586,
     "ubr": 0.445,
-    "advance": 0.527
+    "advance": 0.527,
+    "_comment": "2026-08-13以前のproduction既定。翌年再現性(Year Y→Y+1相関)をそのままweightにしていたためowner ruleに違反（EX-007/EX-008）。削除せずlegacy controlとして保持し、比較にのみ使う"
   },
-  "_componentWeights_basis": "各材料の翌年再現性（同一選手・連続2年の相関、400打席以上336件で実測、2026-08-01）。UBRが最も不安定（0.445）なのに旧実装は等重みで主指標扱いしていた。合成後の翌年再現性: 等重み3材料0.755→重み付き4材料0.791 / advance=0.533（2026-08-05実測、116組） / advance=0.533（2026-08-05実測、116組） / advance=0.527（2026-08-05実測、197組）",
   "advance": {
     "mean": 0.0013656472723286705,
     "sd": 0.11967508255424894,

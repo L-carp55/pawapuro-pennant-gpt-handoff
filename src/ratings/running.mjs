@@ -63,12 +63,15 @@ export function speedComponents(line, ctx, ubr, norm) {
     z.infieldHit = cell ? (raw.infieldHit - cell.mean) / cell.sd : null;
   }
 
-  // 材料ごとに質が違うので等重みで平均しない（2026-08-01変更）。
-  // 重みは**各材料の翌年再現性**＝どれだけ本物の信号を持つか。実測値は configs/running_norms.json。
-  // 実測: 三塁打割合0.695 / 併殺回避0.620 / 内野安打率0.586 / UBR0.445。
-  // UBRが最も不安定なのに主指標扱いしていた（旧コメントの「主経路」は誤り）。
-  // 合成後の翌年再現性: 等重み3材料0.755 → 重み付き4材料0.791。
-  const W = norm.componentWeights ?? { triple: 0.695, gdpAvoid: 0.620, infieldHit: 0.586, ubr: 0.445 };
+  // 材料ごとに質が違うので等重みで平均しない。
+  // 重みは**各材料の同時点の測定信頼性**（1シーズン内の標本誤差から算出、翌年情報を含まない）。
+  // SP-015是正（2026-08-13）: 旧実装は翌年再現性（Year Y→Y+1相関）をそのままweightにしており
+  // owner rule違反だった（CLAUDE.md『年度査定の目的関数』、EX-007/EX-008）。
+  // 実測値・根拠は configs/running_norms.json `_componentWeights_basis`
+  // / docs/audits/sp015_same_time_reliability.md 参照。旧重みは同ファイルの
+  // `_componentWeightsLegacyNextYearRepeatability` にlegacy controlとして保持。
+  const W = norm.componentWeights
+    ?? { triple: 0.496, gdpAvoid: 0.433, infieldHit: 0.533, ubr: 0.496, advance: 0.221 };
   let sum = 0, wsum = 0;
   for (const [k, v] of Object.entries(z)) {
     if (v == null || !Number.isFinite(v)) continue;
@@ -156,9 +159,13 @@ export function baserunningAbility(ubrPerPa, speedScore, norm, cfg, opts = {}) {
 
   if (ubrPerPa != null && norm.ubrOnSpeed) {
     const expected = norm.ubrOnSpeed.intercept + norm.ubrOnSpeed.slope * (speedScore ?? 0);
+    // SP-015是正（2026-08-13）: 旧実装は norm.ubrOnSpeed.repeatability（翌年再現性）を
+    // そのまま合成weightに使っておりowner rule違反だった。この残差の同時点信頼性は未測定のため
+    // 恣意的な代替数値を作らず等重み(1)で暫定運用する（sp015監査: legacy vs equal weightの
+    // 順位相関r=0.995で実務上の副作用は小さい）。.repeatabilityは削除せずdiagnostic用に保持。
     parts.push({
       name: 'ubr', z: (ubrPerPa - expected) / norm.ubrOnSpeed.sd,
-      w: norm.ubrOnSpeed.repeatability ?? 0.30, expected,
+      w: 1, expected,
     });
   }
 
@@ -172,9 +179,10 @@ export function baserunningAbility(ubrPerPa, speedScore, norm, cfg, opts = {}) {
       && opts.advanceChances >= (norm.advance?.min_chances ?? 20)) {
     const a = norm.advanceOnSpeed;
     const expected = a.intercept + a.slope * (speedScore ?? 0);
+    // SP-015是正（2026-08-13）: 同上。a.repeatability（翌年再現性）を重みに使わず等重み(1)。
     parts.push({
       name: 'advance', z: (opts.advance - expected) / a.sd,
-      w: a.repeatability ?? 0.21, expected,
+      w: 1, expected,
     });
   }
 

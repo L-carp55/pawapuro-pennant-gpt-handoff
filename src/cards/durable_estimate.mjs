@@ -25,9 +25,14 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
   // 時間ホールドアウト用の上限（既定=制限なし＝従来どおり）。T-0198。
   const maxSeason = ctx.maxSeason ?? null;
   const hi = maxSeason == null ? targetSeason + MAX_GAP : Math.min(targetSeason + MAX_GAP, maxSeason);
-  const poolOpts = { maxYearGap: MAX_GAP, maxSeason,
-    currentYearFirst: ctx.currentYearFirst ?? false,   // SP-016。既定=false＝従来どおり
+  // SP-016（2026-08-13）: currentYearFirstは走力にのみ適用する。
+  // 肩力・守備範囲・捕球の自動多年poolはこのPhaseのスコープ外（オーナー明示指示）——
+  // ここでpoolOptsを共有すると走力の是正が肩力側へ意図せず波及するため、
+  // 走力用（speedPoolOpts）と肩力用（armPoolOpts、常にlegacy）を分離する。
+  const speedPoolOpts = { maxYearGap: MAX_GAP, maxSeason,
+    currentYearFirst: ctx.currentYearFirst ?? false,
     sufficientWeight: ctx.sufficientWeight ?? 0 };
+  const armPoolOpts = { maxYearGap: MAX_GAP, maxSeason, currentYearFirst: false, sufficientWeight: 0 };
 
   // --- 走力: 対象年の前後の打撃＋走塁データから各年のzを出して畳む ---
   const runRows = prep(db, `
@@ -51,7 +56,7 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
         advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 }, r.ubr, runNorm);
     return sc.score == null ? null : { z: sc.score, weight: r.pa, season: r.season };
   }).filter(Boolean);
-  const speed = poolAcrossYears(speedObs, targetSeason, poolOpts);
+  const speed = poolAcrossYears(speedObs, targetSeason, speedPoolOpts);
 
   // --- 肩: ARM（2020年以降）と補殺（2006年以降）の2つを別々に畳んでから合成 ---
   const armRows = prep(db, `
@@ -79,8 +84,8 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
     return { z: (r.a / r.g - n.mean) / n.sd, weight: r.g, season: r.season };
   }).filter(Boolean);
 
-  const armPooled = poolAcrossYears(armObs, targetSeason, poolOpts);
-  const asstPooled = poolAcrossYears(asstObs, targetSeason, poolOpts);
+  const armPooled = poolAcrossYears(armObs, targetSeason, armPoolOpts);
+  const asstPooled = poolAcrossYears(asstObs, targetSeason, armPoolOpts);
   const combined = combineArmSources(armPooled, asstPooled);
 
   return {
