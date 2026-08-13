@@ -21,15 +21,24 @@
 
 /**
  * 複数年の観測を1つの推定へ畳む。
+ *
+ * ★窓は既定で対象年の**前後**（左右対称）。身体の性質を推定する目的ではこれで正しいが、
+ *   対象年より後の年を使うため、**過去年の査定には後知恵が入り、時間ホールドアウトが成立しない**
+ *   （2026-08-13 T-0198で発見。mode='2024' でも speed_seasons に2025が入っていた）。
+ *   検証時は `maxSeason` を渡して上限を切る。**未指定なら従来どおり**＝既存の査定値は動かない。
+ *
  * @param {Array<{z:number, weight:number, season:number}>} obs
  * @param {number} targetSeason
  * @param {object} opts {maxYearGap} 対象年から何年離れたものまで使うか
+ *                      {maxSeason}  この年より後の観測を使わない（時間ホールドアウト用。既定=制限なし）
  * @returns {null|{z, weight, years, seasons, isMultiYear}}
  */
 export function poolAcrossYears(obs, targetSeason, opts = {}) {
   const gap = opts.maxYearGap ?? 3;
+  const maxSeason = opts.maxSeason ?? null;
   const use = (obs ?? []).filter(o =>
-    o && Number.isFinite(o.z) && o.weight > 0 && Math.abs(o.season - targetSeason) <= gap);
+    o && Number.isFinite(o.z) && o.weight > 0 && Math.abs(o.season - targetSeason) <= gap
+    && (maxSeason == null || o.season <= maxSeason));
   if (!use.length) return null;
   const w = use.reduce((s, o) => s + o.weight, 0);
   return {
