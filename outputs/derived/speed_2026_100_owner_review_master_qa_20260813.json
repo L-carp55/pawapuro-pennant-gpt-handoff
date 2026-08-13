@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-08-13",
+  "rows_100": true,
+  "unique_players": true,
+  "nahara_kept": true,
+  "no_fabricated_ids": true,
+  "ids_blank_count": 1,
+  "gpt_codex_matches_source": true,
+  "powerpro_exact_match_count": 99,
+  "diff_consistent": true,
+  "all_big_diff_in_queue": true,
+  "all_low_confidence_in_queue": true,
+  "all_stale_in_queue": true,
+  "all_conflict_in_queue": true,
+  "low_medium_not_auto_flagged": true,
+  "owner_fields_blank": true,
+  "reasons_have_evidence_or_no_clear_cause": true,
+  "counts": {
+    "total": 100,
+    "review": 64,
+    "big_diff": 58,
+    "conf_LOW": 7,
+    "conf_LOW_MEDIUM": 87,
+    "stale": 17,
+    "conflict": 4,
+    "control_reproduced": 98,
+    "no_clear_cause": 19
+  },
+  "all_pass": true
+}
