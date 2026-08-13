@@ -1,254 +1,105 @@
-# パワプロ査定プロジェクト — Claude Code 引き継ぎパッケージ
+# パワプロ査定プロジェクト — Handoff Entry Point
 
-作成日: 2026-07-31  
-最終更新: 2026-08-11  
-状態: **走力Gate再開 / Claude Code壁打ち主担当へ移行**  
-対象: 実在選手をパワプロ風に査定するための、再現可能・検証可能な野手査定モデル
+最終更新: 2026-08-13  
+状態: **走力Gate ACTIVE / OWNER REVIEW NOT READY / 肩力BLOCKED**
 
 ---
 
-## 1. このパッケージの目的
+## 1. 最初に読むもの
 
-本パッケージは、長い対話の中で形成・修正された査定思想、誤り、検証結果、撤回事項、未解決課題を、Claude Code / Codex / GPT / オーナー間で引き継げる形に整理する。
+走力については、proseのhandoffを正本にしない。次の順で読む。
 
-最重要事項:
+1. `../state/speed_task_registry.tsv` — **現在タスク状態の唯一の正本**
+2. `../state/speed_requirements_baseline_20260813.tsv` — **消してはいけない要件ベースライン**
+3. `../state/speed_legacy_open_item_map.tsv` — 旧未完工程→現タスクID移行表
+4. `22_CURRENT_STATE_AND_AUTONOMOUS_CONTINUATION_20260813.md` — 人間向け現在地
+5. `../audits/speed_task_completeness_and_handoff_root_cause_20260813.md` — 漏れ全数監査と再発防止
+6. 必要な個別audit / source artifact
 
-> **過去に出力した具体的な能力値の多くは最終版ではない。**
+旧 `17_SPEED_GATE_REOPENED_20260811.md`、`18_CURRENT_CRITICAL_PATH_SPEED_REBUILD_20260811.md`、`19_CLAUDE_CODE_HANDOFF_SPEED_REBUILD_20260811.md` は履歴・要件発見元として残すが、**現在のタスク状態を決める正本ではない**。
 
-また、2026-08-11に一度閉じた走力Gateは、後続の全数監査により再度開いた。
+---
 
-現在の正式状態:
+## 2. 現在の状態
 
 ```text
 2026 NPB SPEED APPRAISAL GATE: ACTIVE / REOPENED
+OWNER REVIEW: NOT READY
+SHOULDER: BLOCKED
 ```
 
-旧blind freezeは削除せず、`physical_speed_estimate` 系列の中間成果として保存する。実際にゲームへ採用する最終走力は、今後作る `practical_powerpro_style_speed`。
+現在の100人owner review master tableはpreliminary。旧owner queueはSUPERSEDED。
+
+最終owner review前に少なくとも、task registryで `owner_review_block=1` のタスクを閉じる必要がある。特に:
+
+- Rating Consensus用の旧Grok-X reject救済
+- PowerPro公式YouTube comments
+- Prospi公式YouTube comments
+- official X replies / rating discussion
+- weak generic SNS recovery / same-event dedupe
+- PowerPro version normalization / stale再判定
+- The Show same-time mappingの検証と該当助っ人適用
+- Prospi current/history + PowerPro divergence
+- conflict再診断
+
+が未完。
 
 ---
 
-## 2. 2026-08-11以降の推奨読書順
+## 3. 完了宣言前の必須QA
 
-1. `00_README_AND_HANDOFF.md`
-2. `17_SPEED_GATE_REOPENED_20260811.md` **（現在のGate status）**
-3. `18_CURRENT_CRITICAL_PATH_SPEED_REBUILD_20260811.md` **（現在の作業順）**
-4. `19_CLAUDE_CODE_HANDOFF_SPEED_REBUILD_20260811.md` **（Claude Code再開用完全handoff）**
-5. `../audits/speed_2026_reopen_comprehensive_gap_audit_20260811.md` **（未実施・過度な証拠排除の全数監査）**
-6. `12_APPRAISAL_PRINCIPLES_20260809.md` **（一般査定原則）**
-7. `13_CURRENT_CRITICAL_PATH_20260809.md` **（旧critical path / history）**
-8. `16_SPEED_GATE_FINAL_AFTER_REOPEN_20260811.md` **（旧closed Gate / history）**
-9. `01_HISTORY_DECISION_LOG.md`
-10. `02_CURRENT_SPEC_V2.md`
-11. `03_FORMULAS_DATA_CONTRACTS.md`
-12. `04_RUNNING_DEFENSE_CATCHER.md`
-13. `05_SPECIAL_ABILITIES_KONAMI.md`
-14. `06_CARP_CASE_STUDY_AUDIT.md`
-15. `07_WBC2017_PRIME_STATUS.md`
-16. `08_CLAUDE_CODE_IMPLEMENTATION_PLAN.md`
-17. `09_QA_TESTS_OPEN_QUESTIONS.md`
-18. `10_SOURCE_CATALOG.md`
-19. `11_LEGACY_REFERENCE_V1_9.md`
-
----
-
-## 3. 現在の正本
-
-| ファイル | 役割 |
-|---|---|
-| `17_SPEED_GATE_REOPENED_20260811.md` | **現在の走力Gate status**。旧16をSUPERSEDED扱いにする |
-| `18_CURRENT_CRITICAL_PATH_SPEED_REBUILD_20260811.md` | **現在の進行正本**。Claude red-team→PowerPro temporal/stale→H2F加速→The Show/Prospi→community→owner review→100人再査定の順序 |
-| `19_CLAUDE_CODE_HANDOFF_SPEED_REBUILD_20260811.md` | Claude Codeが過去チャット無しで再開するための完全handoff |
-| `../audits/speed_2026_reopen_comprehensive_gap_audit_20260811.md` | 走力最終工程の全数監査。未実施工程・厳しすぎた証拠排除・再構築方針 |
-| `12_APPRAISAL_PRINCIPLES_20260809.md` | 一般原則。17/18/19と矛盾する走力旧ルールは2026-08-11追補を優先 |
-| `13_CURRENT_CRITICAL_PATH_20260809.md` | 旧進行正本。history |
-| `16_SPEED_GATE_FINAL_AFTER_REOPEN_20260811.md` | 旧closed Gate。17によりSUPERSEDED |
-| `01_HISTORY_DECISION_LOG.md` | 査定モデルの修正履歴 |
-| `02_CURRENT_SPEC_V2.md` | v2査定仕様 |
-| `03_FORMULAS_DATA_CONTRACTS.md` | 入力スキーマ・数式・出力台帳 |
-| `04_RUNNING_DEFENSE_CATCHER.md` | 走力・盗塁・守備・捕球等の旧詳細。走力部分は17/18/19優先 |
-| `05_SPECIAL_ABILITIES_KONAMI.md` | 得能・KONAMI比較 |
-| `11_LEGACY_REFERENCE_V1_9.md` | 歴史資料 |
-
----
-
-## 4. Claude Codeへの最初の指示
-
-```text
-最初に17, 18, 19とcomprehensive gap auditを読んでください。
-
-すぐコードを書かないでください。
-現在のGPT/Codex案を正しい前提にせず、まず独立red-teamをしてください。
-
-確認すること:
-- PowerProを強いpriorとして使いつつ、ベテランstaleをどう検出するか
-- 一塁到達等の混合情報をどの重みで使うか
-- 古い身体測定を現在へどの程度持ち越すか
-- The Show→PowerPro変換
-- Prospiの利用
-- PowerPro/Prospi査定へのSNS/YouTubeコメント
-- owner reviewをどこへ入れるか
-- これまで言及されていたのに未実施の方法が他にないか
-
-最初の成果は実装ではなくred-team auditにしてください。
+```bash
+node scripts/qa_speed_task_registry.mjs
 ```
 
----
+以下の前に必須:
 
-## 5. 現在のAI役割分担
+- 新handoff / CURRENT文書作成
+- taskをDONEへ変更
+- owner review ready宣言
+- Speed Gate close
+- 肩力開始
 
-### Claude Code
-
-査定思想・壁打ち・独立red-teamの主担当。
-
-### Codex
-
-大規模データ処理・DB分析・API・実装・再現可能成果物・QA。
-
-### GPT
-
-Claude案とCodex結果の独立レビュー、矛盾・抜けの検出、owner review package整理。
-
-### Owner
-
-最終査定責任者。
-
-- PowerProとの差5以上を全員確認
-- veteran staleの違和感を裁定
-- PowerPro/Prospiのどちらが自然かを判断
-- final acceptance
+FAILしたら進めない。
 
 ---
 
-## 6. 2026-08-11で追加された重要原則
+## 4. 今回の引継ぎ事故からのルール
 
-- **PowerProは単なる最後のQAより強いpriorとして使う。** ただしstale/inertia flagを持つ。
-- **5点以上のPowerPro差を大きな乖離**とする。
-- 一塁到達・塁間走・内野ゴロ等は、交絡があるからといって0扱いせず、低～中信頼の情報として使う。
-- SNSはPhysical ObservationとRating Consensusに分離する。
-- PowerPro/Prospiの査定コメントを収集する。
-- KONAMI/Prospiの公式能力紹介YouTubeコメントを利用する。YouTube API、CSV/JSON、ownerコピペを許可。
-- genericな「俊足」「鈍足」等も弱い証拠として保持する。
-- The Show temporal policyが識別不能でも、The Show→PowerProのsame-time conversionは別研究として行う。
-- 助っ人で測定時点PowerProが無ければThe Show換算を使う。
-- Prospi current/historyを体系的に統合する。
-- owner verdictを正式データとして保存し、後工程で上書きしない。
+- 「SNS済み」では完了にしない。Physical / Rating / YouTube / X / Prospiを別task IDで追う。
+- 「The Show済み」では完了にしない。collection / temporal negative / same-time mapping / holdout / applicationを別task IDで追う。
+- 「PowerPro panel済み」では完了にしない。collection / normalization / stale / age / injury / community/Prospi QAを別task IDで追う。
+- ファイル存在だけではDONEにしない。completion artifactは非空でなければならない。
+- negative findingはDONE_NEGATIVE_FINDINGとして保存し、未実施にも成功にも変換しない。
+- blocked / waitingは消さず明示する。
+- 新しいowner指示でscopeが増えたら、まず `speed_requirements_baseline_20260813.tsv` と `speed_task_registry.tsv` へ追加してから作業する。
+- 新handoffは旧未完工程を手作業でコピーしない。registryを参照する。
 
 ---
 
-## 7. 現在の走力成果
+## 5. AIの役割
 
-| 作業 | 状態 |
-|---|---|
-| T90 production architecture | 完了 |
-| MLB T90 calibration | 完了 |
-| 2026 NPB+ Sprint Speed 100人 | 完了 |
-| exposure audit | 完了 |
-| physical evidence collection | 完了 |
-| measurement date resolution | 部分完了 |
-| PowerPro long panel | **収集完了 / temporal-stale分析未完** |
-| body measurement × PowerPro timing join | 16 measurement clustersまで完了 / policy未作成 |
-| Historical Anchor Bank | 113 high-confidence anchorsを構築 |
-| ordinary SNS | 実施 |
-| Grok-X SNS | 175検索、191候補、41採用 |
-| rating-comment SNS | **未実施（旧ルールで除外していた）** |
-| official YouTube comments | **未実施** |
-| Prospi current/history | **未実施** |
-| The Show long data | 収集済み / temporal policy negative result |
-| The Show→PowerPro conversion | **未完成** |
-| H2F/context-inclusive acceleration | **未完成** |
-| owner review >=5 | **未実施** |
-| previous blind freeze | 完了。ただしphysical estimateとして保存 |
-| practical PowerPro-style reappraisal | **未実施** |
-| 肩力 | **走力Gateを閉じるまで進まない** |
+- Claude Code: 査定思想・red-team・統合。停止条件まで自律継続。
+- Codex: read-heavy収集・DB/API・再現可能成果物。複数subagent＋独立QAを使用。
+- GPT: 独立レビュー・漏れ監査・正本整合。
+- Owner: AIでは決められない個別査定・stale/odd・最終acceptanceのみ。
+
+重要知見はすべてGitHubへ保存し、`final chat response にしか存在しない重要知見 = 0` を守る。
 
 ---
 
-## 8. Previous blind freeze
+## 6. 一般仕様の参照
 
-branch: `codex/speed-2026-final-reappraisal-freeze`
+走力の現在タスク状態とは別に、一般設計を確認する場合:
 
-- BLIND_FINAL_FREEZE_SHA: `7b82bb2030bf94f40d5983618f6e7362d8f2a06b`
-- previous FINAL_GATE_SHA: `1db37ed11bfb4070c03afe530c9dfb7c12244a79`
+- `12_APPRAISAL_PRINCIPLES_20260809.md`
+- `01_HISTORY_DECISION_LOG.md`
+- `02_CURRENT_SPEC_V2.md`
+- `03_FORMULAS_DATA_CONTRACTS.md`
+- `04_RUNNING_DEFENSE_CATCHER.md`
+- `05_SPECIAL_ABILITIES_KONAMI.md`
+- `09_QA_TESTS_OPEN_QUESTIONS.md`
+- `10_SOURCE_CATALOG.md`
+- `11_LEGACY_REFERENCE_V1_9.md`
 
-100/100査定済みだが、今後は `physical_speed_estimate` baselineとして扱う。
-
-PowerPro QA:
-
-- 99 exact matches
-- project mean 65.343
-- PowerPro mean 65.667
-- MAE 7.758
-- RMSE 9.839
-- corr 0.776
-
-差5以上を今後全員owner reviewする。
-
----
-
-## 9. 重要な失敗の教訓
-
-このプロジェクトでは以前から:
-
-> 「完璧に使えないなら使わない」は、データが少ない状況では最も損な判断
-
-という教訓があった。
-
-走力最終工程ではこれを再発させた。
-
-今後:
-
-```text
-完全ではない
-→ 何が混ざるかを記録
-→ confidenceを下げる
-→ 他の証拠と合わせて使う
-```
-
-を原則とする。
-
----
-
-## 10. 出力上の絶対条件
-
-各選手で、最終的に:
-
-```text
-physical_speed_estimate
-practical_powerpro_style_speed
-PowerPro current/history
-PowerPro prior status
-Prospi current/history
-The Show converted value
-current top speed
-H2F/acceleration evidence
-historical physical evidence
-SNS physical
-SNS rating
-owner verdict
-low/point/high
-confidence
-major discrepancy reason
-evidence used/downweighted
-```
-
-を追跡できるようにする。
-
----
-
-## 11. GitHub durability
-
-Claude/Codex/GPTの最終チャットを正本にしない。
-
-```text
-final chat response にしか存在しない重要知見 = 0
-```
-
-を全タスクの完了条件にする。
-
----
-
-## 12. 注意
-
-現在は「完成済み査定表」ではなく、**走力実用査定の再構築フェーズ**。
-
-次にやるのは肩力ではなく、Claude Codeによる独立red-teamである。
+を使う。ただし走力の進行状態は常にtask registry優先。
