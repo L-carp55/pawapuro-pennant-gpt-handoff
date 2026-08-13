@@ -1,105 +1,143 @@
 # パワプロ風ペナント開発 — Project CLAUDE.md
 
-> 個人で楽しむための、パワプロのペナント機能を改善したシミュレーター。試合を手動プレイする機能は作らない（試合結果は全自動計算）。
+> 個人で楽しむための、パワプロのペナント機能を改善した全自動試合シミュレーター。
 
-## ★ 2026-08-11 CURRENT OVERRIDE — 最優先
+## ★ CURRENT SPEED AUTHORITY — 2026-08-13
 
-走力査定は一度 `CLOSED AFTER REOPEN` まで進んだが、後続のowner reviewと全数監査により**再度ACTIVEへ戻った**。
+走力の現在状態は**散在するhandoff proseではなく、機械可読台帳を正本**とする。
 
-現在の最優先正本:
+最優先:
 
-1. `docs/satei_handoff/17_SPEED_GATE_REOPENED_20260811.md`
-2. `docs/satei_handoff/18_CURRENT_CRITICAL_PATH_SPEED_REBUILD_20260811.md`
-3. `docs/satei_handoff/19_CLAUDE_CODE_HANDOFF_SPEED_REBUILD_20260811.md`
-4. `docs/audits/speed_2026_reopen_comprehensive_gap_audit_20260811.md`
-5. `docs/satei_handoff/12_APPRAISAL_PRINCIPLES_20260809.md`
+1. `docs/state/speed_task_registry.tsv` — **現在のタスク状態の唯一の正本**
+2. `docs/state/speed_requirements_baseline_20260813.tsv` — **消してはいけない要件の不変ベースライン**
+3. `docs/state/speed_legacy_open_item_map.tsv` — 旧critical path / audit / Codex親タスクから現タスクへの移行表
+4. `docs/satei_handoff/22_CURRENT_STATE_AND_AUTONOMOUS_CONTINUATION_20260813.md` — 人間向け現在地要約。台帳と衝突したら台帳優先
+5. `docs/audits/speed_task_completeness_and_handoff_root_cause_20260813.md` — 漏れ全数監査・根本原因・再発防止
 
-`13_CURRENT_CRITICAL_PATH_20260809.md` と `16_SPEED_GATE_FINAL_AFTER_REOPEN_20260811.md` は履歴資料。進行判断では17/18/19を優先する。
+旧 `17/18/19`、旧Gate文書、過去auditは証拠・履歴として読む。**そこに未完工程が残っていても、`speed_legacy_open_item_map.tsv`を経由して現タスクIDへ追跡する。旧proseを新しいCURRENTとして再採用しない。**
 
 現在の正式状態:
 
 ```text
 2026 NPB SPEED APPRAISAL GATE: ACTIVE / REOPENED
+OWNER REVIEW: NOT READY
+SHOULDER: BLOCKED
 ```
 
-肩力へ進まない。
+### 必須QA
 
-### Claude Codeの現在役割
+以下の前に必ず実行する:
 
-Claude Codeは**査定思想・壁打ち・独立red-teamの主担当**。まず19のhandoffを読み、すぐ実装せず現行再構築案を批判する。
+```bash
+node scripts/qa_speed_task_registry.mjs
+```
 
-Codexは大規模データ処理・実装、GPTは独立レビュー、オーナーは最終裁定を担当する。
+- 「完了」「owner review ready」「Gate close」と宣言する前
+- 新しいhandoff / CURRENT文書を作る前
+- 走力から肩力へ進む前
+- `speed_task_registry.tsv` のstatusをDONE系へ変える前
 
-### 走力で変更された重要原則
+QAがFAILしたら**fail closed**。文章上「終わったように見える」ことを理由に進めない。
 
-- PowerProは単なる最後のQAではなく**強いprior**として使う。ただしベテラン・故障後・長期据え置きではstale/inertiaを疑う。
-- PowerProとの差**5点以上を大きな乖離**とし、全員owner reviewへ回す。
-- 一塁到達・塁間走・内野ゴロ等は交絡があるからといって0情報にしない。交絡を記録しlow/medium confidenceで使う。
-- SNSは身体速度への言及だけでなく、PowerPro/Prospi査定へのhigh/low/staleコメントも別laneで使う。
-- KONAMI/Prospi公式YouTube能力紹介コメントも査定community evidenceとして利用する。YouTube API、CSV/JSON、ownerのコピペ投入を許可する。
-- 助っ人等で測定時点のPowerProが無い場合、MLB The Show→PowerPro変換を統計的に作って補完する。
-- genericな俊足/鈍足、走塁結果を含む投稿、動画context等は「完璧でないから棄却」ではなく、弱い証拠として保持する。
-- 旧blind final freezeは削除せず `physical_speed_estimate` 系列の中間成果とする。実ゲーム採用値は今後の `practical_powerpro_style_speed`。
+---
+
+## 現在までに確定した走力の重要事項
+
+- Claude離脱前から、三塁打 / GIDP回避 / 内野安打 / advance / UBR、多年pool、走力と走塁技術の分離を持つproduction statistical modelが存在していた。これをcontrolとして残す。
+- GPT/Codexの旧100人blind baselineは、Claudeの機械検証で99人がNPB+最高速度のほぼ完全な一次関数だった。実用最終値として扱わない。
+- T-0198 `maxSeason` 修理済み。時間holdoutで未来年を切れる。
+- NPB+には実信号があるが、現行 `NPB+ -> PowerPro label regression -> blend` は教師値・重み・scale・循環に構造問題がある。
+- T-0203はC / NOT_IDENTIFIABLE。統計材料1年層がn=2で、低reliability層でのNPB+追加価値を確定できない。現時点では自動blendせず、raw NPB+をreview/conflict evidenceとして保持する。T-0204で2026終了後に事前定義どおり再実行する。
+- PowerProの役割は**未確定タスク**。現行のPowerPro由来scaleは暫定で、PowerProを教師値とQAの両方にしない。
+- absolute 0-100 scaleはrelative orderingと分離。能力値→engine走力効果の橋が未実装なので最終scale校正は依存待ち。
+- 既存owner review master tableはpreliminary asset。旧owner queueはSUPERSEDED。community/Prospi/The Show/temporal等の必須前工程後にfinal queueを再生成する。
+
+### Community evidenceの重要な未完工程
+
+既存ordinary SNS / Grok-X 41 acceptedは主に**Physical Observation lane**。
+
+以下は別タスクで、まだ完了していない:
+
+- 旧Grok-X rejectedのRating Consensus再分類
+- PowerPro公式YouTube能力紹介/updateコメント
+- Prospi公式YouTube能力紹介コメント
+- PowerPro/Prospi公式X replies・査定批評
+- weak generic labelsの救済
+- same-event dedupe / reaction volume
+- Prospi current/history
+
+Codex委任正本:
+`docs/tasks/CODEX_SPEED_COMMUNITY_RATING_RESCUE_20260813.md`
+
+---
+
+## 役割分担
+
+### Claude Code
+査定思想・red-team・統合判断。停止条件に当たるまで逐次owner確認を要求せず、自律継続する。
+
+### Codex
+read-heavy収集・DB処理・API・再現可能成果物・QA。大規模収集では**複数subagentを並列使用し、独立QA agentを置く**。final chat only knowledgeは禁止。
+
+### GPT
+Claude/Codex成果の独立レビュー、漏れ監査、GitHub正本整合、owner review package整理。
+
+### Owner
+AI側で解けない個別査定・PowerPro stale/odd・最終acceptanceを裁定。AIが解ける工程をownerへ丸投げしない。
+
+---
 
 ## 最上位目的
-本家ペナントの4つの不満を解消したペナントシミュレーターを完成させ、オーナー（ユーザー）が長期ペナントを楽しめる状態にする:
+
+本家ペナントの4つの不満を解消する:
+
 1. 選手の成長と衰えの雑さ
-2. CPU球団の頭の悪さ（ドラフト・トレード・FA・編成）
-3. 記録・数字の物足りなさ（通算記録・タイトル史・球団史）
+2. CPU球団の編成判断の弱さ
+3. 記録・数字の物足りなさ
 4. 球団経営の浅さ
 
-## 確定済みの設計判断（2026-07-31 オーナー確定）
-- **査定の照準は自作エンジン整合**: 「能力→成績」変換はこちらが定義し、査定（成績→能力）はその逆算として一体設計する。KONAMI比較は参考チェックに格下げしていたが、走力では2026-08-11追補によりPowerProを強いpriorとして使う。stale検出とowner裁定を必須とする。
-- **カープ黄金期13人・WBC28人は検証用題材**: 査定パイプライン完成後の最初のテストケースとして使う
-- **投手は球速・球種も計算に組み込む**: ただし実在投手の球速・球種は「実際の奪三振率・与四球率・被弾率を再現するよう逆算」で割り当てる（根拠なき係数を置かない原則との両立）。近年投手は公開データから直接取得
-- **選手データ**: 実在NPB選手ベース＋以後のドラフト新人は架空生成
-- **UI**: ブラウザで動く画面付き（ローカル起動、公開しない）
+査定は自作engineと一体設計し、最終的には能力→成績のleague-level整合でQAする。
 
-## 正本
-- 査定思想・数式・失敗ログの正本 = `docs/satei_handoff/`
-- **2026-08-11以降の走力の現在作業順 = `18_CURRENT_CRITICAL_PATH_SPEED_REBUILD_20260811.md`**
-- Claude Code再開 = `19_CLAUDE_CODE_HANDOFF_SPEED_REBUILD_20260811.md`
-- comprehensive gap audit = `docs/audits/speed_2026_reopen_comprehensive_gap_audit_20260811.md`
-- `12_APPRAISAL_PRINCIPLES_20260809.md` は一般原則。ただし走力で17/18/19と矛盾する旧「PowerProはfreeze後だけ」「HP→1Bはcontext-only」等は2026-08-11追補を優先する
-- `13_CURRENT_CRITICAL_PATH_20260809.md` は履歴資料
-- `16_SPEED_GATE_FINAL_AFTER_REOPEN_20260811.md` は旧Gate記録。17によりSUPERSEDED
-- 統合設計 = `docs/design/integration_design_v0.md`
-- 旧仕様 `11_LEGACY_REFERENCE_V1_9.md` は歴史資料。新設計と混同しない
+---
 
-## データソース
-- **プロEYE球** (`https://proeyekyuu.com/ja/csvs-jp/`): 1936-2025年（1945欠）の打撃・投手・守備CSV。利用自由・出典表記歓迎。選手ID付きで年またぎ追跡可能
-- **NPB公式は取得元にしない**（二次利用禁止の明記あり）
-- Nippon Baseball Data Repository (GitHub, MIT): 名簿2018-2026・ドラフト2004-2025。年齢・投打の補完候補
-- 一括取得の実行前は規模（ファイル数）をオーナーに明示する（Hub法務境界ルール準拠）
+## 開発・査定原則
 
-## 開発原則（査定引継ぎから継承）
-- 同じ情報を能力と特殊能力に二重計上しない
-- エラーは捕球のみ。守備力に入れない
-- 盗塁数と走力を混ぜない
-- 少サンプルは減点でなくPrior回帰（経験ベイズ）
-- 欠損を0にしない（null / 0 / 推定+フラグを区別）
-- **不完全な情報も0にしない。** 交絡・信頼度・時点を保存して低重みで使えるようにする
-- 係数のハードコード禁止。未校正値は設定ファイルに分離し根拠を記録
-- 計算ログ（入力・途中式・出典）を全選手で保存
-- **本塁打数はパワーそのものではなく結果指標。** EV/Max EV、Barrel%、Hard-Hit%、ISO、xSLG、HR/FB、Launch Angle等から長打生成能力を先に評価し、HRは整合性QAへ回す
-- **ミート/パワー相互作用は「ミートを先に確定→その後パワー」の順序で扱う。** 同じ相互作用を両能力から同時に差し引いて二重弱体化しない
-- **走力は最初の走行ステップから約90ftを移動する身体能力。** 盗塁技術・走塁判断とは分離するが、H2F等の混合観測は調整済み補助情報として使う
-- **NPB+ Sprint Speed→T90は未較正。** 最高速度だけで最終査定しない
-- **少出場選手の低Sprint Speedは最大努力走行の未観測を疑う。** サンプル数/走行機会、PA、試合数を信頼度に反映し、固定PA閾値で自動減点しない
-- **データ不足選手はアンカー・SNS・公式ゲーム査定・owner reviewを組み合わせて補完可能。**
-- PowerPro / Prospi / The Showは用途とprovenanceを分離する。PowerProは強いpriorだがstale flagを持つ
-- **大規模なread-heavy収集をCodexへ委任する場合、サブエージェントによる並列実行をプロンプトで明示する。** 年代/球団/ソース別Agent＋独立QA Agent、別中間ファイル、親Agentのみ最終統合を原則とする
-- **Codex / Claudeの最終チャット回答は正本にしない。** 重要な結論・coverage・制約・欠損・negative finding・QA・owner verdictは必ずGitHubへ保存し、`final responseにしか存在しない重要知見 = 0` とする
-- **校正の答え合わせは「12球団×143試合を回した時のリーグ全体の成績分布が実データの分布と一致するか」**。走力ではinfield hit、extra-base advancement、GIDP回避等の関連分布もQAする
+- 同じ情報を基礎能力と特殊能力へ二重計上しない。
+- エラーは捕球で扱い、守備力へ直接混ぜない。
+- 盗塁数・走塁判断を走力へそのまま混ぜない。
+- 欠損を0にしない。`null / 0 / 推定 + flag`を区別。
+- 不完全な証拠は、交絡・時点・信頼度を記録して低重みで使える形にする。完全でないことだけを理由に0情報扱いしない。
+- negative findingは「未実施」と区別して保存し、取得不能を証拠不存在と混同しない。
+- raw dataは上書きせず、加工は再現可能にする。
+- 未校正係数は設定へ分離し根拠を保存。
+- PowerPro / Prospi / The Showはsourceと用途を分離し、循環QAを避ける。
+- 重要な結論・coverage・欠損・negative finding・owner verdictはGitHubへ保存し、`final chat response にしか存在しない重要知見 = 0` とする。
 
-## 技術方針
-- TypeScript + Node.js（エンジン・査定とも同一言語でブラウザUIと共有）
-- データはSQLite（Hub実績あり）＋生CSVは data/raw/ に保存
-- UI: ローカルWebサーバー＋ブラウザ。フレームワークは実装開始時に決定
+---
 
-## ★守備位置の表記が経路ごとに3種類ある（2026-08-05に3回踏んだ）
-新しいデータ源を守備位置で結合する前に、必ずどの表記か確認する。素通しで結合すると**エラーにならず黙って対象0件・全員が既定の分岐へ落ちる**。
-- `bm_fld`: 英語 `1B/2B/3B/SS/LF/CF/RF/C/P`
-- `v_fielding`・DELTA: 日本語1文字 `一/二/三/遊/左/中/右/捕/投`
-- 対応表 `POS_JA = {'1B':'一','2B':'二','3B':'三','SS':'遊','LF':'左','CF':'中','RF':'右','C':'捕','P':'投'}` を再利用する
-- 較正済み位置別基準は較正側表記を保持するため、参照時に必ず変換を確認する
+## データソース・注意
+
+- プロEYE球: 1936-2025年（1945欠）の打撃・投手・守備CSV。選手IDで年またぎ追跡。
+- NPB公式は取得元にしない（二次利用禁止の明記があるため）。
+- Nippon Baseball Data Repository等の既存repo資産を、年齢/名簿補完候補としてまず監査する。
+- 大規模外部取得が必要な場合のみ、規模・費用・新規依存をownerへ確認する。
+
+### 守備位置表記
+
+結合時に表記差で黙って0件になる事故を防ぐ:
+
+- `bm_fld`: `1B/2B/3B/SS/LF/CF/RF/C/P`
+- `v_fielding` / DELTA: `一/二/三/遊/左/中/右/捕/投`
+- 既存 `POS_JA` 対応を再利用する。
+
+---
+
+## 絶対禁止
+
+- `speed_task_registry.tsv`に無い新しい走力タスクをchatだけで進める
+- 新handoff作成時に旧未完タスクを手作業で選別して落とす
+- 「SNS済み」「The Show済み」のような親ラベルだけで子タスクをDONE扱いする
+- 成果物ファイルが存在するだけで完了扱いする
+- preliminary owner queueをfinalとしてownerへ送る
+- validator FAILのままGateを閉じる
+- Speed Gate完了前に肩力へ進む
