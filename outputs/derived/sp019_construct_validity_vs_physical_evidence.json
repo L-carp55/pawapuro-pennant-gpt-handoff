@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-08-13",
+  "supersedes": "scripts/sp019_proxy_deconfounding_reaudit.mjs（第1版。実戦proxy同士の比較のみで共通confoundを排除できていなかった）",
+  "policy": "EX-006/EX-007を再OPENした上での再判定。判定基準は実戦outcomeに依存しない外部physical evidence",
+  "n_players_with_ingame_proxies_and_npb": 91,
+  "regression_coefficients": {
+    "triple_on_advance": 0.24900222822743615,
+    "infieldhit_on_gbpct": 0.0016463766275085267
+  },
+  "criteria_coverage": {
+    "npb": 91,
+    "m50": 34,
+    "t90": 2
+  },
+  "known_limitations": [
+    "NPB+ sprint speedは公表されたin-game トラッキング集計であり、qualified-run数が非公開・露出量に依存する。実験室測定ではない",
+    "NPB+は2026 snapshot、実戦proxyは2021-2025の加重平均＝near-timeであり厳密な同時点ではない",
+    "50m実測はSP-017でrange evidenceへ復元した低信頼度データ（protocol/date不明を含む）。方向の確認にのみ使う",
+    "direct T90はn<10で検出力が無い。参考表示のみ",
+    "残差化の回帰係数を本標本内で推定しているため、残差版にわずかな過適合が入りうる（rawに不利ではなく残差版に有利な方向のバイアス）"
+  ],
+  "results": {
+    "EX_007_triple_baserunning_separation": {
+      "npb": {
+        "criterion": "NPB+ sprint speed (km/h)",
+        "tier": "primary",
+        "n": 91,
+        "r_raw": 0.39027593960378265,
+        "r_residualized": 0.25240727220888126,
+        "diff_resid_minus_raw": -0.1378686673949014,
+        "ci95_of_diff": [
+          -0.21306612442618508,
+          -0.083050660746458
+        ],
+        "ci_excludes_zero": true
+      },
+      "m50": {
+        "criterion": "50m実測（秒、符号反転）",
+        "tier": "secondary_low_confidence",
+        "n": 34,
+        "r_raw": 0.5835632226000829,
+        "r_residualized": 0.5005042622469668,
+        "diff_resid_minus_raw": -0.0830589603531161,
+        "ci95_of_diff": [
+          -0.19189900368444213,
+          0.03574033225675177
+        ],
+        "ci_excludes_zero": false
+      },
+      "t90": {
+        "criterion": "direct T90（秒、符号反転）",
+        "tier": "tertiary_underpowered",
+        "n": 2,
+        "insufficient": true
+      }
+    },
+    "EX_006_infieldhit_gb_deconfounding": {
+      "npb": {
+        "criterion": "NPB+ sprint speed (km/h)",
+        "tier": "primary",
+        "n": 91,
+        "r_raw": 0.6511413503489802,
+        "r_residualized": 0.5214052646898852,
+        "diff_resid_minus_raw": -0.129736085659095,
+        "ci95_of_diff": [
+          -0.24807874384336237,
+          0.010208366801299662
+        ],
+        "ci_excludes_zero": false
+      },
+      "m50": {
+        "criterion": "50m実測（秒、符号反転）",
+        "tier": "secondary_low_confidence",
+        "n": 34,
+        "r_raw": 0.5622224774925411,
+        "r_residualized": 0.2759687473241748,
+        "diff_resid_minus_raw": -0.28625373016836625,
+        "ci95_of_diff": [
+          -0.587542571519788,
+          -0.046427918780530875
+        ],
+        "ci_excludes_zero": true
+      },
+      "t90": {
+        "criterion": "direct T90（秒、符号反転）",
+        "tier": "tertiary_underpowered",
+        "n": 2,
+        "insufficient": true
+      }
+    }
+  }
+}
