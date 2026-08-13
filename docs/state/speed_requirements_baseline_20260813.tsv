@@ -53,3 +53,7 @@ SR-051	旧2026-08-05 all-missing-data taskのspeed項目を子要件へマッピ
 SR-052	official scouting / pinch-runner usage / defensive straight-line chase speed等、過去に言及した補助証拠の実施/不要/blockedを明示する	completeness audit
 SR-053	翌年再現性・翌年予測力を、一年ごとの能力査定の材料採否・component weight・縮小強度・最終点の直接根拠に使わない。同時点の測定信頼性・sample誤差とは明確に区別する	owner explicit instruction 2026-08-05 / restored 2026-08-13
 SR-054	年度能力は基本的にその年の情報で査定し、過去実績を全員へ自動混合しない。過去情報は少出場・故障・明らかな下振れ・測定時点補完等の明示された理由がある場合にのみ使い、時点と重みの根拠を保存する	owner explicit instruction 2026-08-05 / restored 2026-08-13
+SR-055	計測方式不明・時点不明・交絡あり・主観的・context-only等「不完全」であることだけを理由に方向性のある証拠を0情報へしない。変換不能と証拠自体の無価値を分離し、range/confidence/downweightで保持する	owner repeated feedback / exclusion reaudit 2026-08-13
+SR-056	少サンプルは観測値の不存在ではない。固定機会数・打席数閾値だけで観測済み証拠をnullへ落とさず、統計量が定義可能ならposterior shrinkage・interval・confidenceで不確実性を表す	project prior policy / exclusion reaudit 2026-08-13
+SR-057	proxyの採否・交絡調整を、別の混合proxy（UBR等）やPowerProとの相関が上がるかだけで決めない。年度査定ではsame-time construct validity・直接身体証拠・二重計上リスクを優先する	exclusion reaudit 2026-08-13
+SR-058	negative finding・除外判定は検証した問い/変換/レーンの範囲に限定し、隣接する別用途まで無効化しない。全除外理由をspeed_exclusion_reason_ledger.tsvへ記録し、再評価必要行が残る間はowner review/Gateを閉じない	exclusion reaudit / current user request 2026-08-13
