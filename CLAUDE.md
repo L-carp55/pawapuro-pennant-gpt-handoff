@@ -10,10 +10,12 @@
 
 1. `docs/state/speed_task_registry.tsv` — **現在のタスク状態の唯一の正本**
 2. `docs/state/speed_requirements_baseline_20260813.tsv` — **消してはいけない要件の不変ベースライン**
-3. `docs/state/speed_legacy_open_item_map.tsv` — 旧critical path / audit / Codex親タスクから現タスクへの移行表
-4. `docs/satei_handoff/22_CURRENT_STATE_AND_AUTONOMOUS_CONTINUATION_20260813.md` — 人間向け現在地要約。台帳と衝突したら台帳優先
-5. `docs/audits/speed_task_completeness_and_handoff_root_cause_20260813.md` — 漏れ全数監査・根本原因・再発防止
-6. `docs/audits/speed_next_year_repeatability_policy_correction_20260813.md` — **年度査定で翌年再現性を使わないowner ruleの復元**
+3. `docs/state/speed_exclusion_reason_ledger.tsv` — **除外・0情報化・negative findingのscopeを管理する正本**
+4. `docs/state/speed_legacy_open_item_map.tsv` — 旧critical path / audit / Codex親タスクから現タスクへの移行表
+5. `docs/satei_handoff/22_CURRENT_STATE_AND_AUTONOMOUS_CONTINUATION_20260813.md` — 人間向け現在地要約。台帳と衝突したら台帳優先
+6. `docs/audits/speed_task_completeness_and_handoff_root_cause_20260813.md` — 漏れ全数監査・根本原因・再発防止
+7. `docs/audits/speed_next_year_repeatability_policy_correction_20260813.md` — **年度査定で翌年再現性を使わないowner ruleの復元**
+8. `docs/audits/speed_exclusion_reason_reaudit_20260813.md` — **誤った理由で除外された証拠の再監査**
 
 旧 `17/18/19`、旧Gate文書、過去auditは証拠・履歴として読む。**そこに未完工程が残っていても、`speed_legacy_open_item_map.tsv`を経由して現タスクIDへ追跡する。旧proseを新しいCURRENTとして再採用しない。**
 
@@ -58,6 +60,18 @@ QAがFAILしたら**fail closed**。文章上「終わったように見える�
 
 ---
 
+## ★ 証拠除外の原則
+
+- `不完全` と `無価値` を同義にしない。
+- protocol/date/context/confoundが不完全でも、方向性がある証拠はrange/confidence/downweightで保持する。
+- `この変換は無効` と `元データ自体が無価値` を分離する。例: 30m/50m→T90距離比例は無効でも30m/50m実測自体は残す。
+- 少サンプルは原則としてconfidence/interval/shrinkageの問題であり、固定閾値だけで観測済み値をnullにしない。
+- negative findingは検証した問い/レーンのscopeに限定し、隣接用途を自動無効化しない。
+- proxyの採否を別の混合proxyやPowerProとの相関だけで決めない。
+- 除外判断は `docs/state/speed_exclusion_reason_ledger.tsv` に登録する。再評価必要行が残る間はfinal owner review / Speed Gateを閉じない。
+
+---
+
 ## 現在までに確定した走力の重要事項
 
 - Claude離脱前から、三塁打 / GIDP回避 / 内野安打 / advance / UBR、多年pool、走力と走塁技術の分離を持つproduction statistical modelが存在していた。**controlとして残すが、翌年再現性weight・自動多年poolはfinal採用済みとはみなさない。**
@@ -67,7 +81,7 @@ QAがFAILしたら**fail closed**。文章上「終わったように見える�
 - T-0203/T-0204は**projection/diagnostic研究**として保持する。future-year predictive performanceを、年度走力査定へ自動blendする/しないの直接基準にはしない。
 - PowerProの役割は**未確定タスク**。現行のPowerPro由来scaleは暫定で、PowerProを教師値とQAの両方にしない。
 - absolute 0-100 scaleはrelative orderingと分離。能力値→engine走力効果の橋が未実装なので最終scale校正は依存待ち。
-- 既存owner review master tableはpreliminary asset。旧owner queueはSUPERSEDED。community/Prospi/The Show/temporal/年度査定weight修正等の必須前工程後にfinal queueを再生成する。
+- 既存owner review master tableはpreliminary asset。旧owner queueはSUPERSEDED。community/Prospi/The Show/temporal/年度査定weight修正/除外再監査等の必須前工程後にfinal queueを再生成する。
 
 ### Community evidenceの重要な未完工程
 
@@ -159,6 +173,8 @@ AI側で解けない個別査定・PowerPro stale/odd・最終acceptanceを裁�
 - 成果物ファイルが存在するだけで完了扱いする
 - **翌年再現性が高い/低いことを理由に年度査定の材料weightや採否を決める**
 - **十分なcurrent-year evidenceがある選手へ過去年を自動poolする**
+- **不完全/少サンプル/複合的という理由だけで観測済み証拠を0情報化する**
+- **negative findingを隣接レーンへ一般化する**
 - preliminary owner queueをfinalとしてownerへ送る
 - validator FAILのままGateを閉じる
 - Speed Gate完了前に肩力へ進む
