@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-08-13",
+  "scope": "run2で収集しcanonへ統合したcommunity raw(473行)を、SP-032/036/037の受入基準に対して独立評価",
+  "row_total": 473,
+  "schema_value_counts": {
+    "physical_or_rating_lane": {
+      "PHYSICAL": 148,
+      "RATING": 209,
+      "rating": 116
+    },
+    "classification": {
+      "UNCLASSIFIED_CONTEXT": 328,
+      "PHYSICAL_FAST": 23,
+      "PHYSICAL_SLOW": 6,
+      "RATING_VALUE_CONTEXT": 2,
+      "PHYSICAL_SLOW,TEMPORAL_DECLINE": 1,
+      "[\"UNCLASSIFIED_CONTEXT\"]": 113
+    }
+  },
+  "sr015_reclassification": {
+    "rows": 150,
+    "by_status": {
+      "NOT_RECLASSIFIABLE_INSUFFICIENT": 58,
+      "RETAINED_NOT_DIRECTIONAL": 33,
+      "RECLASSIFIED_TO_WEAK_CONTEXT_LANE": 29,
+      "NOT_RECLASSIFIABLE_PLAYER_IDENTITY": 17,
+      "NOT_RECLASSIFIABLE_IDENTITY_CONFLICT": 3,
+      "RETAINED_REPOST_NOT_INDEPENDENT": 3,
+      "RECLASSIFIED_TO_RATING_LANE": 2,
+      "RETAINED_DUPLICATE_NOT_INDEPENDENT": 5
+    }
+  },
+  "sr019_weak_directional": {
+    "accepted_weak": 29,
+    "without_direction": 0,
+    "with_numeric_rating": 0
+  },
+  "sr020_dedupe": {
+    "rows_with_event_id": 357,
+    "multi_row_events": 2,
+    "overcounted_events": 0,
+    "reaction_volume_fields_present": [
+      "comment_count",
+      "like_sum",
+      "top_like_count",
+      "origin_count"
+    ]
+  },
+  "uncollected_or_unresolved": {
+    "NOT_FOUND": 200,
+    "INSUFFICIENT": 201,
+    "note": "これらは「証拠が無い」ではなく「取得・特定できていない」。negative findingへ転記しない"
+  },
+  "findings": [
+    {
+      "id": "C-01",
+      "severity": "BLOCK",
+      "requirement": "schema",
+      "summary": "`physical_or_rating_lane` に大文字小文字違いの同義値が混在",
+      "detail": "値と件数: {\"PHYSICAL\":148,\"RATING\":209,\"rating\":116}。lane別に数えると同じ意味の値が別物として二重に数えられる"
+    },
+    {
+      "id": "C-02",
+      "severity": "BLOCK",
+      "requirement": "schema",
+      "summary": "`classification` が「文字列」と「JSON配列を文字列化したもの」の2形式で混在",
+      "detail": "配列形式の値: [\"[\\\"UNCLASSIFIED_CONTEXT\\\"]\"] 合計113件。分類で絞り込むと配列形式の行が漏れる"
+    },
+    {
+      "id": "C-08",
+      "severity": "MINOR",
+      "requirement": "SR-020",
+      "summary": "event_id が無い行が116件",
+      "detail": "event_idが無い行は同一場面かどうかを機械判定できない。reaction volumeの分離が保証されない範囲"
+    }
+  ],
+  "verdict": "BLOCK（受入不可。修理してから再評価）"
+}
