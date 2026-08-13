@@ -57,3 +57,6 @@ SR-055	計測方式不明・時点不明・交絡あり・主観的・context-on
 SR-056	少サンプルは観測値の不存在ではない。固定機会数・打席数閾値だけで観測済み証拠をnullへ落とさず、統計量が定義可能ならposterior shrinkage・interval・confidenceで不確実性を表す	project prior policy / exclusion reaudit 2026-08-13
 SR-057	proxyの採否・交絡調整を、別の混合proxy（UBR等）やPowerProとの相関が上がるかだけで決めない。年度査定ではsame-time construct validity・直接身体証拠・二重計上リスクを優先する	exclusion reaudit 2026-08-13
 SR-058	negative finding・除外判定は検証した問い/変換/レーンの範囲に限定し、隣接する別用途まで無効化しない。全除外理由をspeed_exclusion_reason_ledger.tsvへ記録し、再評価必要行が残る間はowner review/Gateを閉じない	exclusion reaudit / current user request 2026-08-13
+SR-059	収集済みProspiは全てProspi A（スマホアプリ版）でありPowerPro stale/odd QAには使用しない。rawは保持する。コンソール版ProspiはPowerProとほぼ同等で独立情報にならないため追加収集しない。SR-027/SR-028/SR-029の実行前提をsupersedeする	owner ruling 2026-08-14
+SR-060	The Showのcross-time numeric bridgeは採用しない。年度査定のcurrent-year原則と、加齢・故障・移籍によるtemporal confounding回避のため。same-time numeric bridgeがNOT_IDENTIFIABLEであることと併せ、The Showを数値変換の経路としては使わない。ただしThe Show raw / context evidence自体は保持する	owner ruling 2026-08-14
+SR-061	PowerProを経由しないNPB+ raw speed integrationを設計する。same-time physical construct・measurement reliability・exposure/sample error・temporal proximityからlatent speedへ統合し、PowerProラベルおよび翌年再現性をweightや採否に使わない。完成までfinal practical reappraisalでPowerPro-mapped NPB+ blendをfinal値として使わない	owner ruling 2026-08-14
