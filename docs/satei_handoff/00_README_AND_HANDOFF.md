@@ -9,11 +9,11 @@
 
 走力については、proseのhandoffを正本にしない。次の順で読む。
 
-1. `../state/speed_task_registry.tsv` — **現在タスク状態の唯一の正本**
-2. `../state/speed_requirements_baseline_20260813.tsv` — **消してはいけない要件ベースライン**
-3. `../state/speed_legacy_open_item_map.tsv` — 旧未完工程→現タスクID移行表
-4. `22_CURRENT_STATE_AND_AUTONOMOUS_CONTINUATION_20260813.md` — 人間向け現在地
-5. `../audits/speed_task_completeness_and_handoff_root_cause_20260813.md` — 漏れ全数監査と再発防止
+1. `docs/state/speed_task_registry.tsv` — **現在タスク状態の唯一の正本**
+2. `docs/state/speed_requirements_baseline_20260813.tsv` — **消してはいけない要件ベースライン**
+3. `docs/state/speed_legacy_open_item_map.tsv` — 旧未完工程→現タスクID移行表
+4. `docs/satei_handoff/22_CURRENT_STATE_AND_AUTONOMOUS_CONTINUATION_20260813.md` — 人間向け現在地
+5. `docs/audits/speed_task_completeness_and_handoff_root_cause_20260813.md` — 漏れ全数監査と再発防止
 6. 必要な個別audit / source artifact
 
 旧 `17_SPEED_GATE_REOPENED_20260811.md`、`18_CURRENT_CRITICAL_PATH_SPEED_REBUILD_20260811.md`、`19_CLAUDE_CODE_HANDOFF_SPEED_REBUILD_20260811.md` は履歴・要件発見元として残すが、**現在のタスク状態を決める正本ではない**。
@@ -72,7 +72,7 @@ FAILしたら進めない。
 - ファイル存在だけではDONEにしない。completion artifactは非空でなければならない。
 - negative findingはDONE_NEGATIVE_FINDINGとして保存し、未実施にも成功にも変換しない。
 - blocked / waitingは消さず明示する。
-- 新しいowner指示でscopeが増えたら、まず `speed_requirements_baseline_20260813.tsv` と `speed_task_registry.tsv` へ追加してから作業する。
+- 新しいowner指示でscopeが増えたら、まず `docs/state/speed_requirements_baseline_20260813.tsv` と `docs/state/speed_task_registry.tsv` へ追加してから作業する。
 - 新handoffは旧未完工程を手作業でコピーしない。registryを参照する。
 
 ---
@@ -80,8 +80,8 @@ FAILしたら進めない。
 ## 5. AIの役割
 
 - Claude Code: 査定思想・red-team・統合。停止条件まで自律継続。
-- Codex: read-heavy収集・DB/API・再現可能成果物。複数subagent＋独立QAを使用。
-- GPT: 独立レビュー・漏れ監査・正本整合。
+- Codex: read-heavy収集・DB分析・API・再現可能成果物・QA。複数subagent＋独立QAを使用。
+- GPT: Claude案とCodex結果の独立レビュー、矛盾・抜けの検出、owner review package整理。
 - Owner: AIでは決められない個別査定・stale/odd・最終acceptanceのみ。
 
 重要知見はすべてGitHubへ保存し、`final chat response にしか存在しない重要知見 = 0` を守る。
@@ -92,14 +92,14 @@ FAILしたら進めない。
 
 走力の現在タスク状態とは別に、一般設計を確認する場合:
 
-- `12_APPRAISAL_PRINCIPLES_20260809.md`
-- `01_HISTORY_DECISION_LOG.md`
-- `02_CURRENT_SPEC_V2.md`
-- `03_FORMULAS_DATA_CONTRACTS.md`
-- `04_RUNNING_DEFENSE_CATCHER.md`
-- `05_SPECIAL_ABILITIES_KONAMI.md`
-- `09_QA_TESTS_OPEN_QUESTIONS.md`
-- `10_SOURCE_CATALOG.md`
-- `11_LEGACY_REFERENCE_V1_9.md`
+- `docs/satei_handoff/12_APPRAISAL_PRINCIPLES_20260809.md`
+- `docs/satei_handoff/01_HISTORY_DECISION_LOG.md`
+- `docs/satei_handoff/02_CURRENT_SPEC_V2.md`
+- `docs/satei_handoff/03_FORMULAS_DATA_CONTRACTS.md`
+- `docs/satei_handoff/04_RUNNING_DEFENSE_CATCHER.md`
+- `docs/satei_handoff/05_SPECIAL_ABILITIES_KONAMI.md`
+- `docs/satei_handoff/09_QA_TESTS_OPEN_QUESTIONS.md`
+- `docs/satei_handoff/10_SOURCE_CATALOG.md`
+- `docs/satei_handoff/11_LEGACY_REFERENCE_V1_9.md`
 
 を使う。ただし走力の進行状態は常にtask registry優先。
