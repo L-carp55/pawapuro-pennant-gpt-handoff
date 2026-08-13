@@ -52,3 +52,4 @@ SR-050	DONEは成果物存在だけでなく非空・QA・coverage・completion 
 SR-051	旧2026-08-05 all-missing-data taskのspeed項目を子要件へマッピングし、後続成果で代替済みか未完か明示する	completeness audit
 SR-052	official scouting / pinch-runner usage / defensive straight-line chase speed等、過去に言及した補助証拠の実施/不要/blockedを明示する	completeness audit
 SR-053	翌年再現性・翌年予測力を、一年ごとの能力査定の材料採否・component weight・縮小強度・最終点の直接根拠に使わない。同時点の測定信頼性・sample誤差とは明確に区別する	owner explicit instruction 2026-08-05 / restored 2026-08-13
+SR-054	年度能力は基本的にその年の情報で査定し、過去実績を全員へ自動混合しない。過去情報は少出場・故障・明らかな下振れ・測定時点補完等の明示された理由がある場合にのみ使い、時点と重みの根拠を保存する	owner explicit instruction 2026-08-05 / restored 2026-08-13
