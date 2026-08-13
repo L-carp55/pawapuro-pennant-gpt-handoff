@@ -442,7 +442,8 @@ const toLine = p => ({
 export function appraiseCard(ctx, opts) {
   const { db, prep: prep_, lgOf, refAvg, refHr, envFactorsOf, poolOf, goldHistorical = null } = ctx;
   const prep = prep_ ?? (sql => prep(sql));
-  const { name, playerId, mode, cfg, rv, runNorm, fldNorm, seasonRange = null } = opts;
+  const { name, playerId, mode, cfg, rv, runNorm, fldNorm, seasonRange = null,
+    maxSeason = null } = opts;   // maxSeason: 時間ホールドアウト用の上限（既定=制限なし）T-0198
 
   let pid = playerId;
   if (!pid) {
@@ -550,7 +551,8 @@ export function appraiseCard(ctx, opts) {
   // 走る速さ・肩の強さは年でほとんど変わらないのに、1年分の観測だけで査定すると
   // 観測のブレがそのまま能力差として出る（西川龍馬の走力が年により F〜D で振れていた）。
   // 肩はさらに材料を2つ（ARMと補殺）使う——ARM単独では強肩ほど走者が走ってこず機会が減るため。
-  const durable = estimateDurableTraits(db, p.player_id, targetSeason, { cfg, runNorm, fldNorm, lgOf, envFactorsOf });
+  const durable = estimateDurableTraits(db, p.player_id, targetSeason,
+    { cfg, runNorm, fldNorm, lgOf, envFactorsOf, maxSeason });
 
   const bm = prep(`
     SELECT b.ubr, b.wsb, m.gb_pct, m.ld_pct, m.offb_pct, m.iffb_pct FROM v_bm_by_player b
