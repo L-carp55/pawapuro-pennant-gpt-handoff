@@ -1,12 +1,28 @@
 {
   "generated_at": "2026-08-13",
+  "reviewed_at": "2026-08-14 Opus senior review",
   "role": "stale/odd QA evidence only. Do not apply as a PowerPro correction or teacher.",
   "time_map": {
     "2026 Series 1": 2026,
     "2025 Series 2": 2025,
     "2025 Series 1": 2025
   },
+  "time_map_caveat": "2025 Series 1 と Series 2 は同じPowerPro 2025値へ突き合わせている。実測で20人が両editionのpairを持ち、うち4人はS1とS2でProspi値が動く（各1点）。\"same-time\"は年粒度であって版粒度ではない",
   "special_cards_excluded": true,
+  "powerpro_value_source": "sp041_powerpro_normalized.json の text_raw（年単位に畳んだ素点。58版を跨ぐ版内位置は保持していない）",
+  "scale_comparison": {
+    "prospi": {
+      "mean": 72.28,
+      "sd": 6.67
+    },
+    "powerpro": {
+      "mean": 64.98,
+      "sd": 14.41
+    },
+    "pearson_r": 0.899,
+    "corr_rawdiff_vs_powerpro": -0.945,
+    "warning": "生diffは尺度差に支配される（corr(diff, powerpro)≈-0.95）。stale/odd抽出には scale_normalized_divergence_z を使う"
+  },
   "pair_count": 102,
   "player_count": 71,
   "by_year": {
@@ -21,7 +37,7 @@
       "mean_abs": 8.08
     }
   },
-  "largest_abs_diffs": [
+  "largest_scale_normalized_divergence": [
     {
       "player": "浅村 栄斗",
       "pid": "51155118",
@@ -33,7 +49,10 @@
       "powerpro_speed": 35,
       "diff_prospi_minus_powerpro": 36,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.193,
+      "powerpro_z": -2.08,
+      "scale_normalized_divergence_z": 1.887
     },
     {
       "player": "浅村 栄斗",
@@ -46,189 +65,42 @@
       "powerpro_speed": 35,
       "diff_prospi_minus_powerpro": 35,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.342,
+      "powerpro_z": -2.08,
+      "scale_normalized_divergence_z": 1.738
     },
     {
-      "player": "宮﨑 敏郎",
-      "pid": "51455137",
+      "player": "山川 穂高",
+      "pid": "21425139",
       "year": 2025,
       "prospi_edition": "2025 Series 2",
       "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "DeNA",
-      "prospi_speed": 59,
-      "powerpro_speed": 33,
-      "diff_prospi_minus_powerpro": 26,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "石川 昂弥",
-      "pid": "91195151",
-      "year": 2025,
-      "prospi_edition": "2025 Series 2",
-      "prospi_card_type": "ジュニアスカウト",
-      "prospi_team_at_edition": "中日",
-      "prospi_speed": 66,
-      "powerpro_speed": 41,
-      "diff_prospi_minus_powerpro": 25,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "太田 光",
-      "pid": "71375138",
-      "year": 2025,
-      "prospi_edition": "2025 Series 2",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "楽天",
-      "prospi_speed": 66,
-      "powerpro_speed": 44,
-      "diff_prospi_minus_powerpro": 22,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "太田 光",
-      "pid": "71375138",
-      "year": 2025,
-      "prospi_edition": "2025 Series 1",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "楽天",
-      "prospi_speed": 66,
-      "powerpro_speed": 44,
-      "diff_prospi_minus_powerpro": 22,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "木下 拓哉",
-      "pid": "31735132",
-      "year": 2025,
-      "prospi_edition": "2025 Series 1",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "中日",
-      "prospi_speed": 60,
-      "powerpro_speed": 39,
-      "diff_prospi_minus_powerpro": 21,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "筒香 嘉智",
-      "pid": "41945131",
-      "year": 2025,
-      "prospi_edition": "2025 Series 2",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "DeNA",
-      "prospi_speed": 64,
-      "powerpro_speed": 45,
-      "diff_prospi_minus_powerpro": 19,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "高橋 周平",
-      "pid": "91095135",
-      "year": 2025,
-      "prospi_edition": "2025 Series 2",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "中日",
-      "prospi_speed": 64,
-      "powerpro_speed": 46,
-      "diff_prospi_minus_powerpro": 18,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "安田 尚憲",
-      "pid": "81885136",
-      "year": 2025,
-      "prospi_edition": "2025 Series 2",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "ロッテ",
-      "prospi_speed": 63,
-      "powerpro_speed": 46,
-      "diff_prospi_minus_powerpro": 17,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "佐野 恵太",
-      "pid": "91995134",
-      "year": 2025,
-      "prospi_edition": "2025 Series 2",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "DeNA",
-      "prospi_speed": 64,
-      "powerpro_speed": 48,
-      "diff_prospi_minus_powerpro": 16,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "梅野 隆太郎",
-      "pid": "21325139",
-      "year": 2025,
-      "prospi_edition": "2025 Series 2",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "阪神",
-      "prospi_speed": 73,
-      "powerpro_speed": 57,
-      "diff_prospi_minus_powerpro": 16,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "サンタナ",
-      "pid": "53755153",
-      "year": 2025,
-      "prospi_edition": "2025 Series 2",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "ヤクルト",
-      "prospi_speed": 63,
+      "prospi_team_at_edition": "西武",
+      "prospi_speed": 58,
       "powerpro_speed": 47,
-      "diff_prospi_minus_powerpro": 16,
+      "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -2.141,
+      "powerpro_z": -1.247,
+      "scale_normalized_divergence_z": -0.894
     },
     {
-      "player": "梅野 隆太郎",
-      "pid": "21325139",
+      "player": "山川 穂高",
+      "pid": "21425139",
       "year": 2025,
       "prospi_edition": "2025 Series 1",
       "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "阪神",
-      "prospi_speed": 73,
-      "powerpro_speed": 57,
-      "diff_prospi_minus_powerpro": 16,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "佐野 恵太",
-      "pid": "91995134",
-      "year": 2026,
-      "prospi_edition": "2026 Series 1",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "DeNA",
-      "prospi_speed": 63,
-      "powerpro_speed": 48,
-      "diff_prospi_minus_powerpro": 15,
-      "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
-    },
-    {
-      "player": "サンタナ",
-      "pid": "53755153",
-      "year": 2026,
-      "prospi_edition": "2026 Series 1",
-      "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "ヤクルト",
-      "prospi_speed": 62,
+      "prospi_team_at_edition": "西武",
+      "prospi_speed": 58,
       "powerpro_speed": 47,
-      "diff_prospi_minus_powerpro": 15,
+      "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -2.141,
+      "powerpro_z": -1.247,
+      "scale_normalized_divergence_z": -0.894
     },
     {
       "player": "岩田 幸宏",
@@ -241,20 +113,138 @@
       "powerpro_speed": 96,
       "diff_prospi_minus_powerpro": -15,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.307,
+      "powerpro_z": 2.152,
+      "scale_normalized_divergence_z": -0.845
     },
     {
-      "player": "古賀 優大",
-      "pid": "01705134",
+      "player": "外崎 修汰",
+      "pid": "41245130",
       "year": 2025,
       "prospi_edition": "2025 Series 2",
       "prospi_card_type": "レギュラー",
-      "prospi_team_at_edition": "ヤクルト",
-      "prospi_speed": 61,
-      "powerpro_speed": 46,
-      "diff_prospi_minus_powerpro": 15,
+      "prospi_team_at_edition": "西武",
+      "prospi_speed": 79,
+      "powerpro_speed": 68,
+      "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.007,
+      "powerpro_z": 0.209,
+      "scale_normalized_divergence_z": 0.798
+    },
+    {
+      "player": "清宮 幸太郎",
+      "pid": "41545136",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "日本ハム",
+      "prospi_speed": 63,
+      "powerpro_speed": 56,
+      "diff_prospi_minus_powerpro": 7,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.392,
+      "powerpro_z": -0.623,
+      "scale_normalized_divergence_z": -0.769
+    },
+    {
+      "player": "清宮 幸太郎",
+      "pid": "41545136",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "日本ハム",
+      "prospi_speed": 63,
+      "powerpro_speed": 56,
+      "diff_prospi_minus_powerpro": 7,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.392,
+      "powerpro_z": -0.623,
+      "scale_normalized_divergence_z": -0.769
+    },
+    {
+      "player": "石川 昂弥",
+      "pid": "91195151",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "ジュニアスカウト",
+      "prospi_team_at_edition": "中日",
+      "prospi_speed": 66,
+      "powerpro_speed": 41,
+      "diff_prospi_minus_powerpro": 25,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -1.664,
+      "scale_normalized_divergence_z": 0.722
+    },
+    {
+      "player": "柳田 悠岐",
+      "pid": "31835133",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "ソフトバンク",
+      "prospi_speed": 78,
+      "powerpro_speed": 67,
+      "diff_prospi_minus_powerpro": 11,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 0.857,
+      "powerpro_z": 0.14,
+      "scale_normalized_divergence_z": 0.717
+    },
+    {
+      "player": "梅野 隆太郎",
+      "pid": "21325139",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "阪神",
+      "prospi_speed": 73,
+      "powerpro_speed": 57,
+      "diff_prospi_minus_powerpro": 16,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.554,
+      "scale_normalized_divergence_z": 0.661
+    },
+    {
+      "player": "梅野 隆太郎",
+      "pid": "21325139",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "阪神",
+      "prospi_speed": 73,
+      "powerpro_speed": 57,
+      "diff_prospi_minus_powerpro": 16,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.554,
+      "scale_normalized_divergence_z": 0.661
+    },
+    {
+      "player": "古賀 悠斗",
+      "pid": "81785155",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "西武",
+      "prospi_speed": 60,
+      "powerpro_speed": 47,
+      "diff_prospi_minus_powerpro": 13,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.842,
+      "powerpro_z": -1.247,
+      "scale_normalized_divergence_z": -0.595
     },
     {
       "player": "長岡 秀樹",
@@ -267,7 +257,10 @@
       "powerpro_speed": 58,
       "diff_prospi_minus_powerpro": 15,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.484,
+      "scale_normalized_divergence_z": 0.591
     },
     {
       "player": "長岡 秀樹",
@@ -280,7 +273,412 @@
       "powerpro_speed": 58,
       "diff_prospi_minus_powerpro": 15,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.484,
+      "scale_normalized_divergence_z": 0.591
+    },
+    {
+      "player": "近藤 健介",
+      "pid": "41745135",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "日本ハム",
+      "prospi_speed": 68,
+      "powerpro_speed": 64,
+      "diff_prospi_minus_powerpro": 4,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -0.642,
+      "powerpro_z": -0.068,
+      "scale_normalized_divergence_z": -0.574
+    },
+    {
+      "player": "森 友哉",
+      "pid": "91495139",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "オリックス",
+      "prospi_speed": 76,
+      "powerpro_speed": 65,
+      "diff_prospi_minus_powerpro": 11,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 0.557,
+      "powerpro_z": 0.001,
+      "scale_normalized_divergence_z": 0.556
+    },
+    {
+      "player": "森 友哉",
+      "pid": "91495139",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "オリックス",
+      "prospi_speed": 76,
+      "powerpro_speed": 65,
+      "diff_prospi_minus_powerpro": 11,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 0.557,
+      "powerpro_z": 0.001,
+      "scale_normalized_divergence_z": 0.556
+    },
+    {
+      "player": "藤岡 裕大",
+      "pid": "41645136",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "ロッテ",
+      "prospi_speed": 76,
+      "powerpro_speed": 65,
+      "diff_prospi_minus_powerpro": 11,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 0.557,
+      "powerpro_z": 0.001,
+      "scale_normalized_divergence_z": 0.556
+    },
+    {
+      "player": "太田 光",
+      "pid": "71375138",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "楽天",
+      "prospi_speed": 66,
+      "powerpro_speed": 44,
+      "diff_prospi_minus_powerpro": 22,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -1.456,
+      "scale_normalized_divergence_z": 0.514
+    }
+  ],
+  "largest_abs_diffs_raw_scale_confounded": [
+    {
+      "player": "浅村 栄斗",
+      "pid": "51155118",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "楽天",
+      "prospi_speed": 71,
+      "powerpro_speed": 35,
+      "diff_prospi_minus_powerpro": 36,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -0.193,
+      "powerpro_z": -2.08,
+      "scale_normalized_divergence_z": 1.887
+    },
+    {
+      "player": "浅村 栄斗",
+      "pid": "51155118",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "楽天",
+      "prospi_speed": 70,
+      "powerpro_speed": 35,
+      "diff_prospi_minus_powerpro": 35,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -0.342,
+      "powerpro_z": -2.08,
+      "scale_normalized_divergence_z": 1.738
+    },
+    {
+      "player": "宮﨑 敏郎",
+      "pid": "51455137",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "DeNA",
+      "prospi_speed": 59,
+      "powerpro_speed": 33,
+      "diff_prospi_minus_powerpro": 26,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.991,
+      "powerpro_z": -2.219,
+      "scale_normalized_divergence_z": 0.228
+    },
+    {
+      "player": "石川 昂弥",
+      "pid": "91195151",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "ジュニアスカウト",
+      "prospi_team_at_edition": "中日",
+      "prospi_speed": 66,
+      "powerpro_speed": 41,
+      "diff_prospi_minus_powerpro": 25,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -1.664,
+      "scale_normalized_divergence_z": 0.722
+    },
+    {
+      "player": "太田 光",
+      "pid": "71375138",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "楽天",
+      "prospi_speed": 66,
+      "powerpro_speed": 44,
+      "diff_prospi_minus_powerpro": 22,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -1.456,
+      "scale_normalized_divergence_z": 0.514
+    },
+    {
+      "player": "太田 光",
+      "pid": "71375138",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "楽天",
+      "prospi_speed": 66,
+      "powerpro_speed": 44,
+      "diff_prospi_minus_powerpro": 22,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -1.456,
+      "scale_normalized_divergence_z": 0.514
+    },
+    {
+      "player": "木下 拓哉",
+      "pid": "31735132",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "中日",
+      "prospi_speed": 60,
+      "powerpro_speed": 39,
+      "diff_prospi_minus_powerpro": 21,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.842,
+      "powerpro_z": -1.802,
+      "scale_normalized_divergence_z": -0.04
+    },
+    {
+      "player": "筒香 嘉智",
+      "pid": "41945131",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "DeNA",
+      "prospi_speed": 64,
+      "powerpro_speed": 45,
+      "diff_prospi_minus_powerpro": 19,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.242,
+      "powerpro_z": -1.386,
+      "scale_normalized_divergence_z": 0.144
+    },
+    {
+      "player": "高橋 周平",
+      "pid": "91095135",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "中日",
+      "prospi_speed": 64,
+      "powerpro_speed": 46,
+      "diff_prospi_minus_powerpro": 18,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.242,
+      "powerpro_z": -1.317,
+      "scale_normalized_divergence_z": 0.075
+    },
+    {
+      "player": "安田 尚憲",
+      "pid": "81885136",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "ロッテ",
+      "prospi_speed": 63,
+      "powerpro_speed": 46,
+      "diff_prospi_minus_powerpro": 17,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.392,
+      "powerpro_z": -1.317,
+      "scale_normalized_divergence_z": -0.075
+    },
+    {
+      "player": "佐野 恵太",
+      "pid": "91995134",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "DeNA",
+      "prospi_speed": 64,
+      "powerpro_speed": 48,
+      "diff_prospi_minus_powerpro": 16,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.242,
+      "powerpro_z": -1.178,
+      "scale_normalized_divergence_z": -0.064
+    },
+    {
+      "player": "梅野 隆太郎",
+      "pid": "21325139",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "阪神",
+      "prospi_speed": 73,
+      "powerpro_speed": 57,
+      "diff_prospi_minus_powerpro": 16,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.554,
+      "scale_normalized_divergence_z": 0.661
+    },
+    {
+      "player": "サンタナ",
+      "pid": "53755153",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "ヤクルト",
+      "prospi_speed": 63,
+      "powerpro_speed": 47,
+      "diff_prospi_minus_powerpro": 16,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.392,
+      "powerpro_z": -1.247,
+      "scale_normalized_divergence_z": -0.145
+    },
+    {
+      "player": "梅野 隆太郎",
+      "pid": "21325139",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "阪神",
+      "prospi_speed": 73,
+      "powerpro_speed": 57,
+      "diff_prospi_minus_powerpro": 16,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.554,
+      "scale_normalized_divergence_z": 0.661
+    },
+    {
+      "player": "佐野 恵太",
+      "pid": "91995134",
+      "year": 2026,
+      "prospi_edition": "2026 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "DeNA",
+      "prospi_speed": 63,
+      "powerpro_speed": 48,
+      "diff_prospi_minus_powerpro": 15,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.392,
+      "powerpro_z": -1.178,
+      "scale_normalized_divergence_z": -0.214
+    },
+    {
+      "player": "サンタナ",
+      "pid": "53755153",
+      "year": 2026,
+      "prospi_edition": "2026 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "ヤクルト",
+      "prospi_speed": 62,
+      "powerpro_speed": 47,
+      "diff_prospi_minus_powerpro": 15,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.542,
+      "powerpro_z": -1.247,
+      "scale_normalized_divergence_z": -0.295
+    },
+    {
+      "player": "岩田 幸宏",
+      "pid": "51355155",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "ヤクルト",
+      "prospi_speed": 81,
+      "powerpro_speed": 96,
+      "diff_prospi_minus_powerpro": -15,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 1.307,
+      "powerpro_z": 2.152,
+      "scale_normalized_divergence_z": -0.845
+    },
+    {
+      "player": "古賀 優大",
+      "pid": "01705134",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "ヤクルト",
+      "prospi_speed": 61,
+      "powerpro_speed": 46,
+      "diff_prospi_minus_powerpro": 15,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": -1.692,
+      "powerpro_z": -1.317,
+      "scale_normalized_divergence_z": -0.375
+    },
+    {
+      "player": "長岡 秀樹",
+      "pid": "51455151",
+      "year": 2025,
+      "prospi_edition": "2025 Series 2",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "ヤクルト",
+      "prospi_speed": 73,
+      "powerpro_speed": 58,
+      "diff_prospi_minus_powerpro": 15,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.484,
+      "scale_normalized_divergence_z": 0.591
+    },
+    {
+      "player": "長岡 秀樹",
+      "pid": "51455151",
+      "year": 2025,
+      "prospi_edition": "2025 Series 1",
+      "prospi_card_type": "レギュラー",
+      "prospi_team_at_edition": "ヤクルト",
+      "prospi_speed": 73,
+      "powerpro_speed": 58,
+      "diff_prospi_minus_powerpro": 15,
+      "use": "STALE_OR_ODD_QA_ONLY",
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.484,
+      "scale_normalized_divergence_z": 0.591
     }
   ],
   "pairs": [
@@ -295,7 +693,10 @@
       "powerpro_speed": 56,
       "diff_prospi_minus_powerpro": 14,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.342,
+      "powerpro_z": -0.623,
+      "scale_normalized_divergence_z": 0.281
     },
     {
       "player": "西川 龍馬",
@@ -308,7 +709,10 @@
       "powerpro_speed": 72,
       "diff_prospi_minus_powerpro": 3,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.407,
+      "powerpro_z": 0.487,
+      "scale_normalized_divergence_z": -0.08
     },
     {
       "player": "佐野 恵太",
@@ -321,7 +725,10 @@
       "powerpro_speed": 48,
       "diff_prospi_minus_powerpro": 15,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.392,
+      "powerpro_z": -1.178,
+      "scale_normalized_divergence_z": -0.214
     },
     {
       "player": "ファビアン",
@@ -334,7 +741,10 @@
       "powerpro_speed": 61,
       "diff_prospi_minus_powerpro": 9,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.342,
+      "powerpro_z": -0.276,
+      "scale_normalized_divergence_z": -0.066
     },
     {
       "player": "小園 海斗",
@@ -347,7 +757,10 @@
       "powerpro_speed": 79,
       "diff_prospi_minus_powerpro": -1,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.857,
+      "powerpro_z": 0.973,
+      "scale_normalized_divergence_z": -0.116
     },
     {
       "player": "小幡 竜平",
@@ -360,7 +773,10 @@
       "powerpro_speed": 77,
       "diff_prospi_minus_powerpro": 2,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.007,
+      "powerpro_z": 0.834,
+      "scale_normalized_divergence_z": 0.173
     },
     {
       "player": "滝澤 夏央",
@@ -373,7 +789,10 @@
       "powerpro_speed": 85,
       "diff_prospi_minus_powerpro": -5,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.157,
+      "powerpro_z": 1.389,
+      "scale_normalized_divergence_z": -0.232
     },
     {
       "player": "藤岡 裕大",
@@ -386,7 +805,10 @@
       "powerpro_speed": 65,
       "diff_prospi_minus_powerpro": 9,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.257,
+      "powerpro_z": 0.001,
+      "scale_normalized_divergence_z": 0.256
     },
     {
       "player": "細川 成也",
@@ -399,7 +821,10 @@
       "powerpro_speed": 60,
       "diff_prospi_minus_powerpro": 9,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.492,
+      "powerpro_z": -0.346,
+      "scale_normalized_divergence_z": -0.146
     },
     {
       "player": "サンタナ",
@@ -412,7 +837,10 @@
       "powerpro_speed": 47,
       "diff_prospi_minus_powerpro": 15,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.542,
+      "powerpro_z": -1.247,
+      "scale_normalized_divergence_z": -0.295
     },
     {
       "player": "長岡 秀樹",
@@ -425,7 +853,10 @@
       "powerpro_speed": 58,
       "diff_prospi_minus_powerpro": 14,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.043,
+      "powerpro_z": -0.484,
+      "scale_normalized_divergence_z": 0.441
     },
     {
       "player": "柳町 達",
@@ -438,7 +869,10 @@
       "powerpro_speed": 67,
       "diff_prospi_minus_powerpro": 5,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.043,
+      "powerpro_z": 0.14,
+      "scale_normalized_divergence_z": -0.183
     },
     {
       "player": "水野 達稀",
@@ -451,7 +885,10 @@
       "powerpro_speed": 71,
       "diff_prospi_minus_powerpro": 4,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.407,
+      "powerpro_z": 0.418,
+      "scale_normalized_divergence_z": -0.011
     },
     {
       "player": "紅林 弘太郎",
@@ -464,7 +901,10 @@
       "powerpro_speed": 56,
       "diff_prospi_minus_powerpro": 13,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.492,
+      "powerpro_z": -0.623,
+      "scale_normalized_divergence_z": 0.131
     },
     {
       "player": "森 友哉",
@@ -477,7 +917,10 @@
       "powerpro_speed": 65,
       "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.557,
+      "powerpro_z": 0.001,
+      "scale_normalized_divergence_z": 0.556
     },
     {
       "player": "西川 龍馬",
@@ -490,7 +933,10 @@
       "powerpro_speed": 72,
       "diff_prospi_minus_powerpro": 4,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.557,
+      "powerpro_z": 0.487,
+      "scale_normalized_divergence_z": 0.07
     },
     {
       "player": "西野 真弘",
@@ -503,7 +949,10 @@
       "powerpro_speed": 76,
       "diff_prospi_minus_powerpro": 0,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.557,
+      "powerpro_z": 0.765,
+      "scale_normalized_divergence_z": -0.208
     },
     {
       "player": "中川 圭太",
@@ -516,7 +965,10 @@
       "powerpro_speed": 74,
       "diff_prospi_minus_powerpro": 0,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.257,
+      "powerpro_z": 0.626,
+      "scale_normalized_divergence_z": -0.369
     },
     {
       "player": "蝦名 達夫",
@@ -529,7 +981,10 @@
       "powerpro_speed": 75,
       "diff_prospi_minus_powerpro": -1,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.257,
+      "powerpro_z": 0.695,
+      "scale_normalized_divergence_z": -0.438
     },
     {
       "player": "宮﨑 敏郎",
@@ -542,7 +997,10 @@
       "powerpro_speed": 33,
       "diff_prospi_minus_powerpro": 26,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.991,
+      "powerpro_z": -2.219,
+      "scale_normalized_divergence_z": 0.228
     },
     {
       "player": "佐野 恵太",
@@ -555,7 +1013,10 @@
       "powerpro_speed": 48,
       "diff_prospi_minus_powerpro": 16,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.242,
+      "powerpro_z": -1.178,
+      "scale_normalized_divergence_z": -0.064
     },
     {
       "player": "筒香 嘉智",
@@ -568,7 +1029,10 @@
       "powerpro_speed": 45,
       "diff_prospi_minus_powerpro": 19,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.242,
+      "powerpro_z": -1.386,
+      "scale_normalized_divergence_z": 0.144
     },
     {
       "player": "ファビアン",
@@ -581,7 +1045,10 @@
       "powerpro_speed": 61,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.492,
+      "powerpro_z": -0.276,
+      "scale_normalized_divergence_z": -0.216
     },
     {
       "player": "モンテロ",
@@ -594,7 +1061,10 @@
       "powerpro_speed": 49,
       "diff_prospi_minus_powerpro": 13,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.542,
+      "powerpro_z": -1.109,
+      "scale_normalized_divergence_z": -0.433
     },
     {
       "player": "秋山 翔吾",
@@ -607,7 +1077,10 @@
       "powerpro_speed": 77,
       "diff_prospi_minus_powerpro": -2,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.407,
+      "powerpro_z": 0.834,
+      "scale_normalized_divergence_z": -0.427
     },
     {
       "player": "小園 海斗",
@@ -620,7 +1093,10 @@
       "powerpro_speed": 79,
       "diff_prospi_minus_powerpro": -1,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.857,
+      "powerpro_z": 0.973,
+      "scale_normalized_divergence_z": -0.116
     },
     {
       "player": "野間 峻祥",
@@ -633,7 +1109,10 @@
       "powerpro_speed": 88,
       "diff_prospi_minus_powerpro": -7,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.307,
+      "powerpro_z": 1.597,
+      "scale_normalized_divergence_z": -0.29
     },
     {
       "player": "矢野 雅哉",
@@ -646,7 +1125,10 @@
       "powerpro_speed": 78,
       "diff_prospi_minus_powerpro": -1,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.707,
+      "powerpro_z": 0.903,
+      "scale_normalized_divergence_z": -0.196
     },
     {
       "player": "佐藤 輝明",
@@ -659,7 +1141,10 @@
       "powerpro_speed": 68,
       "diff_prospi_minus_powerpro": 4,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.043,
+      "powerpro_z": 0.209,
+      "scale_normalized_divergence_z": -0.252
     },
     {
       "player": "大山 悠輔",
@@ -672,7 +1157,10 @@
       "powerpro_speed": 58,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -0.484,
+      "scale_normalized_divergence_z": -0.458
     },
     {
       "player": "梅野 隆太郎",
@@ -685,7 +1173,10 @@
       "powerpro_speed": 57,
       "diff_prospi_minus_powerpro": 16,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.554,
+      "scale_normalized_divergence_z": 0.661
     },
     {
       "player": "外崎 修汰",
@@ -698,7 +1189,10 @@
       "powerpro_speed": 68,
       "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.007,
+      "powerpro_z": 0.209,
+      "scale_normalized_divergence_z": 0.798
     },
     {
       "player": "源田 壮亮",
@@ -711,7 +1205,10 @@
       "powerpro_speed": 80,
       "diff_prospi_minus_powerpro": 1,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.307,
+      "powerpro_z": 1.042,
+      "scale_normalized_divergence_z": 0.265
     },
     {
       "player": "ポランコ",
@@ -724,7 +1221,10 @@
       "powerpro_speed": 63,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.193,
+      "powerpro_z": -0.137,
+      "scale_normalized_divergence_z": -0.056
     },
     {
       "player": "安田 尚憲",
@@ -737,7 +1237,10 @@
       "powerpro_speed": 46,
       "diff_prospi_minus_powerpro": 17,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.392,
+      "powerpro_z": -1.317,
+      "scale_normalized_divergence_z": -0.075
     },
     {
       "player": "佐藤 都志也",
@@ -750,7 +1253,10 @@
       "powerpro_speed": 71,
       "diff_prospi_minus_powerpro": 4,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.407,
+      "powerpro_z": 0.418,
+      "scale_normalized_divergence_z": -0.011
     },
     {
       "player": "友杉 篤輝",
@@ -763,7 +1269,10 @@
       "powerpro_speed": 87,
       "diff_prospi_minus_powerpro": -7,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.157,
+      "powerpro_z": 1.528,
+      "scale_normalized_divergence_z": -0.371
     },
     {
       "player": "髙部 瑛斗",
@@ -776,7 +1285,10 @@
       "powerpro_speed": 90,
       "diff_prospi_minus_powerpro": -6,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.756,
+      "powerpro_z": 1.736,
+      "scale_normalized_divergence_z": 0.02
     },
     {
       "player": "カリステ",
@@ -789,7 +1301,10 @@
       "powerpro_speed": 82,
       "diff_prospi_minus_powerpro": -1,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.307,
+      "powerpro_z": 1.181,
+      "scale_normalized_divergence_z": 0.126
     },
     {
       "player": "岡林 勇希",
@@ -802,7 +1317,10 @@
       "powerpro_speed": 81,
       "diff_prospi_minus_powerpro": -1,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.157,
+      "powerpro_z": 1.111,
+      "scale_normalized_divergence_z": 0.046
     },
     {
       "player": "高橋 周平",
@@ -815,7 +1333,10 @@
       "powerpro_speed": 46,
       "diff_prospi_minus_powerpro": 18,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.242,
+      "powerpro_z": -1.317,
+      "scale_normalized_divergence_z": 0.075
     },
     {
       "player": "石川 昂弥",
@@ -828,7 +1349,10 @@
       "powerpro_speed": 41,
       "diff_prospi_minus_powerpro": 25,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -1.664,
+      "scale_normalized_divergence_z": 0.722
     },
     {
       "player": "村松 開人",
@@ -841,7 +1365,10 @@
       "powerpro_speed": 80,
       "diff_prospi_minus_powerpro": -2,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.857,
+      "powerpro_z": 1.042,
+      "scale_normalized_divergence_z": -0.185
     },
     {
       "player": "サンタナ",
@@ -854,7 +1381,10 @@
       "powerpro_speed": 47,
       "diff_prospi_minus_powerpro": 16,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.392,
+      "powerpro_z": -1.247,
+      "scale_normalized_divergence_z": -0.145
     },
     {
       "player": "岩田 幸宏",
@@ -867,7 +1397,10 @@
       "powerpro_speed": 96,
       "diff_prospi_minus_powerpro": -15,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.307,
+      "powerpro_z": 2.152,
+      "scale_normalized_divergence_z": -0.845
     },
     {
       "player": "古賀 優大",
@@ -880,7 +1413,10 @@
       "powerpro_speed": 46,
       "diff_prospi_minus_powerpro": 15,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.692,
+      "powerpro_z": -1.317,
+      "scale_normalized_divergence_z": -0.375
     },
     {
       "player": "長岡 秀樹",
@@ -893,7 +1429,10 @@
       "powerpro_speed": 58,
       "diff_prospi_minus_powerpro": 15,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.484,
+      "scale_normalized_divergence_z": 0.591
     },
     {
       "player": "浅村 栄斗",
@@ -906,7 +1445,10 @@
       "powerpro_speed": 35,
       "diff_prospi_minus_powerpro": 35,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.342,
+      "powerpro_z": -2.08,
+      "scale_normalized_divergence_z": 1.738
     },
     {
       "player": "村林 一輝",
@@ -919,7 +1461,10 @@
       "powerpro_speed": 69,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.707,
+      "powerpro_z": 0.279,
+      "scale_normalized_divergence_z": 0.428
     },
     {
       "player": "太田 光",
@@ -932,7 +1477,10 @@
       "powerpro_speed": 44,
       "diff_prospi_minus_powerpro": 22,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -1.456,
+      "scale_normalized_divergence_z": 0.514
     },
     {
       "player": "岸田 行倫",
@@ -945,7 +1493,10 @@
       "powerpro_speed": 55,
       "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -0.692,
+      "scale_normalized_divergence_z": -0.25
     },
     {
       "player": "松本 剛",
@@ -958,7 +1509,10 @@
       "powerpro_speed": 69,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.707,
+      "powerpro_z": 0.279,
+      "scale_normalized_divergence_z": 0.428
     },
     {
       "player": "栗原 陵矢",
@@ -971,7 +1525,10 @@
       "powerpro_speed": 59,
       "diff_prospi_minus_powerpro": 10,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.492,
+      "powerpro_z": -0.415,
+      "scale_normalized_divergence_z": -0.077
     },
     {
       "player": "今宮 健太",
@@ -984,7 +1541,10 @@
       "powerpro_speed": 66,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.257,
+      "powerpro_z": 0.071,
+      "scale_normalized_divergence_z": 0.186
     },
     {
       "player": "山川 穂高",
@@ -997,7 +1557,10 @@
       "powerpro_speed": 47,
       "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -2.141,
+      "powerpro_z": -1.247,
+      "scale_normalized_divergence_z": -0.894
     },
     {
       "player": "周東 佑京",
@@ -1010,7 +1573,10 @@
       "powerpro_speed": 96,
       "diff_prospi_minus_powerpro": -9,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 2.206,
+      "powerpro_z": 2.152,
+      "scale_normalized_divergence_z": 0.054
     },
     {
       "player": "柳町 達",
@@ -1023,7 +1589,10 @@
       "powerpro_speed": 67,
       "diff_prospi_minus_powerpro": 5,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.043,
+      "powerpro_z": 0.14,
+      "scale_normalized_divergence_z": -0.183
     },
     {
       "player": "柳田 悠岐",
@@ -1036,7 +1605,10 @@
       "powerpro_speed": 67,
       "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.857,
+      "powerpro_z": 0.14,
+      "scale_normalized_divergence_z": 0.717
     },
     {
       "player": "郡司 裕也",
@@ -1049,7 +1621,10 @@
       "powerpro_speed": 61,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.492,
+      "powerpro_z": -0.276,
+      "scale_normalized_divergence_z": -0.216
     },
     {
       "player": "水野 達稀",
@@ -1062,7 +1637,10 @@
       "powerpro_speed": 71,
       "diff_prospi_minus_powerpro": 3,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.257,
+      "powerpro_z": 0.418,
+      "scale_normalized_divergence_z": -0.161
     },
     {
       "player": "清宮 幸太郎",
@@ -1075,7 +1653,10 @@
       "powerpro_speed": 56,
       "diff_prospi_minus_powerpro": 7,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.392,
+      "powerpro_z": -0.623,
+      "scale_normalized_divergence_z": -0.769
     },
     {
       "player": "田宮 裕涼",
@@ -1088,7 +1669,10 @@
       "powerpro_speed": 68,
       "diff_prospi_minus_powerpro": 5,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": 0.209,
+      "scale_normalized_divergence_z": -0.102
     },
     {
       "player": "野村 佑希",
@@ -1101,7 +1685,10 @@
       "powerpro_speed": 52,
       "diff_prospi_minus_powerpro": 13,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.092,
+      "powerpro_z": -0.901,
+      "scale_normalized_divergence_z": -0.191
     },
     {
       "player": "紅林 弘太郎",
@@ -1114,7 +1701,10 @@
       "powerpro_speed": 56,
       "diff_prospi_minus_powerpro": 13,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.492,
+      "powerpro_z": -0.623,
+      "scale_normalized_divergence_z": 0.131
     },
     {
       "player": "森 友哉",
@@ -1127,7 +1717,10 @@
       "powerpro_speed": 65,
       "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.557,
+      "powerpro_z": 0.001,
+      "scale_normalized_divergence_z": 0.556
     },
     {
       "player": "太田 椋",
@@ -1140,7 +1733,10 @@
       "powerpro_speed": 64,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.043,
+      "powerpro_z": -0.068,
+      "scale_normalized_divergence_z": 0.025
     },
     {
       "player": "梶原 昂希",
@@ -1153,7 +1749,10 @@
       "powerpro_speed": 90,
       "diff_prospi_minus_powerpro": -9,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.307,
+      "powerpro_z": 1.736,
+      "scale_normalized_divergence_z": -0.429
     },
     {
       "player": "山本 祐大",
@@ -1166,7 +1765,10 @@
       "powerpro_speed": 61,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.492,
+      "powerpro_z": -0.276,
+      "scale_normalized_divergence_z": -0.216
     },
     {
       "player": "モンテロ",
@@ -1179,7 +1781,10 @@
       "powerpro_speed": 49,
       "diff_prospi_minus_powerpro": 13,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.542,
+      "powerpro_z": -1.109,
+      "scale_normalized_divergence_z": -0.433
     },
     {
       "player": "坂倉 将吾",
@@ -1192,7 +1797,10 @@
       "powerpro_speed": 68,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.557,
+      "powerpro_z": 0.209,
+      "scale_normalized_divergence_z": 0.348
     },
     {
       "player": "野間 峻祥",
@@ -1205,7 +1813,10 @@
       "powerpro_speed": 88,
       "diff_prospi_minus_powerpro": -7,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.307,
+      "powerpro_z": 1.597,
+      "scale_normalized_divergence_z": -0.29
     },
     {
       "player": "矢野 雅哉",
@@ -1218,7 +1829,10 @@
       "powerpro_speed": 78,
       "diff_prospi_minus_powerpro": -2,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.557,
+      "powerpro_z": 0.903,
+      "scale_normalized_divergence_z": -0.346
     },
     {
       "player": "森下 翔太",
@@ -1231,7 +1845,10 @@
       "powerpro_speed": 60,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.642,
+      "powerpro_z": -0.346,
+      "scale_normalized_divergence_z": -0.296
     },
     {
       "player": "大山 悠輔",
@@ -1244,7 +1861,10 @@
       "powerpro_speed": 58,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -0.484,
+      "scale_normalized_divergence_z": -0.458
     },
     {
       "player": "中野 拓夢",
@@ -1257,7 +1877,10 @@
       "powerpro_speed": 75,
       "diff_prospi_minus_powerpro": 4,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.007,
+      "powerpro_z": 0.695,
+      "scale_normalized_divergence_z": 0.312
     },
     {
       "player": "梅野 隆太郎",
@@ -1270,7 +1893,10 @@
       "powerpro_speed": 57,
       "diff_prospi_minus_powerpro": 16,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.554,
+      "scale_normalized_divergence_z": 0.661
     },
     {
       "player": "木浪 聖也",
@@ -1283,7 +1909,10 @@
       "powerpro_speed": 59,
       "diff_prospi_minus_powerpro": 13,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.043,
+      "powerpro_z": -0.415,
+      "scale_normalized_divergence_z": 0.372
     },
     {
       "player": "源田 壮亮",
@@ -1296,7 +1925,10 @@
       "powerpro_speed": 80,
       "diff_prospi_minus_powerpro": 2,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.456,
+      "powerpro_z": 1.042,
+      "scale_normalized_divergence_z": 0.414
     },
     {
       "player": "古賀 悠斗",
@@ -1309,7 +1941,10 @@
       "powerpro_speed": 47,
       "diff_prospi_minus_powerpro": 13,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.842,
+      "powerpro_z": -1.247,
+      "scale_normalized_divergence_z": -0.595
     },
     {
       "player": "佐藤 都志也",
@@ -1322,7 +1957,10 @@
       "powerpro_speed": 71,
       "diff_prospi_minus_powerpro": 4,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.407,
+      "powerpro_z": 0.418,
+      "scale_normalized_divergence_z": -0.011
     },
     {
       "player": "藤岡 裕大",
@@ -1335,7 +1973,10 @@
       "powerpro_speed": 65,
       "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.557,
+      "powerpro_z": 0.001,
+      "scale_normalized_divergence_z": 0.556
     },
     {
       "player": "藤原 恭大",
@@ -1348,7 +1989,10 @@
       "powerpro_speed": 85,
       "diff_prospi_minus_powerpro": -5,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.157,
+      "powerpro_z": 1.389,
+      "scale_normalized_divergence_z": -0.232
     },
     {
       "player": "友杉 篤輝",
@@ -1361,7 +2005,10 @@
       "powerpro_speed": 87,
       "diff_prospi_minus_powerpro": -7,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.157,
+      "powerpro_z": 1.528,
+      "scale_normalized_divergence_z": -0.371
     },
     {
       "player": "細川 成也",
@@ -1374,7 +2021,10 @@
       "powerpro_speed": 60,
       "diff_prospi_minus_powerpro": 9,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.492,
+      "powerpro_z": -0.346,
+      "scale_normalized_divergence_z": -0.146
     },
     {
       "player": "村松 開人",
@@ -1387,7 +2037,10 @@
       "powerpro_speed": 80,
       "diff_prospi_minus_powerpro": -3,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.707,
+      "powerpro_z": 1.042,
+      "scale_normalized_divergence_z": -0.335
     },
     {
       "player": "田中 幹也",
@@ -1400,7 +2053,10 @@
       "powerpro_speed": 83,
       "diff_prospi_minus_powerpro": -2,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.307,
+      "powerpro_z": 1.25,
+      "scale_normalized_divergence_z": 0.057
     },
     {
       "player": "木下 拓哉",
@@ -1413,7 +2069,10 @@
       "powerpro_speed": 39,
       "diff_prospi_minus_powerpro": 21,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.842,
+      "powerpro_z": -1.802,
+      "scale_normalized_divergence_z": -0.04
     },
     {
       "player": "丸山 和郁",
@@ -1426,7 +2085,10 @@
       "powerpro_speed": 86,
       "diff_prospi_minus_powerpro": -3,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.606,
+      "powerpro_z": 1.458,
+      "scale_normalized_divergence_z": 0.148
     },
     {
       "player": "中村 悠平",
@@ -1439,7 +2101,10 @@
       "powerpro_speed": 56,
       "diff_prospi_minus_powerpro": 10,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -0.623,
+      "scale_normalized_divergence_z": -0.319
     },
     {
       "player": "長岡 秀樹",
@@ -1452,7 +2117,10 @@
       "powerpro_speed": 58,
       "diff_prospi_minus_powerpro": 15,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": -0.484,
+      "scale_normalized_divergence_z": 0.591
     },
     {
       "player": "浅村 栄斗",
@@ -1465,7 +2133,10 @@
       "powerpro_speed": 35,
       "diff_prospi_minus_powerpro": 36,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.193,
+      "powerpro_z": -2.08,
+      "scale_normalized_divergence_z": 1.887
     },
     {
       "player": "村林 一輝",
@@ -1478,7 +2149,10 @@
       "powerpro_speed": 69,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.707,
+      "powerpro_z": 0.279,
+      "scale_normalized_divergence_z": 0.428
     },
     {
       "player": "太田 光",
@@ -1491,7 +2165,10 @@
       "powerpro_speed": 44,
       "diff_prospi_minus_powerpro": 22,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.942,
+      "powerpro_z": -1.456,
+      "scale_normalized_divergence_z": 0.514
     },
     {
       "player": "吉川 尚輝",
@@ -1504,7 +2181,10 @@
       "powerpro_speed": 80,
       "diff_prospi_minus_powerpro": 0,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.157,
+      "powerpro_z": 1.042,
+      "scale_normalized_divergence_z": 0.115
     },
     {
       "player": "海野 隆司",
@@ -1517,7 +2197,10 @@
       "powerpro_speed": 52,
       "diff_prospi_minus_powerpro": 13,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.092,
+      "powerpro_z": -0.901,
+      "scale_normalized_divergence_z": -0.191
     },
     {
       "player": "近藤 健介",
@@ -1530,7 +2213,10 @@
       "powerpro_speed": 64,
       "diff_prospi_minus_powerpro": 4,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -0.642,
+      "powerpro_z": -0.068,
+      "scale_normalized_divergence_z": -0.574
     },
     {
       "player": "今宮 健太",
@@ -1543,7 +2229,10 @@
       "powerpro_speed": 66,
       "diff_prospi_minus_powerpro": 8,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.257,
+      "powerpro_z": 0.071,
+      "scale_normalized_divergence_z": 0.186
     },
     {
       "player": "山川 穂高",
@@ -1556,7 +2245,10 @@
       "powerpro_speed": 47,
       "diff_prospi_minus_powerpro": 11,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -2.141,
+      "powerpro_z": -1.247,
+      "scale_normalized_divergence_z": -0.894
     },
     {
       "player": "牧原 大成",
@@ -1569,7 +2261,10 @@
       "powerpro_speed": 82,
       "diff_prospi_minus_powerpro": -2,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 1.157,
+      "powerpro_z": 1.181,
+      "scale_normalized_divergence_z": -0.024
     },
     {
       "player": "水野 達稀",
@@ -1582,7 +2277,10 @@
       "powerpro_speed": 71,
       "diff_prospi_minus_powerpro": 3,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.257,
+      "powerpro_z": 0.418,
+      "scale_normalized_divergence_z": -0.161
     },
     {
       "player": "清宮 幸太郎",
@@ -1595,7 +2293,10 @@
       "powerpro_speed": 56,
       "diff_prospi_minus_powerpro": 7,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": -1.392,
+      "powerpro_z": -0.623,
+      "scale_normalized_divergence_z": -0.769
     },
     {
       "player": "田宮 裕涼",
@@ -1608,7 +2309,10 @@
       "powerpro_speed": 68,
       "diff_prospi_minus_powerpro": 5,
       "use": "STALE_OR_ODD_QA_ONLY",
-      "not_a_teacher": true
+      "not_a_teacher": true,
+      "prospi_z": 0.107,
+      "powerpro_z": 0.209,
+      "scale_normalized_divergence_z": -0.102
     }
   ]
 }

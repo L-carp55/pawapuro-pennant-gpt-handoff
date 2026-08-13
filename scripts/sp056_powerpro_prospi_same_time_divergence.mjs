@@ -92,16 +92,54 @@ for (const y of Object.keys(byYear)) {
   delete byYear[y].abs;
 }
 
-const odd = [...pairs].sort((a, b) => Math.abs(b.diff_prospi_minus_powerpro) - Math.abs(a.diff_prospi_minus_powerpro)).slice(0, 20);
+// ★review修正(2026-08-14): ProspiとPowerProは同じ0-100の数字を使っているが**尺度が違う**。
+//   実測 Prospi mean 72.3 / sd 6.7 / 範囲58-87、PowerPro mean 65.0 / sd 14.4 / 範囲33-96。
+//   ばらつきが2倍以上違い平均も7.3点ずれるため、生のdiffは「食い違い」ではなく尺度差を測る。
+//   証拠: corr(diff, powerpro_speed) = -0.945 ＝ PowerProが低い選手ほど自動的に大きく出る。
+//   生diff上位8人とz標準化後の上位8人は2人しか重ならない。
+//   したがって stale/odd の抽出には**各source内で標準化してから**比べた値を使う。
+//   生diffも消さずに併記する（尺度の差そのものを見たい場合があるため）。
+const mean = a => a.reduce((x, y) => x + y, 0) / a.length;
+const sdOf = (a, m) => Math.sqrt(a.reduce((x, y) => x + (y - m) ** 2, 0) / a.length);
+const psArr = pairs.map(p => p.prospi_speed);
+const pwArr = pairs.map(p => p.powerpro_speed);
+const mP = mean(psArr), sP = sdOf(psArr, mP), mW = mean(pwArr), sW = sdOf(pwArr, mW);
+for (const p of pairs) {
+  p.prospi_z = Math.round(((p.prospi_speed - mP) / sP) * 1000) / 1000;
+  p.powerpro_z = Math.round(((p.powerpro_speed - mW) / sW) * 1000) / 1000;
+  p.scale_normalized_divergence_z = Math.round((p.prospi_z - p.powerpro_z) * 1000) / 1000;
+}
+const scaleNote = {
+  prospi: { mean: +mP.toFixed(2), sd: +sP.toFixed(2) },
+  powerpro: { mean: +mW.toFixed(2), sd: +sW.toFixed(2) },
+  pearson_r: (() => {
+    const cv = (a, b, ma, mb) => { let t = 0; for (let i = 0; i < a.length; i++) t += (a[i] - ma) * (b[i] - mb); return t / a.length; };
+    return +(cv(psArr, pwArr, mP, mW) / (sP * sW)).toFixed(3);
+  })(),
+  corr_rawdiff_vs_powerpro: (() => {
+    const d = pairs.map(p => p.diff_prospi_minus_powerpro); const md = mean(d), sdd = sdOf(d, md);
+    let t = 0; for (let i = 0; i < d.length; i++) t += (d[i] - md) * (pwArr[i] - mW);
+    return +((t / d.length) / (sdd * sW)).toFixed(3);
+  })(),
+  warning: '生diffは尺度差に支配される（corr(diff, powerpro)≈-0.95）。stale/odd抽出には scale_normalized_divergence_z を使う',
+};
+
+const oddRaw = [...pairs].sort((a, b) => Math.abs(b.diff_prospi_minus_powerpro) - Math.abs(a.diff_prospi_minus_powerpro)).slice(0, 20);
+const oddZ = [...pairs].sort((a, b) => Math.abs(b.scale_normalized_divergence_z) - Math.abs(a.scale_normalized_divergence_z)).slice(0, 20);
 writeFileSync(OUT, JSON.stringify({
   generated_at: '2026-08-13',
+  reviewed_at: '2026-08-14 Opus senior review',
   role: 'stale/odd QA evidence only. Do not apply as a PowerPro correction or teacher.',
   time_map: TIME_MAP,
+  time_map_caveat: '2025 Series 1 と Series 2 は同じPowerPro 2025値へ突き合わせている。実測で20人が両editionのpairを持ち、うち4人はS1とS2でProspi値が動く（各1点）。"same-time"は年粒度であって版粒度ではない',
   special_cards_excluded: true,
+  powerpro_value_source: 'sp041_powerpro_normalized.json の text_raw（年単位に畳んだ素点。58版を跨ぐ版内位置は保持していない）',
+  scale_comparison: scaleNote,
   pair_count: pairs.length,
   player_count: new Set(pairs.map(p => p.pid)).size,
   by_year: byYear,
-  largest_abs_diffs: odd,
+  largest_scale_normalized_divergence: oddZ,
+  largest_abs_diffs_raw_scale_confounded: oddRaw,
   pairs,
 }, null, 2));
 console.log(JSON.stringify({ pair_count: pairs.length, players: new Set(pairs.map(p => p.pid)).size, by_year: byYear }, null, 2));
