@@ -25,7 +25,9 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
   // 時間ホールドアウト用の上限（既定=制限なし＝従来どおり）。T-0198。
   const maxSeason = ctx.maxSeason ?? null;
   const hi = maxSeason == null ? targetSeason + MAX_GAP : Math.min(targetSeason + MAX_GAP, maxSeason);
-  const poolOpts = { maxYearGap: MAX_GAP, maxSeason };
+  const poolOpts = { maxYearGap: MAX_GAP, maxSeason,
+    currentYearFirst: ctx.currentYearFirst ?? false,   // SP-016。既定=false＝従来どおり
+    sufficientWeight: ctx.sufficientWeight ?? 0 };
 
   // --- 走力: 対象年の前後の打撃＋走塁データから各年のzを出して畳む ---
   const runRows = prep(db, `
