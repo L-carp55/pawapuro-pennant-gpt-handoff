@@ -11,7 +11,7 @@
 >
 > 「翌年再現性は一年ごとの能力を査定するのに完全に不要です」
 
-このルールはミート/パワーの縮小ではコード・configへ反映されたが、**走力のcomponent weightには旧ロジックが残存した**。
+このルールはミート/パワーの縮小ではコード・configへ反映されたが、**走力のcomponent weightと多年poolには旧ロジックが残存した**。
 
 したがって、以下を訂正する。
 
@@ -19,6 +19,7 @@
 2. 翌年再現性を計測した既存研究は削除しないが、**projection / durable-trait / diagnostic用途に限定**する。
 3. 「翌年再現性が悪化したから分離しない」「翌年再現性が高いから重くする」という結論は、年度走力査定のacceptance criterionとしては撤回する。
 4. 現行production statistical speed modelは**controlとして保持**するが、そのcomponentWeightsはlegacyであり、final modelへそのまま継承しない。
+5. **全員へ過去年を自動poolする現行経路もfinal年度査定へそのまま継承しない。** 過去情報は少出場・故障・明らかな下振れ・測定時点補完等、明示的な理由がある場合のprior/temporal evidenceとして使う。
 
 ---
 
@@ -76,6 +77,29 @@ advance     0.527
 
 T-0203/T-0204は**diagnostic/projection research**として保持し、final annual appraisal weightの正本にしない。
 
+### 1.5 自動多年pool
+
+現行controlにはmulti-year durable-trait poolingがある。
+
+これは「過去データを捨てるな」という意味では有用な資産だが、
+
+```text
+全員を機械的に5年pool
+→ その年の能力
+```
+
+という使い方は、2026-08-05の「基本的にはその年だけで査定」と衝突する。
+
+final annual appraisalでは:
+
+- その年に十分なcurrent evidenceがある → current-year中心
+- 少出場 / 故障 / 明らかな下振れ / current direct measurement不足 → historical priorを条件付きで使用
+- 古い身体測定 → temporal change evidenceを伴って持ち越し可否を判断
+
+とする。
+
+現行pool実装は削除せずcontrolとして保持し、`SP-016`でfinal適用条件を再設計する。
+
 ---
 
 ## 2. 年度査定で見るべきもの
@@ -127,7 +151,9 @@ PA、走行機会、計測回数等による不確実さ。
 
 ## 4. 修正タスク
 
-`SP-015` をowner-review blocker / Gate blockerとして新設する。
+### SP-015 — 翌年再現性weight撤去
+
+owner-review blocker / Gate blocker。
 
 完了条件:
 
@@ -136,18 +162,30 @@ PA、走行機会、計測回数等による不確実さ。
 - current-year construct用のweighting/combinationを再設計
 - direct physical anchorが少ない場合は、恣意的な新weightを置かず、equal/regularized/sensitivity等を比較して根拠を保存
 - 100人候補表を再計算し、変更影響を保存
-- owner review final queueはその後に生成
+
+### SP-016 — automatic multi-year pooling再監査
+
+owner-review blocker / Gate blocker。
+
+完了条件:
+
+- 走力で過去年が自動混合される全経路を列挙
+- current evidenceが十分な選手ではcurrent-year中心へ戻す
+- historical priorを使う条件を明文化
+- injury / low exposure / obvious underperformance / measurement-time bridgingを区別
+- 各選手で過去年を使った理由・時点・weightを追跡可能にする
+
+owner review final queueはSP-015/016の後に生成する。
 
 ---
 
 ## 5. 再発防止
 
-`speed_requirements_baseline_20260813.tsv` に、
+`speed_requirements_baseline_20260813.tsv` に以下を独立要件として追加した。
 
-> 翌年再現性・翌年予測力を年度査定の材料採否・重み・縮小根拠へ使わない
+- `SR-053`: 翌年再現性・翌年予測力を年度査定の材料採否・重み・縮小根拠へ使わない
+- `SR-054`: 基本はその年で査定し、過去実績を全員へ自動混合しない
 
-を独立要件として追加する。
+`speed_task_registry.tsv` では `SP-015` / `SP-016` が未完の間、owner review / Speed Gateをfail-closedにする。
 
-`speed_task_registry.tsv` では `SP-015` が未完の間、owner review / Speed Gateをfail-closedにする。
-
-この修正は「再現性を一切調べない」という意味ではない。**年度査定の目的関数と、翌年予測の目的関数を混ぜない**という意味である。
+この修正は「再現性を一切調べない」という意味ではない。**年度査定の目的関数と、翌年予測・durable-trait研究の目的関数を混ぜない**という意味である。
