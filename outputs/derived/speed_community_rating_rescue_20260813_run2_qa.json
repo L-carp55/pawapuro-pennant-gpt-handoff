@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-08-13T11:31:47Z",
+  "verdict": "PASS",
+  "issues": [],
+  "counts": {
+    "old_grok_total": 191,
+    "old_grok_accepted_preserved": 41,
+    "old_grok_rejected_reclassified": 150,
+    "reclassification_status": {
+      "NOT_RECLASSIFIABLE_INSUFFICIENT": 58,
+      "RETAINED_NOT_DIRECTIONAL": 33,
+      "RECLASSIFIED_TO_WEAK_CONTEXT_LANE": 29,
+      "NOT_RECLASSIFIABLE_PLAYER_IDENTITY": 17,
+      "NOT_RECLASSIFIABLE_IDENTITY_CONFLICT": 3,
+      "RETAINED_REPOST_NOT_INDEPENDENT": 3,
+      "RECLASSIFIED_TO_RATING_LANE": 2,
+      "RETAINED_DUPLICATE_NOT_INDEPENDENT": 5
+    },
+    "raw_records": 473,
+    "filtered_records": 31,
+    "summary_rows": 100,
+    "youtube_inventory_videos": 56,
+    "prospi_current": {
+      "NOT_FOUND": 84,
+      "RETRIEVED": 17
+    },
+    "prospi_historical": {
+      "RETRIEVED": 119,
+      "NOT_FOUND": 105
+    }
+  },
+  "sha256": {
+    "raw_csv": "bcf77b27391b1a8d67e4beab9989aba538e9d3949f0ed9c152596cd1d8551822",
+    "raw_jsonl": "a7cff840ce274dbfe0524fe0aa1370eeed4c8d1d3db9a7139bd6a81cbe9d1069",
+    "powerpro_youtube_staging_csv": "69c6356ed079198c7aad69553ebc887e601c393edec51eac6724a6d4fc88a9af",
+    "powerpro_youtube_staging_jsonl": "3975b90292a2ccb3fcd0848d8c28d592ca5ca156efa0aa82467e204bd7f1ed8d",
+    "prospi_youtube_staging_csv": "52f3e230de94d16e98525dd1b43b5ff6ca12665f184d21ebabbc65efa1a889ad",
+    "prospi_youtube_staging_jsonl": "f9bd1d6125ab4842148c62f07720ddf1f9e64bbf5a37dbe701187e64780616ac",
+    "prospi_current_staging": "f5aad5884cc133371f4038ca8e42d2a73d92d50bbb4fb9f19c3ea55454437909",
+    "prospi_historical_staging": "f7bbf866a858ccad9fbb361d53a824f24d0ca516a720b5d004e4697cce8db2de",
+    "reclassification": "195b0483245a991e8a51dcd2c373eac3104fa3849b7293c1e822bde2a714c620",
+    "filtered": "1f0ce61a61e5906af3a5bb6b17828826b2d6f7bacb1ae75494dbf0e849afe819",
+    "summary": "adebe83a801e052ad85c43727624713f4d67c882082afb9945a59acd917c4b1a",
+    "youtube_inventory": "c11818add0d02a399477cd41c19e3fe53e34b32567581819e4b358ad93054cd7",
+    "prospi_current": "f5aad5884cc133371f4038ca8e42d2a73d92d50bbb4fb9f19c3ea55454437909",
+    "prospi_historical": "f7bbf866a858ccad9fbb361d53a824f24d0ca516a720b5d004e4697cce8db2de",
+    "manifest": "5a9432fe16bb93f3553529bd390dca18d2df12b06cb2271bf89c730bbe18128f",
+    "powerpro_log": "bd7850a98c4a9dab769fb2b431dde473fae43fce68359c1dca83d08d21b6c1eb",
+    "prospi_youtube_log": "75c8d50f5b8f9ff195185c8bccd3c7e6ab9bc877883eeff604545ca76cb026cc",
+    "prospi_youtube_exclusions": "c889713d5571b45f0455e2e47bbb945ab2c73ed7174e6d86730f9462500ac42d",
+    "prospi_gamex_log": "c72772fe52361b84b5c1515837ae48794b5ce40622987846cd532d78871132f1"
+  },
+  "checked_outputs": {
+    "raw_csv": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_community_rating_raw_20260813_run2.csv",
+    "raw_jsonl": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_community_rating_raw_20260813_run2.jsonl",
+    "powerpro_youtube_staging_csv": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\_staging_speed_youtube_powerpro_run2.csv",
+    "powerpro_youtube_staging_jsonl": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\_staging_speed_youtube_powerpro_run2.jsonl",
+    "prospi_youtube_staging_csv": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\_staging_speed_youtube_prospi_run2.csv",
+    "prospi_youtube_staging_jsonl": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\_staging_speed_youtube_prospi_run2.jsonl",
+    "prospi_current_staging": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\_staging_speed_prospi_gamex_current_run2.csv",
+    "prospi_historical_staging": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\_staging_speed_prospi_gamex_historical_run2.csv",
+    "reclassification": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_grok_x_rejected_reclassification_20260813_run2.csv",
+    "filtered": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_community_rating_filtered_20260813_run2.csv",
+    "summary": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_community_rating_player_summary_20260813_run2.csv",
+    "youtube_inventory": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_youtube_official_video_inventory_20260813_run2.csv",
+    "prospi_current": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_prospi_gamex_current_20260813_run2.csv",
+    "prospi_historical": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_prospi_gamex_historical_20260813_run2.csv",
+    "manifest": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_community_rating_build_manifest_20260813_run2.json",
+    "powerpro_log": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_youtube_powerpro_run2_execution_log.md",
+    "prospi_youtube_log": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_youtube_prospi_run2_execution_log.md",
+    "prospi_youtube_exclusions": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\_staging_speed_youtube_prospi_run2_qa_exclusions.csv",
+    "prospi_gamex_log": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\_staging_speed_prospi_gamex_run2_execution_log.jsonl"
+  }
+}

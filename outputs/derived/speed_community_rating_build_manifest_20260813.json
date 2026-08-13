@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-08-13T10:49:03.691190+00:00",
+  "lane_inputs": [
+    "outputs\\derived\\speed_community_rating_lane_powerpro_youtube_raw_20260813.jsonl",
+    "outputs\\derived\\speed_community_rating_lane_prospi_youtube_raw_20260813.jsonl",
+    "outputs\\derived\\speed_community_rating_lane_x_powerpro_raw_20260813.jsonl"
+  ],
+  "youtube_inventory_inputs": [
+    "outputs\\derived\\speed_youtube_official_video_inventory_powerpro_20260813.csv",
+    "outputs\\derived\\speed_youtube_official_video_inventory_prospi_20260813.csv"
+  ],
+  "reclassification_inputs": [],
+  "raw_records": 74,
+  "filtered_accepted_records": 0,
+  "status_counts": {
+    "INSUFFICIENT": 5,
+    "NOT_FOUND": 65,
+    "REJECTED": 4
+  },
+  "same_source_duplicates_preserved_in_raw": 0,
+  "schema_issue_records": 65,
+  "unjoined_player_records": 3,
+  "summary_rows": 100,
+  "youtube_inventory_rows": 5,
+  "reclassification_rows": 0,
+  "parse_errors": [],
+  "does_not_write_prior_ledgers_or_registry": true
+}

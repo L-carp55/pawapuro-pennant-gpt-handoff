@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-08-13T11:25:11Z",
+  "run": "run2",
+  "reclassification_inputs": [
+    {
+      "path": "C:\\Users\\amila\\Desktop\\Claude Code\\_worktrees\\pawapuro-speed-2026-grok-x-sns-rescue\\data\\normalized\\speed_2026_grok_x_sources.csv",
+      "sha256": "7d66f634cc6be4e38fcbb486aa81ed3386d9def05cce16b29e65904cdb988644",
+      "total_rows": 191,
+      "accepted_rows_preserved_and_not_read_as_inputs": 41,
+      "rejected_rows_passed_to_reclassification": 150
+    }
+  ],
+  "reclassification_status_counts": {
+    "NOT_RECLASSIFIABLE_IDENTITY_CONFLICT": 3,
+    "NOT_RECLASSIFIABLE_INSUFFICIENT": 58,
+    "NOT_RECLASSIFIABLE_PLAYER_IDENTITY": 17,
+    "RECLASSIFIED_TO_RATING_LANE": 2,
+    "RECLASSIFIED_TO_WEAK_CONTEXT_LANE": 29,
+    "RETAINED_DUPLICATE_NOT_INDEPENDENT": 5,
+    "RETAINED_NOT_DIRECTIONAL": 33,
+    "RETAINED_REPOST_NOT_INDEPENDENT": 3
+  },
+  "x_run1_availability_records_rechecked_individually": {
+    "INSUFFICIENT": 2,
+    "NOT_FOUND": 200
+  },
+  "youtube_run2_staging_records_integrated": {
+    "INSUFFICIENT": 121
+  },
+  "player_summary": {
+    "summary_rows": 100,
+    "summary_players_with_accepted_context": 15
+  },
+  "prospi_final_output_copy": {
+    "current": {
+      "status": "COPIED_UTF8",
+      "source": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\_staging_speed_prospi_gamex_current_run2.csv",
+      "output": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_prospi_gamex_current_20260813_run2.csv",
+      "sha256": "f5aad5884cc133371f4038ca8e42d2a73d92d50bbb4fb9f19c3ea55454437909"
+    },
+    "historical": {
+      "status": "COPIED_UTF8",
+      "source": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\_staging_speed_prospi_gamex_historical_run2.csv",
+      "output": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_prospi_gamex_historical_20260813_run2.csv",
+      "sha256": "f7bbf866a858ccad9fbb361d53a824f24d0ca516a720b5d004e4697cce8db2de"
+    }
+  },
+  "output_paths": {
+    "raw_csv": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_community_rating_raw_20260813_run2.csv",
+    "raw_jsonl": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_community_rating_raw_20260813_run2.jsonl",
+    "reclassification_csv": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_grok_x_rejected_reclassification_20260813_run2.csv",
+    "filtered_csv": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_community_rating_filtered_20260813_run2.csv",
+    "youtube_inventory_csv": "C:\\Users\\amila\\Desktop\\Claude Code\\パワプロ風ペナント開発\\outputs\\derived\\speed_youtube_official_video_inventory_20260813_run2.csv"
+  },
+  "rules": {
+    "old_accepted_41": "Not opened for modification and not emitted as run-2 reclassification rows.",
+    "weak_directional": "Preserved as weak context only; it cannot create strict consensus, a numeric rating, or an independent duplicate origin.",
+    "game_rating": "Explicit rating-value discussion is retained in the rating lane, but a value without appraisal direction is non-directional context.",
+    "not_found_x": "A collection attempt with no source post is an availability result, never a schema_issue or evidence record."
+  }
+}

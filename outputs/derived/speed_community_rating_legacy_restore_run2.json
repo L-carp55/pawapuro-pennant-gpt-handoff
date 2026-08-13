@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-08-13T11:31:34Z",
+  "reason": "Restore legacy non-run2 outputs to their exact repository HEAD state after unexpected run-2-period mutation; preserve mutation as UTF-8 backup.",
+  "results": [
+    {
+      "target": "outputs/derived/speed_community_rating_filtered_20260813.csv",
+      "unexpected_sha256": "08fe5183a2c6cc8047d74c9104938c1bb97f873cb3e25241f8ebe189417e7c12",
+      "restored_head_sha256": "4ca22aade78aae34797e214f1d243cadf076ff2d02c9807644ea2094095264ac",
+      "backup": "outputs\\derived\\speed_community_rating_filtered_20260813_unexpected_mutation_backup_run2.csv",
+      "backup_sha256": "08fe5183a2c6cc8047d74c9104938c1bb97f873cb3e25241f8ebe189417e7c12"
+    },
+    {
+      "target": "outputs/derived/speed_community_rating_player_summary_20260813.csv",
+      "unexpected_sha256": "b82fc9c4826fcd66a8cff8c7652cd4ad89430361822888f806dbec8fca6b2838",
+      "restored_head_sha256": "62e31fc731f16ed5263850c893f5c1fd0051a692304e4f1a51770d50f18c567c",
+      "backup": "outputs\\derived\\speed_community_rating_player_summary_20260813_unexpected_mutation_backup_run2.csv",
+      "backup_sha256": "b82fc9c4826fcd66a8cff8c7652cd4ad89430361822888f806dbec8fca6b2838"
+    },
+    {
+      "target": "outputs/derived/speed_grok_x_rejected_reclassification_20260813.csv",
+      "unexpected_sha256": "28cf7243d182c1c25b12c91bd2b93fbb277e0fafad77c440d23dca706a1a7b9d",
+      "restored_head_sha256": "1c89d13bec78f665c9cb4f09bae57f93ff13507c3ae905f5f664851cb6d338ac",
+      "backup": "outputs\\derived\\speed_grok_x_rejected_reclassification_20260813_unexpected_mutation_backup_run2.csv",
+      "backup_sha256": "28cf7243d182c1c25b12c91bd2b93fbb277e0fafad77c440d23dca706a1a7b9d"
+    }
+  ]
+}

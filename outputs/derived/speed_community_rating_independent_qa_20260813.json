@@ -1,0 +1,92 @@
+{
+  "artifact_type": "independent_read_only_qa_snapshot",
+  "task": "docs/tasks/CODEX_SPEED_COMMUNITY_RATING_RESCUE_20260813.md",
+  "generated_at": "2026-08-13T20:14:11.2751510+09:00",
+  "agent_snapshot_verdict": "FAIL_PRE_MERGE",
+  "scope_note": "Independent agent inspected a pre-convergence snapshot. It could not create this file due to repeated apply_patch write failures; parent saved the agent findings verbatim in structured form without changing the findings.",
+  "snapshot_counts": {
+    "canonical_raw_rows": 138,
+    "canonical_accepted_rows": 0,
+    "run2_raw_rows": 280,
+    "run2_accepted_rows": 31,
+    "run2_filtered_rows": 31,
+    "lane_rows_at_snapshot": {
+      "x_powerpro": 101,
+      "x_prospi": 64,
+      "powerpro_youtube": 3,
+      "prospi_youtube": 7
+    }
+  },
+  "checks": [
+    {
+      "id": "old_ledger_availability_and_non_destruction",
+      "status": "PASS",
+      "evidence": "Live source ledger 191 = accepted 41 + rejected 150; SHA256 7d66f634cc6be4e38fcbb486aa81ed3386d9def05cce16b29e65904cdb988644 matched run2 manifest; run2 emitted 150 rejected and no accepted-41."
+    },
+    {
+      "id": "canonical_output_convergence",
+      "status": "FAIL_PRE_MERGE",
+      "finding": "Canonical 138-row set and run2 280-row set diverged; run2 omitted YouTube and lagged current PowerPro X lane."
+    },
+    {
+      "id": "duplicate_and_same_event_handling",
+      "status": "PASS",
+      "evidence": "Run2 IDs unique; accepted source URLs unique; retained same-event triplet remained CONTEXT_ONLY origin_count=0."
+    },
+    {
+      "id": "player_identity_master_mapping",
+      "status": "FAIL_PRE_MERGE",
+      "finding": "All 31 pre-merge accepted run2 rows lacked canonical_player_id."
+    },
+    {
+      "id": "game_edition_identity",
+      "status": "FAIL_PRE_MERGE",
+      "finding": "Accepted pre-merge rating-context rows lacked adequate game/edition."
+    },
+    {
+      "id": "classification_drift",
+      "status": "FAIL_PRE_MERGE",
+      "finding": "RATING_VALUE_CONTEXT was outside task classification list for GXSR068/GXSR135."
+    },
+    {
+      "id": "weak_evidence_preservation",
+      "status": "PASS",
+      "evidence": "29 weak context and 2 rating context retained; no Prospi numeric inference."
+    },
+    {
+      "id": "reaction_volume",
+      "status": "FAIL_PRE_MERGE",
+      "finding": "Accepted old-ledger rows lacked explicit unavailable representation for reaction metrics."
+    },
+    {
+      "id": "quote_timestamp_url_provenance",
+      "status": "FAIL_PRE_MERGE",
+      "finding": "31 accepted rows had text/timestamp/URL; B/F values were not extracted into target field."
+    },
+    {
+      "id": "prospi_missingness",
+      "status": "PASS",
+      "evidence": "64 early-lane rows were INSUFFICIENT with no inferred values."
+    },
+    {
+      "id": "registry_unchanged",
+      "status": "PASS",
+      "evidence": "All 8 target rows were NOT_STARTED."
+    }
+  ],
+  "required_before_pass_recheck": [
+    "Build one converged canonical raw/filtered/summary/inventory/reclassification set.",
+    "Map deterministic player IDs before filtered/master use.",
+    "Retain insufficient game-edition rating texts raw-only.",
+    "Use task enumerated classification.",
+    "Represent unavailable reaction volume explicitly."
+  ],
+  "parent_remediation_after_snapshot": {
+    "canonical_convergence": "Canonical raw/filtered/summary rebuilt after lane completion: 360 raw records, 29 accepted weak-context records, 100 summary rows.",
+    "identity": "All 29 filtered weak-context records mapped to master canonical_player_id.",
+    "classification_and_rating_text": "GXSR068/GXSR135 changed to UNCLASSIFIED_CONTEXT, B/F extracted, and retained CONTEXT_ONLY raw-only because game/edition inadequate.",
+    "reaction_volume": "All old-ledger rows now set reaction_volume_status=NOT_PUBLICLY_DOCUMENTED_FROM_OLD_LEDGER; no zero substituted.",
+    "prospi": "Canonical structured collection now contains 325 current/historical GameX records, 136 retrieved, 189 NOT_FOUND, with no inferred values.",
+    "recheck_required": "Independent agent did not perform a post-remediation recheck; parent deterministic QA is outputs/derived/speed_community_rating_qa_20260813.json."
+  }
+}

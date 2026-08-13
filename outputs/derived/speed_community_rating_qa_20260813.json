@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-08-13T11:20:37.971184+00:00",
+  "verdict": "PASS_WITH_COLLECTION_GAPS",
+  "checks": {
+    "raw_records": 360,
+    "raw_unique_record_ids": 360,
+    "status_counts": {
+      "ACCEPTED_WEAK_DIRECTIONAL_CONTEXT": 29,
+      "CONTEXT_ONLY": 43,
+      "INSUFFICIENT": 83,
+      "NOT_FOUND": 201,
+      "REJECTED": 4
+    },
+    "raw_required_missing_counts": {
+      "record_id": 0,
+      "source_url": 0,
+      "classification": 0,
+      "independence_group": 0,
+      "collected_at": 0,
+      "acceptance_status": 0,
+      "acceptance_reason": 0,
+      "attempted_routes": 0,
+      "event_id": 0
+    },
+    "old_grok_source_sha256_verified": "7d66f634cc6be4e38fcbb486aa81ed3386d9def05cce16b29e65904cdb988644",
+    "old_rejected_reaudited": 150,
+    "old_accepted_41_reclassification_rows": 0,
+    "weak_directional_filtered": 29,
+    "rating_context_retained_raw_only": 2,
+    "accepted_context_missing_canonical_id": 0,
+    "accepted_context_unknown_reaction_volume": 29,
+    "summary_rows": 100,
+    "summary_unique_players": 100,
+    "powerpro_x_coverage": 100,
+    "prospi_x_coverage": 100,
+    "youtube_inventory_rows": 5,
+    "prospi_gamex_rows": 325,
+    "prospi_current_retrieved": 17,
+    "prospi_historical_retrieved": 119,
+    "prospi_numeric_values_inferred": false,
+    "registry_unchanged": true
+  },
+  "limits": [
+    "YouTube API pagination is unavailable.",
+    "Weak context cannot create physical consensus, numeric ratings, or stale-supported status.",
+    "Reaction volume from old Grok-X source is explicitly NOT_PUBLICLY_DOCUMENTED, not zero.",
+    "The two B/F rating texts are raw-only CONTEXT_ONLY because game edition is inadequate."
+  ]
+}
