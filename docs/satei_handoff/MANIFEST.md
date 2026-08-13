@@ -1,18 +1,34 @@
-# MANIFEST
+# MANIFEST — Current State Index
 
-作成日: 2026-07-31
+最終更新: 2026-08-13
 
-| File | Lines | Bytes | SHA256 |
-|---|---:|---:|---|
-| `00_README_AND_HANDOFF.md` | 161 | 6583 | `ac23f93934ffedff4dcf1eb7569920f43010f38778c29b8a9148bdeb98ea3535` |
-| `01_HISTORY_DECISION_LOG.md` | 471 | 11111 | `156218e764b4a57f80de305651340134e431eab3c7cc74074dc974b21f7444fc` |
-| `02_CURRENT_SPEC_V2.md` | 443 | 9348 | `b38ee7cd3e4113a275427f81c26e188965bf3f242e8b414f0400510acccfa647` |
-| `03_FORMULAS_DATA_CONTRACTS.md` | 482 | 6951 | `160c9d9d67129f2ce05b11e85c79aba285de22beaaf9ea5c5c82944a310fd166` |
-| `04_RUNNING_DEFENSE_CATCHER.md` | 354 | 6275 | `ccc642839bf9cb61781d14ca4140ba779afe26dee497fdce914f863be9a61fe0` |
-| `05_SPECIAL_ABILITIES_KONAMI.md` | 259 | 4429 | `cb25681fc2f63e9abb7079dfb1b5a3b32fba50260cd6405b9759cbb50e2ee9bf` |
-| `06_CARP_CASE_STUDY_AUDIT.md` | 302 | 6709 | `ee1cb7e0cf9e0a7bb66c1b216a436e0fd12f1673419dd0c4c43560b1066ae0d9` |
-| `07_WBC2017_PRIME_STATUS.md` | 248 | 4800 | `b28bb8b6252d3c5039bb3d109921fb44bb1e4a2e83bca5b0a4086b30e7ac53d4` |
-| `08_CLAUDE_CODE_IMPLEMENTATION_PLAN.md` | 372 | 5929 | `09fbb73281a8ec7e4ef363d44a42c70fb61cb299fcd6251ca7e5a5da11b5e987` |
-| `09_QA_TESTS_OPEN_QUESTIONS.md` | 229 | 4388 | `800ea984df472710909b4377871f3e29f7c75888495c7b3847a8305707df859e` |
-| `10_SOURCE_CATALOG.md` | 313 | 6038 | `94737074bfd8ededca49d4e59cd64f7189150f576f3507f4c912a8aa4f2625e6` |
-| `11_LEGACY_REFERENCE_V1_9.md` | 991 | 22284 | `17d4c664763e1aaf6a051ffa6471bea885984d6ca45391a22661fcb8baa4dd4f` |
+> 旧2026-07-31版は当時の12ファイルのchecksum snapshotだったが、その後ファイルが更新・追加されており、現在の進行正本としては失効している。**古いSHA256表を現在の完全性証明として使わない。**
+
+## 現在の走力state authority
+
+- `docs/state/speed_task_registry.tsv` — 現在タスク状態の唯一の正本
+- `docs/state/speed_requirements_baseline_20260813.tsv` — 不変要件ベースライン
+- `docs/state/speed_legacy_open_item_map.tsv` — 旧未完工程から現タスクへの移行表
+- `docs/satei_handoff/22_CURRENT_STATE_AND_AUTONOMOUS_CONTINUATION_20260813.md` — 人間向け現在地要約
+- `docs/audits/speed_task_completeness_and_handoff_root_cause_20260813.md` — 全数監査・根本原因・再発防止
+
+## State QA
+
+- `scripts/qa_speed_task_registry.mjs`
+- `.github/workflows/speed-task-registry-qa.yml`
+
+新handoff、owner review ready、Speed Gate close、肩力開始の前にvalidator PASSが必須。
+
+## Community rescue
+
+- `docs/tasks/CODEX_SPEED_COMMUNITY_RATING_RESCUE_20260813.md`
+
+旧SNSはPhysical Observation中心。Rating Consensus / PowerPro・Prospi公式YouTube / official X replies / Prospi current-historyは別タスクで未完。
+
+## Historical documents
+
+`17/18/19`、旧Gate、旧critical path、2026-07-31以前のhandoff群は履歴・要件発見元として保持する。現在状態の判定には直接使用せず、`docs/state/speed_legacy_open_item_map.tsv`を通じて現task IDへ解決する。
+
+## 重要
+
+このMANIFEST自体もtask statusの正本ではない。**状態は常に `docs/state/speed_task_registry.tsv` を参照する。**
