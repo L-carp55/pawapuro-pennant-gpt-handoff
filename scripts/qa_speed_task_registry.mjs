@@ -1,4 +1,4 @@
-// Fail-closed QA for the speed-rebuild task/requirement registry.
+// Fail-closed QA for the speed-rebuild task/requirement/exclusion registries.
 // Run before saying owner review is ready, before closing the Speed Gate,
 // and before creating a new handoff/current-state document.
 import fs from 'node:fs';
@@ -9,6 +9,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const REQ = 'docs/state/speed_requirements_baseline_20260813.tsv';
 const REG = 'docs/state/speed_task_registry.tsv';
 const LEGACY = 'docs/state/speed_legacy_open_item_map.tsv';
+const EXCL = 'docs/state/speed_exclusion_reason_ledger.tsv';
 const ENTRYPOINTS = [
   'CLAUDE.md',
   'docs/satei_handoff/00_README_AND_HANDOFF.md',
@@ -21,6 +22,16 @@ const ALLOWED = new Set([
   'SUPERSEDED','OBSOLETE_DUPLICATE',
 ]);
 const CLOSED = new Set(['DONE_VALIDATED','DONE_NEGATIVE_FINDING','SUPERSEDED','OBSOLETE_DUPLICATE']);
+const EXCL_OPEN = new Set([
+  'WRONG_AS_ZERO_REOPEN','OVERBROAD_REOPEN','WRONG_HARD_THRESHOLD_REOPEN',
+  'WRONG_VALIDATION_TARGET_REOPEN','WRONG_ACCEPTANCE_CRITERION_REOPEN',
+  'POLICY_CONFLICT_REOPEN','WRONG_LANE_REOPEN','OVERSTRICT_REOPEN',
+  'SCOPE_OVERREACH_REOPEN','REASSESS_REQUIRED',
+]);
+const EXCL_VALID = new Set([
+  'VALID_EXCLUSION_FROM_DIRECT_SPEED','VALID_TRANSFORMATION_EXCLUSION',
+  'VALID_DOWNGRADE_NOT_ZERO','VALID_DEDUP','VALID_EXCLUSION','VALID_NUMERIC_EXCLUSION',
+]);
 const KNOWN_EMPTY_HISTORICAL = new Set([
   'docs/audits/2026-08-07_speed_fielding_catching_arm_redesign.md',
   '_codex_work_20260805/npb_merge_measurements_20260805.mjs',
@@ -49,17 +60,18 @@ const warnings = [];
 const err = s => errors.push(s);
 const warn = s => warnings.push(s);
 
-let reqs, tasks, legacy;
+let reqs, tasks, legacy, exclusions;
 try {
   reqs = parseTsv(REQ);
   tasks = parseTsv(REG);
   legacy = parseTsv(LEGACY);
+  exclusions = parseTsv(EXCL);
 } catch (e) {
   console.error(`FAIL: ${e.message}`);
   process.exit(1);
 }
 
-// 1) Unique IDs + valid status.
+// 1) Unique IDs + valid task status.
 const reqIds = new Set();
 for (const r of reqs) {
   if (!/^SR-\d+$/.test(r.requirement_id)) err(`invalid requirement_id: ${r.requirement_id}`);
@@ -126,23 +138,56 @@ for (const m of legacy) {
   for (const x of xs) if (!byId.has(x)) err(`legacy map references unknown task ${x}: ${m.source} :: ${m.section}`);
 }
 
-// 6) Hard gates: preliminary/final review or Gate cannot bypass unfinished prerequisites.
+// 6) Exclusion-reason ledger. An invalid/overbroad exclusion may not silently disappear or be
+// declared resolved while all of its corrective tasks are still open/absent.
+const exclusionIds = new Set();
+for (const x of exclusions) {
+  if (!/^EX-\d+$/.test(x.exclusion_id)) err(`invalid exclusion_id: ${x.exclusion_id}`);
+  if (exclusionIds.has(x.exclusion_id)) err(`duplicate exclusion: ${x.exclusion_id}`);
+  exclusionIds.add(x.exclusion_id);
+  if (!EXCL_OPEN.has(x.verdict) && !EXCL_VALID.has(x.verdict)) err(`${x.exclusion_id}: invalid exclusion verdict ${x.verdict}`);
+
+  const xs = list(x.task_ids);
+  for (const taskId of xs) if (!byId.has(taskId)) err(`${x.exclusion_id}: references unknown task ${taskId}`);
+
+  const evidence = list(x.evidence);
+  if (!evidence.length) err(`${x.exclusion_id}: has no evidence/provenance artifact`);
+  for (const a of evidence) if (!existsNonempty(a)) err(`${x.exclusion_id}: evidence artifact missing/empty: ${a}`);
+
+  if (EXCL_OPEN.has(x.verdict)) {
+    if (!xs.length) err(`${x.exclusion_id}: reopen/reassess verdict has no corrective task`);
+    else if (xs.every(taskId => byId.has(taskId) && CLOSED.has(byId.get(taskId).status))) {
+      err(`${x.exclusion_id}: still marked ${x.verdict} but all corrective tasks are closed; update verdict only after evidence review`);
+    }
+  }
+}
+const openExclusions = exclusions.filter(x => EXCL_OPEN.has(x.verdict));
+const ownerExclusionBlocks = openExclusions.filter(x => x.owner_review_block === '1');
+const gateExclusionBlocks = openExclusions.filter(x => x.gate_block === '1');
+
+// 7) Hard gates: preliminary/final review or Gate cannot bypass unfinished prerequisites or unresolved exclusions.
 const ownerBlocks = tasks.filter(t => t.owner_review_block === '1' && !CLOSED.has(t.status));
 const gateBlocks = tasks.filter(t => t.gate_block === '1' && !CLOSED.has(t.status));
 const finalQueue = byId.get('SP-077');
 if (finalQueue && CLOSED.has(finalQueue.status) && ownerBlocks.length) {
-  err(`SP-077 owner queue closed with ${ownerBlocks.length} owner-review blockers open: ${ownerBlocks.map(x=>x.task_id).join(',')}`);
+  err(`SP-077 owner queue closed with ${ownerBlocks.length} owner-review task blockers open: ${ownerBlocks.map(x=>x.task_id).join(',')}`);
+}
+if (finalQueue && CLOSED.has(finalQueue.status) && ownerExclusionBlocks.length) {
+  err(`SP-077 owner queue closed with ${ownerExclusionBlocks.length} unresolved exclusion blockers: ${ownerExclusionBlocks.map(x=>x.exclusion_id).join(',')}`);
 }
 const gate = byId.get('SP-081');
 if (gate && CLOSED.has(gate.status) && gateBlocks.length) {
-  err(`SP-081 Speed Gate closed with ${gateBlocks.length} gate blockers open: ${gateBlocks.map(x=>x.task_id).join(',')}`);
+  err(`SP-081 Speed Gate closed with ${gateBlocks.length} task blockers open: ${gateBlocks.map(x=>x.task_id).join(',')}`);
+}
+if (gate && CLOSED.has(gate.status) && gateExclusionBlocks.length) {
+  err(`SP-081 Speed Gate closed with ${gateExclusionBlocks.length} unresolved exclusion blockers: ${gateExclusionBlocks.map(x=>x.exclusion_id).join(',')}`);
 }
 const shoulder = byId.get('SP-082');
 if (shoulder && CLOSED.has(shoulder.status) && (!gate || !CLOSED.has(gate.status))) {
   err('SP-082 shoulder handoff closed before Speed Gate');
 }
 
-// 7) Entrypoint convergence. No new session should be routed to stale prose as authority.
+// 8) Entrypoint convergence. No new session should be routed to stale prose as authority.
 for (const rel of ENTRYPOINTS) {
   const abs = path.join(ROOT, rel);
   if (!fs.existsSync(abs)) { err(`missing entrypoint: ${rel}`); continue; }
@@ -150,8 +195,10 @@ for (const rel of ENTRYPOINTS) {
   if (!s.includes(REG)) err(`${rel}: does not point to canonical task registry ${REG}`);
   if (!s.includes(REQ)) err(`${rel}: does not point to immutable requirements baseline ${REQ}`);
 }
+const claude = fs.readFileSync(path.join(ROOT, 'CLAUDE.md'), 'utf8');
+if (!claude.includes(EXCL)) err(`CLAUDE.md: does not point to exclusion-reason authority ${EXCL}`);
 
-// 8) Known empty historical artifacts are allowed only as explicit historical exceptions, never completion evidence.
+// 9) Known empty historical artifacts are allowed only as explicit historical exceptions, never completion evidence.
 for (const rel of KNOWN_EMPTY_HISTORICAL) {
   const abs = path.join(ROOT, rel);
   if (fs.existsSync(abs) && fs.statSync(abs).isFile() && fs.statSync(abs).size !== 0) {
@@ -159,7 +206,7 @@ for (const rel of KNOWN_EMPTY_HISTORICAL) {
   }
 }
 
-// 9) Guardrail for stale owner queue: old queue must remain superseded until SP-077 is truly ready.
+// 10) Guardrail for stale owner queue: old queue must remain superseded until SP-077 is truly ready.
 const oldQueue = byId.get('SP-076');
 if (oldQueue && oldQueue.status !== 'SUPERSEDED') err('SP-076 preliminary owner queue must remain SUPERSEDED');
 
@@ -173,5 +220,5 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`PASS: requirements=${reqs.length}, tasks=${tasks.length}, owner_review_blockers=${ownerBlocks.length}, gate_blockers=${gateBlocks.length}`);
-console.log('Owner review and Speed Gate remain fail-closed until their blocker counts reach zero.');
+console.log(`PASS: requirements=${reqs.length}, tasks=${tasks.length}, exclusions=${exclusions.length}, open_exclusions=${openExclusions.length}, owner_review_task_blockers=${ownerBlocks.length}, owner_review_exclusion_blockers=${ownerExclusionBlocks.length}, gate_task_blockers=${gateBlocks.length}, gate_exclusion_blockers=${gateExclusionBlocks.length}`);
+console.log('Owner review and Speed Gate remain fail-closed until task and exclusion blocker counts reach zero.');
