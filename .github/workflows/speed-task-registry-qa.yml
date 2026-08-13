@@ -1,0 +1,35 @@
+name: speed-task-registry-qa
+
+on:
+  push:
+    paths:
+      - 'CLAUDE.md'
+      - 'docs/satei_handoff/**'
+      - 'docs/state/**'
+      - 'docs/tasks/**'
+      - 'docs/audits/**'
+      - 'outputs/derived/**'
+      - 'scripts/qa_speed_task_registry.mjs'
+      - '.github/workflows/speed-task-registry-qa.yml'
+  pull_request:
+    paths:
+      - 'CLAUDE.md'
+      - 'docs/satei_handoff/**'
+      - 'docs/state/**'
+      - 'docs/tasks/**'
+      - 'docs/audits/**'
+      - 'outputs/derived/**'
+      - 'scripts/qa_speed_task_registry.mjs'
+      - '.github/workflows/speed-task-registry-qa.yml'
+  workflow_dispatch:
+
+jobs:
+  verify-speed-state:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate speed requirements and task registry
+        run: node scripts/qa_speed_task_registry.mjs
