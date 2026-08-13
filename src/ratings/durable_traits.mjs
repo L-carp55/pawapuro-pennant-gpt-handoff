@@ -36,10 +36,24 @@
 export function poolAcrossYears(obs, targetSeason, opts = {}) {
   const gap = opts.maxYearGap ?? 3;
   const maxSeason = opts.maxSeason ?? null;
-  const use = (obs ?? []).filter(o =>
+  let use = (obs ?? []).filter(o =>
     o && Number.isFinite(o.z) && o.weight > 0 && Math.abs(o.season - targetSeason) <= gap
     && (maxSeason == null || o.season <= maxSeason));
   if (!use.length) return null;
+
+  // ★SP-016（2026-08-13）: 年度能力はcurrent-year中心。過去実績の全員自動混合は禁止。
+  //   current-yearの観測が十分なら**その年だけ**を使い、足りない時だけ過去年を足す。
+  //   既定は false＝**productionの挙動は変えない**（legacy controlとして保持）。
+  //   sufficientWeight は同時点の標本誤差から決める（翌年再現性は使わない）。
+  let poolReason = 'LEGACY_AUTO_POOL';
+  if (opts.currentYearFirst) {
+    const cur = use.filter(o => o.season === targetSeason);
+    const curW = cur.reduce((s, o) => s + o.weight, 0);
+    const need = opts.sufficientWeight ?? 0;
+    if (cur.length && curW >= need) { use = cur; poolReason = 'CURRENT_YEAR_SUFFICIENT'; }
+    else if (cur.length) poolReason = `LOW_SAMPLE_CURRENT_YEAR(${curW}<${need})`;
+    else poolReason = 'NO_CURRENT_YEAR_OBSERVATION';
+  }
   const w = use.reduce((s, o) => s + o.weight, 0);
   return {
     z: use.reduce((s, o) => s + o.z * o.weight, 0) / w,
@@ -47,6 +61,8 @@ export function poolAcrossYears(obs, targetSeason, opts = {}) {
     years: use.length,
     seasons: use.map(o => o.season).sort(),
     isMultiYear: use.length > 1,
+    poolReason,                                   // なぜその年数を使ったか（SP-016）
+    currentYearWeight: use.filter(o => o.season === targetSeason).reduce((s, o) => s + o.weight, 0),
   };
 }
 
