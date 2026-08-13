@@ -448,7 +448,9 @@ export function appraiseCard(ctx, opts) {
     //   true にすると走力のNPB+自動blendを行わず、較正済み統計モデルをprimaryにする。
     //   T-0203が判定C（統計材料が薄い層を推定できず増分を確認できない）だったため、
     //   自動blendは採用しない方針の候補。NPB+のraw値は削除しない（review evidenceとして保持）。
-    statPrimarySpeed = false } = opts;
+    statPrimarySpeed = false,
+    // SP-016 候補: current-year中心の走力プール。既定=false＝productionの挙動は不変
+    currentYearFirst = false, sufficientWeight = 0 } = opts;
 
   let pid = playerId;
   if (!pid) {
@@ -557,7 +559,7 @@ export function appraiseCard(ctx, opts) {
   // 観測のブレがそのまま能力差として出る（西川龍馬の走力が年により F〜D で振れていた）。
   // 肩はさらに材料を2つ（ARMと補殺）使う——ARM単独では強肩ほど走者が走ってこず機会が減るため。
   const durable = estimateDurableTraits(db, p.player_id, targetSeason,
-    { cfg, runNorm, fldNorm, lgOf, envFactorsOf, maxSeason });
+    { cfg, runNorm, fldNorm, lgOf, envFactorsOf, maxSeason, currentYearFirst, sufficientWeight });
 
   const bm = prep(`
     SELECT b.ubr, b.wsb, m.gb_pct, m.ld_pct, m.offb_pct, m.iffb_pct FROM v_bm_by_player b
