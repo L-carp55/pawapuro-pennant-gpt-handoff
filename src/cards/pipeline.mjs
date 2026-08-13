@@ -20,6 +20,7 @@ import {
   strikeoutAbility, infieldHitAbility, goldSpecialAbilities,
 } from '../ratings/special_abilities.mjs';
 import { buildCard, assessConfidence, buildCalcLog } from './card_schema.mjs';
+import { applyScale } from './ability_sheet.mjs';
 import { leagueRates } from './season_score.mjs';
 import { rankSeasons, buildPeakYearCard } from './peak_year.mjs';
 import { leagueOf } from './teams.mjs';
@@ -1010,8 +1011,21 @@ export function appraiseCard(ctx, opts) {
    * 当たる実測ほど強く効き、当たらない実測はほとんど動かさない。
    * 実測が無ければ null を返す＝統計値がそのまま使われる。
    */
-  const blendDirect = (statValue, direct) => {
+  // ★SP-099 review修正(2026-08-14): 混ぜる2つが別の目盛りに乗っていた。
+  //   statValue = speedRating(z) = center50/spread15 の**内部尺度（未較正）**
+  //   direct.value = NPB+実測をパワプロ能力値へ回帰した式の出力＝**パワプロ尺度**
+  //   これをそのまま重み付き平均し、さらに ability_sheet 側で
+  //   `graded(speedOverride.value, cfg, extra)`（ability引数なし＝applyScale不発）を通すため、
+  //   統計側は最後まで一度も較正されない。実測: 走力は全選手で約3点の下方バイアス
+  //   （紅林 42.5*0.24+58.6*0.76=54.8 / 較正後 54.4*0.24+58.6*0.76=57.6）。
+  //   ★直し方は「blend結果へapplyScaleを掛ける」ではない——それでは既にパワプロ尺度の
+  //   direct側が二重較正になる。**統計側だけを混合前に較正して尺度を揃える**のが正しい。
+  //   較正が定義されていない能力（パワー等）では applyScale は恒等なので影響しない。
+  const blendDirect = (statValue, direct, ability = null) => {
     if (!direct || !Number.isFinite(direct.value)) return null;
+    if (ability != null && Number.isFinite(statValue)) {
+      statValue = applyScale(statValue, ability, cfg);
+    }
     // 確からしさ: NPB+ は test_r、MLB Statcast は較正時の r（ホールドアウトが無いので控えめに0.8倍）
     const model = cfg.npb_plus_direct?.models?.[String(direct.source ?? '').replace('NPB+アプリ ', '')];
     const w = model?.test_r != null ? model.test_r
@@ -1053,8 +1067,8 @@ export function appraiseCard(ctx, opts) {
     //   Sprint Speed のように一致0.945の実測はほぼそのまま効き、
     //   ハードヒット率のような0.5前後の実測は半分ほどしか動かさない。
     speedOverride: runRec?.scouting ? runRec
-      : (statPrimarySpeed ? null : blendDirect(run?.speed, directs.走力)),
-    powerOverride: blendDirect(batAdjusted?.power, directs.パワー),
+      : (statPrimarySpeed ? null : blendDirect(run?.speed, directs.走力, '走力')),
+    powerOverride: blendDirect(batAdjusted?.power, directs.パワー, 'パワー'),
     powerDisplay: conventions.power_display,
     specialAbilities: {
       strikeout: strikeoutSpecial,

@@ -49,7 +49,7 @@ export function toRank(value, cfg) {
  * 「材料を総当たりして限界」という主張自体が、仕様が挙げる材料を落としたまま出されていた。
  * 詳細=configs/ratings.json の scale_calibration.not_applied.*._tier_correction_20260804、調査=T-0089。
  */
-function applyScale(value, ability, cfg) {
+export function applyScale(value, ability, cfg) {
   if (value == null) return value;
   const c = cfg.scale_calibration?.applied?.[ability];
   return c ? c.intercept + c.slope * value : value;
