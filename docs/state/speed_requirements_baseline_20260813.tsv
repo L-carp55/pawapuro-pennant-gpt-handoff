@@ -1,0 +1,53 @@
+requirement_id	description	origin
+SR-001	既存のClaude production走力モデルをcontrolとして保持し、再構築案は必ずcontrolと比較する	Claude red-team / user continuation
+SR-002	走力と盗塁技術・走塁判断を分離し、同じ情報を基礎能力と得能へ二重計上しない	owner / project principles
+SR-003	2026 NPB 100人のNPB+ speedとexposureを保持する	GPT/Codex work
+SR-004	身体測定台帳と測定時点を保持し、未解決日時を未解決のまま明示する	GPT/Codex work
+SR-005	PowerPro長期パネルを収集だけで終わらせず、version分布・trajectory・stale/inertiaを監査する	owner request / critical path
+SR-006	秋山翔吾・松山竜平などベテランのPowerPro据え置き疑いを個別caseとして監査する	owner request
+SR-007	PowerProを無条件の正解にせず、教師値とQAの循環を避ける	Claude red-team / owner concern
+SR-008	H2F・塁間走・加速・内野ゴロ等の混合情報を、交絡と誤差を保存して評価する	owner request / gap audit
+SR-009	既存の三塁打/GIDP回避/内野安打/advance/UBRの実測再現性を無視せず再利用する	Claude red-team
+SR-010	NPB+ raw measurement自体と、PowerProラベルへ回帰した変換経路を分離して評価する	Claude red-team
+SR-011	時間holdoutで未来情報漏れを防ぎ、NOT_IDENTIFIABLEを無理に結論へ変えない	T-0198 / user
+SR-012	統計材料が薄い選手でNPB+に追加価値があるかを層別し、判定不能ならreview evidenceへ留める	T-0203 / current policy
+SR-013	2026終了後にT-0203を同じ事前定義で再実行する	T-0204
+SR-014	ordinary SNS/Grok-XのPhysical Observation laneを再利用する	existing evidence
+SR-015	旧Grok-Xでゲーム査定を理由に棄却した候補をRating Consensusとして再分類する	owner explicit request
+SR-016	PowerPro公式YouTubeの能力紹介/updateコメントを体系的に収集・分類する	owner explicit request
+SR-017	Prospi公式YouTubeの能力紹介コメントを体系的に収集・分類する	owner explicit request
+SR-018	PowerPro/Prospi公式X能力紹介投稿への返信と査定批評を収集する	owner explicit request
+SR-019	genericな俊足/鈍足等を0情報にせず弱い方向証拠として保持する	owner explicit request
+SR-020	同一場面の多数反応は独立票として水増しせずreaction volumeを別保存する	community design
+SR-021	strict video tie-breakのnegative findingを保持し、取得失敗を証拠不存在と混同しない	gap audit
+SR-022	context video/加速印象を必要なら低重みレーンとして扱う	owner flexible evidence policy
+SR-023	The Show longitudinal collectionを保持する	Codex existing
+SR-024	The Show temporal responseがNOT_IDENTIFIABLEだったnegative findingを保持する	Codex existing
+SR-025	The Show→PowerPro same-time bridgeをlinear/quantile/isotonic等で比較しholdout検証する	owner explicit request
+SR-026	測定時点にPowerProがない助っ人へThe Show換算を適用し、low/high/confidenceを保存する	owner explicit request
+SR-027	Prospi current走力を体系的に収集する	owner explicit request
+SR-028	Prospi historical走力を体系的に収集する	owner explicit request
+SR-029	PowerProとProspiの同時点乖離をstale QAへ使う	owner explicit request
+SR-030	age/birthdateをPowerPro temporal分析へ結合する。取得不能ならBLOCKEDを明示する	critical path
+SR-031	injury/recovery情報をtemporal/stale分析へ結合する。取得不能ならBLOCKEDを明示する	critical path
+SR-032	既存physical anchor bankをデータ資産として保持するが、NPB+ ordinal包装をfinal pairwiseと誤認しない	Claude red-team
+SR-033	evidence-weighted pairwise/rangeを必要なケースで評価する	gap audit
+SR-034	absolute 0-100 scale問題をrelative modelと分離する	Claude red-team/current state
+SR-035	PowerPro由来scale_calibrationを最終正本とせず由来を明示する	Claude red-team
+SR-036	能力値→自作エンジン走力効果の橋を実装後、absolute scaleをengine response/league distributionで校正する	current absolute scale audit
+SR-037	100人だけ別スケールにせず全ロースター/非100人との目盛り整合を検証する	Claude red-team
+SR-038	100人master tableにproject値・根拠・PowerPro current/history・差理由・confidenceを保存する	owner explicit request
+SR-039	owner review前にAI側でPROJECT_EVIDENCE_CONFLICTを可能な限り診断する	owner explicit request
+SR-040	PowerPro stale/odd判定は年数だけで断定せずtrajectory・current evidence・community・Prospiを統合する	owner explicit request
+SR-041	owner review queueはcommunity/Prospi/scale等の必須前工程後に再抽出する	owner workflow
+SR-042	owner verdictを正式データとして保存し後工程で上書きしないQAを持つ	owner explicit request
+SR-043	最終practical 100人査定を作り、物理/実用値・confidence・evidence provenanceを追跡する	critical path
+SR-044	custom engine/simulationで走力関連のリーグ分布をQAする	project acceptance
+SR-045	Speed Gateを全必須子タスク完了前に閉じない	owner / repeated failure
+SR-046	Speed Gateとowner approval完了まで肩力へ進まない	owner explicit
+SR-047	全重要知見・negative finding・欠損をGitHubへ保存しfinal-chat-only knowledgeを0にする	project durability
+SR-048	新handoff作成時に旧未完要件が黙って消えないよう機械検査する	current user request
+SR-049	CURRENTを名乗る入口文書を1つのtask registryへ収束させ、古い正本への誘導を禁止する	current user request
+SR-050	DONEは成果物存在だけでなく非空・QA・coverage・completion criteriaを満たした時だけ許可する	current user request
+SR-051	旧2026-08-05 all-missing-data taskのspeed項目を子要件へマッピングし、後続成果で代替済みか未完か明示する	completeness audit
+SR-052	official scouting / pinch-runner usage / defensive straight-line chase speed等、過去に言及した補助証拠の実施/不要/blockedを明示する	completeness audit
