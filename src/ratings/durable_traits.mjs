@@ -33,20 +33,78 @@
  *                      {maxSeason}  この年より後の観測を使わない（時間ホールドアウト用。既定=制限なし）
  * @returns {null|{z, weight, years, seasons, isMultiYear}}
  */
+function weightedMean(rows) {
+  const w = rows.reduce((s, o) => s + o.weight, 0);
+  if (!(w > 0)) return null;
+  return rows.reduce((s, o) => s + o.z * o.weight, 0) / w;
+}
+
+/**
+ * SP-016 continuous historical prior（設計正本 2026-08-14）。
+ * 各推定を自身の信頼性で縮小してから精度で合成する。素朴な w=PA/(PA+κ) は棄却済み。
+ */
+export function continuousPriorPool(obs, targetSeason, opts = {}) {
+  const kappa = opts.kappa ?? 50;
+  const lambda = opts.lambda ?? 0.2703;
+  const cur = obs.filter(o => o.season === targetSeason);
+  const hist = obs.filter(o => o.season !== targetSeason);
+  const paCur = cur.reduce((s, o) => s + o.weight, 0);
+  const paHist = hist.reduce((s, o) => s + o.weight, 0);
+  const zCurRaw = cur.length ? weightedMean(cur) : null;
+  const zHistRaw = hist.length ? weightedMean(hist) : null;
+  let z = null;
+  let poolReason = 'CONTINUOUS_PRIOR';
+  if (zCurRaw == null && zHistRaw == null) return null;
+  if (zCurRaw == null) {
+    z = zHistRaw * (paHist / (paHist + kappa));
+    poolReason = 'CONTINUOUS_PRIOR_HIST_ONLY';
+  } else if (zHistRaw == null) {
+    z = zCurRaw * (paCur / (paCur + kappa));
+    poolReason = 'CONTINUOUS_PRIOR_CUR_ONLY';
+  } else {
+    const zCur = zCurRaw * (paCur / (paCur + kappa));
+    const zHist = zHistRaw * (paHist / (paHist + kappa));
+    const pc = paCur, ph = lambda * paHist;
+    z = (pc + ph) > 0 ? (pc * zCur + ph * zHist) / (pc + ph) : null;
+    poolReason = 'CONTINUOUS_PRIOR';
+  }
+  if (z == null) return null;
+  return {
+    z,
+    weight: paCur + lambda * paHist,
+    years: obs.length,
+    seasons: obs.map(o => o.season).sort(),
+    isMultiYear: new Set(obs.map(o => o.season)).size > 1,
+    poolReason,
+    currentYearWeight: paCur,
+    histWeight: paHist,
+    kappa,
+    lambda,
+    zCurRaw,
+    zHistRaw,
+  };
+}
+
 export function poolAcrossYears(obs, targetSeason, opts = {}) {
   const gap = opts.maxYearGap ?? 3;
   const maxSeason = opts.maxSeason ?? null;
+  const minWeight = opts.minWeight ?? 0;
   let use = (obs ?? []).filter(o =>
-    o && Number.isFinite(o.z) && o.weight > 0 && Math.abs(o.season - targetSeason) <= gap
+    o && Number.isFinite(o.z) && o.weight > 0 && o.weight >= minWeight
+    && Math.abs(o.season - targetSeason) <= gap
     && (maxSeason == null || o.season <= maxSeason));
   if (!use.length) return null;
 
-  // ★SP-016（2026-08-13）: 年度能力はcurrent-year中心。過去実績の全員自動混合は禁止。
-  //   current-yearの観測が十分なら**その年だけ**を使い、足りない時だけ過去年を足す。
-  //   既定は false＝**productionの挙動は変えない**（legacy controlとして保持）。
-  //   sufficientWeight は同時点の標本誤差から決める（翌年再現性は使わない）。
+  const mode = opts.poolingMode
+    ?? (opts.currentYearFirst ? 'current_year_first_hard' : 'legacy_auto_pool');
+
+  if (mode === 'continuous_prior') {
+    return continuousPriorPool(use, targetSeason, opts);
+  }
+
+  // ★SP-016 control: hard current-year-first（50PA 階段）または legacy 自動多年pool。
   let poolReason = 'LEGACY_AUTO_POOL';
-  if (opts.currentYearFirst) {
+  if (mode === 'current_year_first_hard' || opts.currentYearFirst) {
     const cur = use.filter(o => o.season === targetSeason);
     const curW = cur.reduce((s, o) => s + o.weight, 0);
     const need = opts.sufficientWeight ?? 0;
@@ -61,7 +119,7 @@ export function poolAcrossYears(obs, targetSeason, opts = {}) {
     years: use.length,
     seasons: use.map(o => o.season).sort(),
     isMultiYear: use.length > 1,
-    poolReason,                                   // なぜその年数を使ったか（SP-016）
+    poolReason,
     currentYearWeight: use.filter(o => o.season === targetSeason).reduce((s, o) => s + o.weight, 0),
   };
 }

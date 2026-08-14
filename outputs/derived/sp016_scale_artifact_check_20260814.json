@@ -1,0 +1,397 @@
+{
+  "generated_at": "2026-08-14",
+  "policy": "Global display center/width only. Individual PowerPro labels not used as weights or fit targets.",
+  "new_display_scale": {
+    "slope": 1.8883315802194052,
+    "intercept": -29.54411881474512
+  },
+  "full_roster": {
+    "n": 260,
+    "before": {
+      "mean": 65.035,
+      "sd": 15.994,
+      "min": 27.07,
+      "max": 131.86,
+      "p10": 46.49,
+      "p50": 63.68,
+      "p90": 84.34
+    },
+    "after": {
+      "mean": 65.035,
+      "sd": 15.994,
+      "min": 34.83,
+      "max": 122.64,
+      "p10": 45.61,
+      "p50": 63.43,
+      "p90": 86.53
+    },
+    "delta": {
+      "mean": 0,
+      "sd": 6.113,
+      "min": -23.63,
+      "max": 29.42,
+      "ge5": 76,
+      "ge10": 22,
+      "all_same_direction": false,
+      "pos": 128,
+      "neg": 127
+    },
+    "corr_delta_vs_hard": -0.1911,
+    "corr_delta_vs_cont": 0.1911,
+    "corr_delta_vs_pa_cur": 0.0938,
+    "scale_artifact": false,
+    "extremes": [
+      {
+        "name": "田村　俊介",
+        "pa_cur": 69,
+        "hard": 59.8,
+        "cont": 89.2,
+        "delta": 29.42
+      },
+      {
+        "name": "浅野　翔吾",
+        "pa_cur": 83,
+        "hard": 87.9,
+        "cont": 64.3,
+        "delta": -23.63
+      },
+      {
+        "name": "大里　昂生",
+        "pa_cur": 101,
+        "hard": 127.2,
+        "cont": 104.9,
+        "delta": -22.33
+      },
+      {
+        "name": "和田　康士朗",
+        "pa_cur": 10,
+        "hard": 131.9,
+        "cont": 112.9,
+        "delta": -19
+      },
+      {
+        "name": "大城　滉二",
+        "pa_cur": 79,
+        "hard": 51.8,
+        "cont": 70,
+        "delta": 18.19
+      },
+      {
+        "name": "坂本　勇人",
+        "pa_cur": 173,
+        "hard": 27.1,
+        "cont": 44.8,
+        "delta": 17.73
+      },
+      {
+        "name": "鵜飼　航丞",
+        "pa_cur": 53,
+        "hard": 88.1,
+        "cont": 70.5,
+        "delta": -17.54
+      },
+      {
+        "name": "羽月　隆太郎",
+        "pa_cur": 119,
+        "hard": 122.8,
+        "cont": 105.6,
+        "delta": -17.23
+      },
+      {
+        "name": "伊藤　裕季也",
+        "pa_cur": 130,
+        "hard": 43.1,
+        "cont": 60.2,
+        "delta": 17.03
+      },
+      {
+        "name": "小川　龍成",
+        "pa_cur": 202,
+        "hard": 55.2,
+        "cont": 71.8,
+        "delta": 16.6
+      },
+      {
+        "name": "川越　誠司",
+        "pa_cur": 43,
+        "hard": 79.6,
+        "cont": 63.4,
+        "delta": -16.14
+      },
+      {
+        "name": "阿部　寿樹",
+        "pa_cur": 129,
+        "hard": 62.5,
+        "cont": 46.4,
+        "delta": -16.08
+      }
+    ]
+  },
+  "hundred_subset_of_roster": {
+    "n": 92,
+    "before": {
+      "mean": 65.543,
+      "sd": 14.98,
+      "min": 37.12,
+      "max": 115.32,
+      "p10": 46.59,
+      "p50": 64.46,
+      "p90": 85.89
+    },
+    "after": {
+      "mean": 66.334,
+      "sd": 16.436,
+      "min": 35.79,
+      "max": 122.64,
+      "p10": 47.31,
+      "p50": 63.38,
+      "p90": 88.89
+    },
+    "delta": {
+      "mean": 0.791,
+      "sd": 4.727,
+      "min": -8.15,
+      "max": 16.6,
+      "ge5": 28,
+      "ge10": 3,
+      "all_same_direction": false,
+      "pos": 51,
+      "neg": 39
+    },
+    "corr_delta_vs_hard": 0.1654,
+    "corr_delta_vs_cont": 0.4383,
+    "corr_delta_vs_pa_cur": 0.1142,
+    "scale_artifact": false,
+    "extremes": [
+      {
+        "name": "小川　龍成",
+        "pa_cur": 202,
+        "hard": 55.2,
+        "cont": 71.8,
+        "delta": 16.6
+      },
+      {
+        "name": "源田　壮亮",
+        "pa_cur": 361,
+        "hard": 80.2,
+        "cont": 90.7,
+        "delta": 10.49
+      },
+      {
+        "name": "高橋　周平",
+        "pa_cur": 101,
+        "hard": 37.1,
+        "cont": 47.3,
+        "delta": 10.19
+      },
+      {
+        "name": "並木　秀尊",
+        "pa_cur": 128,
+        "hard": 101.8,
+        "cont": 111.6,
+        "delta": 9.84
+      },
+      {
+        "name": "髙部　瑛斗",
+        "pa_cur": 384,
+        "hard": 91.2,
+        "cont": 100.2,
+        "delta": 9.02
+      },
+      {
+        "name": "周東　佑京",
+        "pa_cur": 430,
+        "hard": 90.3,
+        "cont": 98.5,
+        "delta": 8.25
+      },
+      {
+        "name": "大島　洋平",
+        "pa_cur": 98,
+        "hard": 78,
+        "cont": 86.3,
+        "delta": 8.25
+      },
+      {
+        "name": "秋山　翔吾",
+        "pa_cur": 157,
+        "hard": 84.8,
+        "cont": 76.6,
+        "delta": -8.15
+      },
+      {
+        "name": "土田　龍空",
+        "pa_cur": 53,
+        "hard": 81.6,
+        "cont": 73.5,
+        "delta": -8.12
+      },
+      {
+        "name": "村松　開人",
+        "pa_cur": 186,
+        "hard": 66.3,
+        "cont": 74.2,
+        "delta": 7.95
+      },
+      {
+        "name": "岩田　幸宏",
+        "pa_cur": 401,
+        "hard": 115.3,
+        "cont": 122.6,
+        "delta": 7.32
+      },
+      {
+        "name": "正木　智也",
+        "pa_cur": 65,
+        "hard": 62.9,
+        "cont": 55.7,
+        "delta": -7.23
+      }
+    ]
+  },
+  "non100_subset_of_roster": {
+    "n": 168,
+    "before": {
+      "mean": 64.756,
+      "sd": 16.517,
+      "min": 27.07,
+      "max": 131.86,
+      "p10": 45.44,
+      "p50": 63.13,
+      "p90": 83.02
+    },
+    "after": {
+      "mean": 64.323,
+      "sd": 15.701,
+      "min": 34.83,
+      "max": 117.72,
+      "p10": 44.8,
+      "p50": 63.63,
+      "p90": 84.17
+    },
+    "delta": {
+      "mean": -0.433,
+      "sd": 6.713,
+      "min": -23.63,
+      "max": 29.42,
+      "ge5": 48,
+      "ge10": 19,
+      "all_same_direction": false,
+      "pos": 77,
+      "neg": 88
+    },
+    "corr_delta_vs_hard": -0.3217,
+    "corr_delta_vs_cont": 0.0892,
+    "corr_delta_vs_pa_cur": 0.0485,
+    "scale_artifact": false,
+    "extremes": [
+      {
+        "name": "田村　俊介",
+        "pa_cur": 69,
+        "hard": 59.8,
+        "cont": 89.2,
+        "delta": 29.42
+      },
+      {
+        "name": "浅野　翔吾",
+        "pa_cur": 83,
+        "hard": 87.9,
+        "cont": 64.3,
+        "delta": -23.63
+      },
+      {
+        "name": "大里　昂生",
+        "pa_cur": 101,
+        "hard": 127.2,
+        "cont": 104.9,
+        "delta": -22.33
+      },
+      {
+        "name": "和田　康士朗",
+        "pa_cur": 10,
+        "hard": 131.9,
+        "cont": 112.9,
+        "delta": -19
+      },
+      {
+        "name": "大城　滉二",
+        "pa_cur": 79,
+        "hard": 51.8,
+        "cont": 70,
+        "delta": 18.19
+      },
+      {
+        "name": "坂本　勇人",
+        "pa_cur": 173,
+        "hard": 27.1,
+        "cont": 44.8,
+        "delta": 17.73
+      },
+      {
+        "name": "鵜飼　航丞",
+        "pa_cur": 53,
+        "hard": 88.1,
+        "cont": 70.5,
+        "delta": -17.54
+      },
+      {
+        "name": "羽月　隆太郎",
+        "pa_cur": 119,
+        "hard": 122.8,
+        "cont": 105.6,
+        "delta": -17.23
+      },
+      {
+        "name": "伊藤　裕季也",
+        "pa_cur": 130,
+        "hard": 43.1,
+        "cont": 60.2,
+        "delta": 17.03
+      },
+      {
+        "name": "川越　誠司",
+        "pa_cur": 43,
+        "hard": 79.6,
+        "cont": 63.4,
+        "delta": -16.14
+      },
+      {
+        "name": "阿部　寿樹",
+        "pa_cur": 129,
+        "hard": 62.5,
+        "cont": 46.4,
+        "delta": -16.08
+      },
+      {
+        "name": "重信　慎之介",
+        "pa_cur": 3,
+        "hard": 82.7,
+        "cont": 67.5,
+        "delta": -15.21
+      }
+    ]
+  },
+  "hundred_appraiseCard_path": {
+    "n": 99,
+    "before": {
+      "mean": 64.97,
+      "sd": 14.339
+    },
+    "after": {
+      "mean": 65.297,
+      "sd": 15.564
+    },
+    "corr_delta_vs_hard": 0.1098,
+    "corr_delta_vs_cont": 0.4019,
+    "all_same_direction": false,
+    "scale_artifact": false
+  },
+  "same_mapping_100_vs_roster": {
+    "slope": 1.8883315802194052,
+    "intercept": -29.54411881474512,
+    "derived_on": "full 2025 statistical roster n=260",
+    "applied_to_100": true,
+    "hundred_only_scale_exists": false
+  },
+  "verdict": "BIDIRECTIONAL_NOT_SCALE_BUG"
+}

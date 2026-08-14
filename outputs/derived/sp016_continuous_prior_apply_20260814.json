@@ -1,0 +1,1030 @@
+{
+  "generated_at": "2026-08-14",
+  "policy": {
+    "control": "poolingMode=current_year_first_hard + old applyScale",
+    "candidate": "poolingMode=continuous_prior + re-derived display scale",
+    "powerpro_individual_labels": "NOT_USED_FOR_WEIGHT_OR_FIT",
+    "scale_role": "provisional global center/width display calibration only",
+    "kappa": 50,
+    "lambda": 0.2703
+  },
+  "new_display_scale": {
+    "slope": 1.888332,
+    "intercept": -29.544119,
+    "matched_legacy_display_mean": 65.035,
+    "matched_legacy_display_sd": 15.994,
+    "continuous_uncal_mean": 50.086,
+    "continuous_uncal_sd": 8.47
+  },
+  "full_roster": {
+    "summary": {
+      "n": 260,
+      "mean": 0,
+      "sd": 6.113,
+      "min": -23.63,
+      "max": 29.42,
+      "range": 53.04,
+      "ge1": 203,
+      "ge3": 125,
+      "ge5": 76,
+      "ge10": 22,
+      "all_same_sign": false,
+      "pos": 128,
+      "neg": 127
+    },
+    "display_hard": {
+      "mean": 65.035,
+      "sd": 15.994,
+      "min": 27.07,
+      "max": 131.86
+    },
+    "display_continuous": {
+      "mean": 65.035,
+      "sd": 15.994
+    },
+    "top_movers": [
+      {
+        "name": "田村　俊介",
+        "pa_cur": 69,
+        "hard": 59.8,
+        "cont": 89.2,
+        "diff": 29.42
+      },
+      {
+        "name": "浅野　翔吾",
+        "pa_cur": 83,
+        "hard": 87.9,
+        "cont": 64.3,
+        "diff": -23.63
+      },
+      {
+        "name": "大里　昂生",
+        "pa_cur": 101,
+        "hard": 127.2,
+        "cont": 104.9,
+        "diff": -22.33
+      },
+      {
+        "name": "和田　康士朗",
+        "pa_cur": 10,
+        "hard": 131.9,
+        "cont": 112.9,
+        "diff": -19
+      },
+      {
+        "name": "大城　滉二",
+        "pa_cur": 79,
+        "hard": 51.8,
+        "cont": 70,
+        "diff": 18.19
+      },
+      {
+        "name": "坂本　勇人",
+        "pa_cur": 173,
+        "hard": 27.1,
+        "cont": 44.8,
+        "diff": 17.73
+      },
+      {
+        "name": "鵜飼　航丞",
+        "pa_cur": 53,
+        "hard": 88.1,
+        "cont": 70.5,
+        "diff": -17.54
+      },
+      {
+        "name": "羽月　隆太郎",
+        "pa_cur": 119,
+        "hard": 122.8,
+        "cont": 105.6,
+        "diff": -17.23
+      },
+      {
+        "name": "伊藤　裕季也",
+        "pa_cur": 130,
+        "hard": 43.1,
+        "cont": 60.2,
+        "diff": 17.03
+      },
+      {
+        "name": "小川　龍成",
+        "pa_cur": 202,
+        "hard": 55.2,
+        "cont": 71.8,
+        "diff": 16.6
+      },
+      {
+        "name": "川越　誠司",
+        "pa_cur": 43,
+        "hard": 79.6,
+        "cont": 63.4,
+        "diff": -16.14
+      },
+      {
+        "name": "阿部　寿樹",
+        "pa_cur": 129,
+        "hard": 62.5,
+        "cont": 46.4,
+        "diff": -16.08
+      },
+      {
+        "name": "重信　慎之介",
+        "pa_cur": 3,
+        "hard": 82.7,
+        "cont": 67.5,
+        "diff": -15.21
+      },
+      {
+        "name": "濱田　太貴",
+        "pa_cur": 104,
+        "hard": 52.7,
+        "cont": 66.4,
+        "diff": 13.69
+      },
+      {
+        "name": "児玉　亮涼",
+        "pa_cur": 53,
+        "hard": 66.9,
+        "cont": 55.9,
+        "diff": -11.09
+      },
+      {
+        "name": "淺間　大基",
+        "pa_cur": 108,
+        "hard": 57.7,
+        "cont": 68.3,
+        "diff": 10.63
+      },
+      {
+        "name": "源田　壮亮",
+        "pa_cur": 361,
+        "hard": 80.2,
+        "cont": 90.7,
+        "diff": 10.49
+      },
+      {
+        "name": "三森　大貴",
+        "pa_cur": 179,
+        "hard": 79.9,
+        "cont": 90.4,
+        "diff": 10.46
+      },
+      {
+        "name": "森　敬斗",
+        "pa_cur": 75,
+        "hard": 78.9,
+        "cont": 89.2,
+        "diff": 10.28
+      },
+      {
+        "name": "中村　剛也",
+        "pa_cur": 110,
+        "hard": 38.6,
+        "cont": 48.9,
+        "diff": 10.24
+      }
+    ],
+    "low_pa_extremes": [
+      {
+        "name": "和田　康士朗",
+        "pa_cur": 10,
+        "hard": 131.9,
+        "cont": 112.9,
+        "diff": -19
+      },
+      {
+        "name": "川越　誠司",
+        "pa_cur": 43,
+        "hard": 79.6,
+        "cont": 63.4,
+        "diff": -16.14
+      },
+      {
+        "name": "重信　慎之介",
+        "pa_cur": 3,
+        "hard": 82.7,
+        "cont": 67.5,
+        "diff": -15.21
+      },
+      {
+        "name": "茶谷　健太",
+        "pa_cur": 41,
+        "hard": 78.4,
+        "cont": 68.1,
+        "diff": -10.24
+      },
+      {
+        "name": "磯村　嘉孝",
+        "pa_cur": 7,
+        "hard": 39.2,
+        "cont": 48.4,
+        "diff": 9.18
+      },
+      {
+        "name": "柴田　竜拓",
+        "pa_cur": 32,
+        "hard": 54.2,
+        "cont": 63,
+        "diff": 8.81
+      },
+      {
+        "name": "松本　直樹",
+        "pa_cur": 36,
+        "hard": 58.6,
+        "cont": 50.4,
+        "diff": -8.22
+      },
+      {
+        "name": "田村　龍弘",
+        "pa_cur": 43,
+        "hard": 51.8,
+        "cont": 44.3,
+        "diff": -7.44
+      },
+      {
+        "name": "中島　卓也",
+        "pa_cur": 30,
+        "hard": 93.1,
+        "cont": 85.8,
+        "diff": -7.36
+      },
+      {
+        "name": "石原　彪",
+        "pa_cur": 38,
+        "hard": 45.2,
+        "cont": 51.4,
+        "diff": 6.25
+      },
+      {
+        "name": "松山　竜平",
+        "pa_cur": 1,
+        "hard": 59.4,
+        "cont": 53.4,
+        "diff": -6
+      },
+      {
+        "name": "宇佐見　真吾",
+        "pa_cur": 41,
+        "hard": 49.8,
+        "cont": 45,
+        "diff": -4.81
+      },
+      {
+        "name": "小林　誠司",
+        "pa_cur": 26,
+        "hard": 52.8,
+        "cont": 48.2,
+        "diff": -4.55
+      },
+      {
+        "name": "茶野　篤政",
+        "pa_cur": 12,
+        "hard": 83.9,
+        "cont": 88.3,
+        "diff": 4.39
+      },
+      {
+        "name": "柘植　世那",
+        "pa_cur": 17,
+        "hard": 50.4,
+        "cont": 54.5,
+        "diff": 4.11
+      }
+    ]
+  },
+  "hundred": {
+    "n_ok": 99,
+    "n_error": 1,
+    "errors": [
+      {
+        "player": "名原 典彦",
+        "error": "該当なし: 名原 典彦（2026 usageあり PA=187 G=41。一軍打撃台帳(v_batting)には2025年まで無し / farm/bm_player id=20230057 seasons=2023,2024,2025,2026 team=広）"
+      }
+    ],
+    "summary": {
+      "n": 99,
+      "mean": 0.327,
+      "sd": 4.68,
+      "min": -9.8,
+      "max": 16.6,
+      "range": 26.4,
+      "ge1": 79,
+      "ge3": 51,
+      "ge5": 28,
+      "ge10": 3,
+      "all_same_sign": false,
+      "pos": 51,
+      "neg": 44
+    },
+    "rows": [
+      {
+        "player": "小川 龍成",
+        "hard": 55.2,
+        "continuous": 71.8,
+        "diff": 16.599999999999994,
+        "no_batting": false
+      },
+      {
+        "player": "源田 壮亮",
+        "hard": 80.2,
+        "continuous": 90.7,
+        "diff": 10.5,
+        "no_batting": false
+      },
+      {
+        "player": "高橋 周平",
+        "hard": 37.1,
+        "continuous": 47.3,
+        "diff": 10.199999999999996,
+        "no_batting": false
+      },
+      {
+        "player": "ソト",
+        "hard": 50.6,
+        "continuous": 40.8,
+        "diff": -9.800000000000004,
+        "no_batting": false
+      },
+      {
+        "player": "髙部 瑛斗",
+        "hard": 91.2,
+        "continuous": 100,
+        "diff": 8.799999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "大島 洋平",
+        "hard": 78,
+        "continuous": 86.3,
+        "diff": 8.299999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "秋山 翔吾",
+        "hard": 84.8,
+        "continuous": 76.6,
+        "diff": -8.200000000000003,
+        "no_batting": false
+      },
+      {
+        "player": "周東 佑京",
+        "hard": 90.3,
+        "continuous": 98.5,
+        "diff": 8.200000000000003,
+        "no_batting": false
+      },
+      {
+        "player": "ポランコ",
+        "hard": 67.6,
+        "continuous": 59.4,
+        "diff": -8.199999999999996,
+        "no_batting": false
+      },
+      {
+        "player": "土田 龍空",
+        "hard": 81.6,
+        "continuous": 73.5,
+        "diff": -8.099999999999994,
+        "no_batting": false
+      },
+      {
+        "player": "村松 開人",
+        "hard": 66.3,
+        "continuous": 74.2,
+        "diff": 7.900000000000006,
+        "no_batting": false
+      },
+      {
+        "player": "中川 圭太",
+        "hard": 66.2,
+        "continuous": 73.4,
+        "diff": 7.200000000000003,
+        "no_batting": false
+      },
+      {
+        "player": "正木 智也",
+        "hard": 62.9,
+        "continuous": 55.7,
+        "diff": -7.199999999999996,
+        "no_batting": false
+      },
+      {
+        "player": "佐藤 都志也",
+        "hard": 71.4,
+        "continuous": 64.3,
+        "diff": -7.1000000000000085,
+        "no_batting": false
+      },
+      {
+        "player": "梅野 隆太郎",
+        "hard": 60.9,
+        "continuous": 54.1,
+        "diff": -6.799999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "宮﨑 敏郎",
+        "hard": 61.5,
+        "continuous": 54.8,
+        "diff": -6.700000000000003,
+        "no_batting": false
+      },
+      {
+        "player": "友杉 篤輝",
+        "hard": 68.8,
+        "continuous": 75.5,
+        "diff": 6.700000000000003,
+        "no_batting": false
+      },
+      {
+        "player": "木浪 聖也",
+        "hard": 65.4,
+        "continuous": 58.9,
+        "diff": -6.500000000000007,
+        "no_batting": false
+      },
+      {
+        "player": "矢野 雅哉",
+        "hard": 80.6,
+        "continuous": 87.1,
+        "diff": 6.5,
+        "no_batting": false
+      },
+      {
+        "player": "坂倉 将吾",
+        "hard": 48.6,
+        "continuous": 55,
+        "diff": 6.399999999999999,
+        "no_batting": false
+      },
+      {
+        "player": "小園 海斗",
+        "hard": 69.4,
+        "continuous": 75.8,
+        "diff": 6.3999999999999915,
+        "no_batting": false
+      },
+      {
+        "player": "山川 穂高",
+        "hard": 42.1,
+        "continuous": 35.8,
+        "diff": -6.300000000000004,
+        "no_batting": false
+      },
+      {
+        "player": "佐野 恵太",
+        "hard": 56.5,
+        "continuous": 50.2,
+        "diff": -6.299999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "菊池 涼介",
+        "hard": 67.2,
+        "continuous": 73.4,
+        "diff": 6.200000000000003,
+        "no_batting": false
+      },
+      {
+        "player": "岡林 勇希",
+        "hard": 86,
+        "continuous": 91.7,
+        "diff": 5.700000000000003,
+        "no_batting": false
+      },
+      {
+        "player": "滝澤 夏央",
+        "hard": 83.3,
+        "continuous": 88.9,
+        "diff": 5.6000000000000085,
+        "no_batting": false
+      },
+      {
+        "player": "中村 悠平",
+        "hard": 39.4,
+        "continuous": 44.9,
+        "diff": 5.5,
+        "no_batting": false
+      },
+      {
+        "player": "大城 卓三",
+        "hard": 45.6,
+        "continuous": 40.2,
+        "diff": -5.399999999999999,
+        "no_batting": false
+      },
+      {
+        "player": "西野 真弘",
+        "hard": 56.7,
+        "continuous": 61.5,
+        "diff": 4.799999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "塩見 泰隆",
+        "hard": 80.5,
+        "continuous": 85.3,
+        "diff": 4.799999999999997,
+        "hard_reason": "NO_CURRENT_YEAR_OBSERVATION",
+        "cont_reason": "CONTINUOUS_PRIOR_HIST_ONLY",
+        "no_batting": true
+      },
+      {
+        "player": "長岡 秀樹",
+        "hard": 64.5,
+        "continuous": 59.7,
+        "diff": -4.799999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "梶原 昂希",
+        "hard": 78,
+        "continuous": 82.7,
+        "diff": 4.700000000000003,
+        "no_batting": false
+      },
+      {
+        "player": "野間 峻祥",
+        "hard": 89,
+        "continuous": 84.5,
+        "diff": -4.5,
+        "no_batting": false
+      },
+      {
+        "player": "松本 剛",
+        "hard": 61,
+        "continuous": 65.4,
+        "diff": 4.400000000000006,
+        "no_batting": false
+      },
+      {
+        "player": "宗 佑磨",
+        "hard": 67.4,
+        "continuous": 63.1,
+        "diff": -4.300000000000004,
+        "no_batting": false
+      },
+      {
+        "player": "藤原 恭大",
+        "hard": 82.7,
+        "continuous": 86.5,
+        "diff": 3.799999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "モンテロ",
+        "hard": 46.6,
+        "continuous": 42.9,
+        "diff": -3.700000000000003,
+        "no_batting": false
+      },
+      {
+        "player": "ファビアン",
+        "hard": 49.8,
+        "continuous": 46.1,
+        "diff": -3.6999999999999957,
+        "no_batting": false
+      },
+      {
+        "player": "サンタナ",
+        "hard": 56.2,
+        "continuous": 52.8,
+        "diff": -3.4000000000000057,
+        "no_batting": false
+      },
+      {
+        "player": "近藤 健介",
+        "hard": 56.5,
+        "continuous": 53.1,
+        "diff": -3.3999999999999986,
+        "no_batting": false
+      },
+      {
+        "player": "郡司 裕也",
+        "hard": 70.4,
+        "continuous": 67.1,
+        "diff": -3.3000000000000114,
+        "no_batting": false
+      },
+      {
+        "player": "牧 秀悟",
+        "hard": 63.3,
+        "continuous": 60,
+        "diff": -3.299999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "安田 尚憲",
+        "hard": 47.9,
+        "continuous": 44.6,
+        "diff": -3.299999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "奈良間 大己",
+        "hard": 77.5,
+        "continuous": 74.2,
+        "diff": -3.299999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "丸 佳浩",
+        "hard": 48.2,
+        "continuous": 51.4,
+        "diff": 3.1999999999999957,
+        "no_batting": false
+      },
+      {
+        "player": "蝦名 達夫",
+        "hard": 73.1,
+        "continuous": 76.2,
+        "diff": 3.1000000000000085,
+        "no_batting": false
+      },
+      {
+        "player": "坂本 誠志郎",
+        "hard": 46.6,
+        "continuous": 49.7,
+        "diff": 3.1000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "山口 航輝",
+        "hard": 56.7,
+        "continuous": 53.6,
+        "diff": -3.1000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "岸田 行倫",
+        "hard": 59.2,
+        "continuous": 56.1,
+        "diff": -3.1000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "太田 光",
+        "hard": 52.4,
+        "continuous": 55.4,
+        "diff": 3,
+        "no_batting": false
+      },
+      {
+        "player": "鈴木 大地",
+        "hard": 61.2,
+        "continuous": 58.2,
+        "diff": -3,
+        "no_batting": false
+      },
+      {
+        "player": "今宮 健太",
+        "hard": 55.7,
+        "continuous": 58.6,
+        "diff": 2.8999999999999986,
+        "no_batting": false
+      },
+      {
+        "player": "岡 大海",
+        "hard": 84.7,
+        "continuous": 82,
+        "diff": -2.700000000000003,
+        "no_batting": false
+      },
+      {
+        "player": "村林 一輝",
+        "hard": 68.6,
+        "continuous": 71,
+        "diff": 2.4000000000000057,
+        "no_batting": false
+      },
+      {
+        "player": "水野 達稀",
+        "hard": 78.2,
+        "continuous": 80.6,
+        "diff": 2.3999999999999915,
+        "no_batting": false
+      },
+      {
+        "player": "佐々木 俊輔",
+        "hard": 75,
+        "continuous": 77.3,
+        "diff": 2.299999999999997,
+        "no_batting": false
+      },
+      {
+        "player": "森 友哉",
+        "hard": 54.9,
+        "continuous": 57,
+        "diff": 2.1000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "柳田 悠岐",
+        "hard": 61.9,
+        "continuous": 59.8,
+        "diff": -2.1000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "吉川 尚輝",
+        "hard": 84.3,
+        "continuous": 82.2,
+        "diff": -2.0999999999999943,
+        "no_batting": false
+      },
+      {
+        "player": "山本 祐大",
+        "hard": 63.7,
+        "continuous": 61.8,
+        "diff": -1.9000000000000057,
+        "no_batting": false
+      },
+      {
+        "player": "筒香 嘉智",
+        "hard": 46.5,
+        "continuous": 44.6,
+        "diff": -1.8999999999999986,
+        "no_batting": false
+      },
+      {
+        "player": "小幡 竜平",
+        "hard": 70.7,
+        "continuous": 72.6,
+        "diff": 1.8999999999999915,
+        "no_batting": false
+      },
+      {
+        "player": "紅林 弘太郎",
+        "hard": 55,
+        "continuous": 53.3,
+        "diff": -1.7000000000000028,
+        "no_batting": false
+      },
+      {
+        "player": "京田 陽太",
+        "hard": 67.1,
+        "continuous": 65.4,
+        "diff": -1.6999999999999886,
+        "no_batting": false
+      },
+      {
+        "player": "古賀 優大",
+        "hard": 41.7,
+        "continuous": 40.1,
+        "diff": -1.6000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "西川 龍馬",
+        "hard": 63.8,
+        "continuous": 62.2,
+        "diff": -1.5999999999999943,
+        "no_batting": false
+      },
+      {
+        "player": "太田 椋",
+        "hard": 53.2,
+        "continuous": 54.7,
+        "diff": 1.5,
+        "no_batting": false
+      },
+      {
+        "player": "海野 隆司",
+        "hard": 61.3,
+        "continuous": 59.8,
+        "diff": -1.5,
+        "no_batting": false
+      },
+      {
+        "player": "田宮 裕涼",
+        "hard": 68.6,
+        "continuous": 67.1,
+        "diff": -1.5,
+        "no_batting": false
+      },
+      {
+        "player": "牧原 大成",
+        "hard": 92.6,
+        "continuous": 94,
+        "diff": 1.4000000000000057,
+        "no_batting": false
+      },
+      {
+        "player": "外崎 修汰",
+        "hard": 58.4,
+        "continuous": 59.8,
+        "diff": 1.3999999999999986,
+        "no_batting": false
+      },
+      {
+        "player": "板山 祐太郎",
+        "hard": 67,
+        "continuous": 68.3,
+        "diff": 1.2999999999999972,
+        "no_batting": false
+      },
+      {
+        "player": "度会 隆輝",
+        "hard": 70.7,
+        "continuous": 69.5,
+        "diff": -1.2000000000000028,
+        "no_batting": false
+      },
+      {
+        "player": "佐藤 輝明",
+        "hard": 62.2,
+        "continuous": 63.4,
+        "diff": 1.1999999999999957,
+        "no_batting": false
+      },
+      {
+        "player": "木下 拓哉",
+        "hard": 48,
+        "continuous": 49.1,
+        "diff": 1.1000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "渡邊 佳明",
+        "hard": 53.3,
+        "continuous": 54.4,
+        "diff": 1.1000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "栗原 陵矢",
+        "hard": 59,
+        "continuous": 57.9,
+        "diff": -1.1000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "来田 涼斗",
+        "hard": 66.3,
+        "continuous": 67.3,
+        "diff": 1,
+        "no_batting": false
+      },
+      {
+        "player": "野村 佑希",
+        "hard": 52.8,
+        "continuous": 53.8,
+        "diff": 1,
+        "no_batting": false
+      },
+      {
+        "player": "カリステ",
+        "hard": 67.8,
+        "continuous": 68.7,
+        "diff": 0.9000000000000057,
+        "no_batting": false
+      },
+      {
+        "player": "浅村 栄斗",
+        "hard": 46.1,
+        "continuous": 47,
+        "diff": 0.8999999999999986,
+        "no_batting": false
+      },
+      {
+        "player": "田中 幹也",
+        "hard": 85.9,
+        "continuous": 86.8,
+        "diff": 0.8999999999999915,
+        "no_batting": false
+      },
+      {
+        "player": "石井 一成",
+        "hard": 67.1,
+        "continuous": 67.9,
+        "diff": 0.8000000000000114,
+        "no_batting": false
+      },
+      {
+        "player": "林 琢真",
+        "hard": 67.2,
+        "continuous": 68,
+        "diff": 0.7999999999999972,
+        "no_batting": false
+      },
+      {
+        "player": "藤岡 裕大",
+        "hard": 45.5,
+        "continuous": 46.3,
+        "diff": 0.7999999999999972,
+        "no_batting": false
+      },
+      {
+        "player": "細川 成也",
+        "hard": 56.5,
+        "continuous": 57.2,
+        "diff": 0.7000000000000028,
+        "no_batting": false
+      },
+      {
+        "player": "中野 拓夢",
+        "hard": 89.8,
+        "continuous": 90.4,
+        "diff": 0.6000000000000085,
+        "no_batting": false
+      },
+      {
+        "player": "石川 昂弥",
+        "hard": 53.9,
+        "continuous": 54.5,
+        "diff": 0.6000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "清宮 幸太郎",
+        "hard": 59.2,
+        "continuous": 58.6,
+        "diff": -0.6000000000000014,
+        "no_batting": false
+      },
+      {
+        "player": "森下 翔太",
+        "hard": 63.8,
+        "continuous": 63.2,
+        "diff": -0.5999999999999943,
+        "no_batting": false
+      },
+      {
+        "player": "若月 健矢",
+        "hard": 66.5,
+        "continuous": 66.1,
+        "diff": -0.4000000000000057,
+        "no_batting": false
+      },
+      {
+        "player": "大山 悠輔",
+        "hard": 48,
+        "continuous": 47.6,
+        "diff": -0.3999999999999986,
+        "no_batting": false
+      },
+      {
+        "player": "古賀 悠斗",
+        "hard": 47.9,
+        "continuous": 47.6,
+        "diff": -0.29999999999999716,
+        "no_batting": false
+      },
+      {
+        "player": "福永 裕基",
+        "hard": 89.5,
+        "continuous": 89.8,
+        "diff": 0.29999999999999716,
+        "no_batting": false
+      },
+      {
+        "player": "柳町 達",
+        "hard": 66.9,
+        "continuous": 67.1,
+        "diff": 0.19999999999998863,
+        "no_batting": false
+      },
+      {
+        "player": "伏見 寅威",
+        "hard": 42.2,
+        "continuous": 42.2,
+        "diff": 0,
+        "no_batting": false
+      },
+      {
+        "player": "丸山 和郁",
+        "hard": 78.9,
+        "continuous": 78.9,
+        "diff": 0,
+        "no_batting": false
+      },
+      {
+        "player": "岩田 幸宏",
+        "hard": 100,
+        "continuous": 100,
+        "diff": 0,
+        "no_batting": false
+      },
+      {
+        "player": "並木 秀尊",
+        "hard": 100,
+        "continuous": 100,
+        "diff": 0,
+        "no_batting": false
+      }
+    ]
+  },
+  "discontinuity": {
+    "band_25_100": 49,
+    "hard_mean_flip": 0,
+    "hard_max_flip": 0,
+    "hard_n_flip_gt_0": 0,
+    "continuous_structural_cliff": 0
+  },
+  "scale_bug_signature": {
+    "full_roster_all_same_direction": false,
+    "hundred_all_same_direction": false,
+    "note": "全員同方向は尺度バグの署名。双方向なら pooling の中身の差。"
+  },
+  "done_ready": true
+}

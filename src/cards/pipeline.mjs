@@ -521,7 +521,10 @@ export function appraiseCard(ctx, opts) {
     //   最終形（PA一括 or 材料別、κの値）の決定には「多年poolに構造的に有利でない」
     //   判定基準が要り、現時点でそれが無いため hard gate を暫定継続している。
     //   詳細と決着条件 = docs/audits/sp016_hard_gate_vs_continuous_20260813.md
-    currentYearFirst = true, sufficientWeight = 50 } = opts;
+    currentYearFirst = true, sufficientWeight = 50,
+    poolingMode = runNorm?.speedPooling?.mode ?? 'current_year_first_hard',
+    kappa = runNorm?.speedPooling?.kappa ?? 50,
+    lambda = runNorm?.speedPooling?.lambda ?? 0.2703 } = opts;
 
   let pid = playerId;
   if (!pid) {
@@ -568,7 +571,7 @@ export function appraiseCard(ctx, opts) {
   //   player_id が card.player.player_id へ潜る、の3点を確認したため修正する。
   if (!(line.AB > 0)) {
     const durable = estimateDurableTraits(db, p.player_id, targetSeason,
-      { cfg, runNorm, fldNorm, lgOf, envFactorsOf, maxSeason, currentYearFirst, sufficientWeight });
+      { cfg, runNorm, fldNorm, lgOf, envFactorsOf, maxSeason, currentYearFirst, sufficientWeight, poolingMode, kappa, lambda });
     const speedVal = durable.speed?.z == null ? null : speedRating(durable.speed.z, cfg);
     const run0 = speedVal == null ? null : { speed: speedVal, speedDetail: durable.speed };
 
@@ -689,7 +692,7 @@ export function appraiseCard(ctx, opts) {
   // 観測のブレがそのまま能力差として出る（西川龍馬の走力が年により F〜D で振れていた）。
   // 肩はさらに材料を2つ（ARMと補殺）使う——ARM単独では強肩ほど走者が走ってこず機会が減るため。
   const durable = estimateDurableTraits(db, p.player_id, targetSeason,
-    { cfg, runNorm, fldNorm, lgOf, envFactorsOf, maxSeason, currentYearFirst, sufficientWeight });
+    { cfg, runNorm, fldNorm, lgOf, envFactorsOf, maxSeason, currentYearFirst, sufficientWeight, poolingMode, kappa, lambda });
 
   const bm = prep(`
     SELECT b.ubr, b.wsb, m.gb_pct, m.ld_pct, m.offb_pct, m.iffb_pct FROM v_bm_by_player b

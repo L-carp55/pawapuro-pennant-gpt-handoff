@@ -407,6 +407,17 @@
     "_purpose": "走塁得能＝走力で説明できる分を引いた残差（仕様04 §3）",
     "_note": "走力の計算にはこの指標を入れずに求める（自分自身を説明変数にすると残差が消えるため）"
   },
+  "speedPooling": {
+    "mode": "continuous_prior",
+    "kappa": 50,
+    "lambda": 0.2703,
+    "pa_hist_median": 185,
+    "sufficientWeightHard": 50,
+    "_control_modes": ["current_year_first_hard", "legacy_auto_pool"],
+    "_basis": "SP-016 final design 2026-08-14. Hierarchical shrink then precision blend. lambda=kappa/median(PA_hist). Naive w=PA/(PA+kappa) rejected. Hard 50PA gate remains as control via poolingMode=current_year_first_hard.",
+    "_owner_rule": "current-year first is kept: more current PA continuously downweights history",
+    "_display_scale": "applyScale for 走力 must be re-derived with this mode (global center/width only; no PowerPro individual labels)"
+  },
   "_componentWeightsLegacySameTimeReliabilityOnly": {
     "triple": 0.49648301630228797,
     "gdpAvoid": 0.43340785393287107,

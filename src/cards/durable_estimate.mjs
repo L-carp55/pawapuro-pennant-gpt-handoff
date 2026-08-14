@@ -29,9 +29,16 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
   // 肩力・守備範囲・捕球の自動多年poolはこのPhaseのスコープ外（オーナー明示指示）——
   // ここでpoolOptsを共有すると走力の是正が肩力側へ意図せず波及するため、
   // 走力用（speedPoolOpts）と肩力用（armPoolOpts、常にlegacy）を分離する。
-  const speedPoolOpts = { maxYearGap: MAX_GAP, maxSeason,
-    currentYearFirst: ctx.currentYearFirst ?? false,
-    sufficientWeight: ctx.sufficientWeight ?? 0 };
+  const pooling = ctx.runNorm?.speedPooling ?? {};
+  const poolingMode = ctx.poolingMode ?? pooling.mode ?? (ctx.currentYearFirst ? 'current_year_first_hard' : 'legacy_auto_pool');
+  const speedPoolOpts = {
+    maxYearGap: MAX_GAP, maxSeason,
+    poolingMode,
+    currentYearFirst: ctx.currentYearFirst ?? (poolingMode === 'current_year_first_hard'),
+    sufficientWeight: ctx.sufficientWeight ?? pooling.sufficientWeightHard ?? 0,
+    kappa: ctx.kappa ?? pooling.kappa ?? 50,
+    lambda: ctx.lambda ?? pooling.lambda ?? 0.2703,
+  };
   const armPoolOpts = { maxYearGap: MAX_GAP, maxSeason, currentYearFirst: false, sufficientWeight: 0 };
 
   // --- 走力: 対象年の前後の打撃＋走塁データから各年のzを出して畳む ---
@@ -43,7 +50,7 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
     LEFT JOIN v_bm_bat m ON m.player_id=l.bm_id AND m.season=b.season AND m.farm=0
     LEFT JOIN nf3_team_link tl ON tl.proeye_id=b.player_id AND tl.season=b.season
     LEFT JOIN nf3_team_bat t ON t.season=tl.season AND t.name_norm=tl.name_norm
-    WHERE b.player_id=? AND b.season BETWEEN ? AND ? AND b.pa>=100 AND b.position<>'投'`)
+    WHERE b.player_id=? AND b.season BETWEEN ? AND ? AND b.pa>=1 AND b.position<>'投'`)
     .all(proeyeId, targetSeason - MAX_GAP, hi);
 
   const nrm = s2 => (s2 ?? '').normalize('NFKC').replace(/\s+/g, '');
@@ -56,7 +63,11 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
         advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 }, r.ubr, runNorm);
     return sc.score == null ? null : { z: sc.score, weight: r.pa, season: r.season };
   }).filter(Boolean);
-  const speed = poolAcrossYears(speedObs, targetSeason, speedPoolOpts);
+  // hard/legacy control は従来どおり PA>=100 の年だけ。continuous は当年の少出場も縮小して使う。
+  const speedForPool = poolingMode === 'continuous_prior'
+    ? speedObs
+    : speedObs.filter(o => o.weight >= 100 || o.season === targetSeason && o.weight >= 100);
+  const speed = poolAcrossYears(speedForPool, targetSeason, speedPoolOpts);
 
   // --- 肩: ARM（2020年以降）と補殺（2006年以降）の2つを別々に畳んでから合成 ---
   const armRows = prep(db, `
