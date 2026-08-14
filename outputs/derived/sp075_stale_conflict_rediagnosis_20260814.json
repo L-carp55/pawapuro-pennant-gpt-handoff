@@ -1,0 +1,1052 @@
+{
+  "generated_at": "2026-08-14",
+  "depends_note": "SP-033/034/035 remain PARTIAL because new official collection is NOT_COLLECTED. This rediagnosis uses closed 032/037 + existing 033-036 artifacts + SUPERSEDED Prospi (not used).",
+  "prospi_used": false,
+  "stale_flags": {
+    "NONE": 77,
+    "EXTERNAL_DISAGREEMENT_ONLY": 11,
+    "INTERNAL_INERTIA_ONLY": 5,
+    "BOTH": 2
+  },
+  "stale_non_none": [
+    {
+      "player": "カリステ",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": -0.6458,
+      "years": 4,
+      "changes": 0
+    },
+    {
+      "player": "古賀 優大",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": 0.5579,
+      "years": 10,
+      "changes": 0
+    },
+    {
+      "player": "矢野 雅哉",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": -0.4602,
+      "years": 6,
+      "changes": 1
+    },
+    {
+      "player": "郡司 裕也",
+      "flag": "BOTH",
+      "gap": 0.3855,
+      "years": 7,
+      "changes": 0
+    },
+    {
+      "player": "塩見 泰隆",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": -0.3937,
+      "years": 9,
+      "changes": 1
+    },
+    {
+      "player": "福永 裕基",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": 0.338,
+      "years": 4,
+      "changes": 0
+    },
+    {
+      "player": "今宮 健太",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": -0.3733,
+      "years": 13,
+      "changes": 3
+    },
+    {
+      "player": "長岡 秀樹",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": 0.3317,
+      "years": 7,
+      "changes": 1
+    },
+    {
+      "player": "細川 成也",
+      "flag": "BOTH",
+      "gap": 0.3028,
+      "years": 10,
+      "changes": 0
+    },
+    {
+      "player": "清宮 幸太郎",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": 0.2974,
+      "years": 9,
+      "changes": 1
+    },
+    {
+      "player": "岡 大海",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": -0.3225,
+      "years": 9,
+      "changes": 1
+    },
+    {
+      "player": "水野 達稀",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": 0.2753,
+      "years": 5,
+      "changes": 1
+    },
+    {
+      "player": "若月 健矢",
+      "flag": "EXTERNAL_DISAGREEMENT_ONLY",
+      "gap": 0.2744,
+      "years": 12,
+      "changes": 4
+    },
+    {
+      "player": "大山 悠輔",
+      "flag": "INTERNAL_INERTIA_ONLY",
+      "gap": -0.1734,
+      "years": 10,
+      "changes": 0
+    },
+    {
+      "player": "牧原 大成",
+      "flag": "INTERNAL_INERTIA_ONLY",
+      "gap": 0.1118,
+      "years": 13,
+      "changes": 0
+    },
+    {
+      "player": "吉川 尚輝",
+      "flag": "INTERNAL_INERTIA_ONLY",
+      "gap": -0.0669,
+      "years": 10,
+      "changes": 0
+    },
+    {
+      "player": "板山 祐太郎",
+      "flag": "INTERNAL_INERTIA_ONLY",
+      "gap": 0.0223,
+      "years": 11,
+      "changes": 0
+    },
+    {
+      "player": "岸田 行倫",
+      "flag": "INTERNAL_INERTIA_ONLY",
+      "gap": -0.0129,
+      "years": 9,
+      "changes": 0
+    }
+  ],
+  "community": {
+    "gx150": {
+      "generated_at": "2026-08-13",
+      "input_rows": 150,
+      "classified_rows": 150,
+      "by_bucket": {
+        "RATING_CONSENSUS": 6,
+        "WEAK_PHYSICAL_OR_CONTEXT": 87,
+        "NOISE_OR_UNRELATED": 57
+      },
+      "missing_reason": 0,
+      "excluded_because_game_rating_mention": 0,
+      "policy": "GAME_RATING_OR_GAME_DISCUSSION_EXCLUDED is not a valid destination. Game-rating mentions go to RATING_CONSENSUS.",
+      "verdict": "PASS",
+      "review_20260814": {
+        "reviewer": "Opus senior review",
+        "change": "SP032-RUN2-GXSR096 を NOISE_OR_UNRELATED → WEAK_PHYSICAL_OR_CONTEXT へ訂正",
+        "why": "選手名と方向が本文にありSR-019の弱い方向証拠に該当。判定理由「方向が特定できない」が本文と矛盾していた",
+        "note": "「足は速い」(選手名なし)はNOISEのまま。ただし理由は方向不明ではなく選手帰属不能が正しい"
+      }
+    },
+    "generic_outside_150": 7,
+    "generic_zeroed": 0
+  },
+  "conflict_classes": [
+    {
+      "player": "岩田 幸宏",
+      "classes": [
+        "STAT_VS_NPB_LATENT_DIVERGE"
+      ],
+      "S": 2.0394,
+      "N": 1.2139,
+      "F": 1.7196,
+      "stale": "NONE"
+    },
+    {
+      "player": "周東 佑京",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 1.1885,
+      "N": 1.8331,
+      "F": 1.4453,
+      "stale": "NONE"
+    },
+    {
+      "player": "並木 秀尊",
+      "classes": [
+        "STAT_VS_NPB_LATENT_DIVERGE",
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 1.6506,
+      "N": 0.1867,
+      "F": 1.3838,
+      "stale": "NONE"
+    },
+    {
+      "player": "髙部 瑛斗",
+      "classes": [],
+      "S": 1.2469,
+      "N": 0.7458,
+      "F": 1.0744,
+      "stale": "NONE"
+    },
+    {
+      "player": "牧原 大成",
+      "classes": [
+        "INTERNAL_INERTIA_ONLY"
+      ],
+      "S": 1.0298,
+      "N": 0.9835,
+      "F": 1.0135,
+      "stale": "INTERNAL_INERTIA_ONLY"
+    },
+    {
+      "player": "滝澤 夏央",
+      "classes": [],
+      "S": 0.848,
+      "N": 1.0461,
+      "F": 0.9249,
+      "stale": "NONE"
+    },
+    {
+      "player": "中野 拓夢",
+      "classes": [],
+      "S": 0.902,
+      "N": 0.9105,
+      "F": 0.9053,
+      "stale": "NONE"
+    },
+    {
+      "player": "名原 典彦",
+      "classes": [
+        "LOW_CURRENT_PA"
+      ],
+      "S": null,
+      "N": 0.8641,
+      "F": 0.8641,
+      "stale": "NONE"
+    },
+    {
+      "player": "田中 幹也",
+      "classes": [],
+      "S": 0.7729,
+      "N": 0.9346,
+      "F": 0.8354,
+      "stale": "NONE"
+    },
+    {
+      "player": "岡林 勇希",
+      "classes": [],
+      "S": 0.9469,
+      "N": 0.4391,
+      "F": 0.766,
+      "stale": "NONE"
+    },
+    {
+      "player": "源田 壮亮",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.9107,
+      "N": 0.4263,
+      "F": 0.7501,
+      "stale": "NONE"
+    },
+    {
+      "player": "水野 達稀",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY"
+      ],
+      "S": 0.5551,
+      "N": 1.0075,
+      "F": 0.7305,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "福永 裕基",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY"
+      ],
+      "S": 0.8807,
+      "N": 0.4372,
+      "F": 0.6741,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "藤原 恭大",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.7648,
+      "N": 0.457,
+      "F": 0.66,
+      "stale": "NONE"
+    },
+    {
+      "player": "小川 龍成",
+      "classes": [
+        "STAT_VS_NPB_LATENT_DIVERGE"
+      ],
+      "S": 0.2438,
+      "N": 1.1451,
+      "F": 0.6169,
+      "stale": "NONE"
+    },
+    {
+      "player": "野間 峻祥",
+      "classes": [],
+      "S": 0.6933,
+      "N": 0.1013,
+      "F": 0.5706,
+      "stale": "NONE"
+    },
+    {
+      "player": "梶原 昂希",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.6278,
+      "N": 0.3049,
+      "F": 0.5665,
+      "stale": "NONE"
+    },
+    {
+      "player": "大島 洋平",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.755,
+      "N": 0.0342,
+      "F": 0.5381,
+      "stale": "NONE"
+    },
+    {
+      "player": "矢野 雅哉",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY",
+        "STAT_VS_NPB_LATENT_DIVERGE"
+      ],
+      "S": 0.7841,
+      "N": -0.1551,
+      "F": 0.5358,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "吉川 尚輝",
+      "classes": [
+        "INTERNAL_INERTIA_ONLY",
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.612,
+      "N": 0.3881,
+      "F": 0.5358,
+      "stale": "INTERNAL_INERTIA_ONLY"
+    },
+    {
+      "player": "佐々木 俊輔",
+      "classes": [],
+      "S": 0.4387,
+      "N": 0.6546,
+      "F": 0.5212,
+      "stale": "NONE"
+    },
+    {
+      "player": "村松 開人",
+      "classes": [],
+      "S": 0.3299,
+      "N": 0.7162,
+      "F": 0.4937,
+      "stale": "NONE"
+    },
+    {
+      "player": "岡 大海",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY"
+      ],
+      "S": 0.603,
+      "N": 0.013,
+      "F": 0.4921,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "村林 一輝",
+      "classes": [],
+      "S": 0.2155,
+      "N": 0.8382,
+      "F": 0.4629,
+      "stale": "NONE"
+    },
+    {
+      "player": "丸山 和郁",
+      "classes": [
+        "LOW_CURRENT_PA",
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.4951,
+      "N": 0.2934,
+      "F": 0.4221,
+      "stale": "NONE"
+    },
+    {
+      "player": "友杉 篤輝",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.3769,
+      "N": 0.3298,
+      "F": 0.3598,
+      "stale": "NONE"
+    },
+    {
+      "player": "秋山 翔吾",
+      "classes": [],
+      "S": 0.4157,
+      "N": 0.0489,
+      "F": 0.3333,
+      "stale": "NONE"
+    },
+    {
+      "player": "小園 海斗",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.3871,
+      "N": 0.1935,
+      "F": 0.314,
+      "stale": "NONE"
+    },
+    {
+      "player": "中川 圭太",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.3024,
+      "N": 0.2939,
+      "F": 0.2993,
+      "stale": "NONE"
+    },
+    {
+      "player": "小幡 竜平",
+      "classes": [],
+      "S": 0.2723,
+      "N": 0.3128,
+      "F": 0.2815,
+      "stale": "NONE"
+    },
+    {
+      "player": "田宮 裕涼",
+      "classes": [],
+      "S": 0.0782,
+      "N": 0.627,
+      "F": 0.2796,
+      "stale": "NONE"
+    },
+    {
+      "player": "菊池 涼介",
+      "classes": [],
+      "S": 0.3005,
+      "N": 0.1251,
+      "F": 0.2375,
+      "stale": "NONE"
+    },
+    {
+      "player": "奈良間 大己",
+      "classes": [],
+      "S": 0.3293,
+      "N": 0.0721,
+      "F": 0.2347,
+      "stale": "NONE"
+    },
+    {
+      "player": "蝦名 達夫",
+      "classes": [],
+      "S": 0.4,
+      "N": -0.0876,
+      "F": 0.2205,
+      "stale": "NONE"
+    },
+    {
+      "player": "度会 隆輝",
+      "classes": [],
+      "S": 0.1642,
+      "N": 0.2715,
+      "F": 0.2026,
+      "stale": "NONE"
+    },
+    {
+      "player": "来田 涼斗",
+      "classes": [],
+      "S": 0.0855,
+      "N": 0.3846,
+      "F": 0.1931,
+      "stale": "NONE"
+    },
+    {
+      "player": "郡司 裕也",
+      "classes": [
+        "BOTH"
+      ],
+      "S": 0.0781,
+      "N": 0.3415,
+      "F": 0.1664,
+      "stale": "BOTH"
+    },
+    {
+      "player": "石井 一成",
+      "classes": [],
+      "S": 0.1061,
+      "N": 0.2869,
+      "F": 0.1618,
+      "stale": "NONE"
+    },
+    {
+      "player": "板山 祐太郎",
+      "classes": [
+        "INTERNAL_INERTIA_ONLY"
+      ],
+      "S": 0.1198,
+      "N": 0.1879,
+      "F": 0.1406,
+      "stale": "INTERNAL_INERTIA_ONLY"
+    },
+    {
+      "player": "林 琢真",
+      "classes": [],
+      "S": 0.1094,
+      "N": 0.0781,
+      "F": 0.1034,
+      "stale": "NONE"
+    },
+    {
+      "player": "松本 剛",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.0196,
+      "N": 0.2278,
+      "F": 0.0989,
+      "stale": "NONE"
+    },
+    {
+      "player": "柳町 達",
+      "classes": [],
+      "S": 0.079,
+      "N": 0.0184,
+      "F": 0.0611,
+      "stale": "NONE"
+    },
+    {
+      "player": "宗 佑磨",
+      "classes": [],
+      "S": -0.0636,
+      "N": 0.1452,
+      "F": 0.0139,
+      "stale": "NONE"
+    },
+    {
+      "player": "京田 陽太",
+      "classes": [],
+      "S": 0.0192,
+      "N": -0.0039,
+      "F": 0.012,
+      "stale": "NONE"
+    },
+    {
+      "player": "若月 健矢",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY"
+      ],
+      "S": 0.0449,
+      "N": -0.0735,
+      "F": 0.01,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "土田 龍空",
+      "classes": [],
+      "S": 0.006,
+      "N": -0.0138,
+      "F": 0.0031,
+      "stale": "NONE"
+    },
+    {
+      "player": "佐藤 輝明",
+      "classes": [],
+      "S": -0.0527,
+      "N": 0.0881,
+      "F": 0.0004,
+      "stale": "NONE"
+    },
+    {
+      "player": "塩見 泰隆",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY",
+        "LOW_CURRENT_PA",
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": 0.7227,
+      "N": -0.0138,
+      "F": -0.0138,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "佐藤 都志也",
+      "classes": [],
+      "S": -0.0207,
+      "N": -0.0011,
+      "F": -0.014,
+      "stale": "NONE"
+    },
+    {
+      "player": "長岡 秀樹",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY"
+      ],
+      "S": -0.1817,
+      "N": 0.1911,
+      "F": -0.0293,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "柳田 悠岐",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": -0.1799,
+      "N": 0.0903,
+      "F": -0.0776,
+      "stale": "NONE"
+    },
+    {
+      "player": "西野 真弘",
+      "classes": [],
+      "S": -0.1197,
+      "N": -0.0104,
+      "F": -0.0899,
+      "stale": "NONE"
+    },
+    {
+      "player": "西川 龍馬",
+      "classes": [],
+      "S": -0.0939,
+      "N": -0.1065,
+      "F": -0.0989,
+      "stale": "NONE"
+    },
+    {
+      "player": "細川 成也",
+      "classes": [
+        "BOTH"
+      ],
+      "S": -0.2704,
+      "N": 0.1771,
+      "F": -0.1097,
+      "stale": "BOTH"
+    },
+    {
+      "player": "山本 祐大",
+      "classes": [],
+      "S": -0.1078,
+      "N": -0.1313,
+      "F": -0.1154,
+      "stale": "NONE"
+    },
+    {
+      "player": "清宮 幸太郎",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY"
+      ],
+      "S": -0.2214,
+      "N": 0.0522,
+      "F": -0.1217,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "外崎 修汰",
+      "classes": [
+        "HAS_H2F_LOW_CONFIDENCE"
+      ],
+      "S": -0.1795,
+      "N": 0.0786,
+      "F": -0.1285,
+      "stale": "NONE"
+    },
+    {
+      "player": "ポランコ",
+      "classes": [
+        "LOW_CURRENT_PA"
+      ],
+      "S": null,
+      "N": -0.1755,
+      "F": -0.1755,
+      "stale": "NONE"
+    },
+    {
+      "player": "カリステ",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY",
+        "LOW_CURRENT_PA"
+      ],
+      "S": null,
+      "N": -0.1783,
+      "F": -0.1783,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "牧 秀悟",
+      "classes": [],
+      "S": -0.171,
+      "N": -0.228,
+      "F": -0.1914,
+      "stale": "NONE"
+    },
+    {
+      "player": "モンテロ",
+      "classes": [
+        "LOW_CURRENT_PA"
+      ],
+      "S": null,
+      "N": -0.1942,
+      "F": -0.1942,
+      "stale": "NONE"
+    },
+    {
+      "player": "森 友哉",
+      "classes": [],
+      "S": -0.2777,
+      "N": -0.0743,
+      "F": -0.2073,
+      "stale": "NONE"
+    },
+    {
+      "player": "森下 翔太",
+      "classes": [],
+      "S": -0.0603,
+      "N": -0.4877,
+      "F": -0.2083,
+      "stale": "NONE"
+    },
+    {
+      "player": "栗原 陵矢",
+      "classes": [],
+      "S": -0.2465,
+      "N": -0.167,
+      "F": -0.2168,
+      "stale": "NONE"
+    },
+    {
+      "player": "鈴木 大地",
+      "classes": [],
+      "S": -0.2356,
+      "N": -0.2601,
+      "F": -0.2392,
+      "stale": "NONE"
+    },
+    {
+      "player": "ファビアン",
+      "classes": [
+        "LOW_CURRENT_PA"
+      ],
+      "S": null,
+      "N": -0.2462,
+      "F": -0.2462,
+      "stale": "NONE"
+    },
+    {
+      "player": "木浪 聖也",
+      "classes": [],
+      "S": -0.2125,
+      "N": -0.3251,
+      "F": -0.2467,
+      "stale": "NONE"
+    },
+    {
+      "player": "今宮 健太",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY"
+      ],
+      "S": -0.2223,
+      "N": -0.3323,
+      "F": -0.2537,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "太田 椋",
+      "classes": [],
+      "S": -0.3607,
+      "N": -0.0523,
+      "F": -0.2573,
+      "stale": "NONE"
+    },
+    {
+      "player": "坂倉 将吾",
+      "classes": [],
+      "S": -0.3475,
+      "N": -0.2106,
+      "F": -0.2977,
+      "stale": "NONE"
+    },
+    {
+      "player": "海野 隆司",
+      "classes": [],
+      "S": -0.1808,
+      "N": -0.5362,
+      "F": -0.2983,
+      "stale": "NONE"
+    },
+    {
+      "player": "山口 航輝",
+      "classes": [],
+      "S": -0.3994,
+      "N": -0.1007,
+      "F": -0.3013,
+      "stale": "NONE"
+    },
+    {
+      "player": "渡邊 佳明",
+      "classes": [],
+      "S": -0.3715,
+      "N": -0.1383,
+      "F": -0.3109,
+      "stale": "NONE"
+    },
+    {
+      "player": "野村 佑希",
+      "classes": [],
+      "S": -0.39,
+      "N": -0.164,
+      "F": -0.3171,
+      "stale": "NONE"
+    },
+    {
+      "player": "岸田 行倫",
+      "classes": [
+        "INTERNAL_INERTIA_ONLY"
+      ],
+      "S": -0.3101,
+      "N": -0.3914,
+      "F": -0.3364,
+      "stale": "INTERNAL_INERTIA_ONLY"
+    },
+    {
+      "player": "梅野 隆太郎",
+      "classes": [],
+      "S": -0.3795,
+      "N": -0.1485,
+      "F": -0.3376,
+      "stale": "NONE"
+    },
+    {
+      "player": "正木 智也",
+      "classes": [],
+      "S": -0.325,
+      "N": -0.3915,
+      "F": -0.355,
+      "stale": "NONE"
+    },
+    {
+      "player": "太田 光",
+      "classes": [],
+      "S": -0.3327,
+      "N": -0.4161,
+      "F": -0.3601,
+      "stale": "NONE"
+    },
+    {
+      "player": "近藤 健介",
+      "classes": [],
+      "S": -0.4147,
+      "N": -0.3137,
+      "F": -0.3775,
+      "stale": "NONE"
+    },
+    {
+      "player": "石川 昂弥",
+      "classes": [],
+      "S": -0.3664,
+      "N": -0.4394,
+      "F": -0.3943,
+      "stale": "NONE"
+    },
+    {
+      "player": "丸 佳浩",
+      "classes": [],
+      "S": -0.4739,
+      "N": -0.0769,
+      "F": -0.4001,
+      "stale": "NONE"
+    },
+    {
+      "player": "紅林 弘太郎",
+      "classes": [],
+      "S": -0.4083,
+      "N": -0.4088,
+      "F": -0.4085,
+      "stale": "NONE"
+    },
+    {
+      "player": "宮﨑 敏郎",
+      "classes": [],
+      "S": -0.3563,
+      "N": -0.5949,
+      "F": -0.4391,
+      "stale": "NONE"
+    },
+    {
+      "player": "佐野 恵太",
+      "classes": [],
+      "S": -0.5174,
+      "N": -0.3186,
+      "F": -0.4399,
+      "stale": "NONE"
+    },
+    {
+      "player": "木下 拓哉",
+      "classes": [],
+      "S": -0.5586,
+      "N": -0.1938,
+      "F": -0.5081,
+      "stale": "NONE"
+    },
+    {
+      "player": "古賀 優大",
+      "classes": [
+        "EXTERNAL_DISAGREEMENT_ONLY",
+        "STAT_VS_NPB_LATENT_DIVERGE"
+      ],
+      "S": -0.8761,
+      "N": 0.1801,
+      "F": -0.5193,
+      "stale": "EXTERNAL_DISAGREEMENT_ONLY"
+    },
+    {
+      "player": "坂本 誠志郎",
+      "classes": [],
+      "S": -0.5339,
+      "N": -0.5419,
+      "F": -0.5361,
+      "stale": "NONE"
+    },
+    {
+      "player": "高橋 周平",
+      "classes": [],
+      "S": -0.62,
+      "N": -0.3715,
+      "F": -0.5485,
+      "stale": "NONE"
+    },
+    {
+      "player": "古賀 悠斗",
+      "classes": [],
+      "S": -0.61,
+      "N": -0.4828,
+      "F": -0.5661,
+      "stale": "NONE"
+    },
+    {
+      "player": "大山 悠輔",
+      "classes": [
+        "INTERNAL_INERTIA_ONLY"
+      ],
+      "S": -0.6112,
+      "N": -0.5252,
+      "F": -0.584,
+      "stale": "INTERNAL_INERTIA_ONLY"
+    },
+    {
+      "player": "藤岡 裕大",
+      "classes": [],
+      "S": -0.6552,
+      "N": -0.0774,
+      "F": -0.6025,
+      "stale": "NONE"
+    },
+    {
+      "player": "筒香 嘉智",
+      "classes": [],
+      "S": -0.7166,
+      "N": -0.3926,
+      "F": -0.6151,
+      "stale": "NONE"
+    },
+    {
+      "player": "中村 悠平",
+      "classes": [],
+      "S": -0.7051,
+      "N": -0.3123,
+      "F": -0.6274,
+      "stale": "NONE"
+    },
+    {
+      "player": "サンタナ",
+      "classes": [
+        "LOW_CURRENT_PA"
+      ],
+      "S": null,
+      "N": -0.6303,
+      "F": -0.6303,
+      "stale": "NONE"
+    },
+    {
+      "player": "浅村 栄斗",
+      "classes": [],
+      "S": -0.6301,
+      "N": -0.6558,
+      "F": -0.6385,
+      "stale": "NONE"
+    },
+    {
+      "player": "安田 尚憲",
+      "classes": [],
+      "S": -0.7143,
+      "N": -0.4372,
+      "F": -0.6551,
+      "stale": "NONE"
+    },
+    {
+      "player": "伏見 寅威",
+      "classes": [],
+      "S": -0.8004,
+      "N": -0.4326,
+      "F": -0.7194,
+      "stale": "NONE"
+    },
+    {
+      "player": "大城 卓三",
+      "classes": [],
+      "S": -0.8725,
+      "N": -0.5205,
+      "F": -0.7347,
+      "stale": "NONE"
+    },
+    {
+      "player": "ソト",
+      "classes": [
+        "LOW_CURRENT_PA"
+      ],
+      "S": null,
+      "N": -0.7918,
+      "F": -0.7918,
+      "stale": "NONE"
+    },
+    {
+      "player": "山川 穂高",
+      "classes": [],
+      "S": -1.0266,
+      "N": -0.6872,
+      "F": -0.9425,
+      "stale": "NONE"
+    }
+  ],
+  "owner_queue_not_generated": true
+}

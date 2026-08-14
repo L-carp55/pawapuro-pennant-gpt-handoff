@@ -910,15 +910,17 @@ console.log('=== 未整備だった回帰テスト ===\n');
       fast.score > noAdv.score, `${noAdv.score?.toFixed(3)} → ${fast.score?.toFixed(3)}`);
     t('§走塁材料-b 走塁が下手だと走力が下がる',
       slow.score < noAdv.score, `${noAdv.score?.toFixed(3)} → ${slow.score?.toFixed(3)}`);
-    t('§走塁材料-c 機会が少なければ使わない（少ない事象を能力差として読まない）',
-      speedComponents(line, { ...base, advance: 0.15, advanceChances: 5 }, 2.0, runNorm).z.advance == null,
-      '5機会では未使用');
+    const few = speedComponents(line, { ...base, advance: 0.15, advanceChances: 5 }, 2.0, runNorm);
+    t('§走塁材料-c 機会が少なくても値は捨てない（SP-018: ハードカットせず縮小する）',
+      few.z.advance != null && Math.abs(few.score - noAdv.score) < Math.abs(fast.score - noAdv.score),
+      `5機会のz=${few.z.advance?.toFixed?.(3) ?? few.z.advance}（40機会より寄与は小さい）`);
     t('§走塁材料-d 走塁指標が無い年でも走力は出る（推定で埋めない）',
       noAdv.score != null && noAdv.z.advance == null, '既存の材料だけで算出');
-    t('§走塁材料-e 重みは翌年再現性（既存の材料と同じ決め方）',
-      runNorm.componentWeights?.advance > runNorm.componentWeights?.ubr
-      && runNorm.componentWeights?.advance < runNorm.componentWeights?.triple,
-      `UBR ${runNorm.componentWeights?.ubr} < 走塁 ${runNorm.componentWeights?.advance} < 三塁打 ${runNorm.componentWeights?.triple}`);
+    t('§走塁材料-e 重みは翌年再現性ではない（SP-015）',
+      runNorm.componentWeights?.advance > 0
+      && runNorm.componentWeights?.advance < runNorm.componentWeights?.infieldHit
+      && runNorm._componentWeightsLegacyNextYearRepeatability != null,
+      `走塁 ${runNorm.componentWeights?.advance} / 内野安打 ${runNorm.componentWeights?.infieldHit}（旧翌年再現性版はlegacyに保持）`);
 
     // 複数年を均す経路（durable_estimate）にも配線されているか＝片側だけ直す誤りの再発検知
     const src = await import('node:fs').then(m => m.readFileSync('src/cards/durable_estimate.mjs', 'utf8'));

@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-08-14",
+  "same_applyScale": {
+    "slope": 1.8883315802194052,
+    "intercept": -29.54411881474512,
+    "derived_on": "full 2025 statistical roster",
+    "hundred_only_scale": false
+  },
+  "artifact": {
+    "roster_n": 260,
+    "in100_n": 92,
+    "non100_n": 168,
+    "roster_before_after": {
+      "before": {
+        "mean": 65.035,
+        "sd": 15.994,
+        "min": 27.07,
+        "max": 131.86,
+        "p10": 46.49,
+        "p50": 63.68,
+        "p90": 84.34
+      },
+      "after": {
+        "mean": 65.035,
+        "sd": 15.994,
+        "min": 34.83,
+        "max": 122.64,
+        "p10": 45.61,
+        "p50": 63.43,
+        "p90": 86.53
+      }
+    },
+    "corr_delta_hard": -0.1911,
+    "corr_delta_cont": 0.1911,
+    "all_same_direction": false,
+    "verdict": "BIDIRECTIONAL_NOT_SCALE_BUG"
+  },
+  "verdict": "SAME_MAPPING_NO_100_ONLY_SCALE"
+}

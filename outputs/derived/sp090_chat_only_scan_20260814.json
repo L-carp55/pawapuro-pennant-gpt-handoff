@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-08-14",
+  "rule": "final-chat-only knowledge = 0. Anything used later must live in a repo file.",
+  "this_wave_durable": [
+    {
+      "path": "outputs/derived/sp016_continuous_prior_apply_20260814.json",
+      "present": true,
+      "bytes": 23355
+    },
+    {
+      "path": "outputs/derived/sp016_scale_artifact_check_20260814.json",
+      "present": true,
+      "bytes": 8162
+    },
+    {
+      "path": "outputs/derived/sp100_wiring_candidates_20260814.json",
+      "present": true,
+      "bytes": 52513
+    },
+    {
+      "path": "outputs/derived/sp033_034_surname_identity_resolution_20260814.json",
+      "present": true,
+      "bytes": 118478
+    },
+    {
+      "path": "outputs/derived/sp036_generic_label_sweep_20260814.json",
+      "present": true,
+      "bytes": 3678
+    },
+    {
+      "path": "outputs/derived/sp039_existing_video_lane_20260814.json",
+      "present": true,
+      "bytes": 9534
+    },
+    {
+      "path": "outputs/derived/sp035_x_existing_organize_20260814.json",
+      "present": true,
+      "bytes": 39417
+    },
+    {
+      "path": "src/ratings/durable_traits.mjs",
+      "present": true,
+      "bytes": 8395
+    },
+    {
+      "path": "configs/running_norms.json",
+      "present": true,
+      "bytes": 15334
+    },
+    {
+      "path": "configs/ratings.json",
+      "present": true,
+      "bytes": 64804
+    },
+    {
+      "path": "docs/state/speed_task_registry.tsv",
+      "present": true,
+      "bytes": 42556
+    }
+  ],
+  "persisted_now_instead_of_chat": [
+    "SP-016 production candidate = continuous_prior + re-derived applyScale; hard gate remains control.",
+    "SP-100 S/N/F winner = NOT_DECLARED. Default not frozen.",
+    "SP-036 outside-150 generic labels = 7, zeroed = 0.",
+    "SP-039 player_results key was missed on first parse; reuse is existing video overlay only.",
+    "SP-062 defensive chase = NOT_DECISION_USEFUL on existing sources.",
+    "SP-044/045 = no birth/injury columns in pennant.db; MIT 2025 roster has no birthdate.",
+    "名原 2025 first-team batting still absent; 塩見 2025 AB=0 is real; サンタナ 2025 = 53755153."
+  ],
+  "missing_from_repo_after_this_file": []
+}

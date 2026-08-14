@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-08-14",
+  "previous_20260813": {
+    "finding": "NPB+ mapped minus stat was +14.4 and 93/97 same direction = scale mix, not player conflict",
+    "superseded_by": "SP-099 blend-before-scale repair + SP-100 raw latent (not PowerPro-mapped) + SP-016 display re-derive"
+  },
+  "current_S_vs_N_latent_z": {
+    "n": 93,
+    "mean": 0.0209,
+    "sd": 0.3861,
+    "all_same_direction": false,
+    "corr_delta_vs_S": -0.5951,
+    "corr_delta_vs_N": 0.0866,
+    "scale_artifact": false,
+    "top": [
+      {
+        "player": "並木 秀尊",
+        "d": -1.4639,
+        "S": 1.6506,
+        "N": 0.1867,
+        "F": 1.3838
+      },
+      {
+        "player": "古賀 優大",
+        "d": 1.0562,
+        "S": -0.8761,
+        "N": 0.1801,
+        "F": -0.5193
+      },
+      {
+        "player": "矢野 雅哉",
+        "d": -0.9392,
+        "S": 0.7841,
+        "N": -0.1551,
+        "F": 0.5358
+      },
+      {
+        "player": "小川 龍成",
+        "d": 0.9013,
+        "S": 0.2438,
+        "N": 1.1451,
+        "F": 0.6169
+      },
+      {
+        "player": "岩田 幸宏",
+        "d": -0.8255000000000001,
+        "S": 2.0394,
+        "N": 1.2139,
+        "F": 1.7196
+      },
+      {
+        "player": "塩見 泰隆",
+        "d": -0.7365,
+        "S": 0.7227,
+        "N": -0.0138,
+        "F": -0.0138
+      },
+      {
+        "player": "大島 洋平",
+        "d": -0.7208,
+        "S": 0.755,
+        "N": 0.0342,
+        "F": 0.5381
+      },
+      {
+        "player": "周東 佑京",
+        "d": 0.6446000000000001,
+        "S": 1.1885,
+        "N": 1.8331,
+        "F": 1.4453
+      },
+      {
+        "player": "村林 一輝",
+        "d": 0.6226999999999999,
+        "S": 0.2155,
+        "N": 0.8382,
+        "F": 0.4629
+      },
+      {
+        "player": "野間 峻祥",
+        "d": -0.5920000000000001,
+        "S": 0.6933,
+        "N": 0.1013,
+        "F": 0.5706
+      },
+      {
+        "player": "岡 大海",
+        "d": -0.59,
+        "S": 0.603,
+        "N": 0.013,
+        "F": 0.4921
+      },
+      {
+        "player": "藤岡 裕大",
+        "d": 0.5778,
+        "S": -0.6552,
+        "N": -0.0774,
+        "F": -0.6025
+      }
+    ]
+  },
+  "note": "S is 2025 statistical continuous-prior z. N is 2026 NPB+ latent z. Different years. Do not treat residual as same-year player conflict without that caveat."
+}

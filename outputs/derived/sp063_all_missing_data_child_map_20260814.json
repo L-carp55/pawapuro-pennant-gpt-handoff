@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-08-14",
+  "parent_task": "_codex_task_20260805_all_missing_data.md",
+  "parent_result": "_codex_result_20260805_missing_data.md",
+  "parent_status_in_result_file": "調査中 — superseded by per-lane SP tasks below. This parent is not a live workstream.",
+  "speed_children": [
+    {
+      "old": "A. Sprint Speed / 走塁時最高速度",
+      "replacement": "SP-010,SP-100",
+      "status_now": "DONE_VALIDATED / PARTIAL wiring"
+    },
+    {
+      "old": "A. 一塁到達 / H2F",
+      "replacement": "SP-007,SP-017",
+      "status_now": "DONE_VALIDATED"
+    },
+    {
+      "old": "A. 30m/50m",
+      "replacement": "SP-017,SP-020",
+      "status_now": "DONE_VALIDATED / PARTIAL dates"
+    },
+    {
+      "old": "A. 外野追走速度",
+      "replacement": "SP-062",
+      "status_now": "closed NOT_DECISION_USEFUL this wave"
+    },
+    {
+      "old": "A. 公式スカウティング",
+      "replacement": "SP-060",
+      "status_now": "inventory this wave"
+    },
+    {
+      "old": "A. 映像計測",
+      "replacement": "SP-038,SP-039",
+      "status_now": "DONE_NEGATIVE_FINDING / existing-lane reuse"
+    },
+    {
+      "old": "A. 三塁打/内野安打/併殺回避/UBR/追加進塁",
+      "replacement": "SP-015,SP-018,SP-019",
+      "status_now": "DONE_VALIDATED / DONE_NEGATIVE_FINDING"
+    },
+    {
+      "old": "The Show numeric bridge",
+      "replacement": "SP-050,SP-051,SP-052,SP-053",
+      "status_now": "numeric path closed; raw kept"
+    },
+    {
+      "old": "Prospi collection",
+      "replacement": "SP-054,SP-055,SP-056",
+      "status_now": "SUPERSEDED"
+    },
+    {
+      "old": "Community rating / SNS",
+      "replacement": "SP-030,SP-031,SP-032,SP-033,SP-034,SP-035,SP-036,SP-037",
+      "status_now": "032/037 closed; 033-035 new API NOT_COLLECTED"
+    }
+  ],
+  "non_speed_children_not_in_scope": [
+    "B. 肩力計測",
+    "C. 守備 TE/FE/UZR",
+    "D. パワー/打球",
+    "E. ミート分割",
+    "F. 球場"
+  ],
+  "parent_superseded": true
+}

@@ -1,0 +1,1341 @@
+{
+  "generated_at": "2026-08-14",
+  "policy": "EX-013: exact measurement not required. Probabilistic/range pairwise with source quality and uncertainty. Not a numeric teacher. PowerPro labels not used as weights.",
+  "n_focus": 13,
+  "n_pairs": 78,
+  "band_counts": {
+    "CLEARLY_FASTER": 63,
+    "LEAN_FASTER": 8,
+    "SIMILAR_BAND": 7
+  },
+  "pairs": [
+    {
+      "a": "岩田 幸宏",
+      "b": "小川 龍成",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": 0.6169,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0.8016,
+        "b_N_conf": 0.5661
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "村林 一輝",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": 0.4629,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0.9176,
+        "b_N_conf": 0.605
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "秋山 翔吾",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": 0.3333,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0.7585,
+        "b_N_conf": 0.2198
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "郡司 裕也",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": 0.1664,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0.8941,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "塩見 泰隆",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": -0.0138,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0,
+        "b_N_conf": 0.2011
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "西川 龍馬",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": -0.0989,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0.8918,
+        "b_N_conf": 0.587
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "細川 成也",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": -0.1097,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0.8954,
+        "b_N_conf": 0.502
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "カリステ",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": -0.1783,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0,
+        "b_N_conf": 0.1813
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "古賀 優大",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": -0.5193,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0.8534,
+        "b_N_conf": 0.4354
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "ソト",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": -0.7918,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": -0.9425,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "郡司 裕也",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": 0.1664,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0.8941,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "西川 龍馬",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": -0.0989,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0.8918,
+        "b_N_conf": 0.587
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "細川 成也",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": -0.1097,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0.8954,
+        "b_N_conf": 0.502
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "古賀 優大",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": -0.5193,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0.8534,
+        "b_N_conf": 0.4354
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "ソト",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": -0.7918,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": -0.9425,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "小川 龍成",
+      "b": "古賀 優大",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.6169,
+      "b_F": -0.5193,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8016,
+        "a_N_conf": 0.5661,
+        "b_S_rel": 0.8534,
+        "b_N_conf": 0.4354
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "小川 龍成",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.6169,
+      "b_F": -0.9425,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8016,
+        "a_N_conf": 0.5661,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "村林 一輝",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.4629,
+      "b_F": -0.9425,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.9176,
+        "a_N_conf": 0.605,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "秋山 翔吾",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 1,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.3333,
+      "b_F": -0.9425,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.7585,
+        "a_N_conf": 0.2198,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "カリステ",
+      "p_a_faster_than_b": 0.9999,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": -0.1783,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0,
+        "b_N_conf": 0.1813
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "郡司 裕也",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 0.9999,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.1664,
+      "b_F": -0.9425,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8941,
+        "a_N_conf": 0.4507,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "秋山 翔吾",
+      "p_a_faster_than_b": 0.9998,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": 0.3333,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0.7585,
+        "b_N_conf": 0.2198
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "小川 龍成",
+      "b": "ソト",
+      "p_a_faster_than_b": 0.9998,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.6169,
+      "b_F": -0.7918,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8016,
+        "a_N_conf": 0.5661,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "村林 一輝",
+      "p_a_faster_than_b": 0.9997,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": 0.4629,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0.9176,
+        "b_N_conf": 0.605
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "村林 一輝",
+      "b": "古賀 優大",
+      "p_a_faster_than_b": 0.9997,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.4629,
+      "b_F": -0.5193,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.9176,
+        "a_N_conf": 0.605,
+        "b_S_rel": 0.8534,
+        "b_N_conf": 0.4354
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "塩見 泰隆",
+      "p_a_faster_than_b": 0.9996,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": -0.0138,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0,
+        "b_N_conf": 0.2011
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "村林 一輝",
+      "b": "ソト",
+      "p_a_faster_than_b": 0.9992,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.4629,
+      "b_F": -0.7918,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.9176,
+        "a_N_conf": 0.605,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "周東 佑京",
+      "b": "小川 龍成",
+      "p_a_faster_than_b": 0.9983,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.4453,
+      "b_F": 0.6169,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8958,
+        "a_N_conf": 0.5933,
+        "b_S_rel": 0.8016,
+        "b_N_conf": 0.5661
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "西川 龍馬",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 0.9982,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.0989,
+      "b_F": -0.9425,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8918,
+        "a_N_conf": 0.587,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "細川 成也",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 0.998,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.1097,
+      "b_F": -0.9425,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8954,
+        "a_N_conf": 0.502,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "秋山 翔吾",
+      "b": "古賀 優大",
+      "p_a_faster_than_b": 0.9962,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.3333,
+      "b_F": -0.5193,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.7585,
+        "a_N_conf": 0.2198,
+        "b_S_rel": 0.8534,
+        "b_N_conf": 0.4354
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "秋山 翔吾",
+      "b": "ソト",
+      "p_a_faster_than_b": 0.9961,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.3333,
+      "b_F": -0.7918,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.7585,
+        "a_N_conf": 0.2198,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "小川 龍成",
+      "b": "細川 成也",
+      "p_a_faster_than_b": 0.9949,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.6169,
+      "b_F": -0.1097,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8016,
+        "a_N_conf": 0.5661,
+        "b_S_rel": 0.8954,
+        "b_N_conf": 0.502
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "小川 龍成",
+      "b": "西川 龍馬",
+      "p_a_faster_than_b": 0.9943,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.6169,
+      "b_F": -0.0989,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8016,
+        "a_N_conf": 0.5661,
+        "b_S_rel": 0.8918,
+        "b_N_conf": 0.587
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "郡司 裕也",
+      "b": "古賀 優大",
+      "p_a_faster_than_b": 0.9923,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.1664,
+      "b_F": -0.5193,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8941,
+        "a_N_conf": 0.4507,
+        "b_S_rel": 0.8534,
+        "b_N_conf": 0.4354
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "郡司 裕也",
+      "b": "ソト",
+      "p_a_faster_than_b": 0.9923,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.1664,
+      "b_F": -0.7918,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8941,
+        "a_N_conf": 0.4507,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "塩見 泰隆",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 0.9831,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.0138,
+      "b_F": -0.9425,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0,
+        "a_N_conf": 0.2011,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "村林 一輝",
+      "b": "細川 成也",
+      "p_a_faster_than_b": 0.9785,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.4629,
+      "b_F": -0.1097,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.9176,
+        "a_N_conf": 0.605,
+        "b_S_rel": 0.8954,
+        "b_N_conf": 0.502
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "村林 一輝",
+      "b": "西川 龍馬",
+      "p_a_faster_than_b": 0.9765,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.4629,
+      "b_F": -0.0989,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.9176,
+        "a_N_conf": 0.605,
+        "b_S_rel": 0.8918,
+        "b_N_conf": 0.587
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "小川 龍成",
+      "b": "カリステ",
+      "p_a_faster_than_b": 0.9657,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.6169,
+      "b_F": -0.1783,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8016,
+        "a_N_conf": 0.5661,
+        "b_S_rel": 0,
+        "b_N_conf": 0.1813
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "西川 龍馬",
+      "b": "ソト",
+      "p_a_faster_than_b": 0.9601,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.0989,
+      "b_F": -0.7918,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8918,
+        "a_N_conf": 0.587,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "カリステ",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 0.9585,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.1783,
+      "b_F": -0.9425,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0,
+        "a_N_conf": 0.1813,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "細川 成也",
+      "b": "ソト",
+      "p_a_faster_than_b": 0.9577,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.1097,
+      "b_F": -0.7918,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8954,
+        "a_N_conf": 0.502,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "小川 龍成",
+      "b": "郡司 裕也",
+      "p_a_faster_than_b": 0.9444,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.6169,
+      "b_F": 0.1664,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8016,
+        "a_N_conf": 0.5661,
+        "b_S_rel": 0.8941,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "塩見 泰隆",
+      "b": "ソト",
+      "p_a_faster_than_b": 0.9348,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.0138,
+      "b_F": -0.7918,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0,
+        "a_N_conf": 0.2011,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "西川 龍馬",
+      "b": "古賀 優大",
+      "p_a_faster_than_b": 0.9314,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.0989,
+      "b_F": -0.5193,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8918,
+        "a_N_conf": 0.587,
+        "b_S_rel": 0.8534,
+        "b_N_conf": 0.4354
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "村林 一輝",
+      "b": "カリステ",
+      "p_a_faster_than_b": 0.929,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.4629,
+      "b_F": -0.1783,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.9176,
+        "a_N_conf": 0.605,
+        "b_S_rel": 0,
+        "b_N_conf": 0.1813
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "古賀 優大",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 0.9284,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.5193,
+      "b_F": -0.9425,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8534,
+        "a_N_conf": 0.4354,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "小川 龍成",
+      "b": "塩見 泰隆",
+      "p_a_faster_than_b": 0.9271,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.6169,
+      "b_F": -0.0138,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8016,
+        "a_N_conf": 0.5661,
+        "b_S_rel": 0,
+        "b_N_conf": 0.2011
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "細川 成也",
+      "b": "古賀 優大",
+      "p_a_faster_than_b": 0.9262,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.1097,
+      "b_F": -0.5193,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8954,
+        "a_N_conf": 0.502,
+        "b_S_rel": 0.8534,
+        "b_N_conf": 0.4354
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "秋山 翔吾",
+      "b": "細川 成也",
+      "p_a_faster_than_b": 0.9174,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.3333,
+      "b_F": -0.1097,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.7585,
+        "a_N_conf": 0.2198,
+        "b_S_rel": 0.8954,
+        "b_N_conf": 0.502
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "秋山 翔吾",
+      "b": "西川 龍馬",
+      "p_a_faster_than_b": 0.9121,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.3333,
+      "b_F": -0.0989,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.7585,
+        "a_N_conf": 0.2198,
+        "b_S_rel": 0.8918,
+        "b_N_conf": 0.587
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "カリステ",
+      "b": "ソト",
+      "p_a_faster_than_b": 0.8824,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.1783,
+      "b_F": -0.7918,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0,
+        "a_N_conf": 0.1813,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "塩見 泰隆",
+      "b": "古賀 優大",
+      "p_a_faster_than_b": 0.8781,
+      "band": "CLEARLY_FASTER",
+      "a_F": -0.0138,
+      "b_F": -0.5193,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0,
+        "a_N_conf": 0.2011,
+        "b_S_rel": 0.8534,
+        "b_N_conf": 0.4354
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "秋山 翔吾",
+      "b": "カリステ",
+      "p_a_faster_than_b": 0.8664,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.3333,
+      "b_F": -0.1783,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.7585,
+        "a_N_conf": 0.2198,
+        "b_S_rel": 0,
+        "b_N_conf": 0.1813
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "村林 一輝",
+      "b": "塩見 泰隆",
+      "p_a_faster_than_b": 0.8642,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.4629,
+      "b_F": -0.0138,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.9176,
+        "a_N_conf": 0.605,
+        "b_S_rel": 0,
+        "b_N_conf": 0.2011
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "村林 一輝",
+      "b": "郡司 裕也",
+      "p_a_faster_than_b": 0.8527,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.4629,
+      "b_F": 0.1664,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.9176,
+        "a_N_conf": 0.605,
+        "b_S_rel": 0.8941,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "郡司 裕也",
+      "b": "細川 成也",
+      "p_a_faster_than_b": 0.8355,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.1664,
+      "b_F": -0.1097,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8941,
+        "a_N_conf": 0.4507,
+        "b_S_rel": 0.8954,
+        "b_N_conf": 0.502
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "岩田 幸宏",
+      "b": "周東 佑京",
+      "p_a_faster_than_b": 0.8339,
+      "band": "CLEARLY_FASTER",
+      "a_F": 1.7196,
+      "b_F": 1.4453,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8891,
+        "a_N_conf": 0.5623,
+        "b_S_rel": 0.8958,
+        "b_N_conf": 0.5933
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "郡司 裕也",
+      "b": "西川 龍馬",
+      "p_a_faster_than_b": 0.8259,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.1664,
+      "b_F": -0.0989,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8941,
+        "a_N_conf": 0.4507,
+        "b_S_rel": 0.8918,
+        "b_N_conf": 0.587
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "小川 龍成",
+      "b": "秋山 翔吾",
+      "p_a_faster_than_b": 0.8128,
+      "band": "CLEARLY_FASTER",
+      "a_F": 0.6169,
+      "b_F": 0.3333,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8016,
+        "a_N_conf": 0.5661,
+        "b_S_rel": 0.7585,
+        "b_N_conf": 0.2198
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "郡司 裕也",
+      "b": "カリステ",
+      "p_a_faster_than_b": 0.785,
+      "band": "LEAN_FASTER",
+      "a_F": 0.1664,
+      "b_F": -0.1783,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8941,
+        "a_N_conf": 0.4507,
+        "b_S_rel": 0,
+        "b_N_conf": 0.1813
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "カリステ",
+      "b": "古賀 優大",
+      "p_a_faster_than_b": 0.7825,
+      "band": "LEAN_FASTER",
+      "a_F": -0.1783,
+      "b_F": -0.5193,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0,
+        "a_N_conf": 0.1813,
+        "b_S_rel": 0.8534,
+        "b_N_conf": 0.4354
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "秋山 翔吾",
+      "b": "塩見 泰隆",
+      "p_a_faster_than_b": 0.7756,
+      "band": "LEAN_FASTER",
+      "a_F": 0.3333,
+      "b_F": -0.0138,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.7585,
+        "a_N_conf": 0.2198,
+        "b_S_rel": 0,
+        "b_N_conf": 0.2011
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "古賀 優大",
+      "b": "ソト",
+      "p_a_faster_than_b": 0.7546,
+      "band": "LEAN_FASTER",
+      "a_F": -0.5193,
+      "b_F": -0.7918,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8534,
+        "a_N_conf": 0.4354,
+        "b_S_rel": 0,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "小川 龍成",
+      "b": "村林 一輝",
+      "p_a_faster_than_b": 0.7069,
+      "band": "LEAN_FASTER",
+      "a_F": 0.6169,
+      "b_F": 0.4629,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8016,
+        "a_N_conf": 0.5661,
+        "b_S_rel": 0.9176,
+        "b_N_conf": 0.605
+      },
+      "high_internal_disagreement": true,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "秋山 翔吾",
+      "b": "郡司 裕也",
+      "p_a_faster_than_b": 0.6995,
+      "band": "LEAN_FASTER",
+      "a_F": 0.3333,
+      "b_F": 0.1664,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.7585,
+        "a_N_conf": 0.2198,
+        "b_S_rel": 0.8941,
+        "b_N_conf": 0.4507
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "郡司 裕也",
+      "b": "塩見 泰隆",
+      "p_a_faster_than_b": 0.6611,
+      "band": "LEAN_FASTER",
+      "a_F": 0.1664,
+      "b_F": -0.0138,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0.8941,
+        "a_N_conf": 0.4507,
+        "b_S_rel": 0,
+        "b_N_conf": 0.2011
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "村林 一輝",
+      "b": "秋山 翔吾",
+      "p_a_faster_than_b": 0.6576,
+      "band": "LEAN_FASTER",
+      "a_F": 0.4629,
+      "b_F": 0.3333,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.9176,
+        "a_N_conf": 0.605,
+        "b_S_rel": 0.7585,
+        "b_N_conf": 0.2198
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "ソト",
+      "b": "山川 穂高",
+      "p_a_faster_than_b": 0.6469,
+      "band": "SIMILAR_BAND",
+      "a_F": -0.7918,
+      "b_F": -0.9425,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0,
+        "a_N_conf": 0.4507,
+        "b_S_rel": 0.9084,
+        "b_N_conf": 0.2991
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "塩見 泰隆",
+      "b": "カリステ",
+      "p_a_faster_than_b": 0.6183,
+      "band": "SIMILAR_BAND",
+      "a_F": -0.0138,
+      "b_F": -0.1783,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0,
+        "a_N_conf": 0.2011,
+        "b_S_rel": 0,
+        "b_N_conf": 0.1813
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "塩見 泰隆",
+      "b": "細川 成也",
+      "p_a_faster_than_b": 0.5875,
+      "band": "SIMILAR_BAND",
+      "a_F": -0.0138,
+      "b_F": -0.1097,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0,
+        "a_N_conf": 0.2011,
+        "b_S_rel": 0.8954,
+        "b_N_conf": 0.502
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "塩見 泰隆",
+      "b": "西川 龍馬",
+      "p_a_faster_than_b": 0.5778,
+      "band": "SIMILAR_BAND",
+      "a_F": -0.0138,
+      "b_F": -0.0989,
+      "h2f_on_either": true,
+      "source_quality": {
+        "a_S_rel": 0,
+        "a_N_conf": 0.2011,
+        "b_S_rel": 0.8918,
+        "b_N_conf": 0.587
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "西川 龍馬",
+      "b": "カリステ",
+      "p_a_faster_than_b": 0.5721,
+      "band": "SIMILAR_BAND",
+      "a_F": -0.0989,
+      "b_F": -0.1783,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8918,
+        "a_N_conf": 0.587,
+        "b_S_rel": 0,
+        "b_N_conf": 0.1813
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "細川 成也",
+      "b": "カリステ",
+      "p_a_faster_than_b": 0.5624,
+      "band": "SIMILAR_BAND",
+      "a_F": -0.1097,
+      "b_F": -0.1783,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8954,
+        "a_N_conf": 0.502,
+        "b_S_rel": 0,
+        "b_N_conf": 0.1813
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    },
+    {
+      "a": "西川 龍馬",
+      "b": "細川 成也",
+      "p_a_faster_than_b": 0.5152,
+      "band": "SIMILAR_BAND",
+      "a_F": -0.0989,
+      "b_F": -0.1097,
+      "h2f_on_either": false,
+      "source_quality": {
+        "a_S_rel": 0.8918,
+        "a_N_conf": 0.587,
+        "b_S_rel": 0.8954,
+        "b_N_conf": 0.502
+      },
+      "high_internal_disagreement": false,
+      "exact_measurement_required": false
+    }
+  ],
+  "unused_as_teacher": true,
+  "note": "Focus list inherits SP-100 player order (high F first), so i<j bands lean CLEARLY_FASTER. The probability itself is symmetric: P(b>a)=1-P(a>b)."
+}

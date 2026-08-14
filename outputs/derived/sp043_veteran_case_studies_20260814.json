@@ -1,0 +1,303 @@
+{
+  "generated_at": "2026-08-14",
+  "policy": "Evidence-backed. Owner judgement only where remaining conflict is genuine, not scale.",
+  "akiyama_shogo": {
+    "pa_by_year": [
+      {
+        "season": 2011,
+        "pa": 313,
+        "ab": 284,
+        "g": 110
+      },
+      {
+        "season": 2012,
+        "pa": 450,
+        "ab": 403,
+        "g": 107
+      },
+      {
+        "season": 2013,
+        "pa": 634,
+        "ab": 564,
+        "g": 144
+      },
+      {
+        "season": 2014,
+        "pa": 561,
+        "ab": 475,
+        "g": 131
+      },
+      {
+        "season": 2015,
+        "pa": 675,
+        "ab": 602,
+        "g": 143
+      },
+      {
+        "season": 2016,
+        "pa": 671,
+        "ab": 578,
+        "g": 143
+      },
+      {
+        "season": 2017,
+        "pa": 659,
+        "ab": 575,
+        "g": 143
+      },
+      {
+        "season": 2018,
+        "pa": 685,
+        "ab": 603,
+        "g": 143
+      },
+      {
+        "season": 2019,
+        "pa": 678,
+        "ab": 590,
+        "g": 143
+      },
+      {
+        "season": 2022,
+        "pa": 174,
+        "ab": 155,
+        "g": 44
+      },
+      {
+        "season": 2023,
+        "pa": 483,
+        "ab": 434,
+        "g": 115
+      },
+      {
+        "season": 2024,
+        "pa": 587,
+        "ab": 547,
+        "g": 138
+      },
+      {
+        "season": 2025,
+        "pa": 157,
+        "ab": 145,
+        "g": 64
+      }
+    ],
+    "appearance_drop": "2024 high PA to 2025 reduced PA is detectable; injury vs role vs decline is not identifiable from PA alone",
+    "apply016": {
+      "player": "秋山 翔吾",
+      "hard": 84.8,
+      "continuous": 76.6,
+      "diff": -8.200000000000003,
+      "no_batting": false
+    },
+    "snf": {
+      "player": "秋山 翔吾",
+      "player_id": "31135133",
+      "S_stat_z": 0.4157,
+      "S_reliability": 0.7585,
+      "N_npb_z": 0.0489,
+      "N_confidence": 0.2198,
+      "N_unshrunk": 0.1903,
+      "F_fuse_z": 0.3333,
+      "fuse": {
+        "w_stat": 0.7585,
+        "w_npb": 0.2198,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 157,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.6
+    },
+    "stale": {
+      "player": "秋山 翔吾",
+      "player_id": "31135133",
+      "powerpro_pct": 0.7158,
+      "latent_physical_pct": 0.5859,
+      "percentile_gap": -0.1299,
+      "powerpro_raw_last": 73,
+      "powerpro_raw_changes": 2,
+      "powerpro_years": 11,
+      "s1_internal_inertia": false,
+      "latent_confidence": 0.2198,
+      "exposure_runs": 9,
+      "s2_external_disagreement": false,
+      "flag": "NONE"
+    },
+    "community": "Existing community/SNS mention age/decline. Not a numeric teacher.",
+    "owner_needed": "Whether 2025 drop is injury/role/true speed loss. PA drop is not converted to injury (SP-045)."
+  },
+  "matsuyama_ryuhei": {
+    "pa_by_year": [
+      {
+        "season": 2008,
+        "pa": 2,
+        "ab": 2,
+        "g": 2
+      },
+      {
+        "season": 2011,
+        "pa": 204,
+        "ab": 196,
+        "g": 68
+      },
+      {
+        "season": 2012,
+        "pa": 146,
+        "ab": 137,
+        "g": 48
+      },
+      {
+        "season": 2013,
+        "pa": 389,
+        "ab": 372,
+        "g": 123
+      },
+      {
+        "season": 2014,
+        "pa": 250,
+        "ab": 233,
+        "g": 80
+      },
+      {
+        "season": 2015,
+        "pa": 229,
+        "ab": 202,
+        "g": 100
+      },
+      {
+        "season": 2016,
+        "pa": 275,
+        "ab": 254,
+        "g": 103
+      },
+      {
+        "season": 2017,
+        "pa": 387,
+        "ab": 350,
+        "g": 120
+      },
+      {
+        "season": 2018,
+        "pa": 446,
+        "ab": 397,
+        "g": 124
+      },
+      {
+        "season": 2019,
+        "pa": 327,
+        "ab": 294,
+        "g": 110
+      },
+      {
+        "season": 2020,
+        "pa": 425,
+        "ab": 404,
+        "g": 108
+      },
+      {
+        "season": 2021,
+        "pa": 194,
+        "ab": 175,
+        "g": 85
+      },
+      {
+        "season": 2022,
+        "pa": 166,
+        "ab": 152,
+        "g": 88
+      },
+      {
+        "season": 2023,
+        "pa": 156,
+        "ab": 143,
+        "g": 79
+      },
+      {
+        "season": 2024,
+        "pa": 78,
+        "ab": 73,
+        "g": 65
+      },
+      {
+        "season": 2025,
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      }
+    ],
+    "apply016": {
+      "name": "松山　竜平",
+      "pa_cur": 1,
+      "hard": 59.4,
+      "cont": 53.4,
+      "diff": -6
+    },
+    "snf": null,
+    "stale": null,
+    "note": "2025 PA is tiny. Hard-gate display can float; continuous prior shrinks toward history. Not an identity hole.",
+    "owner_needed": "Whether late-career speed should stay on the 2026-100 review list at all. Not a data identity block."
+  },
+  "peers_same_pattern": [
+    {
+      "name": "和田　康士朗",
+      "pa_cur": 10,
+      "hard": 131.9,
+      "cont": 112.9,
+      "diff": -19
+    },
+    {
+      "name": "川越　誠司",
+      "pa_cur": 43,
+      "hard": 79.6,
+      "cont": 63.4,
+      "diff": -16.14
+    },
+    {
+      "name": "重信　慎之介",
+      "pa_cur": 3,
+      "hard": 82.7,
+      "cont": 67.5,
+      "diff": -15.21
+    },
+    {
+      "name": "茶谷　健太",
+      "pa_cur": 41,
+      "hard": 78.4,
+      "cont": 68.1,
+      "diff": -10.24
+    },
+    {
+      "name": "磯村　嘉孝",
+      "pa_cur": 7,
+      "hard": 39.2,
+      "cont": 48.4,
+      "diff": 9.18
+    },
+    {
+      "name": "柴田　竜拓",
+      "pa_cur": 32,
+      "hard": 54.2,
+      "cont": 63,
+      "diff": 8.81
+    },
+    {
+      "name": "松本　直樹",
+      "pa_cur": 36,
+      "hard": 58.6,
+      "cont": 50.4,
+      "diff": -8.22
+    },
+    {
+      "name": "田村　龍弘",
+      "pa_cur": 43,
+      "hard": 51.8,
+      "cont": 44.3,
+      "diff": -7.44
+    }
+  ],
+  "remaining_owner": [
+    "秋山: 2025出場減の中身（故障/起用/衰え）は台帳に無い",
+    "松山: 2026-100に残すかは査定以前の対象選定"
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "generated_at": "2026-08-14",
+  "mode": "2025 + statPrimarySpeed=true (wiring QA, not final 2026 practical rating)",
+  "recomputes": [
+    {
+      "player": "名原 典彦",
+      "team": "広島東洋カープ",
+      "want": "no invented 2025 first-team batting value",
+      "status": "ERROR",
+      "error": "該当なし: 名原 典彦（2026 usageあり PA=187 G=41。一軍打撃台帳(v_batting)には2025年まで無し / farm/bm_player id=20230057 seasons=2023,2024,2025,2026 team=広）"
+    },
+    {
+      "player": "サンタナ",
+      "team": "東京ヤクルトスワローズ",
+      "want": "resolves to Ｄ．サンタナ 53755153",
+      "status": "COMPUTED",
+      "player_id": "53755153",
+      "no_batting_sample": false,
+      "speed": 52.8,
+      "arm": 54.9,
+      "fielding": 50.3,
+      "catching": 48,
+      "meet": 63.5,
+      "power": 67.4,
+      "schema_top_keys": [
+        "player_id",
+        "name_ja",
+        "name_en",
+        "card_type",
+        "season_label",
+        "seasons_used",
+        "team",
+        "league",
+        "team_games",
+        "primary_position",
+        "secondary_positions",
+        "bats",
+        "throws",
+        "source_freeze_commit",
+        "ratings",
+        "composition",
+        "confidence",
+        "calc_log",
+        "provenance",
+        "unresolved",
+        "generated_by",
+        "ability_evidence",
+        "abilities",
+        "splits"
+      ],
+      "schema_has_player_id_at_player": false,
+      "schema_shrunk": false,
+      "confidence": {
+        "sample": "C",
+        "source_quality": "B",
+        "context_match": "C",
+        "prior_quality": "A",
+        "game_calibration": "D",
+        "overall": "C",
+        "_note": null,
+        "_legend": "A=直接計測・十分サンプル・完全文脈 / B=公式集計・一部近似 / C=周辺値 / D=推定が大きい"
+      },
+      "unresolved": [
+        "チャンス: 得点圏打数40が下限50未満"
+      ]
+    },
+    {
+      "player": "塩見 泰隆",
+      "team": "東京ヤクルトスワローズ",
+      "want": "AB=0 does not drop speed/arm/fielding/schema",
+      "status": "COMPUTED",
+      "player_id": "71975136",
+      "no_batting_sample": true,
+      "speed": 85.3,
+      "arm": 69.1,
+      "fielding": null,
+      "catching": null,
+      "meet": null,
+      "power": null,
+      "schema_top_keys": [
+        "player_id",
+        "name_ja",
+        "name_en",
+        "card_type",
+        "season_label",
+        "seasons_used",
+        "team",
+        "league",
+        "team_games",
+        "primary_position",
+        "secondary_positions",
+        "bats",
+        "throws",
+        "source_freeze_commit",
+        "ratings",
+        "composition",
+        "confidence",
+        "calc_log",
+        "provenance",
+        "unresolved",
+        "generated_by",
+        "abilities",
+        "speedDetail",
+        "_no_batting_sample"
+      ],
+      "schema_has_player_id_at_player": false,
+      "schema_shrunk": false,
+      "confidence": {
+        "batting": "NO_SAMPLE",
+        "speed": "POOLED",
+        "arm": "POOLED",
+        "fielding": "NONE"
+      },
+      "unresolved": [
+        "対象年の打数が0。打撃査定は出さない（走力・肩力・守備は算出する）"
+      ]
+    }
+  ],
+  "checks": {
+    "nahara_no_invented_value": true,
+    "santana_id": true,
+    "shiomi_computed": true,
+    "shiomi_no_batting": true,
+    "shiomi_meet_null": true,
+    "shiomi_speed_not_null": true,
+    "shiomi_arm_not_null": true,
+    "shiomi_schema_not_shrunk": true,
+    "shiomi_player_id": true
+  }
+}
