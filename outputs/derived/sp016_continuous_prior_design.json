@@ -1,0 +1,394 @@
+{
+  "generated_at": "2026-08-14",
+  "design": {
+    "form": "各推定を自身の信頼性で縮小してから精度で合成: z_cur*=PA_cur/(PA_cur+kappa), z_hist*=PA_hist/(PA_hist+kappa), z=(PA_cur*z_cur + lambda*PA_hist*z_hist)/(PA_cur + lambda*PA_hist)",
+    "naive_form_rejected": "素朴な w=PA/(PA+kappa) は current PA が極小のときPA比例より現在年を過大評価する（実測: PA=6でw=0.107、比例なら約0.02。130点→71.3点と59点動いた）。z_cur自身を縮小していないのが原因",
+    "kappa": 50,
+    "lambda": 0.2703,
+    "pa_hist_median": 185,
+    "kappa_basis": "SP-016 v1が同時点信頼性(1シーズン内の標本誤差)から出した「信頼性0.5交差=50打席」を、連続版で w_cur=0.5 になる点として引き継ぐ。hard gateと同じ較正点を共有し、不連続だけを外した形",
+    "why_not_hard_gate": "hard gateは kappa を無限にした階段＝連続版の退化形。境界の1打席差で挙動が全く変わる",
+    "owner_rule_kept": "current-year中心は維持。observationが増えるほど historical prior は連続的に弱まり、十分な観測では実質current-yearのみになる"
+  },
+  "n_players": 303,
+  "discontinuity": {
+    "hard_gate_flip_players": 1,
+    "hard_gate_cliff_band_25_100": {
+      "n": 73,
+      "mean": 5.23,
+      "max": 26.3
+    },
+    "continuous_cliff": 0
+  },
+  "agreement": {
+    "continuous vs hard50": {
+      "n": 303,
+      "mean_abs": 4.635,
+      "max_abs": 54.8,
+      "ge5": 85
+    },
+    "continuous vs legacy": {
+      "n": 303,
+      "mean_abs": 3.232,
+      "max_abs": 54.8,
+      "ge5": 46
+    },
+    "hard50 vs legacy": {
+      "n": 303,
+      "mean_abs": 3.716,
+      "max_abs": 27.2,
+      "ge5": 83
+    }
+  },
+  "exception_detectability": {
+    "low_exposure": 87,
+    "downswing_detectable": 79,
+    "exposure_break": 15,
+    "total_players": 303,
+    "examples": [
+      {
+        "player": "上川畑大悟",
+        "pa_prev": 305,
+        "pa_cur": 81
+      },
+      {
+        "player": "福田周平",
+        "pa_prev": 261,
+        "pa_cur": 64
+      },
+      {
+        "player": "野村大樹",
+        "pa_prev": 412,
+        "pa_cur": 36
+      },
+      {
+        "player": "秋山翔吾",
+        "pa_prev": 587,
+        "pa_cur": 157
+      },
+      {
+        "player": "角中勝也",
+        "pa_prev": 217,
+        "pa_cur": 53
+      },
+      {
+        "player": "中村奨吾",
+        "pa_prev": 433,
+        "pa_cur": 64
+      }
+    ],
+    "verdict": {
+      "low_exposure": "連続版が自動で扱う（w_curが小さくなる）。専用の例外規則は不要",
+      "obvious_downswing": "履歴2年以上ある選手で current z が履歴分布から2SD外れる件数として検出可能。ただし「下振れ」か「本当に衰えた」かはこのデータでは区別できない → 例外として自動適用しない",
+      "injury": "故障データが存在しない（SP-044/045 BLOCKED_MISSING_DATA）。出場の断絶（前年200PA以上→当年30%未満）が代理になりうるが、故障・不振・起用方針の区別ができない → 自動適用しない。検出だけ行いフラグとして残す"
+    }
+  },
+  "pa_curve_diagnostics": [
+    {
+      "pa_range": "1-25",
+      "n": 326,
+      "obsVar": 27.5806,
+      "mean_pa": 11
+    },
+    {
+      "pa_range": "25-50",
+      "n": 153,
+      "obsVar": 1.5243,
+      "mean_pa": 36
+    },
+    {
+      "pa_range": "50-100",
+      "n": 210,
+      "obsVar": 1.0497,
+      "mean_pa": 72
+    },
+    {
+      "pa_range": "100-150",
+      "n": 136,
+      "obsVar": 0.8761,
+      "mean_pa": 123
+    },
+    {
+      "pa_range": "150-200",
+      "n": 109,
+      "obsVar": 0.7426,
+      "mean_pa": 173
+    },
+    {
+      "pa_range": "200-300",
+      "n": 144,
+      "obsVar": 0.5074,
+      "mean_pa": 248
+    },
+    {
+      "pa_range": "300-400",
+      "n": 115,
+      "obsVar": 0.5267,
+      "mean_pa": 349
+    },
+    {
+      "pa_range": "400-500",
+      "n": 120,
+      "obsVar": 0.4687,
+      "mean_pa": 453
+    },
+    {
+      "pa_range": "500-9999",
+      "n": 106,
+      "obsVar": 0.4173,
+      "mean_pa": 572
+    }
+  ],
+  "rows": [
+    {
+      "player": "東妻純平",
+      "current_pa": 6,
+      "legacy": 130,
+      "hard50": 130,
+      "hard49": 130,
+      "hard51": 130,
+      "continuous": 75.2,
+      "w_cur": 0.107
+    },
+    {
+      "player": "髙松渡",
+      "current_pa": 19,
+      "legacy": 130,
+      "hard50": 130,
+      "hard49": 130,
+      "hard51": 130,
+      "continuous": 75.5,
+      "w_cur": 0.275
+    },
+    {
+      "player": "樋口正修",
+      "current_pa": 25,
+      "legacy": 19.1,
+      "hard50": 19.1,
+      "hard49": 19.1,
+      "hard51": 19.1,
+      "continuous": 47.9,
+      "w_cur": 0.333
+    },
+    {
+      "player": "植田将太",
+      "current_pa": 5,
+      "legacy": 20.2,
+      "hard50": 20.2,
+      "hard49": 20.2,
+      "hard51": 20.2,
+      "continuous": 46.7,
+      "w_cur": 0.091
+    },
+    {
+      "player": "角中勝也",
+      "current_pa": 53,
+      "legacy": 56,
+      "hard50": 82.3,
+      "hard49": 82.3,
+      "hard51": 82.3,
+      "continuous": 56.7,
+      "w_cur": 0.515
+    },
+    {
+      "player": "入江大樹",
+      "current_pa": 10,
+      "legacy": 77.3,
+      "hard50": 77.3,
+      "hard49": 77.3,
+      "hard51": 77.3,
+      "continuous": 52.3,
+      "w_cur": 0.167
+    },
+    {
+      "player": "内田湘大",
+      "current_pa": 10,
+      "legacy": 20.3,
+      "hard50": 20.3,
+      "hard49": 20.3,
+      "hard51": 20.3,
+      "continuous": 44.5,
+      "w_cur": 0.167
+    },
+    {
+      "player": "大里昂生",
+      "current_pa": 101,
+      "legacy": 68.1,
+      "hard50": 95.3,
+      "hard49": 95.3,
+      "hard51": 95.3,
+      "continuous": 71.2,
+      "w_cur": 0.669
+    },
+    {
+      "player": "田村俊介",
+      "current_pa": 69,
+      "legacy": 60.1,
+      "hard50": 85.6,
+      "hard49": 85.6,
+      "hard51": 85.6,
+      "continuous": 62.9,
+      "w_cur": 0.58
+    },
+    {
+      "player": "佐藤啓介",
+      "current_pa": 16,
+      "legacy": 79.5,
+      "hard50": 79.5,
+      "hard49": 79.5,
+      "hard51": 79.5,
+      "continuous": 57.8,
+      "w_cur": 0.242
+    },
+    {
+      "player": "羽月隆太郎",
+      "current_pa": 119,
+      "legacy": 68.1,
+      "hard50": 92,
+      "hard49": 92,
+      "hard51": 92,
+      "continuous": 71.5,
+      "w_cur": 0.704
+    },
+    {
+      "player": "森敬斗",
+      "current_pa": 75,
+      "legacy": 63.3,
+      "hard50": 81.4,
+      "hard49": 81.4,
+      "hard51": 81.4,
+      "continuous": 62.9,
+      "w_cur": 0.6
+    },
+    {
+      "player": "土田龍空",
+      "current_pa": 53,
+      "legacy": 54.3,
+      "hard50": 33.3,
+      "hard49": 33.3,
+      "hard51": 33.3,
+      "continuous": 50.1,
+      "w_cur": 0.515
+    },
+    {
+      "player": "坂本勇人",
+      "current_pa": 173,
+      "legacy": 41.9,
+      "hard50": 22.7,
+      "hard49": 22.7,
+      "hard51": 22.7,
+      "continuous": 39.4,
+      "w_cur": 0.776
+    },
+    {
+      "player": "堂林翔太",
+      "current_pa": 77,
+      "legacy": 40.5,
+      "hard50": 23.8,
+      "hard49": 23.8,
+      "hard51": 23.8,
+      "continuous": 40.4,
+      "w_cur": 0.606
+    },
+    {
+      "player": "大城滉二",
+      "current_pa": 79,
+      "legacy": 45.3,
+      "hard50": 69,
+      "hard49": 69,
+      "hard51": 69,
+      "continuous": 52.7,
+      "w_cur": 0.612
+    },
+    {
+      "player": "大島洋平",
+      "current_pa": 98,
+      "legacy": 61,
+      "hard50": 76.9,
+      "hard49": 76.9,
+      "hard51": 76.9,
+      "continuous": 61.3,
+      "w_cur": 0.662
+    },
+    {
+      "player": "緒方理貢",
+      "current_pa": 79,
+      "legacy": 80,
+      "hard50": 85.1,
+      "hard49": 85.1,
+      "hard51": 85.1,
+      "continuous": 70,
+      "w_cur": 0.612
+    },
+    {
+      "player": "進藤勇也",
+      "current_pa": 31,
+      "legacy": 25.2,
+      "hard50": 25.2,
+      "hard49": 25.2,
+      "hard51": 25.2,
+      "continuous": 40.1,
+      "w_cur": 0.383
+    },
+    {
+      "player": "久保修",
+      "current_pa": 14,
+      "legacy": 29.5,
+      "hard50": 29.5,
+      "hard49": 29.5,
+      "hard51": 29.5,
+      "continuous": 43.1,
+      "w_cur": 0.219
+    },
+    {
+      "player": "古市尊",
+      "current_pa": 19,
+      "legacy": 72.2,
+      "hard50": 72.2,
+      "hard49": 72.2,
+      "hard51": 72.2,
+      "continuous": 58.7,
+      "w_cur": 0.275
+    },
+    {
+      "player": "橋本星哉",
+      "current_pa": 17,
+      "legacy": 32,
+      "hard50": 32,
+      "hard49": 32,
+      "hard51": 32,
+      "continuous": 45.3,
+      "w_cur": 0.254
+    },
+    {
+      "player": "牧野翔矢",
+      "current_pa": 67,
+      "legacy": 68.4,
+      "hard50": 76.5,
+      "hard49": 76.5,
+      "hard51": 76.5,
+      "continuous": 63.3,
+      "w_cur": 0.573
+    },
+    {
+      "player": "伊藤裕季也",
+      "current_pa": 130,
+      "legacy": 53.3,
+      "hard50": 34.4,
+      "hard49": 34.4,
+      "hard51": 34.4,
+      "continuous": 47.5,
+      "w_cur": 0.722
+    },
+    {
+      "player": "児玉亮涼",
+      "current_pa": 53,
+      "legacy": 45.9,
+      "hard50": 32.2,
+      "hard49": 32.2,
+      "hard51": 32.2,
+      "continuous": 45.2,
+      "w_cur": 0.515
+    }
+  ]
+}

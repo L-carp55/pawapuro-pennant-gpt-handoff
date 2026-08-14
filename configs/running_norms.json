@@ -371,13 +371,13 @@
     }
   },
   "componentWeights": {
-    "triple": 0.49648301630228797,
-    "gdpAvoid": 0.43340785393287107,
-    "infieldHit": 0.5331986509790801,
-    "ubr": 0.496,
-    "advance": 0.22075263524730496
+    "triple": 0.1637,
+    "gdpAvoid": 0.1892,
+    "infieldHit": 0.3,
+    "advance": 0.0926,
+    "ubr": 0.1892
   },
-  "_componentWeights_basis": "SP-015是正（2026-08-13）。CLAUDE.md『年度査定の目的関数』および speed_next_year_repeatability_policy_correction_20260813.md により、翌年再現性(Year Y→Y+1相関)を年度査定のweight根拠に使うことは禁止された。同時点の測定信頼性 reliability=1-E[標本誤差の分散]/観測された選手間分散（2021-2025年、1シーズン内で完結・翌年情報を含まない）へ置き換えた。値=三塁打割合0.496 / 併殺回避0.433 / 内野安打率0.533 / advance0.221。UBRは合成指標で試行回数に分解できず同時点標本誤差を解析的に出せないため、他4材料の中央値0.496で暫定代用（分解可能なUBRが手に入れば置換）。根拠=docs/audits/sp015_same_time_reliability.md。旧重みは _componentWeightsLegacyNextYearRepeatability に保持（legacy control、比較専用・productionでは不使用）。感度: legacy vs same_time_reliability の順位相関r=0.992（2025年n=158）——置き換えで壊れていたのは順位でなく根拠",
+  "_componentWeights_basis": "SP-015 final(2026-08-14 オーナー裁定の6軸)。weight ∝ max(0,同時点信頼性) × |偏相関(材料, NPB+ raw sprint speed | ISO)| ＝ 信頼性×妥当性。★翌年再現性(SR-053)もPowerPro個人ラベル(SP-046 B-3)も使っていない。妥当性の基準はNPB+ raw sprint speed(km/h)=トラッキングが出す物理量でPowerProラベルではない(SR-010が両者の分離を要求、SP-046 §4で許可)。axis-levelの重み決定にのみ使いplayer-levelの値は当てにいかない。軸1 construct directnessは恣意的係数を置かず軸6が実測として代弁。軸4 confoundingはISO(長打力)との相関を測り軸6を偏相関にして除去(実測: ISO相関は-0.03〜-0.32だが偏相関にしても一致はほぼ変わらず=ISOは主要な交絡経路ではない)。軸5 temporal proximityはcurrent-year査定では全材料が同一シーズンで定数(poolingはSP-016)。UBRは試行回数へ分解できず軸2が測れないため測れた材料の中央値を代用。詳細=docs/audits/sp015_final_weight_design_20260814.md",
   "_componentWeightsLegacyNextYearRepeatability": {
     "triple": 0.695,
     "gdpAvoid": 0.62,
@@ -406,5 +406,13 @@
     "repeatability": 0.181,
     "_purpose": "走塁得能＝走力で説明できる分を引いた残差（仕様04 §3）",
     "_note": "走力の計算にはこの指標を入れずに求める（自分自身を説明変数にすると残差が消えるため）"
+  },
+  "_componentWeightsLegacySameTimeReliabilityOnly": {
+    "triple": 0.49648301630228797,
+    "gdpAvoid": 0.43340785393287107,
+    "infieldHit": 0.5331986509790801,
+    "ubr": 0.496,
+    "advance": 0.22075263524730496,
+    "_comment": "2026-08-14以前のproduction既定。同時点信頼性のみで重みを決めていた版(SP-015 v1)。妥当性(構成概念への一致)を見ていなかったため、legacy controlとして保持し比較にのみ使う"
   }
 }

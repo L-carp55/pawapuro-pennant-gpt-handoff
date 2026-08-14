@@ -1,0 +1,230 @@
+{
+  "generated_at": "2026-08-14",
+  "policy": "SR-053(翌年再現性不使用) / SP-046 B-3(PowerPro個人ラベル不使用)",
+  "axes": {
+    "axis1": "construct directness — 数値化せず軸6が実測として代弁（恣意的係数を置かない）",
+    "axis2": "same-time measurement reliability — 1 − E[標本誤差分散]/観測分散、シーズン内で完結",
+    "axis3": "sample error — 軸2と同源。平均試行回数を併記して透明化",
+    "axis4": "confounding — 打撃力(ISO)との相関を測り、軸6を偏相関にして除去",
+    "axis5": "temporal proximity — current-year査定では全材料が同一シーズン＝定数。poolingはSP-016",
+    "axis6": "independent physical convergence — NPB+ raw sprint speed(km/h)との一致。PowerProラベルではない",
+    "combination": "weight ∝ max(0, reliability) × |partial_r(component, NPB+ | ISO)|（信頼性×妥当性）",
+    "ubr_note": "UBRは試行回数へ分解できず軸2が測れない。測れた材料の中央値を代用（従来と同じ扱い）"
+  },
+  "components": {
+    "triple": {
+      "label": "三塁打割合",
+      "axis1_construct_directness": "MEDIUM",
+      "axis1_why": "走って三塁へ到達した結果。ただし長打力・球場形状・打球方向が混ざる",
+      "axis2_same_time_reliability": 0.4929,
+      "axis3_sample_error_mean_trials": 16,
+      "axis4_iso_contamination_r": -0.1488,
+      "axis5_temporal_proximity": "SAME_SEASON(=1)",
+      "axis6_npb_convergence_r": 0.3462,
+      "axis6_npb_convergence_partial_r_iso_removed": 0.3321,
+      "n_player_seasons": 730,
+      "n_with_npb": 328,
+      "per_season_reliability": [
+        {
+          "season": 2021,
+          "n": 136,
+          "reliability": 0.491
+        },
+        {
+          "season": 2022,
+          "n": 141,
+          "reliability": 0.518
+        },
+        {
+          "season": 2023,
+          "n": 149,
+          "reliability": 0.548
+        },
+        {
+          "season": 2024,
+          "n": 146,
+          "reliability": 0.458
+        },
+        {
+          "season": 2025,
+          "n": 158,
+          "reliability": 0.45
+        }
+      ]
+    },
+    "gdpAvoid": {
+      "label": "併殺回避",
+      "axis1_construct_directness": "MEDIUM",
+      "axis1_why": "一塁へ走る速さが効くが、打球の質・走者状況・打順が混ざる",
+      "axis2_same_time_reliability": 0.433,
+      "axis3_sample_error_mean_trials": 117,
+      "axis4_iso_contamination_r": -0.2723,
+      "axis5_temporal_proximity": "SAME_SEASON(=1)",
+      "axis6_npb_convergence_r": 0.4549,
+      "axis6_npb_convergence_partial_r_iso_removed": 0.437,
+      "n_player_seasons": 730,
+      "n_with_npb": 328,
+      "per_season_reliability": [
+        {
+          "season": 2021,
+          "n": 136,
+          "reliability": 0.503
+        },
+        {
+          "season": 2022,
+          "n": 141,
+          "reliability": 0.311
+        },
+        {
+          "season": 2023,
+          "n": 149,
+          "reliability": 0.397
+        },
+        {
+          "season": 2024,
+          "n": 146,
+          "reliability": 0.472
+        },
+        {
+          "season": 2025,
+          "n": 158,
+          "reliability": 0.482
+        }
+      ]
+    },
+    "infieldHit": {
+      "label": "内野安打率",
+      "axis1_construct_directness": "HIGH",
+      "axis1_why": "本塁→一塁の脚力が最も直接効く。ゴロ率・打席左右が混ざる",
+      "axis2_same_time_reliability": 0.5326,
+      "axis3_sample_error_mean_trials": 254,
+      "axis4_iso_contamination_r": -0.3161,
+      "axis5_temporal_proximity": "SAME_SEASON(=1)",
+      "axis6_npb_convergence_r": 0.5738,
+      "axis6_npb_convergence_partial_r_iso_removed": 0.5632,
+      "n_player_seasons": 721,
+      "n_with_npb": 328,
+      "per_season_reliability": [
+        {
+          "season": 2021,
+          "n": 136,
+          "reliability": 0.555
+        },
+        {
+          "season": 2022,
+          "n": 139,
+          "reliability": 0.561
+        },
+        {
+          "season": 2023,
+          "n": 147,
+          "reliability": 0.601
+        },
+        {
+          "season": 2024,
+          "n": 143,
+          "reliability": 0.534
+        },
+        {
+          "season": 2025,
+          "n": 156,
+          "reliability": 0.413
+        }
+      ]
+    },
+    "advance": {
+      "label": "自作走塁指標",
+      "axis1_construct_directness": "LOW",
+      "axis1_why": "走塁判断（いつ行くか）が主。純粋な脚力ではない",
+      "axis2_same_time_reliability": 0.2208,
+      "axis3_sample_error_mean_trials": 20,
+      "axis4_iso_contamination_r": -0.0523,
+      "axis5_temporal_proximity": "SAME_SEASON(=1)",
+      "axis6_npb_convergence_r": 0.4219,
+      "axis6_npb_convergence_partial_r_iso_removed": 0.4192,
+      "n_player_seasons": 636,
+      "n_with_npb": 320,
+      "per_season_reliability": [
+        {
+          "season": 2021,
+          "n": 116,
+          "reliability": 0.244
+        },
+        {
+          "season": 2022,
+          "n": 120,
+          "reliability": 0.067
+        },
+        {
+          "season": 2023,
+          "n": 131,
+          "reliability": 0.33
+        },
+        {
+          "season": 2024,
+          "n": 132,
+          "reliability": 0.233
+        },
+        {
+          "season": 2025,
+          "n": 137,
+          "reliability": 0.229
+        }
+      ]
+    },
+    "ubr": {
+      "label": "UBR",
+      "axis1_construct_directness": "LOW",
+      "axis1_why": "走塁の得点貢献。判断とスピードの合成で分解できない",
+      "axis2_same_time_reliability": null,
+      "axis3_sample_error_mean_trials": 359,
+      "axis4_iso_contamination_r": -0.0254,
+      "axis5_temporal_proximity": "SAME_SEASON(=1)",
+      "axis6_npb_convergence_r": 0.4921,
+      "axis6_npb_convergence_partial_r_iso_removed": 0.4937,
+      "n_player_seasons": 730,
+      "n_with_npb": 328,
+      "per_season_reliability": [
+        {
+          "season": 2021,
+          "n": 136,
+          "reliability": null
+        },
+        {
+          "season": 2022,
+          "n": 141,
+          "reliability": null
+        },
+        {
+          "season": 2023,
+          "n": 149,
+          "reliability": null
+        },
+        {
+          "season": 2024,
+          "n": 146,
+          "reliability": null
+        },
+        {
+          "season": 2025,
+          "n": 158,
+          "reliability": null
+        }
+      ]
+    }
+  },
+  "final_weights": {
+    "triple": 0.1637,
+    "gdpAvoid": 0.1892,
+    "infieldHit": 0.3,
+    "advance": 0.0926,
+    "ubr": 0.1892
+  },
+  "legacy_weights_same_time_reliability_only": {
+    "triple": 0.49648301630228797,
+    "gdpAvoid": 0.43340785393287107,
+    "infieldHit": 0.5331986509790801,
+    "ubr": 0.496,
+    "advance": 0.22075263524730496
+  }
+}

@@ -27,8 +27,15 @@ const EXCL_OPEN = new Set([
   'WRONG_VALIDATION_TARGET_REOPEN','WRONG_ACCEPTANCE_CRITERION_REOPEN',
   'POLICY_CONFLICT_REOPEN','WRONG_LANE_REOPEN','OVERSTRICT_REOPEN',
   'SCOPE_OVERREACH_REOPEN','REASSESS_REQUIRED',
-  // 検証は実施したが決着しなかった状態（2026-08-13追加）。現行動作を暫定維持するが
-  // 「検証済み」「妥当な除外」とは扱わない＝fail-closedを維持しblockerとして数える。
+]);
+// 検証を実施したが direct physical evidence では識別できなかった状態。
+// ★2026-08-14 オーナー裁定で **正式な終端状態** として認められた
+// （「無理に閉じず NOT_IDENTIFIABLE_PROVISIONAL を正式な状態としてよい」）。
+// したがって:
+//   - 是正タスクが全て閉じていてもエラーにしない（調査は完了し、答えが「識別不能」だった）
+//   - 「妥当な除外(VALID_*)」とは別枠で数え、見えなくならないようにする
+//   - 決着条件を corrected_policy に書くことを運用で要求する
+const EXCL_UNRESOLVED_TERMINAL = new Set([
   'NOT_IDENTIFIABLE_PROVISIONAL_CURRENT_BEHAVIOR',
 ]);
 const EXCL_VALID = new Set([
@@ -148,7 +155,7 @@ for (const x of exclusions) {
   if (!/^EX-\d+$/.test(x.exclusion_id)) err(`invalid exclusion_id: ${x.exclusion_id}`);
   if (exclusionIds.has(x.exclusion_id)) err(`duplicate exclusion: ${x.exclusion_id}`);
   exclusionIds.add(x.exclusion_id);
-  if (!EXCL_OPEN.has(x.verdict) && !EXCL_VALID.has(x.verdict)) err(`${x.exclusion_id}: invalid exclusion verdict ${x.verdict}`);
+  if (!EXCL_OPEN.has(x.verdict) && !EXCL_VALID.has(x.verdict) && !EXCL_UNRESOLVED_TERMINAL.has(x.verdict)) err(`${x.exclusion_id}: invalid exclusion verdict ${x.verdict}`);
 
   const xs = list(x.task_ids);
   for (const taskId of xs) if (!byId.has(taskId)) err(`${x.exclusion_id}: references unknown task ${taskId}`);
@@ -165,6 +172,12 @@ for (const x of exclusions) {
   }
 }
 const openExclusions = exclusions.filter(x => EXCL_OPEN.has(x.verdict));
+const unresolvedTerminal = exclusions.filter(x => EXCL_UNRESOLVED_TERMINAL.has(x.verdict));
+for (const x of unresolvedTerminal) {
+  if (!String(x.corrected_policy ?? '').trim()) {
+    err(`${x.exclusion_id}: NOT_IDENTIFIABLE系は決着条件を corrected_policy へ書くこと`);
+  }
+}
 const ownerExclusionBlocks = openExclusions.filter(x => x.owner_review_block === '1');
 const gateExclusionBlocks = openExclusions.filter(x => x.gate_block === '1');
 
@@ -223,5 +236,5 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`PASS: requirements=${reqs.length}, tasks=${tasks.length}, exclusions=${exclusions.length}, open_exclusions=${openExclusions.length}, owner_review_task_blockers=${ownerBlocks.length}, owner_review_exclusion_blockers=${ownerExclusionBlocks.length}, gate_task_blockers=${gateBlocks.length}, gate_exclusion_blockers=${gateExclusionBlocks.length}`);
+console.log(`PASS: requirements=${reqs.length}, tasks=${tasks.length}, exclusions=${exclusions.length}, open_exclusions=${openExclusions.length}, unresolved_terminal=${unresolvedTerminal.length}, owner_review_task_blockers=${ownerBlocks.length}, owner_review_exclusion_blockers=${ownerExclusionBlocks.length}, gate_task_blockers=${gateBlocks.length}, gate_exclusion_blockers=${gateExclusionBlocks.length}`);
 console.log('Owner review and Speed Gate remain fail-closed until task and exclusion blocker counts reach zero.');
