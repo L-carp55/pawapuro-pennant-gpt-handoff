@@ -1,8 +1,703 @@
 {
   "generated_at": "2026-08-14",
-  "verdict": "NOT_DECISION_USEFUL",
-  "reason": "Existing NPB+ top_speed / H2F / TZR-RngR mix route, reaction, positioning, and straight-line speed. No source in-repo isolates defensive straight-line chase. Broad recollection not opened.",
+  "task": "SP-062 defensive straight-line chase speed evidence",
+  "evidence_status_vocabulary": [
+    "MEASURED_NEGATIVE",
+    "MEASURED_POSITIVE",
+    "NOT_COLLECTED"
+  ],
+  "code_path": "scripts/sp020_060_061_062_044_045_cleanup.mjs :: SP-062 DB column probe + corpus text probe",
+  "inputs_read": [
+    {
+      "path": "data/pennant.db",
+      "objects": 38,
+      "sql": "SELECT type, name FROM sqlite_master WHERE type IN ('table','view') ORDER BY name",
+      "per_object": "PRAGMA table_info(<name>) + SELECT COUNT(*)"
+    },
+    {
+      "path": "data/normalized + data/manual + outputs/derived (*.json, *.jsonl)",
+      "files_with_hits": 19
+    }
+  ],
+  "items": [
+    {
+      "item": "pennant.db column isolating defensive straight-line chase",
+      "evidence_status": "MEASURED_NEGATIVE",
+      "n": 0,
+      "query": "SELECT type, name FROM sqlite_master WHERE type IN ('table','view') ORDER BY name then PRAGMA table_info(<name>); column regex /chase|pursuit|closing|route|sprint|range|rngr|uzr|tzr|top_speed|reaction/i; required fielding-context column regex /^(fielder|fielder_norm|pos|position)$/i",
+      "objects_scanned": 38,
+      "columns_scanned": 626,
+      "keyword_matched_objects": 8,
+      "keyword_matches": [
+        {
+          "object": "bm_fld",
+          "type": "table",
+          "rows": 14488,
+          "matched_columns": [
+            "tzr",
+            "rngr"
+          ],
+          "table_has_fielding_context_column": true,
+          "sibling_columns": [
+            "season",
+            "farm",
+            "player_id",
+            "pos",
+            "inn",
+            "tzr",
+            "rngr",
+            "dpr",
+            "arm",
+            "errr",
+            "pos_adj",
+            "framing",
+            "blocking"
+          ],
+          "isolates_defensive_chase": false
+        },
+        {
+          "object": "bm_player",
+          "type": "table",
+          "rows": 10431,
+          "matched_columns": [
+            "tzr",
+            "rngr"
+          ],
+          "table_has_fielding_context_column": false,
+          "sibling_columns": [
+            "season",
+            "farm",
+            "player_id",
+            "team",
+            "name_ja",
+            "name_en",
+            "name_sponavi",
+            "war",
+            "bat_war",
+            "run_war",
+            "fld_war",
+            "pit_war",
+            "ubr",
+            "wsb",
+            "dpar",
+            "def_inn",
+            "tzr",
+            "rngr",
+            "dpr",
+            "arm",
+            "errr",
+            "pos_adj"
+          ],
+          "isolates_defensive_chase": false
+        },
+        {
+          "object": "mlb_bridge",
+          "type": "table",
+          "rows": 79,
+          "matched_columns": [
+            "sprint_speed_avg",
+            "sprint_years"
+          ],
+          "table_has_fielding_context_column": false,
+          "sibling_columns": [
+            "npb_name",
+            "npb_name_en",
+            "proeye_id",
+            "mlb_name",
+            "sprint_speed_avg",
+            "sprint_years",
+            "arm_mph_avg",
+            "arm_years",
+            "detail"
+          ],
+          "isolates_defensive_chase": false
+        },
+        {
+          "object": "npb_plus_measurement",
+          "type": "table",
+          "rows": 109,
+          "matched_columns": [
+            "chase_pct",
+            "top_speed_kmh"
+          ],
+          "table_has_fielding_context_column": false,
+          "sibling_columns": [
+            "name",
+            "player_id",
+            "team",
+            "season_label",
+            "exit_velo_max",
+            "exit_velo_avg",
+            "distance_max",
+            "launch_angle_avg",
+            "swing_speed_avg",
+            "hard_hit_pct",
+            "barrel_pct",
+            "chase_pct",
+            "k_pct",
+            "bb_rate",
+            "ops",
+            "sb_success",
+            "top_speed_kmh",
+            "hp_to_1b_sec",
+            "throw_speed_kmh",
+            "source_images",
+            "source"
+          ],
+          "isolates_defensive_chase": false
+        },
+        {
+          "object": "the_show_bridge",
+          "type": "table",
+          "rows": 47,
+          "matched_columns": [
+            "reaction_time_avg"
+          ],
+          "table_has_fielding_context_column": false,
+          "sibling_columns": [
+            "proeye_id",
+            "npb_name",
+            "mlb_name",
+            "name_key",
+            "editions",
+            "ovr_avg",
+            "contact_left_avg",
+            "contact_right_avg",
+            "power_left_avg",
+            "power_right_avg",
+            "plate_vision_avg",
+            "plate_discipline_avg",
+            "batting_clutch_avg",
+            "bunting_ability_avg",
+            "hitting_durability_avg",
+            "fielding_durability_avg",
+            "fielding_ability_avg",
+            "arm_strength_avg",
+            "arm_accuracy_avg",
+            "reaction_time_avg",
+            "blocking_avg",
+            "speed_avg",
+            "baserunning_ability_avg",
+            "baserunning_aggression_avg"
+          ],
+          "isolates_defensive_chase": false
+        },
+        {
+          "object": "the_show_rating",
+          "type": "table",
+          "rows": 17476,
+          "matched_columns": [
+            "reaction_time"
+          ],
+          "table_has_fielding_context_column": false,
+          "sibling_columns": [
+            "edition",
+            "uuid",
+            "name",
+            "name_key",
+            "team",
+            "series",
+            "ovr",
+            "display_position",
+            "age",
+            "bat_hand",
+            "throw_hand",
+            "is_hitter",
+            "contact_left",
+            "contact_right",
+            "power_left",
+            "power_right",
+            "plate_vision",
+            "plate_discipline",
+            "batting_clutch",
+            "bunting_ability",
+            "hitting_durability",
+            "fielding_durability",
+            "fielding_ability",
+            "arm_strength",
+            "arm_accuracy",
+            "reaction_time",
+            "blocking",
+            "speed",
+            "baserunning_ability",
+            "baserunning_aggression"
+          ],
+          "isolates_defensive_chase": false
+        },
+        {
+          "object": "v_bm_by_player",
+          "type": "view",
+          "rows": 7208,
+          "matched_columns": [
+            "tzr",
+            "rngr"
+          ],
+          "table_has_fielding_context_column": false,
+          "sibling_columns": [
+            "proeye_id",
+            "season",
+            "farm",
+            "name_ja",
+            "war",
+            "bat_war",
+            "run_war",
+            "fld_war",
+            "pit_war",
+            "ubr",
+            "wsb",
+            "dpar",
+            "def_inn",
+            "tzr",
+            "rngr",
+            "dpr",
+            "arm",
+            "errr",
+            "src_ids"
+          ],
+          "isolates_defensive_chase": false
+        },
+        {
+          "object": "v_bm_player",
+          "type": "view",
+          "rows": 10349,
+          "matched_columns": [
+            "tzr",
+            "rngr"
+          ],
+          "table_has_fielding_context_column": false,
+          "sibling_columns": [
+            "season",
+            "farm",
+            "player_id",
+            "team",
+            "name_ja",
+            "name_en",
+            "name_sponavi",
+            "war",
+            "bat_war",
+            "run_war",
+            "fld_war",
+            "pit_war",
+            "ubr",
+            "wsb",
+            "dpar",
+            "def_inn",
+            "tzr",
+            "rngr",
+            "dpr",
+            "arm",
+            "errr",
+            "pos_adj",
+            "src_rows"
+          ],
+          "isolates_defensive_chase": false
+        }
+      ],
+      "note": "A keyword match is not a chase metric. npb_plus_measurement.chase_pct sits next to k_pct/bb_rate/barrel_pct and carries no fielder/pos column, so it is plate-discipline chase, not defensive pursuit. That disambiguation is why the isolating test also requires a fielding-context column."
+    },
+    {
+      "item": "in-repo corpus row isolating defensive chase speed (as opposed to route/reaction/positioning mixes)",
+      "evidence_status": "MEASURED_NEGATIVE",
+      "n": 0,
+      "query": "text regex /守備範囲|守備レンジ|追走|defensive_range|DEFENSIVE_RANGE|\\bUZR\\b|\\bTZR\\b|\\bRngR\\b/i over every array-valued key of every .json/.jsonl in data/normalized, data/manual, outputs/derived; isolation test = /追走|直線|トップスピード|最高速度|スプリント|sprint|top[ _-]?speed/i AND /\\d\\s*(秒|sec|s\\b|km\\/?h|キロ|m\\/s|ft\\/s|フィート)/i in the same matched text; search-prompt fields /^(query|queries|query_plan|prompt|search_query|query_kinds|query_log)$/i counted separately",
+      "rows_mentioning_defensive_range": 8911,
+      "rows_passing_isolation_test": 0,
+      "matches_inside_search_prompts": 848,
+      "isolating_rows": [],
+      "note": "Matches are range/RngR/UZR/守備範囲 mentions, which mix route, reaction, positioning and straight-line speed. A large share of raw occurrences is the Grok-X prompt clause instructing the searcher to exclude 守備範囲 posts, counted separately above.",
+      "per_file": [
+        {
+          "file": "data/normalized/speed_2026_grok_x_sources.json",
+          "records_scanned": 191,
+          "rows_matched_outside_prompts": 3,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 191
+        },
+        {
+          "file": "data/normalized/speed_2026_new6_grok_x_temporal_sources.json",
+          "records_scanned": 266,
+          "rows_matched_outside_prompts": 5,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 14
+        },
+        {
+          "file": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+          "records_scanned": 243,
+          "rows_matched_outside_prompts": 3,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 191
+        },
+        {
+          "file": "data/normalized/speed_2026_video_tiebreak_sources.json",
+          "records_scanned": 49,
+          "rows_matched_outside_prompts": 1,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+          "records_scanned": 191,
+          "rows_matched_outside_prompts": 3,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 267
+        },
+        {
+          "file": "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+          "records_scanned": 195,
+          "rows_matched_outside_prompts": 3,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+          "records_scanned": 385,
+          "rows_matched_outside_prompts": 15,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 171
+        },
+        {
+          "file": "data/manual/speed_2026_new6_grok_x_temporal_research_20260811.json",
+          "records_scanned": 194,
+          "rows_matched_outside_prompts": 3,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 14
+        },
+        {
+          "file": "data/manual/speed_2026_video_tiebreak_conflict_research_20260811.json",
+          "records_scanned": 12,
+          "rows_matched_outside_prompts": 1,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "outputs/derived/infield_throw_accuracy.json",
+          "records_scanned": 67,
+          "rows_matched_outside_prompts": 1,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+          "records_scanned": 150,
+          "rows_matched_outside_prompts": 2,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "outputs/derived/sp033_034_youtube_comment_classification_20260813.jsonl",
+          "records_scanned": 7145,
+          "rows_matched_outside_prompts": 3,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "outputs/derived/sp033_034_youtube_events_by_player_claim_20260814.jsonl",
+          "records_scanned": 7145,
+          "rows_matched_outside_prompts": 3,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "outputs/derived/sp063_all_missing_data_child_map_20260814.json",
+          "records_scanned": 15,
+          "rows_matched_outside_prompts": 2,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+          "records_scanned": 473,
+          "rows_matched_outside_prompts": 2,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+          "records_scanned": 360,
+          "rows_matched_outside_prompts": 2,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl",
+          "records_scanned": 473,
+          "rows_matched_outside_prompts": 2,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "outputs/derived/speed_youtube_official_comments_recovered_20260813.jsonl",
+          "records_scanned": 8715,
+          "rows_matched_outside_prompts": 3,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        },
+        {
+          "file": "outputs/derived/web_collected_measurements.json",
+          "records_scanned": 106065,
+          "rows_matched_outside_prompts": 8854,
+          "rows_passing_isolation_test": 0,
+          "matches_inside_search_prompts": 0
+        }
+      ]
+    },
+    {
+      "item": "structured defensive-range metric rows already in the repo (RngR / UZR style)",
+      "evidence_status": "MEASURED_POSITIVE",
+      "n": 607,
+      "query": "rows carrying a metric/metric_name/measure/stat field whose value matches /守備範囲|守備レンジ|追走|defensive_range|DEFENSIVE_RANGE|\\bUZR\\b|\\bTZR\\b|\\bRngR\\b/i",
+      "by_metric": {
+        "RngR": 72,
+        "UZR": 111,
+        "UZR_1200": 96,
+        "UZR_200": 15,
+        "range_runs": 313
+      },
+      "by_file": {
+        "outputs/derived/web_collected_measurements.json": 607
+      },
+      "isolates_straight_line_chase": false,
+      "why_not": "Range runs are outcome credit per opportunity. They fold route, first step, positioning and arm-independent conversion into one number, and carry no time or distance unit, so they cannot be inverted into straight-line chase speed. They stay usable for defence work; they are not a speed teacher."
+    },
+    {
+      "item": "external tracking data (Statcast-style fielder sprint/route on batted balls) for NPB",
+      "evidence_status": "NOT_COLLECTED",
+      "n": null,
+      "reason": "No such feed is in the repo and no external acquisition was attempted in this wave. This is a collection gap, not evidence that the ability is unmeasurable."
+    }
+  ],
+  "verdict": "NOT_DECISION_USEFUL_ON_CURRENT_IN_REPO_SOURCES",
   "closed": true,
-  "negative_finding": true,
-  "scope": "defensive chase as isolated speed evidence"
+  "scope": "defensive chase as isolated speed evidence, in-repo sources only",
+  "negative_finding_scope_limit": "Applies only to isolating defensive straight-line chase from in-repo sources. Does not generalize to adjacent lanes (offensive sprint, H2F, T90) and does not close future external tracking collection.",
+  "db_schema_snapshot": [
+    {
+      "name": "baserunning_advances",
+      "type": "table",
+      "rows": 22459,
+      "n_columns": 11
+    },
+    {
+      "name": "batting",
+      "type": "table",
+      "rows": 17908,
+      "n_columns": 31
+    },
+    {
+      "name": "bm_bat",
+      "type": "table",
+      "rows": 5171,
+      "n_columns": 19
+    },
+    {
+      "name": "bm_fld",
+      "type": "table",
+      "rows": 14488,
+      "n_columns": 13
+    },
+    {
+      "name": "bm_pd",
+      "type": "table",
+      "rows": 52155,
+      "n_columns": 12
+    },
+    {
+      "name": "bm_pit",
+      "type": "table",
+      "rows": 12164,
+      "n_columns": 28
+    },
+    {
+      "name": "bm_player",
+      "type": "table",
+      "rows": 10431,
+      "n_columns": 22
+    },
+    {
+      "name": "bm_pv",
+      "type": "table",
+      "rows": 26214,
+      "n_columns": 20
+    },
+    {
+      "name": "catcher_steal_event",
+      "type": "table",
+      "rows": 9240,
+      "n_columns": 13
+    },
+    {
+      "name": "fielding",
+      "type": "table",
+      "rows": 20461,
+      "n_columns": 14
+    },
+    {
+      "name": "fielding_plays",
+      "type": "table",
+      "rows": 6091,
+      "n_columns": 7
+    },
+    {
+      "name": "infield_grounder_events",
+      "type": "table",
+      "rows": 31003,
+      "n_columns": 15
+    },
+    {
+      "name": "mlb_bridge",
+      "type": "table",
+      "rows": 79,
+      "n_columns": 9
+    },
+    {
+      "name": "mlb_catcher_bridge",
+      "type": "table",
+      "rows": 1,
+      "n_columns": 9
+    },
+    {
+      "name": "nf3_direction",
+      "type": "table",
+      "rows": 5963,
+      "n_columns": 21
+    },
+    {
+      "name": "nf3_link",
+      "type": "table",
+      "rows": 11709,
+      "n_columns": 5
+    },
+    {
+      "name": "nf3_split",
+      "type": "table",
+      "rows": 378829,
+      "n_columns": 32
+    },
+    {
+      "name": "nf3_team_bat",
+      "type": "table",
+      "rows": 13993,
+      "n_columns": 19
+    },
+    {
+      "name": "nf3_team_link",
+      "type": "table",
+      "rows": 12751,
+      "n_columns": 4
+    },
+    {
+      "name": "npb_plus_measurement",
+      "type": "table",
+      "rows": 109,
+      "n_columns": 21
+    },
+    {
+      "name": "npb_usage_2026",
+      "type": "table",
+      "rows": 490,
+      "n_columns": 6
+    },
+    {
+      "name": "park_plate_appearances",
+      "type": "table",
+      "rows": 20892,
+      "n_columns": 5
+    },
+    {
+      "name": "pawapuro_full",
+      "type": "table",
+      "rows": 3229,
+      "n_columns": 18
+    },
+    {
+      "name": "pawapuro_full_link",
+      "type": "table",
+      "rows": 1879,
+      "n_columns": 7
+    },
+    {
+      "name": "pawapuro_link",
+      "type": "table",
+      "rows": 381,
+      "n_columns": 4
+    },
+    {
+      "name": "pawapuro_rating",
+      "type": "table",
+      "rows": 405,
+      "n_columns": 11
+    },
+    {
+      "name": "pitching",
+      "type": "table",
+      "rows": 8444,
+      "n_columns": 40
+    },
+    {
+      "name": "player_link",
+      "type": "table",
+      "rows": 4148,
+      "n_columns": 7
+    },
+    {
+      "name": "sqlite_stat1",
+      "type": "table",
+      "rows": 19,
+      "n_columns": 3
+    },
+    {
+      "name": "the_show_bridge",
+      "type": "table",
+      "rows": 47,
+      "n_columns": 24
+    },
+    {
+      "name": "the_show_rating",
+      "type": "table",
+      "rows": 17476,
+      "n_columns": 30
+    },
+    {
+      "name": "v_batting",
+      "type": "view",
+      "rows": 13192,
+      "n_columns": 26
+    },
+    {
+      "name": "v_bm_bat",
+      "type": "view",
+      "rows": 5126,
+      "n_columns": 20
+    },
+    {
+      "name": "v_bm_by_player",
+      "type": "view",
+      "rows": 7208,
+      "n_columns": 19
+    },
+    {
+      "name": "v_bm_pit",
+      "type": "view",
+      "rows": 12090,
+      "n_columns": 20
+    },
+    {
+      "name": "v_bm_player",
+      "type": "view",
+      "rows": 10349,
+      "n_columns": 23
+    },
+    {
+      "name": "v_fielding",
+      "type": "view",
+      "rows": 16845,
+      "n_columns": 13
+    },
+    {
+      "name": "v_pitching",
+      "type": "view",
+      "rows": 6482,
+      "n_columns": 25
+    }
+  ]
 }

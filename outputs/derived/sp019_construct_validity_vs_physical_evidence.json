@@ -1,4 +1,7 @@
 {
+  "evidence_status": "MEASURED_NEGATIVE",
+  "_evidence_status_note": "SP-019。外部physical基準で実測した（NPB+ n=91 / 50m n=34 / T90 n=2）。EX-007は決着（三塁打の走塁成分を分離すると外部基準から遠ざかる。CI95[-0.213,-0.083]が0を含まない）。EX-006は NOT_IDENTIFIABLE_PROVISIONAL。いずれも「測った上での否定/識別不能」であって未取得ではない。",
+  "_evidence_status_stamped_at": "2026-08-14 Opus bulk review",
   "generated_at": "2026-08-13",
   "supersedes": "scripts/sp019_proxy_deconfounding_reaudit.mjs（第1版。実戦proxy同士の比較のみで共通confoundを排除できていなかった）",
   "policy": "EX-006/EX-007を再OPENした上での再判定。判定基準は実戦outcomeに依存しない外部physical evidence",

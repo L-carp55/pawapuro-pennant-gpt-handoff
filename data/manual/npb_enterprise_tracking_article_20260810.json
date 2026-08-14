@@ -1,0 +1,75 @@
+{
+  "provenance_lane": "NPB_ENTERPRISE_TRACKING_ARTICLE",
+  "_do_not_merge_with": "NPB+ app/player-screen lane (data/manual/npb_plus_screens.jsonl)。観測窓・製品面が違う。同じ NPB+ ラベルにまとめない",
+  "source": {
+    "title": "二盗タイム最速ではない、それでも周東佑京が別格な理由　上位50件で見えた圧倒的な走力【DATA SPOTLIGHT】",
+    "publisher": "Baseball Channel / DATA SPOTLIGHT",
+    "data_provider_stated_by_article": "NPBエンタープライズ",
+    "published_at": "2026-08-10",
+    "as_of": "2026-08-02",
+    "archived_at": "2026-08-14",
+    "supplied_by": "owner（チャットで本文を提供）"
+  },
+
+  "population": {
+    "unit": "二塁への盗塁成功イベント",
+    "selection": "2026-08-02時点で記録された二盗タイムの**速い順 上位50件**",
+    "n_events": 50,
+    "_selection_bias": [
+      "全盗塁企図ではない（成功のみ）",
+      "全走塁イベントではない（盗塁のみ）",
+      "上位50件に条件づけられている（打ち切り標本）",
+      "出現回数は走力だけでなく、盗塁機会・企図の意思・スタート・投手/捕手の状況・スライディングも混ざる"
+    ],
+    "_forbidden_uses": [
+      "この50件から母集団の測定信頼性を作ること",
+      "全選手向けの汎用 same-time reliability 係数を作ること",
+      "上位50件に居ないことを『遅い』の証拠にすること",
+      "出現回数（8回など）や 9.24/9.17 m/s の閾値を、そのまま信頼度の重みへ変換すること",
+      "二盗タイムを純粋な足の速さの教師値として使うこと（リード・スタート・加速・スライディングが混ざる）"
+    ]
+  },
+
+  "definitions": {
+    "sprint_speed": "記事が明示する『走行中の最高速度』(m/s)",
+    "steal_time": "二盗タイム。記事自身が『同じタイムでもリード・スタート・加速・走速度の組合せが異なりうる』と明記"
+  },
+
+  "facts": {
+    "fastest_steal_time_in_set": { "player": "田中 幹也", "seconds": 3.35 },
+    "shuto_best_steal_time": { "seconds": 3.60, "rank_display": "5位タイ" },
+    "shuto_sprint_speed_max_mps": 9.24,
+    "shuto_sprint_speed_max_kmh": 33.264,
+    "shuto_events_at_max": 2,
+    "events_at_or_above_9_17_mps": { "total": 7, "shuto": 6 },
+    "non_shuto_mean_sprint_speed_mps": 8.72,
+    "non_shuto_mean_sprint_speed_kmh": 31.392,
+    "shuto_appearances_in_top50": 8,
+    "next_highest_player_appearances": 4,
+    "shuto_lead_distances_m": [4.11, 4.02, 3.96, 3.90, 3.87, 3.84, 3.78, 3.66],
+    "shuto_lead_mean_m": 3.89,
+    "non_shuto_lead_mean_m": 4.00,
+    "shuto_longest_lead_rank_display": "14位タイ",
+    "shuto_steal_attempts": 26,
+    "shuto_steal_success": 23,
+    "shuto_steal_success_rate": 0.885,
+    "_success_rate_note": "20企図以上では記事時点で最高。ただし盗塁成功率は走塁の成果であって足の速さの計測ではない"
+  },
+
+  "cross_check_with_app_lane": {
+    "app_lane_top_speed_kmh": 35.0,
+    "article_max_kmh": 33.264,
+    "difference_kmh": 1.736,
+    "reading": "記事の最大値はアプリ表示の35.0を下回る。よって記事はアプリ値の重複ではなく、**制限された event 集合（速い成功盗塁）**の観測。集計規則が同一である証拠は無いので同一視しない。",
+    "sb_success_match": "アプリ側 sb_success=0.885 と記事の88.5%は一致。2026年の同時期snapshotであることとは整合するが、速度フィールドの集計定義が同じであることの証拠にはならない。"
+  },
+
+  "legitimate_value": {
+    "scope": "周東佑京 個人",
+    "claim": "同一シーズン内で、event単位の最高速度が繰り返し集団最上位に到達している（単発の外れ値ではない）",
+    "support": ["9.17 m/s 以上の7イベント中6件が本人", "最大値9.24 m/s を2イベントで記録", "50件中の登場8回は最多（次点4回）"],
+    "not_explained_by_lead": "本人のリード平均3.89mは非周東平均4.00mより短く、最長4.11mでも14位タイ。ただしリード距離は走行距離・加速区間を変えるため、標準化されたプロトコルである証明にはならない",
+    "allowed_use": "周東個人の N 推定に対する**反復性の裏づけ**（confidence の文脈）。順序・レンジの証拠。",
+    "not_allowed_use": "1-100 への直接変換／全選手共通の信頼性係数／SP-061 の代走レーンへの合流"
+  }
+}

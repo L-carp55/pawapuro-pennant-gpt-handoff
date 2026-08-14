@@ -521,8 +521,13 @@ export function appraiseCard(ctx, opts) {
     //   最終形（PA一括 or 材料別、κの値）の決定には「多年poolに構造的に有利でない」
     //   判定基準が要り、現時点でそれが無いため hard gate を暫定継続している。
     //   詳細と決着条件 = docs/audits/sp016_hard_gate_vs_continuous_20260813.md
-    currentYearFirst = true, sufficientWeight = 50,
+    // ★2026-08-14 修理: poolingMode を先に解決し、currentYearFirst / sufficientWeight を
+    //   **そこから導く**。以前は currentYearFirst=true / sufficientWeight=50 が独立の既定で、
+    //   poolingMode を明示しても旧フラグが勝っていた（modeが効かない）。
     poolingMode = runNorm?.speedPooling?.mode ?? 'current_year_first_hard',
+    currentYearFirst = poolingMode === 'current_year_first_hard',
+    sufficientWeight = poolingMode === 'current_year_first_hard'
+      ? (runNorm?.speedPooling?.sufficientWeightHard ?? 50) : 0,
     kappa = runNorm?.speedPooling?.kappa ?? 50,
     lambda = runNorm?.speedPooling?.lambda ?? 0.2703 } = opts;
 

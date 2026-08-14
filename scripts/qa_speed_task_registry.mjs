@@ -129,6 +129,62 @@ for (const t of tasks) {
   }
 }
 
+// 3b) 成果物の中身の検査（2026-08-14 追加）。
+//   従来は existsSync && size>0 しか見ていなかったため、**文字列リテラルだけを書いた
+//   0レコードの成果物**で DONE を主張できた（SP-062 / SP-045 / SP-090 が実際にそうなっていた）。
+//   ここでは「列挙された証拠が1件以上あるか」を機械で見る。
+//   列挙が無い成果物で閉じたい場合は、次の2つを明示する必要がある:
+//     - 行の next_action_or_blocker に `EVIDENCE_STATUS=MEASURED_NEGATIVE`（探して0件だった）
+//     - または `EVIDENCE_STATUS=NOT_COLLECTED`（探していない）→ この場合 DONE 系は名乗れない
+function artifactSubstance(rel) {
+  const abs = path.join(ROOT, rel);
+  if (!fs.existsSync(abs) || !fs.statSync(abs).isFile()) return null;
+  const bytes = fs.statSync(abs).size;
+  if (/\.jsonl$/i.test(rel)) {
+    const n = fs.readFileSync(abs, 'utf8').split(/\r?\n/).filter(Boolean).length;
+    return { bytes, maxArray: n, text: '' };
+  }
+  if (!/\.json$/i.test(rel)) return { bytes, maxArray: null, text: '' };
+  let j;
+  try { j = JSON.parse(fs.readFileSync(abs, 'utf8')); } catch { return { bytes, maxArray: null, text: '' }; }
+  let maxArray = 0;
+  const walk = (v, d) => {
+    if (d > 6 || v == null) return;
+    if (Array.isArray(v)) { if (v.length > maxArray) maxArray = v.length; v.slice(0, 50).forEach(x => walk(x, d + 1)); }
+    else if (typeof v === 'object') for (const k of Object.keys(v)) walk(v[k], d + 1);
+  };
+  walk(j, 0);
+  return { bytes, maxArray, text: JSON.stringify(j) };
+}
+for (const t of tasks) {
+  if (!CLOSED.has(t.status)) continue;
+  const arts = list(t.artifacts).filter(a => /\.(json|jsonl)$/i.test(a));
+  if (!arts.length) continue;                       // md のみの成果物はここでは判定しない
+  const decl = /EVIDENCE_STATUS=([A-Z_]+)/.exec(t.next_action_or_blocker || '');
+  const subs = arts.map(a => ({ a, s: artifactSubstance(a) })).filter(x => x.s);
+  const best = subs.reduce((m, x) => (x.s.maxArray ?? 0) > (m?.s?.maxArray ?? -1) ? x : m, null);
+  const enumerated = best ? (best.s.maxArray ?? 0) : 0;
+  if (enumerated < 1) {
+    if (!decl) {
+      err(`${t.task_id}: ${t.status} だが成果物に列挙された証拠が0件（${arts.join(',')}）。`
+        + `実測して0件なら next_action_or_blocker に EVIDENCE_STATUS=MEASURED_NEGATIVE を明記すること`);
+    } else if (decl[1] === 'NOT_COLLECTED') {
+      err(`${t.task_id}: EVIDENCE_STATUS=NOT_COLLECTED を DONE系(${t.status}) で閉じている。`
+        + `取得不能を証拠不存在と混同しない（CLAUDE.md 絶対禁止）`);
+    }
+  }
+  // 3c) DONE_NEGATIVE_FINDING は「探した」ことを成果物自身が示す必要がある
+  if (t.status === 'DONE_NEGATIVE_FINDING') {
+    const txt = subs.map(x => x.s.text).join(' ');
+    const okNeg = /"evidence_status"\s*:\s*"(MEASURED_NEGATIVE|NOT_IDENTIFIABLE)"/.test(txt)
+      || (decl && (decl[1] === 'MEASURED_NEGATIVE' || decl[1] === 'NOT_IDENTIFIABLE'));
+    if (!okNeg) {
+      err(`${t.task_id}: DONE_NEGATIVE_FINDING だが成果物に evidence_status=MEASURED_NEGATIVE の記録が無い。`
+        + `「取得しなかった」と「探して0件だった」を成果物で区別すること`);
+    }
+  }
+}
+
 // 4) Dependencies: a closed child cannot claim completion while a required dependency is still open.
 for (const t of tasks) {
   const deps = list(t.depends_on);
@@ -171,6 +227,25 @@ for (const x of exclusions) {
     }
   }
 }
+// 6b) 循環クローズの検出（2026-08-14 追加）。
+//   除外を「解決した」と宣言する時、corrected_policy が old_reason の言い換えに過ぎない事例が
+//   実際に4件あった（EX-012/016/017/018）。除外理由をそのまま書き直しても解決ではない。
+//   語彙の重なりが強すぎる閉じ方は、新しい測定を伴っていない徴候として落とす。
+const tok = t => new Set(String(t || '')
+  .replace(/[\s、。「」（）()・,\.:;\/]+/g, '')
+  .match(/[\u3040-\u30ff\u4e00-\u9faf]{2}|[A-Za-z]{3,}/g) || []);
+for (const x of exclusions) {
+  if (!EXCL_VALID.has(x.verdict)) continue;
+  const a = tok(x.old_reason), b = tok(x.corrected_policy);
+  if (a.size < 4 || b.size < 4) continue;
+  let inter = 0; for (const v of a) if (b.has(v)) inter++;
+  const containment = inter / a.size;              // old_reason のどれだけが言い直されているか
+  if (containment >= 0.8 && b.size <= a.size * 1.6) {
+    err(`${x.exclusion_id}: ${x.verdict} だが corrected_policy が old_reason の言い換え`
+      + `（語の重なり ${(containment * 100).toFixed(0)}%）。新しい測定・変更点を書くこと`);
+  }
+}
+
 const openExclusions = exclusions.filter(x => EXCL_OPEN.has(x.verdict));
 const unresolvedTerminal = exclusions.filter(x => EXCL_UNRESOLVED_TERMINAL.has(x.verdict));
 for (const x of unresolvedTerminal) {

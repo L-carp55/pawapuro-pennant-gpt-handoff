@@ -24,6 +24,8 @@
  * @param {number} measured 実測値（Sprint Speedならft/s）
  * @param {object} coef {slope, intercept, min, max}
  */
+import { misattributedFields } from './npb_plus_provenance.mjs';
+
 export function measurementToRating(measured, coef) {
   if (!Number.isFinite(measured) || !coef) return null;
   const raw = coef.slope * measured + coef.intercept;
@@ -179,6 +181,16 @@ export function buildDirectMeasurements(row, cfg, targetSeason = null) {
     for (const ability of ['パワー', '走力']) {
       if (out[ability]) continue;      // 既に別の直接計測が入っているなら上書きしない
       if (anchored.has(ability)) continue;   // 仕様アンカーがある能力はパワプロ目盛りで上書きしない
+      // ★2026-08-14 fail closed: owner訂正で NPB+ の走力系 direct measurement は最高速度のみと確定した。
+      //   誤帰属フィールド（hp_to_1b_sec 等）の変換式が設定に残っていたら、静かに飛ばさず**止める**。
+      //   飛ばすだけだと、設定に戻された時に誰も気づかない。正本=configs/npb_plus_field_provenance.json
+      const banned = misattributedFields();
+      const leaked = Object.keys(npbPlus).filter(metric => banned.has(metric));
+      if (leaked.length) {
+        throw new Error(`[NPB+ provenance fail-closed] npb_plus_direct.models に誤帰属フィールドの変換式が在る: `
+          + `${leaked.join(',')}。NPB+の直接計測ではないため能力値へ変換してはならない。`
+          + `configs/npb_plus_field_provenance.json を参照`);
+      }
       const cands = Object.entries(npbPlus)
         .filter(([metric, m]) => m.ability === ability
           && (m.test_r ?? 0) >= HOLDOUT_MIN

@@ -600,7 +600,8 @@
       "slope": 1.3811128593042714,
       "intercept": -4.330107275936925,
       "_kept_as": "control. Restore with poolingMode=current_year_first_hard to reproduce pre-continuous display."
-    }
+    },
+    "_script_note_20260814": "_script は 走力 には当てはまらない。走力の applied 値（slope 1.8883 / intercept -29.5441, n=260）は scripts/sp016_continuous_prior_apply.mjs が「hard gate + 旧scale の表示平均・標準偏差に合わせる」形で再導出したもので、calibrate_scale_vs_pawapuro.mjs の出力ではない。ただし合わせ先の旧scale自体はパワプロ143人の平均・標準偏差に由来する（個人ラベルではなくモーメントのみ＝SP-046 A-1 の範囲）。★2026-08-14 に speedPooling を control へ戻したため、この applied 値は continuous 用の再導出であって現行既定(hard)とは整合しない。continuous を採用する時に再導出すること。"
   },
   "direct_measurement": {
     "_comment": "直接計測(仕様04 §1.2 第1階層)を能力値へ変換する係数。src/ratings/direct_measurement.mjs が読む。受け皿(ability_evidence.direct_measurement)は2026-08-01に実装済みだったがデータ未接続のままで、それを「材料の限界」と誤報告していた(2026-08-04 P-00gで訂正)",
@@ -768,7 +769,9 @@
         "test_r": 0.762,
         "test_n": 14,
         "test_mae": 10.55
-      },
+      }
+    },
+    "_removed_misattributed_20260814": {
       "hp_to_1b_sec": {
         "ability": "走力",
         "unit": "秒",
@@ -780,7 +783,12 @@
         "test_r": 0.588,
         "test_n": 14,
         "test_mae": 12.9
-      }
+      },
+      "_why": "owner訂正(2026-08-14): NPB+アプリ/選手画面の走力系 direct measurement は最高速度のみ。hp_to_1b_sec は NPB+ の直接計測ではない（MISATTRIBUTED_SOURCE、真の出所は未確認）。この式は走力へ変換される経路に居たため models から外す。",
+      "_impact_before_removal": "src/ratings/direct_measurement.mjs は同じ能力の候補を test_r 降順で1つだけ採る。top_speed_kmh(test_r=0.762) が hp_to_1b_sec(0.588) より上なので通常は選ばれないが、top_speed が欠測で hp だけ在る選手では hp が採用されえた＝経路が開いていた。",
+      "_raw_not_deleted": "data/manual/npb_plus_screens.jsonl の値も data/manual/hp_to_1b_measurements_curated.json も削除していない。禁止するのは NPB+ の直接計測として走力へ変換することであって、値の保存ではない。",
+      "_legitimate_lane": "H2F の証拠が要る時は出典URLを持つ curated 側（VERIFIED_OTHER_SOURCE）を別レーンで使う（SP-007）。",
+      "_authority": "configs/npb_plus_field_provenance.json"
     }
   }
 }

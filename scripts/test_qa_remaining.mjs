@@ -1165,8 +1165,18 @@ console.log('=== 未整備だった回帰テスト ===\n');
     const rl = card?.calc_log?.running;
     t('§走力複数年ログ-a 複数年プールを使ったかが計算ログに出る',
       rl && 'speed_is_multi_year' in rl, rl ? `速度複数年=${rl.speed_is_multi_year}` : 'null');
-    t('§走力複数年ログ-b 実際に複数年（1年より多い）が使われている',
-      rl?.speed_years > 1, `${rl?.speed_years}年（${rl?.speed_seasons?.join(',')}）`);
+    // ★2026-08-14 更新: production 既定を current_year_first_hard へ戻したため、
+    //   規定打席級の選手は**当年だけ**で査定される（オーナー確定ルール「年度能力はcurrent-year中心」）。
+    //   よって「既定で複数年が使われる」は主張として誤りになった。
+    //   代わりに (1)既定では当年に閉じる (2)明示的に多年poolを頼めば複数年が使われる、の2つを見る。
+    t('§走力複数年ログ-b 既定では当年に閉じる（current-year中心のオーナールール）',
+      rl?.speed_years === 1 && rl?.speed_seasons?.every(y => y <= 2024),
+      `${rl?.speed_years}年（${rl?.speed_seasons?.join(',')}）`);
+    const poolCard = ac4(ctx7, { name: '周東　佑京', mode: '2024', poolingMode: 'legacy_auto_pool',
+      cfg, rv: rv4, runNorm, fldNorm }).card;
+    const pl = poolCard?.calc_log?.running;
+    t('§走力複数年ログ-c 多年poolを明示すれば複数年が使われる（機構は生きている）',
+      pl?.speed_years > 1, `${pl?.speed_years}年（${pl?.speed_seasons?.join(',')}）`);
   }
 }
 
@@ -1192,10 +1202,20 @@ console.log('=== 未整備だった回帰テスト ===\n');
   const rvW = JSON.parse(rfW('configs/run_values.json', 'utf8')).values;
   const ctxW = mkW(db, cfg);
   const base = acW(ctxW, { name: '村上　宗隆', mode: '2024', cfg, rv: rvW, runNorm, fldNorm }).card;
-  const held = acW(ctxW, { name: '村上　宗隆', mode: '2024', maxSeason: 2024, cfg, rv: rvW, runNorm, fldNorm }).card;
-  t('§窓-d カード査定でも既定では対象年より後が混ざる（漏れの再発検知）',
-    base.calc_log.running.speed_seasons.some(y => y > 2024),
+  // ★2026-08-14 更新: 既定が current_year_first_hard に戻ったので、**既定経路では後年が
+  //   そもそも混ざらない**（漏れが方針で閉じた）。旧テストは「既定で混ざる」を主張していたため
+  //   意味を失った。ここでは強い側＝「既定では後年ゼロ」を確かめ、
+  //   maxSeason の機構そのものは多年poolを明示した経路で確かめる（機構が死んでいないことの検知）。
+  const leak = acW(ctxW, { name: '村上　宗隆', mode: '2024', poolingMode: 'legacy_auto_pool',
+    cfg, rv: rvW, runNorm, fldNorm }).card;
+  const held = acW(ctxW, { name: '村上　宗隆', mode: '2024', maxSeason: 2024,
+    poolingMode: 'legacy_auto_pool', cfg, rv: rvW, runNorm, fldNorm }).card;
+  t('§窓-d 既定（current-year中心）では対象年より後が一切混ざらない',
+    base.calc_log.running.speed_seasons.every(y => y <= 2024),
     JSON.stringify(base.calc_log.running.speed_seasons));
+  t('§窓-d2 多年poolを明示すると後年が混ざる（maxSeasonが守る対象が実在する）',
+    leak.calc_log.running.speed_seasons.some(y => y > 2024),
+    JSON.stringify(leak.calc_log.running.speed_seasons));
   t('§窓-e maxSeasonを渡すと混ざらない（時間ホールドアウトが成立する）',
     held.calc_log.running.speed_seasons.every(y => y <= 2024),
     JSON.stringify(held.calc_log.running.speed_seasons));

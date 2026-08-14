@@ -1,10 +1,291 @@
 {
   "generated_at": "2026-08-14",
-  "pennant_db_injury_tables": "none",
-  "pa_drop_not_converted": true,
-  "roster_removal_not_converted": true,
-  "existing_texts": "SNS mentions of ケガ/故障 exist but lack date/body-part/absence/recovery structure.",
+  "task": "SP-045 injury/recovery join for temporal/stale analysis",
+  "evidence_status_vocabulary": [
+    "MEASURED_NEGATIVE",
+    "MEASURED_POSITIVE",
+    "NOT_COLLECTED"
+  ],
+  "code_path": "scripts/sp020_060_061_062_044_045_cleanup.mjs :: SP-045 sqlite_master/PRAGMA scan + corpus text scan",
+  "inputs_read": [
+    {
+      "path": "data/pennant.db",
+      "sql": "SELECT type, name FROM sqlite_master WHERE type IN ('table','view') ORDER BY name",
+      "objects": 38,
+      "columns": 626
+    },
+    {
+      "path": "data/normalized + data/manual + outputs/derived (*.json, *.jsonl)",
+      "files_with_injury_terms": 28
+    }
+  ],
+  "items": [
+    {
+      "item": "injury table in pennant.db",
+      "evidence_status": "MEASURED_NEGATIVE",
+      "n": 0,
+      "query": "SELECT type, name FROM sqlite_master WHERE type IN ('table','view') ORDER BY name; name regex /故障|離脱|負傷|怪我|ケガ|登録抹消|抹消|injur|disabled_list|(^|_)(dl|il)($|_)/i",
+      "objects_scanned": 38,
+      "matches": []
+    },
+    {
+      "item": "injury-related column in any pennant.db table or view",
+      "evidence_status": "MEASURED_NEGATIVE",
+      "n": 0,
+      "query": "PRAGMA table_info(<name>) for all 38 objects; column regex /故障|離脱|負傷|怪我|ケガ|登録抹消|抹消|injur|disabled_list|(^|_)(dl|il)($|_)/i (the (^|_)(dl|il)($|_) branch is anchored so it cannot match substrings such as \"fielding\")",
+      "columns_scanned": 626,
+      "matches": []
+    },
+    {
+      "item": "unstructured injury mentions in existing collected text",
+      "evidence_status": "MEASURED_POSITIVE",
+      "n": 145,
+      "query": "text regex /故障|離脱|負傷|怪我|ケガ|登録抹消|抹消|injur|disabled_list|(^|_)(dl|il)($|_)/i over every array-valued key of every .json/.jsonl in data/normalized, data/manual, outputs/derived; structure test = date /(19|20)\\d{2}[-/年.]\\s?\\d{1,2}[-/月.]/ and body part /(ハムストリング|太もも|大腿|ふくらはぎ|足首|アキレス|膝|ひざ|肩|肘|ひじ|腰|手首|指|股関節|肉離れ|骨折|靭帯)/ in the same matched text",
+      "rows_with_date": 24,
+      "rows_with_body_part": 6,
+      "rows_with_date_and_body_part": 0,
+      "per_file": [
+        {
+          "file": "data/normalized/speed_2026_grok_x_sources.json",
+          "records_scanned": 191,
+          "rows_with_injury_term": 2,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "data/normalized/speed_2026_new6_grok_x_temporal_sources.json",
+          "records_scanned": 266,
+          "rows_with_injury_term": 22,
+          "with_date": 5,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "data/normalized/speed_2026_sns_consensus_sources.json",
+          "records_scanned": 52,
+          "rows_with_injury_term": 2,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+          "records_scanned": 243,
+          "rows_with_injury_term": 4,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "data/normalized/speed_2026_video_tiebreak_sources.json",
+          "records_scanned": 49,
+          "rows_with_injury_term": 1,
+          "with_date": 1,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+          "records_scanned": 191,
+          "rows_with_injury_term": 2,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+          "records_scanned": 195,
+          "rows_with_injury_term": 2,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+          "records_scanned": 385,
+          "rows_with_injury_term": 19,
+          "with_date": 14,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "data/manual/speed_2026_new6_grok_x_temporal_research_20260811.json",
+          "records_scanned": 194,
+          "rows_with_injury_term": 20,
+          "with_date": 3,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "data/manual/speed_2026_sns_consensus_reviewed_evidence_20260810.json",
+          "records_scanned": 74,
+          "rows_with_injury_term": 4,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "data/manual/speed_2026_video_tiebreak_current_b_research_20260811.json",
+          "records_scanned": 14,
+          "rows_with_injury_term": 2,
+          "with_date": 1,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+          "records_scanned": 150,
+          "rows_with_injury_term": 1,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/sp033_034_youtube_comment_classification_20260813.jsonl",
+          "records_scanned": 7145,
+          "rows_with_injury_term": 14,
+          "with_date": 0,
+          "with_body_part": 2,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/sp033_034_youtube_events_by_player_claim_20260814.jsonl",
+          "records_scanned": 7145,
+          "rows_with_injury_term": 14,
+          "with_date": 0,
+          "with_body_part": 2,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/sp039_existing_video_lane_20260814.json",
+          "records_scanned": 21,
+          "rows_with_injury_term": 1,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/sp043_veteran_case_studies_20260814.json",
+          "records_scanned": 10,
+          "rows_with_injury_term": 1,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/sp090_chat_only_scan_20260814.json",
+          "records_scanned": 18,
+          "rows_with_injury_term": 1,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_2026_100_post_sns_decision_support.json",
+          "records_scanned": 100,
+          "rows_with_injury_term": 2,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_2026_100_post_video_decision_support.json",
+          "records_scanned": 142,
+          "rows_with_injury_term": 2,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_2026_100_pre_video_decision_support.json",
+          "records_scanned": 125,
+          "rows_with_injury_term": 2,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_2026_grok_x_consensus.json",
+          "records_scanned": 19,
+          "rows_with_injury_term": 1,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_2026_sns_tiebreak_consensus.json",
+          "records_scanned": 19,
+          "rows_with_injury_term": 2,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json",
+          "records_scanned": 19,
+          "rows_with_injury_term": 1,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_2026_video_tiebreak_results.json",
+          "records_scanned": 24,
+          "rows_with_injury_term": 1,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+          "records_scanned": 473,
+          "rows_with_injury_term": 1,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+          "records_scanned": 360,
+          "rows_with_injury_term": 1,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl",
+          "records_scanned": 473,
+          "rows_with_injury_term": 1,
+          "with_date": 0,
+          "with_body_part": 0,
+          "with_date_and_body_part": 0
+        },
+        {
+          "file": "outputs/derived/speed_youtube_official_comments_recovered_20260813.jsonl",
+          "records_scanned": 8715,
+          "rows_with_injury_term": 19,
+          "with_date": 0,
+          "with_body_part": 2,
+          "with_date_and_body_part": 0
+        }
+      ],
+      "note": "Mentions exist but lack the absence/recovery window a ledger needs; they are kept as weak context, not zeroed."
+    },
+    {
+      "item": "official IL / registration-removal (登録抹消) feed",
+      "evidence_status": "NOT_COLLECTED",
+      "n": null,
+      "reason": "No external acquisition attempted in this wave; NPB official pages are outside the collection policy. Absence here is a collection gap, not evidence that no injuries occurred."
+    },
+    {
+      "item": "PA drop / roster removal converted into injury events",
+      "evidence_status": "NOT_COLLECTED",
+      "n": null,
+      "reason": "Deliberately not derived. Converting a plate-appearance drop into an injury would fabricate the event; npb_usage_2026 has plate_appearances/games but no cause field."
+    }
+  ],
   "status": "BLOCKED_MISSING_DATA",
-  "blocker": "No structured injury ledger. Would need official IL/press sources; not fabricated from PA drops.",
-  "not_negative_finding": true
+  "blocker": "No structured injury ledger: 0 matching tables/views and 0 matching columns across 38 pennant.db objects; 145 text rows mention an injury term but 0 carry both a date and a body part.",
+  "not_negative_finding": "The BLOCKED status is missing data, not a finding that injuries are irrelevant to speed."
 }

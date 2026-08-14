@@ -1,34 +1,5429 @@
 {
   "generated_at": "2026-08-14",
-  "source": "existing Grok-X reviewed texts only",
-  "n_mentions": 5,
+  "task": "SP-061 pinch-runner usage as weak contextual evidence",
+  "evidence_status_vocabulary": [
+    "MEASURED_NEGATIVE",
+    "MEASURED_POSITIVE",
+    "NOT_COLLECTED"
+  ],
+  "method": {
+    "pattern": "/代走/",
+    "corpus_loader": "every top-level array-valued key of each .json (records/sources/items/source_records/entries/rows/data/comments/posts/…), every line of each .jsonl, or the bare root array",
+    "prompt_fields_excluded": "/^(query|queries|query_plan|prompt|search_query|query_kinds|query_log)$/i",
+    "prompt_field_exclusion_rationale": "Grok/X search prompts contain 代走 as an instruction word; a prompt is not an observation.",
+    "scopes": [
+      {
+        "scope": "PRIMARY",
+        "dir": "data/normalized"
+      },
+      {
+        "scope": "PRIMARY",
+        "dir": "data/manual"
+      },
+      {
+        "scope": "SECONDARY_DERIVED",
+        "dir": "outputs/derived"
+      }
+    ],
+    "code_path": "scripts/sp020_060_061_062_044_045_cleanup.mjs :: listCorpusFiles + loadCorpus + stringLeaves"
+  },
+  "previous_defect": "The earlier loader read only .records/.sources/.items, so speed_2026_grok_x_sources.json (key = source_records) matched 0 rows and three other corpora were never opened.",
+  "totals": {
+    "files_scanned": 165,
+    "files_scanned_primary": 31,
+    "files_skipped": 87,
+    "records_scanned": 174194,
+    "matched_rows": 65,
+    "matched_rows_primary": 48,
+    "unique_source_identities": 29,
+    "unique_single_posts": 22,
+    "unique_search_response_blobs": 7,
+    "unique_single_posts_attributed_to_a_player": 5,
+    "unique_single_posts_whose_own_post_text_holds_the_term": 6,
+    "unique_single_posts_matched_only_via_surrounding_search_blob": 16,
+    "matches_only_inside_search_prompts": 0,
+    "files_with_matches": 10,
+    "unparsed_csv_files_holding_the_pattern_without_a_structured_twin": 4,
+    "unparsed_csv_raw_occurrences_without_a_structured_twin": 18
+  },
+  "evidence_status": "MEASURED_POSITIVE",
   "usage": "WEAK_CONTEXTUAL_NOT_TEACHER",
-  "note": "Mentions of 代走 mix manager choice, role, and injury. Not isolated speed.",
+  "note": "Mentions of 代走 mix manager choice, role, and injury. Not isolated speed. Kept, not zeroed.",
+  "per_file": [
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_final_targeted_physical_evidence.json",
+      "arrays": [
+        {
+          "key": "evidence_records",
+          "n": 18
+        }
+      ],
+      "records_scanned": 18,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "arrays": [
+        {
+          "key": "source_records",
+          "n": 191
+        }
+      ],
+      "records_scanned": 191,
+      "matched_rows": 5,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {
+        "text_excerpt": 5,
+        "quote_excerpt": 5,
+        "returned_identity_variants.[].returned_text_variants.[]": 7
+      },
+      "evidence_status": "MEASURED_POSITIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_new6_grok_x_temporal_sources.json",
+      "arrays": [
+        {
+          "key": "query_plan",
+          "n": 54
+        },
+        {
+          "key": "grok_x_search_receipts",
+          "n": 54
+        },
+        {
+          "key": "raw_x_post_candidates",
+          "n": 38
+        },
+        {
+          "key": "reviewed_candidates",
+          "n": 38
+        },
+        {
+          "key": "sources",
+          "n": 38
+        },
+        {
+          "key": "source_records",
+          "n": 38
+        },
+        {
+          "key": "player_results",
+          "n": 6
+        }
+      ],
+      "records_scanned": 266,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_sns_consensus_sources.json",
+      "arrays": [
+        {
+          "key": "source_records",
+          "n": 52
+        }
+      ],
+      "records_scanned": 52,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+      "arrays": [
+        {
+          "key": "source_records",
+          "n": 243
+        }
+      ],
+      "records_scanned": 243,
+      "matched_rows": 5,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {
+        "text_excerpt": 5,
+        "quote_excerpt": 5,
+        "returned_identity_variants.[].returned_text_variants.[]": 7
+      },
+      "evidence_status": "MEASURED_POSITIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_video_tiebreak_sources.json",
+      "arrays": [
+        {
+          "key": "canonical_scope",
+          "n": 17
+        },
+        {
+          "key": "source_records",
+          "n": 32
+        }
+      ],
+      "records_scanned": 49,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+      "arrays": [
+        {
+          "key": "records",
+          "n": 459
+        }
+      ],
+      "records_scanned": 459,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/historical_speed_qa.json",
+      "arrays": [
+        {
+          "key": "cases",
+          "n": 4
+        }
+      ],
+      "records_scanned": 4,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/hp_to_1b_measurements_curated.json",
+      "arrays": [
+        {
+          "key": "records",
+          "n": 40
+        }
+      ],
+      "records_scanned": 40,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/npb_enterprise_tracking_article_20260810.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/npb_plus_screens.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 109
+        }
+      ],
+      "records_scanned": 109,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/npb_speed_physical_evidence_full_20260809.json",
+      "arrays": [
+        {
+          "key": "guardrails",
+          "n": 5
+        },
+        {
+          "key": "players",
+          "n": 100
+        }
+      ],
+      "records_scanned": 105,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_final_reappraisal_blind_independent_qa_20260811.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 21
+        },
+        {
+          "key": "limitations",
+          "n": 2
+        }
+      ],
+      "records_scanned": 23,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_final_targeted_independent_qa_20260811.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 14
+        }
+      ],
+      "records_scanned": 14,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+      "arrays": [
+        {
+          "key": "candidate_register",
+          "n": 191
+        }
+      ],
+      "records_scanned": 191,
+      "matched_rows": 5,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {
+        "post_text_returned": 5,
+        "all_parsed_contexts.[].post_text_returned": 7,
+        "returned_identity_variants.[].returned_text_variants.[]": 7
+      },
+      "evidence_status": "MEASURED_POSITIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+      "arrays": [
+        {
+          "key": "acceptance_policy",
+          "n": 4
+        },
+        {
+          "key": "candidate_decisions",
+          "n": 191
+        }
+      ],
+      "records_scanned": 195,
+      "matched_rows": 5,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {
+        "text_excerpt": 5
+      },
+      "evidence_status": "MEASURED_POSITIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "arrays": [
+        {
+          "key": "canonical_targets",
+          "n": 19
+        },
+        {
+          "key": "query_receipts",
+          "n": 175
+        },
+        {
+          "key": "unique_x_post_candidates",
+          "n": 191
+        }
+      ],
+      "records_scanned": 385,
+      "matched_rows": 28,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {
+        "raw_response_text": 7,
+        "x_post_occurrences.[].surrounding_returned_text": 26,
+        "surrounding_returned_text_by_receipt.[].text": 26
+      },
+      "evidence_status": "MEASURED_POSITIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_new6_current_physical_and_t90_provenance_research_20260811.json",
+      "arrays": [
+        {
+          "key": "inputs_read",
+          "n": 6
+        },
+        {
+          "key": "current_physical_measurement_research",
+          "n": 6
+        }
+      ],
+      "records_scanned": 12,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_new6_grok_x_temporal_research_20260811.json",
+      "arrays": [
+        {
+          "key": "query_plan",
+          "n": 54
+        },
+        {
+          "key": "query_receipts",
+          "n": 54
+        },
+        {
+          "key": "raw_x_post_candidates",
+          "n": 38
+        },
+        {
+          "key": "reviewed_candidates",
+          "n": 38
+        },
+        {
+          "key": "player_results",
+          "n": 6
+        },
+        {
+          "key": "limitations",
+          "n": 4
+        }
+      ],
+      "records_scanned": 194,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+      "arrays": [
+        {
+          "key": "players",
+          "n": 12
+        }
+      ],
+      "records_scanned": 12,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_sns_consensus_reviewed_evidence_20260810.json",
+      "arrays": [
+        {
+          "key": "collection_limitations",
+          "n": 3
+        },
+        {
+          "key": "sources",
+          "n": 52
+        },
+        {
+          "key": "decisions",
+          "n": 19
+        }
+      ],
+      "records_scanned": 74,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_video_tiebreak_conflict_research_20260811.json",
+      "arrays": [
+        {
+          "key": "canonical_players",
+          "n": 4
+        },
+        {
+          "key": "sources",
+          "n": 4
+        },
+        {
+          "key": "player_proposals",
+          "n": 4
+        }
+      ],
+      "records_scanned": 12,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_video_tiebreak_current_a_research_20260811.json",
+      "arrays": [
+        {
+          "key": "canonical_players",
+          "n": 4
+        },
+        {
+          "key": "scope_exclusions",
+          "n": 3
+        },
+        {
+          "key": "acquisition_receipts",
+          "n": 4
+        },
+        {
+          "key": "video_records",
+          "n": 10
+        },
+        {
+          "key": "player_assessments",
+          "n": 4
+        }
+      ],
+      "records_scanned": 25,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_video_tiebreak_current_b_research_20260811.json",
+      "arrays": [
+        {
+          "key": "canonical_players",
+          "n": 4
+        },
+        {
+          "key": "sources",
+          "n": 6
+        },
+        {
+          "key": "player_proposals",
+          "n": 4
+        }
+      ],
+      "records_scanned": 14,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_video_tiebreak_independent_qa_20260811.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_2026_video_tiebreak_temporal_research_20260811.json",
+      "arrays": [
+        {
+          "key": "search_receipts",
+          "n": 10
+        },
+        {
+          "key": "candidate_ledger",
+          "n": 12
+        },
+        {
+          "key": "player_results",
+          "n": 5
+        }
+      ],
+      "records_scanned": 27,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_historical_anchor_supplement_2015_2026.json",
+      "arrays": [
+        {
+          "key": "guardrails",
+          "n": 4
+        },
+        {
+          "key": "sources",
+          "n": 5
+        },
+        {
+          "key": "additional_directional_records",
+          "n": 3
+        }
+      ],
+      "records_scanned": 12,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/speed_outlier_short_distance_evidence_20260809.json",
+      "arrays": [
+        {
+          "key": "guardrails",
+          "n": 4
+        },
+        {
+          "key": "records",
+          "n": 6
+        }
+      ],
+      "records_scanned": 10,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/sprint_30m_measurements_curated.json",
+      "arrays": [
+        {
+          "key": "records",
+          "n": 12
+        }
+      ],
+      "records_scanned": 12,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/standardized_30m50m_photoelectric_2026.json",
+      "arrays": [
+        {
+          "key": "sources",
+          "n": 2
+        },
+        {
+          "key": "records",
+          "n": 31
+        }
+      ],
+      "records_scanned": 33,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/manual/standardized_50m_electronic_reference.json",
+      "arrays": [
+        {
+          "key": "sources",
+          "n": 2
+        },
+        {
+          "key": "records",
+          "n": 57
+        }
+      ],
+      "records_scanned": 59,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/_staging_speed_prospi_gamex_run2_execution_log.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 12
+        }
+      ],
+      "records_scanned": 12,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/_staging_speed_prospi_gamex_run3_execution_log.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 6
+        }
+      ],
+      "records_scanned": 6,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/_staging_speed_youtube_powerpro_run2.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 5
+        }
+      ],
+      "records_scanned": 5,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/_staging_speed_youtube_prospi_run2.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 116
+        }
+      ],
+      "records_scanned": 116,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/appraisal_2024.json",
+      "arrays": [
+        {
+          "key": "__root_array",
+          "n": 258
+        }
+      ],
+      "records_scanned": 258,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/batted_ball_coefficients.json",
+      "arrays": [
+        {
+          "key": "types",
+          "n": 4
+        }
+      ],
+      "records_scanned": 4,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/catcher_defense_effect.json",
+      "arrays": [
+        {
+          "key": "catchers",
+          "n": 45
+        },
+        {
+          "key": "pitchers_top",
+          "n": 15
+        },
+        {
+          "key": "runners_top",
+          "n": 15
+        }
+      ],
+      "records_scanned": 75,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/catcher_fielding_rating.json",
+      "arrays": [
+        {
+          "key": "catchers",
+          "n": 23
+        }
+      ],
+      "records_scanned": 23,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/catcher_throw_accuracy.json",
+      "arrays": [
+        {
+          "key": "judged",
+          "n": 45
+        }
+      ],
+      "records_scanned": 45,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/fatigue_analysis.json",
+      "arrays": [
+        {
+          "key": "month_profile",
+          "n": 6
+        },
+        {
+          "key": "verdict",
+          "n": 2
+        }
+      ],
+      "records_scanned": 8,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/fielding_norms_validation.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/fielding_shrinkage.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/gamma_anchor.json",
+      "arrays": [
+        {
+          "key": "points",
+          "n": 5
+        }
+      ],
+      "records_scanned": 5,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/gamma_by_quantile.json",
+      "arrays": [
+        {
+          "key": "seasons",
+          "n": 20
+        }
+      ],
+      "records_scanned": 20,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/gamma_by_tier.json",
+      "arrays": [
+        {
+          "key": "tiers",
+          "n": 5
+        }
+      ],
+      "records_scanned": 5,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/gold_historical_distribution.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/infield_arm_prior.json",
+      "arrays": [
+        {
+          "key": "caveats",
+          "n": 3
+        }
+      ],
+      "records_scanned": 3,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/infield_throw_accuracy.json",
+      "arrays": [
+        {
+          "key": "_caution",
+          "n": 3
+        },
+        {
+          "key": "judged",
+          "n": 64
+        }
+      ],
+      "records_scanned": 67,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/infield_throw_rating.json",
+      "arrays": [
+        {
+          "key": "_caution",
+          "n": 3
+        },
+        {
+          "key": "seasons",
+          "n": 7
+        },
+        {
+          "key": "all",
+          "n": 179
+        },
+        {
+          "key": "deep",
+          "n": 84
+        }
+      ],
+      "records_scanned": 273,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/luna_npb_plus_provenance_contamination_20260814.json",
+      "arrays": [
+        {
+          "key": "search_patterns",
+          "n": 6
+        },
+        {
+          "key": "occurrence_groups",
+          "n": 231
+        },
+        {
+          "key": "task2_related_classifications",
+          "n": 4
+        },
+        {
+          "key": "task3_sp100_dependency_trace",
+          "n": 8
+        },
+        {
+          "key": "limitations",
+          "n": 3
+        }
+      ],
+      "records_scanned": 252,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/mlb_bridge.json",
+      "arrays": [
+        {
+          "key": "__root_array",
+          "n": 79
+        }
+      ],
+      "records_scanned": 79,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/npb_enterprise_article_lane_20260814.json",
+      "arrays": [
+        {
+          "key": "selection_bias",
+          "n": 4
+        },
+        {
+          "key": "what_this_lane_can_support",
+          "n": 1
+        }
+      ],
+      "records_scanned": 5,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/npb_plus_sprint_exposure_2026.json",
+      "arrays": [
+        {
+          "key": "sources",
+          "n": 4
+        },
+        {
+          "key": "acquisition_log",
+          "n": 6
+        },
+        {
+          "key": "players",
+          "n": 100
+        }
+      ],
+      "records_scanned": 110,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/npb_speed_measurement_date_resolution_20260809.json",
+      "arrays": [
+        {
+          "key": "important_findings",
+          "n": 3
+        },
+        {
+          "key": "retrieval_constraints",
+          "n": 4
+        },
+        {
+          "key": "source_problem_register",
+          "n": 3
+        },
+        {
+          "key": "unconfirmed_fields",
+          "n": 9
+        },
+        {
+          "key": "negative_findings",
+          "n": 4
+        },
+        {
+          "key": "data_quality_reservations",
+          "n": 5
+        },
+        {
+          "key": "conflict_register",
+          "n": 3
+        },
+        {
+          "key": "postprocess_warnings",
+          "n": 4
+        },
+        {
+          "key": "records",
+          "n": 35
+        }
+      ],
+      "records_scanned": 70,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/park_factors.json",
+      "arrays": [
+        {
+          "key": "caveats",
+          "n": 3
+        }
+      ],
+      "records_scanned": 3,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/pawapuro_calibration.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/pawapuro_scale_calibration.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/pawapuro_speed_history_panel_2015_2026.json",
+      "arrays": [
+        {
+          "key": "source_manifest",
+          "n": 8
+        },
+        {
+          "key": "observations",
+          "n": 23206
+        },
+        {
+          "key": "player_timelines",
+          "n": 2972
+        },
+        {
+          "key": "change_events",
+          "n": 658
+        },
+        {
+          "key": "player_summary",
+          "n": 2972
+        },
+        {
+          "key": "physical_measurement_matches",
+          "n": 51
+        }
+      ],
+      "records_scanned": 29867,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/phase2_run_2020_20260731.json",
+      "arrays": [
+        {
+          "key": "comparison",
+          "n": 5
+        },
+        {
+          "key": "standings",
+          "n": 12
+        }
+      ],
+      "records_scanned": 17,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/phase2_run_2021_20260731.json",
+      "arrays": [
+        {
+          "key": "comparison",
+          "n": 5
+        },
+        {
+          "key": "standings",
+          "n": 12
+        }
+      ],
+      "records_scanned": 17,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/phase2_run_2022_20260731.json",
+      "arrays": [
+        {
+          "key": "comparison",
+          "n": 5
+        },
+        {
+          "key": "standings",
+          "n": 12
+        }
+      ],
+      "records_scanned": 17,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/phase2_run_2023_20260731.json",
+      "arrays": [
+        {
+          "key": "comparison",
+          "n": 5
+        },
+        {
+          "key": "standings",
+          "n": 12
+        }
+      ],
+      "records_scanned": 17,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/phase2_run_2024_20260731.json",
+      "arrays": [
+        {
+          "key": "comparison",
+          "n": 5
+        },
+        {
+          "key": "standings",
+          "n": 12
+        }
+      ],
+      "records_scanned": 17,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/phase2_run_2025_20260731.json",
+      "arrays": [
+        {
+          "key": "comparison",
+          "n": 5
+        },
+        {
+          "key": "standings",
+          "n": 12
+        }
+      ],
+      "records_scanned": 17,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/phase3a_roundtrip_2024.json",
+      "arrays": [
+        {
+          "key": "sample",
+          "n": 12
+        }
+      ],
+      "records_scanned": 12,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/power_auxiliary_measurement.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/raw_manifest.json",
+      "arrays": [
+        {
+          "key": "files",
+          "n": 2175
+        }
+      ],
+      "records_scanned": 2175,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp007_h2f_low_confidence_lane.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp015_final_weight_design.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp015_same_time_reliability.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp016_continuous_prior_apply_20260814.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp016_continuous_prior_design.json",
+      "arrays": [
+        {
+          "key": "pa_curve_diagnostics",
+          "n": 9
+        },
+        {
+          "key": "rows",
+          "n": 25
+        }
+      ],
+      "records_scanned": 34,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp016_current_year_first_audit.json",
+      "arrays": [
+        {
+          "key": "reliability_curve",
+          "n": 7
+        },
+        {
+          "key": "impact",
+          "n": 157
+        }
+      ],
+      "records_scanned": 164,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp016_hard_gate_vs_continuous.json",
+      "arrays": [
+        {
+          "key": "largest_disagreements_hard_vs_component",
+          "n": 15
+        }
+      ],
+      "records_scanned": 15,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp016_scale_artifact_check_20260814.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp017_physical_measurement_range_reclassification.json",
+      "arrays": [
+        {
+          "key": "records",
+          "n": 57
+        }
+      ],
+      "records_scanned": 57,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp019_construct_validity_vs_physical_evidence.json",
+      "arrays": [
+        {
+          "key": "known_limitations",
+          "n": 5
+        }
+      ],
+      "records_scanned": 5,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp019_proxy_deconfounding_reaudit.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp022_pairwise_range_20260814.json",
+      "arrays": [
+        {
+          "key": "pairs",
+          "n": 78
+        }
+      ],
+      "records_scanned": 78,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp032_036_037_community_raw_evaluation.json",
+      "arrays": [
+        {
+          "key": "findings",
+          "n": 3
+        }
+      ],
+      "records_scanned": 3,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 150
+        }
+      ],
+      "records_scanned": 150,
+      "matched_rows": 4,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {
+        "text": 4
+      },
+      "evidence_status": "MEASURED_POSITIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp032_grok_x_150_reclassification_qa_20260813.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp033_034_surname_identity_resolution_20260814.json",
+      "arrays": [
+        {
+          "key": "resolved",
+          "n": 50
+        },
+        {
+          "key": "review",
+          "n": 80
+        }
+      ],
+      "records_scanned": 130,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp033_034_youtube_comment_classification_20260813.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 7145
+        }
+      ],
+      "records_scanned": 7145,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp033_034_youtube_comment_classification_qa_20260813.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp033_034_youtube_events_by_player_claim_20260814.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 7145
+        }
+      ],
+      "records_scanned": 7145,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp035_x_existing_organize_20260814.json",
+      "arrays": [
+        {
+          "key": "not_collected",
+          "n": 3
+        }
+      ],
+      "records_scanned": 3,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp035_x_official_rescue_20260813.json",
+      "arrays": [
+        {
+          "key": "routes_attempted",
+          "n": 5
+        },
+        {
+          "key": "official_posts_retrieved",
+          "n": 3
+        },
+        {
+          "key": "replies_retrieved",
+          "n": 4
+        }
+      ],
+      "records_scanned": 12,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp039_existing_video_lane_20260814.json",
+      "arrays": [
+        {
+          "key": "existing_artifacts",
+          "n": 4
+        },
+        {
+          "key": "classifications",
+          "n": 17
+        },
+        {
+          "key": "not_collected",
+          "n": 0
+        }
+      ],
+      "records_scanned": 21,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp041_powerpro_normalized.json",
+      "arrays": [
+        {
+          "key": "collapsed",
+          "n": 14
+        },
+        {
+          "key": "versions",
+          "n": 58
+        },
+        {
+          "key": "trajectories",
+          "n": 2972
+        }
+      ],
+      "records_scanned": 3044,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp042_powerpro_stale_detector.json",
+      "arrays": [
+        {
+          "key": "rows",
+          "n": 95
+        }
+      ],
+      "records_scanned": 95,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp043_veteran_case_studies_20260814.json",
+      "arrays": [
+        {
+          "key": "peers_same_pattern",
+          "n": 8
+        },
+        {
+          "key": "remaining_owner",
+          "n": 2
+        }
+      ],
+      "records_scanned": 10,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp052_option_b_same_year_census_20260813.json",
+      "arrays": [
+        {
+          "key": "years",
+          "n": 4
+        },
+        {
+          "key": "pairs",
+          "n": 7
+        }
+      ],
+      "records_scanned": 11,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp052_the_show_to_powerpro_mapping.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp054_055_prospi_run3_qa_20260813.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp056_powerpro_prospi_same_time_divergence_20260813.json",
+      "arrays": [
+        {
+          "key": "largest_scale_normalized_divergence",
+          "n": 20
+        },
+        {
+          "key": "largest_abs_diffs_raw_scale_confounded",
+          "n": 20
+        },
+        {
+          "key": "pairs",
+          "n": 102
+        }
+      ],
+      "records_scanned": 142,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp063_all_missing_data_child_map_20260814.json",
+      "arrays": [
+        {
+          "key": "speed_children",
+          "n": 10
+        },
+        {
+          "key": "non_speed_children_not_in_scope",
+          "n": 5
+        }
+      ],
+      "records_scanned": 15,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp072_100_vs_roster_scale_20260814.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp074_conflict_rediagnosis_20260814.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp075_stale_conflict_rediagnosis_20260814.json",
+      "arrays": [
+        {
+          "key": "stale_non_none",
+          "n": 18
+        },
+        {
+          "key": "conflict_classes",
+          "n": 100
+        }
+      ],
+      "records_scanned": 118,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp090_chat_only_scan_20260814.json",
+      "arrays": [
+        {
+          "key": "this_wave_durable",
+          "n": 11
+        },
+        {
+          "key": "persisted_now_instead_of_chat",
+          "n": 7
+        },
+        {
+          "key": "missing_from_repo_after_this_file",
+          "n": 0
+        }
+      ],
+      "records_scanned": 18,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp098_identity_coverage_repair_20260813.json",
+      "arrays": [
+        {
+          "key": "recomputes",
+          "n": 3
+        }
+      ],
+      "records_scanned": 3,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp098_identity_reverify_20260814.json",
+      "arrays": [
+        {
+          "key": "recomputes",
+          "n": 3
+        }
+      ],
+      "records_scanned": 3,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp100_npb_raw_latent_speed.json",
+      "arrays": [
+        {
+          "key": "players",
+          "n": 100
+        }
+      ],
+      "records_scanned": 100,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp100_wiring_candidates_20260814.json",
+      "arrays": [
+        {
+          "key": "players",
+          "n": 100
+        }
+      ],
+      "records_scanned": 100,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_anchor_relative_packets.json",
+      "arrays": [
+        {
+          "key": "packets",
+          "n": 100
+        }
+      ],
+      "records_scanned": 100,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_before_after_sp015_016.json",
+      "arrays": [
+        {
+          "key": "rows",
+          "n": 97
+        }
+      ],
+      "records_scanned": 97,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_blind_final_freeze_manifest_20260811.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_build_qa.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 13
+        },
+        {
+          "key": "initial_failure_history",
+          "n": 1
+        }
+      ],
+      "records_scanned": 14,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_decision_packets.json",
+      "arrays": [
+        {
+          "key": "global_powerpro_same_date_conflict_registry",
+          "n": 32
+        },
+        {
+          "key": "players",
+          "n": 100
+        }
+      ],
+      "records_scanned": 132,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_final_reappraisal_blind_qa_20260811.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 21
+        }
+      ],
+      "records_scanned": 21,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_final_reappraisal_final_qa_20260811.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 12
+        }
+      ],
+      "records_scanned": 12,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_final_reappraisal_freeze_20260811.json",
+      "arrays": [
+        {
+          "key": "players",
+          "n": 100
+        }
+      ],
+      "records_scanned": 100,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_final_reappraisal_powerpro_qa_20260811.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_independent_qa.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 12
+        },
+        {
+          "key": "initial_gate_history",
+          "n": 1
+        },
+        {
+          "key": "limitations",
+          "n": 4
+        }
+      ],
+      "records_scanned": 17,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_master_evidence.json",
+      "arrays": [
+        {
+          "key": "guardrails",
+          "n": 4
+        },
+        {
+          "key": "global_powerpro_same_date_conflict_registry",
+          "n": 32
+        },
+        {
+          "key": "rows",
+          "n": 100
+        }
+      ],
+      "records_scanned": 136,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_owner_review_master_20260813.json",
+      "arrays": [
+        {
+          "key": "rows",
+          "n": 100
+        }
+      ],
+      "records_scanned": 100,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_owner_review_master_qa_20260813.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_post_sns_decision_support.json",
+      "arrays": [
+        {
+          "key": "players",
+          "n": 100
+        }
+      ],
+      "records_scanned": 100,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_post_video_decision_support.json",
+      "arrays": [
+        {
+          "key": "players",
+          "n": 100
+        },
+        {
+          "key": "resolution_overlays",
+          "n": 42
+        }
+      ],
+      "records_scanned": 142,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_pre_video_decision_support.json",
+      "arrays": [
+        {
+          "key": "players",
+          "n": 100
+        },
+        {
+          "key": "resolution_overlays",
+          "n": 25
+        }
+      ],
+      "records_scanned": 125,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_agent_d_execution_qa.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_anchor_pairwise_graph.json",
+      "arrays": [
+        {
+          "key": "guardrails",
+          "n": 4
+        },
+        {
+          "key": "nodes",
+          "n": 100
+        },
+        {
+          "key": "edges",
+          "n": 154
+        },
+        {
+          "key": "suppressed_pairs",
+          "n": 2
+        }
+      ],
+      "records_scanned": 260,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_blind_physical_construct_freeze_manifest.json",
+      "arrays": [
+        {
+          "key": "excluded_artifacts_to_preserve_blind_barrier",
+          "n": 5
+        }
+      ],
+      "records_scanned": 5,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_blind_physical_construct_profiles.json",
+      "arrays": [
+        {
+          "key": "profiles",
+          "n": 100
+        }
+      ],
+      "records_scanned": 100,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_blind_physical_construct_stage1_qa.json",
+      "arrays": [
+        {
+          "key": "physical_only_sns_queue",
+          "n": 25
+        },
+        {
+          "key": "guard_history",
+          "n": 2
+        },
+        {
+          "key": "negative_findings",
+          "n": 5
+        }
+      ],
+      "records_scanned": 32,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_final_targeted_evidence_packets.json",
+      "arrays": [
+        {
+          "key": "packets",
+          "n": 18
+        },
+        {
+          "key": "classification_transitions",
+          "n": 18
+        }
+      ],
+      "records_scanned": 36,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_final_targeted_evidence_qa.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 25
+        }
+      ],
+      "records_scanned": 25,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_grok_x_consensus.json",
+      "arrays": [
+        {
+          "key": "player_results",
+          "n": 19
+        }
+      ],
+      "records_scanned": 19,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_grok_x_sns_qa.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 19
+        }
+      ],
+      "records_scanned": 19,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_position_residual_analysis.json",
+      "arrays": [
+        {
+          "key": "powerpro_exact_match_receipts",
+          "n": 100
+        },
+        {
+          "key": "negative_findings_and_limits",
+          "n": 6
+        }
+      ],
+      "records_scanned": 106,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_powerpro_discrepancy_register.json",
+      "arrays": [
+        {
+          "key": "rows",
+          "n": 100
+        },
+        {
+          "key": "high_discrepancy_rows",
+          "n": 34
+        },
+        {
+          "key": "limitations",
+          "n": 3
+        }
+      ],
+      "records_scanned": 137,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_residual_model_comparison.json",
+      "arrays": [
+        {
+          "key": "player_level_inputs",
+          "n": 100
+        },
+        {
+          "key": "limitations",
+          "n": 6
+        }
+      ],
+      "records_scanned": 106,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_residual_structure_qa.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 29
+        },
+        {
+          "key": "qa_history",
+          "n": 2
+        },
+        {
+          "key": "limits",
+          "n": 2
+        }
+      ],
+      "records_scanned": 33,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_residual_structure_verdict.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_sns_consensus_qa.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_sns_tiebreak_consensus.json",
+      "arrays": [
+        {
+          "key": "consensus",
+          "n": 19
+        }
+      ],
+      "records_scanned": 19,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.json",
+      "arrays": [
+        {
+          "key": "consensus",
+          "n": 19
+        }
+      ],
+      "records_scanned": 19,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_video_tiebreak_qa.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 21
+        }
+      ],
+      "records_scanned": 21,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_video_tiebreak_results.json",
+      "arrays": [
+        {
+          "key": "permitted_classifications",
+          "n": 7
+        },
+        {
+          "key": "player_results",
+          "n": 17
+        }
+      ],
+      "records_scanned": 24,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_anchor_band_coverage_2015_2026.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_blind_v3_npbplus_2026.json",
+      "arrays": [
+        {
+          "key": "players",
+          "n": 99
+        }
+      ],
+      "records_scanned": 99,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_build_manifest_20260813.json",
+      "arrays": [
+        {
+          "key": "lane_inputs",
+          "n": 3
+        },
+        {
+          "key": "youtube_inventory_inputs",
+          "n": 2
+        },
+        {
+          "key": "reclassification_inputs",
+          "n": 0
+        },
+        {
+          "key": "parse_errors",
+          "n": 0
+        }
+      ],
+      "records_scanned": 5,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_build_manifest_20260813_run2.json",
+      "arrays": [
+        {
+          "key": "reclassification_inputs",
+          "n": 1
+        }
+      ],
+      "records_scanned": 1,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_independent_qa_20260813.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 11
+        },
+        {
+          "key": "required_before_pass_recheck",
+          "n": 5
+        }
+      ],
+      "records_scanned": 16,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_lane_powerpro_youtube_raw_20260813.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 3
+        }
+      ],
+      "records_scanned": 3,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_legacy_restore_run2.json",
+      "arrays": [
+        {
+          "key": "results",
+          "n": 3
+        }
+      ],
+      "records_scanned": 3,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 473
+        }
+      ],
+      "records_scanned": 473,
+      "matched_rows": 4,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {
+        "text": 4
+      },
+      "evidence_status": "MEASURED_POSITIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_normalized_qa_20260813.json",
+      "arrays": [
+        {
+          "key": "reaction_volume_fields_present",
+          "n": 5
+        },
+        {
+          "key": "findings",
+          "n": 0
+        }
+      ],
+      "records_scanned": 5,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_qa_20260813.json",
+      "arrays": [
+        {
+          "key": "limits",
+          "n": 4
+        }
+      ],
+      "records_scanned": 4,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 360
+        }
+      ],
+      "records_scanned": 360,
+      "matched_rows": 4,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {
+        "text": 4
+      },
+      "evidence_status": "MEASURED_POSITIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 473
+        }
+      ],
+      "records_scanned": 473,
+      "matched_rows": 4,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {
+        "text": 4
+      },
+      "evidence_status": "MEASURED_POSITIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_rescue_20260813_run2_qa.json",
+      "arrays": [
+        {
+          "key": "issues",
+          "n": 0
+        }
+      ],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_high_confidence_anchor_bank_2015_2026.json",
+      "arrays": [
+        {
+          "key": "anchors",
+          "n": 213
+        }
+      ],
+      "records_scanned": 213,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_high_confidence_anchor_pairwise_graph_2015_2026.json",
+      "arrays": [
+        {
+          "key": "unconnected_high_confidence_anchors",
+          "n": 5
+        },
+        {
+          "key": "edges",
+          "n": 200
+        }
+      ],
+      "records_scanned": 205,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_historical_anchor_build_qa_2015_2026.json",
+      "arrays": [
+        {
+          "key": "checks",
+          "n": 15
+        }
+      ],
+      "records_scanned": 15,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_historical_anchor_independent_qa_2015_2026.json",
+      "arrays": [
+        {
+          "key": "review_scope",
+          "n": 6
+        },
+        {
+          "key": "checks",
+          "n": 14
+        },
+        {
+          "key": "blockers",
+          "n": 0
+        }
+      ],
+      "records_scanned": 20,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_prospi_gamex_run3_coverage_diagnosis.json",
+      "arrays": [
+        {
+          "key": "edition_results",
+          "n": 4
+        },
+        {
+          "key": "partial_name_candidates_not_auto_accepted",
+          "n": 0
+        },
+        {
+          "key": "limits",
+          "n": 3
+        }
+      ],
+      "records_scanned": 7,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_weights_vs_mlb.json",
+      "arrays": [],
+      "records_scanned": 0,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_youtube_official_comments_recovered_20260813.jsonl",
+      "arrays": [
+        {
+          "key": "__jsonl_line",
+          "n": 8715
+        }
+      ],
+      "records_scanned": 8715,
+      "matched_rows": 1,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {
+        "author": 1
+      },
+      "evidence_status": "MEASURED_POSITIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_youtube_official_comments_recovery_manifest_20260813.json",
+      "arrays": [
+        {
+          "key": "targets",
+          "n": 75
+        }
+      ],
+      "records_scanned": 75,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/the_show_mapping.json",
+      "arrays": [
+        {
+          "key": "mappings",
+          "n": 2
+        },
+        {
+          "key": "own_scale",
+          "n": 2
+        },
+        {
+          "key": "_cross_check",
+          "n": 2
+        }
+      ],
+      "records_scanned": 6,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/throw_accuracy_from_te.json",
+      "arrays": [
+        {
+          "key": "_caution",
+          "n": 3
+        },
+        {
+          "key": "judged",
+          "n": 310
+        }
+      ],
+      "records_scanned": 313,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/web_collected_measurements.json",
+      "arrays": [
+        {
+          "key": "__root_array",
+          "n": 106065
+        }
+      ],
+      "records_scanned": 106065,
+      "matched_rows": 0,
+      "matches_in_excluded_prompt_fields": 0,
+      "matched_field_paths": {},
+      "evidence_status": "MEASURED_NEGATIVE"
+    }
+  ],
+  "skipped_files": [
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_final_targeted_physical_evidence.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_final_targeted_physical_evidence.json)",
+      "structured_twin_scanned": [
+        "speed_2026_final_targeted_physical_evidence.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_grok_x_sources.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_grok_x_sources.json)",
+      "structured_twin_scanned": [
+        "speed_2026_grok_x_sources.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 10,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_sns_consensus_sources.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_sns_consensus_sources.json)",
+      "structured_twin_scanned": [
+        "speed_2026_sns_consensus_sources.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_sns_consensus_sources_v2.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_sns_consensus_sources_v2.json)",
+      "structured_twin_scanned": [
+        "speed_2026_sns_consensus_sources_v2.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 10,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_2026_video_tiebreak_sources.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_video_tiebreak_sources.json)",
+      "structured_twin_scanned": [
+        "speed_2026_video_tiebreak_sources.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "PRIMARY",
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_historical_physical_measurements_2015_2026.json)",
+      "structured_twin_scanned": [
+        "speed_historical_physical_measurements_2015_2026.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/_staging_speed_prospi_gamex_current_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/_staging_speed_prospi_gamex_historical_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/_staging_speed_youtube_powerpro_run2.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(_staging_speed_youtube_powerpro_run2.jsonl)",
+      "structured_twin_scanned": [
+        "_staging_speed_youtube_powerpro_run2.jsonl"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/_staging_speed_youtube_prospi_run2.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(_staging_speed_youtube_prospi_run2.jsonl)",
+      "structured_twin_scanned": [
+        "_staging_speed_youtube_prospi_run2.jsonl"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/_staging_speed_youtube_prospi_run2_qa_exclusions.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/npb_plus_sprint_exposure_2026.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(npb_plus_sprint_exposure_2026.json)",
+      "structured_twin_scanned": [
+        "npb_plus_sprint_exposure_2026.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/npb_speed_evidence_coverage_20260809.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/npb_speed_measurement_date_resolution_20260809.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(npb_speed_measurement_date_resolution_20260809.json)",
+      "structured_twin_scanned": [
+        "npb_speed_measurement_date_resolution_20260809.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/pawapuro_speed_change_events_2015_2026.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/pawapuro_speed_history_panel_2015_2026.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(pawapuro_speed_history_panel_2015_2026.json)",
+      "structured_twin_scanned": [
+        "pawapuro_speed_history_panel_2015_2026.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/pawapuro_speed_history_physical_measurement_matches_20260809.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/pawapuro_speed_history_player_summary_2015_2026.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp020_date_resolution_status_20260814.json",
+      "reason": "SELF_OUTPUT_OF_THIS_SCRIPT_EXCLUDED_TO_AVOID_CIRCULAR_COUNTING",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp032_grok_x_150_reclassification_20260813.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(sp032_grok_x_150_reclassification_20260813.jsonl)",
+      "structured_twin_scanned": [
+        "sp032_grok_x_150_reclassification_20260813.jsonl"
+      ],
+      "raw_pattern_occurrences_unparsed": 4,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp036_generic_label_sweep_20260814.json",
+      "reason": "SELF_OUTPUT_OF_THIS_SCRIPT_EXCLUDED_TO_AVOID_CIRCULAR_COUNTING",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp041_powerpro_percentile_trajectories.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp044_age_birth_search_20260814.json",
+      "reason": "SELF_OUTPUT_OF_THIS_SCRIPT_EXCLUDED_TO_AVOID_CIRCULAR_COUNTING",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp045_injury_search_20260814.json",
+      "reason": "SELF_OUTPUT_OF_THIS_SCRIPT_EXCLUDED_TO_AVOID_CIRCULAR_COUNTING",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp060_scouting_inventory_20260814.json",
+      "reason": "SELF_OUTPUT_OF_THIS_SCRIPT_EXCLUDED_TO_AVOID_CIRCULAR_COUNTING",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp061_pinch_runner_weak_context_20260814.json",
+      "reason": "SELF_OUTPUT_OF_THIS_SCRIPT_EXCLUDED_TO_AVOID_CIRCULAR_COUNTING",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/sp062_defensive_chase_close_20260814.json",
+      "reason": "SELF_OUTPUT_OF_THIS_SCRIPT_EXCLUDED_TO_AVOID_CIRCULAR_COUNTING",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_before_after_sp015_016.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_100_before_after_sp015_016.json)",
+      "structured_twin_scanned": [
+        "speed_2026_100_before_after_sp015_016.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_final_reappraisal_freeze_20260811.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_100_final_reappraisal_freeze_20260811.json)",
+      "structured_twin_scanned": [
+        "speed_2026_100_final_reappraisal_freeze_20260811.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_human_review_queue.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_master_evidence.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_100_master_evidence.json)",
+      "structured_twin_scanned": [
+        "speed_2026_100_master_evidence.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_owner_review_master_20260813.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_100_owner_review_master_20260813.json)",
+      "structured_twin_scanned": [
+        "speed_2026_100_owner_review_master_20260813.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_100_sns_tiebreak_queue.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_acceleration_evidence_subset.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_blind_physical_construct_profiles.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_blind_physical_construct_profiles.json)",
+      "structured_twin_scanned": [
+        "speed_2026_blind_physical_construct_profiles.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_final_targeted_evidence_resolution.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_final_video_tiebreak_queue.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_position_matched_speed_pairs.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_post_video_unresolved_queue.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_powerpro_discrepancy_register.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_powerpro_discrepancy_register.json)",
+      "structured_twin_scanned": [
+        "speed_2026_powerpro_discrepancy_register.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_powerpro_residual_structure_dataset.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_residual_model_comparison.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_residual_model_comparison.json)",
+      "structured_twin_scanned": [
+        "speed_2026_residual_model_comparison.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_sns_tiebreak_consensus.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_sns_tiebreak_consensus.json)",
+      "structured_twin_scanned": [
+        "speed_2026_sns_tiebreak_consensus.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_sns_tiebreak_consensus_v2.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_sns_tiebreak_consensus_v2.json)",
+      "structured_twin_scanned": [
+        "speed_2026_sns_tiebreak_consensus_v2.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_sns_tiebreak_queue_v2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_targeted_additional_physical_evidence_needs.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_video_tiebreak_queue.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_video_tiebreak_queue_v2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_2026_video_tiebreak_results.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_video_tiebreak_results.json)",
+      "structured_twin_scanned": [
+        "speed_2026_video_tiebreak_results.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_anchor_rejected_candidates_2015_2026.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_filtered_20260813.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_filtered_20260813_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 1,
+      "row_level_attribution": "NOT_COLLECTED_PATTERN_PRESENT_IN_UNPARSED_CSV",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_filtered_20260813_unexpected_mutation_backup_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 1,
+      "row_level_attribution": "NOT_COLLECTED_PATTERN_PRESENT_IN_UNPARSED_CSV",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_lane_x_powerpro_filtered_20260813.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_player_summary_20260813.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_player_summary_20260813_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_player_summary_20260813_unexpected_mutation_backup_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_raw_20260813_run2.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_community_rating_raw_20260813_run2.jsonl)",
+      "structured_twin_scanned": [
+        "speed_community_rating_raw_20260813_run2.jsonl"
+      ],
+      "raw_pattern_occurrences_unparsed": 4,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_rescue_20260813_run2_qa.md",
+      "reason": "NOT_JSON_OR_JSONL",
+      "raw_pattern_occurrences_unparsed": 0,
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_conflict_diagnosis_2026.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_grok_x_rejected_reclassification_20260813.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_grok_x_rejected_reclassification_20260813_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 8,
+      "row_level_attribution": "NOT_COLLECTED_PATTERN_PRESENT_IN_UNPARSED_CSV",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_grok_x_rejected_reclassification_20260813_unexpected_mutation_backup_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 8,
+      "row_level_attribution": "NOT_COLLECTED_PATTERN_PRESENT_IN_UNPARSED_CSV",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_grok_x_rejected_reclassification_lane_availability_20260813.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_high_confidence_anchor_bank_2015_2026.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_high_confidence_anchor_bank_2015_2026.json)",
+      "structured_twin_scanned": [
+        "speed_high_confidence_anchor_bank_2015_2026.json"
+      ],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_npb_plus_2026_and_cv.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_npb_plus_independent_power_2026.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_owner_review_table_2026.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_prospi_current_history_20260813.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_prospi_current_history_lane_20260813.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_prospi_gamex_current_20260813_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_prospi_gamex_current_20260813_run3.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_prospi_gamex_historical_20260813_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_prospi_gamex_historical_20260813_run3.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_rolling_holdout_2026.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_table_diff_current_vs_candidate.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_youtube_official_video_inventory_20260813.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_youtube_official_video_inventory_20260813_run2.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_youtube_official_video_inventory_powerpro_20260813.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_youtube_official_video_inventory_prospi_20260813.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_youtube_powerpro_run2_execution_log.md",
+      "reason": "NOT_JSON_OR_JSONL",
+      "raw_pattern_occurrences_unparsed": 0,
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_youtube_prospi_run2_execution_log.md",
+      "reason": "NOT_JSON_OR_JSONL",
+      "raw_pattern_occurrences_unparsed": 0,
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_youtube_prospi_run2_qa.md",
+      "reason": "NOT_JSON_OR_JSONL",
+      "raw_pattern_occurrences_unparsed": 0,
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/t0203_stratified_npb_plus_increment.csv",
+      "reason": "CSV_NOT_PARSED_BY_THIS_SWEEP_NO_STRUCTURED_TWIN",
+      "structured_twin_scanned": [],
+      "raw_pattern_occurrences_unparsed": 0,
+      "row_level_attribution": "NOT_APPLICABLE",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_lane_prospi_youtube_raw_20260813.jsonl",
+      "reason": "JSON_PARSE_ERROR: Unexpected token '﻿', \"﻿{\"record_\"... is not valid JSON",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_lane_x_powerpro_raw_20260813.jsonl",
+      "reason": "JSON_PARSE_ERROR: Unexpected token '﻿', \"﻿\" is not valid JSON",
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "scope": "SECONDARY_DERIVED",
+      "file": "outputs/derived/speed_community_rating_lane_x_prospi_raw_20260813.jsonl",
+      "reason": "JSON_PARSE_ERROR: Unexpected token '﻿', \"﻿{\"record_\"... is not valid JSON",
+      "evidence_status": "NOT_COLLECTED"
+    }
+  ],
   "rows": [
     {
-      "text": ": 岡大海さんどこかケガしとるんか？足速いのに代走だされとる。",
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 19,
+      "identity": "x:1972618657919586580",
+      "identity_raw": "https://x.com/Dec046adE/status/1972618657919586580",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
       "player": "岡 大海",
-      "source": "reviewed"
+      "text": ": 岡大海さんどこかケガしとるんか？足速いのに代走だされとる。"
     },
     {
-      "text": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない",
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 97,
+      "identity": "x:2050423606560309310",
+      "identity_raw": "https://x.com/dragons_080203/status/2050423606560309310",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
       "player": "土田 龍空",
-      "source": "reviewed"
+      "text": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない"
     },
     {
-      "text": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策",
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 108,
+      "identity": "x:1967517436858757269",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
       "player": "藤岡 裕大",
-      "source": "reviewed"
+      "text": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策"
     },
     {
-      "text": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。",
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 179,
+      "identity": "x:2049700341634187360",
+      "identity_raw": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
       "player": "林 琢真",
-      "source": "reviewed"
+      "text": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。"
     },
     {
-      "text": "平良の代走専に感じることはあるけど \n守備鈴木大地未満 \n打撃伊藤裕季也未満 \n走力そこそこ普通 \nこんな感じだからな \nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな",
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 185,
+      "identity": "x:2040609735112823266",
+      "identity_raw": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
       "player": "鈴木 大地",
-      "source": "reviewed"
+      "text": "平良の代走専に感じることはあるけど \n守備鈴木大地未満 \n打撃伊藤裕季也未満 \n走力そこそこ普通 \nこんな感じだからな \nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 71,
+      "identity": "x:1972618657919586580",
+      "identity_raw": "https://x.com/Dec046adE/status/1972618657919586580",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": "岡 大海",
+      "text": ": 岡大海さんどこかケガしとるんか？足速いのに代走だされとる。"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 149,
+      "identity": "x:2050423606560309310",
+      "identity_raw": "https://x.com/dragons_080203/status/2050423606560309310",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": "土田 龍空",
+      "text": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 160,
+      "identity": "x:1967517436858757269",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": "藤岡 裕大",
+      "text": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 231,
+      "identity": "x:2049700341634187360",
+      "identity_raw": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": "林 琢真",
+      "text": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 237,
+      "identity": "x:2040609735112823266",
+      "identity_raw": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": "鈴木 大地",
+      "text": "平良の代走専に感じることはあるけど \n守備鈴木大地未満 \n打撃伊藤裕季也未満 \n走力そこそこ普通 \nこんな感じだからな \nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "candidate_register",
+      "row_index": 19,
+      "identity": "x:1972618657919586580",
+      "identity_raw": "https://x.com/Dec046adE/status/1972618657919586580",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "post_text_returned",
+        "all_parsed_contexts.[].post_text_returned",
+        "all_parsed_contexts.[].post_text_returned",
+        "returned_identity_variants.[].returned_text_variants.[]",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": null,
+      "text": ": 岡大海さんどこかケガしとるんか？足速いのに代走だされとる。"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "candidate_register",
+      "row_index": 97,
+      "identity": "x:2050423606560309310",
+      "identity_raw": "https://x.com/dragons_080203/status/2050423606560309310",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "post_text_returned",
+        "all_parsed_contexts.[].post_text_returned",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": null,
+      "text": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "candidate_register",
+      "row_index": 108,
+      "identity": "x:1967517436858757269",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "post_text_returned",
+        "all_parsed_contexts.[].post_text_returned",
+        "all_parsed_contexts.[].post_text_returned",
+        "returned_identity_variants.[].returned_text_variants.[]",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": null,
+      "text": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "candidate_register",
+      "row_index": 179,
+      "identity": "x:2049700341634187360",
+      "identity_raw": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "post_text_returned",
+        "all_parsed_contexts.[].post_text_returned",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": null,
+      "text": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "candidate_register",
+      "row_index": 185,
+      "identity": "x:2040609735112823266",
+      "identity_raw": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "post_text_returned",
+        "all_parsed_contexts.[].post_text_returned",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": null,
+      "text": "平良の代走専に感じることはあるけど \n守備鈴木大地未満 \n打撃伊藤裕季也未満 \n走力そこそこ普通 \nこんな感じだからな \nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "candidate_decisions",
+      "row_index": 19,
+      "identity": "x:1972618657919586580",
+      "identity_raw": "https://x.com/Dec046adE/status/1972618657919586580",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt"
+      ],
+      "player": "岡 大海",
+      "text": ": 岡大海さんどこかケガしとるんか？足速いのに代走だされとる。"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "candidate_decisions",
+      "row_index": 97,
+      "identity": "x:2050423606560309310",
+      "identity_raw": "https://x.com/dragons_080203/status/2050423606560309310",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt"
+      ],
+      "player": "土田 龍空",
+      "text": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "candidate_decisions",
+      "row_index": 108,
+      "identity": "x:1967517436858757269",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt"
+      ],
+      "player": "藤岡 裕大",
+      "text": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "candidate_decisions",
+      "row_index": 179,
+      "identity": "x:2049700341634187360",
+      "identity_raw": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt"
+      ],
+      "player": "林 琢真",
+      "text": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "candidate_decisions",
+      "row_index": 185,
+      "identity": "x:2040609735112823266",
+      "identity_raw": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt"
+      ],
+      "player": "鈴木 大地",
+      "text": "平良の代走専に感じることはあるけど \n守備鈴木大地未満 \n打撃伊藤裕季也未満 \n走力そこそこ普通 \nこんな感じだからな \nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 19,
+      "identity": "receipt:GXQ020",
+      "identity_raw": "GXQ020",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "土田 龍空",
+      "text": "**Posts found (2026 priority):**\n\n@yasu_zehn  \n例えば田中幹也はあの脚力とスピードを存分に活かしてすごいプレーしてるけど、土田龍空はその足の遅さでなんでそんなプレーできるんやって思うし打球感とかそういうのが天才なんやと思う  \nhttps://x.com/yasu_zehn/status/2054869070378586471  \n(2026-05-14)\n\n@dragons_080203  \n知野はほとんどベンチに放置 昨日は代"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 54,
+      "identity": "receipt:GXQ055",
+      "identity_raw": "GXQ055",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "岡 大海",
+      "text": "**2026年投稿:**\n\n@USAMOND1348  \nソフトバンクには周東がいる。マリーンズにも周東より速い和田康士朗と岡大海がいるのに、固定レギュラーで使わない。  \nhttps://x.com/USAMOND1348/status/2081325276282409176  \n(2026-07-26 10:26 GMT)\n\n@MotaMarines12  \n岡大海の走塁やばい。あの加速好きすぎる  \nhttps://x.com/MotaMarines12/status/"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 59,
+      "identity": "receipt:GXQ060",
+      "identity_raw": "GXQ060",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "岡 大海",
+      "text": "**2026 posts:**\n\n- @MotaMarines12: 岡大海の走塁やばい。あの加速好きすぎる  \n  https://x.com/MotaMarines12/status/2072743192558968907  \n  (2026-07-02)\n\n- @jun_jun1980: ひろみー♪( ´θ｀)ノ 疾走とても良かった☺️  \n  https://x.com/jun_jun1980/status/2025167379848986704  \n  (2026-"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 65,
+      "identity": "receipt:GXQ066",
+      "identity_raw": "GXQ066",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "藤岡 裕大",
+      "text": "**2026年投稿（1件）**  \n- @mariiiinsfuck  \n  チームを負けに導く藤岡裕大さん。せめて全力疾走しろよ。  \n  https://x.com/mariiiinsfuck/status/2043200297158459507  \n  2026-04-12 05:31:26 GMT  \n\n**2025年投稿（4件）**  \n- @Y_Marines_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 68,
+      "identity": "receipt:GXQ069",
+      "identity_raw": "GXQ069",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "藤岡 裕大",
+      "text": "**2026 posts:**\n\n- @mariiiinsfuck: チームを負けに導く藤岡裕大さん。せめて全力疾走しろよ。  \n  https://x.com/mariiiinsfuck/status/2043200297158459507  \n  (Sun, 12 Apr 2026 05:31:26 GMT)\n\n**2025 posts:**\n\n- @Y_Marines_26: 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走で"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 128,
+      "identity": "receipt:GXQ129",
+      "identity_raw": "GXQ129",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "鈴木 大地",
+      "text": "**Post 1**  \n@yasuhiro926  \n鈴木大地の何が凄いって、別にとりたててパンチ力があるワケでも足が速いワケでもなく、3割打者の常連でもなく(1度も打ってない)せいぜい.270の7本塁打くらいの打者で、守備も別に上手いワケでもないのに、約15年も現役を続けていて1500安打も打ってるトコよな。ある意味で野球少年の希望だと思う。  \nhttps://x.com/yasuhiro926/status/2061747891946050004  \n2026-06-"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 135,
+      "identity": "receipt:GXQ136",
+      "identity_raw": "GXQ136",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "林 琢真",
+      "text": "**2026 posts:**\n\n- @Lysenko_Yoshida  \n  実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。  \n  https://x.com/Lysenko_Yoshida/status/2049700341634187360  \n  2026-04-30\n\n- @6d0WLgoKfP20737  \n  石上よりも足も速いだろうし  \n  https://x.com/6d0WLgoKfP20737/status/"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 20,
+      "identity": "x:2054869070378586471",
+      "identity_raw": "https://x.com/yasu_zehn/status/2054869070378586471",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**Posts found (2026 priority):**\n\n@yasu_zehn  \n例えば田中幹也はあの脚力とスピードを存分に活かしてすごいプレーしてるけど、土田龍空はその足の遅さでなんでそんなプレーできるんやって思うし打球感とかそういうのが天才なんやと思う\nhttps://x.com/yasu_zehn/status/2054869070378586471\n(2026-05-14)\n\n@dragons_080203  \n知野はほとんどベンチに放置 昨日は代打も三振"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 21,
+      "identity": "x:2050423606560309310",
+      "identity_raw": "https://x.com/dragons_080203/status/2050423606560309310",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**Posts found (2026 priority):**\n\n@yasu_zehn  \n例えば田中幹也はあの脚力とスピードを存分に活かしてすごいプレーしてるけど、土田龍空はその足の遅さでなんでそんなプレーできるんやって思うし打球感とかそういうのが天才なんやと思う  \nhttps://x.com/yasu_zehn/status/2054869070378586471  \n(2026-05-14)\n\n@dragons_080203  \n知野はほとんどベンチに放置 昨日は代"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 22,
+      "identity": "x:2049409629340475763",
+      "identity_raw": "https://x.com/dragons_080203/status/2049409629340475763",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**Posts found (2026 priority):**\n\n@yasu_zehn  \n例えば田中幹也はあの脚力とスピードを存分に活かしてすごいプレーしてるけど、土田龍空はその足の遅さでなんでそんなプレーできるんやって思うし打球感とかそういうのが天才なんやと思う  \nhttps://x.com/yasu_zehn/status/2054869070378586471  \n(2026-05-14)\n\n@dragons_080203  \n知野はほとんどベンチに放置 昨日は代"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 23,
+      "identity": "x:1758309489835655376",
+      "identity_raw": "https://x.com/dragons_080203/status/1758309489835655376",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "s found (2026 priority):**\n\n@yasu_zehn  \n例えば田中幹也はあの脚力とスピードを存分に活かしてすごいプレーしてるけど、土田龍空はその足の遅さでなんでそんなプレーできるんやって思うし打球感とかそういうのが天才なんやと思う  \nhttps://x.com/yasu_zehn/status/2054869070378586471  \n(2026-05-14)\n\n@dragons_080203  \n知野はほとんどベンチに放置 昨日は代打も三振 代"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 71,
+      "identity": "x:2027416132739825932",
+      "identity_raw": "https://x.com/happy_days0709/status/2027416132739825932",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026年投稿:**\n\n@USAMOND1348  \nソフトバンクには周東がいる。マリーンズにも周東より速い和田康士朗と岡大海がいるのに、固定レギュラーで使わない。  \nhttps://x.com/USAMOND1348/status/2081325276282409176  \n(2026-07-26 10:26 GMT)\n\n@MotaMarines12  \n岡大海の走塁やばい。あの加速好きすぎる  \nhttps://x.com/MotaMarines12/status/"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 72,
+      "identity": "x:1972618657919586580",
+      "identity_raw": "https://x.com/Dec046adE/status/1972618657919586580",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text",
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026年投稿:**\n\n@USAMOND1348  \nソフトバンクには周東がいる。マリーンズにも周東より速い和田康士朗と岡大海がいるのに、固定レギュラーで使わない。  \nhttps://x.com/USAMOND1348/status/2081325276282409176  \n(2026-07-26 10:26 GMT)\n\n@MotaMarines12  \n岡大海の走塁やばい。あの加速好きすぎる  \nhttps://x.com/MotaMarines12/status/"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 73,
+      "identity": "x:1971140422090228203",
+      "identity_raw": "https://x.com/minn_810/status/1971140422090228203",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text",
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "にも周東より速い和田康士朗と岡大海がいるのに、固定レギュラーで使わない。  \nhttps://x.com/USAMOND1348/status/2081325276282409176  \n(2026-07-26 10:26 GMT)\n\n@MotaMarines12  \n岡大海の走塁やばい。あの加速好きすぎる  \nhttps://x.com/MotaMarines12/status/2072743192558968907  \n(2026-07-02 18:04 GMT)\n\n@h"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 76,
+      "identity": "x:1928342837265125767",
+      "identity_raw": "https://x.com/io_sono_yuccaP/status/1928342837265125767",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026 posts:**\n\n- @MotaMarines12: 岡大海の走塁やばい。あの加速好きすぎる  \n  https://x.com/MotaMarines12/status/2072743192558968907  \n  (2026-07-02)\n\n- @jun_jun1980: ひろみー♪( ´θ｀)ノ 疾走とても良かった☺️  \n  https://x.com/jun_jun1980/status/2025167379848986704  \n  (2026-"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 77,
+      "identity": "x:2043200297158459507",
+      "identity_raw": "https://x.com/mariiiinsfuck/status/2043200297158459507",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text",
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026年投稿（1件）**  \n- @mariiiinsfuck  \n  チームを負けに導く藤岡裕大さん。せめて全力疾走しろよ。\nhttps://x.com/mariiiinsfuck/status/2043200297158459507\n2026-04-12 05:31:26 GMT  \n\n**2025年投稿（4件）**  \n- @Y_Marines_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャ"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 78,
+      "identity": "x:1967517436858757269",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text",
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026年投稿（1件）**  \n- @mariiiinsfuck  \n  チームを負けに導く藤岡裕大さん。せめて全力疾走しろよ。  \n  https://x.com/mariiiinsfuck/status/2043200297158459507  \n  2026-04-12 05:31:26 GMT  \n\n**2025年投稿（4件）**  \n- @Y_Marines_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 79,
+      "identity": "x:1955583711711547601",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1955583711711547601",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text",
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026年投稿（1件）**  \n- @mariiiinsfuck  \n  チームを負けに導く藤岡裕大さん。せめて全力疾走しろよ。  \n  https://x.com/mariiiinsfuck/status/2043200297158459507  \n  2026-04-12 05:31:26 GMT  \n\n**2025年投稿（4件）**  \n- @Y_Marines_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 80,
+      "identity": "x:1947266818105643228",
+      "identity_raw": "https://x.com/marinittai836/status/1947266818105643228",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "を負けに導く藤岡裕大さん。せめて全力疾走しろよ。  \n  https://x.com/mariiiinsfuck/status/2043200297158459507  \n  2026-04-12 05:31:26 GMT  \n\n**2025年投稿（4件）**  \n- @Y_Marines_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策  \n  https"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 81,
+      "identity": "x:1935990810061025464",
+      "identity_raw": "https://x.com/LOTTE_Nicha____/status/1935990810061025464",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "es_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策  \n  https://x.com/Y_Marines_26/status/1967517436858757269  \n  2025-09-15 09:14:46 GMT  \n\n- @Y_Marines_26  \n  6回、セカンド併殺打 藤岡裕大、全力疾走してない。船下りよう  \n  https://"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 146,
+      "identity": "x:1971877407171952704",
+      "identity_raw": "https://x.com/aobata_jpn/status/1971877407171952704",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "上手いワケでもないのに、約15年も現役を続けていて1500安打も打ってるトコよな。ある意味で野球少年の希望だと思う。  \nhttps://x.com/yasuhiro926/status/2061747891946050004  \n2026-06-02 09:52:57 GMT\n\n**Post 2**  \n@Roku7_AIMS  \n平良の代走専に感じることはあるけど  \n守備鈴木大地未満  \n打撃伊藤裕季也未満  \n走力そこそこ普通  \nこんな感じだからな  \nワォより速い"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 148,
+      "identity": "x:2061747891946050004",
+      "identity_raw": "https://x.com/yasuhiro926/status/2061747891946050004",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**Post 1**  \n@yasuhiro926  \n鈴木大地の何が凄いって、別にとりたててパンチ力があるワケでも足が速いワケでもなく、3割打者の常連でもなく(1度も打ってない)せいぜい.270の7本塁打くらいの打者で、守備も別に上手いワケでもないのに、約15年も現役を続けていて1500安打も打ってるトコよな。ある意味で野球少年の希望だと思う。\nhttps://x.com/yasuhiro926/status/2061747891946050004\n2026-06-02 0"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 149,
+      "identity": "x:2040609735112823266",
+      "identity_raw": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**Post 1**  \n@yasuhiro926  \n鈴木大地の何が凄いって、別にとりたててパンチ力があるワケでも足が速いワケでもなく、3割打者の常連でもなく(1度も打ってない)せいぜい.270の7本塁打くらいの打者で、守備も別に上手いワケでもないのに、約15年も現役を続けていて1500安打も打ってるトコよな。ある意味で野球少年の希望だと思う。  \nhttps://x.com/yasuhiro926/status/2061747891946050004  \n2026-06-"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 150,
+      "identity": "x:1991514528610414964",
+      "identity_raw": "https://x.com/jerryandjimmy/status/1991514528610414964",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**Post 1**  \n@yasuhiro926  \n鈴木大地の何が凄いって、別にとりたててパンチ力があるワケでも足が速いワケでもなく、3割打者の常連でもなく(1度も打ってない)せいぜい.270の7本塁打くらいの打者で、守備も別に上手いワケでもないのに、約15年も現役を続けていて1500安打も打ってるトコよな。ある意味で野球少年の希望だと思う。  \nhttps://x.com/yasuhiro926/status/2061747891946050004  \n2026-06-"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 151,
+      "identity": "x:2049700341634187360",
+      "identity_raw": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026 posts:**\n\n- @Lysenko_Yoshida  \n  実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。\nhttps://x.com/Lysenko_Yoshida/status/2049700341634187360\n2026-04-30\n\n- @6d0WLgoKfP20737  \n  石上よりも足も速いだろうし  \n  https://x.com/6d0WLgoKfP20737/status/20418677"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 152,
+      "identity": "x:2041867789183676641",
+      "identity_raw": "https://x.com/6d0WLgoKfP20737/status/2041867789183676641",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026 posts:**\n\n- @Lysenko_Yoshida  \n  実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。  \n  https://x.com/Lysenko_Yoshida/status/2049700341634187360  \n  2026-04-30\n\n- @6d0WLgoKfP20737  \n  石上よりも足も速いだろうし\nhttps://x.com/6d0WLgoKfP20737/status/2041"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 153,
+      "identity": "x:1994367143262208295",
+      "identity_raw": "https://x.com/ikomariny/status/1994367143262208295",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026 posts:**\n\n- @Lysenko_Yoshida  \n  実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。  \n  https://x.com/Lysenko_Yoshida/status/2049700341634187360  \n  2026-04-30\n\n- @6d0WLgoKfP20737  \n  石上よりも足も速いだろうし  \n  https://x.com/6d0WLgoKfP20737/status/"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 154,
+      "identity": "x:1978418232542290258",
+      "identity_raw": "https://x.com/0417_Incidents/status/1978418232542290258",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026 posts:**\n\n- @Lysenko_Yoshida  \n  実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。  \n  https://x.com/Lysenko_Yoshida/status/2049700341634187360  \n  2026-04-30\n\n- @6d0WLgoKfP20737  \n  石上よりも足も速いだろうし  \n  https://x.com/6d0WLgoKfP20737/status/"
+    },
+    {
+      "file": "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 78,
+      "identity": "x:2050423606560309310",
+      "identity_raw": "https://x.com/dragons_080203/status/2050423606560309310",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "土田 龍空",
+      "text": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない"
+    },
+    {
+      "file": "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 85,
+      "identity": "x:1967517436858757269",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "藤岡 裕大",
+      "text": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策"
+    },
+    {
+      "file": "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 139,
+      "identity": "x:2049700341634187360",
+      "identity_raw": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "林 琢真",
+      "text": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。"
+    },
+    {
+      "file": "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 145,
+      "identity": "x:2040609735112823266",
+      "identity_raw": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "鈴木 大地",
+      "text": "平良の代走専に感じることはあるけど\n守備鈴木大地未満\n打撃伊藤裕季也未満\n走力そこそこ普通\nこんな感じだからな\nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 78,
+      "identity": "x:2050423606560309310",
+      "identity_raw": "https://x.com/dragons_080203/status/2050423606560309310",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "土田 龍空",
+      "text": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 85,
+      "identity": "x:1967517436858757269",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "藤岡 裕大",
+      "text": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 139,
+      "identity": "x:2049700341634187360",
+      "identity_raw": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "林 琢真",
+      "text": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 145,
+      "identity": "x:2040609735112823266",
+      "identity_raw": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "鈴木 大地",
+      "text": "平良の代走専に感じることはあるけど\n守備鈴木大地未満\n打撃伊藤裕季也未満\n走力そこそこ普通\nこんな感じだからな\nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 100,
+      "identity": "x:2050423606560309310",
+      "identity_raw": "https://x.com/dragons_080203/status/2050423606560309310",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "土田 龍空",
+      "text": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 223,
+      "identity": "x:2049700341634187360",
+      "identity_raw": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "林 琢真",
+      "text": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 309,
+      "identity": "x:1967517436858757269",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "藤岡 裕大",
+      "text": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 347,
+      "identity": "x:2040609735112823266",
+      "identity_raw": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "鈴木 大地",
+      "text": "平良の代走専に感じることはあるけど\n守備鈴木大地未満\n打撃伊藤裕季也未満\n走力そこそこ普通\nこんな感じだからな\nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 78,
+      "identity": "x:2050423606560309310",
+      "identity_raw": "https://x.com/dragons_080203/status/2050423606560309310",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "土田 龍空",
+      "text": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 85,
+      "identity": "x:1967517436858757269",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "藤岡 裕大",
+      "text": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 139,
+      "identity": "x:2049700341634187360",
+      "identity_raw": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "林 琢真",
+      "text": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 145,
+      "identity": "x:2040609735112823266",
+      "identity_raw": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text"
+      ],
+      "player": "鈴木 大地",
+      "text": "平良の代走専に感じることはあるけど\n守備鈴木大地未満\n打撃伊藤裕季也未満\n走力そこそこ普通\nこんな感じだからな\nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな"
+    },
+    {
+      "file": "outputs/derived/speed_youtube_official_comments_recovered_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 8695,
+      "identity": "youtube:K_5Tv30wn1o#Ugy6UHYP9P9H2a_Wlv14AaABAg",
+      "identity_raw": "https://www.youtube.com/watch?v=K_5Tv30wn1o&lc=Ugy6UHYP9P9H2a_Wlv14AaABAg",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "author"
+      ],
+      "player": null,
+      "text": "@代走あの子"
+    }
+  ],
+  "unique_rows": [
+    {
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 19,
+      "identity": "x:1972618657919586580",
+      "identity_raw": "https://x.com/Dec046adE/status/1972618657919586580",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": "岡 大海",
+      "text": ": 岡大海さんどこかケガしとるんか？足速いのに代走だされとる。",
+      "seen_in_files": [
+        "data/normalized/speed_2026_grok_x_sources.json",
+        "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+        "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+        "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 97,
+      "identity": "x:2050423606560309310",
+      "identity_raw": "https://x.com/dragons_080203/status/2050423606560309310",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": "土田 龍空",
+      "text": "知野はほとんどベンチに放置 昨日は代打も三振 代走なら土田龍空、知野も俊足で尾田より全然使えるのに無能な首脳陣の思考回路は理解できない",
+      "seen_in_files": [
+        "data/normalized/speed_2026_grok_x_sources.json",
+        "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+        "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+        "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+        "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+        "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+        "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+        "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl"
+      ]
+    },
+    {
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 108,
+      "identity": "x:1967517436858757269",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1967517436858757269",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": "藤岡 裕大",
+      "text": ": 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策",
+      "seen_in_files": [
+        "data/normalized/speed_2026_grok_x_sources.json",
+        "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+        "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+        "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+        "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+        "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+        "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+        "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl"
+      ]
+    },
+    {
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 179,
+      "identity": "x:2049700341634187360",
+      "identity_raw": "https://x.com/Lysenko_Yoshida/status/2049700341634187360",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": "林 琢真",
+      "text": "実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。",
+      "seen_in_files": [
+        "data/normalized/speed_2026_grok_x_sources.json",
+        "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+        "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+        "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+        "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+        "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+        "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+        "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl"
+      ]
+    },
+    {
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "scope": "PRIMARY",
+      "array_key": "source_records",
+      "row_index": 185,
+      "identity": "x:2040609735112823266",
+      "identity_raw": "https://x.com/Roku7_AIMS/status/2040609735112823266",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "text_excerpt",
+        "quote_excerpt",
+        "returned_identity_variants.[].returned_text_variants.[]"
+      ],
+      "player": "鈴木 大地",
+      "text": "平良の代走専に感じることはあるけど \n守備鈴木大地未満 \n打撃伊藤裕季也未満 \n走力そこそこ普通 \nこんな感じだからな \nワォより速いとも思えないけどこれでも首脳陣は使おうとしてらように見えるがな",
+      "seen_in_files": [
+        "data/normalized/speed_2026_grok_x_sources.json",
+        "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+        "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+        "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+        "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+        "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+        "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+        "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 19,
+      "identity": "receipt:GXQ020",
+      "identity_raw": "GXQ020",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "土田 龍空",
+      "text": "**Posts found (2026 priority):**\n\n@yasu_zehn  \n例えば田中幹也はあの脚力とスピードを存分に活かしてすごいプレーしてるけど、土田龍空はその足の遅さでなんでそんなプレーできるんやって思うし打球感とかそういうのが天才なんやと思う  \nhttps://x.com/yasu_zehn/status/2054869070378586471  \n(2026-05-14)\n\n@dragons_080203  \n知野はほとんどベンチに放置 昨日は代",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 54,
+      "identity": "receipt:GXQ055",
+      "identity_raw": "GXQ055",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "岡 大海",
+      "text": "**2026年投稿:**\n\n@USAMOND1348  \nソフトバンクには周東がいる。マリーンズにも周東より速い和田康士朗と岡大海がいるのに、固定レギュラーで使わない。  \nhttps://x.com/USAMOND1348/status/2081325276282409176  \n(2026-07-26 10:26 GMT)\n\n@MotaMarines12  \n岡大海の走塁やばい。あの加速好きすぎる  \nhttps://x.com/MotaMarines12/status/",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 59,
+      "identity": "receipt:GXQ060",
+      "identity_raw": "GXQ060",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "岡 大海",
+      "text": "**2026 posts:**\n\n- @MotaMarines12: 岡大海の走塁やばい。あの加速好きすぎる  \n  https://x.com/MotaMarines12/status/2072743192558968907  \n  (2026-07-02)\n\n- @jun_jun1980: ひろみー♪( ´θ｀)ノ 疾走とても良かった☺️  \n  https://x.com/jun_jun1980/status/2025167379848986704  \n  (2026-",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 65,
+      "identity": "receipt:GXQ066",
+      "identity_raw": "GXQ066",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "藤岡 裕大",
+      "text": "**2026年投稿（1件）**  \n- @mariiiinsfuck  \n  チームを負けに導く藤岡裕大さん。せめて全力疾走しろよ。  \n  https://x.com/mariiiinsfuck/status/2043200297158459507  \n  2026-04-12 05:31:26 GMT  \n\n**2025年投稿（4件）**  \n- @Y_Marines_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 68,
+      "identity": "receipt:GXQ069",
+      "identity_raw": "GXQ069",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "藤岡 裕大",
+      "text": "**2026 posts:**\n\n- @mariiiinsfuck: チームを負けに導く藤岡裕大さん。せめて全力疾走しろよ。  \n  https://x.com/mariiiinsfuck/status/2043200297158459507  \n  (Sun, 12 Apr 2026 05:31:26 GMT)\n\n**2025 posts:**\n\n- @Y_Marines_26: 藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走で",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 128,
+      "identity": "receipt:GXQ129",
+      "identity_raw": "GXQ129",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "鈴木 大地",
+      "text": "**Post 1**  \n@yasuhiro926  \n鈴木大地の何が凄いって、別にとりたててパンチ力があるワケでも足が速いワケでもなく、3割打者の常連でもなく(1度も打ってない)せいぜい.270の7本塁打くらいの打者で、守備も別に上手いワケでもないのに、約15年も現役を続けていて1500安打も打ってるトコよな。ある意味で野球少年の希望だと思う。  \nhttps://x.com/yasuhiro926/status/2061747891946050004  \n2026-06-",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "query_receipts",
+      "row_index": 135,
+      "identity": "receipt:GXQ136",
+      "identity_raw": "GXQ136",
+      "identity_unit": "SEARCH_RESPONSE_BLOB",
+      "attributed_to_player": true,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "raw_response_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text",
+        "x_post_occurrences.[].surrounding_returned_text"
+      ],
+      "player": "林 琢真",
+      "text": "**2026 posts:**\n\n- @Lysenko_Yoshida  \n  実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。  \n  https://x.com/Lysenko_Yoshida/status/2049700341634187360  \n  2026-04-30\n\n- @6d0WLgoKfP20737  \n  石上よりも足も速いだろうし  \n  https://x.com/6d0WLgoKfP20737/status/",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 20,
+      "identity": "x:2054869070378586471",
+      "identity_raw": "https://x.com/yasu_zehn/status/2054869070378586471",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**Posts found (2026 priority):**\n\n@yasu_zehn  \n例えば田中幹也はあの脚力とスピードを存分に活かしてすごいプレーしてるけど、土田龍空はその足の遅さでなんでそんなプレーできるんやって思うし打球感とかそういうのが天才なんやと思う\nhttps://x.com/yasu_zehn/status/2054869070378586471\n(2026-05-14)\n\n@dragons_080203  \n知野はほとんどベンチに放置 昨日は代打も三振",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 22,
+      "identity": "x:2049409629340475763",
+      "identity_raw": "https://x.com/dragons_080203/status/2049409629340475763",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**Posts found (2026 priority):**\n\n@yasu_zehn  \n例えば田中幹也はあの脚力とスピードを存分に活かしてすごいプレーしてるけど、土田龍空はその足の遅さでなんでそんなプレーできるんやって思うし打球感とかそういうのが天才なんやと思う  \nhttps://x.com/yasu_zehn/status/2054869070378586471  \n(2026-05-14)\n\n@dragons_080203  \n知野はほとんどベンチに放置 昨日は代",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 23,
+      "identity": "x:1758309489835655376",
+      "identity_raw": "https://x.com/dragons_080203/status/1758309489835655376",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "s found (2026 priority):**\n\n@yasu_zehn  \n例えば田中幹也はあの脚力とスピードを存分に活かしてすごいプレーしてるけど、土田龍空はその足の遅さでなんでそんなプレーできるんやって思うし打球感とかそういうのが天才なんやと思う  \nhttps://x.com/yasu_zehn/status/2054869070378586471  \n(2026-05-14)\n\n@dragons_080203  \n知野はほとんどベンチに放置 昨日は代打も三振 代",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 71,
+      "identity": "x:2027416132739825932",
+      "identity_raw": "https://x.com/happy_days0709/status/2027416132739825932",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026年投稿:**\n\n@USAMOND1348  \nソフトバンクには周東がいる。マリーンズにも周東より速い和田康士朗と岡大海がいるのに、固定レギュラーで使わない。  \nhttps://x.com/USAMOND1348/status/2081325276282409176  \n(2026-07-26 10:26 GMT)\n\n@MotaMarines12  \n岡大海の走塁やばい。あの加速好きすぎる  \nhttps://x.com/MotaMarines12/status/",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 73,
+      "identity": "x:1971140422090228203",
+      "identity_raw": "https://x.com/minn_810/status/1971140422090228203",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text",
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "にも周東より速い和田康士朗と岡大海がいるのに、固定レギュラーで使わない。  \nhttps://x.com/USAMOND1348/status/2081325276282409176  \n(2026-07-26 10:26 GMT)\n\n@MotaMarines12  \n岡大海の走塁やばい。あの加速好きすぎる  \nhttps://x.com/MotaMarines12/status/2072743192558968907  \n(2026-07-02 18:04 GMT)\n\n@h",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 76,
+      "identity": "x:1928342837265125767",
+      "identity_raw": "https://x.com/io_sono_yuccaP/status/1928342837265125767",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026 posts:**\n\n- @MotaMarines12: 岡大海の走塁やばい。あの加速好きすぎる  \n  https://x.com/MotaMarines12/status/2072743192558968907  \n  (2026-07-02)\n\n- @jun_jun1980: ひろみー♪( ´θ｀)ノ 疾走とても良かった☺️  \n  https://x.com/jun_jun1980/status/2025167379848986704  \n  (2026-",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 77,
+      "identity": "x:2043200297158459507",
+      "identity_raw": "https://x.com/mariiiinsfuck/status/2043200297158459507",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text",
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026年投稿（1件）**  \n- @mariiiinsfuck  \n  チームを負けに導く藤岡裕大さん。せめて全力疾走しろよ。\nhttps://x.com/mariiiinsfuck/status/2043200297158459507\n2026-04-12 05:31:26 GMT  \n\n**2025年投稿（4件）**  \n- @Y_Marines_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャ",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 79,
+      "identity": "x:1955583711711547601",
+      "identity_raw": "https://x.com/Y_Marines_26/status/1955583711711547601",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text",
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026年投稿（1件）**  \n- @mariiiinsfuck  \n  チームを負けに導く藤岡裕大さん。せめて全力疾走しろよ。  \n  https://x.com/mariiiinsfuck/status/2043200297158459507  \n  2026-04-12 05:31:26 GMT  \n\n**2025年投稿（4件）**  \n- @Y_Marines_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 80,
+      "identity": "x:1947266818105643228",
+      "identity_raw": "https://x.com/marinittai836/status/1947266818105643228",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "を負けに導く藤岡裕大さん。せめて全力疾走しろよ。  \n  https://x.com/mariiiinsfuck/status/2043200297158459507  \n  2026-04-12 05:31:26 GMT  \n\n**2025年投稿（4件）**  \n- @Y_Marines_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策  \n  https",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 81,
+      "identity": "x:1935990810061025464",
+      "identity_raw": "https://x.com/LOTTE_Nicha____/status/1935990810061025464",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "es_26  \n  藤岡裕大について、得点圏打率は低い（代打に不向き）守備固め要員でも代走要員でもない、全力疾走できない『キャプテンだけ』って事で1軍帯同させ続けてるなら愚策  \n  https://x.com/Y_Marines_26/status/1967517436858757269  \n  2025-09-15 09:14:46 GMT  \n\n- @Y_Marines_26  \n  6回、セカンド併殺打 藤岡裕大、全力疾走してない。船下りよう  \n  https://",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 146,
+      "identity": "x:1971877407171952704",
+      "identity_raw": "https://x.com/aobata_jpn/status/1971877407171952704",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "上手いワケでもないのに、約15年も現役を続けていて1500安打も打ってるトコよな。ある意味で野球少年の希望だと思う。  \nhttps://x.com/yasuhiro926/status/2061747891946050004  \n2026-06-02 09:52:57 GMT\n\n**Post 2**  \n@Roku7_AIMS  \n平良の代走専に感じることはあるけど  \n守備鈴木大地未満  \n打撃伊藤裕季也未満  \n走力そこそこ普通  \nこんな感じだからな  \nワォより速い",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 148,
+      "identity": "x:2061747891946050004",
+      "identity_raw": "https://x.com/yasuhiro926/status/2061747891946050004",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**Post 1**  \n@yasuhiro926  \n鈴木大地の何が凄いって、別にとりたててパンチ力があるワケでも足が速いワケでもなく、3割打者の常連でもなく(1度も打ってない)せいぜい.270の7本塁打くらいの打者で、守備も別に上手いワケでもないのに、約15年も現役を続けていて1500安打も打ってるトコよな。ある意味で野球少年の希望だと思う。\nhttps://x.com/yasuhiro926/status/2061747891946050004\n2026-06-02 0",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 150,
+      "identity": "x:1991514528610414964",
+      "identity_raw": "https://x.com/jerryandjimmy/status/1991514528610414964",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**Post 1**  \n@yasuhiro926  \n鈴木大地の何が凄いって、別にとりたててパンチ力があるワケでも足が速いワケでもなく、3割打者の常連でもなく(1度も打ってない)せいぜい.270の7本塁打くらいの打者で、守備も別に上手いワケでもないのに、約15年も現役を続けていて1500安打も打ってるトコよな。ある意味で野球少年の希望だと思う。  \nhttps://x.com/yasuhiro926/status/2061747891946050004  \n2026-06-",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 152,
+      "identity": "x:2041867789183676641",
+      "identity_raw": "https://x.com/6d0WLgoKfP20737/status/2041867789183676641",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026 posts:**\n\n- @Lysenko_Yoshida  \n  実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。  \n  https://x.com/Lysenko_Yoshida/status/2049700341634187360  \n  2026-04-30\n\n- @6d0WLgoKfP20737  \n  石上よりも足も速いだろうし\nhttps://x.com/6d0WLgoKfP20737/status/2041",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 153,
+      "identity": "x:1994367143262208295",
+      "identity_raw": "https://x.com/ikomariny/status/1994367143262208295",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026 posts:**\n\n- @Lysenko_Yoshida  \n  実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。  \n  https://x.com/Lysenko_Yoshida/status/2049700341634187360  \n  2026-04-30\n\n- @6d0WLgoKfP20737  \n  石上よりも足も速いだろうし  \n  https://x.com/6d0WLgoKfP20737/status/",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "scope": "PRIMARY",
+      "array_key": "unique_x_post_candidates",
+      "row_index": 154,
+      "identity": "x:1978418232542290258",
+      "identity_raw": "https://x.com/0417_Incidents/status/1978418232542290258",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": true,
+      "matched_fields": [
+        "surrounding_returned_text_by_receipt.[].text"
+      ],
+      "player": null,
+      "text": "**2026 posts:**\n\n- @Lysenko_Yoshida  \n  実際知野のベーランはマジ、あの番長が足の速い林琢真を使わずに知野を代走に使うくらいマジ。  \n  https://x.com/Lysenko_Yoshida/status/2049700341634187360  \n  2026-04-30\n\n- @6d0WLgoKfP20737  \n  石上よりも足も速いだろうし  \n  https://x.com/6d0WLgoKfP20737/status/",
+      "seen_in_files": [
+        "data/manual/speed_2026_grok_x_search_receipts_20260810.json"
+      ]
+    },
+    {
+      "file": "outputs/derived/speed_youtube_official_comments_recovered_20260813.jsonl",
+      "scope": "SECONDARY_DERIVED",
+      "array_key": "__jsonl_line",
+      "row_index": 8695,
+      "identity": "youtube:K_5Tv30wn1o#Ugy6UHYP9P9H2a_Wlv14AaABAg",
+      "identity_raw": "https://www.youtube.com/watch?v=K_5Tv30wn1o&lc=Ugy6UHYP9P9H2a_Wlv14AaABAg",
+      "identity_unit": "SINGLE_POST",
+      "attributed_to_player": false,
+      "text_is_surrounding_search_blob": false,
+      "matched_fields": [
+        "author"
+      ],
+      "player": null,
+      "text": "@代走あの子",
+      "seen_in_files": [
+        "outputs/derived/speed_youtube_official_comments_recovered_20260813.jsonl"
+      ]
     }
   ]
 }

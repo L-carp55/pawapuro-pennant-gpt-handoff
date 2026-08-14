@@ -1,0 +1,93 @@
+{
+  "generated_at": "2026-08-14",
+  "lane": "NPB_ENTERPRISE_TRACKING_ARTICLE",
+  "separate_from": "NPB+ app/player-screen lane（data/manual/npb_plus_screens.jsonl）",
+  "evidence_status": "MEASURED_POSITIVE_PLAYER_SPECIFIC",
+  "source": {
+    "title": "二盗タイム最速ではない、それでも周東佑京が別格な理由　上位50件で見えた圧倒的な走力【DATA SPOTLIGHT】",
+    "publisher": "Baseball Channel / DATA SPOTLIGHT",
+    "data_provider_stated_by_article": "NPBエンタープライズ",
+    "published_at": "2026-08-10",
+    "as_of": "2026-08-02",
+    "archived_at": "2026-08-14",
+    "supplied_by": "owner（チャットで本文を提供）"
+  },
+  "selection_bias": [
+    "全盗塁企図ではない（成功のみ）",
+    "全走塁イベントではない（盗塁のみ）",
+    "上位50件に条件づけられている（打ち切り標本）",
+    "出現回数は走力だけでなく、盗塁機会・企図の意思・スタート・投手/捕手の状況・スライディングも混ざる"
+  ],
+  "what_this_lane_can_support": [
+    {
+      "player": "周東 佑京",
+      "player_id": "21925136",
+      "lane": "NPB_ENTERPRISE_TRACKING_ARTICLE",
+      "flag": "WITHIN_SEASON_REPEATED_ELITE_MAX_SPEED",
+      "is_weight": false,
+      "is_rating": false,
+      "_what_it_means": "同一シーズン内で event 単位の最高速度が繰り返し集団最上位に到達している。NPB+ アプリの単一値が単発の外れ値である可能性を下げる。点数にも重みにもしない。",
+      "app_lane": {
+        "top_speed_kmh": 35,
+        "npb_top_speed_z": 2.7051,
+        "rank_of": "100 / 100",
+        "exposure_runs": 59
+      },
+      "article_lane": {
+        "events_in_top50": 8,
+        "next_highest_player_events": 4,
+        "events_at_or_above_threshold": {
+          "total": 7,
+          "shuto": 6
+        },
+        "share_of_extreme_events": 0.8571,
+        "max_speed_reached_times": 2,
+        "max_kmh": 33.264,
+        "gap_vs_non_shuto_mean_kmh": 1.872,
+        "lead_shorter_than_peers_m": 0.11
+      },
+      "consistency_check": {
+        "app_max_kmh": 35,
+        "article_max_kmh": 33.264,
+        "article_below_app": true,
+        "reading": "記事の最大値がアプリ値を下回るのは、記事が制限された event 集合の観測だから、で説明がつく。集計規則が同一である証拠は無いので、2つを同じ量として平均したり差を誤差として読んだりしない。"
+      }
+    }
+  ],
+  "what_this_lane_cannot_support": {
+    "population_measurement_reliability": {
+      "verdict": "NOT_IDENTIFIABLE",
+      "value": null,
+      "why": [
+        "標本が「成功した二塁盗塁」かつ「タイム上位50件」に条件づけられている（打ち切り標本）",
+        "同一選手の反復が観測されるのは、速い成功盗塁を多く生む選手に偏る＝出現自体が結果に依存する",
+        "上位50件に居ない選手の観測が存在しないため、母集団の分散も測定誤差も推定できない"
+      ],
+      "_do_not": "出現回数8回や 9.24/9.17 m/s の閾値を、全選手共通の信頼性係数へ変換しない"
+    },
+    "steal_time_as_speed_teacher": {
+      "verdict": "REJECTED",
+      "why": "記事自身が「同じタイムでもリード・スタート・加速・走速度の組合せが異なりうる」と明記。二盗タイムは純粋な足の速さの計測ではない"
+    },
+    "absence_means_slow": {
+      "verdict": "REJECTED",
+      "why": "上位50件に居ないことは、遅いことでも、盗塁機会が無かったことでもありうる（識別できない）"
+    },
+    "merge_into_pinch_runner_lane": {
+      "verdict": "REJECTED",
+      "why": "SP-061 は代走起用の文脈レーン。本記事は代走の証拠ではない（合流させない）"
+    }
+  },
+  "effect_on_sp100": {
+    "reliability_verdict_unchanged": "NOT_IDENTIFIABLE",
+    "_why": "本記事は選択標本のため、NPB+ の汎用測定信頼性を識別しない。SP-100 v2 の判定を変えない。",
+    "candidate_n_unchanged": true,
+    "candidate_f_unchanged": true,
+    "_only_change": "周東佑京1名について、反復性の文脈フラグが1件付いた（重みでも点数でもない）"
+  },
+  "effect_on_sp022": {
+    "usable_as": "高位レンジの順序証拠（周東を最上位側に置く根拠の補強）",
+    "not_usable_as": "1-100への直接変換、pairwise確率の重み"
+  },
+  "n_player_flags": 1
+}

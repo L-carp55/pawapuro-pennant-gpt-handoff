@@ -1,4 +1,7 @@
 {
+  "evidence_status": "MEASURED_NEGATIVE",
+  "_evidence_status_note": "SP-006。標準化50m n=88（侍ジャパン大学代表候補の同一セッション光電管）を実際に集計した上で、strict direct evidence の下では production 採用に足りないと判定した。「探していない(NOT_COLLECTED)」ではなく「探して測った上で採用に至らない」。距離比例変換の禁止(EX-020)は維持。",
+  "_evidence_status_stamped_at": "2026-08-14 Opus bulk review",
   "status": "candidate_only",
   "_purpose": "標準化された光電管50mの集団内順位を、野球専用27.43m走の集団内順位へ写すPowerPro非依存の身体能力Prior。productionでは未使用。",
   "_important": "50m秒数を27.43mへ距離比例変換しない。別プロトコル・別集団なので、標準化zを介したquantile-style priorとしてのみ使う。PowerPro値は一切使用していない。",
@@ -21,9 +24,20 @@
     "t30_all_sd_sec": 0.16,
     "t27_43_all_mean_sec": 4.11,
     "t27_43_all_sd_sec": 0.13,
-    "t27_43_all_range_sec": [3.79, 4.38],
-    "infielders": {"n": 15, "t30_mean_sec": 4.32, "t30_sd_sec": 0.13},
-    "outfielders": {"n": 9, "t30_mean_sec": 4.26, "t30_sd_sec": 0.11},
+    "t27_43_all_range_sec": [
+      3.79,
+      4.38
+    ],
+    "infielders": {
+      "n": 15,
+      "t30_mean_sec": 4.32,
+      "t30_sd_sec": 0.13
+    },
+    "outfielders": {
+      "n": 9,
+      "t30_mean_sec": 4.26,
+      "t30_sd_sec": 0.11
+    },
     "protocol": "野球場内野土、スパイク、野球のリード姿勢から90度方向へスタート、Brower光電管0/5/.../30m、2試技の良い方"
   },
   "position_player_t90_prior": {

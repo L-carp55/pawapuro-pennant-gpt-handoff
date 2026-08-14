@@ -1,0 +1,70 @@
+{
+  "_purpose": "data/manual/npb_plus_screens.jsonl の各フィールドの出所分類。誤帰属したフィールドをNPB+の直接計測として使う経路を fail closed にするための正本。",
+  "_authority": "owner correction 2026-08-14 + docs/audits/luna_npb_plus_provenance_contamination_20260814.md",
+  "_owner_correction": "このプロジェクトで使っている NPB+ アプリ／選手画面の走力系 direct measurement は「最高速度のみ」。他の走力系フィールドを NPB+ の直接計測として扱ってはならない。",
+  "_consumer": "src/ratings/npb_plus_provenance.mjs（唯一の合流点）。生JSONLを直接読んで走力系フィールドを取り出す新規コードを書かない。",
+  "_raw_retention": "誤帰属フィールドの raw 値は監査のため削除しない。禁止するのは『NPB+の直接計測として下流で数値使用すること』であって、値の保存ではない。",
+
+  "classes": {
+    "VERIFIED_NPB_PLUS": "NPB+アプリの直接計測としてownerが認めたフィールド。下流の physical measurement として使ってよい。",
+    "MISATTRIBUTED_SOURCE": "リポジトリ上はNPB+入力として記録されているが、owner訂正によりNPB+の直接計測ではない。真の出所は未確認。NPB+測定としての下流数値使用を禁止する。",
+    "DERIVED_PROXY": "別データから導出した代理量。測定値ではない。exposure/context としてのみ、選択バイアスを明示した上で使う。",
+    "CONTEXT_ONLY": "走力の物理量ではない。文脈・照合用。",
+    "VERIFIED_OTHER_SOURCE": "出典が明示された別系統のデータ。独立レーンとして使ってよい。"
+  },
+
+  "fields": {
+    "top_speed_kmh": {
+      "class": "VERIFIED_NPB_PLUS",
+      "meaning": "NPB+の最高走速度(km/h)。速いほど大きい。",
+      "usable_as_npb_plus_measurement": true,
+      "_statistic_type": "MAXIMUM",
+      "_max_statistic_caveat": "最大値統計は観測機会数が多いほど上振れする。機会数の少ない選手の値は下振れしうる。この偏りは『精度が低い』のではなく『水準がずれる』ので、機会数による中心方向への縮小では補正できない。",
+      "_resolution_measured": "実データ100人で 29.0〜35.0 km/h、42水準、最小刻み0.1 km/h（= 0.080 sd、sd=1.252）。分解能は順位づけの制約にならない。",
+      "_resolution_caveat_retracted_20260814": "当初『1 km/h刻みの7水準・1刻み0.8sd』と書いたが誤り。min/maxが整数だったのを格子と読み違えた。実測は上記のとおり0.1刻み。"
+    },
+    "hp_to_1b_sec": {
+      "class": "MISATTRIBUTED_SOURCE",
+      "meaning": "本塁→一塁の到達秒として保存されている値。",
+      "usable_as_npb_plus_measurement": false,
+      "true_source": "PROVENANCE_UNVERIFIED",
+      "_evidence": "source_images 参照は109行すべてにあるが tracked image は0件。git履歴は root commit 8637405 の1件のみで、field追加・変換の履歴が無い。真の出所を推測して別ソースへ置換しない。",
+      "_forbidden_uses": [
+        "NPB+の第2測定として parallel-forms reliability を作ること",
+        "Spearman-Brown 合成信頼性の入力にすること",
+        "latent physical speed / confidence の入力にすること",
+        "走力の direct measurement 較正の入力にすること"
+      ],
+      "_legitimate_alternative": "data/manual/hp_to_1b_measurements_curated.json は source_name/source_url を持つ VERIFIED_OTHER_SOURCE。H2Fの証拠が要る時はこちらを別レーンとして使う。"
+    },
+    "full_effort_run_proxy_count": {
+      "class": "DERIVED_PROXY",
+      "meaning": "PBP・走塁記録を合算した全力走の機会数。NPB+の測定値ではない。",
+      "usable_as_npb_plus_measurement": false,
+      "_measured_trait_correlation": {
+        "corr_with_z_top": 0.4148,
+        "corr_weight_with_z_top": 0.3526,
+        "_measured_at": "2026-08-14",
+        "_implication": "機会数は測定対象（走力）そのものと正に相関する。これを reliability として z に乗算すると、遅い選手ほど強く中心へ寄る非対称な縮小になり、分布の平均自体がずれる（実測: |z|損失 fast 0.3905 / slow 0.4666、縮小後 mean(z)=+0.0552）。したがって exposure を縮小係数として z に掛けない。"
+      },
+      "_allowed_use": "confidence/context として**別欄で**報告する。z への乗算はしない。"
+    },
+    "npb_plus_source_season_label": { "class": "CONTEXT_ONLY", "meaning": "snapshotの季節ラベル。査定年との時間距離の追跡用。" },
+    "npb_plus_sample_count": { "class": "CONTEXT_ONLY", "meaning": "公表サンプル数。実データでは100人全員 null。" },
+    "qualified_run_count": { "class": "CONTEXT_ONLY", "meaning": "公表対象走数。実データでは100人全員 null。" }
+  },
+
+  "reliability_status": {
+    "npb_plus_generic_measurement_reliability": {
+      "verdict": "NOT_IDENTIFIABLE",
+      "_why": [
+        "直接測定が最高速度の1つしかなく、内部 parallel-forms を構成できない。",
+        "公表 sample_count / qualified_run_count が100人全員 null で、標本誤差からの推定経路が無い。",
+        "同一選手の反復測定が同一 snapshot 内に存在しない。",
+        "NPB_ENTERPRISE_TRACKING_ARTICLE レーンは上位50件の成功盗塁に条件づけられた選択標本であり、母集団の測定信頼性を推定できない。"
+      ],
+      "_forbidden": "識別できないことを理由に、代わりの2測定を仕立てて内部信頼性を作らない。値を埋めるより NOT_IDENTIFIABLE と記録する方が正しい。",
+      "_reopen_condition": "選択されていない event-level tracking が母集団規模で入手できた場合、または同一 snapshot 内の反復測定が得られた場合に再検討する。"
+    }
+  }
+}

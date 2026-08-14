@@ -55,6 +55,14 @@ export function applyScale(value, ability, cfg) {
   return c ? c.intercept + c.slope * value : value;
 }
 
+/** 較正の出所を設定から引く。能力ごとに合わせ先も件数も違うので、刻印を定数にしない。 */
+const scaleProvenance = (ability, cfg) => {
+  const a = cfg.scale_calibration?.applied?.[ability];
+  if (!a) return null;
+  if (a._basis) return `${a._basis}${a._n ? `（n=${a._n}）` : ''}`;
+  return a._n ? `中心と幅を較正済み（n=${a._n}）` : '中心と幅を較正済み';
+};
+
 /** 数値とランクを対で持つ（内部は数値・表示はランク、の実装） */
 const graded = (value, cfg, extra = {}, ability = null) => {
   const raw = value;
@@ -63,7 +71,10 @@ const graded = (value, cfg, extra = {}, ability = null) => {
   const calibrated = ability && cfg.scale_calibration?.applied?.[ability] && raw != null;
   return {
     value: r1(v), rank: toRank(v, cfg),
-    ...(calibrated ? { uncalibrated: r1(raw), _scale: 'パワプロ143人で中心と幅を較正済み' } : {}),
+    // ★2026-08-14 修正: 以前は全能力へ一律に「パワプロ143人で…」と刻んでいたが、
+    //   走力の applied は SP-016 で n=260 のロスター表示分布合わせへ作り直されており偽だった。
+    //   出所は設定側の記録から引く（刻印を手書きの定数にしない）。
+    ...(calibrated ? { uncalibrated: r1(raw), _scale: scaleProvenance(ability, cfg) } : {}),
     ...extra,
   };
 };

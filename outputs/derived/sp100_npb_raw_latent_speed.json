@@ -1,42 +1,132 @@
 {
   "generated_at": "2026-08-14",
+  "supersedes": "sp100_npb_raw_latent_speed.json v1 (2026-08-14 早版、hp_to_1b_sec 汚染)",
   "policy": "SP-046 B-1〜B-5 / SR-010 / SR-053 — PowerProラベルも翌年再現性も一切使わない",
-  "powerpro_fields_read": [],
-  "powerpro_guard": "pawapuro_2026_speed は読み込んでいない（実データでも 0/100 で不在）。使用フィールドはコード内で機械チェック",
+  "provenance": {
+    "source": "data/manual/npb_plus_screens.jsonl",
+    "classification": "configs/npb_plus_field_provenance.json",
+    "fields": {
+      "top_speed_kmh": "VERIFIED_NPB_PLUS"
+    },
+    "excluded_misattributed": [
+      {
+        "field": "hp_to_1b_sec",
+        "true_source": "PROVENANCE_UNVERIFIED"
+      }
+    ]
+  },
+  "contamination_remediation": {
+    "incident": "hp_to_1b_sec を NPB+ 直接計測として扱っていた（MISATTRIBUTED_SOURCE）",
+    "audit": "docs/audits/luna_npb_plus_provenance_contamination_20260814.md",
+    "removed_from_this_output": [
+      "parallel-forms reliability r(top_speed, hp_to_1b)",
+      "Spearman-Brown combined reliability",
+      "confidence = relCombined × exposure_weight",
+      "latent_speed_z（hp を第2測定として混ぜた合成）"
+    ],
+    "raw_retained": {
+      "file": "data/manual/npb_plus_screens.jsonl",
+      "hp_to_1b_sec_rows_kept": 100
+    },
+    "enforcement": "src/ratings/npb_plus_provenance.mjs の合流点で fail closed。configs/npb_plus_field_provenance.json が正本"
+  },
+  "measurement_reliability": {
+    "verdict": "NOT_IDENTIFIABLE",
+    "value": null,
+    "why": [
+      "直接測定が最高速度の1つしかなく、内部 parallel-forms を構成できない。",
+      "公表 sample_count / qualified_run_count が100人全員 null で、標本誤差からの推定経路が無い。",
+      "同一選手の反復測定が同一 snapshot 内に存在しない。",
+      "NPB_ENTERPRISE_TRACKING_ARTICLE レーンは上位50件の成功盗塁に条件づけられた選択標本であり、母集団の測定信頼性を推定できない。"
+    ],
+    "reopen_condition": "選択されていない event-level tracking が母集団規模で入手できた場合、または同一 snapshot 内の反復測定が得られた場合に再検討する。",
+    "_do_not": "別の量を第2測定に仕立てて内部信頼性を作り直さない。埋めるより NOT_IDENTIFIABLE を残す方が正しい。"
+  },
   "inputs": {
     "top_speed_kmh": 100,
-    "hp_to_1b_sec": 100,
-    "exposure_runs_nonzero": 100,
     "published_qualified_run_count": 0,
-    "published_sample_count": 0
+    "published_sample_count": 0,
+    "hp_to_1b_sec_used": 0
   },
   "same_time_normalization": {
     "top_speed": {
       "mean": 31.612,
-      "sd": 1.252
+      "sd": 1.252,
+      "min": 29,
+      "max": 35
     },
-    "hp_to_1b_negated": {
-      "mean": -4.167,
-      "sd": 0.274
+    "measurement_resolution": {
+      "distinct_values": 42,
+      "values": [
+        29,
+        29.1,
+        29.2,
+        29.4,
+        29.5,
+        29.6,
+        30,
+        30.1,
+        30.2,
+        30.3,
+        30.4,
+        30.5,
+        30.6,
+        30.7,
+        30.8,
+        31,
+        31.1,
+        31.2,
+        31.3,
+        31.4,
+        31.5,
+        31.6,
+        31.7,
+        31.8,
+        31.9,
+        32,
+        32.1,
+        32.3,
+        32.4,
+        32.5,
+        32.6,
+        32.7,
+        32.8,
+        32.9,
+        33,
+        33.4,
+        33.5,
+        33.6,
+        33.7,
+        33.8,
+        34.5,
+        35
+      ],
+      "min_step": 0.09999999999999432,
+      "step_in_sd": 0.08,
+      "note": "1刻みが約0.8sdに相当する粗い格子。順位づけの分解能そのものがここで上限になる"
     },
     "note": "同一snapshot(2026)内で標準化。年をまたいだ正規化はしていない"
   },
-  "measurement_reliability": {
-    "method": "parallel forms（top_speed_kmh と hp_to_1b_sec の一致）。公表run数が全てnullのため代替",
-    "r_between_measures": 0.7462,
-    "spearman_brown_combined": 0.8547,
-    "note": "PowerProを一切使わない内部整合の推定。2測定は別の物理量だが同じ「走る速さ」を測る"
-  },
-  "exposure": {
+  "exposure_proxy": {
     "field": "full_effort_run_proxy_count",
-    "kappa": 26,
-    "kappa_basis": "実データの中央値。恣意的な定数を置かない"
+    "class": "DERIVED_PROXY",
+    "applied_to_z": false,
+    "kappa_reference_only": 26,
+    "corr_with_z_top": 0.4148,
+    "corr_weight_with_z_top": 0.3526,
+    "why_not_applied": "exposure が測定対象と正に相関するため、乗算縮小は遅い選手を強く縮める非対称になり分布の平均が動く。また top_speed は最大値統計なので、機会数が少ない選手は精度でなく水準が下振れする。中心方向への縮小では直らない。",
+    "selection_bias_note": "機会数は走力そのもの・起用・盗塁企図の意思にも依存する。信頼度として読むときはこの交絡を併記すること。"
+  },
+  "shrinkage_policy": {
+    "point_estimate": "npb_top_speed_z（縮小なし）",
+    "sensitivity": "shrunk_sensitivity_ASSUMPTION.rho_{0.5,0.7,0.9}",
+    "_note": "rho は仮定であって推定ではない。単一の縮小値を production の既定にしない。"
   },
   "temporal_proximity": {
     "season_labels": {
       "2026途中": 100
     },
-    "note": "NPB+は2026途中のsnapshot。査定年との距離はこのラベルで追う。年別NPB+は存在しない"
+    "note": "NPB+は2026途中のsnapshot。年別NPB+は存在しない"
   },
   "n_players": 100,
   "players": [
@@ -44,1801 +134,2101 @@
       "player": "周東 佑京",
       "player_id": "21925136",
       "top_speed_kmh": 35,
-      "hp_to_1b_sec": 3.46,
       "exposure_runs": 59,
       "pa": 404,
       "games": 95,
       "season_label": "2026途中",
       "prev_pa": 430,
-      "z_top": 2.7050764541167918,
-      "z_h2f": 2.5767028984608444,
-      "n_measures": 2,
-      "exposure_weight": 0.6941,
-      "latent_speed_z": 1.8331,
-      "latent_speed_z_unshrunk": 2.6409,
-      "confidence": 0.5933
-    },
-    {
-      "player": "岩田 幸宏",
-      "player_id": "51355155",
-      "top_speed_kmh": 33.6,
-      "hp_to_1b_sec": 3.59,
-      "exposure_runs": 50,
-      "pa": 330,
-      "games": 91,
-      "season_label": "2026途中",
-      "prev_pa": 401,
-      "z_top": 1.5872762664652267,
-      "z_h2f": 2.102977291333268,
-      "n_measures": 2,
-      "exposure_weight": 0.6579,
-      "latent_speed_z": 1.2139,
-      "latent_speed_z_unshrunk": 1.8451,
-      "confidence": 0.5623
-    },
-    {
-      "player": "小川 龍成",
-      "player_id": "11715153",
-      "top_speed_kmh": 33.4,
-      "hp_to_1b_sec": 3.61,
-      "exposure_runs": 51,
-      "pa": 346,
-      "games": 96,
-      "season_label": "2026途中",
-      "prev_pa": 202,
-      "z_top": 1.4275905253721435,
-      "z_h2f": 2.0300964286982555,
-      "n_measures": 2,
-      "exposure_weight": 0.6623,
-      "latent_speed_z": 1.1451,
-      "latent_speed_z_unshrunk": 1.7288,
-      "confidence": 0.5661
-    },
-    {
-      "player": "滝澤 夏央",
-      "player_id": "51255155",
-      "top_speed_kmh": 33,
-      "hp_to_1b_sec": 3.61,
-      "exposure_runs": 52,
-      "pa": 363,
-      "games": 93,
-      "season_label": "2026途中",
-      "prev_pa": 438,
-      "z_top": 1.1082190431859829,
-      "z_h2f": 2.0300964286982555,
-      "n_measures": 2,
-      "exposure_weight": 0.6667,
-      "latent_speed_z": 1.0461,
-      "latent_speed_z_unshrunk": 1.5692,
-      "confidence": 0.5698
-    },
-    {
-      "player": "水野 達稀",
-      "player_id": "63165155",
-      "top_speed_kmh": 33.4,
-      "hp_to_1b_sec": 3.7,
-      "exposure_runs": 47,
-      "pa": 409,
-      "games": 98,
-      "season_label": "2026途中",
-      "prev_pa": 332,
-      "z_top": 1.4275905253721435,
-      "z_h2f": 1.702132546840701,
-      "n_measures": 2,
-      "exposure_weight": 0.6438,
-      "latent_speed_z": 1.0075,
-      "latent_speed_z_unshrunk": 1.5649,
-      "confidence": 0.5503
-    },
-    {
-      "player": "牧原 大成",
-      "player_id": "61465133",
-      "top_speed_kmh": 33.5,
-      "hp_to_1b_sec": 3.64,
-      "exposure_runs": 35,
-      "pa": 368,
-      "games": 97,
-      "season_label": "2026途中",
-      "prev_pa": 443,
-      "z_top": 1.507433395918685,
-      "z_h2f": 1.920775134745737,
-      "n_measures": 2,
-      "exposure_weight": 0.5738,
-      "latent_speed_z": 0.9835,
-      "latent_speed_z_unshrunk": 1.7141,
-      "confidence": 0.4904
-    },
-    {
-      "player": "田中 幹也",
-      "player_id": "21025157",
-      "top_speed_kmh": 33.5,
-      "hp_to_1b_sec": 3.79,
-      "exposure_runs": 48,
-      "pa": 247,
-      "games": 73,
-      "season_label": "2026途中",
-      "prev_pa": 365,
-      "z_top": 1.507433395918685,
-      "z_h2f": 1.374168664983148,
-      "n_measures": 2,
-      "exposure_weight": 0.6486,
-      "latent_speed_z": 0.9346,
-      "latent_speed_z_unshrunk": 1.4408,
-      "confidence": 0.5544
-    },
-    {
-      "player": "中野 拓夢",
-      "player_id": "41445153",
-      "top_speed_kmh": 32.9,
-      "hp_to_1b_sec": 3.74,
-      "exposure_runs": 62,
-      "pa": 407,
-      "games": 99,
-      "season_label": "2026途中",
-      "prev_pa": 625,
-      "z_top": 1.0283761726394411,
-      "z_h2f": 1.556370821570677,
-      "n_measures": 2,
-      "exposure_weight": 0.7045,
-      "latent_speed_z": 0.9105,
-      "latent_speed_z_unshrunk": 1.2924,
-      "confidence": 0.6022
-    },
-    {
-      "player": "名原 典彦",
-      "player_id": null,
-      "top_speed_kmh": 33.7,
-      "hp_to_1b_sec": 3.71,
-      "exposure_runs": 28,
-      "pa": 222,
-      "games": 53,
-      "season_label": "2026途中",
-      "prev_pa": null,
-      "z_top": 1.6671191370117682,
-      "z_h2f": 1.6656921155231958,
-      "n_measures": 2,
-      "exposure_weight": 0.5185,
-      "latent_speed_z": 0.8641,
-      "latent_speed_z_unshrunk": 1.6664,
-      "confidence": 0.4432
+      "npb_top_speed_z": 2.7051,
+      "exposure_context": {
+        "runs": 59,
+        "would_be_weight_NOT_APPLIED": 0.6941,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 1.3525,
+        "rho_0.7": 1.8936,
+        "rho_0.9": 2.4346
+      }
     },
     {
       "player": "村林 一輝",
       "player_id": "41845132",
       "top_speed_kmh": 34.5,
-      "hp_to_1b_sec": 4.15,
       "exposure_runs": 63,
       "pa": 386,
       "games": 96,
       "season_label": "2026途中",
       "prev_pa": 557,
-      "z_top": 2.3058621013840894,
-      "z_h2f": 0.062313137552932364,
-      "n_measures": 2,
-      "exposure_weight": 0.7079,
-      "latent_speed_z": 0.8382,
-      "latent_speed_z_unshrunk": 1.1841,
-      "confidence": 0.605
-    },
-    {
-      "player": "髙部 瑛斗",
-      "player_id": "11215151",
-      "top_speed_kmh": 33.6,
-      "hp_to_1b_sec": 3.85,
-      "exposure_runs": 31,
-      "pa": 130,
-      "games": 44,
-      "season_label": "2026途中",
-      "prev_pa": 384,
-      "z_top": 1.5872762664652267,
-      "z_h2f": 1.155526077078112,
-      "n_measures": 2,
-      "exposure_weight": 0.5439,
-      "latent_speed_z": 0.7458,
-      "latent_speed_z_unshrunk": 1.3714,
-      "confidence": 0.4648
-    },
-    {
-      "player": "村松 開人",
-      "player_id": "03105157",
-      "top_speed_kmh": 33.4,
-      "hp_to_1b_sec": 3.98,
-      "exposure_runs": 55,
-      "pa": 413,
-      "games": 99,
-      "season_label": "2026途中",
-      "prev_pa": 186,
-      "z_top": 1.4275905253721435,
-      "z_h2f": 0.681800469950535,
-      "n_measures": 2,
-      "exposure_weight": 0.679,
-      "latent_speed_z": 0.7162,
-      "latent_speed_z_unshrunk": 1.0547,
-      "confidence": 0.5803
-    },
-    {
-      "player": "佐々木 俊輔",
-      "player_id": "51955159",
-      "top_speed_kmh": 33,
-      "hp_to_1b_sec": 3.82,
-      "exposure_runs": 32,
-      "pa": 249,
-      "games": 81,
-      "season_label": "2026途中",
-      "prev_pa": 161,
-      "z_top": 1.1082190431859829,
-      "z_h2f": 1.2648473710306307,
-      "n_measures": 2,
-      "exposure_weight": 0.5517,
-      "latent_speed_z": 0.6546,
-      "latent_speed_z_unshrunk": 1.1865,
-      "confidence": 0.4716
-    },
-    {
-      "player": "田宮 裕涼",
-      "player_id": "51055138",
-      "top_speed_kmh": 32.4,
-      "hp_to_1b_sec": 3.74,
-      "exposure_runs": 35,
-      "pa": 236,
-      "games": 74,
-      "season_label": "2026途中",
-      "prev_pa": 274,
-      "z_top": 0.6291618199067389,
-      "z_h2f": 1.556370821570677,
-      "n_measures": 2,
-      "exposure_weight": 0.5738,
-      "latent_speed_z": 0.627,
-      "latent_speed_z_unshrunk": 1.0928,
-      "confidence": 0.4904
-    },
-    {
-      "player": "藤原 恭大",
-      "player_id": "31635138",
-      "top_speed_kmh": 33,
-      "hp_to_1b_sec": 4.01,
-      "exposure_runs": 31,
-      "pa": 278,
-      "games": 63,
-      "season_label": "2026途中",
-      "prev_pa": 452,
-      "z_top": 1.1082190431859829,
-      "z_h2f": 0.5724791759980178,
-      "n_measures": 2,
-      "exposure_weight": 0.5439,
-      "latent_speed_z": 0.457,
-      "latent_speed_z_unshrunk": 0.8403,
-      "confidence": 0.4648
-    },
-    {
-      "player": "岡林 勇希",
-      "player_id": "81585151",
-      "top_speed_kmh": 32.5,
-      "hp_to_1b_sec": 3.96,
-      "exposure_runs": 39,
-      "pa": 235,
-      "games": 54,
-      "season_label": "2026途中",
-      "prev_pa": 637,
-      "z_top": 0.7090046904532805,
-      "z_h2f": 0.7546813325855469,
-      "n_measures": 2,
-      "exposure_weight": 0.6,
-      "latent_speed_z": 0.4391,
-      "latent_speed_z_unshrunk": 0.7318,
-      "confidence": 0.5128
-    },
-    {
-      "player": "福永 裕基",
-      "player_id": "81685157",
-      "top_speed_kmh": 33,
-      "hp_to_1b_sec": 4.03,
-      "exposure_runs": 31,
-      "pa": 256,
-      "games": 73,
-      "season_label": "2026途中",
-      "prev_pa": 57,
-      "z_top": 1.1082190431859829,
-      "z_h2f": 0.4995983133630042,
-      "n_measures": 2,
-      "exposure_weight": 0.5439,
-      "latent_speed_z": 0.4372,
-      "latent_speed_z_unshrunk": 0.8039,
-      "confidence": 0.4648
-    },
-    {
-      "player": "源田 壮亮",
-      "player_id": "71775134",
-      "top_speed_kmh": 32.9,
-      "hp_to_1b_sec": 3.99,
-      "exposure_runs": 27,
-      "pa": 209,
-      "games": 81,
-      "season_label": "2026途中",
-      "prev_pa": 361,
-      "z_top": 1.0283761726394411,
-      "z_h2f": 0.6453600386330282,
-      "n_measures": 2,
-      "exposure_weight": 0.5094,
-      "latent_speed_z": 0.4263,
-      "latent_speed_z_unshrunk": 0.8369,
-      "confidence": 0.4354
-    },
-    {
-      "player": "吉川 尚輝",
-      "player_id": "73375134",
-      "top_speed_kmh": 32.5,
-      "hp_to_1b_sec": 3.97,
-      "exposure_runs": 31,
-      "pa": 144,
-      "games": 40,
-      "season_label": "2026途中",
-      "prev_pa": 455,
-      "z_top": 0.7090046904532805,
-      "z_h2f": 0.7182409012680401,
-      "n_measures": 2,
-      "exposure_weight": 0.5439,
-      "latent_speed_z": 0.3881,
-      "latent_speed_z_unshrunk": 0.7136,
-      "confidence": 0.4648
-    },
-    {
-      "player": "来田 涼斗",
-      "player_id": "51955153",
-      "top_speed_kmh": 32.4,
-      "hp_to_1b_sec": 3.9,
-      "exposure_runs": 24,
-      "pa": 183,
-      "games": 62,
-      "season_label": "2026途中",
-      "prev_pa": 135,
-      "z_top": 0.6291618199067389,
-      "z_h2f": 0.9733239204905828,
-      "n_measures": 2,
-      "exposure_weight": 0.48,
-      "latent_speed_z": 0.3846,
-      "latent_speed_z_unshrunk": 0.8012,
-      "confidence": 0.4102
-    },
-    {
-      "player": "郡司 裕也",
-      "player_id": "21925151",
-      "top_speed_kmh": 32.7,
-      "hp_to_1b_sec": 4.05,
-      "exposure_runs": 29,
-      "pa": 284,
-      "games": 79,
-      "season_label": "2026途中",
-      "prev_pa": 422,
-      "z_top": 0.8686904315463637,
-      "z_h2f": 0.42671745072799383,
-      "n_measures": 2,
-      "exposure_weight": 0.5273,
-      "latent_speed_z": 0.3415,
-      "latent_speed_z_unshrunk": 0.6477,
-      "confidence": 0.4507
-    },
-    {
-      "player": "友杉 篤輝",
-      "player_id": "71275157",
-      "top_speed_kmh": 32.7,
-      "hp_to_1b_sec": 4.09,
-      "exposure_runs": 35,
-      "pa": 270,
-      "games": 83,
-      "season_label": "2026途中",
-      "prev_pa": 319,
-      "z_top": 0.8686904315463637,
-      "z_h2f": 0.28095572545796993,
-      "n_measures": 2,
-      "exposure_weight": 0.5738,
-      "latent_speed_z": 0.3298,
-      "latent_speed_z_unshrunk": 0.5748,
-      "confidence": 0.4904
-    },
-    {
-      "player": "小幡 竜平",
-      "player_id": "31535138",
-      "top_speed_kmh": 32.8,
-      "hp_to_1b_sec": 3.85,
-      "exposure_runs": 11,
-      "pa": 104,
-      "games": 36,
-      "season_label": "2026途中",
-      "prev_pa": 297,
-      "z_top": 0.9485333020928997,
-      "z_h2f": 1.155526077078112,
-      "n_measures": 2,
-      "exposure_weight": 0.2973,
-      "latent_speed_z": 0.3128,
-      "latent_speed_z_unshrunk": 1.052,
-      "confidence": 0.2541
-    },
-    {
-      "player": "梶原 昂希",
-      "player_id": "51555155",
-      "top_speed_kmh": 33.4,
-      "hp_to_1b_sec": 3.77,
-      "exposure_runs": 7,
-      "pa": 73,
-      "games": 28,
-      "season_label": "2026途中",
-      "prev_pa": 170,
-      "z_top": 1.4275905253721435,
-      "z_h2f": 1.4470495276181599,
-      "n_measures": 2,
-      "exposure_weight": 0.2121,
-      "latent_speed_z": 0.3049,
-      "latent_speed_z_unshrunk": 1.4373,
-      "confidence": 0.1813
-    },
-    {
-      "player": "中川 圭太",
-      "player_id": "51255138",
-      "top_speed_kmh": 32.6,
-      "hp_to_1b_sec": 4.12,
-      "exposure_runs": 41,
-      "pa": 366,
-      "games": 93,
-      "season_label": "2026途中",
-      "prev_pa": 463,
-      "z_top": 0.7888475609998221,
-      "z_h2f": 0.17163443150545113,
-      "n_measures": 2,
-      "exposure_weight": 0.6119,
-      "latent_speed_z": 0.2939,
-      "latent_speed_z_unshrunk": 0.4802,
-      "confidence": 0.523
-    },
-    {
-      "player": "丸山 和郁",
-      "player_id": "93195155",
-      "top_speed_kmh": 32.4,
-      "hp_to_1b_sec": 3.76,
-      "exposure_runs": 10,
-      "pa": 112,
-      "games": 39,
-      "season_label": "2026途中",
-      "prev_pa": 36,
-      "z_top": 0.6291618199067389,
-      "z_h2f": 1.4834899589356667,
-      "n_measures": 2,
-      "exposure_weight": 0.2778,
-      "latent_speed_z": 0.2934,
-      "latent_speed_z_unshrunk": 1.0563,
-      "confidence": 0.2374
-    },
-    {
-      "player": "石井 一成",
-      "player_id": "21125134",
-      "top_speed_kmh": 32.6,
-      "hp_to_1b_sec": 4.04,
-      "exposure_runs": 22,
-      "pa": 216,
-      "games": 62,
-      "season_label": "2026途中",
-      "prev_pa": 364,
-      "z_top": 0.7888475609998221,
-      "z_h2f": 0.463157882045499,
-      "n_measures": 2,
-      "exposure_weight": 0.4583,
-      "latent_speed_z": 0.2869,
-      "latent_speed_z_unshrunk": 0.626,
-      "confidence": 0.3917
-    },
-    {
-      "player": "度会 隆輝",
-      "player_id": "33535159",
-      "top_speed_kmh": 31.7,
-      "hp_to_1b_sec": 3.92,
-      "exposure_runs": 33,
-      "pa": 317,
-      "games": 91,
-      "season_label": "2026途中",
-      "prev_pa": 301,
-      "z_top": 0.07026172608095636,
-      "z_h2f": 0.9004430578555709,
-      "n_measures": 2,
-      "exposure_weight": 0.5593,
-      "latent_speed_z": 0.2715,
-      "latent_speed_z_unshrunk": 0.4854,
-      "confidence": 0.478
-    },
-    {
-      "player": "松本 剛",
-      "player_id": "21625135",
-      "top_speed_kmh": 31.4,
-      "hp_to_1b_sec": 3.9,
-      "exposure_runs": 34,
-      "pa": 290,
-      "games": 88,
-      "season_label": "2026途中",
-      "prev_pa": 185,
-      "z_top": -0.16926688555866556,
-      "z_h2f": 0.9733239204905828,
-      "n_measures": 2,
-      "exposure_weight": 0.5667,
-      "latent_speed_z": 0.2278,
-      "latent_speed_z_unshrunk": 0.402,
-      "confidence": 0.4843
-    },
-    {
-      "player": "小園 海斗",
-      "player_id": "01705138",
-      "top_speed_kmh": 31.5,
-      "hp_to_1b_sec": 3.98,
-      "exposure_runs": 49,
-      "pa": 382,
-      "games": 96,
-      "season_label": "2026途中",
-      "prev_pa": 573,
-      "z_top": -0.08942401501212396,
-      "z_h2f": 0.681800469950535,
-      "n_measures": 2,
-      "exposure_weight": 0.6533,
-      "latent_speed_z": 0.1935,
-      "latent_speed_z_unshrunk": 0.2962,
-      "confidence": 0.5584
-    },
-    {
-      "player": "長岡 秀樹",
-      "player_id": "51455151",
-      "top_speed_kmh": 31.6,
-      "hp_to_1b_sec": 4.01,
-      "exposure_runs": 55,
-      "pa": 355,
-      "games": 85,
-      "season_label": "2026途中",
-      "prev_pa": 261,
-      "z_top": -0.009581144465582381,
-      "z_h2f": 0.5724791759980178,
-      "n_measures": 2,
-      "exposure_weight": 0.679,
-      "latent_speed_z": 0.1911,
-      "latent_speed_z_unshrunk": 0.2814,
-      "confidence": 0.5803
-    },
-    {
-      "player": "板山 祐太郎",
-      "player_id": "91395132",
-      "top_speed_kmh": 32,
-      "hp_to_1b_sec": 4,
-      "exposure_runs": 18,
-      "pa": 182,
-      "games": 67,
-      "season_label": "2026途中",
-      "prev_pa": 193,
-      "z_top": 0.3097903377205783,
-      "z_h2f": 0.608919607315523,
-      "n_measures": 2,
-      "exposure_weight": 0.4091,
-      "latent_speed_z": 0.1879,
-      "latent_speed_z_unshrunk": 0.4594,
-      "confidence": 0.3496
+      "npb_top_speed_z": 2.3059,
+      "exposure_context": {
+        "runs": 63,
+        "would_be_weight_NOT_APPLIED": 0.7079,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 1.1529,
+        "rho_0.7": 1.6141,
+        "rho_0.9": 2.0753
+      }
     },
     {
       "player": "並木 秀尊",
       "player_id": "91695153",
       "top_speed_kmh": 33.8,
-      "hp_to_1b_sec": 4.1,
       "exposure_runs": 6,
       "pa": 45,
       "games": 18,
       "season_label": "2026途中",
       "prev_pa": 128,
-      "z_top": 1.746962007558304,
-      "z_h2f": 0.24451529414046472,
-      "n_measures": 2,
-      "exposure_weight": 0.1875,
-      "latent_speed_z": 0.1867,
-      "latent_speed_z_unshrunk": 0.9957,
-      "confidence": 0.1603
+      "npb_top_speed_z": 1.747,
+      "exposure_context": {
+        "runs": 6,
+        "would_be_weight_NOT_APPLIED": 0.1875,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.8735,
+        "rho_0.7": 1.2229,
+        "rho_0.9": 1.5723
+      }
     },
     {
-      "player": "古賀 優大",
-      "player_id": "01705134",
-      "top_speed_kmh": 32.1,
-      "hp_to_1b_sec": 4.08,
-      "exposure_runs": 27,
-      "pa": 252,
-      "games": 69,
+      "player": "名原 典彦",
+      "player_id": null,
+      "top_speed_kmh": 33.7,
+      "exposure_runs": 28,
+      "pa": 222,
+      "games": 53,
       "season_label": "2026途中",
-      "prev_pa": 291,
-      "z_top": 0.3896332082671199,
-      "z_h2f": 0.31739615677547506,
-      "n_measures": 2,
-      "exposure_weight": 0.5094,
-      "latent_speed_z": 0.1801,
-      "latent_speed_z_unshrunk": 0.3535,
-      "confidence": 0.4354
+      "prev_pa": null,
+      "npb_top_speed_z": 1.6671,
+      "exposure_context": {
+        "runs": 28,
+        "would_be_weight_NOT_APPLIED": 0.5185,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.8336,
+        "rho_0.7": 1.167,
+        "rho_0.9": 1.5004
+      }
+    },
+    {
+      "player": "髙部 瑛斗",
+      "player_id": "11215151",
+      "top_speed_kmh": 33.6,
+      "exposure_runs": 31,
+      "pa": 130,
+      "games": 44,
+      "season_label": "2026途中",
+      "prev_pa": 384,
+      "npb_top_speed_z": 1.5873,
+      "exposure_context": {
+        "runs": 31,
+        "would_be_weight_NOT_APPLIED": 0.5439,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.7936,
+        "rho_0.7": 1.1111,
+        "rho_0.9": 1.4286
+      }
+    },
+    {
+      "player": "岩田 幸宏",
+      "player_id": "51355155",
+      "top_speed_kmh": 33.6,
+      "exposure_runs": 50,
+      "pa": 330,
+      "games": 91,
+      "season_label": "2026途中",
+      "prev_pa": 401,
+      "npb_top_speed_z": 1.5873,
+      "exposure_context": {
+        "runs": 50,
+        "would_be_weight_NOT_APPLIED": 0.6579,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.7936,
+        "rho_0.7": 1.1111,
+        "rho_0.9": 1.4286
+      }
+    },
+    {
+      "player": "田中 幹也",
+      "player_id": "21025157",
+      "top_speed_kmh": 33.5,
+      "exposure_runs": 48,
+      "pa": 247,
+      "games": 73,
+      "season_label": "2026途中",
+      "prev_pa": 365,
+      "npb_top_speed_z": 1.5074,
+      "exposure_context": {
+        "runs": 48,
+        "would_be_weight_NOT_APPLIED": 0.6486,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.7537,
+        "rho_0.7": 1.0552,
+        "rho_0.9": 1.3567
+      }
+    },
+    {
+      "player": "牧原 大成",
+      "player_id": "61465133",
+      "top_speed_kmh": 33.5,
+      "exposure_runs": 35,
+      "pa": 368,
+      "games": 97,
+      "season_label": "2026途中",
+      "prev_pa": 443,
+      "npb_top_speed_z": 1.5074,
+      "exposure_context": {
+        "runs": 35,
+        "would_be_weight_NOT_APPLIED": 0.5738,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.7537,
+        "rho_0.7": 1.0552,
+        "rho_0.9": 1.3567
+      }
+    },
+    {
+      "player": "村松 開人",
+      "player_id": "03105157",
+      "top_speed_kmh": 33.4,
+      "exposure_runs": 55,
+      "pa": 413,
+      "games": 99,
+      "season_label": "2026途中",
+      "prev_pa": 186,
+      "npb_top_speed_z": 1.4276,
+      "exposure_context": {
+        "runs": 55,
+        "would_be_weight_NOT_APPLIED": 0.679,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.7138,
+        "rho_0.7": 0.9993,
+        "rho_0.9": 1.2848
+      }
+    },
+    {
+      "player": "水野 達稀",
+      "player_id": "63165155",
+      "top_speed_kmh": 33.4,
+      "exposure_runs": 47,
+      "pa": 409,
+      "games": 98,
+      "season_label": "2026途中",
+      "prev_pa": 332,
+      "npb_top_speed_z": 1.4276,
+      "exposure_context": {
+        "runs": 47,
+        "would_be_weight_NOT_APPLIED": 0.6438,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.7138,
+        "rho_0.7": 0.9993,
+        "rho_0.9": 1.2848
+      }
+    },
+    {
+      "player": "小川 龍成",
+      "player_id": "11715153",
+      "top_speed_kmh": 33.4,
+      "exposure_runs": 51,
+      "pa": 346,
+      "games": 96,
+      "season_label": "2026途中",
+      "prev_pa": 202,
+      "npb_top_speed_z": 1.4276,
+      "exposure_context": {
+        "runs": 51,
+        "would_be_weight_NOT_APPLIED": 0.6623,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.7138,
+        "rho_0.7": 0.9993,
+        "rho_0.9": 1.2848
+      }
+    },
+    {
+      "player": "梶原 昂希",
+      "player_id": "51555155",
+      "top_speed_kmh": 33.4,
+      "exposure_runs": 7,
+      "pa": 73,
+      "games": 28,
+      "season_label": "2026途中",
+      "prev_pa": 170,
+      "npb_top_speed_z": 1.4276,
+      "exposure_context": {
+        "runs": 7,
+        "would_be_weight_NOT_APPLIED": 0.2121,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.7138,
+        "rho_0.7": 0.9993,
+        "rho_0.9": 1.2848
+      }
+    },
+    {
+      "player": "福永 裕基",
+      "player_id": "81685157",
+      "top_speed_kmh": 33,
+      "exposure_runs": 31,
+      "pa": 256,
+      "games": 73,
+      "season_label": "2026途中",
+      "prev_pa": 57,
+      "npb_top_speed_z": 1.1082,
+      "exposure_context": {
+        "runs": 31,
+        "would_be_weight_NOT_APPLIED": 0.5439,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.5541,
+        "rho_0.7": 0.7757,
+        "rho_0.9": 0.9974
+      }
+    },
+    {
+      "player": "藤原 恭大",
+      "player_id": "31635138",
+      "top_speed_kmh": 33,
+      "exposure_runs": 31,
+      "pa": 278,
+      "games": 63,
+      "season_label": "2026途中",
+      "prev_pa": 452,
+      "npb_top_speed_z": 1.1082,
+      "exposure_context": {
+        "runs": 31,
+        "would_be_weight_NOT_APPLIED": 0.5439,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.5541,
+        "rho_0.7": 0.7757,
+        "rho_0.9": 0.9974
+      }
+    },
+    {
+      "player": "滝澤 夏央",
+      "player_id": "51255155",
+      "top_speed_kmh": 33,
+      "exposure_runs": 52,
+      "pa": 363,
+      "games": 93,
+      "season_label": "2026途中",
+      "prev_pa": 438,
+      "npb_top_speed_z": 1.1082,
+      "exposure_context": {
+        "runs": 52,
+        "would_be_weight_NOT_APPLIED": 0.6667,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.5541,
+        "rho_0.7": 0.7757,
+        "rho_0.9": 0.9974
+      }
+    },
+    {
+      "player": "佐々木 俊輔",
+      "player_id": "51955159",
+      "top_speed_kmh": 33,
+      "exposure_runs": 32,
+      "pa": 249,
+      "games": 81,
+      "season_label": "2026途中",
+      "prev_pa": 161,
+      "npb_top_speed_z": 1.1082,
+      "exposure_context": {
+        "runs": 32,
+        "would_be_weight_NOT_APPLIED": 0.5517,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.5541,
+        "rho_0.7": 0.7757,
+        "rho_0.9": 0.9974
+      }
+    },
+    {
+      "player": "源田 壮亮",
+      "player_id": "71775134",
+      "top_speed_kmh": 32.9,
+      "exposure_runs": 27,
+      "pa": 209,
+      "games": 81,
+      "season_label": "2026途中",
+      "prev_pa": 361,
+      "npb_top_speed_z": 1.0284,
+      "exposure_context": {
+        "runs": 27,
+        "would_be_weight_NOT_APPLIED": 0.5094,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.5142,
+        "rho_0.7": 0.7199,
+        "rho_0.9": 0.9256
+      }
+    },
+    {
+      "player": "中野 拓夢",
+      "player_id": "41445153",
+      "top_speed_kmh": 32.9,
+      "exposure_runs": 62,
+      "pa": 407,
+      "games": 99,
+      "season_label": "2026途中",
+      "prev_pa": 625,
+      "npb_top_speed_z": 1.0284,
+      "exposure_context": {
+        "runs": 62,
+        "would_be_weight_NOT_APPLIED": 0.7045,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.5142,
+        "rho_0.7": 0.7199,
+        "rho_0.9": 0.9256
+      }
+    },
+    {
+      "player": "小幡 竜平",
+      "player_id": "31535138",
+      "top_speed_kmh": 32.8,
+      "exposure_runs": 11,
+      "pa": 104,
+      "games": 36,
+      "season_label": "2026途中",
+      "prev_pa": 297,
+      "npb_top_speed_z": 0.9485,
+      "exposure_context": {
+        "runs": 11,
+        "would_be_weight_NOT_APPLIED": 0.2973,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.4743,
+        "rho_0.7": 0.6639,
+        "rho_0.9": 0.8537
+      }
     },
     {
       "player": "細川 成也",
       "player_id": "31835134",
       "top_speed_kmh": 32.7,
-      "hp_to_1b_sec": 4.24,
       "exposure_runs": 37,
       "pa": 429,
       "games": 102,
       "season_label": "2026途中",
       "prev_pa": 428,
-      "z_top": 0.8686904315463637,
-      "z_h2f": -0.2656507443046207,
-      "n_measures": 2,
-      "exposure_weight": 0.5873,
-      "latent_speed_z": 0.1771,
-      "latent_speed_z_unshrunk": 0.3015,
-      "confidence": 0.502
+      "npb_top_speed_z": 0.8687,
+      "exposure_context": {
+        "runs": 37,
+        "would_be_weight_NOT_APPLIED": 0.5873,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.4344,
+        "rho_0.7": 0.6081,
+        "rho_0.9": 0.7818
+      }
     },
     {
-      "player": "宗 佑磨",
-      "player_id": "11815130",
-      "top_speed_kmh": 31.9,
-      "hp_to_1b_sec": 4.1,
+      "player": "郡司 裕也",
+      "player_id": "21925151",
+      "top_speed_kmh": 32.7,
+      "exposure_runs": 29,
+      "pa": 284,
+      "games": 79,
+      "season_label": "2026途中",
+      "prev_pa": 422,
+      "npb_top_speed_z": 0.8687,
+      "exposure_context": {
+        "runs": 29,
+        "would_be_weight_NOT_APPLIED": 0.5273,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.4344,
+        "rho_0.7": 0.6081,
+        "rho_0.9": 0.7818
+      }
+    },
+    {
+      "player": "友杉 篤輝",
+      "player_id": "71275157",
+      "top_speed_kmh": 32.7,
+      "exposure_runs": 35,
+      "pa": 270,
+      "games": 83,
+      "season_label": "2026途中",
+      "prev_pa": 319,
+      "npb_top_speed_z": 0.8687,
+      "exposure_context": {
+        "runs": 35,
+        "would_be_weight_NOT_APPLIED": 0.5738,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.4344,
+        "rho_0.7": 0.6081,
+        "rho_0.9": 0.7818
+      }
+    },
+    {
+      "player": "中川 圭太",
+      "player_id": "51255138",
+      "top_speed_kmh": 32.6,
       "exposure_runs": 41,
-      "pa": 388,
-      "games": 96,
+      "pa": 366,
+      "games": 93,
       "season_label": "2026途中",
-      "prev_pa": 388,
-      "z_top": 0.22994746717403672,
-      "z_h2f": 0.24451529414046472,
-      "n_measures": 2,
-      "exposure_weight": 0.6119,
-      "latent_speed_z": 0.1452,
-      "latent_speed_z_unshrunk": 0.2372,
-      "confidence": 0.523
-    },
-    {
-      "player": "菊池 涼介",
-      "player_id": "61565135",
-      "top_speed_kmh": 31.8,
-      "hp_to_1b_sec": 4.09,
-      "exposure_runs": 36,
-      "pa": 353,
-      "games": 88,
-      "season_label": "2026途中",
-      "prev_pa": 389,
-      "z_top": 0.15010459662749795,
-      "z_h2f": 0.28095572545796993,
-      "n_measures": 2,
-      "exposure_weight": 0.5806,
-      "latent_speed_z": 0.1251,
-      "latent_speed_z_unshrunk": 0.2155,
-      "confidence": 0.4963
-    },
-    {
-      "player": "野間 峻祥",
-      "player_id": "01405130",
-      "top_speed_kmh": 31.7,
-      "hp_to_1b_sec": 3.95,
-      "exposure_runs": 8,
-      "pa": 86,
-      "games": 35,
-      "season_label": "2026途中",
-      "prev_pa": 166,
-      "z_top": 0.07026172608095636,
-      "z_h2f": 0.7911217639030521,
-      "n_measures": 2,
-      "exposure_weight": 0.2353,
-      "latent_speed_z": 0.1013,
-      "latent_speed_z_unshrunk": 0.4307,
-      "confidence": 0.2011
-    },
-    {
-      "player": "柳田 悠岐",
-      "player_id": "31835133",
-      "top_speed_kmh": 32.1,
-      "hp_to_1b_sec": 4.16,
-      "exposure_runs": 20,
-      "pa": 333,
-      "games": 89,
-      "season_label": "2026途中",
-      "prev_pa": 78,
-      "z_top": 0.3896332082671199,
-      "z_h2f": 0.025872706235427187,
-      "n_measures": 2,
-      "exposure_weight": 0.4348,
-      "latent_speed_z": 0.0903,
-      "latent_speed_z_unshrunk": 0.2078,
-      "confidence": 0.3716
-    },
-    {
-      "player": "佐藤 輝明",
-      "player_id": "41045153",
-      "top_speed_kmh": 32.1,
-      "hp_to_1b_sec": 4.2,
-      "exposure_runs": 49,
-      "pa": 420,
-      "games": 99,
-      "season_label": "2026途中",
-      "prev_pa": 597,
-      "z_top": 0.3896332082671199,
-      "z_h2f": -0.11988901903459676,
-      "n_measures": 2,
-      "exposure_weight": 0.6533,
-      "latent_speed_z": 0.0881,
-      "latent_speed_z_unshrunk": 0.1349,
-      "confidence": 0.5584
-    },
-    {
-      "player": "外崎 修汰",
-      "player_id": "41245130",
-      "top_speed_kmh": 32.3,
-      "hp_to_1b_sec": 4.15,
-      "exposure_runs": 9,
-      "pa": 69,
-      "games": 23,
-      "season_label": "2026途中",
-      "prev_pa": 415,
-      "z_top": 0.5493189493601974,
-      "z_h2f": 0.062313137552932364,
-      "n_measures": 2,
-      "exposure_weight": 0.2571,
-      "latent_speed_z": 0.0786,
-      "latent_speed_z_unshrunk": 0.3058,
-      "confidence": 0.2198
-    },
-    {
-      "player": "林 琢真",
-      "player_id": "91695157",
-      "top_speed_kmh": 32,
-      "hp_to_1b_sec": 4.07,
-      "exposure_runs": 8,
-      "pa": 104,
-      "games": 42,
-      "season_label": "2026途中",
-      "prev_pa": 290,
-      "z_top": 0.3097903377205783,
-      "z_h2f": 0.35383658809298024,
-      "n_measures": 2,
-      "exposure_weight": 0.2353,
-      "latent_speed_z": 0.0781,
-      "latent_speed_z_unshrunk": 0.3318,
-      "confidence": 0.2011
-    },
-    {
-      "player": "奈良間 大己",
-      "player_id": "31435157",
-      "top_speed_kmh": 31.7,
-      "hp_to_1b_sec": 4.1,
-      "exposure_runs": 22,
-      "pa": 192,
-      "games": 84,
-      "season_label": "2026途中",
-      "prev_pa": 103,
-      "z_top": 0.07026172608095636,
-      "z_h2f": 0.24451529414046472,
-      "n_measures": 2,
-      "exposure_weight": 0.4583,
-      "latent_speed_z": 0.0721,
-      "latent_speed_z_unshrunk": 0.1574,
-      "confidence": 0.3917
-    },
-    {
-      "player": "清宮 幸太郎",
-      "player_id": "41545136",
-      "top_speed_kmh": 31.7,
-      "hp_to_1b_sec": 4.14,
-      "exposure_runs": 42,
-      "pa": 363,
-      "games": 97,
-      "season_label": "2026途中",
-      "prev_pa": 577,
-      "z_top": 0.07026172608095636,
-      "z_h2f": 0.09875356887044077,
-      "n_measures": 2,
-      "exposure_weight": 0.6176,
-      "latent_speed_z": 0.0522,
-      "latent_speed_z_unshrunk": 0.0845,
-      "confidence": 0.5279
-    },
-    {
-      "player": "秋山 翔吾",
-      "player_id": "31135133",
-      "top_speed_kmh": 31.6,
-      "hp_to_1b_sec": 4.06,
-      "exposure_runs": 9,
-      "pa": 134,
-      "games": 49,
-      "season_label": "2026途中",
-      "prev_pa": 157,
-      "z_top": -0.009581144465582381,
-      "z_h2f": 0.39027701941048865,
-      "n_measures": 2,
-      "exposure_weight": 0.2571,
-      "latent_speed_z": 0.0489,
-      "latent_speed_z_unshrunk": 0.1903,
-      "confidence": 0.2198
-    },
-    {
-      "player": "大島 洋平",
-      "player_id": "01305131",
-      "top_speed_kmh": 31.7,
-      "hp_to_1b_sec": 4.13,
-      "exposure_runs": 13,
-      "pa": 66,
-      "games": 21,
-      "season_label": "2026途中",
-      "prev_pa": 98,
-      "z_top": 0.07026172608095636,
-      "z_h2f": 0.13519400018794595,
-      "n_measures": 2,
-      "exposure_weight": 0.3333,
-      "latent_speed_z": 0.0342,
-      "latent_speed_z_unshrunk": 0.1027,
-      "confidence": 0.2849
-    },
-    {
-      "player": "柳町 達",
-      "player_id": "73175151",
-      "top_speed_kmh": 31.5,
-      "hp_to_1b_sec": 4.12,
-      "exposure_runs": 21,
-      "pa": 214,
-      "games": 60,
-      "season_label": "2026途中",
-      "prev_pa": 517,
-      "z_top": -0.08942401501212396,
-      "z_h2f": 0.17163443150545113,
-      "n_measures": 2,
-      "exposure_weight": 0.4468,
-      "latent_speed_z": 0.0184,
-      "latent_speed_z_unshrunk": 0.0411,
-      "confidence": 0.3819
+      "prev_pa": 463,
+      "npb_top_speed_z": 0.7888,
+      "exposure_context": {
+        "runs": 41,
+        "would_be_weight_NOT_APPLIED": 0.6119,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.3944,
+        "rho_0.7": 0.5522,
+        "rho_0.9": 0.7099
+      }
     },
     {
       "player": "岡 大海",
       "player_id": "11515139",
       "top_speed_kmh": 32.6,
-      "hp_to_1b_sec": 4.35,
       "exposure_runs": 7,
       "pa": 50,
       "games": 26,
       "season_label": "2026途中",
       "prev_pa": 181,
-      "z_top": 0.7888475609998221,
-      "z_h2f": -0.6664954887971841,
-      "n_measures": 2,
-      "exposure_weight": 0.2121,
-      "latent_speed_z": 0.013,
-      "latent_speed_z_unshrunk": 0.0612,
-      "confidence": 0.1813
+      "npb_top_speed_z": 0.7888,
+      "exposure_context": {
+        "runs": 7,
+        "would_be_weight_NOT_APPLIED": 0.2121,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.3944,
+        "rho_0.7": 0.5522,
+        "rho_0.9": 0.7099
+      }
     },
     {
-      "player": "佐藤 都志也",
-      "player_id": "71075151",
-      "top_speed_kmh": 31.3,
-      "hp_to_1b_sec": 4.1,
-      "exposure_runs": 26,
-      "pa": 301,
-      "games": 88,
+      "player": "石井 一成",
+      "player_id": "21125134",
+      "top_speed_kmh": 32.6,
+      "exposure_runs": 22,
+      "pa": 216,
+      "games": 62,
       "season_label": "2026途中",
-      "prev_pa": 224,
-      "z_top": -0.2491097561052043,
-      "z_h2f": 0.24451529414046472,
-      "n_measures": 2,
-      "exposure_weight": 0.5,
-      "latent_speed_z": -0.0011,
-      "latent_speed_z_unshrunk": -0.0023,
-      "confidence": 0.4273
+      "prev_pa": 364,
+      "npb_top_speed_z": 0.7888,
+      "exposure_context": {
+        "runs": 22,
+        "would_be_weight_NOT_APPLIED": 0.4583,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.3944,
+        "rho_0.7": 0.5522,
+        "rho_0.9": 0.7099
+      }
     },
     {
-      "player": "京田 陽太",
-      "player_id": "81585134",
-      "top_speed_kmh": 31.1,
-      "hp_to_1b_sec": 4.06,
-      "exposure_runs": 19,
-      "pa": 119,
-      "games": 45,
+      "player": "岡林 勇希",
+      "player_id": "81585151",
+      "top_speed_kmh": 32.5,
+      "exposure_runs": 39,
+      "pa": 235,
+      "games": 54,
       "season_label": "2026途中",
-      "prev_pa": 210,
-      "z_top": -0.4087954971982846,
-      "z_h2f": 0.39027701941048865,
-      "n_measures": 2,
-      "exposure_weight": 0.4222,
-      "latent_speed_z": -0.0039,
-      "latent_speed_z_unshrunk": -0.0093,
-      "confidence": 0.3609
+      "prev_pa": 637,
+      "npb_top_speed_z": 0.709,
+      "exposure_context": {
+        "runs": 39,
+        "would_be_weight_NOT_APPLIED": 0.6,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.3545,
+        "rho_0.7": 0.4963,
+        "rho_0.9": 0.6381
+      }
     },
     {
-      "player": "西野 真弘",
-      "player_id": "91495130",
-      "top_speed_kmh": 31.6,
-      "hp_to_1b_sec": 4.18,
-      "exposure_runs": 15,
-      "pa": 85,
-      "games": 29,
+      "player": "吉川 尚輝",
+      "player_id": "73375134",
+      "top_speed_kmh": 32.5,
+      "exposure_runs": 31,
+      "pa": 144,
+      "games": 40,
       "season_label": "2026途中",
-      "prev_pa": 252,
-      "z_top": -0.009581144465582381,
-      "z_h2f": -0.04700815639958317,
-      "n_measures": 2,
-      "exposure_weight": 0.3659,
-      "latent_speed_z": -0.0104,
-      "latent_speed_z_unshrunk": -0.0283,
-      "confidence": 0.3127
+      "prev_pa": 455,
+      "npb_top_speed_z": 0.709,
+      "exposure_context": {
+        "runs": 31,
+        "would_be_weight_NOT_APPLIED": 0.5439,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.3545,
+        "rho_0.7": 0.4963,
+        "rho_0.9": 0.6381
+      }
     },
     {
-      "player": "土田 龍空",
-      "player_id": "51455153",
-      "top_speed_kmh": 31.2,
-      "hp_to_1b_sec": 4.15,
-      "exposure_runs": 3,
-      "pa": 43,
-      "games": 38,
+      "player": "来田 涼斗",
+      "player_id": "51955153",
+      "top_speed_kmh": 32.4,
+      "exposure_runs": 24,
+      "pa": 183,
+      "games": 62,
       "season_label": "2026途中",
-      "prev_pa": 53,
-      "z_top": -0.3289526266517459,
-      "z_h2f": 0.062313137552932364,
-      "n_measures": 2,
-      "exposure_weight": 0.1034,
-      "latent_speed_z": -0.0138,
-      "latent_speed_z_unshrunk": -0.1333,
-      "confidence": 0.0884
+      "prev_pa": 135,
+      "npb_top_speed_z": 0.6292,
+      "exposure_context": {
+        "runs": 24,
+        "would_be_weight_NOT_APPLIED": 0.48,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.3146,
+        "rho_0.7": 0.4404,
+        "rho_0.9": 0.5663
+      }
+    },
+    {
+      "player": "田宮 裕涼",
+      "player_id": "51055138",
+      "top_speed_kmh": 32.4,
+      "exposure_runs": 35,
+      "pa": 236,
+      "games": 74,
+      "season_label": "2026途中",
+      "prev_pa": 274,
+      "npb_top_speed_z": 0.6292,
+      "exposure_context": {
+        "runs": 35,
+        "would_be_weight_NOT_APPLIED": 0.5738,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.3146,
+        "rho_0.7": 0.4404,
+        "rho_0.9": 0.5663
+      }
+    },
+    {
+      "player": "丸山 和郁",
+      "player_id": "93195155",
+      "top_speed_kmh": 32.4,
+      "exposure_runs": 10,
+      "pa": 112,
+      "games": 39,
+      "season_label": "2026途中",
+      "prev_pa": 36,
+      "npb_top_speed_z": 0.6292,
+      "exposure_context": {
+        "runs": 10,
+        "would_be_weight_NOT_APPLIED": 0.2778,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.3146,
+        "rho_0.7": 0.4404,
+        "rho_0.9": 0.5663
+      }
+    },
+    {
+      "player": "外崎 修汰",
+      "player_id": "41245130",
+      "top_speed_kmh": 32.3,
+      "exposure_runs": 9,
+      "pa": 69,
+      "games": 23,
+      "season_label": "2026途中",
+      "prev_pa": 415,
+      "npb_top_speed_z": 0.5493,
+      "exposure_context": {
+        "runs": 9,
+        "would_be_weight_NOT_APPLIED": 0.2571,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.2747,
+        "rho_0.7": 0.3845,
+        "rho_0.9": 0.4944
+      }
     },
     {
       "player": "塩見 泰隆",
       "player_id": "71975136",
       "top_speed_kmh": 32.3,
-      "hp_to_1b_sec": 4.35,
       "exposure_runs": 8,
       "pa": 83,
       "games": 37,
       "season_label": "2026途中",
       "prev_pa": 0,
-      "z_top": 0.5493189493601974,
-      "z_h2f": -0.6664954887971841,
-      "n_measures": 2,
-      "exposure_weight": 0.2353,
-      "latent_speed_z": -0.0138,
-      "latent_speed_z_unshrunk": -0.0586,
-      "confidence": 0.2011
+      "npb_top_speed_z": 0.5493,
+      "exposure_context": {
+        "runs": 8,
+        "would_be_weight_NOT_APPLIED": 0.2353,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.2747,
+        "rho_0.7": 0.3845,
+        "rho_0.9": 0.4944
+      }
     },
     {
-      "player": "太田 椋",
-      "player_id": "91395138",
-      "top_speed_kmh": 31.7,
-      "hp_to_1b_sec": 4.24,
-      "exposure_runs": 30,
-      "pa": 347,
-      "games": 85,
+      "player": "古賀 優大",
+      "player_id": "01705134",
+      "top_speed_kmh": 32.1,
+      "exposure_runs": 27,
+      "pa": 252,
+      "games": 69,
       "season_label": "2026途中",
-      "prev_pa": 496,
-      "z_top": 0.07026172608095636,
-      "z_h2f": -0.2656507443046207,
-      "n_measures": 2,
-      "exposure_weight": 0.5357,
-      "latent_speed_z": -0.0523,
-      "latent_speed_z_unshrunk": -0.0977,
-      "confidence": 0.4579
+      "prev_pa": 291,
+      "npb_top_speed_z": 0.3896,
+      "exposure_context": {
+        "runs": 27,
+        "would_be_weight_NOT_APPLIED": 0.5094,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.1948,
+        "rho_0.7": 0.2727,
+        "rho_0.9": 0.3506
+      }
     },
     {
-      "player": "若月 健矢",
-      "player_id": "41645139",
-      "top_speed_kmh": 30.7,
-      "hp_to_1b_sec": 4.06,
+      "player": "柳田 悠岐",
+      "player_id": "31835133",
+      "top_speed_kmh": 32.1,
       "exposure_runs": 20,
-      "pa": 244,
-      "games": 80,
+      "pa": 333,
+      "games": 89,
       "season_label": "2026途中",
-      "prev_pa": 400,
-      "z_top": -0.7281669793844482,
-      "z_h2f": 0.39027701941048865,
-      "n_measures": 2,
-      "exposure_weight": 0.4348,
-      "latent_speed_z": -0.0735,
-      "latent_speed_z_unshrunk": -0.1689,
-      "confidence": 0.3716
+      "prev_pa": 78,
+      "npb_top_speed_z": 0.3896,
+      "exposure_context": {
+        "runs": 20,
+        "would_be_weight_NOT_APPLIED": 0.4348,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.1948,
+        "rho_0.7": 0.2727,
+        "rho_0.9": 0.3506
+      }
     },
     {
-      "player": "森 友哉",
-      "player_id": "91495139",
-      "top_speed_kmh": 31.2,
-      "hp_to_1b_sec": 4.16,
-      "exposure_runs": 25,
-      "pa": 250,
-      "games": 65,
+      "player": "佐藤 輝明",
+      "player_id": "41045153",
+      "top_speed_kmh": 32.1,
+      "exposure_runs": 49,
+      "pa": 420,
+      "games": 99,
       "season_label": "2026途中",
-      "prev_pa": 191,
-      "z_top": -0.3289526266517459,
-      "z_h2f": 0.025872706235427187,
-      "n_measures": 2,
-      "exposure_weight": 0.4902,
-      "latent_speed_z": -0.0743,
-      "latent_speed_z_unshrunk": -0.1515,
-      "confidence": 0.419
+      "prev_pa": 597,
+      "npb_top_speed_z": 0.3896,
+      "exposure_context": {
+        "runs": 49,
+        "would_be_weight_NOT_APPLIED": 0.6533,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.1948,
+        "rho_0.7": 0.2727,
+        "rho_0.9": 0.3506
+      }
     },
     {
-      "player": "丸 佳浩",
-      "player_id": "21425116",
-      "top_speed_kmh": 31.4,
-      "hp_to_1b_sec": 4.3,
+      "player": "板山 祐太郎",
+      "player_id": "91395132",
+      "top_speed_kmh": 32,
+      "exposure_runs": 18,
+      "pa": 182,
+      "games": 67,
+      "season_label": "2026途中",
+      "prev_pa": 193,
+      "npb_top_speed_z": 0.3098,
+      "exposure_context": {
+        "runs": 18,
+        "would_be_weight_NOT_APPLIED": 0.4091,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.1549,
+        "rho_0.7": 0.2169,
+        "rho_0.9": 0.2788
+      }
+    },
+    {
+      "player": "林 琢真",
+      "player_id": "91695157",
+      "top_speed_kmh": 32,
       "exposure_runs": 8,
-      "pa": 82,
-      "games": 46,
+      "pa": 104,
+      "games": 42,
       "season_label": "2026途中",
-      "prev_pa": 369,
-      "z_top": -0.16926688555866556,
-      "z_h2f": -0.48429333220965504,
-      "n_measures": 2,
-      "exposure_weight": 0.2353,
-      "latent_speed_z": -0.0769,
-      "latent_speed_z_unshrunk": -0.3268,
-      "confidence": 0.2011
+      "prev_pa": 290,
+      "npb_top_speed_z": 0.3098,
+      "exposure_context": {
+        "runs": 8,
+        "would_be_weight_NOT_APPLIED": 0.2353,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.1549,
+        "rho_0.7": 0.2169,
+        "rho_0.9": 0.2788
+      }
     },
     {
-      "player": "藤岡 裕大",
-      "player_id": "41645136",
-      "top_speed_kmh": 30.8,
-      "hp_to_1b_sec": 4.4,
-      "exposure_runs": 3,
-      "pa": 26,
-      "games": 9,
+      "player": "宗 佑磨",
+      "player_id": "11815130",
+      "top_speed_kmh": 31.9,
+      "exposure_runs": 41,
+      "pa": 388,
+      "games": 96,
       "season_label": "2026途中",
-      "prev_pa": 373,
-      "z_top": -0.6483241088379066,
-      "z_h2f": -0.8486976453847165,
-      "n_measures": 2,
-      "exposure_weight": 0.1034,
-      "latent_speed_z": -0.0774,
-      "latent_speed_z_unshrunk": -0.7485,
-      "confidence": 0.0884
-    },
-    {
-      "player": "蝦名 達夫",
-      "player_id": "51555151",
-      "top_speed_kmh": 31.4,
-      "hp_to_1b_sec": 4.2,
-      "exposure_runs": 40,
-      "pa": 283,
-      "games": 77,
-      "season_label": "2026途中",
-      "prev_pa": 401,
-      "z_top": -0.16926688555866556,
-      "z_h2f": -0.11988901903459676,
-      "n_measures": 2,
-      "exposure_weight": 0.6061,
-      "latent_speed_z": -0.0876,
-      "latent_speed_z_unshrunk": -0.1446,
-      "confidence": 0.518
+      "prev_pa": 388,
+      "npb_top_speed_z": 0.2299,
+      "exposure_context": {
+        "runs": 41,
+        "would_be_weight_NOT_APPLIED": 0.6119,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.1149,
+        "rho_0.7": 0.1609,
+        "rho_0.9": 0.2069
+      }
     },
     {
       "player": "山口 航輝",
       "player_id": "91895138",
       "top_speed_kmh": 31.9,
-      "hp_to_1b_sec": 4.37,
       "exposure_runs": 17,
       "pa": 243,
       "games": 67,
       "season_label": "2026途中",
       "prev_pa": 112,
-      "z_top": 0.22994746717403672,
-      "z_h2f": -0.7393763514321977,
-      "n_measures": 2,
-      "exposure_weight": 0.3953,
-      "latent_speed_z": -0.1007,
-      "latent_speed_z_unshrunk": -0.2547,
-      "confidence": 0.3379
-    },
-    {
-      "player": "西川 龍馬",
-      "player_id": "71475132",
-      "top_speed_kmh": 31.1,
-      "hp_to_1b_sec": 4.14,
-      "exposure_runs": 57,
-      "pa": 436,
-      "games": 102,
-      "season_label": "2026途中",
-      "prev_pa": 412,
-      "z_top": -0.4087954971982846,
-      "z_h2f": 0.09875356887044077,
-      "n_measures": 2,
-      "exposure_weight": 0.6867,
-      "latent_speed_z": -0.1065,
-      "latent_speed_z_unshrunk": -0.155,
-      "confidence": 0.587
-    },
-    {
-      "player": "山本 祐大",
-      "player_id": "23125136",
-      "top_speed_kmh": 31,
-      "hp_to_1b_sec": 4.18,
-      "exposure_runs": 25,
-      "pa": 184,
-      "games": 50,
-      "season_label": "2026途中",
-      "prev_pa": 344,
-      "z_top": -0.4886383677448262,
-      "z_h2f": -0.04700815639958317,
-      "n_measures": 2,
-      "exposure_weight": 0.4902,
-      "latent_speed_z": -0.1313,
-      "latent_speed_z_unshrunk": -0.2678,
-      "confidence": 0.419
-    },
-    {
-      "player": "渡邊 佳明",
-      "player_id": "73175138",
-      "top_speed_kmh": 30.3,
-      "hp_to_1b_sec": 4.12,
-      "exposure_runs": 12,
-      "pa": 140,
-      "games": 54,
-      "season_label": "2026途中",
-      "prev_pa": 166,
-      "z_top": -1.047538461570609,
-      "z_h2f": 0.17163443150545113,
-      "n_measures": 2,
-      "exposure_weight": 0.3158,
-      "latent_speed_z": -0.1383,
-      "latent_speed_z_unshrunk": -0.438,
-      "confidence": 0.2699
-    },
-    {
-      "player": "梅野 隆太郎",
-      "player_id": "21325139",
-      "top_speed_kmh": 30.6,
-      "hp_to_1b_sec": 4.38,
-      "exposure_runs": 6,
-      "pa": 71,
-      "games": 23,
-      "season_label": "2026途中",
-      "prev_pa": 132,
-      "z_top": -0.8080098499309869,
-      "z_h2f": -0.7758167827497029,
-      "n_measures": 2,
-      "exposure_weight": 0.1875,
-      "latent_speed_z": -0.1485,
-      "latent_speed_z_unshrunk": -0.7919,
-      "confidence": 0.1603
-    },
-    {
-      "player": "矢野 雅哉",
-      "player_id": "93395153",
-      "top_speed_kmh": 30.7,
-      "hp_to_1b_sec": 4.2,
-      "exposure_runs": 15,
-      "pa": 58,
-      "games": 44,
-      "season_label": "2026途中",
-      "prev_pa": 335,
-      "z_top": -0.7281669793844482,
-      "z_h2f": -0.11988901903459676,
-      "n_measures": 2,
-      "exposure_weight": 0.3659,
-      "latent_speed_z": -0.1551,
-      "latent_speed_z_unshrunk": -0.424,
-      "confidence": 0.3127
-    },
-    {
-      "player": "野村 佑希",
-      "player_id": "31435138",
-      "top_speed_kmh": 31.7,
-      "hp_to_1b_sec": 4.37,
-      "exposure_runs": 25,
-      "pa": 302,
-      "games": 84,
-      "season_label": "2026途中",
-      "prev_pa": 369,
-      "z_top": 0.07026172608095636,
-      "z_h2f": -0.7393763514321977,
-      "n_measures": 2,
-      "exposure_weight": 0.4902,
-      "latent_speed_z": -0.164,
-      "latent_speed_z_unshrunk": -0.3346,
-      "confidence": 0.419
-    },
-    {
-      "player": "栗原 陵矢",
-      "player_id": "01705130",
-      "top_speed_kmh": 31.3,
-      "hp_to_1b_sec": 4.25,
-      "exposure_runs": 40,
-      "pa": 439,
-      "games": 100,
-      "season_label": "2026途中",
-      "prev_pa": 332,
-      "z_top": -0.2491097561052043,
-      "z_h2f": -0.3020911756221259,
-      "n_measures": 2,
-      "exposure_weight": 0.6061,
-      "latent_speed_z": -0.167,
-      "latent_speed_z_unshrunk": -0.2756,
-      "confidence": 0.518
-    },
-    {
-      "player": "ポランコ",
-      "player_id": "63065155",
-      "top_speed_kmh": 31.1,
-      "hp_to_1b_sec": 4.36,
-      "exposure_runs": 12,
-      "pa": 149,
-      "games": 52,
-      "season_label": "2026途中",
-      "prev_pa": 154,
-      "z_top": -0.4087954971982846,
-      "z_h2f": -0.7029359201146925,
-      "n_measures": 2,
-      "exposure_weight": 0.3158,
-      "latent_speed_z": -0.1755,
-      "latent_speed_z_unshrunk": -0.5559,
-      "confidence": 0.2699
-    },
-    {
-      "player": "カリステ",
-      "player_id": "93795157",
-      "top_speed_kmh": 31.3,
-      "hp_to_1b_sec": 4.56,
-      "exposure_runs": 7,
-      "pa": 67,
-      "games": 26,
-      "season_label": "2026途中",
-      "prev_pa": 192,
-      "z_top": -0.2491097561052043,
-      "z_h2f": -1.431744546464809,
-      "n_measures": 2,
-      "exposure_weight": 0.2121,
-      "latent_speed_z": -0.1783,
-      "latent_speed_z_unshrunk": -0.8404,
-      "confidence": 0.1813
-    },
-    {
-      "player": "木下 拓哉",
-      "player_id": "31735132",
-      "top_speed_kmh": 29.4,
-      "hp_to_1b_sec": 4.48,
-      "exposure_runs": 4,
-      "pa": 63,
-      "games": 21,
-      "season_label": "2026途中",
-      "prev_pa": 122,
-      "z_top": -1.7661242964894746,
-      "z_h2f": -1.1402210959247643,
-      "n_measures": 2,
-      "exposure_weight": 0.1333,
-      "latent_speed_z": -0.1938,
-      "latent_speed_z_unshrunk": -1.4532,
-      "confidence": 0.114
+      "npb_top_speed_z": 0.2299,
+      "exposure_context": {
+        "runs": 17,
+        "would_be_weight_NOT_APPLIED": 0.3953,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.1149,
+        "rho_0.7": 0.1609,
+        "rho_0.9": 0.2069
+      }
     },
     {
       "player": "モンテロ",
       "player_id": "53955150",
       "top_speed_kmh": 31.9,
-      "hp_to_1b_sec": 4.55,
       "exposure_runs": 13,
       "pa": 251,
       "games": 86,
       "season_label": "2026途中",
       "prev_pa": 396,
-      "z_top": 0.22994746717403672,
-      "z_h2f": -1.3953041151473038,
-      "n_measures": 2,
-      "exposure_weight": 0.3333,
-      "latent_speed_z": -0.1942,
-      "latent_speed_z_unshrunk": -0.5827,
-      "confidence": 0.2849
+      "npb_top_speed_z": 0.2299,
+      "exposure_context": {
+        "runs": 13,
+        "would_be_weight_NOT_APPLIED": 0.3333,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.1149,
+        "rho_0.7": 0.1609,
+        "rho_0.9": 0.2069
+      }
     },
     {
-      "player": "坂倉 将吾",
-      "player_id": "11915134",
-      "top_speed_kmh": 30.6,
-      "hp_to_1b_sec": 4.14,
-      "exposure_runs": 38,
-      "pa": 383,
-      "games": 94,
+      "player": "菊池 涼介",
+      "player_id": "61565135",
+      "top_speed_kmh": 31.8,
+      "exposure_runs": 36,
+      "pa": 353,
+      "games": 88,
       "season_label": "2026途中",
-      "prev_pa": 399,
-      "z_top": -0.8080098499309869,
-      "z_h2f": 0.09875356887044077,
-      "n_measures": 2,
-      "exposure_weight": 0.5938,
-      "latent_speed_z": -0.2106,
-      "latent_speed_z_unshrunk": -0.3546,
-      "confidence": 0.5075
+      "prev_pa": 389,
+      "npb_top_speed_z": 0.1501,
+      "exposure_context": {
+        "runs": 36,
+        "would_be_weight_NOT_APPLIED": 0.5806,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.0751,
+        "rho_0.7": 0.1051,
+        "rho_0.9": 0.1351
+      }
+    },
+    {
+      "player": "太田 椋",
+      "player_id": "91395138",
+      "top_speed_kmh": 31.7,
+      "exposure_runs": 30,
+      "pa": 347,
+      "games": 85,
+      "season_label": "2026途中",
+      "prev_pa": 496,
+      "npb_top_speed_z": 0.0703,
+      "exposure_context": {
+        "runs": 30,
+        "would_be_weight_NOT_APPLIED": 0.5357,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.0352,
+        "rho_0.7": 0.0492,
+        "rho_0.9": 0.0633
+      }
+    },
+    {
+      "player": "大島 洋平",
+      "player_id": "01305131",
+      "top_speed_kmh": 31.7,
+      "exposure_runs": 13,
+      "pa": 66,
+      "games": 21,
+      "season_label": "2026途中",
+      "prev_pa": 98,
+      "npb_top_speed_z": 0.0703,
+      "exposure_context": {
+        "runs": 13,
+        "would_be_weight_NOT_APPLIED": 0.3333,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.0352,
+        "rho_0.7": 0.0492,
+        "rho_0.9": 0.0633
+      }
+    },
+    {
+      "player": "奈良間 大己",
+      "player_id": "31435157",
+      "top_speed_kmh": 31.7,
+      "exposure_runs": 22,
+      "pa": 192,
+      "games": 84,
+      "season_label": "2026途中",
+      "prev_pa": 103,
+      "npb_top_speed_z": 0.0703,
+      "exposure_context": {
+        "runs": 22,
+        "would_be_weight_NOT_APPLIED": 0.4583,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.0352,
+        "rho_0.7": 0.0492,
+        "rho_0.9": 0.0633
+      }
+    },
+    {
+      "player": "清宮 幸太郎",
+      "player_id": "41545136",
+      "top_speed_kmh": 31.7,
+      "exposure_runs": 42,
+      "pa": 363,
+      "games": 97,
+      "season_label": "2026途中",
+      "prev_pa": 577,
+      "npb_top_speed_z": 0.0703,
+      "exposure_context": {
+        "runs": 42,
+        "would_be_weight_NOT_APPLIED": 0.6176,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.0352,
+        "rho_0.7": 0.0492,
+        "rho_0.9": 0.0633
+      }
+    },
+    {
+      "player": "野村 佑希",
+      "player_id": "31435138",
+      "top_speed_kmh": 31.7,
+      "exposure_runs": 25,
+      "pa": 302,
+      "games": 84,
+      "season_label": "2026途中",
+      "prev_pa": 369,
+      "npb_top_speed_z": 0.0703,
+      "exposure_context": {
+        "runs": 25,
+        "would_be_weight_NOT_APPLIED": 0.4902,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.0352,
+        "rho_0.7": 0.0492,
+        "rho_0.9": 0.0633
+      }
+    },
+    {
+      "player": "野間 峻祥",
+      "player_id": "01405130",
+      "top_speed_kmh": 31.7,
+      "exposure_runs": 8,
+      "pa": 86,
+      "games": 35,
+      "season_label": "2026途中",
+      "prev_pa": 166,
+      "npb_top_speed_z": 0.0703,
+      "exposure_context": {
+        "runs": 8,
+        "would_be_weight_NOT_APPLIED": 0.2353,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.0352,
+        "rho_0.7": 0.0492,
+        "rho_0.9": 0.0633
+      }
+    },
+    {
+      "player": "度会 隆輝",
+      "player_id": "33535159",
+      "top_speed_kmh": 31.7,
+      "exposure_runs": 33,
+      "pa": 317,
+      "games": 91,
+      "season_label": "2026途中",
+      "prev_pa": 301,
+      "npb_top_speed_z": 0.0703,
+      "exposure_context": {
+        "runs": 33,
+        "would_be_weight_NOT_APPLIED": 0.5593,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": 0.0352,
+        "rho_0.7": 0.0492,
+        "rho_0.9": 0.0633
+      }
+    },
+    {
+      "player": "西野 真弘",
+      "player_id": "91495130",
+      "top_speed_kmh": 31.6,
+      "exposure_runs": 15,
+      "pa": 85,
+      "games": 29,
+      "season_label": "2026途中",
+      "prev_pa": 252,
+      "npb_top_speed_z": -0.0096,
+      "exposure_context": {
+        "runs": 15,
+        "would_be_weight_NOT_APPLIED": 0.3659,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.0048,
+        "rho_0.7": -0.0067,
+        "rho_0.9": -0.0086
+      }
+    },
+    {
+      "player": "秋山 翔吾",
+      "player_id": "31135133",
+      "top_speed_kmh": 31.6,
+      "exposure_runs": 9,
+      "pa": 134,
+      "games": 49,
+      "season_label": "2026途中",
+      "prev_pa": 157,
+      "npb_top_speed_z": -0.0096,
+      "exposure_context": {
+        "runs": 9,
+        "would_be_weight_NOT_APPLIED": 0.2571,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.0048,
+        "rho_0.7": -0.0067,
+        "rho_0.9": -0.0086
+      }
+    },
+    {
+      "player": "長岡 秀樹",
+      "player_id": "51455151",
+      "top_speed_kmh": 31.6,
+      "exposure_runs": 55,
+      "pa": 355,
+      "games": 85,
+      "season_label": "2026途中",
+      "prev_pa": 261,
+      "npb_top_speed_z": -0.0096,
+      "exposure_context": {
+        "runs": 55,
+        "would_be_weight_NOT_APPLIED": 0.679,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.0048,
+        "rho_0.7": -0.0067,
+        "rho_0.9": -0.0086
+      }
     },
     {
       "player": "牧 秀悟",
       "player_id": "13115153",
       "top_speed_kmh": 31.6,
-      "hp_to_1b_sec": 4.38,
       "exposure_runs": 36,
       "pa": 288,
       "games": 65,
       "season_label": "2026途中",
       "prev_pa": 391,
-      "z_top": -0.009581144465582381,
-      "z_h2f": -0.7758167827497029,
-      "n_measures": 2,
-      "exposure_weight": 0.5806,
-      "latent_speed_z": -0.228,
-      "latent_speed_z_unshrunk": -0.3927,
-      "confidence": 0.4963
+      "npb_top_speed_z": -0.0096,
+      "exposure_context": {
+        "runs": 36,
+        "would_be_weight_NOT_APPLIED": 0.5806,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.0048,
+        "rho_0.7": -0.0067,
+        "rho_0.9": -0.0086
+      }
+    },
+    {
+      "player": "小園 海斗",
+      "player_id": "01705138",
+      "top_speed_kmh": 31.5,
+      "exposure_runs": 49,
+      "pa": 382,
+      "games": 96,
+      "season_label": "2026途中",
+      "prev_pa": 573,
+      "npb_top_speed_z": -0.0894,
+      "exposure_context": {
+        "runs": 49,
+        "would_be_weight_NOT_APPLIED": 0.6533,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.0447,
+        "rho_0.7": -0.0626,
+        "rho_0.9": -0.0805
+      }
+    },
+    {
+      "player": "柳町 達",
+      "player_id": "73175151",
+      "top_speed_kmh": 31.5,
+      "exposure_runs": 21,
+      "pa": 214,
+      "games": 60,
+      "season_label": "2026途中",
+      "prev_pa": 517,
+      "npb_top_speed_z": -0.0894,
+      "exposure_context": {
+        "runs": 21,
+        "would_be_weight_NOT_APPLIED": 0.4468,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.0447,
+        "rho_0.7": -0.0626,
+        "rho_0.9": -0.0805
+      }
     },
     {
       "player": "ファビアン",
       "player_id": "43745150",
       "top_speed_kmh": 31.4,
-      "hp_to_1b_sec": 4.49,
       "exposure_runs": 15,
       "pa": 255,
       "games": 65,
       "season_label": "2026途中",
       "prev_pa": 572,
-      "z_top": -0.16926688555866556,
-      "z_h2f": -1.1766615272422696,
-      "n_measures": 2,
-      "exposure_weight": 0.3659,
-      "latent_speed_z": -0.2462,
-      "latent_speed_z_unshrunk": -0.673,
-      "confidence": 0.3127
+      "npb_top_speed_z": -0.1693,
+      "exposure_context": {
+        "runs": 15,
+        "would_be_weight_NOT_APPLIED": 0.3659,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.0847,
+        "rho_0.7": -0.1185,
+        "rho_0.9": -0.1524
+      }
     },
     {
-      "player": "鈴木 大地",
-      "player_id": "81985135",
-      "top_speed_kmh": 29,
-      "hp_to_1b_sec": 4.48,
-      "exposure_runs": 5,
-      "pa": 55,
-      "games": 34,
+      "player": "蝦名 達夫",
+      "player_id": "51555151",
+      "top_speed_kmh": 31.4,
+      "exposure_runs": 40,
+      "pa": 283,
+      "games": 77,
       "season_label": "2026途中",
-      "prev_pa": 198,
-      "z_top": -2.0854957786756354,
-      "z_h2f": -1.1402210959247643,
-      "n_measures": 2,
-      "exposure_weight": 0.1613,
-      "latent_speed_z": -0.2601,
-      "latent_speed_z_unshrunk": -1.6129,
-      "confidence": 0.1379
+      "prev_pa": 401,
+      "npb_top_speed_z": -0.1693,
+      "exposure_context": {
+        "runs": 40,
+        "would_be_weight_NOT_APPLIED": 0.6061,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.0847,
+        "rho_0.7": -0.1185,
+        "rho_0.9": -0.1524
+      }
     },
     {
-      "player": "中村 悠平",
-      "player_id": "51255118",
-      "top_speed_kmh": 30.4,
-      "hp_to_1b_sec": 4.63,
+      "player": "丸 佳浩",
+      "player_id": "21425116",
+      "top_speed_kmh": 31.4,
       "exposure_runs": 8,
-      "pa": 65,
-      "games": 32,
+      "pa": 82,
+      "games": 46,
       "season_label": "2026途中",
-      "prev_pa": 221,
-      "z_top": -0.9676955910240701,
-      "z_h2f": -1.6868275656873517,
-      "n_measures": 2,
-      "exposure_weight": 0.2353,
-      "latent_speed_z": -0.3123,
-      "latent_speed_z_unshrunk": -1.3273,
-      "confidence": 0.2011
+      "prev_pa": 369,
+      "npb_top_speed_z": -0.1693,
+      "exposure_context": {
+        "runs": 8,
+        "would_be_weight_NOT_APPLIED": 0.2353,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.0847,
+        "rho_0.7": -0.1185,
+        "rho_0.9": -0.1524
+      }
+    },
+    {
+      "player": "松本 剛",
+      "player_id": "21625135",
+      "top_speed_kmh": 31.4,
+      "exposure_runs": 34,
+      "pa": 290,
+      "games": 88,
+      "season_label": "2026途中",
+      "prev_pa": 185,
+      "npb_top_speed_z": -0.1693,
+      "exposure_context": {
+        "runs": 34,
+        "would_be_weight_NOT_APPLIED": 0.5667,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.0847,
+        "rho_0.7": -0.1185,
+        "rho_0.9": -0.1524
+      }
+    },
+    {
+      "player": "カリステ",
+      "player_id": "93795157",
+      "top_speed_kmh": 31.3,
+      "exposure_runs": 7,
+      "pa": 67,
+      "games": 26,
+      "season_label": "2026途中",
+      "prev_pa": 192,
+      "npb_top_speed_z": -0.2491,
+      "exposure_context": {
+        "runs": 7,
+        "would_be_weight_NOT_APPLIED": 0.2121,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.1245,
+        "rho_0.7": -0.1744,
+        "rho_0.9": -0.2242
+      }
+    },
+    {
+      "player": "佐藤 都志也",
+      "player_id": "71075151",
+      "top_speed_kmh": 31.3,
+      "exposure_runs": 26,
+      "pa": 301,
+      "games": 88,
+      "season_label": "2026途中",
+      "prev_pa": 224,
+      "npb_top_speed_z": -0.2491,
+      "exposure_context": {
+        "runs": 26,
+        "would_be_weight_NOT_APPLIED": 0.5,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.1245,
+        "rho_0.7": -0.1744,
+        "rho_0.9": -0.2242
+      }
+    },
+    {
+      "player": "栗原 陵矢",
+      "player_id": "01705130",
+      "top_speed_kmh": 31.3,
+      "exposure_runs": 40,
+      "pa": 439,
+      "games": 100,
+      "season_label": "2026途中",
+      "prev_pa": 332,
+      "npb_top_speed_z": -0.2491,
+      "exposure_context": {
+        "runs": 40,
+        "would_be_weight_NOT_APPLIED": 0.6061,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.1245,
+        "rho_0.7": -0.1744,
+        "rho_0.9": -0.2242
+      }
+    },
+    {
+      "player": "森 友哉",
+      "player_id": "91495139",
+      "top_speed_kmh": 31.2,
+      "exposure_runs": 25,
+      "pa": 250,
+      "games": 65,
+      "season_label": "2026途中",
+      "prev_pa": 191,
+      "npb_top_speed_z": -0.329,
+      "exposure_context": {
+        "runs": 25,
+        "would_be_weight_NOT_APPLIED": 0.4902,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.1645,
+        "rho_0.7": -0.2303,
+        "rho_0.9": -0.2961
+      }
+    },
+    {
+      "player": "土田 龍空",
+      "player_id": "51455153",
+      "top_speed_kmh": 31.2,
+      "exposure_runs": 3,
+      "pa": 43,
+      "games": 38,
+      "season_label": "2026途中",
+      "prev_pa": 53,
+      "npb_top_speed_z": -0.329,
+      "exposure_context": {
+        "runs": 3,
+        "would_be_weight_NOT_APPLIED": 0.1034,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.1645,
+        "rho_0.7": -0.2303,
+        "rho_0.9": -0.2961
+      }
     },
     {
       "player": "近藤 健介",
       "player_id": "41745135",
       "top_speed_kmh": 31.2,
-      "hp_to_1b_sec": 4.37,
       "exposure_runs": 37,
       "pa": 417,
       "games": 97,
       "season_label": "2026途中",
       "prev_pa": 307,
-      "z_top": -0.3289526266517459,
-      "z_h2f": -0.7393763514321977,
-      "n_measures": 2,
-      "exposure_weight": 0.5873,
-      "latent_speed_z": -0.3137,
-      "latent_speed_z_unshrunk": -0.5342,
-      "confidence": 0.502
+      "npb_top_speed_z": -0.329,
+      "exposure_context": {
+        "runs": 37,
+        "would_be_weight_NOT_APPLIED": 0.5873,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.1645,
+        "rho_0.7": -0.2303,
+        "rho_0.9": -0.2961
+      }
     },
     {
-      "player": "佐野 恵太",
-      "player_id": "91995134",
-      "top_speed_kmh": 30.6,
-      "hp_to_1b_sec": 4.2,
+      "player": "西川 龍馬",
+      "player_id": "71475132",
+      "top_speed_kmh": 31.1,
       "exposure_runs": 57,
-      "pa": 396,
-      "games": 95,
+      "pa": 436,
+      "games": 102,
       "season_label": "2026途中",
-      "prev_pa": 569,
-      "z_top": -0.8080098499309869,
-      "z_h2f": -0.11988901903459676,
-      "n_measures": 2,
-      "exposure_weight": 0.6867,
-      "latent_speed_z": -0.3186,
-      "latent_speed_z_unshrunk": -0.4639,
-      "confidence": 0.587
+      "prev_pa": 412,
+      "npb_top_speed_z": -0.4088,
+      "exposure_context": {
+        "runs": 57,
+        "would_be_weight_NOT_APPLIED": 0.6867,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.2044,
+        "rho_0.7": -0.2862,
+        "rho_0.9": -0.3679
+      }
     },
     {
-      "player": "木浪 聖也",
-      "player_id": "31735138",
-      "top_speed_kmh": 30,
-      "hp_to_1b_sec": 4.25,
-      "exposure_runs": 18,
-      "pa": 134,
-      "games": 46,
-      "season_label": "2026途中",
-      "prev_pa": 203,
-      "z_top": -1.2870670732102307,
-      "z_h2f": -0.3020911756221259,
-      "n_measures": 2,
-      "exposure_weight": 0.4091,
-      "latent_speed_z": -0.3251,
-      "latent_speed_z_unshrunk": -0.7946,
-      "confidence": 0.3496
-    },
-    {
-      "player": "今宮 健太",
-      "player_id": "31335131",
-      "top_speed_kmh": 30.4,
-      "hp_to_1b_sec": 4.4,
-      "exposure_runs": 15,
-      "pa": 138,
-      "games": 47,
-      "season_label": "2026途中",
-      "prev_pa": 182,
-      "z_top": -0.9676955910240701,
-      "z_h2f": -0.8486976453847165,
-      "n_measures": 2,
-      "exposure_weight": 0.3659,
-      "latent_speed_z": -0.3323,
-      "latent_speed_z_unshrunk": -0.9082,
-      "confidence": 0.3127
-    },
-    {
-      "player": "高橋 周平",
-      "player_id": "91095135",
-      "top_speed_kmh": 29.5,
-      "hp_to_1b_sec": 4.35,
+      "player": "ポランコ",
+      "player_id": "63065155",
+      "top_speed_kmh": 31.1,
       "exposure_runs": 12,
-      "pa": 102,
-      "games": 48,
+      "pa": 149,
+      "games": 52,
       "season_label": "2026途中",
-      "prev_pa": 101,
-      "z_top": -1.686281425942933,
-      "z_h2f": -0.6664954887971841,
-      "n_measures": 2,
-      "exposure_weight": 0.3158,
-      "latent_speed_z": -0.3715,
-      "latent_speed_z_unshrunk": -1.1764,
-      "confidence": 0.2699
+      "prev_pa": 154,
+      "npb_top_speed_z": -0.4088,
+      "exposure_context": {
+        "runs": 12,
+        "would_be_weight_NOT_APPLIED": 0.3158,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.2044,
+        "rho_0.7": -0.2862,
+        "rho_0.9": -0.3679
+      }
     },
     {
-      "player": "岸田 行倫",
-      "player_id": "91595136",
-      "top_speed_kmh": 29.4,
-      "hp_to_1b_sec": 4.13,
-      "exposure_runs": 24,
-      "pa": 196,
-      "games": 56,
+      "player": "京田 陽太",
+      "player_id": "81585134",
+      "top_speed_kmh": 31.1,
+      "exposure_runs": 19,
+      "pa": 119,
+      "games": 45,
       "season_label": "2026途中",
-      "prev_pa": 299,
-      "z_top": -1.7661242964894746,
-      "z_h2f": 0.13519400018794595,
-      "n_measures": 2,
-      "exposure_weight": 0.48,
-      "latent_speed_z": -0.3914,
-      "latent_speed_z_unshrunk": -0.8155,
-      "confidence": 0.4102
+      "prev_pa": 210,
+      "npb_top_speed_z": -0.4088,
+      "exposure_context": {
+        "runs": 19,
+        "would_be_weight_NOT_APPLIED": 0.4222,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.2044,
+        "rho_0.7": -0.2862,
+        "rho_0.9": -0.3679
+      }
     },
     {
       "player": "正木 智也",
       "player_id": "81885155",
       "top_speed_kmh": 31.1,
-      "hp_to_1b_sec": 4.45,
       "exposure_runs": 31,
       "pa": 292,
       "games": 62,
       "season_label": "2026途中",
       "prev_pa": 65,
-      "z_top": -0.4087954971982846,
-      "z_h2f": -1.0308998019722455,
-      "n_measures": 2,
-      "exposure_weight": 0.5439,
-      "latent_speed_z": -0.3915,
-      "latent_speed_z_unshrunk": -0.7198,
-      "confidence": 0.4648
+      "npb_top_speed_z": -0.4088,
+      "exposure_context": {
+        "runs": 31,
+        "would_be_weight_NOT_APPLIED": 0.5439,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.2044,
+        "rho_0.7": -0.2862,
+        "rho_0.9": -0.3679
+      }
     },
     {
-      "player": "筒香 嘉智",
-      "player_id": "41945131",
-      "top_speed_kmh": 30.2,
-      "hp_to_1b_sec": 4.34,
-      "exposure_runs": 21,
-      "pa": 240,
-      "games": 61,
-      "season_label": "2026途中",
-      "prev_pa": 257,
-      "z_top": -1.1273813321171504,
-      "z_h2f": -0.6300550574796789,
-      "n_measures": 2,
-      "exposure_weight": 0.4468,
-      "latent_speed_z": -0.3926,
-      "latent_speed_z_unshrunk": -0.8787,
-      "confidence": 0.3819
-    },
-    {
-      "player": "紅林 弘太郎",
-      "player_id": "91995151",
-      "top_speed_kmh": 30.7,
-      "hp_to_1b_sec": 4.4,
-      "exposure_runs": 28,
-      "pa": 365,
-      "games": 95,
-      "season_label": "2026途中",
-      "prev_pa": 447,
-      "z_top": -0.7281669793844482,
-      "z_h2f": -0.8486976453847165,
-      "n_measures": 2,
-      "exposure_weight": 0.5185,
-      "latent_speed_z": -0.4088,
-      "latent_speed_z_unshrunk": -0.7884,
-      "confidence": 0.4432
-    },
-    {
-      "player": "太田 光",
-      "player_id": "71375138",
-      "top_speed_kmh": 30.5,
-      "hp_to_1b_sec": 4.41,
-      "exposure_runs": 23,
-      "pa": 204,
-      "games": 72,
-      "season_label": "2026途中",
-      "prev_pa": 231,
-      "z_top": -0.8878527204775285,
-      "z_h2f": -0.8851380767022217,
-      "n_measures": 2,
-      "exposure_weight": 0.4694,
-      "latent_speed_z": -0.4161,
-      "latent_speed_z_unshrunk": -0.8865,
-      "confidence": 0.4012
-    },
-    {
-      "player": "伏見 寅威",
-      "player_id": "61065137",
-      "top_speed_kmh": 29.1,
-      "hp_to_1b_sec": 4.54,
-      "exposure_runs": 9,
-      "pa": 105,
-      "games": 35,
-      "season_label": "2026途中",
-      "prev_pa": 175,
-      "z_top": -2.0056529081290937,
-      "z_h2f": -1.3588636838297987,
-      "n_measures": 2,
-      "exposure_weight": 0.2571,
-      "latent_speed_z": -0.4326,
-      "latent_speed_z_unshrunk": -1.6823,
-      "confidence": 0.2198
-    },
-    {
-      "player": "安田 尚憲",
-      "player_id": "81885136",
-      "top_speed_kmh": 29.6,
-      "hp_to_1b_sec": 4.59,
-      "exposure_runs": 10,
-      "pa": 129,
-      "games": 42,
-      "season_label": "2026途中",
-      "prev_pa": 350,
-      "z_top": -1.6064385553963914,
-      "z_h2f": -1.5410658404173279,
-      "n_measures": 2,
-      "exposure_weight": 0.2778,
-      "latent_speed_z": -0.4372,
-      "latent_speed_z_unshrunk": -1.5738,
-      "confidence": 0.2374
-    },
-    {
-      "player": "石川 昂弥",
-      "player_id": "91195151",
-      "top_speed_kmh": 30.6,
-      "hp_to_1b_sec": 4.5,
-      "exposure_runs": 20,
-      "pa": 236,
-      "games": 64,
-      "season_label": "2026途中",
-      "prev_pa": 75,
-      "z_top": -0.8080098499309869,
-      "z_h2f": -1.2131019585597747,
-      "n_measures": 2,
-      "exposure_weight": 0.4348,
-      "latent_speed_z": -0.4394,
-      "latent_speed_z_unshrunk": -1.0106,
-      "confidence": 0.3716
-    },
-    {
-      "player": "古賀 悠斗",
-      "player_id": "81785155",
-      "top_speed_kmh": 30.6,
-      "hp_to_1b_sec": 4.44,
-      "exposure_runs": 30,
-      "pa": 193,
-      "games": 76,
-      "season_label": "2026途中",
-      "prev_pa": 328,
-      "z_top": -0.8080098499309869,
-      "z_h2f": -0.9944593706547404,
-      "n_measures": 2,
-      "exposure_weight": 0.5357,
-      "latent_speed_z": -0.4828,
-      "latent_speed_z_unshrunk": -0.9012,
-      "confidence": 0.4579
-    },
-    {
-      "player": "森下 翔太",
-      "player_id": "43145157",
-      "top_speed_kmh": 30.5,
-      "hp_to_1b_sec": 4.39,
-      "exposure_runs": 35,
-      "pa": 432,
-      "games": 99,
-      "season_label": "2026途中",
-      "prev_pa": 620,
-      "z_top": -0.8878527204775285,
-      "z_h2f": -0.8122572140672081,
-      "n_measures": 2,
-      "exposure_weight": 0.5738,
-      "latent_speed_z": -0.4877,
-      "latent_speed_z_unshrunk": -0.8501,
-      "confidence": 0.4904
-    },
-    {
-      "player": "大城 卓三",
-      "player_id": "21325136",
-      "top_speed_kmh": 29.2,
-      "hp_to_1b_sec": 4.21,
-      "exposure_runs": 26,
-      "pa": 227,
-      "games": 70,
-      "season_label": "2026途中",
-      "prev_pa": 99,
-      "z_top": -1.9258100375825549,
-      "z_h2f": -0.15632945035210194,
-      "n_measures": 2,
-      "exposure_weight": 0.5,
-      "latent_speed_z": -0.5205,
-      "latent_speed_z_unshrunk": -1.0411,
-      "confidence": 0.4273
-    },
-    {
-      "player": "大山 悠輔",
-      "player_id": "21325134",
-      "top_speed_kmh": 30.5,
-      "hp_to_1b_sec": 4.5,
-      "exposure_runs": 26,
-      "pa": 402,
-      "games": 97,
-      "season_label": "2026途中",
-      "prev_pa": 587,
-      "z_top": -0.8878527204775285,
-      "z_h2f": -1.2131019585597747,
-      "n_measures": 2,
-      "exposure_weight": 0.5,
-      "latent_speed_z": -0.5252,
-      "latent_speed_z_unshrunk": -1.0505,
-      "confidence": 0.4273
-    },
-    {
-      "player": "海野 隆司",
-      "player_id": "81385151",
-      "top_speed_kmh": 30.3,
-      "hp_to_1b_sec": 4.48,
+      "player": "山本 祐大",
+      "player_id": "23125136",
+      "top_speed_kmh": 31,
       "exposure_runs": 25,
-      "pa": 228,
-      "games": 75,
+      "pa": 184,
+      "games": 50,
       "season_label": "2026途中",
-      "prev_pa": 281,
-      "z_top": -1.047538461570609,
-      "z_h2f": -1.1402210959247643,
-      "n_measures": 2,
-      "exposure_weight": 0.4902,
-      "latent_speed_z": -0.5362,
-      "latent_speed_z_unshrunk": -1.0939,
-      "confidence": 0.419
+      "prev_pa": 344,
+      "npb_top_speed_z": -0.4886,
+      "exposure_context": {
+        "runs": 25,
+        "would_be_weight_NOT_APPLIED": 0.4902,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.2443,
+        "rho_0.7": -0.342,
+        "rho_0.9": -0.4397
+      }
     },
     {
-      "player": "坂本 誠志郎",
-      "player_id": "11915132",
-      "top_speed_kmh": 30.2,
-      "hp_to_1b_sec": 4.61,
-      "exposure_runs": 17,
-      "pa": 194,
-      "games": 63,
+      "player": "藤岡 裕大",
+      "player_id": "41645136",
+      "top_speed_kmh": 30.8,
+      "exposure_runs": 3,
+      "pa": 26,
+      "games": 9,
       "season_label": "2026途中",
-      "prev_pa": 414,
-      "z_top": -1.1273813321171504,
-      "z_h2f": -1.6139467030523413,
-      "n_measures": 2,
-      "exposure_weight": 0.3953,
-      "latent_speed_z": -0.5419,
-      "latent_speed_z_unshrunk": -1.3707,
-      "confidence": 0.3379
-    },
-    {
-      "player": "宮﨑 敏郎",
-      "player_id": "51455137",
-      "top_speed_kmh": 30.3,
-      "hp_to_1b_sec": 4.48,
-      "exposure_runs": 31,
-      "pa": 267,
-      "games": 75,
-      "season_label": "2026途中",
-      "prev_pa": 352,
-      "z_top": -1.047538461570609,
-      "z_h2f": -1.1402210959247643,
-      "n_measures": 2,
-      "exposure_weight": 0.5439,
-      "latent_speed_z": -0.5949,
-      "latent_speed_z_unshrunk": -1.0939,
-      "confidence": 0.4648
+      "prev_pa": 373,
+      "npb_top_speed_z": -0.6483,
+      "exposure_context": {
+        "runs": 3,
+        "would_be_weight_NOT_APPLIED": 0.1034,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.3241,
+        "rho_0.7": -0.4538,
+        "rho_0.9": -0.5835
+      }
     },
     {
       "player": "サンタナ",
       "player_id": "53755153",
       "top_speed_kmh": 30.8,
-      "hp_to_1b_sec": 4.56,
       "exposure_runs": 40,
       "pa": 357,
       "games": 96,
       "season_label": "2026途中",
       "prev_pa": 240,
-      "z_top": -0.6483241088379066,
-      "z_h2f": -1.431744546464809,
-      "n_measures": 2,
-      "exposure_weight": 0.6061,
-      "latent_speed_z": -0.6303,
-      "latent_speed_z_unshrunk": -1.04,
-      "confidence": 0.518
+      "npb_top_speed_z": -0.6483,
+      "exposure_context": {
+        "runs": 40,
+        "would_be_weight_NOT_APPLIED": 0.6061,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.3241,
+        "rho_0.7": -0.4538,
+        "rho_0.9": -0.5835
+      }
+    },
+    {
+      "player": "紅林 弘太郎",
+      "player_id": "91995151",
+      "top_speed_kmh": 30.7,
+      "exposure_runs": 28,
+      "pa": 365,
+      "games": 95,
+      "season_label": "2026途中",
+      "prev_pa": 447,
+      "npb_top_speed_z": -0.7282,
+      "exposure_context": {
+        "runs": 28,
+        "would_be_weight_NOT_APPLIED": 0.5185,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.3641,
+        "rho_0.7": -0.5097,
+        "rho_0.9": -0.6554
+      }
+    },
+    {
+      "player": "若月 健矢",
+      "player_id": "41645139",
+      "top_speed_kmh": 30.7,
+      "exposure_runs": 20,
+      "pa": 244,
+      "games": 80,
+      "season_label": "2026途中",
+      "prev_pa": 400,
+      "npb_top_speed_z": -0.7282,
+      "exposure_context": {
+        "runs": 20,
+        "would_be_weight_NOT_APPLIED": 0.4348,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.3641,
+        "rho_0.7": -0.5097,
+        "rho_0.9": -0.6554
+      }
+    },
+    {
+      "player": "矢野 雅哉",
+      "player_id": "93395153",
+      "top_speed_kmh": 30.7,
+      "exposure_runs": 15,
+      "pa": 58,
+      "games": 44,
+      "season_label": "2026途中",
+      "prev_pa": 335,
+      "npb_top_speed_z": -0.7282,
+      "exposure_context": {
+        "runs": 15,
+        "would_be_weight_NOT_APPLIED": 0.3659,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.3641,
+        "rho_0.7": -0.5097,
+        "rho_0.9": -0.6554
+      }
+    },
+    {
+      "player": "石川 昂弥",
+      "player_id": "91195151",
+      "top_speed_kmh": 30.6,
+      "exposure_runs": 20,
+      "pa": 236,
+      "games": 64,
+      "season_label": "2026途中",
+      "prev_pa": 75,
+      "npb_top_speed_z": -0.808,
+      "exposure_context": {
+        "runs": 20,
+        "would_be_weight_NOT_APPLIED": 0.4348,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.404,
+        "rho_0.7": -0.5656,
+        "rho_0.9": -0.7272
+      }
+    },
+    {
+      "player": "古賀 悠斗",
+      "player_id": "81785155",
+      "top_speed_kmh": 30.6,
+      "exposure_runs": 30,
+      "pa": 193,
+      "games": 76,
+      "season_label": "2026途中",
+      "prev_pa": 328,
+      "npb_top_speed_z": -0.808,
+      "exposure_context": {
+        "runs": 30,
+        "would_be_weight_NOT_APPLIED": 0.5357,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.404,
+        "rho_0.7": -0.5656,
+        "rho_0.9": -0.7272
+      }
+    },
+    {
+      "player": "坂倉 将吾",
+      "player_id": "11915134",
+      "top_speed_kmh": 30.6,
+      "exposure_runs": 38,
+      "pa": 383,
+      "games": 94,
+      "season_label": "2026途中",
+      "prev_pa": 399,
+      "npb_top_speed_z": -0.808,
+      "exposure_context": {
+        "runs": 38,
+        "would_be_weight_NOT_APPLIED": 0.5938,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.404,
+        "rho_0.7": -0.5656,
+        "rho_0.9": -0.7272
+      }
+    },
+    {
+      "player": "佐野 恵太",
+      "player_id": "91995134",
+      "top_speed_kmh": 30.6,
+      "exposure_runs": 57,
+      "pa": 396,
+      "games": 95,
+      "season_label": "2026途中",
+      "prev_pa": 569,
+      "npb_top_speed_z": -0.808,
+      "exposure_context": {
+        "runs": 57,
+        "would_be_weight_NOT_APPLIED": 0.6867,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.404,
+        "rho_0.7": -0.5656,
+        "rho_0.9": -0.7272
+      }
+    },
+    {
+      "player": "梅野 隆太郎",
+      "player_id": "21325139",
+      "top_speed_kmh": 30.6,
+      "exposure_runs": 6,
+      "pa": 71,
+      "games": 23,
+      "season_label": "2026途中",
+      "prev_pa": 132,
+      "npb_top_speed_z": -0.808,
+      "exposure_context": {
+        "runs": 6,
+        "would_be_weight_NOT_APPLIED": 0.1875,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.404,
+        "rho_0.7": -0.5656,
+        "rho_0.9": -0.7272
+      }
+    },
+    {
+      "player": "太田 光",
+      "player_id": "71375138",
+      "top_speed_kmh": 30.5,
+      "exposure_runs": 23,
+      "pa": 204,
+      "games": 72,
+      "season_label": "2026途中",
+      "prev_pa": 231,
+      "npb_top_speed_z": -0.8879,
+      "exposure_context": {
+        "runs": 23,
+        "would_be_weight_NOT_APPLIED": 0.4694,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.444,
+        "rho_0.7": -0.6215,
+        "rho_0.9": -0.7991
+      }
     },
     {
       "player": "浅村 栄斗",
       "player_id": "51155118",
       "top_speed_kmh": 30.5,
-      "hp_to_1b_sec": 4.63,
       "exposure_runs": 27,
       "pa": 333,
       "games": 87,
       "season_label": "2026途中",
       "prev_pa": 389,
-      "z_top": -0.8878527204775285,
-      "z_h2f": -1.6868275656873517,
-      "n_measures": 2,
-      "exposure_weight": 0.5094,
-      "latent_speed_z": -0.6558,
-      "latent_speed_z_unshrunk": -1.2873,
-      "confidence": 0.4354
+      "npb_top_speed_z": -0.8879,
+      "exposure_context": {
+        "runs": 27,
+        "would_be_weight_NOT_APPLIED": 0.5094,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.444,
+        "rho_0.7": -0.6215,
+        "rho_0.9": -0.7991
+      }
     },
     {
-      "player": "山川 穂高",
-      "player_id": "21425139",
-      "top_speed_kmh": 29.4,
-      "hp_to_1b_sec": 4.76,
-      "exposure_runs": 14,
-      "pa": 168,
-      "games": 46,
+      "player": "大山 悠輔",
+      "player_id": "21325134",
+      "top_speed_kmh": 30.5,
+      "exposure_runs": 26,
+      "pa": 402,
+      "games": 97,
       "season_label": "2026途中",
-      "prev_pa": 496,
-      "z_top": -1.7661242964894746,
-      "z_h2f": -2.1605531728149288,
-      "n_measures": 2,
-      "exposure_weight": 0.35,
-      "latent_speed_z": -0.6872,
-      "latent_speed_z_unshrunk": -1.9633,
-      "confidence": 0.2991
+      "prev_pa": 587,
+      "npb_top_speed_z": -0.8879,
+      "exposure_context": {
+        "runs": 26,
+        "would_be_weight_NOT_APPLIED": 0.5,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.444,
+        "rho_0.7": -0.6215,
+        "rho_0.9": -0.7991
+      }
+    },
+    {
+      "player": "森下 翔太",
+      "player_id": "43145157",
+      "top_speed_kmh": 30.5,
+      "exposure_runs": 35,
+      "pa": 432,
+      "games": 99,
+      "season_label": "2026途中",
+      "prev_pa": 620,
+      "npb_top_speed_z": -0.8879,
+      "exposure_context": {
+        "runs": 35,
+        "would_be_weight_NOT_APPLIED": 0.5738,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.444,
+        "rho_0.7": -0.6215,
+        "rho_0.9": -0.7991
+      }
+    },
+    {
+      "player": "中村 悠平",
+      "player_id": "51255118",
+      "top_speed_kmh": 30.4,
+      "exposure_runs": 8,
+      "pa": 65,
+      "games": 32,
+      "season_label": "2026途中",
+      "prev_pa": 221,
+      "npb_top_speed_z": -0.9677,
+      "exposure_context": {
+        "runs": 8,
+        "would_be_weight_NOT_APPLIED": 0.2353,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.4839,
+        "rho_0.7": -0.6774,
+        "rho_0.9": -0.8709
+      }
+    },
+    {
+      "player": "今宮 健太",
+      "player_id": "31335131",
+      "top_speed_kmh": 30.4,
+      "exposure_runs": 15,
+      "pa": 138,
+      "games": 47,
+      "season_label": "2026途中",
+      "prev_pa": 182,
+      "npb_top_speed_z": -0.9677,
+      "exposure_context": {
+        "runs": 15,
+        "would_be_weight_NOT_APPLIED": 0.3659,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.4839,
+        "rho_0.7": -0.6774,
+        "rho_0.9": -0.8709
+      }
+    },
+    {
+      "player": "渡邊 佳明",
+      "player_id": "73175138",
+      "top_speed_kmh": 30.3,
+      "exposure_runs": 12,
+      "pa": 140,
+      "games": 54,
+      "season_label": "2026途中",
+      "prev_pa": 166,
+      "npb_top_speed_z": -1.0475,
+      "exposure_context": {
+        "runs": 12,
+        "would_be_weight_NOT_APPLIED": 0.3158,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.5238,
+        "rho_0.7": -0.7333,
+        "rho_0.9": -0.9428
+      }
+    },
+    {
+      "player": "宮﨑 敏郎",
+      "player_id": "51455137",
+      "top_speed_kmh": 30.3,
+      "exposure_runs": 31,
+      "pa": 267,
+      "games": 75,
+      "season_label": "2026途中",
+      "prev_pa": 352,
+      "npb_top_speed_z": -1.0475,
+      "exposure_context": {
+        "runs": 31,
+        "would_be_weight_NOT_APPLIED": 0.5439,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.5238,
+        "rho_0.7": -0.7333,
+        "rho_0.9": -0.9428
+      }
+    },
+    {
+      "player": "海野 隆司",
+      "player_id": "81385151",
+      "top_speed_kmh": 30.3,
+      "exposure_runs": 25,
+      "pa": 228,
+      "games": 75,
+      "season_label": "2026途中",
+      "prev_pa": 281,
+      "npb_top_speed_z": -1.0475,
+      "exposure_context": {
+        "runs": 25,
+        "would_be_weight_NOT_APPLIED": 0.4902,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.5238,
+        "rho_0.7": -0.7333,
+        "rho_0.9": -0.9428
+      }
+    },
+    {
+      "player": "筒香 嘉智",
+      "player_id": "41945131",
+      "top_speed_kmh": 30.2,
+      "exposure_runs": 21,
+      "pa": 240,
+      "games": 61,
+      "season_label": "2026途中",
+      "prev_pa": 257,
+      "npb_top_speed_z": -1.1274,
+      "exposure_context": {
+        "runs": 21,
+        "would_be_weight_NOT_APPLIED": 0.4468,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.5637,
+        "rho_0.7": -0.7892,
+        "rho_0.9": -1.0147
+      }
+    },
+    {
+      "player": "坂本 誠志郎",
+      "player_id": "11915132",
+      "top_speed_kmh": 30.2,
+      "exposure_runs": 17,
+      "pa": 194,
+      "games": 63,
+      "season_label": "2026途中",
+      "prev_pa": 414,
+      "npb_top_speed_z": -1.1274,
+      "exposure_context": {
+        "runs": 17,
+        "would_be_weight_NOT_APPLIED": 0.3953,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.5637,
+        "rho_0.7": -0.7892,
+        "rho_0.9": -1.0147
+      }
     },
     {
       "player": "ソト",
       "player_id": "03505133",
       "top_speed_kmh": 30.1,
-      "hp_to_1b_sec": 4.66,
       "exposure_runs": 29,
       "pa": 302,
       "games": 88,
       "season_label": "2026途中",
       "prev_pa": 367,
-      "z_top": -1.2072242026636892,
-      "z_h2f": -1.7961488596398705,
-      "n_measures": 2,
-      "exposure_weight": 0.5273,
-      "latent_speed_z": -0.7918,
-      "latent_speed_z_unshrunk": -1.5017,
-      "confidence": 0.4507
+      "npb_top_speed_z": -1.2072,
+      "exposure_context": {
+        "runs": 29,
+        "would_be_weight_NOT_APPLIED": 0.5273,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.6036,
+        "rho_0.7": -0.845,
+        "rho_0.9": -1.0865
+      }
+    },
+    {
+      "player": "木浪 聖也",
+      "player_id": "31735138",
+      "top_speed_kmh": 30,
+      "exposure_runs": 18,
+      "pa": 134,
+      "games": 46,
+      "season_label": "2026途中",
+      "prev_pa": 203,
+      "npb_top_speed_z": -1.2871,
+      "exposure_context": {
+        "runs": 18,
+        "would_be_weight_NOT_APPLIED": 0.4091,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.6435,
+        "rho_0.7": -0.901,
+        "rho_0.9": -1.1584
+      }
+    },
+    {
+      "player": "安田 尚憲",
+      "player_id": "81885136",
+      "top_speed_kmh": 29.6,
+      "exposure_runs": 10,
+      "pa": 129,
+      "games": 42,
+      "season_label": "2026途中",
+      "prev_pa": 350,
+      "npb_top_speed_z": -1.6064,
+      "exposure_context": {
+        "runs": 10,
+        "would_be_weight_NOT_APPLIED": 0.2778,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.8032,
+        "rho_0.7": -1.1245,
+        "rho_0.9": -1.4458
+      }
+    },
+    {
+      "player": "高橋 周平",
+      "player_id": "91095135",
+      "top_speed_kmh": 29.5,
+      "exposure_runs": 12,
+      "pa": 102,
+      "games": 48,
+      "season_label": "2026途中",
+      "prev_pa": 101,
+      "npb_top_speed_z": -1.6863,
+      "exposure_context": {
+        "runs": 12,
+        "would_be_weight_NOT_APPLIED": 0.3158,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.8431,
+        "rho_0.7": -1.1804,
+        "rho_0.9": -1.5177
+      }
+    },
+    {
+      "player": "木下 拓哉",
+      "player_id": "31735132",
+      "top_speed_kmh": 29.4,
+      "exposure_runs": 4,
+      "pa": 63,
+      "games": 21,
+      "season_label": "2026途中",
+      "prev_pa": 122,
+      "npb_top_speed_z": -1.7661,
+      "exposure_context": {
+        "runs": 4,
+        "would_be_weight_NOT_APPLIED": 0.1333,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.8831,
+        "rho_0.7": -1.2363,
+        "rho_0.9": -1.5895
+      }
+    },
+    {
+      "player": "山川 穂高",
+      "player_id": "21425139",
+      "top_speed_kmh": 29.4,
+      "exposure_runs": 14,
+      "pa": 168,
+      "games": 46,
+      "season_label": "2026途中",
+      "prev_pa": 496,
+      "npb_top_speed_z": -1.7661,
+      "exposure_context": {
+        "runs": 14,
+        "would_be_weight_NOT_APPLIED": 0.35,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.8831,
+        "rho_0.7": -1.2363,
+        "rho_0.9": -1.5895
+      }
+    },
+    {
+      "player": "岸田 行倫",
+      "player_id": "91595136",
+      "top_speed_kmh": 29.4,
+      "exposure_runs": 24,
+      "pa": 196,
+      "games": 56,
+      "season_label": "2026途中",
+      "prev_pa": 299,
+      "npb_top_speed_z": -1.7661,
+      "exposure_context": {
+        "runs": 24,
+        "would_be_weight_NOT_APPLIED": 0.48,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.8831,
+        "rho_0.7": -1.2363,
+        "rho_0.9": -1.5895
+      }
+    },
+    {
+      "player": "大城 卓三",
+      "player_id": "21325136",
+      "top_speed_kmh": 29.2,
+      "exposure_runs": 26,
+      "pa": 227,
+      "games": 70,
+      "season_label": "2026途中",
+      "prev_pa": 99,
+      "npb_top_speed_z": -1.9258,
+      "exposure_context": {
+        "runs": 26,
+        "would_be_weight_NOT_APPLIED": 0.5,
+        "max_statistic_direction": "ADEQUATE_RUNS"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -0.9629,
+        "rho_0.7": -1.3481,
+        "rho_0.9": -1.7332
+      }
+    },
+    {
+      "player": "伏見 寅威",
+      "player_id": "61065137",
+      "top_speed_kmh": 29.1,
+      "exposure_runs": 9,
+      "pa": 105,
+      "games": 35,
+      "season_label": "2026途中",
+      "prev_pa": 175,
+      "npb_top_speed_z": -2.0057,
+      "exposure_context": {
+        "runs": 9,
+        "would_be_weight_NOT_APPLIED": 0.2571,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -1.0029,
+        "rho_0.7": -1.404,
+        "rho_0.9": -1.8051
+      }
+    },
+    {
+      "player": "鈴木 大地",
+      "player_id": "81985135",
+      "top_speed_kmh": 29,
+      "exposure_runs": 5,
+      "pa": 55,
+      "games": 34,
+      "season_label": "2026途中",
+      "prev_pa": 198,
+      "npb_top_speed_z": -2.0855,
+      "exposure_context": {
+        "runs": 5,
+        "would_be_weight_NOT_APPLIED": 0.1613,
+        "max_statistic_direction": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "shrunk_sensitivity_ASSUMPTION": {
+        "rho_0.5": -1.0428,
+        "rho_0.7": -1.4599,
+        "rho_0.9": -1.877
+      }
     }
   ]
 }

@@ -38,7 +38,7 @@
   },
   "wsbOnSpeed": {
     "slope": 0.0005245847772941503,
-    "intercept": 0.00002573890548979331,
+    "intercept": 2.573890548979331e-05,
     "sd": 0.0023241549069166734,
     "n": 442
   },
@@ -408,15 +408,29 @@
     "_note": "走力の計算にはこの指標を入れずに求める（自分自身を説明変数にすると残差が消えるため）"
   },
   "speedPooling": {
-    "mode": "continuous_prior",
+    "mode": "current_year_first_hard",
     "kappa": 50,
     "lambda": 0.2703,
     "pa_hist_median": 185,
     "sufficientWeightHard": 50,
-    "_control_modes": ["current_year_first_hard", "legacy_auto_pool"],
+    "_control_modes": [
+      "current_year_first_hard",
+      "legacy_auto_pool"
+    ],
     "_basis": "SP-016 final design 2026-08-14. Hierarchical shrink then precision blend. lambda=kappa/median(PA_hist). Naive w=PA/(PA+kappa) rejected. Hard 50PA gate remains as control via poolingMode=current_year_first_hard.",
     "_owner_rule": "current-year first is kept: more current PA continuously downweights history",
-    "_display_scale": "applyScale for 走力 must be re-derived with this mode (global center/width only; no PowerPro individual labels)"
+    "_display_scale": "applyScale for 走力 must be re-derived with this mode (global center/width only; no PowerPro individual labels)",
+    "_reverted_20260814": "Opus bulk review で continuous_prior → current_year_first_hard へ差し戻した。理由: SP-016 は registry で PARTIAL、EX-009 は POLICY_CONFLICT_REOPEN（gate_block=1）のまま、production の既定だけが continuous_prior になっていた＝fail-closed の逆。さらに実測で3つの数学的欠陥を確認: (a) 当年PAを増やすと一旦リーグ平均へ寄る非単調性（縮小が分子だけに掛かり分母は生のPA。paHist=500 のとき係数は paCur=0 で0.9091、paCur=61 で最小0.7973、paCur≈500 でようやく復帰。z=+2 の選手は当年61打席の方が0打席より表示で6.33点低い） (b) 正しい単一プール縮小 (n_c+λn_h)/(n_c+λn_h+κ) と比べて誤差の符号がPAで反転する（6/500 で +18% 過小縮小、200/500 で -3% 過剰縮小）＝全体の再較正では吸収できない (c) 規定打席級でも履歴が3割超残る（当年350-500PAで平均37.1%、≥500PAで32.4%、源田壮亮は当年361PAで履歴54.8%）＝CLAUDE.md 絶対禁止「十分なcurrent-year evidenceがある選手へ過去年を自動pool」に該当。continuous_prior は候補として保持し、opts.poolingMode で明示指定した時だけ使う。",
+    "_lambda_calibration_defect": "λ=0.2703 は κ/median(PA_hist)=50/185 として作られたが、185 は「2022-2025に出場した全選手を名前キーで集計した n=480 の上側中央値」。実際に適用される2025ロスター（player_id キー、n=260）のmedian(PA_hist) は 520。同じ規則を適用先の母集団で解くと λ=50/520=0.0962 で、現行値は履歴に約2.8倍の精度重みを与えている。採用前に再較正が必要。",
+    "_known_defects_before_adoption": [
+      "A-1 非単調性（上記a）",
+      "A-3 単一プール縮小との符号反転誤差（上記b）",
+      "A-4 規定打席級への履歴自動pool（上記c）",
+      "B  λ が別母集団の中央値で較正されている（約2.8倍）",
+      "F  採否ゲートが構成上落ちない（mean/sd を揃えた後は corr(delta,hard)≡-sqrt((1-r)/2)=-0.1911 が恒等的に成立し、閾値0.9は発火しえない。done_ready も continuous_structural_cliff=0 というリテラルとのANDで常に真）",
+      "X-1 結合の重複行（2022-2025で15 player-season が重複、1628 PA の水増し。ロスター260人中10人が該当。hard gate では大半が不可視だったが continuous では paHist へ直接効く）",
+      "X-2 sp016_continuous_prior_apply.mjs が冪等でない（cfg を読んでから同じファイルを上書きするため、再実行すると control 側が新scaleで計算される）"
+    ]
   },
   "_componentWeightsLegacySameTimeReliabilityOnly": {
     "triple": 0.49648301630228797,

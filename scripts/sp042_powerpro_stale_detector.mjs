@@ -6,7 +6,7 @@
 //   代わりに **SP-100 の PowerPro非依存 latent physical speed** が使えるようになった。
 //
 // ■ 設計（尺度差の罠を踏まない）
-//   PowerPro素点と latent_speed_z は**別の尺度**。生の差を取ると SP-056 と同じ
+//   PowerPro素点と npb_top_speed_z は**別の尺度**。生の差を取ると SP-056 と同じ
 //   「尺度差を食い違いと誤認する」失敗になる（corr(diff, powerpro)≈-0.95 の型）。
 //   → **両方を percentile へ写してから比べる**。順位空間なら尺度差は原理的に消える。
 //
@@ -37,8 +37,16 @@ const inertiaByPid = new Map(inertia.map(t => [String(t.pid).replace(/^proeye:/,
 
 // ── S2: PowerPro percentile vs latent physical percentile ────────────
 // latent 側を percentile 化（順位空間へ）
-const lat = latent.players.filter(p => p.latent_speed_z_unshrunk != null);
-const sortedLat = [...lat].sort((a, b) => a.latent_speed_z_unshrunk - b.latent_speed_z_unshrunk);
+// ★SP-100 v2（2026-08-14 provenance修理）で入力フィールドが変わった。
+//   旧: latent_speed_z_unshrunk（hp_to_1b_sec を第2測定として混ぜた合成）
+//   新: npb_top_speed_z（NPB+最高速度のみ・標準化のみ）
+//   旧名のまま読むと filter が全件落として**静かに0件**になるため、fail closed にする。
+if (!latent.players.some(p => p.npb_top_speed_z != null)) {
+  throw new Error('[fail closed] SP-100 v2 の npb_top_speed_z が無い。'
+    + 'sp100_npb_raw_latent_speed.json が旧版（hp_to_1b_sec 汚染）の疑い。先に SP-100 を再生成せよ');
+}
+const lat = latent.players.filter(p => p.npb_top_speed_z != null);
+const sortedLat = [...lat].sort((a, b) => a.npb_top_speed_z - b.npb_top_speed_z);
 const latPct = new Map();
 sortedLat.forEach((p, idx) => latPct.set(nk(p.player), sortedLat.length > 1 ? idx / (sortedLat.length - 1) : 0.5));
 
@@ -67,8 +75,12 @@ for (const p of lat) {
     percentile_gap: +gap.toFixed(4),
     powerpro_raw_last: t.raw_last, powerpro_raw_changes: t.raw_changes, powerpro_years: t.years,
     s1_internal_inertia: !!t.raw_flat_but_pct_moved,
-    latent_confidence: p.confidence,
+    // ★confidence は撤去。SP-100 v2 で NPB+ の測定信頼性は NOT_IDENTIFIABLE と確定したため、
+    //   数値を作らない。信頼度の代わりに exposure（機会数）を文脈として置く。
+    latent_reliability: null,
+    latent_reliability_status: 'NOT_IDENTIFIABLE',
     exposure_runs: p.exposure_runs,
+    exposure_caveat: p.exposure_context?.max_statistic_direction ?? null,
   });
 }
 

@@ -103,8 +103,12 @@ export function poolAcrossYears(obs, targetSeason, opts = {}) {
   }
 
   // ★SP-016 control: hard current-year-first（50PA 階段）または legacy 自動多年pool。
+  // ★2026-08-14 修理: 以前は `mode === 'current_year_first_hard' || opts.currentYearFirst` で、
+  //   mode を解決した直後に旧フラグが上書きしていた。呼び出し側（pipeline）が
+  //   currentYearFirst=true を既定で渡すため、**poolingMode:'legacy_auto_pool' を明示しても
+  //   到達できない**状態だった（modeが飾りになっていた）。mode を唯一の権威にする。
   let poolReason = 'LEGACY_AUTO_POOL';
-  if (mode === 'current_year_first_hard' || opts.currentYearFirst) {
+  if (mode === 'current_year_first_hard') {
     const cur = use.filter(o => o.season === targetSeason);
     const curW = cur.reduce((s, o) => s + o.weight, 0);
     const need = opts.sufficientWeight ?? 0;

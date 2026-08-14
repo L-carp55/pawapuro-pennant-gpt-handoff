@@ -1,14 +1,127 @@
 {
   "generated_at": "2026-08-14",
-  "outside_150_ledger": 7,
-  "origins": 7,
-  "zeroed": 0,
-  "note": "These are weak directional labels kept off the numeric teacher path. Not independent physical measurements.",
+  "task": "SP-036 recover weak generic SNS labels without zeroing them",
+  "inputs_read": [
+    {
+      "path": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+      "records": 473,
+      "role": "community rating normalized ledger"
+    },
+    {
+      "path": "outputs/derived/sp033_034_youtube_comment_classification_20260813.jsonl",
+      "records": 7145,
+      "role": "YouTube comment classification"
+    },
+    {
+      "path": "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+      "records": 150,
+      "role": "150-row reclassification ledger (already-covered record_ids)"
+    }
+  ],
+  "code_path": "scripts/sp036_generic_label_sweep.mjs :: keep() -> commentIdentity() -> byOrigin dedupe",
+  "method": {
+    "generic_label_test": "labels match GENERIC_FAST|GENERIC_SLOW|PHYSICAL_FAST|PHYSICAL_SLOW, or the text contains 俊足|鈍足|足が速|足が遅|足速|足遅",
+    "already_covered": "record_id present in the 150-row reclassification ledger is skipped",
+    "event_id_canonicalisation": "platform alias (yt->youtube, twitter->x, bsky->bluesky) + drop type tokens (video/v/watch/post/status/root/comment/thread/reply) + keep the first surviving platform-native segment",
+    "origin_unit": "a single comment: youtube:<video_id>#<comment_id>, recovered from explicit fields, else source_url v=/lc=, else the record_id tail after the video id",
+    "player_attribution": "player or surname_candidate_player non-empty",
+    "non_observation_flag": "game-mechanic/UI tokens [タップ, 連打, ボタン, コントローラ, 操作, 画面, アプリ, スワイプ, 課金] co-occurring with a speed term"
+  },
+  "previous_defect": "origins were counted on the raw event_id string, so yt:video:<vid> and youtube:<vid> (and youtube:<vid>:root) counted the same comment twice; the reported 7 origins were 4 comments.",
+  "counts": {
+    "outside_150_ledger_rows": 7,
+    "distinct_raw_event_id_strings": 7,
+    "origins": 4,
+    "origins_before_namespace_normalisation": 7,
+    "origins_collapsed_by_namespace_fix": 3,
+    "unique_videos": 4,
+    "rows_attributed_to_player": 1,
+    "rows_likely_not_player_observation": 1,
+    "rows_usable_as_player_evidence": 1,
+    "origins_attributed_to_player": 1,
+    "origins_likely_not_player_observation": 1,
+    "origins_usable_as_player_evidence": 1,
+    "zeroed": 0
+  },
+  "note": "These are weak directional labels kept off the numeric teacher path. Not independent physical measurements. Rows that fail the usability tests are flagged, never deleted.",
+  "origins": [
+    {
+      "origin_id": "youtube:4LPWDwnHVpg#UgyKWZysufT3_qcmMh94AaABAg",
+      "rows": 2,
+      "raw_event_ids": [
+        "yt:video:4LPWDwnHVpg",
+        "youtube:4LPWDwnHVpg"
+      ],
+      "sources": [
+        "community_normalized",
+        "youtube_classified"
+      ],
+      "attributed_to_player": false,
+      "player": null,
+      "likely_not_player_observation": false,
+      "usable_as_player_evidence": false,
+      "text": "ビシエドってそんな足速いのか。他にもいろいろ能力値がおかしい。"
+    },
+    {
+      "origin_id": "youtube:gn972-2UigM#UgyomjulWWCVFesOgPB4AaABAg",
+      "rows": 2,
+      "raw_event_ids": [
+        "youtube:gn972-2UigM:root",
+        "youtube:gn972-2UigM"
+      ],
+      "sources": [
+        "community_normalized",
+        "youtube_classified"
+      ],
+      "attributed_to_player": false,
+      "player": null,
+      "likely_not_player_observation": false,
+      "usable_as_player_evidence": false,
+      "text": "2人とも天才でしかも秀才で森って言うのかな🎉しかも素人から見てもイチローさんはめちゃくちゃ足速いからねw"
+    },
+    {
+      "origin_id": "youtube:qVl61GKQNhE#Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+      "rows": 2,
+      "raw_event_ids": [
+        "youtube:qVl61GKQNhE:Ugy4DnrAM4_gYxLtKf14AaABAg",
+        "youtube:qVl61GKQNhE"
+      ],
+      "sources": [
+        "community_normalized",
+        "youtube_classified"
+      ],
+      "attributed_to_player": true,
+      "player": "山川 穂高",
+      "likely_not_player_observation": false,
+      "usable_as_player_evidence": true,
+      "text": "足が速い山川"
+    },
+    {
+      "origin_id": "youtube:s6I10vOFLkU#UgwK9ZPl4anJ2XES4Il4AaABAg",
+      "rows": 1,
+      "raw_event_ids": [
+        "youtube:s6I10vOFLkU"
+      ],
+      "sources": [
+        "youtube_classified"
+      ],
+      "attributed_to_player": false,
+      "player": null,
+      "likely_not_player_observation": true,
+      "usable_as_player_evidence": false,
+      "text": "杉谷さん打ったあとにランナーがはが走る時スマホの画面をタップするとランナーの足が速くなります"
+    }
+  ],
   "rows": [
     {
       "record_id": "PPYT-RUN2-COMMENT-4LPWDwnHVpg-UgyKWZysufT3_qcmMh94AaABAg",
       "source": "community_normalized",
+      "source_path": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
       "player": "",
+      "attributed_to_player": false,
+      "likely_not_player_observation": false,
+      "likely_not_player_observation_reason": null,
+      "usable_as_player_evidence": false,
       "text": "ビシエドってそんな足速いのか。他にもいろいろ能力値がおかしい。",
       "labels": [
         "UNCLASSIFIED_CONTEXT"
@@ -16,13 +129,23 @@
       "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
       "zeroed": false,
       "event_id": "yt:video:4LPWDwnHVpg",
+      "canonical_event_id": "youtube:4LPWDwnHVpg",
+      "origin_id": "youtube:4LPWDwnHVpg#UgyKWZysufT3_qcmMh94AaABAg",
+      "video_id": "4LPWDwnHVpg",
+      "comment_id": "UgyKWZysufT3_qcmMh94AaABAg",
+      "identity_method": "SOURCE_URL_V_AND_LC",
       "origin_count": 1,
-      "reaction_volume": 1
+      "reaction_volume": 2
     },
     {
       "record_id": "SP034-RUN2-COMMENT-gn972-2UigM-UgyomjulWWCVFesOgPB4AaABAg",
       "source": "community_normalized",
+      "source_path": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
       "player": "",
+      "attributed_to_player": false,
+      "likely_not_player_observation": false,
+      "likely_not_player_observation_reason": null,
+      "usable_as_player_evidence": false,
       "text": "2人とも天才でしかも秀才で森って言うのかな🎉しかも素人から見てもイチローさんはめちゃくちゃ足速いからねw",
       "labels": [
         "UNCLASSIFIED_CONTEXT"
@@ -30,13 +153,23 @@
       "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
       "zeroed": false,
       "event_id": "youtube:gn972-2UigM:root",
+      "canonical_event_id": "youtube:gn972-2UigM",
+      "origin_id": "youtube:gn972-2UigM#UgyomjulWWCVFesOgPB4AaABAg",
+      "video_id": "gn972-2UigM",
+      "comment_id": "UgyomjulWWCVFesOgPB4AaABAg",
+      "identity_method": "SOURCE_URL_V_AND_LC",
       "origin_count": 1,
-      "reaction_volume": 1
+      "reaction_volume": 2
     },
     {
       "record_id": "SP034-RUN2-COMMENT-qVl61GKQNhE-Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
       "source": "community_normalized",
+      "source_path": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
       "player": "",
+      "attributed_to_player": false,
+      "likely_not_player_observation": false,
+      "likely_not_player_observation_reason": null,
+      "usable_as_player_evidence": false,
       "text": "足が速い山川",
       "labels": [
         "UNCLASSIFIED_CONTEXT"
@@ -44,13 +177,23 @@
       "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
       "zeroed": false,
       "event_id": "youtube:qVl61GKQNhE:Ugy4DnrAM4_gYxLtKf14AaABAg",
+      "canonical_event_id": "youtube:qVl61GKQNhE",
+      "origin_id": "youtube:qVl61GKQNhE#Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+      "video_id": "qVl61GKQNhE",
+      "comment_id": "Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+      "identity_method": "SOURCE_URL_V_AND_LC",
       "origin_count": 1,
-      "reaction_volume": 1
+      "reaction_volume": 2
     },
     {
       "record_id": "YT-RECOVER-4LPWDwnHVpg-UgyKWZysufT3_qcmMh94AaABAg",
       "source": "youtube_classified",
+      "source_path": "outputs/derived/sp033_034_youtube_comment_classification_20260813.jsonl",
       "player": null,
+      "attributed_to_player": false,
+      "likely_not_player_observation": false,
+      "likely_not_player_observation_reason": null,
+      "usable_as_player_evidence": false,
       "text": "ビシエドってそんな足速いのか。他にもいろいろ能力値がおかしい。",
       "labels": [
         "GENERIC_FAST"
@@ -58,13 +201,23 @@
       "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
       "zeroed": false,
       "event_id": "youtube:4LPWDwnHVpg",
-      "origin_count": 1,
-      "reaction_volume": 1
+      "canonical_event_id": "youtube:4LPWDwnHVpg",
+      "origin_id": "youtube:4LPWDwnHVpg#UgyKWZysufT3_qcmMh94AaABAg",
+      "video_id": "4LPWDwnHVpg",
+      "comment_id": "UgyKWZysufT3_qcmMh94AaABAg",
+      "identity_method": "EXPLICIT_VIDEO_AND_COMMENT_FIELDS",
+      "origin_count": 0,
+      "reaction_volume": 2
     },
     {
       "record_id": "YT-RECOVER-gn972-2UigM-UgyomjulWWCVFesOgPB4AaABAg",
       "source": "youtube_classified",
+      "source_path": "outputs/derived/sp033_034_youtube_comment_classification_20260813.jsonl",
       "player": null,
+      "attributed_to_player": false,
+      "likely_not_player_observation": false,
+      "likely_not_player_observation_reason": null,
+      "usable_as_player_evidence": false,
       "text": "2人とも天才でしかも秀才で森って言うのかな🎉しかも素人から見てもイチローさんはめちゃくちゃ足速いからねw",
       "labels": [
         "GENERIC_FAST"
@@ -72,13 +225,23 @@
       "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
       "zeroed": false,
       "event_id": "youtube:gn972-2UigM",
-      "origin_count": 1,
-      "reaction_volume": 1
+      "canonical_event_id": "youtube:gn972-2UigM",
+      "origin_id": "youtube:gn972-2UigM#UgyomjulWWCVFesOgPB4AaABAg",
+      "video_id": "gn972-2UigM",
+      "comment_id": "UgyomjulWWCVFesOgPB4AaABAg",
+      "identity_method": "EXPLICIT_VIDEO_AND_COMMENT_FIELDS",
+      "origin_count": 0,
+      "reaction_volume": 2
     },
     {
       "record_id": "YT-RECOVER-s6I10vOFLkU-UgwK9ZPl4anJ2XES4Il4AaABAg",
       "source": "youtube_classified",
+      "source_path": "outputs/derived/sp033_034_youtube_comment_classification_20260813.jsonl",
       "player": null,
+      "attributed_to_player": false,
+      "likely_not_player_observation": true,
+      "likely_not_player_observation_reason": "game-mechanic/UI tokens [タップ, 画面] co-occur with a speed term: the sentence describes in-game 操作 (making the on-screen runner faster), not an observation of a real player's speed",
+      "usable_as_player_evidence": false,
       "text": "杉谷さん打ったあとにランナーがはが走る時スマホの画面をタップするとランナーの足が速くなります",
       "labels": [
         "GENERIC_FAST"
@@ -86,13 +249,23 @@
       "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
       "zeroed": false,
       "event_id": "youtube:s6I10vOFLkU",
+      "canonical_event_id": "youtube:s6I10vOFLkU",
+      "origin_id": "youtube:s6I10vOFLkU#UgwK9ZPl4anJ2XES4Il4AaABAg",
+      "video_id": "s6I10vOFLkU",
+      "comment_id": "UgwK9ZPl4anJ2XES4Il4AaABAg",
+      "identity_method": "EXPLICIT_VIDEO_AND_COMMENT_FIELDS",
       "origin_count": 1,
       "reaction_volume": 1
     },
     {
       "record_id": "YT-RECOVER-qVl61GKQNhE-Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
       "source": "youtube_classified",
+      "source_path": "outputs/derived/sp033_034_youtube_comment_classification_20260813.jsonl",
       "player": "山川 穂高",
+      "attributed_to_player": true,
+      "likely_not_player_observation": false,
+      "likely_not_player_observation_reason": null,
+      "usable_as_player_evidence": true,
       "text": "足が速い山川",
       "labels": [
         "GENERIC_FAST"
@@ -100,8 +273,13 @@
       "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
       "zeroed": false,
       "event_id": "youtube:qVl61GKQNhE",
-      "origin_count": 1,
-      "reaction_volume": 1
+      "canonical_event_id": "youtube:qVl61GKQNhE",
+      "origin_id": "youtube:qVl61GKQNhE#Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+      "video_id": "qVl61GKQNhE",
+      "comment_id": "Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+      "identity_method": "EXPLICIT_VIDEO_AND_COMMENT_FIELDS",
+      "origin_count": 0,
+      "reaction_volume": 2
     }
   ]
 }

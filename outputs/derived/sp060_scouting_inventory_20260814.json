@@ -1,18 +1,239 @@
 {
   "generated_at": "2026-08-14",
-  "n_speed_entries": 1,
-  "entries": [
+  "task": "SP-060 official scouting evidence integration",
+  "evidence_status_vocabulary": [
+    "MEASURED_NEGATIVE",
+    "MEASURED_POSITIVE",
+    "NOT_COLLECTED"
+  ],
+  "inputs_read": [
     {
-      "player": "鈴木　誠也",
-      "season": null,
-      "value": 68,
-      "evaluator": "owner",
-      "basis": "オーナー評価『C〜B』。裏づけ=ドラフト時の身体測定 50m走5秒8（週刊ベースボールONLINE）。統計（三塁打・併殺回避・UBR）はE45だが、これらは走塁の成果であって脚力そのものではない（GPT回答も独立に同じ診断: 目的変数が走力になっていない）。※50m走は高校時代の手計測であり2021年の走力そのものではない＝Priorとして使う",
-      "source": "2026-08-01 オーナー発言",
-      "dated": "2026-08-01",
-      "usage": "LOW_MEDIUM_EVIDENCE_NOT_PURE_SPEED_TEACHER"
+      "path": "configs/scouting.json",
+      "records": 2,
+      "by_ability": {
+        "走力": 1,
+        "肩力": 1
+      }
+    },
+    {
+      "path": "data/normalized/*.json(l) + data/manual/*.json(l)",
+      "files_scanned": 31,
+      "records_scanned": 2840,
+      "files_skipped": 6,
+      "note": "per-file counts in lane_b_measurement_corpora / lane_c_free_text_only"
+    },
+    {
+      "path": "outputs/derived/speed_2026_100_owner_review_master_20260813.json",
+      "records": 100
+    }
+  ],
+  "code_path": "scripts/sp020_060_061_062_044_045_cleanup.mjs :: SP-060 lane A/B/C scan",
+  "method": {
+    "lane_a": "configs/scouting.json entries filtered on ability === 走力",
+    "lane_b": "records whose provenance fields (/^(timing_method|protocol_class|source_provenance|source_name|source_url|source_title|source_class|tier|source_type|measurement_protocol)$/i) or context fields (/^(context|note|notes|reason|cohort|cohort_id|basis|surface_or_conditions|caveat)$/i) match /scouting|scout|draft|スカウト|ドラフト/i",
+    "lane_c": "files where the pattern only appears in free text (quoted scout comments in SNS posts) — weaker lane, counted separately"
+  },
+  "lane_a_config_scouting": {
+    "n_entries_total": 2,
+    "n_speed_entries": 1,
+    "n_speed_entries_inside_2026_100": 0,
+    "evidence_status": "MEASURED_POSITIVE",
+    "entries": [
+      {
+        "player": "鈴木　誠也",
+        "season": null,
+        "value": 68,
+        "evaluator": "owner",
+        "basis": "オーナー評価『C〜B』。裏づけ=ドラフト時の身体測定 50m走5秒8（週刊ベースボールONLINE）。統計（三塁打・併殺回避・UBR）はE45だが、これらは走塁の成果であって脚力そのものではない（GPT回答も独立に同じ診断: 目的変数が走力になっていない）。※50m走は高校時代の手計測であり2021年の走力そのものではない＝Priorとして使う",
+        "source": "2026-08-01 オーナー発言",
+        "dated": "2026-08-01",
+        "usage": "LOW_MEDIUM_EVIDENCE_NOT_PURE_SPEED_TEACHER"
+      }
+    ]
+  },
+  "lane_b_measurement_corpora": {
+    "files_with_scouting_provenance": 8,
+    "records_with_provenance_field_match": 37,
+    "records_with_context_field_match": 12,
+    "unique_players_named": 23,
+    "unique_players_inside_2026_100": 21,
+    "evidence_status": "MEASURED_POSITIVE",
+    "per_file": [
+      {
+        "file": "data/normalized/speed_2026_sns_consensus_sources.json",
+        "records_scanned": 52,
+        "provenance_field_matches": 1,
+        "context_field_matches": 0,
+        "free_text_mentions_only": 0,
+        "unique_players_with_scouting_provenance": 1,
+        "evidence_status": "MEASURED_POSITIVE"
+      },
+      {
+        "file": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+        "records_scanned": 243,
+        "provenance_field_matches": 1,
+        "context_field_matches": 0,
+        "free_text_mentions_only": 1,
+        "unique_players_with_scouting_provenance": 1,
+        "evidence_status": "MEASURED_POSITIVE"
+      },
+      {
+        "file": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+        "records_scanned": 459,
+        "provenance_field_matches": 17,
+        "context_field_matches": 6,
+        "free_text_mentions_only": 16,
+        "unique_players_with_scouting_provenance": 21,
+        "evidence_status": "MEASURED_POSITIVE"
+      },
+      {
+        "file": "data/manual/hp_to_1b_measurements_curated.json",
+        "records_scanned": 40,
+        "provenance_field_matches": 0,
+        "context_field_matches": 3,
+        "free_text_mentions_only": 0,
+        "unique_players_with_scouting_provenance": 2,
+        "evidence_status": "MEASURED_POSITIVE"
+      },
+      {
+        "file": "data/manual/npb_speed_physical_evidence_full_20260809.json",
+        "records_scanned": 105,
+        "provenance_field_matches": 12,
+        "context_field_matches": 3,
+        "free_text_mentions_only": 85,
+        "unique_players_with_scouting_provenance": 15,
+        "evidence_status": "MEASURED_POSITIVE"
+      },
+      {
+        "file": "data/manual/speed_2026_old12_current_physical_research_20260811.json",
+        "records_scanned": 12,
+        "provenance_field_matches": 1,
+        "context_field_matches": 0,
+        "free_text_mentions_only": 0,
+        "unique_players_with_scouting_provenance": 1,
+        "evidence_status": "MEASURED_POSITIVE"
+      },
+      {
+        "file": "data/manual/speed_2026_sns_consensus_reviewed_evidence_20260810.json",
+        "records_scanned": 74,
+        "provenance_field_matches": 1,
+        "context_field_matches": 0,
+        "free_text_mentions_only": 0,
+        "unique_players_with_scouting_provenance": 1,
+        "evidence_status": "MEASURED_POSITIVE"
+      },
+      {
+        "file": "data/manual/speed_outlier_short_distance_evidence_20260809.json",
+        "records_scanned": 10,
+        "provenance_field_matches": 4,
+        "context_field_matches": 0,
+        "free_text_mentions_only": 1,
+        "unique_players_with_scouting_provenance": 4,
+        "evidence_status": "MEASURED_POSITIVE"
+      }
+    ]
+  },
+  "lane_c_free_text_only": {
+    "files": 4,
+    "evidence_status": "MEASURED_POSITIVE",
+    "per_file": [
+      {
+        "file": "data/normalized/speed_2026_grok_x_sources.json",
+        "records_scanned": 191,
+        "provenance_field_matches": 0,
+        "context_field_matches": 0,
+        "free_text_mentions_only": 1,
+        "unique_players_with_scouting_provenance": 0,
+        "evidence_status": "MEASURED_NEGATIVE"
+      },
+      {
+        "file": "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+        "records_scanned": 191,
+        "provenance_field_matches": 0,
+        "context_field_matches": 0,
+        "free_text_mentions_only": 1,
+        "unique_players_with_scouting_provenance": 0,
+        "evidence_status": "MEASURED_NEGATIVE"
+      },
+      {
+        "file": "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+        "records_scanned": 195,
+        "provenance_field_matches": 0,
+        "context_field_matches": 0,
+        "free_text_mentions_only": 1,
+        "unique_players_with_scouting_provenance": 0,
+        "evidence_status": "MEASURED_NEGATIVE"
+      },
+      {
+        "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+        "records_scanned": 385,
+        "provenance_field_matches": 0,
+        "context_field_matches": 0,
+        "free_text_mentions_only": 12,
+        "unique_players_with_scouting_provenance": 0,
+        "evidence_status": "MEASURED_NEGATIVE"
+      }
+    ],
+    "note": "Scout comments quoted inside SNS/X posts. Directional context only."
+  },
+  "coverage_vs_2026_100": {
+    "target_players": 100,
+    "players_with_any_scouting_row": 21
+  },
+  "skipped_files": [
+    {
+      "file": "data/normalized/speed_2026_final_targeted_physical_evidence.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_final_targeted_physical_evidence.json)",
+      "structured_twin_scanned": [
+        "speed_2026_final_targeted_physical_evidence.json"
+      ],
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "file": "data/normalized/speed_2026_grok_x_sources.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_grok_x_sources.json)",
+      "structured_twin_scanned": [
+        "speed_2026_grok_x_sources.json"
+      ],
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_sns_consensus_sources.json)",
+      "structured_twin_scanned": [
+        "speed_2026_sns_consensus_sources.json"
+      ],
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources_v2.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_sns_consensus_sources_v2.json)",
+      "structured_twin_scanned": [
+        "speed_2026_sns_consensus_sources_v2.json"
+      ],
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "file": "data/normalized/speed_2026_video_tiebreak_sources.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_2026_video_tiebreak_sources.json)",
+      "structured_twin_scanned": [
+        "speed_2026_video_tiebreak_sources.json"
+      ],
+      "evidence_status": "NOT_COLLECTED"
+    },
+    {
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.csv",
+      "reason": "CSV_MIRROR_OF_SCANNED_STRUCTURED_TWIN(speed_historical_physical_measurements_2015_2026.json)",
+      "structured_twin_scanned": [
+        "speed_historical_physical_measurements_2015_2026.json"
+      ],
+      "evidence_status": "NOT_COLLECTED"
     }
   ],
   "missing_coverage": "Most 2026-100 players have no official scouting row. Broad recollection not opened.",
+  "broad_official_scouting_sweep": {
+    "evidence_status": "NOT_COLLECTED",
+    "reason": "No external sweep of team/press official scouting profiles was run in this wave. Absence of a row is not evidence that no scouting evaluation exists."
+  },
   "teacher": false
 }
