@@ -1,0 +1,2624 @@
+{
+  "qa": {
+    "generated_at": "2026-08-14",
+    "comments": 7145,
+    "surname_candidates_in": 243,
+    "auto_accepted": 70,
+    "accepted_by": {
+      "ACCEPTED_FULL_NAME": 70
+    },
+    "review_lane": 243,
+    "review_by": {
+      "REVIEW_SURNAME_CANDIDATE": 242,
+      "REVIEW_IRONY": 1
+    },
+    "distinct_player_claim_events": 179,
+    "videos": 55,
+    "note": "Same video can have multiple origins when different players or claims appear. Reaction volume stays on the player-claim event.",
+    "negative_finding": false
+  },
+  "resolved": [
+    {
+      "record_id": "YT-RECOVER-sX8nl6eCua0-UgxcLMOACoDDZZrciVp4AaABAg.AZJu1Lwbu2GAZKKdYpwyYr",
+      "video_id": "sX8nl6eCua0",
+      "video_title": "福留孝介・糸井嘉男の新能力公開！ 福留×糸井 ホンネ！俺の実力話しますSP 後編【プロスピA】",
+      "text": "@U @User-e4y6e んなこと言ったら弾道なんか正味KONAMIの匙加減でしかないだろ\n\n正直言って、小深田や牧原、松本剛、泉口、中島、池田etc…\nこの辺のなにを見てライドラになって、そうじゃない中弾道（低弾道）との違いはなんなのかなんて誰も説明つかんやろ\n\nアーチとパワヒ、パワヒと高弾道の違いも然り",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "松本 剛",
+      "canonical_player_id": "21625135",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:sX8nl6eCua0:21625135:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 1,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-UgxH73mOVonSWnRlLoh4AaABAg",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "14:53 明らかにソトの時に使った方がいいでしょ笑",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ソト",
+      "canonical_player_id": "03505133",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:03505133:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 3,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgxFwOnuLeBAK_WfgQl4AaABAg.AXAgjiwu9JmAXBTVm5mNnc",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアンかわいいな",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgzAXIivsqFhAc8mYuZ4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "22:21 ファビアンがカード揃えてるの日本人すぎる",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgwZ2QPzRlFd8icbyTB4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアンチラチラ見すぎだろ笑",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugz5rze4TjOZKA-Ktix4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアン覗き見しまくってて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgyBpEkeuGol2uIS4wh4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアン普通にずるしてておもろい笑\n対決系でいちばんおもろい",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugw1nvai4HT-xjiOjg54AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "こういうの見ると、ファビアンに一軍に上がってきてほしいって思うし。2人のことがもっと好きになった。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgxlsEcZse91kFDo-vN4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "サムネが濃かったから面白そうで来たのに急に去年の尾形が打たれたファビアンの満塁ホームラン思い出さされて鬱",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgzlAfjpumC7zWZ9oQV4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "2:11 モンテロの守備査定あげてくれw",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgyG4cj4TIB3Wlsqpr94AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアンゾーン打ちでホームラン打ってて神",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgwY7n86Z0RLvZcfRgx4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "最近疑惑があったけどやっぱモンテロと野間はできてるな😮",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugw92CFSfhBcUzSW8l54AaABAg.AXBQk26BmM1AXBtACSASVc",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロは得意にしている模様",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgzcITJChOaBqfrlkTZ4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアン、途中覗きまくってるのに負けてて草。\n仲良さそうな姿見れて嬉しい、残りのシーズン2人とも打ちまくって来年もまた見たいですね",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugz8t478J-kvR4ozhfV4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアンめっちゃ見てて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugxfhw0DX1RO3p8COj14AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "カープファンじゃないけどお二人仲良すぎだし、可愛い😍\nカンニングファビアンおもろすぎる笑笑",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugw6v9IELjTuCsPNaX14AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロクソイケメンやん笑笑",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgzSnSD2qWejUnrh2ix4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロ普通に俺よりヒット打つの上手くて泣いた",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgwLtQ7K2McdGcGToJZ4AaABAg.AXAir9w_UDMAXAmr-bAYLg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "オスナサンタナ以来の神回",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "サンタナ",
+      "canonical_player_id": "53755153",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53755153:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 3,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgxbwtWZbf4LM95xYoZ4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアンめっちゃズルしてておもろい",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgznXIw3oSMEGJt7zkh4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアン2番がやりやすかったんやな",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgwI6Gu9-XFL7DGZxJF4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアン 後半戦 頼むぞ！",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgyLimCFcPzzcCceGh94AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "サンタナとオスナは（ ;  ; ）",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "サンタナ",
+      "canonical_player_id": "53755153",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:53755153:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 2,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-zGF4VfGcAwk-UgwcSnvmpi0S6A9fL114AaABAg",
+      "video_id": "zGF4VfGcAwk",
+      "video_title": "埼玉西武ライオンズ 甲斐野央 投手 VS 山田陽翔 投手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "甲斐野と上茶谷はしっくりくるんだけど、中川圭太も同期なの違和感がすごい",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "中川 圭太",
+      "canonical_player_id": "51255138",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:zGF4VfGcAwk:51255138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 1,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-opjfeVgrOs4-Ugz3ZMIim3bxsTpCEBB4AaABAg",
+      "video_id": "opjfeVgrOs4",
+      "video_title": "イチローがプロスピ2024をプレイ！ KOBE CHIBEN VS オリックス・バファローズ 後編 『プロ野球スピリッツ2024-2025』",
+      "text": "すごいな。オリックス打線の調子までリアルに再現されてるじゃん。って、おい😢\nそれにしても、打席の森友哉の顔が小木田に見える。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "森 友哉",
+      "canonical_player_id": "91495139",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:opjfeVgrOs4:91495139:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 2,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-SLdb3uO_H9E-Ugzdz0hZFuCi5yf3E_54AaABAg",
+      "video_id": "SLdb3uO_H9E",
+      "video_title": "杉谷拳士vs糸井嘉男！？　まさかのリアルタイム対戦に大注目！？杉谷のプロスピA成長記！第3弾",
+      "text": "この二人すごい良い組み合わせ！\n37:54　松本剛本人から聞いた攻略法で攻めてるの草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "松本 剛",
+      "canonical_player_id": "21625135",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:SLdb3uO_H9E:21625135:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 1,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-s6I10vOFLkU-UgxqBOGrmh62i4hMrKN4AaABAg",
+      "video_id": "s6I10vOFLkU",
+      "video_title": "杉谷拳士がプロスピAに初挑戦！杉谷のプロスピA成長記！第2弾",
+      "text": "松本剛選手バッティングフォームまじで似てる",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "松本 剛",
+      "canonical_player_id": "21625135",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:s6I10vOFLkU:21625135:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 1,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-8D2DutCg2g8-Ugz85LffEMH3ajr0ME54AaABAg",
+      "video_id": "8D2DutCg2g8",
+      "video_title": "【プロスピ2021】 体験プレイ動画 グランプリ編 里崎智也さんが監督となって格上チームに挑む！",
+      "text": "ショートの土田龍空大活躍",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "土田 龍空",
+      "canonical_player_id": "51455153",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:8D2DutCg2g8:51455153:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 5,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-8D2DutCg2g8-UgyDiIfOsld_xiStkDZ4AaABAg",
+      "video_id": "8D2DutCg2g8",
+      "video_title": "【プロスピ2021】 体験プレイ動画 グランプリ編 里崎智也さんが監督となって格上チームに挑む！",
+      "text": "ショートはドラゴンズ次世代を担う\n土田龍空っていう選手です笑",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "土田 龍空",
+      "canonical_player_id": "51455153",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:8D2DutCg2g8:51455153:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 5,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-qnLewo6KoKQ-UgxqTif154E8i965kFl4AaABAg.9P7LPAAsOXb9PJpkA7G_Bk",
+      "video_id": "qnLewo6KoKQ",
+      "video_title": "【プロスピA】プロスピグランプリ秘書紹介動画 貴島明日香編",
+      "text": "調子くん 吉川尚輝",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "吉川 尚輝",
+      "canonical_player_id": "73375134",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:qnLewo6KoKQ:73375134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 1,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-sX8nl6eCua0-UgwrngshkMDWxlCm5gV4AaABAg",
+      "video_id": "sX8nl6eCua0",
+      "video_title": "福留孝介・糸井嘉男の新能力公開！ 福留×糸井 ホンネ！俺の実力話しますSP 後編【プロスピA】",
+      "text": "福留ほぼパワヒの近藤健介やん\nライトは由伸がいるからレフトで考えるとして",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "近藤 健介",
+      "canonical_player_id": "41745135",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:sX8nl6eCua0:41745135:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 2,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-UgzxO45M29tP2SI8jWF4AaABAg",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "横浜の神回、山本祐大とビシエド待ってます",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "山本 祐大",
+      "canonical_player_id": "23125136",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:23125136:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 3,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-Ugyr523gVaL_D9Am9d14AaABAg",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ロッテ純正としてはいい人選だったと思う\n特に種市はシーズン絶望だからSiri2出ないだろうし\n広島みたいに助っ人2人にしてソトポラみたいにしてもおもろそうだったな",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ソト",
+      "canonical_player_id": "03505133",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:03505133:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 3,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-UgzUta9mbg_m5Kmefal4AaABAg",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "なんでソトじゃないんだ",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ソト",
+      "canonical_player_id": "03505133",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:03505133:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 3,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-Ugy5MdG8szwgr3pl_xh4AaABAg.AXDGYm5GV5KAXDH9AGF2Xa",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "これはしゃーない。西川史礁は2025からロッテ一軍だから、藤岡裕大が遊撃手を守っていた2023以前を知らない。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "藤岡 裕大",
+      "canonical_player_id": "41645136",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:41645136:UNCLASSIFIED_CONTEXT",
+      "origin_count": 1,
+      "reaction_volume": 1,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugwl7wWuumzsxd2p4It4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロ普通にバッティング上手い笑",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgzcL7U5lrb3aJAejLd4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロイケメンやな",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgyZFlGhIvJo4QlbTJN4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロ上手くね",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugzbin2OqO8ltMXvyol4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロ上手くね？",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugw1fE8tBMtaD6WchMx4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアンの喜んでるところ可愛くてファビアン好きになった😂",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgxGDztEA9wfxr0tecl4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "去年は逆だったけど今季はこのゲームの活躍度合いでもわかるようにモンテロのが活躍してるな〜",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgzM_B8sjDT4bF6KVlV4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロ守備に自信あるのに守備固め出されるのどんな気持ちなんだろ。\n正直佐々木に代えるぐらいならモンテロのままで良い。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugy716FNePJSREzpJdN4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロさん、ゲームが上手いね🎮",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgyPhYvwAKUBhqL8Txd4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "2:18 モンテロマジで良いやつやん",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgwUJXTbocZiZSR8K0l4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "大瀬良に感動するモンテロすき",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgxQvyMD2HGdxNPMNtt4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアンカンニングしてて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgzEpvdK7hl9tQMmVDV4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ファビアンミートホームランすげえな笑",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "ファビアン",
+      "canonical_player_id": "43745150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:43745150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 25,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgyjrwvF_0g1wzWOxOd4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "一昨年のサンタナ・オスナの時もそうだったけど、海外の人ってじゃんけんする時下にパーの手を入れるのってどうしてなんだろう",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "サンタナ",
+      "canonical_player_id": "53755153",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53755153:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 3,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-UgyWP8uA_k93bEDGUAJ4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロのキメ顔ｗ",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugz81RFI4XRUp2w4kaF4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "モンテロ上手くて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "UNIQUE",
+      "decision": "ACCEPTED_FULL_NAME",
+      "player": "モンテロ",
+      "canonical_player_id": "53955150",
+      "reason": "フルネーム完全一致",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:53955150:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": true
+    }
+  ],
+  "review": [
+    {
+      "record_id": "YT-RECOVER-wOjrANePk1c-UgyzlChHpINAPmjqmr94AaABAg.AUEiFa792_wAUGlQSvcFng",
+      "video_id": "wOjrANePk1c",
+      "video_title": "『パワフルプロ野球2026-2027』オープニングムービー",
+      "text": "矢部のホームイン後は岩村なのにスライディングしてるから周東要素もある",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "周東 佑京",
+      "canonical_player_id": "21925136",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:wOjrANePk1c:21925136:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-pxdRtLSTI80-UgxwBb795mAt8N0tND14AaABAg",
+      "video_id": "pxdRtLSTI80",
+      "video_title": "『パワフルプロ野球2024-2025』オープニングムービー",
+      "text": "野村克也が晩年残したこのコラムちょっと切ない\n\n常識的に、二刀流というのは無理だと思った。プロはそんなに甘くない。だから最初は反対したのである。しかし、2016年の日本ハムでの大活躍を見て考えを変えた。「おれが監督でも（二刀流を）やらせたくなるわ」、正直にそう思った。\n\n当初はどちらも中途半端に終わり、才能を浪費してしまうのを心配したが、いまは違う。\n\n将来、大谷はどうなっているか。それがわかるころにはもう私はいないだろう。だから終わった人間のいうことなんてどうだっていい。常識外の二刀流？　けっこうなことじゃないか。不滅の記録をつくればいいんだよ。チャレンジは若さの特権なのだから。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:pxdRtLSTI80:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-pxdRtLSTI80-UgxwBb795mAt8N0tND14AaABAg.A3BGDWRc0YqA4ZBybmrLX4",
+      "video_id": "pxdRtLSTI80",
+      "video_title": "『パワフルプロ野球2024-2025』オープニングムービー",
+      "text": " @akathebangbang1512 南海の現役時代、若かった頃の野村さん。もちろん今のメジャーリーガーの大谷だろうがなんだろうがささやいたでしょうね。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:pxdRtLSTI80:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-pxdRtLSTI80-UgxwBb795mAt8N0tND14AaABAg.A3BGDWRc0YqAOfutXHq1Tk",
+      "video_id": "pxdRtLSTI80",
+      "video_title": "『パワフルプロ野球2024-2025』オープニングムービー",
+      "text": "​ @4ojhg5rde_fg \nうわ～～～、そうか。\nノムさん、大谷とんでもない事になってるよ！😂\n\nこれが生きてるといい事も\nある！てやつか……。\n\n\n誰かAI野村克也、作ってくれないかな………？",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:pxdRtLSTI80:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-pxdRtLSTI80-UgxwBb795mAt8N0tND14AaABAg.A3BGDWRc0YqA9U7s6Zl-Cg",
+      "video_id": "pxdRtLSTI80",
+      "video_title": "『パワフルプロ野球2024-2025』オープニングムービー",
+      "text": "ノムさんは亡くなってしまったけど、プロに野村チルドレンがいて\nそして我々野球ファンが彼を忘れることがなければその道に決して終わりは来ない",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:pxdRtLSTI80:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-pxdRtLSTI80-UgxwBb795mAt8N0tND14AaABAg.A3BGDWRc0YqA5thxBirPzu",
+      "video_id": "pxdRtLSTI80",
+      "video_title": "『パワフルプロ野球2024-2025』オープニングムービー",
+      "text": "野村「噂の新居はどうだい？」\n大谷「…これが本物なんですね」\n野村「？」\n大谷「ささやき戦術…」\nノムさんがニヤリと笑う\n\nプレイボール！！",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:pxdRtLSTI80:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-pxdRtLSTI80-UgxwBb795mAt8N0tND14AaABAg.A3BGDWRc0YqA54KwLBLR6E",
+      "video_id": "pxdRtLSTI80",
+      "video_title": "『パワフルプロ野球2024-2025』オープニングムービー",
+      "text": "パワプロなら、捕手野村、打者大谷の、この勝負ができるんだよな。ありがとうKONAMI",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:pxdRtLSTI80:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-pxdRtLSTI80-UgxwBb795mAt8N0tND14AaABAg.A3BGDWRc0YqAG5PKlLM1CK",
+      "video_id": "pxdRtLSTI80",
+      "video_title": "『パワフルプロ野球2024-2025』オープニングムービー",
+      "text": " @柳龍光-y1v  その野村がオープニングで最後マスクつけて出てくるの最高にエモい",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:pxdRtLSTI80:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-pxdRtLSTI80-UgxwBb795mAt8N0tND14AaABAg.A3BGDWRc0YqA4ZCUuvJpLs",
+      "video_id": "pxdRtLSTI80",
+      "video_title": "『パワフルプロ野球2024-2025』オープニングムービー",
+      "text": "野村さんのコラム、とても良い引用ありがとうございました。感動です。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:pxdRtLSTI80:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-pxdRtLSTI80-UgxwBb795mAt8N0tND14AaABAg.A3BGDWRc0YqATfjYEmUc2F",
+      "video_id": "pxdRtLSTI80",
+      "video_title": "『パワフルプロ野球2024-2025』オープニングムービー",
+      "text": "そんなに知識のない自分ですが日本の野球を今のように進化させたのは野村さんだと思ってます！\nできることなら今の大谷さんの活躍も見てほしかったものです…",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:pxdRtLSTI80:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-pxdRtLSTI80-UgxwBb795mAt8N0tND14AaABAg.A3BGDWRc0YqAA3GXrXzOwR",
+      "video_id": "pxdRtLSTI80",
+      "video_title": "『パワフルプロ野球2024-2025』オープニングムービー",
+      "text": "俺たちは野村が見られなかった大谷翔平のその後を見れてるわけだ。このすばらしい瞬間に生きていることをもっと感謝しよう",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:pxdRtLSTI80:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-4LPWDwnHVpg-UgzeNC_pLNuV_eQ8D2d4AaABAg",
+      "video_id": "4LPWDwnHVpg",
+      "video_title": "【公式からの挑戦】激ムズ！パワプロ2020選手能力クイズ",
+      "text": "秋山投手の打撃能力は特徴的だからよく見てる筈なんだけど隠されると意外と分からんなぁ…",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "秋山 翔吾",
+      "canonical_player_id": "31135133",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:4LPWDwnHVpg:31135133:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 2,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-4LPWDwnHVpg-UgwM4w0iMqTwrxgNyyZ4AaABAg",
+      "video_id": "4LPWDwnHVpg",
+      "video_title": "【公式からの挑戦】激ムズ！パワプロ2020選手能力クイズ",
+      "text": "野間はすぐ分かった‪w",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野間 峻祥",
+      "canonical_player_id": "01405130",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:4LPWDwnHVpg:01405130:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-4LPWDwnHVpg-Ugxg-OCUKARnrxBD6Hp4AaABAg",
+      "video_id": "4LPWDwnHVpg",
+      "video_title": "【公式からの挑戦】激ムズ！パワプロ2020選手能力クイズ",
+      "text": "舘野さぁん、坂本分からんかったらやべぇでしょうよｗｗ",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "坂本 誠志郎",
+      "canonical_player_id": "11915132",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:4LPWDwnHVpg:11915132:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-4LPWDwnHVpg-UgxLFheXQb-uNv7xq1h4AaABAg",
+      "video_id": "4LPWDwnHVpg",
+      "video_title": "【公式からの挑戦】激ムズ！パワプロ2020選手能力クイズ",
+      "text": "マルティネスと秋山はわからんかったなぁ...秋山に関しては投手という考えがなかったわ。\nそれ以外だと大和が意外と難しかったわ。俺の中では守備力Aやから、いつのまに落ちたんや。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "秋山 翔吾",
+      "canonical_player_id": "31135133",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:4LPWDwnHVpg:31135133:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 2,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-sX8nl6eCua0-UgxcLMOACoDDZZrciVp4AaABAg.AZJu1Lwbu2GAZMLmqX4IJa",
+      "video_id": "sX8nl6eCua0",
+      "video_title": "福留孝介・糸井嘉男の新能力公開！ 福留×糸井 ホンネ！俺の実力話しますSP 後編【プロスピA】",
+      "text": " @GQ-np5uc 牧原はライドラやろ",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "牧原 大成",
+      "canonical_player_id": "61465133",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:sX8nl6eCua0:61465133:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 2,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-sX8nl6eCua0-UgxcLMOACoDDZZrciVp4AaABAg.AZJu1Lwbu2GAZMhLzZH0KF",
+      "video_id": "sX8nl6eCua0",
+      "video_title": "福留孝介・糸井嘉男の新能力公開！ 福留×糸井 ホンネ！俺の実力話しますSP 後編【プロスピA】",
+      "text": " @GQ-np5uc 牧原選手の打球を見てですかね。例えばこの前の7月11日のホームランの打球はこれこそラインドライブの打球だなと思いました。ちなみにあなたはなぜ牧原選手ラインドライブじゃないと考えてたんですか？",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "牧原 大成",
+      "canonical_player_id": "61465133",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:sX8nl6eCua0:61465133:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 2,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-sX8nl6eCua0-Ugy2lCy62k0dM_4a53J4AaABAg.AZJwG9QGg7jAZiuwI6dvcD",
+      "video_id": "sX8nl6eCua0",
+      "video_title": "福留孝介・糸井嘉男の新能力公開！ 福留×糸井 ホンネ！俺の実力話しますSP 後編【プロスピA】",
+      "text": "​ @DrK-qw1gw 坂倉が最強捕手なのはどう思ってるの？",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "坂倉 将吾",
+      "canonical_player_id": "11915134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:sX8nl6eCua0:11915134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-UgxKPcf5VWhIZX90XZ54AaABAg",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ショート安田とか言う大型ショート爆誕ワロタ",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "安田 尚憲",
+      "canonical_player_id": "81885136",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:81885136:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 16,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-Ugw1dZaANO8lvov-dzt4AaABAg",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ちょっと安田ァで草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "安田 尚憲",
+      "canonical_player_id": "81885136",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:81885136:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 16,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-UgxDz1ycvLroX4L7yJ14AaABAg",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "代打安田笑ってて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "安田 尚憲",
+      "canonical_player_id": "81885136",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:81885136:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 16,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-UgzUdjZhwnPQQcIi0ld4AaABAg",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ショート安田爆誕してて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "安田 尚憲",
+      "canonical_player_id": "81885136",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:81885136:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 16,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-UgyVAy9oXHUUApdb2np4AaABAg.AXDGq2zN69rAXEV_2TZtSS",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": " @田中和行-p2v  草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "田中 幹也",
+      "canonical_player_id": "21025157",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:21025157:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-Ugw2VsKv8n3X8wPVijl4AaABAg",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "種市と西川歴史サンゴ礁か！！！！！種市好きだからこれは嬉しい！！！！",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "西川 龍馬",
+      "canonical_player_id": "71475132",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:71475132:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-Ugw2VsKv8n3X8wPVijl4AaABAg.AXDEcihWQv4AXDJfq_a3I4",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "西　川　歴　史　サ　ン　ゴ　礁",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "西川 龍馬",
+      "canonical_player_id": "71475132",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:71475132:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-Ugw2VsKv8n3X8wPVijl4AaABAg.AXDEcihWQv4AXDGv0ZJPGK",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "ワイは西川史実座礁派",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "西川 龍馬",
+      "canonical_player_id": "71475132",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:71475132:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 10,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-Cigl41WJeaU-Ugy0v_vn8NG43ibHcEZ4AaABAg",
+      "video_id": "Cigl41WJeaU",
+      "video_title": "千葉ロッテ 種市篤暉 投手 VS 西川史礁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "パワーヒッター安田（パワーがあるとは言ってない）",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "安田 尚憲",
+      "canonical_player_id": "81885136",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:Cigl41WJeaU:81885136:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 16,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-lug1RWbPMwI-Ugy1WckJBOe2hEOkawt4AaABAg",
+      "video_id": "lug1RWbPMwI",
+      "video_title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "坂倉股抜かれてて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "坂倉 将吾",
+      "canonical_player_id": "11915134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:lug1RWbPMwI:11915134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 2,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-Ugxk9c1CKdSMKWpd2e94AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "他球団ファンなので長岡さんのキャラクターを知らなかったけど、めっちゃ優しそうで一気にファンになりました！",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgxHJtVwgkFh8ODET114AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "長岡の声渋めで好き",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-Ugxivm2M7ytTVefHyp94AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "20:13\n星　「哲さんが決めてくれるっす」\n\n長岡「1発ありますもんね？哲さんだったら」\n　　「もうフォアボールでも良いっすよ、本当は」\n\n兵頭「フォアボールも（相手に）ポイント入ります」\n\n21:13\n山田　〈カキーーーン〉\n\nここの流れ好きすぎるw",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-Ugw44OINHBwiBGMzvJV4AaABAg.AX0WTtowxb8AX5w1ISABDT",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "菊池なんか守備だけやん",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "菊池 涼介",
+      "canonical_player_id": "61565135",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:61565135:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgwzfT_WmfWSG_p-EsV4AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "長岡の写真かっこよすぎるでしょ笑笑。同士の方いますか？",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgzF6OGDFhP221g7GBl4AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "長岡顔と声のギャップ尊",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgyuYrHOo5JlVxy4mnB4AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "兵頭さん長岡選手と何年か前に話したことあるって言ってたからこうやって仕事で会えたの嬉しかったやろうな",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgyFMQKTJw4TenIcLD94AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "長岡写真いいな",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgzqAL1tA6kN4ax_ZTl4AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "5:55 なんでいないのって聞く長岡可愛い😂 星くんのトーク見れるの嬉しい😊",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgyGkQvmPEDehAaFqnN4AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "長岡と星が兵頭いじってるとこ好きw兵頭嬉しそうw",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-Ugw7aJEztBnhxCkDapV4AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "星嬉し過ぎるな\n長岡はミパ走全同値で頼む",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgwGbIwrH2bxmErDhXB4AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "長岡出てるのは嬉しいけど 星くん通常出てなくね？😂\n2人とも稲葉使ってておもろ😂",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgwN1Wf9t8QTz7Wek9t4AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "星！3000ストックはありがたいぞ🎉ヤクルトファンとして長岡も嬉しい",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-UgyQU_MJnoNR9DQPZhV4AaABAg",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "星、出るのずっと待ってた😊\n星は迷わず取りに行く。長岡は通常持ってるから妥協だな😅",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "長岡 秀樹",
+      "canonical_player_id": "51455151",
+      "reason": "タイトル一致だが方向ラベルが弱い、または他選手もタイトルにいる",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:51455151:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 22,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-D5Fg3e-E_QY-Ugxoe6VkVl8b-g3i4UB4AaABAg.AX0VkpxF1y-AX1Dv68kbG4",
+      "video_id": "D5Fg3e-E_QY",
+      "video_title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "@お @おっちぃ-v1d セレクションはキハダと丸山じゃない❔予想だから信用しないで😢",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "丸山 和郁",
+      "canonical_player_id": "93195155",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:D5Fg3e-E_QY:93195155:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-zGF4VfGcAwk-UgygZzL4mk9-ryRnaYx4AaABAg",
+      "video_id": "zGF4VfGcAwk",
+      "video_title": "埼玉西武ライオンズ 甲斐野央 投手 VS 山田陽翔 投手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "甲斐野ノリと雰囲気菊池風磨😂",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "菊池 涼介",
+      "canonical_player_id": "61565135",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:zGF4VfGcAwk:61565135:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 3,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-zGF4VfGcAwk-UgzV_PQZmU5N2-za5GB4AaABAg",
+      "video_id": "zGF4VfGcAwk",
+      "video_title": "埼玉西武ライオンズ 甲斐野央 投手 VS 山田陽翔 投手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "text": "うちの森下村上よりおもろくしてどないすんねん笑褒めてます",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "森下 翔太",
+      "canonical_player_id": "43145157",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:zGF4VfGcAwk:43145157:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-18tbwwPM91A-UgxaL5dEqkdejQXDZ5B4AaABAg.AGC7-S51KPHAGCTujKkn8c",
+      "video_id": "18tbwwPM91A",
+      "video_title": "新・松井秀喜登場記念！ 松井秀喜×イチロー特別対談【プロ野球スピリッツA】",
+      "text": "その通り。\n同世代のこの2人が51と55を意味のある番号に変えてくれた。\nちょっと前だと渡辺久信と工藤の41と47もそうだし、門田や中村の60もそうかな。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "中村 悠平",
+      "canonical_player_id": "51255118",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:18tbwwPM91A:51255118:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-av7vqGoVtcY-UgwEpNsjxfB9jMluHrp4AaABAg",
+      "video_id": "av7vqGoVtcY",
+      "video_title": "プロ野球スピリッツA PV 2025年度版",
+      "text": "周東ライドラお願い🙏",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "周東 佑京",
+      "canonical_player_id": "21925136",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:av7vqGoVtcY:21925136:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-av7vqGoVtcY-Ugz0pa_9hJjAA3hI2LJ4AaABAg",
+      "video_id": "av7vqGoVtcY",
+      "video_title": "プロ野球スピリッツA PV 2025年度版",
+      "text": "中村紀洋が欲しいです！！",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "中村 悠平",
+      "canonical_player_id": "51255118",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:av7vqGoVtcY:51255118:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-av7vqGoVtcY-UgycYTLtMCnEO4SSaZF4AaABAg",
+      "video_id": "av7vqGoVtcY",
+      "video_title": "プロ野球スピリッツA PV 2025年度版",
+      "text": "野村大樹 ライドラあざーす^^",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "野村 佑希",
+      "canonical_player_id": "31435138",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:av7vqGoVtcY:31435138:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-t-0dgSQckqQ-UgzJ_dXeCtlGDvPF5Wh4AaABAg.ACTOGzUVHYZACTYHzW5gzo",
+      "video_id": "t-0dgSQckqQ",
+      "video_title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "text": "源田「いつから平和だと錯覚していた？」",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "源田 壮亮",
+      "canonical_player_id": "71775134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:t-0dgSQckqQ:71775134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 18,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-t-0dgSQckqQ-UgxGoER_3AHHushTYfR4AaABAg",
+      "video_id": "t-0dgSQckqQ",
+      "video_title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "text": "西武の清原じゃなくて西武の源田がトレンドになってて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "源田 壮亮",
+      "canonical_player_id": "71775134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:t-0dgSQckqQ:71775134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 18,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-t-0dgSQckqQ-Ugz9eNfcZV0xA0rrWfJ4AaABAg",
+      "video_id": "t-0dgSQckqQ",
+      "video_title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "text": "源田のせいで日本のトレンド1位にならんのガチ草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "源田 壮亮",
+      "canonical_player_id": "71775134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:t-0dgSQckqQ:71775134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 18,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-t-0dgSQckqQ-UgzvRrm9ooVd0sWpKDJ4AaABAg",
+      "video_id": "t-0dgSQckqQ",
+      "video_title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "text": "まさかのトレンドに源田が入るとは",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "源田 壮亮",
+      "canonical_player_id": "71775134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:t-0dgSQckqQ:71775134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 18,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-t-0dgSQckqQ-UgyvpHRM9b2cpIiNfdp4AaABAg",
+      "video_id": "t-0dgSQckqQ",
+      "video_title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "text": "源田のせいでトレンド入り無理なの草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "源田 壮亮",
+      "canonical_player_id": "71775134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:t-0dgSQckqQ:71775134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 18,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-t-0dgSQckqQ-UgxBRcr0cBTskDJlTxB4AaABAg",
+      "video_id": "t-0dgSQckqQ",
+      "video_title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "text": "清原じゃなくて源田にトレンド持ってかれてるの草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "源田 壮亮",
+      "canonical_player_id": "71775134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:t-0dgSQckqQ:71775134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 18,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-t-0dgSQckqQ-UgwYPnx7-CX6NNbZSGN4AaABAg",
+      "video_id": "t-0dgSQckqQ",
+      "video_title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "text": "清原じゃなくて、源田がトレンド入りとはたまげたなぁ…",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "源田 壮亮",
+      "canonical_player_id": "71775134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:t-0dgSQckqQ:71775134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 18,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-t-0dgSQckqQ-UgyAolVLcVd2EcDRa3p4AaABAg",
+      "video_id": "t-0dgSQckqQ",
+      "video_title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "text": "源田のせいで清原トレンドどころじゃなくて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "源田 壮亮",
+      "canonical_player_id": "71775134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:t-0dgSQckqQ:71775134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 18,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-t-0dgSQckqQ-UgxzwyTGSSkTBBNPee14AaABAg",
+      "video_id": "t-0dgSQckqQ",
+      "video_title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "text": "源田のちかーらー…（笑）\n\n清原能力に里崎チェック入ってるから、ファースト守備Bサブサード、超アーチスト・広角、ミパＡ同値可能だといいな",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "源田 壮亮",
+      "canonical_player_id": "71775134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:t-0dgSQckqQ:71775134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 18,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-t-0dgSQckqQ-Ugxjov4h5iIKBiDeHlF4AaABAg",
+      "video_id": "t-0dgSQckqQ",
+      "video_title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "text": "西武で清原調べようとしても源田しか出てこなくて詰む",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "源田 壮亮",
+      "canonical_player_id": "71775134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:t-0dgSQckqQ:71775134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 18,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-ZlhjLHzUt0A-UgzUsbRyRQ5Tj_p2Flp4AaABAg.A9sfgKmBAddA9tVYLbKBlk",
+      "video_id": "ZlhjLHzUt0A",
+      "video_title": "大谷翔平選手 登場記念『プロ野球スピリッツA』CMメイキング＆インタビュー",
+      "text": "中村奨成!?",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "中村 悠平",
+      "canonical_player_id": "51255118",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:ZlhjLHzUt0A:51255118:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-qVl61GKQNhE-Ugy17uQ_7v9YeVId_0V4AaABAg",
+      "video_id": "qVl61GKQNhE",
+      "video_title": "プロスピAで規格外の二刀流を体感しよう！【2023WORLD BASEBALL CLASSIC 大谷翔平登場記念特別企画】",
+      "text": "高橋宏斗あの歳でしっかりしすぎてないか😂",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "高橋 周平",
+      "canonical_player_id": "91095135",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:qVl61GKQNhE:91095135:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-nXfOipyoX6k-UgwDQJC3gKjCz3rR2PB4AaABAg",
+      "video_id": "nXfOipyoX6k",
+      "video_title": "『プロ野球スピリッツ2024-2025』大谷翔平ができるまで",
+      "text": "4:36近藤修正されてる",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "近藤 健介",
+      "canonical_player_id": "41745135",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:nXfOipyoX6k:41745135:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 3,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-nXfOipyoX6k-UgyqkBVS-7NPUzW6tAp4AaABAg",
+      "video_id": "nXfOipyoX6k",
+      "video_title": "『プロ野球スピリッツ2024-2025』大谷翔平ができるまで",
+      "text": "前の動画では近藤がホームベースでハイタッチしてベンチでもハイタッチしてたけど、修正されてて良かった。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "近藤 健介",
+      "canonical_player_id": "41745135",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:nXfOipyoX6k:41745135:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 3,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-nXfOipyoX6k-UgxEK07Cyt_L2KJ3sDV4AaABAg",
+      "video_id": "nXfOipyoX6k",
+      "video_title": "『プロ野球スピリッツ2024-2025』大谷翔平ができるまで",
+      "text": "キャッチャー中村やのに、動きが甲斐過ぎる",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "中村 悠平",
+      "canonical_player_id": "51255118",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:nXfOipyoX6k:51255118:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-nXfOipyoX6k-UgyG-o4cFG68FDc2tYt4AaABAg",
+      "video_id": "nXfOipyoX6k",
+      "video_title": "『プロ野球スピリッツ2024-2025』大谷翔平ができるまで",
+      "text": "4:37 近藤がベンチに瞬間移動するの消えてるやん",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "近藤 健介",
+      "canonical_player_id": "41745135",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:nXfOipyoX6k:41745135:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 3,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-nXfOipyoX6k-UgyKLRsYcCvtakR_edF4AaABAg.A9RVdxk_BoeA9S-essR0id",
+      "video_id": "nXfOipyoX6k",
+      "video_title": "『プロ野球スピリッツ2024-2025』大谷翔平ができるまで",
+      "text": "いや、リアル軌道にしたら変化量も増えたはずやで\n千賀とか佐々木朗希のフォークとかリアル軌道やったら基本ボールになった記憶ある",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "佐々木 俊輔",
+      "canonical_player_id": "51955159",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:nXfOipyoX6k:51955159:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-0yNZ0wCRHs0-UgxGINvTx_Jg3FfkZ0x4AaABAg",
+      "video_id": "0yNZ0wCRHs0",
+      "video_title": "ニューイヤー特番！プロスピA お正月王決定戦【プロ野球スピリッツA】",
+      "text": "僕のリアタイオーダーに、田中将大さんを自引きで、獲得します!!!",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "田中 幹也",
+      "canonical_player_id": "21025157",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:0yNZ0wCRHs0:21025157:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-ZSHCu-8QhQA-UgxPrFmjWs4RjRPFhr54AaABAg",
+      "video_id": "ZSHCu-8QhQA",
+      "video_title": "プロスピAは今年で8周年！～プロスピA8周年記念特番～",
+      "text": "髙橋宏斗より仲地、細川より宇佐見に先に固有フォーム付けるの謎すぎて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "細川 成也",
+      "canonical_player_id": "31835134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:ZSHCu-8QhQA:31835134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-ZSHCu-8QhQA-UgyT3EXAVZQCxCbFCgx4AaABAg",
+      "video_id": "ZSHCu-8QhQA",
+      "video_title": "プロスピAは今年で8周年！～プロスピA8周年記念特番～",
+      "text": "坂本まじほしい",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "坂本 誠志郎",
+      "canonical_player_id": "11915132",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:ZSHCu-8QhQA:11915132:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-ZSHCu-8QhQA-UgwvMwsw1Q5KsWvgi3Z4AaABAg",
+      "video_id": "ZSHCu-8QhQA",
+      "video_title": "プロスピAは今年で8周年！～プロスピA8周年記念特番～",
+      "text": "西川今ホームランパフォ追加されるのか()",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "西川 龍馬",
+      "canonical_player_id": "71475132",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:ZSHCu-8QhQA:71475132:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-SLdb3uO_H9E-UgxZqjgeWI3fMkOV7M14AaABAg",
+      "video_id": "SLdb3uO_H9E",
+      "video_title": "杉谷拳士vs糸井嘉男！？　まさかのリアルタイム対戦に大注目！？杉谷のプロスピA成長記！第3弾",
+      "text": "杉谷さん坂倉さん強いのに原口さんに変えるの笑ったわ。　セレクション来てほしいわ、",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "坂倉 将吾",
+      "canonical_player_id": "11915134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:SLdb3uO_H9E:11915134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-SLdb3uO_H9E-UgzO6GJHNX6IYr5nZgV4AaABAg",
+      "video_id": "SLdb3uO_H9E",
+      "video_title": "杉谷拳士vs糸井嘉男！？　まさかのリアルタイム対戦に大注目！？杉谷のプロスピA成長記！第3弾",
+      "text": "さごまんかw佐野キャプテンのやつ",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "佐野 恵太",
+      "canonical_player_id": "91995134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:SLdb3uO_H9E:91995134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-SLdb3uO_H9E-UgzdFyReyjlZY4n20Cl4AaABAg",
+      "video_id": "SLdb3uO_H9E",
+      "video_title": "杉谷拳士vs糸井嘉男！？　まさかのリアルタイム対戦に大注目！？杉谷のプロスピA成長記！第3弾",
+      "text": "5:43〜　近本っ！\n36:24　清宮っ！",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "清宮 幸太郎",
+      "canonical_player_id": "41545136",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:SLdb3uO_H9E:41545136:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-s6I10vOFLkU-UgxwTX0nICyJ-MFn8tt4AaABAg",
+      "video_id": "s6I10vOFLkU",
+      "video_title": "杉谷拳士がプロスピAに初挑戦！杉谷のプロスピA成長記！第2弾",
+      "text": "「坂本選手出てくんの！？」は色々意味深すぎて草",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "坂本 誠志郎",
+      "canonical_player_id": "11915132",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:s6I10vOFLkU:11915132:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 1,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-s6I10vOFLkU-Ugzq6uM0iw43ahpK29N4AaABAg",
+      "video_id": "s6I10vOFLkU",
+      "video_title": "杉谷拳士がプロスピAに初挑戦！杉谷のプロスピA成長記！第2弾",
+      "text": "小川さん失投ホームラン打つのうまw",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "小川 龍成",
+      "canonical_player_id": "11715153",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:s6I10vOFLkU:11715153:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 9,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-s6I10vOFLkU-UgyBvymcdsd4jOUBCi14AaABAg",
+      "video_id": "s6I10vOFLkU",
+      "video_title": "杉谷拳士がプロスピAに初挑戦！杉谷のプロスピA成長記！第2弾",
+      "text": "小川さんの杉谷の失投の一球目打つ時うぃって言ってるのすき",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "小川 龍成",
+      "canonical_player_id": "11715153",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:s6I10vOFLkU:11715153:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 9,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-s6I10vOFLkU-Ugz-fGe-mjlxnxJSWzB4AaABAg",
+      "video_id": "s6I10vOFLkU",
+      "video_title": "杉谷拳士がプロスピAに初挑戦！杉谷のプロスピA成長記！第2弾",
+      "text": "坂倉は普通に羨ましいw",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "坂倉 将吾",
+      "canonical_player_id": "11915134",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:s6I10vOFLkU:11915134:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 4,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-s6I10vOFLkU-Ugxk4wxRRhSj5rWQ-XB4AaABAg",
+      "video_id": "s6I10vOFLkU",
+      "video_title": "杉谷拳士がプロスピAに初挑戦！杉谷のプロスピA成長記！第2弾",
+      "text": "小川さん声と笑い方深田えいみすぎる",
+      "labels": [
+        "JOKE_OR_NOISE"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "小川 龍成",
+      "canonical_player_id": "11715153",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:s6I10vOFLkU:11715153:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 9,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-s6I10vOFLkU-Ugzj9pwXTnZyCXVaLEh4AaABAg",
+      "video_id": "s6I10vOFLkU",
+      "video_title": "杉谷拳士がプロスピAに初挑戦！杉谷のプロスピA成長記！第2弾",
+      "text": "小川さん可愛すぎた",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "小川 龍成",
+      "canonical_player_id": "11715153",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:s6I10vOFLkU:11715153:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 9,
+      "auto_accepted": false
+    },
+    {
+      "record_id": "YT-RECOVER-s6I10vOFLkU-UgxvHmF_Kw849dCXl7d4AaABAg",
+      "video_id": "s6I10vOFLkU",
+      "video_title": "杉谷拳士がプロスピAに初挑戦！杉谷のプロスピA成長記！第2弾",
+      "text": "この感じだと杉谷セレクションに中田と浅村は来そう",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "claim": "UNCLASSIFIED_CONTEXT",
+      "identity_before": "SURNAME_CANDIDATE_UNAMBIGUOUS_IN_ROSTER",
+      "decision": "REVIEW_SURNAME_CANDIDATE",
+      "player": "浅村 栄斗",
+      "canonical_player_id": "51155118",
+      "reason": "姓のみ。タイトル文脈なし。自動採用しない",
+      "irony_flag": false,
+      "event_id": "youtube:s6I10vOFLkU:51155118:UNCLASSIFIED_CONTEXT",
+      "origin_count": 0,
+      "reaction_volume": 2,
+      "auto_accepted": false
+    }
+  ]
+}

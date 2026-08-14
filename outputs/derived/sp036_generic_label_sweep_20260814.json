@@ -1,0 +1,107 @@
+{
+  "generated_at": "2026-08-14",
+  "outside_150_ledger": 7,
+  "origins": 7,
+  "zeroed": 0,
+  "note": "These are weak directional labels kept off the numeric teacher path. Not independent physical measurements.",
+  "rows": [
+    {
+      "record_id": "PPYT-RUN2-COMMENT-4LPWDwnHVpg-UgyKWZysufT3_qcmMh94AaABAg",
+      "source": "community_normalized",
+      "player": "",
+      "text": "ビシエドってそんな足速いのか。他にもいろいろ能力値がおかしい。",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
+      "zeroed": false,
+      "event_id": "yt:video:4LPWDwnHVpg",
+      "origin_count": 1,
+      "reaction_volume": 1
+    },
+    {
+      "record_id": "SP034-RUN2-COMMENT-gn972-2UigM-UgyomjulWWCVFesOgPB4AaABAg",
+      "source": "community_normalized",
+      "player": "",
+      "text": "2人とも天才でしかも秀才で森って言うのかな🎉しかも素人から見てもイチローさんはめちゃくちゃ足速いからねw",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
+      "zeroed": false,
+      "event_id": "youtube:gn972-2UigM:root",
+      "origin_count": 1,
+      "reaction_volume": 1
+    },
+    {
+      "record_id": "SP034-RUN2-COMMENT-qVl61GKQNhE-Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+      "source": "community_normalized",
+      "player": "",
+      "text": "足が速い山川",
+      "labels": [
+        "UNCLASSIFIED_CONTEXT"
+      ],
+      "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
+      "zeroed": false,
+      "event_id": "youtube:qVl61GKQNhE:Ugy4DnrAM4_gYxLtKf14AaABAg",
+      "origin_count": 1,
+      "reaction_volume": 1
+    },
+    {
+      "record_id": "YT-RECOVER-4LPWDwnHVpg-UgyKWZysufT3_qcmMh94AaABAg",
+      "source": "youtube_classified",
+      "player": null,
+      "text": "ビシエドってそんな足速いのか。他にもいろいろ能力値がおかしい。",
+      "labels": [
+        "GENERIC_FAST"
+      ],
+      "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
+      "zeroed": false,
+      "event_id": "youtube:4LPWDwnHVpg",
+      "origin_count": 1,
+      "reaction_volume": 1
+    },
+    {
+      "record_id": "YT-RECOVER-gn972-2UigM-UgyomjulWWCVFesOgPB4AaABAg",
+      "source": "youtube_classified",
+      "player": null,
+      "text": "2人とも天才でしかも秀才で森って言うのかな🎉しかも素人から見てもイチローさんはめちゃくちゃ足速いからねw",
+      "labels": [
+        "GENERIC_FAST"
+      ],
+      "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
+      "zeroed": false,
+      "event_id": "youtube:gn972-2UigM",
+      "origin_count": 1,
+      "reaction_volume": 1
+    },
+    {
+      "record_id": "YT-RECOVER-s6I10vOFLkU-UgwK9ZPl4anJ2XES4Il4AaABAg",
+      "source": "youtube_classified",
+      "player": null,
+      "text": "杉谷さん打ったあとにランナーがはが走る時スマホの画面をタップするとランナーの足が速くなります",
+      "labels": [
+        "GENERIC_FAST"
+      ],
+      "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
+      "zeroed": false,
+      "event_id": "youtube:s6I10vOFLkU",
+      "origin_count": 1,
+      "reaction_volume": 1
+    },
+    {
+      "record_id": "YT-RECOVER-qVl61GKQNhE-Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+      "source": "youtube_classified",
+      "player": "山川 穂高",
+      "text": "足が速い山川",
+      "labels": [
+        "GENERIC_FAST"
+      ],
+      "bucket": "WEAK_PHYSICAL_OR_CONTEXT_FAST",
+      "zeroed": false,
+      "event_id": "youtube:qVl61GKQNhE",
+      "origin_count": 1,
+      "reaction_volume": 1
+    }
+  ]
+}

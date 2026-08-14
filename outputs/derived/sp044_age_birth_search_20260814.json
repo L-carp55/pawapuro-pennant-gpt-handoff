@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-14",
+  "pennant_db_birth_columns": [],
+  "public_roster_checked": {
+    "source": "armstjc/Nippon-Baseball-Data-Repository rosters/2025_npb_rosters.csv",
+    "has_birthdate": false,
+    "columns": "person_id,player_name,player_name_kanji,team,jersey,position,announce_date,movement,season"
+  },
+  "status": "BLOCKED_MISSING_DATA",
+  "blocker": "No high-trust birthdate field in pennant.db or the MIT roster dump. NPB official pages are out of collection policy.",
+  "not_negative_finding": true
+}

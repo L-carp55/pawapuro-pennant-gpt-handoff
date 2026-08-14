@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-08-14",
+  "n_speed_entries": 1,
+  "entries": [
+    {
+      "player": "鈴木　誠也",
+      "season": null,
+      "value": 68,
+      "evaluator": "owner",
+      "basis": "オーナー評価『C〜B』。裏づけ=ドラフト時の身体測定 50m走5秒8（週刊ベースボールONLINE）。統計（三塁打・併殺回避・UBR）はE45だが、これらは走塁の成果であって脚力そのものではない（GPT回答も独立に同じ診断: 目的変数が走力になっていない）。※50m走は高校時代の手計測であり2021年の走力そのものではない＝Priorとして使う",
+      "source": "2026-08-01 オーナー発言",
+      "dated": "2026-08-01",
+      "usage": "LOW_MEDIUM_EVIDENCE_NOT_PURE_SPEED_TEACHER"
+    }
+  ],
+  "missing_coverage": "Most 2026-100 players have no official scouting row. Broad recollection not opened.",
+  "teacher": false
+}
