@@ -1,0 +1,2241 @@
+{
+  "schema_version": "1.0",
+  "target_head": "f6ee09bfa06f47d27931f412b5ca0820b1018c22",
+  "branch": "agent/grok-speed-large-wave-20260814",
+  "search_patterns": [
+    "hp_to_1b_sec",
+    "hp_to_1b",
+    "一塁到達",
+    "full_effort_run_proxy_count",
+    "top_speed_kmh",
+    "npb_plus_screens"
+  ],
+  "search_command": "git -c core.quotePath=false grep -n -I -E 'hp_to_1b_sec|hp_to_1b|一塁到達|full_effort_run_proxy_count|top_speed_kmh|npb_plus_screens' --",
+  "matching_lines": 5287,
+  "matching_files": 158,
+  "term_matching_lines": {
+    "hp_to_1b_sec": 346,
+    "hp_to_1b": 1567,
+    "一塁到達": 2239,
+    "full_effort_run_proxy_count": 1127,
+    "top_speed_kmh": 563,
+    "npb_plus_screens": 11
+  },
+  "occurrence_groups": [
+    {
+      "file": "_codex_task_20260805_all_missing_data.md",
+      "term": "hp_to_1b",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "133",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "_codex_task_20260805_all_missing_data.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 2,
+      "line_ranges": "30,48",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "_codex_task_20260805_missing_data.md",
+      "term": "hp_to_1b",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "99",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "_codex_task_20260805_missing_data.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 2,
+      "line_ranges": "55,70",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "configs/ratings.json",
+      "term": "hp_to_1b",
+      "type": "config",
+      "occurrence_count": 1,
+      "line_ranges": "772",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "configs/ratings.json",
+      "term": "hp_to_1b_sec",
+      "type": "config",
+      "occurrence_count": 1,
+      "line_ranges": "772",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "configs/ratings.json",
+      "term": "top_speed_kmh",
+      "type": "config",
+      "occurrence_count": 1,
+      "line_ranges": "760",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manifests/speed_historical_anchor_source_manifest_2015_2026.json",
+      "term": "hp_to_1b",
+      "type": "config",
+      "occurrence_count": 1,
+      "line_ranges": "131",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/historical_speed_qa.json",
+      "term": "hp_to_1b",
+      "type": "raw",
+      "occurrence_count": 5,
+      "line_ranges": "46,66,77,115,122",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/historical_speed_qa.json",
+      "term": "hp_to_1b_sec",
+      "type": "raw",
+      "occurrence_count": 1,
+      "line_ranges": "77",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/historical_speed_qa.json",
+      "term": "top_speed_kmh",
+      "type": "raw",
+      "occurrence_count": 1,
+      "line_ranges": "108",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/historical_speed_qa.json",
+      "term": "一塁到達",
+      "type": "raw",
+      "occurrence_count": 3,
+      "line_ranges": "3,56,74",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/hp_to_1b_measurements_curated.json",
+      "term": "hp_to_1b",
+      "type": "raw",
+      "occurrence_count": 31,
+      "line_ranges": "3,14,19,25-26,28-53",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/hp_to_1b_measurements_curated.json",
+      "term": "一塁到達",
+      "type": "raw",
+      "occurrence_count": 38,
+      "line_ranges": "2,12,14-31,33,35-39,41-47,49-53",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/npb_plus_screens.jsonl",
+      "term": "hp_to_1b",
+      "type": "raw",
+      "occurrence_count": 100,
+      "line_ranges": "1-46,48-101",
+      "npb_plus_claim": "yes_as_NPB_plus_claim",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/npb_plus_screens.jsonl",
+      "term": "hp_to_1b_sec",
+      "type": "raw",
+      "occurrence_count": 100,
+      "line_ranges": "1-46,48-101",
+      "npb_plus_claim": "yes_as_NPB_plus_claim",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/npb_plus_screens.jsonl",
+      "term": "top_speed_kmh",
+      "type": "raw",
+      "occurrence_count": 100,
+      "line_ranges": "1-46,48-101",
+      "npb_plus_claim": "yes_as_NPB_plus_claim",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/npb_speed_physical_evidence_full_20260809.json",
+      "term": "hp_to_1b",
+      "type": "raw",
+      "occurrence_count": 73,
+      "line_ranges": "321,335,339,534,538,1479,1483,2086,2100,2104,2158,2162,2183,2187,2208,2212,2233,2237,2244,2258,2262,2896,2910,2914,3043,3047,3515,3519,3540,3544,3953,3957,3978,3982,4061,4065,4297,4301,4630,4634,4655,4659,4731,4745,4749,5047,5051,5072,5076,5083,5097,5101,5108,5122,5126,5133,5147,5151,5158,5172,5176,5183,5197,5201,5208,5222,5226,5298,5302,5439,5443,5580,5584",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/npb_speed_physical_evidence_full_20260809.json",
+      "term": "一塁到達",
+      "type": "raw",
+      "occurrence_count": 222,
+      "line_ranges": "60,62,92,94,124,126,156,158,214,216,246,248,278,280,310,312,326,340,368,370,426,428,484,486,567,569,599,601,657,659,689,691,721,723,753,755,897,899,929,931,1012,1014,1044,1046,1188,1190,1220,1222,1278,1280,1422,1424,1512,1514,1595,1597,1627,1629,1685,1687,1768,1770,1800,1802,1883,1885,1915,1917,1947,1949,1979,1981,2011,2013,2043,2045,2075,2077,2091,2105,2133,2135,2149,2174,2188,2213,2238,2263,2291,2293,2323,2325,2355,2357,2413,2415,2445,2447,2589,2591,2647,2649,2705,2707,2763,2765,2821,2823,2853,2855,2885,2887,2915,2968,2970,3076,3078,3134,3136,3278,3280,3336,3338,3368,3370,3426,3428,3458,3460,3490,3492,3573,3575,3631,3633,3663,3665,3695,3697,3727,3729,3759,3761,3903,3905,4011,4013,4094,4096,4126,4128,4158,4160,4190,4192,4222,4224,4330,4332,4362,4364,4420,4422,4452,4454,4484,4486,4516,4518,4548,4550,4580,4582,4688,4690,4720,4722,4736,4750,4778,4780,4810,4812,4842,4844,4874,4876,4932,4934,4964,4966,5022,5024,5038,5063,5102,5113,5127,5152,5177,5188,5202,5331,5333,5389,5391,5472,5474,5530,5532,5613,5615,5645,5647,5677,5679,5735,5737,5793,5795,5876,5878",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_candidate_review_20260810.json",
+      "term": "一塁到達",
+      "type": "raw",
+      "occurrence_count": 273,
+      "line_ranges": "56,114,172,230,288,344,400,456,514,572,630,700,705,777,782,853,858,916,1000,1005,1010,1068,1124,1195,1200,1271,1276,1334,1392,1476,1481,1486,1558,1563,1621,1640,1648,1671,1692,1697,1755,1813,1867,1925,1981,2037,2093,2149,2242,2247,2252,2306,2364,2422,2493,2498,2581,2586,2591,2649,2707,2763,2819,2902,2907,2912,2970,3054,3059,3064,3161,3166,3171,3176,3232,3290,3348,3406,3464,3522,3641,3646,3651,3656,3661,3743,3748,3820,3825,3897,3902,3972,3977,4097,4102,4107,4112,4117,4122,4205,4210,4215,4273,4329,4387,4443,4499,4555,4625,4630,4686,4756,4761,4831,4836,4906,4911,4969,5027,5083,5139,5195,5251,5307,5365,5435,5440,5510,5515,5573,5631,5689,5747,5805,5889,5894,5899,5957,6027,6032,6090,6161,6166,6185,6193,6206,6224,6282,6340,6398,6456,6514,6585,6590,6660,6665,6723,6781,6839,6897,6953,7011,7069,7140,7145,7216,7221,7279,7362,7367,7372,7430,7488,7571,7576,7581,7639,7695,7765,7770,7840,7845,7901,7957,8013,8069,8125,8181,8252,8257,8328,8333,8391,8449,8507,8565,8623,8681,8739,8797,8855,8913,8971,9029,9100,9105,9163,9221,9277,9333,9389,9471,9476,9481,9563,9568,9573,9631,9689,9773,9778,9783,9841,9895,9953,10007,10065,10123,10181,10251,10256,10314,10372,10430,10488,10546,10604,10662,10720,10776,10834,10892,10948,11006,11062,11116,11199,11204,11209,11263,11317,11400,11405,11410,11466,11520,11578,11636,11694,11752,11823,11828,11924,11929,11934,11939,11997,12055,12113,12171,12229,12287,12345",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_reviewed_evidence_20260810.json",
+      "term": "一塁到達",
+      "type": "raw",
+      "occurrence_count": 2,
+      "line_ranges": "505,1815",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/speed_2026_grok_x_search_receipts_20260810.json",
+      "term": "一塁到達",
+      "type": "raw",
+      "occurrence_count": 183,
+      "line_ranges": "148,192,252,296,356,375,427,479,531,550,569,613,632,660,679,698,717,736,755,799,851,870,874,903,911,919,930,966,985,1021,1040,1068,1112,1172,1232,1251,1270,1289,1308,1368,1387,1406,1466,1518,1546,1606,1642,1678,1697,1757,1785,1845,1864,1883,1902,1921,1940,1959,1978,2038,2074,2093,2112,2140,2200,2219,2238,2257,2276,2295,2355,2399,2427,2471,2499,2518,2537,2556,2560,2573,2581,2592,2652,2671,2690,2709,2728,2747,2766,2810,2854,2873,2892,2911,2939,2958,2977,2996,3040,3059,3103,3122,3141,3160,3196,3224,3243,3262,3322,3341,3401,3420,3439,3458,3494,3546,3565,3584,3644,3672,3732,3792,3811,3830,3858,3918,3937,3997,4057,4076,4095,4123,4151,4170,4189,4257,4309,4328,4347,4383,4402,4430,4449,4509,4528,4588,4632,4660,4696,4715,4775,4794,4846,4906,4925,4953,4981,5000,5019,5038,5098,5117,5169,5229,5273,5292,5328,5347,5366,5394,5430,5466,5485,5513,5541,5560,5579,5598,6096,6135,6225,7352,7370",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/speed_2026_new6_grok_x_temporal_research_20260811.json",
+      "term": "一塁到達",
+      "type": "raw",
+      "occurrence_count": 30,
+      "line_ranges": "35,42,49,56,63,70,77,147,217,287,343,399,413,434,455,476,497,518,539,749,959,1169,1337,1505,3010,3044,3078,3418,3452,3622",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/speed_2026_sns_consensus_reviewed_evidence_20260810.json",
+      "term": "一塁到達",
+      "type": "raw",
+      "occurrence_count": 3,
+      "line_ranges": "171,1310,1325",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/manual/sprint_30m_measurements_curated.json",
+      "term": "一塁到達",
+      "type": "raw",
+      "occurrence_count": 1,
+      "line_ranges": "2",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_2026_grok_x_sources.csv",
+      "term": "一塁到達",
+      "type": "normalized",
+      "occurrence_count": 195,
+      "line_ranges": "7,14,21,28,35,42,49,56,63,70,79,86,95,104,111,118,125,132,139,146,153,160,167,174,189,196-197,200,209,216,223,230,237,244,251,258,265,274,281,288,295,306,317,324,331,338,345,352,359,366,373,380,387,394,401,408,415,422,429,436,443,450,457,468,477,484,493,500,507,514,523,530,537,544,553,562,571,578,585,592,599,606,613,620,627,634,641,648,655,662,669,676,683,690,697-699,706,713,722,731,738,745,752,759,766,773,780,787,794,801,808,815,822,829,836,843,850,859,866,873,880,887,894,901,908,915,922,929,936,943,950,957,964,971,978,985,992,999,1006,1013,1020,1027,1036,1043,1050,1057,1064,1071,1078,1085,1092,1101,1108,1117,1124,1131,1138,1145,1152,1159,1166,1173,1180,1187,1194,1201,1214,1221,1228,1235,1242,1249,1256,1263,1270,1277,1284,1291,1298,1305,1312,1319,1326,1333,1340,1347,1356,1365,1378,1395,1402,1409,1416,1423",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_2026_grok_x_sources.json",
+      "term": "一塁到達",
+      "type": "normalized",
+      "occurrence_count": 197,
+      "line_ranges": "82,144,210,276,342,408,472,536,600,666,732,798,867,938,1008,1074,1148,1214,1278,1348,1418,1484,1550,1624,1695,1761,1771-1772,1801,1831,1897,1963,2025,2091,2155,2219,2283,2347,2429,2491,2557,2623,2693,2766,2832,2898,2962,3026,3099,3165,3239,3317,3381,3447,3513,3579,3645,3711,3802,3883,3954,4025,4094,4177,4250,4316,4380,4446,4510,4574,4638,4707,4771,4840,4909,4978,5044,5110,5174,5238,5302,5366,5430,5496,5565,5634,5700,5766,5832,5898,5964,6038,6104,6173,6239,6309,6317-6318,6346,6375,6441,6507,6573,6639,6705,6775,6844,6910,6976,7042,7108,7172,7238,7304,7374,7444,7510,7583,7649,7715,7788,7854,7918,7987,8056,8120,8184,8248,8312,8376,8440,8510,8580,8646,8712,8778,8844,8910,8976,9042,9108,9174,9240,9306,9372,9442,9508,9574,9638,9702,9766,9838,9910,9976,10042,10116,10182,10244,10310,10372,10438,10504,10570,10639,10705,10771,10837,10903,10969,11035,11101,11167,11231,11297,11363,11427,11493,11557,11619,11692,11754,11816,11889,11953,12015,12081,12147,12213,12279,12349,12426,12492,12558,12624,12690,12756,12822",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_2026_new6_grok_x_temporal_sources.json",
+      "term": "一塁到達",
+      "type": "normalized",
+      "occurrence_count": 42,
+      "line_ranges": "33,40,47,54,61,68,75,145,215,285,341,397,411,432,453,474,495,516,537,747,957,1167,1335,1503,3052,3097,3142,3592,3637,3862,4785,4830,4875,5325,5370,5595,6518,6563,6608,7058,7103,7328",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources_v2.csv",
+      "term": "一塁到達",
+      "type": "normalized",
+      "occurrence_count": 196,
+      "line_ranges": "8,59,66,73,80,87,94,101,108,115,122,131,138,147,156,163,170,177,184,191,198,205,212,219,226,241,248-249,252,261,268,275,282,289,296,303,310,317,326,333,340,347,358,369,376,383,390,397,404,411,418,425,432,439,446,453,460,467,474,481,488,495,502,509,520,529,536,545,552,559,566,575,582,589,596,605,614,623,630,637,644,651,658,665,672,679,686,693,700,707,714,721,728,735,742,749-751,758,765,774,783,790,797,804,811,818,825,832,839,846,853,860,867,874,881,888,895,902,911,918,925,932,939,946,953,960,967,974,981,988,995,1002,1009,1016,1023,1030,1037,1044,1051,1058,1065,1072,1079,1088,1095,1102,1109,1116,1123,1130,1137,1144,1153,1160,1169,1176,1183,1190,1197,1204,1211,1218,1225,1232,1239,1246,1253,1266,1273,1280,1287,1294,1301,1308,1315,1322,1329,1336,1343,1350,1357,1364,1371,1378,1385,1392,1399,1408,1417,1430,1447,1454,1461,1468,1475",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+      "term": "一塁到達",
+      "type": "normalized",
+      "occurrence_count": 199,
+      "line_ranges": "324,345,2580,2642,2708,2774,2840,2906,2970,3034,3098,3164,3230,3296,3365,3436,3506,3572,3646,3712,3776,3846,3916,3982,4048,4122,4193,4259,4269-4270,4299,4329,4395,4461,4523,4589,4653,4717,4781,4845,4927,4989,5055,5121,5191,5264,5330,5396,5460,5524,5597,5663,5737,5815,5879,5945,6011,6077,6143,6209,6300,6381,6452,6523,6592,6675,6748,6814,6878,6944,7008,7072,7136,7205,7269,7338,7407,7476,7542,7608,7672,7736,7800,7864,7928,7994,8063,8132,8198,8264,8330,8396,8462,8536,8602,8671,8737,8807,8815-8816,8844,8873,8939,9005,9071,9137,9203,9273,9342,9408,9474,9540,9606,9670,9736,9802,9872,9942,10008,10081,10147,10213,10286,10352,10416,10485,10554,10618,10682,10746,10810,10874,10938,11008,11078,11144,11210,11276,11342,11408,11474,11540,11606,11672,11738,11804,11870,11940,12006,12072,12136,12200,12264,12336,12408,12474,12540,12614,12680,12742,12808,12870,12936,13002,13068,13137,13203,13269,13335,13401,13467,13533,13599,13665,13729,13795,13861,13925,13991,14055,14117,14190,14252,14314,14387,14451,14513,14579,14645,14711,14777,14847,14924,14990,15056,15122,15188,15254,15320",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources.csv",
+      "term": "一塁到達",
+      "type": "normalized",
+      "occurrence_count": 1,
+      "line_ranges": "8",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_2026_sns_consensus_sources.json",
+      "term": "一塁到達",
+      "type": "normalized",
+      "occurrence_count": 1,
+      "line_ranges": "216",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.csv",
+      "term": "hp_to_1b",
+      "type": "normalized",
+      "occurrence_count": 76,
+      "line_ranges": "196,200,218,226-231,241,245,253-254,261-262,264,267,270-272,275-282,285,288,291,308-347,354-356,359-360",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.csv",
+      "term": "hp_to_1b_sec",
+      "type": "normalized",
+      "occurrence_count": 1,
+      "line_ranges": "356",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.csv",
+      "term": "top_speed_kmh",
+      "type": "normalized",
+      "occurrence_count": 1,
+      "line_ranges": "358",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.csv",
+      "term": "一塁到達",
+      "type": "normalized",
+      "occurrence_count": 52,
+      "line_ranges": "196,226-231,241,272,275-281,308-319,321-325,327,329-333,335-341,343-347,355",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "normalized",
+      "occurrence_count": 100,
+      "line_ranges": "17373,17418,17463,17508,17553,17598,17643,17688,17733,17778,17823,17868,17913,17958,18003,18048,18093,18138,18183,18228,18273,18318,18363,18408,18453,18498,18543,18588,18633,18678,18723,18768,18813,18858,18903,18948,18993,19038,19083,19128,19173,19218,19263,19308,19353,19398,19443,19488,19533,19578,19623,19668,19713,19758,19803,19848,19893,19938,19983,20028,20073,20118,20163,20208,20253,20298,20343,20388,20433,20478,20523,20568,20613,20658,20703,20748,20793,20838,20883,20928,20973,21018,21063,21108,21153,21198,21243,21288,21333,21378,21423,21468,21513,21558,21603,21648,21693,21738,21783,21828",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+      "term": "hp_to_1b",
+      "type": "normalized",
+      "occurrence_count": 225,
+      "line_ranges": "8088,8104,8111,8125,8129,8344,8365,8369,9434,9455,9459,9898,9914,9921,9935,9939,9974,9995,9999,10034,10055,10059,10094,10115,10119,10154,10175,10179,10198,10214,10221,10235,10239,10799,10815,10822,10836,10840,11055,11076,11080,11536,11557,11561,11596,11617,11621,12017,12038,12042,12077,12098,12102,12197,12218,12222,12377,12398,12402,12557,12578,12582,12617,12638,12642,12661,12677,12684,12698,12702,12857,12878,12882,12917,12938,12942,12961,12977,12984,12998,13002,13021,13037,13044,13058,13062,13081,13097,13104,13118,13122,13141,13157,13164,13178,13182,13201,13217,13224,13238,13242,13261,13277,13284,13298,13302,13458,13479,13483,13638,13659,13663,13818,13839,13843,14715,14731,14740,14782,14833,14884,14935,14970,14986,14995,15037,15088,15139,15190,15241,15276,15292,15301,15327,15343,15352,15394,15429,15445,15454,15480,15496,15505,15531,15547,15556,15582,15598,15607,15633,15649,15658,15684,15700,15709,15735,15751,15760,15786,15802,15811,15837,15853,15862,15888,15904,15913,15939,15955,15964,15990,16006,16015,16041,16057,16066,16092,16108,16117,16143,16159,16168,16194,16210,16219,16245,16261,16270,16296,16312,16321,16347,16363,16372,16398,16414,16423,16449,16465,16474,16500,16516,16525,16551,16567,16576,16602,16618,16627,16653,16669,16678,16704,16720,16729,17057,17061,17101,17105,17147,17151,17279,17283,17321,17325",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+      "term": "hp_to_1b_sec",
+      "type": "normalized",
+      "occurrence_count": 2,
+      "line_ranges": "17147,17151",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+      "term": "top_speed_kmh",
+      "type": "normalized",
+      "occurrence_count": 2,
+      "line_ranges": "17237,17241",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+      "term": "一塁到達",
+      "type": "normalized",
+      "occurrence_count": 139,
+      "line_ranges": "8091,8116,8130,8134,9901,9926,9940,9944,9961,9986,10021,10046,10060,10064,10120,10124,10180,10184,10240,10244,10841,10845,12664,12689,12703,12707,12844,12869,12904,12929,13003,13007,13024,13049,13063,13067,13123,13127,13183,13187,13204,13229,13243,13247,14718,14743,14769,14794,14820,14845,14871,14896,14922,14947,14973,14997-14998,15007,15024,15049,15099,15109,15150,15160,15177,15201-15202,15211,15252,15262,15279,15303-15304,15313,15356,15405,15415,15456,15466,15507,15517,15558,15568,15609,15619,15687,15711-15712,15721,15813,15823,15840,15864-15865,15874,15891,15915-15916,15925,15966,15976,15993,16017-16018,16027,16095,16119-16120,16129,16170,16180,16221,16231,16272,16282,16323,16333,16350,16374-16375,16384,16401,16425-16426,16435,16503,16528,16554,16579,16629,16639,16680,16690,16707,16731-16732,16741,17113,17117",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "docs/audits/sp007_h2f_low_confidence_lane_20260813.md",
+      "term": "hp_to_1b",
+      "type": "docs",
+      "occurrence_count": 3,
+      "line_ranges": "8,18,31",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/sp007_h2f_low_confidence_lane_20260813.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 2,
+      "line_ranges": "1,8",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/sp100_npb_raw_latent_speed_20260814.md",
+      "term": "full_effort_run_proxy_count",
+      "type": "docs",
+      "occurrence_count": 2,
+      "line_ranges": "10,21",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/sp100_npb_raw_latent_speed_20260814.md",
+      "term": "hp_to_1b",
+      "type": "docs",
+      "occurrence_count": 5,
+      "line_ranges": "10,19,26,33,44",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/sp100_npb_raw_latent_speed_20260814.md",
+      "term": "hp_to_1b_sec",
+      "type": "docs",
+      "occurrence_count": 5,
+      "line_ranges": "10,19,26,33,44",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/sp100_npb_raw_latent_speed_20260814.md",
+      "term": "top_speed_kmh",
+      "type": "docs",
+      "occurrence_count": 5,
+      "line_ranges": "10,19,24,33,43",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/sp100_npb_raw_latent_speed_20260814.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "37",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/speed_2026_final_targeted_evidence_rescue.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "67",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/speed_2026_reopen_comprehensive_gap_audit_20260811.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 3,
+      "line_ranges": "213,229,429",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/speed_npb_plus_independent_power_2026.md",
+      "term": "top_speed_kmh",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "54",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/speed_rebuild_independent_red_team_20260812.md",
+      "term": "hp_to_1b",
+      "type": "docs",
+      "occurrence_count": 2,
+      "line_ranges": "118,244",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/speed_rebuild_independent_red_team_20260812.md",
+      "term": "hp_to_1b_sec",
+      "type": "docs",
+      "occurrence_count": 2,
+      "line_ranges": "118,244",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/speed_rebuild_independent_red_team_20260812.md",
+      "term": "top_speed_kmh",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "243",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/audits/speed_rebuild_independent_red_team_20260812.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "112",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/reference/konami_appraisal_public_info.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 2,
+      "line_ranges": "84,243",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/satei_handoff/04_RUNNING_DEFENSE_CATCHER.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "19",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/satei_handoff/06_CARP_CASE_STUDY_AUDIT.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "61",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/satei_handoff/12_APPRAISAL_PRINCIPLES_20260809.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 2,
+      "line_ranges": "138,150",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/satei_handoff/17_SPEED_GATE_REOPENED_20260811.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "32",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/satei_handoff/18_CURRENT_CRITICAL_PATH_SPEED_REBUILD_20260811.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "171",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/satei_handoff/19_CLAUDE_CODE_HANDOFF_SPEED_REBUILD_20260811.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 3,
+      "line_ranges": "43,119,149",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/satei_handoff/20_PROGRESS_SINCE_CLAUDE_HANDOFF_20260811.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 3,
+      "line_ranges": "33,103,500",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/state/speed_exclusion_reason_ledger.tsv",
+      "term": "hp_to_1b",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "4",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/state/speed_task_registry.tsv",
+      "term": "hp_to_1b",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "8",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "docs/tasks/OWNER_SPEED_ANCHOR_TABLE_V2_20260812.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "17",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "outputs/cards/Ｂ．エルドレッド_2016.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/Ｗ．バレンティン_2013.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/Ｘ．バティスタ_2019.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/安部友裕_2017.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/岡本和真_2023.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "536",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/丸佳浩_2018.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/菊池涼介_2016.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/近本光司_2023.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "421",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/近本光司_2024.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "418",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/源田壮亮_2024.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "392",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/甲斐拓也_2024.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "437",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/坂本勇人_2016.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/坂本勇人_2021.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "394",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/山田哲人_2015.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/秋山翔吾_2017.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/小林誠司_2015.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "366",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/松山竜平_2017.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/松田宣浩_2011.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/新井貴浩_2010.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "238",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/新井貴浩_2016.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/西川龍馬_2020.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "543",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/青木宣親_2010.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/石原慶幸_2013.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "238",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/石原慶幸_2015.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "370",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/村上宗隆_2021-2023.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "492",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/村上宗隆_2022.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "394",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/村上宗隆_2024.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "545",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/大野奨太_2013.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "370",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/炭谷銀仁朗_2017.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "378",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/中田翔_2013.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/田中広輔_2017.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/筒香嘉智_2016.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/内川聖一_2008.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/平田良介_2018.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/牧秀悟_2023.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "392",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/野間峻祥_2019.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/野間峻祥_2021.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "674",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/野村勇_2025.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "760",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/柳田悠岐_2015.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/鈴木誠也_2017.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "238",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/鈴木誠也_2019.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/鈴木誠也_2021.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "517",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/cards/會澤翼_2018.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "379",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/mlb_bridge.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 276,
+      "line_ranges": "11,16,30,44,49,54,59,73,78,83,88,135,140,145,159,164,169,174,179,193,198,203,226,231,245,250,255,260,265,270,293,316,330,335,349,354,359,364,369,383,388,393,398,403,417,422,427,432,437,442,473,478,483,488,502,507,512,517,522,536,541,546,551,556,570,575,580,585,590,595,609,614,619,624,638,643,648,662,676,690,695,700,705,719,724,729,734,739,744,758,763,768,773,778,783,797,802,816,830,835,849,863,868,873,887,892,897,902,907,912,917,948,953,967,981,986,1000,1005,1010,1015,1020,1034,1039,1044,1049,1054,1059,1064,1095,1100,1105,1128,1142,1147,1161,1166,1180,1185,1190,1195,1200,1205,1236,1241,1246,1251,1282,1296,1301,1306,1329,1334,1348,1353,1358,1363,1377,1382,1387,1392,1415,1420,1425,1456,1461,1492,1497,1502,1507,1512,1517,1522,1527,1566,1580,1594,1608,1622,1627,1632,1637,1642,1673,1678,1683,1706,1711,1716,1721,1726,1731,1745,1750,1755,1760,1765,1770,1793,1798,1803,1808,1813,1818,1832,1846,1851,1856,1861,1866,1871,1876,1907,1912,1917,1922,1927,1932,1971,1976,1999,2004,2009,2014,2037,2042,2047,2078,2083,2088,2093,2098,2153,2158,2181,2186,2191,2222,2227,2232,2237,2242,2247,2252,2283,2288,2293,2298,2303,2342,2347,2352,2357,2362,2401,2406,2411,2416,2421,2452,2457,2462,2467,2472,2477,2482,2487,2510,2515,2538,2543,2548,2587,2601,2624,2629,2634",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/npb_plus_sprint_exposure_2026.csv",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "1",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/npb_plus_sprint_exposure_2026.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 102,
+      "line_ranges": "39,206,243,276,309,342,375,408,441,474,507,540,573,606,639,672,705,738,771,804,837,870,903,936,969,1002,1035,1068,1101,1134,1167,1200,1233,1266,1299,1332,1365,1398,1431,1464,1497,1530,1563,1596,1629,1662,1695,1728,1761,1794,1827,1860,1893,1926,1959,1992,2025,2058,2091,2124,2157,2190,2223,2256,2289,2322,2355,2388,2421,2454,2487,2520,2553,2586,2619,2652,2685,2718,2751,2784,2817,2850,2883,2916,2949,2982,3015,3048,3081,3114,3147,3180,3213,3246,3279,3312,3345,3378,3411,3444,3477,3510",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/npb_plus_sprint_exposure_2026.json",
+      "term": "top_speed_kmh",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "7",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/npb_speed_evidence_coverage_20260809.csv",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "1",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/npb_speed_measurement_date_resolution_20260809.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 3,
+      "line_ranges": "7,15,164",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/sp007_h2f_low_confidence_lane.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "4",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/sp032_grok_x_150_reclassification_20260813.csv",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "20,86",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "18,75",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/sp035_x_existing_organize_20260814.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "156,442",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/sp063_all_missing_data_child_map_20260814.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "13",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/sp100_npb_raw_latent_speed.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "31",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/sp100_npb_raw_latent_speed.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 103,
+      "line_ranges": "8,18,25,47,65,83,101,119,137,155,173,191,209,227,245,263,281,299,317,335,353,371,389,407,425,443,461,479,497,515,533,551,569,587,605,623,641,659,677,695,713,731,749,767,785,803,821,839,857,875,893,911,929,947,965,983,1001,1019,1037,1055,1073,1091,1109,1127,1145,1163,1181,1199,1217,1235,1253,1271,1289,1307,1325,1343,1361,1379,1397,1415,1433,1451,1469,1487,1505,1523,1541,1559,1577,1595,1613,1631,1649,1667,1685,1703,1721,1739,1757,1775,1793,1811,1829",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/sp100_npb_raw_latent_speed.json",
+      "term": "hp_to_1b_sec",
+      "type": "derived",
+      "occurrence_count": 102,
+      "line_ranges": "8,25,47,65,83,101,119,137,155,173,191,209,227,245,263,281,299,317,335,353,371,389,407,425,443,461,479,497,515,533,551,569,587,605,623,641,659,677,695,713,731,749,767,785,803,821,839,857,875,893,911,929,947,965,983,1001,1019,1037,1055,1073,1091,1109,1127,1145,1163,1181,1199,1217,1235,1253,1271,1289,1307,1325,1343,1361,1379,1397,1415,1433,1451,1469,1487,1505,1523,1541,1559,1577,1595,1613,1631,1649,1667,1685,1703,1721,1739,1757,1775,1793,1811,1829",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/sp100_npb_raw_latent_speed.json",
+      "term": "top_speed_kmh",
+      "type": "derived",
+      "occurrence_count": 102,
+      "line_ranges": "7,25,46,64,82,100,118,136,154,172,190,208,226,244,262,280,298,316,334,352,370,388,406,424,442,460,478,496,514,532,550,568,586,604,622,640,658,676,694,712,730,748,766,784,802,820,838,856,874,892,910,928,946,964,982,1000,1018,1036,1054,1072,1090,1108,1126,1144,1162,1180,1198,1216,1234,1252,1270,1288,1306,1324,1342,1360,1378,1396,1414,1432,1450,1468,1486,1504,1522,1540,1558,1576,1594,1612,1630,1648,1666,1684,1702,1720,1738,1756,1774,1792,1810,1828",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_anchor_relative_packets.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "256,492,728,976,1224,1460,1696,1932,2168,2521,2757,3016,3264,3500,3748,3984,4232,4468,4704,4963,5199,5469,5705,5953,6201,6437,6673,6909,7262,7510,7831,8079,8315,8563,8811,9081,9317,9565,9801,10060,10407,10655,10891,11127,11480,11739,11987,12257,12516,12869,13105,13341,13694,13986,14222,14481,14717,14998,15234,15470,15706,15965,16201,16437,16640,16888,17124,17360,17596,17832,18142,18401,18637,18962,19210,19446,19903,20151,20410,20658,20906,21154,21390,21649,21885,22121,22357,22627,22863,23099,23358,23594,23830,24100,24336,24572,24842,25078,25314,25550",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_decision_packets.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "539,1213,1887,2082,2737,3264,3873,4705,5540,6372,6973,7530,8363,9008,9840,10267,11098,11631,12240,12667,13551,14383,14962,15455,16292,17077,17686,18360,18555,19221,19934,20509,21339,21896,22668,23467,24240,24967,25678,26170,27002,27781,28367,29119,29428,29811,30230,31115,31935,32599,33451,34283,35115,35846,36439,37271,37871,38650,39414,39775,40384,41058,41926,42758,43432,44249,45135,45914,46746,47473,47835,48409,49003,49198,49887,50598,51430,52218,53165,54104,54834,55781,56380,56989,57928,58760,58955,59317,60209,60936,61663,62470,63027,63832,64536,65368,66147,66968,67642,68474",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_decision_packets.json",
+      "term": "top_speed_kmh",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "526,1200,1874,2069,2724,3251,3860,4692,5527,6359,6960,7517,8350,8995,9827,10254,11085,11618,12227,12654,13538,14370,14949,15442,16279,17064,17673,18347,18542,19208,19921,20496,21326,21883,22655,23454,24227,24954,25665,26157,26989,27768,28354,29106,29415,29798,30217,31102,31922,32586,33438,34270,35102,35833,36426,37258,37858,38637,39401,39762,40371,41045,41913,42745,43419,44236,45122,45901,46733,47460,47822,48396,48990,49185,49874,50585,51417,52205,53152,54091,54821,55768,56367,56976,57915,58747,58942,59304,60196,60923,61650,62457,63014,63819,64523,65355,66134,66955,67629,68461",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_master_evidence.csv",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "1",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_master_evidence.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "548,1323,2030,2254,2973,3564,4204,5067,5933,6796,7576,8164,9166,9877,10740,11198,12060,12657,13297,13755,14703,15566,16243,16767,17668,18517,19157,19864,20088,20933,21710,22452,23346,23934,24770,25633,26539,27297,28072,28595,29528,30680,31330,32113,32453,33018,33532,34481,35441,36169,37200,38063,38926,39836,40598,41461,42194,43004,43971,44363,45003,45708,46642,47505,48210,49058,50008,50818,51681,52439,52832,53504,54233,54457,55325,56100,56963,58463,59474,60546,61340,62351,63014,63654,64726,65591,65815,66208,67301,68059,68819,69725,70313,71149,71951,72814,73624,74543,75248,76111",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_master_evidence.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 146,
+      "line_ranges": "575,589,593,641,655,659,8205,8209,8239,8243,8305,8309,8339,8343,21819,21823,21955,21959,25660,25674,25678,25795,25809,25813,28622,28636,28640,28688,28702,28706,29569,29573,29603,29607,29637,29641,29671,29675,29691,29705,29709,29771,29775,29805,29809,29839,29843,29873,29877,29893,29907,29911,34563,34567,34671,34675,39945,39949,40046,40050,41536,41540,41637,41641,43079,43083,43113,43117,43214,43218,43248,43252,53579,53583,53680,53684,57004,57008,57038,57042,57058,57072,57076,57092,57106,57110,57126,57140,57144,57160,57174,57178,57194,57208,57212,57228,57242,57246,57345,57349,57481,57485,57515,57519,57535,57549,57553,57569,57583,57587,57603,57617,57621,57637,57651,57655,57671,57685,57689,57705,57719,57723,57753,57757,59549,59553,59650,59654,63729,63733,63830,63834,66283,66287,66317,66321,66418,66422,66452,66456,68846,68860,68864,68912,68926,68930",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_master_evidence.json",
+      "term": "top_speed_kmh",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "538,1313,2020,2244,2963,3554,4194,5057,5923,6786,7566,8154,9156,9867,10730,11188,12050,12647,13287,13745,14693,15556,16233,16757,17658,18507,19147,19854,20078,20923,21700,22442,23336,23924,24760,25623,26529,27287,28062,28585,29518,30670,31320,32103,32443,33008,33522,34471,35431,36159,37190,38053,38916,39826,40588,41451,42184,42994,43961,44353,44993,45698,46632,47495,48200,49048,49998,50808,51671,52429,52822,53494,54223,54447,55315,56090,56953,58453,59464,60536,61330,62341,63004,63644,64716,65581,65805,66198,67291,68049,68809,69715,70303,71139,71941,72804,73614,74533,75238,76101",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_master_evidence.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 244,
+      "line_ranges": "580,594,626,628,646,660,1366,1368,2073,2075,2332,2334,3051,3053,3607,3609,4247,4249,5110,5112,5976,5978,6977,6979,7619,7621,8276,8278,9244,9246,9920,9922,10783,10785,11241,11243,12138,12140,12700,12702,13340,13342,13833,13835,14746,14748,15678,15680,16286,16288,16845,16847,17746,17748,18560,18562,19200,19202,19907,19909,20269,20271,21011,21013,21856,21858,22530,22532,23389,23391,24012,24014,24848,24850,25679,25745,25747,25814,26582,26584,27375,27377,28115,28117,28627,28641,28673,28675,28693,28707,29560,29594,29608,29642,29676,29710,29742,29744,29762,29796,29810,29844,29878,29912,30758,30760,31373,31375,32156,32158,32634,32636,33130,33132,33610,33612,34600,34602,35519,35521,36350,36352,37243,37245,38106,38108,39107,39109,39982,39984,40641,40643,41573,41575,42237,42239,43150,43152,44014,44016,44406,44408,45046,45048,45786,45788,46685,46687,47548,47550,48253,48255,49136,49138,50051,50053,50861,50863,51724,51726,52482,52484,52944,52946,53616,53618,54276,54278,54638,54640,55403,55405,56143,56145,56995,57029,57077,57097,57111,57145,57179,57199,57213,57382,57384,57472,57506,57554,57574,57588,57622,57656,57676,57690,58541,58543,59586,59588,60624,60626,61418,61420,62429,62431,63057,63059,63766,63768,64769,64771,65634,65636,65858,65860,66354,66356,67344,67346,68102,68104,68851,68865,68897,68899,68917,68931,69768,69770,70356,70358,71261,71263,71994,71996,72857,72859,73736,73738,74586,74588,75291,75293,76154,76156",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_owner_review_master_20260813.csv",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 5,
+      "line_ranges": "2,37,41,78,92",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_owner_review_master_20260813.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 5,
+      "line_ranges": "24,1704,1896,3672,4344",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_post_sns_decision_support.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "241,469,697,925,1153,1381,1609,1837,2065,2360,2656,2954,3252,3480,3776,4004,4232,4460,4688,4916,5144,5372,5600,5828,6056,6284,6512,6740,6968,7196,7424,7721,7949,8177,8405,8702,8930,9225,9453,9681,9977,10205,10433,10661,10889,11117,11345,11573,11801,12099,12327,12555,12855,13083,13385,13680,13908,14136,14432,14660,14888,15116,15344,15572,15767,16061,16289,16517,16745,16973,17201,17499,17799,18027,18255,18483,18678,18906,19134,19362,19590,19818,20046,20274,20502,20730,21025,21253,21481,21709,21937,22165,22393,22621,22849,23077,23305,23533,23761,24056",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_post_sns_decision_support.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "2136,2728",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_post_video_decision_support.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "249,477,705,933,1161,1389,1617,1845,2073,2368,2664,2962,3260,3488,3784,4012,4240,4468,4696,4924,5152,5380,5608,5836,6064,6292,6520,6748,6976,7204,7432,7729,7957,8185,8413,8710,8938,9233,9461,9689,9985,10213,10441,10669,10897,11125,11353,11581,11809,12107,12335,12563,12863,13091,13393,13688,13916,14144,14440,14668,14896,15124,15352,15580,15775,16069,16297,16525,16753,16981,17209,17507,17807,18035,18263,18491,18686,18914,19142,19370,19598,19826,20054,20282,20510,20738,21033,21261,21489,21717,21945,22173,22401,22629,22857,23085,23313,23541,23769,24064",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_post_video_decision_support.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "2144,2736",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_pre_video_decision_support.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "252,480,708,936,1164,1392,1620,1848,2076,2371,2667,2965,3263,3491,3787,4015,4243,4471,4699,4927,5155,5383,5611,5839,6067,6295,6523,6751,6979,7207,7435,7732,7960,8188,8416,8713,8941,9236,9464,9692,9988,10216,10444,10672,10900,11128,11356,11584,11812,12110,12338,12566,12866,13094,13396,13691,13919,14147,14443,14671,14899,15127,15355,15583,15778,16072,16300,16528,16756,16984,17212,17510,17810,18038,18266,18494,18689,18917,19145,19373,19601,19829,20057,20285,20513,20741,21036,21264,21492,21720,21948,22176,22404,22632,22860,23088,23316,23544,23772,24067",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_100_pre_video_decision_support.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "2147,2739",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_blind_physical_construct_profiles.csv",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "2-101",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_blind_physical_construct_profiles.csv",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 17,
+      "line_ranges": "1-2,13,32,37,41-42,49,55,57,59,73,78,80,85,89,92",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_blind_physical_construct_profiles.csv",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 5,
+      "line_ranges": "2,41-42,78,92",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_blind_physical_construct_profiles.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "41,135,207,279,374,469,541,613,685,757,944,1016,1129,1224,1296,1369,1441,1536,1608,1680,1776,1848,1991,2063,2158,2253,2325,2397,2469,2656,2751,2914,3009,3081,3176,3271,3388,3460,3555,3627,3721,3899,3994,4066,4138,4286,4401,4496,4613,4709,4896,4968,5040,5227,5346,5418,5534,5606,5743,5815,5887,5959,6055,6127,6199,6271,6366,6438,6510,6582,6654,6796,6912,6984,7132,7227,7299,7608,7703,7819,7914,8009,8104,8176,8292,8364,8436,8508,8644,8716,8788,8882,8954,9026,9143,9215,9287,9403,9475,9547",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_blind_physical_construct_profiles.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 174,
+      "line_ranges": "20,85,87,95,100,179,251,345,440,513,585,657,729,908,988,1060,1062,1075,1081,1094,1195,1268,1340,1413,1507,1580,1652,1746,1820,1960,2035,2129,2224,2297,2369,2441,2620,2722,2862,2864,2877,2980,3053,3147,3242,3337,3339,3347,3352,3432,3526,3599,3671,3673,3681,3686,3765,3767,3780,3786,3799,3805,3818,3824,3837,3843,3851,3856,3965,4038,4110,4250,4371,4467,4562,4564,4577,4679,4860,4940,5012,5191,5293,5295,5308,5390,5484,5486,5499,5578,5672,5674,5687,5693,5706,5787,5859,5931,6025,6099,6171,6243,6337,6410,6482,6554,6626,6765,6862,6864,6877,6956,7096,7198,7271,7385,7387,7400,7406,7419,7425,7433,7438,7444,7452,7457,7463,7471,7476,7482,7490,7495,7501,7509,7514,7520,7528,7533,7539,7552,7674,7769,7771,7784,7885,7980,8075,8148,8242,8244,8257,8336,8408,8480,8574,8576,8589,8595,8608,8688,8760,8832,8834,8842,8847,8926,8998,9112,9187,9259,9372,9447,9519,9591",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_blind_physical_construct_profiles.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 9,
+      "line_ranges": "94,3680,3774,3793,7394,7413,7451,7508,8841",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_blind_physical_construct_stage1_qa.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "17",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_model_comparison.csv",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "1",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_model_comparison.csv",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "1",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_model_comparison.csv",
+      "term": "hp_to_1b_sec",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "1",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_model_comparison.csv",
+      "term": "top_speed_kmh",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "1",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_model_comparison.json",
+      "term": "full_effort_run_proxy_count",
+      "type": "derived",
+      "occurrence_count": 103,
+      "line_ranges": "61,690,781,870,895,920,945,970,995,1020,1045,1070,1095,1120,1145,1170,1195,1220,1245,1270,1295,1320,1345,1370,1395,1420,1445,1470,1495,1520,1545,1570,1595,1620,1645,1670,1695,1720,1745,1770,1795,1820,1845,1870,1895,1920,1945,1970,1995,2020,2045,2070,2095,2120,2145,2170,2195,2220,2245,2270,2295,2320,2345,2370,2395,2420,2445,2470,2495,2520,2545,2570,2595,2620,2645,2670,2695,2720,2745,2770,2795,2820,2845,2870,2895,2920,2945,2970,2995,3020,3045,3070,3095,3120,3145,3170,3195,3220,3245,3270,3295,3320,3345",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_model_comparison.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 209,
+      "line_ranges": "10,13,46,59,555,567,582,620,635,871,880,896,905,921,930,946,955,971,980,996,1005,1021,1030,1046,1055,1071,1080,1096,1105,1121,1130,1146,1155,1171,1180,1196,1205,1221,1230,1246,1255,1271,1280,1296,1305,1321,1330,1346,1355,1371,1380,1396,1405,1421,1430,1446,1455,1471,1480,1496,1505,1521,1530,1546,1555,1571,1580,1596,1605,1621,1630,1646,1655,1671,1680,1696,1705,1721,1730,1746,1755,1771,1780,1796,1805,1821,1830,1846,1855,1871,1880,1896,1905,1921,1930,1946,1955,1971,1980,1996,2005,2021,2030,2046,2055,2071,2080,2096,2105,2121,2130,2146,2155,2171,2180,2196,2205,2221,2230,2246,2255,2271,2280,2296,2305,2321,2330,2346,2355,2371,2380,2396,2405,2421,2430,2446,2455,2471,2480,2496,2505,2521,2530,2546,2555,2571,2580,2596,2605,2621,2630,2646,2655,2671,2680,2696,2705,2721,2730,2746,2755,2771,2780,2796,2805,2821,2830,2846,2855,2871,2880,2896,2905,2921,2930,2946,2955,2971,2980,2996,3005,3021,3030,3046,3055,3071,3080,3096,3105,3121,3130,3146,3155,3171,3180,3196,3205,3221,3230,3246,3255,3271,3280,3296,3305,3321,3330,3346,3355",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_model_comparison.json",
+      "term": "hp_to_1b_sec",
+      "type": "derived",
+      "occurrence_count": 101,
+      "line_ranges": "59,871,896,921,946,971,996,1021,1046,1071,1096,1121,1146,1171,1196,1221,1246,1271,1296,1321,1346,1371,1396,1421,1446,1471,1496,1521,1546,1571,1596,1621,1646,1671,1696,1721,1746,1771,1796,1821,1846,1871,1896,1921,1946,1971,1996,2021,2046,2071,2096,2121,2146,2171,2196,2221,2246,2271,2296,2321,2346,2371,2396,2421,2446,2471,2496,2521,2546,2571,2596,2621,2646,2671,2696,2721,2746,2771,2796,2821,2846,2871,2896,2921,2946,2971,2996,3021,3046,3071,3096,3121,3146,3171,3196,3221,3246,3271,3296,3321,3346",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_model_comparison.json",
+      "term": "npb_plus_screens",
+      "type": "derived",
+      "occurrence_count": 3,
+      "line_ranges": "42,59,62",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_model_comparison.json",
+      "term": "top_speed_kmh",
+      "type": "derived",
+      "occurrence_count": 100,
+      "line_ranges": "868,893,918,943,968,993,1018,1043,1068,1093,1118,1143,1168,1193,1218,1243,1268,1293,1318,1343,1368,1393,1418,1443,1468,1493,1518,1543,1568,1593,1618,1643,1668,1693,1718,1743,1768,1793,1818,1843,1868,1893,1918,1943,1968,1993,2018,2043,2068,2093,2118,2143,2168,2193,2218,2243,2268,2293,2318,2343,2368,2393,2418,2443,2468,2493,2518,2543,2568,2593,2618,2643,2668,2693,2718,2743,2768,2793,2818,2843,2868,2893,2918,2943,2968,2993,3018,3043,3068,3093,3118,3143,3168,3193,3218,3243,3268,3293,3318,3343",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_structure_qa.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "80",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_residual_structure_verdict.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "66",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_sns_tiebreak_consensus.csv",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "4",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_2026_sns_tiebreak_consensus.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "103,241",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_anchor_rejected_candidates_2015_2026.csv",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 41,
+      "line_ranges": "39,69,71-74,84,115,120-124,156,158-162,164-168,170,172-176,178-184,188-190,198",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_blind_v3_npbplus_2026.json",
+      "term": "top_speed_kmh",
+      "type": "derived",
+      "occurrence_count": 1,
+      "line_ranges": "1",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_normalized_20260813.jsonl",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "18,75",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813_run2.csv",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "20,86",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813_run2.jsonl",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "18,75",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_community_rating_raw_20260813.jsonl",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 2,
+      "line_ranges": "97,122",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_grok_x_rejected_reclassification_20260813_run2.csv",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 4,
+      "line_ranges": "21,24,96-97",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/speed_grok_x_rejected_reclassification_20260813_unexpected_mutation_backup_run2.csv",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 4,
+      "line_ranges": "21,24,96-97",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/web_collected_measurements.json",
+      "term": "hp_to_1b",
+      "type": "derived",
+      "occurrence_count": 40,
+      "line_ranges": "8118,8134,8150,8166,8182,8198,8214,8230,8246,8262,8278,8294,8310,8326,8502,8518,8534,8550,8566,8582,8598,8614,8630,8646,8662,8678,8694,8710,8726,8742,8758,8774,8790,8806,8822,9334,9862,9894,9910,9926",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/derived/web_collected_measurements.json",
+      "term": "一塁到達",
+      "type": "derived",
+      "occurrence_count": 20,
+      "line_ranges": "8122,8138,8154,8170,8186,8202,8218,8266,8298,8320,8586,8634,8650,8682,8714,8794,8810,9338,9866,9930",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "outputs/npb_plus_input_2024.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 12,
+      "line_ranges": "33,46,61,75,88,99,110,120,132,143,154,166",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "outputs/npb_plus_target_list_2024.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "36",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "outputs/prompt_to_gpt_appraisal_method.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "39",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "outputs/web_collected_inventory_20260805.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 1,
+      "line_ranges": "71",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "scripts/analyze_speed_2026_acceleration_models.mjs",
+      "term": "full_effort_run_proxy_count",
+      "type": "production",
+      "occurrence_count": 4,
+      "line_ranges": "537,647,737,773",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/analyze_speed_2026_acceleration_models.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 20,
+      "line_ranges": "30,538,550,559-561,563,566,572,580,592,723,738,747,759,762,771,803,805-806",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/analyze_speed_2026_acceleration_models.mjs",
+      "term": "hp_to_1b_sec",
+      "type": "production",
+      "occurrence_count": 11,
+      "line_ranges": "538,559-561,563,566,572,738,771,805-806",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/analyze_speed_2026_acceleration_models.mjs",
+      "term": "npb_plus_screens",
+      "type": "production",
+      "occurrence_count": 3,
+      "line_ranges": "29,771,774",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/analyze_speed_2026_acceleration_models.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 4,
+      "line_ranges": "535,564-565,735",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/audit_web_collected.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "102",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/audit_web_collected.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 2,
+      "line_ranges": "73,102",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/build_owner_review_master_20260813.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "117",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/build_speed_2026_100_decision_packets.mjs",
+      "term": "full_effort_run_proxy_count",
+      "type": "production",
+      "occurrence_count": 5,
+      "line_ranges": "288,297,1019,1057,1079",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/build_speed_2026_100_decision_packets.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 2,
+      "line_ranges": "725,731",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/build_speed_2026_blind_physical_construct_profiles.mjs",
+      "term": "full_effort_run_proxy_count",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "514",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/build_speed_2026_blind_physical_construct_profiles.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 4,
+      "line_ranges": "548,644,696,835",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/build_speed_2026_final_targeted_evidence_rescue.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "662",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/build_speed_2026_grok_x_sns_rescue.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 2,
+      "line_ranges": "468,877",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/build_speed_historical_anchor_bank.mjs",
+      "term": "full_effort_run_proxy_count",
+      "type": "production",
+      "occurrence_count": 2,
+      "line_ranges": "665,910",
+      "npb_plus_claim": "mixed_proxy_context",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/build_speed_historical_anchor_bank.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 4,
+      "line_ranges": "24,478,492,572",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/build_speed_owner_review_table.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 3,
+      "line_ranges": "107-109",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/calibrate_npb_plus_direct.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "44",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/calibrate_npb_plus_direct.mjs",
+      "term": "hp_to_1b_sec",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "44",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/calibrate_npb_plus_direct.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "43",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/calibrate_npb_plus_direct.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "10",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/collect_speed_2026_grok_x_receipts.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "143",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/diagnose_speed_conflicts.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 3,
+      "line_ranges": "88,92-93",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/ingest_npb_plus_screens.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 5,
+      "line_ranges": "30,48,86,104,116",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/ingest_npb_plus_screens.mjs",
+      "term": "hp_to_1b_sec",
+      "type": "production",
+      "occurrence_count": 5,
+      "line_ranges": "30,48,86,104,116",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/ingest_npb_plus_screens.mjs",
+      "term": "npb_plus_screens",
+      "type": "production",
+      "occurrence_count": 4,
+      "line_ranges": "23-24,40,65",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/ingest_npb_plus_screens.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 6,
+      "line_ranges": "30,48,86,104,116,124",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/ingest_npb_plus_screens.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 2,
+      "line_ranges": "8,20",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/link_mlb_bridge.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 2,
+      "line_ranges": "52,57",
+      "npb_plus_claim": "no_or_other_source",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/make_npb_plus_input_sheet.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 3,
+      "line_ranges": "4,75,88",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/make_npb_plus_target_list.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "140",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/npb_plus_2026_test_and_cv.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 4,
+      "line_ranges": "63,65,81,99",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/npb_plus_independent_power.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 3,
+      "line_ranges": "41-42,152",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/parse_npb_plus_input.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "81",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/parse_npb_plus_input.mjs",
+      "term": "hp_to_1b_sec",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "81",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/parse_npb_plus_input.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "21",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/qa_speed_2026_powerpro_residual_structure.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 3,
+      "line_ranges": "225-227",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/rolling_holdout_speed_methods.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 3,
+      "line_ranges": "43,51-52",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp007_h2f_low_confidence_lane.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 2,
+      "line_ranges": "32,114",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp007_h2f_low_confidence_lane.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "4",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp032_grok_x_150_reclassify.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "65",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp035_x_existing_organize.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "16",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp063_090_098_043_022_072_074_075.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "30",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp100_npb_raw_latent_speed.mjs",
+      "term": "full_effort_run_proxy_count",
+      "type": "production",
+      "occurrence_count": 4,
+      "line_ranges": "12,41,65,141",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp100_npb_raw_latent_speed.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 13,
+      "line_ranges": "11,19,42,59,64,75-76,80,124,131,135,153,155",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp100_npb_raw_latent_speed.mjs",
+      "term": "hp_to_1b_sec",
+      "type": "production",
+      "occurrence_count": 11,
+      "line_ranges": "11,19,42,59,64,75-76,80,124,135,153",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp100_npb_raw_latent_speed.mjs",
+      "term": "npb_plus_screens",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "35",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp100_npb_raw_latent_speed.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 10,
+      "line_ranges": "10,19,42,58,63,73,79,123,135,153",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp100_wiring_candidates_compare.mjs",
+      "term": "hp_to_1b",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "34",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp100_wiring_candidates_compare.mjs",
+      "term": "hp_to_1b_sec",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "34",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/sp100_wiring_candidates_compare.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 2,
+      "line_ranges": "34,95",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/t0203_stratified_npb_plus_increment.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 3,
+      "line_ranges": "111,113,128",
+      "npb_plus_claim": "yes_or_mixed",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "scripts/test_qa_remaining.mjs",
+      "term": "top_speed_kmh",
+      "type": "production",
+      "occurrence_count": 2,
+      "line_ranges": "807,1230",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "sessions/2026-08-01_nf3_rulings_ability_sheet_handoff.md",
+      "term": "一塁到達",
+      "type": "docs",
+      "occurrence_count": 3,
+      "line_ranges": "350,467,718",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "no_or_context_only"
+    },
+    {
+      "file": "src/ratings/ability_evidence.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 2,
+      "line_ranges": "100,107",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "src/ratings/direct_measurement.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "152",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    },
+    {
+      "file": "src/ratings/scouting_input.mjs",
+      "term": "一塁到達",
+      "type": "production",
+      "occurrence_count": 1,
+      "line_ranges": "5",
+      "npb_plus_claim": "not_asserted_or_other",
+      "downstream_numeric_use": "yes_or_indirect"
+    }
+  ],
+  "annotation_note": "line_ranges are exhaustive per file-term group. npb_plus_claim and downstream_numeric_use are structural annotations; high-impact claim and dependency determinations are stated separately in the report.",
+  "classification_legend": {
+    "VERIFIED_NPB_PLUS": "owner correction and repository labeling agree that the metric is a direct NPB+ measurement",
+    "VERIFIED_OTHER_SOURCE": "repository records a different named source or external measurement source",
+    "DERIVED_PROXY": "computed/aggregated proxy, not a direct physical measurement",
+    "PROVENANCE_UNVERIFIED": "repository does not retain enough source evidence to identify the origin",
+    "MISATTRIBUTED_SOURCE": "repository claims NPB+ origin but owner correction says NPB+ cannot provide that field"
+  },
+  "task2_provenance_trace": {
+    "field": "data/manual/npb_plus_screens.jsonl[].hp_to_1b_sec",
+    "raw_rows": 109,
+    "nonnull_hp_to_1b_sec_rows": 100,
+    "nonnull_top_speed_kmh_rows": 100,
+    "source_images_rows": 109,
+    "source_image_references": 189,
+    "unique_source_image_references": 182,
+    "tracked_image_files_in_repository": 0,
+    "file_blob_at_target_head": "bcdb3716a71f89cae6115887be0a2f4e6ecc34d7",
+    "file_history": [
+      "863740518aebb59eec2eee93e3f046fcd28d2486|2026-08-06T17:09:04+09:00|root snapshot commit; no parent",
+      "git log --follow has no earlier entry for this path"
+    ],
+    "generator_script_history": [
+      "863740518aebb59eec2eee93e3f046fcd28d2486|2026-08-06T17:09:04+09:00|same root snapshot commit"
+    ],
+    "generation_trace": {
+      "jsonl_writer_found": false,
+      "ingest_script_role": "reads data/manual/npb_plus_screens.jsonl and imports it into npb_plus_measurement; it does not write the JSONL",
+      "source_images_role": "filenames or manual notes only; referenced image files are not tracked"
+    },
+    "classification": "MISATTRIBUTED_SOURCE",
+    "residual_origin_status": "PROVENANCE_UNVERIFIED",
+    "evidence": [
+      "scripts/ingest_npb_plus_screens.mjs:1-11,23-31,40-48,81-87,102-117",
+      "scripts/parse_npb_plus_input.mjs:18-23,33,81,106",
+      "data/manual/npb_plus_screens.jsonl:1-101",
+      "git log --follow -- data/manual/npb_plus_screens.jsonl",
+      "git log --follow -- scripts/ingest_npb_plus_screens.mjs"
+    ]
+  },
+  "task2_related_classifications": [
+    {
+      "field": "data/manual/npb_plus_screens.jsonl[].top_speed_kmh",
+      "classification": "VERIFIED_NPB_PLUS",
+      "note": "owner correction identifies maximum speed as the NPB+ direct running measurement"
+    },
+    {
+      "field": "full_effort_run_proxy_count",
+      "classification": "DERIVED_PROXY",
+      "note": "exposure aggregation; not a direct NPB+ measurement"
+    },
+    {
+      "field": "data/manual/hp_to_1b_measurements_curated.json[].seconds",
+      "classification": "VERIFIED_OTHER_SOURCE",
+      "note": "curated web/article measurements with named source URLs"
+    },
+    {
+      "field": "data/manual/npb_plus_screens.jsonl[].source_images",
+      "classification": "PROVENANCE_UNVERIFIED",
+      "note": "references exist but image payloads are absent"
+    }
+  ],
+  "task3_sp100_dependency_trace": [
+    {
+      "from": "npb_plus_screens.hp_to_1b_sec",
+      "to": "sp100_npb_raw_latent_speed.h2f/z_h2f",
+      "kind": "direct_numeric",
+      "evidence": "scripts/sp100_npb_raw_latent_speed.mjs:35-42,58-80"
+    },
+    {
+      "from": "sp100_npb_raw_latent_speed.z_top + z_h2f",
+      "to": "measurement reliability rPF and relCombined",
+      "kind": "direct_numeric",
+      "evidence": "scripts/sp100_npb_raw_latent_speed.mjs:83-87"
+    },
+    {
+      "from": "measurement reliability + h2f",
+      "to": "latent_speed_z and confidence",
+      "kind": "direct_numeric",
+      "evidence": "scripts/sp100_npb_raw_latent_speed.mjs:95-110"
+    },
+    {
+      "from": "full_effort_run_proxy_count",
+      "to": "exposure_runs/KAPPA_EXP/wExp",
+      "kind": "derived_proxy_numeric",
+      "evidence": "scripts/sp100_npb_raw_latent_speed.mjs:65,89-94,104-110"
+    },
+    {
+      "from": "latent_speed_z/confidence",
+      "to": "Candidate N (N_npb_z/N_confidence)",
+      "kind": "indirect_numeric",
+      "evidence": "scripts/sp100_wiring_candidates_compare.mjs:27,60-72,81-90"
+    },
+    {
+      "from": "Candidate N confidence",
+      "to": "Candidate F (F_fuse_z)",
+      "kind": "indirect_numeric",
+      "evidence": "scripts/sp100_wiring_candidates_compare.mjs:73-90"
+    },
+    {
+      "from": "historical database statistical observations",
+      "to": "Candidate S",
+      "kind": "no_hp_edge",
+      "evidence": "scripts/sp100_wiring_candidates_compare.mjs:37-57,149"
+    },
+    {
+      "from": "hp_to_1b_sec",
+      "to": "Candidate S",
+      "kind": "not_dependent",
+      "evidence": "no hp read in Candidate S observation construction; H2F is a separate diagnostic lane at scripts/sp100_wiring_candidates_compare.mjs:109-120"
+    }
+  ],
+  "task4_sp015_validation_target": {
+    "target": "NPB_PLUS_SPRINT_SPEED_KMH only",
+    "hp_to_1b_sec_mixed_into_sp015_weight_validation": false,
+    "evidence": [
+      "scripts/sp015_final_weight_design.mjs:56-62 reads only metric === NPB_PLUS_SPRINT_SPEED_KMH",
+      "scripts/sp015_final_weight_design.mjs:129-146 computes convergence against r.npb",
+      "scripts/sp015_final_weight_design.mjs:152-167 computes weights from reliability and partial convergence to r.npb",
+      "scripts/sp015_final_weight_design.mjs:175-176 names NPB+ raw sprint speed as axis 6",
+      "configs/running_norms.json:373-380 records the same basis"
+    ],
+    "adjacent_non_sp015_numeric_route": {
+      "hp_to_1b_sec_used_elsewhere_for_speed_calibration": true,
+      "evidence": [
+        "scripts/calibrate_npb_plus_direct.mjs:40-44,115-128",
+        "configs/ratings.json:760-783"
+      ],
+      "status": "reported_only_no_fix"
+    }
+  },
+  "limitations": [
+    "The report is an inventory and dependency trace; it does not repair or reclassify source data.",
+    "Line ranges are exhaustive for every file-term group. High-impact contexts and exact dependency interpretations are documented in the report.",
+    "The original screenshot payloads and capture metadata are not present in the target repository, so the true origin of hp_to_1b_sec values cannot be reconstructed."
+  ]
+}
