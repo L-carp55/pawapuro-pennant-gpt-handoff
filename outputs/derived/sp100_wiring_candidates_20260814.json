@@ -1,0 +1,1954 @@
+{
+  "generated_at": "2026-08-14",
+  "production_default_frozen": false,
+  "policy": {
+    "no_powerpro_individual_weight": true,
+    "no_next_year_repeatability": true,
+    "npb_plus_not_copied_to_past_years": true,
+    "display_scale_last": true,
+    "powerpro_agreement_not_winner": true
+  },
+  "candidates": {
+    "S": "statistical/proxy speed only (continuous prior z, 2025)",
+    "N": "NPB+ raw latent physical speed only (2026 snapshot, already shrunk)",
+    "F": "fuse after each estimate is reliability-shrunk, in latent-z space"
+  },
+  "coverage": {
+    "S": 93,
+    "N": 100,
+    "F_both": 93,
+    "h2f": 15,
+    "t90_direct": 0
+  },
+  "compare": {
+    "S_vs_N": {
+      "n": 93,
+      "r": 0.7491
+    },
+    "S_vs_H2F": {
+      "n": 15,
+      "r": 0.2195
+    },
+    "N_vs_H2F": {
+      "n": 15,
+      "r": 0.4293
+    },
+    "F_vs_H2F": {
+      "n": 15,
+      "r": 0.435
+    },
+    "S_vs_NPBplus_sprint": {
+      "n": 93,
+      "r": 0.7597
+    },
+    "N_vs_NPBplus_sprint_CIRCULAR": {
+      "n": 100,
+      "r": 0.8764,
+      "note": "N is built from NPB+ top speed. Not a winner criterion."
+    }
+  },
+  "physical_ledgers": {
+    "h2f_lane": {
+      "n": 15,
+      "source": "sp007"
+    },
+    "30m_50m": {
+      "n_records": 41,
+      "n_name_matched_to_2026_100": 0,
+      "note": "Most 50m rows are romanized historical names; not used as winner."
+    },
+    "t90_direct": {
+      "n": 0,
+      "note": "strict T90 coverage remains 2-player class; not enough for winner"
+    }
+  },
+  "winner": "NOT_DECLARED_COVERAGE_OR_INDEPENDENCE_INSUFFICIENT",
+  "players": [
+    {
+      "player": "岩田 幸宏",
+      "player_id": "51355155",
+      "S_stat_z": 2.0394,
+      "S_reliability": 0.8891,
+      "N_npb_z": 1.2139,
+      "N_confidence": 0.5623,
+      "N_unshrunk": 1.8451,
+      "F_fuse_z": 1.7196,
+      "fuse": {
+        "w_stat": 0.8891,
+        "w_npb": 0.5623,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 401,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33.6
+    },
+    {
+      "player": "周東 佑京",
+      "player_id": "21925136",
+      "S_stat_z": 1.1885,
+      "S_reliability": 0.8958,
+      "N_npb_z": 1.8331,
+      "N_confidence": 0.5933,
+      "N_unshrunk": 2.6409,
+      "F_fuse_z": 1.4453,
+      "fuse": {
+        "w_stat": 0.8958,
+        "w_npb": 0.5933,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 430,
+      "npb_2026_only": true,
+      "h2f_z": 1.081391816939039,
+      "npb_plus_sprint_kmh": 35
+    },
+    {
+      "player": "並木 秀尊",
+      "player_id": "91695153",
+      "S_stat_z": 1.6506,
+      "S_reliability": 0.7191,
+      "N_npb_z": 0.1867,
+      "N_confidence": 0.1603,
+      "N_unshrunk": 0.9957,
+      "F_fuse_z": 1.3838,
+      "fuse": {
+        "w_stat": 0.7191,
+        "w_npb": 0.1603,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 128,
+      "npb_2026_only": true,
+      "h2f_z": 0.016701031921837733,
+      "npb_plus_sprint_kmh": 33.8
+    },
+    {
+      "player": "髙部 瑛斗",
+      "player_id": "11215151",
+      "S_stat_z": 1.2469,
+      "S_reliability": 0.8848,
+      "N_npb_z": 0.7458,
+      "N_confidence": 0.4648,
+      "N_unshrunk": 1.3714,
+      "F_fuse_z": 1.0744,
+      "fuse": {
+        "w_stat": 0.8848,
+        "w_npb": 0.4648,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 384,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33.6
+    },
+    {
+      "player": "牧原 大成",
+      "player_id": "61465133",
+      "S_stat_z": 1.0298,
+      "S_reliability": 0.8986,
+      "N_npb_z": 0.9835,
+      "N_confidence": 0.4904,
+      "N_unshrunk": 1.7141,
+      "F_fuse_z": 1.0135,
+      "fuse": {
+        "w_stat": 0.8986,
+        "w_npb": 0.4904,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 443,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33.5
+    },
+    {
+      "player": "滝澤 夏央",
+      "player_id": "51255155",
+      "S_stat_z": 0.848,
+      "S_reliability": 0.8975,
+      "N_npb_z": 1.0461,
+      "N_confidence": 0.5698,
+      "N_unshrunk": 1.5692,
+      "F_fuse_z": 0.9249,
+      "fuse": {
+        "w_stat": 0.8975,
+        "w_npb": 0.5698,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 438,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33
+    },
+    {
+      "player": "中野 拓夢",
+      "player_id": "41445153",
+      "S_stat_z": 0.902,
+      "S_reliability": 0.9259,
+      "N_npb_z": 0.9105,
+      "N_confidence": 0.6022,
+      "N_unshrunk": 1.2924,
+      "F_fuse_z": 0.9053,
+      "fuse": {
+        "w_stat": 0.9259,
+        "w_npb": 0.6022,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 625,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.9
+    },
+    {
+      "player": "名原 典彦",
+      "player_id": null,
+      "S_stat_z": null,
+      "S_reliability": 0,
+      "N_npb_z": 0.8641,
+      "N_confidence": 0.4432,
+      "N_unshrunk": 1.6664,
+      "F_fuse_z": 0.8641,
+      "fuse": {
+        "fallback": "N_ONLY"
+      },
+      "pa_2025": 0,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33.7
+    },
+    {
+      "player": "田中 幹也",
+      "player_id": "21025157",
+      "S_stat_z": 0.7729,
+      "S_reliability": 0.8795,
+      "N_npb_z": 0.9346,
+      "N_confidence": 0.5544,
+      "N_unshrunk": 1.4408,
+      "F_fuse_z": 0.8354,
+      "fuse": {
+        "w_stat": 0.8795,
+        "w_npb": 0.5544,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 365,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33.5
+    },
+    {
+      "player": "岡林 勇希",
+      "player_id": "81585151",
+      "S_stat_z": 0.9469,
+      "S_reliability": 0.9272,
+      "N_npb_z": 0.4391,
+      "N_confidence": 0.5128,
+      "N_unshrunk": 0.7318,
+      "F_fuse_z": 0.766,
+      "fuse": {
+        "w_stat": 0.9272,
+        "w_npb": 0.5128,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 637,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.5
+    },
+    {
+      "player": "源田 壮亮",
+      "player_id": "71775134",
+      "S_stat_z": 0.9107,
+      "S_reliability": 0.8783,
+      "N_npb_z": 0.4263,
+      "N_confidence": 0.4354,
+      "N_unshrunk": 0.8369,
+      "F_fuse_z": 0.7501,
+      "fuse": {
+        "w_stat": 0.8783,
+        "w_npb": 0.4354,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 361,
+      "npb_2026_only": true,
+      "h2f_z": 1.1064433648218008,
+      "npb_plus_sprint_kmh": 32.9
+    },
+    {
+      "player": "水野 達稀",
+      "player_id": "63165155",
+      "S_stat_z": 0.5551,
+      "S_reliability": 0.8691,
+      "N_npb_z": 1.0075,
+      "N_confidence": 0.5503,
+      "N_unshrunk": 1.5649,
+      "F_fuse_z": 0.7305,
+      "fuse": {
+        "w_stat": 0.8691,
+        "w_npb": 0.5503,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 332,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33.4
+    },
+    {
+      "player": "福永 裕基",
+      "player_id": "81685157",
+      "S_stat_z": 0.8807,
+      "S_reliability": 0.5327,
+      "N_npb_z": 0.4372,
+      "N_confidence": 0.4648,
+      "N_unshrunk": 0.8039,
+      "F_fuse_z": 0.6741,
+      "fuse": {
+        "w_stat": 0.5327,
+        "w_npb": 0.4648,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 57,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33
+    },
+    {
+      "player": "藤原 恭大",
+      "player_id": "31635138",
+      "S_stat_z": 0.7648,
+      "S_reliability": 0.9004,
+      "N_npb_z": 0.457,
+      "N_confidence": 0.4648,
+      "N_unshrunk": 0.8403,
+      "F_fuse_z": 0.66,
+      "fuse": {
+        "w_stat": 0.9004,
+        "w_npb": 0.4648,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 452,
+      "npb_2026_only": true,
+      "h2f_z": 0.4676288938114766,
+      "npb_plus_sprint_kmh": 33
+    },
+    {
+      "player": "小川 龍成",
+      "player_id": "11715153",
+      "S_stat_z": 0.2438,
+      "S_reliability": 0.8016,
+      "N_npb_z": 1.1451,
+      "N_confidence": 0.5661,
+      "N_unshrunk": 1.7288,
+      "F_fuse_z": 0.6169,
+      "fuse": {
+        "w_stat": 0.8016,
+        "w_npb": 0.5661,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 202,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33.4
+    },
+    {
+      "player": "野間 峻祥",
+      "player_id": "01405130",
+      "S_stat_z": 0.6933,
+      "S_reliability": 0.7685,
+      "N_npb_z": 0.1013,
+      "N_confidence": 0.2011,
+      "N_unshrunk": 0.4307,
+      "F_fuse_z": 0.5706,
+      "fuse": {
+        "w_stat": 0.7685,
+        "w_npb": 0.2011,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 166,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.7
+    },
+    {
+      "player": "梶原 昂希",
+      "player_id": "51555155",
+      "S_stat_z": 0.6278,
+      "S_reliability": 0.7727,
+      "N_npb_z": 0.3049,
+      "N_confidence": 0.1813,
+      "N_unshrunk": 1.4373,
+      "F_fuse_z": 0.5665,
+      "fuse": {
+        "w_stat": 0.7727,
+        "w_npb": 0.1813,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 170,
+      "npb_2026_only": true,
+      "h2f_z": -0.05845361172643707,
+      "npb_plus_sprint_kmh": 33.4
+    },
+    {
+      "player": "大島 洋平",
+      "player_id": "01305131",
+      "S_stat_z": 0.755,
+      "S_reliability": 0.6622,
+      "N_npb_z": 0.0342,
+      "N_confidence": 0.2849,
+      "N_unshrunk": 0.1027,
+      "F_fuse_z": 0.5381,
+      "fuse": {
+        "w_stat": 0.6622,
+        "w_npb": 0.2849,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 98,
+      "npb_2026_only": true,
+      "h2f_z": 0.016701031921837733,
+      "npb_plus_sprint_kmh": 31.7
+    },
+    {
+      "player": "矢野 雅哉",
+      "player_id": "93395153",
+      "S_stat_z": 0.7841,
+      "S_reliability": 0.8701,
+      "N_npb_z": -0.1551,
+      "N_confidence": 0.3127,
+      "N_unshrunk": -0.424,
+      "F_fuse_z": 0.5358,
+      "fuse": {
+        "w_stat": 0.8701,
+        "w_npb": 0.3127,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 335,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.7
+    },
+    {
+      "player": "吉川 尚輝",
+      "player_id": "73375134",
+      "S_stat_z": 0.612,
+      "S_reliability": 0.901,
+      "N_npb_z": 0.3881,
+      "N_confidence": 0.4648,
+      "N_unshrunk": 0.7136,
+      "F_fuse_z": 0.5358,
+      "fuse": {
+        "w_stat": 0.901,
+        "w_npb": 0.4648,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 455,
+      "npb_2026_only": true,
+      "h2f_z": -1.5239691628677607,
+      "npb_plus_sprint_kmh": 32.5
+    },
+    {
+      "player": "佐々木 俊輔",
+      "player_id": "51955159",
+      "S_stat_z": 0.4387,
+      "S_reliability": 0.763,
+      "N_npb_z": 0.6546,
+      "N_confidence": 0.4716,
+      "N_unshrunk": 1.1865,
+      "F_fuse_z": 0.5212,
+      "fuse": {
+        "w_stat": 0.763,
+        "w_npb": 0.4716,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 161,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33
+    },
+    {
+      "player": "村松 開人",
+      "player_id": "03105157",
+      "S_stat_z": 0.3299,
+      "S_reliability": 0.7881,
+      "N_npb_z": 0.7162,
+      "N_confidence": 0.5803,
+      "N_unshrunk": 1.0547,
+      "F_fuse_z": 0.4937,
+      "fuse": {
+        "w_stat": 0.7881,
+        "w_npb": 0.5803,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 186,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 33.4
+    },
+    {
+      "player": "岡 大海",
+      "player_id": "11515139",
+      "S_stat_z": 0.603,
+      "S_reliability": 0.7835,
+      "N_npb_z": 0.013,
+      "N_confidence": 0.1813,
+      "N_unshrunk": 0.0612,
+      "F_fuse_z": 0.4921,
+      "fuse": {
+        "w_stat": 0.7835,
+        "w_npb": 0.1813,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 181,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.6
+    },
+    {
+      "player": "村林 一輝",
+      "player_id": "41845132",
+      "S_stat_z": 0.2155,
+      "S_reliability": 0.9176,
+      "N_npb_z": 0.8382,
+      "N_confidence": 0.605,
+      "N_unshrunk": 1.1841,
+      "F_fuse_z": 0.4629,
+      "fuse": {
+        "w_stat": 0.9176,
+        "w_npb": 0.605,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 557,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 34.5
+    },
+    {
+      "player": "丸山 和郁",
+      "player_id": "93195155",
+      "S_stat_z": 0.4951,
+      "S_reliability": 0.4186,
+      "N_npb_z": 0.2934,
+      "N_confidence": 0.2374,
+      "N_unshrunk": 1.0563,
+      "F_fuse_z": 0.4221,
+      "fuse": {
+        "w_stat": 0.4186,
+        "w_npb": 0.2374,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 36,
+      "npb_2026_only": true,
+      "h2f_z": 1.219175330294208,
+      "npb_plus_sprint_kmh": 32.4
+    },
+    {
+      "player": "友杉 篤輝",
+      "player_id": "71275157",
+      "S_stat_z": 0.3769,
+      "S_reliability": 0.8645,
+      "N_npb_z": 0.3298,
+      "N_confidence": 0.4904,
+      "N_unshrunk": 0.5748,
+      "F_fuse_z": 0.3598,
+      "fuse": {
+        "w_stat": 0.8645,
+        "w_npb": 0.4904,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 319,
+      "npb_2026_only": true,
+      "h2f_z": 1.7452578358321182,
+      "npb_plus_sprint_kmh": 32.7
+    },
+    {
+      "player": "秋山 翔吾",
+      "player_id": "31135133",
+      "S_stat_z": 0.4157,
+      "S_reliability": 0.7585,
+      "N_npb_z": 0.0489,
+      "N_confidence": 0.2198,
+      "N_unshrunk": 0.1903,
+      "F_fuse_z": 0.3333,
+      "fuse": {
+        "w_stat": 0.7585,
+        "w_npb": 0.2198,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 157,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.6
+    },
+    {
+      "player": "小園 海斗",
+      "player_id": "01705138",
+      "S_stat_z": 0.3871,
+      "S_reliability": 0.9197,
+      "N_npb_z": 0.1935,
+      "N_confidence": 0.5584,
+      "N_unshrunk": 0.2962,
+      "F_fuse_z": 0.314,
+      "fuse": {
+        "w_stat": 0.9197,
+        "w_npb": 0.5584,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 573,
+      "npb_2026_only": true,
+      "h2f_z": -0.6596907609126189,
+      "npb_plus_sprint_kmh": 31.5
+    },
+    {
+      "player": "中川 圭太",
+      "player_id": "51255138",
+      "S_stat_z": 0.3024,
+      "S_reliability": 0.9025,
+      "N_npb_z": 0.2939,
+      "N_confidence": 0.523,
+      "N_unshrunk": 0.4802,
+      "F_fuse_z": 0.2993,
+      "fuse": {
+        "w_stat": 0.9025,
+        "w_npb": 0.523,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 463,
+      "npb_2026_only": true,
+      "h2f_z": -0.3590721863195263,
+      "npb_plus_sprint_kmh": 32.6
+    },
+    {
+      "player": "小幡 竜平",
+      "player_id": "31535138",
+      "S_stat_z": 0.2723,
+      "S_reliability": 0.8559,
+      "N_npb_z": 0.3128,
+      "N_confidence": 0.2541,
+      "N_unshrunk": 1.052,
+      "F_fuse_z": 0.2815,
+      "fuse": {
+        "w_stat": 0.8559,
+        "w_npb": 0.2541,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 297,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.8
+    },
+    {
+      "player": "田宮 裕涼",
+      "player_id": "51055138",
+      "S_stat_z": 0.0782,
+      "S_reliability": 0.8457,
+      "N_npb_z": 0.627,
+      "N_confidence": 0.4904,
+      "N_unshrunk": 1.0928,
+      "F_fuse_z": 0.2796,
+      "fuse": {
+        "w_stat": 0.8457,
+        "w_npb": 0.4904,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 274,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.4
+    },
+    {
+      "player": "菊池 涼介",
+      "player_id": "61565135",
+      "S_stat_z": 0.3005,
+      "S_reliability": 0.8861,
+      "N_npb_z": 0.1251,
+      "N_confidence": 0.4963,
+      "N_unshrunk": 0.2155,
+      "F_fuse_z": 0.2375,
+      "fuse": {
+        "w_stat": 0.8861,
+        "w_npb": 0.4963,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 389,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.8
+    },
+    {
+      "player": "奈良間 大己",
+      "player_id": "31435157",
+      "S_stat_z": 0.3293,
+      "S_reliability": 0.6732,
+      "N_npb_z": 0.0721,
+      "N_confidence": 0.3917,
+      "N_unshrunk": 0.1574,
+      "F_fuse_z": 0.2347,
+      "fuse": {
+        "w_stat": 0.6732,
+        "w_npb": 0.3917,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 103,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.7
+    },
+    {
+      "player": "蝦名 達夫",
+      "player_id": "51555151",
+      "S_stat_z": 0.4,
+      "S_reliability": 0.8891,
+      "N_npb_z": -0.0876,
+      "N_confidence": 0.518,
+      "N_unshrunk": -0.1446,
+      "F_fuse_z": 0.2205,
+      "fuse": {
+        "w_stat": 0.8891,
+        "w_npb": 0.518,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 401,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.4
+    },
+    {
+      "player": "度会 隆輝",
+      "player_id": "33535159",
+      "S_stat_z": 0.1642,
+      "S_reliability": 0.8575,
+      "N_npb_z": 0.2715,
+      "N_confidence": 0.478,
+      "N_unshrunk": 0.4854,
+      "F_fuse_z": 0.2026,
+      "fuse": {
+        "w_stat": 0.8575,
+        "w_npb": 0.478,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 301,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.7
+    },
+    {
+      "player": "来田 涼斗",
+      "player_id": "51955153",
+      "S_stat_z": 0.0855,
+      "S_reliability": 0.7297,
+      "N_npb_z": 0.3846,
+      "N_confidence": 0.4102,
+      "N_unshrunk": 0.8012,
+      "F_fuse_z": 0.1931,
+      "fuse": {
+        "w_stat": 0.7297,
+        "w_npb": 0.4102,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 135,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.4
+    },
+    {
+      "player": "郡司 裕也",
+      "player_id": "21925151",
+      "S_stat_z": 0.0781,
+      "S_reliability": 0.8941,
+      "N_npb_z": 0.3415,
+      "N_confidence": 0.4507,
+      "N_unshrunk": 0.6477,
+      "F_fuse_z": 0.1664,
+      "fuse": {
+        "w_stat": 0.8941,
+        "w_npb": 0.4507,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 422,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.7
+    },
+    {
+      "player": "石井 一成",
+      "player_id": "21125134",
+      "S_stat_z": 0.1061,
+      "S_reliability": 0.8792,
+      "N_npb_z": 0.2869,
+      "N_confidence": 0.3917,
+      "N_unshrunk": 0.626,
+      "F_fuse_z": 0.1618,
+      "fuse": {
+        "w_stat": 0.8792,
+        "w_npb": 0.3917,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 364,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.6
+    },
+    {
+      "player": "板山 祐太郎",
+      "player_id": "91395132",
+      "S_stat_z": 0.1198,
+      "S_reliability": 0.7942,
+      "N_npb_z": 0.1879,
+      "N_confidence": 0.3496,
+      "N_unshrunk": 0.4594,
+      "F_fuse_z": 0.1406,
+      "fuse": {
+        "w_stat": 0.7942,
+        "w_npb": 0.3496,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 193,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32
+    },
+    {
+      "player": "林 琢真",
+      "player_id": "91695157",
+      "S_stat_z": 0.1094,
+      "S_reliability": 0.8529,
+      "N_npb_z": 0.0781,
+      "N_confidence": 0.2011,
+      "N_unshrunk": 0.3318,
+      "F_fuse_z": 0.1034,
+      "fuse": {
+        "w_stat": 0.8529,
+        "w_npb": 0.2011,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 290,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32
+    },
+    {
+      "player": "松本 剛",
+      "player_id": "21625135",
+      "S_stat_z": 0.0196,
+      "S_reliability": 0.7872,
+      "N_npb_z": 0.2278,
+      "N_confidence": 0.4843,
+      "N_unshrunk": 0.402,
+      "F_fuse_z": 0.0989,
+      "fuse": {
+        "w_stat": 0.7872,
+        "w_npb": 0.4843,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 185,
+      "npb_2026_only": true,
+      "h2f_z": 0.16701031921838402,
+      "npb_plus_sprint_kmh": 31.4
+    },
+    {
+      "player": "柳町 達",
+      "player_id": "73175151",
+      "S_stat_z": 0.079,
+      "S_reliability": 0.9118,
+      "N_npb_z": 0.0184,
+      "N_confidence": 0.3819,
+      "N_unshrunk": 0.0411,
+      "F_fuse_z": 0.0611,
+      "fuse": {
+        "w_stat": 0.9118,
+        "w_npb": 0.3819,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 517,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.5
+    },
+    {
+      "player": "宗 佑磨",
+      "player_id": "11815130",
+      "S_stat_z": -0.0636,
+      "S_reliability": 0.8858,
+      "N_npb_z": 0.1452,
+      "N_confidence": 0.523,
+      "N_unshrunk": 0.2372,
+      "F_fuse_z": 0.0139,
+      "fuse": {
+        "w_stat": 0.8858,
+        "w_npb": 0.523,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 388,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.9
+    },
+    {
+      "player": "京田 陽太",
+      "player_id": "81585134",
+      "S_stat_z": 0.0192,
+      "S_reliability": 0.8077,
+      "N_npb_z": -0.0039,
+      "N_confidence": 0.3609,
+      "N_unshrunk": -0.0093,
+      "F_fuse_z": 0.012,
+      "fuse": {
+        "w_stat": 0.8077,
+        "w_npb": 0.3609,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 210,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.1
+    },
+    {
+      "player": "若月 健矢",
+      "player_id": "41645139",
+      "S_stat_z": 0.0449,
+      "S_reliability": 0.8889,
+      "N_npb_z": -0.0735,
+      "N_confidence": 0.3716,
+      "N_unshrunk": -0.1689,
+      "F_fuse_z": 0.01,
+      "fuse": {
+        "w_stat": 0.8889,
+        "w_npb": 0.3716,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 400,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.7
+    },
+    {
+      "player": "土田 龍空",
+      "player_id": "51455153",
+      "S_stat_z": 0.006,
+      "S_reliability": 0.5146,
+      "N_npb_z": -0.0138,
+      "N_confidence": 0.0884,
+      "N_unshrunk": -0.1333,
+      "F_fuse_z": 0.0031,
+      "fuse": {
+        "w_stat": 0.5146,
+        "w_npb": 0.0884,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 53,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.2
+    },
+    {
+      "player": "佐藤 輝明",
+      "player_id": "41045153",
+      "S_stat_z": -0.0527,
+      "S_reliability": 0.9227,
+      "N_npb_z": 0.0881,
+      "N_confidence": 0.5584,
+      "N_unshrunk": 0.1349,
+      "F_fuse_z": 0.0004,
+      "fuse": {
+        "w_stat": 0.9227,
+        "w_npb": 0.5584,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 597,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.1
+    },
+    {
+      "player": "塩見 泰隆",
+      "player_id": "71975136",
+      "S_stat_z": 0.7227,
+      "S_reliability": 0,
+      "N_npb_z": -0.0138,
+      "N_confidence": 0.2011,
+      "N_unshrunk": -0.0586,
+      "F_fuse_z": -0.0138,
+      "fuse": {
+        "w_stat": 0,
+        "w_npb": 0.2011,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 0,
+      "npb_2026_only": true,
+      "h2f_z": -1.8245877374608535,
+      "npb_plus_sprint_kmh": 32.3
+    },
+    {
+      "player": "佐藤 都志也",
+      "player_id": "71075151",
+      "S_stat_z": -0.0207,
+      "S_reliability": 0.8175,
+      "N_npb_z": -0.0011,
+      "N_confidence": 0.4273,
+      "N_unshrunk": -0.0023,
+      "F_fuse_z": -0.014,
+      "fuse": {
+        "w_stat": 0.8175,
+        "w_npb": 0.4273,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 224,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.3
+    },
+    {
+      "player": "長岡 秀樹",
+      "player_id": "51455151",
+      "S_stat_z": -0.1817,
+      "S_reliability": 0.8392,
+      "N_npb_z": 0.1911,
+      "N_confidence": 0.5803,
+      "N_unshrunk": 0.2814,
+      "F_fuse_z": -0.0293,
+      "fuse": {
+        "w_stat": 0.8392,
+        "w_npb": 0.5803,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 261,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.6
+    },
+    {
+      "player": "柳田 悠岐",
+      "player_id": "31835133",
+      "S_stat_z": -0.1799,
+      "S_reliability": 0.6094,
+      "N_npb_z": 0.0903,
+      "N_confidence": 0.3716,
+      "N_unshrunk": 0.2078,
+      "F_fuse_z": -0.0776,
+      "fuse": {
+        "w_stat": 0.6094,
+        "w_npb": 0.3716,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 78,
+      "npb_2026_only": true,
+      "h2f_z": -0.13360825537470855,
+      "npb_plus_sprint_kmh": 32.1
+    },
+    {
+      "player": "西野 真弘",
+      "player_id": "91495130",
+      "S_stat_z": -0.1197,
+      "S_reliability": 0.8344,
+      "N_npb_z": -0.0104,
+      "N_confidence": 0.3127,
+      "N_unshrunk": -0.0283,
+      "F_fuse_z": -0.0899,
+      "fuse": {
+        "w_stat": 0.8344,
+        "w_npb": 0.3127,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 252,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.6
+    },
+    {
+      "player": "西川 龍馬",
+      "player_id": "71475132",
+      "S_stat_z": -0.0939,
+      "S_reliability": 0.8918,
+      "N_npb_z": -0.1065,
+      "N_confidence": 0.587,
+      "N_unshrunk": -0.155,
+      "F_fuse_z": -0.0989,
+      "fuse": {
+        "w_stat": 0.8918,
+        "w_npb": 0.587,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 412,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.1
+    },
+    {
+      "player": "細川 成也",
+      "player_id": "31835134",
+      "S_stat_z": -0.2704,
+      "S_reliability": 0.8954,
+      "N_npb_z": 0.1771,
+      "N_confidence": 0.502,
+      "N_unshrunk": 0.3015,
+      "F_fuse_z": -0.1097,
+      "fuse": {
+        "w_stat": 0.8954,
+        "w_npb": 0.502,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 428,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.7
+    },
+    {
+      "player": "山本 祐大",
+      "player_id": "23125136",
+      "S_stat_z": -0.1078,
+      "S_reliability": 0.8731,
+      "N_npb_z": -0.1313,
+      "N_confidence": 0.419,
+      "N_unshrunk": -0.2678,
+      "F_fuse_z": -0.1154,
+      "fuse": {
+        "w_stat": 0.8731,
+        "w_npb": 0.419,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 344,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31
+    },
+    {
+      "player": "清宮 幸太郎",
+      "player_id": "41545136",
+      "S_stat_z": -0.2214,
+      "S_reliability": 0.9203,
+      "N_npb_z": 0.0522,
+      "N_confidence": 0.5279,
+      "N_unshrunk": 0.0845,
+      "F_fuse_z": -0.1217,
+      "fuse": {
+        "w_stat": 0.9203,
+        "w_npb": 0.5279,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 577,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.7
+    },
+    {
+      "player": "外崎 修汰",
+      "player_id": "41245130",
+      "S_stat_z": -0.1795,
+      "S_reliability": 0.8925,
+      "N_npb_z": 0.0786,
+      "N_confidence": 0.2198,
+      "N_unshrunk": 0.3058,
+      "F_fuse_z": -0.1285,
+      "fuse": {
+        "w_stat": 0.8925,
+        "w_npb": 0.2198,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 415,
+      "npb_2026_only": true,
+      "h2f_z": -1.260927910098804,
+      "npb_plus_sprint_kmh": 32.3
+    },
+    {
+      "player": "ポランコ",
+      "player_id": "63065155",
+      "S_stat_z": null,
+      "S_reliability": 0,
+      "N_npb_z": -0.1755,
+      "N_confidence": 0.2699,
+      "N_unshrunk": -0.5559,
+      "F_fuse_z": -0.1755,
+      "fuse": {
+        "fallback": "N_ONLY"
+      },
+      "pa_2025": 0,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.1
+    },
+    {
+      "player": "カリステ",
+      "player_id": "93795157",
+      "S_stat_z": null,
+      "S_reliability": 0,
+      "N_npb_z": -0.1783,
+      "N_confidence": 0.1813,
+      "N_unshrunk": -0.8404,
+      "F_fuse_z": -0.1783,
+      "fuse": {
+        "fallback": "N_ONLY"
+      },
+      "pa_2025": 0,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.3
+    },
+    {
+      "player": "牧 秀悟",
+      "player_id": "13115153",
+      "S_stat_z": -0.171,
+      "S_reliability": 0.8866,
+      "N_npb_z": -0.228,
+      "N_confidence": 0.4963,
+      "N_unshrunk": -0.3927,
+      "F_fuse_z": -0.1914,
+      "fuse": {
+        "w_stat": 0.8866,
+        "w_npb": 0.4963,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 391,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.6
+    },
+    {
+      "player": "モンテロ",
+      "player_id": "53955150",
+      "S_stat_z": null,
+      "S_reliability": 0,
+      "N_npb_z": -0.1942,
+      "N_confidence": 0.2849,
+      "N_unshrunk": -0.5827,
+      "F_fuse_z": -0.1942,
+      "fuse": {
+        "fallback": "N_ONLY"
+      },
+      "pa_2025": 0,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.9
+    },
+    {
+      "player": "森 友哉",
+      "player_id": "91495139",
+      "S_stat_z": -0.2777,
+      "S_reliability": 0.7925,
+      "N_npb_z": -0.0743,
+      "N_confidence": 0.419,
+      "N_unshrunk": -0.1515,
+      "F_fuse_z": -0.2073,
+      "fuse": {
+        "w_stat": 0.7925,
+        "w_npb": 0.419,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 191,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.2
+    },
+    {
+      "player": "森下 翔太",
+      "player_id": "43145157",
+      "S_stat_z": -0.0603,
+      "S_reliability": 0.9254,
+      "N_npb_z": -0.4877,
+      "N_confidence": 0.4904,
+      "N_unshrunk": -0.8501,
+      "F_fuse_z": -0.2083,
+      "fuse": {
+        "w_stat": 0.9254,
+        "w_npb": 0.4904,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 620,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.5
+    },
+    {
+      "player": "栗原 陵矢",
+      "player_id": "01705130",
+      "S_stat_z": -0.2465,
+      "S_reliability": 0.8691,
+      "N_npb_z": -0.167,
+      "N_confidence": 0.518,
+      "N_unshrunk": -0.2756,
+      "F_fuse_z": -0.2168,
+      "fuse": {
+        "w_stat": 0.8691,
+        "w_npb": 0.518,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 332,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.3
+    },
+    {
+      "player": "鈴木 大地",
+      "player_id": "81985135",
+      "S_stat_z": -0.2356,
+      "S_reliability": 0.7984,
+      "N_npb_z": -0.2601,
+      "N_confidence": 0.1379,
+      "N_unshrunk": -1.6129,
+      "F_fuse_z": -0.2392,
+      "fuse": {
+        "w_stat": 0.7984,
+        "w_npb": 0.1379,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 198,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 29
+    },
+    {
+      "player": "ファビアン",
+      "player_id": "43745150",
+      "S_stat_z": null,
+      "S_reliability": 0,
+      "N_npb_z": -0.2462,
+      "N_confidence": 0.3127,
+      "N_unshrunk": -0.673,
+      "F_fuse_z": -0.2462,
+      "fuse": {
+        "fallback": "N_ONLY"
+      },
+      "pa_2025": 0,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.4
+    },
+    {
+      "player": "木浪 聖也",
+      "player_id": "31735138",
+      "S_stat_z": -0.2125,
+      "S_reliability": 0.8024,
+      "N_npb_z": -0.3251,
+      "N_confidence": 0.3496,
+      "N_unshrunk": -0.7946,
+      "F_fuse_z": -0.2467,
+      "fuse": {
+        "w_stat": 0.8024,
+        "w_npb": 0.3496,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 203,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30
+    },
+    {
+      "player": "今宮 健太",
+      "player_id": "31335131",
+      "S_stat_z": -0.2223,
+      "S_reliability": 0.7845,
+      "N_npb_z": -0.3323,
+      "N_confidence": 0.3127,
+      "N_unshrunk": -0.9082,
+      "F_fuse_z": -0.2537,
+      "fuse": {
+        "w_stat": 0.7845,
+        "w_npb": 0.3127,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 182,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.4
+    },
+    {
+      "player": "太田 椋",
+      "player_id": "91395138",
+      "S_stat_z": -0.3607,
+      "S_reliability": 0.9084,
+      "N_npb_z": -0.0523,
+      "N_confidence": 0.4579,
+      "N_unshrunk": -0.0977,
+      "F_fuse_z": -0.2573,
+      "fuse": {
+        "w_stat": 0.9084,
+        "w_npb": 0.4579,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 496,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.7
+    },
+    {
+      "player": "坂倉 将吾",
+      "player_id": "11915134",
+      "S_stat_z": -0.3475,
+      "S_reliability": 0.8886,
+      "N_npb_z": -0.2106,
+      "N_confidence": 0.5075,
+      "N_unshrunk": -0.3546,
+      "F_fuse_z": -0.2977,
+      "fuse": {
+        "w_stat": 0.8886,
+        "w_npb": 0.5075,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 399,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.6
+    },
+    {
+      "player": "海野 隆司",
+      "player_id": "81385151",
+      "S_stat_z": -0.1808,
+      "S_reliability": 0.8489,
+      "N_npb_z": -0.5362,
+      "N_confidence": 0.419,
+      "N_unshrunk": -1.0939,
+      "F_fuse_z": -0.2983,
+      "fuse": {
+        "w_stat": 0.8489,
+        "w_npb": 0.419,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 281,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.3
+    },
+    {
+      "player": "山口 航輝",
+      "player_id": "91895138",
+      "S_stat_z": -0.3994,
+      "S_reliability": 0.6914,
+      "N_npb_z": -0.1007,
+      "N_confidence": 0.3379,
+      "N_unshrunk": -0.2547,
+      "F_fuse_z": -0.3013,
+      "fuse": {
+        "w_stat": 0.6914,
+        "w_npb": 0.3379,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 112,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.9
+    },
+    {
+      "player": "渡邊 佳明",
+      "player_id": "73175138",
+      "S_stat_z": -0.3715,
+      "S_reliability": 0.7685,
+      "N_npb_z": -0.1383,
+      "N_confidence": 0.2699,
+      "N_unshrunk": -0.438,
+      "F_fuse_z": -0.3109,
+      "fuse": {
+        "w_stat": 0.7685,
+        "w_npb": 0.2699,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 166,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.3
+    },
+    {
+      "player": "野村 佑希",
+      "player_id": "31435138",
+      "S_stat_z": -0.39,
+      "S_reliability": 0.8807,
+      "N_npb_z": -0.164,
+      "N_confidence": 0.419,
+      "N_unshrunk": -0.3346,
+      "F_fuse_z": -0.3171,
+      "fuse": {
+        "w_stat": 0.8807,
+        "w_npb": 0.419,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 369,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.7
+    },
+    {
+      "player": "岸田 行倫",
+      "player_id": "91595136",
+      "S_stat_z": -0.3101,
+      "S_reliability": 0.8567,
+      "N_npb_z": -0.3914,
+      "N_confidence": 0.4102,
+      "N_unshrunk": -0.8155,
+      "F_fuse_z": -0.3364,
+      "fuse": {
+        "w_stat": 0.8567,
+        "w_npb": 0.4102,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 299,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 29.4
+    },
+    {
+      "player": "梅野 隆太郎",
+      "player_id": "21325139",
+      "S_stat_z": -0.3795,
+      "S_reliability": 0.7253,
+      "N_npb_z": -0.1485,
+      "N_confidence": 0.1603,
+      "N_unshrunk": -0.7919,
+      "F_fuse_z": -0.3376,
+      "fuse": {
+        "w_stat": 0.7253,
+        "w_npb": 0.1603,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 132,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.6
+    },
+    {
+      "player": "正木 智也",
+      "player_id": "81885155",
+      "S_stat_z": -0.325,
+      "S_reliability": 0.5652,
+      "N_npb_z": -0.3915,
+      "N_confidence": 0.4648,
+      "N_unshrunk": -0.7198,
+      "F_fuse_z": -0.355,
+      "fuse": {
+        "w_stat": 0.5652,
+        "w_npb": 0.4648,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 65,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.1
+    },
+    {
+      "player": "太田 光",
+      "player_id": "71375138",
+      "S_stat_z": -0.3327,
+      "S_reliability": 0.8221,
+      "N_npb_z": -0.4161,
+      "N_confidence": 0.4012,
+      "N_unshrunk": -0.8865,
+      "F_fuse_z": -0.3601,
+      "fuse": {
+        "w_stat": 0.8221,
+        "w_npb": 0.4012,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 231,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.5
+    },
+    {
+      "player": "近藤 健介",
+      "player_id": "41745135",
+      "S_stat_z": -0.4147,
+      "S_reliability": 0.8599,
+      "N_npb_z": -0.3137,
+      "N_confidence": 0.502,
+      "N_unshrunk": -0.5342,
+      "F_fuse_z": -0.3775,
+      "fuse": {
+        "w_stat": 0.8599,
+        "w_npb": 0.502,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 307,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.2
+    },
+    {
+      "player": "石川 昂弥",
+      "player_id": "91195151",
+      "S_stat_z": -0.3664,
+      "S_reliability": 0.6,
+      "N_npb_z": -0.4394,
+      "N_confidence": 0.3716,
+      "N_unshrunk": -1.0106,
+      "F_fuse_z": -0.3943,
+      "fuse": {
+        "w_stat": 0.6,
+        "w_npb": 0.3716,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 75,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.6
+    },
+    {
+      "player": "丸 佳浩",
+      "player_id": "21425116",
+      "S_stat_z": -0.4739,
+      "S_reliability": 0.8807,
+      "N_npb_z": -0.0769,
+      "N_confidence": 0.2011,
+      "N_unshrunk": -0.3268,
+      "F_fuse_z": -0.4001,
+      "fuse": {
+        "w_stat": 0.8807,
+        "w_npb": 0.2011,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 369,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 31.4
+    },
+    {
+      "player": "紅林 弘太郎",
+      "player_id": "91995151",
+      "S_stat_z": -0.4083,
+      "S_reliability": 0.8994,
+      "N_npb_z": -0.4088,
+      "N_confidence": 0.4432,
+      "N_unshrunk": -0.7884,
+      "F_fuse_z": -0.4085,
+      "fuse": {
+        "w_stat": 0.8994,
+        "w_npb": 0.4432,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 447,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.7
+    },
+    {
+      "player": "宮﨑 敏郎",
+      "player_id": "51455137",
+      "S_stat_z": -0.3563,
+      "S_reliability": 0.8756,
+      "N_npb_z": -0.5949,
+      "N_confidence": 0.4648,
+      "N_unshrunk": -1.0939,
+      "F_fuse_z": -0.4391,
+      "fuse": {
+        "w_stat": 0.8756,
+        "w_npb": 0.4648,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 352,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.3
+    },
+    {
+      "player": "佐野 恵太",
+      "player_id": "91995134",
+      "S_stat_z": -0.5174,
+      "S_reliability": 0.9192,
+      "N_npb_z": -0.3186,
+      "N_confidence": 0.587,
+      "N_unshrunk": -0.4639,
+      "F_fuse_z": -0.4399,
+      "fuse": {
+        "w_stat": 0.9192,
+        "w_npb": 0.587,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 569,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.6
+    },
+    {
+      "player": "木下 拓哉",
+      "player_id": "31735132",
+      "S_stat_z": -0.5586,
+      "S_reliability": 0.7093,
+      "N_npb_z": -0.1938,
+      "N_confidence": 0.114,
+      "N_unshrunk": -1.4532,
+      "F_fuse_z": -0.5081,
+      "fuse": {
+        "w_stat": 0.7093,
+        "w_npb": 0.114,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 122,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 29.4
+    },
+    {
+      "player": "古賀 優大",
+      "player_id": "01705134",
+      "S_stat_z": -0.8761,
+      "S_reliability": 0.8534,
+      "N_npb_z": 0.1801,
+      "N_confidence": 0.4354,
+      "N_unshrunk": 0.3535,
+      "F_fuse_z": -0.5193,
+      "fuse": {
+        "w_stat": 0.8534,
+        "w_npb": 0.4354,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 291,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 32.1
+    },
+    {
+      "player": "坂本 誠志郎",
+      "player_id": "11915132",
+      "S_stat_z": -0.5339,
+      "S_reliability": 0.8922,
+      "N_npb_z": -0.5419,
+      "N_confidence": 0.3379,
+      "N_unshrunk": -1.3707,
+      "F_fuse_z": -0.5361,
+      "fuse": {
+        "w_stat": 0.8922,
+        "w_npb": 0.3379,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 414,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.2
+    },
+    {
+      "player": "高橋 周平",
+      "player_id": "91095135",
+      "S_stat_z": -0.62,
+      "S_reliability": 0.6689,
+      "N_npb_z": -0.3715,
+      "N_confidence": 0.2699,
+      "N_unshrunk": -1.1764,
+      "F_fuse_z": -0.5485,
+      "fuse": {
+        "w_stat": 0.6689,
+        "w_npb": 0.2699,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 101,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 29.5
+    },
+    {
+      "player": "古賀 悠斗",
+      "player_id": "81785155",
+      "S_stat_z": -0.61,
+      "S_reliability": 0.8677,
+      "N_npb_z": -0.4828,
+      "N_confidence": 0.4579,
+      "N_unshrunk": -0.9012,
+      "F_fuse_z": -0.5661,
+      "fuse": {
+        "w_stat": 0.8677,
+        "w_npb": 0.4579,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 328,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.6
+    },
+    {
+      "player": "大山 悠輔",
+      "player_id": "21325134",
+      "S_stat_z": -0.6112,
+      "S_reliability": 0.9215,
+      "N_npb_z": -0.5252,
+      "N_confidence": 0.4273,
+      "N_unshrunk": -1.0505,
+      "F_fuse_z": -0.584,
+      "fuse": {
+        "w_stat": 0.9215,
+        "w_npb": 0.4273,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 587,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.5
+    },
+    {
+      "player": "藤岡 裕大",
+      "player_id": "41645136",
+      "S_stat_z": -0.6552,
+      "S_reliability": 0.8818,
+      "N_npb_z": -0.0774,
+      "N_confidence": 0.0884,
+      "N_unshrunk": -0.7485,
+      "F_fuse_z": -0.6025,
+      "fuse": {
+        "w_stat": 0.8818,
+        "w_npb": 0.0884,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 373,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.8
+    },
+    {
+      "player": "筒香 嘉智",
+      "player_id": "41945131",
+      "S_stat_z": -0.7166,
+      "S_reliability": 0.8371,
+      "N_npb_z": -0.3926,
+      "N_confidence": 0.3819,
+      "N_unshrunk": -0.8787,
+      "F_fuse_z": -0.6151,
+      "fuse": {
+        "w_stat": 0.8371,
+        "w_npb": 0.3819,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 257,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.2
+    },
+    {
+      "player": "中村 悠平",
+      "player_id": "51255118",
+      "S_stat_z": -0.7051,
+      "S_reliability": 0.8155,
+      "N_npb_z": -0.3123,
+      "N_confidence": 0.2011,
+      "N_unshrunk": -1.3273,
+      "F_fuse_z": -0.6274,
+      "fuse": {
+        "w_stat": 0.8155,
+        "w_npb": 0.2011,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 221,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.4
+    },
+    {
+      "player": "サンタナ",
+      "player_id": "53755153",
+      "S_stat_z": null,
+      "S_reliability": 0,
+      "N_npb_z": -0.6303,
+      "N_confidence": 0.518,
+      "N_unshrunk": -1.04,
+      "F_fuse_z": -0.6303,
+      "fuse": {
+        "fallback": "N_ONLY"
+      },
+      "pa_2025": 0,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.8
+    },
+    {
+      "player": "浅村 栄斗",
+      "player_id": "51155118",
+      "S_stat_z": -0.6301,
+      "S_reliability": 0.8861,
+      "N_npb_z": -0.6558,
+      "N_confidence": 0.4354,
+      "N_unshrunk": -1.2873,
+      "F_fuse_z": -0.6385,
+      "fuse": {
+        "w_stat": 0.8861,
+        "w_npb": 0.4354,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 389,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.5
+    },
+    {
+      "player": "安田 尚憲",
+      "player_id": "81885136",
+      "S_stat_z": -0.7143,
+      "S_reliability": 0.875,
+      "N_npb_z": -0.4372,
+      "N_confidence": 0.2374,
+      "N_unshrunk": -1.5738,
+      "F_fuse_z": -0.6551,
+      "fuse": {
+        "w_stat": 0.875,
+        "w_npb": 0.2374,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 350,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 29.6
+    },
+    {
+      "player": "伏見 寅威",
+      "player_id": "61065137",
+      "S_stat_z": -0.8004,
+      "S_reliability": 0.7778,
+      "N_npb_z": -0.4326,
+      "N_confidence": 0.2198,
+      "N_unshrunk": -1.6823,
+      "F_fuse_z": -0.7194,
+      "fuse": {
+        "w_stat": 0.7778,
+        "w_npb": 0.2198,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 175,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 29.1
+    },
+    {
+      "player": "大城 卓三",
+      "player_id": "21325136",
+      "S_stat_z": -0.8725,
+      "S_reliability": 0.6644,
+      "N_npb_z": -0.5205,
+      "N_confidence": 0.4273,
+      "N_unshrunk": -1.0411,
+      "F_fuse_z": -0.7347,
+      "fuse": {
+        "w_stat": 0.6644,
+        "w_npb": 0.4273,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 99,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 29.2
+    },
+    {
+      "player": "ソト",
+      "player_id": "03505133",
+      "S_stat_z": null,
+      "S_reliability": 0,
+      "N_npb_z": -0.7918,
+      "N_confidence": 0.4507,
+      "N_unshrunk": -1.5017,
+      "F_fuse_z": -0.7918,
+      "fuse": {
+        "fallback": "N_ONLY"
+      },
+      "pa_2025": 0,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 30.1
+    },
+    {
+      "player": "山川 穂高",
+      "player_id": "21425139",
+      "S_stat_z": -1.0266,
+      "S_reliability": 0.9084,
+      "N_npb_z": -0.6872,
+      "N_confidence": 0.2991,
+      "N_unshrunk": -1.9633,
+      "F_fuse_z": -0.9425,
+      "fuse": {
+        "w_stat": 0.9084,
+        "w_npb": 0.2991,
+        "note": "same latent-z space; no PowerPro weight; display scale not applied here"
+      },
+      "pa_2025": 496,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_sprint_kmh": 29.4
+    }
+  ]
+}
