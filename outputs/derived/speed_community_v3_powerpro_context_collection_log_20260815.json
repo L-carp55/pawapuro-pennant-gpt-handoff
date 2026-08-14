@@ -1,0 +1,269 @@
+{
+  "task": "speed_community_recollection_v3_youtube_powerpro_context",
+  "scope": [
+    "SP-033"
+  ],
+  "status": "COMPLETED_BOUNDED",
+  "target_count": 35,
+  "videos_ok": 35,
+  "timeout_count": 0,
+  "error_count": 0,
+  "comment_rows_recovered": 9352,
+  "candidate_rows": 318,
+  "requested_comment_bound": "all,all,all,all,all",
+  "timeout_seconds": 300,
+  "per_video": [
+    {
+      "video_id": "Ms1zfS7gSmo",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 8,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "lXJEdQqrU7E",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 10,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "Pm_Pyg54JV0",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 29,
+      "candidate_count": 1
+    },
+    {
+      "video_id": "1lkcAGahFZ8",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 32,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "PMkxCzAo16A",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 3,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "5nxW28yS5kQ",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 15,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "wOjrANePk1c",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1981,
+      "candidate_count": 60
+    },
+    {
+      "video_id": "WMCRj4Snias",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 23,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "ZzSgcUeTLHw",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 127,
+      "candidate_count": 1
+    },
+    {
+      "video_id": "T9yXBWsT7bU",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 28,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "AuXLDp8HBOY",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 4,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "zEUKZtZmHZY",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 8,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "ZK-anNJ8CHk",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 7,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "MLVN7I8iJ7c",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 10,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "-kb9eFlpGZI",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 167,
+      "candidate_count": 4
+    },
+    {
+      "video_id": "ctyndHX2HPQ",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 2,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "dQSB1FfiAH8",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 91,
+      "candidate_count": 5
+    },
+    {
+      "video_id": "y57WBLiAMNw",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 2,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "b1wRVILTWTM",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 6,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "yrIsbjxOHQs",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 22,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "mjFQ2nYv9VE",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 11,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "EhYNTJdPSP0",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 35,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "-DHtzgiY6VQ",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 236,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "m6O3gUWdZuM",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 277,
+      "candidate_count": 3
+    },
+    {
+      "video_id": "2egN5kYxyio",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 232,
+      "candidate_count": 2
+    },
+    {
+      "video_id": "2MPQJ70Tb9Q",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 279,
+      "candidate_count": 1
+    },
+    {
+      "video_id": "hN5K7B7nfNU",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 269,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "MRdZJEeuXWc",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 367,
+      "candidate_count": 1
+    },
+    {
+      "video_id": "W8J8LK3JK28",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 10,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "pxdRtLSTI80",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 4084,
+      "candidate_count": 238
+    },
+    {
+      "video_id": "A6WNGSDebRc",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 26,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "vwU0NyiNcaA",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 177,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "wAhQbilAhTY",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 28,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "xcUGTOAXaC4",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 6,
+      "candidate_count": 0
+    },
+    {
+      "video_id": "eaWfO7kRCwU",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 740,
+      "candidate_count": 2
+    }
+  ],
+  "output_files": [
+    "outputs\\derived\\speed_community_v3_powerpro_context_inventory_20260815.csv",
+    "outputs\\derived\\speed_community_v3_powerpro_context_raw_20260815.jsonl",
+    "outputs\\derived\\speed_community_v3_powerpro_context_candidates_20260815.jsonl",
+    "outputs\\derived\\speed_community_v3_powerpro_context_collection_log_20260815.json"
+  ],
+  "note": "This pass exists to preserve row-level comment/reply context missing from the primary worker raw file; all-requested retrieval remains bounded public-route evidence, not platform-exhaustive proof."
+}
