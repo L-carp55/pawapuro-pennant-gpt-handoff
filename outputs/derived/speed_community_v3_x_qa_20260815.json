@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-08-15",
+  "task": "SP-035",
+  "status": "PASS",
+  "proposed_sp035_status": "PARTIAL",
+  "proposed_status_reason": "Canonical X integrity is repaired, but full official reply paging remains NOT_COLLECTED and bounded current-100 hit coverage is incomplete. This is not a negative finding.",
+  "current_100_players_searched": 100,
+  "current_100_players_total": 100,
+  "players_with_ge1_raw_hit": 73,
+  "players_with_ge1_rating_claim": 61,
+  "players_with_ge1_physical_claim": 14,
+  "official_posts_discovered": 111,
+  "replies_quotes_collected": 50,
+  "raw_candidate_count": 420,
+  "canonical_x_rows": 373,
+  "accepted_rating_claim_count": 156,
+  "speed_specific_physical_claim_count": 21,
+  "general_aging_injury_context_count": 17,
+  "supplemental_web_rows": 36,
+  "unique_origin_count": 370,
+  "unresolved_identity_count": 100,
+  "duplicate_rows_collapsed": 1,
+  "false_negative_sample": [
+    {
+      "id": "1931247163016667566",
+      "note": "野間のまだ走力A claim remains a rating claim; joke/stale wording was not discarded"
+    },
+    {
+      "id": "2087467009147834775",
+      "note": "柳田の全力疾走/衰え知らず claim remains speed-specific physical"
+    },
+    {
+      "id": "2081646323414224919",
+      "note": "西川史礁 remains unmapped and is not assigned to 西川龍馬"
+    }
+  ],
+  "false_positive_sample": [
+    {
+      "id": "2077699813446201580",
+      "note": "power-only official reply remains context and is not promoted to speed rating"
+    },
+    {
+      "id": "2070439838969393261",
+      "note": "gameplay 同値速報 remains non-speed context"
+    }
+  ],
+  "qa_sample_count": 89,
+  "qa_error_count": 0,
+  "qa_corrected_count": 0,
+  "cleanup_fixes": {
+    "x_actual_rows_before_dedupe": 374,
+    "non_evidence_x_rows_excluded_from_canonical": 10,
+    "web_rows_separated": 36,
+    "canonical_event_ids_normalized": 373,
+    "canonical_independence_groups_normalized": 373,
+    "duplicate_rows_collapsed": 1,
+    "canonical_claim_facets_assigned": 373,
+    "current_100_flags_recomputed_from_master": 373
+  },
+  "missingness": [
+    "公式スレッドの認証付き全返信ページングは NOT_COLLECTED（canonical known reply/quote rows=50）。",
+    "current-100 27人はこのbounded X artifactでcanonical post hitがない（若月 健矢、土田 龍空、板山 祐太郎、石川 昂弥、福永 裕基、野村 佑希、ファビアン、モンテロ、名原 典彦、坂倉 将吾、小園 海斗、サンタナ、京田 陽太、佐野 恵太、山本 祐大、度会 隆輝、林 琢真、梶原 昂希、蝦名 達夫、栗原 陵矢、海野 隆司、佐々木 俊輔、岸田 行倫、伏見 寅威、坂本 誠志郎、小幡 竜平、梅野 隆太郎）。これは発言不存在のnegative findingではない。",
+    "PowerPro公式の個別走力本文は既存query結果で薄く、画像・公式サイト側の能力値取得は今回のcleanup範囲外。",
+    "X_SEARCH_QUERYのNOT_FOUND/HITS_BUT_IRRELEVANT、account metadata、入口recordはrawに保持したがcanonical evidence originには数えていない。"
+  ],
+  "canonical_artifacts": [
+    "outputs/derived/speed_community_v3_x_canonical_20260815.jsonl",
+    "outputs/derived/speed_community_v3_x_supplemental_web_20260815.jsonl",
+    "outputs/derived/speed_community_v3_x_integrity_qa_20260815.json",
+    "outputs/derived/speed_community_v3_x_qa_20260815.json",
+    "outputs/derived/speed_community_v3_x_player_summary_20260815.csv",
+    "outputs/derived/speed_community_v3_x_query_coverage_20260815.csv",
+    "docs/audits/speed_community_v3_x_recollection_20260815.md",
+    "docs/state/speed_task_registry.tsv"
+  ]
+}

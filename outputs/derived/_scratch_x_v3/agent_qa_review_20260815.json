@@ -1,0 +1,315 @@
+{
+  "reviewer": "qa_agent_sp035_independent",
+  "reviewed_at": "2026-08-15",
+  "scope": "SP-035 X recollection v3 only. YouTube / SP-033 / SP-034 not modified.",
+  "inputs_read": [
+    "outputs/derived/speed_community_v3_x_qa_20260815.json",
+    "outputs/derived/speed_community_v3_x_classified_20260815.jsonl",
+    "outputs/derived/speed_community_v3_x_player_summary_20260815.csv",
+    "outputs/derived/speed_community_v3_x_query_coverage_20260815.csv",
+    "outputs/derived/speed_community_v3_x_raw_20260815.jsonl",
+    "outputs/derived/_scratch_x_v3/agent_c_central_hits.jsonl",
+    "outputs/derived/_scratch_x_v3/agent_d_pacific_hits.jsonl",
+    "outputs/derived/_scratch_x_v3/current_100_players.json",
+    "outputs/derived/speed_2026_100_owner_review_master_20260813.csv",
+    "outputs/derived/_scratch_x_v3/agent_c_query_log.jsonl",
+    "outputs/derived/_scratch_x_v3/agent_d_query_log.jsonl",
+    "scripts/build_speed_community_v3_x_20260815.mjs",
+    "scripts/_extract_current_100_for_x_v3.mjs",
+    "docs/tasks/GROK_SPEED_X_RECOLLECTION_V3_20260815.md"
+  ],
+  "artifact_counts_observed": {
+    "raw": 483,
+    "classified": 424,
+    "accepted_rating_direction_not_unclear": 188,
+    "rating_unclear": 49,
+    "noise": 147,
+    "physical": 32,
+    "gameplay": 8,
+    "mixed": 17,
+    "empty_text_classified": 135,
+    "current_100_true": 255,
+    "current_100_false": 228,
+    "current_100_null": 0,
+    "published_qa_raw": 393,
+    "published_qa_accepted": 147,
+    "published_qa_omits_agent_e": true,
+    "note": "Published QA counts are stale vs current artifacts. Agent E stale/injury rows are in classified/raw but not listed in speed_community_v3_x_qa_20260815.json agent_files_merged."
+  },
+  "check_1_current_100_mapping": {
+    "pass": true,
+    "hard_coded_null": false,
+    "source": "outputs/derived/speed_2026_100_owner_review_master_20260813.csv via scripts/_extract_current_100_for_x_v3.mjs -> outputs/derived/_scratch_x_v3/current_100_players.json",
+    "master_n": 100,
+    "extracted_n": 100,
+    "name_set_diff": [],
+    "player_id_mismatch": [],
+    "current_100_true_names_not_in_list": [],
+    "current_100_false_but_canonical_in_list": [],
+    "resolver_explicitly_blocks_nishikawa_fumiaki": true,
+    "comment": "current_100 is boolean from the real 100 list, not the old null hard-code. This is the main SP-035 defect that this wave actually fixed."
+  },
+  "samples_reviewed": {
+    "accepted_rating_n": 20,
+    "accepted_rating_selection": "deterministic hash sample of classified rows with claim_lane in RATING_POWERPRO/RATING_PROSPI/MIXED and rating_direction != UNCLEAR, plus targeted extras for 山川/古賀/西川/森下",
+    "accepted_rating": [
+      {"record_id": "SPD-X-D-085", "player": "森友哉", "judgment": "KEEP_WEAK", "why": "Prospi catcher TOP3 table listing 走力74B. Rating-lane listing, not criticism."},
+      {"record_id": "SPD-X-D-035", "player": "佐藤都志也", "judgment": "KEEP_WEAK", "why": "Same TOP3 table. COMPARISON_ONLY is fair."},
+      {"record_id": "SPD-X-D-058", "player": "滝澤夏央", "judgment": "KEEP_WEAK", "why": "Fan collage request 走力90, not official. Notes already flag this."},
+      {"record_id": "SPD-X-D-034", "player": "佐藤都志也", "judgment": "KEEP", "why": "Prospi S-rank reveal 走力75B."},
+      {"record_id": "AGC-C-039", "player": "筒香嘉智", "judgment": "KEEP_WEAK", "why": "2016 fan card 走力D9. Historical proposed value, not 2026 critique."},
+      {"record_id": "SPD-X-D-033", "player": "ポランコ", "judgment": "KEEP", "why": "Prospi ポランコ走力B vs PowerPro C. Real rating comparison."},
+      {"record_id": "AGC-C-038", "player": "牧秀悟", "judgment": "KEEP_WEAK", "why": "Fan-repro 走力67→56. Proposed value, not official-card critique."},
+      {"record_id": "SPD-X-D-032", "player": "ポランコ", "judgment": "KEEP", "why": "角中 press cluster; ポランコ C vs Prospi B."},
+      {"record_id": "SPD-X-D-031", "player": "ポランコ", "judgment": "KEEP", "why": "2025 PowerPro still ポランコC. Comparison/stale-adjacent."},
+      {"record_id": "SPD-X-D-030", "player": "安田尚憲", "judgment": "KEEP", "why": "Clear Prospi TOO_LOW vs レイエス."},
+      {"record_id": "reply_1848729745464426545", "player": "大谷翔平", "judgment": "KEEP_OUT_OF_100", "why": "Official-reply speed grade wish. Not current-100."},
+      {"record_id": "reply_2088175208415060306", "player": "山本浩二", "judgment": "FALSE_POSITIVE", "why": "広島差別査定 / アーチスト / 鈴木誠也. Power-overall, not 走力."},
+      {"record_id": "AGC-C-034", "player": "京田陽太", "judgment": "KEEP_WEAK", "why": "Fan-repro 走力B78→B72 aging. Direction OK, not official critique."},
+      {"record_id": "SPD-X-D-028", "player": "安田尚憲", "judgment": "KEEP_DUP", "why": "Same-event extract as D-027. Rating listing."},
+      {"record_id": "reply_1872478671942090951", "player": "前田智徳", "judgment": "KEEP_WEAK", "why": "Explicit 走力69 on OB card. Gameplay comparison, still a speed number."},
+      {"record_id": "AGC-C-033", "player": "宮﨑敏郎", "judgment": "KEEP_WEAK", "why": "Fan-repro 走力-5."},
+      {"record_id": "SPD-X-D-029", "player": "安田尚憲", "judgment": "KEEP", "why": "PowerPro 走力 E46 frozen 2017-2025. STALE is correct."},
+      {"record_id": "AGC-C-032", "player": "丸佳浩", "judgment": "KEEP_WEAK", "why": "Fan-repro aging C65→C63."},
+      {"record_id": "AGC-C-031", "player": "丸佳浩", "judgment": "KEEP_WEAK", "why": "2016 peak 走力A praise. Not current rating."},
+      {"record_id": "AGC-C-030", "player": "佐藤輝明", "judgment": "KEEP", "why": "Fan 査定 走力C68."},
+      {"record_id": "X-V3-2066818855377481755-森下翔太", "player": "森下翔太", "judgment": "KEEP", "why": "パワプロ走力60/70 厳しすぎて草. Real TOO_LOW."},
+      {"record_id": "X-V3-2066818855377481755-大山悠輔", "player": "大山悠輔", "judgment": "FALSE_POSITIVE", "why": "大山58 is the reference, not a 大山走力-too-low claim."},
+      {"record_id": "AGE-E-20260815-049", "player": "山川穂高", "judgment": "KEEP", "why": "走力Gじゃね？w is sarcastic TOO_HIGH, not 'fast 山川' irony."},
+      {"record_id": "X-V3-1950499692657123725-古賀優大", "player": "古賀優大", "judgment": "KEEP", "why": "Fan card 走力E43 on 古賀優大, not 悠斗."},
+      {"record_id": "X-V3-1936336784574808219-カリステ", "player": "カリステ", "judgment": "KEEP", "why": "プロスピ走力AだがCぐらい. Classic TOO_HIGH."}
+    ],
+    "rejected_or_noise_or_unclear_n": 47,
+    "rejected_or_noise_or_unclear_selection": "20 hash-sampled NOISE + 20 hash-sampled UNCLEAR rating-lane + all 7 走力-bearing NOISE",
+    "rejected_or_noise_or_unclear": [
+      {"record_id": "X-V3-1782242931358957693-none", "lane": "NOISE", "judgment": "NOT_COLLECTED_NOT_FN", "why": "Empty-text official inventory row. Cannot tell if the post had 走力 in media."},
+      {"record_id": "thread_coverage_1848333844665233748", "lane": "NOISE", "judgment": "OK", "why": "Coverage stub stating unread replies != absence."},
+      {"record_id": "AGE-E-20260815-079", "lane": "NOISE", "judgment": "OK", "why": "NOT_FOUND receipt, not a dropped claim."},
+      {"record_id": "AGE-E-20260815-081", "lane": "NOISE", "judgment": "OK", "why": "Required-phrase empty search receipt."},
+      {"record_id": "tierb_1663470303425568768", "lane": "NOISE", "judgment": "OK", "why": "Official promo 'パンチ力・走力' is not a rating claim."},
+      {"record_id": "SPD-X-D-060", "lane": "RATING_PROSPI/UNCLEAR", "judgment": "OK_CONSERVATIVE", "why": "太田光 プロスピの査定ほんまか. Attribute unspecified; not dropped to NOISE."},
+      {"record_id": "SPD-X-D-067", "lane": "RATING_PROSPI/UNCLEAR", "judgment": "OK", "why": "Complaint is 弾道/パワー, 走力型 is contrast only."},
+      {"record_id": "AGE-E-20260815-060", "lane": "RATING_PROSPI/UNCLEAR", "judgment": "OK", "why": "2019 西川龍馬 still B. Before-image, not a dropped current claim."},
+      {"record_id": "reply_1872286479030145393", "lane": "RATING_PROSPI/UNCLEAR", "judgment": "IDENTITY_ERROR", "why": "Subject is unnamed (likely 前田智徳); mapped HIGH to 筒香 because 筒香 is the comparison."},
+      {"record_id": "X-V3-1932374389988987324-山本祐大", "lane": "RATING_POWERPRO/UNCLEAR", "judgment": "IDENTITY_ERROR", "why": "Text is 山本大斗; unique_surname mapped to 山本祐大."}
+    ],
+    "physical_reviewed_n": 32,
+    "gameplay_reviewed_n": 8,
+    "sarcasm_or_joke_accepted_reviewed_n": 21,
+    "identity_specials_reviewed": ["西川史礁", "西川龍馬", "山川穂高", "古賀優大", "古賀悠斗", "山本大斗/山本祐大"],
+    "false_negative_sample_rate": "0 clear dropped 走力査定 / 27 independent NOISE-or-走力-NOISE rows. Residual risk is empty official posts (135) and unread official replies, not classifier drop of visible 走力査定 text.",
+    "false_positive_sample_rate": "4 definite speed-lane FPs in 25 accepted-or-targeted rating rows (~16%). Additional weak listings/fan-repros are rating-lane but not 査定批判."
+  },
+  "false_negatives": [],
+  "false_negatives_note": "Independent review did not find a clear 走力査定 claim dropped to NOISE/UNCLEAR-as-absent. Published QA's 3-row 'false_negative_sample' is self-review of already-kept rows, not a rejected-set sample. Residual FN risk = NOT_COLLECTED (empty official texts, thread_fetch slice, 9 players without full-name x_keyword).",
+  "false_positives": [
+    {
+      "record_id": "reply_2088175208415060306",
+      "player": "山本浩二",
+      "issue": "Power/overall 査定 abuse accepted as RATING_PROSPI TOO_LOW. No 走力 claim.",
+      "severity": "high"
+    },
+    {
+      "record_id": "reply_2077696153454551162",
+      "player": "福留孝介",
+      "issue": "パワー最大88 / パワヒ. Power complaint accepted as speed rating TOO_LOW.",
+      "severity": "high"
+    },
+    {
+      "record_id": "X-V3-2066818855377481755-大山悠輔",
+      "player": "大山悠輔",
+      "issue": "大山58 is the baseline in a 森下走力 poll. Direction TOO_LOW on 大山 is wrong.",
+      "severity": "medium"
+    },
+    {
+      "record_id": "AGC-C-044",
+      "player": "岸田行倫",
+      "issue": "査定が良すぎる is overall, not 走力. Also post_id is Instagram/YouTube-like DWpe9zPy7-l.",
+      "severity": "medium"
+    },
+    {
+      "record_id": "AGE-E-20260815-052",
+      "player": "山川穂高",
+      "issue": "WEB_RATING_SNAPSHOT (Game8 走力47) treated as X community rating. Not an X claim.",
+      "severity": "medium"
+    }
+  ],
+  "identity_errors": [
+    {
+      "record_id": "X-V3-1932374389988987324-山本祐大",
+      "text": "パワプロの山本大斗の走力もっと上げろ",
+      "mapped_to": "山本 祐大 / 23125136",
+      "correct": "山本大斗 (not in current-100). Must not unique_surname-collapse 山本.",
+      "severity": "high",
+      "check": "surname/alias"
+    },
+    {
+      "record_id": "reply_1872286479030145393",
+      "text": "前より走力速くなったから筒香よりも重要性があるのでレフト起用ならいいと思う",
+      "mapped_to": "筒香 嘉智 HIGH full_name",
+      "correct": "Subject unnamed; notes say likely 前田智徳. 筒香 is comparison only. Notes claim LOW but field is HIGH.",
+      "severity": "high",
+      "check": "surname/alias"
+    },
+    {
+      "record_id": "AGE-E-20260815-070",
+      "text": "塩見 丸山 並木 / 岩田幸宏 怪我なし … 足めっちゃ早い",
+      "mapped_to": "丸山 和郁",
+      "correct": "Speed praise is 岩田. 丸山 is injury-availability contrast.",
+      "severity": "medium",
+      "check": "surname/alias"
+    },
+    {
+      "record_id": "SPD-X-D-017",
+      "text": "紅林「あ〜〜…(走力が)微妙！」 太田椋「(吉田正尚は)意外と速い！」",
+      "mapped_to": "紅林弘太郎 PHYSICAL",
+      "correct": "紅林 is commenting on 吉田正尚's speed, not his own.",
+      "severity": "medium",
+      "check": "surname/alias"
+    },
+    {
+      "record_id": "X-V3-2081646323414224919-西川史礁",
+      "text": "西川史礁プロスピでの走力低すぎんか？73はあるはずやろ",
+      "mapped_to": "西川 史礁 / current_100=false / full_name_not_in_100",
+      "correct": "Correct. Not 西川龍馬.",
+      "severity": "none_this_is_a_pass",
+      "check": "西川史礁 vs 西川龍馬"
+    },
+    {
+      "record_id": "X-V3-1950499692657123725-古賀優大",
+      "mapped_to": "古賀 優大 / 01705134",
+      "paired_with": "SPD-X-D-051 古賀悠斗 PHYSICAL kept separate",
+      "correct": "Correct split. 優大=Yakult catcher rating card; 悠斗=Seibu physical RH/joke.",
+      "severity": "none_this_is_a_pass",
+      "check": "古賀優大 vs 古賀悠斗"
+    }
+  ],
+  "sarcasm_review": {
+    "山川_irony": {
+      "pass": true,
+      "records": ["AGE-E-20260815-049", "AGE-E-20260815-050"],
+      "note": "YouTube-era failure was '足が速い山川' taken as physical-fast. Here '走力Gじゃね？w' and 'F超えてG' are kept as joke/MIXED about slowness, not inverted to fast. No sarcasm false-physical-fast found."
+    },
+    "sarcasm_as_literal_physical_n": 0,
+    "joke_but_claim_present_kept_correctly": [
+      "X-V3-2066818855377481755-森下翔太",
+      "AGE-E-20260815-049",
+      "SPD-X-D-012",
+      "AGC-C-001"
+    ],
+    "borderline": [
+      {
+        "record_id": "AGC-C-011",
+        "note": "40歳で走力B 草 is a real TOO_HIGH/aging joke, but source looks like Instagram (post_id DW-TZEjyL1c), not X."
+      }
+    ]
+  },
+  "gameplay_as_physical": {
+    "systematic_error": false,
+    "phys_with_gameplay_words_n": 0,
+    "notes": [
+      "2070439838969393261 リアタイは走力・守備 correctly GAMEPLAY.",
+      "SPD-X-D-008 太田椋 足が早いラオウ correctly GAMEPLAY.",
+      "Same post 1922204388203880521 is PHYSICAL in parent (X-V3-...-水野) and GAMEPLAY in agent D (SPD-X-D-023). Split, not gameplay-promoted-to-physical. Parent physical row is mixed gameplay+observation.",
+      "AGE-E-007 / AGC-C-012 アキレス腱ジョーク: one GAMEPLAY, one RATING INJURY. Not physical."
+    ]
+  },
+  "duplicate_clusters": [
+    {
+      "cluster_id": "independence_group_x_undefined",
+      "n_accepted": 143,
+      "issue": "Agent C/D/E rows often lack independence_group/parent_id so eventId/independence collapse to x:undefined or x:unknown:<player>:unk. 188 accepted claims are not 188 independent origins. Unique accepted post_ids = 146; 13 accepted have no post_id.",
+      "severity": "high"
+    },
+    {
+      "cluster_id": "multi_agent_same_post",
+      "n_posts": 31,
+      "examples": [
+        {"post_id": "1950499692657123725", "agents": ["parent X-V3", "AGE-E"], "player": "古賀優大"},
+        {"post_id": "1790318907439632537", "agents": ["SPD-X-D-018", "AGE-E-059"], "player": "西川龍馬"},
+        {"post_id": "1546103070773645313", "agents": ["SPD-X-D-073", "AGE-E-051"], "player": "山川穂高"},
+        {"post_id": "2087467009147834775", "agents": ["parent", "AGE-E-027"], "player": "柳田悠岐"},
+        {"post_id": "1922204388203880521", "agents": ["parent PHYSICAL", "SPD GAMEPLAY"], "player": "水野/石井"},
+        {"post_id": "1838164015492874545", "agents": ["parent", "SPD-X-D-032"], "player": "ポランコ"},
+        {"post_id": "530989503721132032", "agents": ["AGC-C-012", "AGE-E-007"], "player": "大島洋平"}
+      ],
+      "severity": "high"
+    },
+    {
+      "cluster_id": "x:1848333844665233748",
+      "n": 8,
+      "player": "大谷翔平",
+      "issue": "One official 大谷 thread exploded into 8 accepted rating rows (TOO_LOW / EXPLICIT / TOO_HIGH). Reaction volume, not 8 origins.",
+      "severity": "medium"
+    },
+    {
+      "cluster_id": "empty_text_official_inventory",
+      "n": 135,
+      "issue": "Agent A inventory rows with blank text inflate NOISE and official_post counts.",
+      "severity": "medium"
+    }
+  ],
+  "official_vs_unofficial": {
+    "source_quality_handle_gate": "pass_for_prospiA_PR_and_pawapuro_pro",
+    "official_as_community_n": 0,
+    "unofficial_as_source_quality_official_n": 0,
+    "problems": [
+      "source_type OFFICIAL_X_POST applied to fan/adjacent handles (pawa_app573 x8, eBASEBALL_Pro x3, Konami x1). source_quality is community, but type label mixes official inventory with unofficial posts.",
+      "Official replies from fans are correctly source_quality=community.",
+      "WEB_RATING_SNAPSHOT 14 + WEB_ARTICLE 6 + WEB_SNIPPET 1 mixed into the X lane.",
+      "YouTube/Instagram-like 11-char ids in X post_id: DW-TZEjyL1c, DWc4fAjyDh7, DWpe9zPy7-l.",
+      "Only 2 official posts contain the word 走力; one is 2023 Tier B 塩見 promo. 2024-2026 official ability-reveal text with 走力 is essentially empty in this extract."
+    ]
+  },
+  "coverage_gaps": [
+    {
+      "gap": "required_13_query_family_not_applied_per_player",
+      "detail": "Task asked 13 families per player. Logs show collapsed OR. Players with family hits: 走力+パワプロ 100, 走力+プロスピ 100, 走力+査定 100, 俊足 48, 鈍足 46, 高すぎ 9, 低すぎ 10, おかしい 9, 上げろ 1, 下げろ 1, 走力A/B/C 4, 足速 0, 足遅 0. Family-count histogram: 45 players have only 3/13 families."
+    },
+    {
+      "gap": "nine_players_no_full_name_x_keyword",
+      "players": ["木下 拓哉", "名原 典彦", "佐野 恵太", "山本 祐大", "蝦名 達夫", "佐々木 俊輔", "伏見 寅威", "坂本 誠志郎", "小幡 竜平"],
+      "detail": "These 9 appear in web_search and/or surname-batch queries, but not in a dedicated x_keyword_search with the full name. Builder also force-marks all 100 searched if agent C/D files exist, so published 100/100 is partly circular."
+    },
+    {
+      "gap": "official_reply_paging_not_collected",
+      "detail": "thread_fetch is a slice. Coverage stubs correctly refuse to treat unread replies as absence."
+    },
+    {
+      "gap": "empty_official_ability_text",
+      "detail": "Many @pawapuro_pro inventory rows have empty text. Cannot verify 能力公開 content or replies on those posts."
+    },
+    {
+      "gap": "published_qa_not_independent",
+      "detail": "speed_community_v3_x_qa_20260815.json FN/FP samples are 3 already-kept cases. Counts omit agent_e (raw 393 vs current 483)."
+    }
+  ],
+  "query_family_applied": {
+    "all_100_names_in_some_query_log": true,
+    "all_100_have_sou_pawapuro_or_prospi_or_satei": true,
+    "literal_13_family_per_player": false,
+    "ashi_haya_or_ashi_oso_used": false,
+    "builder_force_marks_league_as_searched": true
+  },
+  "check_results": {
+    "1_current_100_from_real_list_not_null": "PASS",
+    "2_accepted_are_rating_lane": "PARTIAL_PASS",
+    "3_rejected_false_negatives": "PASS_ON_VISIBLE_TEXT",
+    "4_surname_alias": "FAIL_ON_YAMAMOTO_AND_TSUTSUGO_SUBJECT",
+    "5_sarcasm_false_positive": "PASS",
+    "6_gameplay_as_physical": "PASS",
+    "7_duplicate_same_event_inflation": "FAIL",
+    "8_official_unofficial_mixup": "FAIL_LABEL_AND_WEB_LEAK",
+    "9_100_player_query_family": "PARTIAL_PASS"
+  },
+  "verdict": "FAIL_CLOSED_PARTIAL. current_100 is no longer null-hardcoded and all 100 names were queried at least once. A usable minority rating-lane exists (カリステ A-too-high, 野間 still-A, 安田 E46 stale, 森下 too-low, 山川 G-joke). Do not treat 188 accepted rows as 188 independent speed-rating origins. Do not close SP-035 as DONE_VALIDATED or DONE_NEGATIVE_FINDING.",
+  "recommended_sp035_status": "PARTIAL",
+  "recommended_status_reason": "Search happened on the real 100 list and found current-100 rating claims, so the old 0-criticism-because-null-hardcode result is obsolete. Remaining holes are material: collapsed query family (足速/足遅 never run; 高すぎ family not per-player), 9 names without full-name x_keyword, official reply paging NOT_COLLECTED, empty official texts, independence_group collapse broken (143 accepted in x:undefined), multi-agent same-post double counts (31 posts), WEB/YouTube leaked into the X lane, and at least two identity errors (山本大斗→山本祐大, 筒香 comparison→subject). Yield is not zero, so not a negative finding. Quality is not good enough for DONE_VALIDATED.",
+  "do_not": [
+    "Do not mark SP-035 DONE_VALIDATED.",
+    "Do not mark SP-035 DONE_NEGATIVE_FINDING.",
+    "Do not change SP-033/034 or YouTube artifacts.",
+    "Do not use n_rating in player_summary as independent origin counts.",
+    "Do not treat WEB_RATING_SNAPSHOT as X community evidence."
+  ]
+}

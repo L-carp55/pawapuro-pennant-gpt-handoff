@@ -1,0 +1,416 @@
+query,tool,result,players,note,canonical_x_rows,canonical_directional_rating,canonical_speed_specific_physical,canonical_general_context
+from:prospiA_PR (能力 OR 査定 OR 走力 OR 新能力 OR アップデート),x_keyword_search,HIT,,,,,,
+from:pawapuroprospi (能力 OR 査定 OR 走力 OR 新能力),x_keyword_search,EMPTY,,legacy handle,,,,
+(パワプロ OR プロスピ) (走力) (査定 OR 高すぎ OR 低すぎ OR おかしい),x_keyword_search,HIT,,,,,,
+(周東佑京 OR 岩田幸宏 OR 並木秀尊 OR 源田壮亮 OR 髙部瑛斗) (走力) (パワプロ OR プロスピ OR 査定),x_keyword_search,HIT,周東 佑京|岩田 幸宏,,,,,
+(野間峻祥 OR 塩見泰隆 OR 秋山翔吾 OR 古賀優大 OR 村林一輝) (走力) (パワプロ OR プロスピ OR 査定),x_keyword_search,HIT,野間 峻祥|古賀 優大,,,,,
+from:prospiA_PR (走力 OR 俊足 OR 足 OR 能力公開 OR 新能力),x_keyword_search,HIT,,,,,,
+(パワプロ) (走力) (高すぎ OR 低すぎ OR おかしい OR 上げろ OR 下げろ OR 更新),x_keyword_search,HIT,,,,,,
+(プロスピ) (走力) (高すぎ OR 低すぎ OR おかしい),x_keyword_search,HIT,,,,,,
+(秋山翔吾 OR 塩見泰隆 OR 今宮健太 OR 筒香嘉智 OR 柳田悠岐) (走力) (パワプロ OR プロスピ OR 査定 OR 衰え OR 怪我),x_keyword_search,HIT,柳田 悠岐,,,,,
+(カリステ OR モンテロ OR サンタナ OR ソト OR ポランコ OR ファビアン) (走力) (パワプロ OR プロスピ),x_keyword_search,HIT,カリステ|ファビアン|ポランコ,,,,,
+semantic: パワプロやプロスピの走力査定がおかしい,x_semantic_search,HIT,,,,,,
+from:pawapuro_pro (能力 OR 査定 OR 走力 OR 新能力 OR 選手),x_keyword_search,HIT,,,,,,
+(岡林勇希 OR 中野拓夢 OR 度会隆輝 OR 牧秀悟 OR 佐藤輝明 OR 森下翔太) (走力) (パワプロ OR プロスピ OR 査定),x_keyword_search,HIT,岡林 勇希|中野 拓夢|佐藤 輝明|森下 翔太|牧 秀悟,,,,,
+(源田壮亮 OR 外崎修汰 OR 藤原恭大 OR 小川龍成 OR 髙部瑛斗 OR 紅林弘太郎) (走力) (パワプロ OR プロスピ),x_keyword_search,EMPTY,,,,,,
+(矢野雅哉 OR 小園海斗 OR 林琢真 OR 並木秀尊 OR 丸山和郁 OR 京田陽太) (走力) (パワプロ OR プロスピ),x_keyword_search,HIT,小園 海斗|矢野 雅哉,,,,,
+(西川龍馬 OR 西野真弘 OR 今宮健太 OR 細川成也 OR 郡司裕也) (走力) (パワプロ OR プロスピ OR 査定 OR 衰え),x_keyword_search,HIT,細川 成也,,,,,
+(パワプロ) (走力A OR 走力S OR 走力B) (まだ OR 落ちた OR 昔 OR 衰え OR 更新),x_keyword_search,HIT,,,,,,
+(松本剛 OR 大島洋平 OR 菊池涼介 OR 丸佳浩 OR 近藤健介) (走力) (パワプロ OR プロスピ OR 査定),x_keyword_search,HIT,松本 剛|近藤 健介|菊池 涼介,,,,,
+(塩見泰隆 OR 岩田幸宏 OR 並木秀尊 OR 周東佑京) (パワプロ) (走力),x_keyword_search,HIT,岩田 幸宏|周東 佑京,,,,,
+(村林一輝 OR 浅村栄斗 OR 山川穂高 OR 柳田悠岐 OR 清宮幸太郎 OR 岡大海) (走力) (パワプロ OR プロスピ OR 査定),x_keyword_search,HIT,山川 穂高|柳田 悠岐,,,,,
+(秋山翔吾 OR 菊池涼介 OR 筒香嘉智 OR 大島洋平 OR 塩見泰隆) (パワプロ) (走力 OR 足),x_keyword_search,EMPTY,,,,,,
+秋山翔吾 (パワプロ OR プロスピ) (走力 OR 足 OR 査定),x_keyword_search,HIT,秋山 翔吾,,,,,
+塩見泰隆 (パワプロ OR プロスピ) (走力 OR 足 OR 査定),x_keyword_search,HIT,塩見 泰隆,hits are 2020-2022,,,,
+(モンテロ OR 名原 OR ポランコ OR サンタナ) (パワプロ OR プロスピ) (走力 OR 俊足),x_keyword_search,HIT,ポランコ,,,,,
+from:pawapuro_pro since:2024-01-01 (パワプロ2024 OR パワプロ2025 OR パワプロ2026) (能力 OR 査定),x_keyword_search,EMPTY,,,,,,
+(西川龍馬 OR 西野真弘 OR 今宮健太 OR 村林一輝 OR 源田壮亮) パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+posts from @pawapuro_pro about 能力公開,grok-x__x_search,HIT,,,,,,
+(カリステ OR 野間 OR 古賀優大 OR 森下翔太 OR 西川史礁) (走力) (高すぎ OR 低すぎ OR おかしい OR まだ),x_keyword_search,HIT,野間 峻祥,,,,,
+(中川圭太 OR 太田椋 OR 宗佑磨 OR 来田涼斗 OR 森友哉 OR 紅林弘太郎 OR 若月健矢) (走力) (パワプロ OR プロスピ),x_keyword_search,HIT,森 友哉,,,,,
+(奈良間大己 OR 水野達稀 OR 田宮裕涼 OR 野村佑希 OR 友杉篤輝 OR 安田尚憲 OR 小川龍成) (走力) (パワプロ OR プロスピ),x_keyword_search,HIT,安田 尚憲|野村 佑希,,,,,
+(山口航輝 OR 藤原恭大 OR 藤岡裕大 OR 古賀悠斗 OR 外崎修汰 OR 滝澤夏央 OR 石井一成) (走力) (パワプロ OR プロスピ),x_keyword_search,HIT,藤原 恭大|藤岡 裕大|滝澤 夏央|石井 一成|水野 達稀,,,,,
+(土田龍空 OR 坂倉将吾 OR 中村悠平 OR 長岡秀樹 OR 宮﨑敏郎 OR 岸田行倫 OR 梅野隆太郎) (走力) (パワプロ OR プロスピ),x_keyword_search,HIT,中村 悠平,,,,,
+(村松開人 OR 板山祐太郎 OR 田中幹也 OR 石川昂弥 OR 福永裕基 OR 高橋周平 OR 梶原昂希) (走力) (パワプロ OR プロスピ),x_keyword_search,EMPTY,,,,,,
+thread 2077694733518782866,x_thread_fetch,HIT,,,,,,
+thread 2087841591457132957,x_thread_fetch,HIT,,,,,,
+thread 2085667266394300473,x_thread_fetch,HIT,,,,,,
+thread 2071431931930263811,x_thread_fetch,HIT,,,,,,
+x_user_search パワプロ 公式 / プロスピA 公式 / pawapuroprospi / 実況パワフルプロ野球,x_user_search,HIT,,official found as @pawapuro_pro and @prospiA_PR,,,,
+カリステ 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+カリステ パワプロ 走力,x_keyword_search,HIT,,,,,,
+カリステ 走力 A パワプロ 意外 OR おかしい,web_search,HIT,,,,,,
+土田龍空 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+土田龍空 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+土田龍空 足 遅い OR 走力 パワプロ,x_keyword_search,EMPTY,,,,,,
+土田龍空 足 遅い パワプロ OR 査定,web_search,EMPTY,,,,,,
+大島洋平 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+大島洋平 パワプロ 走力,x_keyword_search,HIT,,,,,,
+大島洋平 40歳 走力 パワプロ,web_search,HIT,,,,,,
+site:x.com 大島洋平 走力 パワプロ OR 査定 OR 40歳,web_search,EMPTY,,,,,,
+岡林勇希 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+岡林勇希 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+岡林勇希 走力 パワプロ,x_keyword_search,EMPTY,,,,,,
+site:x.com 岡林勇希 走力 パワプロ OR プロスピ OR 査定 OR 高すぎ OR 低すぎ,web_search,EMPTY,,,,,,
+木下拓哉 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+村松開人 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+板山祐太郎 走力 パワプロ OR プロスピ OR 査定,web_search,BLOCKED,,,,,,
+板山祐太郎 走力 パワプロ,web_search,EMPTY,,,,,,
+田中幹也 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+田中幹也 パワプロ 走力,x_keyword_search,HIT,,,,,,
+site:x.com 田中幹也 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+石川昂弥 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+福永裕基 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+細川成也 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+高橋周平 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+高橋周平 パワプロ 走塁,x_keyword_search,HIT,,,,,,
+ファビアン 広島 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+ファビアン 広島 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+モンテロ 広島 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+モンテロ パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+名原典彦 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+坂倉将吾 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+小園海斗 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+小園海斗 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+小園海斗 走力 パワプロ,x_keyword_search,EMPTY,,,,,,
+矢野雅哉 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+矢野雅哉 パワプロ 走力,x_keyword_search,HIT,,,,,,
+秋山翔吾 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+秋山翔吾 パワプロ 走力,x_keyword_search,HIT,,,,,,
+菊池涼介 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+菊池涼介 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+野間峻祥 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+野間峻祥 パワプロ 走力,x_keyword_search,HIT,,,,,,
+野間峻祥 走力 A パワプロ まだ OR 査定,web_search,HIT,,,,,,
+サンタナ ヤクルト 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+並木秀尊 走力 パワプロ OR プロスピ OR 査定,web_search,BLOCKED,,,,,,
+並木秀尊 走力 パワプロ,web_search,EMPTY,,,,,,
+並木秀尊 パワプロ 走力,x_keyword_search,HIT,,,,,,
+site:x.com 並木秀尊 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+並木秀尊 走力 S パワプロ 査定,web_search,EMPTY,,,,,,
+中村悠平 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+丸山和郁 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+丸山和郁 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+古賀優大 ヤクルト 走力 パワプロ OR プロスピ OR 査定,web_search,BLOCKED,,,,,,
+古賀優大 ヤクルト 走力 パワプロ,web_search,EMPTY,,,,,,
+塩見泰隆 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+塩見泰隆 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+塩見泰隆 走力 パワプロ,x_keyword_search,EMPTY,,,,,,
+塩見泰隆 走力 A パワプロ,x_keyword_search,EMPTY,,,,,,
+岩田幸宏 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+岩田幸宏 パワプロ 走力,x_keyword_search,HIT,,,,,,
+長岡秀樹 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+京田陽太 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+京田陽太 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+京田陽太 走力 パワプロ,x_keyword_search,EMPTY,,,,,,
+佐野恵太 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+宮﨑敏郎 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+宮崎敏郎 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+宮﨑敏郎 OR 宮崎敏郎 パワプロ 走力,x_keyword_search,HIT,,,,,,
+宮﨑敏郎 走力 低すぎ OR 高すぎ OR おかしい パワプロ,web_search,EMPTY,,,,,,
+山本祐大 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+度会隆輝 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+林琢真 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+林琢真 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+林琢真 走力 パワプロ,x_keyword_search,EMPTY,,,,,,
+梶原昂希 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+梶原昂希 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+牧秀悟 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+牧秀悟 パワプロ 走力,x_keyword_search,HIT,,,,,,
+筒香嘉智 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+筒香嘉智 パワプロ 走力,x_keyword_search,HIT,,,,,,
+蝦名達夫 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+丸佳浩 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+丸佳浩 パワプロ 走力,x_keyword_search,HIT,,,,,,
+佐々木俊輔 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+吉川尚輝 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+吉川尚輝 パワプロ 走力,x_keyword_search,HIT,,,,,,
+大城卓三 走力 パワプロ OR プロスピ OR 査定,web_search,BLOCKED,,,,,,
+大城卓三 走力 パワプロ,web_search,HIT,,,,,,
+大城卓三 パワプロ 走力,x_keyword_search,HIT,,,,,,
+岸田行倫 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+松本剛 巨人 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+中野拓夢 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+中野拓夢 パワプロ 走力,x_keyword_search,HIT,,,,,,
+site:x.com 中野拓夢 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+伏見寅威 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+佐藤輝明 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+佐藤輝明 パワプロ 走力,x_keyword_search,HIT,,,,,,
+坂本誠志郎 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+大山悠輔 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+大山悠輔 パワプロ 走力,x_keyword_search,EMPTY,,,,,,
+小幡竜平 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+木浪聖也 走力 パワプロ OR プロスピ OR 査定,web_search,HIT,,,,,,
+木浪聖也 パワプロ 走力,x_keyword_search,HIT,,,,,,
+site:x.com 木浪聖也 パワプロ 走力 OR 査定,web_search,HIT,,,,,,
+梅野隆太郎 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+森下翔太 走力 パワプロ OR プロスピ OR 査定,web_search,EMPTY,,,,,,
+中川圭太 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+太田椋 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+宗佑磨 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+来田涼斗 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+森友哉 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+紅林弘太郎 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+若月健矢 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+西川龍馬 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+西野真弘 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+奈良間大己 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+水野達稀 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+清宮幸太郎 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+田宮裕涼 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+郡司裕也 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+野村佑希 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+ソト ロッテ (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+ポランコ (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+佐藤都志也 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+友杉篤輝 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+安田尚憲 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+小川龍成 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+山口航輝 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+岡大海 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+藤原恭大 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+藤岡裕大 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+髙部瑛斗 OR 高部瑛斗 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+古賀悠斗 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+外崎修汰 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+源田壮亮 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+滝澤夏央 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+石井一成 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+太田光 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+村林一輝 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+浅村栄斗 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+渡邊佳明 OR 渡辺佳明 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+鈴木大地 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+今宮健太 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+周東佑京 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+山川穂高 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+柳田悠岐 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+柳町達 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+栗原陵矢 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+正木智也 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+海野隆司 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+牧原大成 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+近藤健介 (走力 OR 俊足 OR 鈍足) (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+太田椋 (パワプロ OR プロスピ) (走力 OR 足 OR 俊足 OR 鈍足),x_keyword_search,,,,,,,
+若月健矢 (パワプロ OR プロスピ) (走力 OR 足 OR 俊足 OR 鈍足),x_keyword_search,,,,,,,
+郡司裕也 (パワプロ OR プロスピ) (走力 OR 足 OR 俊足 OR 鈍足),x_keyword_search,,,,,,,
+山口航輝 (パワプロ OR プロスピ) (走力 OR 足 OR 俊足 OR 鈍足),x_keyword_search,,,,,,,
+古賀悠斗 (パワプロ OR プロスピ) (走力 OR 足 OR 俊足 OR 鈍足),x_keyword_search,,,,,,,
+太田光 楽天 (パワプロ OR プロスピ) (走力 OR 足 OR 俊足 OR 鈍足),x_keyword_search,,,,,,,
+村林一輝 (パワプロ OR プロスピ) (走力 OR 足 OR 俊足 OR 鈍足),x_keyword_search,,,,,,,
+栗原陵矢 (パワプロ OR プロスピ) (走力 OR 足 OR 俊足 OR 鈍足),x_keyword_search,,,,,,,
+正木智也 (パワプロ OR プロスピ) (走力 OR 足 OR 俊足 OR 鈍足),x_keyword_search,,,,,,,
+海野隆司 (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+若月健矢 (パワプロ OR プロスピ) 走力,x_keyword_search,,,,,,,
+郡司裕也 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+山口航輝 走力,x_keyword_search,,,,,,,
+古賀悠斗 走力,x_keyword_search,,,,,,,
+"""太田光"" (パワプロ OR プロスピ) 走力",x_keyword_search,,,,,,,
+村林 走力 (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+栗原陵矢 走力 (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+正木智也 走力 (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+若月健矢 (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+郡司裕也 (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+"""太田光"" (パワプロ OR プロスピ)",x_keyword_search,,,,,,,
+栗原陵矢 (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+正木智也 (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+周東佑京 走力 (高すぎ OR 低すぎ OR おかしい OR 上げろ OR 下げろ),x_keyword_search,,,,,,,
+柳田悠岐 走力 (高すぎ OR 低すぎ OR おかしい OR 優遇),x_keyword_search,,,,,,,
+中川圭太 走力 (パワプロ OR プロスピ OR 低すぎ OR おかしい),x_keyword_search,,,,,,,
+藤原恭大 走力 (高すぎ OR 低すぎ OR おかしい),x_keyword_search,,,,,,,
+来田涼斗 (走力 OR 俊足) (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+髙部 OR 高部瑛斗 (パワプロ OR プロスピ) 走力,x_keyword_search,,,,,,,
+源田壮亮 パワプロ 走力,x_keyword_search,,,,,,,
+周東佑京 パワプロ 走力,x_keyword_search,,,,,,,
+柳田悠岐 パワプロ 走力,x_keyword_search,,,,,,,
+清宮幸太郎 パワプロ 走力,x_keyword_search,,,,,,,
+安田尚憲 パワプロ 走力,x_keyword_search,,,,,,,
+栗原陵矢 OR 正木智也 OR 海野隆司 OR 若月健矢 走力 (パワプロ OR プロスピ OR 鈍足 OR 俊足),x_keyword_search,,,,,,,
+来田涼斗 俊足 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+野村佑希 (走力 OR 鈍足) (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+太田椋 走力,x_keyword_search,,,,,,,
+紅林弘太郎 走力 (パワプロ OR プロスピ OR 遅い OR 速い),x_keyword_search,,,,,,,
+今宮健太 パワプロ 走力,x_keyword_search,,,,,,,
+山川穂高 パワプロ 走力,x_keyword_search,,,,,,,
+site:x.com パワプロ 走力 周東佑京 OR 柳田悠岐 OR 髙部瑛斗 OR 中川圭太 OR 藤原恭大,web_search,,,,,,,
+site:x.com パワプロ 走力 低すぎ OR 高すぎ OR おかしい 源田 OR 髙部 OR 牧原 OR 清宮 OR 安田,web_search,,,,,,,
+site:x.com 中川圭太 パワプロ 走力 C,web_search,,,,,,,
+柳田悠岐 プロスピ 走力 優遇,web_search,,,,,,,
+"""パワプロ"" 走力 周東佑京 site:x.com",web_search,,,,,,,
+"""プロスピ"" 走力 柳田悠岐 優遇",web_search,,,,,,,
+"""パワプロ"" 中川圭太 走力 C",web_search,,,,,,,
+角中 ポランコ 走力 パワプロ site:x.com,web_search,,,,,,,
+thread:1549239416694403072,x_thread_fetch,,,,,,,
+thread:1624815253954637824,x_thread_fetch,,,,,,,
+thread:1832368131203067972,x_thread_fetch,,,,,,,
+昔は速かった パワプロ 走力,x_keyword_search,,,,,,,
+全盛期 走力 パワプロ,x_keyword_search,,,,,,,
+まだこの走力 パワプロ,x_keyword_search,,,,,,,
+走力落ちた パワプロ,x_keyword_search,,,,,,,
+衰え 走力 査定,x_keyword_search,,,,,,,
+怪我後 走力 パワプロ,x_keyword_search,,,,,,,
+復帰後 走力 査定,x_keyword_search,,,,,,,
+"""査定が更新されていない"" 走力",x_keyword_search,,,,,,,
+昔のイメージ 走力 パワプロ,x_keyword_search,,,,,,,
+パワプロやプロスピの走力査定が古いまま、全盛期のイメージ、衰えや怪我後の走力が反映されていないという批判,x_semantic_search,,,,,,,
+昔は速かった パワプロ 走力 査定 -youtube,web_search,,,,,,,
+走力落ちた パワプロ 査定 衰え OR 怪我後 OR 復帰後 -youtube,web_search,,,,,,,
+秋山翔吾 走力 パワプロ,x_keyword_search,,,,,,,
+塩見泰隆 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+今宮健太 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+柳田悠岐 走力 (落ち OR 衰え OR 怪我 OR パワプロ),x_keyword_search,,,,,,,
+丸佳浩 走力 (パワプロ OR プロスピ OR 落ち OR 衰え),x_keyword_search,,,,,,,
+筒香嘉智 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+山川穂高 走力 (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+大島洋平 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+菊池涼介 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+西川龍馬 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+(走力 据え置き OR 走力 更新されてない OR 走力 古いまま OR 走力 変わってない) (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+柳田悠岐 丸佳浩 秋山翔吾 塩見泰隆 大島洋平 筒香 山川 今宮 走力が落ちた 全盛期ほど速くない パワプロ査定が昔のまま,x_semantic_search,,,,,,,
+(西野真弘 OR 木下拓哉 OR 細川成也 OR 清宮幸太郎) 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+(郡司裕也 OR 古賀優大 OR 中村悠平 OR 丸山和郁) 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+(長岡秀樹 OR 正木智也 OR 岸田行倫 OR 野村佑希) 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+(佐藤都志也 OR 山口航輝) 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+柳田悠岐 走力 (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+秋山翔吾 走力 (プロスピ OR 査定 OR 落ち),x_keyword_search,,,,,,,
+(塩見泰隆 OR 今宮健太 OR 丸佳浩 OR 大島洋平) (走力落ち OR 足遅く OR 衰え),x_keyword_search,,,,,,,
+(怪我後 OR 手術後 OR 復帰後) 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+昔は速かった (パワプロ OR プロスピ) (走力 OR 足),x_keyword_search,,,,,,,
+走力 (高すぎ OR 下げろ OR まだA OR まだB) (パワプロ OR プロスピ) (ベテラン OR 歳 OR 衰え),x_keyword_search,,,,,,,
+柳田悠岐 走力 パワプロ 査定 落ち OR 衰え -youtube,web_search,,,,,,,
+秋山翔吾 OR 塩見泰隆 OR 丸佳浩 OR 大島洋平 走力 パワプロ 査定 -youtube,web_search,,,,,,,
+柳田 (優遇 OR 高すぎ OR おかしい OR まだA) 走力 (プロスピ OR パワプロ),x_keyword_search,,,,,,,
+(塩見泰隆 OR 塩見) (怪我 OR 手術 OR 復帰) (走力 OR 足 OR パワプロ OR プロスピ),x_keyword_search,,,,,,,
+(清宮幸太郎 OR 正木智也 OR 西野真弘 OR 岸田行倫 OR 山口航輝) (走力 OR 足遅 OR 俊足) (パワプロ OR プロスピ),x_keyword_search,,,,,,,
+(坂本勇人 OR 中村剛也 OR おかわり OR 中島宏之) 走力 (パワプロ OR プロスピ) (まだ OR 落ち OR 衰え OR 据え置き),x_keyword_search,,,,,,,
+今宮健太 パワプロ 走力,x_keyword_search,,,,,,,
+(菊池涼介 OR 山川穂高 OR 筒香) 走力 (落ち OR 衰え OR 高すぎ OR まだ),x_keyword_search,,,,,,,
+塩見泰隆 怪我後に足が落ちた 走力査定が古いまま パワプロ プロスピ,x_semantic_search,,,,,,,
+柳田悠岐のプロスピ走力が高すぎる 優遇査定 全盛期のイメージ,x_semantic_search,,,,,,,
+塩見泰隆 走力 パワプロ OR プロスピ 査定 怪我,web_search,,,,,,,
+今宮健太 OR 細川成也 OR 長岡秀樹 OR 清宮幸太郎 走力 パワプロ 査定,web_search,,,,,,,
+https://pawapuro-lab.com/entry/evaluation_running,web_fetch,,,,,,,
+柳田悠岐 パワプロ 走力 推移 74 72 70,web_search,,,,,,,
+清宮幸太郎 走力 (パワプロ OR プロスピ OR 査定),x_keyword_search,,,,,,,
+https://game8.jp/pawapuro2026-2027/788847,web_fetch,,,,,,,
+https://dnomotoke.com/archives/20250729010027/,web_fetch,,,,,,,
+正木智也 走力,x_keyword_search,,,,,,,
+西野真弘 (走力 OR パワプロ OR プロスピ),x_keyword_search,,,,,,,
+(岸田行倫 OR 山口航輝 OR 野村佑希 OR 郡司裕也) 走力 (パワプロ OR プロスピ OR 遅い OR 速い),x_keyword_search,,,,,,,
+塩見 走力 (落ち OR 遅く OR A OR パワプロ),x_keyword_search,,,,,,,
+(大島洋平 OR 丸佳浩 OR 今宮 OR 山川) パワプロ 走力,x_keyword_search,,,,,,,
+(菊池涼介 OR 秋山翔吾 OR 大島洋平) パワプロ 走力,x_keyword_search,,,,,,,
+パワプロ2026 大島洋平 走力 能力,web_search,,,,,,,
+パワプロ2026 柳田悠岐 走力 能力 査定,web_search,,,,,,,
+パワプロ2026 秋山翔吾 OR 丸佳浩 OR 今宮健太 OR 菊池涼介 OR 山川穂高 走力 site:game8.jp,web_search,,,,,,,
+https://game8.jp/pawapuro2026-2027/788903,web_fetch,,,,,,,
+site:game8.jp/pawapuro2026-2027 秋山翔吾 走力,web_search,,,,,,,
+site:game8.jp/pawapuro2026-2027 (丸佳浩 OR 今宮健太 OR 菊池涼介 OR 細川成也 OR 岸田行倫) 走力,web_search,,,,,,,
+https://game8.jp/pawapuro2026-2027/788870,open_page_with_find,,,,,,,
+https://game8.jp/pawapuro2026-2027/789185,open_page_with_find,,,,,,,
+https://game8.jp/pawapuro2026-2027/788894,open_page_with_find,,,,,,,
+https://game8.jp/pawapuro2026-2027/788857,open_page_with_find,,,,,,,
+site:game8.jp/pawapuro2026-2027 今宮健太 走力,web_search,,,,,,,
+site:game8.jp/pawapuro2026-2027 菊池涼介 走力,web_search,,,,,,,
+site:game8.jp/pawapuro2026-2027/ 今宮健太,web_search,,,,,,,
+プロスピ 公式 / プロ野球スピリッツ 公式 / プロスピ2025 公式,,,,,,,,
+player_coverage:中川 圭太,aggregate,HIT,中川 圭太,canonical_x_rows=6;directional_rating=4;speed_specific_physical=2;general_context=0,6,4,2,0
+player_coverage:太田 椋,aggregate,HIT,太田 椋,canonical_x_rows=4;directional_rating=2;speed_specific_physical=1;general_context=0,4,2,1,0
+player_coverage:宗 佑磨,aggregate,HIT,宗 佑磨,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:来田 涼斗,aggregate,HIT,来田 涼斗,canonical_x_rows=1;directional_rating=0;speed_specific_physical=1;general_context=0,1,0,1,0
+player_coverage:森 友哉,aggregate,HIT,森 友哉,canonical_x_rows=6;directional_rating=5;speed_specific_physical=0;general_context=0,6,5,0,0
+player_coverage:紅林 弘太郎,aggregate,HIT,紅林 弘太郎,canonical_x_rows=2;directional_rating=0;speed_specific_physical=0;general_context=0,2,0,0,0
+player_coverage:若月 健矢,aggregate,SEARCHED_NO_HIT,若月 健矢,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:西川 龍馬,aggregate,HIT,西川 龍馬,canonical_x_rows=3;directional_rating=2;speed_specific_physical=0;general_context=0,3,2,0,0
+player_coverage:西野 真弘,aggregate,HIT,西野 真弘,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:カリステ,aggregate,HIT,カリステ,canonical_x_rows=9;directional_rating=9;speed_specific_physical=2;general_context=0,9,9,2,0
+player_coverage:土田 龍空,aggregate,SEARCHED_NO_HIT,土田 龍空,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:大島 洋平,aggregate,HIT,大島 洋平,canonical_x_rows=4;directional_rating=3;speed_specific_physical=0;general_context=4,4,3,0,4
+player_coverage:岡林 勇希,aggregate,HIT,岡林 勇希,canonical_x_rows=1;directional_rating=0;speed_specific_physical=0;general_context=0,1,0,0,0
+player_coverage:木下 拓哉,aggregate,HIT,木下 拓哉,canonical_x_rows=2;directional_rating=2;speed_specific_physical=0;general_context=0,2,2,0,0
+player_coverage:村松 開人,aggregate,HIT,村松 開人,canonical_x_rows=1;directional_rating=0;speed_specific_physical=0;general_context=0,1,0,0,0
+player_coverage:板山 祐太郎,aggregate,SEARCHED_NO_HIT,板山 祐太郎,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:田中 幹也,aggregate,HIT,田中 幹也,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:石川 昂弥,aggregate,SEARCHED_NO_HIT,石川 昂弥,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:福永 裕基,aggregate,SEARCHED_NO_HIT,福永 裕基,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:細川 成也,aggregate,HIT,細川 成也,canonical_x_rows=2;directional_rating=1;speed_specific_physical=0;general_context=0,2,1,0,0
+player_coverage:高橋 周平,aggregate,HIT,高橋 周平,canonical_x_rows=3;directional_rating=3;speed_specific_physical=0;general_context=0,3,3,0,0
+player_coverage:奈良間 大己,aggregate,HIT,奈良間 大己,canonical_x_rows=1;directional_rating=0;speed_specific_physical=1;general_context=0,1,0,1,0
+player_coverage:水野 達稀,aggregate,HIT,水野 達稀,canonical_x_rows=3;directional_rating=2;speed_specific_physical=0;general_context=0,3,2,0,0
+player_coverage:清宮 幸太郎,aggregate,HIT,清宮 幸太郎,canonical_x_rows=2;directional_rating=1;speed_specific_physical=0;general_context=0,2,1,0,0
+player_coverage:田宮 裕涼,aggregate,HIT,田宮 裕涼,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:郡司 裕也,aggregate,HIT,郡司 裕也,canonical_x_rows=2;directional_rating=1;speed_specific_physical=0;general_context=0,2,1,0,0
+player_coverage:野村 佑希,aggregate,SEARCHED_NO_HIT,野村 佑希,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:ソト,aggregate,HIT,ソト,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:ポランコ,aggregate,HIT,ポランコ,canonical_x_rows=4;directional_rating=4;speed_specific_physical=0;general_context=0,4,4,0,0
+player_coverage:佐藤 都志也,aggregate,HIT,佐藤 都志也,canonical_x_rows=4;directional_rating=3;speed_specific_physical=0;general_context=0,4,3,0,0
+player_coverage:友杉 篤輝,aggregate,HIT,友杉 篤輝,canonical_x_rows=1;directional_rating=0;speed_specific_physical=1;general_context=0,1,0,1,0
+player_coverage:安田 尚憲,aggregate,HIT,安田 尚憲,canonical_x_rows=3;directional_rating=3;speed_specific_physical=0;general_context=0,3,3,0,0
+player_coverage:小川 龍成,aggregate,HIT,小川 龍成,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:山口 航輝,aggregate,HIT,山口 航輝,canonical_x_rows=1;directional_rating=0;speed_specific_physical=1;general_context=0,1,0,1,0
+player_coverage:岡 大海,aggregate,HIT,岡 大海,canonical_x_rows=3;directional_rating=3;speed_specific_physical=0;general_context=0,3,3,0,0
+player_coverage:藤原 恭大,aggregate,HIT,藤原 恭大,canonical_x_rows=4;directional_rating=3;speed_specific_physical=0;general_context=0,4,3,0,0
+player_coverage:藤岡 裕大,aggregate,HIT,藤岡 裕大,canonical_x_rows=2;directional_rating=2;speed_specific_physical=0;general_context=0,2,2,0,0
+player_coverage:髙部 瑛斗,aggregate,HIT,髙部 瑛斗,canonical_x_rows=2;directional_rating=2;speed_specific_physical=0;general_context=0,2,2,0,0
+player_coverage:古賀 悠斗,aggregate,HIT,古賀 悠斗,canonical_x_rows=2;directional_rating=0;speed_specific_physical=1;general_context=0,2,0,1,0
+player_coverage:外崎 修汰,aggregate,HIT,外崎 修汰,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:源田 壮亮,aggregate,HIT,源田 壮亮,canonical_x_rows=2;directional_rating=2;speed_specific_physical=0;general_context=0,2,2,0,0
+player_coverage:滝澤 夏央,aggregate,HIT,滝澤 夏央,canonical_x_rows=3;directional_rating=3;speed_specific_physical=0;general_context=0,3,3,0,0
+player_coverage:石井 一成,aggregate,HIT,石井 一成,canonical_x_rows=2;directional_rating=2;speed_specific_physical=0;general_context=0,2,2,0,0
+player_coverage:ファビアン,aggregate,SEARCHED_NO_HIT,ファビアン,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:モンテロ,aggregate,SEARCHED_NO_HIT,モンテロ,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:名原 典彦,aggregate,SEARCHED_NO_HIT,名原 典彦,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:坂倉 将吾,aggregate,SEARCHED_NO_HIT,坂倉 将吾,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:小園 海斗,aggregate,SEARCHED_NO_HIT,小園 海斗,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:矢野 雅哉,aggregate,HIT,矢野 雅哉,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:秋山 翔吾,aggregate,HIT,秋山 翔吾,canonical_x_rows=2;directional_rating=2;speed_specific_physical=0;general_context=1,2,2,0,1
+player_coverage:菊池 涼介,aggregate,HIT,菊池 涼介,canonical_x_rows=1;directional_rating=0;speed_specific_physical=0;general_context=0,1,0,0,0
+player_coverage:野間 峻祥,aggregate,HIT,野間 峻祥,canonical_x_rows=2;directional_rating=2;speed_specific_physical=0;general_context=0,2,2,0,0
+player_coverage:サンタナ,aggregate,SEARCHED_NO_HIT,サンタナ,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:並木 秀尊,aggregate,HIT,並木 秀尊,canonical_x_rows=2;directional_rating=2;speed_specific_physical=1;general_context=0,2,2,1,0
+player_coverage:中村 悠平,aggregate,HIT,中村 悠平,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:丸山 和郁,aggregate,HIT,丸山 和郁,canonical_x_rows=2;directional_rating=1;speed_specific_physical=1;general_context=0,2,1,1,0
+player_coverage:古賀 優大,aggregate,HIT,古賀 優大,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:塩見 泰隆,aggregate,HIT,塩見 泰隆,canonical_x_rows=11;directional_rating=2;speed_specific_physical=4;general_context=3,11,2,4,3
+player_coverage:岩田 幸宏,aggregate,HIT,岩田 幸宏,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:長岡 秀樹,aggregate,HIT,長岡 秀樹,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:太田 光,aggregate,HIT,太田 光,canonical_x_rows=2;directional_rating=0;speed_specific_physical=0;general_context=0,2,0,0,0
+player_coverage:村林 一輝,aggregate,HIT,村林 一輝,canonical_x_rows=2;directional_rating=1;speed_specific_physical=0;general_context=0,2,1,0,0
+player_coverage:浅村 栄斗,aggregate,HIT,浅村 栄斗,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:渡邊 佳明,aggregate,HIT,渡邊 佳明,canonical_x_rows=1;directional_rating=0;speed_specific_physical=0;general_context=0,1,0,0,0
+player_coverage:鈴木 大地,aggregate,HIT,鈴木 大地,canonical_x_rows=2;directional_rating=2;speed_specific_physical=0;general_context=0,2,2,0,0
+player_coverage:京田 陽太,aggregate,SEARCHED_NO_HIT,京田 陽太,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:佐野 恵太,aggregate,SEARCHED_NO_HIT,佐野 恵太,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:宮﨑 敏郎,aggregate,HIT,宮﨑 敏郎,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:山本 祐大,aggregate,SEARCHED_NO_HIT,山本 祐大,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:度会 隆輝,aggregate,SEARCHED_NO_HIT,度会 隆輝,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:林 琢真,aggregate,SEARCHED_NO_HIT,林 琢真,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:梶原 昂希,aggregate,SEARCHED_NO_HIT,梶原 昂希,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:牧 秀悟,aggregate,HIT,牧 秀悟,canonical_x_rows=3;directional_rating=0;speed_specific_physical=0;general_context=0,3,0,0,0
+player_coverage:筒香 嘉智,aggregate,HIT,筒香 嘉智,canonical_x_rows=8;directional_rating=5;speed_specific_physical=1;general_context=1,8,5,1,1
+player_coverage:蝦名 達夫,aggregate,SEARCHED_NO_HIT,蝦名 達夫,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:今宮 健太,aggregate,HIT,今宮 健太,canonical_x_rows=3;directional_rating=1;speed_specific_physical=0;general_context=1,3,1,0,1
+player_coverage:周東 佑京,aggregate,HIT,周東 佑京,canonical_x_rows=6;directional_rating=5;speed_specific_physical=0;general_context=0,6,5,0,0
+player_coverage:山川 穂高,aggregate,HIT,山川 穂高,canonical_x_rows=5;directional_rating=3;speed_specific_physical=0;general_context=0,5,3,0,0
+player_coverage:柳田 悠岐,aggregate,HIT,柳田 悠岐,canonical_x_rows=7;directional_rating=4;speed_specific_physical=2;general_context=1,7,4,2,1
+player_coverage:柳町 達,aggregate,HIT,柳町 達,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:栗原 陵矢,aggregate,SEARCHED_NO_HIT,栗原 陵矢,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:正木 智也,aggregate,HIT,正木 智也,canonical_x_rows=2;directional_rating=1;speed_specific_physical=1;general_context=0,2,1,1,0
+player_coverage:海野 隆司,aggregate,SEARCHED_NO_HIT,海野 隆司,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:牧原 大成,aggregate,HIT,牧原 大成,canonical_x_rows=3;directional_rating=1;speed_specific_physical=0;general_context=0,3,1,0,0
+player_coverage:近藤 健介,aggregate,HIT,近藤 健介,canonical_x_rows=5;directional_rating=3;speed_specific_physical=0;general_context=0,5,3,0,0
+player_coverage:丸 佳浩,aggregate,HIT,丸 佳浩,canonical_x_rows=3;directional_rating=1;speed_specific_physical=0;general_context=2,3,1,0,2
+player_coverage:佐々木 俊輔,aggregate,SEARCHED_NO_HIT,佐々木 俊輔,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:吉川 尚輝,aggregate,HIT,吉川 尚輝,canonical_x_rows=2;directional_rating=2;speed_specific_physical=0;general_context=0,2,2,0,0
+player_coverage:大城 卓三,aggregate,HIT,大城 卓三,canonical_x_rows=2;directional_rating=2;speed_specific_physical=0;general_context=0,2,2,0,0
+player_coverage:岸田 行倫,aggregate,SEARCHED_NO_HIT,岸田 行倫,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:松本 剛,aggregate,HIT,松本 剛,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:中野 拓夢,aggregate,HIT,中野 拓夢,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:伏見 寅威,aggregate,SEARCHED_NO_HIT,伏見 寅威,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:佐藤 輝明,aggregate,HIT,佐藤 輝明,canonical_x_rows=4;directional_rating=3;speed_specific_physical=0;general_context=0,4,3,0,0
+player_coverage:坂本 誠志郎,aggregate,SEARCHED_NO_HIT,坂本 誠志郎,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:大山 悠輔,aggregate,HIT,大山 悠輔,canonical_x_rows=2;directional_rating=1;speed_specific_physical=0;general_context=0,2,1,0,0
+player_coverage:小幡 竜平,aggregate,SEARCHED_NO_HIT,小幡 竜平,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:木浪 聖也,aggregate,HIT,木浪 聖也,canonical_x_rows=1;directional_rating=1;speed_specific_physical=0;general_context=0,1,1,0,0
+player_coverage:梅野 隆太郎,aggregate,SEARCHED_NO_HIT,梅野 隆太郎,canonical_x_rows=0;directional_rating=0;speed_specific_physical=0;general_context=0,0,0,0,0
+player_coverage:森下 翔太,aggregate,HIT,森下 翔太,canonical_x_rows=3;directional_rating=1;speed_specific_physical=0;general_context=0,3,1,0,0

@@ -1,0 +1,38 @@
+{"query":"from:prospiA_PR (能力 OR 査定 OR 走力 OR 新能力 OR アップデート)","tool":"x_keyword_search","result":"HIT","n":10}
+{"query":"from:pawapuroprospi (能力 OR 査定 OR 走力 OR 新能力)","tool":"x_keyword_search","result":"EMPTY","note":"legacy handle"}
+{"query":"(パワプロ OR プロスピ) (走力) (査定 OR 高すぎ OR 低すぎ OR おかしい)","tool":"x_keyword_search","result":"HIT"}
+{"query":"(周東佑京 OR 岩田幸宏 OR 並木秀尊 OR 源田壮亮 OR 髙部瑛斗) (走力) (パワプロ OR プロスピ OR 査定)","tool":"x_keyword_search","result":"HIT","players":["周東 佑京","岩田 幸宏"]}
+{"query":"(野間峻祥 OR 塩見泰隆 OR 秋山翔吾 OR 古賀優大 OR 村林一輝) (走力) (パワプロ OR プロスピ OR 査定)","tool":"x_keyword_search","result":"HIT","players":["野間 峻祥","古賀 優大"]}
+{"query":"from:prospiA_PR (走力 OR 俊足 OR 足 OR 能力公開 OR 新能力)","tool":"x_keyword_search","result":"HIT"}
+{"query":"(パワプロ) (走力) (高すぎ OR 低すぎ OR おかしい OR 上げろ OR 下げろ OR 更新)","tool":"x_keyword_search","result":"HIT"}
+{"query":"(プロスピ) (走力) (高すぎ OR 低すぎ OR おかしい)","tool":"x_keyword_search","result":"HIT"}
+{"query":"(秋山翔吾 OR 塩見泰隆 OR 今宮健太 OR 筒香嘉智 OR 柳田悠岐) (走力) (パワプロ OR プロスピ OR 査定 OR 衰え OR 怪我)","tool":"x_keyword_search","result":"HIT","players":["柳田 悠岐"]}
+{"query":"(カリステ OR モンテロ OR サンタナ OR ソト OR ポランコ OR ファビアン) (走力) (パワプロ OR プロスピ)","tool":"x_keyword_search","result":"HIT","players":["カリステ","ファビアン","ポランコ"]}
+{"query":"semantic: パワプロやプロスピの走力査定がおかしい","tool":"x_semantic_search","result":"HIT"}
+{"query":"from:pawapuro_pro (能力 OR 査定 OR 走力 OR 新能力 OR 選手)","tool":"x_keyword_search","result":"HIT"}
+{"query":"(岡林勇希 OR 中野拓夢 OR 度会隆輝 OR 牧秀悟 OR 佐藤輝明 OR 森下翔太) (走力) (パワプロ OR プロスピ OR 査定)","tool":"x_keyword_search","result":"HIT","players":["岡林 勇希","中野 拓夢","佐藤 輝明","森下 翔太","牧 秀悟"]}
+{"query":"(源田壮亮 OR 外崎修汰 OR 藤原恭大 OR 小川龍成 OR 髙部瑛斗 OR 紅林弘太郎) (走力) (パワプロ OR プロスピ)","tool":"x_keyword_search","result":"EMPTY"}
+{"query":"(矢野雅哉 OR 小園海斗 OR 林琢真 OR 並木秀尊 OR 丸山和郁 OR 京田陽太) (走力) (パワプロ OR プロスピ)","tool":"x_keyword_search","result":"HIT","players":["小園 海斗","矢野 雅哉"]}
+{"query":"(西川龍馬 OR 西野真弘 OR 今宮健太 OR 細川成也 OR 郡司裕也) (走力) (パワプロ OR プロスピ OR 査定 OR 衰え)","tool":"x_keyword_search","result":"HIT","players":["細川 成也"]}
+{"query":"(パワプロ) (走力A OR 走力S OR 走力B) (まだ OR 落ちた OR 昔 OR 衰え OR 更新)","tool":"x_keyword_search","result":"HIT"}
+{"query":"(松本剛 OR 大島洋平 OR 菊池涼介 OR 丸佳浩 OR 近藤健介) (走力) (パワプロ OR プロスピ OR 査定)","tool":"x_keyword_search","result":"HIT","players":["松本 剛","近藤 健介","菊池 涼介"]}
+{"query":"(塩見泰隆 OR 岩田幸宏 OR 並木秀尊 OR 周東佑京) (パワプロ) (走力)","tool":"x_keyword_search","result":"HIT","players":["岩田 幸宏","周東 佑京"]}
+{"query":"(村林一輝 OR 浅村栄斗 OR 山川穂高 OR 柳田悠岐 OR 清宮幸太郎 OR 岡大海) (走力) (パワプロ OR プロスピ OR 査定)","tool":"x_keyword_search","result":"HIT","players":["山川 穂高","柳田 悠岐"]}
+{"query":"(秋山翔吾 OR 菊池涼介 OR 筒香嘉智 OR 大島洋平 OR 塩見泰隆) (パワプロ) (走力 OR 足)","tool":"x_keyword_search","result":"EMPTY"}
+{"query":"秋山翔吾 (パワプロ OR プロスピ) (走力 OR 足 OR 査定)","tool":"x_keyword_search","result":"HIT","players":["秋山 翔吾"]}
+{"query":"塩見泰隆 (パワプロ OR プロスピ) (走力 OR 足 OR 査定)","tool":"x_keyword_search","result":"HIT","players":["塩見 泰隆"],"note":"hits are 2020-2022"}
+{"query":"(モンテロ OR 名原 OR ポランコ OR サンタナ) (パワプロ OR プロスピ) (走力 OR 俊足)","tool":"x_keyword_search","result":"HIT","players":["ポランコ"]}
+{"query":"from:pawapuro_pro since:2024-01-01 (パワプロ2024 OR パワプロ2025 OR パワプロ2026) (能力 OR 査定)","tool":"x_keyword_search","result":"EMPTY"}
+{"query":"(西川龍馬 OR 西野真弘 OR 今宮健太 OR 村林一輝 OR 源田壮亮) パワプロ 走力","tool":"x_keyword_search","result":"EMPTY"}
+{"query":"posts from @pawapuro_pro about 能力公開","tool":"grok-x__x_search","result":"HIT"}
+{"query":"(カリステ OR 野間 OR 古賀優大 OR 森下翔太 OR 西川史礁) (走力) (高すぎ OR 低すぎ OR おかしい OR まだ)","tool":"x_keyword_search","result":"HIT","players":["野間 峻祥"]}
+{"query":"(中川圭太 OR 太田椋 OR 宗佑磨 OR 来田涼斗 OR 森友哉 OR 紅林弘太郎 OR 若月健矢) (走力) (パワプロ OR プロスピ)","tool":"x_keyword_search","result":"HIT","players":["森 友哉"]}
+{"query":"(奈良間大己 OR 水野達稀 OR 田宮裕涼 OR 野村佑希 OR 友杉篤輝 OR 安田尚憲 OR 小川龍成) (走力) (パワプロ OR プロスピ)","tool":"x_keyword_search","result":"HIT","players":["安田 尚憲","野村 佑希"]}
+{"query":"(山口航輝 OR 藤原恭大 OR 藤岡裕大 OR 古賀悠斗 OR 外崎修汰 OR 滝澤夏央 OR 石井一成) (走力) (パワプロ OR プロスピ)","tool":"x_keyword_search","result":"HIT","players":["藤原 恭大","藤岡 裕大","滝澤 夏央","石井 一成","水野 達稀"]}
+{"query":"(土田龍空 OR 坂倉将吾 OR 中村悠平 OR 長岡秀樹 OR 宮﨑敏郎 OR 岸田行倫 OR 梅野隆太郎) (走力) (パワプロ OR プロスピ)","tool":"x_keyword_search","result":"HIT","players":["中村 悠平"]}
+{"query":"(村松開人 OR 板山祐太郎 OR 田中幹也 OR 石川昂弥 OR 福永裕基 OR 高橋周平 OR 梶原昂希) (走力) (パワプロ OR プロスピ)","tool":"x_keyword_search","result":"EMPTY"}
+{"query":"thread 2077694733518782866","tool":"x_thread_fetch","result":"HIT"}
+{"query":"thread 2087841591457132957","tool":"x_thread_fetch","result":"HIT"}
+{"query":"thread 2085667266394300473","tool":"x_thread_fetch","result":"HIT"}
+{"query":"thread 2071431931930263811","tool":"x_thread_fetch","result":"HIT"}
+{"query":"x_user_search パワプロ 公式 / プロスピA 公式 / pawapuroprospi / 実況パワフルプロ野球","tool":"x_user_search","result":"HIT","note":"official found as @pawapuro_pro and @prospiA_PR"}
