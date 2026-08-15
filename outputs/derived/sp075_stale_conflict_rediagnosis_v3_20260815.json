@@ -1,0 +1,4043 @@
+{
+  "schema_version": "sp075_stale_conflict_rediagnosis_v3_20260815",
+  "generated_at": "2026-08-15",
+  "evidence_status": "MEASURED_BOUNDED",
+  "status": "PARTIAL",
+  "scope": "Community V3 context integration; no production rating, scale, or gate change",
+  "source_hashes": {
+    "youtube_raw": "250970a875a0b348f61fdfe555dd90b199805bb88fc3c4ee027bffc65a86ff20",
+    "youtube_candidates": "a4c5dcdba1d0057fe1388632d318bd9ea852ffbb981af9e86e7bf07bd73f0f71",
+    "youtube_semantic_input": "60465438924f7fdea74590994378a11928de8a7e44013308aaa72b971aea9547",
+    "x_canonical_input": "a5f173bebb856e54ea011532f47163ee80cc7c8e7a3783e8189e163e7287181e",
+    "sp042_stale_detector": "5e99b0831a3eee5415a6b6393f4add19c099c1404eb486927868103ef0c020c2",
+    "sp100_wiring": "27a8e57c90a4786e72c6235632aa59369373c4102bc016195f93360f9d9b88e5"
+  },
+  "population": {
+    "current_100_rows": 100,
+    "sp042_stale_rows": 95,
+    "stale_not_covered_rows": 5,
+    "stale_not_covered_players": [
+      {
+        "player": "宗 佑磨",
+        "player_id": "11815130"
+      },
+      {
+        "player": "ソト",
+        "player_id": "03505133"
+      },
+      {
+        "player": "名原 典彦",
+        "player_id": ""
+      },
+      {
+        "player": "牧 秀悟",
+        "player_id": "13115153"
+      },
+      {
+        "player": "丸 佳浩",
+        "player_id": "21425116"
+      }
+    ],
+    "stale_flag_counts_from_live_sp042": {
+      "NONE": 73,
+      "EXTERNAL_DISAGREEMENT_ONLY": 15,
+      "INTERNAL_INERTIA_ONLY": 5,
+      "BOTH": 2
+    }
+  },
+  "policy": {
+    "community_context_only": true,
+    "powerpro_individual_labels_as_physical_teacher": false,
+    "prospi_as_independent_physical_truth": false,
+    "automatic_rating_change": false,
+    "automatic_stale_promotion": false,
+    "missing_collection_is_negative_evidence": false
+  },
+  "dependency_state": {
+    "community_dependencies_closed_this_run": [
+      "SP-033",
+      "SP-034",
+      "SP-035"
+    ],
+    "remaining_community_dependency": [
+      "SP-036"
+    ],
+    "remaining_non_community_blockers": [
+      {
+        "task_id": "SP-022",
+        "reason": "evidence-weighted pairwise/range uncertainty design remains PARTIAL"
+      },
+      {
+        "task_id": "SP-043",
+        "reason": "veteran case study remains PARTIAL"
+      },
+      {
+        "task_id": "SP-074",
+        "reason": "physical conflict diagnosis has unresolved year-alignment issue"
+      }
+    ],
+    "reason_for_partial": "SP-036 remains PARTIAL; broader owner-review conflict prerequisites remain open. Community context does not close physical/dependency work."
+  },
+  "community_effects": {
+    "player_level_speed_appraisal_changes": 0,
+    "rationale": "No Community record is allowed to change a physical speed point, production rating, or stale flag automatically.",
+    "owner_review_context_players": 55,
+    "prospi_stale_support_claims_used": 0
+  },
+  "players": [
+    {
+      "player": "中川 圭太",
+      "player_id": "51255138",
+      "team": "オリックス・バファローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.7313,
+        "latent_physical_pct": 0.7576,
+        "percentile_gap": 0.0263,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.3024,
+        "N_npb_top_speed_z": 0.7888,
+        "N_exposure_runs": 41,
+        "npb_plus_top_speed_kmh": 32.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 6,
+        "usable_source_event_count": 6,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 6,
+        "community_verdict": "TOO_LOW",
+        "physical_observation_count": 2,
+        "directional_rating_claim_count": 2,
+        "prospi_context_count": 3,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "太田 椋",
+      "player_id": "91395138",
+      "team": "オリックス・バファローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.4599,
+        "latent_physical_pct": 0.5253,
+        "percentile_gap": 0.0653,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.3607,
+        "N_npb_top_speed_z": 0.0703,
+        "N_exposure_runs": 30,
+        "npb_plus_top_speed_kmh": 31.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 2,
+        "community_verdict": "PHYSICAL_CONTEXT_ONLY",
+        "physical_observation_count": 1,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "宗 佑磨",
+      "player_id": "11815130",
+      "team": "オリックス・バファローズ",
+      "stale_candidate": "STALE_NOT_COVERED",
+      "stale_detector_coverage": false,
+      "stale_detector_fields": null,
+      "physical_reference_context": {
+        "S_stat_z": -0.0636,
+        "N_npb_top_speed_z": 0.2299,
+        "N_exposure_runs": 41,
+        "npb_plus_top_speed_kmh": 31.9,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "来田 涼斗",
+      "player_id": "51955153",
+      "team": "オリックス・バファローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9251,
+        "latent_physical_pct": 0.7071,
+        "percentile_gap": -0.218,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.0855,
+        "N_npb_top_speed_z": 0.6292,
+        "N_exposure_runs": 24,
+        "npb_plus_top_speed_kmh": 32.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "PHYSICAL_CONTEXT_ONLY",
+        "physical_observation_count": 1,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "森 友哉",
+      "player_id": "91495139",
+      "team": "オリックス・バファローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.509,
+        "latent_physical_pct": 0.3636,
+        "percentile_gap": -0.1454,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.2777,
+        "N_npb_top_speed_z": -0.329,
+        "N_exposure_runs": 25,
+        "npb_plus_top_speed_kmh": 31.2,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 4,
+        "usable_source_event_count": 4,
+        "attributable_author_origin_count": 1,
+        "unattributed_source_event_count": 3,
+        "community_verdict": "MIXED",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 2,
+        "prospi_context_count": 4,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "紅林 弘太郎",
+      "player_id": "91995151",
+      "team": "オリックス・バファローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2481,
+        "latent_physical_pct": 0.2626,
+        "percentile_gap": 0.0146,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.4083,
+        "N_npb_top_speed_z": -0.7282,
+        "N_exposure_runs": 28,
+        "npb_plus_top_speed_kmh": 30.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "若月 健矢",
+      "player_id": "41645139",
+      "team": "オリックス・バファローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1499,
+        "latent_physical_pct": 0.2727,
+        "percentile_gap": 0.1229,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.0449,
+        "N_npb_top_speed_z": -0.7282,
+        "N_exposure_runs": 20,
+        "npb_plus_top_speed_kmh": 30.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "西川 龍馬",
+      "player_id": "71475132",
+      "team": "オリックス・バファローズ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6848,
+        "latent_physical_pct": 0.3232,
+        "percentile_gap": -0.3615,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.0939,
+        "N_npb_top_speed_z": -0.4088,
+        "N_exposure_runs": 57,
+        "npb_plus_top_speed_kmh": 31.1,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 3,
+        "usable_source_event_count": 3,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 3,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 2,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "西野 真弘",
+      "player_id": "91495130",
+      "team": "オリックス・バファローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.7674,
+        "latent_physical_pct": 0.4848,
+        "percentile_gap": -0.2826,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.1197,
+        "N_npb_top_speed_z": -0.0096,
+        "N_exposure_runs": 15,
+        "npb_plus_top_speed_kmh": 31.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "カリステ",
+      "player_id": "93795157",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8579,
+        "latent_physical_pct": 0.3939,
+        "percentile_gap": -0.4639,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": null,
+        "N_npb_top_speed_z": -0.2491,
+        "N_exposure_runs": 7,
+        "npb_plus_top_speed_kmh": 31.3,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 9,
+        "usable_source_event_count": 9,
+        "attributable_author_origin_count": 3,
+        "unattributed_source_event_count": 6,
+        "community_verdict": "MIXED",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 6,
+        "prospi_context_count": 3,
+        "powerpro_context_count": 4
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "土田 龍空",
+      "player_id": "51455153",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.5349,
+        "latent_physical_pct": 0.3737,
+        "percentile_gap": -0.1611,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.006,
+        "N_npb_top_speed_z": -0.329,
+        "N_exposure_runs": 3,
+        "npb_plus_top_speed_kmh": 31.2,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "大島 洋平",
+      "player_id": "01305131",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.7313,
+        "latent_physical_pct": 0.5354,
+        "percentile_gap": -0.1959,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.755,
+        "N_npb_top_speed_z": 0.0703,
+        "N_exposure_runs": 13,
+        "npb_plus_top_speed_kmh": 31.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "岡林 勇希",
+      "player_id": "81585151",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.845,
+        "latent_physical_pct": 0.7374,
+        "percentile_gap": -0.1076,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.9469,
+        "N_npb_top_speed_z": 0.709,
+        "N_exposure_runs": 39,
+        "npb_plus_top_speed_kmh": 32.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "木下 拓哉",
+      "player_id": "31735132",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.0465,
+        "latent_physical_pct": 0.0303,
+        "percentile_gap": -0.0162,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.5586,
+        "N_npb_top_speed_z": -1.7661,
+        "N_exposure_runs": 4,
+        "npb_plus_top_speed_kmh": 29.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "村松 開人",
+      "player_id": "03105157",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8346,
+        "latent_physical_pct": 0.8889,
+        "percentile_gap": 0.0543,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.3299,
+        "N_npb_top_speed_z": 1.4276,
+        "N_exposure_runs": 55,
+        "npb_plus_top_speed_kmh": 33.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "板山 祐太郎",
+      "player_id": "91395132",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "INTERNAL_INERTIA_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6848,
+        "latent_physical_pct": 0.6364,
+        "percentile_gap": -0.0484,
+        "s1_internal_inertia": true,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.1198,
+        "N_npb_top_speed_z": 0.3098,
+        "N_exposure_runs": 18,
+        "npb_plus_top_speed_kmh": 32,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "田中 幹也",
+      "player_id": "21025157",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8786,
+        "latent_physical_pct": 0.9293,
+        "percentile_gap": 0.0507,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.7729,
+        "N_npb_top_speed_z": 1.5074,
+        "N_exposure_runs": 48,
+        "npb_plus_top_speed_kmh": 33.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "石川 昂弥",
+      "player_id": "91195151",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.062,
+        "latent_physical_pct": 0.2121,
+        "percentile_gap": 0.1501,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.3664,
+        "N_npb_top_speed_z": -0.808,
+        "N_exposure_runs": 20,
+        "npb_plus_top_speed_kmh": 30.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "福永 裕基",
+      "player_id": "81685157",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.4599,
+        "latent_physical_pct": 0.8485,
+        "percentile_gap": 0.3885,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.8807,
+        "N_npb_top_speed_z": 1.1082,
+        "N_exposure_runs": 31,
+        "npb_plus_top_speed_kmh": 33,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "細川 成也",
+      "player_id": "31835134",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "BOTH",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.3437,
+        "latent_physical_pct": 0.7879,
+        "percentile_gap": 0.4442,
+        "s1_internal_inertia": true,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.2704,
+        "N_npb_top_speed_z": 0.8687,
+        "N_exposure_runs": 37,
+        "npb_plus_top_speed_kmh": 32.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 2,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 2,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "高橋 周平",
+      "player_id": "91095135",
+      "team": "中日ドラゴンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1189,
+        "latent_physical_pct": 0.0606,
+        "percentile_gap": -0.0583,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.62,
+        "N_npb_top_speed_z": -1.6863,
+        "N_exposure_runs": 12,
+        "npb_plus_top_speed_kmh": 29.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 2,
+        "community_verdict": "PHYSICAL_CONTEXT_ONLY",
+        "physical_observation_count": 1,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "奈良間 大己",
+      "player_id": "31435157",
+      "team": "北海道日本ハムファイターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.4599,
+        "latent_physical_pct": 0.5455,
+        "percentile_gap": 0.0855,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.3293,
+        "N_npb_top_speed_z": 0.0703,
+        "N_exposure_runs": 22,
+        "npb_plus_top_speed_kmh": 31.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "PHYSICAL_CONTEXT_ONLY",
+        "physical_observation_count": 1,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "水野 達稀",
+      "player_id": "63165155",
+      "team": "北海道日本ハムファイターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6641,
+        "latent_physical_pct": 0.899,
+        "percentile_gap": 0.2349,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.5551,
+        "N_npb_top_speed_z": 1.4276,
+        "N_exposure_runs": 47,
+        "npb_plus_top_speed_kmh": 33.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "PHYSICAL_CONTEXT_ONLY",
+        "physical_observation_count": 1,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "清宮 幸太郎",
+      "player_id": "41545136",
+      "team": "北海道日本ハムファイターズ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2481,
+        "latent_physical_pct": 0.5556,
+        "percentile_gap": 0.3075,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.2214,
+        "N_npb_top_speed_z": 0.0703,
+        "N_exposure_runs": 42,
+        "npb_plus_top_speed_kmh": 31.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 2,
+        "community_verdict": "TOO_LOW",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "田宮 裕涼",
+      "player_id": "51055138",
+      "team": "北海道日本ハムファイターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6021,
+        "latent_physical_pct": 0.7172,
+        "percentile_gap": 0.1151,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.0782,
+        "N_npb_top_speed_z": 0.6292,
+        "N_exposure_runs": 35,
+        "npb_plus_top_speed_kmh": 32.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "TOO_LOW",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "郡司 裕也",
+      "player_id": "21925151",
+      "team": "北海道日本ハムファイターズ",
+      "stale_candidate": "BOTH",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.3721,
+        "latent_physical_pct": 0.798,
+        "percentile_gap": 0.4259,
+        "s1_internal_inertia": true,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.0781,
+        "N_npb_top_speed_z": 0.8687,
+        "N_exposure_runs": 29,
+        "npb_plus_top_speed_kmh": 32.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "TOO_HIGH",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "野村 佑希",
+      "player_id": "31435138",
+      "team": "北海道日本ハムファイターズ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2067,
+        "latent_physical_pct": 0.5657,
+        "percentile_gap": 0.3589,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.39,
+        "N_npb_top_speed_z": 0.0703,
+        "N_exposure_runs": 25,
+        "npb_plus_top_speed_kmh": 31.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "ソト",
+      "player_id": "03505133",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "STALE_NOT_COVERED",
+      "stale_detector_coverage": false,
+      "stale_detector_fields": null,
+      "physical_reference_context": {
+        "S_stat_z": null,
+        "N_npb_top_speed_z": -1.2072,
+        "N_exposure_runs": 29,
+        "npb_plus_top_speed_kmh": 30.1,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "ポランコ",
+      "player_id": "63065155",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.4289,
+        "latent_physical_pct": 0.3333,
+        "percentile_gap": -0.0956,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": null,
+        "N_npb_top_speed_z": -0.4088,
+        "N_exposure_runs": 12,
+        "npb_plus_top_speed_kmh": 31.1,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 2,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "佐藤 都志也",
+      "player_id": "71075151",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6641,
+        "latent_physical_pct": 0.404,
+        "percentile_gap": -0.26,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.0207,
+        "N_npb_top_speed_z": -0.2491,
+        "N_exposure_runs": 26,
+        "npb_plus_top_speed_kmh": 31.3,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "友杉 篤輝",
+      "player_id": "71275157",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9432,
+        "latent_physical_pct": 0.8081,
+        "percentile_gap": -0.1351,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.3769,
+        "N_npb_top_speed_z": 0.8687,
+        "N_exposure_runs": 35,
+        "npb_plus_top_speed_kmh": 32.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "PHYSICAL_CONTEXT_ONLY",
+        "physical_observation_count": 1,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "安田 尚憲",
+      "player_id": "81885136",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1189,
+        "latent_physical_pct": 0.0707,
+        "percentile_gap": -0.0482,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.7143,
+        "N_npb_top_speed_z": -1.6064,
+        "N_exposure_runs": 10,
+        "npb_plus_top_speed_kmh": 29.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 1,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "MIXED",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 2,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "小川 龍成",
+      "player_id": "11715153",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9354,
+        "latent_physical_pct": 0.9091,
+        "percentile_gap": -0.0263,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.2438,
+        "N_npb_top_speed_z": 1.4276,
+        "N_exposure_runs": 51,
+        "npb_plus_top_speed_kmh": 33.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "山口 航輝",
+      "player_id": "91895138",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2067,
+        "latent_physical_pct": 0.6162,
+        "percentile_gap": 0.4094,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.3994,
+        "N_npb_top_speed_z": 0.2299,
+        "N_exposure_runs": 17,
+        "npb_plus_top_speed_kmh": 31.9,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "PHYSICAL_CONTEXT_ONLY",
+        "physical_observation_count": 1,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "岡 大海",
+      "player_id": "11515139",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8579,
+        "latent_physical_pct": 0.7677,
+        "percentile_gap": -0.0902,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.603,
+        "N_npb_top_speed_z": 0.7888,
+        "N_exposure_runs": 7,
+        "npb_plus_top_speed_kmh": 32.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 3,
+        "usable_source_event_count": 3,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 3,
+        "community_verdict": "TOO_HIGH",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 2
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "藤原 恭大",
+      "player_id": "31635138",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9251,
+        "latent_physical_pct": 0.8586,
+        "percentile_gap": -0.0665,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.7648,
+        "N_npb_top_speed_z": 1.1082,
+        "N_exposure_runs": 31,
+        "npb_plus_top_speed_kmh": 33,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 4,
+        "usable_source_event_count": 4,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 4,
+        "community_verdict": "TOO_HIGH",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 3,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "藤岡 裕大",
+      "player_id": "41645136",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.509,
+        "latent_physical_pct": 0.2929,
+        "percentile_gap": -0.2161,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.6552,
+        "N_npb_top_speed_z": -0.6483,
+        "N_exposure_runs": 3,
+        "npb_plus_top_speed_kmh": 30.8,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "髙部 瑛斗",
+      "player_id": "11215151",
+      "team": "千葉ロッテマリーンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9638,
+        "latent_physical_pct": 0.9495,
+        "percentile_gap": -0.0143,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 1.2469,
+        "N_npb_top_speed_z": 1.5873,
+        "N_exposure_runs": 31,
+        "npb_plus_top_speed_kmh": 33.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "古賀 悠斗",
+      "player_id": "81785155",
+      "team": "埼玉西武ライオンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1344,
+        "latent_physical_pct": 0.2222,
+        "percentile_gap": 0.0879,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.61,
+        "N_npb_top_speed_z": -0.808,
+        "N_exposure_runs": 30,
+        "npb_plus_top_speed_kmh": 30.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 2,
+        "community_verdict": "PHYSICAL_CONTEXT_ONLY",
+        "physical_observation_count": 2,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "外崎 修汰",
+      "player_id": "41245130",
+      "team": "埼玉西武ライオンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6021,
+        "latent_physical_pct": 0.6869,
+        "percentile_gap": 0.0848,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.1795,
+        "N_npb_top_speed_z": 0.5493,
+        "N_exposure_runs": 9,
+        "npb_plus_top_speed_kmh": 32.3,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "源田 壮亮",
+      "player_id": "71775134",
+      "team": "埼玉西武ライオンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8346,
+        "latent_physical_pct": 0.8283,
+        "percentile_gap": -0.0063,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.9107,
+        "N_npb_top_speed_z": 1.0284,
+        "N_exposure_runs": 27,
+        "npb_plus_top_speed_kmh": 32.9,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 2,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 2,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "滝澤 夏央",
+      "player_id": "51255155",
+      "team": "埼玉西武ライオンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9251,
+        "latent_physical_pct": 0.8687,
+        "percentile_gap": -0.0564,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.848,
+        "N_npb_top_speed_z": 1.1082,
+        "N_exposure_runs": 52,
+        "npb_plus_top_speed_kmh": 33,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 3,
+        "usable_source_event_count": 3,
+        "attributable_author_origin_count": 1,
+        "unattributed_source_event_count": 2,
+        "community_verdict": "APPROPRIATE",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 3,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "石井 一成",
+      "player_id": "21125134",
+      "team": "埼玉西武ライオンズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8142,
+        "latent_physical_pct": 0.7778,
+        "percentile_gap": -0.0364,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.1061,
+        "N_npb_top_speed_z": 0.7888,
+        "N_exposure_runs": 22,
+        "npb_plus_top_speed_kmh": 32.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "ファビアン",
+      "player_id": "43745150",
+      "team": "広島東洋カープ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.3721,
+        "latent_physical_pct": 0.4242,
+        "percentile_gap": 0.0521,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": null,
+        "N_npb_top_speed_z": -0.1693,
+        "N_exposure_runs": 15,
+        "npb_plus_top_speed_kmh": 31.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "モンテロ",
+      "player_id": "53955150",
+      "team": "広島東洋カープ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1705,
+        "latent_physical_pct": 0.6263,
+        "percentile_gap": 0.4557,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": null,
+        "N_npb_top_speed_z": 0.2299,
+        "N_exposure_runs": 13,
+        "npb_plus_top_speed_kmh": 31.9,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "名原 典彦",
+      "player_id": "",
+      "team": "広島東洋カープ",
+      "stale_candidate": "STALE_NOT_COVERED",
+      "stale_detector_coverage": false,
+      "stale_detector_fields": null,
+      "physical_reference_context": null,
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "坂倉 将吾",
+      "player_id": "11915134",
+      "team": "広島東洋カープ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6021,
+        "latent_physical_pct": 0.2323,
+        "percentile_gap": -0.3697,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.3475,
+        "N_npb_top_speed_z": -0.808,
+        "N_exposure_runs": 38,
+        "npb_plus_top_speed_kmh": 30.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "小園 海斗",
+      "player_id": "01705138",
+      "team": "広島東洋カープ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8217,
+        "latent_physical_pct": 0.4646,
+        "percentile_gap": -0.3571,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.3871,
+        "N_npb_top_speed_z": -0.0894,
+        "N_exposure_runs": 49,
+        "npb_plus_top_speed_kmh": 31.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "矢野 雅哉",
+      "player_id": "93395153",
+      "team": "広島東洋カープ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8036,
+        "latent_physical_pct": 0.2828,
+        "percentile_gap": -0.5208,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.7841,
+        "N_npb_top_speed_z": -0.7282,
+        "N_exposure_runs": 15,
+        "npb_plus_top_speed_kmh": 30.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "TOO_LOW",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "秋山 翔吾",
+      "player_id": "31135133",
+      "team": "広島東洋カープ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.7158,
+        "latent_physical_pct": 0.4949,
+        "percentile_gap": -0.2208,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.4157,
+        "N_npb_top_speed_z": -0.0096,
+        "N_exposure_runs": 9,
+        "npb_plus_top_speed_kmh": 31.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "TOO_LOW",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "菊池 涼介",
+      "player_id": "61565135",
+      "team": "広島東洋カープ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6848,
+        "latent_physical_pct": 0.596,
+        "percentile_gap": -0.0888,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.3005,
+        "N_npb_top_speed_z": 0.1501,
+        "N_exposure_runs": 36,
+        "npb_plus_top_speed_kmh": 31.8,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "野間 峻祥",
+      "player_id": "01405130",
+      "team": "広島東洋カープ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9561,
+        "latent_physical_pct": 0.5758,
+        "percentile_gap": -0.3803,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.6933,
+        "N_npb_top_speed_z": 0.0703,
+        "N_exposure_runs": 8,
+        "npb_plus_top_speed_kmh": 31.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 2,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "MIXED",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 2,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 2
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "サンタナ",
+      "player_id": "53755153",
+      "team": "東京ヤクルトスワローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1344,
+        "latent_physical_pct": 0.303,
+        "percentile_gap": 0.1687,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": null,
+        "N_npb_top_speed_z": -0.6483,
+        "N_exposure_runs": 40,
+        "npb_plus_top_speed_kmh": 30.8,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "並木 秀尊",
+      "player_id": "91695153",
+      "team": "東京ヤクルトスワローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9922,
+        "latent_physical_pct": 0.9798,
+        "percentile_gap": -0.0125,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 1.6506,
+        "N_npb_top_speed_z": 1.747,
+        "N_exposure_runs": 6,
+        "npb_plus_top_speed_kmh": 33.8,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "中村 悠平",
+      "player_id": "51255118",
+      "team": "東京ヤクルトスワローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2481,
+        "latent_physical_pct": 0.1515,
+        "percentile_gap": -0.0965,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.7051,
+        "N_npb_top_speed_z": -0.9677,
+        "N_exposure_runs": 8,
+        "npb_plus_top_speed_kmh": 30.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "丸山 和郁",
+      "player_id": "93195155",
+      "team": "東京ヤクルトスワローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9354,
+        "latent_physical_pct": 0.7273,
+        "percentile_gap": -0.2081,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.4951,
+        "N_npb_top_speed_z": 0.6292,
+        "N_exposure_runs": 10,
+        "npb_plus_top_speed_kmh": 32.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "古賀 優大",
+      "player_id": "01705134",
+      "team": "東京ヤクルトスワローズ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1189,
+        "latent_physical_pct": 0.6566,
+        "percentile_gap": 0.5377,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.8761,
+        "N_npb_top_speed_z": 0.3896,
+        "N_exposure_runs": 27,
+        "npb_plus_top_speed_kmh": 32.1,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 1,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "塩見 泰隆",
+      "player_id": "71975136",
+      "team": "東京ヤクルトスワローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8786,
+        "latent_physical_pct": 0.697,
+        "percentile_gap": -0.1816,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.7227,
+        "N_npb_top_speed_z": 0.5493,
+        "N_exposure_runs": 8,
+        "npb_plus_top_speed_kmh": 32.3,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 6,
+        "usable_source_event_count": 6,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 6,
+        "community_verdict": "PHYSICAL_CONTEXT_ONLY",
+        "physical_observation_count": 3,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 2,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "岩田 幸宏",
+      "player_id": "51355155",
+      "team": "東京ヤクルトスワローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9871,
+        "latent_physical_pct": 0.9596,
+        "percentile_gap": -0.0275,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 2.0394,
+        "N_npb_top_speed_z": 1.5873,
+        "N_exposure_runs": 50,
+        "npb_plus_top_speed_kmh": 33.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 1,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "APPROPRIATE",
+        "physical_observation_count": 1,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "長岡 秀樹",
+      "player_id": "51455151",
+      "team": "東京ヤクルトスワローズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2946,
+        "latent_physical_pct": 0.5051,
+        "percentile_gap": 0.2105,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.1817,
+        "N_npb_top_speed_z": -0.0096,
+        "N_exposure_runs": 55,
+        "npb_plus_top_speed_kmh": 31.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "太田 光",
+      "player_id": "71375138",
+      "team": "東北楽天ゴールデンイーグルス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1008,
+        "latent_physical_pct": 0.1717,
+        "percentile_gap": 0.0709,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.3327,
+        "N_npb_top_speed_z": -0.8879,
+        "N_exposure_runs": 23,
+        "npb_plus_top_speed_kmh": 30.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "村林 一輝",
+      "player_id": "41845132",
+      "team": "東北楽天ゴールデンイーグルス",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6227,
+        "latent_physical_pct": 0.9899,
+        "percentile_gap": 0.3672,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.2155,
+        "N_npb_top_speed_z": 2.3059,
+        "N_exposure_runs": 63,
+        "npb_plus_top_speed_kmh": 34.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "浅村 栄斗",
+      "player_id": "51155118",
+      "team": "東北楽天ゴールデンイーグルス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.0207,
+        "latent_physical_pct": 0.1818,
+        "percentile_gap": 0.1611,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.6301,
+        "N_npb_top_speed_z": -0.8879,
+        "N_exposure_runs": 27,
+        "npb_plus_top_speed_kmh": 30.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "渡邊 佳明",
+      "player_id": "73175138",
+      "team": "東北楽天ゴールデンイーグルス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1809,
+        "latent_physical_pct": 0.1212,
+        "percentile_gap": -0.0597,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.3715,
+        "N_npb_top_speed_z": -1.0475,
+        "N_exposure_runs": 12,
+        "npb_plus_top_speed_kmh": 30.3,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "鈴木 大地",
+      "player_id": "81985135",
+      "team": "東北楽天ゴールデンイーグルス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1705,
+        "latent_physical_pct": 0,
+        "percentile_gap": -0.1705,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.2356,
+        "N_npb_top_speed_z": -2.0855,
+        "N_exposure_runs": 5,
+        "npb_plus_top_speed_kmh": 29,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "京田 陽太",
+      "player_id": "81585134",
+      "team": "横浜DeNAベイスターズ",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8036,
+        "latent_physical_pct": 0.3434,
+        "percentile_gap": -0.4602,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.0192,
+        "N_npb_top_speed_z": -0.4088,
+        "N_exposure_runs": 19,
+        "npb_plus_top_speed_kmh": 31.1,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "佐野 恵太",
+      "player_id": "91995134",
+      "team": "横浜DeNAベイスターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1499,
+        "latent_physical_pct": 0.2424,
+        "percentile_gap": 0.0926,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.5174,
+        "N_npb_top_speed_z": -0.808,
+        "N_exposure_runs": 57,
+        "npb_plus_top_speed_kmh": 30.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "宮﨑 敏郎",
+      "player_id": "51455137",
+      "team": "横浜DeNAベイスターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.0129,
+        "latent_physical_pct": 0.1313,
+        "percentile_gap": 0.1184,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.3563,
+        "N_npb_top_speed_z": -1.0475,
+        "N_exposure_runs": 31,
+        "npb_plus_top_speed_kmh": 30.3,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "TOO_HIGH",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "山本 祐大",
+      "player_id": "23125136",
+      "team": "横浜DeNAベイスターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.3721,
+        "latent_physical_pct": 0.3131,
+        "percentile_gap": -0.059,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.1078,
+        "N_npb_top_speed_z": -0.4886,
+        "N_exposure_runs": 25,
+        "npb_plus_top_speed_kmh": 31,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "度会 隆輝",
+      "player_id": "33535159",
+      "team": "横浜DeNAベイスターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.509,
+        "latent_physical_pct": 0.5859,
+        "percentile_gap": 0.0768,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.1642,
+        "N_npb_top_speed_z": 0.0703,
+        "N_exposure_runs": 33,
+        "npb_plus_top_speed_kmh": 31.7,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "林 琢真",
+      "player_id": "91695157",
+      "team": "横浜DeNAベイスターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8579,
+        "latent_physical_pct": 0.6465,
+        "percentile_gap": -0.2114,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.1094,
+        "N_npb_top_speed_z": 0.3098,
+        "N_exposure_runs": 8,
+        "npb_plus_top_speed_kmh": 32,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "梶原 昂希",
+      "player_id": "51555155",
+      "team": "横浜DeNAベイスターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9638,
+        "latent_physical_pct": 0.9192,
+        "percentile_gap": -0.0446,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.6278,
+        "N_npb_top_speed_z": 1.4276,
+        "N_exposure_runs": 7,
+        "npb_plus_top_speed_kmh": 33.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "牧 秀悟",
+      "player_id": "13115153",
+      "team": "横浜DeNAベイスターズ",
+      "stale_candidate": "STALE_NOT_COVERED",
+      "stale_detector_coverage": false,
+      "stale_detector_fields": null,
+      "physical_reference_context": {
+        "S_stat_z": -0.171,
+        "N_npb_top_speed_z": -0.0096,
+        "N_exposure_runs": 36,
+        "npb_plus_top_speed_kmh": 31.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "筒香 嘉智",
+      "player_id": "41945131",
+      "team": "横浜DeNAベイスターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1059,
+        "latent_physical_pct": 0.101,
+        "percentile_gap": -0.0049,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.7166,
+        "N_npb_top_speed_z": -1.1274,
+        "N_exposure_runs": 21,
+        "npb_plus_top_speed_kmh": 30.2,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 5,
+        "usable_source_event_count": 5,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 5,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 4,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "蝦名 達夫",
+      "player_id": "51555151",
+      "team": "横浜DeNAベイスターズ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.7494,
+        "latent_physical_pct": 0.4343,
+        "percentile_gap": -0.315,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.4,
+        "N_npb_top_speed_z": -0.1693,
+        "N_exposure_runs": 40,
+        "npb_plus_top_speed_kmh": 31.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "今宮 健太",
+      "player_id": "31335131",
+      "team": "福岡ソフトバンクホークス",
+      "stale_candidate": "EXTERNAL_DISAGREEMENT_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.5349,
+        "latent_physical_pct": 0.1616,
+        "percentile_gap": -0.3733,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": true,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.2223,
+        "N_npb_top_speed_z": -0.9677,
+        "N_exposure_runs": 15,
+        "npb_plus_top_speed_kmh": 30.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "周東 佑京",
+      "player_id": "21925136",
+      "team": "福岡ソフトバンクホークス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.9871,
+        "latent_physical_pct": 1,
+        "percentile_gap": 0.0129,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 1.1885,
+        "N_npb_top_speed_z": 2.7051,
+        "N_exposure_runs": 59,
+        "npb_plus_top_speed_kmh": 35,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 4,
+        "usable_source_event_count": 4,
+        "attributable_author_origin_count": 3,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "山川 穂高",
+      "player_id": "21425139",
+      "team": "福岡ソフトバンクホークス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1344,
+        "latent_physical_pct": 0.0404,
+        "percentile_gap": -0.094,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -1.0266,
+        "N_npb_top_speed_z": -1.7661,
+        "N_exposure_runs": 14,
+        "npb_plus_top_speed_kmh": 29.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 4,
+        "usable_source_event_count": 4,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 4,
+        "community_verdict": "TOO_HIGH",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 3
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "柳田 悠岐",
+      "player_id": "31835133",
+      "team": "福岡ソフトバンクホークス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.5685,
+        "latent_physical_pct": 0.6667,
+        "percentile_gap": 0.0982,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.1799,
+        "N_npb_top_speed_z": 0.3896,
+        "N_exposure_runs": 20,
+        "npb_plus_top_speed_kmh": 32.1,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 6,
+        "usable_source_event_count": 6,
+        "attributable_author_origin_count": 1,
+        "unattributed_source_event_count": 5,
+        "community_verdict": "MIXED",
+        "physical_observation_count": 1,
+        "directional_rating_claim_count": 3,
+        "prospi_context_count": 4,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "柳町 達",
+      "player_id": "73175151",
+      "team": "福岡ソフトバンクホークス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.5685,
+        "latent_physical_pct": 0.4747,
+        "percentile_gap": -0.0937,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.079,
+        "N_npb_top_speed_z": -0.0894,
+        "N_exposure_runs": 21,
+        "npb_plus_top_speed_kmh": 31.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "栗原 陵矢",
+      "player_id": "01705130",
+      "team": "福岡ソフトバンクホークス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.3282,
+        "latent_physical_pct": 0.4141,
+        "percentile_gap": 0.086,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.2465,
+        "N_npb_top_speed_z": -0.2491,
+        "N_exposure_runs": 40,
+        "npb_plus_top_speed_kmh": 31.3,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "正木 智也",
+      "player_id": "81885155",
+      "team": "福岡ソフトバンクホークス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.1499,
+        "latent_physical_pct": 0.3535,
+        "percentile_gap": 0.2037,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.325,
+        "N_npb_top_speed_z": -0.4088,
+        "N_exposure_runs": 31,
+        "npb_plus_top_speed_kmh": 31.1,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "海野 隆司",
+      "player_id": "81385151",
+      "team": "福岡ソフトバンクホークス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2067,
+        "latent_physical_pct": 0.1414,
+        "percentile_gap": -0.0653,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.1808,
+        "N_npb_top_speed_z": -1.0475,
+        "N_exposure_runs": 25,
+        "npb_plus_top_speed_kmh": 30.3,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "牧原 大成",
+      "player_id": "61465133",
+      "team": "福岡ソフトバンクホークス",
+      "stale_candidate": "INTERNAL_INERTIA_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8579,
+        "latent_physical_pct": 0.9394,
+        "percentile_gap": 0.0815,
+        "s1_internal_inertia": true,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 1.0298,
+        "N_npb_top_speed_z": 1.5074,
+        "N_exposure_runs": 35,
+        "npb_plus_top_speed_kmh": 33.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 2,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 1,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "近藤 健介",
+      "player_id": "41745135",
+      "team": "福岡ソフトバンクホークス",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.4599,
+        "latent_physical_pct": 0.3838,
+        "percentile_gap": -0.0761,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.4147,
+        "N_npb_top_speed_z": -0.329,
+        "N_exposure_runs": 37,
+        "npb_plus_top_speed_kmh": 31.2,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 4,
+        "usable_source_event_count": 4,
+        "attributable_author_origin_count": 1,
+        "unattributed_source_event_count": 3,
+        "community_verdict": "CONTEXT_ONLY",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 2,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "丸 佳浩",
+      "player_id": "21425116",
+      "team": "読売ジャイアンツ",
+      "stale_candidate": "STALE_NOT_COVERED",
+      "stale_detector_coverage": false,
+      "stale_detector_fields": null,
+      "physical_reference_context": {
+        "S_stat_z": -0.4739,
+        "N_npb_top_speed_z": -0.1693,
+        "N_exposure_runs": 8,
+        "npb_plus_top_speed_kmh": 31.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "APPROPRIATE",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "佐々木 俊輔",
+      "player_id": "51955159",
+      "team": "読売ジャイアンツ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.7674,
+        "latent_physical_pct": 0.8788,
+        "percentile_gap": 0.1113,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.4387,
+        "N_npb_top_speed_z": 1.1082,
+        "N_exposure_runs": 32,
+        "npb_plus_top_speed_kmh": 33,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "吉川 尚輝",
+      "player_id": "73375134",
+      "team": "読売ジャイアンツ",
+      "stale_candidate": "INTERNAL_INERTIA_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.8346,
+        "latent_physical_pct": 0.7475,
+        "percentile_gap": -0.0872,
+        "s1_internal_inertia": true,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.612,
+        "N_npb_top_speed_z": 0.709,
+        "N_exposure_runs": 31,
+        "npb_plus_top_speed_kmh": 32.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 2,
+        "community_verdict": "TOO_HIGH",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "大城 卓三",
+      "player_id": "21325136",
+      "team": "読売ジャイアンツ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0,
+        "latent_physical_pct": 0.0202,
+        "percentile_gap": 0.0202,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.8725,
+        "N_npb_top_speed_z": -1.9258,
+        "N_exposure_runs": 26,
+        "npb_plus_top_speed_kmh": 29.2,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "APPROPRIATE",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "岸田 行倫",
+      "player_id": "91595136",
+      "team": "読売ジャイアンツ",
+      "stale_candidate": "INTERNAL_INERTIA_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2351,
+        "latent_physical_pct": 0.0505,
+        "percentile_gap": -0.1846,
+        "s1_internal_inertia": true,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.3101,
+        "N_npb_top_speed_z": -1.7661,
+        "N_exposure_runs": 24,
+        "npb_plus_top_speed_kmh": 29.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "松本 剛",
+      "player_id": "21625135",
+      "team": "読売ジャイアンツ",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6284,
+        "latent_physical_pct": 0.4545,
+        "percentile_gap": -0.1738,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.0196,
+        "N_npb_top_speed_z": -0.1693,
+        "N_exposure_runs": 34,
+        "npb_plus_top_speed_kmh": 31.4,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "中野 拓夢",
+      "player_id": "41445153",
+      "team": "阪神タイガース",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.7494,
+        "latent_physical_pct": 0.8384,
+        "percentile_gap": 0.089,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.902,
+        "N_npb_top_speed_z": 1.0284,
+        "N_exposure_runs": 62,
+        "npb_plus_top_speed_kmh": 32.9,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "伏見 寅威",
+      "player_id": "61065137",
+      "team": "阪神タイガース",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.0611,
+        "latent_physical_pct": 0.0101,
+        "percentile_gap": -0.051,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.8004,
+        "N_npb_top_speed_z": -2.0057,
+        "N_exposure_runs": 9,
+        "npb_plus_top_speed_kmh": 29.1,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "佐藤 輝明",
+      "player_id": "41045153",
+      "team": "阪神タイガース",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.6021,
+        "latent_physical_pct": 0.6768,
+        "percentile_gap": 0.0747,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.0527,
+        "N_npb_top_speed_z": 0.3896,
+        "N_exposure_runs": 49,
+        "npb_plus_top_speed_kmh": 32.1,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 4,
+        "usable_source_event_count": 4,
+        "attributable_author_origin_count": 2,
+        "unattributed_source_event_count": 2,
+        "community_verdict": "PHYSICAL_CONTEXT_ONLY",
+        "physical_observation_count": 1,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 3
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "坂本 誠志郎",
+      "player_id": "11915132",
+      "team": "阪神タイガース",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2481,
+        "latent_physical_pct": 0.1111,
+        "percentile_gap": -0.137,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.5339,
+        "N_npb_top_speed_z": -1.1274,
+        "N_exposure_runs": 17,
+        "npb_plus_top_speed_kmh": 30.2,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "大山 悠輔",
+      "player_id": "21325134",
+      "team": "阪神タイガース",
+      "stale_candidate": "INTERNAL_INERTIA_ONLY",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2946,
+        "latent_physical_pct": 0.1919,
+        "percentile_gap": -0.1027,
+        "s1_internal_inertia": true,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.6112,
+        "N_npb_top_speed_z": -0.8879,
+        "N_exposure_runs": 26,
+        "npb_plus_top_speed_kmh": 30.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "小幡 竜平",
+      "player_id": "31535138",
+      "team": "阪神タイガース",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.7829,
+        "latent_physical_pct": 0.8182,
+        "percentile_gap": 0.0352,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": 0.2723,
+        "N_npb_top_speed_z": 0.9485,
+        "N_exposure_runs": 11,
+        "npb_plus_top_speed_kmh": 32.8,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "木浪 聖也",
+      "player_id": "31735138",
+      "team": "阪神タイガース",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.3282,
+        "latent_physical_pct": 0.0808,
+        "percentile_gap": -0.2474,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.2125,
+        "N_npb_top_speed_z": -1.2871,
+        "N_exposure_runs": 18,
+        "npb_plus_top_speed_kmh": 30,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 1,
+        "usable_source_event_count": 1,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 1,
+        "community_verdict": "APPROPRIATE",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 1
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "梅野 隆太郎",
+      "player_id": "21325139",
+      "team": "阪神タイガース",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.2713,
+        "latent_physical_pct": 0.2525,
+        "percentile_gap": -0.0188,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.3795,
+        "N_npb_top_speed_z": -0.808,
+        "N_exposure_runs": 6,
+        "npb_plus_top_speed_kmh": 30.6,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 0,
+        "usable_source_event_count": 0,
+        "attributable_author_origin_count": 0,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "INSUFFICIENT",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 0,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 0
+      },
+      "community_effect": "NO_MAPPED_CONTEXT_IN_BOUNDED_LANE",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    },
+    {
+      "player": "森下 翔太",
+      "player_id": "43145157",
+      "team": "阪神タイガース",
+      "stale_candidate": "NONE",
+      "stale_detector_coverage": true,
+      "stale_detector_fields": {
+        "powerpro_pct": 0.3437,
+        "latent_physical_pct": 0.202,
+        "percentile_gap": -0.1416,
+        "s1_internal_inertia": false,
+        "s2_external_disagreement": false,
+        "latent_reliability_status": "NOT_IDENTIFIABLE",
+        "exposure_caveat": "ADEQUATE_RUNS"
+      },
+      "physical_reference_context": {
+        "S_stat_z": -0.0603,
+        "N_npb_top_speed_z": -0.8879,
+        "N_exposure_runs": 35,
+        "npb_plus_top_speed_kmh": 30.5,
+        "N_reliability": null
+      },
+      "community_context": {
+        "usable_claim_count": 2,
+        "usable_source_event_count": 2,
+        "attributable_author_origin_count": 2,
+        "unattributed_source_event_count": 0,
+        "community_verdict": "TOO_LOW",
+        "physical_observation_count": 0,
+        "directional_rating_claim_count": 1,
+        "prospi_context_count": 0,
+        "powerpro_context_count": 2
+      },
+      "community_effect": "OWNER_REVIEW_CONTEXT_ONLY",
+      "final_stale_verdict": "NOT_DECLARED",
+      "automatic_rating_change": false,
+      "automatic_stale_promotion": false,
+      "powerpro_label_not_used_as_physical_teacher": true,
+      "prospi_not_used_as_independent_physical_truth": true
+    }
+  ]
+}

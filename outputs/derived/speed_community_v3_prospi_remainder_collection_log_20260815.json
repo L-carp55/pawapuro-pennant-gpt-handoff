@@ -1,0 +1,531 @@
+{
+  "task": "speed_community_recollection_v3_youtube_prospi_remainder",
+  "scope": [
+    "SP-034"
+  ],
+  "official_channel_id": "UCWzEh28vj3mQKpe0fzVTOUw",
+  "period": {
+    "from": "2024-01-01",
+    "to": "2026-08-14"
+  },
+  "status": "COMPLETED_BOUNDED",
+  "source_metadata": "outputs\\derived\\speed_community_v3_official_video_metadata_20260814.jsonl",
+  "target_count": 50,
+  "completed_count": 50,
+  "timeout_count": 0,
+  "error_count": 0,
+  "comment_rows_recovered": 28867,
+  "candidate_rows": 1816,
+  "semantic_rows": 1816,
+  "requested_comment_bound": "all_parents_all_replies_all_depth",
+  "per_video": [
+    {
+      "video_id": "0yNZ0wCRHs0",
+      "title": "ニューイヤー特番！プロスピA お正月王決定戦【プロ野球スピリッツA】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 141,
+      "platform_reported_comment_count": 141,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "eaWfO7kRCwU",
+      "title": "大谷翔平選手がパワプロ30周年×プロスピ20周年アンバサダーに！【メイキング+特別インタビュー】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 740,
+      "platform_reported_comment_count": 740,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "vwU0NyiNcaA",
+      "title": "【パワプロ30周年】3人娘から皆さんへビデオメッセージ",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 177,
+      "platform_reported_comment_count": 177,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "s5n8g6g4mz8",
+      "title": "〇〇は芸術点が高い！？イチローが監督・コーチから選出！2024TSイチローセレクション選手発表セ・リーグ編 【プロスピA】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1386,
+      "platform_reported_comment_count": 1386,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "TFpR64Mc0N8",
+      "title": "パ・リーグを託した！イチローが監督・コーチから選出！2024TSイチローセレクション選手発表パ・リーグ編 【プロスピA】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 680,
+      "platform_reported_comment_count": 680,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "HrdWA9MHDXw",
+      "title": "【10月17日 発売】実は力仕事をしてました!!社会人時代の:秘密:エピソード！雪平莉左さん：メイキング＆インタビュー『プロ野球スピリッツ2024-2025』",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 26,
+      "platform_reported_comment_count": 26,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "Q9scqsaYhb8",
+      "title": "【10月17日 発売】動画クリエイターじゃなかったら、野球場で活躍する○○になりたい！森元流那さん：メイキング＆インタビュー『プロ野球スピリッツ2024-2025』",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 23,
+      "platform_reported_comment_count": 23,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "uo3DOM4QeG0",
+      "title": "【10月17日 発売】プロスピを一緒にプレーするなら、ゲーム仲間の女優・○○さん！あのさん：メイキング＆インタビュー『プロ野球スピリッツ2024-2025』",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 54,
+      "platform_reported_comment_count": 54,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "MRdZJEeuXWc",
+      "title": "『パワフルプロ野球2024-2025』レジェンドOB対決動画　マリーンズ 対 イーグルス",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 367,
+      "platform_reported_comment_count": 367,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "2MPQJ70Tb9Q",
+      "title": "『パワフルプロ野球2024-2025』レジェンドOB対決動画　ファイターズ 対 ドラゴンズ",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 279,
+      "platform_reported_comment_count": 279,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "hN5K7B7nfNU",
+      "title": "『パワフルプロ野球2024-2025』レジェンドOB対決動画　バファローズ 対 ホークス",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 269,
+      "platform_reported_comment_count": 269,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "2egN5kYxyio",
+      "title": "『パワフルプロ野球2024-2025』レジェンドOB対決動画　大阪近鉄 対 南海 対 阪急",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 232,
+      "platform_reported_comment_count": 232,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "m6O3gUWdZuM",
+      "title": "『パワフルプロ野球2024-2025』レジェンドOB対決動画　カープ 対 ベイスターズ",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 277,
+      "platform_reported_comment_count": 277,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "-DHtzgiY6VQ",
+      "title": "『パワフルプロ野球2024-2025』レジェンドOB対決動画　ジャイアンツ 対 タイガース",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 236,
+      "platform_reported_comment_count": 236,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "jdfUYFjoQV0",
+      "title": "セレクション登場選手 先行公開　レジェンドOB選手と語る【プロスピセレクション 20th SPIRITS】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1318,
+      "platform_reported_comment_count": 1318,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "e5dwQoPyYsA",
+      "title": "『プロ野球スピリッツ2024-2025』プロモーションムービー",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1990,
+      "platform_reported_comment_count": 1990,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "6P5Z1qOE_oM",
+      "title": "イチローがプロスピ2024をプレイ！ KOBE CHIBEN VS オリックス・バファローズ 前編 『プロ野球スピリッツ2024-2025』",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 339,
+      "platform_reported_comment_count": 339,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "77ysFGiQ5IM",
+      "title": "イチローができるまで：MOTION CAPTURE MAKING #1 準備編 『プロ野球スピリッツ2024-2025』",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 30,
+      "platform_reported_comment_count": 30,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "n0rZ1IrWtIA",
+      "title": "イチローができるまで：MOTION CAPTURE MAKING #2 バッティング編 『プロ野球スピリッツ2024-2025』",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 108,
+      "platform_reported_comment_count": 108,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "oLYNhSCWjS0",
+      "title": "イチローができるまで：3Dフォトスキャンメイキング 『プロ野球スピリッツ2024-2025』",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 13,
+      "platform_reported_comment_count": 13,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "opjfeVgrOs4",
+      "title": "イチローがプロスピ2024をプレイ！ KOBE CHIBEN VS オリックス・バファローズ 後編 『プロ野球スピリッツ2024-2025』",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 510,
+      "platform_reported_comment_count": 510,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "q4AsOr1aNCk",
+      "title": "イチローができるまで：MOTION CAPTURE MAKING #3 守備・投球編 『プロ野球スピリッツ2024-2025』",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 48,
+      "platform_reported_comment_count": 48,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "pcf3nWd3XOc",
+      "title": "イチローが球団社長に！？ プロスピ2024 「ｍyBALLPARK」 編 『プロ野球スピリッツ2024-2025』",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 161,
+      "platform_reported_comment_count": 161,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "nXfOipyoX6k",
+      "title": "『プロ野球スピリッツ2024-2025』大谷翔平ができるまで",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 148,
+      "platform_reported_comment_count": 148,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "ZlhjLHzUt0A",
+      "title": "大谷翔平選手 登場記念『プロ野球スピリッツA』CMメイキング＆インタビュー",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 194,
+      "platform_reported_comment_count": 194,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "qVl61GKQNhE",
+      "title": "プロスピAで規格外の二刀流を体感しよう！【2023WORLD BASEBALL CLASSIC 大谷翔平登場記念特別企画】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1310,
+      "platform_reported_comment_count": 1310,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "ZXlGM3LIxOc",
+      "title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 セ・リーグ編",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1124,
+      "platform_reported_comment_count": 1124,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "t-0dgSQckqQ",
+      "title": "【プロ野球スピリッツA】古田・里崎セレクション 登場選手発表 パ・リーグ編",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1021,
+      "platform_reported_comment_count": 1021,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "-t3uaS6tKok",
+      "title": "【プロ野球スピリッツA】古田・里崎セレクション 能力値発表編",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1446,
+      "platform_reported_comment_count": 1446,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "yrIsbjxOHQs",
+      "title": "大谷選手直筆サイングッズ・ドジャース観戦 in LAが当たる！【パワスピ・ポイントクラブ】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 22,
+      "platform_reported_comment_count": 22,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "av7vqGoVtcY",
+      "title": "プロ野球スピリッツA PV 2025年度版",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 36,
+      "platform_reported_comment_count": 36,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "18tbwwPM91A",
+      "title": "新・松井秀喜登場記念！ 松井秀喜×イチロー特別対談【プロ野球スピリッツA】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1120,
+      "platform_reported_comment_count": 1120,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "gn972-2UigM",
+      "title": "イチローが新特殊能力でプロスピAに登場！ 松井秀喜は当時イチローをどう思っていた？特別対談 vol.2 【プロ野球スピリッツA】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 940,
+      "platform_reported_comment_count": 940,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "-VNj79TGAyE",
+      "title": "イチローが唯一とんでもない空振りをした投手とは！？2025OB松井秀喜セレクション選手発表 パ・リーグ編【プロスピA】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1124,
+      "platform_reported_comment_count": 1124,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "1VjtE7UuJFU",
+      "title": "松井秀喜が打席で唯一意識させられたキャッチャーとは！？2025OB松井秀喜セレクション選手発表 セ・リーグ編【プロスピA】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1161,
+      "platform_reported_comment_count": 1161,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "YTqml_AWv6M",
+      "title": "プロスピセレクション第1弾、第2弾選手発表！ プロスピAニュース 第1回【プロ野球スピリッツA】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1804,
+      "platform_reported_comment_count": 1804,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "dQSB1FfiAH8",
+      "title": "まだ登録してないの！？もっとお得にパワプロ・プロスピAを遊べる！パワスピ・ポイントクラブPV",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 91,
+      "platform_reported_comment_count": 91,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "-1gkOWAxI1c",
+      "title": "10周年を振り返ろう！ダルビッシュと作るプロスピA年表【プロスピA】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 277,
+      "platform_reported_comment_count": 277,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "wCbxuVhK56A",
+      "title": "ダルビッシュが選ぶOB選手12名！2025OBセレクションSPダルビッシュセレクション選手発表【プロスピA】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1831,
+      "platform_reported_comment_count": 1831,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "f4KsZVHUmYs",
+      "title": "プロ野球スピリッツA PV 2026年度版",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 25,
+      "platform_reported_comment_count": 25,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "_h4nmi7mWdg",
+      "title": "阪神タイガース 村上頌樹 投手 VS 森下翔太 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 731,
+      "platform_reported_comment_count": 731,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "nzmHFRWHr30",
+      "title": "オリックス・バファローズ 山岡泰輔 投手 VS 曽谷龍平 投手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 228,
+      "platform_reported_comment_count": 228,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "9W_JWgJJS7s",
+      "title": "読売ジャイアンツ 大勢 投手 VS 泉口友汰 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 377,
+      "platform_reported_comment_count": 377,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "zGF4VfGcAwk",
+      "title": "埼玉西武ライオンズ 甲斐野央 投手 VS 山田陽翔 投手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 671,
+      "platform_reported_comment_count": 671,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "D5Fg3e-E_QY",
+      "title": "東京ヤクルト 星知弥 投手 VS 長岡秀樹 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 298,
+      "platform_reported_comment_count": 298,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "vm6AgZD-vMM",
+      "title": "東北楽天ゴールデンイーグルス 中島大輔 選手 VS 宗山塁 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 345,
+      "platform_reported_comment_count": 345,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "2UxAd74t9CY",
+      "title": "中日ドラゴンズ 清水達也 投手 VS 金丸夢斗 投手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 298,
+      "platform_reported_comment_count": 298,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "dBlFvhlQNXc",
+      "title": "北海道日本ハムファイターズ レイエス 選手 VS 五十幡亮汰 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 407,
+      "platform_reported_comment_count": 407,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "lug1RWbPMwI",
+      "title": "広島東洋カープ ファビアン 選手 VS モンテロ 選手 プロスピAで対決！【エキサイティングプレイヤースペシャルマッチ】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 624,
+      "platform_reported_comment_count": 624,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    },
+    {
+      "video_id": "RqUAGcmp6z8",
+      "title": "新スカウト情報発表！プロスピA ニュース【スピニュース】",
+      "status": "OK",
+      "error": "",
+      "comments_retrieved": 1810,
+      "platform_reported_comment_count": 1810,
+      "requested_bound": "all_parents_all_replies_all_depth",
+      "timeout_seconds": 300
+    }
+  ],
+  "note": "Public yt-dlp route was used without a fixed top-100/300 cap; timeout/error rows remain unresolved and are not negative evidence.",
+  "output_files": [
+    "outputs\\derived\\speed_community_v3_prospi_remainder_inventory_20260815.csv",
+    "outputs\\derived\\speed_community_v3_prospi_remainder_raw_20260815.jsonl",
+    "outputs\\derived\\speed_community_v3_prospi_remainder_candidates_20260815.jsonl",
+    "outputs\\derived\\speed_community_v3_prospi_remainder_semantic_classified_20260815.jsonl",
+    "outputs\\derived\\speed_community_v3_prospi_remainder_collection_log_20260815.json"
+  ]
+}

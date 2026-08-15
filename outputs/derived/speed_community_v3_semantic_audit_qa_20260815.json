@@ -1,0 +1,1347 @@
+{
+  "schema_version": "speed_community_v3_semantic_audit_qa_20260815",
+  "generated_at": "2026-08-15",
+  "evidence_status": "MEASURED_BOUNDED",
+  "inputs": {
+    "youtube_raw": "outputs/derived/speed_community_v3_youtube_raw_20260814.jsonl",
+    "youtube_candidates": "outputs/derived/speed_community_v3_youtube_candidates_20260814.jsonl",
+    "youtube_semantic_input": "outputs/derived/speed_community_v3_youtube_semantic_classified_20260814.jsonl",
+    "x_canonical_input": "outputs/derived/speed_community_v3_x_canonical_20260815.jsonl",
+    "sp042_stale_detector": "outputs/derived/sp042_powerpro_stale_detector.json",
+    "sp100_wiring": "outputs/derived/sp100_wiring_candidates_20260814.json"
+  },
+  "source_hashes": {
+    "youtube_raw": "250970a875a0b348f61fdfe555dd90b199805bb88fc3c4ee027bffc65a86ff20",
+    "youtube_candidates": "a4c5dcdba1d0057fe1388632d318bd9ea852ffbb981af9e86e7bf07bd73f0f71",
+    "youtube_semantic_input": "60465438924f7fdea74590994378a11928de8a7e44013308aaa72b971aea9547",
+    "x_canonical_input": "a5f173bebb856e54ea011532f47163ee80cc7c8e7a3783e8189e163e7287181e",
+    "sp042_stale_detector": "5e99b0831a3eee5415a6b6393f4add19c099c1404eb486927868103ef0c020c2",
+    "sp100_wiring": "27a8e57c90a4786e72c6235632aa59369373c4102bc016195f93360f9d9b88e5"
+  },
+  "semantic_qa_sample_count": 94,
+  "semantic_qa_sample": [
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgzAE5VbxJaW0TCeXLd4AaABAg.A9sPs546gOxA9t3sT2HhwA",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": "大谷翔平",
+      "current_100": false,
+      "claim_lane": "STEALING_TECHNIQUE",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "CONTEXT_ONLY_TECHNIQUE_OR_GAMEPLAY"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgzXRgwQBy1InAF_zYx4AaABAg",
+      "platform": "YouTube",
+      "player_id": "31835133",
+      "player_name": "柳田 悠岐",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-CANDIDATE-lJAT0YaFPfs-UgwI6-msSVkt04146mN4AaABAg",
+      "platform": "YouTube",
+      "player_id": "41945131",
+      "player_name": "筒香 嘉智",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "UNCLEAR",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgwcxGWucVM1AANtDrB4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": "大谷翔平",
+      "current_100": false,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgyyiFKJ0tGChvbqwWx4AaABAg.A9rG-Ei4RYLA9rHVobDxsz",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgyIR8l-7RGL3AcH2M14AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-ZlhjLHzUt0A-Ugxpf5SH6TQEtKSqGkB4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-Ugy1vWL88pZmNy82q154AaABAg.A9qq6pVMAFJA9rAT1nY-SQ",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgxG3KePH_Yfmn8bpE94AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "STEALING_TECHNIQUE",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "REVIEW_REQUIRED_IDENTITY"
+    },
+    {
+      "record_id": "YT-FINAL-PPV3-CONTEXT-CAND-pxdRtLSTI80-UgxaO5R_ig8xDdEOYIV4AaABAg.A2wNierEUTkA2xXsONgIru",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-Ugw3fitxxJa6YpJNlkF4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "BASERUNNING_TECHNIQUE",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "REVIEW_REQUIRED_IDENTITY"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-Ugxrrr8Oi_gx2RoRin54AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgyjucAQUephONvlxsp4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgwjApg4jyENWxR30Ax4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-ZlhjLHzUt0A-UgzbGrHzMJ3ijjCsIuF4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-18tbwwPM91A-UgwMVA5RdvFsMt-kZYR4AaABAg.AGKpJ7-SJ68AYn0nEaw1vu",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-t-0dgSQckqQ-UgwqN63b_dAjoTGN0Ep4AaABAg.ACTKzrz247fACTMrPMlLl7",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-Ugy5gl5qNz6G9byikx54AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgzCKLCAThPA6vrIaPV4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgzEEyIP4LFBqTY0ZQh4AaABAg.A9rEdSogs4WA9rEyne-geY",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-gn972-2UigM-Ugy8EQB5JqiRs6iUeVN4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "REVIEW_REQUIRED_IDENTITY"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgzKM6N7bbiAF3EAE9Z4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-gn972-2UigM-Ugy6TyyMqQjJ-Z9Ze2p4AaABAg.AI7kx_d56mNAI7l7qZjq1z",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-Ugxkx9oE2i8drQ7tG8F4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-Ugzlu8lf5ILfGC7QEkd4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgwHSVgX27oFeUsQRTZ4AaABAg.A9rDNstLk3yA9rDudO9IzV",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgyMPXYdERx0UqRHrYp4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgwfGcAgJ9bluljPsVx4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgwsqyUHXTMdBPBiN154AaABAg.A9rEsKn4_2ZAA5Bx14WTn6",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-PPV3-CONTEXT-CAND-pxdRtLSTI80-UgytRc-WyIbw4hgq5mx4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "STEALING_TECHNIQUE",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "REVIEW_REQUIRED_IDENTITY"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgxI4j0IKYkBaGgjV554AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgyqtEFBT5PSBxZG7Yp4AaABAg",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-PPV3-CONTEXT-CAND-pxdRtLSTI80-UgwICPdveFRdvE7aku94AaABAg.A2w_INkKkk7A39UPkRoP30",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "YT-FINAL-SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-Ugyrh4Wz9tF9s4cc0ZB4AaABAg.A9qkOxTLOO8A9rCDrGhLvR",
+      "platform": "YouTube",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "MIXED",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "REVIEW_REQUIRED_IDENTITY"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-005",
+      "platform": "X",
+      "player_id": "51255138",
+      "player_name": "中川 圭太",
+      "current_100": true,
+      "claim_lane": "PHYSICAL_OBSERVATION",
+      "direction": "UNCLEAR",
+      "canonical_status": "USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-009",
+      "platform": "X",
+      "player_id": "91395138",
+      "player_name": "太田 椋",
+      "current_100": true,
+      "claim_lane": "PHYSICAL_OBSERVATION",
+      "direction": "UNCLEAR",
+      "canonical_status": "USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-073",
+      "platform": "X",
+      "player_id": "21425139",
+      "player_name": "山川 穂高",
+      "current_100": true,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-AGC-C-040",
+      "platform": "X",
+      "player_id": "93395153",
+      "player_name": "矢野 雅哉",
+      "current_100": true,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "TOO_LOW",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1936336784574808219-カリステ",
+      "platform": "X",
+      "player_id": "93795157",
+      "player_name": "カリステ",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "TOO_HIGH",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2081646323414224919-西川史礁",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "西川 史礁",
+      "current_100": false,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "TOO_LOW",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-reply_2024761618413081057",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "英智",
+      "current_100": false,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "TOO_LOW",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2077412186335695343-カリステ",
+      "platform": "X",
+      "player_id": "93795157",
+      "player_name": "カリステ",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "STALE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-001",
+      "platform": "X",
+      "player_id": "51255138",
+      "player_name": "中川 圭太",
+      "current_100": true,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "TOO_LOW",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1936336591460700564-カリステ",
+      "platform": "X",
+      "player_id": "93795157",
+      "player_name": "カリステ",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "TOO_HIGH",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-018",
+      "platform": "X",
+      "player_id": "71475132",
+      "player_name": "西川 龍馬",
+      "current_100": true,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-AGE-E-20260815-058",
+      "platform": "X",
+      "player_id": "41945131",
+      "player_name": "筒香 嘉智",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-AGE-E-20260815-085",
+      "platform": "X",
+      "player_id": "41945131",
+      "player_name": "筒香 嘉智",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-039-technique",
+      "platform": "X",
+      "player_id": "91895138",
+      "player_name": "山口 航輝",
+      "current_100": true,
+      "claim_lane": "STEALING_TECHNIQUE",
+      "direction": "UNCLEAR",
+      "canonical_status": "CONTEXT_ONLY_TECHNIQUE_OR_GAMEPLAY"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-027",
+      "platform": "X",
+      "player_id": "03505133",
+      "player_name": "ソト",
+      "current_100": true,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-022",
+      "platform": "X",
+      "player_id": "63165155",
+      "player_name": "水野 達稀",
+      "current_100": true,
+      "claim_lane": "PHYSICAL_OBSERVATION",
+      "direction": "UNCLEAR",
+      "canonical_status": "USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1950499692657123725-古賀優大",
+      "platform": "X",
+      "player_id": "01705134",
+      "player_name": "古賀 優大",
+      "current_100": true,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-AGC-C-039",
+      "platform": "X",
+      "player_id": "41945131",
+      "player_name": "筒香 嘉智",
+      "current_100": true,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1837489487301300588-ポランコ",
+      "platform": "X",
+      "player_id": "63065155",
+      "player_name": "ポランコ",
+      "current_100": true,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "CONTEXT_ONLY_COMPARISON"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1905636646751797603-ポランコ",
+      "platform": "X",
+      "player_id": "63065155",
+      "player_name": "ポランコ",
+      "current_100": true,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "CONTEXT_ONLY_COMPARISON"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-053",
+      "platform": "X",
+      "player_id": "41245130",
+      "player_name": "外崎 修汰",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-AGE-E-20260815-002",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "坂本 勇人",
+      "current_100": false,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "STALE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-reply_2065312199053037783",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "田中 和基",
+      "current_100": false,
+      "claim_lane": "GAMEPLAY_MECHANICS",
+      "direction": "UNCLEAR",
+      "canonical_status": "CONTEXT_ONLY_TECHNIQUE_OR_GAMEPLAY"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-002",
+      "platform": "X",
+      "player_id": "51255138",
+      "player_name": "中川 圭太",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "TOO_LOW",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-AGC-C-025",
+      "platform": "X",
+      "player_id": "41445153",
+      "player_name": "中野 拓夢",
+      "current_100": true,
+      "claim_lane": "GAMEPLAY_MECHANICS",
+      "direction": "UNCLEAR",
+      "canonical_status": "CONTEXT_ONLY_TECHNIQUE_OR_GAMEPLAY"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-010",
+      "platform": "X",
+      "player_id": "11815130",
+      "player_name": "宗 佑磨",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-062",
+      "platform": "X",
+      "player_id": "41845132",
+      "player_name": "村林 一輝",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "UNCLEAR",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2069209194285437034-松本剛",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "ダルベック",
+      "current_100": false,
+      "claim_lane": "RATING_POWERPRO",
+      "direction": "TOO_HIGH",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-AGC-C-005",
+      "platform": "X",
+      "player_id": "93795157",
+      "player_name": "カリステ",
+      "current_100": true,
+      "claim_lane": "MIXED",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-082",
+      "platform": "X",
+      "player_id": "41745135",
+      "player_name": "近藤 健介",
+      "current_100": true,
+      "claim_lane": "MIXED",
+      "direction": "UNCLEAR",
+      "canonical_status": "USABLE_RATING_CONTEXT"
+    },
+    {
+      "record_id": "X-FINAL-post_1981269368551198841",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "高橋由伸",
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2061235102110425254-森友哉",
+      "platform": "X",
+      "player_id": "91495139",
+      "player_name": "森 友哉",
+      "current_100": true,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "EXPLICIT_PROPOSED_VALUE",
+      "canonical_status": "EXCLUDED_DUPLICATE"
+    },
+    {
+      "record_id": "X-FINAL-AGE-E-20260815-012",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "STALE",
+      "canonical_status": "REVIEW_REQUIRED_IDENTITY"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2070439838969393261-岡林勇希",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "UNCLEAR",
+      "canonical_status": "REVIEW_REQUIRED_IDENTITY"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1785869319693377860-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-post_1871496037879419320",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1922204388203880521-水野達稀",
+      "platform": "X",
+      "player_id": "63165155",
+      "player_name": "水野 達稀",
+      "current_100": true,
+      "claim_lane": "GAMEPLAY_MECHANICS",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "EXCLUDED_DUPLICATE"
+    },
+    {
+      "record_id": "X-FINAL-post_1964992108659417127",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "松井秀喜",
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-AGC-C-017",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "MIXED",
+      "direction": "COMPARISON_ONLY",
+      "canonical_status": "REVIEW_REQUIRED_IDENTITY"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2029001378140504521-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-quote_2077905343921955165",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-post_2080563635064320425",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "イチロー",
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-post_2064543082524082190",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "松中信彦",
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-reply_2088175208415060306",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "山本浩二",
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2037364901312925989-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2062746158146199829-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2064964901375009258-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1777905770249806090-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2036705075247346037-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-SPD-X-D-067",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "RATING_PROSPI",
+      "direction": "UNCLEAR",
+      "canonical_status": "REVIEW_REQUIRED_IDENTITY"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1811597599960629734-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2049654975014342975-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1922487038953324638-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-1807700679391355159-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-quote_2077918216459059294",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-post_2083100351750688905",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "大谷翔平",
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-post_2078028178665128282",
+      "platform": "X",
+      "player_id": null,
+      "player_name": "福留孝介",
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-thread_coverage_1871133659102863439",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-X-V3-2076139485356540113-none",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "NOISE",
+      "direction": "UNCLEAR",
+      "canonical_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "record_id": "X-FINAL-AGE-E-20260815-019",
+      "platform": "X",
+      "player_id": null,
+      "player_name": null,
+      "current_100": false,
+      "claim_lane": "PHYSICAL_OBSERVATION",
+      "direction": "UNCLEAR",
+      "canonical_status": "REVIEW_REQUIRED_IDENTITY"
+    }
+  ],
+  "errors_found_in_source_outputs": {
+    "reproducible_youtube_identity_or_parent_leak_fixtures": 4,
+    "user_required_x_semantic_fixtures": 6,
+    "complete_current100_usable_x_hard_subject_or_lane_fixtures": 13,
+    "x_physical_observation_vs_rating_lane_fixtures": 5,
+    "x_gameplay_duplicate_or_split_context_fixtures": 4,
+    "x_fan_profile_comparison_or_multi_subject_fixtures": 5,
+    "x_final_verified_copy_or_multi_subject_dedup_fixtures": 2,
+    "conservative_x_ambiguity_or_no_claim_safeguards": 4,
+    "confirmed_reproducible_errors": 39,
+    "total_corrected_safety_rows": 43,
+    "all_youtube_candidates_reaudited": 2171,
+    "youtube_source_rows_with_prior_mapping_fields": 203
+  },
+  "errors_fixed_in_final_canonical": {
+    "youtube_identity_or_parent_leak_fixtures_fixed": 4,
+    "x1_power_only_excluded": 3,
+    "x2_comparison_target_unmapped": 1,
+    "x3_subject_corrected": 1,
+    "x4_split_and_non_speed_excluded": 1,
+    "complete_current100_usable_x_hard_subject_or_lane_fixtures_fixed": 13,
+    "x_physical_observation_vs_rating_lane_fixtures_fixed": 5,
+    "x_gameplay_duplicate_or_split_context_fixtures_fixed": 4,
+    "x_fan_profile_comparison_or_multi_subject_fixtures_fixed": 5,
+    "x_final_verified_copy_or_multi_subject_dedup_fixtures_fixed": 2,
+    "conservative_x_ambiguity_or_no_claim_safeguards_applied": 4,
+    "confirmed_reproducible_errors_fixed": 39,
+    "total_safety_corrections_applied": 43,
+    "x5_x6_regression_guarded_without_prior_error": 2,
+    "automatic_rating_changes": 0
+  },
+  "errors_remaining": 0,
+  "checks": [
+    {
+      "label": "all claim_lane values are in taxonomy",
+      "pass": true
+    },
+    {
+      "label": "all direction values are in taxonomy",
+      "pass": true
+    },
+    {
+      "label": "all speed_concept values are in taxonomy",
+      "pass": true
+    },
+    {
+      "label": "all discourse values are in taxonomy",
+      "pass": true
+    },
+    {
+      "label": "no Community record is a physical teacher",
+      "pass": true
+    },
+    {
+      "label": "current100 mappings are resolved against master",
+      "pass": true
+    },
+    {
+      "label": "usable rows have direct speed semantics",
+      "pass": true
+    },
+    {
+      "label": "origin uses post, semantic subject, and author-or-unattributed without reactions or collector IDs",
+      "pass": true
+    },
+    {
+      "label": "SP-042 95-of-100 coverage keeps five players explicit as STALE_NOT_COVERED",
+      "pass": true
+    },
+    {
+      "label": "SP-075 has no automatic player-level speed appraisal change",
+      "pass": true
+    },
+    {
+      "label": "Prospi context is not used as stale support",
+      "pass": true
+    },
+    {
+      "label": "X-1 power-only replies excluded from speed ratings",
+      "pass": true
+    },
+    {
+      "label": "X-2 comparison player is not the criticized player",
+      "pass": true
+    },
+    {
+      "label": "X-3 speed predicate attaches to 岩田",
+      "pass": true
+    },
+    {
+      "label": "X-4 is split so Akiyama shoulder is not speed and Muramatsu is context-only",
+      "pass": true
+    },
+    {
+      "label": "X-5 Nishikawa Shoki is not Nishikawa Ryoma",
+      "pass": true
+    },
+    {
+      "label": "X-6 Yamamoto Taido is not Yamamoto Yudai",
+      "pass": true
+    },
+    {
+      "label": "all complete X semantic fixtures are represented",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture reply_1872286479030145393",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture reply_2065312199053037783",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture SPD-X-D-050",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture SPD-X-D-027",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture SPD-X-D-008",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture AGE-E-20260815-003",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture SPD-X-D-017",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture AGE-E-20260815-065",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture X-V3-2069209194285437034-松本剛",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture SPD-X-D-014",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture AGC-C-037",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture AGE-E-20260815-002",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture AGC-C-023",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture AGE-E-20260815-016",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture SPD-X-D-051",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture SPD-X-D-052",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture SPD-X-D-086",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture X-V3-2087467009147834775-柳田悠岐",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture AGC-C-025",
+      "pass": true
+    },
+    {
+      "label": "complete X semantic subject fixture SPD-X-D-022",
+      "pass": true
+    },
+    {
+      "label": "same historic pennant joke is context-only and collapsed to one source event",
+      "pass": true
+    },
+    {
+      "label": "same Mizuno baserunning event is current100 context-only and collapsed to one source event",
+      "pass": true
+    },
+    {
+      "label": "Polanco comparison values are context-only and same-post copies collapse",
+      "pass": true
+    },
+    {
+      "label": "AGC-C-014 splits physical speed from baserunning technique",
+      "pass": true
+    },
+    {
+      "label": "SPD-X-D-039 splits physical speed from stealing technique",
+      "pass": true
+    },
+    {
+      "label": "multi-player rating statement retains one Mori A and one Kondo B73 slot",
+      "pass": true
+    },
+    {
+      "label": "baserunning A is separated from pure speed",
+      "pass": true
+    },
+    {
+      "label": "generic non-speed stale complaint is excluded",
+      "pass": true
+    },
+    {
+      "label": "copypasta about non-speed abilities is excluded",
+      "pass": true
+    },
+    {
+      "label": "YouTube regression A",
+      "pass": true
+    },
+    {
+      "label": "YouTube regression B",
+      "pass": true
+    },
+    {
+      "label": "YouTube regression C",
+      "pass": true
+    },
+    {
+      "label": "YouTube regression D",
+      "pass": true
+    },
+    {
+      "label": "YouTube regression E",
+      "pass": true
+    },
+    {
+      "label": "YouTube regression F",
+      "pass": true
+    },
+    {
+      "label": "YouTube regression G",
+      "pass": true
+    },
+    {
+      "label": "YouTube identity negative fixture 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "YouTube identity negative fixture 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "YouTube identity negative fixture 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "YouTube identity negative fixture 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "written canonical JSONL parses as one object per record",
+      "pass": true
+    }
+  ],
+  "x_regression": {
+    "X-1": "PASS",
+    "X-2": "PASS",
+    "X-3": "PASS",
+    "X-4": "PASS",
+    "X-5": "PASS",
+    "X-6": "PASS"
+  },
+  "youtube_regression": [
+    {
+      "case": "A",
+      "pass": true,
+      "source_record_id": "YT-RECOVER-4LPWDwnHVpg-UgyKWZysufT3_qcmMh94AaABAg",
+      "source_found": true,
+      "text": "ビシエドってそんな足速いのか。他にもいろいろ能力値がおかしい。"
+    },
+    {
+      "case": "B",
+      "pass": true,
+      "source_record_id": "YT-RECOVER-nXfOipyoX6k-Ugx8FlZgFzYY4bfnEyB4AaABAg",
+      "source_found": true,
+      "text": "大谷走力Aだろ"
+    },
+    {
+      "case": "C",
+      "pass": true,
+      "source_record_id": "YT-RECOVER-ZlhjLHzUt0A-UgyIfblGe38FvnvQVKN4AaABAg",
+      "source_found": true,
+      "text": "これパワーAはもちろん、走力Bにも不満あったんだよね笑"
+    },
+    {
+      "case": "D",
+      "pass": true,
+      "source_record_id": "YT-RECOVER-qVl61GKQNhE-UgziwKPu1jG3hO15b8R4AaABAg",
+      "source_found": true,
+      "text": "予想\nミート82パワー90走力84"
+    },
+    {
+      "case": "E",
+      "pass": true,
+      "source_record_id": "YT-RECOVER-nXfOipyoX6k-Ugx8FlZgFzYY4bfnEyB4AaABAg;YT-RECOVER-ZlhjLHzUt0A-UgyIfblGe38FvnvQVKN4AaABAg",
+      "source_found": true,
+      "text": "大谷走力Aだろ / 大谷走力Bにも不満"
+    },
+    {
+      "case": "F",
+      "pass": true,
+      "source_record_id": "YT-RECOVER-qVl61GKQNhE-Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+      "source_found": true,
+      "text": "足が速い山川"
+    },
+    {
+      "case": "G",
+      "pass": true,
+      "source_record_id": "YT-RECOVER-t-0dgSQckqQ-UgwqN63b_dAjoTGN0Ep4AaABAg",
+      "source_found": true,
+      "text": "清原\n弾道アーチスト　守備一塁B71 三塁D53\nミートB79 パワー82走力B74\n超広角打法or超アーチスト\nアーチスト改or広角打法改\n存在感orチャンス\nマジでこれくらいはやってくれよ？\nこれでパワヒで守備Dとかだったら終わってるぞ"
+    }
+  ],
+  "youtube_identity_negative_fixtures": [
+    {
+      "source_record_id": "SP034-V3-REMAINDER-CANDIDATE-t-0dgSQckqQ-UgwqN63b_dAjoTGN0Ep4AaABAg.ACTKzrz247fACTMqcXCPKc",
+      "incorrect_current_player": "山川 穂高",
+      "final_player_name": null,
+      "final_current_100": false,
+      "final_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "source_record_id": "SP034-V3-REMAINDER-CANDIDATE-qVl61GKQNhE-UgyEzwaOMYIakWGMpzV4AaABAg.A9rR8DdUasVA9t3wbMjpmj",
+      "incorrect_current_player": "鈴木 大地",
+      "final_player_name": null,
+      "final_current_100": false,
+      "final_status": "REVIEW_REQUIRED_IDENTITY"
+    },
+    {
+      "source_record_id": "SP034-V3-CANDIDATE-sX8nl6eCua0-UgwzgKtu11a_sJPcYrl4AaABAg.AZKIWzYYGWiAZKMQ4ub2Ic",
+      "incorrect_current_player": "高橋 周平",
+      "final_player_name": null,
+      "final_current_100": false,
+      "final_status": "EXCLUDED_NON_SPEED"
+    },
+    {
+      "source_record_id": "SP034-V3-CANDIDATE-lJAT0YaFPfs-UgwI6-msSVkt04146mN4AaABAg",
+      "incorrect_current_player": "牧 秀悟",
+      "final_player_name": "筒香 嘉智",
+      "final_current_100": true,
+      "final_status": "USABLE_RATING_CONTEXT"
+    }
+  ],
+  "dedupe_and_origin": {
+    "unique_usable_source_event_count": 119,
+    "attributable_distinct_author_origin_key_count": 21,
+    "attributable_distinct_author_count": 20,
+    "unattributed_usable_source_event_count": 98,
+    "independence_verified_for_all_usable_events": false,
+    "reaction_volume_used_as_origin_count": 0,
+    "duplicate_rows_excluded": 9,
+    "origin_policy": "source_event_key uses platform/root/attributable-author-or-unattributed/semantic-subject; same post and subject only retain one semantic slot, reactions and collector IDs are never counted, and authorless events are not claimed as independent people"
+  },
+  "sp075": {
+    "current100_complete_join": true,
+    "live_sp042_rows": 95,
+    "stale_not_covered_rows": 5,
+    "stale_flag_counts_match_live_sp042": true,
+    "rating_change_count": 0,
+    "stale_auto_promotion_count": 0
+  },
+  "verdict": "PASS",
+  "output_integrity": {
+    "canonical_jsonl_consumer_parse": "PASS",
+    "canonical_jsonl_records": 2548,
+    "canonical_jsonl_sha256": "b22221f773e307932deaab6fa13323b5fbfee36e7233623b65d8637a3a14ba92"
+  }
+}

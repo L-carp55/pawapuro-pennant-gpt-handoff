@@ -1,0 +1,517 @@
+{
+  "generated_at": "2026-08-14T16:28:54Z",
+  "started_at": "2026-08-14T16:00:58Z",
+  "scope": "SP-033 PowerPro official YouTube lane only",
+  "excluded_scope": [
+    "SP-035/X new collection, reclassification, status changes",
+    "Prospi lane",
+    "registry",
+    "common final",
+    "commit",
+    "push"
+  ],
+  "discovery": {
+    "official_channel_id": "UCWzEh28vj3mQKpe0fzVTOUw",
+    "official_channel_url": "https://www.youtube.com/channel/UCWzEh28vj3mQKpe0fzVTOUw/videos",
+    "official_channel_name": "パワプロ・プロスピ公式チャンネル",
+    "method": "official_channel_flat_playlist_then_per_video_metadata",
+    "date_from": "2024-01-01",
+    "date_to": "2026-08-14",
+    "official_channel_entries_scanned": 199,
+    "metadata_ok": 199,
+    "metadata_failed_or_unverified": 0,
+    "in_scope_entries": 97,
+    "relevant_powerpro_videos": 35,
+    "old_inventory_ids_read_only": 5,
+    "fresh_discovered_relevant_ids": 33,
+    "overlap_relevant_ids": 2,
+    "unresolved_date_count": 0
+  },
+  "collection": {
+    "videos_attempted": 35,
+    "videos_ok": 35,
+    "videos_failed_or_bounded": 0,
+    "comments_replies_retrieved": 9352,
+    "root_thread_count": 6916,
+    "semantic_review_candidates": 164,
+    "requested_bound": "all,all,all,all,all",
+    "sort": "new",
+    "completeness_statement": "yt-dlp all-requested is not proof of platform-exhaustive retrieval; per-video reported/retrieved counts and unresolved lower bounds are preserved in raw video records and log.",
+    "per_video": [
+      {
+        "video_id": "Ms1zfS7gSmo",
+        "status": "OK",
+        "comments_retrieved": 8,
+        "comment_total_reported": 8,
+        "candidate_count": 0,
+        "root_thread_count": 7,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=Ms1zfS7gSmo",
+        "error": ""
+      },
+      {
+        "video_id": "lXJEdQqrU7E",
+        "status": "OK",
+        "comments_retrieved": 10,
+        "comment_total_reported": 10,
+        "candidate_count": 0,
+        "root_thread_count": 9,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=lXJEdQqrU7E",
+        "error": ""
+      },
+      {
+        "video_id": "Pm_Pyg54JV0",
+        "status": "OK",
+        "comments_retrieved": 29,
+        "comment_total_reported": 29,
+        "candidate_count": 1,
+        "root_thread_count": 28,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=Pm_Pyg54JV0",
+        "error": ""
+      },
+      {
+        "video_id": "1lkcAGahFZ8",
+        "status": "OK",
+        "comments_retrieved": 32,
+        "comment_total_reported": 32,
+        "candidate_count": 0,
+        "root_thread_count": 20,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=1lkcAGahFZ8",
+        "error": ""
+      },
+      {
+        "video_id": "PMkxCzAo16A",
+        "status": "OK",
+        "comments_retrieved": 3,
+        "comment_total_reported": 3,
+        "candidate_count": 0,
+        "root_thread_count": 3,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=PMkxCzAo16A",
+        "error": ""
+      },
+      {
+        "video_id": "5nxW28yS5kQ",
+        "status": "OK",
+        "comments_retrieved": 15,
+        "comment_total_reported": 15,
+        "candidate_count": 0,
+        "root_thread_count": 13,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=5nxW28yS5kQ",
+        "error": ""
+      },
+      {
+        "video_id": "wOjrANePk1c",
+        "status": "OK",
+        "comments_retrieved": 1981,
+        "comment_total_reported": 1981,
+        "candidate_count": 33,
+        "root_thread_count": 1492,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=wOjrANePk1c",
+        "error": ""
+      },
+      {
+        "video_id": "WMCRj4Snias",
+        "status": "OK",
+        "comments_retrieved": 23,
+        "comment_total_reported": 23,
+        "candidate_count": 0,
+        "root_thread_count": 19,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=WMCRj4Snias",
+        "error": ""
+      },
+      {
+        "video_id": "ZzSgcUeTLHw",
+        "status": "OK",
+        "comments_retrieved": 127,
+        "comment_total_reported": 127,
+        "candidate_count": 1,
+        "root_thread_count": 110,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=ZzSgcUeTLHw",
+        "error": ""
+      },
+      {
+        "video_id": "T9yXBWsT7bU",
+        "status": "OK",
+        "comments_retrieved": 28,
+        "comment_total_reported": 28,
+        "candidate_count": 0,
+        "root_thread_count": 20,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=T9yXBWsT7bU",
+        "error": ""
+      },
+      {
+        "video_id": "AuXLDp8HBOY",
+        "status": "OK",
+        "comments_retrieved": 4,
+        "comment_total_reported": 4,
+        "candidate_count": 0,
+        "root_thread_count": 4,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=AuXLDp8HBOY",
+        "error": ""
+      },
+      {
+        "video_id": "zEUKZtZmHZY",
+        "status": "OK",
+        "comments_retrieved": 8,
+        "comment_total_reported": 8,
+        "candidate_count": 0,
+        "root_thread_count": 8,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=zEUKZtZmHZY",
+        "error": ""
+      },
+      {
+        "video_id": "ZK-anNJ8CHk",
+        "status": "OK",
+        "comments_retrieved": 7,
+        "comment_total_reported": 7,
+        "candidate_count": 0,
+        "root_thread_count": 7,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=ZK-anNJ8CHk",
+        "error": ""
+      },
+      {
+        "video_id": "MLVN7I8iJ7c",
+        "status": "OK",
+        "comments_retrieved": 10,
+        "comment_total_reported": 10,
+        "candidate_count": 0,
+        "root_thread_count": 8,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=MLVN7I8iJ7c",
+        "error": ""
+      },
+      {
+        "video_id": "-kb9eFlpGZI",
+        "status": "OK",
+        "comments_retrieved": 167,
+        "comment_total_reported": 167,
+        "candidate_count": 4,
+        "root_thread_count": 126,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=-kb9eFlpGZI",
+        "error": ""
+      },
+      {
+        "video_id": "ctyndHX2HPQ",
+        "status": "OK",
+        "comments_retrieved": 2,
+        "comment_total_reported": 2,
+        "candidate_count": 0,
+        "root_thread_count": 2,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=ctyndHX2HPQ",
+        "error": ""
+      },
+      {
+        "video_id": "dQSB1FfiAH8",
+        "status": "OK",
+        "comments_retrieved": 91,
+        "comment_total_reported": 91,
+        "candidate_count": 5,
+        "root_thread_count": 70,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=dQSB1FfiAH8",
+        "error": ""
+      },
+      {
+        "video_id": "y57WBLiAMNw",
+        "status": "OK",
+        "comments_retrieved": 2,
+        "comment_total_reported": 2,
+        "candidate_count": 0,
+        "root_thread_count": 2,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=y57WBLiAMNw",
+        "error": ""
+      },
+      {
+        "video_id": "b1wRVILTWTM",
+        "status": "OK",
+        "comments_retrieved": 6,
+        "comment_total_reported": 6,
+        "candidate_count": 0,
+        "root_thread_count": 4,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=b1wRVILTWTM",
+        "error": ""
+      },
+      {
+        "video_id": "yrIsbjxOHQs",
+        "status": "OK",
+        "comments_retrieved": 22,
+        "comment_total_reported": 22,
+        "candidate_count": 0,
+        "root_thread_count": 20,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=yrIsbjxOHQs",
+        "error": ""
+      },
+      {
+        "video_id": "mjFQ2nYv9VE",
+        "status": "OK",
+        "comments_retrieved": 11,
+        "comment_total_reported": 11,
+        "candidate_count": 0,
+        "root_thread_count": 10,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=mjFQ2nYv9VE",
+        "error": ""
+      },
+      {
+        "video_id": "EhYNTJdPSP0",
+        "status": "OK",
+        "comments_retrieved": 35,
+        "comment_total_reported": 35,
+        "candidate_count": 0,
+        "root_thread_count": 18,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=EhYNTJdPSP0",
+        "error": ""
+      },
+      {
+        "video_id": "-DHtzgiY6VQ",
+        "status": "OK",
+        "comments_retrieved": 236,
+        "comment_total_reported": 236,
+        "candidate_count": 0,
+        "root_thread_count": 180,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=-DHtzgiY6VQ",
+        "error": ""
+      },
+      {
+        "video_id": "m6O3gUWdZuM",
+        "status": "OK",
+        "comments_retrieved": 277,
+        "comment_total_reported": 277,
+        "candidate_count": 1,
+        "root_thread_count": 234,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=m6O3gUWdZuM",
+        "error": ""
+      },
+      {
+        "video_id": "2egN5kYxyio",
+        "status": "OK",
+        "comments_retrieved": 232,
+        "comment_total_reported": 232,
+        "candidate_count": 1,
+        "root_thread_count": 192,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=2egN5kYxyio",
+        "error": ""
+      },
+      {
+        "video_id": "2MPQJ70Tb9Q",
+        "status": "OK",
+        "comments_retrieved": 279,
+        "comment_total_reported": 279,
+        "candidate_count": 1,
+        "root_thread_count": 231,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=2MPQJ70Tb9Q",
+        "error": ""
+      },
+      {
+        "video_id": "hN5K7B7nfNU",
+        "status": "OK",
+        "comments_retrieved": 269,
+        "comment_total_reported": 269,
+        "candidate_count": 0,
+        "root_thread_count": 218,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=hN5K7B7nfNU",
+        "error": ""
+      },
+      {
+        "video_id": "MRdZJEeuXWc",
+        "status": "OK",
+        "comments_retrieved": 367,
+        "comment_total_reported": 367,
+        "candidate_count": 1,
+        "root_thread_count": 276,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=MRdZJEeuXWc",
+        "error": ""
+      },
+      {
+        "video_id": "W8J8LK3JK28",
+        "status": "OK",
+        "comments_retrieved": 10,
+        "comment_total_reported": 10,
+        "candidate_count": 0,
+        "root_thread_count": 9,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=W8J8LK3JK28",
+        "error": ""
+      },
+      {
+        "video_id": "pxdRtLSTI80",
+        "status": "OK",
+        "comments_retrieved": 4084,
+        "comment_total_reported": 4084,
+        "candidate_count": 114,
+        "root_thread_count": 2771,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=pxdRtLSTI80",
+        "error": ""
+      },
+      {
+        "video_id": "A6WNGSDebRc",
+        "status": "OK",
+        "comments_retrieved": 26,
+        "comment_total_reported": 26,
+        "candidate_count": 0,
+        "root_thread_count": 20,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=A6WNGSDebRc",
+        "error": ""
+      },
+      {
+        "video_id": "vwU0NyiNcaA",
+        "status": "OK",
+        "comments_retrieved": 177,
+        "comment_total_reported": 177,
+        "candidate_count": 0,
+        "root_thread_count": 140,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=vwU0NyiNcaA",
+        "error": ""
+      },
+      {
+        "video_id": "wAhQbilAhTY",
+        "status": "OK",
+        "comments_retrieved": 28,
+        "comment_total_reported": 28,
+        "candidate_count": 0,
+        "root_thread_count": 24,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=wAhQbilAhTY",
+        "error": ""
+      },
+      {
+        "video_id": "xcUGTOAXaC4",
+        "status": "OK",
+        "comments_retrieved": 6,
+        "comment_total_reported": 6,
+        "candidate_count": 0,
+        "root_thread_count": 5,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=xcUGTOAXaC4",
+        "error": ""
+      },
+      {
+        "video_id": "eaWfO7kRCwU",
+        "status": "OK",
+        "comments_retrieved": 740,
+        "comment_total_reported": 740,
+        "candidate_count": 2,
+        "root_thread_count": 616,
+        "retrieval_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --no-playlist --get-comments --dump-single-json --extractor-args youtube:comment_sort=new;max_comments=all,all,all,all,all https://www.youtube.com/watch?v=eaWfO7kRCwU",
+        "error": ""
+      }
+    ]
+  },
+  "regression_cases_A_to_G": {
+    "A": {
+      "text": "ビシエドってそんな足速いのか。他にもいろいろ能力値がおかしい。",
+      "candidate_retained": true,
+      "matched_terms": [
+        "おかしい",
+        "能力",
+        "能力値",
+        "足",
+        "速い"
+      ],
+      "explicit_grades": [],
+      "explicit_numbers": [],
+      "current_100_mapping": [],
+      "identity_note": "Current-100 mapping is only reported when the live master contains the name; otherwise the candidate is retained without inventing a player ID."
+    },
+    "B": {
+      "text": "大谷走力Aだろ",
+      "candidate_retained": true,
+      "matched_terms": [
+        "EXPLICIT_GRADE",
+        "走力"
+      ],
+      "explicit_grades": [
+        "A"
+      ],
+      "explicit_numbers": [],
+      "current_100_mapping": [],
+      "identity_note": "Current-100 mapping is only reported when the live master contains the name; otherwise the candidate is retained without inventing a player ID."
+    },
+    "C": {
+      "text": "これパワーAはもちろん、走力Bにも不満あったんだよね笑",
+      "candidate_retained": true,
+      "matched_terms": [
+        "EXPLICIT_GRADE",
+        "不満",
+        "走力"
+      ],
+      "explicit_grades": [
+        "A",
+        "B"
+      ],
+      "explicit_numbers": [],
+      "current_100_mapping": [],
+      "identity_note": "Current-100 mapping is only reported when the live master contains the name; otherwise the candidate is retained without inventing a player ID."
+    },
+    "D": {
+      "text": "予想 ミート82パワー90走力84",
+      "candidate_retained": true,
+      "matched_terms": [
+        "EXPLICIT_NUMERIC_VALUE_IN_SPEED_CONTEXT",
+        "NUMERIC_SPEED_EXPRESSION",
+        "走力"
+      ],
+      "explicit_grades": [],
+      "explicit_numbers": [
+        "82",
+        "84",
+        "90"
+      ],
+      "current_100_mapping": [],
+      "identity_note": "Current-100 mapping is only reported when the live master contains the name; otherwise the candidate is retained without inventing a player ID."
+    },
+    "E": {
+      "text": "大谷走力Aだろ",
+      "candidate_retained": true,
+      "matched_terms": [
+        "EXPLICIT_GRADE",
+        "走力"
+      ],
+      "explicit_grades": [
+        "A"
+      ],
+      "explicit_numbers": [],
+      "current_100_mapping": [],
+      "identity_note": "Current-100 mapping is only reported when the live master contains the name; otherwise the candidate is retained without inventing a player ID."
+    },
+    "F": {
+      "text": "足が速い山川",
+      "candidate_retained": false,
+      "matched_terms": [
+        "足",
+        "足が速",
+        "速い"
+      ],
+      "explicit_grades": [],
+      "explicit_numbers": [],
+      "current_100_mapping": [],
+      "identity_note": "Current-100 mapping is only reported when the live master contains the name; otherwise the candidate is retained without inventing a player ID."
+    },
+    "G": {
+      "text": "清原 ミートB79 パワー82 走力B74 これくらいはやってくれよ？",
+      "candidate_retained": true,
+      "matched_terms": [
+        "EXPLICIT_GRADE",
+        "EXPLICIT_NUMERIC_VALUE_IN_SPEED_CONTEXT",
+        "NUMERIC_SPEED_EXPRESSION",
+        "走力"
+      ],
+      "explicit_grades": [
+        "B"
+      ],
+      "explicit_numbers": [
+        "74",
+        "79",
+        "82"
+      ],
+      "current_100_mapping": [],
+      "identity_note": "Current-100 mapping is only reported when the live master contains the name; otherwise the candidate is retained without inventing a player ID."
+    }
+  },
+  "output_files": [
+    "outputs\\derived\\speed_community_v3_powerpro_inventory_20260815.csv",
+    "outputs\\derived\\speed_community_v3_powerpro_raw_20260815.jsonl",
+    "outputs\\derived\\speed_community_v3_powerpro_candidates_20260815.jsonl",
+    "outputs\\derived\\speed_community_v3_powerpro_collection_log_20260815.jsonl",
+    "outputs\\derived\\speed_community_v3_powerpro_qa_20260815.json"
+  ],
+  "limitations": [
+    "The channel is a mixed PowerPro/Prospi official channel; Prospi-only videos are retained in the inventory but excluded from SP-033 comment collection.",
+    "Metadata and comments are public extractor results, not YouTube Data API exhaustive exports.",
+    "Current-100 player IDs are joined only from the live master; regression examples outside that master remain candidates without invented IDs.",
+    "This script does not perform semantic acceptance; candidates preserve thread/title context for contextual review."
+  ]
+}
