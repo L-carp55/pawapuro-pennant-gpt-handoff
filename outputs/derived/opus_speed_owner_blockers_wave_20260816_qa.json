@@ -1,0 +1,37 @@
+{
+  "schema_version": "opus_speed_owner_blockers_wave_20260816_qa",
+  "generated_at": "2026-08-16",
+  "qa_type": "independent_reread",
+  "verdict": "PASS",
+  "checks_run": 17283,
+  "failed_checks": [],
+  "verified_artifact_hashes": {
+    "outputs/derived/sp036_generic_label_decision_v2_20260816.json": "36ec0c9682717977b5d85e8a2e494a83e0433bd093c97bea5b5b4b937228919c",
+    "outputs/derived/sp022_pairwise_range_v2_20260816.json": "1e7e1d09b48a1e130ea7b7e4e653afba6ff2aef0eb17fe078fe7778a9fe77b82",
+    "outputs/derived/sp043_veteran_case_studies_v2_20260816.json": "2d00c9a4f802eaed4dd9e61bb19634b55fe3cd183cc7b4252334d3eff85a1887",
+    "outputs/derived/sp074_conflict_diagnosis_v2_20260816.json": "abac2723dac755a96bc0fbfeb99ad28aaa1cba7173be12397243104a048fcf16",
+    "outputs/derived/sp075_stale_conflict_rediagnosis_v4_20260816.json": "610db284b6c4d55adc507d217d503fff108026f7ad13cbfc9f6a4a68d4a8a250",
+    "docs/state/speed_task_registry.tsv": "18530d2d900812946b20ab5dff354723c06f255d229fa17839cf21767e05537c",
+    "docs/state/speed_exclusion_reason_ledger.tsv": "34bda740d95db7f44f050a8436c52d822b4b884d0f12a89855517e833db2048a",
+    "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl": "ce5b1a3f0c002daa36a2dc86678a596edc95be4e4e57716072894c8f11921a85",
+    "outputs/derived/speed_community_v3_canonical_20260815.jsonl": "9bb9e9cc0df7646840e7b584756d7501ecad475df1410ebc72d549fda09ad058",
+    "outputs/derived/speed_x_excluded_prospi_20260816.jsonl": "aade4c19937484741ccb4b3622e1596d3a241b333bfb63a10a89d0561e09ec0d",
+    "docs/audits/opus_speed_owner_blockers_wave_20260816.md": "aac1e3496b40a1478b666da9ee8c40f90de81d8371bc67abe473e992ae9ca7d6"
+  },
+  "scope_guard": {
+    "no_network_or_collection_operations": true,
+    "no_shoulder_work": true,
+    "no_sp077_or_later_work": true,
+    "no_global_speed_gate_close": true,
+    "production_default_changed": false
+  },
+  "sp075_owner_review_context_players": 18,
+  "automatic_rating_changes": 0,
+  "automatic_stale_promotions": 0,
+  "source_counts": {
+    "active_x": 28,
+    "active_x_players": 18,
+    "terra_youtube_powerpro": 0,
+    "excluded_x_prospi": 73
+  }
+}

@@ -1,0 +1,1116 @@
+{
+  "schema_version": "sp043_veteran_case_studies_v2_20260816",
+  "generated_at": "2026-08-16",
+  "task_id": "SP-043",
+  "status": "DONE_VALIDATED",
+  "evidence_status": "MEASURED_BOUNDED",
+  "exact_tested_question": "What speed evidence at its relevant date exists for Akiyama, Matsuyama, and genuinely reproducible peers, without turning age, PA, PowerPro, or narrative context into a physical decline verdict?",
+  "source_hashes": {
+    "data/normalized/speed_historical_physical_measurements_2015_2026.json": "a9ee33462b0577add21e5e1c8bd8f447791d88e15d8f5f8b38c71112720495bc",
+    "data/normalized/speed_2026_video_tiebreak_sources.json": "7a0c0fcac99ad2dae030777efef9e709981a0f7cf0f6ca978dca964314824b9e",
+    "outputs/derived/sp100_wiring_candidates_20260814.json": "27a8e57c90a4786e72c6235632aa59369373c4102bc016195f93360f9d9b88e5",
+    "outputs/derived/sp042_powerpro_stale_detector.json": "5e99b0831a3eee5415a6b6393f4add19c099c1404eb486927868103ef0c020c2",
+    "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl": "ce5b1a3f0c002daa36a2dc86678a596edc95be4e4e57716072894c8f11921a85",
+    "outputs/derived/speed_community_v3_canonical_20260815.jsonl": "9bb9e9cc0df7646840e7b584756d7501ecad475df1410ebc72d549fda09ad058",
+    "data/pennant.db": "1bcbe9d3260367fa732ed0571573de52a87afd725e9796f2c8d3eb77c671449d"
+  },
+  "case_studies": [
+    {
+      "player": "秋山 翔吾",
+      "current_direct_physical": [
+        {
+          "raw_id": "R00409",
+          "measurement_date": "2026 season snapshot",
+          "measurement_year": 2026,
+          "metric": "NPB_PLUS_SPRINT_SPEED_KMH",
+          "value": 31.6,
+          "unit": "km_per_hour",
+          "evidence_class": "CURRENT_BASEBALL_SPEED",
+          "canonicality": "CANONICAL_SOURCE_RECORD",
+          "acceptance": "ACCEPTED_MODERATE_CURRENT_ORDINAL",
+          "same_measurement_cluster_id": "npb_plus_2026_秋山翔吾",
+          "role": "CURRENT_DIRECT_OR_ORDINAL_CONTEXT",
+          "notes": "Current 2026 ordinal anchor only. Missing published sample and qualified-run counts prevent high-confidence calibration or a cross-system unit bridge."
+        }
+      ],
+      "historical_direct_physical": [
+        {
+          "raw_id": "R00175",
+          "measurement_date": "2021-season",
+          "measurement_year": 2021,
+          "metric": "T90FT_SECONDS",
+          "value": 3.97,
+          "unit": "seconds",
+          "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+          "canonicality": "CANONICAL_SOURCE_RECORD",
+          "acceptance": "ACCEPTED_HIGH_CONFIDENCE",
+          "same_measurement_cluster_id": "mlb_statcast_t90_2021_秋山翔吾",
+          "role": "HISTORICAL_DIRECT_CONTEXT",
+          "notes": "Official direct 90ft split retained as an absolute historical observation; not numerically bridged to NPB+ or 50m."
+        },
+        {
+          "raw_id": "R00176",
+          "measurement_date": "2021-season",
+          "measurement_year": 2021,
+          "metric": "T10FT_SECONDS",
+          "value": 0.86,
+          "unit": "seconds",
+          "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+          "canonicality": "CANONICAL_SOURCE_RECORD",
+          "acceptance": "RETAINED_SUPPORT_ONLY",
+          "same_measurement_cluster_id": "mlb_statcast_t10ft_seconds_2021_秋山翔吾",
+          "role": "HISTORICAL_DIRECT_CONTEXT",
+          "notes": "Supporting split retained separately; it is not converted to metres or a game ability."
+        },
+        {
+          "raw_id": "R00177",
+          "measurement_date": "2021-season",
+          "measurement_year": 2021,
+          "metric": "T30FT_SECONDS",
+          "value": 1.78,
+          "unit": "seconds",
+          "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+          "canonicality": "CANONICAL_SOURCE_RECORD",
+          "acceptance": "RETAINED_SUPPORT_ONLY",
+          "same_measurement_cluster_id": "mlb_statcast_t30ft_seconds_2021_秋山翔吾",
+          "role": "HISTORICAL_DIRECT_CONTEXT",
+          "notes": "Supporting split retained separately; it is not converted to metres or a game ability."
+        },
+        {
+          "raw_id": "R00178",
+          "measurement_date": "2021-season",
+          "measurement_year": 2021,
+          "metric": "MLB_SPRINT_SPEED_FTPS",
+          "value": 28,
+          "unit": "ft_per_second",
+          "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+          "canonicality": "CANONICAL_SOURCE_RECORD",
+          "acceptance": "RETAINED_SUPPORT_ONLY",
+          "same_measurement_cluster_id": "mlb_statcast_mlb_sprint_speed_ftps_2021_秋山翔吾",
+          "role": "HISTORICAL_DIRECT_CONTEXT",
+          "notes": "Official seasonal Sprint Speed retained as a separate unit and aggregation; it is not equated to NPB+."
+        }
+      ],
+      "statistical_context": {
+        "appraisal_year": 2025,
+        "S_stat_z": 0.4157,
+        "S_reliability": 0.7585,
+        "pa_2025": 157,
+        "future_2026_NPB_top_speed_context": {
+          "value_z": -0.0096,
+          "kmh": 31.6,
+          "exposure_runs": 9,
+          "reliability": null,
+          "role": "TEMPORALLY_LATER_CONTEXT_NOT_ANNUAL_2025_TEACHER"
+        }
+      },
+      "powerpro_stale_odd_context": {
+        "coverage": "SP042_COVERED",
+        "flag": "NONE",
+        "powerpro_pct": 0.7158,
+        "latent_physical_pct": 0.4949,
+        "percentile_gap": -0.2208,
+        "role": "STALE_ODD_CONTEXT_ONLY_NOT_PHYSICAL_EVIDENCE"
+      },
+      "injury_aging_context": {
+        "pa_by_year": [
+          {
+            "season": 2011,
+            "pa": 313,
+            "ab": 284,
+            "g": 110
+          },
+          {
+            "season": 2012,
+            "pa": 450,
+            "ab": 403,
+            "g": 107
+          },
+          {
+            "season": 2013,
+            "pa": 634,
+            "ab": 564,
+            "g": 144
+          },
+          {
+            "season": 2014,
+            "pa": 561,
+            "ab": 475,
+            "g": 131
+          },
+          {
+            "season": 2015,
+            "pa": 675,
+            "ab": 602,
+            "g": 143
+          },
+          {
+            "season": 2016,
+            "pa": 671,
+            "ab": 578,
+            "g": 143
+          },
+          {
+            "season": 2017,
+            "pa": 659,
+            "ab": 575,
+            "g": 143
+          },
+          {
+            "season": 2018,
+            "pa": 685,
+            "ab": 603,
+            "g": 143
+          },
+          {
+            "season": 2019,
+            "pa": 678,
+            "ab": 590,
+            "g": 143
+          },
+          {
+            "season": 2022,
+            "pa": 174,
+            "ab": 155,
+            "g": 44
+          },
+          {
+            "season": 2023,
+            "pa": 483,
+            "ab": 434,
+            "g": 115
+          },
+          {
+            "season": 2024,
+            "pa": 587,
+            "ab": 547,
+            "g": 138
+          },
+          {
+            "season": 2025,
+            "pa": 157,
+            "ab": 145,
+            "g": 64
+          }
+        ],
+        "injury_evidence_status": "NOT_COLLECTED_IN_BOUNDED_INPUTS",
+        "age_or_low_PA_is_not_physical_decline_evidence": true,
+        "conclusion": "No injury, aging, role, or PA-only narrative is converted into a speed decline verdict."
+      },
+      "video_context": {
+        "rows": [
+          {
+            "record_id": "TVT-B-005",
+            "season": 2025,
+            "accepted": false,
+            "physical_speed_relevance": "NOT_USABLE_WITHOUT_ISOLATED_STRAIGHT_SEGMENT",
+            "rejection_reason": "BATTER_TO_FIRST_TRANSITION_CONTAMINATED_CONTEXT_ONLY; VISUAL_INSPECTION_UNAVAILABLE"
+          },
+          {
+            "record_id": "TVT-B-006",
+            "season": 2026,
+            "accepted": false,
+            "physical_speed_relevance": "NOT_USABLE_WITHOUT_VISUAL_REVIEW",
+            "rejection_reason": "TIER_C_REQUIRES_VISUAL_IDENTITY_DATE_SPEED_VERIFICATION; VISUAL_INSPECTION_UNAVAILABLE"
+          }
+        ],
+        "accepted_speed_records": 0,
+        "role": "video rows remain context or rejected evidence at their stated scope"
+      },
+      "community_context": {
+        "active_owner_filtered_x_rows": 0,
+        "final_terra_rows_all_statuses": 2,
+        "active_physical_teacher": false
+      },
+      "missingness": {
+        "no_current_direct_speed_evidence": false,
+        "no_current_statistical_context": false,
+        "no_stale_detector_coverage": false
+      },
+      "conclusion": {
+        "state": "CURRENT_ORDINAL_CONTEXT_PRESENT",
+        "physical_decline_verdict": "NOT_IDENTIFIABLE",
+        "reason": "Historical 2021 Statcast evidence and later 2026 NPB+ top-speed context are separated by time, construct, and sampling. Reduced PA is not treated as a decline measurement."
+      }
+    },
+    {
+      "player": "松山 竜平",
+      "current_direct_physical": [],
+      "historical_direct_physical": [],
+      "statistical_context": {
+        "state": "NO_SP100_CURRENT_STATISTICAL_CONTEXT",
+        "role": "MISSING_NOT_ZERO"
+      },
+      "powerpro_stale_odd_context": {
+        "coverage": "SP042_NOT_COVERED",
+        "role": "MISSING_NOT_ZERO_NOT_PHYSICAL_EVIDENCE"
+      },
+      "injury_aging_context": {
+        "pa_by_year": [
+          {
+            "season": 2008,
+            "pa": 2,
+            "ab": 2,
+            "g": 2
+          },
+          {
+            "season": 2011,
+            "pa": 204,
+            "ab": 196,
+            "g": 68
+          },
+          {
+            "season": 2012,
+            "pa": 146,
+            "ab": 137,
+            "g": 48
+          },
+          {
+            "season": 2013,
+            "pa": 389,
+            "ab": 372,
+            "g": 123
+          },
+          {
+            "season": 2014,
+            "pa": 250,
+            "ab": 233,
+            "g": 80
+          },
+          {
+            "season": 2015,
+            "pa": 229,
+            "ab": 202,
+            "g": 100
+          },
+          {
+            "season": 2016,
+            "pa": 275,
+            "ab": 254,
+            "g": 103
+          },
+          {
+            "season": 2017,
+            "pa": 387,
+            "ab": 350,
+            "g": 120
+          },
+          {
+            "season": 2018,
+            "pa": 446,
+            "ab": 397,
+            "g": 124
+          },
+          {
+            "season": 2019,
+            "pa": 327,
+            "ab": 294,
+            "g": 110
+          },
+          {
+            "season": 2020,
+            "pa": 425,
+            "ab": 404,
+            "g": 108
+          },
+          {
+            "season": 2021,
+            "pa": 194,
+            "ab": 175,
+            "g": 85
+          },
+          {
+            "season": 2022,
+            "pa": 166,
+            "ab": 152,
+            "g": 88
+          },
+          {
+            "season": 2023,
+            "pa": 156,
+            "ab": 143,
+            "g": 79
+          },
+          {
+            "season": 2024,
+            "pa": 78,
+            "ab": 73,
+            "g": 65
+          },
+          {
+            "season": 2025,
+            "pa": 1,
+            "ab": 1,
+            "g": 1
+          }
+        ],
+        "injury_evidence_status": "NOT_COLLECTED_IN_BOUNDED_INPUTS",
+        "age_or_low_PA_is_not_physical_decline_evidence": true,
+        "conclusion": "No injury, aging, role, or PA-only narrative is converted into a speed decline verdict."
+      },
+      "video_context": {
+        "rows": [],
+        "accepted_speed_records": 0,
+        "role": "video rows remain context or rejected evidence at their stated scope"
+      },
+      "community_context": {
+        "active_owner_filtered_x_rows": 0,
+        "final_terra_rows_all_statuses": 0,
+        "active_physical_teacher": false
+      },
+      "missingness": {
+        "no_current_direct_speed_evidence": true,
+        "no_current_statistical_context": true,
+        "no_stale_detector_coverage": true
+      },
+      "conclusion": {
+        "state": "NO_DIRECT_SPEED_EVIDENCE",
+        "physical_decline_verdict": "NOT_IDENTIFIABLE",
+        "reason": "No canonical direct speed record, no SP-100 current statistical context, and no SP-042 stale/odd coverage exist in the bounded inputs."
+      }
+    }
+  ],
+  "peer_rule": {
+    "candidate_universe": [
+      {
+        "name": "九里　亜蓮",
+        "pa": 1,
+        "ab": 0,
+        "g": 25
+      },
+      {
+        "name": "仲地　礼亜",
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      },
+      {
+        "name": "佐々木　千隼",
+        "pa": 1,
+        "ab": 1,
+        "g": 20
+      },
+      {
+        "name": "内　星龍",
+        "pa": 1,
+        "ab": 1,
+        "g": 25
+      },
+      {
+        "name": "大内　誠弥",
+        "pa": 1,
+        "ab": 1,
+        "g": 2
+      },
+      {
+        "name": "小園　健太",
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      },
+      {
+        "name": "岡島　豪郎",
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      },
+      {
+        "name": "岡田　俊哉",
+        "pa": 1,
+        "ab": 1,
+        "g": 4
+      },
+      {
+        "name": "斉藤　優汰",
+        "pa": 1,
+        "ab": 1,
+        "g": 2
+      },
+      {
+        "name": "木村　優人",
+        "pa": 1,
+        "ab": 1,
+        "g": 22
+      },
+      {
+        "name": "松井　友飛",
+        "pa": 1,
+        "ab": 1,
+        "g": 13
+      },
+      {
+        "name": "松山　竜平",
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      },
+      {
+        "name": "松木平　優太",
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      },
+      {
+        "name": "松本　健吾",
+        "pa": 1,
+        "ab": 1,
+        "g": 23
+      },
+      {
+        "name": "根尾　昂",
+        "pa": 1,
+        "ab": 1,
+        "g": 4
+      },
+      {
+        "name": "石井　大智",
+        "pa": 1,
+        "ab": 1,
+        "g": 53
+      },
+      {
+        "name": "石川　亮",
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      },
+      {
+        "name": "篠木　健太郎",
+        "pa": 1,
+        "ab": 1,
+        "g": 3
+      },
+      {
+        "name": "草加　勝",
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      },
+      {
+        "name": "西　勇輝",
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      },
+      {
+        "name": "金久保　優斗",
+        "pa": 1,
+        "ab": 1,
+        "g": 12
+      },
+      {
+        "name": "長坂　拳弥",
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      },
+      {
+        "name": "阪口　樂",
+        "pa": 1,
+        "ab": 1,
+        "g": 1
+      },
+      {
+        "name": "颯",
+        "pa": 1,
+        "ab": 1,
+        "g": 27
+      },
+      {
+        "name": "高野　脩汰",
+        "pa": 1,
+        "ab": 1,
+        "g": 37
+      },
+      {
+        "name": "Ａ．エスピノーザ",
+        "pa": 1,
+        "ab": 1,
+        "g": 23
+      },
+      {
+        "name": "前田　純",
+        "pa": 2,
+        "ab": 2,
+        "g": 10
+      },
+      {
+        "name": "又木　鉄平",
+        "pa": 2,
+        "ab": 2,
+        "g": 5
+      },
+      {
+        "name": "吉田　聖弥",
+        "pa": 2,
+        "ab": 1,
+        "g": 5
+      },
+      {
+        "name": "小島　和哉",
+        "pa": 2,
+        "ab": 2,
+        "g": 24
+      },
+      {
+        "name": "川端　慎吾",
+        "pa": 2,
+        "ab": 2,
+        "g": 2
+      },
+      {
+        "name": "平内　龍太",
+        "pa": 2,
+        "ab": 1,
+        "g": 12
+      },
+      {
+        "name": "有原　航平",
+        "pa": 2,
+        "ab": 1,
+        "g": 26
+      },
+      {
+        "name": "森　唯斗",
+        "pa": 2,
+        "ab": 2,
+        "g": 2
+      },
+      {
+        "name": "横山　聖哉",
+        "pa": 2,
+        "ab": 2,
+        "g": 2
+      },
+      {
+        "name": "渡邉　勇太朗",
+        "pa": 2,
+        "ab": 2,
+        "g": 23
+      },
+      {
+        "name": "田内　真翔",
+        "pa": 2,
+        "ab": 2,
+        "g": 2
+      },
+      {
+        "name": "石川　柊太",
+        "pa": 2,
+        "ab": 2,
+        "g": 19
+      },
+      {
+        "name": "種市　篤暉",
+        "pa": 2,
+        "ab": 1,
+        "g": 24
+      },
+      {
+        "name": "與座　海人",
+        "pa": 2,
+        "ab": 2,
+        "g": 16
+      },
+      {
+        "name": "郡　拓也",
+        "pa": 2,
+        "ab": 2,
+        "g": 3
+      },
+      {
+        "name": "陽　柏翔",
+        "pa": 2,
+        "ab": 2,
+        "g": 2
+      },
+      {
+        "name": "隅田　知一郎",
+        "pa": 2,
+        "ab": 1,
+        "g": 23
+      },
+      {
+        "name": "高橋　昂也",
+        "pa": 2,
+        "ab": 2,
+        "g": 24
+      },
+      {
+        "name": "Ｍ．ヤフーレ",
+        "pa": 2,
+        "ab": 2,
+        "g": 14
+      },
+      {
+        "name": "アドゥワ　誠",
+        "pa": 3,
+        "ab": 3,
+        "g": 4
+      },
+      {
+        "name": "井上　広大",
+        "pa": 3,
+        "ab": 3,
+        "g": 1
+      },
+      {
+        "name": "加藤　貴之",
+        "pa": 3,
+        "ab": 2,
+        "g": 20
+      },
+      {
+        "name": "吉納　翼",
+        "pa": 3,
+        "ab": 3,
+        "g": 2
+      },
+      {
+        "name": "吉野　光樹",
+        "pa": 3,
+        "ab": 3,
+        "g": 2
+      },
+      {
+        "name": "堀　柊那",
+        "pa": 3,
+        "ab": 3,
+        "g": 3
+      },
+      {
+        "name": "大関　友久",
+        "pa": 3,
+        "ab": 2,
+        "g": 24
+      },
+      {
+        "name": "岸　孝之",
+        "pa": 3,
+        "ab": 1,
+        "g": 19
+      },
+      {
+        "name": "早川　隆久",
+        "pa": 3,
+        "ab": 3,
+        "g": 12
+      },
+      {
+        "name": "津田　啓史",
+        "pa": 3,
+        "ab": 3,
+        "g": 5
+      },
+      {
+        "name": "湯浅　大",
+        "pa": 3,
+        "ab": 3,
+        "g": 8
+      },
+      {
+        "name": "瀧中　瞭太",
+        "pa": 3,
+        "ab": 0,
+        "g": 15
+      },
+      {
+        "name": "田嶋　大樹",
+        "pa": 3,
+        "ab": 3,
+        "g": 18
+      },
+      {
+        "name": "達　孝太",
+        "pa": 3,
+        "ab": 3,
+        "g": 16
+      },
+      {
+        "name": "遠藤　淳志",
+        "pa": 3,
+        "ab": 3,
+        "g": 7
+      },
+      {
+        "name": "重信　慎之介",
+        "pa": 3,
+        "ab": 3,
+        "g": 10
+      },
+      {
+        "name": "金村　尚真",
+        "pa": 3,
+        "ab": 3,
+        "g": 28
+      },
+      {
+        "name": "Ｓ．ハワード",
+        "pa": 3,
+        "ab": 3,
+        "g": 9
+      },
+      {
+        "name": "北山　亘基",
+        "pa": 4,
+        "ab": 4,
+        "g": 22
+      },
+      {
+        "name": "宮城　大弥",
+        "pa": 4,
+        "ab": 3,
+        "g": 23
+      },
+      {
+        "name": "山瀬　慎之助",
+        "pa": 4,
+        "ab": 4,
+        "g": 1
+      },
+      {
+        "name": "早川　太貴",
+        "pa": 4,
+        "ab": 3,
+        "g": 3
+      },
+      {
+        "name": "曽谷　龍平",
+        "pa": 4,
+        "ab": 4,
+        "g": 21
+      },
+      {
+        "name": "松本　晴",
+        "pa": 4,
+        "ab": 4,
+        "g": 29
+      },
+      {
+        "name": "濱　将乃介",
+        "pa": 4,
+        "ab": 4,
+        "g": 5
+      },
+      {
+        "name": "藤井　聖",
+        "pa": 4,
+        "ab": 2,
+        "g": 22
+      },
+      {
+        "name": "青柳　晃洋",
+        "pa": 4,
+        "ab": 4,
+        "g": 3
+      },
+      {
+        "name": "上沢　直之",
+        "pa": 5,
+        "ab": 4,
+        "g": 23
+      },
+      {
+        "name": "中村　優斗",
+        "pa": 5,
+        "ab": 4,
+        "g": 4
+      },
+      {
+        "name": "乙坂　智",
+        "pa": 5,
+        "ab": 5,
+        "g": 5
+      },
+      {
+        "name": "佐藤　柳之介",
+        "pa": 5,
+        "ab": 4,
+        "g": 6
+      },
+      {
+        "name": "堀田　賢慎",
+        "pa": 5,
+        "ab": 5,
+        "g": 8
+      },
+      {
+        "name": "尾田　剛樹",
+        "pa": 5,
+        "ab": 5,
+        "g": 28
+      },
+      {
+        "name": "東　晃平",
+        "pa": 5,
+        "ab": 5,
+        "g": 6
+      },
+      {
+        "name": "梅林　優貴",
+        "pa": 5,
+        "ab": 5,
+        "g": 2
+      },
+      {
+        "name": "植田　将太",
+        "pa": 5,
+        "ab": 5,
+        "g": 5
+      },
+      {
+        "name": "武内　夏暉",
+        "pa": 5,
+        "ab": 2,
+        "g": 12
+      },
+      {
+        "name": "田中　晴也",
+        "pa": 5,
+        "ab": 5,
+        "g": 13
+      },
+      {
+        "name": "田中　貴也",
+        "pa": 5,
+        "ab": 3,
+        "g": 12
+      },
+      {
+        "name": "髙橋　光成",
+        "pa": 5,
+        "ab": 4,
+        "g": 24
+      },
+      {
+        "name": "Ａ．ボス",
+        "pa": 5,
+        "ab": 5,
+        "g": 22
+      },
+      {
+        "name": "Ｌ．モイネロ",
+        "pa": 5,
+        "ab": 5,
+        "g": 24
+      },
+      {
+        "name": "Ｍ．フルプ",
+        "pa": 5,
+        "ab": 5,
+        "g": 2
+      },
+      {
+        "name": "Ｎ．ネルソン",
+        "pa": 5,
+        "ab": 4,
+        "g": 23
+      },
+      {
+        "name": "今井　達也",
+        "pa": 6,
+        "ab": 6,
+        "g": 24
+      },
+      {
+        "name": "伊藤　大海",
+        "pa": 6,
+        "ab": 6,
+        "g": 27
+      },
+      {
+        "name": "宮崎　一樹",
+        "pa": 6,
+        "ab": 6,
+        "g": 5
+      },
+      {
+        "name": "富田　蓮",
+        "pa": 6,
+        "ab": 5,
+        "g": 9
+      },
+      {
+        "name": "東妻　純平",
+        "pa": 6,
+        "ab": 6,
+        "g": 4
+      },
+      {
+        "name": "立松　由宇",
+        "pa": 6,
+        "ab": 6,
+        "g": 4
+      },
+      {
+        "name": "藤浪　晋太郎",
+        "pa": 6,
+        "ab": 5,
+        "g": 6
+      },
+      {
+        "name": "鈴木　叶",
+        "pa": 6,
+        "ab": 6,
+        "g": 2
+      },
+      {
+        "name": "山﨑　福也",
+        "pa": 7,
+        "ab": 7,
+        "g": 20
+      },
+      {
+        "name": "石川　達也",
+        "pa": 7,
+        "ab": 7,
+        "g": 41
+      },
+      {
+        "name": "磯村　嘉孝",
+        "pa": 7,
+        "ab": 7,
+        "g": 6
+      },
+      {
+        "name": "若林　晃弘",
+        "pa": 7,
+        "ab": 7,
+        "g": 5
+      },
+      {
+        "name": "Ｈ．メヒア",
+        "pa": 7,
+        "ab": 7,
+        "g": 25
+      },
+      {
+        "name": "下川　隼佑",
+        "pa": 8,
+        "ab": 6,
+        "g": 9
+      },
+      {
+        "name": "味谷　大誠",
+        "pa": 8,
+        "ab": 7,
+        "g": 3
+      },
+      {
+        "name": "渡邉　悠斗",
+        "pa": 8,
+        "ab": 8,
+        "g": 2
+      },
+      {
+        "name": "三浦　瑞樹",
+        "pa": 9,
+        "ab": 8,
+        "g": 7
+      },
+      {
+        "name": "伊藤　光",
+        "pa": 9,
+        "ab": 9,
+        "g": 6
+      },
+      {
+        "name": "勝又　温史",
+        "pa": 9,
+        "ab": 9,
+        "g": 7
+      },
+      {
+        "name": "川村　友斗",
+        "pa": 9,
+        "ab": 9,
+        "g": 15
+      },
+      {
+        "name": "松川　虎生",
+        "pa": 9,
+        "ab": 8,
+        "g": 6
+      },
+      {
+        "name": "榮枝　裕貴",
+        "pa": 9,
+        "ab": 9,
+        "g": 8
+      },
+      {
+        "name": "石塚　裕惺",
+        "pa": 9,
+        "ab": 9,
+        "g": 9
+      },
+      {
+        "name": "Ｊ．ドミンゲス",
+        "pa": 9,
+        "ab": 9,
+        "g": 6
+      },
+      {
+        "name": "中村　健人",
+        "pa": 10,
+        "ab": 6,
+        "g": 4
+      },
+      {
+        "name": "仲三河　優太",
+        "pa": 10,
+        "ab": 9,
+        "g": 5
+      },
+      {
+        "name": "元　謙太",
+        "pa": 10,
+        "ab": 7,
+        "g": 31
+      },
+      {
+        "name": "入江　大樹",
+        "pa": 10,
+        "ab": 10,
+        "g": 4
+      },
+      {
+        "name": "内田　湘大",
+        "pa": 10,
+        "ab": 9,
+        "g": 6
+      },
+      {
+        "name": "和田　康士朗",
+        "pa": 10,
+        "ab": 8,
+        "g": 17
+      },
+      {
+        "name": "常廣　羽也斗",
+        "pa": 10,
+        "ab": 9,
+        "g": 7
+      },
+      {
+        "name": "西舘　勇陽",
+        "pa": 10,
+        "ab": 8,
+        "g": 15
+      }
+    ],
+    "candidate_universe_definition": "All 2025 v_batting rows with 0 < PA <= 10, shown only as a descriptive low-current-sample universe.",
+    "matching_rule": null,
+    "selection_method": "NO_PEERS_EMITTED",
+    "result": [],
+    "reason": "The bounded inputs do not contain a predeclared joint age, injury/role mechanism, and same-time direct-speed construct needed to label another player a genuine veteran same-pattern peer. Low PA alone is not a same pattern."
+  },
+  "qa": {
+    "current_direct_and_historical_records_separated": true,
+    "duplicate_physical_cluster_guard": true,
+    "no_powerpro_as_physical_evidence": true,
+    "no_age_or_low_PA_decline_inference": true,
+    "first_N_peer_fixture_rejected": true
+  },
+  "final_reason": "The case-study reconciliation is complete and usable as owner context. It deliberately returns NOT_IDENTIFIABLE for a physical decline claim and NO_DIRECT_SPEED_EVIDENCE for Matsuyama rather than manufacturing either a verdict or false peers."
+}

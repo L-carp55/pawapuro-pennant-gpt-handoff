@@ -1,0 +1,1049 @@
+{
+  "schema_version": "sp036_generic_label_decision_v2_20260816",
+  "generated_at": "2026-08-16",
+  "task_id": "SP-036",
+  "status": "DONE_NEGATIVE_FINDING",
+  "evidence_status": "MEASURED_NEGATIVE",
+  "exact_tested_question": "Within the seven-row outside-150 generic-label rescue, does retained weak generic fast/slow context demonstrate systematic current player-level speed decision value under the owner-filtered active policy?",
+  "source_hashes": {
+    "outputs/derived/sp036_generic_label_sweep_20260814.json": "3bb1cd1b2be0de4d3e77784485a011014216277b07bfa9506a56a8b46d7092fb",
+    "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl": "3e153eb09b8e334459a954c54d792eaa8876b66b85bc8d7d50946dd7e142a391",
+    "outputs/derived/speed_community_v3_canonical_20260815.jsonl": "9bb9e9cc0df7646840e7b584756d7501ecad475df1410ebc72d549fda09ad058",
+    "outputs/derived/speed_community_v3_semantic_audit_qa_20260815.json": "10fcaffa8458a62f893a5fc6d1a87bee3084a67519c929225dc0c58191318cdc",
+    "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl": "ce5b1a3f0c002daa36a2dc86678a596edc95be4e4e57716072894c8f11921a85",
+    "outputs/derived/speed_x_current_powerpro_qa_20260816.json": "d33691d33f741c97f0d529d451f98fb0200f572d948a0bf190a974b07ba15df3"
+  },
+  "input_counts": {
+    "outside_150_rows": 7,
+    "outside_150_origins": 4,
+    "outside_150_usable_player_origins": 1,
+    "legacy_reclassified_generic_rows": 67,
+    "legacy_reclassified_generic_origins": 59
+  },
+  "population_separation": {
+    "outside_150_sweep": {
+      "role": "bounded additional rescue directly tested here",
+      "rows": [
+        {
+          "record_id": "PPYT-RUN2-COMMENT-4LPWDwnHVpg-UgyKWZysufT3_qcmMh94AaABAg",
+          "origin_id": "youtube:4LPWDwnHVpg#UgyKWZysufT3_qcmMh94AaABAg",
+          "source": "community_normalized",
+          "player": null,
+          "category": "RATING_CONTEXT",
+          "usable_as_player_evidence": false,
+          "likely_not_player_observation": false,
+          "zeroed": false,
+          "source_url": null
+        },
+        {
+          "record_id": "SP034-RUN2-COMMENT-gn972-2UigM-UgyomjulWWCVFesOgPB4AaABAg",
+          "origin_id": "youtube:gn972-2UigM#UgyomjulWWCVFesOgPB4AaABAg",
+          "source": "community_normalized",
+          "player": null,
+          "category": "UNATTRIBUTED_OR_AMBIGUOUS_CONTEXT",
+          "usable_as_player_evidence": false,
+          "likely_not_player_observation": false,
+          "zeroed": false,
+          "source_url": null
+        },
+        {
+          "record_id": "SP034-RUN2-COMMENT-qVl61GKQNhE-Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+          "origin_id": "youtube:qVl61GKQNhE#Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+          "source": "community_normalized",
+          "player": null,
+          "category": "UNATTRIBUTED_OR_AMBIGUOUS_CONTEXT",
+          "usable_as_player_evidence": false,
+          "likely_not_player_observation": false,
+          "zeroed": false,
+          "source_url": null
+        },
+        {
+          "record_id": "YT-RECOVER-4LPWDwnHVpg-UgyKWZysufT3_qcmMh94AaABAg",
+          "origin_id": "youtube:4LPWDwnHVpg#UgyKWZysufT3_qcmMh94AaABAg",
+          "source": "youtube_classified",
+          "player": null,
+          "category": "RATING_CONTEXT",
+          "usable_as_player_evidence": false,
+          "likely_not_player_observation": false,
+          "zeroed": false,
+          "source_url": null
+        },
+        {
+          "record_id": "YT-RECOVER-gn972-2UigM-UgyomjulWWCVFesOgPB4AaABAg",
+          "origin_id": "youtube:gn972-2UigM#UgyomjulWWCVFesOgPB4AaABAg",
+          "source": "youtube_classified",
+          "player": null,
+          "category": "UNATTRIBUTED_OR_AMBIGUOUS_CONTEXT",
+          "usable_as_player_evidence": false,
+          "likely_not_player_observation": false,
+          "zeroed": false,
+          "source_url": null
+        },
+        {
+          "record_id": "YT-RECOVER-s6I10vOFLkU-UgwK9ZPl4anJ2XES4Il4AaABAg",
+          "origin_id": "youtube:s6I10vOFLkU#UgwK9ZPl4anJ2XES4Il4AaABAg",
+          "source": "youtube_classified",
+          "player": null,
+          "category": "TECHNIQUE_GAMEPLAY_OR_NOISE",
+          "usable_as_player_evidence": false,
+          "likely_not_player_observation": true,
+          "zeroed": false,
+          "source_url": null
+        },
+        {
+          "record_id": "YT-RECOVER-qVl61GKQNhE-Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+          "origin_id": "youtube:qVl61GKQNhE#Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+          "source": "youtube_classified",
+          "player": "山川 穂高",
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "usable_as_player_evidence": true,
+          "likely_not_player_observation": false,
+          "zeroed": false,
+          "source_url": null
+        }
+      ],
+      "origins": [
+        {
+          "origin_id": "youtube:4LPWDwnHVpg#UgyKWZysufT3_qcmMh94AaABAg",
+          "player": null,
+          "category": "RATING_CONTEXT",
+          "usable_as_player_evidence": false,
+          "likely_not_player_observation": false,
+          "row_count": 2
+        },
+        {
+          "origin_id": "youtube:gn972-2UigM#UgyomjulWWCVFesOgPB4AaABAg",
+          "player": null,
+          "category": "UNATTRIBUTED_OR_AMBIGUOUS_CONTEXT",
+          "usable_as_player_evidence": false,
+          "likely_not_player_observation": false,
+          "row_count": 2
+        },
+        {
+          "origin_id": "youtube:qVl61GKQNhE#Ugy4DnrAM4_gYxLtKf14AaABAg.A9rG5wxHHpNA9rZ9MoQ9jP",
+          "player": "山川 穂高",
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "usable_as_player_evidence": true,
+          "likely_not_player_observation": false,
+          "row_count": 2
+        },
+        {
+          "origin_id": "youtube:s6I10vOFLkU#UgwK9ZPl4anJ2XES4Il4AaABAg",
+          "player": null,
+          "category": "TECHNIQUE_GAMEPLAY_OR_NOISE",
+          "usable_as_player_evidence": false,
+          "likely_not_player_observation": true,
+          "row_count": 1
+        }
+      ]
+    },
+    "legacy_reclassified_generic_labels": {
+      "role": "retained historical weak context; not silently discarded or treated as a current active vote",
+      "rows": [
+        {
+          "record_id": "SP032-RUN2-GXSR003",
+          "player": "カリステ",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/jpxneezd/status/2035030093240967369"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR004",
+          "player": "カリステ",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/NoKick/status/2038966073568154036"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR005",
+          "player": "塩見 泰隆",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/yutakah2/status/1774791555674751464"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR009",
+          "player": "塩見 泰隆",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/TsubameZoku/status/1896682767947370912"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR010",
+          "player": "塩見 泰隆",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/epachinko/status/1918305639656505507"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR011",
+          "player": "塩見 泰隆",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/webSportiva/status/1957404644805841126"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR015",
+          "player": "塩見 泰隆",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/oeghak/status/2072549548715835602"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR022",
+          "player": "岡 大海",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "DUPLICATE_KEEP_AS_REACTION",
+          "origin_count": 0,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/happy_days0709/status/2027416132739825932"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR026",
+          "player": "外崎 修汰",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST",
+            "PLAYER_COMPARISON"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/xxxmiraclesxxx/status/1966499694495834147"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR027",
+          "player": "外崎 修汰",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/i_yodonoki/status/1974476633840234720"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR030",
+          "player": "外崎 修汰",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/YouTube08049738/status/2080662691337883730"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR035",
+          "player": "梶原 昂希",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/dokayamaBB/status/1853551646703595975"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR038",
+          "player": "梶原 昂希",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/bk_wanko/status/1969003439414731188"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR041",
+          "player": "梶原 昂希",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/mejiro9banchi/status/2066081062422503509"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR044",
+          "player": "丸 佳浩",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/cun_song14143/status/1856965524414218540"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR047",
+          "player": "丸 佳浩",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW",
+            "PLAYER_COMPARISON"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/hirosatou1717/status/2051881673625854452"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR048",
+          "player": "丸 佳浩",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST",
+            "PLAYER_COMPARISON"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/hirosatou1717/status/2051891392386114024"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR055",
+          "player": "西野 真弘",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/Petalenco/status/1966819704489845245"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR057",
+          "player": "西野 真弘",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/sozaryata/status/1967904417220587687"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR058",
+          "player": "西野 真弘",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST",
+            "AGING_NOT_REFLECTED"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/non__m05/status/2002274269816860915"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR063",
+          "player": "大島 洋平",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/nLbSDgU2oRDQZZk/status/1928076101546389666"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR070",
+          "player": "大島 洋平",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST",
+            "AGING_NOT_REFLECTED"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/kunoichimonme/status/2044398359260369133"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR071",
+          "player": "大島 洋平",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/miyagi_kaccyan/status/2046901979390308565"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR073",
+          "player": "大島 洋平",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST",
+            "AGING_NOT_REFLECTED"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/kohei6d/status/2047616061420556430"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR074",
+          "player": "大島 洋平",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST",
+            "AGING_NOT_REFLECTED"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/kohei6d/status/2051268651354108020"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR085",
+          "player": "中村 悠平",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/Genmai_rice/status/2050897151962870194"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR086",
+          "player": "中村 悠平",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/swbiPpOTea48605/status/2050897172787527695"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR087",
+          "player": "中村 悠平",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/h_sorewata/status/2050897223928754237"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR089",
+          "player": "中村 悠平",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/Baya45_0814/status/2074817218777649412"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR090",
+          "player": "土田 龍空",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/dragons_080203/status/1758309489835655376"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR094",
+          "player": "土田 龍空",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/yazannokame/status/2044705791194886509"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR096",
+          "player": "土田 龍空",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 0,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/Jt4ivTh/status/2049395897323397441"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR097",
+          "player": "土田 龍空",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/dragons_080203/status/2049409629340475763"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR098",
+          "player": "土田 龍空",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/dragons_080203/status/2050423606560309310"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR102",
+          "player": "土田 龍空",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/pttt0gqm/status/2080907150042501612"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR113",
+          "player": "梅野 隆太郎",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/martesuperuna/status/1871212154067755104"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR115",
+          "player": "梅野 隆太郎",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "DUPLICATE_KEEP_AS_REACTION",
+          "origin_count": 0,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/Brazell_6_7/status/2060953071811977349"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR117",
+          "player": "並木 秀尊",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST",
+            "PLAYER_COMPARISON"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/SVictory82/status/1862863426567180613"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR118",
+          "player": "並木 秀尊",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/ys_osfk/status/1863546351184978306"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR125",
+          "player": "並木 秀尊",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "DUPLICATE_KEEP_AS_REACTION",
+          "origin_count": 0,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/DesFrieden/status/2005636348645167111"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR126",
+          "player": "並木 秀尊",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "DUPLICATE_KEEP_AS_REACTION",
+          "origin_count": 0,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/mnbv99015/status/2005660370783141899"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR129",
+          "player": "木下 拓哉",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/benchihey/status/1822936573731844199"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR130",
+          "player": "木下 拓哉",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/2DMdzvNxMscJWdO/status/1823294180853944590"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR132",
+          "player": "木下 拓哉",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/kota_rainbow321/status/1823684390674948519"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR134",
+          "player": "木下 拓哉",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/pasan111211/status/1837066926415032393"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR142",
+          "player": "木下 拓哉",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/q9wc0ddNvxfmc/status/2042540211490742632"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR143",
+          "player": "木下 拓哉",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/pasan111211/status/2045104911399231544"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR147",
+          "player": "野間 峻祥",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/RURI_SEIKAIHADO/status/1795444505690386510"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR148",
+          "player": "野間 峻祥",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/JINJIN13480843/status/1829059665671663729"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR149",
+          "player": "野間 峻祥",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/Donden_Suenaga/status/1979822981338820791"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR152",
+          "player": "野間 峻祥",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/hanasada1997/status/2066743741269049502"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR154",
+          "player": "矢野 雅哉",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/suzukiikuz/status/1830195362889699449"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR155",
+          "player": "矢野 雅哉",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/ureshisounainu/status/1830196024226226345"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR156",
+          "player": "矢野 雅哉",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/100ten___chan/status/1830198668605219039"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR159",
+          "player": "矢野 雅哉",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/jpdc_ishii/status/2082738224334795170"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR162",
+          "player": "友杉 篤輝",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST",
+            "PLAYER_COMPARISON"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/eagleshibakawa/status/1983518718589313525"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR164",
+          "player": "友杉 篤輝",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/maaar_kun5/status/2066476109252936061"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR179",
+          "player": "林 琢真",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/6d0WLgoKfP20737/status/2041867789183676641"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR180",
+          "player": "林 琢真",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/Lysenko_Yoshida/status/2049700341634187360"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR181",
+          "player": "林 琢真",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/makishi23/status/2078423711078846672"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR182",
+          "player": "林 琢真",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/kakkii_bay/status/2079163315524399553"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR183",
+          "player": "鈴木 大地",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/toinera_/status/1865031178421731550"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR186",
+          "player": "鈴木 大地",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_SLOW"
+          ],
+          "independence": "ORIGIN",
+          "origin_count": 1,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/Roku7_AIMS/status/2040609735112823266"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR187",
+          "player": "鈴木 大地",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "DUPLICATE_KEEP_AS_REACTION",
+          "origin_count": 0,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/yasuhiro926/status/2061747891946050004"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR188",
+          "player": "鈴木 大地",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "DUPLICATE_KEEP_AS_REACTION",
+          "origin_count": 0,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/nmstyn/status/2061780209557524582"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR189",
+          "player": "鈴木 大地",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "DUPLICATE_KEEP_AS_REACTION",
+          "origin_count": 0,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/maru_maru1359/status/2061780328046633243"
+        },
+        {
+          "record_id": "SP032-RUN2-GXSR191",
+          "player": "鈴木 大地",
+          "bucket": "WEAK_PHYSICAL_OR_CONTEXT",
+          "labels": [
+            "GENERIC_FAST"
+          ],
+          "independence": "DUPLICATE_KEEP_AS_REACTION",
+          "origin_count": 0,
+          "reaction_volume": 1,
+          "category": "GENERIC_PHYSICAL_CONTEXT",
+          "source_url": "https://x.com/NWGN1971/status/2061781203922059668"
+        }
+      ],
+      "active_lineage": {
+        "legacy_generic_rows": 67,
+        "legacy_generic_origins": 59,
+        "exact_url_matches_in_final_terra": 0,
+        "exact_url_matches_in_owner_filtered_x": 0,
+        "total_deterministic_active_matches": 0
+      }
+    }
+  },
+  "role_policy": {
+    "generic_physical_context": "context only; never a physical teacher or automatic player action",
+    "rating_context": "rating-consensus context only; not physical truth",
+    "technique_gameplay_noise": "retained for provenance but excluded from pure-speed interpretation",
+    "missing_or_unlinked_lineage": "not negative evidence and not an active vote",
+    "powerpro_individual_label_as_physical_teacher": false,
+    "automatic_rating_change": false,
+    "automatic_stale_promotion": false
+  },
+  "original_mass_rejection_claim": {
+    "claim": "Mass rejection of generic labels was too strict.",
+    "outside_150_rescue_result": "UNSUPPORTED: one attributable usable origin cannot establish systematic decision value.",
+    "broad_legacy_population_result": "NOT_IDENTIFIABLE_FOR_BROAD_LEGACY_POPULATION_NO_DETERMINISTIC_ACTIVE_LINEAGE",
+    "reason": "The 67 legacy generic rows remain preserved, but the frozen final Terra and owner-filtered active layers provide no deterministic URL crosswalk for a broad active-policy conclusion."
+  },
+  "final_reason": "The exact seven-row rescue was genuinely tested and did not demonstrate systematic decision value. Weak evidence remains contextual; the broader historical claim stays explicitly unidentifiable rather than being converted to a false negative or a forced positive."
+}

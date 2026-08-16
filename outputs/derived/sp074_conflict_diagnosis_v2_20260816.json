@@ -1,0 +1,3146 @@
+{
+  "schema_version": "sp074_conflict_diagnosis_v2_20260816",
+  "generated_at": "2026-08-16",
+  "task_id": "SP-074",
+  "status": "DONE_NEGATIVE_FINDING",
+  "evidence_status": "MEASURED_NEGATIVE",
+  "exact_tested_question": "Which project evidence pairs are genuine same-time disagreements, temporal bridge problems, different-construct context, or missing evidence?",
+  "source_hashes": {
+    "outputs/derived/sp100_wiring_candidates_20260814.json": "27a8e57c90a4786e72c6235632aa59369373c4102bc016195f93360f9d9b88e5",
+    "data/normalized/speed_historical_physical_measurements_2015_2026.json": "a9ee33462b0577add21e5e1c8bd8f447791d88e15d8f5f8b38c71112720495bc"
+  },
+  "source_provenance": {
+    "statistical_proxy": {
+      "year": 2025,
+      "construct": "STATISTICAL_PROXY_SPEED",
+      "source": "outputs/derived/sp100_wiring_candidates_20260814.json",
+      "role": "current-year proxy context; not a direct max-speed measurement"
+    },
+    "npb_plus": {
+      "year": 2026,
+      "construct": "MAX_SPEED_TRACKING",
+      "source": "outputs/derived/sp100_wiring_candidates_20260814.json",
+      "role": "current maximum-speed snapshot only; generic reliability NOT_IDENTIFIABLE"
+    },
+    "same_time_direct_comparison_availability": {
+      "canonical_2025_direct_records_for_current100": [],
+      "canonical_direct_records_by_year": {
+        "2015": 1,
+        "2017": 4,
+        "2018": 2,
+        "2019": 1,
+        "2020": 8,
+        "2021": 13,
+        "2022": 9,
+        "2023": 4,
+        "2024": 12,
+        "2026": 101,
+        "null": 3
+      },
+      "result": "NO_TRUE_OR_EXPLICITLY_ALIGNABLE_SAME_TIME_DIRECT_COMPARISON_AVAILABLE"
+    }
+  },
+  "diagnosis_policy": {
+    "same_time_disagreement": "Requires equal year, equal construct, observed player-level values, and source-specific uncertainty.",
+    "different_time": "TEMPORALLY_CONFOUNDED; conflict strength is NOT_IDENTIFIABLE rather than a score.",
+    "different_construct": "DIFFERENT_CONSTRUCT_CONTEXT_ONLY; not automatically contradictory.",
+    "missing_evidence": "MISSING_EVIDENCE_NOT_CONFLICT; missingness is not a negative finding.",
+    "standardized_mean_sd_checks_used": false
+  },
+  "players": [
+    {
+      "player": "岩田 幸宏",
+      "player_id": "51355155",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 2.0394,
+          "uncertainty": 0.1109,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.5873,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "周東 佑京",
+      "player_id": "21925136",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 1.1885,
+          "uncertainty": 0.10419999999999996,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 2.7051,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "並木 秀尊",
+      "player_id": "91695153",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 1.6506,
+          "uncertainty": 0.28090000000000004,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.747,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "髙部 瑛斗",
+      "player_id": "11215151",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 1.2469,
+          "uncertainty": 0.11519999999999997,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.5873,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "名原 典彦",
+      "player_id": null,
+      "sources": {
+        "statistical_proxy_2025": null,
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.6671,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "MISSING_EVIDENCE_NOT_CONFLICT",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "牧原 大成",
+      "player_id": "61465133",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 1.0298,
+          "uncertainty": 0.10140000000000005,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.5074,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "田中 幹也",
+      "player_id": "21025157",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.7729,
+          "uncertainty": 0.12050000000000005,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.5074,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "村林 一輝",
+      "player_id": "41845132",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.2155,
+          "uncertainty": 0.08240000000000003,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 2.3059,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "福永 裕基",
+      "player_id": "81685157",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.8807,
+          "uncertainty": 0.46730000000000005,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.1082,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "源田 壮亮",
+      "player_id": "71775134",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.9107,
+          "uncertainty": 0.12170000000000003,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.0284,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "中野 拓夢",
+      "player_id": "41445153",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.902,
+          "uncertainty": 0.07410000000000005,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.0284,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "滝澤 夏央",
+      "player_id": "51255155",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.848,
+          "uncertainty": 0.10250000000000004,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.1082,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "梶原 昂希",
+      "player_id": "51555155",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.6278,
+          "uncertainty": 0.22729999999999995,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.4276,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "藤原 恭大",
+      "player_id": "31635138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.7648,
+          "uncertainty": 0.09960000000000002,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.1082,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "水野 達稀",
+      "player_id": "63165155",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.5551,
+          "uncertainty": 0.13090000000000002,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.4276,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "岡林 勇希",
+      "player_id": "81585151",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.9469,
+          "uncertainty": 0.07279999999999998,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.709,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "村松 開人",
+      "player_id": "03105157",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.3299,
+          "uncertainty": 0.21189999999999998,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.4276,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "佐々木 俊輔",
+      "player_id": "51955159",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.4387,
+          "uncertainty": 0.237,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.1082,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "小川 龍成",
+      "player_id": "11715153",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.2438,
+          "uncertainty": 0.19840000000000002,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 1.4276,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "岡 大海",
+      "player_id": "11515139",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.603,
+          "uncertainty": 0.21650000000000003,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.7888,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "塩見 泰隆",
+      "player_id": "71975136",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.7227,
+          "uncertainty": 1,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.5493,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "吉川 尚輝",
+      "player_id": "73375134",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.612,
+          "uncertainty": 0.09899999999999998,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.709,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "友杉 篤輝",
+      "player_id": "71275157",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.3769,
+          "uncertainty": 0.13549999999999995,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.8687,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "丸山 和郁",
+      "player_id": "93195155",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.4951,
+          "uncertainty": 0.5813999999999999,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.6292,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "小幡 竜平",
+      "player_id": "31535138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.2723,
+          "uncertainty": 0.1441,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.9485,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "大島 洋平",
+      "player_id": "01305131",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.755,
+          "uncertainty": 0.3378,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.0703,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "中川 圭太",
+      "player_id": "51255138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.3024,
+          "uncertainty": 0.09750000000000003,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.7888,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "野間 峻祥",
+      "player_id": "01405130",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.6933,
+          "uncertainty": 0.23150000000000004,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.0703,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "郡司 裕也",
+      "player_id": "21925151",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.0781,
+          "uncertainty": 0.1059,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.8687,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "石井 一成",
+      "player_id": "21125134",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.1061,
+          "uncertainty": 0.12080000000000002,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.7888,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "来田 涼斗",
+      "player_id": "51955153",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.0855,
+          "uncertainty": 0.2703,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.6292,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "田宮 裕涼",
+      "player_id": "51055138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.0782,
+          "uncertainty": 0.1543,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.6292,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "秋山 翔吾",
+      "player_id": "31135133",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.4157,
+          "uncertainty": 0.24150000000000005,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.0096,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "菊池 涼介",
+      "player_id": "61565135",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.3005,
+          "uncertainty": 0.1139,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.1501,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "奈良間 大己",
+      "player_id": "31435157",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.3293,
+          "uncertainty": 0.3268,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.0703,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "矢野 雅哉",
+      "player_id": "93395153",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.7841,
+          "uncertainty": 0.12990000000000002,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.7282,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "小園 海斗",
+      "player_id": "01705138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.3871,
+          "uncertainty": 0.08030000000000004,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.0894,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "モンテロ",
+      "player_id": "53955150",
+      "sources": {
+        "statistical_proxy_2025": null,
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.2299,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "MISSING_EVIDENCE_NOT_CONFLICT",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "蝦名 達夫",
+      "player_id": "51555151",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.4,
+          "uncertainty": 0.1109,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.1693,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "板山 祐太郎",
+      "player_id": "91395132",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.1198,
+          "uncertainty": 0.20579999999999998,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.3098,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "林 琢真",
+      "player_id": "91695157",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.1094,
+          "uncertainty": 0.1471,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.3098,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "細川 成也",
+      "player_id": "31835134",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.2704,
+          "uncertainty": 0.10460000000000003,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.8687,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "度会 隆輝",
+      "player_id": "33535159",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.1642,
+          "uncertainty": 0.14249999999999996,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.0703,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "佐藤 輝明",
+      "player_id": "41045153",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.0527,
+          "uncertainty": 0.07730000000000004,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.3896,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "外崎 修汰",
+      "player_id": "41245130",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.1795,
+          "uncertainty": 0.10750000000000004,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.5493,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "宗 佑磨",
+      "player_id": "11815130",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.0636,
+          "uncertainty": 0.11419999999999997,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.2299,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "柳田 悠岐",
+      "player_id": "31835133",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.1799,
+          "uncertainty": 0.39059999999999995,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.3896,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "柳町 達",
+      "player_id": "73175151",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.079,
+          "uncertainty": 0.08819999999999995,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.0894,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "松本 剛",
+      "player_id": "21625135",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.0196,
+          "uncertainty": 0.2128,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.1693,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "西野 真弘",
+      "player_id": "91495130",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.1197,
+          "uncertainty": 0.16559999999999997,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.0096,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "ファビアン",
+      "player_id": "43745150",
+      "sources": {
+        "statistical_proxy_2025": null,
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.1693,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "MISSING_EVIDENCE_NOT_CONFLICT",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "佐藤 都志也",
+      "player_id": "71075151",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.0207,
+          "uncertainty": 0.1825,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.2491,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "牧 秀悟",
+      "player_id": "13115153",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.171,
+          "uncertainty": 0.11339999999999995,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.0096,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "清宮 幸太郎",
+      "player_id": "41545136",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.2214,
+          "uncertainty": 0.0797,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.0703,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "土田 龍空",
+      "player_id": "51455153",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.006,
+          "uncertainty": 0.48540000000000005,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.329,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "長岡 秀樹",
+      "player_id": "51455151",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.1817,
+          "uncertainty": 0.16080000000000005,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.0096,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "京田 陽太",
+      "player_id": "81585134",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.0192,
+          "uncertainty": 0.19230000000000003,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.4088,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "カリステ",
+      "player_id": "93795157",
+      "sources": {
+        "statistical_proxy_2025": null,
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.2491,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "MISSING_EVIDENCE_NOT_CONFLICT",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "山口 航輝",
+      "player_id": "91895138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.3994,
+          "uncertainty": 0.3086,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.2299,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "太田 椋",
+      "player_id": "91395138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.3607,
+          "uncertainty": 0.09160000000000001,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.0703,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "西川 龍馬",
+      "player_id": "71475132",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.0939,
+          "uncertainty": 0.10819999999999996,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.4088,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "野村 佑希",
+      "player_id": "31435138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.39,
+          "uncertainty": 0.11929999999999996,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.0703,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "若月 健矢",
+      "player_id": "41645139",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": 0.0449,
+          "uncertainty": 0.11109999999999998,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.7282,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "山本 祐大",
+      "player_id": "23125136",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.1078,
+          "uncertainty": 0.1269,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.4886,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "栗原 陵矢",
+      "player_id": "01705130",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.2465,
+          "uncertainty": 0.13090000000000002,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.2491,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "ポランコ",
+      "player_id": "63065155",
+      "sources": {
+        "statistical_proxy_2025": null,
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.4088,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "MISSING_EVIDENCE_NOT_CONFLICT",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "森 友哉",
+      "player_id": "91495139",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.2777,
+          "uncertainty": 0.20750000000000002,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.329,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "正木 智也",
+      "player_id": "81885155",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.325,
+          "uncertainty": 0.43479999999999996,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.4088,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "森下 翔太",
+      "player_id": "43145157",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.0603,
+          "uncertainty": 0.0746,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.8879,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "丸 佳浩",
+      "player_id": "21425116",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.4739,
+          "uncertainty": 0.11929999999999996,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.1693,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "近藤 健介",
+      "player_id": "41745135",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.4147,
+          "uncertainty": 0.1401,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.329,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "古賀 優大",
+      "player_id": "01705134",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.8761,
+          "uncertainty": 0.14659999999999995,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": 0.3896,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "サンタナ",
+      "player_id": "53755153",
+      "sources": {
+        "statistical_proxy_2025": null,
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.6483,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "MISSING_EVIDENCE_NOT_CONFLICT",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "今宮 健太",
+      "player_id": "31335131",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.2223,
+          "uncertainty": 0.21550000000000002,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.9677,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "海野 隆司",
+      "player_id": "81385151",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.1808,
+          "uncertainty": 0.1511,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.0475,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "坂倉 将吾",
+      "player_id": "11915134",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.3475,
+          "uncertainty": 0.11140000000000005,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.808,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "紅林 弘太郎",
+      "player_id": "91995151",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.4083,
+          "uncertainty": 0.10060000000000002,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.7282,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "石川 昂弥",
+      "player_id": "91195151",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.3664,
+          "uncertainty": 0.4,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.808,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "太田 光",
+      "player_id": "71375138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.3327,
+          "uncertainty": 0.17789999999999995,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.8879,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "梅野 隆太郎",
+      "player_id": "21325139",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.3795,
+          "uncertainty": 0.27470000000000006,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.808,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "木浪 聖也",
+      "player_id": "31735138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.2125,
+          "uncertainty": 0.1976,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.2871,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "宮﨑 敏郎",
+      "player_id": "51455137",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.3563,
+          "uncertainty": 0.12439999999999996,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.0475,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "渡邊 佳明",
+      "player_id": "73175138",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.3715,
+          "uncertainty": 0.23150000000000004,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.0475,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "佐野 恵太",
+      "player_id": "91995134",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.5174,
+          "uncertainty": 0.08079999999999998,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.808,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "藤岡 裕大",
+      "player_id": "41645136",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.6552,
+          "uncertainty": 0.11819999999999997,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.6483,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "古賀 悠斗",
+      "player_id": "81785155",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.61,
+          "uncertainty": 0.13229999999999997,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.808,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "大山 悠輔",
+      "player_id": "21325134",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.6112,
+          "uncertainty": 0.07850000000000001,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.8879,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "浅村 栄斗",
+      "player_id": "51155118",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.6301,
+          "uncertainty": 0.1139,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.8879,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "坂本 誠志郎",
+      "player_id": "11915132",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.5339,
+          "uncertainty": 0.1078,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.1274,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "中村 悠平",
+      "player_id": "51255118",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.7051,
+          "uncertainty": 0.1845,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -0.9677,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "岸田 行倫",
+      "player_id": "91595136",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.3101,
+          "uncertainty": 0.14329999999999998,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.7661,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "ソト",
+      "player_id": "03505133",
+      "sources": {
+        "statistical_proxy_2025": null,
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.2072,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "MISSING_EVIDENCE_NOT_CONFLICT",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "筒香 嘉智",
+      "player_id": "41945131",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.7166,
+          "uncertainty": 0.16290000000000004,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.1274,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "鈴木 大地",
+      "player_id": "81985135",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.2356,
+          "uncertainty": 0.2016,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -2.0855,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "木下 拓哉",
+      "player_id": "31735132",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.5586,
+          "uncertainty": 0.29069999999999996,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.7661,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "高橋 周平",
+      "player_id": "91095135",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.62,
+          "uncertainty": 0.33109999999999995,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.6863,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "安田 尚憲",
+      "player_id": "81885136",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.7143,
+          "uncertainty": 0.125,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.6064,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "伏見 寅威",
+      "player_id": "61065137",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.8004,
+          "uncertainty": 0.22219999999999995,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -2.0057,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "大城 卓三",
+      "player_id": "21325136",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -0.8725,
+          "uncertainty": 0.3356,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.9258,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    },
+    {
+      "player": "山川 穂高",
+      "player_id": "21425139",
+      "sources": {
+        "statistical_proxy_2025": {
+          "source": "SP100_2025_STATISTICAL_PROXY",
+          "year": 2025,
+          "construct": "STATISTICAL_PROXY_SPEED",
+          "value": -1.0266,
+          "uncertainty": 0.09160000000000001,
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: S_stat_z"
+        },
+        "npb_plus_top_speed_2026": {
+          "source": "SP100_2026_NPB_PLUS_TOP_SPEED",
+          "year": 2026,
+          "construct": "MAX_SPEED_TRACKING",
+          "value": -1.7661,
+          "uncertainty": null,
+          "reliability_status": "NOT_IDENTIFIABLE",
+          "provenance": "outputs/derived/sp100_wiring_candidates_20260814.json :: N_npb_top_speed_z"
+        }
+      },
+      "classification": {
+        "state": "TEMPORALLY_CONFOUNDED",
+        "conflict_strength": "NOT_IDENTIFIABLE",
+        "comparison_gap": null,
+        "directional_state": null,
+        "temporal_gap_years": 1
+      },
+      "same_time_conflict_score_withheld": true
+    }
+  ],
+  "classification_counts": {
+    "TEMPORALLY_CONFOUNDED": 93,
+    "MISSING_EVIDENCE_NOT_CONFLICT": 7
+  },
+  "qa": {
+    "large_same_time_fixture": {
+      "state": "SAME_TIME_DISAGREEMENT",
+      "conflict_strength": "MATERIAL",
+      "comparison_gap": 0.9,
+      "normalized_gap": 12.727922,
+      "directional_state": "A_HIGHER"
+    },
+    "small_same_time_fixture": {
+      "state": "NO_MATERIAL_SAME_TIME_DISAGREEMENT",
+      "conflict_strength": "LOW",
+      "comparison_gap": 0.05,
+      "normalized_gap": 0.235702,
+      "directional_state": "A_HIGHER"
+    },
+    "different_construct_fixture": {
+      "state": "DIFFERENT_CONSTRUCT_CONTEXT_ONLY",
+      "conflict_strength": "NOT_IDENTIFIABLE",
+      "comparison_gap": null,
+      "directional_state": null
+    },
+    "permutation_fixture": {
+      "forward": {
+        "state": "SAME_TIME_DISAGREEMENT",
+        "conflict_strength": "MATERIAL",
+        "comparison_gap": 0.9,
+        "normalized_gap": 12.727922,
+        "directional_state": "A_HIGHER"
+      },
+      "reversed": {
+        "state": "SAME_TIME_DISAGREEMENT",
+        "conflict_strength": "MATERIAL",
+        "comparison_gap": -0.9,
+        "normalized_gap": 12.727922,
+        "directional_state": "B_HIGHER"
+      }
+    },
+    "missing_source_fixture": {
+      "state": "MISSING_EVIDENCE_NOT_CONFLICT",
+      "conflict_strength": "NOT_IDENTIFIABLE",
+      "comparison_gap": null,
+      "directional_state": null
+    },
+    "no_tautological_standardization_check": true
+  },
+  "final_reason": "The tested current-100 inventory contains no true or explicitly alignable same-time independent direct comparison, so no actual conflict score is identifiable. The negative finding is bounded to that availability question; fixtures validate that a genuine same-time disagreement would still be detected without tautological standardization."
+}
