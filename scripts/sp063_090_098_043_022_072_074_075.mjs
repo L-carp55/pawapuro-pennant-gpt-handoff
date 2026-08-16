@@ -140,7 +140,8 @@ const qa098 = {
     shiomi_speed_not_null: shiom?.speed != null,
     shiomi_arm_not_null: shiom?.arm != null,
     shiomi_schema_not_shrunk: shiom?.schema_shrunk === false,
-    shiomi_player_id: shiom?.player_id === '71975136' || !!shiom?.player_id,
+    // SP-098: an arbitrary non-empty id is not evidence of the expected person.
+    shiomi_player_id: shiom?.player_id === '71975136',
   },
 };
 writeFileSync(path.join(ROOT, 'outputs/derived/sp098_identity_reverify_20260814.json'), JSON.stringify(qa098, null, 2));

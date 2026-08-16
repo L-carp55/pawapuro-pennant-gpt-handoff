@@ -1,0 +1,144 @@
+{
+  "artifact_version": "SP-016-repair-qa-20260816-v2",
+  "status": "DONE_VALIDATED",
+  "collection": "NO_NETWORK_OR_EXTERNAL_COLLECTION",
+  "production_default": "current_year_first_low_sample_prior",
+  "formula": "below sufficiency: (n_c*z_c + lambda*n_h*z_h)/(n_c + lambda*n_h + kappa); at/above sufficiency: z_c and reliability use current-year evidence exactly",
+  "parameters": {
+    "target_season": 2025,
+    "sufficiency_pa": 50,
+    "kappa": 50,
+    "lambda": 0.09900990099009901,
+    "production_calibration_cohort": {
+      "n": 260,
+      "history_recipient_n": 241,
+      "upper_median_historical_pa": 505
+    },
+    "low_pa_retention_audit_coverage": {
+      "n": 358,
+      "upper_median_historical_pa_including_no_history": 240
+    }
+  },
+  "reproduced_legacy_defects": {
+    "A1_non_monotonic": {
+      "current_pa": [
+        0,
+        15,
+        50,
+        61,
+        120,
+        200,
+        400,
+        500
+      ],
+      "coefficients": [
+        0.909091,
+        0.841327,
+        0.798615,
+        0.797278,
+        0.81352,
+        0.843991,
+        0.893991,
+        0.909091
+      ],
+      "minimum": 0.797278
+    },
+    "A3_sign_changing_error": {
+      "error_at_6_500": 0.1365764,
+      "error_at_200_500": -0.02618929
+    },
+    "A4_history_survives_high_current": {
+      "n": 67,
+      "mean_history_share": 0.33136,
+      "max_history_share": 0.538693
+    },
+    "B_wrong_population_lambda": {
+      "legacy_lambda": 0.2703,
+      "repaired_lambda": 0.09900990099009901,
+      "legacy_median": 185,
+      "low_pa_inclusive_audit_coverage_not_calibration_cohort": {
+        "n": 358,
+        "upper_median_historical_pa_including_no_history": 240
+      },
+      "exact_production_calibration_cohort_reconciliation": {
+        "raw_pre_X1_dedupe": {
+          "cohort_n": 260,
+          "historical_prior_recipient_n": 241,
+          "upper_median_historical_pa": 520
+        },
+        "deduped_repaired_source": {
+          "cohort_n": 260,
+          "historical_prior_recipient_n": 241,
+          "upper_median_historical_pa": 505
+        }
+      }
+    },
+    "F_algebraic_gate": {
+      "observed_correlation": -0.055756846693,
+      "identity_value": -0.055756846693,
+      "literal_gate_found": true
+    },
+    "X1_duplicate_join": {
+      "duplicate_player_seasons": 15,
+      "raw_pa_inflation": 1628,
+      "repaired_duplicates": 0
+    },
+    "X2_legacy_non_idempotence": {
+      "verdict": "FALSIFIED_IN_CURRENT_SOURCE",
+      "reason": "the checked current legacy script uses a fixed OLD_SCALE control rather than reading its own written applied scale; repaired QA is additionally rerun byte-for-byte below"
+    },
+    "X4_low_pa_deleted_before_sufficiency": {
+      "legacy_no_current_count": 71,
+      "repaired_preserved_low_pa_count": 169
+    }
+  },
+  "repaired_invariants": {
+    "monotonic_history_contribution": "PASS",
+    "exact_zero_history_at_sufficiency": "PASS",
+    "current_year_reliability_independent_of_history_at_sufficiency": "PASS",
+    "low_pa_current_preserved": "PASS",
+    "source_player_season_deduped": "PASS",
+    "malformed_input_fail_closed": "PASS",
+    "idempotent_output_design": "PASS (fixed inputs, deterministic ordering, no wall-clock fields)",
+    "no_powerpro_individual_label_path": "PASS",
+    "no_future_year_input": "PASS",
+    "normal_appraise_card_path": {
+      "result": "PASS",
+      "pool_reason": "LOW_SAMPLE_CURRENT_YEAR_HISTORY_PRIOR"
+    }
+  },
+  "negative_fixtures": {
+    "all_rejected": true,
+    "rows": [
+      {
+        "label": "monotonicity increase",
+        "rejected": true
+      },
+      {
+        "label": "history above sufficiency",
+        "rejected": true
+      },
+      {
+        "label": "duplicate player-season",
+        "rejected": true
+      },
+      {
+        "label": "malformed zero-weight observation",
+        "rejected": true
+      },
+      {
+        "label": "wrong-population lambda",
+        "rejected": true
+      },
+      {
+        "label": "independent gate fail-closed",
+        "rejected": true
+      }
+    ]
+  },
+  "gate": {
+    "genuinely_failable": true,
+    "pass_count": 8,
+    "fail_count": 0
+  }
+}

@@ -43,15 +43,34 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
 
   // --- 走力: 対象年の前後の打撃＋走塁データから各年のzを出して畳む ---
   const runRows = prep(db, `
+    WITH nf3_team_bat_player_season AS (
+      -- A player may have one NF3 row per team after a transfer.  v_batting is
+      -- already a player-season total, so joining raw team rows would duplicate
+      -- that total and inflate PA.  Sum the team-level infield hits first.
+      SELECT season, name_norm, SUM(COALESCE(ih, 0)) AS ih, MIN(bats) AS bats
+      FROM nf3_team_bat
+      GROUP BY season, name_norm
+    )
     SELECT b.season, b.name, b.pa, b.ab, b.so, b.b2, b.b3, b.hr, b.gdp, bm.ubr, m.gb_pct, t.ih, t.bats
     FROM v_batting b
     JOIN player_link l ON l.proeye_id=b.player_id AND l.season=b.season
     JOIN v_bm_by_player bm ON bm.proeye_id=b.player_id AND bm.season=b.season AND bm.farm=0
     LEFT JOIN v_bm_bat m ON m.player_id=l.bm_id AND m.season=b.season AND m.farm=0
     LEFT JOIN nf3_team_link tl ON tl.proeye_id=b.player_id AND tl.season=b.season
-    LEFT JOIN nf3_team_bat t ON t.season=tl.season AND t.name_norm=tl.name_norm
+    LEFT JOIN nf3_team_bat_player_season t ON t.season=tl.season AND t.name_norm=tl.name_norm
     WHERE b.player_id=? AND b.season BETWEEN ? AND ? AND b.pa>=1 AND b.position<>'投'`)
     .all(proeyeId, targetSeason - MAX_GAP, hi);
+
+  // The SQL above must supply one canonical row per player-season.  If another
+  // join ever breaks that invariant, fail closed before it can enter the
+  // low-sample historical prior as inflated evidence.
+  const runSeasons = new Set();
+  for (const r of runRows) {
+    if (runSeasons.has(r.season)) {
+      throw new Error(`SP-016 fail-closed: duplicate speed player-season after source aggregation (${proeyeId}, ${r.season})`);
+    }
+    runSeasons.add(r.season);
+  }
 
   const nrm = s2 => (s2 ?? '').normalize('NFKC').replace(/\s+/g, '');
   const speedObs = runRows.map(r => {
@@ -63,11 +82,10 @@ export function estimateDurableTraits(db, proeyeId, targetSeason, ctx) {
         advance: adv?.value ?? null, advanceChances: adv?.chances ?? 0 }, r.ubr, runNorm);
     return sc.score == null ? null : { z: sc.score, weight: r.pa, season: r.season };
   }).filter(Boolean);
-  // hard/legacy control は従来どおり PA>=100 の年だけ。continuous は当年の少出場も縮小して使う。
-  const speedForPool = poolingMode === 'continuous_prior'
-    ? speedObs
-    : speedObs.filter(o => o.weight >= 100 || o.season === targetSeason && o.weight >= 100);
-  const speed = poolAcrossYears(speedForPool, targetSeason, speedPoolOpts);
+  // SP-016: do not delete low-PA current evidence before sufficiency is
+  // evaluated.  The pooling policy, not a preprocessing threshold, decides
+  // how strongly that evidence contributes.
+  const speed = poolAcrossYears(speedObs, targetSeason, speedPoolOpts);
 
   // --- 肩: ARM（2020年以降）と補殺（2006年以降）の2つを別々に畳んでから合成 ---
   const armRows = prep(db, `

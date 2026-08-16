@@ -150,7 +150,7 @@ const out = {
     measurement_resolution: {
       distinct_values: distinct.length, values: distinct, min_step: stepMin,
       step_in_sd: stepMin == null ? null : +(stepMin / sTop).toFixed(3),
-      note: '1刻みが約0.8sdに相当する粗い格子。順位づけの分解能そのものがここで上限になる',
+      note: '最小刻みは0.1 km/h（約0.08sd）。分解能は順位づけの制約として記録するが、この入力では粗い格子ではない。',
     },
     note: '同一snapshot(2026)内で標準化。年をまたいだ正規化はしていない',
   },

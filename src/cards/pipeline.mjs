@@ -94,48 +94,173 @@ export function withProvenance(value, src, opts = {}) {
  */
 export const normName = s => (s ?? '').normalize('NFKC').replace(/\s+/g, '');
 
-/** 正規化した名前から、DBに入っている綴りの player_id を引く */
-export function resolveName(db, name, opts = {}) {
+const unique = rows => [...new Set(rows)];
+const sameTeam = (actual, expected) => {
+  const a = normName(actual), e = normName(expected);
+  return !!a && !!e && (a === e || a.includes(e) || e.includes(a));
+};
+const candidateSummary = rows => unique(rows.map(r => r.player_id)).map(playerId => {
+  const own = rows.filter(r => r.player_id === playerId);
+  return {
+    playerId,
+    names: unique(own.map(r => r.name)),
+    teams: unique(own.map(r => r.team)),
+    seasons: unique(own.map(r => Number(r.season))).sort((a, b) => a - b),
+  };
+});
+
+/**
+ * Resolve a person before deciding whether the requested first-team batting
+ * coverage exists.  `playerId` is intentionally absent for a farm-only
+ * crosswalk: it is not a ProEYE id and must never be fabricated as one.
+ */
+export function resolveIdentity(db, name, opts = {}) {
   const key = normName(name);
-  if (opts.playerId) {
-    const row = db.prepare(
-      `SELECT DISTINCT player_id, name FROM v_batting WHERE player_id=? AND position <> '投' LIMIT 1`
-    ).get(opts.playerId);
-    if (row) return { playerId: row.player_id, dbName: row.name, disambiguation: 'player_id' };
-  }
+  const season = opts.season != null && Number.isFinite(Number(opts.season)) ? Number(opts.season) : null;
+  const teamKey = opts.team ? normName(opts.team) : '';
+  const requestedPlayerId = opts.playerId == null ? null : String(opts.playerId);
   const rows = db.prepare(
     `SELECT DISTINCT player_id, name, team, season FROM v_batting WHERE position <> '投'`
   ).all();
   const exact = rows.filter(r => normName(r.name) === key);
-  const exactIds = [...new Set(exact.map(r => r.player_id))];
-  if (exactIds.length === 1) return { playerId: exactIds[0], dbName: exact[0].name, disambiguation: 'exact' };
+  const named = exact.length ? exact : rows.filter(r => normName(r.name).includes(key));
+  const nameMatch = exact.length ? 'exact' : named.length ? 'includes' : null;
+  const originalCandidates = candidateSummary(named);
 
-  const hit = rows.filter(r => normName(r.name).includes(key));
-  const ids = [...new Set(hit.map(r => r.player_id))];
-  if (ids.length === 1) return { playerId: ids[0], dbName: hit[0].name, disambiguation: 'unique_includes' };
-
-  if (ids.length > 1) {
-    const season = opts.season != null ? Number(opts.season) : null;
-    if (Number.isFinite(season)) {
-      const inSeason = hit.filter(r => Number(r.season) === season);
-      const seasonIds = [...new Set(inSeason.map(r => r.player_id))];
-      if (seasonIds.length === 1) {
-        return { playerId: seasonIds[0], dbName: inSeason[0].name, disambiguation: 'season' };
-      }
+  if (named.length) {
+    let constrained = named;
+    const constraints = [];
+    if (requestedPlayerId != null) {
+      constrained = constrained.filter(r => String(r.player_id) === requestedPlayerId);
+      constraints.push(`player_id=${requestedPlayerId}`);
     }
-    const teamKey = opts.team ? normName(opts.team) : '';
     if (teamKey) {
-      const inTeam = hit.filter(r => teamKey.includes(normName(r.team)) || normName(r.team).includes(teamKey));
-      const teamIds = [...new Set(inTeam.map(r => r.player_id))];
-      if (teamIds.length === 1) {
-        return { playerId: teamIds[0], dbName: inTeam[0].name, disambiguation: 'team' };
+      constrained = constrained.filter(r => sameTeam(r.team, opts.team));
+      constraints.push(`team=${opts.team}`);
+    }
+    const constrainedIds = unique(constrained.map(r => r.player_id));
+
+    // A short name such as サンタナ is only resolved by a year if the same
+    // person also satisfies every supplied identity constraint.  This makes a
+    // wrong-team/year pair fail rather than silently selecting another person.
+    if (constrainedIds.length > 1 && season != null) {
+      constrained = constrained.filter(r => Number(r.season) === season);
+      constraints.push(`season=${season}`);
+    } else if (constrainedIds.length === 1 && season != null && originalCandidates.length > 1
+      && !constrained.some(r => Number(r.season) === season)) {
+      return {
+        errorCode: 'IDENTITY_CONSTRAINT_MISMATCH',
+        error: `同定条件に一致しない: ${name}（${[...constraints, `season=${season}`].join(', ')}）`,
+        candidates: originalCandidates,
+      };
+    }
+
+    const ids = unique(constrained.map(r => r.player_id));
+    if (ids.length === 1) {
+      const playerId = ids[0];
+      const own = constrained.filter(r => r.player_id === playerId);
+      return {
+        status: 'IDENTITY_RESOLVED',
+        playerId,
+        dbName: own[0].name,
+        canonicalKey: `PROEYE:${playerId}`,
+        disambiguation: [...constraints, nameMatch].filter(Boolean).join('+'),
+        identityEvidence: {
+          playerId,
+          dbName: own[0].name,
+          teams: unique(own.map(r => r.team)),
+          seasons: unique(own.map(r => Number(r.season))).sort((a, b) => a - b),
+        },
+      };
+    }
+    return {
+      errorCode: ids.length ? 'AMBIGUOUS_IDENTITY' : 'IDENTITY_CONSTRAINT_MISMATCH',
+      error: ids.length
+        ? `名前が複数人に一致: ${unique(constrained.map(r => r.name)).join(' / ')}`
+        : `同定条件に一致しない: ${name}（${constraints.join(', ')}）`,
+      candidates: originalCandidates,
+    };
+  }
+
+  // There is no first-team batting candidate.  A farm/usage crosswalk can
+  // still identify the person without upgrading farm id=20230057 into the
+  // distinct ProEYE namespace or inventing a missing batting row.
+  if (requestedPlayerId == null) {
+    const farm = db.prepare(
+      `SELECT season, farm, player_id, team, name_ja FROM bm_player ORDER BY season`
+    ).all().filter(r => normName(r.name_ja) === key && (!teamKey || sameTeam(r.team, opts.team)));
+    const farmIds = unique(farm.map(r => r.player_id));
+    if (farmIds.length === 1) {
+      const bmPlayerId = farmIds[0];
+      const ownFarm = farm.filter(r => r.player_id === bmPlayerId);
+      const usage = db.prepare(`SELECT name, plate_appearances, games FROM npb_usage_2026`).all()
+        .filter(r => normName(r.name) === key);
+      const links = db.prepare(
+        `SELECT DISTINCT proeye_id, season FROM player_link WHERE bm_id=? ORDER BY season`
+      ).all(bmPlayerId);
+      const linkedProeyeIds = unique(links.map(r => r.proeye_id).filter(Boolean));
+      if (usage.length && linkedProeyeIds.length === 0) {
+        const seasons = unique(ownFarm.map(r => Number(r.season))).sort((a, b) => a - b);
+        return {
+          status: 'IDENTITY_RESOLVED_BATTING_COVERAGE_MISSING',
+          playerId: null,
+          dbName: ownFarm[0].name_ja,
+          canonicalKey: `BM_PLAYER:${bmPlayerId}`,
+          disambiguation: 'bm_player+npb_usage_2026_crosswalk',
+          identityEvidence: {
+            bmPlayerId,
+            dbName: ownFarm[0].name_ja,
+            teams: unique(ownFarm.map(r => r.team)),
+            seasons,
+            usage2026: usage.map(r => ({ name: r.name, plateAppearances: r.plate_appearances, games: r.games })),
+            linkedProeyeIds,
+          },
+          coverage: {
+            targetSeason: season,
+            firstTeamBatting: 'MISSING',
+            reason: 'NO_PROEYE_FIRST_TEAM_BATTING_LINK_OR_ROW',
+          },
+        };
       }
     }
-    return { error: `名前が複数人に一致: ${[...new Set(hit.map(r => r.name))].join(' / ')}` };
   }
 
   const extra = describeUnresolvedIdentity(db, name);
-  return { error: extra ? `該当なし: ${name}（${extra}）` : `該当なし: ${name}` };
+  return {
+    errorCode: 'IDENTITY_NOT_FOUND',
+    error: extra ? `該当なし: ${name}（${extra}）` : `該当なし: ${name}`,
+    candidates: [],
+  };
+}
+
+/** Backward-compatible ProEYE-only lookup for callers that require a batting id. */
+export function resolveName(db, name, opts = {}) {
+  const identity = resolveIdentity(db, name, opts);
+  if (identity.error) return { error: identity.error, errorCode: identity.errorCode, candidates: identity.candidates };
+  if (identity.playerId == null) {
+    return {
+      error: `一軍打撃coverageなし: ${name}（${identity.canonicalKey}）`,
+      errorCode: 'BATTING_COVERAGE_MISSING',
+      coverage: identity.coverage,
+      canonicalKey: identity.canonicalKey,
+    };
+  }
+  return { playerId: identity.playerId, dbName: identity.dbName, disambiguation: identity.disambiguation };
+}
+
+function coverageOnlyResult(identity) {
+  return {
+    status: 'IDENTITY_RESOLVED_BATTING_COVERAGE_MISSING',
+    card: null,
+    batting: null,
+    coverage: {
+      canonicalKey: identity.canonicalKey,
+      dbName: identity.dbName,
+      identityEvidence: identity.identityEvidence,
+      ...(identity.coverage ?? {}),
+    },
+    meta: { identityStatus: identity.status, noFinalAppraisal: true },
+  };
 }
 
 function describeUnresolvedIdentity(db, name) {
@@ -513,30 +638,27 @@ export function appraiseCard(ctx, opts) {
     //   現状存在しないため未実装（SP-044/SP-045 BLOCKED_MISSING_DATA）。
     //   legacy再現には currentYearFirst:false を明示的に渡す（比較専用）。
     //
-    // ★★ WORKING DEFAULT — 最終設計として凍結していない（2026-08-13 オーナー指摘）
-    //   この 50 は hard gate（閾値の上下で挙動が不連続に変わる形）である。実測では
-    //   境界帯(25-100打席)の選手が1打席の差で平均9.93点・最大33.6点の落差を受けうる。
-    //   連続形（w_cur = PA/(PA+κ) 等）ならこの落差は0になり、同じκ=50較正点を持つ
-    //   連続版の方が構造的に良い形であることも確認済み。
-    //   最終形（PA一括 or 材料別、κの値）の決定には「多年poolに構造的に有利でない」
-    //   判定基準が要り、現時点でそれが無いため hard gate を暫定継続している。
-    //   詳細と決着条件 = docs/audits/sp016_hard_gate_vs_continuous_20260813.md
-    // ★2026-08-14 修理: poolingMode を先に解決し、currentYearFirst / sufficientWeight を
-    //   **そこから導く**。以前は currentYearFirst=true / sufficientWeight=50 が独立の既定で、
-    //   poolingMode を明示しても旧フラグが勝っていた（modeが効かない）。
+    // SP-016 repaired production policy (2026-08-16): retain every current
+    // observation.  Below the explicit 50-PA sufficiency point, only a
+    // discounted historical prior plus a zero-centred population prior may be
+    // used; at or above 50 PA, history contributes exactly zero.  The resolved
+    // pooling mode is the single authority for its associated threshold.
     poolingMode = runNorm?.speedPooling?.mode ?? 'current_year_first_hard',
-    currentYearFirst = poolingMode === 'current_year_first_hard',
-    sufficientWeight = poolingMode === 'current_year_first_hard'
+    currentYearFirst = poolingMode === 'current_year_first_hard'
+      || poolingMode === 'current_year_first_low_sample_prior',
+    sufficientWeight = currentYearFirst
       ? (runNorm?.speedPooling?.sufficientWeightHard ?? 50) : 0,
     kappa = runNorm?.speedPooling?.kappa ?? 50,
     lambda = runNorm?.speedPooling?.lambda ?? 0.2703 } = opts;
 
   let pid = playerId;
+  let identity = null;
   if (!pid) {
     const seasonHint = mode === 'peak' || mode === 'prime' ? null : Number(mode);
-    const r = resolveName(db, name, { team: opts.team, season: Number.isFinite(seasonHint) ? seasonHint : null });
-    if (r.error) return { error: r.error };
-    pid = r.playerId;
+    identity = resolveIdentity(db, name, { team: opts.team, season: Number.isFinite(seasonHint) ? seasonHint : null });
+    if (identity.error) return { error: identity.error, errorCode: identity.errorCode };
+    if (identity.playerId == null) return coverageOnlyResult(identity);
+    pid = identity.playerId;
   }
 
   let sql = `SELECT * FROM v_batting WHERE player_id=? AND position <> '投'`;
@@ -562,6 +684,17 @@ export function appraiseCard(ctx, opts) {
     const c = buildPeakYearCard(ranked, { mode: 'total' });
     const y = mode === 'peak' ? c.seasonLabel : Number(mode);
     const s = seasons.find(x => x.season === y);
+    if (!s && identity) {
+      return coverageOnlyResult({
+        ...identity,
+        coverage: {
+          targetSeason: y,
+          firstTeamBatting: 'MISSING',
+          reason: 'NO_PROEYE_FIRST_TEAM_BATTING_ROW_FOR_TARGET_SEASON',
+          availableFirstTeamBattingSeasons: seasons.map(x => x.season),
+        },
+      });
+    }
     if (!s) return { error: `${y}年のデータなし（あるのは ${seasons.map(x => x.season).join(', ')}）` };
     cardType = 'peak_single_year'; seasonLabel = y; seasonsUsed = [y]; line = s.line; targetSeason = y;
   }
@@ -621,6 +754,20 @@ export function appraiseCard(ctx, opts) {
     });
     card.abilities = abilitySheet;
     card.speedDetail = durable.speed ?? null;
+    // Keep the non-batting evidence envelope even when a particular ability is
+    // null.  Null fielding for e.g. 塩見2025 means no fielding innings were in
+    // the source, not that AB=0 erased the identity or non-batting pathway.
+    card.non_batting_evidence = {
+      speed: durable.speed
+        ? { status: 'ESTIMATED_FROM_NON_BATTING_EVIDENCE', seasons: durable.speed.seasons ?? [], basis: durable.speed.basis ?? null }
+        : { status: 'NOT_AVAILABLE' },
+      arm: durable.arm
+        ? { status: 'ESTIMATED_FROM_NON_BATTING_EVIDENCE', seasons: durable.arm.seasons ?? [], basis: durable.arm.basis ?? null }
+        : { status: 'NOT_AVAILABLE' },
+      fielding: fldRows0.length
+        ? { status: 'CURRENT_SEASON_FIELDING_APPRAISED', positionRows: fldRows0.length, positions: fldRows0.map(f => f.pos) }
+        : { status: 'NOT_AVAILABLE_NO_CURRENT_SEASON_FIELDING_INNINGS', positionRows: 0, positions: [] },
+    };
     card._no_batting_sample = true;
     return { card, batting: null, meta: { targetSeason, noBattingSample: true, hasBasement: false } };
   }

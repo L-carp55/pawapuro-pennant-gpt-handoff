@@ -260,11 +260,20 @@ const gateExclusionBlocks = openExclusions.filter(x => x.gate_block === '1');
 const ownerBlocks = tasks.filter(t => t.owner_review_block === '1' && !CLOSED.has(t.status));
 const gateBlocks = tasks.filter(t => t.gate_block === '1' && !CLOSED.has(t.status));
 const finalQueue = byId.get('SP-077');
-if (finalQueue && CLOSED.has(finalQueue.status) && ownerBlocks.length) {
-  err(`SP-077 owner queue closed with ${ownerBlocks.length} owner-review task blockers open: ${ownerBlocks.map(x=>x.task_id).join(',')}`);
+// SP-077 is an explicitly bounded owner-review queue.  Its task contract
+// declares the exact prerequisites in `depends_on`; unrelated open exclusion
+// lanes remain visible and continue to block the global Speed Gate, but they
+// must not silently redefine this queue's dependency contract.
+const finalQueueDependencyIds = new Set(finalQueue ? list(finalQueue.depends_on) : []);
+const finalQueueTaskBlocks = ownerBlocks.filter(t => finalQueueDependencyIds.has(t.task_id));
+const finalQueueExclusionBlocks = ownerExclusionBlocks.filter(x =>
+  list(x.task_ids).some(taskId => finalQueueDependencyIds.has(taskId))
+);
+if (finalQueue && CLOSED.has(finalQueue.status) && finalQueueTaskBlocks.length) {
+  err(`SP-077 owner queue closed with ${finalQueueTaskBlocks.length} declared dependency task blocker(s) open: ${finalQueueTaskBlocks.map(x=>x.task_id).join(',')}`);
 }
-if (finalQueue && CLOSED.has(finalQueue.status) && ownerExclusionBlocks.length) {
-  err(`SP-077 owner queue closed with ${ownerExclusionBlocks.length} unresolved exclusion blockers: ${ownerExclusionBlocks.map(x=>x.exclusion_id).join(',')}`);
+if (finalQueue && CLOSED.has(finalQueue.status) && finalQueueExclusionBlocks.length) {
+  err(`SP-077 owner queue closed with ${finalQueueExclusionBlocks.length} unresolved dependency exclusion blockers: ${finalQueueExclusionBlocks.map(x=>x.exclusion_id).join(',')}`);
 }
 const gate = byId.get('SP-081');
 if (gate && CLOSED.has(gate.status) && gateBlocks.length) {
@@ -311,5 +320,5 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`PASS: requirements=${reqs.length}, tasks=${tasks.length}, exclusions=${exclusions.length}, open_exclusions=${openExclusions.length}, unresolved_terminal=${unresolvedTerminal.length}, owner_review_task_blockers=${ownerBlocks.length}, owner_review_exclusion_blockers=${ownerExclusionBlocks.length}, gate_task_blockers=${gateBlocks.length}, gate_exclusion_blockers=${gateExclusionBlocks.length}`);
-console.log('Owner review and Speed Gate remain fail-closed until task and exclusion blocker counts reach zero.');
+console.log(`PASS: requirements=${reqs.length}, tasks=${tasks.length}, exclusions=${exclusions.length}, open_exclusions=${openExclusions.length}, unresolved_terminal=${unresolvedTerminal.length}, owner_review_task_blockers=${ownerBlocks.length}, owner_review_dependency_task_blockers=${finalQueueTaskBlocks.length}, owner_review_dependency_exclusion_blockers=${finalQueueExclusionBlocks.length}, owner_review_non_dependency_exclusion_blocks=${ownerExclusionBlocks.length - finalQueueExclusionBlocks.length}, gate_task_blockers=${gateBlocks.length}, gate_exclusion_blockers=${gateExclusionBlocks.length}`);
+console.log('SP-077 is fail-closed on its declared dependencies; the global Speed Gate remains fail-closed until all gate blockers reach zero.');

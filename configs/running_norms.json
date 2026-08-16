@@ -408,21 +408,22 @@
     "_note": "走力の計算にはこの指標を入れずに求める（自分自身を説明変数にすると残差が消えるため）"
   },
   "speedPooling": {
-    "mode": "current_year_first_hard",
+    "mode": "current_year_first_low_sample_prior",
     "kappa": 50,
-    "lambda": 0.2703,
-    "pa_hist_median": 185,
+    "lambda": 0.09900990099009901,
+    "pa_hist_median": 505,
     "sufficientWeightHard": 50,
     "_control_modes": [
       "current_year_first_hard",
-      "legacy_auto_pool"
+      "legacy_auto_pool",
+      "continuous_prior"
     ],
-    "_basis": "SP-016 final design 2026-08-14. Hierarchical shrink then precision blend. lambda=kappa/median(PA_hist). Naive w=PA/(PA+kappa) rejected. Hard 50PA gate remains as control via poolingMode=current_year_first_hard.",
-    "_owner_rule": "current-year first is kept: more current PA continuously downweights history",
-    "_display_scale": "applyScale for 走力 must be re-derived with this mode (global center/width only; no PowerPro individual labels)",
-    "_reverted_20260814": "Opus bulk review で continuous_prior → current_year_first_hard へ差し戻した。理由: SP-016 は registry で PARTIAL、EX-009 は POLICY_CONFLICT_REOPEN（gate_block=1）のまま、production の既定だけが continuous_prior になっていた＝fail-closed の逆。さらに実測で3つの数学的欠陥を確認: (a) 当年PAを増やすと一旦リーグ平均へ寄る非単調性（縮小が分子だけに掛かり分母は生のPA。paHist=500 のとき係数は paCur=0 で0.9091、paCur=61 で最小0.7973、paCur≈500 でようやく復帰。z=+2 の選手は当年61打席の方が0打席より表示で6.33点低い） (b) 正しい単一プール縮小 (n_c+λn_h)/(n_c+λn_h+κ) と比べて誤差の符号がPAで反転する（6/500 で +18% 過小縮小、200/500 で -3% 過剰縮小）＝全体の再較正では吸収できない (c) 規定打席級でも履歴が3割超残る（当年350-500PAで平均37.1%、≥500PAで32.4%、源田壮亮は当年361PAで履歴54.8%）＝CLAUDE.md 絶対禁止「十分なcurrent-year evidenceがある選手へ過去年を自動pool」に該当。continuous_prior は候補として保持し、opts.poolingMode で明示指定した時だけ使う。",
-    "_lambda_calibration_defect": "λ=0.2703 は κ/median(PA_hist)=50/185 として作られたが、185 は「2022-2025に出場した全選手を名前キーで集計した n=480 の上側中央値」。実際に適用される2025ロスター（player_id キー、n=260）のmedian(PA_hist) は 520。同じ規則を適用先の母集団で解くと λ=50/520=0.0962 で、現行値は履歴に約2.8倍の精度重みを与えている。採用前に再較正が必要。",
-    "_known_defects_before_adoption": [
+    "_basis": "SP-016 repaired current-year-first low-sample prior (2026-08-16). For current PA below 50 only: z=(n_c*z_c + lambda*n_h*z_h)/(n_c + lambda*n_h + kappa), with an explicit zero-centred kappa prior. At current PA >=50, z=z_c and history contribution is exactly zero. The raw pre-repair production cohort independently reproduces n=260, 241 historical-prior recipients, and median PA_hist=520. Required split-team dedupe removes 15 duplicate player-seasons / 1628 excess PA before the historical effective sample calculation; the same n=260/n=241 corrected cohort then has median PA_hist=505, so lambda=50/505. Low-PA current rows are retained for sufficiency evaluation, but do not redefine that existing display-calibration cohort. No PowerPro individual labels or future outcomes were used.",
+    "_owner_rule": "Current evidence is preserved at every PA. History contribution is monotone non-increasing as current PA rises and is exactly zero once current PA reaches the explicit 50-PA sufficiency rule.",
+    "_display_scale": "Existing display scale is retained as provisional global center/width only. SP-016 does not finalize the absolute 0-100 scale.",
+    "_legacy_reversion_20260814": "The rejected 2026-08-14 continuous_prior candidate was reverted to hard control while its defects were repaired. It remains an explicit non-default control.",
+    "_legacy_lambda_calibration_defect": "Legacy lambda=0.2703 used median 185 from the wrong name-key population. The raw audited cohort is n=260 / 241 historical-prior recipients / median 520; required dedupe corrects that median to 505, so the repaired default uses 50/505.",
+    "_legacy_defects_reproduced_before_repair": [
       "A-1 非単調性（上記a）",
       "A-3 単一プール縮小との符号反転誤差（上記b）",
       "A-4 規定打席級への履歴自動pool（上記c）",
@@ -430,7 +431,8 @@
       "F  採否ゲートが構成上落ちない（mean/sd を揃えた後は corr(delta,hard)≡-sqrt((1-r)/2)=-0.1911 が恒等的に成立し、閾値0.9は発火しえない。done_ready も continuous_structural_cliff=0 というリテラルとのANDで常に真）",
       "X-1 結合の重複行（2022-2025で15 player-season が重複、1628 PA の水増し。ロスター260人中10人が該当。hard gate では大半が不可視だったが continuous では paHist へ直接効く）",
       "X-2 sp016_continuous_prior_apply.mjs が冪等でない（cfg を読んでから同じファイルを上書きするため、再実行すると control 側が新scaleで計算される）"
-    ]
+    ],
+    "_repair_qa": "scripts/sp016_current_year_first_repair_qa_20260816.mjs; outputs/derived/sp016_current_year_first_repair_qa_20260816.json; docs/audits/sp016_current_year_first_repair_20260816.md"
   },
   "_componentWeightsLegacySameTimeReliabilityOnly": {
     "triple": 0.49648301630228797,

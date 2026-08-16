@@ -42,14 +42,14 @@
   "fusion_scaling": {
     "common_n": 93,
     "S": {
-      "mean": 0.0556,
-      "sd": 0.5807
+      "mean": 0.0384,
+      "sd": 0.5876
     },
     "N": {
       "mean": 0.0084,
       "sd": 1.0108
     },
-    "sd_ratio_N_over_S": 1.7406,
+    "sd_ratio_N_over_S": 1.7203,
     "method": "STANDARDIZE_BOTH_ON_COMMON_SET_BEFORE_WEIGHTING",
     "_why": "S は階層縮小済みで幅が狭い。生のまま混ぜると w が重みでなく幅の配分になる（実測 corr(S-N, N)=-0.8335）"
   },
@@ -70,11 +70,11 @@
   "compare": {
     "S_vs_N": {
       "n": 93,
-      "r": 0.7597
+      "r": 0.7316
     },
     "S_vs_H2F": {
       "n": 15,
-      "r": 0.2195
+      "r": 0.1439
     },
     "N_vs_H2F": {
       "n": 15,
@@ -82,7 +82,7 @@
     },
     "F_mid_vs_H2F": {
       "n": 15,
-      "r": 0.3054
+      "r": 0.2656
     },
     "N_vs_NPBplus_top_speed_CIRCULAR": {
       "n": 100,
@@ -92,20 +92,20 @@
     "_scale_artifact_check": {
       "S_vs_N_RAW": {
         "n": 93,
-        "corr_diff_with_A": -0.274,
-        "corr_diff_with_B": -0.8335,
+        "corr_diff_with_A": -0.2152,
+        "corr_diff_with_B": -0.8233,
         "verdict": "HEALTHY"
       },
       "S_vs_N_AFTER_SCALE_MATCH": {
         "n": 93,
-        "corr_diff_with_A": 0.3466,
-        "corr_diff_with_B": -0.3466,
+        "corr_diff_with_A": 0.3664,
+        "corr_diff_with_B": -0.3663,
         "verdict": "HEALTHY"
       },
       "S_vs_N_PERCENTILE": {
         "n": 93,
-        "corr_diff_with_A": 0.3347,
-        "corr_diff_with_B": -0.3325,
+        "corr_diff_with_A": 0.3531,
+        "corr_diff_with_B": -0.352,
         "verdict": "HEALTHY"
       },
       "_why": "SP-056 では corr(diff, source) = -0.945 を見落として尺度差を食い違いと報告した。同型の再発を毎回機械で見る"
@@ -132,27 +132,27 @@
     {
       "player": "岩田 幸宏",
       "player_id": "51355155",
-      "S_stat_z": 2.0394,
+      "S_stat_z": 2.1203,
       "S_reliability": 0.8891,
       "N_npb_top_speed_z": 1.5873,
       "N_reliability": null,
       "N_exposure_runs": 50,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 2.9525,
-        "w_npb_0.5": 2.489,
-        "w_npb_0.75": 2.0254
+        "w_npb_0.25": 3.0478,
+        "w_npb_0.5": 2.5525,
+        "w_npb_0.75": 2.0572
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.9891,
         "w_npb_0.5": 0.9783,
         "w_npb_0.75": 0.9674
       },
-      "F_midpoint_for_ranking_only": 2.489,
+      "F_midpoint_for_ranking_only": 2.5525,
       "pa_2025": 401,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 33.6,
-      "S_std": 3.416,
+      "S_std": 3.5431,
       "N_std": 1.5619,
       "S_pct": 1,
       "N_pct": 0.9565
@@ -160,27 +160,27 @@
     {
       "player": "周東 佑京",
       "player_id": "21925136",
-      "S_stat_z": 1.1885,
+      "S_stat_z": 1.1461,
       "S_reliability": 0.8958,
       "N_npb_top_speed_z": 2.7051,
       "N_reliability": null,
       "N_exposure_runs": 59,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 2.13,
-        "w_npb_0.5": 2.3093,
-        "w_npb_0.75": 2.4885
+        "w_npb_0.25": 2.0808,
+        "w_npb_0.5": 2.2765,
+        "w_npb_0.75": 2.4721
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.9755,
         "w_npb_0.5": 0.9837,
         "w_npb_0.75": 0.9918
       },
-      "F_midpoint_for_ranking_only": 2.3093,
+      "F_midpoint_for_ranking_only": 2.2765,
       "pa_2025": 430,
       "npb_2026_only": true,
       "h2f_z": 1.081391816939039,
       "npb_plus_top_speed_kmh": 35,
-      "S_std": 1.9508,
+      "S_std": 1.8852,
       "N_std": 2.6678,
       "S_pct": 0.9674,
       "N_pct": 1
@@ -188,27 +188,27 @@
     {
       "player": "並木 秀尊",
       "player_id": "91695153",
-      "S_stat_z": 1.6506,
+      "S_stat_z": 1.4566,
       "S_reliability": 0.7191,
       "N_npb_top_speed_z": 1.747,
       "N_reliability": null,
       "N_exposure_runs": 6,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 2.4899,
-        "w_npb_0.5": 2.2332,
-        "w_npb_0.75": 1.9766
+        "w_npb_0.25": 2.2402,
+        "w_npb_0.5": 2.0667,
+        "w_npb_0.75": 1.8933
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.9864,
         "w_npb_0.5": 0.9837,
         "w_npb_0.75": 0.981
       },
-      "F_midpoint_for_ranking_only": 2.2332,
+      "F_midpoint_for_ranking_only": 2.0667,
       "pa_2025": 128,
       "npb_2026_only": true,
       "h2f_z": 0.016701031921837733,
       "npb_plus_top_speed_kmh": 33.8,
-      "S_std": 2.7465,
+      "S_std": 2.4136,
       "N_std": 1.7199,
       "S_pct": 0.9891,
       "N_pct": 0.9783
@@ -216,30 +216,58 @@
     {
       "player": "髙部 瑛斗",
       "player_id": "11215151",
-      "S_stat_z": 1.2469,
+      "S_stat_z": 1.1864,
       "S_reliability": 0.8848,
       "N_npb_top_speed_z": 1.5873,
       "N_reliability": null,
       "N_exposure_runs": 31,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 1.929,
-        "w_npb_0.5": 1.8066,
-        "w_npb_0.75": 1.6843
+        "w_npb_0.25": 1.8558,
+        "w_npb_0.5": 1.7578,
+        "w_npb_0.75": 1.6599
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.9728,
         "w_npb_0.5": 0.9674,
         "w_npb_0.75": 0.962
       },
-      "F_midpoint_for_ranking_only": 1.8066,
+      "F_midpoint_for_ranking_only": 1.7578,
       "pa_2025": 384,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 33.6,
-      "S_std": 2.0514,
+      "S_std": 1.9537,
       "N_std": 1.5619,
       "S_pct": 0.9783,
       "N_pct": 0.9565
+    },
+    {
+      "player": "牧原 大成",
+      "player_id": "61465133",
+      "S_stat_z": 1.1206,
+      "S_reliability": 0.8986,
+      "N_npb_top_speed_z": 1.5074,
+      "N_reliability": null,
+      "N_exposure_runs": 35,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 1.752,
+        "w_npb_0.5": 1.6623,
+        "w_npb_0.75": 1.5726
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.9511,
+        "w_npb_0.5": 0.9457,
+        "w_npb_0.75": 0.9402
+      },
+      "F_midpoint_for_ranking_only": 1.6623,
+      "pa_2025": 443,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 33.5,
+      "S_std": 1.8418,
+      "N_std": 1.4829,
+      "S_pct": 0.9565,
+      "N_pct": 0.9348
     },
     {
       "player": "名原 典彦",
@@ -259,281 +287,225 @@
       "F_fallback": "N_ONLY_STANDARDIZED"
     },
     {
-      "player": "牧原 大成",
-      "player_id": "61465133",
-      "S_stat_z": 1.0298,
-      "S_reliability": 0.8986,
-      "N_npb_top_speed_z": 1.5074,
-      "N_reliability": null,
-      "N_exposure_runs": 35,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 1.6289,
-        "w_npb_0.5": 1.5802,
-        "w_npb_0.75": 1.5315
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.9511,
-        "w_npb_0.5": 0.9457,
-        "w_npb_0.75": 0.9402
-      },
-      "F_midpoint_for_ranking_only": 1.5802,
-      "pa_2025": 443,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 33.5,
-      "S_std": 1.6775,
-      "N_std": 1.4829,
-      "S_pct": 0.9565,
-      "N_pct": 0.9348
-    },
-    {
       "player": "田中 幹也",
       "player_id": "21025157",
-      "S_stat_z": 0.7729,
+      "S_stat_z": 0.8456,
       "S_reliability": 0.8795,
       "N_npb_top_speed_z": 1.5074,
       "N_reliability": null,
       "N_exposure_runs": 48,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 1.2971,
-        "w_npb_0.5": 1.359,
-        "w_npb_0.75": 1.421
+        "w_npb_0.25": 1.401,
+        "w_npb_0.5": 1.4283,
+        "w_npb_0.75": 1.4556
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.894,
-        "w_npb_0.5": 0.9076,
-        "w_npb_0.75": 0.9212
+        "w_npb_0.25": 0.9185,
+        "w_npb_0.5": 0.9239,
+        "w_npb_0.75": 0.9293
       },
-      "F_midpoint_for_ranking_only": 1.359,
+      "F_midpoint_for_ranking_only": 1.4283,
       "pa_2025": 365,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 33.5,
-      "S_std": 1.2352,
+      "S_std": 1.3737,
       "N_std": 1.4829,
-      "S_pct": 0.8804,
-      "N_pct": 0.9348
-    },
-    {
-      "player": "村林 一輝",
-      "player_id": "41845132",
-      "S_stat_z": 0.2155,
-      "S_reliability": 0.9176,
-      "N_npb_top_speed_z": 2.3059,
-      "N_reliability": null,
-      "N_exposure_runs": 63,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7747,
-        "w_npb_0.5": 1.2741,
-        "w_npb_0.75": 1.7735
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7364,
-        "w_npb_0.5": 0.8207,
-        "w_npb_0.75": 0.9049
-      },
-      "F_midpoint_for_ranking_only": 1.2741,
-      "pa_2025": 557,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 34.5,
-      "S_std": 0.2754,
-      "N_std": 2.2728,
-      "S_pct": 0.6522,
-      "N_pct": 0.9891
-    },
-    {
-      "player": "福永 裕基",
-      "player_id": "81685157",
-      "S_stat_z": 0.8807,
-      "S_reliability": 0.5327,
-      "N_npb_top_speed_z": 1.1082,
-      "N_reliability": null,
-      "N_exposure_runs": 31,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 1.3376,
-        "w_npb_0.5": 1.2544,
-        "w_npb_0.75": 1.1712
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.8967,
-        "w_npb_0.5": 0.8804,
-        "w_npb_0.75": 0.8641
-      },
-      "F_midpoint_for_ranking_only": 1.2544,
-      "pa_2025": 57,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 33,
-      "S_std": 1.4208,
-      "N_std": 1.088,
       "S_pct": 0.913,
-      "N_pct": 0.8478
-    },
-    {
-      "player": "源田 壮亮",
-      "player_id": "71775134",
-      "S_stat_z": 0.9107,
-      "S_reliability": 0.8783,
-      "N_npb_top_speed_z": 1.0284,
-      "N_reliability": null,
-      "N_exposure_runs": 27,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 1.3566,
-        "w_npb_0.5": 1.2407,
-        "w_npb_0.75": 1.1249
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.9076,
-        "w_npb_0.5": 0.8804,
-        "w_npb_0.75": 0.8533
-      },
-      "F_midpoint_for_ranking_only": 1.2407,
-      "pa_2025": 361,
-      "npb_2026_only": true,
-      "h2f_z": 1.1064433648218008,
-      "npb_plus_top_speed_kmh": 32.9,
-      "S_std": 1.4724,
-      "N_std": 1.009,
-      "S_pct": 0.9348,
-      "N_pct": 0.8261
+      "N_pct": 0.9348
     },
     {
       "player": "中野 拓夢",
       "player_id": "41445153",
-      "S_stat_z": 0.902,
+      "S_stat_z": 1.0089,
       "S_reliability": 0.9259,
       "N_npb_top_speed_z": 1.0284,
       "N_reliability": null,
       "N_exposure_runs": 62,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 1.3454,
-        "w_npb_0.5": 1.2332,
-        "w_npb_0.75": 1.1211
+        "w_npb_0.25": 1.491,
+        "w_npb_0.5": 1.3303,
+        "w_npb_0.75": 1.1697
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.8995,
-        "w_npb_0.5": 0.875,
-        "w_npb_0.75": 0.8505
+        "w_npb_0.25": 0.9158,
+        "w_npb_0.5": 0.8859,
+        "w_npb_0.75": 0.856
       },
-      "F_midpoint_for_ranking_only": 1.2332,
+      "F_midpoint_for_ranking_only": 1.3303,
       "pa_2025": 625,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 32.9,
-      "S_std": 1.4575,
+      "S_std": 1.6517,
       "N_std": 1.009,
-      "S_pct": 0.9239,
+      "S_pct": 0.9457,
       "N_pct": 0.8261
+    },
+    {
+      "player": "村林 一輝",
+      "player_id": "41845132",
+      "S_stat_z": 0.1908,
+      "S_reliability": 0.9176,
+      "N_npb_top_speed_z": 2.3059,
+      "N_reliability": null,
+      "N_exposure_runs": 63,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 0.7627,
+        "w_npb_0.5": 1.2661,
+        "w_npb_0.75": 1.7695
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.7446,
+        "w_npb_0.5": 0.8261,
+        "w_npb_0.75": 0.9076
+      },
+      "F_midpoint_for_ranking_only": 1.2661,
+      "pa_2025": 557,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 34.5,
+      "S_std": 0.2594,
+      "N_std": 2.2728,
+      "S_pct": 0.663,
+      "N_pct": 0.9891
     },
     {
       "player": "滝澤 夏央",
       "player_id": "51255155",
-      "S_stat_z": 0.848,
+      "S_stat_z": 0.8207,
       "S_reliability": 0.8975,
       "N_npb_top_speed_z": 1.1082,
       "N_reliability": null,
       "N_exposure_runs": 52,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 1.2954,
-        "w_npb_0.5": 1.2262,
-        "w_npb_0.75": 1.1571
+        "w_npb_0.25": 1.2705,
+        "w_npb_0.5": 1.2097,
+        "w_npb_0.75": 1.1488
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.8886,
         "w_npb_0.5": 0.875,
         "w_npb_0.75": 0.8614
       },
-      "F_midpoint_for_ranking_only": 1.2262,
+      "F_midpoint_for_ranking_only": 1.2097,
       "pa_2025": 438,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 33,
-      "S_std": 1.3645,
+      "S_std": 1.3314,
       "N_std": 1.088,
       "S_pct": 0.9022,
       "N_pct": 0.8478
     },
     {
-      "player": "梶原 昂希",
-      "player_id": "51555155",
-      "S_stat_z": 0.6278,
-      "S_reliability": 0.7727,
-      "N_npb_top_speed_z": 1.4276,
-      "N_reliability": null,
-      "N_exposure_runs": 7,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 1.09,
-        "w_npb_0.5": 1.1946,
-        "w_npb_0.75": 1.2993
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.8424,
-        "w_npb_0.5": 0.8587,
-        "w_npb_0.75": 0.875
-      },
-      "F_midpoint_for_ranking_only": 1.1946,
-      "pa_2025": 170,
-      "npb_2026_only": true,
-      "h2f_z": -0.05845361172643707,
-      "npb_plus_top_speed_kmh": 33.4,
-      "S_std": 0.9853,
-      "N_std": 1.4039,
-      "S_pct": 0.8261,
-      "N_pct": 0.8913
-    },
-    {
       "player": "藤原 恭大",
       "player_id": "31635138",
-      "S_stat_z": 0.7648,
+      "S_stat_z": 0.7741,
       "S_reliability": 0.9004,
       "N_npb_top_speed_z": 1.1082,
       "N_reliability": null,
       "N_exposure_runs": 31,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 1.1879,
-        "w_npb_0.5": 1.1546,
-        "w_npb_0.75": 1.1213
+        "w_npb_0.25": 1.211,
+        "w_npb_0.5": 1.17,
+        "w_npb_0.75": 1.129
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.8641,
-        "w_npb_0.5": 0.8587,
-        "w_npb_0.75": 0.8533
+        "w_npb_0.25": 0.8723,
+        "w_npb_0.5": 0.8641,
+        "w_npb_0.75": 0.856
       },
-      "F_midpoint_for_ranking_only": 1.1546,
+      "F_midpoint_for_ranking_only": 1.17,
       "pa_2025": 452,
       "npb_2026_only": true,
       "h2f_z": 0.4676288938114766,
       "npb_plus_top_speed_kmh": 33,
-      "S_std": 1.2212,
+      "S_std": 1.2521,
       "N_std": 1.088,
-      "S_pct": 0.8696,
+      "S_pct": 0.8804,
       "N_pct": 0.8478
     },
     {
-      "player": "水野 達稀",
-      "player_id": "63165155",
-      "S_stat_z": 0.5551,
-      "S_reliability": 0.8691,
+      "player": "源田 壮亮",
+      "player_id": "71775134",
+      "S_stat_z": 0.7952,
+      "S_reliability": 0.8783,
+      "N_npb_top_speed_z": 1.0284,
+      "N_reliability": null,
+      "N_exposure_runs": 27,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 1.2182,
+        "w_npb_0.5": 1.1485,
+        "w_npb_0.75": 1.0788
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.875,
+        "w_npb_0.5": 0.8587,
+        "w_npb_0.75": 0.8424
+      },
+      "F_midpoint_for_ranking_only": 1.1485,
+      "pa_2025": 361,
+      "npb_2026_only": true,
+      "h2f_z": 1.1064433648218008,
+      "npb_plus_top_speed_kmh": 32.9,
+      "S_std": 1.288,
+      "N_std": 1.009,
+      "S_pct": 0.8913,
+      "N_pct": 0.8261
+    },
+    {
+      "player": "梶原 昂希",
+      "player_id": "51555155",
+      "S_stat_z": 0.56,
+      "S_reliability": 0.7727,
       "N_npb_top_speed_z": 1.4276,
       "N_reliability": null,
-      "N_exposure_runs": 47,
+      "N_exposure_runs": 7,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.9961,
-        "w_npb_0.5": 1.132,
-        "w_npb_0.75": 1.268
+        "w_npb_0.25": 1.0168,
+        "w_npb_0.5": 1.1458,
+        "w_npb_0.75": 1.2749
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.8179,
         "w_npb_0.5": 0.8424,
         "w_npb_0.75": 0.8668
       },
-      "F_midpoint_for_ranking_only": 1.132,
+      "F_midpoint_for_ranking_only": 1.1458,
+      "pa_2025": 170,
+      "npb_2026_only": true,
+      "h2f_z": -0.05845361172643707,
+      "npb_plus_top_speed_kmh": 33.4,
+      "S_std": 0.8877,
+      "N_std": 1.4039,
+      "S_pct": 0.7935,
+      "N_pct": 0.8913
+    },
+    {
+      "player": "水野 達稀",
+      "player_id": "63165155",
+      "S_stat_z": 0.56,
+      "S_reliability": 0.8691,
+      "N_npb_top_speed_z": 1.4276,
+      "N_reliability": null,
+      "N_exposure_runs": 47,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 1.0168,
+        "w_npb_0.5": 1.1458,
+        "w_npb_0.75": 1.2749
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.8179,
+        "w_npb_0.5": 0.8424,
+        "w_npb_0.75": 0.8668
+      },
+      "F_midpoint_for_ranking_only": 1.1458,
       "pa_2025": 332,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 33.4,
-      "S_std": 0.8601,
+      "S_std": 0.8877,
       "N_std": 1.4039,
       "S_pct": 0.7935,
       "N_pct": 0.8913
@@ -541,142 +513,142 @@
     {
       "player": "岡林 勇希",
       "player_id": "81585151",
-      "S_stat_z": 0.9469,
+      "S_stat_z": 0.9487,
       "S_reliability": 0.9272,
       "N_npb_top_speed_z": 0.709,
       "N_reliability": null,
       "N_exposure_runs": 39,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 1.3243,
-        "w_npb_0.5": 1.1139,
-        "w_npb_0.75": 0.9035
+        "w_npb_0.25": 1.3352,
+        "w_npb_0.5": 1.1211,
+        "w_npb_0.75": 0.9071
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.8913,
-        "w_npb_0.5": 0.837,
-        "w_npb_0.75": 0.7826
+        "w_npb_0.25": 0.8832,
+        "w_npb_0.5": 0.8315,
+        "w_npb_0.75": 0.7799
       },
-      "F_midpoint_for_ranking_only": 1.1139,
+      "F_midpoint_for_ranking_only": 1.1211,
       "pa_2025": 637,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 32.5,
-      "S_std": 1.5348,
+      "S_std": 1.5492,
       "N_std": 0.693,
-      "S_pct": 0.9457,
+      "S_pct": 0.9348,
       "N_pct": 0.7283
     },
     {
-      "player": "村松 開人",
-      "player_id": "03105157",
-      "S_stat_z": 0.3299,
-      "S_reliability": 0.7881,
-      "N_npb_top_speed_z": 1.4276,
+      "player": "福永 裕基",
+      "player_id": "81685157",
+      "S_stat_z": 0.6502,
+      "S_reliability": 0.5327,
+      "N_npb_top_speed_z": 1.1082,
       "N_reliability": null,
-      "N_exposure_runs": 55,
+      "N_exposure_runs": 31,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7052,
-        "w_npb_0.5": 0.9381,
-        "w_npb_0.75": 1.171
+        "w_npb_0.25": 1.0529,
+        "w_npb_0.5": 1.0646,
+        "w_npb_0.75": 1.0763
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7609,
-        "w_npb_0.5": 0.8043,
-        "w_npb_0.75": 0.8478
+        "w_npb_0.25": 0.8234,
+        "w_npb_0.5": 0.8315,
+        "w_npb_0.75": 0.8397
       },
-      "F_midpoint_for_ranking_only": 0.9381,
-      "pa_2025": 186,
+      "F_midpoint_for_ranking_only": 1.0646,
+      "pa_2025": 57,
       "npb_2026_only": true,
       "h2f_z": null,
-      "npb_plus_top_speed_kmh": 33.4,
-      "S_std": 0.4724,
-      "N_std": 1.4039,
-      "S_pct": 0.7174,
-      "N_pct": 0.8913
+      "npb_plus_top_speed_kmh": 33,
+      "S_std": 1.0412,
+      "N_std": 1.088,
+      "S_pct": 0.8152,
+      "N_pct": 0.8478
+    },
+    {
+      "player": "吉川 尚輝",
+      "player_id": "73375134",
+      "S_stat_z": 0.7244,
+      "S_reliability": 0.901,
+      "N_npb_top_speed_z": 0.709,
+      "N_reliability": null,
+      "N_exposure_runs": 31,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 1.0489,
+        "w_npb_0.5": 0.9303,
+        "w_npb_0.75": 0.8117
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.8261,
+        "w_npb_0.5": 0.7935,
+        "w_npb_0.75": 0.7609
+      },
+      "F_midpoint_for_ranking_only": 0.9303,
+      "pa_2025": 455,
+      "npb_2026_only": true,
+      "h2f_z": -1.5239691628677607,
+      "npb_plus_top_speed_kmh": 32.5,
+      "S_std": 1.1675,
+      "N_std": 0.693,
+      "S_pct": 0.8587,
+      "N_pct": 0.7283
+    },
+    {
+      "player": "岡 大海",
+      "player_id": "11515139",
+      "S_stat_z": 0.664,
+      "S_reliability": 0.7835,
+      "N_npb_top_speed_z": 0.7888,
+      "N_reliability": null,
+      "N_exposure_runs": 7,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 0.9915,
+        "w_npb_0.5": 0.9183,
+        "w_npb_0.75": 0.8452
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.8071,
+        "w_npb_0.5": 0.788,
+        "w_npb_0.75": 0.769
+      },
+      "F_midpoint_for_ranking_only": 0.9183,
+      "pa_2025": 181,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 32.6,
+      "S_std": 1.0647,
+      "N_std": 0.772,
+      "S_pct": 0.8261,
+      "N_pct": 0.75
     },
     {
       "player": "佐々木 俊輔",
       "player_id": "51955159",
-      "S_stat_z": 0.4387,
+      "S_stat_z": 0.4049,
       "S_reliability": 0.763,
       "N_npb_top_speed_z": 1.1082,
       "N_reliability": null,
       "N_exposure_runs": 32,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7668,
-        "w_npb_0.5": 0.8738,
-        "w_npb_0.75": 0.9809
+        "w_npb_0.25": 0.7398,
+        "w_npb_0.5": 0.8559,
+        "w_npb_0.75": 0.9719
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.7908,
         "w_npb_0.5": 0.8098,
         "w_npb_0.75": 0.8288
       },
-      "F_midpoint_for_ranking_only": 0.8738,
+      "F_midpoint_for_ranking_only": 0.8559,
       "pa_2025": 161,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 33,
-      "S_std": 0.6597,
+      "S_std": 0.6238,
       "N_std": 1.088,
       "S_pct": 0.7717,
       "N_pct": 0.8478
-    },
-    {
-      "player": "小川 龍成",
-      "player_id": "11715153",
-      "S_stat_z": 0.2438,
-      "S_reliability": 0.8016,
-      "N_npb_top_speed_z": 1.4276,
-      "N_reliability": null,
-      "N_exposure_runs": 51,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.5941,
-        "w_npb_0.5": 0.864,
-        "w_npb_0.75": 1.134
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7201,
-        "w_npb_0.5": 0.7772,
-        "w_npb_0.75": 0.8342
-      },
-      "F_midpoint_for_ranking_only": 0.864,
-      "pa_2025": 202,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 33.4,
-      "S_std": 0.3241,
-      "N_std": 1.4039,
-      "S_pct": 0.663,
-      "N_pct": 0.8913
-    },
-    {
-      "player": "岡 大海",
-      "player_id": "11515139",
-      "S_stat_z": 0.603,
-      "S_reliability": 0.7835,
-      "N_npb_top_speed_z": 0.7888,
-      "N_reliability": null,
-      "N_exposure_runs": 7,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.9,
-        "w_npb_0.5": 0.8573,
-        "w_npb_0.75": 0.8146
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7908,
-        "w_npb_0.5": 0.7772,
-        "w_npb_0.75": 0.7636
-      },
-      "F_midpoint_for_ranking_only": 0.8573,
-      "pa_2025": 181,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 32.6,
-      "S_std": 0.9426,
-      "N_std": 0.772,
-      "S_pct": 0.8043,
-      "N_pct": 0.75
     },
     {
       "player": "塩見 泰隆",
@@ -687,472 +659,416 @@
       "N_reliability": null,
       "N_exposure_runs": 8,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.9953,
-        "w_npb_0.5": 0.8419,
-        "w_npb_0.75": 0.6885
+        "w_npb_0.25": 1.0072,
+        "w_npb_0.5": 0.8498,
+        "w_npb_0.75": 0.6924
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.8043,
         "w_npb_0.5": 0.7609,
         "w_npb_0.75": 0.7174
       },
-      "F_midpoint_for_ranking_only": 0.8419,
+      "F_midpoint_for_ranking_only": 0.8498,
       "pa_2025": 0,
       "npb_2026_only": true,
       "h2f_z": -1.8245877374608535,
       "npb_plus_top_speed_kmh": 32.3,
-      "S_std": 1.1487,
+      "S_std": 1.1646,
       "N_std": 0.5351,
       "S_pct": 0.8478,
       "N_pct": 0.6739
     },
     {
-      "player": "吉川 尚輝",
-      "player_id": "73375134",
-      "S_stat_z": 0.612,
-      "S_reliability": 0.901,
-      "N_npb_top_speed_z": 0.709,
+      "player": "村松 開人",
+      "player_id": "03105157",
+      "S_stat_z": 0.2057,
+      "S_reliability": 0.7881,
+      "N_npb_top_speed_z": 1.4276,
       "N_reliability": null,
-      "N_exposure_runs": 31,
+      "N_exposure_runs": 55,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.8918,
-        "w_npb_0.5": 0.8256,
-        "w_npb_0.75": 0.7593
+        "w_npb_0.25": 0.5645,
+        "w_npb_0.5": 0.8443,
+        "w_npb_0.75": 1.1241
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7935,
-        "w_npb_0.5": 0.7717,
-        "w_npb_0.75": 0.75
+        "w_npb_0.25": 0.7283,
+        "w_npb_0.5": 0.7826,
+        "w_npb_0.75": 0.837
       },
-      "F_midpoint_for_ranking_only": 0.8256,
-      "pa_2025": 455,
-      "npb_2026_only": true,
-      "h2f_z": -1.5239691628677607,
-      "npb_plus_top_speed_kmh": 32.5,
-      "S_std": 0.9581,
-      "N_std": 0.693,
-      "S_pct": 0.8152,
-      "N_pct": 0.7283
-    },
-    {
-      "player": "友杉 篤輝",
-      "player_id": "71275157",
-      "S_stat_z": 0.3769,
-      "S_reliability": 0.8645,
-      "N_npb_top_speed_z": 0.8687,
-      "N_reliability": null,
-      "N_exposure_runs": 35,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.6277,
-        "w_npb_0.5": 0.7022,
-        "w_npb_0.75": 0.7766
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7418,
-        "w_npb_0.5": 0.7554,
-        "w_npb_0.75": 0.769
-      },
-      "F_midpoint_for_ranking_only": 0.7022,
-      "pa_2025": 319,
-      "npb_2026_only": true,
-      "h2f_z": 1.7452578358321182,
-      "npb_plus_top_speed_kmh": 32.7,
-      "S_std": 0.5533,
-      "N_std": 0.851,
-      "S_pct": 0.7283,
-      "N_pct": 0.7826
-    },
-    {
-      "player": "丸山 和郁",
-      "player_id": "93195155",
-      "S_stat_z": 0.4951,
-      "S_reliability": 0.4186,
-      "N_npb_top_speed_z": 0.6292,
-      "N_reliability": null,
-      "N_exposure_runs": 10,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7211,
-        "w_npb_0.5": 0.6855,
-        "w_npb_0.75": 0.6498
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7609,
-        "w_npb_0.5": 0.7391,
-        "w_npb_0.75": 0.7174
-      },
-      "F_midpoint_for_ranking_only": 0.6855,
-      "pa_2025": 36,
-      "npb_2026_only": true,
-      "h2f_z": 1.219175330294208,
-      "npb_plus_top_speed_kmh": 32.4,
-      "S_std": 0.7568,
-      "N_std": 0.6141,
-      "S_pct": 0.7826,
-      "N_pct": 0.6957
-    },
-    {
-      "player": "小幡 竜平",
-      "player_id": "31535138",
-      "S_stat_z": 0.2723,
-      "S_reliability": 0.8559,
-      "N_npb_top_speed_z": 0.9485,
-      "N_reliability": null,
-      "N_exposure_runs": 11,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.5124,
-        "w_npb_0.5": 0.6516,
-        "w_npb_0.75": 0.7908
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7092,
-        "w_npb_0.5": 0.7446,
-        "w_npb_0.75": 0.7799
-      },
-      "F_midpoint_for_ranking_only": 0.6516,
-      "pa_2025": 297,
+      "F_midpoint_for_ranking_only": 0.8443,
+      "pa_2025": 186,
       "npb_2026_only": true,
       "h2f_z": null,
-      "npb_plus_top_speed_kmh": 32.8,
-      "S_std": 0.3732,
-      "N_std": 0.93,
+      "npb_plus_top_speed_kmh": 33.4,
+      "S_std": 0.2847,
+      "N_std": 1.4039,
       "S_pct": 0.6739,
-      "N_pct": 0.8152
+      "N_pct": 0.8913
     },
     {
       "player": "大島 洋平",
       "player_id": "01305131",
-      "S_stat_z": 0.755,
+      "S_stat_z": 0.8841,
       "S_reliability": 0.6622,
       "N_npb_top_speed_z": 0.0703,
       "N_reliability": null,
       "N_exposure_runs": 13,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.9186,
-        "w_npb_0.5": 0.6328,
-        "w_npb_0.75": 0.347
+        "w_npb_0.25": 1.0948,
+        "w_npb_0.5": 0.7502,
+        "w_npb_0.75": 0.4057
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7717,
-        "w_npb_0.5": 0.6848,
-        "w_npb_0.75": 0.5978
+        "w_npb_0.25": 0.8207,
+        "w_npb_0.5": 0.7174,
+        "w_npb_0.75": 0.6141
       },
-      "F_midpoint_for_ranking_only": 0.6328,
+      "F_midpoint_for_ranking_only": 0.7502,
       "pa_2025": 98,
       "npb_2026_only": true,
       "h2f_z": 0.016701031921837733,
       "npb_plus_top_speed_kmh": 31.7,
-      "S_std": 1.2043,
+      "S_std": 1.4393,
       "N_std": 0.0612,
-      "S_pct": 0.8587,
+      "S_pct": 0.9239,
       "N_pct": 0.5109
-    },
-    {
-      "player": "中川 圭太",
-      "player_id": "51255138",
-      "S_stat_z": 0.3024,
-      "S_reliability": 0.9025,
-      "N_npb_top_speed_z": 0.7888,
-      "N_reliability": null,
-      "N_exposure_runs": 41,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.5117,
-        "w_npb_0.5": 0.5985,
-        "w_npb_0.75": 0.6852
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7092,
-        "w_npb_0.5": 0.7228,
-        "w_npb_0.75": 0.7364
-      },
-      "F_midpoint_for_ranking_only": 0.5985,
-      "pa_2025": 463,
-      "npb_2026_only": true,
-      "h2f_z": -0.3590721863195263,
-      "npb_plus_top_speed_kmh": 32.6,
-      "S_std": 0.425,
-      "N_std": 0.772,
-      "S_pct": 0.6957,
-      "N_pct": 0.75
     },
     {
       "player": "野間 峻祥",
       "player_id": "01405130",
-      "S_stat_z": 0.6933,
+      "S_stat_z": 0.7699,
       "S_reliability": 0.7685,
       "N_npb_top_speed_z": 0.0703,
       "N_reliability": null,
       "N_exposure_runs": 8,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.8389,
-        "w_npb_0.5": 0.5796,
-        "w_npb_0.75": 0.3204
+        "w_npb_0.25": 0.949,
+        "w_npb_0.5": 0.6531,
+        "w_npb_0.75": 0.3571
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7554,
-        "w_npb_0.5": 0.6739,
-        "w_npb_0.75": 0.5924
+        "w_npb_0.25": 0.7799,
+        "w_npb_0.5": 0.6902,
+        "w_npb_0.75": 0.6005
       },
-      "F_midpoint_for_ranking_only": 0.5796,
+      "F_midpoint_for_ranking_only": 0.6531,
       "pa_2025": 166,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.7,
-      "S_std": 1.0981,
+      "S_std": 1.2449,
       "N_std": 0.0612,
-      "S_pct": 0.837,
+      "S_pct": 0.8696,
       "N_pct": 0.5109
+    },
+    {
+      "player": "小幡 竜平",
+      "player_id": "31535138",
+      "S_stat_z": 0.2573,
+      "S_reliability": 0.8559,
+      "N_npb_top_speed_z": 0.9485,
+      "N_reliability": null,
+      "N_exposure_runs": 11,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 0.5119,
+        "w_npb_0.5": 0.6513,
+        "w_npb_0.75": 0.7906
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.7337,
+        "w_npb_0.5": 0.7609,
+        "w_npb_0.75": 0.788
+      },
+      "F_midpoint_for_ranking_only": 0.6513,
+      "pa_2025": 297,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 32.8,
+      "S_std": 0.3726,
+      "N_std": 0.93,
+      "S_pct": 0.7065,
+      "N_pct": 0.8152
+    },
+    {
+      "player": "友杉 篤輝",
+      "player_id": "71275157",
+      "S_stat_z": 0.2666,
+      "S_reliability": 0.8645,
+      "N_npb_top_speed_z": 0.8687,
+      "N_reliability": null,
+      "N_exposure_runs": 35,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 0.504,
+        "w_npb_0.5": 0.6197,
+        "w_npb_0.75": 0.7354
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.7337,
+        "w_npb_0.5": 0.75,
+        "w_npb_0.75": 0.7663
+      },
+      "F_midpoint_for_ranking_only": 0.6197,
+      "pa_2025": 319,
+      "npb_2026_only": true,
+      "h2f_z": 1.7452578358321182,
+      "npb_plus_top_speed_kmh": 32.7,
+      "S_std": 0.3884,
+      "N_std": 0.851,
+      "S_pct": 0.7174,
+      "N_pct": 0.7826
+    },
+    {
+      "player": "小川 龍成",
+      "player_id": "11715153",
+      "S_stat_z": -0.0793,
+      "S_reliability": 0.8016,
+      "N_npb_top_speed_z": 1.4276,
+      "N_reliability": null,
+      "N_exposure_runs": 51,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 0.2008,
+        "w_npb_0.5": 0.6018,
+        "w_npb_0.75": 1.0029
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.5815,
+        "w_npb_0.5": 0.6848,
+        "w_npb_0.75": 0.788
+      },
+      "F_midpoint_for_ranking_only": 0.6018,
+      "pa_2025": 202,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 33.4,
+      "S_std": -0.2003,
+      "N_std": 1.4039,
+      "S_pct": 0.4783,
+      "N_pct": 0.8913
+    },
+    {
+      "player": "丸山 和郁",
+      "player_id": "93195155",
+      "S_stat_z": 0.3598,
+      "S_reliability": 0.4186,
+      "N_npb_top_speed_z": 0.6292,
+      "N_reliability": null,
+      "N_exposure_runs": 10,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 0.5638,
+        "w_npb_0.5": 0.5805,
+        "w_npb_0.75": 0.5973
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.7283,
+        "w_npb_0.5": 0.7174,
+        "w_npb_0.75": 0.7065
+      },
+      "F_midpoint_for_ranking_only": 0.5805,
+      "pa_2025": 36,
+      "npb_2026_only": true,
+      "h2f_z": 1.219175330294208,
+      "npb_plus_top_speed_kmh": 32.4,
+      "S_std": 0.547,
+      "N_std": 0.6141,
+      "S_pct": 0.7391,
+      "N_pct": 0.6957
     },
     {
       "player": "郡司 裕也",
       "player_id": "21925151",
-      "S_stat_z": 0.0781,
+      "S_stat_z": 0.1639,
       "S_reliability": 0.8941,
       "N_npb_top_speed_z": 0.8687,
       "N_reliability": null,
       "N_exposure_runs": 29,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2418,
-        "w_npb_0.5": 0.4449,
-        "w_npb_0.75": 0.648
+        "w_npb_0.25": 0.373,
+        "w_npb_0.5": 0.5323,
+        "w_npb_0.75": 0.6917
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.6196,
-        "w_npb_0.5": 0.6739,
-        "w_npb_0.75": 0.7283
+        "w_npb_0.25": 0.6766,
+        "w_npb_0.5": 0.712,
+        "w_npb_0.75": 0.7473
       },
-      "F_midpoint_for_ranking_only": 0.4449,
+      "F_midpoint_for_ranking_only": 0.5323,
       "pa_2025": 422,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 32.7,
-      "S_std": 0.0388,
+      "S_std": 0.2136,
       "N_std": 0.851,
-      "S_pct": 0.5652,
+      "S_pct": 0.6413,
       "N_pct": 0.7826
+    },
+    {
+      "player": "中川 圭太",
+      "player_id": "51255138",
+      "S_stat_z": 0.1839,
+      "S_reliability": 0.9025,
+      "N_npb_top_speed_z": 0.7888,
+      "N_reliability": null,
+      "N_exposure_runs": 41,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 0.3787,
+        "w_npb_0.5": 0.5098,
+        "w_npb_0.75": 0.6409
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.6766,
+        "w_npb_0.5": 0.7011,
+        "w_npb_0.75": 0.7255
+      },
+      "F_midpoint_for_ranking_only": 0.5098,
+      "pa_2025": 463,
+      "npb_2026_only": true,
+      "h2f_z": -0.3590721863195263,
+      "npb_plus_top_speed_kmh": 32.6,
+      "S_std": 0.2476,
+      "N_std": 0.772,
+      "S_pct": 0.6522,
+      "N_pct": 0.75
     },
     {
       "player": "石井 一成",
       "player_id": "21125134",
-      "S_stat_z": 0.1061,
+      "S_stat_z": 0.1035,
       "S_reliability": 0.8792,
       "N_npb_top_speed_z": 0.7888,
       "N_reliability": null,
       "N_exposure_runs": 22,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2582,
-        "w_npb_0.5": 0.4295,
-        "w_npb_0.75": 0.6007
+        "w_npb_0.25": 0.2761,
+        "w_npb_0.5": 0.4414,
+        "w_npb_0.75": 0.6067
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.644,
         "w_npb_0.5": 0.6793,
         "w_npb_0.75": 0.7147
       },
-      "F_midpoint_for_ranking_only": 0.4295,
+      "F_midpoint_for_ranking_only": 0.4414,
       "pa_2025": 364,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 32.6,
-      "S_std": 0.087,
+      "S_std": 0.1108,
       "N_std": 0.772,
       "S_pct": 0.6087,
       "N_pct": 0.75
     },
     {
-      "player": "来田 涼斗",
-      "player_id": "51955153",
-      "S_stat_z": 0.0855,
-      "S_reliability": 0.7297,
-      "N_npb_top_speed_z": 0.6292,
-      "N_reliability": null,
-      "N_exposure_runs": 24,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.1922,
-        "w_npb_0.5": 0.3328,
-        "w_npb_0.75": 0.4735
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.6223,
-        "w_npb_0.5": 0.6467,
-        "w_npb_0.75": 0.6712
-      },
-      "F_midpoint_for_ranking_only": 0.3328,
-      "pa_2025": 135,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 32.4,
-      "S_std": 0.0515,
-      "N_std": 0.6141,
-      "S_pct": 0.5978,
-      "N_pct": 0.6957
-    },
-    {
-      "player": "田宮 裕涼",
-      "player_id": "51055138",
-      "S_stat_z": 0.0782,
-      "S_reliability": 0.8457,
-      "N_npb_top_speed_z": 0.6292,
-      "N_reliability": null,
-      "N_exposure_runs": 35,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.1827,
-        "w_npb_0.5": 0.3265,
-        "w_npb_0.75": 0.4703
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.606,
-        "w_npb_0.5": 0.6359,
-        "w_npb_0.75": 0.6658
-      },
-      "F_midpoint_for_ranking_only": 0.3265,
-      "pa_2025": 274,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 32.4,
-      "S_std": 0.0389,
-      "N_std": 0.6141,
-      "S_pct": 0.5761,
-      "N_pct": 0.6957
-    },
-    {
       "player": "秋山 翔吾",
       "player_id": "31135133",
-      "S_stat_z": 0.4157,
+      "S_stat_z": 0.529,
       "S_reliability": 0.7585,
       "N_npb_top_speed_z": -0.0096,
       "N_reliability": null,
       "N_exposure_runs": 9,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.4606,
-        "w_npb_0.5": 0.3011,
-        "w_npb_0.75": 0.1416
+        "w_npb_0.25": 0.6217,
+        "w_npb_0.5": 0.4085,
+        "w_npb_0.75": 0.1953
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.6875,
-        "w_npb_0.5": 0.6141,
-        "w_npb_0.75": 0.5408
+        "w_npb_0.25": 0.7038,
+        "w_npb_0.5": 0.625,
+        "w_npb_0.75": 0.5462
       },
-      "F_midpoint_for_ranking_only": 0.3011,
+      "F_midpoint_for_ranking_only": 0.4085,
       "pa_2025": 157,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.6,
-      "S_std": 0.6201,
+      "S_std": 0.8349,
       "N_std": -0.0179,
-      "S_pct": 0.7609,
+      "S_pct": 0.7826,
       "N_pct": 0.4674
     },
     {
-      "player": "菊池 涼介",
-      "player_id": "61565135",
-      "S_stat_z": 0.3005,
-      "S_reliability": 0.8861,
-      "N_npb_top_speed_z": 0.1501,
+      "player": "田宮 裕涼",
+      "player_id": "51055138",
+      "S_stat_z": 0.1222,
+      "S_reliability": 0.8457,
+      "N_npb_top_speed_z": 0.6292,
       "N_reliability": null,
-      "N_exposure_runs": 36,
+      "N_exposure_runs": 35,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.3513,
-        "w_npb_0.5": 0.2809,
-        "w_npb_0.75": 0.2105
+        "w_npb_0.25": 0.2605,
+        "w_npb_0.5": 0.3784,
+        "w_npb_0.75": 0.4962
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.6603,
-        "w_npb_0.5": 0.6359,
-        "w_npb_0.75": 0.6114
+        "w_npb_0.25": 0.6467,
+        "w_npb_0.5": 0.663,
+        "w_npb_0.75": 0.6793
       },
-      "F_midpoint_for_ranking_only": 0.2809,
-      "pa_2025": 389,
+      "F_midpoint_for_ranking_only": 0.3784,
+      "pa_2025": 274,
       "npb_2026_only": true,
       "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31.8,
-      "S_std": 0.4217,
-      "N_std": 0.1401,
-      "S_pct": 0.6848,
-      "N_pct": 0.587
+      "npb_plus_top_speed_kmh": 32.4,
+      "S_std": 0.1426,
+      "N_std": 0.6141,
+      "S_pct": 0.6304,
+      "N_pct": 0.6957
+    },
+    {
+      "player": "来田 涼斗",
+      "player_id": "51955153",
+      "S_stat_z": 0.0697,
+      "S_reliability": 0.7297,
+      "N_npb_top_speed_z": 0.6292,
+      "N_reliability": null,
+      "N_exposure_runs": 24,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 0.1935,
+        "w_npb_0.5": 0.3337,
+        "w_npb_0.75": 0.4739
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.5978,
+        "w_npb_0.5": 0.6304,
+        "w_npb_0.75": 0.663
+      },
+      "F_midpoint_for_ranking_only": 0.3337,
+      "pa_2025": 135,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 32.4,
+      "S_std": 0.0533,
+      "N_std": 0.6141,
+      "S_pct": 0.5652,
+      "N_pct": 0.6957
     },
     {
       "player": "奈良間 大己",
       "player_id": "31435157",
-      "S_stat_z": 0.3293,
+      "S_stat_z": 0.3703,
       "S_reliability": 0.6732,
       "N_npb_top_speed_z": 0.0703,
       "N_reliability": null,
       "N_exposure_runs": 22,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.3688,
-        "w_npb_0.5": 0.2663,
-        "w_npb_0.75": 0.1637
+        "w_npb_0.25": 0.4389,
+        "w_npb_0.5": 0.313,
+        "w_npb_0.75": 0.1871
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.6576,
-        "w_npb_0.5": 0.6087,
-        "w_npb_0.75": 0.5598
+        "w_npb_0.25": 0.6902,
+        "w_npb_0.5": 0.6304,
+        "w_npb_0.75": 0.5707
       },
-      "F_midpoint_for_ranking_only": 0.2663,
+      "F_midpoint_for_ranking_only": 0.313,
       "pa_2025": 103,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.7,
-      "S_std": 0.4713,
+      "S_std": 0.5649,
       "N_std": 0.0612,
-      "S_pct": 0.7065,
+      "S_pct": 0.75,
       "N_pct": 0.5109
-    },
-    {
-      "player": "矢野 雅哉",
-      "player_id": "93395153",
-      "S_stat_z": 0.7841,
-      "S_reliability": 0.8701,
-      "N_npb_top_speed_z": -0.7282,
-      "N_reliability": null,
-      "N_exposure_runs": 15,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7587,
-        "w_npb_0.5": 0.2629,
-        "w_npb_0.75": -0.2329
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.7364,
-        "w_npb_0.5": 0.5815,
-        "w_npb_0.75": 0.4266
-      },
-      "F_midpoint_for_ranking_only": 0.2629,
-      "pa_2025": 335,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 30.7,
-      "S_std": 1.2545,
-      "N_std": -0.7287,
-      "S_pct": 0.8913,
-      "N_pct": 0.2717
-    },
-    {
-      "player": "小園 海斗",
-      "player_id": "01705138",
-      "S_stat_z": 0.3871,
-      "S_reliability": 0.9197,
-      "N_npb_top_speed_z": -0.0894,
-      "N_reliability": null,
-      "N_exposure_runs": 49,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.4039,
-        "w_npb_0.5": 0.237,
-        "w_npb_0.75": 0.0701
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.6658,
-        "w_npb_0.5": 0.5924,
-        "w_npb_0.75": 0.519
-      },
-      "F_midpoint_for_ranking_only": 0.237,
-      "pa_2025": 573,
-      "npb_2026_only": true,
-      "h2f_z": -0.6596907609126189,
-      "npb_plus_top_speed_kmh": 31.5,
-      "S_std": 0.5708,
-      "N_std": -0.0968,
-      "S_pct": 0.7391,
-      "N_pct": 0.4457
     },
     {
       "player": "モンテロ",
@@ -1172,340 +1088,480 @@
       "F_fallback": "N_ONLY_STANDARDIZED"
     },
     {
-      "player": "蝦名 達夫",
-      "player_id": "51555151",
-      "S_stat_z": 0.4,
-      "S_reliability": 0.8891,
-      "N_npb_top_speed_z": -0.1693,
+      "player": "菊池 涼介",
+      "player_id": "61565135",
+      "S_stat_z": 0.2118,
+      "S_reliability": 0.8861,
+      "N_npb_top_speed_z": 0.1501,
       "N_reliability": null,
-      "N_exposure_runs": 40,
+      "N_exposure_runs": 36,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.4008,
-        "w_npb_0.5": 0.2086,
-        "w_npb_0.75": 0.0164
+        "w_npb_0.25": 0.2564,
+        "w_npb_0.5": 0.2176,
+        "w_npb_0.75": 0.1789
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.6658,
-        "w_npb_0.5": 0.5815,
-        "w_npb_0.75": 0.4973
+        "w_npb_0.25": 0.6603,
+        "w_npb_0.5": 0.6359,
+        "w_npb_0.75": 0.6114
       },
-      "F_midpoint_for_ranking_only": 0.2086,
-      "pa_2025": 401,
+      "F_midpoint_for_ranking_only": 0.2176,
+      "pa_2025": 389,
       "npb_2026_only": true,
       "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31.4,
-      "S_std": 0.5931,
-      "N_std": -0.1758,
-      "S_pct": 0.75,
-      "N_pct": 0.413
+      "npb_plus_top_speed_kmh": 31.8,
+      "S_std": 0.2951,
+      "N_std": 0.1401,
+      "S_pct": 0.6848,
+      "N_pct": 0.587
     },
     {
-      "player": "板山 祐太郎",
-      "player_id": "91395132",
-      "S_stat_z": 0.1198,
-      "S_reliability": 0.7942,
-      "N_npb_top_speed_z": 0.3098,
+      "player": "矢野 雅哉",
+      "player_id": "93395153",
+      "S_stat_z": 0.7221,
+      "S_reliability": 0.8701,
+      "N_npb_top_speed_z": -0.7282,
       "N_reliability": null,
-      "N_exposure_runs": 18,
+      "N_exposure_runs": 15,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.1575,
-        "w_npb_0.5": 0.2043,
-        "w_npb_0.75": 0.2512
+        "w_npb_0.25": 0.6905,
+        "w_npb_0.5": 0.2174,
+        "w_npb_0.75": -0.2557
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.6277,
-        "w_npb_0.5": 0.625,
-        "w_npb_0.75": 0.6223
+        "w_npb_0.25": 0.6957,
+        "w_npb_0.5": 0.5543,
+        "w_npb_0.75": 0.413
       },
-      "F_midpoint_for_ranking_only": 0.2043,
-      "pa_2025": 193,
+      "F_midpoint_for_ranking_only": 0.2174,
+      "pa_2025": 335,
       "npb_2026_only": true,
       "h2f_z": null,
-      "npb_plus_top_speed_kmh": 32,
-      "S_std": 0.1106,
-      "N_std": 0.2981,
-      "S_pct": 0.6304,
-      "N_pct": 0.6196
+      "npb_plus_top_speed_kmh": 30.7,
+      "S_std": 1.1636,
+      "N_std": -0.7287,
+      "S_pct": 0.837,
+      "N_pct": 0.2717
     },
     {
       "player": "林 琢真",
       "player_id": "91695157",
-      "S_stat_z": 0.1094,
+      "S_stat_z": 0.1059,
       "S_reliability": 0.8529,
       "N_npb_top_speed_z": 0.3098,
       "N_reliability": null,
       "N_exposure_runs": 8,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.144,
-        "w_npb_0.5": 0.1954,
-        "w_npb_0.75": 0.2468
+        "w_npb_0.25": 0.1607,
+        "w_npb_0.5": 0.2065,
+        "w_npb_0.75": 0.2523
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.6196,
         "w_npb_0.5": 0.6196,
         "w_npb_0.75": 0.6196
       },
-      "F_midpoint_for_ranking_only": 0.1954,
+      "F_midpoint_for_ranking_only": 0.2065,
       "pa_2025": 290,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 32,
-      "S_std": 0.0927,
+      "S_std": 0.1149,
       "N_std": 0.2981,
       "S_pct": 0.6196,
       "N_pct": 0.6196
     },
     {
-      "player": "細川 成也",
-      "player_id": "31835134",
-      "S_stat_z": -0.2704,
-      "S_reliability": 0.8954,
-      "N_npb_top_speed_z": 0.8687,
+      "player": "板山 祐太郎",
+      "player_id": "91395132",
+      "S_stat_z": 0.1022,
+      "S_reliability": 0.7942,
+      "N_npb_top_speed_z": 0.3098,
       "N_reliability": null,
-      "N_exposure_runs": 37,
+      "N_exposure_runs": 18,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.2082,
-        "w_npb_0.5": 0.1449,
-        "w_npb_0.75": 0.4979
+        "w_npb_0.25": 0.156,
+        "w_npb_0.5": 0.2034,
+        "w_npb_0.75": 0.2507
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.4402,
-        "w_npb_0.5": 0.5543,
-        "w_npb_0.75": 0.6685
+        "w_npb_0.25": 0.6033,
+        "w_npb_0.5": 0.6087,
+        "w_npb_0.75": 0.6141
       },
-      "F_midpoint_for_ranking_only": 0.1449,
-      "pa_2025": 428,
+      "F_midpoint_for_ranking_only": 0.2034,
+      "pa_2025": 193,
       "npb_2026_only": true,
       "h2f_z": null,
-      "npb_plus_top_speed_kmh": 32.7,
-      "S_std": -0.5613,
-      "N_std": 0.851,
-      "S_pct": 0.3261,
-      "N_pct": 0.7826
+      "npb_plus_top_speed_kmh": 32,
+      "S_std": 0.1086,
+      "N_std": 0.2981,
+      "S_pct": 0.5978,
+      "N_pct": 0.6196
+    },
+    {
+      "player": "蝦名 達夫",
+      "player_id": "51555151",
+      "S_stat_z": 0.3781,
+      "S_reliability": 0.8891,
+      "N_npb_top_speed_z": -0.1693,
+      "N_reliability": null,
+      "N_exposure_runs": 40,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 0.3896,
+        "w_npb_0.5": 0.2012,
+        "w_npb_0.75": 0.0127
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.6739,
+        "w_npb_0.5": 0.587,
+        "w_npb_0.75": 0.5
+      },
+      "F_midpoint_for_ranking_only": 0.2012,
+      "pa_2025": 401,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 31.4,
+      "S_std": 0.5781,
+      "N_std": -0.1758,
+      "S_pct": 0.7609,
+      "N_pct": 0.413
     },
     {
       "player": "度会 隆輝",
       "player_id": "33535159",
-      "S_stat_z": 0.1642,
+      "S_stat_z": 0.2134,
       "S_reliability": 0.8575,
       "N_npb_top_speed_z": 0.0703,
       "N_reliability": null,
       "N_exposure_runs": 33,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.1556,
-        "w_npb_0.5": 0.1241,
-        "w_npb_0.75": 0.0927
+        "w_npb_0.25": 0.2387,
+        "w_npb_0.5": 0.1795,
+        "w_npb_0.75": 0.1204
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.6087,
-        "w_npb_0.5": 0.5761,
-        "w_npb_0.75": 0.5435
+        "w_npb_0.25": 0.6495,
+        "w_npb_0.5": 0.6033,
+        "w_npb_0.75": 0.5571
       },
-      "F_midpoint_for_ranking_only": 0.1241,
+      "F_midpoint_for_ranking_only": 0.1795,
       "pa_2025": 301,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.7,
-      "S_std": 0.187,
+      "S_std": 0.2978,
       "N_std": 0.0612,
-      "S_pct": 0.6413,
+      "S_pct": 0.6957,
       "N_pct": 0.5109
     },
     {
-      "player": "佐藤 輝明",
-      "player_id": "41045153",
-      "S_stat_z": -0.0527,
-      "S_reliability": 0.9227,
-      "N_npb_top_speed_z": 0.3896,
+      "player": "小園 海斗",
+      "player_id": "01705138",
+      "S_stat_z": 0.2954,
+      "S_reliability": 0.9197,
+      "N_npb_top_speed_z": -0.0894,
       "N_reliability": null,
       "N_exposure_runs": 49,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.0456,
-        "w_npb_0.5": 0.0953,
-        "w_npb_0.75": 0.2362
+        "w_npb_0.25": 0.3039,
+        "w_npb_0.5": 0.1703,
+        "w_npb_0.75": 0.0368
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.5353,
-        "w_npb_0.5": 0.5707,
-        "w_npb_0.75": 0.606
+        "w_npb_0.25": 0.6576,
+        "w_npb_0.5": 0.587,
+        "w_npb_0.75": 0.5163
       },
-      "F_midpoint_for_ranking_only": 0.0953,
-      "pa_2025": 597,
+      "F_midpoint_for_ranking_only": 0.1703,
+      "pa_2025": 573,
       "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 32.1,
-      "S_std": -0.1865,
-      "N_std": 0.3771,
-      "S_pct": 0.5,
-      "N_pct": 0.6413
+      "h2f_z": -0.6596907609126189,
+      "npb_plus_top_speed_kmh": 31.5,
+      "S_std": 0.4374,
+      "N_std": -0.0968,
+      "S_pct": 0.7283,
+      "N_pct": 0.4457
     },
     {
-      "player": "外崎 修汰",
-      "player_id": "41245130",
-      "S_stat_z": -0.1795,
-      "S_reliability": 0.8925,
-      "N_npb_top_speed_z": 0.5493,
+      "player": "細川 成也",
+      "player_id": "31835134",
+      "S_stat_z": -0.3132,
+      "S_reliability": 0.8954,
+      "N_npb_top_speed_z": 0.8687,
       "N_reliability": null,
-      "N_exposure_runs": 9,
+      "N_exposure_runs": 37,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.1698,
-        "w_npb_0.5": 0.0651,
-        "w_npb_0.75": 0.3001
+        "w_npb_0.25": -0.236,
+        "w_npb_0.5": 0.1263,
+        "w_npb_0.75": 0.4887
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.4864,
-        "w_npb_0.5": 0.5489,
-        "w_npb_0.75": 0.6114
+        "w_npb_0.25": 0.4076,
+        "w_npb_0.5": 0.5326,
+        "w_npb_0.75": 0.6576
       },
-      "F_midpoint_for_ranking_only": 0.0651,
-      "pa_2025": 415,
+      "F_midpoint_for_ranking_only": 0.1263,
+      "pa_2025": 428,
       "npb_2026_only": true,
-      "h2f_z": -1.260927910098804,
-      "npb_plus_top_speed_kmh": 32.3,
-      "S_std": -0.4048,
-      "N_std": 0.5351,
-      "S_pct": 0.4239,
-      "N_pct": 0.6739
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 32.7,
+      "S_std": -0.5983,
+      "N_std": 0.851,
+      "S_pct": 0.2826,
+      "N_pct": 0.7826
     },
     {
       "player": "宗 佑磨",
       "player_id": "11815130",
-      "S_stat_z": -0.0636,
+      "S_stat_z": 0.0207,
       "S_reliability": 0.8858,
       "N_npb_top_speed_z": 0.2299,
       "N_reliability": null,
       "N_exposure_runs": 41,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.0992,
-        "w_npb_0.5": 0.0069,
-        "w_npb_0.75": 0.113
+        "w_npb_0.25": 0.0322,
+        "w_npb_0.5": 0.0945,
+        "w_npb_0.75": 0.1568
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.5082,
-        "w_npb_0.5": 0.538,
-        "w_npb_0.75": 0.5679
+        "w_npb_0.25": 0.5489,
+        "w_npb_0.5": 0.5652,
+        "w_npb_0.75": 0.5815
       },
-      "F_midpoint_for_ranking_only": 0.0069,
+      "F_midpoint_for_ranking_only": 0.0945,
       "pa_2025": 388,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.9,
-      "S_std": -0.2052,
+      "S_std": -0.0301,
       "N_std": 0.2191,
-      "S_pct": 0.4783,
+      "S_pct": 0.5326,
       "N_pct": 0.5978
     },
     {
-      "player": "柳田 悠岐",
-      "player_id": "31835133",
-      "S_stat_z": -0.1799,
-      "S_reliability": 0.6094,
+      "player": "佐藤 輝明",
+      "player_id": "41045153",
+      "S_stat_z": -0.0825,
+      "S_reliability": 0.9227,
       "N_npb_top_speed_z": 0.3896,
       "N_reliability": null,
-      "N_exposure_runs": 20,
+      "N_exposure_runs": 49,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.2098,
-        "w_npb_0.5": -0.0142,
-        "w_npb_0.75": 0.1814
+        "w_npb_0.25": -0.06,
+        "w_npb_0.5": 0.0857,
+        "w_npb_0.75": 0.2314
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.5109,
+        "w_npb_0.5": 0.5543,
+        "w_npb_0.75": 0.5978
+      },
+      "F_midpoint_for_ranking_only": 0.0857,
+      "pa_2025": 597,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 32.1,
+      "S_std": -0.2057,
+      "N_std": 0.3771,
+      "S_pct": 0.4674,
+      "N_pct": 0.6413
+    },
+    {
+      "player": "外崎 修汰",
+      "player_id": "41245130",
+      "S_stat_z": -0.2227,
+      "S_reliability": 0.8925,
+      "N_npb_top_speed_z": 0.5493,
+      "N_reliability": null,
+      "N_exposure_runs": 9,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.1995,
+        "w_npb_0.5": 0.0454,
+        "w_npb_0.75": 0.2902
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.4701,
-        "w_npb_0.5": 0.5272,
-        "w_npb_0.75": 0.5842
+        "w_npb_0.5": 0.538,
+        "w_npb_0.75": 0.606
       },
-      "F_midpoint_for_ranking_only": -0.0142,
-      "pa_2025": 78,
+      "F_midpoint_for_ranking_only": 0.0454,
+      "pa_2025": 415,
       "npb_2026_only": true,
-      "h2f_z": -0.13360825537470855,
-      "npb_plus_top_speed_kmh": 32.1,
-      "S_std": -0.4055,
-      "N_std": 0.3771,
-      "S_pct": 0.413,
-      "N_pct": 0.6413
+      "h2f_z": -1.260927910098804,
+      "npb_plus_top_speed_kmh": 32.3,
+      "S_std": -0.4443,
+      "N_std": 0.5351,
+      "S_pct": 0.4022,
+      "N_pct": 0.6739
     },
     {
       "player": "柳町 達",
       "player_id": "73175151",
-      "S_stat_z": 0.079,
+      "S_stat_z": 0.0874,
       "S_reliability": 0.9118,
       "N_npb_top_speed_z": -0.0894,
       "N_reliability": null,
       "N_exposure_runs": 21,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": 0.006,
-        "w_npb_0.5": -0.0282,
-        "w_npb_0.75": -0.0625
+        "w_npb_0.25": 0.0384,
+        "w_npb_0.5": -0.0067,
+        "w_npb_0.75": -0.0517
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.5516,
-        "w_npb_0.5": 0.5163,
-        "w_npb_0.75": 0.481
+        "w_npb_0.25": 0.5435,
+        "w_npb_0.5": 0.5109,
+        "w_npb_0.75": 0.4783
       },
-      "F_midpoint_for_ranking_only": -0.0282,
+      "F_midpoint_for_ranking_only": -0.0067,
       "pa_2025": 517,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.5,
-      "S_std": 0.0403,
+      "S_std": 0.0834,
       "N_std": -0.0968,
-      "S_pct": 0.587,
+      "S_pct": 0.5761,
       "N_pct": 0.4457
     },
     {
-      "player": "松本 剛",
-      "player_id": "21625135",
-      "S_stat_z": 0.0196,
-      "S_reliability": 0.7872,
-      "N_npb_top_speed_z": -0.1693,
+      "player": "柳田 悠岐",
+      "player_id": "31835133",
+      "S_stat_z": -0.2343,
+      "S_reliability": 0.6094,
+      "N_npb_top_speed_z": 0.3896,
       "N_reliability": null,
-      "N_exposure_runs": 34,
+      "N_exposure_runs": 20,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.0904,
-        "w_npb_0.5": -0.1189,
-        "w_npb_0.75": -0.1474
+        "w_npb_0.25": -0.2538,
+        "w_npb_0.5": -0.0435,
+        "w_npb_0.75": 0.1668
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.5109,
-        "w_npb_0.5": 0.4783,
-        "w_npb_0.75": 0.4457
+        "w_npb_0.25": 0.4457,
+        "w_npb_0.5": 0.5109,
+        "w_npb_0.75": 0.5761
       },
-      "F_midpoint_for_ranking_only": -0.1189,
-      "pa_2025": 185,
+      "F_midpoint_for_ranking_only": -0.0435,
+      "pa_2025": 78,
       "npb_2026_only": true,
-      "h2f_z": 0.16701031921838402,
-      "npb_plus_top_speed_kmh": 31.4,
-      "S_std": -0.062,
-      "N_std": -0.1758,
-      "S_pct": 0.5435,
-      "N_pct": 0.413
+      "h2f_z": -0.13360825537470855,
+      "npb_plus_top_speed_kmh": 32.1,
+      "S_std": -0.4641,
+      "N_std": 0.3771,
+      "S_pct": 0.3804,
+      "N_pct": 0.6413
     },
     {
-      "player": "西野 真弘",
-      "player_id": "91495130",
-      "S_stat_z": -0.1197,
-      "S_reliability": 0.8344,
+      "player": "佐藤 都志也",
+      "player_id": "71075151",
+      "S_stat_z": 0.0988,
+      "S_reliability": 0.8175,
+      "N_npb_top_speed_z": -0.2491,
+      "N_reliability": null,
+      "N_exposure_runs": 26,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": 0.0134,
+        "w_npb_0.5": -0.076,
+        "w_npb_0.75": -0.1654
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.538,
+        "w_npb_0.5": 0.4891,
+        "w_npb_0.75": 0.4402
+      },
+      "F_midpoint_for_ranking_only": -0.076,
+      "pa_2025": 224,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 31.3,
+      "S_std": 0.1028,
+      "N_std": -0.2548,
+      "S_pct": 0.587,
+      "N_pct": 0.3913
+    },
+    {
+      "player": "長岡 秀樹",
+      "player_id": "51455151",
+      "S_stat_z": -0.1151,
+      "S_reliability": 0.8392,
       "N_npb_top_speed_z": -0.0096,
       "N_reliability": null,
-      "N_exposure_runs": 15,
+      "N_exposure_runs": 55,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.2308,
-        "w_npb_0.5": -0.1598,
-        "w_npb_0.75": -0.0888
+        "w_npb_0.25": -0.2004,
+        "w_npb_0.5": -0.1395,
+        "w_npb_0.75": -0.0787
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.4511,
         "w_npb_0.5": 0.4565,
         "w_npb_0.75": 0.462
       },
-      "F_midpoint_for_ranking_only": -0.1598,
-      "pa_2025": 252,
+      "F_midpoint_for_ranking_only": -0.1395,
+      "pa_2025": 261,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.6,
-      "S_std": -0.3018,
+      "S_std": -0.2612,
       "N_std": -0.0179,
       "S_pct": 0.4457,
       "N_pct": 0.4674
+    },
+    {
+      "player": "牧 秀悟",
+      "player_id": "13115153",
+      "S_stat_z": -0.1217,
+      "S_reliability": 0.8866,
+      "N_npb_top_speed_z": -0.0096,
+      "N_reliability": null,
+      "N_exposure_runs": 36,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.2088,
+        "w_npb_0.5": -0.1451,
+        "w_npb_0.75": -0.0815
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.4429,
+        "w_npb_0.5": 0.4511,
+        "w_npb_0.75": 0.4592
+      },
+      "F_midpoint_for_ranking_only": -0.1451,
+      "pa_2025": 391,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 31.6,
+      "S_std": -0.2724,
+      "N_std": -0.0179,
+      "S_pct": 0.4348,
+      "N_pct": 0.4674
+    },
+    {
+      "player": "松本 剛",
+      "player_id": "21625135",
+      "S_stat_z": -0.0377,
+      "S_reliability": 0.7872,
+      "N_npb_top_speed_z": -0.1693,
+      "N_reliability": null,
+      "N_exposure_runs": 34,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.1411,
+        "w_npb_0.5": -0.1527,
+        "w_npb_0.75": -0.1643
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.4946,
+        "w_npb_0.5": 0.4674,
+        "w_npb_0.75": 0.4402
+      },
+      "F_midpoint_for_ranking_only": -0.1527,
+      "pa_2025": 185,
+      "npb_2026_only": true,
+      "h2f_z": 0.16701031921838402,
+      "npb_plus_top_speed_kmh": 31.4,
+      "S_std": -0.1295,
+      "N_std": -0.1758,
+      "S_pct": 0.5217,
+      "N_pct": 0.413
     },
     {
       "player": "ファビアン",
@@ -1525,172 +1581,116 @@
       "F_fallback": "N_ONLY_STANDARDIZED"
     },
     {
-      "player": "佐藤 都志也",
-      "player_id": "71075151",
-      "S_stat_z": -0.0207,
-      "S_reliability": 0.8175,
-      "N_npb_top_speed_z": -0.2491,
+      "player": "京田 陽太",
+      "player_id": "81585134",
+      "S_stat_z": 0.0548,
+      "S_reliability": 0.8077,
+      "N_npb_top_speed_z": -0.4088,
       "N_reliability": null,
-      "N_exposure_runs": 26,
+      "N_exposure_runs": 19,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.1622,
-        "w_npb_0.5": -0.1931,
-        "w_npb_0.75": -0.2239
+        "w_npb_0.25": -0.0822,
+        "w_npb_0.5": -0.1924,
+        "w_npb_0.75": -0.3026
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.481,
-        "w_npb_0.5": 0.4511,
-        "w_npb_0.75": 0.4212
+        "w_npb_0.25": 0.4891,
+        "w_npb_0.5": 0.4348,
+        "w_npb_0.75": 0.3804
       },
-      "F_midpoint_for_ranking_only": -0.1931,
-      "pa_2025": 224,
+      "F_midpoint_for_ranking_only": -0.1924,
+      "pa_2025": 210,
       "npb_2026_only": true,
       "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31.3,
-      "S_std": -0.1314,
-      "N_std": -0.2548,
-      "S_pct": 0.5109,
-      "N_pct": 0.3913
-    },
-    {
-      "player": "牧 秀悟",
-      "player_id": "13115153",
-      "S_stat_z": -0.171,
-      "S_reliability": 0.8866,
-      "N_npb_top_speed_z": -0.0096,
-      "N_reliability": null,
-      "N_exposure_runs": 36,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.2971,
-        "w_npb_0.5": -0.204,
-        "w_npb_0.75": -0.1109
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.4429,
-        "w_npb_0.5": 0.4511,
-        "w_npb_0.75": 0.4592
-      },
-      "F_midpoint_for_ranking_only": -0.204,
-      "pa_2025": 391,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31.6,
-      "S_std": -0.3902,
-      "N_std": -0.0179,
-      "S_pct": 0.4348,
-      "N_pct": 0.4674
+      "npb_plus_top_speed_kmh": 31.1,
+      "S_std": 0.0279,
+      "N_std": -0.4128,
+      "S_pct": 0.5435,
+      "N_pct": 0.3261
     },
     {
       "player": "清宮 幸太郎",
       "player_id": "41545136",
-      "S_stat_z": -0.2214,
+      "S_stat_z": -0.2344,
       "S_reliability": 0.9203,
       "N_npb_top_speed_z": 0.0703,
       "N_reliability": null,
       "N_exposure_runs": 42,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.3424,
-        "w_npb_0.5": -0.2079,
-        "w_npb_0.75": -0.0733
+        "w_npb_0.25": -0.3329,
+        "w_npb_0.5": -0.2015,
+        "w_npb_0.75": -0.0702
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.4049,
         "w_npb_0.5": 0.4402,
         "w_npb_0.75": 0.4755
       },
-      "F_midpoint_for_ranking_only": -0.2079,
+      "F_midpoint_for_ranking_only": -0.2015,
       "pa_2025": 577,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.7,
-      "S_std": -0.4769,
+      "S_std": -0.4642,
       "N_std": 0.0612,
       "S_pct": 0.3696,
       "N_pct": 0.5109
     },
     {
-      "player": "土田 龍空",
-      "player_id": "51455153",
-      "S_stat_z": 0.006,
-      "S_reliability": 0.5146,
-      "N_npb_top_speed_z": -0.329,
+      "player": "山口 航輝",
+      "player_id": "91895138",
+      "S_stat_z": -0.3549,
+      "S_reliability": 0.6914,
+      "N_npb_top_speed_z": 0.2299,
       "N_reliability": null,
-      "N_exposure_runs": 3,
+      "N_exposure_runs": 17,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.1475,
-        "w_npb_0.5": -0.2096,
-        "w_npb_0.75": -0.2717
+        "w_npb_0.25": -0.4472,
+        "w_npb_0.5": -0.2251,
+        "w_npb_0.75": -0.003
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.481,
-        "w_npb_0.5": 0.4402,
-        "w_npb_0.75": 0.3995
+        "w_npb_0.25": 0.337,
+        "w_npb_0.5": 0.4239,
+        "w_npb_0.75": 0.5109
       },
-      "F_midpoint_for_ranking_only": -0.2096,
-      "pa_2025": 53,
+      "F_midpoint_for_ranking_only": -0.2251,
+      "pa_2025": 112,
       "npb_2026_only": true,
       "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31.2,
-      "S_std": -0.0854,
-      "N_std": -0.3338,
-      "S_pct": 0.5217,
-      "N_pct": 0.3587
+      "npb_plus_top_speed_kmh": 31.9,
+      "S_std": -0.6693,
+      "N_std": 0.2191,
+      "S_pct": 0.25,
+      "N_pct": 0.5978
     },
     {
-      "player": "長岡 秀樹",
-      "player_id": "51455151",
-      "S_stat_z": -0.1817,
-      "S_reliability": 0.8392,
+      "player": "西野 真弘",
+      "player_id": "91495130",
+      "S_stat_z": -0.2253,
+      "S_reliability": 0.8344,
       "N_npb_top_speed_z": -0.0096,
       "N_reliability": null,
-      "N_exposure_runs": 55,
+      "N_exposure_runs": 15,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.3109,
-        "w_npb_0.5": -0.2132,
-        "w_npb_0.75": -0.1155
+        "w_npb_0.25": -0.341,
+        "w_npb_0.5": -0.2333,
+        "w_npb_0.75": -0.1256
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.4103,
         "w_npb_0.5": 0.4293,
         "w_npb_0.75": 0.4484
       },
-      "F_midpoint_for_ranking_only": -0.2132,
-      "pa_2025": 261,
+      "F_midpoint_for_ranking_only": -0.2333,
+      "pa_2025": 252,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.6,
-      "S_std": -0.4086,
+      "S_std": -0.4487,
       "N_std": -0.0179,
       "S_pct": 0.3913,
       "N_pct": 0.4674
-    },
-    {
-      "player": "京田 陽太",
-      "player_id": "81585134",
-      "S_stat_z": 0.0192,
-      "S_reliability": 0.8077,
-      "N_npb_top_speed_z": -0.4088,
-      "N_reliability": null,
-      "N_exposure_runs": 19,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.1502,
-        "w_npb_0.5": -0.2377,
-        "w_npb_0.75": -0.3252
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.481,
-        "w_npb_0.5": 0.4293,
-        "w_npb_0.75": 0.3777
-      },
-      "F_midpoint_for_ranking_only": -0.2377,
-      "pa_2025": 210,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31.1,
-      "S_std": -0.0627,
-      "N_std": -0.4128,
-      "S_pct": 0.5326,
-      "N_pct": 0.3261
     },
     {
       "player": "カリステ",
@@ -1710,200 +1710,172 @@
       "F_fallback": "N_ONLY_STANDARDIZED"
     },
     {
-      "player": "山口 航輝",
-      "player_id": "91895138",
-      "S_stat_z": -0.3994,
-      "S_reliability": 0.6914,
-      "N_npb_top_speed_z": 0.2299,
-      "N_reliability": null,
-      "N_exposure_runs": 17,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.5328,
-        "w_npb_0.5": -0.2822,
-        "w_npb_0.75": -0.0316
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2962,
-        "w_npb_0.5": 0.3967,
-        "w_npb_0.75": 0.4973
-      },
-      "F_midpoint_for_ranking_only": -0.2822,
-      "pa_2025": 112,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31.9,
-      "S_std": -0.7835,
-      "N_std": 0.2191,
-      "S_pct": 0.1957,
-      "N_pct": 0.5978
-    },
-    {
-      "player": "太田 椋",
-      "player_id": "91395138",
-      "S_stat_z": -0.3607,
-      "S_reliability": 0.9084,
-      "N_npb_top_speed_z": 0.0703,
-      "N_reliability": null,
-      "N_exposure_runs": 30,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.5223,
-        "w_npb_0.5": -0.3278,
-        "w_npb_0.75": -0.1333
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.3152,
-        "w_npb_0.5": 0.3804,
-        "w_npb_0.75": 0.4457
-      },
-      "F_midpoint_for_ranking_only": -0.3278,
-      "pa_2025": 496,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31.7,
-      "S_std": -0.7168,
-      "N_std": 0.0612,
-      "S_pct": 0.25,
-      "N_pct": 0.5109
-    },
-    {
       "player": "西川 龍馬",
       "player_id": "71475132",
-      "S_stat_z": -0.0939,
+      "S_stat_z": -0.0678,
       "S_reliability": 0.8918,
       "N_npb_top_speed_z": -0.4088,
       "N_reliability": null,
       "N_exposure_runs": 57,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.2962,
-        "w_npb_0.5": -0.3351,
-        "w_npb_0.75": -0.3739
+        "w_npb_0.25": -0.2387,
+        "w_npb_0.5": -0.2967,
+        "w_npb_0.75": -0.3548
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.4321,
-        "w_npb_0.5": 0.3967,
-        "w_npb_0.75": 0.3614
+        "w_npb_0.25": 0.4565,
+        "w_npb_0.5": 0.413,
+        "w_npb_0.75": 0.3696
       },
-      "F_midpoint_for_ranking_only": -0.3351,
+      "F_midpoint_for_ranking_only": -0.2967,
       "pa_2025": 412,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.1,
-      "S_std": -0.2574,
+      "S_std": -0.1807,
       "N_std": -0.4128,
-      "S_pct": 0.4674,
+      "S_pct": 0.5,
       "N_pct": 0.3261
     },
     {
-      "player": "野村 佑希",
-      "player_id": "31435138",
-      "S_stat_z": -0.39,
-      "S_reliability": 0.8807,
-      "N_npb_top_speed_z": 0.0703,
+      "player": "山本 祐大",
+      "player_id": "23125136",
+      "S_stat_z": -0.0736,
+      "S_reliability": 0.8731,
+      "N_npb_top_speed_z": -0.4886,
       "N_reliability": null,
       "N_exposure_runs": 25,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.5602,
-        "w_npb_0.5": -0.353,
-        "w_npb_0.75": -0.1459
+        "w_npb_0.25": -0.2659,
+        "w_npb_0.5": -0.3411,
+        "w_npb_0.75": -0.4164
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2826,
-        "w_npb_0.5": 0.3587,
-        "w_npb_0.75": 0.4348
+        "w_npb_0.25": 0.4457,
+        "w_npb_0.5": 0.4022,
+        "w_npb_0.75": 0.3587
       },
-      "F_midpoint_for_ranking_only": -0.353,
-      "pa_2025": 369,
+      "F_midpoint_for_ranking_only": -0.3411,
+      "pa_2025": 344,
       "npb_2026_only": true,
       "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31.7,
-      "S_std": -0.7673,
-      "N_std": 0.0612,
-      "S_pct": 0.2065,
-      "N_pct": 0.5109
+      "npb_plus_top_speed_kmh": 31,
+      "S_std": -0.1906,
+      "N_std": -0.4917,
+      "S_pct": 0.4891,
+      "N_pct": 0.3152
     },
     {
       "player": "若月 健矢",
       "player_id": "41645139",
-      "S_stat_z": 0.0449,
+      "S_stat_z": 0.0612,
       "S_reliability": 0.8889,
       "N_npb_top_speed_z": -0.7282,
       "N_reliability": null,
       "N_exposure_runs": 20,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.196,
-        "w_npb_0.5": -0.3736,
-        "w_npb_0.75": -0.5512
+        "w_npb_0.25": -0.1531,
+        "w_npb_0.5": -0.345,
+        "w_npb_0.75": -0.5369
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.4837,
         "w_npb_0.5": 0.413,
         "w_npb_0.75": 0.3424
       },
-      "F_midpoint_for_ranking_only": -0.3736,
+      "F_midpoint_for_ranking_only": -0.345,
       "pa_2025": 400,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30.7,
-      "S_std": -0.0184,
+      "S_std": 0.0388,
       "N_std": -0.7287,
       "S_pct": 0.5543,
       "N_pct": 0.2717
     },
     {
-      "player": "山本 祐大",
-      "player_id": "23125136",
-      "S_stat_z": -0.1078,
-      "S_reliability": 0.8731,
-      "N_npb_top_speed_z": -0.4886,
-      "N_reliability": null,
-      "N_exposure_runs": 25,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.3339,
-        "w_npb_0.5": -0.3865,
-        "w_npb_0.75": -0.4391
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.4212,
-        "w_npb_0.5": 0.3859,
-        "w_npb_0.75": 0.3505
-      },
-      "F_midpoint_for_ranking_only": -0.3865,
-      "pa_2025": 344,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31,
-      "S_std": -0.2813,
-      "N_std": -0.4917,
-      "S_pct": 0.4565,
-      "N_pct": 0.3152
-    },
-    {
       "player": "栗原 陵矢",
       "player_id": "01705130",
-      "S_stat_z": -0.2465,
+      "S_stat_z": -0.2434,
       "S_reliability": 0.8691,
       "N_npb_top_speed_z": -0.2491,
       "N_reliability": null,
       "N_exposure_runs": 40,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.4538,
-        "w_npb_0.5": -0.3875,
-        "w_npb_0.75": -0.3211
+        "w_npb_0.25": -0.4234,
+        "w_npb_0.5": -0.3672,
+        "w_npb_0.75": -0.311
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.3505,
-        "w_npb_0.5": 0.3641,
-        "w_npb_0.75": 0.3777
+        "w_npb_0.25": 0.3668,
+        "w_npb_0.5": 0.375,
+        "w_npb_0.75": 0.3832
       },
-      "F_midpoint_for_ranking_only": -0.3875,
+      "F_midpoint_for_ranking_only": -0.3672,
       "pa_2025": 332,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.3,
-      "S_std": -0.5202,
+      "S_std": -0.4796,
       "N_std": -0.2548,
-      "S_pct": 0.337,
+      "S_pct": 0.3587,
       "N_pct": 0.3913
+    },
+    {
+      "player": "太田 椋",
+      "player_id": "91395138",
+      "S_stat_z": -0.4436,
+      "S_reliability": 0.9084,
+      "N_npb_top_speed_z": 0.0703,
+      "N_reliability": null,
+      "N_exposure_runs": 30,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.5999,
+        "w_npb_0.5": -0.3795,
+        "w_npb_0.75": -0.1592
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.2663,
+        "w_npb_0.5": 0.3478,
+        "w_npb_0.75": 0.4293
+      },
+      "F_midpoint_for_ranking_only": -0.3795,
+      "pa_2025": 496,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 31.7,
+      "S_std": -0.8203,
+      "N_std": 0.0612,
+      "S_pct": 0.1848,
+      "N_pct": 0.5109
+    },
+    {
+      "player": "野村 佑希",
+      "player_id": "31435138",
+      "S_stat_z": -0.4479,
+      "S_reliability": 0.8807,
+      "N_npb_top_speed_z": 0.0703,
+      "N_reliability": null,
+      "N_exposure_runs": 25,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.6054,
+        "w_npb_0.5": -0.3832,
+        "w_npb_0.75": -0.161
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.2582,
+        "w_npb_0.5": 0.3424,
+        "w_npb_0.75": 0.4266
+      },
+      "F_midpoint_for_ranking_only": -0.3832,
+      "pa_2025": 369,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 31.7,
+      "S_std": -0.8276,
+      "N_std": 0.0612,
+      "S_pct": 0.1739,
+      "N_pct": 0.5109
     },
     {
       "player": "ポランコ",
@@ -1923,172 +1895,228 @@
       "F_fallback": "N_ONLY_STANDARDIZED"
     },
     {
+      "player": "土田 龍空",
+      "player_id": "51455153",
+      "S_stat_z": -0.2508,
+      "S_reliability": 0.5146,
+      "N_npb_top_speed_z": -0.329,
+      "N_reliability": null,
+      "N_exposure_runs": 3,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.4526,
+        "w_npb_0.5": -0.413,
+        "w_npb_0.75": -0.3734
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.3424,
+        "w_npb_0.5": 0.3478,
+        "w_npb_0.75": 0.3533
+      },
+      "F_midpoint_for_ranking_only": -0.413,
+      "pa_2025": 53,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 31.2,
+      "S_std": -0.4921,
+      "N_std": -0.3338,
+      "S_pct": 0.337,
+      "N_pct": 0.3587
+    },
+    {
       "player": "森 友哉",
       "player_id": "91495139",
-      "S_stat_z": -0.2777,
+      "S_stat_z": -0.3143,
       "S_reliability": 0.7925,
       "N_npb_top_speed_z": -0.329,
       "N_reliability": null,
       "N_exposure_runs": 25,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.5139,
-        "w_npb_0.5": -0.4539,
-        "w_npb_0.75": -0.3938
+        "w_npb_0.25": -0.5336,
+        "w_npb_0.5": -0.467,
+        "w_npb_0.75": -0.4004
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.3261,
-        "w_npb_0.5": 0.337,
-        "w_npb_0.75": 0.3478
+        "w_npb_0.25": 0.2935,
+        "w_npb_0.5": 0.3152,
+        "w_npb_0.75": 0.337
       },
-      "F_midpoint_for_ranking_only": -0.4539,
+      "F_midpoint_for_ranking_only": -0.467,
       "pa_2025": 191,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.2,
-      "S_std": -0.5739,
+      "S_std": -0.6002,
       "N_std": -0.3338,
-      "S_pct": 0.3152,
+      "S_pct": 0.2717,
       "N_pct": 0.3587
     },
     {
       "player": "正木 智也",
       "player_id": "81885155",
-      "S_stat_z": -0.325,
+      "S_stat_z": -0.3246,
       "S_reliability": 0.5652,
       "N_npb_top_speed_z": -0.4088,
       "N_reliability": null,
       "N_exposure_runs": 31,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.5947,
-        "w_npb_0.5": -0.5341,
-        "w_npb_0.75": -0.4734
+        "w_npb_0.25": -0.5665,
+        "w_npb_0.5": -0.5153,
+        "w_npb_0.75": -0.464
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.3016,
-        "w_npb_0.5": 0.3098,
-        "w_npb_0.75": 0.3179
+        "w_npb_0.25": 0.2772,
+        "w_npb_0.5": 0.2935,
+        "w_npb_0.75": 0.3098
       },
-      "F_midpoint_for_ranking_only": -0.5341,
+      "F_midpoint_for_ranking_only": -0.5153,
       "pa_2025": 65,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.1,
-      "S_std": -0.6553,
+      "S_std": -0.6177,
       "N_std": -0.4128,
-      "S_pct": 0.2935,
+      "S_pct": 0.2609,
       "N_pct": 0.3261
     },
     {
       "player": "森下 翔太",
       "player_id": "43145157",
-      "S_stat_z": -0.0603,
+      "S_stat_z": -0.0504,
       "S_reliability": 0.9254,
       "N_npb_top_speed_z": -0.8879,
       "N_reliability": null,
       "N_exposure_runs": 35,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.3713,
-        "w_npb_0.5": -0.5431,
-        "w_npb_0.75": -0.7149
+        "w_npb_0.25": -0.335,
+        "w_npb_0.5": -0.5189,
+        "w_npb_0.75": -0.7028
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.4103,
-        "w_npb_0.5": 0.3315,
-        "w_npb_0.75": 0.2527
+        "w_npb_0.25": 0.4266,
+        "w_npb_0.5": 0.3424,
+        "w_npb_0.75": 0.2582
       },
-      "F_midpoint_for_ranking_only": -0.5431,
+      "F_midpoint_for_ranking_only": -0.5189,
       "pa_2025": 620,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30.5,
-      "S_std": -0.1995,
+      "S_std": -0.1511,
       "N_std": -0.8867,
-      "S_pct": 0.4891,
+      "S_pct": 0.5109,
       "N_pct": 0.1739
-    },
-    {
-      "player": "丸 佳浩",
-      "player_id": "21425116",
-      "S_stat_z": -0.4739,
-      "S_reliability": 0.8807,
-      "N_npb_top_speed_z": -0.1693,
-      "N_reliability": null,
-      "N_exposure_runs": 8,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.7278,
-        "w_npb_0.5": -0.5438,
-        "w_npb_0.75": -0.3598
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2255,
-        "w_npb_0.5": 0.288,
-        "w_npb_0.75": 0.3505
-      },
-      "F_midpoint_for_ranking_only": -0.5438,
-      "pa_2025": 369,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 31.4,
-      "S_std": -0.9117,
-      "N_std": -0.1758,
-      "S_pct": 0.163,
-      "N_pct": 0.413
     },
     {
       "player": "近藤 健介",
       "player_id": "41745135",
-      "S_stat_z": -0.4147,
+      "S_stat_z": -0.3839,
       "S_reliability": 0.8599,
       "N_npb_top_speed_z": -0.329,
       "N_reliability": null,
       "N_exposure_runs": 37,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.6908,
-        "w_npb_0.5": -0.5718,
-        "w_npb_0.75": -0.4528
+        "w_npb_0.25": -0.6225,
+        "w_npb_0.5": -0.5262,
+        "w_npb_0.75": -0.43
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2201,
-        "w_npb_0.5": 0.2663,
-        "w_npb_0.75": 0.3125
+        "w_npb_0.25": 0.269,
+        "w_npb_0.5": 0.2989,
+        "w_npb_0.75": 0.3288
       },
-      "F_midpoint_for_ranking_only": -0.5718,
+      "F_midpoint_for_ranking_only": -0.5262,
       "pa_2025": 307,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 31.2,
-      "S_std": -0.8098,
+      "S_std": -0.7187,
       "N_std": -0.3338,
-      "S_pct": 0.1739,
+      "S_pct": 0.2391,
       "N_pct": 0.3587
+    },
+    {
+      "player": "丸 佳浩",
+      "player_id": "21425116",
+      "S_stat_z": -0.5753,
+      "S_reliability": 0.8807,
+      "N_npb_top_speed_z": -0.1693,
+      "N_reliability": null,
+      "N_exposure_runs": 8,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.8273,
+        "w_npb_0.5": -0.6101,
+        "w_npb_0.75": -0.393
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.2092,
+        "w_npb_0.5": 0.2772,
+        "w_npb_0.75": 0.3451
+      },
+      "F_midpoint_for_ranking_only": -0.6101,
+      "pa_2025": 369,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 31.4,
+      "S_std": -1.0444,
+      "N_std": -0.1758,
+      "S_pct": 0.1413,
+      "N_pct": 0.413
     },
     {
       "player": "古賀 優大",
       "player_id": "01705134",
-      "S_stat_z": -0.8761,
+      "S_stat_z": -0.9193,
       "S_reliability": 0.8534,
       "N_npb_top_speed_z": 0.3896,
       "N_reliability": null,
       "N_exposure_runs": 27,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.109,
-        "w_npb_0.5": -0.6136,
-        "w_npb_0.75": -0.1183
+        "w_npb_0.25": -1.1281,
+        "w_npb_0.5": -0.6264,
+        "w_npb_0.75": -0.1247
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.1685,
         "w_npb_0.5": 0.3261,
         "w_npb_0.75": 0.4837
       },
-      "F_midpoint_for_ranking_only": -0.6136,
+      "F_midpoint_for_ranking_only": -0.6264,
       "pa_2025": 291,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 32.1,
-      "S_std": -1.6043,
+      "S_std": -1.6298,
       "N_std": 0.3771,
       "S_pct": 0.0109,
       "N_pct": 0.6413
+    },
+    {
+      "player": "石川 昂弥",
+      "player_id": "91195151",
+      "S_stat_z": -0.2485,
+      "S_reliability": 0.6,
+      "N_npb_top_speed_z": -0.808,
+      "N_reliability": null,
+      "N_exposure_runs": 20,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.5681,
+        "w_npb_0.5": -0.648,
+        "w_npb_0.75": -0.7278
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.3152,
+        "w_npb_0.5": 0.2826,
+        "w_npb_0.75": 0.25
+      },
+      "F_midpoint_for_ranking_only": -0.648,
+      "pa_2025": 75,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 30.6,
+      "S_std": -0.4882,
+      "N_std": -0.8077,
+      "S_pct": 0.3478,
+      "N_pct": 0.2174
     },
     {
       "player": "サンタナ",
@@ -2108,393 +2136,365 @@
       "F_fallback": "N_ONLY_STANDARDIZED"
     },
     {
-      "player": "今宮 健太",
-      "player_id": "31335131",
-      "S_stat_z": -0.2223,
-      "S_reliability": 0.7845,
-      "N_npb_top_speed_z": -0.9677,
-      "N_reliability": null,
-      "N_exposure_runs": 15,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.6003,
-        "w_npb_0.5": -0.7221,
-        "w_npb_0.75": -0.8439
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.3071,
-        "w_npb_0.5": 0.2554,
-        "w_npb_0.75": 0.2038
-      },
-      "F_midpoint_for_ranking_only": -0.7221,
-      "pa_2025": 182,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 30.4,
-      "S_std": -0.4785,
-      "N_std": -0.9657,
-      "S_pct": 0.3587,
-      "N_pct": 0.1522
-    },
-    {
-      "player": "海野 隆司",
-      "player_id": "81385151",
-      "S_stat_z": -0.1808,
-      "S_reliability": 0.8489,
-      "N_npb_top_speed_z": -1.0475,
-      "N_reliability": null,
-      "N_exposure_runs": 25,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.5664,
-        "w_npb_0.5": -0.7258,
-        "w_npb_0.75": -0.8852
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.3315,
-        "w_npb_0.5": 0.2609,
-        "w_npb_0.75": 0.1902
-      },
-      "F_midpoint_for_ranking_only": -0.7258,
-      "pa_2025": 281,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 30.3,
-      "S_std": -0.407,
-      "N_std": -1.0446,
-      "S_pct": 0.4022,
-      "N_pct": 0.1196
-    },
-    {
-      "player": "坂倉 将吾",
-      "player_id": "11915134",
-      "S_stat_z": -0.3475,
-      "S_reliability": 0.8886,
-      "N_npb_top_speed_z": -0.808,
-      "N_reliability": null,
-      "N_exposure_runs": 38,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.7225,
-        "w_npb_0.5": -0.7509,
-        "w_npb_0.75": -0.7793
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2582,
-        "w_npb_0.5": 0.2446,
-        "w_npb_0.75": 0.231
-      },
-      "F_midpoint_for_ranking_only": -0.7509,
-      "pa_2025": 399,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 30.6,
-      "S_std": -0.6941,
-      "N_std": -0.8077,
-      "S_pct": 0.2717,
-      "N_pct": 0.2174
-    },
-    {
-      "player": "紅林 弘太郎",
-      "player_id": "91995151",
-      "S_stat_z": -0.4083,
-      "S_reliability": 0.8994,
-      "N_npb_top_speed_z": -0.7282,
-      "N_reliability": null,
-      "N_exposure_runs": 28,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.7813,
-        "w_npb_0.5": -0.7638,
-        "w_npb_0.75": -0.7463
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2065,
-        "w_npb_0.5": 0.2283,
-        "w_npb_0.75": 0.25
-      },
-      "F_midpoint_for_ranking_only": -0.7638,
-      "pa_2025": 447,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 30.7,
-      "S_std": -0.7988,
-      "N_std": -0.7287,
-      "S_pct": 0.1848,
-      "N_pct": 0.2717
-    },
-    {
-      "player": "石川 昂弥",
-      "player_id": "91195151",
-      "S_stat_z": -0.3664,
-      "S_reliability": 0.6,
-      "N_npb_top_speed_z": -0.808,
-      "N_reliability": null,
-      "N_exposure_runs": 20,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.7469,
-        "w_npb_0.5": -0.7672,
-        "w_npb_0.75": -0.7874
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2337,
-        "w_npb_0.5": 0.2283,
-        "w_npb_0.75": 0.2228
-      },
-      "F_midpoint_for_ranking_only": -0.7672,
-      "pa_2025": 75,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 30.6,
-      "S_std": -0.7266,
-      "N_std": -0.8077,
-      "S_pct": 0.2391,
-      "N_pct": 0.2174
-    },
-    {
-      "player": "太田 光",
-      "player_id": "71375138",
-      "S_stat_z": -0.3327,
-      "S_reliability": 0.8221,
-      "N_npb_top_speed_z": -0.8879,
-      "N_reliability": null,
-      "N_exposure_runs": 23,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.7231,
-        "w_npb_0.5": -0.7777,
-        "w_npb_0.75": -0.8322
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2554,
-        "w_npb_0.5": 0.2283,
-        "w_npb_0.75": 0.2011
-      },
-      "F_midpoint_for_ranking_only": -0.7777,
-      "pa_2025": 231,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 30.5,
-      "S_std": -0.6686,
-      "N_std": -0.8867,
-      "S_pct": 0.2826,
-      "N_pct": 0.1739
-    },
-    {
       "player": "梅野 隆太郎",
       "player_id": "21325139",
-      "S_stat_z": -0.3795,
+      "S_stat_z": -0.2869,
       "S_reliability": 0.7253,
       "N_npb_top_speed_z": -0.808,
       "N_reliability": null,
       "N_exposure_runs": 6,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.7638,
-        "w_npb_0.5": -0.7784,
-        "w_npb_0.75": -0.7931
+        "w_npb_0.25": -0.6171,
+        "w_npb_0.5": -0.6806,
+        "w_npb_0.75": -0.7442
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2174,
-        "w_npb_0.5": 0.2174,
-        "w_npb_0.75": 0.2174
+        "w_npb_0.25": 0.2745,
+        "w_npb_0.5": 0.2554,
+        "w_npb_0.75": 0.2364
       },
-      "F_midpoint_for_ranking_only": -0.7784,
+      "F_midpoint_for_ranking_only": -0.6806,
       "pa_2025": 132,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30.6,
-      "S_std": -0.7492,
+      "S_std": -0.5536,
       "N_std": -0.8077,
-      "S_pct": 0.2174,
+      "S_pct": 0.2935,
       "N_pct": 0.2174
+    },
+    {
+      "player": "海野 隆司",
+      "player_id": "81385151",
+      "S_stat_z": -0.1558,
+      "S_reliability": 0.8489,
+      "N_npb_top_speed_z": -1.0475,
+      "N_reliability": null,
+      "N_exposure_runs": 25,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.509,
+        "w_npb_0.5": -0.6875,
+        "w_npb_0.75": -0.8661
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.3478,
+        "w_npb_0.5": 0.2717,
+        "w_npb_0.75": 0.1957
+      },
+      "F_midpoint_for_ranking_only": -0.6875,
+      "pa_2025": 281,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 30.3,
+      "S_std": -0.3305,
+      "N_std": -1.0446,
+      "S_pct": 0.4239,
+      "N_pct": 0.1196
+    },
+    {
+      "player": "今宮 健太",
+      "player_id": "31335131",
+      "S_stat_z": -0.2637,
+      "S_reliability": 0.7845,
+      "N_npb_top_speed_z": -0.9677,
+      "N_reliability": null,
+      "N_exposure_runs": 15,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.627,
+        "w_npb_0.5": -0.7399,
+        "w_npb_0.75": -0.8528
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.2745,
+        "w_npb_0.5": 0.2337,
+        "w_npb_0.75": 0.1929
+      },
+      "F_midpoint_for_ranking_only": -0.7399,
+      "pa_2025": 182,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 30.4,
+      "S_std": -0.5141,
+      "N_std": -0.9657,
+      "S_pct": 0.3152,
+      "N_pct": 0.1522
+    },
+    {
+      "player": "紅林 弘太郎",
+      "player_id": "91995151",
+      "S_stat_z": -0.4143,
+      "S_reliability": 0.8994,
+      "N_npb_top_speed_z": -0.7282,
+      "N_reliability": null,
+      "N_exposure_runs": 28,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.76,
+        "w_npb_0.5": -0.7496,
+        "w_npb_0.75": -0.7392
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.2228,
+        "w_npb_0.5": 0.2391,
+        "w_npb_0.75": 0.2554
+      },
+      "F_midpoint_for_ranking_only": -0.7496,
+      "pa_2025": 447,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 30.7,
+      "S_std": -0.7704,
+      "N_std": -0.7287,
+      "S_pct": 0.2065,
+      "N_pct": 0.2717
     },
     {
       "player": "木浪 聖也",
       "player_id": "31735138",
-      "S_stat_z": -0.2125,
+      "S_stat_z": -0.1105,
       "S_reliability": 0.8024,
       "N_npb_top_speed_z": -1.2871,
       "N_reliability": null,
       "N_exposure_runs": 18,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.6666,
-        "w_npb_0.5": -0.8716,
-        "w_npb_0.75": -1.0767
+        "w_npb_0.25": -0.5104,
+        "w_npb_0.5": -0.7675,
+        "w_npb_0.75": -1.0246
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.3071,
-        "w_npb_0.5": 0.2337,
-        "w_npb_0.75": 0.1603
+        "w_npb_0.25": 0.3641,
+        "w_npb_0.5": 0.2717,
+        "w_npb_0.75": 0.1793
       },
-      "F_midpoint_for_ranking_only": -0.8716,
+      "F_midpoint_for_ranking_only": -0.7675,
       "pa_2025": 203,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30,
-      "S_std": -0.4616,
+      "S_std": -0.2534,
       "N_std": -1.2817,
-      "S_pct": 0.3804,
+      "S_pct": 0.4565,
       "N_pct": 0.087
     },
     {
       "player": "宮﨑 敏郎",
       "player_id": "51455137",
-      "S_stat_z": -0.3563,
+      "S_stat_z": -0.2563,
       "S_reliability": 0.8756,
       "N_npb_top_speed_z": -1.0475,
       "N_reliability": null,
       "N_exposure_runs": 31,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.7931,
-        "w_npb_0.5": -0.8769,
-        "w_npb_0.75": -0.9608
+        "w_npb_0.25": -0.6373,
+        "w_npb_0.5": -0.7731,
+        "w_npb_0.75": -0.9088
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2255,
-        "w_npb_0.5": 0.1902,
-        "w_npb_0.75": 0.1549
+        "w_npb_0.25": 0.2745,
+        "w_npb_0.5": 0.2228,
+        "w_npb_0.75": 0.1712
       },
-      "F_midpoint_for_ranking_only": -0.8769,
+      "F_midpoint_for_ranking_only": -0.7731,
       "pa_2025": 352,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30.3,
-      "S_std": -0.7092,
+      "S_std": -0.5015,
       "N_std": -1.0446,
-      "S_pct": 0.2609,
+      "S_pct": 0.3261,
       "N_pct": 0.1196
+    },
+    {
+      "player": "佐野 恵太",
+      "player_id": "91995134",
+      "S_stat_z": -0.4429,
+      "S_reliability": 0.9192,
+      "N_npb_top_speed_z": -0.808,
+      "N_reliability": null,
+      "N_exposure_runs": 57,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.8162,
+        "w_npb_0.5": -0.8134,
+        "w_npb_0.75": -0.8105
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.2011,
+        "w_npb_0.5": 0.2065,
+        "w_npb_0.75": 0.212
+      },
+      "F_midpoint_for_ranking_only": -0.8134,
+      "pa_2025": 569,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 30.6,
+      "S_std": -0.8191,
+      "N_std": -0.8077,
+      "S_pct": 0.1957,
+      "N_pct": 0.2174
+    },
+    {
+      "player": "太田 光",
+      "player_id": "71375138",
+      "S_stat_z": -0.4088,
+      "S_reliability": 0.8221,
+      "N_npb_top_speed_z": -0.8879,
+      "N_reliability": null,
+      "N_exposure_runs": 23,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.7925,
+        "w_npb_0.5": -0.8239,
+        "w_npb_0.75": -0.8553
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.2065,
+        "w_npb_0.5": 0.1957,
+        "w_npb_0.75": 0.1848
+      },
+      "F_midpoint_for_ranking_only": -0.8239,
+      "pa_2025": 231,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 30.5,
+      "S_std": -0.761,
+      "N_std": -0.8867,
+      "S_pct": 0.2174,
+      "N_pct": 0.1739
+    },
+    {
+      "player": "坂倉 将吾",
+      "player_id": "11915134",
+      "S_stat_z": -0.5068,
+      "S_reliability": 0.8886,
+      "N_npb_top_speed_z": -0.808,
+      "N_reliability": null,
+      "N_exposure_runs": 38,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -0.8978,
+        "w_npb_0.5": -0.8678,
+        "w_npb_0.75": -0.8377
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.1766,
+        "w_npb_0.5": 0.1902,
+        "w_npb_0.75": 0.2038
+      },
+      "F_midpoint_for_ranking_only": -0.8678,
+      "pa_2025": 399,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 30.6,
+      "S_std": -0.9278,
+      "N_std": -0.8077,
+      "S_pct": 0.163,
+      "N_pct": 0.2174
     },
     {
       "player": "渡邊 佳明",
       "player_id": "73175138",
-      "S_stat_z": -0.3715,
+      "S_stat_z": -0.3977,
       "S_reliability": 0.7685,
       "N_npb_top_speed_z": -1.0475,
       "N_reliability": null,
       "N_exposure_runs": 12,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.8127,
-        "w_npb_0.5": -0.89,
-        "w_npb_0.75": -0.9673
+        "w_npb_0.25": -0.8178,
+        "w_npb_0.5": -0.8934,
+        "w_npb_0.75": -0.969
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.2011,
         "w_npb_0.5": 0.1739,
         "w_npb_0.75": 0.1467
       },
-      "F_midpoint_for_ranking_only": -0.89,
+      "F_midpoint_for_ranking_only": -0.8934,
       "pa_2025": 166,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30.3,
-      "S_std": -0.7354,
+      "S_std": -0.7421,
       "N_std": -1.0446,
       "S_pct": 0.2283,
       "N_pct": 0.1196
     },
     {
-      "player": "佐野 恵太",
-      "player_id": "91995134",
-      "S_stat_z": -0.5174,
-      "S_reliability": 0.9192,
-      "N_npb_top_speed_z": -0.808,
-      "N_reliability": null,
-      "N_exposure_runs": 57,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.9419,
-        "w_npb_0.5": -0.8972,
-        "w_npb_0.75": -0.8524
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.1685,
-        "w_npb_0.5": 0.1848,
-        "w_npb_0.75": 0.2011
-      },
-      "F_midpoint_for_ranking_only": -0.8972,
-      "pa_2025": 569,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 30.6,
-      "S_std": -0.9866,
-      "N_std": -0.8077,
-      "S_pct": 0.1522,
-      "N_pct": 0.2174
-    },
-    {
       "player": "藤岡 裕大",
       "player_id": "41645136",
-      "S_stat_z": -0.6552,
+      "S_stat_z": -0.7406,
       "S_reliability": 0.8818,
       "N_npb_top_speed_z": -0.6483,
       "N_reliability": null,
       "N_exposure_runs": 3,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.0804,
-        "w_npb_0.5": -0.9368,
-        "w_npb_0.75": -0.7933
+        "w_npb_0.25": -1.1567,
+        "w_npb_0.5": -0.9877,
+        "w_npb_0.75": -0.8187
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.1332,
-        "w_npb_0.5": 0.1902,
-        "w_npb_0.75": 0.2473
+        "w_npb_0.25": 0.1168,
+        "w_npb_0.5": 0.1793,
+        "w_npb_0.75": 0.2418
       },
-      "F_midpoint_for_ranking_only": -0.9368,
+      "F_midpoint_for_ranking_only": -0.9877,
       "pa_2025": 373,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30.8,
-      "S_std": -1.2239,
+      "S_std": -1.3257,
       "N_std": -0.6497,
-      "S_pct": 0.0761,
+      "S_pct": 0.0543,
       "N_pct": 0.3043
     },
     {
       "player": "古賀 悠斗",
       "player_id": "81785155",
-      "S_stat_z": -0.61,
+      "S_stat_z": -0.66,
       "S_reliability": 0.8677,
       "N_npb_top_speed_z": -0.808,
       "N_reliability": null,
       "N_exposure_runs": 30,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.0615,
-        "w_npb_0.5": -0.9769,
-        "w_npb_0.75": -0.8923
+        "w_npb_0.25": -1.0933,
+        "w_npb_0.5": -0.9981,
+        "w_npb_0.75": -0.9029
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.144,
-        "w_npb_0.5": 0.1685,
-        "w_npb_0.75": 0.1929
+        "w_npb_0.25": 0.1522,
+        "w_npb_0.5": 0.1739,
+        "w_npb_0.75": 0.1957
       },
-      "F_midpoint_for_ranking_only": -0.9769,
+      "F_midpoint_for_ranking_only": -0.9981,
       "pa_2025": 328,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30.6,
-      "S_std": -1.1461,
+      "S_std": -1.1885,
       "N_std": -0.8077,
-      "S_pct": 0.1196,
+      "S_pct": 0.1304,
       "N_pct": 0.2174
     },
     {
       "player": "大山 悠輔",
       "player_id": "21325134",
-      "S_stat_z": -0.6112,
+      "S_stat_z": -0.6768,
       "S_reliability": 0.9215,
       "N_npb_top_speed_z": -0.8879,
       "N_reliability": null,
       "N_exposure_runs": 26,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.0828,
-        "w_npb_0.5": -1.0174,
-        "w_npb_0.75": -0.9521
+        "w_npb_0.25": -1.1345,
+        "w_npb_0.5": -1.0519,
+        "w_npb_0.75": -0.9693
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.125,
         "w_npb_0.5": 0.1413,
         "w_npb_0.75": 0.1576
       },
-      "F_midpoint_for_ranking_only": -1.0174,
+      "F_midpoint_for_ranking_only": -1.0519,
       "pa_2025": 587,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30.5,
-      "S_std": -1.1482,
+      "S_std": -1.2171,
       "N_std": -0.8867,
       "S_pct": 0.1087,
       "N_pct": 0.1739
@@ -2502,114 +2502,86 @@
     {
       "player": "浅村 栄斗",
       "player_id": "51155118",
-      "S_stat_z": -0.6301,
+      "S_stat_z": -0.7023,
       "S_reliability": 0.8861,
       "N_npb_top_speed_z": -0.8879,
       "N_reliability": null,
       "N_exposure_runs": 27,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.1072,
-        "w_npb_0.5": -1.0337,
-        "w_npb_0.75": -0.9602
+        "w_npb_0.25": -1.1671,
+        "w_npb_0.5": -1.0736,
+        "w_npb_0.75": -0.9802
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.1087,
-        "w_npb_0.5": 0.1304,
-        "w_npb_0.75": 0.1522
+        "w_npb_0.25": 0.1168,
+        "w_npb_0.5": 0.1359,
+        "w_npb_0.75": 0.1549
       },
-      "F_midpoint_for_ranking_only": -1.0337,
+      "F_midpoint_for_ranking_only": -1.0736,
       "pa_2025": 389,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30.5,
-      "S_std": -1.1807,
+      "S_std": -1.2605,
       "N_std": -0.8867,
-      "S_pct": 0.087,
+      "S_pct": 0.0978,
       "N_pct": 0.1739
-    },
-    {
-      "player": "坂本 誠志郎",
-      "player_id": "11915132",
-      "S_stat_z": -0.5339,
-      "S_reliability": 0.8922,
-      "N_npb_top_speed_z": -1.1274,
-      "N_reliability": null,
-      "N_exposure_runs": 17,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.0422,
-        "w_npb_0.5": -1.0694,
-        "w_npb_0.75": -1.0965
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.1304,
-        "w_npb_0.5": 0.1196,
-        "w_npb_0.75": 0.1087
-      },
-      "F_midpoint_for_ranking_only": -1.0694,
-      "pa_2025": 414,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 30.2,
-      "S_std": -1.0151,
-      "N_std": -1.1237,
-      "S_pct": 0.1413,
-      "N_pct": 0.0978
-    },
-    {
-      "player": "中村 悠平",
-      "player_id": "51255118",
-      "S_stat_z": -0.7051,
-      "S_reliability": 0.8155,
-      "N_npb_top_speed_z": -0.9677,
-      "N_reliability": null,
-      "N_exposure_runs": 8,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.2238,
-        "w_npb_0.5": -1.1378,
-        "w_npb_0.75": -1.0517
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.087,
-        "w_npb_0.5": 0.1087,
-        "w_npb_0.75": 0.1304
-      },
-      "F_midpoint_for_ranking_only": -1.1378,
-      "pa_2025": 221,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 30.4,
-      "S_std": -1.3098,
-      "N_std": -0.9657,
-      "S_pct": 0.0652,
-      "N_pct": 0.1522
     },
     {
       "player": "岸田 行倫",
       "player_id": "91595136",
-      "S_stat_z": -0.3101,
+      "S_stat_z": -0.2638,
       "S_reliability": 0.8567,
       "N_npb_top_speed_z": -1.7661,
       "N_reliability": null,
       "N_exposure_runs": 24,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.9111,
-        "w_npb_0.5": -1.1926,
-        "w_npb_0.75": -1.4741
+        "w_npb_0.25": -0.8246,
+        "w_npb_0.5": -1.1349,
+        "w_npb_0.75": -1.4452
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.2364,
         "w_npb_0.5": 0.1685,
         "w_npb_0.75": 0.1005
       },
-      "F_midpoint_for_ranking_only": -1.1926,
+      "F_midpoint_for_ranking_only": -1.1349,
       "pa_2025": 299,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 29.4,
-      "S_std": -0.6297,
+      "S_std": -0.5143,
       "N_std": -1.7555,
       "S_pct": 0.3043,
       "N_pct": 0.0326
+    },
+    {
+      "player": "坂本 誠志郎",
+      "player_id": "11915132",
+      "S_stat_z": -0.6693,
+      "S_reliability": 0.8922,
+      "N_npb_top_speed_z": -1.1274,
+      "N_reliability": null,
+      "N_exposure_runs": 17,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -1.1842,
+        "w_npb_0.5": -1.164,
+        "w_npb_0.75": -1.1438
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.1141,
+        "w_npb_0.5": 0.1087,
+        "w_npb_0.75": 0.1033
+      },
+      "F_midpoint_for_ranking_only": -1.164,
+      "pa_2025": 414,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 30.2,
+      "S_std": -1.2044,
+      "N_std": -1.1237,
+      "S_pct": 0.1196,
+      "N_pct": 0.0978
     },
     {
       "player": "ソト",
@@ -2631,223 +2603,251 @@
     {
       "player": "筒香 嘉智",
       "player_id": "41945131",
-      "S_stat_z": -0.7166,
+      "S_stat_z": -0.7287,
       "S_reliability": 0.8371,
       "N_npb_top_speed_z": -1.1274,
       "N_reliability": null,
       "N_exposure_runs": 21,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.2782,
-        "w_npb_0.5": -1.2267,
-        "w_npb_0.75": -1.1752
+        "w_npb_0.25": -1.26,
+        "w_npb_0.5": -1.2146,
+        "w_npb_0.75": -1.1691
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.0571,
-        "w_npb_0.5": 0.0707,
-        "w_npb_0.75": 0.0842
+        "w_npb_0.25": 0.0734,
+        "w_npb_0.5": 0.0815,
+        "w_npb_0.75": 0.0897
       },
-      "F_midpoint_for_ranking_only": -1.2267,
+      "F_midpoint_for_ranking_only": -1.2146,
       "pa_2025": 257,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 30.2,
-      "S_std": -1.3296,
+      "S_std": -1.3055,
       "N_std": -1.1237,
-      "S_pct": 0.0435,
+      "S_pct": 0.0652,
       "N_pct": 0.0978
+    },
+    {
+      "player": "中村 悠平",
+      "player_id": "51255118",
+      "S_stat_z": -0.8319,
+      "S_reliability": 0.8155,
+      "N_npb_top_speed_z": -0.9677,
+      "N_reliability": null,
+      "N_exposure_runs": 8,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -1.3522,
+        "w_npb_0.5": -1.2234,
+        "w_npb_0.75": -1.0945
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.0625,
+        "w_npb_0.5": 0.0924,
+        "w_npb_0.75": 0.1223
+      },
+      "F_midpoint_for_ranking_only": -1.2234,
+      "pa_2025": 221,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 30.4,
+      "S_std": -1.4811,
+      "N_std": -0.9657,
+      "S_pct": 0.0326,
+      "N_pct": 0.1522
     },
     {
       "player": "鈴木 大地",
       "player_id": "81985135",
-      "S_stat_z": -0.2356,
+      "S_stat_z": -0.1965,
       "S_reliability": 0.7984,
       "N_npb_top_speed_z": -2.0855,
       "N_reliability": null,
       "N_exposure_runs": 5,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -0.8939,
-        "w_npb_0.5": -1.2865,
-        "w_npb_0.75": -1.679
+        "w_npb_0.25": -0.8177,
+        "w_npb_0.5": -1.2356,
+        "w_npb_0.75": -1.6536
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.2609,
-        "w_npb_0.5": 0.1739,
-        "w_npb_0.75": 0.087
+        "w_npb_0.25": 0.3098,
+        "w_npb_0.5": 0.2065,
+        "w_npb_0.75": 0.1033
       },
-      "F_midpoint_for_ranking_only": -1.2865,
+      "F_midpoint_for_ranking_only": -1.2356,
       "pa_2025": 198,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 29,
-      "S_std": -0.5014,
+      "S_std": -0.3997,
       "N_std": -2.0715,
-      "S_pct": 0.3478,
+      "S_pct": 0.413,
       "N_pct": 0
     },
     {
       "player": "木下 拓哉",
       "player_id": "31735132",
-      "S_stat_z": -0.5586,
+      "S_stat_z": -0.564,
       "S_reliability": 0.7093,
       "N_npb_top_speed_z": -1.7661,
       "N_reliability": null,
       "N_exposure_runs": 4,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.2321,
-        "w_npb_0.5": -1.4066,
-        "w_npb_0.75": -1.581
+        "w_npb_0.25": -1.2078,
+        "w_npb_0.5": -1.3903,
+        "w_npb_0.75": -1.5729
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.106,
-        "w_npb_0.5": 0.0815,
-        "w_npb_0.75": 0.0571
+        "w_npb_0.25": 0.1223,
+        "w_npb_0.5": 0.0924,
+        "w_npb_0.75": 0.0625
       },
-      "F_midpoint_for_ranking_only": -1.4066,
+      "F_midpoint_for_ranking_only": -1.3903,
       "pa_2025": 122,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 29.4,
-      "S_std": -1.0576,
+      "S_std": -1.0252,
       "N_std": -1.7555,
-      "S_pct": 0.1304,
+      "S_pct": 0.1522,
       "N_pct": 0.0326
-    },
-    {
-      "player": "高橋 周平",
-      "player_id": "91095135",
-      "S_stat_z": -0.62,
-      "S_reliability": 0.6689,
-      "N_npb_top_speed_z": -1.6863,
-      "N_reliability": null,
-      "N_exposure_runs": 12,
-      "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.2916,
-        "w_npb_0.5": -1.4199,
-        "w_npb_0.75": -1.5483
-      },
-      "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.0897,
-        "w_npb_0.5": 0.0815,
-        "w_npb_0.75": 0.0734
-      },
-      "F_midpoint_for_ranking_only": -1.4199,
-      "pa_2025": 101,
-      "npb_2026_only": true,
-      "h2f_z": null,
-      "npb_plus_top_speed_kmh": 29.5,
-      "S_std": -1.1633,
-      "N_std": -1.6766,
-      "S_pct": 0.0978,
-      "N_pct": 0.0652
     },
     {
       "player": "安田 尚憲",
       "player_id": "81885136",
-      "S_stat_z": -0.7143,
+      "S_stat_z": -0.7132,
       "S_reliability": 0.875,
       "N_npb_top_speed_z": -1.6064,
       "N_reliability": null,
       "N_exposure_runs": 10,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.3936,
-        "w_npb_0.5": -1.4616,
-        "w_npb_0.75": -1.5296
+        "w_npb_0.25": -1.3587,
+        "w_npb_0.5": -1.4383,
+        "w_npb_0.75": -1.5179
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.0598,
-        "w_npb_0.5": 0.0652,
-        "w_npb_0.75": 0.0707
+        "w_npb_0.25": 0.0842,
+        "w_npb_0.5": 0.0815,
+        "w_npb_0.75": 0.0788
       },
-      "F_midpoint_for_ranking_only": -1.4616,
+      "F_midpoint_for_ranking_only": -1.4383,
       "pa_2025": 350,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 29.6,
-      "S_std": -1.3257,
+      "S_std": -1.2791,
       "N_std": -1.5975,
-      "S_pct": 0.0543,
+      "S_pct": 0.087,
       "N_pct": 0.0761
     },
     {
-      "player": "伏見 寅威",
-      "player_id": "61065137",
-      "S_stat_z": -0.8004,
-      "S_reliability": 0.7778,
-      "N_npb_top_speed_z": -2.0057,
+      "player": "高橋 周平",
+      "player_id": "91095135",
+      "S_stat_z": -0.7248,
+      "S_reliability": 0.6689,
+      "N_npb_top_speed_z": -1.6863,
       "N_reliability": null,
-      "N_exposure_runs": 9,
+      "N_exposure_runs": 12,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.6036,
-        "w_npb_0.5": -1.7333,
-        "w_npb_0.75": -1.8629
+        "w_npb_0.25": -1.3933,
+        "w_npb_0.5": -1.4877,
+        "w_npb_0.75": -1.5821
       },
       "F_percentile_band_ASSUMPTION": {
-        "w_npb_0.25": 0.0272,
-        "w_npb_0.5": 0.0217,
-        "w_npb_0.75": 0.0163
+        "w_npb_0.25": 0.0734,
+        "w_npb_0.5": 0.0707,
+        "w_npb_0.75": 0.0679
       },
-      "F_midpoint_for_ranking_only": -1.7333,
-      "pa_2025": 175,
+      "F_midpoint_for_ranking_only": -1.4877,
+      "pa_2025": 101,
       "npb_2026_only": true,
       "h2f_z": null,
-      "npb_plus_top_speed_kmh": 29.1,
-      "S_std": -1.4739,
-      "N_std": -1.9926,
-      "S_pct": 0.0326,
-      "N_pct": 0.0109
+      "npb_plus_top_speed_kmh": 29.5,
+      "S_std": -1.2988,
+      "N_std": -1.6766,
+      "S_pct": 0.0761,
+      "N_pct": 0.0652
     },
     {
       "player": "大城 卓三",
       "player_id": "21325136",
-      "S_stat_z": -0.8725,
+      "S_stat_z": -0.8593,
       "S_reliability": 0.6644,
       "N_npb_top_speed_z": -1.9258,
       "N_reliability": null,
       "N_exposure_runs": 26,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.677,
-        "w_npb_0.5": -1.7558,
-        "w_npb_0.75": -1.8347
+        "w_npb_0.25": -1.6242,
+        "w_npb_0.5": -1.7206,
+        "w_npb_0.75": -1.8171
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.0217,
         "w_npb_0.5": 0.0217,
         "w_npb_0.75": 0.0217
       },
-      "F_midpoint_for_ranking_only": -1.7558,
+      "F_midpoint_for_ranking_only": -1.7206,
       "pa_2025": 99,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 29.2,
-      "S_std": -1.5981,
+      "S_std": -1.5277,
       "N_std": -1.9135,
       "S_pct": 0.0217,
       "N_pct": 0.0217
     },
     {
+      "player": "伏見 寅威",
+      "player_id": "61065137",
+      "S_stat_z": -0.8206,
+      "S_reliability": 0.7778,
+      "N_npb_top_speed_z": -2.0057,
+      "N_reliability": null,
+      "N_exposure_runs": 9,
+      "F_band_ASSUMPTION": {
+        "w_npb_0.25": -1.5945,
+        "w_npb_0.5": -1.7272,
+        "w_npb_0.75": -1.8599
+      },
+      "F_percentile_band_ASSUMPTION": {
+        "w_npb_0.25": 0.0353,
+        "w_npb_0.5": 0.0272,
+        "w_npb_0.75": 0.019
+      },
+      "F_midpoint_for_ranking_only": -1.7272,
+      "pa_2025": 175,
+      "npb_2026_only": true,
+      "h2f_z": null,
+      "npb_plus_top_speed_kmh": 29.1,
+      "S_std": -1.4618,
+      "N_std": -1.9926,
+      "S_pct": 0.0435,
+      "N_pct": 0.0109
+    },
+    {
       "player": "山川 穂高",
       "player_id": "21425139",
-      "S_stat_z": -1.0266,
+      "S_stat_z": -1.0082,
       "S_reliability": 0.9084,
       "N_npb_top_speed_z": -1.7661,
       "N_reliability": null,
       "N_exposure_runs": 14,
       "F_band_ASSUMPTION": {
-        "w_npb_0.25": -1.8365,
-        "w_npb_0.5": -1.8095,
-        "w_npb_0.75": -1.7825
+        "w_npb_0.25": -1.7747,
+        "w_npb_0.5": -1.7683,
+        "w_npb_0.75": -1.7619
       },
       "F_percentile_band_ASSUMPTION": {
         "w_npb_0.25": 0.0082,
         "w_npb_0.5": 0.0163,
         "w_npb_0.75": 0.0245
       },
-      "F_midpoint_for_ranking_only": -1.8095,
+      "F_midpoint_for_ranking_only": -1.7683,
       "pa_2025": 496,
       "npb_2026_only": true,
       "h2f_z": null,
       "npb_plus_top_speed_kmh": 29.4,
-      "S_std": -1.8634,
+      "S_std": -1.7811,
       "N_std": -1.7555,
       "S_pct": 0,
       "N_pct": 0.0326

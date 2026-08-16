@@ -1,0 +1,208 @@
+{
+  "generated_at": "2026-08-16",
+  "task": "SP-098",
+  "mode": "IDENTITY_COVERAGE_QA_ONLY_NOT_FINAL_2026_PRACTICAL_APPRAISAL",
+  "external_collection_performed": false,
+  "owner_verdicts_written": 0,
+  "direct_db_evidence": {
+    "nahara": {
+      "bm_player_id": "20230057",
+      "farm_seasons": [
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "usage_2026": [
+        {
+          "name": "名原　典彦",
+          "plate_appearances": 187,
+          "games": 41
+        }
+      ],
+      "proeye_link_count": 0,
+      "named_v_batting_count": 0
+    },
+    "santana": {
+      "exact_2025_yakult": [
+        {
+          "season": 2025,
+          "player_id": "53755153",
+          "name": "Ｄ．サンタナ",
+          "team": "東京ヤクルトスワローズ"
+        }
+      ],
+      "alternate_2019_hiroshima": [
+        {
+          "season": 2019,
+          "player_id": "83585138",
+          "name": "Ｊ．サンタナ",
+          "team": "広島東洋カープ"
+        }
+      ]
+    },
+    "shiomi": {
+      "2025_first_team": [
+        {
+          "season": 2025,
+          "player_id": "71975136",
+          "name": "塩見　泰隆",
+          "team": "東京ヤクルトスワローズ",
+          "g": 1,
+          "pa": 0,
+          "ab": 0
+        }
+      ],
+      "current_fielding_rows": 0
+    }
+  },
+  "outcomes": {
+    "nahara": {
+      "status": "IDENTITY_RESOLVED_BATTING_COVERAGE_MISSING",
+      "canonical_key": "BM_PLAYER:20230057",
+      "batting_coverage": "MISSING",
+      "card_generated": false
+    },
+    "santana": {
+      "status": "COMPUTED_FOR_QA",
+      "canonical_key": "PROEYE:53755153",
+      "player_id": "53755153"
+    },
+    "shiomi": {
+      "status": "COMPUTED_FOR_QA",
+      "player_id": "71975136",
+      "no_batting_sample": true,
+      "non_batting_evidence": {
+        "speed": {
+          "status": "ESTIMATED_FROM_NON_BATTING_EVIDENCE",
+          "seasons": [
+            2022,
+            2023,
+            2024
+          ],
+          "basis": null
+        },
+        "arm": {
+          "status": "ESTIMATED_FROM_NON_BATTING_EVIDENCE",
+          "seasons": [
+            2022,
+            2023,
+            2024
+          ],
+          "basis": "ARMと補殺の平均（2つは別のものを測っており、合わせた方が翌年を当てる）"
+        },
+        "fielding": {
+          "status": "NOT_AVAILABLE_NO_CURRENT_SEASON_FIELDING_INNINGS",
+          "positionRows": 0,
+          "positions": []
+        }
+      }
+    }
+  },
+  "negative_fixtures": {
+    "sameSurname": {
+      "errorCode": "AMBIGUOUS_IDENTITY",
+      "error": "名前が複数人に一致: Ｄ．サンタナ / Ｊ．サンタナ"
+    },
+    "wrongTeam": {
+      "errorCode": "IDENTITY_CONSTRAINT_MISMATCH",
+      "error": "同定条件に一致しない: サンタナ（team=広島東洋カープ, season=2025）"
+    },
+    "wrongId": {
+      "errorCode": "IDENTITY_CONSTRAINT_MISMATCH",
+      "error": "同定条件に一致しない: サンタナ（player_id=83585138, team=東京ヤクルトスワローズ）"
+    }
+  },
+  "checks": [
+    {
+      "id": "NAHARA_DB_STABLE_FARM_KEY",
+      "pass": true,
+      "detail": "bm_player id=20230057 seasons=2023,2024,2025,2026"
+    },
+    {
+      "id": "NAHARA_DB_2026_USAGE",
+      "pass": true,
+      "detail": "usage rows=1"
+    },
+    {
+      "id": "NAHARA_DB_NO_PROEYE_LINK_OR_2025_BATTING",
+      "pass": true,
+      "detail": "proeye_links=0; named_v_batting_rows=0"
+    },
+    {
+      "id": "NAHARA_IDENTITY_CROSSWALK_NOT_PROEYE_ID",
+      "pass": true,
+      "detail": "{\"status\":\"IDENTITY_RESOLVED_BATTING_COVERAGE_MISSING\",\"canonicalKey\":\"BM_PLAYER:20230057\",\"playerId\":null}"
+    },
+    {
+      "id": "NAHARA_COVERAGE_MISSING_NOT_GENERIC_ERROR",
+      "pass": true,
+      "detail": "{\"status\":\"IDENTITY_RESOLVED_BATTING_COVERAGE_MISSING\",\"coverage\":{\"canonicalKey\":\"BM_PLAYER:20230057\",\"dbName\":\"名原 典彦\",\"identityEvidence\":{\"bmPlayerId\":\"20230057\",\"dbName\":\"名原 典彦\",\"teams\":[\"広\"],\"seasons\":[2023,2024,2025,2026],\"usage2026\":[{\"name\":\"名原　典彦\",\"plateAppearances\":187,\"games\":41}],\"linkedProeyeIds\":[]},\"targetSeason\":2025,\"firstTeamBatting\":\"MISSING\",\"reason\":\"NO_PROEYE_FIRST_TEAM_BATTING_LINK_OR_ROW\"}}"
+    },
+    {
+      "id": "SANTANA_DB_EXACT_EXPECTED_RELATIONSHIP",
+      "pass": true,
+      "detail": "expected=1; other_same_surname=1"
+    },
+    {
+      "id": "SANTANA_EXACT_IDENTITY_FROM_STABLE_RELATIONSHIP",
+      "pass": true,
+      "detail": "{\"playerId\":\"53755153\",\"dbName\":\"Ｄ．サンタナ\",\"evidence\":{\"playerId\":\"53755153\",\"dbName\":\"Ｄ．サンタナ\",\"teams\":[\"東京ヤクルトスワローズ\"],\"seasons\":[2021,2022,2023,2024,2025]}}"
+    },
+    {
+      "id": "SANTANA_PIPELINE_EXACT_ID",
+      "pass": true,
+      "detail": "pipeline_player_id=53755153"
+    },
+    {
+      "id": "SHIOMI_DB_AB_ZERO",
+      "pass": true,
+      "detail": "[{\"season\":2025,\"player_id\":\"71975136\",\"name\":\"塩見　泰隆\",\"team\":\"東京ヤクルトスワローズ\",\"g\":1,\"pa\":0,\"ab\":0}]"
+    },
+    {
+      "id": "SHIOMI_EXACT_IDENTITY",
+      "pass": true,
+      "detail": "{\"playerId\":\"71975136\",\"dbName\":\"塩見　泰隆\",\"evidence\":{\"playerId\":\"71975136\",\"dbName\":\"塩見　泰隆\",\"teams\":[\"東京ヤクルトスワローズ\"],\"seasons\":[2018,2019,2020,2021,2022,2023,2024,2025]}}"
+    },
+    {
+      "id": "SHIOMI_NO_BATTING_SCHEMA_PRESERVED",
+      "pass": true,
+      "detail": "{\"playerId\":\"71975136\",\"noBatting\":true,\"ability\":{\"弾道\":null,\"ミート\":null,\"パワー\":null,\"走力\":{\"value\":78.7,\"rank\":\"B\",\"uncalibrated\":57.3,\"_scale\":\"SP-016 continuous prior. Match hard-gate+old-scale display mean/sd on 2025 statistical roster. Individual PowerPro labels were not used as weights or fit targets.（n=260）\"},\"肩力\":{\"value\":69.1,\"rank\":\"C\"},\"守備力\":null,\"捕球\":null}}"
+    },
+    {
+      "id": "SHIOMI_FIELDING_CONTEXT_NOT_ERASED_BY_AB_ZERO",
+      "pass": true,
+      "detail": "{\"db_fielding_rows\":0,\"non_batting_evidence\":{\"speed\":{\"status\":\"ESTIMATED_FROM_NON_BATTING_EVIDENCE\",\"seasons\":[2022,2023,2024],\"basis\":null},\"arm\":{\"status\":\"ESTIMATED_FROM_NON_BATTING_EVIDENCE\",\"seasons\":[2022,2023,2024],\"basis\":\"ARMと補殺の平均（2つは別のものを測っており、合わせた方が翌年を当てる）\"},\"fielding\":{\"status\":\"NOT_AVAILABLE_NO_CURRENT_SEASON_FIELDING_INNINGS\",\"positionRows\":0,\"positions\":[]}}}"
+    },
+    {
+      "id": "NEGATIVE_SAME_SURNAME_FAILS_AMBIGUOUS",
+      "pass": true,
+      "detail": "{\"errorCode\":\"AMBIGUOUS_IDENTITY\",\"error\":\"名前が複数人に一致: Ｄ．サンタナ / Ｊ．サンタナ\",\"candidates\":[{\"playerId\":\"53755153\",\"names\":[\"Ｄ．サンタナ\"],\"teams\":[\"東京ヤクルトスワローズ\"],\"seasons\":[2021,2022,2023,2024,2025]},{\"playerId\":\"83585138\",\"names\":[\"Ｊ．サンタナ\"],\"teams\":[\"広島東洋カープ\"],\"seasons\":[2019]}]}"
+    },
+    {
+      "id": "NEGATIVE_WRONG_TEAM_FAILS",
+      "pass": true,
+      "detail": "{\"errorCode\":\"IDENTITY_CONSTRAINT_MISMATCH\",\"error\":\"同定条件に一致しない: サンタナ（team=広島東洋カープ, season=2025）\",\"candidates\":[{\"playerId\":\"53755153\",\"names\":[\"Ｄ．サンタナ\"],\"teams\":[\"東京ヤクルトスワローズ\"],\"seasons\":[2021,2022,2023,2024,2025]},{\"playerId\":\"83585138\",\"names\":[\"Ｊ．サンタナ\"],\"teams\":[\"広島東洋カープ\"],\"seasons\":[2019]}]}"
+    },
+    {
+      "id": "NEGATIVE_WRONG_ID_FAILS",
+      "pass": true,
+      "detail": "{\"errorCode\":\"IDENTITY_CONSTRAINT_MISMATCH\",\"error\":\"同定条件に一致しない: サンタナ（player_id=83585138, team=東京ヤクルトスワローズ）\",\"candidates\":[{\"playerId\":\"53755153\",\"names\":[\"Ｄ．サンタナ\"],\"teams\":[\"東京ヤクルトスワローズ\"],\"seasons\":[2021,2022,2023,2024,2025]},{\"playerId\":\"83585138\",\"names\":[\"Ｊ．サンタナ\"],\"teams\":[\"広島東洋カープ\"],\"seasons\":[2019]}]}"
+    },
+    {
+      "id": "NO_SELF_FULFILLING_OR_NONEMPTY_ID_CHECK",
+      "pass": true,
+      "detail": "resolver and corrected historic SP-098 check contain no `|| !!` acceptance shortcut"
+    }
+  ],
+  "summary": {
+    "passed": 16,
+    "failed": 0,
+    "result": "PASS"
+  },
+  "key_input_hashes": {
+    "pipeline_mjs_sha256": "4be4c897f775f5999cdda7146422b811194b0ee2ea799858a6064dc675e539bc",
+    "qa_script_sha256": "36ad6ee724721d6c8a43dfbf81f5008513e50d035a09557f6b8a54181c98ca55",
+    "pennant_db_sha256": "1bcbe9d3260367fa732ed0571573de52a87afd725e9796f2c8d3eb77c671449d"
+  }
+}

@@ -40,6 +40,112 @@ function weightedMean(rows) {
 }
 
 /**
+ * SP-016 repaired annual-speed policy.
+ *
+ * This is deliberately a separate mode from the rejected 2026-08-14
+ * `continuous_prior` candidate below.  Before the explicit sufficiency point,
+ * historical observations form a discounted prior and the remaining mass is a
+ * zero-centred population prior.  At or above sufficiency, the result is the
+ * current-season observation exactly: history is not merely small, it is zero.
+ *
+ *     z = (n_c z_c + lambda n_h z_h) / (n_c + lambda n_h + kappa)
+ *
+ * for n_c < sufficientWeight.  `kappa` is the explicit zero-centred prior,
+ * so it is present in both the numerator (kappa * 0) and denominator.
+ * `lambda` discounts history; it is calibrated outside this function against
+ * the actual target population, never against a future outcome.
+ */
+export function currentYearFirstLowSamplePrior(obs, targetSeason, opts = {}) {
+  const kappa = opts.kappa ?? 50;
+  const lambda = opts.lambda;
+  const sufficientWeight = opts.sufficientWeight ?? 50;
+
+  if (!Number.isFinite(kappa) || kappa < 0) {
+    throw new Error('SP-016 fail-closed: kappa must be a finite non-negative number');
+  }
+  if (!Number.isFinite(lambda) || lambda <= 0) {
+    throw new Error('SP-016 fail-closed: lambda must be a finite positive number');
+  }
+  if (!Number.isFinite(sufficientWeight) || sufficientWeight <= 0) {
+    throw new Error('SP-016 fail-closed: sufficientWeight must be a finite positive number');
+  }
+
+  // A speed observation has one canonical player-season.  The source query
+  // aggregates split-team NF3 rows before calling this function.  Seeing a
+  // duplicate here means that contract was broken; adding their PA would make
+  // a hidden inflation, so stop rather than guess how to merge transformed z.
+  const seenSeasons = new Set();
+  for (const o of obs) {
+    if (!o || !Number.isFinite(o.z) || !Number.isFinite(o.weight) || o.weight <= 0
+      || !Number.isInteger(o.season)) {
+      throw new Error('SP-016 fail-closed: malformed player-season observation');
+    }
+    if (seenSeasons.has(o.season)) {
+      throw new Error(`SP-016 fail-closed: duplicate player-season observation for ${o.season}`);
+    }
+    seenSeasons.add(o.season);
+  }
+
+  const cur = obs.filter(o => o.season === targetSeason);
+  const hist = obs.filter(o => o.season !== targetSeason);
+  const nCur = cur.reduce((s, o) => s + o.weight, 0);
+  const nHist = hist.reduce((s, o) => s + o.weight, 0);
+  const zCur = cur.length ? weightedMean(cur) : null;
+  const zHist = hist.length ? weightedMean(hist) : null;
+  if (zCur == null && zHist == null) return null;
+
+  const common = {
+    weight: nCur + lambda * nHist,
+    years: obs.length,
+    seasons: obs.map(o => o.season).sort(),
+    isMultiYear: new Set(obs.map(o => o.season)).size > 1,
+    currentYearWeight: nCur,
+    histWeight: nHist,
+    kappa,
+    lambda,
+    sufficientWeight,
+    zCurRaw: zCur,
+    zHistRaw: zHist,
+  };
+
+  if (zCur != null && nCur >= sufficientWeight) {
+    return {
+      ...common,
+      // `weight` is consumed by traitRating's reliability calculation.  It
+      // must therefore be current-only as well: retaining discounted history
+      // here would change the final displayed rating despite z/historyContribution
+      // claiming that history was absent.
+      weight: nCur,
+      years: cur.length,
+      seasons: cur.map(o => o.season).sort(),
+      isMultiYear: false,
+      z: zCur,
+      poolReason: 'CURRENT_YEAR_SUFFICIENT_HISTORY_ZERO',
+      currentEvidenceSufficient: true,
+      currentContribution: 1,
+      historyContribution: 0,
+      populationPriorContribution: 0,
+    };
+  }
+
+  const effectiveHistory = lambda * nHist;
+  const denominator = nCur + effectiveHistory + kappa;
+  if (!(denominator > 0)) return null;
+  const z = ((nCur * (zCur ?? 0)) + (effectiveHistory * (zHist ?? 0))) / denominator;
+  return {
+    ...common,
+    z,
+    poolReason: zCur == null
+      ? 'NO_CURRENT_YEAR_OBSERVATION_HISTORY_PRIOR'
+      : 'LOW_SAMPLE_CURRENT_YEAR_HISTORY_PRIOR',
+    currentEvidenceSufficient: false,
+    currentContribution: nCur / denominator,
+    historyContribution: effectiveHistory / denominator,
+    populationPriorContribution: kappa / denominator,
+  };
+}
+
+/**
  * SP-016 continuous historical prior（設計正本 2026-08-14）。
  * 各推定を自身の信頼性で縮小してから精度で合成する。素朴な w=PA/(PA+κ) は棄却済み。
  */
@@ -89,14 +195,25 @@ export function poolAcrossYears(obs, targetSeason, opts = {}) {
   const gap = opts.maxYearGap ?? 3;
   const maxSeason = opts.maxSeason ?? null;
   const minWeight = opts.minWeight ?? 0;
-  let use = (obs ?? []).filter(o =>
-    o && Number.isFinite(o.z) && o.weight > 0 && o.weight >= minWeight
+  if (obs == null || !obs.length) return null;
+  if (!Array.isArray(obs)) throw new Error('SP-016 fail-closed: observations must be an array');
+  for (const o of obs) {
+    if (!o || !Number.isFinite(o.z) || !Number.isFinite(o.weight) || o.weight <= 0
+      || !Number.isInteger(o.season)) {
+      throw new Error('SP-016 fail-closed: malformed player-season observation');
+    }
+  }
+  let use = obs.filter(o => o.weight >= minWeight
     && Math.abs(o.season - targetSeason) <= gap
     && (maxSeason == null || o.season <= maxSeason));
   if (!use.length) return null;
 
   const mode = opts.poolingMode
     ?? (opts.currentYearFirst ? 'current_year_first_hard' : 'legacy_auto_pool');
+
+  if (mode === 'current_year_first_low_sample_prior') {
+    return currentYearFirstLowSamplePrior(use, targetSeason, opts);
+  }
 
   if (mode === 'continuous_prior') {
     return continuousPriorPool(use, targetSeason, opts);

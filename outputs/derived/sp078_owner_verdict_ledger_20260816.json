@@ -1,0 +1,34 @@
+{
+  "schema_version": "sp078_owner_verdict_ledger_20260816",
+  "created_at": "2026-08-16",
+  "queue_source": {
+    "path": "outputs/derived/sp077_final_owner_review_queue_20260816.json",
+    "sha256": "757e3d5dd51fe86c0238cbbe4be614839ae647541d9a048caeab23bf732e5287",
+    "row_count": 100
+  },
+  "allowed_verdicts": [
+    "POWERPRO_PLAUSIBLE",
+    "POWERPRO_TOO_HIGH_OR_STALE",
+    "POWERPRO_TOO_LOW",
+    "PROJECT_TOO_HIGH",
+    "PROJECT_TOO_LOW",
+    "BOTH_QUESTIONABLE",
+    "UNRESOLVED",
+    "OTHER"
+  ],
+  "required_event_fields": [
+    "event_id",
+    "queue_row_key",
+    "verdict",
+    "timestamp",
+    "source",
+    "reviewer"
+  ],
+  "append_update_semantics": {
+    "ordinary_duplicate_write": "REJECTED_NO_SILENT_OVERWRITE",
+    "amendment": "APPEND_ONLY_REQUIRES_EXPLICIT_SUPERSEDES_EVENT_ID",
+    "historical_events_preserved": true
+  },
+  "records": [],
+  "owner_verdict_count": 0
+}
