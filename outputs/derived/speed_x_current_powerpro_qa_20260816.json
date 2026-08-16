@@ -1,0 +1,68 @@
+{
+  "schema_version": "speed_x_current_powerpro_qa_20260816",
+  "generated_at": "2026-08-16",
+  "input": "outputs/derived/speed_community_v3_canonical_20260815.jsonl",
+  "input_sha256": "9bb9e9cc0df7646840e7b584756d7501ecad475df1410ebc72d549fda09ad058",
+  "owner_rules": {
+    "no_new_collection": true,
+    "prospi_game_rating_excluded_all": true,
+    "active_current_start": "2025-01-01",
+    "powerpro_mainline_only_for_rating_consensus": true,
+    "game_independent_physical_separate": true
+  },
+  "previous_superseded_metrics": {
+    "final_canonical_x_speed_relevant_claims": 138,
+    "current100_players_with_usable_community_evidence_all_platforms": 55
+  },
+  "input_counts": {
+    "terra_all_rows": 2548,
+    "terra_x_rows": 377
+  },
+  "disposition_counts": {
+    "CURRENT_POWERPRO_RATING": 19,
+    "CURRENT_REALWORLD_SPEED_PHYSICAL": 10,
+    "CURRENT_TECHNIQUE_CONTEXT": 2,
+    "EXCLUDED_NON_SPEED": 102,
+    "EXCLUDED_POWERPRO_APP": 8,
+    "EXCLUDED_PROSPI_ALL": 180,
+    "HISTORICAL_POWERPRO_TRAJECTORY": 41,
+    "REVIEW_REQUIRED": 15
+  },
+  "active_counts": {
+    "current_powerpro_rating_claims": 19,
+    "directional_current_powerpro_rating_claims": 11,
+    "current100_players_with_powerpro_rating_evidence": 12,
+    "current100_players_with_directional_powerpro_evidence": 8,
+    "current_realworld_speed_physical_observations": 10,
+    "current100_players_with_realworld_speed_physical_observations": 6,
+    "current_technique_context_rows": 2,
+    "active_unique_source_events": 30,
+    "active_attributable_author_origins": 11,
+    "active_unattributed_source_events": 19,
+    "historical_powerpro_rows_archived": 41,
+    "prospi_rows_excluded": 180
+  },
+  "machine_checks": {
+    "active_rating_prospi_zero": true,
+    "active_rating_pre2025_zero": true,
+    "active_rating_missing_date_zero": true,
+    "active_rating_powerpro_app_zero": true,
+    "comparison_only_vote_zero": true,
+    "active_duplicates_zero": true,
+    "physical_generic_non_speed_zero": true,
+    "technique_counted_as_physical_zero": true,
+    "active_traceable_record_id_all": true,
+    "context_only_prospi_mentions_do_not_exclude_physical": true,
+    "x_only_input": true,
+    "owner_buckets_mutually_exclusive": true,
+    "nishikawa_shoki_not_nishikawa_ryoma": true,
+    "yamamoto_taido_not_yamamoto_yudai": true,
+    "fukudome_power_only_not_active_speed": true,
+    "shiomi_comparison_not_vote": true,
+    "maruyama_iwata_subject_preserved": true,
+    "dalbec_matsumoto_comparison_not_vote": true
+  },
+  "failed_checks": [],
+  "verdict": "PASS",
+  "value_judgment": "X_COLLECTION_LIMITED_VALUE"
+}

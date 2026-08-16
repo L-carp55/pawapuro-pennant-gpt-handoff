@@ -36,7 +36,10 @@ const dateOnly = v => {
 };
 const isCurrentDate = d => Boolean(d && d >= CURRENT_START && d <= '2026-12-31');
 const isHistoricalDate = d => Boolean(d && d < CURRENT_START);
-const productString = r => [r.source_product, r.game, r.source_claim_lane, r.claim_lane, r.source_type, r.notes].map(norm).join(' | ');
+// Product identity must come from canonical semantic fields.  Do not inspect
+// notes/source_context here: those fields may mention a discovery query or an
+// author's profile even when the row itself is a game-independent observation.
+const productString = r => [r.source_product, r.game, r.source_claim_lane, r.claim_lane].map(norm).join(' | ');
 const textString = r => [r.text_or_excerpt, r.source_context, r.notes].map(norm).join(' | ');
 
 function isProspi(r) {
@@ -45,7 +48,7 @@ function isProspi(r) {
 }
 function isPowerProApp(r) {
   const p = low(productString(r));
-  const t = low(textString(r));
+  const t = low(norm(r.text_or_excerpt));
   return (p.includes('powerpro') || p.includes('パワプロ')) && (p.includes('app') || p.includes('mobile') || p.includes('アプリ') || t.includes('パワプロアプリ'));
 }
 function isPowerProRating(r) {
@@ -78,7 +81,20 @@ function needsReview(r) {
   return norm(r.canonical_status).startsWith('REVIEW_REQUIRED_');
 }
 function directionIsVote(r) {
+  if (norm(r.canonical_status) === 'CONTEXT_ONLY_COMPARISON') return false;
   return ['TOO_HIGH', 'TOO_LOW', 'APPROPRIATE', 'STALE', 'AGING_NOT_REFLECTED', 'INJURY_NOT_REFLECTED', 'RECOVERY_NOT_REFLECTED'].includes(norm(r.direction));
+}
+
+function isCurrentGameIndependentPhysicalWithContextOnlyProspiMention(r) {
+  const d = dateOnly(r.published_at);
+  const context = [r.source_context, r.notes].map(norm).join(' | ');
+  return isCurrentDate(d)
+    && !norm(r.source_product)
+    && !norm(r.game)
+    && norm(r.claim_lane) === 'PHYSICAL_OBSERVATION'
+    && norm(r.canonical_status) === 'USABLE_PHYSICAL_CONTEXT'
+    && Boolean(r.speed_semantics_present)
+    && /prospi|プロスピ/i.test(context);
 }
 function isAttributable(r) {
   return norm(r.author_attribution_status) === 'ATTRIBUTABLE' && Boolean(norm(r.author_or_handle));
@@ -182,11 +198,13 @@ function machineChecks() {
   checks.active_rating_pre2025_zero = currentRating.filter(r => !isCurrentDate(dateOnly(r.published_at))).length === 0;
   checks.active_rating_missing_date_zero = currentRating.filter(r => !dateOnly(r.published_at)).length === 0;
   checks.active_rating_powerpro_app_zero = currentRating.filter(isPowerProApp).length === 0;
-  checks.comparison_only_vote_zero = currentRating.filter(r => norm(r.direction) === 'COMPARISON_ONLY' && directionIsVote(r)).length === 0;
+  const comparisonOnlyIds = new Set(currentRating.filter(r => norm(r.direction) === 'COMPARISON_ONLY' || norm(r.canonical_status) === 'CONTEXT_ONLY_COMPARISON').map(r => norm(r.record_id)));
+  checks.comparison_only_vote_zero = !ratingVoteRows.some(r => comparisonOnlyIds.has(norm(r.record_id)));
   checks.active_duplicates_zero = active.filter(isDuplicate).length === 0;
   checks.physical_generic_non_speed_zero = currentPhysical.filter(r => !r.speed_semantics_present || norm(r.claim_lane) !== 'PHYSICAL_OBSERVATION').length === 0;
   checks.technique_counted_as_physical_zero = currentPhysical.filter(isTechnique).length === 0;
   checks.active_traceable_record_id_all = active.every(r => Boolean(norm(r.record_id)));
+  checks.context_only_prospi_mentions_do_not_exclude_physical = !classified.some(r => isCurrentGameIndependentPhysicalWithContextOnlyProspiMention(r) && r.owner_disposition !== 'CURRENT_REALWORLD_SPEED_PHYSICAL');
   checks.x_only_input = classified.every(r => low(r.platform) === 'x');
   checks.owner_buckets_mutually_exclusive = classified.length === xRows.length && classified.every(r => Boolean(r.owner_disposition));
   checks.nishikawa_shoki_not_nishikawa_ryoma = !classified.some(r => /西川史礁/.test(textString(r)) && norm(r.player_name) === '西川 龍馬' && !norm(r.canonical_status).startsWith('EXCLUDED_'));
