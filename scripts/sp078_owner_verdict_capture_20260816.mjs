@@ -87,6 +87,20 @@ function validateLedger(ledger, info) {
   }
   requireOk(Number(ledger.owner_verdict_count) === activeRecords(ledger.records).length, 'ledger owner_verdict_count does not match active append-only records');
 }
+function validateReinitializableEmptyLedger(ledger) {
+  requireOk(ledger?.schema_version === 'sp078_owner_verdict_ledger_20260816', 'ledger schema mismatch');
+  requireOk(Array.isArray(ledger.records), 'ledger records are not an array');
+  requireOk(ledger.records.length === 0, 'cannot reinitialize a ledger that contains historical owner events');
+  requireOk(Number(ledger.owner_verdict_count) === 0, 'cannot reinitialize a ledger with a nonzero owner verdict count');
+  requireOk(ledger.queue_source?.path && typeof ledger.queue_source.sha256 === 'string'
+    && Number(ledger.queue_source.row_count) === 100, 'existing empty ledger lacks a valid prior queue receipt');
+  requireOk(Array.isArray(ledger.allowed_verdicts) && ledger.allowed_verdicts.length === ALLOWED_VERDICTS.size,
+    'existing empty ledger has invalid verdict schema');
+}
+function reinitializeEmptyLedger(ledger, queuePath, info) {
+  validateReinitializableEmptyLedger(ledger);
+  return emptyLedger(queuePath, info);
+}
 function normalizedEvent(raw, info, existing, isAmendment) {
   requireOk(raw && typeof raw === 'object', 'input event is not an object');
   const event = {
@@ -146,7 +160,17 @@ function selfTest() {
     const amended = appendEvents(once, info, [{ ...first, event_id: 'fixture-3', verdict: 'OTHER', supersedes_event_id: 'fixture-1' }], true);
     requireOk(amended.records.length === 2 && amended.records[0].event_id === 'fixture-1', 'amendment did not preserve prior event');
     requireOk(amended.owner_verdict_count === 1, 'amendment active verdict count is incorrect');
-    console.log(JSON.stringify({ self_test: 'PASS', duplicate_overwrite_rejected: true, explicit_amendment_preserves_history: true }));
+    const staleEmpty = emptyLedger(queuePath, info);
+    staleEmpty.queue_source.sha256 = 'stale-empty-queue-hash';
+    const reinitialized = reinitializeEmptyLedger(staleEmpty, queuePath, info);
+    requireOk(reinitialized.records.length === 0 && reinitialized.owner_verdict_count === 0
+      && reinitialized.queue_source.sha256 === info.sha256, 'empty-ledger reinitialization did not bind the current queue');
+    let nonemptyReinitializationRejected = false;
+    try { reinitializeEmptyLedger(once, queuePath, info); }
+    catch (error) { nonemptyReinitializationRejected = /cannot reinitialize/.test(error.message); }
+    requireOk(nonemptyReinitializationRejected, 'nonempty-ledger reinitialization fixture was not rejected');
+    requireOk(once.records.length === 1 && once.owner_verdict_count === 1, 'rejected reinitialization mutated owner history');
+    console.log(JSON.stringify({ self_test: 'PASS', duplicate_overwrite_rejected: true, explicit_amendment_preserves_history: true, empty_reinitialization_rebinds_current_queue: true, nonempty_reinitialization_rejected: true }));
   } finally {
     fs.rmSync(temp, { recursive: true, force: true });
   }
@@ -162,6 +186,15 @@ if (process.argv.includes('--initialize')) {
   const ledger = emptyLedger(queuePath, info);
   writeAtomic(ledgerPath, JSON.stringify(ledger, null, 2) + '\n');
   console.log(JSON.stringify({ initialized: true, ledger: path.relative(ROOT, ledgerPath), owner_verdict_count: 0, queue_rows: 100 }));
+  process.exit(0);
+}
+
+if (process.argv.includes('--reinitialize-empty')) {
+  requireOk(fs.existsSync(ledgerPath), `ledger does not exist: ${ledgerPath}`);
+  const prior = readJson(ledgerPath);
+  const ledger = reinitializeEmptyLedger(prior, queuePath, info);
+  writeAtomic(ledgerPath, JSON.stringify(ledger, null, 2) + '\n');
+  console.log(JSON.stringify({ reinitialized_empty_ledger: true, ledger: path.relative(ROOT, ledgerPath), owner_verdict_count: 0, queue_rows: 100, queue_sha256: info.sha256 }));
   process.exit(0);
 }
 

@@ -13,7 +13,7 @@
     {
       "id": "REGISTRY_QA_EXECUTES_PASS",
       "pass": true,
-      "detail": "PASS: requirements=61, tasks=72, exclusions=25, open_exclusions=3, unresolved_terminal=2, owner_review_task_blockers=0, owner_review_dependency_task_blockers=0, owner_review_dependency_exclusion_blockers=0, owner_review_non_dependency_exclusion_blocks=3, gate_task_blockers=15, gate_exclusion_blockers=3\r\nSP-077 is fail-closed on its declared dependencies; the global Speed Gate remains fail-closed until all gate blockers reach zero.\r\n"
+      "detail": "PASS: requirements=61, tasks=72, exclusions=25, open_exclusions=3, unresolved_terminal=2, owner_review_task_blockers=0, owner_review_dependency_task_blockers=0, owner_review_dependency_exclusion_blockers=0, owner_review_non_dependency_exclusion_blocks=3, gate_task_blockers=14, gate_exclusion_blockers=3\nSP-077 is fail-closed on its declared dependencies; the global Speed Gate remains fail-closed until all gate blockers reach zero.\n"
     },
     {
       "id": "REGISTRY_DIRECT_ROWS_CONTENT_LEVEL",
@@ -30,9 +30,9 @@
           "0"
         ],
         "SP-100": [
-          "PARTIAL",
+          "DONE_VALIDATED",
           "0",
-          "1"
+          "0"
         ],
         "SP-077": [
           "DONE_VALIDATED",
@@ -121,16 +121,17 @@
       "detail": "no non-empty-id shortcut"
     },
     {
-      "id": "SP100_RECEIPT_57_PASS_0_FAIL",
+      "id": "SP100_PACKET_QA_PASS_0_FAIL",
       "pass": true,
-      "detail": "SP-100 independent QA: 57 PASS / 0 FAIL\r\n"
+      "detail": "SP-100 owner-approved packet QA: 63 PASS / 0 FAIL\n"
     },
     {
-      "id": "SP100_OWNER_BOUNDARY_RECOMMENDATION_ONLY",
+      "id": "SP100_EXPLICIT_OWNER_DECISION_AND_IMPLEMENTATION",
       "pass": true,
       "detail": {
-        "status": "PARTIAL",
-        "recommendation": "N_PRIMARY_S_CONTEXT_OR_FALLBACK"
+        "status": "DONE_VALIDATED",
+        "implementation": "N_PRIMARY_S_CONTEXT_OR_FALLBACK",
+        "n_primary_rows": 100
       }
     },
     {
@@ -145,7 +146,7 @@
       "id": "SP100_PACKET_SOURCE_HASHES_CURRENT",
       "pass": true,
       "detail": {
-        "verified_sources": 17
+        "verified_sources": 18
       }
     },
     {
@@ -160,15 +161,15 @@
       "id": "SP077_DEPENDENCY_GATE_PROVISIONAL_AND_HUMAN_REPORT",
       "pass": true,
       "detail": {
-        "fixture": "{\"fixture\":\"open_declared_sp077_dependency\",\"result\":\"PASS\"}\r\n",
-        "provisional": "PARTIAL"
+        "fixture": "{\"fixture\":\"open_declared_sp077_dependency\",\"result\":\"PASS\"}\n",
+        "sp100": "DONE_VALIDATED"
       }
     },
     {
       "id": "SP077_SOURCE_HASHES_AND_SCOPE_GUARDS",
       "pass": true,
       "detail": {
-        "verified_sources": 7,
+        "verified_sources": 8,
         "scope_guards": {
           "no_external_collection": true,
           "no_shoulder_work": true,
@@ -190,7 +191,7 @@
     {
       "id": "SP078_NO_OVERWRITE_SELF_TEST",
       "pass": true,
-      "detail": "{\"self_test\":\"PASS\",\"duplicate_overwrite_rejected\":true,\"explicit_amendment_preserves_history\":true}\r\n"
+      "detail": "{\"self_test\":\"PASS\",\"duplicate_overwrite_rejected\":true,\"explicit_amendment_preserves_history\":true,\"empty_reinitialization_rebinds_current_queue\":true,\"nonempty_reinitialization_rejected\":true}\n"
     },
     {
       "id": "SP075_AND_COMMUNITY_INVARIANT_HASHES_UNCHANGED",
@@ -220,8 +221,8 @@
       "id": "NO_EXTERNAL_COLLECTION_AND_FORBIDDEN_WORK_SCOPE",
       "pass": true,
       "detail": {
-        "changed_path_count": 1,
-        "changed_scripts": 0
+        "changed_path_count": 25,
+        "changed_scripts": 10
       }
     }
   ],
@@ -232,7 +233,7 @@
   },
   "key_artifact_sha256": {
     "configs/running_norms.json": "4439795b9452c8d3cdb6a2a8e3bc0811ed3aa3b8071e7f2135908c11f8d985cd",
-    "docs/state/speed_task_registry.tsv": "4cb96a0be7fd263b94f86f736f24921288a5b6e2c15cead56771ddeffbae57b0",
+    "docs/state/speed_task_registry.tsv": "f2e7a13ee265c2946676be27a83eb5197f97fecada1399654fe0d05c655a5924",
     "docs/state/speed_exclusion_reason_ledger.tsv": "bcf0f5e743fb08f57590007ecca80c333a8eea43964102859adbff7264349c8a",
     "src/ratings/durable_traits.mjs": "040a205c523bdd3917f2c17026d5b13b89142a3934d62984dad2d78fb004b7cd",
     "src/cards/durable_estimate.mjs": "dcccc0f3f9892aac9f0aafd642c4b92c0d6c005c2f2cdf4c825b87995d36d3e8",
@@ -244,20 +245,29 @@
     "scripts/sp098_identity_coverage_qa_20260816.mjs": "36ad6ee724721d6c8a43dfbf81f5008513e50d035a09557f6b8a54181c98ca55",
     "outputs/derived/sp098_identity_coverage_qa_20260816.json": "4887935877ec968027d8aa2d62893e87875e9c8414c8c4991d0fc36edbed4c81",
     "docs/audits/sp098_identity_coverage_qa_20260816.md": "1413d978e74de7f423f60969658d12a079933e7a1bdffd8d3cd05a051c77be8d",
-    "scripts/sp100_production_wiring_decision_packet_20260816.mjs": "5a8f208326bbf68421ff333ad815d1fd0549e0f8d4738176e896adc27f255941",
-    "scripts/qa_sp100_production_wiring_decision_packet_20260816.mjs": "580f34654843a004dc10e31eb5098333ea9fb1390e43d7a0db9aa0d631f6255b",
-    "outputs/derived/sp100_production_wiring_decision_packet_20260816.json": "f339f69d10afd89aaecfc639396e0c5742c8a72cf8cc65a328cf97a39e1ff99e",
-    "docs/audits/sp100_production_wiring_decision_packet_20260816.md": "8cf223259123419f31bfcbc8435f26ee52b5ceb90920e30baf46ed8cfcc957e1",
-    "scripts/build_sp077_final_owner_review_queue_20260816.mjs": "6a3d4f36af55d5381ee9bee9357debec56f8ec83066fcbe900b3b211f76e2259",
-    "outputs/derived/sp077_final_owner_review_queue_20260816.json": "757e3d5dd51fe86c0238cbbe4be614839ae647541d9a048caeab23bf732e5287",
-    "outputs/derived/sp077_final_owner_review_queue_20260816.csv": "135a78aa031830b7b3e82b72d138e4ff5e8dc49e12399a52f07f46efe739b783",
-    "docs/reports/sp077_final_owner_review_queue_20260816.md": "b9abf22add9e0ed65b491d2091bbc1b7327ed9b3ea2252963cac4a240758f53a",
-    "scripts/sp078_owner_verdict_capture_20260816.mjs": "802610206bd6530d659b03963763b7846a1810390bdf7e51cecee7788d11b986",
-    "outputs/derived/sp078_owner_verdict_ledger_20260816.json": "8448f1ea288f8e1b10a1c8ace12fefd1f000f63abaf496321513fcdd7b4b20a6"
+    "scripts/sp100_production_wiring_decision_packet_20260816.mjs": "0c993f6d74651075dd38fd20f61570caa3591a44e7d7a6e03f536f088f3f1a06",
+    "scripts/qa_sp100_production_wiring_decision_packet_20260816.mjs": "a3b2834d2204be53717d4827d9d2782f6b9185370f8c37d8e55da725b79ad5c9",
+    "outputs/derived/sp100_production_wiring_decision_packet_20260816.json": "d93956fa68e1d37c534338908c1addc89956a35831a0cfc3f0445983ead70f49",
+    "docs/audits/sp100_production_wiring_decision_packet_20260816.md": "4f0c68d3273fc7d9aa10ce3ca5a01b5864cad59f06b9aea349f8a9b1aff98763",
+    "docs/audits/sp100_owner_decision_20260816.md": "a069397d3ecb894bf35451a736039760a05c757da20f0dfa5277f96cfb061d9b",
+    "docs/audits/sp100_owner_approved_production_wiring_20260816.md": "3fbc03b8771f025f7318b97cb790996d9879ca0c5791ffd974fb8ce8ca9254b2",
+    "docs/audits/sp100_owner_approved_wiring_20260816.md": "a10c21334190b1984eb576b186deea5ef4b209a3aecf41d7a888b34fedd73058",
+    "src/ratings/direct_measurement.mjs": "6648c0a859c71922c7f63fb2f4c600f3c121f81114c0a8c616ad7b5f1f4089e0",
+    "src/ratings/sp100_npb_primary_speed.mjs": "114fb6205ce345e5219e08c494b71cae17614767e8bed302dae2de2090d545c3",
+    "src/ratings/sp100_production_wiring.mjs": "e704d923491cbfa1b81498f6521699a02c63d9abd923acfb95afb4cc8ef33168",
+    "scripts/build_sp100_owner_approved_production_wiring_20260816.mjs": "8d4eb9e224e148b76a4535c60d936306f55fb38a82d0bf476c873721f27bd0c3",
+    "scripts/qa_sp100_owner_approved_wiring_20260816.mjs": "373393408aa18e7d69fc84a3eb5368128810ff4e39e90ee5e67d9d985f3abecc",
+    "outputs/derived/sp100_owner_approved_production_wiring_20260816.json": "585a8c18e77b33c5161a5a44aaa0edf6e7915ea68231fd03ab3da3207b24dc47",
+    "outputs/derived/qa_sp100_owner_approved_wiring_20260816.json": "f2319b013f2db5f520f01ce3a49f461d861f911a4f44dfe26839f9babee756da",
+    "scripts/build_sp077_final_owner_review_queue_20260816.mjs": "2604f6effd6252426f4396a6f93391fb6d154a294eb074c59ad11320fe41c0c2",
+    "outputs/derived/sp077_final_owner_review_queue_20260816.json": "3ee2328bc61d47ce74c31907e0ead3a194a90d02c9ec29605219a5062896e2ba",
+    "outputs/derived/sp077_final_owner_review_queue_20260816.csv": "bf5192dc5f90017911508ac844511cf784154ca4465c1826a69d02a9cbcfd89c",
+    "docs/reports/sp077_final_owner_review_queue_20260816.md": "ab5aef09b07dc5f291282b9fe9df7b11752017b411a24878e319f9866ca5d740",
+    "scripts/sp078_owner_verdict_capture_20260816.mjs": "b39b51f3c8b586febd813a047c4d23c25ac6e205930500ec0ac0b33e54403f76",
+    "outputs/derived/sp078_owner_verdict_ledger_20260816.json": "ee97a2eb98aaf3d8df04da90478eadb05aac8a0cadcc65199d81aefb598d25bd"
   },
   "remaining_blockers_to_sp079": [
-    "Explicit owner approval of the SP-100 production-wiring architecture is still required; SP-100 remains PARTIAL and production behavior is unchanged.",
-    "Owner verdicts have not been entered: SP-078 ledger intentionally contains zero real verdicts."
+    "Owner review/verdict input has not been entered: SP-078 ledger intentionally contains zero real verdicts."
   ],
   "non_blocking_provisional_limitations": [
     "SP-071 absolute 0-100 scale finalization remains blocked on the engine bridge; it is retained as a provisional label, not a declared SP-079 dependency."

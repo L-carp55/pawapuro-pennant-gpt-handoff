@@ -88,6 +88,16 @@ const keyFiles = [
   'scripts/qa_sp100_production_wiring_decision_packet_20260816.mjs',
   'outputs/derived/sp100_production_wiring_decision_packet_20260816.json',
   'docs/audits/sp100_production_wiring_decision_packet_20260816.md',
+  'docs/audits/sp100_owner_decision_20260816.md',
+  'docs/audits/sp100_owner_approved_production_wiring_20260816.md',
+  'docs/audits/sp100_owner_approved_wiring_20260816.md',
+  'src/ratings/direct_measurement.mjs',
+  'src/ratings/sp100_npb_primary_speed.mjs',
+  'src/ratings/sp100_production_wiring.mjs',
+  'scripts/build_sp100_owner_approved_production_wiring_20260816.mjs',
+  'scripts/qa_sp100_owner_approved_wiring_20260816.mjs',
+  'outputs/derived/sp100_owner_approved_production_wiring_20260816.json',
+  'outputs/derived/qa_sp100_owner_approved_wiring_20260816.json',
   'scripts/build_sp077_final_owner_review_queue_20260816.mjs',
   'outputs/derived/sp077_final_owner_review_queue_20260816.json',
   'outputs/derived/sp077_final_owner_review_queue_20260816.csv',
@@ -119,7 +129,7 @@ check('REGISTRY_DIRECT_ROWS_CONTENT_LEVEL', () => {
   const expected = {
     'SP-016': ['DONE_VALIDATED', '0', '0'],
     'SP-098': ['DONE_VALIDATED', '0', '0'],
-    'SP-100': ['PARTIAL', '0', '1'],
+    'SP-100': ['DONE_VALIDATED', '0', '0'],
     'SP-077': ['DONE_VALIDATED', '0', '0'],
     'SP-078': ['DONE_VALIDATED', '0', '0'],
   };
@@ -257,25 +267,37 @@ check('SP098_NO_SELF_FULFILLING_ID_CHECK', () => {
   return 'no non-empty-id shortcut';
 });
 
-// SP-100: run the read-only QA and independently assert the owner boundary.
+// SP-100: independently assert the explicit owner-approved limited wiring.
 const sp100 = json('outputs/derived/sp100_production_wiring_decision_packet_20260816.json');
+const sp100Layer = json('outputs/derived/sp100_owner_approved_production_wiring_20260816.json');
 const latent = json('outputs/derived/sp100_npb_raw_latent_speed.json');
-check('SP100_RECEIPT_57_PASS_0_FAIL', () => {
+check('SP100_PACKET_QA_PASS_0_FAIL', () => {
   const output = runtimeReceipts.sp100Qa;
   requireOk(output, 'missing externally executed SP-100 QA receipt');
-  requireOk(/SP-100 independent QA: 57 PASS \/ 0 FAIL/.test(output), `unexpected SP-100 QA: ${output}`);
+  requireOk(/SP-100 owner-approved packet QA: \d+ PASS \/ 0 FAIL/.test(output), `unexpected SP-100 QA: ${output}`);
   return output;
 });
-check('SP100_OWNER_BOUNDARY_RECOMMENDATION_ONLY', () => {
-  requireOk(sp100.status === 'PARTIAL' && sp100.decision_type === 'OWNER_VALUE_JUDGMENT_REQUIRED', `status ${sp100.status}/${sp100.decision_type}`);
+check('SP100_EXPLICIT_OWNER_DECISION_AND_IMPLEMENTATION', () => {
+  const exact = 'SP-100は N_PRIMARY_S_CONTEXT_OR_FALLBACK で承認します。Sはcontext/fallbackに留め、SとNを識別不能な重みでblendしません。';
+  requireOk(sp100.status === 'DONE_VALIDATED' && sp100.decision_type === 'EXPLICIT_OWNER_APPROVED_IMPLEMENTED', `status ${sp100.status}/${sp100.decision_type}`);
   requireOk(sp100.technical_recommendation === 'N_PRIMARY_S_CONTEXT_OR_FALLBACK', `recommendation ${sp100.technical_recommendation}`);
-  requireOk(sp100.implemented_architecture === null && sp100.production_behavior_changed === false, 'owner judgment was silently implemented');
-  requireOk(sp100.owner_ruling_after_v2_provenance_repair?.found === false, 'unproven owner ruling');
-  requireOk(sp100.exact_one_line_owner_approval_required === 'Approve N_PRIMARY_S_CONTEXT_OR_FALLBACK for 2026-only SP-100 production wiring; keep S as context/fallback and do not blend S and N by an unidentifiable weight.', 'approval line changed');
+  requireOk(sp100.implemented_architecture === 'N_PRIMARY_S_CONTEXT_OR_FALLBACK' && sp100.production_behavior_changed === true, 'approved architecture not implemented');
+  requireOk(sp100.owner_ruling_after_v2_provenance_repair?.found === true
+    && sp100.owner_ruling_after_v2_provenance_repair?.exact_owner_ruling === exact
+    && sp100.owner_ruling_after_v2_provenance_repair?.owner_player_verdicts_written === 0, 'owner ruling receipt mismatch');
   requireOk(sp100.architectures?.length === 3 && sp100.architectures.every(architecture =>
     ['annual_time_alignment', 'construct_directness', 'sampling_max_statistic_caveat', 'coverage', 'provenance_safety', 'circularity', 'arbitrary_unidentifiable_weight']
       .every(key => Boolean(architecture[key]))), 'admissible architecture comparison incomplete');
-  return { status: sp100.status, recommendation: sp100.technical_recommendation };
+  requireOk(sp100Layer.status === 'DONE_VALIDATED' && sp100Layer.summary?.current_target_population === 100
+    && sp100Layer.summary?.N_primary_count === 100 && sp100Layer.summary?.S_fallback_count === 0
+    && sp100Layer.production_behavior?.arithmetic_N_S_blend === false
+    && sp100Layer.production_behavior?.final_practical_reappraisal_created === false, 'N-primary layer summary mismatch');
+  requireOk(sp100Layer.players?.length === 100 && new Set(sp100Layer.players.map(row => row.stable_player_key)).size === 100
+    && sp100Layer.players.every(row => row.selection === 'N_PRIMARY_CURRENT_2026'
+      && row.no_arithmetic_n_s_blend === true
+      && row.n_primary?.measurement_reliability === 'NOT_IDENTIFIABLE'
+      && row.n_primary?.exposure_context?.applied_to_z === false), 'N-primary row constraint mismatch');
+  return { status: sp100.status, implementation: sp100.implemented_architecture, n_primary_rows: sp100Layer.summary.N_primary_count };
 });
 check('SP100_TOP_SPEED_ONLY_AND_RAW_PROVENANCE_GUARD', () => {
   requireOk(latent.inputs?.hp_to_1b_sec_used === 0 && latent.measurement_reliability?.verdict === 'NOT_IDENTIFIABLE'
@@ -307,12 +329,20 @@ check('SP077_DEPENDENCY_GATE_PROVISIONAL_AND_HUMAN_REPORT', () => {
   const fixture = runtimeReceipts.sp077Fixture;
   requireOk(fixture, 'missing externally executed SP-077 fixture receipt');
   requireOk(fixture.includes('"result":"PASS"'), `dependency fixture ${fixture}`);
-  requireOk(queue.provisional_constraints?.sp100_status === 'PARTIAL' && queue.provisional_constraints?.sp100_implemented_architecture === null
-    && queue.provisional_constraints?.sp071_status === 'BLOCKED_DEPENDENCY', 'missing SP-100/SP-071 provisional labels');
+  requireOk(queue.provisional_constraints?.sp100_status === 'DONE_VALIDATED'
+    && queue.provisional_constraints?.sp100_implemented_architecture === 'N_PRIMARY_S_CONTEXT_OR_FALLBACK'
+    && queue.provisional_constraints?.sp100_owner_approved_wiring_active === true
+    && queue.provisional_constraints?.sp100_owner_decision_required === false
+    && queue.provisional_constraints?.sp071_status === 'BLOCKED_DEPENDENCY', 'missing current SP-100/SP-071 status labels');
+  requireOk(queue.players.every(row => row.current_physical_evidence?.sp100_selection === 'N_PRIMARY_CURRENT_2026'
+    && row.current_physical_evidence?.no_arithmetic_n_s_blend === true
+    && row.current_physical_evidence?.measurement_reliability === 'NOT_IDENTIFIABLE'
+    && row.provisional_status?.sp100_owner_decision_required === false
+    && row.provisional_status?.sp100_owner_approved_wiring_active === true), 'queue does not expose N-primary/no-blend fields for all rows');
   const report = read('docs/reports/sp077_final_owner_review_queue_20260816.md');
   requireOk(!report.includes('[object Object]'), 'human queue report serializes a field as [object Object]');
   requireOk(report.includes('Queue coverage: **100/100**') && report.includes('No owner verdict is entered.'), 'human report missing queue/verdict statement');
-  return { fixture, provisional: queue.provisional_constraints.sp100_status };
+  return { fixture, sp100: queue.provisional_constraints.sp100_status };
 });
 check('SP077_SOURCE_HASHES_AND_SCOPE_GUARDS', () => {
   const mismatches = Object.entries(queue.source_hashes ?? {}).filter(([file, expected]) => fileHash(file) !== expected).map(([file]) => file);
@@ -333,7 +363,9 @@ check('SP078_NO_OVERWRITE_SELF_TEST', () => {
   const output = runtimeReceipts.sp078SelfTest;
   requireOk(output, 'missing externally executed SP-078 self-test receipt');
   requireOk(output.includes('"self_test":"PASS"') && output.includes('"duplicate_overwrite_rejected":true')
-    && output.includes('"explicit_amendment_preserves_history":true'), `SP-078 self test ${output}`);
+    && output.includes('"explicit_amendment_preserves_history":true')
+    && output.includes('"empty_reinitialization_rebinds_current_queue":true')
+    && output.includes('"nonempty_reinitialization_rejected":true'), `SP-078 self test ${output}`);
   return output;
 });
 
@@ -374,15 +406,21 @@ check('NO_EXTERNAL_COLLECTION_AND_FORBIDDEN_WORK_SCOPE', () => {
     'configs/running_norms.json', 'docs/state/speed_exclusion_reason_ledger.tsv', 'docs/state/speed_task_registry.tsv',
     'outputs/derived/sp100_npb_raw_latent_speed.json', 'outputs/derived/sp100_wiring_candidates_20260814.json',
     'scripts/qa_speed_task_registry.mjs', 'scripts/sp063_090_098_043_022_072_074_075.mjs', 'scripts/sp100_npb_raw_latent_speed.mjs',
-    'src/cards/durable_estimate.mjs', 'src/cards/pipeline.mjs', 'src/ratings/durable_traits.mjs',
+    'src/cards/durable_estimate.mjs', 'src/cards/pipeline.mjs', 'src/ratings/durable_traits.mjs', 'src/ratings/direct_measurement.mjs',
+    'src/ratings/sp100_npb_primary_speed.mjs', 'src/ratings/sp100_production_wiring.mjs',
     'docs/audits/sp016_current_year_first_repair_20260816.md', 'docs/audits/sp098_identity_coverage_qa_20260816.md',
-    'docs/audits/sp100_production_wiring_decision_packet_20260816.md', 'docs/reports/sp077_final_owner_review_queue_20260816.md',
+    'docs/audits/sp100_production_wiring_decision_packet_20260816.md', 'docs/audits/sp100_owner_decision_20260816.md',
+    'docs/audits/sp100_owner_approved_production_wiring_20260816.md', 'docs/audits/sp100_owner_approved_wiring_20260816.md',
+    'docs/reports/sp077_final_owner_review_queue_20260816.md',
     'outputs/derived/sp016_current_year_first_repair_qa_20260816.json', 'outputs/derived/sp077_final_owner_review_queue_20260816.csv',
     'outputs/derived/sp077_final_owner_review_queue_20260816.json', 'outputs/derived/sp078_owner_verdict_ledger_20260816.json',
     'outputs/derived/sp098_identity_coverage_qa_20260816.json', 'outputs/derived/sp100_production_wiring_decision_packet_20260816.json',
-    'scripts/build_sp077_final_owner_review_queue_20260816.mjs', 'scripts/qa_sp100_production_wiring_decision_packet_20260816.mjs',
+    'outputs/derived/sp100_owner_approved_production_wiring_20260816.json', 'outputs/derived/qa_sp100_owner_approved_wiring_20260816.json',
+    'scripts/build_sp077_final_owner_review_queue_20260816.mjs', 'scripts/build_sp100_owner_approved_production_wiring_20260816.mjs',
+    'scripts/qa_sp100_production_wiring_decision_packet_20260816.mjs', 'scripts/qa_sp100_owner_approved_wiring_20260816.mjs',
     'scripts/sp016_current_year_first_repair_qa_20260816.mjs', 'scripts/sp078_owner_verdict_capture_20260816.mjs',
     'scripts/sp098_identity_coverage_qa_20260816.mjs', 'scripts/sp100_production_wiring_decision_packet_20260816.mjs',
+    'scripts/test_qa_remaining.mjs',
     'scripts/qa_opus_speed_pre_owner_review_wave_20260816.mjs', OUT, AUDIT,
   ]);
   const unexpected = [...changed].filter(file => !allowed.has(file));
@@ -414,8 +452,7 @@ const result = {
   summary: { passed, failed, result: failed === 0 ? 'PASS' : 'FAIL' },
   key_artifact_sha256: keyArtifactHashes,
   remaining_blockers_to_sp079: [
-    'Explicit owner approval of the SP-100 production-wiring architecture is still required; SP-100 remains PARTIAL and production behavior is unchanged.',
-    'Owner verdicts have not been entered: SP-078 ledger intentionally contains zero real verdicts.',
+    'Owner review/verdict input has not been entered: SP-078 ledger intentionally contains zero real verdicts.',
   ],
   non_blocking_provisional_limitations: [
     'SP-071 absolute 0-100 scale finalization remains blocked on the engine bridge; it is retained as a provisional label, not a declared SP-079 dependency.',
@@ -435,14 +472,14 @@ const audit = [
   '## Result',
   '',
   `- **${passed} PASS / ${failed} FAIL — ${result.summary.result}**`,
-  `- Registry QA: PASS; SP-016 receipt: 8 PASS / 0 FAIL; SP-098 receipt: 16 PASS / 0 FAIL; SP-100 read-only QA: 57 PASS / 0 FAIL.`,
+  `- Registry QA: PASS; SP-016 receipt: 8 PASS / 0 FAIL; SP-098 receipt: 16 PASS / 0 FAIL; ${runtimeReceipts.sp100Qa.match(/SP-100 owner-approved packet QA: \d+ PASS \/ 0 FAIL/)?.[0] ?? 'SP-100 packet QA PASS receipt supplied'}.`,
   `- Real owner verdicts: **${ledger.owner_verdict_count}**.`,
   '',
   '## Content-level conclusions',
   '',
   '- SP-016: repaired mode is production default. At 50 PA or more history is exactly absent; below 50 PA the coherent zero-centred prior uses kappa=50 and lambda=50/505. Raw 520 historical-PA median is reproduced before split-team deduplication; corrected calibrated cohort is 260 / 241 / 505.',
   '- SP-098: 名原 is `BM_PLAYER:20230057` with batting coverage missing, Santana is exact `53755153`, and Shiomi is exact `71975136` with AB=0/non-batting schema retained. Negative same-surname/wrong-team/wrong-id cases reject.',
-  '- SP-100: remains PARTIAL. `N_PRIMARY_S_CONTEXT_OR_FALLBACK` is a technical recommendation only; no post-v2 owner ruling was found, no production architecture is implemented, and `hp_to_1b_sec` remains rejected.',
+  '- SP-100: DONE_VALIDATED. The explicit owner ruling implements `N_PRIMARY_S_CONTEXT_OR_FALLBACK` as the current 2026 N-primary physical/rank layer for 100/100 rows; S remains separate context/fallback, `hp_to_1b_sec` remains rejected, and no final SP-079 rating is created.',
   '- SP-077: exact 100/100 unique stable rows, zero verdicts, dependency fixture rejects an open declared dependency, and the human report contains readable SP-074 states.',
   '- SP-078: initialized empty ledger binds to the final queue hash; ordinary overwrite rejects and explicit amendments preserve history.',
   '- SP-075/Community invariant hashes and the production scale-finalization configuration are unchanged. No new external collection, shoulder work, SP-079/SP-080/SP-081 work, individual PowerPro teacher, or future-year annual-appraisal weighting was found.',

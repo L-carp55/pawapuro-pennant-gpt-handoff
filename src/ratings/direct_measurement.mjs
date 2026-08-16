@@ -193,6 +193,11 @@ export function buildDirectMeasurements(row, cfg, targetSeason = null) {
       }
       const cands = Object.entries(npbPlus)
         .filter(([metric, m]) => m.ability === ability
+          // SP-100 owner decision (2026-08-16): NPB+ top speed must not use
+          // this legacy PowerPro-scale regression or its blend path. The
+          // dedicated 2026 N-primary wire computes its cohort z/rank through
+          // the provenance gateway; older appraisal years retain S instead.
+          && metric !== 'top_speed_kmh'
           && (m.test_r ?? 0) >= HOLDOUT_MIN
           && row[metric] != null)
         .sort((a, b) => (b[1].test_r ?? 0) - (a[1].test_r ?? 0));

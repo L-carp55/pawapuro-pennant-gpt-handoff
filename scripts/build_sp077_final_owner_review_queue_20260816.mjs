@@ -19,6 +19,7 @@ const F = {
   sp075: 'outputs/derived/sp075_stale_conflict_rediagnosis_v4_20260816.json',
   sp098: 'outputs/derived/sp098_identity_coverage_qa_20260816.json',
   sp100: 'outputs/derived/sp100_production_wiring_decision_packet_20260816.json',
+  sp100Layer: 'outputs/derived/sp100_owner_approved_production_wiring_20260816.json',
   queueJson: 'outputs/derived/sp077_final_owner_review_queue_20260816.json',
   queueCsv: 'outputs/derived/sp077_final_owner_review_queue_20260816.csv',
   report: 'docs/reports/sp077_final_owner_review_queue_20260816.md',
@@ -117,7 +118,7 @@ const sp100Registry = byId.get('SP-100');
 check('SP-071 registry row exists', Boolean(sp071));
 check('SP-100 registry row exists', Boolean(sp100Registry));
 
-const sourceTexts = Object.fromEntries([F.registry, F.master, F.sp022, F.sp074, F.sp075, F.sp098, F.sp100]
+const sourceTexts = Object.fromEntries([F.registry, F.master, F.sp022, F.sp074, F.sp075, F.sp098, F.sp100, F.sp100Layer]
   .map(rel => [rel, read(rel)]));
 const sourceHashes = Object.fromEntries(Object.entries(sourceTexts).map(([rel, text]) => [rel, sha256(text)]));
 const masterRows = parseCsv(sourceTexts[F.master]);
@@ -126,21 +127,33 @@ const sp074 = JSON.parse(sourceTexts[F.sp074]);
 const sp075 = JSON.parse(sourceTexts[F.sp075]);
 const sp098 = JSON.parse(sourceTexts[F.sp098]);
 const sp100 = JSON.parse(sourceTexts[F.sp100]);
+const sp100Layer = JSON.parse(sourceTexts[F.sp100Layer]);
 
 check('current-100 source has exactly 100 rows', masterRows.length === 100);
 check('SP-022 provides 100 profiles', Array.isArray(sp022.profiles) && sp022.profiles.length === 100);
 check('SP-074 provides 100 classifications', Array.isArray(sp074.players) && sp074.players.length === 100);
 check('SP-075 provides 100 player contexts', Array.isArray(sp075.players) && sp075.players.length === 100);
 check('SP-098 identity QA passed', sp098?.summary?.result === 'PASS');
-check('SP-100 packet remains a recommendation, not an implementation',
-  sp100?.status === 'PARTIAL' && sp100?.production_behavior_changed === false);
-check('SP-100 packet selects no production architecture without owner ruling',
-  sp100?.implemented_architecture == null);
+check('SP-100 packet records the explicit owner-approved implementation',
+  sp100?.status === 'DONE_VALIDATED'
+    && sp100?.decision_type === 'EXPLICIT_OWNER_APPROVED_IMPLEMENTED'
+    && sp100?.implemented_architecture === 'N_PRIMARY_S_CONTEXT_OR_FALLBACK'
+    && sp100?.production_behavior_changed === true
+    && sp100?.owner_ruling_after_v2_provenance_repair?.found === true);
+check('SP-100 physical layer is exact N-primary current-100 coverage',
+  sp100Layer?.status === 'DONE_VALIDATED'
+    && sp100Layer?.owner_approved_architecture === 'N_PRIMARY_S_CONTEXT_OR_FALLBACK'
+    && sp100Layer?.summary?.current_target_population === 100
+    && sp100Layer?.summary?.N_primary_count === 100
+    && sp100Layer?.production_behavior?.arithmetic_N_S_blend === false
+    && sp100Layer?.production_behavior?.final_practical_reappraisal_created === false);
 
 const sp022ByName = new Map(sp022.profiles.map(row => [norm(row.player), row]));
 const sp074ByName = new Map(sp074.players.map(row => [norm(row.player), row]));
 const sp075ByName = new Map(sp075.players.map(row => [norm(row.player), row]));
 const sp098Outcomes = sp098.outcomes ?? {};
+const sp100LayerByStableKey = new Map((sp100Layer.players ?? []).map(row => [row.stable_player_key, row]));
+check('SP-100 physical layer stable keys are unique', sp100LayerByStableKey.size === 100);
 
 function identityFor(row) {
   const player = norm(row.player);
@@ -167,7 +180,7 @@ function identityFor(row) {
 }
 
 const ownerFlags = [
-  `SP-100=${sp100Registry.status}: ${sp100?.exact_one_line_owner_approval_required ?? sp100?.required_owner_approval ?? sp100?.owner_decision?.required_approval ?? 'owner production-wiring decision required'}`,
+  `SP-100=${sp100Registry.status}: owner-approved N_PRIMARY_S_CONTEXT_OR_FALLBACK is active for the 2026 physical/rank layer; S remains context/fallback only and is never blended with N.`,
   `SP-071=${sp071.status}: absolute 0-100 scale remains provisional pending engine bridge`,
   'SP-079 is not run by this queue; no final practical reappraisal is represented here.',
 ];
@@ -184,6 +197,10 @@ const players = masterRows.map((row, index) => {
     ? conflictClassification.state ?? null
     : conflictClassification;
   const identity = identityFor(row);
+  const nPrimary = sp100LayerByStableKey.get(identity.stable_player_key);
+  check(`SP-100 N-primary row joins ${row.player}`, Boolean(nPrimary));
+  check(`SP-100 N-primary identity agrees ${row.player}`,
+    norm(nPrimary.player) === nameKey && nPrimary.selection === 'N_PRIMARY_CURRENT_2026');
   const activeCommunityRows = Number(community.active_community_source_row_count ?? 0);
   const activeCommunity = activeCommunityRows > 0;
   return {
@@ -199,7 +216,24 @@ const players = masterRows.map((row, index) => {
     },
     current_physical_evidence: {
       appraisal_year: 2026,
-      npb_plus_top_speed_kmh: numeric(row.npb_plus_sprint_speed_kmh),
+      sp100_selection: nPrimary.selection,
+      sp100_current_physical_selection: nPrimary.selection,
+      sp100_owner_approved_architecture: nPrimary.architecture,
+      npb_plus_top_speed_kmh: nPrimary.n_primary.top_speed_kmh,
+      npb_top_speed_z: nPrimary.n_primary.npb_top_speed_z,
+      sp100_npb_top_speed_z: nPrimary.n_primary.npb_top_speed_z,
+      rank_fastest_in_current_100: nPrimary.n_primary.current_cohort.rank_fastest,
+      sp100_rank_fastest: nPrimary.n_primary.current_cohort.rank_fastest,
+      percentile_faster_than_in_current_100: nPrimary.n_primary.current_cohort.percentile_faster_than,
+      measurement_reliability: nPrimary.n_primary.measurement_reliability,
+      sp100_measurement_reliability: nPrimary.n_primary.measurement_reliability,
+      exposure_context: nPrimary.n_primary.exposure_context,
+      sp100_exposure_context: nPrimary.n_primary.exposure_context,
+      provisional_display_point: nPrimary.n_primary.provisional_display_point,
+      sp100_provisional_display_point: nPrimary.n_primary.provisional_display_point,
+      display_scale_status: nPrimary.n_primary.display_scale_status,
+      physical_evidence_season: nPrimary.physical_evidence_season,
+      no_arithmetic_n_s_blend: nPrimary.no_arithmetic_n_s_blend,
       measure_class: 'NPB_PLUS_TOP_MAX_SPEED_DIRECT_MAX_STATISTIC',
       full_effort_run_proxy_count: numeric(row.full_effort_run_proxy_count),
       exposure_class: row.exposure_class || null,
@@ -211,9 +245,9 @@ const players = masterRows.map((row, index) => {
       physical_record_count: numeric(row.physical_record_count),
       existing_provisional_physical_point: numeric(row.blind_v3_baseline_rating),
       existing_provisional_t90: numeric(row.blind_v3_t90),
-      existing_point_status: 'PRESERVED_PROVISIONAL_NOT_A_FINAL_SP079_APPRAISAL',
-      provenance: row.source_artifact_references || null,
-      limitation: 'N is direct current maximum-statistic evidence, not error-free. Exposure is confidence/context only and does not numerically shrink N.',
+      existing_point_status: 'PRESERVED_LEGACY_CONTEXT_NOT_THE_SP100_N_PRIMARY_SELECTION_AND_NOT_A_FINAL_SP079_APPRAISAL',
+      provenance: [F.sp100Layer, row.source_artifact_references || null].filter(Boolean),
+      limitation: 'N is current direct maximum-statistic evidence, not error-free. Generic reliability is NOT_IDENTIFIABLE. Exposure is context only and does not numerically shrink N; S is separately retained below and never arithmetically blended.',
     },
     statistical_proxy_context: {
       appraisal_year: s.appraisal_year,
@@ -254,7 +288,8 @@ const players = masterRows.map((row, index) => {
     },
     provisional_status: {
       labels: ownerFlags,
-      sp100_owner_decision_required: true,
+      sp100_owner_decision_required: false,
+      sp100_owner_approved_wiring_active: true,
       sp071_absolute_scale_finalization_pending: true,
       no_sp079_final_reappraisal_entered: true,
     },
@@ -276,8 +311,14 @@ check('all rows preserve an identity key', players.every(row => row.identity.sta
 check('all rows keep verdicts blank', players.every(row => row.owner_verdict.status === 'NOT_ENTERED' && row.owner_verdict.verdict == null));
 check('only active SP-075 context is included', players.filter(row => !row.community_rating_consensus_context.active_under_sp075_policy)
   .every(row => row.community_rating_consensus_context.effect == null));
-check('all rows label SP-100 and SP-071 as provisional', players.every(row =>
-  row.provisional_status.sp100_owner_decision_required && row.provisional_status.sp071_absolute_scale_finalization_pending));
+check('all rows expose the approved N-primary selection without an SP-100 provisional flag', players.every(row =>
+  row.current_physical_evidence.sp100_selection === 'N_PRIMARY_CURRENT_2026'
+    && row.current_physical_evidence.no_arithmetic_n_s_blend === true
+    && row.current_physical_evidence.measurement_reliability === 'NOT_IDENTIFIABLE'
+    && row.provisional_status.sp100_owner_decision_required === false
+    && row.provisional_status.sp100_owner_approved_wiring_active === true));
+check('all rows retain only the SP-071 provisional display-scale limitation', players.every(row =>
+  row.provisional_status.sp071_absolute_scale_finalization_pending));
 
 const output = {
   schema_version: 'sp077_final_owner_review_queue_20260816',
@@ -302,7 +343,9 @@ const output = {
   provisional_constraints: {
     sp100_status: sp100Registry.status,
     sp100_recommendation: sp100?.technical_recommendation ?? 'N_PRIMARY_S_CONTEXT_OR_FALLBACK',
-    sp100_implemented_architecture: sp100?.implemented_architecture ?? null,
+    sp100_implemented_architecture: sp100?.implemented_architecture,
+    sp100_owner_approved_wiring_active: true,
+    sp100_owner_decision_required: false,
     sp071_status: sp071.status,
     text: ownerFlags,
   },
@@ -318,7 +361,8 @@ const output = {
 
 const csvColumns = [
   'queue_row_key', 'queue_order', 'player', 'team', 'stable_player_key', 'production_player_id', 'canonical_crosswalk_key',
-  'identity_status', 'batting_coverage', 'npb_plus_top_speed_kmh', 'existing_provisional_physical_point', 'existing_provisional_t90',
+  'identity_status', 'batting_coverage', 'sp100_selection', 'npb_plus_top_speed_kmh', 'npb_top_speed_z', 'rank_fastest_in_current_100',
+  'provisional_display_point', 'measurement_reliability', 'existing_provisional_physical_point', 'existing_provisional_t90',
   'sp022_state', 'sp022_value_z', 'sp022_sigma', 'sp075_active_context', 'sp075_active_source_row_count', 'sp074_classification',
   'source_best_evidence_tier', 'decision_usable_evidence_tier', 'owner_verdict_status', 'sp100_provisional', 'sp071_provisional',
 ];
@@ -332,7 +376,12 @@ const csvRows = players.map(row => ({
   canonical_crosswalk_key: row.identity.canonical_crosswalk_key,
   identity_status: row.identity.identity_status,
   batting_coverage: row.identity.batting_coverage,
+  sp100_selection: row.current_physical_evidence.sp100_selection,
   npb_plus_top_speed_kmh: row.current_physical_evidence.npb_plus_top_speed_kmh,
+  npb_top_speed_z: row.current_physical_evidence.npb_top_speed_z,
+  rank_fastest_in_current_100: row.current_physical_evidence.rank_fastest_in_current_100,
+  provisional_display_point: row.current_physical_evidence.provisional_display_point,
+  measurement_reliability: row.current_physical_evidence.measurement_reliability,
   existing_provisional_physical_point: row.current_physical_evidence.existing_provisional_physical_point,
   existing_provisional_t90: row.current_physical_evidence.existing_provisional_t90,
   sp022_state: row.statistical_proxy_context.state,
@@ -344,7 +393,7 @@ const csvRows = players.map(row => ({
   source_best_evidence_tier: row.missingness_and_coverage.source_best_evidence_tier,
   decision_usable_evidence_tier: row.missingness_and_coverage.decision_usable_evidence_tier,
   owner_verdict_status: row.owner_verdict.status,
-  sp100_provisional: true,
+  sp100_provisional: false,
   sp071_provisional: true,
 }));
 const report = [
@@ -356,13 +405,13 @@ const report = [
   '',
   `- Queue coverage: **${players.length}/100**, exactly once by stable row key.`,
   '- No owner verdict is entered. This is pre-owner-review infrastructure, not SP-079.',
-  `- SP-100 remains **${sp100Registry.status}**: technical recommendation is N-primary/S-context-or-fallback, but production is unchanged pending explicit owner approval.`,
+  `- SP-100 is **${sp100Registry.status}**: owner-approved N-primary/S-context-or-fallback is wired for all 100 current physical/rank rows. S remains separately labelled context/fallback and is never blended with N.`,
   `- SP-071 remains **${sp071.status}**: the absolute 0–100 display scale is provisional.`,
   '',
   '## Reading the rows',
   '',
-  '- `current_physical_evidence` is the current 2026 NPB+ top/max-speed lane and separately preserves any existing provisional physical point. It is not a final SP-079 rating.',
-  '- `statistical_proxy_context` is the 2025 S/pairwise lane. It is context only and never a physical teacher.',
+  '- `current_physical_evidence` is the owner-approved current 2026 N-primary top/max-speed lane. It includes raw top speed, cohort z/rank, unknown generic reliability, contextual-only exposure, and a provisional display point. It is not a final SP-079 rating.',
+  '- `statistical_proxy_context` is the separately retained 2025 S/pairwise context/fallback lane. It is never arithmetically blended with N and is never a physical teacher.',
   '- `community_rating_consensus_context` is present only where active under SP-075; it is owner-review context only and never an automatic action.',
   '- Missingness is explicit and is never converted into negative evidence.',
   '- 名原 uses the stable `BM_PLAYER:20230057` crosswalk with batting coverage marked missing; no ProEYE id or 2025 first-team batting value is invented.',
@@ -374,9 +423,9 @@ const report = [
   '',
   '## Compact 100-player index',
   '',
-  '| # | Player | Stable key | 2026 N top speed | S context | Active SP-075 context | SP-074 state | Verdict |',
-  '|---:|---|---|---:|---|---:|---|---|',
-  ...players.map(row => `| ${row.queue_order} | ${row.identity.player} | ${row.identity.stable_player_key} | ${row.current_physical_evidence.npb_plus_top_speed_kmh ?? '-'} | ${row.statistical_proxy_context.state} | ${row.community_rating_consensus_context.active_source_row_count} | ${row.pairwise_and_conflict_context.sp074_state ?? '-'} | ${row.owner_verdict.status} |`),
+  '| # | Player | Stable key | 2026 N top speed | N z/rank | S context | Active SP-075 context | SP-074 state | Verdict |',
+  '|---:|---|---|---:|---|---|---:|---|---|',
+  ...players.map(row => `| ${row.queue_order} | ${row.identity.player} | ${row.identity.stable_player_key} | ${row.current_physical_evidence.npb_plus_top_speed_kmh ?? '-'} | ${row.current_physical_evidence.npb_top_speed_z ?? '-'} / ${row.current_physical_evidence.rank_fastest_in_current_100 ?? '-'} | ${row.statistical_proxy_context.state} | ${row.community_rating_consensus_context.active_source_row_count} | ${row.pairwise_and_conflict_context.sp074_state ?? '-'} | ${row.owner_verdict.status} |`),
   '',
 ].join('\n');
 

@@ -1,0 +1,5014 @@
+{
+  "schema_version": "qa_sp100_owner_approved_wiring_20260816",
+  "generated_at": "2026-08-16",
+  "task_id": "SP-100",
+  "status": "PASS",
+  "summary": {
+    "checks_passed": 1248,
+    "checks_failed": 0
+  },
+  "required_consumers": [
+    "outputs/derived/sp100_owner_approved_production_wiring_20260816.json",
+    "outputs/derived/sp100_production_wiring_decision_packet_20260816.json",
+    "outputs/derived/sp077_final_owner_review_queue_20260816.json",
+    "outputs/derived/sp078_owner_verdict_ledger_20260816.json"
+  ],
+  "checks": [
+    {
+      "label": "required artifact exists: configs/ratings.json",
+      "pass": true
+    },
+    {
+      "label": "required artifact exists: docs/state/speed_task_registry.tsv",
+      "pass": true
+    },
+    {
+      "label": "required artifact exists: docs/audits/sp100_owner_decision_20260816.md",
+      "pass": true
+    },
+    {
+      "label": "required artifact exists: scripts/build_sp100_owner_approved_production_wiring_20260816.mjs",
+      "pass": true
+    },
+    {
+      "label": "required artifact exists: src/ratings/direct_measurement.mjs",
+      "pass": true
+    },
+    {
+      "label": "required artifact exists: outputs/derived/sp100_owner_approved_production_wiring_20260816.json",
+      "pass": true
+    },
+    {
+      "label": "required artifact exists: outputs/derived/sp100_production_wiring_decision_packet_20260816.json",
+      "pass": true
+    },
+    {
+      "label": "required artifact exists: docs/audits/sp100_production_wiring_decision_packet_20260816.md",
+      "pass": true
+    },
+    {
+      "label": "required artifact exists: outputs/derived/sp100_npb_raw_latent_speed.json",
+      "pass": true
+    },
+    {
+      "label": "required artifact exists: outputs/derived/sp077_final_owner_review_queue_20260816.json",
+      "pass": true
+    },
+    {
+      "label": "required artifact exists: outputs/derived/sp078_owner_verdict_ledger_20260816.json",
+      "pass": true
+    },
+    {
+      "label": "owner decision document records the exact owner instruction",
+      "pass": true
+    },
+    {
+      "label": "owner decision document calls the approval explicit",
+      "pass": true
+    },
+    {
+      "label": "registry marks SP-100 DONE_VALIDATED",
+      "pass": true
+    },
+    {
+      "label": "packet schema is current",
+      "pass": true
+    },
+    {
+      "label": "packet is owner-approved and implemented",
+      "pass": true
+    },
+    {
+      "label": "packet retains exact owner instruction",
+      "pass": true
+    },
+    {
+      "label": "packet records a real owner ruling",
+      "pass": true
+    },
+    {
+      "label": "packet source hash binds owner decision document",
+      "pass": true
+    },
+    {
+      "label": "packet human report is owner-approved, not pending approval",
+      "pass": true
+    },
+    {
+      "label": "generic direct source explicitly excludes top_speed_kmh",
+      "pass": true
+    },
+    {
+      "label": "generic direct path does not produce a top-speed rating",
+      "pass": true,
+      "detail": "null"
+    },
+    {
+      "label": "provenance guard rejects hp_to_1b_sec as NPB+ measurement",
+      "pass": true
+    },
+    {
+      "label": "raw N population is exactly 100",
+      "pass": true
+    },
+    {
+      "label": "raw N uses top speed only and excludes hp_to_1b_sec",
+      "pass": true
+    },
+    {
+      "label": "raw N cohort mean is exactly 31.612",
+      "pass": true,
+      "detail": "31.611999999999995"
+    },
+    {
+      "label": "raw N cohort population SD is exactly 1.252",
+      "pass": true,
+      "detail": "1.25245997940054"
+    },
+    {
+      "label": "raw N recorded normalization matches independently recomputed mean/SD",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: カリステ",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: ソト",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "raw N z reproduces fixed cohort: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "generic NPB reliability remains NOT_IDENTIFIABLE without numeric value",
+      "pass": true
+    },
+    {
+      "label": "exposure remains context and cannot shrink z",
+      "pass": true
+    },
+    {
+      "label": "production layer schema/status are final",
+      "pass": true
+    },
+    {
+      "label": "production layer declares approved architecture",
+      "pass": true
+    },
+    {
+      "label": "production layer says N primary, S separate, no arithmetic blend",
+      "pass": true
+    },
+    {
+      "label": "production layer preserves no-SP-079 and no-backward-copy guards",
+      "pass": true
+    },
+    {
+      "label": "production layer has exactly 100 N-primary rows",
+      "pass": true
+    },
+    {
+      "label": "production layer records no owner verdicts",
+      "pass": true
+    },
+    {
+      "label": "production layer is bound to raw N input",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: カリステ",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: カリステ",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: カリステ",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: カリステ",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: カリステ",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: カリステ",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: カリステ",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: ソト",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: ソト",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: ソト",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: ソト",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: ソト",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: ソト",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: ソト",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "production row joins raw N: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "production N/S selection is separate: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "production N record matches frozen top/z: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "production N has exact cohort normalization: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "production N reliability remains nonnumeric: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "production exposure does not shrink z: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "production N/S has no blend fields: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "2025 resolver has no copied 2026 N",
+      "pass": true
+    },
+    {
+      "label": "production generator contains no appraiseCard/final appraisal call",
+      "pass": true
+    },
+    {
+      "label": "production generator has no external-collection mechanism",
+      "pass": true
+    },
+    {
+      "label": "queue schema/status are final pre-owner-review only",
+      "pass": true
+    },
+    {
+      "label": "queue source hash binds approved production layer",
+      "pass": true
+    },
+    {
+      "label": "queue no longer says SP-100 owner decision is required",
+      "pass": true
+    },
+    {
+      "label": "queue has exactly 100 owner-review rows",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 中川 圭太",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 太田 椋",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 宗 佑磨",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 来田 涼斗",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 森 友哉",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 紅林 弘太郎",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 若月 健矢",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 西川 龍馬",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 西野 真弘",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: カリステ",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: カリステ",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: カリステ",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: カリステ",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 土田 龍空",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 大島 洋平",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 岡林 勇希",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 木下 拓哉",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 村松 開人",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 板山 祐太郎",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 田中 幹也",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 石川 昂弥",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 福永 裕基",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 細川 成也",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 高橋 周平",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 奈良間 大己",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 水野 達稀",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 清宮 幸太郎",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 田宮 裕涼",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 郡司 裕也",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 野村 佑希",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: ソト",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: ソト",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: ソト",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: ソト",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: ポランコ",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 佐藤 都志也",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 友杉 篤輝",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 安田 尚憲",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 小川 龍成",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 山口 航輝",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 岡 大海",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 藤原 恭大",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 藤岡 裕大",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 髙部 瑛斗",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 古賀 悠斗",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 外崎 修汰",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 源田 壮亮",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 滝澤 夏央",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 石井 一成",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: ファビアン",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: モンテロ",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 名原 典彦",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 坂倉 将吾",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 小園 海斗",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 矢野 雅哉",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 秋山 翔吾",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 菊池 涼介",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 野間 峻祥",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: サンタナ",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 並木 秀尊",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 中村 悠平",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 丸山 和郁",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 古賀 優大",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 塩見 泰隆",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 岩田 幸宏",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 長岡 秀樹",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 太田 光",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 村林 一輝",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 浅村 栄斗",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 渡邊 佳明",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 鈴木 大地",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 京田 陽太",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 佐野 恵太",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 宮﨑 敏郎",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 山本 祐大",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 度会 隆輝",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 林 琢真",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 梶原 昂希",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 牧 秀悟",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 筒香 嘉智",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 蝦名 達夫",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 今宮 健太",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 周東 佑京",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 山川 穂高",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 柳田 悠岐",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 柳町 達",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 栗原 陵矢",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 正木 智也",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 海野 隆司",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 牧原 大成",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 近藤 健介",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 丸 佳浩",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 佐々木 俊輔",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 吉川 尚輝",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 大城 卓三",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 岸田 行倫",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 松本 剛",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 中野 拓夢",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 伏見 寅威",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 佐藤 輝明",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 坂本 誠志郎",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 大山 悠輔",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 小幡 竜平",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 木浪 聖也",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 梅野 隆太郎",
+      "pass": true
+    },
+    {
+      "label": "queue consumes N-primary current layer: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "queue keeps S only as separate context: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "queue keeps owner verdict blank: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "queue has no SP-100 provisional/ SP-079 final output: 森下 翔太",
+      "pass": true
+    },
+    {
+      "label": "queue does not retain old SP-100 PARTIAL label",
+      "pass": true
+    },
+    {
+      "label": "ledger schema is current",
+      "pass": true
+    },
+    {
+      "label": "ledger binds exact regenerated queue hash and 100 rows",
+      "pass": true
+    },
+    {
+      "label": "ledger contains no owner verdicts",
+      "pass": true
+    }
+  ],
+  "failures": []
+}

@@ -809,8 +809,8 @@ console.log('=== 未整備だった回帰テスト ===\n');
 
     t('§NPB実測-a ハードヒット率からパワーの実測値が出る（アンカー無しの前提でのモデル動作確認）',
       d.パワー?.value > 0, d.パワー ? `${d.パワー.value}（${d.パワー.source}）` : 'null');
-    t('§NPB実測-b 瞬間最高速度から走力の実測値が出る',
-      d.走力?.value > 0, d.走力 ? `${d.走力.value}（${d.走力.source}）` : 'null');
+    t('§NPB実測-b 最高速度は旧PowerPro尺度のgeneric direct経路へ入らない',
+      d.走力 == null, `走力=${d.走力?.value ?? 'null'}`);
     t('§NPB実測-c 同じ能力に候補が複数あっても1つだけ使う（重ねない）',
       d.パワー?.source?.includes('hard_hit_pct'), `${d.パワー?.source}（testの一致が最も高いもの）`);
 
@@ -820,8 +820,8 @@ console.log('=== 未整備だった回帰テスト ===\n');
     const withAnchor = buildDirectMeasurements(row, { ...merged, scale_calibration: cfg.scale_calibration }, 2024);
     t('§NPB実測-g 仕様アンカーを持つ能力（パワー）にはパワプロ目盛りの実測を入れない',
       withAnchor.パワー == null, `パワー=${withAnchor.パワー?.value ?? 'null'}`);
-    t('§NPB実測-h アンカーの無い走力には引き続き入る（実測を捨てたわけではない）',
-      withAnchor.走力?.value > 0, `走力=${withAnchor.走力?.value}`);
+    t('§NPB実測-h 最高速度は2026 SP-100 N-primary専用であり過去年generic directへ戻さない',
+      withAnchor.走力 == null, `走力=${withAnchor.走力?.value ?? 'null'}`);
     t('§NPB実測-d ホールドアウトで保たれない材料は使わない（弾道＝打球角度 test 0.129）',
       !JSON.stringify(d).includes('launch_angle'), '弾道は入らない');
     t('§NPB実測-e 実測が無ければ何も返さない（推定で埋めない）',
@@ -834,11 +834,10 @@ console.log('=== 未整備だった回帰テスト ===\n');
     const ctx6 = mk3(db, cfg);
     const card = ac3(ctx6, { name: '山川　穂高', mode: '2024', cfg, rv: rv2, runNorm, fldNorm }).card;
     const sp = card?.abilities?.基礎能力?.走力;
-    // ★2026-08-06に対象をパワー→走力へ変更。パワーは仕様アンカーを持つのでこの経路自体を
-    //   止めた（§NPB実測-g）。混合の仕組み（丸ごと上書きしない）は走力で引き続き検証する。
-    t('§NPB実測-f 統計値を残したまま実測と混ぜる（丸ごと上書きしない）',
-      sp?.statistical_value != null && sp.value !== sp.statistical_value,
-      sp ? `統計${sp.statistical_value} → 最終${sp.value}` : 'null');
+    // SP-100 approval: a 2026 N value must not be copied onto a 2024 card.
+    t('§NPB実測-f 2024カードへ2026最高速度を逆流させない',
+      sp?.from_direct_measurement !== true && sp?.source?.includes('top_speed_kmh') !== true,
+      sp ? `source=${sp.source ?? 'statistical'}` : 'null');
 
     // ★アンカーがそのまま能力値になること（パワプロ較正・実測混合のどちらでも上書きされない）
     const mura = ac3(ctx6, { name: '村上　宗隆', mode: '2024', cfg, rv: rv2, runNorm, fldNorm }).card;
@@ -1221,30 +1220,44 @@ console.log('=== 未整備だった回帰テスト ===\n');
     JSON.stringify(held.calc_log.running.speed_seasons));
 }
 
-// ── §候補 relative model候補: 統計モデルprimary（正本22 §5-C、2026-08-13）────
-// T-0203が判定C（統計材料が薄い層を推定できず増分を確認できない）だったため、
-// 走力のNPB+自動blendは採用しない方針。ただし**productionの既定は変えない**。
-// statPrimarySpeed:true を渡した時だけ候補の挙動になる。
-// NPB+のraw値は削除しない（低reliability選手のreview evidenceとして保持する）。
+// ── §SP-100 2026 N-primary: 旧N/S blendを復活させない ──────────────────
+// 明示owner裁定により、現在期のphysicalEvidenceSeason=2026だけでNを
+// primaryに配線する。2025カードはNを後方コピーせずSのままである。
 {
   const { makeContext: mkC, appraiseCard: acC } = await import('../src/cards/pipeline.mjs');
   const { readFileSync: rfC } = await import('node:fs');
   const rvC = JSON.parse(rfC('configs/run_values.json', 'utf8')).values;
   const ctxC = mkC(db, cfg);
   const cur = acC(ctxC, { name: '周東　佑京', mode: '2025', cfg, rv: rvC, runNorm, fldNorm }).card;
-  const cand = acC(ctxC, { name: '周東　佑京', mode: '2025', statPrimarySpeed: true, cfg, rv: rvC, runNorm, fldNorm }).card;
-  const A = cur.abilities.基礎能力.走力, B = cand.abilities.基礎能力.走力;
+  const control = acC(ctxC, { name: '周東　佑京', mode: '2025', statPrimarySpeed: true, cfg, rv: rvC, runNorm, fldNorm }).card;
+  const A = cur.abilities.基礎能力.走力, B = control.abilities.基礎能力.走力;
+  const { resolveSp100ProductionPhysicalSpeed } = await import('../src/ratings/sp100_production_wiring.mjs');
+  const nPrimary = resolveSp100ProductionPhysicalSpeed({
+    physicalEvidenceSeason: 2026,
+    playerName: '周東 佑京',
+    cfg,
+    statisticalContext: { value_z: A.uncalibrated ?? null },
+  });
+  const historical = resolveSp100ProductionPhysicalSpeed({
+    physicalEvidenceSeason: 2025,
+    playerName: '周東 佑京',
+    cfg,
+    statisticalContext: { value_z: A.uncalibrated ?? null },
+  });
 
-  t('§候補-a 既定ではNPB+実測が混ざる（productionの挙動を変えていない）',
-    A.statistical_value != null && A.from_direct_measurement === true,
-    `統計${A.statistical_value} → 混合後${A.value}`);
-  t('§候補-b 候補ではNPB+を混ぜない',
-    B.statistical_value == null && B.from_direct_measurement !== true, `候補=${B.value}`);
-  t('§候補-c 候補では較正が掛かる（幅を戻す。混合経路はapplyScaleを迂回していた）',
-    B.uncalibrated != null && B.value !== B.uncalibrated,
-    `素点${B.uncalibrated} → 較正後${B.value}`);
-  t('§候補-d 候補と既定で値が違う（フラグが実際に効いている）',
-    A.value !== B.value, `既定${A.value} / 候補${B.value}`);
+  t('§SP100-a 2025カードはNを混ぜず統計Sのまま',
+    A.from_direct_measurement !== true && A.source?.includes('top_speed_kmh') !== true,
+    `2025 source=${A.source ?? 'statistical'}`);
+  t('§SP100-b S-only controlは2025既定と同じN非使用経路',
+    B.from_direct_measurement !== true && A.value === B.value, `default=${A.value} / control=${B.value}`);
+  t('§SP100-c explicit 2026 physical layerはN primaryを返す',
+    nPrimary.selection === 'N_PRIMARY_CURRENT_2026'
+      && nPrimary.n_primary?.measurement_reliability === 'NOT_IDENTIFIABLE'
+      && nPrimary.no_arithmetic_n_s_blend === true,
+    `N=${nPrimary.n_primary?.top_speed_kmh} / z=${nPrimary.n_primary?.npb_top_speed_z}`);
+  t('§SP100-d 2026 Nは2025 physical layerへ後方コピーしない',
+    historical.selection === 'S_FALLBACK_NO_CURRENT_YEAR_N' && historical.n_primary == null,
+    `selection=${historical.selection}`);
 
   // NPB+のraw値を捨てていないこと（正本22 §9「raw measurementを削除しない」）
   const npbCount = db.prepare('SELECT COUNT(*) n FROM npb_plus_measurement WHERE top_speed_kmh IS NOT NULL').get().n;
