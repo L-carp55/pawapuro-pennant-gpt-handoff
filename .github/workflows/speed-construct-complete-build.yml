@@ -8,8 +8,10 @@ on:
       - 'scripts/audit_sp021_anchor_bank_20260817.mjs'
       - 'scripts/augment_sp077_with_sp021_anchors_20260817.mjs'
       - 'scripts/qa_sp077_construct_complete_owner_review_queue_v2_20260817.mjs'
+      - 'scripts/qa_speed_construct_traceability_20260817.mjs'
       - 'scripts/diagnose_sp077_physical_multiset_mismatch_20260817.mjs'
       - 'data/normalized/speed_historical_physical_measurements_2015_2026.json'
+      - 'docs/state/speed_construct_traceability_contract_20260817.tsv'
       - '.github/workflows/speed-construct-complete-build.yml'
   workflow_dispatch:
 
@@ -38,6 +40,8 @@ jobs:
         run: node scripts/diagnose_sp077_physical_multiset_mismatch_20260817.mjs
       - name: Independent construct-complete queue QA v2
         run: node scripts/qa_sp077_construct_complete_owner_review_queue_v2_20260817.mjs
+      - name: Global construct traceability QA while locked
+        run: node scripts/qa_speed_construct_traceability_20260817.mjs
       - name: Verify generated artifacts exist
         run: |
           test -s outputs/derived/sp021_anchor_bank_inventory_20260817.json
@@ -53,6 +57,6 @@ jobs:
           if git diff --cached --quiet; then
             echo 'No generated changes'
           else
-            git commit -m 'fix(speed): preserve null physical evidence and verify construct-complete queue'
+            git commit -m 'fix(speed): regenerate construct-complete queue against current contract'
             git push origin HEAD:${GITHUB_REF_NAME}
           fi
