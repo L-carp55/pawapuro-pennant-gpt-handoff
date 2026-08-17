@@ -1,0 +1,39 @@
+name: speed-construct-complete-build
+
+on:
+  push:
+    paths:
+      - 'scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs'
+      - '.github/workflows/speed-construct-complete-build.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-construct-complete-queue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate construct-complete queue
+        run: node scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs
+      - name: Verify generated artifacts exist
+        run: |
+          test -s outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json
+          test -s docs/reports/sp077_construct_complete_owner_review_queue_20260817.md
+      - name: Commit generated artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json docs/reports/sp077_construct_complete_owner_review_queue_20260817.md
+          if git diff --cached --quiet; then
+            echo 'No generated changes'
+          else
+            git commit -m 'build(speed): generate construct-complete owner review queue'
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
