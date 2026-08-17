@@ -3,12 +3,12 @@
   "created_at": "2026-08-17",
   "locked": true,
   "reason_code": "SPEC_DRIFT_FULL_CONSTRUCT_NOT_PROPAGATED_TO_OWNER_REVIEW_QUEUE",
-  "summary": "SP-100 correctly implemented one important current physical/rank lane (2026 NPB+ top speed), but SP-077/owner-review flow was allowed to proceed without proving that the full speed construct and all retained evidence lanes propagated into the final owner-review artifact.",
+  "summary": "SP-100 correctly implemented one important current physical/rank lane (2026 NPB+ top speed), but the earlier SP-077/owner-review flow was allowed to proceed without proving that the full speed construct and all retained evidence lanes propagated into the final owner-review artifact. A construct-complete candidate now exists and has independent source-derived QA, but owner review remains locked until the formal revalidation/rebind transition is complete.",
   "invalidated_actions": [
-    "record new SP-078 owner verdicts against the current SP-077 queue",
-    "treat the current SP-077 queue as sufficient evidence for player-level owner decisions",
+    "record new SP-078 owner verdicts against the superseded 2026-08-16 queue",
+    "treat the superseded 2026-08-16 SP-077 queue as sufficient evidence for player-level owner decisions",
     "run or close SP-079 final practical reappraisal",
-    "claim owner review ready or Speed Gate ready"
+    "claim owner review ready or Speed Gate ready before the revalidation/rebind transition completes"
   ],
   "preserved_valid_work": [
     "SP-016 current-year-first history policy",
@@ -21,16 +21,22 @@
     "SP-075 community/stale context",
     "SP-078 append-only infrastructure and its zero-verdict ledger"
   ],
+  "construct_complete_candidate": "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json",
+  "construct_complete_independent_qa": "outputs/derived/qa_sp077_construct_complete_owner_review_queue_v2_20260817.json",
   "current_owner_verdict_count_expected": 0,
   "unlock_conditions": [
     "docs/state/speed_construct_traceability_contract_20260817.tsv has no UNRESOLVED required owner-review lane",
-    "every required evidence lane is represented per player in the regenerated owner-review queue, including explicit missingness when no player-level value exists",
+    "every required evidence lane is represented per player in outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json, including explicit missingness when no player-level value exists",
     "top speed is not permitted to stand in for the full speed construct; acceleration/H2F/90ft and short-distance/historical physical evidence are separately represented",
-    "source-specific negative findings remain source/field scoped; hp_to_1b_sec provenance failure must not delete the H2F/acceleration construct lane",
-    "node scripts/qa_speed_construct_traceability_20260817.mjs passes with locked=false",
-    "the empty SP-078 ledger is rebound to the regenerated queue hash before any owner verdict is captured",
+    "source-specific negative findings remain source/field scoped; hp_to_1b_sec provenance failure does not delete the H2F/acceleration construct lane",
+    "independent source-derived QA for the construct-complete queue passes with zero failures",
+    "node scripts/qa_speed_construct_traceability_20260817.mjs passes against the construct-complete queue while locked=true",
+    "SP-077 is formally revalidated to DONE_VALIDATED only after the preceding conditions pass",
+    "the empty SP-078 ledger is rebound to the construct-complete queue hash and its append-only/no-overwrite/lock-bypass QA passes",
+    "SP-078 is formally revalidated to DONE_VALIDATED only after successful empty-ledger rebind",
+    "node scripts/qa_speed_construct_traceability_20260817.mjs passes with locked=false after SP-077/SP-078 revalidation",
     "an independent review confirms the regenerated queue matches the immutable speed requirements and the 2026-08-11 gap-audit intent"
   ],
-  "owner_review_unlock_rule": "Changing locked=false by itself is invalid. The traceability QA must independently prove all unlock conditions encoded in machine-readable contracts.",
+  "owner_review_unlock_rule": "Changing locked=false by itself is invalid. The traceability QA and independent source-derived queue QA must prove the encoded conditions, and SP-078 must be rebound while empty before any owner verdict can be captured.",
   "incident_audit": "docs/audits/speed_spec_drift_incident_and_permanent_guard_20260817.md"
 }
