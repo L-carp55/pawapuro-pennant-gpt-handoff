@@ -61,8 +61,8 @@ const xRows = read(F.xClean).split(/\r?\n/).filter(Boolean).map((line, i) => {
 });
 const db = new DatabaseSync(full('data/pennant.db'), { readOnly: true });
 
-const normalH2F = new Map(asArray(h2f.rows).map(r => [norm(r.canonical_name ?? r.player), r]));
-const buntH2F = new Map(asArray(h2f.bunt_rows ?? h2f.buntRows).map(r => [norm(r.canonical_name ?? r.player), r]));
+const normalH2F = new Map(asArray(h2f.normal_swing?.players ?? h2f.rows).map(r => [norm(r.canonical_name ?? r.player), r]));
+const buntH2F = new Map(asArray(h2f.bunt?.players ?? h2f.bunt_rows ?? h2f.buntRows).map(r => [norm(r.canonical_name ?? r.player), r]));
 const physicalByName = new Map(asArray(physical.players).map(r => [norm(r.player), r]));
 const recoveredByName = new Map();
 for (const r of asArray(recovered.records)) {
@@ -70,7 +70,7 @@ for (const r of asArray(recovered.records)) {
   if (!recoveredByName.has(k)) recoveredByName.set(k, []);
   recoveredByName.get(k).push(r);
 }
-const staleByName = new Map(asArray(stale.players).map(r => [norm(r.player), r]));
+const staleByName = new Map(asArray(stale.rows ?? stale.players).map(r => [norm(r.player), r]));
 const xByName = new Map();
 for (const r of xRows) {
   const k = norm(r.player ?? r.canonical_player ?? r.subject_player ?? r.player_name);
@@ -231,16 +231,25 @@ const players = oldQueue.players.map(row => {
     acceleration_h2f_t90_evidence: {
       evidence_state: normal || bunt || t90Records.length ? 'AVAILABLE_BOUNDED' : 'MISSING_BOUNDED',
       normal_swing_h2f: normal ? {
-        n: normal.n, mean_sec: normal.mean_sec, median_sec: normal.median_sec,
-        fastest_sec: normal.fastest_sec, spread_sec: normal.spread_sec,
-        z_within_sample_lower_is_faster: normal.z_within_sample_lower_is_faster,
-        handedness: normal.handedness ?? null, confidence: normal.confidence,
-        lane: normal.lane, flags: normal.flags ?? [], play_ids: normal.play_ids ?? [],
+        seconds: nullableNumber(normal.seconds),
+        n_independent_records: nullableNumber(normal.n_independent_records),
+        n_raw_records: nullableNumber(normal.n_raw_records),
+        z_within_sample_lower_is_faster: nullableNumber(normal.z),
+        handedness: normal.bats ?? null,
+        confidence: 'LOW',
+        lane: normal.lane,
+        sources: normal.sources ?? [],
       } : null,
       bunt_h2f: bunt ? {
-        n: bunt.n, mean_sec: bunt.mean_sec, median_sec: bunt.median_sec,
-        fastest_sec: bunt.fastest_sec, confidence: bunt.confidence,
-        lane: bunt.lane, flags: bunt.flags ?? [], play_ids: bunt.play_ids ?? [],
+        seconds: nullableNumber(bunt.seconds),
+        n_independent_records: nullableNumber(bunt.n_independent_records),
+        n_raw_records: nullableNumber(bunt.n_raw_records),
+        z_within_sample_lower_is_faster: nullableNumber(bunt.z),
+        handedness: bunt.bats ?? null,
+        confidence: 'LOW_VERY_SMALL_SAMPLE',
+        lane: bunt.lane,
+        sources: bunt.sources ?? [],
+        note: bunt.note ?? null,
       } : null,
       direct_or_standardized_t90_records: t90Records,
       role: 'ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING',
