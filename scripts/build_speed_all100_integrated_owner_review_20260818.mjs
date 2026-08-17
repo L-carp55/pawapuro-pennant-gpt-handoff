@@ -61,7 +61,7 @@ function recordValue(record, key) {
 }
 function lowerIsFaster(key) { return key !== 'HIST_SPRINT'; }
 function fallbackScale(key) {
-  return ({T10FT:0.05,T30FT:0.10,T90FT:0.18,H2F:0.18,30M:0.20,50M:0.30,HIST_SPRINT:1.5})[key] ?? 1;
+  return ({T10FT:0.05,T30FT:0.10,T90FT:0.18,H2F:0.18,'30M':0.20,'50M':0.30,HIST_SPRINT:1.5})[key] ?? 1;
 }
 function confidenceWeight(value) {
   const c = String(value ?? '').toLowerCase();
@@ -152,8 +152,8 @@ function weightedDimension(entries) {
   return {z:clamp(z,-3,3),confidence,support,entries:valid};
 }
 function metricDimensionSupport(key) {
-  const accel = ({T10FT:1.00,T30FT:0.90,T90FT:0.25,H2F:0.70,30M:0.72,50M:0.30,HIST_SPRINT:0.15})[key] ?? 0;
-  const end = ({T10FT:0.12,T30FT:0.30,T90FT:1.00,H2F:0.85,30M:0.58,50M:0.82,HIST_SPRINT:0.20})[key] ?? 0;
+  const accel = ({T10FT:1.00,T30FT:0.90,T90FT:0.25,H2F:0.70,'30M':0.72,'50M':0.30,HIST_SPRINT:0.15})[key] ?? 0;
+  const end = ({T10FT:0.12,T30FT:0.30,T90FT:1.00,H2F:0.85,'30M':0.58,'50M':0.82,HIST_SPRINT:0.20})[key] ?? 0;
   return {accel,end};
 }
 function exposureConfidence(top) {
