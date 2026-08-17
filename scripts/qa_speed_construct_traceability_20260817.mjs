@@ -99,8 +99,9 @@ if (!Array.isArray(ledger?.records)) err('SP-078 ledger records are not an array
 // Independent source-derived QA is mandatory; this prevents the contract itself
 // from being edited merely to make traceability pass.
 if (queueQa?.status !== 'PASS') err(`construct-complete independent QA status is ${queueQa?.status ?? 'MISSING'}, expected PASS`);
-if (Number(queueQa?.summary?.fail_count ?? queueQa?.fail_count ?? NaN) !== 0) err('construct-complete independent QA has failures');
-if (Number(queueQa?.summary?.player_count ?? queueQa?.player_count ?? 100) !== 100) err('construct-complete independent QA does not cover exactly 100 players');
+if (Number(queueQa?.checks_failed ?? NaN) !== 0) err(`construct-complete independent QA has ${queueQa?.checks_failed ?? 'unknown'} failures`);
+if (Number(queueQa?.checks_passed ?? NaN) !== Number(queueQa?.checks_total ?? NaN)) err('construct-complete independent QA passed/total mismatch');
+if (Number(queueQa?.coverage?.players ?? NaN) !== 100) err('construct-complete independent QA does not cover exactly 100 players');
 
 const unresolved = contract.filter(row => row.required_for_owner_review === '1' && row.current_resolution === 'UNRESOLVED');
 const resolvedRequired = contract.filter(row => row.required_for_owner_review === '1' && row.current_resolution !== 'UNRESOLVED');
