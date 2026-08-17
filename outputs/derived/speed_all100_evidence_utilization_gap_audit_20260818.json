@@ -1,0 +1,177 @@
+{
+  "schema_version": "speed_all100_evidence_utilization_gap_audit_20260818",
+  "generated_at": "2026-08-18",
+  "status": "MEASURED_FAIL_CURRENT_OWNER_PROPOSAL_NOT_APPROVAL_READY",
+  "scope": "Trace which accumulated speed evidence assets actually affected the 100-player integrated screen and adjudicated recommendations.",
+  "reviewed_artifacts": [
+    "docs/state/speed_requirements_baseline_20260813.tsv",
+    "docs/state/speed_task_registry.tsv",
+    "docs/state/speed_construct_traceability_contract_20260817.tsv",
+    "docs/state/speed_exclusion_reason_ledger.tsv",
+    "scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs",
+    "scripts/build_speed_all100_full_construct_inventory_20260818.mjs",
+    "scripts/build_speed_all100_integrated_owner_review_20260818.mjs",
+    "scripts/build_speed_all100_owner_review_adjudication_20260818.mjs",
+    "outputs/derived/pawapuro_speed_history_panel_2015_2026.json",
+    "outputs/derived/sp041_powerpro_percentile_trajectories.csv",
+    "outputs/derived/sp042_powerpro_stale_detector.json",
+    "outputs/derived/the_show_mapping.json",
+    "docs/audits/owner_policy_ruling_20260814.md",
+    "outputs/derived/sp078_owner_verdict_proposal_20260818.json",
+    "outputs/derived/sp078_owner_verdict_ledger_20260816.json"
+  ],
+  "headline_findings": [
+    "The current 100-player decision screen did not consume all evidence assets identified by the owner and requirements baseline.",
+    "The final integrated screen reads only the compact inventory and actively scores current NPB+ peak speed, retained physical timing/distance records, S, mixed game context, Community physical context, and current PowerPro percentile as a comparison target.",
+    "The final adjudication contains explicit player-specific manual overrides for 15 players; the other 85 rows pass through the automated screen with a generic compatibility rationale.",
+    "MLB The Show game-rating data and The Show/PowerPro/real-measurement mapping artifacts are not read by the final inventory, screen, or adjudication scripts.",
+    "PowerPro longitudinal trajectories are collected and summarized upstream, but the final screen does not use changes, years, percentile drift, S1 internal inertia, S2 disagreement, or stale flags in its decision logic.",
+    "Several auxiliary evidence tasks remain PARTIAL or NOT_STARTED and are not consumed by the final screen: measurement-date completion, scouting, pinch-runner usage, defensive straight-line chase, legacy missing-data reconciliation, full-roster scale consistency, and durability audit.",
+    "The current SP-078 owner-verdict proposal must not be approved or captured until an all-requirement evidence-utilization rebuild is completed."
+  ],
+  "decision_effective_lanes": [
+    {
+      "lane": "CURRENT_NPB_PLUS_PEAK_SPEED_AND_EXPOSURE",
+      "status": "DIRECT_DECISION_INPUT",
+      "notes": "Scored at a maximum nominal component weight of 0.40; exposure adjusts confidence."
+    },
+    {
+      "lane": "H2F_T10_T30_T90_30M_50M_HISTORICAL_SPRINT",
+      "status": "DIRECT_DECISION_INPUT_WITH_TEMPORAL_SOURCE_PROTOCOL_DISCOUNTS",
+      "notes": "Retained records are normalized and divided between acceleration and end-to-end dimensions."
+    },
+    {
+      "lane": "S_STATISTICAL_PROXY",
+      "status": "DIRECT_CONTEXT_INPUT",
+      "notes": "Capped context; reliability and PA affect weight."
+    },
+    {
+      "lane": "MIXED_GAME_CONTEXT",
+      "status": "DIRECT_CONTEXT_INPUT",
+      "notes": "Composite/components affect the screen with a capped weight despite construct confounding."
+    },
+    {
+      "lane": "COMMUNITY_PHYSICAL",
+      "status": "DIRECT_CONTEXT_INPUT",
+      "notes": "Semantic positive/negative vote affects the screen."
+    },
+    {
+      "lane": "COMMUNITY_TECHNIQUE",
+      "status": "DECISION_MODIFIER_ONLY",
+      "notes": "Presence can downweight conflicting S/game context; the technique content is not otherwise modeled."
+    },
+    {
+      "lane": "CURRENT_POWERPRO_PERCENTILE",
+      "status": "COMPARISON_TARGET_ONLY",
+      "notes": "Used to create high/low/plausible comparison gaps after the independent screen; not used as a physical feature."
+    }
+  ],
+  "present_but_not_decision_effective": [
+    {
+      "lane": "POWERPRO_LONGITUDINAL_TRAJECTORY",
+      "upstream_assets": [
+        "outputs/derived/pawapuro_speed_history_panel_2015_2026.json",
+        "outputs/derived/sp041_powerpro_percentile_trajectories.csv",
+        "outputs/derived/sp042_powerpro_stale_detector.json"
+      ],
+      "final_state": "COMPRESSED_THEN_IGNORED_BY_DECISION_LOGIC",
+      "details": "Inventory retains changes, years, S1/S2 and flag fields, but the integrated screen uses only current raw/percentile for comparison and merely emits the flag."
+    },
+    {
+      "lane": "COMMUNITY_POWERPRO_RATING_CONTEXT",
+      "final_state": "VISIBLE_IN_OUTPUT_NOT_SCORED_OR_ADJUDICATED",
+      "details": "Rows are preserved in the inventory/screen output but do not affect score or recommendation logic."
+    },
+    {
+      "lane": "SP021_HIGH_CONFIDENCE_ANCHOR_CONTEXT",
+      "final_state": "SEPARATE_QUEUE_FIELD_DROPPED_BY_COMPACT_INVENTORY",
+      "details": "Some underlying measurements may duplicate historical records, but the independent SP-021 receipt is not propagated, so usage cannot be demonstrated."
+    },
+    {
+      "lane": "SP022_PAIRWISE_RANGE_AND_SP074_CONFLICT_CONTEXT",
+      "final_state": "UPSTREAM_ONLY_NOT_PROPAGATED_TO_FINAL_SCREEN",
+      "details": "The compact inventory does not expose these decision receipts."
+    },
+    {
+      "lane": "SP043_VETERAN_CASE_STUDIES_AND_SP075_REDIAGNOSIS",
+      "final_state": "UPSTREAM_ONLY_OR_PARTIALLY_REEXPRESSED",
+      "details": "Selected facts can reappear through physical/Community rows, but the case-level conclusions and uncertainty receipts are not direct final inputs."
+    },
+    {
+      "lane": "INJURY_AND_AGE_CONTEXT",
+      "final_state": "DROPPED_FROM_COMPACT_INVENTORY_EXCEPT_WHERE_COMMUNITY_TEXT_REEXPRESSES_DECLINE",
+      "details": "Structured age/injury joins are blocked; queue missingness receipts are not propagated into final scoring."
+    },
+    {
+      "lane": "SOURCE_SCOPE_AND_FULL_PROVENANCE_RECEIPTS",
+      "final_state": "PARTIALLY_DROPPED_BY_COMPACT_INVENTORY",
+      "details": "Core values remain, but the final screen does not expose all upstream source-scope, exclusion and missingness receipts."
+    }
+  ],
+  "not_consumed_or_incomplete_lanes": [
+    {
+      "lane": "MLB_THE_SHOW_GAME_RATINGS_AND_MAPPING",
+      "status": "NOT_READ_BY_FINAL_PIPELINE",
+      "policy_boundary": "Player-level same-time numeric bridge is NOT_IDENTIFIABLE; cross-time numeric bridge was explicitly disallowed by owner ruling SR-060. Raw/context and global structural QA were not prohibited but were not propagated to the final review.",
+      "important_distinction": "Historical MLB Statcast Sprint Speed/T10/T30/T90 records used for individual players are not MLB The Show ratings."
+    },
+    {
+      "lane": "OFFICIAL_SCOUTING",
+      "status": "PARTIAL_NOT_CONSUMED",
+      "coverage": "21/100 players identified in the broader inventory; broad external scouting collection remains NOT_COLLECTED."
+    },
+    {
+      "lane": "PINCH_RUNNER_USAGE",
+      "status": "PARTIAL_NOT_CONSUMED",
+      "coverage": "Five attributable player mentions after repaired sweep; contextual weighting remains undecided."
+    },
+    {
+      "lane": "DEFENSIVE_STRAIGHT_LINE_CHASE",
+      "status": "NOT_STARTED_NOT_CONSUMED",
+      "coverage": "No separable straight-line chase evidence; external NPB tracking not collected. Existing 607 range-metric rows have not been evaluated for this purpose."
+    },
+    {
+      "lane": "VIDEO_LOW_WEIGHT_CONTEXT",
+      "status": "PRESERVED_WITHOUT_CONSUMER",
+      "coverage": "17 inconclusive video candidates retained, but no final consumer uses the low-weight lane."
+    },
+    {
+      "lane": "MEASUREMENT_DATE_COMPLETION",
+      "status": "PARTIAL",
+      "coverage": "Date ledger covers only part of current-100 and exact-date collection was not completed."
+    },
+    {
+      "lane": "FULL_ROSTER_SCALE_CONSISTENCY",
+      "status": "NOT_STARTED",
+      "coverage": "100-vs-non100 scale consistency is not established."
+    }
+  ],
+  "governance_defects": [
+    "The 12-lane construct traceability contract is narrower than the immutable requirements baseline and omits The Show context, scouting, pinch-runner usage, defensive chase/video context, and full PowerPro trajectory receipts.",
+    "SP-077 is recorded DONE_VALIDATED even though SR-052 child tasks SP-060/SP-061/SP-062 remain PARTIAL/PARTIAL/NOT_STARTED and open exclusion rows remain for related evidence.",
+    "The adjudication artifact describes all-100 human adjudication, but code-level player-specific adjudications exist for only 15 rows; 85 use automated pass-through logic."
+  ],
+  "supersession": {
+    "superseded_for_owner_approval": [
+      "outputs/derived/speed_all100_integrated_owner_review_20260818.json",
+      "outputs/derived/speed_all100_owner_review_adjudicated_20260818.json",
+      "outputs/derived/sp078_owner_verdict_proposal_20260818.json",
+      "docs/reports/sp078_owner_verdict_proposal_20260818.md"
+    ],
+    "reason": "Incomplete evidence utilization and overstated all-player manual review.",
+    "canonical_owner_ledger_mutated": false,
+    "owner_verdict_count_expected": 0,
+    "sp079_allowed": false,
+    "shoulder_allowed": false
+  },
+  "exact_next_step": [
+    "Build a requirement-to-decision evidence utilization contract covering every SR item, not only the existing 12-lane construct subset.",
+    "Create a per-player receipt with AVAILABLE, USED_DIRECTLY, USED_CONTEXT, EXCLUDED_WITH_SCOPED_REASON, BLOCKED, or NOT_COLLECTED for every evidence family.",
+    "Reintroduce PowerPro raw trajectory, normalized percentile trajectory, inertia, breakpoints and current evidence alignment as review context without using them as a physical teacher.",
+    "Reopen The Show usage into separate questions: keep player-level numeric conversion excluded under SR-060 unless the owner amends it; evaluate raw/context and global measurement-to-game scale shape as independent QA rather than player-level prediction.",
+    "Integrate scouting, pinch-runner and usable video context at explicit low weights; keep defensive chase as bounded missingness until separable evidence exists.",
+    "Propagate SP-021 anchors, SP-022 ranges, SP-043 veteran cases, SP-074 conflicts, SP-075 Community rediagnosis, injury/age missingness and source-scope receipts into the all-100 review packet.",
+    "Individually adjudicate all 100 rows with a non-generic rationale and an evidence-use receipt.",
+    "Only after the rebuilt 100-player review passes independent QA should a new SP-078 owner-verdict proposal be generated."
+  ]
+}
