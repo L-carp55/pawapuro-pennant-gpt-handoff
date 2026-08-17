@@ -17,7 +17,12 @@ const activeDispositions = new Set(['CURRENT_POWERPRO_RATING','CURRENT_REALWORLD
 const sourceRows = read(SRC).split(/\r?\n/).filter(Boolean).map((line,i)=>{try{return JSON.parse(line);}catch(e){throw new Error(`${SRC}:${i+1} ${e.message}`);}});
 const sp075 = JSON.parse(read(SP075));
 const queue = JSON.parse(read(QUEUE));
-const active = sourceRows.filter(r => r.current_100 === true && r.usable_for_current100 === true && activeDispositions.has(String(r.owner_disposition ?? '')));
+// SP-075 defines active owner-review context by the owner disposition. The
+// usable_for_current100 flag is a qualifier within that context, not an
+// activation gate. This intentionally retains comparison-only PowerPro and
+// technique-only rows while preventing them from being mistaken for physical
+// appraisal inputs.
+const active = sourceRows.filter(r => r.current_100 === true && activeDispositions.has(String(r.owner_disposition ?? '')));
 const errors=[]; const checks=[];
 const check=(label,ok,detail='')=>{checks.push({label,pass:!!ok,detail:String(detail??'')}); if(!ok) errors.push(`${label}: ${detail}`);};
 
@@ -66,7 +71,8 @@ for(const q of queue.players??[]){
     check(`${src.record_id} text`, target.text===(src.text_or_excerpt??null), 'text mismatch');
     check(`${src.record_id} url`, target.url===(src.source_url??null), 'url mismatch');
     check(`${src.record_id} source_date`, target.source_date===(src.published_at??src.temporal_context??null), `${target.source_date} vs ${src.published_at}`);
-    check(`${src.record_id} usable`, target.usable_for_current100===true, target.usable_for_current100);
+    check(`${src.record_id} usable qualifier preserved`, target.usable_for_current100===(src.usable_for_current100===true), `${target.usable_for_current100} vs ${src.usable_for_current100===true}`);
+    check(`${src.record_id} canonical_status`, target.canonical_status===(src.canonical_status??null), `${target.canonical_status} vs ${src.canonical_status}`);
   }
 }
 check('global active source/queue row count', actualTotal===active.length && expectedTotal===active.length, `source=${active.length} expected=${expectedTotal} queue=${actualTotal}`);
@@ -79,6 +85,8 @@ const known = [
   ['塩見泰隆','physical_observation_rows'],
   ['岩田幸宏','physical_observation_rows'],
   ['柳田悠岐','physical_observation_rows'],
+  ['大島洋平','technique_context_rows'],
+  ['ポランコ','powerpro_rating_context_rows'],
 ];
 for(const [name,field] of known){
   const q=queueByName.get(norm(name));
@@ -91,7 +99,7 @@ for(const [name,field] of known){
 const byDisposition=Object.fromEntries([...activeDispositions].map(d=>[d,active.filter(r=>r.owner_disposition===d).length]));
 const output={
   schema_version:'qa_sp077_community_semantic_propagation_20260817', generated_at:'2026-08-17', status:errors.length?'FAIL':'PASS',
-  source:{path:SRC,active_rule:'current_100=true && usable_for_current100=true && owner_disposition in SP-075 active dispositions',active_rows:active.length,active_players:sourcePlayerNames.size,by_disposition:byDisposition},
+  source:{path:SRC,active_rule:'current_100=true && owner_disposition in SP-075 active dispositions; usable_for_current100 preserved as qualifier',active_rows:active.length,active_players:sourcePlayerNames.size,by_disposition:byDisposition},
   queue:QUEUE, sp075_expected:{active_x_rows:sp075?.community_effects?.active_x_rows,owner_review_context_players:sp075?.community_effects?.owner_review_context_players},
   checks_total:checks.length, checks_passed:checks.filter(x=>x.pass).length, checks_failed:errors.length, errors, checks,
 };
@@ -101,7 +109,8 @@ const md=[
   `- canonical active source rows: ${active.length}`,
   `- canonical active players: ${sourcePlayerNames.size}`,
   `- dispositions: ${JSON.stringify(byDisposition)}`,
-  '- comparison is record_id exact and category exact; lane existence alone cannot pass.','',
+  '- comparison is record_id exact and category/content exact; lane existence alone cannot pass.',
+  '- usable_for_current100 is preserved exactly as a qualifier; false rows may remain owner-review context but cannot become physical appraisal inputs.','',
   ...(errors.length?['## Errors','',...errors.map(e=>`- ${e}`),'']:[]),
 ].join('\n');
 fs.mkdirSync(path.dirname(path.join(ROOT,AUDIT)),{recursive:true}); fs.writeFileSync(path.join(ROOT,AUDIT),md+'\n');
