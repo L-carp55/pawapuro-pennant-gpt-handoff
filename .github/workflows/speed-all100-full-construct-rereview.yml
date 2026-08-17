@@ -1,0 +1,62 @@
+name: speed-all100-full-construct-rereview
+
+on:
+  push:
+    branches:
+      - review/opus-speed-pre-owner-review-wave-20260816
+    paths:
+      - 'scripts/build_speed_all100_full_construct_rereview_20260818.mjs'
+      - 'data/manual/speed_all100_full_construct_review_recommendations_20260818.tsv'
+      - '.github/workflows/speed-all100-full-construct-rereview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate and render all-100 full-construct rereview
+        run: node scripts/build_speed_all100_full_construct_rereview_20260818.mjs
+      - name: Verify outputs and owner-verdict immutability
+        run: |
+          test -s outputs/derived/speed_all100_full_construct_rereview_20260818.json
+          test -s docs/audits/speed_all100_full_construct_rereview_20260818.md
+          node - <<'NODE'
+          const fs = require('fs');
+          const out = JSON.parse(fs.readFileSync('outputs/derived/speed_all100_full_construct_rereview_20260818.json', 'utf8'));
+          const ledger = JSON.parse(fs.readFileSync('outputs/derived/sp078_owner_verdict_ledger_20260816.json', 'utf8'));
+          const expected = {
+            POWERPRO_PLAUSIBLE: 31,
+            POWERPRO_TOO_LOW: 1,
+            POWERPRO_TOO_HIGH_OR_STALE: 1,
+            UNRESOLVED: 67,
+          };
+          if (out.population?.emitted !== 100) throw new Error(`emitted=${out.population?.emitted}`);
+          for (const [key, value] of Object.entries(expected)) {
+            if (out.recommendation_counts?.[key] !== value) throw new Error(`${key}=${out.recommendation_counts?.[key]}`);
+          }
+          if (ledger.owner_verdict_count !== 0 || ledger.records.length !== 0) throw new Error('SP-078 mutated');
+          NODE
+          git diff --check
+      - name: Commit validated rereview only after all checks pass
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            outputs/derived/speed_all100_full_construct_rereview_20260818.json \
+            docs/audits/speed_all100_full_construct_rereview_20260818.md
+          if git diff --cached --quiet; then
+            echo 'No rereview outputs to commit'
+            exit 1
+          fi
+          git commit -m 'docs(speed): publish all-100 full-construct rereview'
+          git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
