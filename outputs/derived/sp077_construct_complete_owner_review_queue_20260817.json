@@ -251,21 +251,24 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 4.01,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": -0.3590721863195263,
+          "handedness": "右",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://pacificleague.com/news/32690"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "context_only",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -454,8 +457,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "中川 圭太",
+          "player_id": "51255138",
+          "powerpro_pct": 0.7313,
+          "latent_physical_pct": 0.7576,
+          "percentile_gap": 0.0263,
+          "powerpro_raw_last": 74,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 41,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -477,13 +496,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "MISSING_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -892,8 +911,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "太田 椋",
+          "player_id": "91395138",
+          "powerpro_pct": 0.4599,
+          "latent_physical_pct": 0.5253,
+          "percentile_gap": 0.0653,
+          "powerpro_raw_last": 64,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 30,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -921,7 +956,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -1842,8 +1877,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "来田 涼斗",
+          "player_id": "51955153",
+          "powerpro_pct": 0.9251,
+          "latent_physical_pct": 0.7071,
+          "percentile_gap": -0.218,
+          "powerpro_raw_last": 85,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 6,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 24,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -1871,7 +1922,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -2352,8 +2403,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "森 友哉",
+          "player_id": "91495139",
+          "powerpro_pct": 0.509,
+          "latent_physical_pct": 0.3636,
+          "percentile_gap": -0.1454,
+          "powerpro_raw_last": 65,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 4,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 25,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -2381,7 +2448,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -2790,8 +2857,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "紅林 弘太郎",
+          "player_id": "91995151",
+          "powerpro_pct": 0.2481,
+          "latent_physical_pct": 0.2626,
+          "percentile_gap": 0.0146,
+          "powerpro_raw_last": 56,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 7,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 28,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -2819,7 +2902,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -3228,8 +3311,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "若月 健矢",
+          "player_id": "41645139",
+          "powerpro_pct": 0.1499,
+          "latent_physical_pct": 0.2727,
+          "percentile_gap": 0.1229,
+          "powerpro_raw_last": 48,
+          "powerpro_raw_changes": 4,
+          "powerpro_years": 12,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 20,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -3257,7 +3356,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -3666,8 +3765,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "西川 龍馬",
+          "player_id": "71475132",
+          "powerpro_pct": 0.6848,
+          "latent_physical_pct": 0.3232,
+          "percentile_gap": -0.3615,
+          "powerpro_raw_last": 72,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 11,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 57,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -3695,7 +3810,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -4104,8 +4219,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "西野 真弘",
+          "player_id": "91495130",
+          "powerpro_pct": 0.7674,
+          "latent_physical_pct": 0.4848,
+          "percentile_gap": -0.2826,
+          "powerpro_raw_last": 76,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 11,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 15,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -4133,7 +4264,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -4695,8 +4826,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "カリステ",
+          "player_id": "93795157",
+          "powerpro_pct": 0.8579,
+          "latent_physical_pct": 0.3939,
+          "percentile_gap": -0.4639,
+          "powerpro_raw_last": 82,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 4,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 7,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -4724,7 +4871,7 @@
           "statistical_proxy": "MISSING_SAME_TIME_STATISTICAL_EVIDENCE",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -5133,8 +5280,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "土田 龍空",
+          "player_id": "51455153",
+          "powerpro_pct": 0.5349,
+          "latent_physical_pct": 0.3737,
+          "percentile_gap": -0.1611,
+          "powerpro_raw_last": 66,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 6,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 3,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -5162,7 +5325,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -5382,21 +5545,36 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
-        "bunt_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 3.96,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": 0.016701031921837733,
+          "handedness": "左",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://goetheweb.jp/person/article/20230907-yohei-oshima"
+          ]
+        },
+        "bunt_h2f": {
+          "seconds": 3.79,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": 0,
+          "handedness": "左",
+          "confidence": "LOW_VERY_SMALL_SAMPLE",
+          "lane": "H2F_BUNT_LOW_CONFIDENCE",
+          "sources": [
+            "https://goetheweb.jp/person/article/20230907-yohei-oshima"
+          ],
+          "note": "セーフティ/プッシュバントはスタートが速く通常スイングと同一分布で比較できない。別レーンのまま保持し、normal-swing z-scoreへ混ぜない"
+        },
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "context_only",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -5606,8 +5784,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "大島 洋平",
+          "player_id": "01305131",
+          "powerpro_pct": 0.7313,
+          "latent_physical_pct": 0.5354,
+          "percentile_gap": -0.1959,
+          "powerpro_raw_last": 74,
+          "powerpro_raw_changes": 4,
+          "powerpro_years": 13,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 13,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -5629,13 +5823,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "MISSING_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -6114,8 +6308,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "岡林 勇希",
+          "player_id": "81585151",
+          "powerpro_pct": 0.845,
+          "latent_physical_pct": 0.7374,
+          "percentile_gap": -0.1076,
+          "powerpro_raw_last": 81,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 7,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 39,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -6143,7 +6353,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -6552,8 +6762,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "木下 拓哉",
+          "player_id": "31735132",
+          "powerpro_pct": 0.0465,
+          "latent_physical_pct": 0.0303,
+          "percentile_gap": -0.0162,
+          "powerpro_raw_last": 39,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 11,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 4,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -6581,7 +6807,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -6990,8 +7216,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "村松 開人",
+          "player_id": "03105157",
+          "powerpro_pct": 0.8346,
+          "latent_physical_pct": 0.8889,
+          "percentile_gap": 0.0543,
+          "powerpro_raw_last": 80,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 4,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 55,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -7019,7 +7261,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -7428,8 +7670,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "板山 祐太郎",
+          "player_id": "91395132",
+          "powerpro_pct": 0.6848,
+          "latent_physical_pct": 0.6364,
+          "percentile_gap": -0.0484,
+          "powerpro_raw_last": 72,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 11,
+          "s1_internal_inertia": true,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 18,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "INTERNAL_INERTIA_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -7457,7 +7715,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -7938,8 +8196,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "田中 幹也",
+          "player_id": "21025157",
+          "powerpro_pct": 0.8786,
+          "latent_physical_pct": 0.9293,
+          "percentile_gap": 0.0507,
+          "powerpro_raw_last": 83,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 4,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 48,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -7967,7 +8241,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -8376,8 +8650,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "石川 昂弥",
+          "player_id": "91195151",
+          "powerpro_pct": 0.062,
+          "latent_physical_pct": 0.2121,
+          "percentile_gap": 0.1501,
+          "powerpro_raw_last": 41,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 7,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 20,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -8405,7 +8695,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -8814,8 +9104,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "福永 裕基",
+          "player_id": "81685157",
+          "powerpro_pct": 0.4599,
+          "latent_physical_pct": 0.8485,
+          "percentile_gap": 0.3885,
+          "powerpro_raw_last": 64,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 4,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 31,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -8843,7 +9149,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -9324,8 +9630,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "細川 成也",
+          "player_id": "31835134",
+          "powerpro_pct": 0.3437,
+          "latent_physical_pct": 0.7879,
+          "percentile_gap": 0.4442,
+          "powerpro_raw_last": 60,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 10,
+          "s1_internal_inertia": true,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 37,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": true,
+          "flag": "BOTH"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -9353,7 +9675,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -9762,8 +10084,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "高橋 周平",
+          "player_id": "91095135",
+          "powerpro_pct": 0.1189,
+          "latent_physical_pct": 0.0606,
+          "percentile_gap": -0.0583,
+          "powerpro_raw_last": 46,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 13,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 12,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -9791,7 +10129,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -10314,8 +10652,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "奈良間 大己",
+          "player_id": "31435157",
+          "powerpro_pct": 0.4599,
+          "latent_physical_pct": 0.5455,
+          "percentile_gap": 0.0855,
+          "powerpro_raw_last": 64,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 4,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 22,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -10343,7 +10697,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -10752,8 +11106,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "水野 達稀",
+          "player_id": "63165155",
+          "powerpro_pct": 0.6641,
+          "latent_physical_pct": 0.899,
+          "percentile_gap": 0.2349,
+          "powerpro_raw_last": 71,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 5,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 47,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -10781,7 +11151,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -11262,8 +11632,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "清宮 幸太郎",
+          "player_id": "41545136",
+          "powerpro_pct": 0.2481,
+          "latent_physical_pct": 0.5556,
+          "percentile_gap": 0.3075,
+          "powerpro_raw_last": 56,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 9,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 42,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -11291,7 +11677,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -11772,8 +12158,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "田宮 裕涼",
+          "player_id": "51055138",
+          "powerpro_pct": 0.6021,
+          "latent_physical_pct": 0.7172,
+          "percentile_gap": 0.1151,
+          "powerpro_raw_last": 68,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 35,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -11801,7 +12203,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -12210,8 +12612,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "郡司 裕也",
+          "player_id": "21925151",
+          "powerpro_pct": 0.3721,
+          "latent_physical_pct": 0.798,
+          "percentile_gap": 0.4259,
+          "powerpro_raw_last": 61,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 7,
+          "s1_internal_inertia": true,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 29,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": true,
+          "flag": "BOTH"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -12239,7 +12657,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -12648,8 +13066,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "野村 佑希",
+          "player_id": "31435138",
+          "powerpro_pct": 0.2067,
+          "latent_physical_pct": 0.5657,
+          "percentile_gap": 0.3589,
+          "powerpro_raw_last": 52,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 25,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -12677,7 +13111,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -13646,8 +14080,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "ポランコ",
+          "player_id": "63065155",
+          "powerpro_pct": 0.4289,
+          "latent_physical_pct": 0.3333,
+          "percentile_gap": -0.0956,
+          "powerpro_raw_last": 63,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 5,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 12,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -13675,7 +14125,7 @@
           "statistical_proxy": "MISSING_SAME_TIME_STATISTICAL_EVIDENCE",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -14156,8 +14606,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "佐藤 都志也",
+          "player_id": "71075151",
+          "powerpro_pct": 0.6641,
+          "latent_physical_pct": 0.404,
+          "percentile_gap": -0.26,
+          "powerpro_raw_last": 71,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 7,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 26,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -14185,7 +14651,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -14407,21 +14873,24 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 3.73,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": 1.7452578358321182,
+          "handedness": "右",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://4years.asahi.com/article/14723455"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -14729,8 +15198,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "友杉 篤輝",
+          "player_id": "71275157",
+          "powerpro_pct": 0.9432,
+          "latent_physical_pct": 0.8081,
+          "percentile_gap": -0.1351,
+          "powerpro_raw_last": 87,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 4,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 35,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -14752,13 +15237,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -15239,8 +15724,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "安田 尚憲",
+          "player_id": "81885136",
+          "powerpro_pct": 0.1189,
+          "latent_physical_pct": 0.0707,
+          "percentile_gap": -0.0482,
+          "powerpro_raw_last": 46,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 9,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 10,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -15268,7 +15769,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -15677,8 +16178,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "小川 龍成",
+          "player_id": "11715153",
+          "powerpro_pct": 0.9354,
+          "latent_physical_pct": 0.9091,
+          "percentile_gap": -0.0263,
+          "powerpro_raw_last": 86,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 6,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 51,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -15706,7 +16223,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -16187,8 +16704,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "山口 航輝",
+          "player_id": "91895138",
+          "powerpro_pct": 0.2067,
+          "latent_physical_pct": 0.6162,
+          "percentile_gap": 0.4094,
+          "powerpro_raw_last": 52,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 17,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -16216,7 +16749,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -16697,8 +17230,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "岡 大海",
+          "player_id": "11515139",
+          "powerpro_pct": 0.8579,
+          "latent_physical_pct": 0.7677,
+          "percentile_gap": -0.0902,
+          "powerpro_raw_last": 82,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 9,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 7,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -16726,7 +17275,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -16948,21 +17497,24 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 3.9,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": 0.4676288938114766,
+          "handedness": "左",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://pacificleague.com/news/50792"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -17228,8 +17780,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "藤原 恭大",
+          "player_id": "31635138",
+          "powerpro_pct": 0.9251,
+          "latent_physical_pct": 0.8586,
+          "percentile_gap": -0.0665,
+          "powerpro_raw_last": 85,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 31,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -17251,13 +17819,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -17666,8 +18234,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "藤岡 裕大",
+          "player_id": "41645136",
+          "powerpro_pct": 0.509,
+          "latent_physical_pct": 0.2929,
+          "percentile_gap": -0.2161,
+          "powerpro_raw_last": 65,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 9,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 3,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -17695,7 +18279,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -18175,8 +18759,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "髙部 瑛斗",
+          "player_id": "11215151",
+          "powerpro_pct": 0.9638,
+          "latent_physical_pct": 0.9495,
+          "percentile_gap": -0.0143,
+          "powerpro_raw_last": 90,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 7,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 31,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -18204,7 +18804,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -18613,8 +19213,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "古賀 悠斗",
+          "player_id": "81785155",
+          "powerpro_pct": 0.1344,
+          "latent_physical_pct": 0.2222,
+          "percentile_gap": 0.0879,
+          "powerpro_raw_last": 47,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 5,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 30,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -18642,7 +19258,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -18862,21 +19478,24 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 4.13,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": -1.260927910098804,
+          "handedness": "右",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://pacificleague.com/news/61236"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "context_only",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -19065,8 +19684,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "外崎 修汰",
+          "player_id": "41245130",
+          "powerpro_pct": 0.6021,
+          "latent_physical_pct": 0.6869,
+          "percentile_gap": 0.0848,
+          "powerpro_raw_last": 68,
+          "powerpro_raw_changes": 3,
+          "powerpro_years": 11,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 9,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -19088,13 +19723,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "MISSING_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -19314,21 +19949,39 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
-        "bunt_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 3.8149999999999995,
+          "n_independent_records": 4,
+          "n_raw_records": 4,
+          "z_within_sample_lower_is_faster": 1.1064433648218008,
+          "handedness": "左",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://pacificleague.com/news/32690",
+            "https://pacificleague.com/news/32690",
+            "https://pacificleague.com/news/32690",
+            "https://pacificleague.com/news/61236"
+          ]
+        },
+        "bunt_h2f": {
+          "seconds": 3.68,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": 0,
+          "handedness": "左",
+          "confidence": "LOW_VERY_SMALL_SAMPLE",
+          "lane": "H2F_BUNT_LOW_CONFIDENCE",
+          "sources": [
+            "https://sports.yahoo.co.jp/official/detail/202009180094-spnaviow"
+          ],
+          "note": "セーフティ/プッシュバントはスタートが速く通常スイングと同一分布で比較できない。別レーンのまま保持し、normal-swing z-scoreへ混ぜない"
+        },
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "context_only",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -19601,8 +20254,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "源田 壮亮",
+          "player_id": "71775134",
+          "powerpro_pct": 0.8346,
+          "latent_physical_pct": 0.8283,
+          "percentile_gap": -0.0063,
+          "powerpro_raw_last": 80,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 10,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 27,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -19624,13 +20293,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "MISSING_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -20111,8 +20780,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "滝澤 夏央",
+          "player_id": "51255155",
+          "powerpro_pct": 0.9251,
+          "latent_physical_pct": 0.8687,
+          "percentile_gap": -0.0564,
+          "powerpro_raw_last": 85,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 5,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 52,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -20140,7 +20825,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -20549,8 +21234,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "石井 一成",
+          "player_id": "21125134",
+          "powerpro_pct": 0.8142,
+          "latent_physical_pct": 0.7778,
+          "percentile_gap": -0.0364,
+          "powerpro_raw_last": 79,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 9,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 22,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -20578,7 +21279,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -20986,8 +21687,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "ファビアン",
+          "player_id": "43745150",
+          "powerpro_pct": 0.3721,
+          "latent_physical_pct": 0.4242,
+          "percentile_gap": 0.0521,
+          "powerpro_raw_last": 61,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 2,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 15,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -21015,7 +21732,7 @@
           "statistical_proxy": "MISSING_SAME_TIME_STATISTICAL_EVIDENCE",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -21577,8 +22294,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "モンテロ",
+          "player_id": "53955150",
+          "powerpro_pct": 0.1705,
+          "latent_physical_pct": 0.6263,
+          "percentile_gap": 0.4557,
+          "powerpro_raw_last": 49,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 2,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 13,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -21606,7 +22339,7 @@
           "statistical_proxy": "MISSING_SAME_TIME_STATISTICAL_EVIDENCE",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -22652,8 +23385,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "坂倉 将吾",
+          "player_id": "11915134",
+          "powerpro_pct": 0.6021,
+          "latent_physical_pct": 0.2323,
+          "percentile_gap": -0.3697,
+          "powerpro_raw_last": 68,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 10,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 38,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -22681,7 +23430,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -22903,21 +23652,24 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 4.05,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": -0.6596907609126189,
+          "handedness": "左",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://goetheweb.jp/person/article/20241128-star-kozonokaito"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -23183,8 +23935,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "小園 海斗",
+          "player_id": "01705138",
+          "powerpro_pct": 0.8217,
+          "latent_physical_pct": 0.4646,
+          "percentile_gap": -0.3571,
+          "powerpro_raw_last": 79,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 49,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -23206,13 +23974,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -23693,8 +24461,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "矢野 雅哉",
+          "player_id": "93395153",
+          "powerpro_pct": 0.8036,
+          "latent_physical_pct": 0.2828,
+          "percentile_gap": -0.5208,
+          "powerpro_raw_last": 78,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 6,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 15,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -23722,7 +24506,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -24285,8 +25069,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "秋山 翔吾",
+          "player_id": "31135133",
+          "powerpro_pct": 0.7158,
+          "latent_physical_pct": 0.4949,
+          "percentile_gap": -0.2208,
+          "powerpro_raw_last": 73,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 11,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 9,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -24314,7 +25114,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -24723,8 +25523,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "菊池 涼介",
+          "player_id": "61565135",
+          "powerpro_pct": 0.6848,
+          "latent_physical_pct": 0.596,
+          "percentile_gap": -0.0888,
+          "powerpro_raw_last": 72,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 13,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 36,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -24752,7 +25568,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -25161,8 +25977,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "野間 峻祥",
+          "player_id": "01405130",
+          "powerpro_pct": 0.9561,
+          "latent_physical_pct": 0.5758,
+          "percentile_gap": -0.3803,
+          "powerpro_raw_last": 88,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 11,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 8,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -25190,7 +26022,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -25752,8 +26584,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "サンタナ",
+          "player_id": "53755153",
+          "powerpro_pct": 0.1344,
+          "latent_physical_pct": 0.303,
+          "percentile_gap": 0.1687,
+          "powerpro_raw_last": 47,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 6,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 40,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -25781,7 +26629,7 @@
           "statistical_proxy": "MISSING_SAME_TIME_STATISTICAL_EVIDENCE",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -26001,21 +26849,24 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 3.96,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": 0.016701031921837733,
+          "handedness": "右",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://number.bunshun.jp/articles/-/846891?page=2"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -26323,8 +27174,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "並木 秀尊",
+          "player_id": "91695153",
+          "powerpro_pct": 0.9922,
+          "latent_physical_pct": 0.9798,
+          "percentile_gap": -0.0125,
+          "powerpro_raw_last": 97,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 6,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 6,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -26346,13 +27213,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -26761,8 +27628,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "中村 悠平",
+          "player_id": "51255118",
+          "powerpro_pct": 0.2481,
+          "latent_physical_pct": 0.1515,
+          "percentile_gap": -0.0965,
+          "powerpro_raw_last": 56,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 13,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 8,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -26790,7 +27673,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -27012,21 +27895,24 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 3.8,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": 1.219175330294208,
+          "handedness": "左",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://4years.asahi.com/article/12432940"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -27292,8 +28178,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "丸山 和郁",
+          "player_id": "93195155",
+          "powerpro_pct": 0.9354,
+          "latent_physical_pct": 0.7273,
+          "percentile_gap": -0.2081,
+          "powerpro_raw_last": 86,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 5,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 10,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -27315,13 +28217,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -27730,8 +28632,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "古賀 優大",
+          "player_id": "01705134",
+          "powerpro_pct": 0.1189,
+          "latent_physical_pct": 0.6566,
+          "percentile_gap": 0.5377,
+          "powerpro_raw_last": 46,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 10,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 27,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -27759,7 +28677,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -27979,21 +28897,25 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 4.205,
+          "n_independent_records": 2,
+          "n_raw_records": 2,
+          "z_within_sample_lower_is_faster": -1.8245877374608535,
+          "handedness": "右",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://number.bunshun.jp/articles/-/833298?page=2",
+            "https://number.bunshun.jp/articles/-/833298?page=2"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -28290,8 +29212,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "塩見 泰隆",
+          "player_id": "71975136",
+          "powerpro_pct": 0.8786,
+          "latent_physical_pct": 0.697,
+          "percentile_gap": -0.1816,
+          "powerpro_raw_last": 83,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 9,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 8,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -28313,13 +29251,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "MISSING_BOUNDED",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -28728,8 +29666,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "岩田 幸宏",
+          "player_id": "51355155",
+          "powerpro_pct": 0.9871,
+          "latent_physical_pct": 0.9596,
+          "percentile_gap": -0.0275,
+          "powerpro_raw_last": 96,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 3,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 50,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -28757,7 +29711,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -29166,8 +30120,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "長岡 秀樹",
+          "player_id": "51455151",
+          "powerpro_pct": 0.2946,
+          "latent_physical_pct": 0.5051,
+          "percentile_gap": 0.2105,
+          "powerpro_raw_last": 58,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 7,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 55,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -29195,7 +30165,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -29604,8 +30574,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "太田 光",
+          "player_id": "71375138",
+          "powerpro_pct": 0.1008,
+          "latent_physical_pct": 0.1717,
+          "percentile_gap": 0.0709,
+          "powerpro_raw_last": 44,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 23,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -29633,7 +30619,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -30112,8 +31098,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "村林 一輝",
+          "player_id": "41845132",
+          "powerpro_pct": 0.6227,
+          "latent_physical_pct": 0.9899,
+          "percentile_gap": 0.3672,
+          "powerpro_raw_last": 69,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 11,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 63,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -30141,7 +31143,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -30550,8 +31552,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "浅村 栄斗",
+          "player_id": "51155118",
+          "powerpro_pct": 0.0207,
+          "latent_physical_pct": 0.1818,
+          "percentile_gap": 0.1611,
+          "powerpro_raw_last": 35,
+          "powerpro_raw_changes": 5,
+          "powerpro_years": 13,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 27,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -30579,7 +31597,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -30988,8 +32006,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "渡邊 佳明",
+          "player_id": "73175138",
+          "powerpro_pct": 0.1809,
+          "latent_physical_pct": 0.1212,
+          "percentile_gap": -0.0597,
+          "powerpro_raw_last": 50,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 12,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -31017,7 +32051,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -31426,8 +32460,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "鈴木 大地",
+          "player_id": "81985135",
+          "powerpro_pct": 0.1705,
+          "latent_physical_pct": 0,
+          "percentile_gap": -0.1705,
+          "powerpro_raw_last": 49,
+          "powerpro_raw_changes": 3,
+          "powerpro_years": 13,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 5,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -31455,7 +32505,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -31936,8 +32986,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "京田 陽太",
+          "player_id": "81585134",
+          "powerpro_pct": 0.8036,
+          "latent_physical_pct": 0.3434,
+          "percentile_gap": -0.4602,
+          "powerpro_raw_last": 78,
+          "powerpro_raw_changes": 3,
+          "powerpro_years": 10,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 19,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -31965,7 +33031,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -32374,8 +33440,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "佐野 恵太",
+          "player_id": "91995134",
+          "powerpro_pct": 0.1499,
+          "latent_physical_pct": 0.2424,
+          "percentile_gap": 0.0926,
+          "powerpro_raw_last": 48,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 10,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 57,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -32403,7 +33485,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -32811,8 +33893,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "宮﨑 敏郎",
+          "player_id": "51455137",
+          "powerpro_pct": 0.0129,
+          "latent_physical_pct": 0.1313,
+          "percentile_gap": 0.1184,
+          "powerpro_raw_last": 33,
+          "powerpro_raw_changes": 4,
+          "powerpro_years": 13,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 31,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -32840,7 +33938,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -33249,8 +34347,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "山本 祐大",
+          "player_id": "23125136",
+          "powerpro_pct": 0.3721,
+          "latent_physical_pct": 0.3131,
+          "percentile_gap": -0.059,
+          "powerpro_raw_last": 61,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 9,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 25,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -33278,7 +34392,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -33687,8 +34801,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "度会 隆輝",
+          "player_id": "33535159",
+          "powerpro_pct": 0.509,
+          "latent_physical_pct": 0.5859,
+          "percentile_gap": 0.0768,
+          "powerpro_raw_last": 65,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 3,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 33,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -33716,7 +34846,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -34239,8 +35369,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "林 琢真",
+          "player_id": "91695157",
+          "powerpro_pct": 0.8579,
+          "latent_physical_pct": 0.6465,
+          "percentile_gap": -0.2114,
+          "powerpro_raw_last": 82,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 4,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 8,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -34268,7 +35414,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -34490,21 +35636,24 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 3.97,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": -0.05845361172643707,
+          "handedness": "左",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://baseballking.jp/ns/297434/"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -34770,8 +35919,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "梶原 昂希",
+          "player_id": "51555155",
+          "powerpro_pct": 0.9638,
+          "latent_physical_pct": 0.9192,
+          "percentile_gap": -0.0446,
+          "powerpro_raw_last": 90,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 5,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 7,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -34793,13 +35958,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -35802,8 +36967,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "筒香 嘉智",
+          "player_id": "41945131",
+          "powerpro_pct": 0.1059,
+          "latent_physical_pct": 0.101,
+          "percentile_gap": -0.0049,
+          "powerpro_raw_last": 45,
+          "powerpro_raw_changes": 3,
+          "powerpro_years": 9,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 21,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -35831,7 +37012,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -36312,8 +37493,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "蝦名 達夫",
+          "player_id": "51555151",
+          "powerpro_pct": 0.7494,
+          "latent_physical_pct": 0.4343,
+          "percentile_gap": -0.315,
+          "powerpro_raw_last": 75,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 7,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 40,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -36341,7 +37538,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -36750,8 +37947,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "今宮 健太",
+          "player_id": "31335131",
+          "powerpro_pct": 0.5349,
+          "latent_physical_pct": 0.1616,
+          "percentile_gap": -0.3733,
+          "powerpro_raw_last": 66,
+          "powerpro_raw_changes": 3,
+          "powerpro_years": 13,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 15,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": true,
+          "flag": "EXTERNAL_DISAGREEMENT_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -36779,7 +37992,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -37001,21 +38214,43 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
-        "bunt_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 3.8183333333333334,
+          "n_independent_records": 6,
+          "n_raw_records": 6,
+          "z_within_sample_lower_is_faster": 1.081391816939039,
+          "handedness": "左",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://pacificleague.com/news/50792",
+            "https://pacificleague.com/news/50792",
+            "https://pacificleague.com/news/61236",
+            "https://pacificleague.com/news/61236",
+            "https://pacificleague.com/news/61236",
+            "https://goetheweb.jp/person/article/20230209-star-46"
+          ]
+        },
+        "bunt_h2f": {
+          "seconds": 3.53,
+          "n_independent_records": 3,
+          "n_raw_records": 3,
+          "z_within_sample_lower_is_faster": 0,
+          "handedness": "左",
+          "confidence": "LOW_VERY_SMALL_SAMPLE",
+          "lane": "H2F_BUNT_LOW_CONFIDENCE",
+          "sources": [
+            "https://sports.yahoo.co.jp/official/detail/202009180094-spnaviow",
+            "https://sports.yahoo.co.jp/official/detail/202009180094-spnaviow",
+            "https://pacificleague.com/news/61236"
+          ],
+          "note": "セーフティ/プッシュバントはスタートが速く通常スイングと同一分布で比較できない。別レーンのまま保持し、normal-swing z-scoreへ混ぜない"
+        },
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -37491,8 +38726,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "周東 佑京",
+          "player_id": "21925136",
+          "powerpro_pct": 0.9871,
+          "latent_physical_pct": 1,
+          "percentile_gap": 0.0129,
+          "powerpro_raw_last": 96,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 59,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -37514,13 +38765,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -38001,8 +39252,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "山川 穂高",
+          "player_id": "21425139",
+          "powerpro_pct": 0.1344,
+          "latent_physical_pct": 0.0404,
+          "percentile_gap": -0.094,
+          "powerpro_raw_last": 47,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 12,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 14,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -38030,7 +39297,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -38252,21 +39519,24 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 3.98,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": -0.13360825537470855,
+          "handedness": "左",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://goetheweb.jp/person/article/20210610-yuki_yanagita"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -38532,8 +39802,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "柳田 悠岐",
+          "player_id": "31835133",
+          "powerpro_pct": 0.5685,
+          "latent_physical_pct": 0.6667,
+          "percentile_gap": 0.0982,
+          "powerpro_raw_last": 67,
+          "powerpro_raw_changes": 6,
+          "powerpro_years": 13,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 20,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -38555,13 +39841,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -39042,8 +40328,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "柳町 達",
+          "player_id": "73175151",
+          "powerpro_pct": 0.5685,
+          "latent_physical_pct": 0.4747,
+          "percentile_gap": -0.0937,
+          "powerpro_raw_last": 67,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 7,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 21,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -39071,7 +40373,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -39552,8 +40854,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "栗原 陵矢",
+          "player_id": "01705130",
+          "powerpro_pct": 0.3282,
+          "latent_physical_pct": 0.4141,
+          "percentile_gap": 0.086,
+          "powerpro_raw_last": 59,
+          "powerpro_raw_changes": 6,
+          "powerpro_years": 11,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 40,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -39581,7 +40899,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -40062,8 +41380,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "正木 智也",
+          "player_id": "81885155",
+          "powerpro_pct": 0.1499,
+          "latent_physical_pct": 0.3535,
+          "percentile_gap": 0.2037,
+          "powerpro_raw_last": 48,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 5,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 31,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -40091,7 +41425,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -40500,8 +41834,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "海野 隆司",
+          "player_id": "81385151",
+          "powerpro_pct": 0.2067,
+          "latent_physical_pct": 0.1414,
+          "percentile_gap": -0.0653,
+          "powerpro_raw_last": 52,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 7,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 25,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -40529,7 +41879,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -40751,21 +42101,25 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
+        "evidence_state": "AVAILABLE_BOUNDED",
         "normal_swing_h2f": null,
-        "bunt_h2f": null,
+        "bunt_h2f": {
+          "seconds": 3.69,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": 0,
+          "handedness": "左",
+          "confidence": "LOW_VERY_SMALL_SAMPLE",
+          "lane": "H2F_BUNT_LOW_CONFIDENCE",
+          "sources": [
+            "https://pacificleague.com/news/2019/8/18255"
+          ],
+          "note": "セーフティ/プッシュバントはスタートが速く通常スイングと同一分布で比較できない。別レーンのまま保持し、normal-swing z-scoreへ混ぜない"
+        },
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -41031,8 +42385,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "牧原 大成",
+          "player_id": "61465133",
+          "powerpro_pct": 0.8579,
+          "latent_physical_pct": 0.9394,
+          "percentile_gap": 0.0815,
+          "powerpro_raw_last": 82,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 13,
+          "s1_internal_inertia": true,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 35,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "INTERNAL_INERTIA_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -41054,13 +42424,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -41469,8 +42839,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "近藤 健介",
+          "player_id": "41745135",
+          "powerpro_pct": 0.4599,
+          "latent_physical_pct": 0.3838,
+          "percentile_gap": -0.0761,
+          "powerpro_raw_last": 64,
+          "powerpro_raw_changes": 3,
+          "powerpro_years": 13,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 37,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -41498,7 +42884,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -42347,8 +43733,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "佐々木 俊輔",
+          "player_id": "51955159",
+          "powerpro_pct": 0.7674,
+          "latent_physical_pct": 0.8788,
+          "percentile_gap": 0.1113,
+          "powerpro_raw_last": 76,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 3,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 32,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -42376,7 +43778,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -42598,21 +44000,25 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 4.165,
+          "n_independent_records": 2,
+          "n_raw_records": 2,
+          "z_within_sample_lower_is_faster": -1.5239691628677607,
+          "handedness": "左",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://www.nikkansports.com/baseball/news/1658951.html",
+            "https://www.nikkansports.com/baseball/news/1658951.html"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "physical_record_found",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -42899,8 +44305,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "吉川 尚輝",
+          "player_id": "73375134",
+          "powerpro_pct": 0.8346,
+          "latent_physical_pct": 0.7475,
+          "percentile_gap": -0.0872,
+          "powerpro_raw_last": 80,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 10,
+          "s1_internal_inertia": true,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 31,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "INTERNAL_INERTIA_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -42922,13 +44344,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "AVAILABLE_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -43337,8 +44759,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "大城 卓三",
+          "player_id": "21325136",
+          "powerpro_pct": 0,
+          "latent_physical_pct": 0.0202,
+          "percentile_gap": 0.0202,
+          "powerpro_raw_last": 24,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 9,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 26,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -43366,7 +44804,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -43775,8 +45213,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "岸田 行倫",
+          "player_id": "91595136",
+          "powerpro_pct": 0.2351,
+          "latent_physical_pct": 0.0505,
+          "percentile_gap": -0.1846,
+          "powerpro_raw_last": 55,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 9,
+          "s1_internal_inertia": true,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 24,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "INTERNAL_INERTIA_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -43804,7 +45258,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -44026,21 +45480,24 @@
         ]
       },
       "acceleration_h2f_t90_evidence": {
-        "evidence_state": "MISSING_BOUNDED",
-        "normal_swing_h2f": null,
+        "evidence_state": "AVAILABLE_BOUNDED",
+        "normal_swing_h2f": {
+          "seconds": 3.94,
+          "n_independent_records": 1,
+          "n_raw_records": 1,
+          "z_within_sample_lower_is_faster": 0.16701031921838402,
+          "handedness": "右",
+          "confidence": "LOW",
+          "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+          "sources": [
+            "https://pacificleague.com/news/41022"
+          ]
+        },
         "bunt_h2f": null,
         "direct_or_standardized_t90_records": [],
         "role": "ACCELERATION_CONTEXT; H2F_BUNT_AND_NORMAL_ARE_SEPARATE; NEVER_STANDALONE_RATING",
         "source_scope_guard": "NPB+ hp_to_1b_sec provenance failure does not invalidate independently sourced H2F/T90 evidence.",
-        "missingness": {
-          "evidence_state": "MISSING_BOUNDED",
-          "reason": "context_only",
-          "no_negative_inference": true,
-          "searched_or_scoped_sources": [
-            "outputs/derived/sp007_h2f_low_confidence_lane.json",
-            "data/manual/npb_speed_physical_evidence_full_20260809.json"
-          ]
-        },
+        "missingness": null,
         "provenance": [
           "outputs/derived/sp007_h2f_low_confidence_lane.json",
           "data/manual/npb_speed_physical_evidence_full_20260809.json"
@@ -44229,8 +45686,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "松本 剛",
+          "player_id": "21625135",
+          "powerpro_pct": 0.6284,
+          "latent_physical_pct": 0.4545,
+          "percentile_gap": -0.1738,
+          "powerpro_raw_last": 69,
+          "powerpro_raw_changes": 2,
+          "powerpro_years": 12,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 34,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -44252,13 +45725,13 @@
         "missingness_is_not_negative_evidence": true,
         "lane_states": {
           "top_speed": "AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC",
-          "acceleration_h2f_t90": "MISSING_BOUNDED",
+          "acceleration_h2f_t90": "AVAILABLE_BOUNDED",
           "short_distance": "MISSING_BOUNDED",
           "historical_physical": "AVAILABLE_BOUNDED",
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -44667,8 +46140,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "中野 拓夢",
+          "player_id": "41445153",
+          "powerpro_pct": 0.7494,
+          "latent_physical_pct": 0.8384,
+          "percentile_gap": 0.089,
+          "powerpro_raw_last": 75,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 6,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 62,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -44696,7 +46185,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -45105,8 +46594,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "伏見 寅威",
+          "player_id": "61065137",
+          "powerpro_pct": 0.0611,
+          "latent_physical_pct": 0.0101,
+          "percentile_gap": -0.051,
+          "powerpro_raw_last": 40,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 12,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 9,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -45134,7 +46639,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -45741,8 +47246,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "佐藤 輝明",
+          "player_id": "41045153",
+          "powerpro_pct": 0.6021,
+          "latent_physical_pct": 0.6768,
+          "percentile_gap": 0.0747,
+          "powerpro_raw_last": 68,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 6,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 49,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -45770,7 +47291,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -46179,8 +47700,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "坂本 誠志郎",
+          "player_id": "11915132",
+          "powerpro_pct": 0.2481,
+          "latent_physical_pct": 0.1111,
+          "percentile_gap": -0.137,
+          "powerpro_raw_last": 56,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 11,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 17,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -46208,7 +47745,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -46617,8 +48154,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "大山 悠輔",
+          "player_id": "21325134",
+          "powerpro_pct": 0.2946,
+          "latent_physical_pct": 0.1919,
+          "percentile_gap": -0.1027,
+          "powerpro_raw_last": 58,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 10,
+          "s1_internal_inertia": true,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 26,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "INTERNAL_INERTIA_ONLY"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -46646,7 +48199,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -47253,8 +48806,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "小幡 竜平",
+          "player_id": "31535138",
+          "powerpro_pct": 0.7829,
+          "latent_physical_pct": 0.8182,
+          "percentile_gap": 0.0352,
+          "powerpro_raw_last": 77,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 11,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -47282,7 +48851,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -47691,8 +49260,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "木浪 聖也",
+          "player_id": "31735138",
+          "powerpro_pct": 0.3282,
+          "latent_physical_pct": 0.0808,
+          "percentile_gap": -0.2474,
+          "powerpro_raw_last": 59,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 8,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 18,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -47720,7 +49305,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -48129,8 +49714,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "梅野 隆太郎",
+          "player_id": "21325139",
+          "powerpro_pct": 0.2713,
+          "latent_physical_pct": 0.2525,
+          "percentile_gap": -0.0188,
+          "powerpro_raw_last": 57,
+          "powerpro_raw_changes": 1,
+          "powerpro_years": 12,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 6,
+          "exposure_caveat": "FEW_RUNS_TOP_SPEED_LIKELY_UNDERSTATED",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -48158,7 +49759,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "MISSING_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },
@@ -48567,8 +50168,24 @@
         ]
       },
       "powerpro_review_context": {
-        "evidence_state": "MISSING_BOUNDED",
-        "stale_detector": null,
+        "evidence_state": "AVAILABLE_REVIEW_CONTEXT",
+        "stale_detector": {
+          "player": "森下 翔太",
+          "player_id": "43145157",
+          "powerpro_pct": 0.3437,
+          "latent_physical_pct": 0.202,
+          "percentile_gap": -0.1416,
+          "powerpro_raw_last": 60,
+          "powerpro_raw_changes": 0,
+          "powerpro_years": 4,
+          "s1_internal_inertia": false,
+          "latent_reliability": null,
+          "latent_reliability_status": "NOT_IDENTIFIABLE",
+          "exposure_runs": 35,
+          "exposure_caveat": "ADEQUATE_RUNS",
+          "s2_external_disagreement": false,
+          "flag": "NONE"
+        },
         "individual_powerpro_label_is_physical_teacher": false,
         "allowed_role": "STALE_ODD_REVIEW_CONTEXT_ONLY",
         "automatic_rating_change": false,
@@ -48596,7 +50213,7 @@
           "statistical_proxy": "COMPARABLE_2025_STATISTICAL_PROXY",
           "game_context_proxy": "AVAILABLE_MIXED_PROXY",
           "community_physical": "AVAILABLE_BOUNDED",
-          "powerpro_review": "MISSING_BOUNDED",
+          "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
           "age": "MISSING_BOUNDED"
         },

@@ -12,14 +12,14 @@ Date: 2026-08-17
 |---|---:|---:|
 | construct_contract | 100 | 0 |
 | top_speed_evidence | 100 | 0 |
-| acceleration_h2f_t90_evidence | 6 | 94 |
+| acceleration_h2f_t90_evidence | 22 | 78 |
 | short_distance_physical_evidence | 38 | 62 |
 | historical_physical_temporal_context | 49 | 51 |
 | statistical_proxy_context | 100 | 0 |
 | game_context_proxy_breakdown | 97 | 3 |
 | community_physical_context | 18 | 82 |
 | technique_separation_contract | 100 | 0 |
-| powerpro_review_context | 0 | 100 |
+| powerpro_review_context | 95 | 5 |
 | source_scope_guard | 100 | 0 |
 | missingness_and_provenance_contract | 100 | 0 |
 
