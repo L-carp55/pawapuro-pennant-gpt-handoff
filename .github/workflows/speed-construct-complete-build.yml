@@ -5,6 +5,7 @@ on:
     paths:
       - 'scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs'
       - 'scripts/audit_sp021_anchor_bank_20260817.mjs'
+      - 'scripts/augment_sp077_with_sp021_anchors_20260817.mjs'
       - 'data/normalized/speed_historical_physical_measurements_2015_2026.json'
       - '.github/workflows/speed-construct-complete-build.yml'
   workflow_dispatch:
@@ -26,6 +27,8 @@ jobs:
         run: node scripts/audit_sp021_anchor_bank_20260817.mjs
       - name: Generate construct-complete queue
         run: node scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs
+      - name: Surface SP-021 high-confidence anchors
+        run: node scripts/augment_sp077_with_sp021_anchors_20260817.mjs
       - name: Verify generated artifacts exist
         run: |
           test -s outputs/derived/sp021_anchor_bank_inventory_20260817.json
