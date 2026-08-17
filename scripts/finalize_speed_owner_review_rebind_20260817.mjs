@@ -158,6 +158,25 @@ const ledgerQaOutput = run(P.qaLedger);
 req(/"qa":"PASS"/.test(ledgerQaOutput), 'SP-078 binding QA did not pass after unlock');
 const unlockedTraceOutput = run(P.qaTrace);
 req(/OWNER_REVIEW_READY_BY_CONSTRUCT_TRACEABILITY=1/.test(unlockedTraceOutput), 'unlocked construct traceability QA did not declare owner-review readiness');
+
+// SP-077/SP-078 already reference P.audit in the local candidate registry.
+// Create a non-final local receipt before registry QA so the completion-artifact
+// existence check is meaningful. If a later gate fails, the workflow never
+// commits this workspace. The receipt is overwritten with the final PASS audit
+// after registry QA succeeds.
+writeAtomic(P.audit, [
+  '# Speed owner-review unlock transition — 2026-08-17',
+  '',
+  'Status: **LOCAL_CANDIDATE_PENDING_FINAL_REGISTRY_QA**',
+  '',
+  `- Active queue: \`${P.queue}\``,
+  `- Queue SHA-256: \`${queueHash}\``,
+  '- Mandatory construct lanes: 12/12 INTEGRATED',
+  '- SP-078 empty ledger rebound completed in this uncommitted workspace',
+  '- No owner verdict was created',
+  '',
+].join('\n'));
+
 const registryQaOutput = run(P.qaRegistry);
 req(/PASS: requirements=/.test(registryQaOutput), 'task-registry QA did not pass after transition');
 

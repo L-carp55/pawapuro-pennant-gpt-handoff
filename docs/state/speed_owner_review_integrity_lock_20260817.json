@@ -1,7 +1,7 @@
 {
   "schema_version": "speed_owner_review_integrity_lock_20260817",
   "created_at": "2026-08-17",
-  "locked": true,
+  "locked": false,
   "reason_code": "SPEC_DRIFT_FULL_CONSTRUCT_NOT_PROPAGATED_TO_OWNER_REVIEW_QUEUE",
   "summary": "SP-100 correctly implemented one important current physical/rank lane (2026 NPB+ top speed), but the earlier SP-077/owner-review flow was allowed to proceed without proving that the full speed construct and all retained evidence lanes propagated into the final owner-review artifact. A construct-complete candidate now exists and has independent source-derived QA, but owner review remains locked until the formal revalidation/rebind transition is complete.",
   "invalidated_actions": [
@@ -38,5 +38,19 @@
     "an independent review confirms the regenerated queue matches the immutable speed requirements and the 2026-08-11 gap-audit intent"
   ],
   "owner_review_unlock_rule": "Changing locked=false by itself is invalid. The traceability QA and independent source-derived queue QA must prove the encoded conditions, and SP-078 must be rebound while empty before any owner verdict can be captured.",
-  "incident_audit": "docs/audits/speed_spec_drift_incident_and_permanent_guard_20260817.md"
+  "incident_audit": "docs/audits/speed_spec_drift_incident_and_permanent_guard_20260817.md",
+  "unlocked_at": "2026-08-17T09:33:03.281Z",
+  "unlock_status": "CONSTRUCT_TRACEABILITY_REVALIDATED_AND_SP078_REBOUND",
+  "active_owner_review_queue": "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json",
+  "active_owner_review_queue_sha256": "39a10b64857732ad8089b1528240f3ba9bce3e69c2c14a4af8bfe315fba4d9d2",
+  "active_owner_verdict_ledger": "outputs/derived/sp078_owner_verdict_ledger_20260816.json",
+  "owner_verdict_count_at_unlock": 0,
+  "unlock_basis": [
+    "12/12 mandatory construct lanes INTEGRATED",
+    "independent queue QA 3255/3255 PASS",
+    "locked global traceability QA PASS",
+    "SP-078 append-only self-test PASS",
+    "empty ledger rebound to exact construct-complete queue SHA-256",
+    "SP-077 and SP-078 reclosed DONE_VALIDATED before unlock"
+  ]
 }

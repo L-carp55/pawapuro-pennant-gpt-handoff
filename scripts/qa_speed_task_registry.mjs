@@ -266,8 +266,16 @@ const finalQueue = byId.get('SP-077');
 // must not silently redefine this queue's dependency contract.
 const finalQueueDependencyIds = new Set(finalQueue ? list(finalQueue.depends_on) : []);
 const finalQueueTaskBlocks = ownerBlocks.filter(t => finalQueueDependencyIds.has(t.task_id));
+// Only an OPEN corrective task can make an OPEN exclusion a dependency blocker.
+// Regression case: EX-004 contains closed SP-019 plus open SP-060/061/062.
+// SP-019 is a declared SP-077 dependency, but because SP-019 is closed, the
+// unrelated open tasks must remain global-Speed-Gate work instead of silently
+// redefining the bounded SP-077 queue contract.
+const openCorrectiveTaskIds = x => list(x.task_ids).filter(taskId =>
+  byId.has(taskId) && !CLOSED.has(byId.get(taskId).status)
+);
 const finalQueueExclusionBlocks = ownerExclusionBlocks.filter(x =>
-  list(x.task_ids).some(taskId => finalQueueDependencyIds.has(taskId))
+  openCorrectiveTaskIds(x).some(taskId => finalQueueDependencyIds.has(taskId))
 );
 if (finalQueue && CLOSED.has(finalQueue.status) && finalQueueTaskBlocks.length) {
   err(`SP-077 owner queue closed with ${finalQueueTaskBlocks.length} declared dependency task blocker(s) open: ${finalQueueTaskBlocks.map(x=>x.task_id).join(',')}`);
