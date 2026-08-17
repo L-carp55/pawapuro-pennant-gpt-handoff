@@ -1,0 +1,39 @@
+name: speed-integrity-registry-repair
+
+on:
+  push:
+    paths:
+      - 'scripts/reopen_sp077_sp078_after_integrity_incident_20260817.mjs'
+      - '.github/workflows/speed-integrity-registry-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair-registry-state:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reopen SP-077 and SP-078 fail-closed
+        run: node scripts/reopen_sp077_sp078_after_integrity_incident_20260817.mjs
+      - name: Validate task registry after reopen
+        run: node scripts/qa_speed_task_registry.mjs
+      - name: Reconfirm construct-complete queue source-derived QA
+        run: node scripts/qa_sp077_construct_complete_owner_review_queue_v2_20260817.mjs
+      - name: Commit repaired registry state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/state/speed_task_registry.tsv
+          if git diff --cached --quiet; then
+            echo 'No registry changes'
+          else
+            git commit -m 'fix(speed): reopen SP-077 and SP-078 under integrity lock'
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
