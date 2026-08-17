@@ -1,10 +1,13 @@
 // SP-078 durable, append-only owner-verdict capture.
 //
-// Initialisation creates an empty ledger.  Capturing a verdict requires a
-// queue row key plus timestamp/source/reviewer.  A second ordinary write to
+// Initialisation creates an empty ledger. Capturing a verdict requires a
+// queue row key plus timestamp/source/reviewer. A second ordinary write to
 // the same row is rejected; an explicit amendment appends an event and keeps
 // the prior event intact, so regeneration cannot silently overwrite owner
 // input.
+//
+// 2026-08-17 integrity repair: the only writable queue is the construct-
+// complete SP-077 queue. The superseded narrow 2026-08-16 queue is rejected.
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -12,10 +15,11 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const DATE = '2026-08-16';
-const DEFAULT_QUEUE = 'outputs/derived/sp077_final_owner_review_queue_20260816.json';
+const DATE = '2026-08-17';
+const DEFAULT_QUEUE = 'outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json';
 const DEFAULT_LEDGER = 'outputs/derived/sp078_owner_verdict_ledger_20260816.json';
 const OWNER_REVIEW_LOCK = 'docs/state/speed_owner_review_integrity_lock_20260817.json';
+const REQUIRED_QUEUE_SCHEMA = 'sp077_construct_complete_owner_review_queue_20260817';
 const ALLOWED_VERDICTS = new Set([
   'POWERPRO_PLAUSIBLE', 'POWERPRO_TOO_HIGH_OR_STALE', 'POWERPRO_TOO_LOW',
   'PROJECT_TOO_HIGH', 'PROJECT_TOO_LOW', 'BOTH_QUESTIONABLE', 'UNRESOLVED', 'OTHER',
@@ -53,8 +57,11 @@ function argument(flag, fallback = null) {
 function queueInfo(queuePath) {
   const queueText = fs.readFileSync(queuePath, 'utf8');
   const queue = JSON.parse(queueText);
-  requireOk(queue?.schema_version === 'sp077_final_owner_review_queue_20260816', 'not an SP-077 final queue');
+  requireOk(queue?.schema_version === REQUIRED_QUEUE_SCHEMA,
+    `not the construct-complete SP-077 queue (schema=${queue?.schema_version ?? 'MISSING'})`);
   requireOk(Array.isArray(queue.players) && queue.players.length === 100, 'queue does not contain the exact current-100 population');
+  requireOk(queue?.construct?.top_speed_only_finalization_forbidden === true,
+    'queue does not preserve the full speed construct guard');
   const rowKeys = new Set(queue.players.map(row => row.queue_row_key));
   requireOk(rowKeys.size === queue.players.length && !rowKeys.has(undefined), 'queue row keys are not unique');
   return { queue, rowKeys, sha256: sha256(queueText) };
@@ -63,7 +70,12 @@ function emptyLedger(queuePath, info) {
   return {
     schema_version: 'sp078_owner_verdict_ledger_20260816',
     created_at: DATE,
-    queue_source: { path: path.relative(ROOT, queuePath).replace(/\\/g, '/'), sha256: info.sha256, row_count: info.queue.players.length },
+    queue_source: {
+      path: path.relative(ROOT, queuePath).replace(/\\/g, '/'),
+      schema_version: info.queue.schema_version,
+      sha256: info.sha256,
+      row_count: info.queue.players.length,
+    },
     allowed_verdicts: [...ALLOWED_VERDICTS],
     required_event_fields: ['event_id', 'queue_row_key', 'verdict', 'timestamp', 'source', 'reviewer'],
     append_update_semantics: {
@@ -82,6 +94,7 @@ function activeRecords(records) {
 function validateLedger(ledger, info) {
   requireOk(ledger?.schema_version === 'sp078_owner_verdict_ledger_20260816', 'ledger schema mismatch');
   requireOk(Array.isArray(ledger.records), 'ledger records are not an array');
+  requireOk(ledger.queue_source?.schema_version === REQUIRED_QUEUE_SCHEMA, 'ledger is not bound to the construct-complete queue schema');
   requireOk(ledger.queue_source?.sha256 === info.sha256, 'queue source changed; refuse to write verdicts against a different queue');
   const eventIds = new Set();
   for (const record of ledger.records) {
@@ -154,11 +167,15 @@ function selfTest() {
   const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'sp078-owner-verdict-'));
   try {
     const queuePath = path.join(temp, 'queue.json');
-    const queue = { schema_version: 'sp077_final_owner_review_queue_20260816', players: Array.from({ length: 100 }, (_, index) => ({ queue_row_key: `SP077:fixture-${index + 1}` })) };
+    const queue = {
+      schema_version: REQUIRED_QUEUE_SCHEMA,
+      construct: { top_speed_only_finalization_forbidden: true },
+      players: Array.from({ length: 100 }, (_, index) => ({ queue_row_key: `SP077:fixture-${index + 1}` })),
+    };
     fs.writeFileSync(queuePath, JSON.stringify(queue) + '\n', 'utf8');
     const info = queueInfo(queuePath);
     const original = emptyLedger(queuePath, info);
-    const first = { event_id: 'fixture-1', queue_row_key: 'SP077:fixture-1', verdict: 'UNRESOLVED', timestamp: '2026-08-16T00:00:00Z', source: 'fixture', reviewer: 'fixture-reviewer' };
+    const first = { event_id: 'fixture-1', queue_row_key: 'SP077:fixture-1', verdict: 'UNRESOLVED', timestamp: '2026-08-17T00:00:00Z', source: 'fixture', reviewer: 'fixture-reviewer' };
     const once = appendEvents(original, info, [first], false);
     const beforeAttempt = JSON.stringify(once);
     let duplicateRejected = false;
@@ -179,7 +196,7 @@ function selfTest() {
     catch (error) { nonemptyReinitializationRejected = /cannot reinitialize/.test(error.message); }
     requireOk(nonemptyReinitializationRejected, 'nonempty-ledger reinitialization fixture was not rejected');
     requireOk(once.records.length === 1 && once.owner_verdict_count === 1, 'rejected reinitialization mutated owner history');
-    console.log(JSON.stringify({ self_test: 'PASS', duplicate_overwrite_rejected: true, explicit_amendment_preserves_history: true, empty_reinitialization_rebinds_current_queue: true, nonempty_reinitialization_rejected: true }));
+    console.log(JSON.stringify({ self_test: 'PASS', construct_complete_queue_required: true, duplicate_overwrite_rejected: true, explicit_amendment_preserves_history: true, empty_reinitialization_rebinds_current_queue: true, nonempty_reinitialization_rejected: true }));
   } finally {
     fs.rmSync(temp, { recursive: true, force: true });
   }
@@ -208,7 +225,7 @@ if (process.argv.includes('--reinitialize-empty')) {
 }
 
 const inputPath = argument('--input');
-requireOk(inputPath, 'use --initialize, --self-test, or supply --input <JSON>');
+requireOk(inputPath, 'use --initialize, --reinitialize-empty, --self-test, or supply --input <JSON>');
 assertOwnerReviewUnlocked();
 requireOk(fs.existsSync(ledgerPath), `ledger does not exist: ${ledgerPath}`);
 const payload = readJson(full(inputPath));
