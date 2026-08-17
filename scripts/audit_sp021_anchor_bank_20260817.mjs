@@ -25,6 +25,22 @@ const summary = xs => ({
  unique_selected_anchor_ids: uniq(xs, r=>r.selected_anchor_id),
  unique_measurement_clusters: uniq(xs, r=>r.same_measurement_cluster_id),
 });
+const highGroups = new Map();
+for (const r of acceptedHigh) {
+  const id = r.selected_anchor_id || r.same_measurement_cluster_id || r.raw_id;
+  if (!highGroups.has(id)) highGroups.set(id, []);
+  highGroups.get(id).push(r);
+}
+const groupDiagnostics = [...highGroups].map(([anchor_id, rs]) => ({
+  anchor_id,
+  raw_record_count: rs.length,
+  normalized_players: [...new Set(rs.map(r=>norm(r.player)))],
+  metrics: [...new Set(rs.map(r=>r.metric))],
+  values: [...new Set(rs.map(r=>String(r.value)))],
+  raw_ids: rs.map(r=>r.raw_id),
+}));
+const crossPlayer = groupDiagnostics.filter(g=>g.normalized_players.length>1);
+const multiRaw = groupDiagnostics.filter(g=>g.raw_record_count>1);
 const payload = {
  schema_version:'sp021_anchor_bank_inventory_20260817', generated_at:'2026-08-17',
  source:src, total_records:rows.length,
@@ -36,6 +52,7 @@ const payload = {
    accepted_high_confidence_current100: summary(currentSlice(acceptedHigh)),
    selected_current100: summary(currentSlice(selected)),
  },
+ anchor_group_diagnostics:{ total_groups:highGroups.size, multi_raw_groups:multiRaw.length, cross_player_groups:crossPlayer.length, max_raw_records_per_group:Math.max(...groupDiagnostics.map(g=>g.raw_record_count)), cross_player_groups_detail:crossPlayer, multi_raw_groups_detail:multiRaw },
  bank_acceptance_status_counts:countBy('bank_acceptance_status'),
  evidence_class_counts:countBy('evidence_class'),
  source_tier_counts:countBy('source_tier'),
@@ -45,4 +62,4 @@ const payload = {
  selected_all:selected.map(compact)
 };
 fs.writeFileSync(path.join(ROOT,out),JSON.stringify(payload,null,2)+'\n');
-console.log(JSON.stringify({total:rows.length, counts:payload.counts, dedup_counts:payload.dedup_counts, status_counts:payload.bank_acceptance_status_counts}));
+console.log(JSON.stringify({total:rows.length, counts:payload.counts, dedup_counts:payload.dedup_counts, anchor_group_diagnostics:{total_groups:highGroups.size,multi_raw_groups:multiRaw.length,cross_player_groups:crossPlayer.length,max_raw_records_per_group:payload.anchor_group_diagnostics.max_raw_records_per_group}, status_counts:payload.bank_acceptance_status_counts}));
