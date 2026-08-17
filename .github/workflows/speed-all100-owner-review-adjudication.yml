@@ -1,0 +1,69 @@
+name: speed-all100-owner-review-adjudication
+
+on:
+  push:
+    branches:
+      - review/opus-speed-pre-owner-review-wave-20260816
+    paths:
+      - 'scripts/build_speed_all100_owner_review_adjudication_20260818.mjs'
+      - '.github/workflows/speed-all100-owner-review-adjudication.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  adjudicate-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build human-adjudicated all-100 recommendations
+        run: node scripts/build_speed_all100_owner_review_adjudication_20260818.mjs
+      - name: Verify population, corrections and governance
+        run: |
+          test -s outputs/derived/speed_all100_owner_review_adjudicated_20260818.json
+          test -s outputs/derived/speed_all100_owner_review_adjudicated_20260818.tsv
+          test -s docs/audits/speed_all100_owner_review_adjudicated_20260818.md
+          node - <<'NODE'
+          const fs=require('fs');
+          const x=JSON.parse(fs.readFileSync('outputs/derived/speed_all100_owner_review_adjudicated_20260818.json','utf8'));
+          if(x.population!==100||x.players?.length!==100) throw new Error(`population=${x.population}/${x.players?.length}`);
+          if(x.owner_verdict_count!==0) throw new Error('owner verdict contamination');
+          const expected={POWERPRO_PLAUSIBLE:83,UNRESOLVED:8,POWERPRO_TOO_HIGH_OR_STALE:5,POWERPRO_TOO_LOW:4};
+          for(const [k,v] of Object.entries(expected)) if(x.counts?.[k]!==v) throw new Error(`${k}=${x.counts?.[k]}, expected ${v}`);
+          if(Object.values(x.counts).reduce((a,b)=>a+b,0)!==100) throw new Error('counts do not sum to 100');
+          const noTarget=x.players.filter(r=>r.powerpro_current==null);
+          if(noTarget.length!==5||noTarget.some(r=>r.adjudicated_recommendation!=='UNRESOLVED')) throw new Error('no-target invariant');
+          const changed=x.players.filter(r=>r.screening.recommendation!==r.adjudicated_recommendation);
+          const expectedChanged=['古賀優大','細川成也','小園海斗','矢野雅哉','京田陽太','カリステ'].sort();
+          const actualChanged=changed.map(r=>r.player.replace(/\s/g,'')).sort();
+          if(JSON.stringify(actualChanged)!==JSON.stringify(expectedChanged)) throw new Error(`changed=${actualChanged.join(',')}`);
+          if(x.players.some(r=>r.governance.owner_verdict_written||r.governance.sp079_rating_created||r.governance.shoulder_work_performed)) throw new Error('governance contamination');
+          console.log(JSON.stringify({status:'PASS',counts:x.counts,changed:actualChanged,noTarget:noTarget.map(r=>r.player)}));
+          NODE
+      - name: Re-run canonical speed state gates
+        run: |
+          node scripts/qa_speed_task_registry.mjs
+          node scripts/qa_speed_construct_traceability_20260817.mjs
+          node scripts/qa_sp078_integrity_lock_20260817.mjs
+      - name: Commit and push adjudicated review
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            outputs/derived/speed_all100_owner_review_adjudicated_20260818.json \
+            outputs/derived/speed_all100_owner_review_adjudicated_20260818.tsv \
+            docs/audits/speed_all100_owner_review_adjudicated_20260818.md
+          if git diff --cached --quiet; then
+            echo 'No generated changes'
+            exit 0
+          fi
+          git commit -m 'docs(speed): adjudicate all-100 full-construct owner-review recommendations'
+          git pull --rebase origin review/opus-speed-pre-owner-review-wave-20260816
+          git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
