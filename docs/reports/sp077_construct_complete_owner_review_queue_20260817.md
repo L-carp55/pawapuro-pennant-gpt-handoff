@@ -32,3 +32,12 @@ Date: 2026-08-17
 - No owner verdict or final SP-079 practical rating is created.
 
 Machine-readable: `outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json`
+
+## SP-021 high-confidence anchors
+
+- Source inventory: 459 records.
+- ACCEPTED_HIGH_CONFIDENCE: 140 raw records.
+- Grouped by selected_anchor_id / measurement cluster: 113 anchors.
+- Current-100 overlap: 7 anchors / 7 raw records / 7 players.
+- Multi-row anchors preserve every accepted raw record; no row is silently chosen or discarded.
+- These are historical/physical anchors, not automatic current-year carryover values.

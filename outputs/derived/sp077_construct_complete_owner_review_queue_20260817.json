@@ -42,7 +42,8 @@
     "technique_separation_contract",
     "powerpro_review_context",
     "source_scope_guard",
-    "missingness_and_provenance_contract"
+    "missingness_and_provenance_contract",
+    "sp021_high_confidence_anchor_context"
   ],
   "owner_review_lock_expected": true,
   "players": [
@@ -504,7 +505,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -515,6 +517,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -958,7 +970,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -969,6 +982,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -1398,7 +1421,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "MISSING_BOUNDED",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -1409,6 +1433,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -1924,7 +1958,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -1935,6 +1970,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -2450,7 +2495,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -2461,6 +2507,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -2904,7 +2960,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -2915,6 +2972,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -3358,7 +3425,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -3369,6 +3437,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -3812,7 +3890,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -3823,6 +3902,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -4266,7 +4355,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -4277,6 +4367,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -4873,7 +4973,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -4884,6 +4985,59 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR",
+        "anchor_count": 1,
+        "raw_record_count": 1,
+        "anchors": [
+          {
+            "anchor_id": "A0109",
+            "raw_record_count": 1,
+            "records": [
+              {
+                "raw_id": "R00167",
+                "player": "カリステ",
+                "measurement_date": "2017-season",
+                "measurement_year": 2017,
+                "metric": "T90FT_SECONDS",
+                "value": 3.94,
+                "unit": "seconds",
+                "timing_method": "Statcast official CSV",
+                "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+                "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+                "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+                "source_name": "Baseball Savant / MLB Statcast",
+                "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2017&csv=true",
+                "same_measurement_cluster_id": "mlb_statcast_t90_2017_カリステ",
+                "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+              }
+            ]
+          }
+        ],
+        "records": [
+          {
+            "anchor_id": "A0109",
+            "raw_id": "R00167",
+            "player": "カリステ",
+            "measurement_date": "2017-season",
+            "measurement_year": 2017,
+            "metric": "T90FT_SECONDS",
+            "value": 3.94,
+            "unit": "seconds",
+            "timing_method": "Statcast official CSV",
+            "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+            "source_name": "Baseball Savant / MLB Statcast",
+            "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2017&csv=true",
+            "same_measurement_cluster_id": "mlb_statcast_t90_2017_カリステ",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+          }
+        ],
+        "role": "DIRECT_OR_STANDARDIZED_PHYSICAL_ANCHOR; CURRENT_CARRYOVER_NOT_AUTOMATIC",
+        "current_carryover_policy": "Use for current appraisal only with explicit temporal bridge such as low current sample, injury/recovery, underperformance, or measurement-time reconciliation.",
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -5327,7 +5481,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -5338,6 +5493,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -5562,7 +5727,7 @@
           "seconds": 3.79,
           "n_independent_records": 1,
           "n_raw_records": 1,
-          "z_within_sample_lower_is_faster": 0,
+          "z_within_sample_lower_is_faster": null,
           "handedness": "左",
           "confidence": "LOW_VERY_SMALL_SAMPLE",
           "lane": "H2F_BUNT_LOW_CONFIDENCE",
@@ -5831,7 +5996,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -5842,6 +6008,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -6355,7 +6531,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -6366,6 +6543,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -6809,7 +6996,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -6820,6 +7008,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -7263,7 +7461,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -7274,6 +7473,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -7717,7 +7926,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -7728,6 +7938,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -8243,7 +8463,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -8254,6 +8475,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -8697,7 +8928,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -8708,6 +8940,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -9151,7 +9393,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -9162,6 +9405,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -9677,7 +9930,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -9688,6 +9942,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -10131,7 +10395,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -10142,6 +10407,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -10699,7 +10974,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -10710,6 +10986,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -11153,7 +11439,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -11164,6 +11451,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -11679,7 +11976,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -11690,6 +11988,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -11947,7 +12255,7 @@
             "measurement_year": null,
             "temporal_distance_years_from_2026": null,
             "metric": "50M_PROFILE_SECONDS",
-            "seconds": 0,
+            "seconds": null,
             "value": null,
             "unit": "seconds",
             "usage_class": null,
@@ -12000,7 +12308,7 @@
             "measurement_year": null,
             "temporal_distance_years_from_2026": null,
             "metric": "50M_PROFILE_SECONDS",
-            "seconds": 0,
+            "seconds": null,
             "value": null,
             "unit": "seconds",
             "usage_class": null,
@@ -12205,7 +12513,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -12216,6 +12525,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -12659,7 +12978,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -12670,6 +12990,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -13113,7 +13443,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -13124,6 +13455,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -13520,7 +13861,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "MISSING_BOUNDED",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -13531,6 +13873,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -14127,7 +14479,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -14138,6 +14491,59 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR",
+        "anchor_count": 1,
+        "raw_record_count": 1,
+        "anchors": [
+          {
+            "anchor_id": "A0112",
+            "raw_record_count": 1,
+            "records": [
+              {
+                "raw_id": "R00179",
+                "player": "ポランコ",
+                "measurement_date": "2021-season",
+                "measurement_year": 2021,
+                "metric": "T90FT_SECONDS",
+                "value": 3.99,
+                "unit": "seconds",
+                "timing_method": "Statcast official CSV",
+                "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+                "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+                "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+                "source_name": "Baseball Savant / MLB Statcast",
+                "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+                "same_measurement_cluster_id": "mlb_statcast_t90_2021_ポランコ",
+                "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+              }
+            ]
+          }
+        ],
+        "records": [
+          {
+            "anchor_id": "A0112",
+            "raw_id": "R00179",
+            "player": "ポランコ",
+            "measurement_date": "2021-season",
+            "measurement_year": 2021,
+            "metric": "T90FT_SECONDS",
+            "value": 3.99,
+            "unit": "seconds",
+            "timing_method": "Statcast official CSV",
+            "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+            "source_name": "Baseball Savant / MLB Statcast",
+            "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+            "same_measurement_cluster_id": "mlb_statcast_t90_2021_ポランコ",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+          }
+        ],
+        "role": "DIRECT_OR_STANDARDIZED_PHYSICAL_ANCHOR; CURRENT_CARRYOVER_NOT_AUTOMATIC",
+        "current_carryover_policy": "Use for current appraisal only with explicit temporal bridge such as low current sample, injury/recovery, underperformance, or measurement-time reconciliation.",
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -14653,7 +15059,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -14664,6 +15071,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -15245,7 +15662,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -15256,6 +15674,59 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR",
+        "anchor_count": 1,
+        "raw_record_count": 1,
+        "anchors": [
+          {
+            "anchor_id": "A0002",
+            "raw_record_count": 1,
+            "records": [
+              {
+                "raw_id": "R00027",
+                "player": "友杉篤輝",
+                "measurement_date": "2022-06-19",
+                "measurement_year": 2022,
+                "metric": "50M_STANDING_START_SECONDS",
+                "value": 6.1,
+                "unit": "seconds",
+                "timing_method": "electronic_photoelectric",
+                "start_protocol": "not_publicly_documented",
+                "evidence_class": "STANDARDIZED_SHORT_DISTANCE",
+                "source_tier": "A_OFFICIAL_VALUE",
+                "source_name": "Existing standardized 50m reference",
+                "source_url": "https://www.japan-baseball.jp/jp/news/press/20220619_1.html",
+                "same_measurement_cluster_id": "standardized_50m_2022-06-19_友杉篤輝",
+                "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+              }
+            ]
+          }
+        ],
+        "records": [
+          {
+            "anchor_id": "A0002",
+            "raw_id": "R00027",
+            "player": "友杉篤輝",
+            "measurement_date": "2022-06-19",
+            "measurement_year": 2022,
+            "metric": "50M_STANDING_START_SECONDS",
+            "value": 6.1,
+            "unit": "seconds",
+            "timing_method": "electronic_photoelectric",
+            "start_protocol": "not_publicly_documented",
+            "evidence_class": "STANDARDIZED_SHORT_DISTANCE",
+            "source_tier": "A_OFFICIAL_VALUE",
+            "source_name": "Existing standardized 50m reference",
+            "source_url": "https://www.japan-baseball.jp/jp/news/press/20220619_1.html",
+            "same_measurement_cluster_id": "standardized_50m_2022-06-19_友杉篤輝",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+          }
+        ],
+        "role": "DIRECT_OR_STANDARDIZED_PHYSICAL_ANCHOR; CURRENT_CARRYOVER_NOT_AUTOMATIC",
+        "current_carryover_policy": "Use for current appraisal only with explicit temporal bridge such as low current sample, injury/recovery, underperformance, or measurement-time reconciliation.",
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -15771,7 +16242,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -15782,6 +16254,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -16225,7 +16707,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -16236,6 +16719,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -16751,7 +17244,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -16762,6 +17256,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -17277,7 +17781,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -17288,6 +17793,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -17827,7 +18342,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -17838,6 +18354,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -18281,7 +18807,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -18292,6 +18819,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -18806,7 +19343,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -18817,6 +19355,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -19260,7 +19808,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -19271,6 +19820,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -19731,7 +20290,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -19742,6 +20302,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -19969,7 +20539,7 @@
           "seconds": 3.68,
           "n_independent_records": 1,
           "n_raw_records": 1,
-          "z_within_sample_lower_is_faster": 0,
+          "z_within_sample_lower_is_faster": null,
           "handedness": "左",
           "confidence": "LOW_VERY_SMALL_SAMPLE",
           "lane": "H2F_BUNT_LOW_CONFIDENCE",
@@ -20301,7 +20871,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -20312,6 +20883,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -20827,7 +21408,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -20838,6 +21420,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -21281,7 +21873,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -21292,6 +21885,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -21734,7 +22337,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -21745,6 +22349,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -22341,7 +22955,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -22352,6 +22967,59 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR",
+        "anchor_count": 1,
+        "raw_record_count": 1,
+        "anchors": [
+          {
+            "anchor_id": "A0113",
+            "raw_record_count": 1,
+            "records": [
+              {
+                "raw_id": "R00183",
+                "player": "モンテロ",
+                "measurement_date": "2024-season",
+                "measurement_year": 2024,
+                "metric": "T90FT_SECONDS",
+                "value": 4.2,
+                "unit": "seconds",
+                "timing_method": "Statcast official CSV",
+                "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+                "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+                "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+                "source_name": "Baseball Savant / MLB Statcast",
+                "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+                "same_measurement_cluster_id": "mlb_statcast_t90_2024_モンテロ",
+                "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+              }
+            ]
+          }
+        ],
+        "records": [
+          {
+            "anchor_id": "A0113",
+            "raw_id": "R00183",
+            "player": "モンテロ",
+            "measurement_date": "2024-season",
+            "measurement_year": 2024,
+            "metric": "T90FT_SECONDS",
+            "value": 4.2,
+            "unit": "seconds",
+            "timing_method": "Statcast official CSV",
+            "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+            "source_name": "Baseball Savant / MLB Statcast",
+            "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2024&csv=true",
+            "same_measurement_cluster_id": "mlb_statcast_t90_2024_モンテロ",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+          }
+        ],
+        "role": "DIRECT_OR_STANDARDIZED_PHYSICAL_ANCHOR; CURRENT_CARRYOVER_NOT_AUTOMATIC",
+        "current_carryover_policy": "Use for current appraisal only with explicit temporal bridge such as low current sample, injury/recovery, underperformance, or measurement-time reconciliation.",
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -22906,7 +23574,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "MISSING_BOUNDED",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -22917,6 +23586,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -23432,7 +24111,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -23443,6 +24123,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -23703,7 +24393,7 @@
             "measurement_year": null,
             "temporal_distance_years_from_2026": null,
             "metric": "50M_PROFILE_SECONDS",
-            "seconds": 0,
+            "seconds": null,
             "value": null,
             "unit": "seconds",
             "usage_class": null,
@@ -23777,7 +24467,7 @@
             "measurement_year": null,
             "temporal_distance_years_from_2026": null,
             "metric": "50M_PROFILE_SECONDS",
-            "seconds": 0,
+            "seconds": null,
             "value": null,
             "unit": "seconds",
             "usage_class": null,
@@ -23982,7 +24672,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -23993,6 +24684,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -24508,7 +25209,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -24519,6 +25221,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -25116,7 +25828,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -25127,6 +25840,59 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR",
+        "anchor_count": 1,
+        "raw_record_count": 1,
+        "anchors": [
+          {
+            "anchor_id": "A0111",
+            "raw_record_count": 1,
+            "records": [
+              {
+                "raw_id": "R00175",
+                "player": "秋山翔吾",
+                "measurement_date": "2021-season",
+                "measurement_year": 2021,
+                "metric": "T90FT_SECONDS",
+                "value": 3.97,
+                "unit": "seconds",
+                "timing_method": "Statcast official CSV",
+                "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+                "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+                "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+                "source_name": "Baseball Savant / MLB Statcast",
+                "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+                "same_measurement_cluster_id": "mlb_statcast_t90_2021_秋山翔吾",
+                "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+              }
+            ]
+          }
+        ],
+        "records": [
+          {
+            "anchor_id": "A0111",
+            "raw_id": "R00175",
+            "player": "秋山翔吾",
+            "measurement_date": "2021-season",
+            "measurement_year": 2021,
+            "metric": "T90FT_SECONDS",
+            "value": 3.97,
+            "unit": "seconds",
+            "timing_method": "Statcast official CSV",
+            "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+            "source_name": "Baseball Savant / MLB Statcast",
+            "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2021&csv=true",
+            "same_measurement_cluster_id": "mlb_statcast_t90_2021_秋山翔吾",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+          }
+        ],
+        "role": "DIRECT_OR_STANDARDIZED_PHYSICAL_ANCHOR; CURRENT_CARRYOVER_NOT_AUTOMATIC",
+        "current_carryover_policy": "Use for current appraisal only with explicit temporal bridge such as low current sample, injury/recovery, underperformance, or measurement-time reconciliation.",
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -25570,7 +26336,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -25581,6 +26348,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -26024,7 +26801,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -26035,6 +26813,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -26631,7 +27419,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -26642,6 +27431,59 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR",
+        "anchor_count": 1,
+        "raw_record_count": 1,
+        "anchors": [
+          {
+            "anchor_id": "A0110",
+            "raw_record_count": 1,
+            "records": [
+              {
+                "raw_id": "R00171",
+                "player": "サンタナ",
+                "measurement_date": "2020-season",
+                "measurement_year": 2020,
+                "metric": "T90FT_SECONDS",
+                "value": 4.13,
+                "unit": "seconds",
+                "timing_method": "Statcast official CSV",
+                "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+                "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+                "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+                "source_name": "Baseball Savant / MLB Statcast",
+                "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2020&csv=true",
+                "same_measurement_cluster_id": "mlb_statcast_t90_2020_サンタナ",
+                "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+              }
+            ]
+          }
+        ],
+        "records": [
+          {
+            "anchor_id": "A0110",
+            "raw_id": "R00171",
+            "player": "サンタナ",
+            "measurement_date": "2020-season",
+            "measurement_year": 2020,
+            "metric": "T90FT_SECONDS",
+            "value": 4.13,
+            "unit": "seconds",
+            "timing_method": "Statcast official CSV",
+            "start_protocol": "Statcast 90ft running-split definition; initial step to 90ft",
+            "evidence_class": "ABSOLUTE_DIRECT_STATCAST",
+            "source_tier": "A_FIRST_PARTY_LIVE_REVERIFIED",
+            "source_name": "Baseball Savant / MLB Statcast",
+            "source_url": "https://baseballsavant.mlb.com/running_splits?bats=&min=5&position=&team=&type=raw&year=2020&csv=true",
+            "same_measurement_cluster_id": "mlb_statcast_t90_2020_サンタナ",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+          }
+        ],
+        "role": "DIRECT_OR_STANDARDIZED_PHYSICAL_ANCHOR; CURRENT_CARRYOVER_NOT_AUTOMATIC",
+        "current_carryover_policy": "Use for current appraisal only with explicit temporal bridge such as low current sample, injury/recovery, underperformance, or measurement-time reconciliation.",
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -27221,7 +28063,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -27232,6 +28075,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -27675,7 +28528,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -27686,6 +28540,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -28225,7 +29089,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -28236,6 +29101,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -28679,7 +29554,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -28690,6 +29566,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -29259,7 +30145,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -29270,6 +30157,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -29713,7 +30610,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -29724,6 +30622,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -30167,7 +31075,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -30178,6 +31087,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -30621,7 +31540,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -30632,6 +31552,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -31145,7 +32075,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -31156,6 +32087,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -31599,7 +32540,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -31610,6 +32552,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -32053,7 +33005,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -32064,6 +33017,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -32507,7 +33470,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -32518,6 +33482,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -33033,7 +34007,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -33044,6 +34019,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -33487,7 +34472,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -33498,6 +34484,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -33940,7 +34936,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -33951,6 +34948,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -34394,7 +35401,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -34405,6 +35413,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -34848,7 +35866,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -34859,6 +35878,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -35416,7 +36445,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -35427,6 +36457,59 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR",
+        "anchor_count": 1,
+        "raw_record_count": 1,
+        "anchors": [
+          {
+            "anchor_id": "A0004",
+            "raw_record_count": 1,
+            "records": [
+              {
+                "raw_id": "R00029",
+                "player": "林琢真",
+                "measurement_date": "2022-06-19",
+                "measurement_year": 2022,
+                "metric": "50M_STANDING_START_SECONDS",
+                "value": 5.99,
+                "unit": "seconds",
+                "timing_method": "electronic_photoelectric",
+                "start_protocol": "not_publicly_documented",
+                "evidence_class": "STANDARDIZED_SHORT_DISTANCE",
+                "source_tier": "A_OFFICIAL_VALUE",
+                "source_name": "Existing standardized 50m reference",
+                "source_url": "https://www.japan-baseball.jp/jp/news/press/20220619_1.html",
+                "same_measurement_cluster_id": "standardized_50m_2022-06-19_林琢真",
+                "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+              }
+            ]
+          }
+        ],
+        "records": [
+          {
+            "anchor_id": "A0004",
+            "raw_id": "R00029",
+            "player": "林琢真",
+            "measurement_date": "2022-06-19",
+            "measurement_year": 2022,
+            "metric": "50M_STANDING_START_SECONDS",
+            "value": 5.99,
+            "unit": "seconds",
+            "timing_method": "electronic_photoelectric",
+            "start_protocol": "not_publicly_documented",
+            "evidence_class": "STANDARDIZED_SHORT_DISTANCE",
+            "source_tier": "A_OFFICIAL_VALUE",
+            "source_name": "Existing standardized 50m reference",
+            "source_url": "https://www.japan-baseball.jp/jp/news/press/20220619_1.html",
+            "same_measurement_cluster_id": "standardized_50m_2022-06-19_林琢真",
+            "bank_acceptance_status": "ACCEPTED_HIGH_CONFIDENCE"
+          }
+        ],
+        "role": "DIRECT_OR_STANDARDIZED_PHYSICAL_ANCHOR; CURRENT_CARRYOVER_NOT_AUTOMATIC",
+        "current_carryover_policy": "Use for current appraisal only with explicit temporal bridge such as low current sample, injury/recovery, underperformance, or measurement-time reconciliation.",
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -35966,7 +37049,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -35977,6 +37061,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -36406,7 +37500,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "MISSING_BOUNDED",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -36417,6 +37512,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -37014,7 +38119,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -37025,6 +38131,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -37540,7 +38656,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -37551,6 +38668,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -37994,7 +39121,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -38005,6 +39133,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -38236,7 +39374,7 @@
           "seconds": 3.53,
           "n_independent_records": 3,
           "n_raw_records": 3,
-          "z_within_sample_lower_is_faster": 0,
+          "z_within_sample_lower_is_faster": null,
           "handedness": "左",
           "confidence": "LOW_VERY_SMALL_SAMPLE",
           "lane": "H2F_BUNT_LOW_CONFIDENCE",
@@ -38773,7 +39911,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -38784,6 +39923,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -39299,7 +40448,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -39310,6 +40460,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -39849,7 +41009,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -39860,6 +41021,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -40375,7 +41546,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -40386,6 +41558,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -40901,7 +42083,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -40912,6 +42095,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -41427,7 +42620,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -41438,6 +42632,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -41881,7 +43085,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -41892,6 +43097,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -42107,7 +43322,7 @@
           "seconds": 3.69,
           "n_independent_records": 1,
           "n_raw_records": 1,
-          "z_within_sample_lower_is_faster": 0,
+          "z_within_sample_lower_is_faster": null,
           "handedness": "左",
           "confidence": "LOW_VERY_SMALL_SAMPLE",
           "lane": "H2F_BUNT_LOW_CONFIDENCE",
@@ -42432,7 +43647,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -42443,6 +43659,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -42886,7 +44112,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -42897,6 +44124,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -43326,7 +44563,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "MISSING_BOUNDED",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -43337,6 +44575,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -43780,7 +45028,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -43791,6 +45040,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -44352,7 +45611,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -44363,6 +45623,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -44806,7 +46076,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -44817,6 +46088,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -45260,7 +46541,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -45271,6 +46553,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -45733,7 +47025,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -45744,6 +47037,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -46187,7 +47490,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -46198,6 +47502,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -46641,7 +47955,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -46652,6 +47967,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -47293,7 +48618,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -47304,6 +48630,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -47747,7 +49083,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -47758,6 +49095,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -48201,7 +49548,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -48212,6 +49560,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -48853,7 +50211,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -48864,6 +50223,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -49307,7 +50676,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -49318,6 +50688,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -49761,7 +51141,8 @@
           "community_physical": "MISSING_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -49772,6 +51153,16 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     },
     {
@@ -50215,7 +51606,8 @@
           "community_physical": "AVAILABLE_BOUNDED",
           "powerpro_review": "AVAILABLE_REVIEW_CONTEXT",
           "injury": "MISSING_BOUNDED",
-          "age": "MISSING_BOUNDED"
+          "age": "MISSING_BOUNDED",
+          "sp021_high_confidence_anchor": "MISSING_BOUNDED"
         },
         "provenance": [
           "docs/state/speed_construct_traceability_contract_20260817.tsv",
@@ -50226,7 +51618,35 @@
           "outputs/derived/sp042_powerpro_stale_detector.json",
           "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl"
         ]
+      },
+      "sp021_high_confidence_anchor_context": {
+        "evidence_state": "MISSING_BOUNDED",
+        "anchor_count": 0,
+        "raw_record_count": 0,
+        "anchors": [],
+        "records": [],
+        "reason": "NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER",
+        "no_negative_inference": true,
+        "provenance": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
       }
     }
-  ]
+  ],
+  "sp021_anchor_bank_summary": {
+    "source": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+    "raw_inventory_records": 459,
+    "accepted_high_confidence_raw_records": 140,
+    "deduplicated_high_confidence_anchors": 113,
+    "current100_anchor_count": 7,
+    "current100_raw_record_count": 7,
+    "current100_player_count": 7,
+    "current100_players": [
+      "カリステ",
+      "ポランコ",
+      "友杉 篤輝",
+      "モンテロ",
+      "秋山 翔吾",
+      "サンタナ",
+      "林 琢真"
+    ]
+  }
 }

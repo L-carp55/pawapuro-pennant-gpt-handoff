@@ -33,7 +33,7 @@ const read = p => {
 };
 const json = p => JSON.parse(read(p));
 const sha = text => createHash('sha256').update(text).digest('hex');
-const nullableNumber = v => Number.isFinite(Number(v)) ? Number(v) : null;
+const nullableNumber = v => (v === null || v === undefined || v === '') ? null : (Number.isFinite(Number(v)) ? Number(v) : null);
 const asArray = v => Array.isArray(v) ? v : [];
 const metricText = r => `${r?.metric ?? ''} ${r?.metric_raw ?? ''} ${r?.metric_canonical ?? ''} ${r?.start_protocol ?? ''}`;
 const isT90 = r => /(T90|90\s*ft|90ft|home.?to.?first|home-to-first|一塁到達)/i.test(metricText(r));

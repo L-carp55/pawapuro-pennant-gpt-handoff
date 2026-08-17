@@ -42,6 +42,500 @@
       "unique_measurement_clusters": 107
     }
   },
+  "anchor_group_diagnostics": {
+    "total_groups": 113,
+    "multi_raw_groups": 27,
+    "cross_player_groups": 0,
+    "max_raw_records_per_group": 2,
+    "cross_player_groups_detail": [],
+    "multi_raw_groups_detail": [
+      {
+        "anchor_id": "A0081",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "小島慎也"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.24",
+          "6.29"
+        ],
+        "raw_ids": [
+          "R00112",
+          "R00113"
+        ]
+      },
+      {
+        "anchor_id": "A0082",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "笹田海風"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.35",
+          "6.28"
+        ],
+        "raw_ids": [
+          "R00114",
+          "R00115"
+        ]
+      },
+      {
+        "anchor_id": "A0083",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "真鍋慧"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.32",
+          "6.31"
+        ],
+        "raw_ids": [
+          "R00116",
+          "R00117"
+        ]
+      },
+      {
+        "anchor_id": "A0084",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "岡田啓吾"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "5.69",
+          "5.8"
+        ],
+        "raw_ids": [
+          "R00118",
+          "R00119"
+        ]
+      },
+      {
+        "anchor_id": "A0086",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "鈴木斗偉"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.3",
+          "6.32"
+        ],
+        "raw_ids": [
+          "R00121",
+          "R00122"
+        ]
+      },
+      {
+        "anchor_id": "A0087",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "木切倉稜真"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.63",
+          "6.68"
+        ],
+        "raw_ids": [
+          "R00123",
+          "R00124"
+        ]
+      },
+      {
+        "anchor_id": "A0088",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "梅澤蒼空"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.63",
+          "6.7"
+        ],
+        "raw_ids": [
+          "R00125",
+          "R00126"
+        ]
+      },
+      {
+        "anchor_id": "A0089",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "川合錬磨"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.29",
+          "6.57"
+        ],
+        "raw_ids": [
+          "R00127",
+          "R00128"
+        ]
+      },
+      {
+        "anchor_id": "A0090",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "新保玖和"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.14",
+          "6.23"
+        ],
+        "raw_ids": [
+          "R00129",
+          "R00130"
+        ]
+      },
+      {
+        "anchor_id": "A0091",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "光弘帆高"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.45",
+          "6.42"
+        ],
+        "raw_ids": [
+          "R00131",
+          "R00132"
+        ]
+      },
+      {
+        "anchor_id": "A0092",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "小林隼翔"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.29",
+          "6.27"
+        ],
+        "raw_ids": [
+          "R00133",
+          "R00134"
+        ]
+      },
+      {
+        "anchor_id": "A0093",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "緒方漣"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.61",
+          "6.59"
+        ],
+        "raw_ids": [
+          "R00135",
+          "R00136"
+        ]
+      },
+      {
+        "anchor_id": "A0094",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "吉田祐大"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.47",
+          "6.55"
+        ],
+        "raw_ids": [
+          "R00137",
+          "R00138"
+        ]
+      },
+      {
+        "anchor_id": "A0095",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "西浦真平"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.69",
+          "6.44"
+        ],
+        "raw_ids": [
+          "R00139",
+          "R00140"
+        ]
+      },
+      {
+        "anchor_id": "A0096",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "佐藤悠太"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.55",
+          "6.51"
+        ],
+        "raw_ids": [
+          "R00141",
+          "R00142"
+        ]
+      },
+      {
+        "anchor_id": "A0097",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "黒田義信"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.2",
+          "6.07"
+        ],
+        "raw_ids": [
+          "R00143",
+          "R00144"
+        ]
+      },
+      {
+        "anchor_id": "A0098",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "榊原七斗"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.05",
+          "5.99"
+        ],
+        "raw_ids": [
+          "R00145",
+          "R00146"
+        ]
+      },
+      {
+        "anchor_id": "A0099",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "境亮陽"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "5.92",
+          "5.93"
+        ],
+        "raw_ids": [
+          "R00147",
+          "R00148"
+        ]
+      },
+      {
+        "anchor_id": "A0100",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "寺尾拳聖"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.43",
+          "6.27"
+        ],
+        "raw_ids": [
+          "R00149",
+          "R00150"
+        ]
+      },
+      {
+        "anchor_id": "A0101",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "眞邉麗生"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.03",
+          "6.17"
+        ],
+        "raw_ids": [
+          "R00151",
+          "R00152"
+        ]
+      },
+      {
+        "anchor_id": "A0102",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "三好元気"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.34",
+          "6.4"
+        ],
+        "raw_ids": [
+          "R00153",
+          "R00154"
+        ]
+      },
+      {
+        "anchor_id": "A0103",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "岩田悠聖"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.39"
+        ],
+        "raw_ids": [
+          "R00155",
+          "R00156"
+        ]
+      },
+      {
+        "anchor_id": "A0104",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "星野大和"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.1",
+          "6.02"
+        ],
+        "raw_ids": [
+          "R00157",
+          "R00158"
+        ]
+      },
+      {
+        "anchor_id": "A0105",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "春山陽登"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.52",
+          "6.26"
+        ],
+        "raw_ids": [
+          "R00159",
+          "R00160"
+        ]
+      },
+      {
+        "anchor_id": "A0106",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "市橋昂士"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "5.99",
+          "5.91"
+        ],
+        "raw_ids": [
+          "R00161",
+          "R00162"
+        ]
+      },
+      {
+        "anchor_id": "A0107",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "田上夏衣"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "5.92",
+          "6"
+        ],
+        "raw_ids": [
+          "R00163",
+          "R00164"
+        ]
+      },
+      {
+        "anchor_id": "A0108",
+        "raw_record_count": 2,
+        "normalized_players": [
+          "中山優月"
+        ],
+        "metrics": [
+          "50M_STANDING_START_SECONDS"
+        ],
+        "values": [
+          "6.46",
+          "6.42"
+        ],
+        "raw_ids": [
+          "R00165",
+          "R00166"
+        ]
+      }
+    ]
+  },
   "bank_acceptance_status_counts": {
     "ACCEPTED_HIGH_CONFIDENCE": 140,
     "REJECTED_OR_CONTEXT_ONLY": 101,
