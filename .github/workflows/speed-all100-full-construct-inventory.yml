@@ -1,0 +1,54 @@
+name: speed-all100-full-construct-inventory
+
+on:
+  push:
+    branches:
+      - review/opus-speed-pre-owner-review-wave-20260816
+    paths:
+      - 'scripts/build_speed_all100_full_construct_inventory_20260818.mjs'
+      - '.github/workflows/speed-all100-full-construct-inventory.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build all-100 full-construct inventory
+        run: node scripts/build_speed_all100_full_construct_inventory_20260818.mjs
+      - name: Verify outputs and no owner verdict mutation
+        run: |
+          test -s outputs/derived/speed_all100_full_construct_inventory_20260818.json
+          test -s docs/reports/speed_all100_full_construct_inventory_20260818.md
+          test -s docs/reports/speed_all100_full_construct_inventory_20260818_part1.md
+          test -s docs/reports/speed_all100_full_construct_inventory_20260818_part2.md
+          test -s docs/reports/speed_all100_full_construct_inventory_20260818_part3.md
+          test -s docs/reports/speed_all100_full_construct_inventory_20260818_part4.md
+          node -e "const x=require('./outputs/derived/sp078_owner_verdict_ledger_20260816.json'); if(x.owner_verdict_count!==0||x.records.length!==0) process.exit(1)"
+          git diff --check
+      - name: Commit inventory
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            outputs/derived/speed_all100_full_construct_inventory_20260818.json \
+            docs/reports/speed_all100_full_construct_inventory_20260818.md \
+            docs/reports/speed_all100_full_construct_inventory_20260818_part1.md \
+            docs/reports/speed_all100_full_construct_inventory_20260818_part2.md \
+            docs/reports/speed_all100_full_construct_inventory_20260818_part3.md \
+            docs/reports/speed_all100_full_construct_inventory_20260818_part4.md
+          if git diff --cached --quiet; then
+            echo 'No inventory changes to commit'
+            exit 1
+          fi
+          git commit -m 'docs(speed): materialize all-100 full-construct inventory'
+          git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
