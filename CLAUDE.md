@@ -2,9 +2,65 @@
 
 > 個人で楽しむための、パワプロのペナント機能を改善した全自動試合シミュレーター。
 
+## ★ SPEED SPEC INTEGRITY LOCK — 2026-08-17
+
+**現在、走力のowner reviewは仕様整合性lockで停止中。**
+
+必ず最初に読む:
+
+1. `docs/state/speed_owner_review_integrity_lock_20260817.json` — owner verdict / SP-079の機械lock
+2. `docs/state/speed_construct_traceability_contract_20260817.tsv` — 走力constructから最終queueまでの必須lane
+3. `docs/audits/speed_spec_drift_incident_and_permanent_guard_20260817.md` — 事故原因と恒久ルール
+4. `scripts/qa_speed_construct_traceability_20260817.mjs` — end-to-end traceability QA
+
+### 事故の本質
+
+SP-100は「2026 NPB+ top speedを安全にcurrent physical/rank laneへ接続する」局所タスクであり、走力全体の最終査定ではない。過去に、SP-100のN-primary layerを最終走力constructに近いものとして扱い、H2F/90ft/加速、30m/50m、historical physical、mixed game evidence等が最終owner-review queueへ実際に伝播したかを確認せずreviewへ進みかけた。
+
+今後は**taskがDONEであること、dependencyが閉じていること、artifactが存在することだけではowner review readyを絶対に意味しない。**
+
+### owner review / SP-079の必須条件
+
+以下の2つを両方PASSしない限り進行禁止:
+
+```bash
+node scripts/qa_speed_task_registry.mjs
+node scripts/qa_speed_construct_traceability_20260817.mjs
+```
+
+さらに `speed_owner_review_integrity_lock_20260817.json` の `locked` が `false` でなければならない。`locked=false`へ手で変更するだけでは無効。construct traceability QAが独立に解除条件を検証できなければならない。
+
+### 絶対禁止 — 仕様縮約の再発防止
+
+- SP-100 / NPB+ top speed / 単一physical componentを「走力査定全体」とみなす。
+- immutable requirementがtaskへ1件mapされているだけで「最終成果物まで要件が保存された」とみなす。
+- H2F/90ft/加速、30m/50m、historical physical、mixed game evidence等のlaneを、最終queueにfieldが無いまま暗黙に欠損扱いする。
+- `hp_to_1b_sec`等の**特定source/fieldのprovenance failureを、H2F/加速というconstruct全体の無効化へ一般化する。**
+- owner-review lock中にSP-078へowner verdictを書く。`scripts/sp078_owner_verdict_capture_20260816.mjs`もlockを直接検査してfail closedする。
+- lock中にSP-079を実行/完了扱いする。
+- 「SP-077がDONE_VALIDATEDだから」という理由だけでownerへplayer verdictを求める。現SP-077は技術snapshotとして保持できるが、integrity lockより優先しない。
+
+### 必須のend-to-end traceability
+
+owner-review必須要件は次の鎖を最後まで追跡できなければならない:
+
+```text
+immutable requirement
+  -> evidence lane / source task
+  -> reproducible artifact
+  -> per-player owner-review field
+  -> explicit value/range/confidence/provenance OR bounded missingness OR scoped exclusion
+  -> owner verdict
+  -> SP-079 final appraisal
+```
+
+途中のどこかでfield自体が消えた場合はFAIL。`null`やmissingを許す場合も、**fieldとmissing reason/confidence/provenanceを明示する。**
+
+---
+
 ## ★ CURRENT SPEED AUTHORITY — 2026-08-13
 
-走力の現在状態は**散在するhandoff proseではなく、機械可読台帳を正本**とする。
+走力の現在状態は**散在するhandoff proseではなく、機械可読台帳を正本**とする。ただし、**owner-review readiness / SP-079 readinessは上記2026-08-17 integrity lockとconstruct contractとのAND条件**であり、task registry単独では解除できない。
 
 最優先:
 
@@ -23,7 +79,7 @@
 
 ```text
 2026 NPB SPEED APPRAISAL GATE: ACTIVE / REOPENED
-OWNER REVIEW: NOT READY
+OWNER REVIEW: NOT READY / INTEGRITY LOCKED
 SHOULDER: BLOCKED
 ```
 
@@ -33,14 +89,17 @@ SHOULDER: BLOCKED
 
 ```bash
 node scripts/qa_speed_task_registry.mjs
+node scripts/qa_speed_construct_traceability_20260817.mjs
 ```
 
 - 「完了」「owner review ready」「Gate close」と宣言する前
 - 新しいhandoff / CURRENT文書を作る前
 - 走力から肩力へ進む前
 - `speed_task_registry.tsv` のstatusをDONE系へ変える前
+- owner verdictを記録する前
+- SP-079を実行/再生成する前
 
-QAがFAILしたら**fail closed**。文章上「終わったように見える」ことを理由に進めない。
+どちらかがFAILしたら**fail closed**。文章上「終わったように見える」ことや局所taskのDONEを理由に進めない。
 
 ---
 
@@ -175,6 +234,9 @@ AI側で解けない個別査定・PowerPro stale/odd・最終acceptanceを裁�
 - **十分なcurrent-year evidenceがある選手へ過去年を自動poolする**
 - **不完全/少サンプル/複合的という理由だけで観測済み証拠を0情報化する**
 - **negative findingを隣接レーンへ一般化する**
+- **局所taskのDONE/VALIDATEDを、最上位constructのend-to-end実装完了と読み替える**
+- **owner-review queueから必須evidence laneをfieldごと消したままowner reviewへ進む**
+- **integrity lock / construct traceability QAを迂回してowner verdictやSP-079を進める**
 - preliminary owner queueをfinalとしてownerへ送る
 - validator FAILのままGateを閉じる
 - Speed Gate完了前に肩力へ進む
