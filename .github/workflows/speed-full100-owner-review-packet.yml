@@ -1,0 +1,54 @@
+name: speed-full100-owner-review-packet
+
+on:
+  push:
+    branches:
+      - review/opus-speed-pre-owner-review-wave-20260816
+    paths:
+      - 'scripts/build_sp077_full100_owner_review_packet_20260818.mjs'
+      - '.github/workflows/speed-full100-owner-review-packet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-full100-packet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build full-construct packet for all 100 players
+        run: node scripts/build_sp077_full100_owner_review_packet_20260818.mjs
+      - name: Verify packet invariants
+        run: |
+          test -s outputs/derived/sp077_full100_owner_review_packet_20260818.json
+          test -s outputs/derived/sp077_full100_owner_review_matrix_20260818.tsv
+          test -s docs/reports/sp077_full100_owner_review_packet_20260818.md
+          node - <<'NODE'
+          const fs = require('fs');
+          const x = JSON.parse(fs.readFileSync('outputs/derived/sp077_full100_owner_review_packet_20260818.json','utf8'));
+          if (x.players?.length !== 100) throw new Error(`players=${x.players?.length}`);
+          if (new Set(x.players.map(r => r.queue_row_key)).size !== 100) throw new Error('duplicate queue key');
+          if (x.players.some(r => r.owner_verdict?.verdict != null || r.owner_verdict?.status !== 'NOT_ENTERED')) throw new Error('owner verdict contamination');
+          console.log(JSON.stringify({status:'PASS',players:x.players.length,coverage:x.coverage}));
+          NODE
+      - name: Commit generated packet
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            outputs/derived/sp077_full100_owner_review_packet_20260818.json \
+            outputs/derived/sp077_full100_owner_review_matrix_20260818.tsv \
+            docs/reports/sp077_full100_owner_review_packet_20260818.md
+          if git diff --cached --quiet; then
+            echo 'No generated changes'
+          else
+            git commit -m 'docs(speed): generate full-construct review packet for all 100 players'
+            git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
+          fi
