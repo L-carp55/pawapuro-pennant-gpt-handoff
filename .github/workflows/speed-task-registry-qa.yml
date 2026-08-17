@@ -11,6 +11,7 @@ on:
       - 'outputs/derived/**'
       - 'scripts/qa_speed_task_registry.mjs'
       - 'scripts/qa_speed_construct_traceability_20260817.mjs'
+      - 'scripts/qa_sp078_integrity_lock_20260817.mjs'
       - 'scripts/sp078_owner_verdict_capture_20260816.mjs'
       - '.github/workflows/speed-task-registry-qa.yml'
   pull_request:
@@ -23,6 +24,7 @@ on:
       - 'outputs/derived/**'
       - 'scripts/qa_speed_task_registry.mjs'
       - 'scripts/qa_speed_construct_traceability_20260817.mjs'
+      - 'scripts/qa_sp078_integrity_lock_20260817.mjs'
       - 'scripts/sp078_owner_verdict_capture_20260816.mjs'
       - '.github/workflows/speed-task-registry-qa.yml'
   workflow_dispatch:
@@ -39,3 +41,5 @@ jobs:
         run: node scripts/qa_speed_task_registry.mjs
       - name: Validate full speed construct reaches owner review
         run: node scripts/qa_speed_construct_traceability_20260817.mjs
+      - name: Prove locked owner-verdict writes are rejected without mutation
+        run: node scripts/qa_sp078_integrity_lock_20260817.mjs
