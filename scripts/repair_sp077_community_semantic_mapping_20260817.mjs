@@ -14,10 +14,13 @@ if (start < 0 || end < 0) throw new Error('splitCommunity bounded replacement ma
 const replacement = `function splitCommunity(nameKey, oldCommunity) {
   const allRows = xByName.get(nameKey) ?? [];
   const ACTIVE = new Set(['CURRENT_POWERPRO_RATING', 'CURRENT_REALWORLD_SPEED_PHYSICAL', 'CURRENT_TECHNIQUE_CONTEXT']);
-  // SP-075 active X policy: owner-filtered disposition + current-100 usable row.
-  // Do not reactivate comparison-only/excluded rows merely because they exist in the clean file.
+  // SP-075 policy defines active owner-review context by owner_disposition.
+  // usable_for_current100 is preserved as a semantic qualifier, NOT an
+  // activation filter: comparison-only PowerPro context (e.g. Polanco) and
+  // technique-only context (e.g. Oshima) remain visible to the owner while
+  // still carrying usable_for_current100=false so they cannot become a
+  // physical teacher or automatic appraisal input.
   const rows = allRows.filter(r => r.current_100 === true
-    && r.usable_for_current100 === true
     && ACTIVE.has(String(r.owner_disposition ?? '')));
   const physicalRows = rows.filter(r => r.owner_disposition === 'CURRENT_REALWORLD_SPEED_PHYSICAL');
   const techniqueRows = rows.filter(r => r.owner_disposition === 'CURRENT_TECHNIQUE_CONTEXT');
@@ -45,11 +48,11 @@ const replacement = `function splitCommunity(nameKey, oldCommunity) {
     aggregate_source_counts: oldCommunity?.source_counts ?? null,
     role: 'OWNER_REVIEW_CONTEXT_ONLY',
     missing_is_negative: false,
-    activation_rule: 'current_100=true AND usable_for_current100=true AND owner_disposition in SP-075 active dispositions',
+    activation_rule: 'current_100=true AND owner_disposition in SP-075 active dispositions; usable_for_current100 is retained as a qualifier, not an activation filter',
     provenance: [F.xClean, 'outputs/derived/sp075_stale_conflict_rediagnosis_v4_20260816.json'],
   };
 }`;
 const after = before.slice(0, start) + replacement + before.slice(end);
 if (after === before) throw new Error('repair produced no change');
 fs.writeFileSync(TARGET, after, 'utf8');
-console.log(JSON.stringify({ repaired: true, target: path.relative(ROOT, TARGET), canonical_fields: ['owner_disposition','claim_lane','text_or_excerpt','published_at','source_url','player_name'] }));
+console.log(JSON.stringify({ repaired: true, target: path.relative(ROOT, TARGET), canonical_fields: ['owner_disposition','claim_lane','text_or_excerpt','published_at','source_url','player_name'], active_policy: 'SP075_OWNER_DISPOSITION_ONLY_WITH_USABLE_FLAG_PRESERVED' }));
