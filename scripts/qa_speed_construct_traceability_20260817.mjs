@@ -1,6 +1,5 @@
 // Fail-closed QA for end-to-end speed-construct preservation.
-// This validator exists because task/dependency closure alone did not prove
-// that immutable appraisal requirements reached the per-player owner-review queue.
+// Validates the construct-complete SP-077 queue, not the superseded narrow queue.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -10,7 +9,8 @@ const CONTRACT = 'docs/state/speed_construct_traceability_contract_20260817.tsv'
 const LOCK = 'docs/state/speed_owner_review_integrity_lock_20260817.json';
 const REQ = 'docs/state/speed_requirements_baseline_20260813.tsv';
 const REG = 'docs/state/speed_task_registry.tsv';
-const QUEUE = 'outputs/derived/sp077_final_owner_review_queue_20260816.json';
+const QUEUE = 'outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json';
+const QUEUE_QA = 'outputs/derived/qa_sp077_construct_complete_owner_review_queue_v2_20260817.json';
 const LEDGER = 'outputs/derived/sp078_owner_verdict_ledger_20260816.json';
 
 const REQUIRED_LANES = new Set([
@@ -53,13 +53,14 @@ function hasPath(object, dottedPath) {
   return true;
 }
 
-let contract, requirements, tasks, lock, queue, ledger;
+let contract, requirements, tasks, lock, queue, queueQa, ledger;
 try {
   contract = parseTsv(CONTRACT);
   requirements = parseTsv(REQ);
   tasks = parseTsv(REG);
   lock = readJson(LOCK);
   queue = readJson(QUEUE);
+  queueQa = readJson(QUEUE_QA);
   ledger = readJson(LEDGER);
 } catch (error) {
   console.error(`FAIL: ${error.message}`);
@@ -92,28 +93,44 @@ for (const laneId of laneById.keys()) if (!REQUIRED_LANES.has(laneId)) warn(`ext
 if (lock?.schema_version !== 'speed_owner_review_integrity_lock_20260817') err('integrity lock schema mismatch');
 if (typeof lock?.locked !== 'boolean') err('integrity lock must contain boolean locked');
 if (!Array.isArray(lock?.unlock_conditions) || lock.unlock_conditions.length < 5) err('integrity lock has insufficient unlock conditions');
-if (!Array.isArray(queue?.players) || queue.players.length !== 100) err('owner-review queue is not exact current-100 population');
+if (!Array.isArray(queue?.players) || queue.players.length !== 100) err('construct-complete owner-review queue is not exact current-100 population');
 if (!Array.isArray(ledger?.records)) err('SP-078 ledger records are not an array');
+
+// Independent source-derived QA is mandatory; this prevents the contract itself
+// from being edited merely to make traceability pass.
+if (queueQa?.status !== 'PASS') err(`construct-complete independent QA status is ${queueQa?.status ?? 'MISSING'}, expected PASS`);
+if (Number(queueQa?.summary?.fail_count ?? queueQa?.fail_count ?? NaN) !== 0) err('construct-complete independent QA has failures');
+if (Number(queueQa?.summary?.player_count ?? queueQa?.player_count ?? 100) !== 100) err('construct-complete independent QA does not cover exactly 100 players');
 
 const unresolved = contract.filter(row => row.required_for_owner_review === '1' && row.current_resolution === 'UNRESOLVED');
 const resolvedRequired = contract.filter(row => row.required_for_owner_review === '1' && row.current_resolution !== 'UNRESOLVED');
 
 // Any lane marked resolved must actually be represented on every queue row.
-// A field may contain null/missing-status content, but the field itself must exist.
+// A lane may hold explicit missingness, but the lane object itself must exist.
 if (Array.isArray(queue?.players)) {
   for (const row of resolvedRequired) {
     const missingRows = queue.players.filter(player => !hasPath(player, row.per_player_queue_field));
     if (missingRows.length) {
-      err(`${row.lane_id}: marked ${row.current_resolution} but declared queue field ${row.per_player_queue_field} is absent on ${missingRows.length}/100 rows`);
+      err(`${row.lane_id}: marked ${row.current_resolution} but queue field ${row.per_player_queue_field} is absent on ${missingRows.length}/100 rows`);
     }
   }
+}
+
+// All queue verdicts must still be blank at traceability-unlock time.
+if (Array.isArray(queue?.players)) {
+  const prefilled = queue.players.filter(player => player?.owner_verdict?.status !== 'NOT_ENTERED' || player?.owner_verdict?.verdict != null);
+  if (prefilled.length) err(`construct-complete queue contains ${prefilled.length} prefilled owner verdict(s)`);
 }
 
 const ownerVerdictCount = Number(ledger?.owner_verdict_count ?? NaN);
 if (!Number.isInteger(ownerVerdictCount) || ownerVerdictCount < 0) err('SP-078 owner_verdict_count is invalid');
 if (Array.isArray(ledger?.records) && Number.isInteger(ownerVerdictCount) && ledger.records.length < ownerVerdictCount) err('SP-078 record count is smaller than owner_verdict_count');
 
+const sp077 = taskById.get('SP-077');
+const sp078 = taskById.get('SP-078');
 const sp079 = taskById.get('SP-079');
+if (!sp077) err('SP-077 missing from task registry');
+if (!sp078) err('SP-078 missing from task registry');
 if (!sp079) err('SP-079 missing from task registry');
 
 if (lock?.locked === true) {
@@ -121,7 +138,7 @@ if (lock?.locked === true) {
     err('OWNER REVIEW LOCKED but SP-078 contains owner verdict history');
   }
   if (sp079 && CLOSED.has(sp079.status)) err(`OWNER REVIEW LOCKED but SP-079 is ${sp079.status}`);
-  if (!unresolved.length) warn('integrity lock is still true although all required construct lanes are resolved; run independent review before unlocking');
+  if (!unresolved.length) warn('all required construct lanes are resolved while integrity lock remains true; independent review and explicit unlock transition are still required');
 } else if (lock?.locked === false) {
   if (unresolved.length) err(`integrity lock is false with unresolved construct lanes: ${unresolved.map(row => row.lane_id).join(',')}`);
   if (Array.isArray(queue?.players)) {
@@ -130,17 +147,18 @@ if (lock?.locked === true) {
       if (missingRows.length) err(`unlock invalid: ${row.lane_id} field ${row.per_player_queue_field} absent on ${missingRows.length}/100 rows`);
     }
   }
+  if (sp077?.status !== 'DONE_VALIDATED') err(`unlock invalid: SP-077=${sp077?.status ?? 'MISSING'}, expected DONE_VALIDATED`);
+  if (sp078?.status !== 'DONE_VALIDATED') err(`unlock invalid: SP-078=${sp078?.status ?? 'MISSING'}, expected DONE_VALIDATED`);
 }
 
-// Explicitly protect against the incident's conceptual collapse.
+// Explicitly protect against the original conceptual collapse.
 const topSpeed = laneById.get('SC-002');
 const acceleration = laneById.get('SC-003');
 const shortDistance = laneById.get('SC-004');
 if (topSpeed?.current_resolution === 'INTEGRATED'
-    && acceleration?.current_resolution === 'UNRESOLVED'
-    && shortDistance?.current_resolution === 'UNRESOLVED'
+    && (acceleration?.current_resolution === 'UNRESOLVED' || shortDistance?.current_resolution === 'UNRESOLVED')
     && lock?.locked !== true) {
-  err('single-lane collapse detected: top speed integrated while acceleration and short-distance lanes unresolved, but owner review is not locked');
+  err('single-lane collapse detected: top speed integrated while acceleration or short-distance lane unresolved, but owner review is not locked');
 }
 
 if (warnings.length) {
@@ -155,7 +173,7 @@ if (errors.length) {
 
 console.log(`PASS: construct_lanes=${contract.length}, unresolved_required=${unresolved.length}, owner_verdict_count=${ownerVerdictCount}, OWNER_REVIEW_LOCKED=${lock.locked ? 1 : 0}`);
 if (lock.locked) {
-  console.log(`OWNER REVIEW BLOCKED. Resolve: ${unresolved.map(row => row.lane_id).join(',')}`);
+  console.log('CONSTRUCT_TRACEABILITY_READY_FOR_INDEPENDENT_UNLOCK_REVIEW=1; OWNER REVIEW REMAINS BLOCKED until lock transition and SP-078 rebind complete.');
 } else {
   console.log('OWNER_REVIEW_READY_BY_CONSTRUCT_TRACEABILITY=1; existing registry/exclusion QA must also pass before proceeding.');
 }
