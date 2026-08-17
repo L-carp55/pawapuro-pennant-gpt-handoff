@@ -17,7 +17,7 @@ if (inventory.owner_verdict_count !== 0) throw new Error('owner verdict contamin
 if (new Set(inventory.players.map(r => r.queue_row_key)).size !== 100) throw new Error('duplicate queue key');
 
 const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
-const finite = v => Number.isFinite(Number(v)) ? Number(v) : null;
+const finite = v => (v === null || v === undefined || v === '') ? null : (Number.isFinite(Number(v)) ? Number(v) : null);
 const arr = v => Array.isArray(v) ? v : [];
 const median = xs => {
   const a = xs.filter(Number.isFinite).slice().sort((x,y)=>x-y);
