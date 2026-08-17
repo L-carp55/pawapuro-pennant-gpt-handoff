@@ -1,0 +1,90 @@
+{
+  "schema_version": "sp079_preimplementation_contract_20260818",
+  "generated_at": "2026-08-18",
+  "status": "PREIMPLEMENTATION_CONTRACT_ONLY_NOT_EXECUTED",
+  "task": "SP-079",
+  "purpose": "Define the consequence of owner verdicts before capturing them, then implement a traceable 100-player practical reappraisal without PowerPro-label leakage or top-speed substitution.",
+  "entry_conditions": [
+    "speed_owner_review_integrity_lock_20260817.locked=false",
+    "task-registry QA PASS",
+    "construct-traceability QA PASS",
+    "SP-078 ledger remains bound to the active 100-row construct queue",
+    "exactly 100 active owner verdicts exist: one per queue_row_key",
+    "every verdict has nonempty timestamp/source/reviewer and append-only history"
+  ],
+  "owner_verdict_semantics": {
+    "POWERPRO_PLAUSIBLE": "No material contradiction requiring a directional correction. This does not validate the exact PowerPro number and does not copy it into SP-079.",
+    "POWERPRO_TOO_LOW": "Directional owner constraint only. It does not specify the replacement number unless preferred_rating_optional is explicitly supplied.",
+    "POWERPRO_TOO_HIGH_OR_STALE": "Directional owner constraint only. It does not specify the replacement number unless preferred_rating_optional is explicitly supplied.",
+    "UNRESOLVED": "Preserve conflict or missing comparison target; SP-079 must widen uncertainty and must not force a direction."
+  },
+  "required_inputs": [
+    "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json",
+    "outputs/derived/sp078_owner_verdict_ledger_20260816.json",
+    "outputs/derived/sp100_owner_approved_production_wiring_20260816.json",
+    "outputs/derived/sp016_continuous_prior_apply_20260814.json and current-year-first repair QA",
+    "docs/state/speed_requirements_baseline_20260813.tsv",
+    "docs/state/speed_exclusion_reason_ledger.tsv"
+  ],
+  "forbidden_inputs_or_shortcuts": [
+    "retired NPB+ -> PowerPro label regression -> blend as final appraisal",
+    "PowerPro current value as a physical teacher",
+    "current NPB+ top speed as the entire speed construct",
+    "automatic all-player historical pooling",
+    "next-year repeatability as annual-appraisal acceptance or weighting evidence",
+    "missing evidence converted to zero or negative evidence"
+  ],
+  "required_player_output_fields": [
+    "queue_row_key and stable identity",
+    "owner_verdict event receipt",
+    "physical latent/rank estimate",
+    "practical provisional display point",
+    "range_low and range_high",
+    "confidence and explicit confidence drivers",
+    "per-lane evidence values or bounded missingness",
+    "historical carryover reason and weight when used",
+    "technique-separation receipt",
+    "PowerPro comparison result without teacher leakage",
+    "source provenance and source hashes",
+    "absolute_scale_status"
+  ],
+  "verdict_application_rules": {
+    "POWERPRO_PLAUSIBLE": "Do not anchor to PowerPro. Preserve the independent evidence estimate; record only that no forced directional correction is required.",
+    "POWERPRO_TOO_LOW": "The independent practical range must not silently resolve below the current PowerPro comparison without an explicit conflict flag; preferred_rating_optional, when supplied, is a review constraint rather than physical evidence.",
+    "POWERPRO_TOO_HIGH_OR_STALE": "The independent practical range must not silently resolve above the current PowerPro comparison without an explicit conflict flag; preferred_rating_optional, when supplied, is a review constraint rather than physical evidence.",
+    "UNRESOLVED": "Do not force a point direction. Preserve a wider range, lower confidence, and the exact conflict/missing-target reason."
+  },
+  "scale_policy": {
+    "relative_and_practical_reappraisal_can_proceed_after_owner_verdicts": true,
+    "absolute_0_100_scale_final": false,
+    "required_status": "PROVISIONAL_PENDING_SP-071_ENGINE_BRIDGE",
+    "reason": "SP-071 remains blocked by the ability-to-engine-response bridge. SP-079 is not allowed to pretend that dependency is closed."
+  },
+  "minimum_qa": [
+    "100/100 population and unique queue keys",
+    "100/100 active owner-verdict coverage with exact queue hash binding",
+    "deterministic byte-identical rerun",
+    "no PowerPro current value in physical-estimation feature set",
+    "no top-speed-only finalization",
+    "all required construct lanes remain visible per player",
+    "missingness is explicit and never negative evidence",
+    "historical evidence used only with player-specific current-year exception reason",
+    "directional verdict canaries: 山口航輝, 塩見泰隆, 村林一輝, 坂倉将吾",
+    "conflict canaries remain unresolved unless amended by owner: 細川成也, 小園海斗, 古賀優大",
+    "カリステ/矢野雅哉/京田陽太 regression guards against peak-speed overreach",
+    "SP-078 ledger unchanged by SP-079 computation",
+    "shoulder remains blocked"
+  ],
+  "completion_boundary": {
+    "SP079_can_be_done_validated_when": "100-player physical/practical point+range+confidence+provenance exists and all contract QA passes.",
+    "SP080_still_waits_for": [
+      "SP-071 engine bridge",
+      "SP-079 practical ratings"
+    ],
+    "SP081_gate_close_still_waits_for": [
+      "SP-079",
+      "SP-080",
+      "explicit owner approval"
+    ]
+  }
+}
