@@ -22,15 +22,21 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Repair exclusion dependency gate semantics
+        run: node scripts/repair_speed_registry_exclusion_dependency_gate_20260817.mjs
+      - name: Repair unlock audit ordering
+        run: node scripts/repair_speed_unlock_audit_order_20260817.mjs
       - name: Run fail-closed transition
         run: node scripts/finalize_speed_owner_review_rebind_20260817.mjs
       - name: Show transition diff
-        run: git diff --check && git diff -- docs/state/speed_task_registry.tsv docs/state/speed_owner_review_integrity_lock_20260817.json outputs/derived/sp078_owner_verdict_ledger_20260816.json docs/audits/speed_owner_review_unlock_transition_20260817.md
+        run: |
+          git diff --check
+          git diff -- scripts/qa_speed_task_registry.mjs scripts/finalize_speed_owner_review_rebind_20260817.mjs docs/state/speed_task_registry.tsv docs/state/speed_owner_review_integrity_lock_20260817.json outputs/derived/sp078_owner_verdict_ledger_20260816.json docs/audits/speed_owner_review_unlock_transition_20260817.md
       - name: Commit transition only after all gates pass
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/state/speed_task_registry.tsv docs/state/speed_owner_review_integrity_lock_20260817.json outputs/derived/sp078_owner_verdict_ledger_20260816.json docs/audits/speed_owner_review_unlock_transition_20260817.md
+          git add scripts/qa_speed_task_registry.mjs scripts/finalize_speed_owner_review_rebind_20260817.mjs docs/state/speed_task_registry.tsv docs/state/speed_owner_review_integrity_lock_20260817.json outputs/derived/sp078_owner_verdict_ledger_20260816.json docs/audits/speed_owner_review_unlock_transition_20260817.md
           if git diff --cached --quiet; then
             echo 'No transition changes to commit'
             exit 1
