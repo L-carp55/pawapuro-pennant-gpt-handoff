@@ -1,7 +1,7 @@
 {
   "schema_version": "speed_owner_review_integrity_lock_20260817",
   "created_at": "2026-08-17",
-  "locked": true,
+  "locked": false,
   "reason_code": "COMMUNITY_SEMANTIC_FIELD_MAPPING_DROPPED_CONTEXT",
   "summary": "A post-unlock human-readable priority review exposed a semantic field-mapping defect in the construct-complete Community lane: the canonical clean-X source uses owner_disposition/claim_lane/text_or_excerpt/published_at, while the construct builder classified legacy disposition/text/date fields. The lane object existed and structural QA passed, but physical/technique/rating subrows could be silently empty. No owner verdict was recorded. Owner review is re-locked until source-derived semantic multiset QA proves exact Community propagation and the construct queue is regenerated/rebound.",
   "invalidated_actions": [
@@ -58,5 +58,17 @@
     "status": "SUPERSEDED_BY_SEMANTIC_RELOCK_BEFORE_ANY_OWNER_VERDICT"
   },
   "active_owner_review_queue": "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json",
-  "active_owner_verdict_ledger": "outputs/derived/sp078_owner_verdict_ledger_20260816.json"
+  "active_owner_verdict_ledger": "outputs/derived/sp078_owner_verdict_ledger_20260816.json",
+  "unlocked_at": "2026-08-17T14:39:01.358Z",
+  "unlock_status": "CONSTRUCT_TRACEABILITY_REVALIDATED_AND_SP078_REBOUND",
+  "active_owner_review_queue_sha256": "ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d",
+  "owner_verdict_count_at_unlock": 0,
+  "unlock_basis": [
+    "12/12 mandatory construct lanes INTEGRATED",
+    "independent queue QA 3255/3255 PASS",
+    "locked global traceability QA PASS",
+    "SP-078 append-only self-test PASS",
+    "empty ledger rebound to exact construct-complete queue SHA-256",
+    "SP-077 and SP-078 reclosed DONE_VALIDATED before unlock"
+  ]
 }

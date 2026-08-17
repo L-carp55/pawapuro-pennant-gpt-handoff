@@ -4,7 +4,7 @@ Status: **PASS**
 
 - Active queue: `outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json`
 - Queue schema: `sp077_construct_complete_owner_review_queue_20260817`
-- Queue SHA-256: `39a10b64857732ad8089b1528240f3ba9bce3e69c2c14a4af8bfe315fba4d9d2`
+- Queue SHA-256: `ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d`
 - Queue population: 100/100 unique row keys
 - Independent construct QA: 3255/3255 PASS; 0 FAIL
 - Mandatory construct lanes: 12/12 INTEGRATED
@@ -35,4 +35,4 @@ PASS: requirements=61, tasks=72, exclusions=25, open_exclusions=3, unresolved_te
 SP-077 is fail-closed on its declared dependencies; the global Speed Gate remains fail-closed until all gate blockers reach zero.
 ```
 
-SP-078 rebind output: `{"reinitialized_empty_ledger":true,"ledger":"outputs/derived/sp078_owner_verdict_ledger_20260816.json","owner_verdict_count":0,"queue_rows":100,"queue_sha256":"39a10b64857732ad8089b1528240f3ba9bce3e69c2c14a4af8bfe315fba4d9d2"}`
+SP-078 rebind output: `{"reinitialized_empty_ledger":true,"ledger":"outputs/derived/sp078_owner_verdict_ledger_20260816.json","owner_verdict_count":0,"queue_rows":100,"queue_sha256":"ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d"}`
