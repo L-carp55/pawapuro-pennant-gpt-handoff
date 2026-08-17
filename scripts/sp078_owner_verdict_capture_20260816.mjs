@@ -15,6 +15,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATE = '2026-08-16';
 const DEFAULT_QUEUE = 'outputs/derived/sp077_final_owner_review_queue_20260816.json';
 const DEFAULT_LEDGER = 'outputs/derived/sp078_owner_verdict_ledger_20260816.json';
+const OWNER_REVIEW_LOCK = 'docs/state/speed_owner_review_integrity_lock_20260817.json';
 const ALLOWED_VERDICTS = new Set([
   'POWERPRO_PLAUSIBLE', 'POWERPRO_TOO_HIGH_OR_STALE', 'POWERPRO_TOO_LOW',
   'PROJECT_TOO_HIGH', 'PROJECT_TOO_LOW', 'BOTH_QUESTIONABLE', 'UNRESOLVED', 'OTHER',
@@ -27,6 +28,14 @@ function requireOk(condition, message) { if (!condition) fail(message); }
 function readJson(abs) {
   try { return JSON.parse(fs.readFileSync(abs, 'utf8')); }
   catch (error) { fail(`invalid JSON ${abs}: ${error.message}`); }
+}
+function assertOwnerReviewUnlocked() {
+  const lockPath = full(OWNER_REVIEW_LOCK);
+  requireOk(fs.existsSync(lockPath), `owner-review integrity lock is missing: ${OWNER_REVIEW_LOCK}`);
+  const lock = readJson(lockPath);
+  requireOk(lock?.schema_version === 'speed_owner_review_integrity_lock_20260817', 'owner-review integrity lock schema mismatch');
+  requireOk(lock.locked === false,
+    `owner-review integrity lock is active (${lock.reason_code || 'UNSPECIFIED'}); rebuild and validate the full construct traceability before capturing owner verdicts`);
 }
 function writeAtomic(abs, body) {
   fs.mkdirSync(path.dirname(abs), { recursive: true });
@@ -200,6 +209,7 @@ if (process.argv.includes('--reinitialize-empty')) {
 
 const inputPath = argument('--input');
 requireOk(inputPath, 'use --initialize, --self-test, or supply --input <JSON>');
+assertOwnerReviewUnlocked();
 requireOk(fs.existsSync(ledgerPath), `ledger does not exist: ${ledgerPath}`);
 const payload = readJson(full(inputPath));
 const events = Array.isArray(payload) ? payload : payload.events;
