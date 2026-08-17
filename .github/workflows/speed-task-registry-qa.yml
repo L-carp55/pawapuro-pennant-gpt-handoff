@@ -1,4 +1,5 @@
 name: speed-task-registry-qa
+# 2026-08-17 post-unlock remote verification trigger: run canonical registry/construct/ledger gates on the committed transition state.
 
 on:
   push:
