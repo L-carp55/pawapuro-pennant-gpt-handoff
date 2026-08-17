@@ -6,6 +6,7 @@ on:
       - review/opus-speed-pre-owner-review-wave-20260816
     paths:
       - 'scripts/build_speed_all100_integrated_owner_review_20260818.mjs'
+      - 'scripts/repair_speed_all100_integrated_numeric_metric_keys_20260818.mjs'
       - '.github/workflows/speed-all100-integrated-owner-review.yml'
   workflow_dispatch:
 
@@ -23,6 +24,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Repair numeric-leading metric keys
+        run: node scripts/repair_speed_all100_integrated_numeric_metric_keys_20260818.mjs
       - name: Build integrated all-100 recommendations
         run: node scripts/build_speed_all100_integrated_owner_review_20260818.mjs
       - name: Verify evidence and governance invariants
@@ -52,6 +55,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
+            scripts/build_speed_all100_integrated_owner_review_20260818.mjs \
             outputs/derived/speed_all100_integrated_owner_review_20260818.json \
             outputs/derived/speed_all100_integrated_owner_review_20260818.tsv \
             docs/audits/speed_all100_integrated_owner_review_20260818.md
