@@ -58,14 +58,16 @@ let current100PlayerCount = 0;
 let current100RawRecordCount = 0;
 for (const row of q.players) {
   const anchors = byPlayer.get(norm(row.identity?.player)) ?? [];
+  const flatRecords = anchors.flatMap(a => a.records.map(r => ({ anchor_id: a.anchor_id, ...r })));
   current100AnchorCount += anchors.length;
-  current100RawRecordCount += anchors.reduce((s,a)=>s+a.raw_record_count,0);
+  current100RawRecordCount += flatRecords.length;
   if (anchors.length) current100PlayerCount += 1;
   row.sp021_high_confidence_anchor_context = anchors.length ? {
     evidence_state: 'AVAILABLE_HIGH_CONFIDENCE_HISTORICAL_ANCHOR',
     anchor_count: anchors.length,
-    raw_record_count: anchors.reduce((s,a)=>s+a.raw_record_count,0),
+    raw_record_count: flatRecords.length,
     anchors,
+    records: flatRecords,
     role: 'DIRECT_OR_STANDARDIZED_PHYSICAL_ANCHOR; CURRENT_CARRYOVER_NOT_AUTOMATIC',
     current_carryover_policy: 'Use for current appraisal only with explicit temporal bridge such as low current sample, injury/recovery, underperformance, or measurement-time reconciliation.',
     provenance: SOURCE,
@@ -74,6 +76,7 @@ for (const row of q.players) {
     anchor_count: 0,
     raw_record_count: 0,
     anchors: [],
+    records: [],
     reason: 'NO_ACCEPTED_HIGH_CONFIDENCE_SP021_ANCHOR_FOR_THIS_CURRENT100_PLAYER',
     no_negative_inference: true,
     provenance: SOURCE,
