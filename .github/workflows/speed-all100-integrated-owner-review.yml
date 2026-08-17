@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/build_speed_all100_integrated_owner_review_20260818.mjs'
       - 'scripts/repair_speed_all100_integrated_numeric_metric_keys_20260818.mjs'
+      - 'scripts/repair_speed_all100_integrated_null_numeric_guard_20260818.mjs'
       - '.github/workflows/speed-all100-integrated-owner-review.yml'
   workflow_dispatch:
 
@@ -26,6 +27,8 @@ jobs:
           node-version: '22'
       - name: Repair numeric-leading metric keys
         run: node scripts/repair_speed_all100_integrated_numeric_metric_keys_20260818.mjs
+      - name: Preserve null numeric targets and evidence
+        run: node scripts/repair_speed_all100_integrated_null_numeric_guard_20260818.mjs
       - name: Build integrated all-100 recommendations
         run: node scripts/build_speed_all100_integrated_owner_review_20260818.mjs
       - name: Verify evidence and governance invariants
@@ -43,12 +46,17 @@ jobs:
             && r.integrated_review.peak_contribution_share>0.70
             && !r.supporting_lanes.some(s=>s.lane!=='peak_speed'));
           if(badStrong.length) throw new Error(`top-speed-only strong verdicts: ${badStrong.map(r=>r.player).join(',')}`);
+          const noTarget=x.players.filter(r=>r.powerpro_current==null);
+          if(noTarget.length!==5) throw new Error(`no-target population=${noTarget.length}, expected 5`);
+          if(noTarget.some(r=>r.recommendation!=='UNRESOLVED'||r.reason_code!=='NO_CURRENT_POWERPRO_TARGET')) {
+            throw new Error(`missing target misclassified: ${noTarget.map(r=>`${r.player}:${r.recommendation}/${r.reason_code}`).join(',')}`);
+          }
           const y=x.players.find(r=>r.player.replace(/\s/g,'')==='山口航輝');
           const s=x.players.find(r=>r.player.replace(/\s/g,'')==='塩見泰隆');
           if(y?.recommendation!=='POWERPRO_TOO_LOW') throw new Error(`山口 semantic regression: ${y?.recommendation}`);
           if(s?.recommendation!=='POWERPRO_TOO_HIGH_OR_STALE') throw new Error(`塩見 semantic regression: ${s?.recommendation}`);
           if(x.players.some(r=>r.guardrails?.some(g=>/SP-078 owner verdict/.test(g))===false)) throw new Error('missing non-verdict guard');
-          console.log(JSON.stringify({status:'PASS',counts:x.counts,confidence:x.confidence_counts,strength:x.strength_counts}));
+          console.log(JSON.stringify({status:'PASS',counts:x.counts,confidence:x.confidence_counts,strength:x.strength_counts,noTarget:noTarget.map(r=>r.player)}));
           NODE
       - name: Commit and push generated review
         run: |
