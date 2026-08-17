@@ -1,0 +1,41 @@
+name: speed-priority-owner-review-packet
+
+on:
+  push:
+    branches:
+      - review/opus-speed-pre-owner-review-wave-20260816
+    paths:
+      - '.github/workflows/speed-priority-owner-review-packet.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-priority-packet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build priority-23 construct-complete review packet
+        run: node scripts/build_sp077_priority_owner_review_packet_20260817.mjs
+      - name: Verify no verdict contamination
+        run: |
+          node - <<'NODE'
+          const j=require('./outputs/derived/sp077_priority23_owner_review_packet_20260817.json');
+          if(j.population.emitted!==23) throw new Error('priority packet != 23');
+          if(j.players.some(p=>p.owner_verdict?.status!=='NOT_ENTERED'||p.owner_verdict?.verdict!=null)) throw new Error('owner verdict contamination');
+          console.log('PASS priority23=23 verdicts=0');
+          NODE
+      - name: Commit packet
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add outputs/derived/sp077_priority23_owner_review_packet_20260817.json docs/reports/sp077_priority23_owner_review_packet_20260817.md
+          git commit -m 'docs(speed): generate construct-complete priority owner review packet'
+          git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
