@@ -1,0 +1,4267 @@
+{
+  "schema_version": "qa_sp077_community_semantic_propagation_20260817",
+  "generated_at": "2026-08-17",
+  "status": "PASS",
+  "source": {
+    "path": "outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl",
+    "active_rule": "current_100=true && owner_disposition in SP-075 active dispositions; usable_for_current100 preserved as qualifier",
+    "active_rows": 28,
+    "active_players": 18,
+    "by_disposition": {
+      "CURRENT_POWERPRO_RATING": 16,
+      "CURRENT_REALWORLD_SPEED_PHYSICAL": 10,
+      "CURRENT_TECHNIQUE_CONTEXT": 2
+    }
+  },
+  "queue": "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json",
+  "sp075_expected": {
+    "active_x_rows": 28,
+    "owner_review_context_players": 18
+  },
+  "checks_total": 848,
+  "checks_passed": 848,
+  "checks_failed": 0,
+  "errors": [],
+  "checks": [
+    {
+      "label": "queue schema",
+      "pass": true,
+      "detail": "sp077_construct_complete_owner_review_queue_20260817"
+    },
+    {
+      "label": "queue population",
+      "pass": true,
+      "detail": "100"
+    },
+    {
+      "label": "source active rows match SP-075",
+      "pass": true,
+      "detail": "28 vs 28"
+    },
+    {
+      "label": "source active record ids unique",
+      "pass": true,
+      "detail": "28"
+    },
+    {
+      "label": "source active players match SP-075",
+      "pass": true,
+      "detail": "18 vs 18"
+    },
+    {
+      "label": "中川 圭太 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "中川 圭太 active_source_row_count",
+      "pass": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "label": "中川 圭太 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "中川 圭太 record-id multiset size",
+      "pass": true,
+      "detail": "actual=2 expected=2"
+    },
+    {
+      "label": "中川 圭太 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "中川 圭太 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-005 category",
+      "pass": true,
+      "detail": "physical_observation_rows"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-005 disposition",
+      "pass": true,
+      "detail": "CURRENT_REALWORLD_SPEED_PHYSICAL vs CURRENT_REALWORLD_SPEED_PHYSICAL"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-005 claim_lane",
+      "pass": true,
+      "detail": "PHYSICAL_OBSERVATION vs PHYSICAL_OBSERVATION"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-005 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-005 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-005 source_date",
+      "pass": true,
+      "detail": "2025-06-22T07:05:35Z vs 2025-06-22T07:05:35Z"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-005 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-005 canonical_status",
+      "pass": true,
+      "detail": "USABLE_PHYSICAL_CONTEXT vs USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-086 category",
+      "pass": true,
+      "detail": "physical_observation_rows"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-086 disposition",
+      "pass": true,
+      "detail": "CURRENT_REALWORLD_SPEED_PHYSICAL vs CURRENT_REALWORLD_SPEED_PHYSICAL"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-086 claim_lane",
+      "pass": true,
+      "detail": "PHYSICAL_OBSERVATION vs PHYSICAL_OBSERVATION"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-086 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-086 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-086 source_date",
+      "pass": true,
+      "detail": "2025-10-12T08:28:14Z vs 2025-10-12T08:28:14Z"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-086 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-086 canonical_status",
+      "pass": true,
+      "detail": "USABLE_PHYSICAL_CONTEXT vs USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "label": "太田 椋 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "太田 椋 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "太田 椋 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "太田 椋 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "太田 椋 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "太田 椋 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "宗 佑磨 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "宗 佑磨 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "宗 佑磨 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "宗 佑磨 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "宗 佑磨 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "宗 佑磨 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "来田 涼斗 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "来田 涼斗 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "来田 涼斗 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "来田 涼斗 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "来田 涼斗 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "来田 涼斗 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "森 友哉 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "森 友哉 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "森 友哉 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "森 友哉 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "森 友哉 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "森 友哉 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "紅林 弘太郎 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "紅林 弘太郎 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "紅林 弘太郎 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "紅林 弘太郎 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "紅林 弘太郎 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "紅林 弘太郎 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "若月 健矢 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "若月 健矢 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "若月 健矢 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "若月 健矢 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "若月 健矢 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "若月 健矢 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "西川 龍馬 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "西川 龍馬 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "西川 龍馬 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "西川 龍馬 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "西川 龍馬 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "西川 龍馬 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "西野 真弘 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "西野 真弘 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "西野 真弘 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "西野 真弘 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "西野 真弘 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "西野 真弘 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "カリステ community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "カリステ active_source_row_count",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "label": "カリステ evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "カリステ record-id multiset size",
+      "pass": true,
+      "detail": "actual=1 expected=1"
+    },
+    {
+      "label": "カリステ no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "カリステ no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-AGC-C-002 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-AGC-C-002 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-AGC-C-002 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-AGC-C-002 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGC-C-002 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGC-C-002 source_date",
+      "pass": true,
+      "detail": "2025-05-06T06:56:08Z vs 2025-05-06T06:56:08Z"
+    },
+    {
+      "label": "X-FINAL-AGC-C-002 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-AGC-C-002 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "土田 龍空 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "土田 龍空 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "土田 龍空 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "土田 龍空 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "土田 龍空 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "土田 龍空 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "大島 洋平 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "大島 洋平 active_source_row_count",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "label": "大島 洋平 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "大島 洋平 record-id multiset size",
+      "pass": true,
+      "detail": "actual=1 expected=1"
+    },
+    {
+      "label": "大島 洋平 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "大島 洋平 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-033 category",
+      "pass": true,
+      "detail": "technique_context_rows"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-033 disposition",
+      "pass": true,
+      "detail": "CURRENT_TECHNIQUE_CONTEXT vs CURRENT_TECHNIQUE_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-033 claim_lane",
+      "pass": true,
+      "detail": "BASERUNNING_TECHNIQUE vs BASERUNNING_TECHNIQUE"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-033 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-033 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-033 source_date",
+      "pass": true,
+      "detail": "2026-08-03T11:36:32Z vs 2026-08-03T11:36:32Z"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-033 usable qualifier preserved",
+      "pass": true,
+      "detail": "false vs false"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-033 canonical_status",
+      "pass": true,
+      "detail": "CONTEXT_ONLY_TECHNIQUE_OR_GAMEPLAY vs CONTEXT_ONLY_TECHNIQUE_OR_GAMEPLAY"
+    },
+    {
+      "label": "岡林 勇希 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "岡林 勇希 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "岡林 勇希 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "岡林 勇希 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "岡林 勇希 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "岡林 勇希 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "木下 拓哉 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "木下 拓哉 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "木下 拓哉 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "木下 拓哉 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "木下 拓哉 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "木下 拓哉 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "村松 開人 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "村松 開人 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "村松 開人 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "村松 開人 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "村松 開人 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "村松 開人 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "板山 祐太郎 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "板山 祐太郎 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "板山 祐太郎 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "板山 祐太郎 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "板山 祐太郎 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "板山 祐太郎 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "田中 幹也 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "田中 幹也 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "田中 幹也 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "田中 幹也 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "田中 幹也 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "田中 幹也 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "石川 昂弥 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "石川 昂弥 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "石川 昂弥 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "石川 昂弥 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "石川 昂弥 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "石川 昂弥 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "福永 裕基 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "福永 裕基 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "福永 裕基 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "福永 裕基 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "福永 裕基 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "福永 裕基 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "細川 成也 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "細川 成也 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "細川 成也 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "細川 成也 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "細川 成也 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "細川 成也 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "高橋 周平 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "高橋 周平 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "高橋 周平 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "高橋 周平 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "高橋 周平 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "高橋 周平 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "奈良間 大己 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "奈良間 大己 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "奈良間 大己 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "奈良間 大己 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "奈良間 大己 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "奈良間 大己 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "水野 達稀 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "水野 達稀 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "水野 達稀 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "水野 達稀 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "水野 達稀 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "水野 達稀 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "清宮 幸太郎 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "清宮 幸太郎 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "清宮 幸太郎 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "清宮 幸太郎 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "清宮 幸太郎 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "清宮 幸太郎 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "田宮 裕涼 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "田宮 裕涼 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "田宮 裕涼 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "田宮 裕涼 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "田宮 裕涼 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "田宮 裕涼 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "郡司 裕也 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "郡司 裕也 active_source_row_count",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "label": "郡司 裕也 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "郡司 裕也 record-id multiset size",
+      "pass": true,
+      "detail": "actual=1 expected=1"
+    },
+    {
+      "label": "郡司 裕也 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "郡司 裕也 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-067 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-067 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-067 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-067 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-067 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-067 source_date",
+      "pass": true,
+      "detail": "2026-08-14T13:10:26Z vs 2026-08-14T13:10:26Z"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-067 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-067 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "野村 佑希 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "野村 佑希 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "野村 佑希 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "野村 佑希 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "野村 佑希 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "野村 佑希 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "ソト community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "ソト active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "ソト evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "ソト record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "ソト no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "ソト no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "ポランコ community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "ポランコ active_source_row_count",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "label": "ポランコ evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "ポランコ record-id multiset size",
+      "pass": true,
+      "detail": "actual=1 expected=1"
+    },
+    {
+      "label": "ポランコ no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "ポランコ no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-X-V3-1905636646751797603-ポランコ category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-X-V3-1905636646751797603-ポランコ disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-X-V3-1905636646751797603-ポランコ claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-X-V3-1905636646751797603-ポランコ text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-1905636646751797603-ポランコ url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-1905636646751797603-ポランコ source_date",
+      "pass": true,
+      "detail": "2025-03-28T15:02:36Z vs 2025-03-28T15:02:36Z"
+    },
+    {
+      "label": "X-FINAL-X-V3-1905636646751797603-ポランコ usable qualifier preserved",
+      "pass": true,
+      "detail": "false vs false"
+    },
+    {
+      "label": "X-FINAL-X-V3-1905636646751797603-ポランコ canonical_status",
+      "pass": true,
+      "detail": "CONTEXT_ONLY_COMPARISON vs CONTEXT_ONLY_COMPARISON"
+    },
+    {
+      "label": "佐藤 都志也 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐藤 都志也 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "佐藤 都志也 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "佐藤 都志也 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "佐藤 都志也 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐藤 都志也 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "友杉 篤輝 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "友杉 篤輝 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "友杉 篤輝 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "友杉 篤輝 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "友杉 篤輝 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "友杉 篤輝 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "安田 尚憲 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "安田 尚憲 active_source_row_count",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "label": "安田 尚憲 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "安田 尚憲 record-id multiset size",
+      "pass": true,
+      "detail": "actual=1 expected=1"
+    },
+    {
+      "label": "安田 尚憲 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "安田 尚憲 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-029 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-029 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-029 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-029 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-029 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-029 source_date",
+      "pass": true,
+      "detail": "2025-07-08T10:58:55Z vs 2025-07-08T10:58:55Z"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-029 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-029 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "小川 龍成 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "小川 龍成 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "小川 龍成 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "小川 龍成 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "小川 龍成 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "小川 龍成 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "山口 航輝 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "山口 航輝 active_source_row_count",
+      "pass": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "label": "山口 航輝 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "山口 航輝 record-id multiset size",
+      "pass": true,
+      "detail": "actual=2 expected=2"
+    },
+    {
+      "label": "山口 航輝 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "山口 航輝 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-physical category",
+      "pass": true,
+      "detail": "physical_observation_rows"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-physical disposition",
+      "pass": true,
+      "detail": "CURRENT_REALWORLD_SPEED_PHYSICAL vs CURRENT_REALWORLD_SPEED_PHYSICAL"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-physical claim_lane",
+      "pass": true,
+      "detail": "PHYSICAL_OBSERVATION vs PHYSICAL_OBSERVATION"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-physical text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-physical url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-physical source_date",
+      "pass": true,
+      "detail": "2025-09-05T11:55:17Z vs 2025-09-05T11:55:17Z"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-physical usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-physical canonical_status",
+      "pass": true,
+      "detail": "USABLE_PHYSICAL_CONTEXT vs USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-technique category",
+      "pass": true,
+      "detail": "technique_context_rows"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-technique disposition",
+      "pass": true,
+      "detail": "CURRENT_TECHNIQUE_CONTEXT vs CURRENT_TECHNIQUE_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-technique claim_lane",
+      "pass": true,
+      "detail": "STEALING_TECHNIQUE vs STEALING_TECHNIQUE"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-technique text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-technique url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-technique source_date",
+      "pass": true,
+      "detail": "2025-09-05T11:55:17Z vs 2025-09-05T11:55:17Z"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-technique usable qualifier preserved",
+      "pass": true,
+      "detail": "false vs false"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-039-technique canonical_status",
+      "pass": true,
+      "detail": "CONTEXT_ONLY_TECHNIQUE_OR_GAMEPLAY vs CONTEXT_ONLY_TECHNIQUE_OR_GAMEPLAY"
+    },
+    {
+      "label": "岡 大海 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "岡 大海 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "岡 大海 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "岡 大海 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "岡 大海 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "岡 大海 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "藤原 恭大 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "藤原 恭大 active_source_row_count",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "label": "藤原 恭大 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "藤原 恭大 record-id multiset size",
+      "pass": true,
+      "detail": "actual=1 expected=1"
+    },
+    {
+      "label": "藤原 恭大 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "藤原 恭大 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-044 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-044 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-044 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-044 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-044 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-044 source_date",
+      "pass": true,
+      "detail": "2025-05-15T11:48:50Z vs 2025-05-15T11:48:50Z"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-044 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-044 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "藤岡 裕大 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "藤岡 裕大 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "藤岡 裕大 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "藤岡 裕大 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "藤岡 裕大 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "藤岡 裕大 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "髙部 瑛斗 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "髙部 瑛斗 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "髙部 瑛斗 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "髙部 瑛斗 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "髙部 瑛斗 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "髙部 瑛斗 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "古賀 悠斗 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "古賀 悠斗 active_source_row_count",
+      "pass": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "label": "古賀 悠斗 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "古賀 悠斗 record-id multiset size",
+      "pass": true,
+      "detail": "actual=2 expected=2"
+    },
+    {
+      "label": "古賀 悠斗 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "古賀 悠斗 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-052 category",
+      "pass": true,
+      "detail": "physical_observation_rows"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-052 disposition",
+      "pass": true,
+      "detail": "CURRENT_REALWORLD_SPEED_PHYSICAL vs CURRENT_REALWORLD_SPEED_PHYSICAL"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-052 claim_lane",
+      "pass": true,
+      "detail": "PHYSICAL_OBSERVATION vs PHYSICAL_OBSERVATION"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-052 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-052 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-052 source_date",
+      "pass": true,
+      "detail": "2025-08-22T10:48:15Z vs 2025-08-22T10:48:15Z"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-052 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-052 canonical_status",
+      "pass": true,
+      "detail": "USABLE_PHYSICAL_CONTEXT vs USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-051 category",
+      "pass": true,
+      "detail": "physical_observation_rows"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-051 disposition",
+      "pass": true,
+      "detail": "CURRENT_REALWORLD_SPEED_PHYSICAL vs CURRENT_REALWORLD_SPEED_PHYSICAL"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-051 claim_lane",
+      "pass": true,
+      "detail": "PHYSICAL_OBSERVATION vs PHYSICAL_OBSERVATION"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-051 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-051 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-051 source_date",
+      "pass": true,
+      "detail": "2025-10-02T09:29:28Z vs 2025-10-02T09:29:28Z"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-051 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-SPD-X-D-051 canonical_status",
+      "pass": true,
+      "detail": "USABLE_PHYSICAL_CONTEXT vs USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "label": "外崎 修汰 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "外崎 修汰 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "外崎 修汰 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "外崎 修汰 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "外崎 修汰 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "外崎 修汰 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "源田 壮亮 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "源田 壮亮 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "源田 壮亮 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "源田 壮亮 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "源田 壮亮 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "源田 壮亮 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "滝澤 夏央 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "滝澤 夏央 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "滝澤 夏央 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "滝澤 夏央 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "滝澤 夏央 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "滝澤 夏央 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "石井 一成 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "石井 一成 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "石井 一成 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "石井 一成 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "石井 一成 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "石井 一成 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "ファビアン community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "ファビアン active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "ファビアン evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "ファビアン record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "ファビアン no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "ファビアン no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "モンテロ community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "モンテロ active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "モンテロ evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "モンテロ record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "モンテロ no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "モンテロ no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "名原 典彦 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "名原 典彦 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "名原 典彦 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "名原 典彦 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "名原 典彦 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "名原 典彦 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "坂倉 将吾 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "坂倉 将吾 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "坂倉 将吾 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "坂倉 将吾 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "坂倉 将吾 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "坂倉 将吾 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "小園 海斗 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "小園 海斗 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "小園 海斗 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "小園 海斗 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "小園 海斗 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "小園 海斗 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "矢野 雅哉 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "矢野 雅哉 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "矢野 雅哉 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "矢野 雅哉 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "矢野 雅哉 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "矢野 雅哉 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "秋山 翔吾 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "秋山 翔吾 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "秋山 翔吾 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "秋山 翔吾 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "秋山 翔吾 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "秋山 翔吾 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "菊池 涼介 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "菊池 涼介 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "菊池 涼介 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "菊池 涼介 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "菊池 涼介 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "菊池 涼介 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "野間 峻祥 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "野間 峻祥 active_source_row_count",
+      "pass": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "label": "野間 峻祥 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "野間 峻祥 record-id multiset size",
+      "pass": true,
+      "detail": "actual=2 expected=2"
+    },
+    {
+      "label": "野間 峻祥 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "野間 峻祥 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-X-V3-1931247163016667566-野間峻祥 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-X-V3-1931247163016667566-野間峻祥 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-X-V3-1931247163016667566-野間峻祥 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-X-V3-1931247163016667566-野間峻祥 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-1931247163016667566-野間峻祥 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-1931247163016667566-野間峻祥 source_date",
+      "pass": true,
+      "detail": "2025-06-07T07:09:39Z vs 2025-06-07T07:09:39Z"
+    },
+    {
+      "label": "X-FINAL-X-V3-1931247163016667566-野間峻祥 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-X-V3-1931247163016667566-野間峻祥 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-X-V3-2073903673978311123-野間峻祥 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-X-V3-2073903673978311123-野間峻祥 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-X-V3-2073903673978311123-野間峻祥 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-X-V3-2073903673978311123-野間峻祥 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-2073903673978311123-野間峻祥 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-2073903673978311123-野間峻祥 source_date",
+      "pass": true,
+      "detail": "2026-07-05T22:55:41Z vs 2026-07-05T22:55:41Z"
+    },
+    {
+      "label": "X-FINAL-X-V3-2073903673978311123-野間峻祥 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-X-V3-2073903673978311123-野間峻祥 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "サンタナ community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "サンタナ active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "サンタナ evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "サンタナ record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "サンタナ no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "サンタナ no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "並木 秀尊 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "並木 秀尊 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "並木 秀尊 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "並木 秀尊 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "並木 秀尊 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "並木 秀尊 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "中村 悠平 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "中村 悠平 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "中村 悠平 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "中村 悠平 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "中村 悠平 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "中村 悠平 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "丸山 和郁 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "丸山 和郁 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "丸山 和郁 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "丸山 和郁 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "丸山 和郁 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "丸山 和郁 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "古賀 優大 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "古賀 優大 active_source_row_count",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "label": "古賀 優大 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "古賀 優大 record-id multiset size",
+      "pass": true,
+      "detail": "actual=1 expected=1"
+    },
+    {
+      "label": "古賀 優大 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "古賀 優大 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-X-V3-1950499692657123725-古賀優大 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-X-V3-1950499692657123725-古賀優大 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-X-V3-1950499692657123725-古賀優大 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-X-V3-1950499692657123725-古賀優大 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-1950499692657123725-古賀優大 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-1950499692657123725-古賀優大 source_date",
+      "pass": true,
+      "detail": "2025-07-30T10:12:19Z vs 2025-07-30T10:12:19Z"
+    },
+    {
+      "label": "X-FINAL-X-V3-1950499692657123725-古賀優大 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-X-V3-1950499692657123725-古賀優大 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "塩見 泰隆 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "塩見 泰隆 active_source_row_count",
+      "pass": true,
+      "detail": "3 vs 3"
+    },
+    {
+      "label": "塩見 泰隆 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "塩見 泰隆 record-id multiset size",
+      "pass": true,
+      "detail": "actual=3 expected=3"
+    },
+    {
+      "label": "塩見 泰隆 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "塩見 泰隆 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-016 category",
+      "pass": true,
+      "detail": "physical_observation_rows"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-016 disposition",
+      "pass": true,
+      "detail": "CURRENT_REALWORLD_SPEED_PHYSICAL vs CURRENT_REALWORLD_SPEED_PHYSICAL"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-016 claim_lane",
+      "pass": true,
+      "detail": "PHYSICAL_OBSERVATION vs PHYSICAL_OBSERVATION"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-016 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-016 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-016 source_date",
+      "pass": true,
+      "detail": "2026-07-21T11:00:38Z vs 2026-07-21T11:00:38Z"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-016 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-016 canonical_status",
+      "pass": true,
+      "detail": "USABLE_PHYSICAL_CONTEXT vs USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-017 category",
+      "pass": true,
+      "detail": "physical_observation_rows"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-017 disposition",
+      "pass": true,
+      "detail": "CURRENT_REALWORLD_SPEED_PHYSICAL vs CURRENT_REALWORLD_SPEED_PHYSICAL"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-017 claim_lane",
+      "pass": true,
+      "detail": "PHYSICAL_OBSERVATION vs PHYSICAL_OBSERVATION"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-017 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-017 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-017 source_date",
+      "pass": true,
+      "detail": "2026-07-21T11:00:51Z vs 2026-07-21T11:00:51Z"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-017 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-017 canonical_status",
+      "pass": true,
+      "detail": "USABLE_PHYSICAL_CONTEXT vs USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-018 category",
+      "pass": true,
+      "detail": "physical_observation_rows"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-018 disposition",
+      "pass": true,
+      "detail": "CURRENT_REALWORLD_SPEED_PHYSICAL vs CURRENT_REALWORLD_SPEED_PHYSICAL"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-018 claim_lane",
+      "pass": true,
+      "detail": "PHYSICAL_OBSERVATION vs PHYSICAL_OBSERVATION"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-018 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-018 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-018 source_date",
+      "pass": true,
+      "detail": "2026-08-01T11:04:29Z vs 2026-08-01T11:04:29Z"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-018 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-018 canonical_status",
+      "pass": true,
+      "detail": "USABLE_PHYSICAL_CONTEXT vs USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "label": "岩田 幸宏 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "岩田 幸宏 active_source_row_count",
+      "pass": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "label": "岩田 幸宏 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "岩田 幸宏 record-id multiset size",
+      "pass": true,
+      "detail": "actual=2 expected=2"
+    },
+    {
+      "label": "岩田 幸宏 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "岩田 幸宏 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-X-V3-1902381595983802651-岩田幸宏 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-X-V3-1902381595983802651-岩田幸宏 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-X-V3-1902381595983802651-岩田幸宏 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-X-V3-1902381595983802651-岩田幸宏 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-1902381595983802651-岩田幸宏 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-1902381595983802651-岩田幸宏 source_date",
+      "pass": true,
+      "detail": "2025-03-19T15:28:11Z vs 2025-03-19T15:28:11Z"
+    },
+    {
+      "label": "X-FINAL-X-V3-1902381595983802651-岩田幸宏 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-X-V3-1902381595983802651-岩田幸宏 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-070-iwata-physical category",
+      "pass": true,
+      "detail": "physical_observation_rows"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-070-iwata-physical disposition",
+      "pass": true,
+      "detail": "CURRENT_REALWORLD_SPEED_PHYSICAL vs CURRENT_REALWORLD_SPEED_PHYSICAL"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-070-iwata-physical claim_lane",
+      "pass": true,
+      "detail": "PHYSICAL_OBSERVATION vs PHYSICAL_OBSERVATION"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-070-iwata-physical text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-070-iwata-physical url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-070-iwata-physical source_date",
+      "pass": true,
+      "detail": "2026-08-02T12:52:46Z vs 2026-08-02T12:52:46Z"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-070-iwata-physical usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-070-iwata-physical canonical_status",
+      "pass": true,
+      "detail": "USABLE_PHYSICAL_CONTEXT vs USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "label": "長岡 秀樹 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "長岡 秀樹 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "長岡 秀樹 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "長岡 秀樹 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "長岡 秀樹 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "長岡 秀樹 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "太田 光 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "太田 光 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "太田 光 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "太田 光 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "太田 光 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "太田 光 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "村林 一輝 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "村林 一輝 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "村林 一輝 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "村林 一輝 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "村林 一輝 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "村林 一輝 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "浅村 栄斗 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "浅村 栄斗 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "浅村 栄斗 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "浅村 栄斗 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "浅村 栄斗 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "浅村 栄斗 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "渡邊 佳明 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "渡邊 佳明 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "渡邊 佳明 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "渡邊 佳明 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "渡邊 佳明 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "渡邊 佳明 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "鈴木 大地 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "鈴木 大地 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "鈴木 大地 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "鈴木 大地 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "鈴木 大地 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "鈴木 大地 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "京田 陽太 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "京田 陽太 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "京田 陽太 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "京田 陽太 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "京田 陽太 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "京田 陽太 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐野 恵太 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐野 恵太 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "佐野 恵太 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "佐野 恵太 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "佐野 恵太 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐野 恵太 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "宮﨑 敏郎 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "宮﨑 敏郎 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "宮﨑 敏郎 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "宮﨑 敏郎 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "宮﨑 敏郎 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "宮﨑 敏郎 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "山本 祐大 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "山本 祐大 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "山本 祐大 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "山本 祐大 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "山本 祐大 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "山本 祐大 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "度会 隆輝 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "度会 隆輝 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "度会 隆輝 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "度会 隆輝 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "度会 隆輝 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "度会 隆輝 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "林 琢真 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "林 琢真 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "林 琢真 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "林 琢真 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "林 琢真 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "林 琢真 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "梶原 昂希 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "梶原 昂希 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "梶原 昂希 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "梶原 昂希 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "梶原 昂希 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "梶原 昂希 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "牧 秀悟 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "牧 秀悟 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "牧 秀悟 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "牧 秀悟 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "牧 秀悟 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "牧 秀悟 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "筒香 嘉智 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "筒香 嘉智 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "筒香 嘉智 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "筒香 嘉智 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "筒香 嘉智 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "筒香 嘉智 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "蝦名 達夫 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "蝦名 達夫 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "蝦名 達夫 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "蝦名 達夫 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "蝦名 達夫 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "蝦名 達夫 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "今宮 健太 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "今宮 健太 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "今宮 健太 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "今宮 健太 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "今宮 健太 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "今宮 健太 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "周東 佑京 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "周東 佑京 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "周東 佑京 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "周東 佑京 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "周東 佑京 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "周東 佑京 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "山川 穂高 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "山川 穂高 active_source_row_count",
+      "pass": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "label": "山川 穂高 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "山川 穂高 record-id multiset size",
+      "pass": true,
+      "detail": "actual=2 expected=2"
+    },
+    {
+      "label": "山川 穂高 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "山川 穂高 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-050 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-050 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-050 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-050 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-050 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-050 source_date",
+      "pass": true,
+      "detail": "2025-09-26T09:36:03Z vs 2025-09-26T09:36:03Z"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-050 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-050 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-049 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-049 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-049 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-049 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-049 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-049 source_date",
+      "pass": true,
+      "detail": "2025-09-26T09:36:25Z vs 2025-09-26T09:36:25Z"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-049 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-AGE-E-20260815-049 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "柳田 悠岐 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "柳田 悠岐 active_source_row_count",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "label": "柳田 悠岐 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "柳田 悠岐 record-id multiset size",
+      "pass": true,
+      "detail": "actual=1 expected=1"
+    },
+    {
+      "label": "柳田 悠岐 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "柳田 悠岐 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-X-V3-2087467009147834775-柳田悠岐 category",
+      "pass": true,
+      "detail": "physical_observation_rows"
+    },
+    {
+      "label": "X-FINAL-X-V3-2087467009147834775-柳田悠岐 disposition",
+      "pass": true,
+      "detail": "CURRENT_REALWORLD_SPEED_PHYSICAL vs CURRENT_REALWORLD_SPEED_PHYSICAL"
+    },
+    {
+      "label": "X-FINAL-X-V3-2087467009147834775-柳田悠岐 claim_lane",
+      "pass": true,
+      "detail": "PHYSICAL_OBSERVATION vs PHYSICAL_OBSERVATION"
+    },
+    {
+      "label": "X-FINAL-X-V3-2087467009147834775-柳田悠岐 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-2087467009147834775-柳田悠岐 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-2087467009147834775-柳田悠岐 source_date",
+      "pass": true,
+      "detail": "2026-08-12T09:11:32Z vs 2026-08-12T09:11:32Z"
+    },
+    {
+      "label": "X-FINAL-X-V3-2087467009147834775-柳田悠岐 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-X-V3-2087467009147834775-柳田悠岐 canonical_status",
+      "pass": true,
+      "detail": "USABLE_PHYSICAL_CONTEXT vs USABLE_PHYSICAL_CONTEXT"
+    },
+    {
+      "label": "柳町 達 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "柳町 達 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "柳町 達 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "柳町 達 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "柳町 達 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "柳町 達 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "栗原 陵矢 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "栗原 陵矢 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "栗原 陵矢 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "栗原 陵矢 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "栗原 陵矢 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "栗原 陵矢 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "正木 智也 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "正木 智也 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "正木 智也 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "正木 智也 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "正木 智也 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "正木 智也 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "海野 隆司 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "海野 隆司 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "海野 隆司 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "海野 隆司 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "海野 隆司 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "海野 隆司 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "牧原 大成 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "牧原 大成 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "牧原 大成 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "牧原 大成 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "牧原 大成 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "牧原 大成 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "近藤 健介 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "近藤 健介 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "近藤 健介 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "近藤 健介 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "近藤 健介 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "近藤 健介 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "丸 佳浩 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "丸 佳浩 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "丸 佳浩 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "丸 佳浩 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "丸 佳浩 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "丸 佳浩 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐々木 俊輔 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐々木 俊輔 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "佐々木 俊輔 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "佐々木 俊輔 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "佐々木 俊輔 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐々木 俊輔 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "吉川 尚輝 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "吉川 尚輝 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "吉川 尚輝 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "吉川 尚輝 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "吉川 尚輝 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "吉川 尚輝 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "大城 卓三 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "大城 卓三 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "大城 卓三 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "大城 卓三 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "大城 卓三 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "大城 卓三 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "岸田 行倫 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "岸田 行倫 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "岸田 行倫 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "岸田 行倫 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "岸田 行倫 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "岸田 行倫 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "松本 剛 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "松本 剛 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "松本 剛 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "松本 剛 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "松本 剛 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "松本 剛 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "中野 拓夢 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "中野 拓夢 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "中野 拓夢 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "中野 拓夢 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "中野 拓夢 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "中野 拓夢 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "伏見 寅威 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "伏見 寅威 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "伏見 寅威 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "伏見 寅威 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "伏見 寅威 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "伏見 寅威 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐藤 輝明 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐藤 輝明 active_source_row_count",
+      "pass": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "label": "佐藤 輝明 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "佐藤 輝明 record-id multiset size",
+      "pass": true,
+      "detail": "actual=2 expected=2"
+    },
+    {
+      "label": "佐藤 輝明 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "佐藤 輝明 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-AGC-C-030 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-AGC-C-030 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-AGC-C-030 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-AGC-C-030 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGC-C-030 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGC-C-030 source_date",
+      "pass": true,
+      "detail": "2025-05-05T11:37:52Z vs 2025-05-05T11:37:52Z"
+    },
+    {
+      "label": "X-FINAL-AGC-C-030 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-AGC-C-030 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-X-V3-1953764488613965944-佐藤輝明 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-X-V3-1953764488613965944-佐藤輝明 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-X-V3-1953764488613965944-佐藤輝明 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-X-V3-1953764488613965944-佐藤輝明 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-1953764488613965944-佐藤輝明 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-1953764488613965944-佐藤輝明 source_date",
+      "pass": true,
+      "detail": "2025-08-08T10:25:27Z vs 2025-08-08T10:25:27Z"
+    },
+    {
+      "label": "X-FINAL-X-V3-1953764488613965944-佐藤輝明 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-X-V3-1953764488613965944-佐藤輝明 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "坂本 誠志郎 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "坂本 誠志郎 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "坂本 誠志郎 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "坂本 誠志郎 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "坂本 誠志郎 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "坂本 誠志郎 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "大山 悠輔 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "大山 悠輔 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "大山 悠輔 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "大山 悠輔 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "大山 悠輔 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "大山 悠輔 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "小幡 竜平 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "小幡 竜平 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "小幡 竜平 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "小幡 竜平 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "小幡 竜平 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "小幡 竜平 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "木浪 聖也 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "木浪 聖也 active_source_row_count",
+      "pass": true,
+      "detail": "1 vs 1"
+    },
+    {
+      "label": "木浪 聖也 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "木浪 聖也 record-id multiset size",
+      "pass": true,
+      "detail": "actual=1 expected=1"
+    },
+    {
+      "label": "木浪 聖也 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "木浪 聖也 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-AGC-C-001 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-AGC-C-001 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-AGC-C-001 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-AGC-C-001 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-AGC-C-001 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-AGC-C-001 source_date",
+      "pass": true,
+      "detail": "2026-06-14T08:27:24Z vs 2026-06-14T08:27:24Z"
+    },
+    {
+      "label": "X-FINAL-AGC-C-001 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-AGC-C-001 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "梅野 隆太郎 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "梅野 隆太郎 active_source_row_count",
+      "pass": true,
+      "detail": "0 vs 0"
+    },
+    {
+      "label": "梅野 隆太郎 evidence_state",
+      "pass": true,
+      "detail": "MISSING_BOUNDED"
+    },
+    {
+      "label": "梅野 隆太郎 record-id multiset size",
+      "pass": true,
+      "detail": "actual=0 expected=0"
+    },
+    {
+      "label": "梅野 隆太郎 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "梅野 隆太郎 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "森下 翔太 community lane exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "森下 翔太 active_source_row_count",
+      "pass": true,
+      "detail": "2 vs 2"
+    },
+    {
+      "label": "森下 翔太 evidence_state",
+      "pass": true,
+      "detail": "AVAILABLE_BOUNDED"
+    },
+    {
+      "label": "森下 翔太 record-id multiset size",
+      "pass": true,
+      "detail": "actual=2 expected=2"
+    },
+    {
+      "label": "森下 翔太 no missing source ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "森下 翔太 no extra queue ids",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "label": "X-FINAL-X-V3-2066780305625862256-大山悠輔 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066780305625862256-大山悠輔 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066780305625862256-大山悠輔 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066780305625862256-大山悠輔 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066780305625862256-大山悠輔 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066780305625862256-大山悠輔 source_date",
+      "pass": true,
+      "detail": "2026-06-16T07:09:58Z vs 2026-06-16T07:09:58Z"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066780305625862256-大山悠輔 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066780305625862256-大山悠輔 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066818855377481755-大山悠輔 category",
+      "pass": true,
+      "detail": "powerpro_rating_context_rows"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066818855377481755-大山悠輔 disposition",
+      "pass": true,
+      "detail": "CURRENT_POWERPRO_RATING vs CURRENT_POWERPRO_RATING"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066818855377481755-大山悠輔 claim_lane",
+      "pass": true,
+      "detail": "RATING_POWERPRO vs RATING_POWERPRO"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066818855377481755-大山悠輔 text",
+      "pass": true,
+      "detail": "text mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066818855377481755-大山悠輔 url",
+      "pass": true,
+      "detail": "url mismatch"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066818855377481755-大山悠輔 source_date",
+      "pass": true,
+      "detail": "2026-06-16T09:43:09Z vs 2026-06-16T09:43:09Z"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066818855377481755-大山悠輔 usable qualifier preserved",
+      "pass": true,
+      "detail": "true vs true"
+    },
+    {
+      "label": "X-FINAL-X-V3-2066818855377481755-大山悠輔 canonical_status",
+      "pass": true,
+      "detail": "USABLE_RATING_CONTEXT vs USABLE_RATING_CONTEXT"
+    },
+    {
+      "label": "global active source/queue row count",
+      "pass": true,
+      "detail": "source=28 expected=28 queue=28"
+    },
+    {
+      "label": "regression source fixture 中川圭太 physical_observation_rows",
+      "pass": true,
+      "detail": "source rows=2"
+    },
+    {
+      "label": "regression queue fixture 中川圭太 physical_observation_rows",
+      "pass": true,
+      "detail": "queue=2 source=2"
+    },
+    {
+      "label": "regression source fixture 古賀悠斗 physical_observation_rows",
+      "pass": true,
+      "detail": "source rows=2"
+    },
+    {
+      "label": "regression queue fixture 古賀悠斗 physical_observation_rows",
+      "pass": true,
+      "detail": "queue=2 source=2"
+    },
+    {
+      "label": "regression source fixture 山口航輝 physical_observation_rows",
+      "pass": true,
+      "detail": "source rows=1"
+    },
+    {
+      "label": "regression queue fixture 山口航輝 physical_observation_rows",
+      "pass": true,
+      "detail": "queue=1 source=1"
+    },
+    {
+      "label": "regression source fixture 山口航輝 technique_context_rows",
+      "pass": true,
+      "detail": "source rows=1"
+    },
+    {
+      "label": "regression queue fixture 山口航輝 technique_context_rows",
+      "pass": true,
+      "detail": "queue=1 source=1"
+    },
+    {
+      "label": "regression source fixture 塩見泰隆 physical_observation_rows",
+      "pass": true,
+      "detail": "source rows=3"
+    },
+    {
+      "label": "regression queue fixture 塩見泰隆 physical_observation_rows",
+      "pass": true,
+      "detail": "queue=3 source=3"
+    },
+    {
+      "label": "regression source fixture 岩田幸宏 physical_observation_rows",
+      "pass": true,
+      "detail": "source rows=1"
+    },
+    {
+      "label": "regression queue fixture 岩田幸宏 physical_observation_rows",
+      "pass": true,
+      "detail": "queue=1 source=1"
+    },
+    {
+      "label": "regression source fixture 柳田悠岐 physical_observation_rows",
+      "pass": true,
+      "detail": "source rows=1"
+    },
+    {
+      "label": "regression queue fixture 柳田悠岐 physical_observation_rows",
+      "pass": true,
+      "detail": "queue=1 source=1"
+    },
+    {
+      "label": "regression source fixture 大島洋平 technique_context_rows",
+      "pass": true,
+      "detail": "source rows=1"
+    },
+    {
+      "label": "regression queue fixture 大島洋平 technique_context_rows",
+      "pass": true,
+      "detail": "queue=1 source=1"
+    },
+    {
+      "label": "regression source fixture ポランコ powerpro_rating_context_rows",
+      "pass": true,
+      "detail": "source rows=1"
+    },
+    {
+      "label": "regression queue fixture ポランコ powerpro_rating_context_rows",
+      "pass": true,
+      "detail": "queue=1 source=1"
+    }
+  ]
+}

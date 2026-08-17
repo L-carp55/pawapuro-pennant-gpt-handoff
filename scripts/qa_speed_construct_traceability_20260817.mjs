@@ -11,6 +11,7 @@ const REQ = 'docs/state/speed_requirements_baseline_20260813.tsv';
 const REG = 'docs/state/speed_task_registry.tsv';
 const QUEUE = 'outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json';
 const QUEUE_QA = 'outputs/derived/qa_sp077_construct_complete_owner_review_queue_v2_20260817.json';
+const COMMUNITY_QA = 'outputs/derived/qa_sp077_community_semantic_propagation_20260817.json';
 const LEDGER = 'outputs/derived/sp078_owner_verdict_ledger_20260816.json';
 
 const REQUIRED_LANES = new Set([
@@ -53,7 +54,7 @@ function hasPath(object, dottedPath) {
   return true;
 }
 
-let contract, requirements, tasks, lock, queue, queueQa, ledger;
+let contract, requirements, tasks, lock, queue, queueQa, communityQa, ledger;
 try {
   contract = parseTsv(CONTRACT);
   requirements = parseTsv(REQ);
@@ -61,6 +62,7 @@ try {
   lock = readJson(LOCK);
   queue = readJson(QUEUE);
   queueQa = readJson(QUEUE_QA);
+  communityQa = readJson(COMMUNITY_QA);
   ledger = readJson(LEDGER);
 } catch (error) {
   console.error(`FAIL: ${error.message}`);
@@ -102,6 +104,16 @@ if (queueQa?.status !== 'PASS') err(`construct-complete independent QA status is
 if (Number(queueQa?.checks_failed ?? NaN) !== 0) err(`construct-complete independent QA has ${queueQa?.checks_failed ?? 'unknown'} failures`);
 if (Number(queueQa?.checks_passed ?? NaN) !== Number(queueQa?.checks_total ?? NaN)) err('construct-complete independent QA passed/total mismatch');
 if (Number(queueQa?.coverage?.players ?? NaN) !== 100) err('construct-complete independent QA does not cover exactly 100 players');
+
+// Structural lane existence is insufficient. The 2026-08-17 regression proved
+// that a Community lane object can exist while canonical physical/technique/
+// rating rows disappear because of field-name drift. Require source-derived
+// record-id/category/content exact propagation before owner review can unlock.
+if (communityQa?.status !== 'PASS') err(`Community semantic propagation QA status is ${communityQa?.status ?? 'MISSING'}, expected PASS`);
+if (Number(communityQa?.checks_failed ?? NaN) !== 0) err(`Community semantic propagation QA has ${communityQa?.checks_failed ?? 'unknown'} failures`);
+if (Number(communityQa?.checks_passed ?? NaN) !== Number(communityQa?.checks_total ?? NaN)) err('Community semantic propagation QA passed/total mismatch');
+if (!(Number(communityQa?.source?.active_rows ?? 0) > 0)) err('Community semantic propagation QA has no active source rows');
+if (!(Number(communityQa?.source?.active_players ?? 0) > 0)) err('Community semantic propagation QA has no active source players');
 
 const unresolved = contract.filter(row => row.required_for_owner_review === '1' && row.current_resolution === 'UNRESOLVED');
 const resolvedRequired = contract.filter(row => row.required_for_owner_review === '1' && row.current_resolution !== 'UNRESOLVED');

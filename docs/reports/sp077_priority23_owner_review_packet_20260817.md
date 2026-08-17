@@ -42,7 +42,7 @@ Source: `outputs/derived/sp077_construct_complete_owner_review_queue_20260817.js
 - **Historical physical:** 2021 hp_to_1b 4.01 sec [medium]. Current carryover is not automatic.
 - **2025 statistical proxy S:** z=0.302, reliability=0.9025, PA=463, state=COMPARABLE_2025_STATISTICAL_PROXY.
 - **Mixed game proxy:** state=AVAILABLE_MIXED_PROXY, composite-context z=0.072, components={"triple":-0.563864693481934,"gdpAvoid":-0.10832690236795221,"ubr":0.6040831437218847,"advance":-0.2644916421580113,"infieldHit":0.30080289100518676}.
-- **Community physical:** none; technique context: none.
+- **Community physical:** 2025-06-22T07:05:35Z 中川圭太俊足見せつける　#Bs2025 / 2025-10-12T08:28:14Z 中川圭太は怪我治してくれ 流石に走力が落ちすぎてるし打球の伸びがちょっとおかしい; technique context: none.
 - **PowerPro review context only:** current=74, pct=0.7313, gap=0.0263, flag=NONE.
 - **Lane states:** {"top_speed":"AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC","acceleration_h2f_t90":"AVAILABLE_BOUNDED","short_distance":"MISSING_BOUNDED","historical_physical":"AVAILABLE_BOUNDED","statistical_proxy":"COMPARABLE_2025_STATISTICAL_PROXY","game_context_proxy":"AVAILABLE_MIXED_PROXY","community_physical":"AVAILABLE_BOUNDED","powerpro_review":"AVAILABLE_REVIEW_CONTEXT","injury":"MISSING_BOUNDED","age":"MISSING_BOUNDED","sp021_high_confidence_anchor":"MISSING_BOUNDED"}.
 
@@ -66,7 +66,7 @@ Source: `outputs/derived/sp077_construct_complete_owner_review_queue_20260817.js
 - **Historical physical:** 2007 hp_to_1b 3.96 sec [medium] / 2007 hp_to_1b 3.79 sec [medium]. Current carryover is not automatic.
 - **2025 statistical proxy S:** z=0.755, reliability=0.6622, PA=98, state=COMPARABLE_2025_STATISTICAL_PROXY.
 - **Mixed game proxy:** state=AVAILABLE_MIXED_PROXY, composite-context z=1.790, components={"triple":null,"gdpAvoid":1.905005319443675,"ubr":0.5715286056857939,"advance":-0.36383686520798614,"infieldHit":3.151042257143994}.
-- **Community physical:** none; technique context: none.
+- **Community physical:** none; technique context: 2026-08-03T11:36:32Z 大島洋平は毎年首位打者争いに顔を出し、2000本安打を達成したレジェンドだ。…一番衰えを感じないのは走塁面だから代走であったり、守備に衰えはあるけど…細川の守備固めもあり。.
 - **PowerPro review context only:** current=74, pct=0.7313, gap=-0.1959, flag=NONE.
 - **Lane states:** {"top_speed":"AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC","acceleration_h2f_t90":"AVAILABLE_BOUNDED","short_distance":"MISSING_BOUNDED","historical_physical":"AVAILABLE_BOUNDED","statistical_proxy":"COMPARABLE_2025_STATISTICAL_PROXY","game_context_proxy":"AVAILABLE_MIXED_PROXY","community_physical":"AVAILABLE_BOUNDED","powerpro_review":"AVAILABLE_REVIEW_CONTEXT","injury":"MISSING_BOUNDED","age":"MISSING_BOUNDED","sp021_high_confidence_anchor":"MISSING_BOUNDED"}.
 
@@ -126,7 +126,7 @@ Source: `outputs/derived/sp077_construct_complete_owner_review_queue_20260817.js
 - **Historical physical:** ? 50m 6.3 sec [medium] / ? 50M_PROFILE_SECONDS 6.3 seconds [low]. Current carryover is not automatic.
 - **2025 statistical proxy S:** z=-0.399, reliability=0.6914, PA=112, state=COMPARABLE_2025_STATISTICAL_PROXY.
 - **Mixed game proxy:** state=AVAILABLE_MIXED_PROXY, composite-context z=-0.386, components={"triple":-0.9126557968518834,"gdpAvoid":-2.0840233861544077,"ubr":-0.8885695110212556,"advance":-0.33184066431549347,"infieldHit":1.2722480974643136}.
-- **Community physical:** none; technique context: none.
+- **Community physical:** 2025-09-05T11:55:17Z 山口航輝は足速いぞ。かつて源田も走力ナメて山なり送球して内野安打になるくらいには。盗塁のセンスはないなぁと思うけど。; technique context: 2025-09-05T11:55:17Z 山口航輝は足速いぞ。かつて源田も走力ナメて山なり送球して内野安打になるくらいには。盗塁のセンスはないなぁと思うけど。.
 - **PowerPro review context only:** current=52, pct=0.2067, gap=0.4094, flag=EXTERNAL_DISAGREEMENT_ONLY.
 - **Lane states:** {"top_speed":"AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC","acceleration_h2f_t90":"MISSING_BOUNDED","short_distance":"AVAILABLE_BOUNDED","historical_physical":"AVAILABLE_BOUNDED","statistical_proxy":"COMPARABLE_2025_STATISTICAL_PROXY","game_context_proxy":"AVAILABLE_MIXED_PROXY","community_physical":"AVAILABLE_BOUNDED","powerpro_review":"AVAILABLE_REVIEW_CONTEXT","injury":"MISSING_BOUNDED","age":"MISSING_BOUNDED","sp021_high_confidence_anchor":"MISSING_BOUNDED"}.
 
@@ -150,7 +150,7 @@ Source: `outputs/derived/sp077_construct_complete_owner_review_queue_20260817.js
 - **Historical physical:** —. Current carryover is not automatic.
 - **2025 statistical proxy S:** z=-0.610, reliability=0.8677, PA=328, state=COMPARABLE_2025_STATISTICAL_PROXY.
 - **Mixed game proxy:** state=AVAILABLE_MIXED_PROXY, composite-context z=-0.811, components={"triple":-0.9126557968518834,"gdpAvoid":-0.9861077797306513,"ubr":-1.572191687764688,"advance":0.05176151581499319,"infieldHit":-0.43194163329902985}.
-- **Community physical:** none; technique context: none.
+- **Community physical:** 2025-08-22T10:48:15Z 古賀悠斗、打撃開眼に加えて走力向上したか笑 / 2025-10-02T09:29:28Z 古賀悠斗の走力でランニングホームランやらかすとか、相当なボーンヘッドよな🙄; technique context: none.
 - **PowerPro review context only:** current=47, pct=0.1344, gap=0.0879, flag=NONE.
 - **Lane states:** {"top_speed":"AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC","acceleration_h2f_t90":"MISSING_BOUNDED","short_distance":"MISSING_BOUNDED","historical_physical":"MISSING_BOUNDED","statistical_proxy":"COMPARABLE_2025_STATISTICAL_PROXY","game_context_proxy":"AVAILABLE_MIXED_PROXY","community_physical":"AVAILABLE_BOUNDED","powerpro_review":"AVAILABLE_REVIEW_CONTEXT","injury":"MISSING_BOUNDED","age":"MISSING_BOUNDED","sp021_high_confidence_anchor":"MISSING_BOUNDED"}.
 
@@ -234,7 +234,7 @@ Source: `outputs/derived/sp077_construct_complete_owner_review_queue_20260817.js
 - **Historical physical:** 2018 30m 3.85 sec [medium] / ? hp_to_1b 4.15 sec [medium] / ? hp_to_1b 4.26 sec [medium] / 2018 30M_PROFILE_SECONDS 3.85 seconds [low] / +1件. Current carryover is not automatic.
 - **2025 statistical proxy S:** z=0.723, reliability=0, PA=0, state=COMPARABLE_2025_STATISTICAL_PROXY.
 - **Mixed game proxy:** state=MISSING_BOUNDED, composite-context z=—, components=null.
-- **Community physical:** none; technique context: none.
+- **Community physical:** 2026-07-21T11:00:38Z ハマスタでも思ったけど塩見は怪我の影響か知らんけど明らかに走力落ちてる / 2026-07-21T11:00:51Z 田中怪我した臭いし突っ込ませるのは正味分かるわ 塩見の足が遅くなりすぎてた / 2026-08-01T11:04:29Z 塩見は怪我と年齢で足が遅くなってるから打ってもらわないと使えないんだけどいかんせんきた球全部振るくらいでやっちゃうからキツいね; technique context: none.
 - **PowerPro review context only:** current=83, pct=0.8786, gap=-0.1816, flag=NONE.
 - **Lane states:** {"top_speed":"AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC","acceleration_h2f_t90":"AVAILABLE_BOUNDED","short_distance":"AVAILABLE_BOUNDED","historical_physical":"AVAILABLE_BOUNDED","statistical_proxy":"COMPARABLE_2025_STATISTICAL_PROXY","game_context_proxy":"MISSING_BOUNDED","community_physical":"AVAILABLE_BOUNDED","powerpro_review":"AVAILABLE_REVIEW_CONTEXT","injury":"MISSING_BOUNDED","age":"MISSING_BOUNDED","sp021_high_confidence_anchor":"MISSING_BOUNDED"}.
 
@@ -246,7 +246,7 @@ Source: `outputs/derived/sp077_construct_complete_owner_review_queue_20260817.js
 - **Historical physical:** —. Current carryover is not automatic.
 - **2025 statistical proxy S:** z=2.039, reliability=0.8891, PA=401, state=COMPARABLE_2025_STATISTICAL_PROXY.
 - **Mixed game proxy:** state=AVAILABLE_MIXED_PROXY, composite-context z=2.442, components={"triple":2.709405661220667,"gdpAvoid":1.5827429928652577,"ubr":2.4426439438795784,"advance":0.7289548686182757,"infieldHit":3.367204362121795}.
-- **Community physical:** none; technique context: none.
+- **Community physical:** 2026-08-02T12:52:46Z 塩見　長年の怪我で打てない 丸山　毎年怪我する 並木　コンディション不良が多い / 岩田幸宏　怪我なし … 足めっちゃ早い; technique context: none.
 - **PowerPro review context only:** current=96, pct=0.9871, gap=-0.0275, flag=NONE.
 - **Lane states:** {"top_speed":"AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC","acceleration_h2f_t90":"MISSING_BOUNDED","short_distance":"MISSING_BOUNDED","historical_physical":"MISSING_BOUNDED","statistical_proxy":"COMPARABLE_2025_STATISTICAL_PROXY","game_context_proxy":"AVAILABLE_MIXED_PROXY","community_physical":"AVAILABLE_BOUNDED","powerpro_review":"AVAILABLE_REVIEW_CONTEXT","injury":"MISSING_BOUNDED","age":"MISSING_BOUNDED","sp021_high_confidence_anchor":"MISSING_BOUNDED"}.
 
@@ -270,7 +270,7 @@ Source: `outputs/derived/sp077_construct_complete_owner_review_queue_20260817.js
 - **Historical physical:** ? 50m 5.94 sec [medium] / 2009 hp_to_1b 3.98 sec [medium] / ? 50M_PROFILE_SECONDS 5.94 seconds [low]. Current carryover is not automatic.
 - **2025 statistical proxy S:** z=-0.180, reliability=0.6094, PA=78, state=COMPARABLE_2025_STATISTICAL_PROXY.
 - **Mixed game proxy:** state=AVAILABLE_MIXED_PROXY, composite-context z=-0.675, components={"triple":-0.9126557968518834,"gdpAvoid":0.9414417211939032,"ubr":-1.7240815842016883,"advance":-0.2915551055036028,"infieldHit":-1.0229054655125047}.
-- **Community physical:** none; technique context: none.
+- **Community physical:** 2026-08-12T09:11:32Z 柳田悠岐、衰え知らずの走力よ　全力疾走偉い; technique context: none.
 - **PowerPro review context only:** current=67, pct=0.5685, gap=0.0982, flag=NONE.
 - **Lane states:** {"top_speed":"AVAILABLE_CURRENT_DIRECT_MAX_STATISTIC","acceleration_h2f_t90":"AVAILABLE_BOUNDED","short_distance":"AVAILABLE_BOUNDED","historical_physical":"AVAILABLE_BOUNDED","statistical_proxy":"COMPARABLE_2025_STATISTICAL_PROXY","game_context_proxy":"AVAILABLE_MIXED_PROXY","community_physical":"AVAILABLE_BOUNDED","powerpro_review":"AVAILABLE_REVIEW_CONTEXT","injury":"MISSING_BOUNDED","age":"MISSING_BOUNDED","sp021_high_confidence_anchor":"MISSING_BOUNDED"}.
 

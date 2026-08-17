@@ -179,7 +179,22 @@
       },
       "community": {
         "state": "AVAILABLE_BOUNDED",
-        "physical": [],
+        "physical": [
+          {
+            "date": "2025-06-22T07:05:35Z",
+            "disposition": "CURRENT_REALWORLD_SPEED_PHYSICAL",
+            "direction": "UNCLEAR",
+            "text": "中川圭太俊足見せつける　#Bs2025",
+            "url": "https://x.com/i/status/1936681958530232456"
+          },
+          {
+            "date": "2025-10-12T08:28:14Z",
+            "disposition": "CURRENT_REALWORLD_SPEED_PHYSICAL",
+            "direction": "UNCLEAR",
+            "text": "中川圭太は怪我治してくれ 流石に走力が落ちすぎてるし打球の伸びがちょっとおかしい",
+            "url": "https://x.com/i/status/1977290201081983352"
+          }
+        ],
         "technique": [],
         "powerpro_rating": [],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
@@ -555,7 +570,15 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2025-05-06T06:56:08Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "TOO_HIGH",
+            "text": "カリステってほんと、何番でも打つし、どこでも守るし、いい人そうだし素晴らしいね。\nでもパワプロで走力Aなの意外すぎる",
+            "url": "https://x.com/KwOXO74odWW1xyU/status/1919647350034989492"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -814,7 +837,15 @@
       "community": {
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
-        "technique": [],
+        "technique": [
+          {
+            "date": "2026-08-03T11:36:32Z",
+            "disposition": "CURRENT_TECHNIQUE_CONTEXT",
+            "direction": "UNCLEAR",
+            "text": "大島洋平は毎年首位打者争いに顔を出し、2000本安打を達成したレジェンドだ。…一番衰えを感じないのは走塁面だから代走であったり、守備に衰えはあるけど…細川の守備固めもあり。",
+            "url": "https://x.com/piroaichimie/status/2084242006302437679"
+          }
+        ],
         "powerpro_rating": [],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
@@ -1040,7 +1071,15 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2026-08-14T13:10:26Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "TOO_HIGH",
+            "text": "今川郡司カストロの外野陣なんてやったらカストロはともかく残りの2人はパワプロで例えると走力Dくらいしかないんだから間抜かれまくるし…と思いながらパワプロの能力見たら郡司も今川も走力Cだった",
+            "url": "https://x.com/harahettayoooo/status/2088251905650954253"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -1614,7 +1653,15 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2025-03-28T15:02:36Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "COMPARISON_ONLY",
+            "text": "パワプロ、2025も角中の走力D…ポランコはC。",
+            "url": "https://x.com/larks_gar/status/1905636646751797603"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -1885,7 +1932,15 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2025-07-08T10:58:55Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "STALE",
+            "text": "安田尚憲パワプロ史 2017 走力 E（46） … 2025 走力 E（46）",
+            "url": "https://x.com/i/status/1942538886057476106"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -2154,8 +2209,24 @@
       },
       "community": {
         "state": "AVAILABLE_BOUNDED",
-        "physical": [],
-        "technique": [],
+        "physical": [
+          {
+            "date": "2025-09-05T11:55:17Z",
+            "disposition": "CURRENT_REALWORLD_SPEED_PHYSICAL",
+            "direction": "UNCLEAR",
+            "text": "山口航輝は足速いぞ。かつて源田も走力ナメて山なり送球して内野安打になるくらいには。盗塁のセンスはないなぁと思うけど。",
+            "url": "https://x.com/i/status/1963933954479706514"
+          }
+        ],
+        "technique": [
+          {
+            "date": "2025-09-05T11:55:17Z",
+            "disposition": "CURRENT_TECHNIQUE_CONTEXT",
+            "direction": "UNCLEAR",
+            "text": "山口航輝は足速いぞ。かつて源田も走力ナメて山なり送球して内野安打になるくらいには。盗塁のセンスはないなぁと思うけど。",
+            "url": "https://x.com/i/status/1963933954479706514"
+          }
+        ],
         "powerpro_rating": [],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
@@ -2444,7 +2515,15 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2025-05-15T11:48:50Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "EXPLICIT_PROPOSED_VALUE",
+            "text": "パワプロで走力Aの藤原恭大",
+            "url": "https://x.com/i/status/1922982503364669768"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -2667,7 +2746,22 @@
       },
       "community": {
         "state": "AVAILABLE_BOUNDED",
-        "physical": [],
+        "physical": [
+          {
+            "date": "2025-08-22T10:48:15Z",
+            "disposition": "CURRENT_REALWORLD_SPEED_PHYSICAL",
+            "direction": "UNCLEAR",
+            "text": "古賀悠斗、打撃開眼に加えて走力向上したか笑",
+            "url": "https://x.com/i/status/1958843656472858727"
+          },
+          {
+            "date": "2025-10-02T09:29:28Z",
+            "disposition": "CURRENT_REALWORLD_SPEED_PHYSICAL",
+            "direction": "UNCLEAR",
+            "text": "古賀悠斗の走力でランニングホームランやらかすとか、相当なボーンヘッドよな🙄",
+            "url": "https://x.com/i/status/1973681731019620406"
+          }
+        ],
         "technique": [],
         "powerpro_rating": [],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
@@ -3799,7 +3893,22 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2025-06-07T07:09:39Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "STALE",
+            "text": "野間峻祥のパワプロ査定はまだ走力Aなんだな。",
+            "url": "https://x.com/koishufudou/status/1931247163016667566"
+          },
+          {
+            "date": "2026-07-05T22:55:41Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "TOO_HIGH",
+            "text": "野間ってパワプロで走力A88(数年前までS91)の肩S90査定されるぐらいには足肩良いとは思えない",
+            "url": "https://x.com/Tigers32TSUBOI/status/2073903673978311123"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -4398,7 +4507,15 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2025-07-30T10:12:19Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "EXPLICIT_PROPOSED_VALUE",
+            "text": "今の古賀優大を簡易的にパワプロ査定すると 走力 E43",
+            "url": "https://x.com/swa_ponzu/status/1950499692657123725"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -4705,7 +4822,29 @@
       },
       "community": {
         "state": "AVAILABLE_BOUNDED",
-        "physical": [],
+        "physical": [
+          {
+            "date": "2026-07-21T11:00:38Z",
+            "disposition": "CURRENT_REALWORLD_SPEED_PHYSICAL",
+            "direction": "UNCLEAR",
+            "text": "ハマスタでも思ったけど塩見は怪我の影響か知らんけど明らかに走力落ちてる",
+            "url": "https://x.com/sedango31/status/2079521931788001361"
+          },
+          {
+            "date": "2026-07-21T11:00:51Z",
+            "disposition": "CURRENT_REALWORLD_SPEED_PHYSICAL",
+            "direction": "UNCLEAR",
+            "text": "田中怪我した臭いし突っ込ませるのは正味分かるわ 塩見の足が遅くなりすぎてた",
+            "url": "https://x.com/fucklt_swallows/status/2079521986708177267"
+          },
+          {
+            "date": "2026-08-01T11:04:29Z",
+            "disposition": "CURRENT_REALWORLD_SPEED_PHYSICAL",
+            "direction": "UNCLEAR",
+            "text": "塩見は怪我と年齢で足が遅くなってるから打ってもらわないと使えないんだけどいかんせんきた球全部振るくらいでやっちゃうからキツいね",
+            "url": "https://x.com/svjqdl/status/2083509165188841656"
+          }
+        ],
         "technique": [],
         "powerpro_rating": [],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
@@ -4930,9 +5069,25 @@
       },
       "community": {
         "state": "AVAILABLE_BOUNDED",
-        "physical": [],
+        "physical": [
+          {
+            "date": "2026-08-02T12:52:46Z",
+            "disposition": "CURRENT_REALWORLD_SPEED_PHYSICAL",
+            "direction": "UNCLEAR",
+            "text": "塩見　長年の怪我で打てない 丸山　毎年怪我する 並木　コンディション不良が多い / 岩田幸宏　怪我なし … 足めっちゃ早い",
+            "url": "https://x.com/swallows3355/status/2083898802583560497"
+          }
+        ],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2025-03-19T15:28:11Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "APPROPRIATE",
+            "text": "パワプロで岩田幸宏さんの走力ってS行ってたんだな。ファンから見ればもちろん納得",
+            "url": "https://x.com/YsPadresLetsgo/status/1902381595983802651"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -5203,7 +5358,22 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2025-09-26T09:36:03Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "UNCLEAR",
+            "text": "山川このままやとパワプロの走力F超えてG付けられてしまうぞ",
+            "url": "https://x.com/asensioDMF/status/1971509062333555116"
+          },
+          {
+            "date": "2025-09-26T09:36:25Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "TOO_HIGH",
+            "text": "パワプロでの山川の走力評価ってGじゃね？w",
+            "url": "https://x.com/ikimono94496368/status/1971509151152136511"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -5489,7 +5659,15 @@
       },
       "community": {
         "state": "AVAILABLE_BOUNDED",
-        "physical": [],
+        "physical": [
+          {
+            "date": "2026-08-12T09:11:32Z",
+            "disposition": "CURRENT_REALWORLD_SPEED_PHYSICAL",
+            "direction": "UNCLEAR",
+            "text": "柳田悠岐、衰え知らずの走力よ　全力疾走偉い",
+            "url": "https://x.com/teyuneriiii/status/2087467009147834775"
+          }
+        ],
         "technique": [],
         "powerpro_rating": [],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
@@ -5852,7 +6030,22 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2025-05-05T11:37:52Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "EXPLICIT_PROPOSED_VALUE",
+            "text": "パワプロ査定　佐藤輝明\n弾道4\nミート　B74\nパワー　A82\n走力　　C68\n肩力　　B71\n守備力　C63\n捕球　　C60",
+            "url": "https://x.com/CREEPER810w/status/1919355862394560838"
+          },
+          {
+            "date": "2025-08-08T10:25:27Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "EXPLICIT_PROPOSED_VALUE",
+            "text": "佐藤輝明 ミートC60、パワーA89、走力C69…でパワプロはよろしくお願いします",
+            "url": "https://x.com/munenmusouP/status/1953764488613965944"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -6077,7 +6270,15 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2026-06-14T08:27:24Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "APPROPRIATE",
+            "text": "木浪聖也(2026)パワプロ査定\nミート36　←　まあな\nパワー43　←　まあまあ\n走力59　　←　ええやん\n肩力60　　←　ええやんけおい\n守備力54　←　何がやねん💢10やろおい\n捕球48　　←　どこがやねん💢3やろカス",
+            "url": "https://x.com/tigerschannel72/status/2066075016073212230"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
@@ -6302,7 +6503,22 @@
         "state": "AVAILABLE_BOUNDED",
         "physical": [],
         "technique": [],
-        "powerpro_rating": [],
+        "powerpro_rating": [
+          {
+            "date": "2026-06-16T07:09:58Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "UNCLEAR",
+            "text": "パワプロ2026に収録された森下翔太の走力はどれ A90 B80 C70 D60 参考大山58",
+            "url": "https://x.com/tigerschannel72/status/2066780305625862256"
+          },
+          {
+            "date": "2026-06-16T09:43:09Z",
+            "disposition": "CURRENT_POWERPRO_RATING",
+            "direction": "TOO_LOW",
+            "text": "森下翔太の走力60とか70とか…パワプロ査定厳しすぎて草！大山58が基準やったんか",
+            "url": "https://x.com/an_web3/status/2066818855377481755"
+          }
+        ],
         "role": "OWNER_REVIEW_CONTEXT_ONLY"
       },
       "technique_separation": {
