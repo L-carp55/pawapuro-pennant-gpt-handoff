@@ -1,0 +1,64 @@
+name: speed-all100-integrated-owner-review
+
+on:
+  push:
+    branches:
+      - review/opus-speed-pre-owner-review-wave-20260816
+    paths:
+      - 'scripts/build_speed_all100_integrated_owner_review_20260818.mjs'
+      - '.github/workflows/speed-all100-integrated-owner-review.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build integrated all-100 recommendations
+        run: node scripts/build_speed_all100_integrated_owner_review_20260818.mjs
+      - name: Verify evidence and governance invariants
+        run: |
+          test -s outputs/derived/speed_all100_integrated_owner_review_20260818.json
+          test -s outputs/derived/speed_all100_integrated_owner_review_20260818.tsv
+          test -s docs/audits/speed_all100_integrated_owner_review_20260818.md
+          node - <<'NODE'
+          const fs=require('fs');
+          const x=JSON.parse(fs.readFileSync('outputs/derived/speed_all100_integrated_owner_review_20260818.json','utf8'));
+          if(x.population!==100 || x.players?.length!==100) throw new Error(`population=${x.population}/${x.players?.length}`);
+          if(x.owner_verdict_count!==0) throw new Error('owner verdict contamination');
+          if(Object.values(x.counts??{}).reduce((a,b)=>a+b,0)!==100) throw new Error('recommendation counts do not sum to 100');
+          const badStrong=x.players.filter(r=>/^STRONG/.test(r.recommendation_strength)
+            && r.integrated_review.peak_contribution_share>0.70
+            && !r.supporting_lanes.some(s=>s.lane!=='peak_speed'));
+          if(badStrong.length) throw new Error(`top-speed-only strong verdicts: ${badStrong.map(r=>r.player).join(',')}`);
+          const y=x.players.find(r=>r.player.replace(/\s/g,'')==='山口航輝');
+          const s=x.players.find(r=>r.player.replace(/\s/g,'')==='塩見泰隆');
+          if(y?.recommendation!=='POWERPRO_TOO_LOW') throw new Error(`山口 semantic regression: ${y?.recommendation}`);
+          if(s?.recommendation!=='POWERPRO_TOO_HIGH_OR_STALE') throw new Error(`塩見 semantic regression: ${s?.recommendation}`);
+          if(x.players.some(r=>r.guardrails?.some(g=>/SP-078 owner verdict/.test(g))===false)) throw new Error('missing non-verdict guard');
+          console.log(JSON.stringify({status:'PASS',counts:x.counts,confidence:x.confidence_counts,strength:x.strength_counts}));
+          NODE
+      - name: Commit and push generated review
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            outputs/derived/speed_all100_integrated_owner_review_20260818.json \
+            outputs/derived/speed_all100_integrated_owner_review_20260818.tsv \
+            docs/audits/speed_all100_integrated_owner_review_20260818.md
+          if git diff --cached --quiet; then
+            echo 'No generated changes'
+            exit 0
+          fi
+          git commit -m 'docs(speed): synthesize all-100 full-construct owner-review recommendations'
+          git pull --rebase origin review/opus-speed-pre-owner-review-wave-20260816
+          git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
