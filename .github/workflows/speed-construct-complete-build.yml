@@ -6,7 +6,7 @@ on:
       - 'scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs'
       - 'scripts/audit_sp021_anchor_bank_20260817.mjs'
       - 'scripts/augment_sp077_with_sp021_anchors_20260817.mjs'
-      - 'scripts/qa_sp077_construct_complete_owner_review_queue_20260817.mjs'
+      - 'scripts/qa_sp077_construct_complete_owner_review_queue_v2_20260817.mjs'
       - 'data/normalized/speed_historical_physical_measurements_2015_2026.json'
       - '.github/workflows/speed-construct-complete-build.yml'
   workflow_dispatch:
@@ -30,20 +30,20 @@ jobs:
         run: node scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs
       - name: Surface SP-021 high-confidence anchors
         run: node scripts/augment_sp077_with_sp021_anchors_20260817.mjs
-      - name: Independent construct-complete queue QA
-        run: node scripts/qa_sp077_construct_complete_owner_review_queue_20260817.mjs
+      - name: Independent construct-complete queue QA v2
+        run: node scripts/qa_sp077_construct_complete_owner_review_queue_v2_20260817.mjs
       - name: Verify generated artifacts exist
         run: |
           test -s outputs/derived/sp021_anchor_bank_inventory_20260817.json
           test -s outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json
-          test -s outputs/derived/qa_sp077_construct_complete_owner_review_queue_20260817.json
+          test -s outputs/derived/qa_sp077_construct_complete_owner_review_queue_v2_20260817.json
           test -s docs/reports/sp077_construct_complete_owner_review_queue_20260817.md
-          test -s docs/audits/sp077_construct_complete_owner_review_independent_qa_20260817.md
+          test -s docs/audits/sp077_construct_complete_owner_review_independent_qa_v2_20260817.md
       - name: Commit generated artifacts
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add outputs/derived/sp021_anchor_bank_inventory_20260817.json outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json outputs/derived/qa_sp077_construct_complete_owner_review_queue_20260817.json docs/reports/sp077_construct_complete_owner_review_queue_20260817.md docs/audits/sp077_construct_complete_owner_review_independent_qa_20260817.md
+          git add outputs/derived/sp021_anchor_bank_inventory_20260817.json outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json outputs/derived/qa_sp077_construct_complete_owner_review_queue_v2_20260817.json docs/reports/sp077_construct_complete_owner_review_queue_20260817.md docs/audits/sp077_construct_complete_owner_review_independent_qa_v2_20260817.md
           if git diff --cached --quiet; then
             echo 'No generated changes'
           else
