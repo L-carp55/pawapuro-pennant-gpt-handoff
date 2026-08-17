@@ -1,0 +1,76 @@
+name: speed-sp078-proposal-sp079-contract
+
+on:
+  push:
+    branches:
+      - review/opus-speed-pre-owner-review-wave-20260816
+    paths:
+      - 'scripts/build_sp078_owner_decision_proposal_and_sp079_contract_20260818.mjs'
+      - '.github/workflows/speed-sp078-proposal-sp079-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Freeze SP-078 ledger hash before proposal generation
+        run: sha256sum outputs/derived/sp078_owner_verdict_ledger_20260816.json > /tmp/sp078.before.sha256
+      - name: Build proposal and SP-079 contract
+        run: node scripts/build_sp078_owner_decision_proposal_and_sp079_contract_20260818.mjs
+      - name: Verify proposal populations, non-capture status and contract
+        run: |
+          test -s outputs/derived/sp078_owner_verdict_proposal_20260818.json
+          test -s outputs/derived/sp078_owner_verdict_proposal_20260818.tsv
+          test -s docs/reports/sp078_owner_verdict_proposal_20260818.md
+          test -s outputs/derived/sp079_preimplementation_contract_20260818.json
+          test -s docs/audits/sp079_preimplementation_contract_20260818.md
+          sha256sum --check /tmp/sp078.before.sha256
+          node - <<'NODE'
+          const fs=require('fs');
+          const p=JSON.parse(fs.readFileSync('outputs/derived/sp078_owner_verdict_proposal_20260818.json','utf8'));
+          const c=JSON.parse(fs.readFileSync('outputs/derived/sp079_preimplementation_contract_20260818.json','utf8'));
+          const l=JSON.parse(fs.readFileSync('outputs/derived/sp078_owner_verdict_ledger_20260816.json','utf8'));
+          if(p.status!=='PROPOSED_NOT_OWNER_APPROVED'||p.capture_allowed!==false||p.owner_approval_required!==true) throw new Error('proposal capture guard failed');
+          if(p.proposed_events?.length!==100||new Set(p.proposed_events.map(r=>r.queue_row_key)).size!==100) throw new Error('proposal population failed');
+          const expectedVerdicts={POWERPRO_PLAUSIBLE:83,UNRESOLVED:8,POWERPRO_TOO_HIGH_OR_STALE:5,POWERPRO_TOO_LOW:4};
+          for(const [k,v] of Object.entries(expectedVerdicts)) if(p.verdict_counts?.[k]!==v) throw new Error(`${k}=${p.verdict_counts?.[k]}, expected ${v}`);
+          const expectedBatches={A_BULK_COMPATIBLE_OR_NO_TARGET:88,B_DIRECTIONAL_REVIEW:9,C_MATERIAL_CONFLICT:3};
+          for(const [k,v] of Object.entries(expectedBatches)) if(p.batch_counts?.[k]!==v) throw new Error(`${k}=${p.batch_counts?.[k]}, expected ${v}`);
+          if(p.proposed_events.some(r=>r.capture_ready!==false||Object.values(r.owner_event_fields??{}).some(v=>v!==null))) throw new Error('proposal contains fabricated owner event fields');
+          if(l.owner_verdict_count!==0||l.records?.length!==0) throw new Error('SP-078 mutated');
+          if(c.status!=='PREIMPLEMENTATION_CONTRACT_ONLY_NOT_EXECUTED'||c.scale_policy?.absolute_0_100_scale_final!==false) throw new Error('SP-079/scale boundary failed');
+          if(!c.entry_conditions?.some(x=>/exactly 100 active owner verdicts/.test(x))) throw new Error('100-verdict entry gate missing');
+          console.log(JSON.stringify({status:'PASS',verdicts:p.verdict_counts,batches:p.batch_counts,ledger:l.owner_verdict_count,sp079:c.status}));
+          NODE
+      - name: Re-run canonical speed gates
+        run: |
+          node scripts/qa_speed_task_registry.mjs
+          node scripts/qa_speed_construct_traceability_20260817.mjs
+          node scripts/qa_sp078_integrity_lock_20260817.mjs
+      - name: Commit generated checkpoint artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            outputs/derived/sp078_owner_verdict_proposal_20260818.json \
+            outputs/derived/sp078_owner_verdict_proposal_20260818.tsv \
+            docs/reports/sp078_owner_verdict_proposal_20260818.md \
+            outputs/derived/sp079_preimplementation_contract_20260818.json \
+            docs/audits/sp079_preimplementation_contract_20260818.md
+          if git diff --cached --quiet; then
+            echo 'No generated changes'
+            exit 0
+          fi
+          git commit -m 'docs(speed): prepare SP-078 owner checkpoint and SP-079 contract'
+          git pull --rebase origin review/opus-speed-pre-owner-review-wave-20260816
+          git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
