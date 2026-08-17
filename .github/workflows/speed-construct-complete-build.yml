@@ -5,13 +5,20 @@ on:
     paths:
       - 'scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs'
       - 'scripts/repair_sp077_nullable_number_builder_20260817.mjs'
+      - 'scripts/repair_sp077_community_semantic_mapping_20260817.mjs'
+      - 'scripts/repair_speed_construct_traceability_require_community_semantic_qa_20260817.mjs'
       - 'scripts/audit_sp021_anchor_bank_20260817.mjs'
       - 'scripts/augment_sp077_with_sp021_anchors_20260817.mjs'
       - 'scripts/qa_sp077_construct_complete_owner_review_queue_v2_20260817.mjs'
+      - 'scripts/qa_sp077_community_semantic_propagation_20260817.mjs'
       - 'scripts/qa_speed_construct_traceability_20260817.mjs'
       - 'scripts/diagnose_sp077_physical_multiset_mismatch_20260817.mjs'
+      - 'scripts/build_sp077_priority_owner_review_packet_20260817.mjs'
       - 'data/normalized/speed_historical_physical_measurements_2015_2026.json'
+      - 'outputs/derived/speed_x_current_powerpro_clean_20260816.jsonl'
+      - 'outputs/derived/sp075_stale_conflict_rediagnosis_v4_20260816.json'
       - 'docs/state/speed_construct_traceability_contract_20260817.tsv'
+      - 'docs/state/speed_owner_review_integrity_lock_20260817.json'
       - '.github/workflows/speed-construct-complete-build.yml'
   workflow_dispatch:
 
@@ -25,11 +32,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Repair null-preservation bug in construct builder
         run: node scripts/repair_sp077_nullable_number_builder_20260817.mjs
+      - name: Repair Community canonical semantic field mapping
+        run: node scripts/repair_sp077_community_semantic_mapping_20260817.mjs
+      - name: Make Community semantic QA mandatory in global traceability
+        run: node scripts/repair_speed_construct_traceability_require_community_semantic_qa_20260817.mjs
       - name: Audit SP-021 historical anchor bank
         run: node scripts/audit_sp021_anchor_bank_20260817.mjs
       - name: Generate construct-complete queue
@@ -40,23 +52,42 @@ jobs:
         run: node scripts/diagnose_sp077_physical_multiset_mismatch_20260817.mjs
       - name: Independent construct-complete queue QA v2
         run: node scripts/qa_sp077_construct_complete_owner_review_queue_v2_20260817.mjs
+      - name: Source-derived Community semantic propagation QA
+        run: node scripts/qa_sp077_community_semantic_propagation_20260817.mjs
       - name: Global construct traceability QA while locked
         run: node scripts/qa_speed_construct_traceability_20260817.mjs
+      - name: Regenerate priority-23 owner-review packet
+        run: node scripts/build_sp077_priority_owner_review_packet_20260817.mjs
       - name: Verify generated artifacts exist
         run: |
           test -s outputs/derived/sp021_anchor_bank_inventory_20260817.json
           test -s outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json
           test -s outputs/derived/qa_sp077_construct_complete_owner_review_queue_v2_20260817.json
+          test -s outputs/derived/qa_sp077_community_semantic_propagation_20260817.json
+          test -s outputs/derived/sp077_priority23_owner_review_packet_20260817.json
           test -s docs/reports/sp077_construct_complete_owner_review_queue_20260817.md
+          test -s docs/reports/sp077_priority23_owner_review_packet_20260817.md
           test -s docs/audits/sp077_construct_complete_owner_review_independent_qa_v2_20260817.md
-      - name: Commit source repair and generated artifacts
+          test -s docs/audits/sp077_community_semantic_propagation_qa_20260817.md
+      - name: Commit source repairs and regenerated artifacts
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs outputs/derived/sp021_anchor_bank_inventory_20260817.json outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json outputs/derived/qa_sp077_construct_complete_owner_review_queue_v2_20260817.json docs/reports/sp077_construct_complete_owner_review_queue_20260817.md docs/audits/sp077_construct_complete_owner_review_independent_qa_v2_20260817.md
+          git add \
+            scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs \
+            scripts/qa_speed_construct_traceability_20260817.mjs \
+            outputs/derived/sp021_anchor_bank_inventory_20260817.json \
+            outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json \
+            outputs/derived/qa_sp077_construct_complete_owner_review_queue_v2_20260817.json \
+            outputs/derived/qa_sp077_community_semantic_propagation_20260817.json \
+            outputs/derived/sp077_priority23_owner_review_packet_20260817.json \
+            docs/reports/sp077_construct_complete_owner_review_queue_20260817.md \
+            docs/reports/sp077_priority23_owner_review_packet_20260817.md \
+            docs/audits/sp077_construct_complete_owner_review_independent_qa_v2_20260817.md \
+            docs/audits/sp077_community_semantic_propagation_qa_20260817.md
           if git diff --cached --quiet; then
             echo 'No generated changes'
           else
-            git commit -m 'fix(speed): regenerate construct-complete queue against current contract'
+            git commit -m 'fix(speed): preserve Community semantics in owner-review queue'
             git push origin HEAD:${GITHUB_REF_NAME}
           fi
