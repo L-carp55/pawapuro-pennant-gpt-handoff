@@ -7,6 +7,7 @@ on:
       - 'scripts/audit_sp021_anchor_bank_20260817.mjs'
       - 'scripts/augment_sp077_with_sp021_anchors_20260817.mjs'
       - 'scripts/qa_sp077_construct_complete_owner_review_queue_v2_20260817.mjs'
+      - 'scripts/diagnose_sp077_physical_multiset_mismatch_20260817.mjs'
       - 'data/normalized/speed_historical_physical_measurements_2015_2026.json'
       - '.github/workflows/speed-construct-complete-build.yml'
   workflow_dispatch:
@@ -30,6 +31,8 @@ jobs:
         run: node scripts/build_sp077_construct_complete_owner_review_queue_20260817.mjs
       - name: Surface SP-021 high-confidence anchors
         run: node scripts/augment_sp077_with_sp021_anchors_20260817.mjs
+      - name: Diagnose remaining physical multiset mismatches
+        run: node scripts/diagnose_sp077_physical_multiset_mismatch_20260817.mjs
       - name: Independent construct-complete queue QA v2
         run: node scripts/qa_sp077_construct_complete_owner_review_queue_v2_20260817.mjs
       - name: Verify generated artifacts exist
