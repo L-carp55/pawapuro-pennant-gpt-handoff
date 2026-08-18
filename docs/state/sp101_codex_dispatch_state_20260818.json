@@ -1,0 +1,38 @@
+{
+  "schema_version": "sp101_codex_dispatch_state_20260818",
+  "generated_at": "2026-08-18",
+  "status": "READY_TO_DISPATCH_TO_CODEX",
+  "repository": "L-carp55/pawapuro-pennant-gpt-handoff",
+  "execution_branch": "codex/speed-sp101-expanded-the-show-universe-20260818",
+  "baseline_review_sha": "4aef2779f438ec53f5bcc841fc3498effecbc5c5",
+  "dispatch_prompt": "docs/tasks/CODEX_SP101_EXECUTION_PROMPT_20260818.md",
+  "authoritative_task_spec": "docs/tasks/SP101_EXPANDED_THE_SHOW_NPB_UNIVERSE_20260818.md",
+  "mandatory_multibridge_addendum": "docs/tasks/SP101_MULTI_BRIDGE_INFERENCE_ADDENDUM_20260818.md",
+  "downstream_sp102_task": "docs/tasks/SP102_TARGETED_2CH_VIDEO_COMMENT_RESCUE_20260818.md",
+  "dispatch_policy": {
+    "delegate_to_codex": [
+      "large-scale identity reconstruction",
+      "cross-repository The Show data integration",
+      "NPB/MLB transition timeline construction",
+      "shared-indicator analog matching",
+      "dual game-behavior modeling",
+      "latent multi-trait and ordinal inference implementation",
+      "temporal/inertia/transition analysis",
+      "route ablation and automated QA",
+      "artifact generation, commit and push"
+    ],
+    "reserve_for_browser_owner_review": [
+      "independent review of Codex artifacts",
+      "cross-route interpretation",
+      "player-level adjudication",
+      "owner-verdict proposal design",
+      "final judgment on whether SP-101 is actually DONE_VALIDATED"
+    ]
+  },
+  "hard_guards": {
+    "sp078_owner_verdict_count_expected": 0,
+    "run_sp079": false,
+    "run_sp102_comment_collection": false,
+    "start_shoulder": false
+  }
+}
