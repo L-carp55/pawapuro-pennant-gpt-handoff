@@ -1,0 +1,99 @@
+{
+  "schema_version": "sp101_common_metric_bridge_feasibility_20260818",
+  "generated_at": "2026-08-18",
+  "status": "FEASIBLE_AS_GAME_APPRAISAL_QA_NOT_PHYSICAL_TRUTH",
+  "scope": "speed only; no shoulder work; no SP-078 verdict; no SP-079 rating",
+  "source_snapshot": {
+    "path": "/mnt/data/07_pennant.db",
+    "project_equivalent": "data/pennant.db snapshot",
+    "note": "Counts and proof-of-concept calculations were reproduced from the available SQLite snapshot."
+  },
+  "available_data_counts": {
+    "the_show_rating_rows": 17476,
+    "the_show_rating_unique_name_keys": 5024,
+    "the_show_live_rows": 10400,
+    "the_show_live_unique_name_keys": 4424,
+    "the_show_bridge_rows_lower_bound": 47,
+    "mlb_bridge_rows_lower_bound": 79,
+    "pawapuro_full_rows": 3229,
+    "pawapuro_unique_normalized_names": 943,
+    "pawapuro_full_link_rows": 1879,
+    "pawapuro_linked_unique_proeye_ids": 682,
+    "npb_official_batting_rows": 17908,
+    "npb_baserunning_advance_events": 22459,
+    "npb_infield_grounder_events": 31003,
+    "bm_bat_rows": 5171,
+    "bm_fld_rows": 14488,
+    "same_year_powerpro_batting_rows": 1879,
+    "same_year_powerpro_batting_unique_players": 682,
+    "same_year_advanced_bm_bat_rows_2020_2022_2024": 806,
+    "same_year_advanced_bm_fld_rows_2020_2022_2024": 801
+  },
+  "proofs_of_concept": {
+    "the_show_speed_vs_statcast_sprint_speed": {
+      "population": "47 players in the existing lower-bound mlb_bridge × the_show_bridge intersection",
+      "values": "multi-year averages; not same-time player-year observations",
+      "pearson_r": 0.8730270517881524,
+      "spearman_rho": 0.8798484370093571,
+      "interpretation": "The Show Speed carries substantial physical-speed signal in this bounded historical bridge, but time mixing and selection prevent direct current-NPB conversion."
+    },
+    "npb_common_metric_neighborhood_to_powerpro_speed": {
+      "population": {
+        "rows": 968,
+        "unique_players": 393,
+        "minimum_pa": 100,
+        "powerpro_works": [2013, 2014, 2016, 2018, 2020, 2022, 2024]
+      },
+      "features": [
+        "season-standardized stolen-base attempt rate",
+        "season-standardized stolen-base success rate",
+        "season-standardized triple rate",
+        "season-standardized GIDP rate",
+        "season-standardized run rate",
+        "season-standardized ball-in-play rate",
+        "season-standardized single rate",
+        "season-standardized double rate"
+      ],
+      "model": "distance-weighted k-nearest-neighbor analog estimator, k=30",
+      "validation": "5-fold GroupKFold by proeye_id; the same player never appears in both train and test",
+      "mae_powerpro_points": 8.171571461445634,
+      "r_squared": 0.5050631337071354,
+      "prediction_correlation": 0.7164252220399188,
+      "interpretation": "Even basic shared NPB indicators contain enough signal to reconstruct a substantial portion of historical PowerPro rating behavior. This validates an analog/behavior-QA lane, not a physical-speed teacher."
+    },
+    "npb_common_metric_supervised_screen": {
+      "population": "same 968 rows / 393 players / PA>=100",
+      "ridge_group_cv": {
+        "mae_powerpro_points": 7.993192596870158,
+        "r_squared": 0.5225785254552062,
+        "prediction_correlation": 0.7229130575677075
+      },
+      "extra_trees_group_cv": {
+        "mae_powerpro_points": 7.60386413231822,
+        "r_squared": 0.5743829559812825,
+        "prediction_correlation": 0.7604066734601874
+      },
+      "interpretation": "Model choice changes performance, so route uncertainty and ablation must be explicit. Nonlinear models are screening tools until temporally held-out and player-clustered QA passes."
+    }
+  },
+  "required_role_separation": {
+    "physical_latent_path": "must remain PowerPro-label-free and must not use The Show as direct measurement",
+    "game_appraisal_behavior_path": "may model The Show and PowerPro rating behavior from common indicators",
+    "decision_use": "compare independent physical estimate, The Show-implied appraisal, PowerPro-behavior expectation and contextual evidence; never replace the physical estimate with a game label"
+  },
+  "mandatory_caveats": [
+    "The existing 47-player bridge is a lower-bound selected sample and uses multi-year averages.",
+    "Basic batting/baserunning outcomes mix physical speed, technique, opportunity, batting quality, park and managerial usage.",
+    "League-season percentile normalization and opportunity controls are mandatory before MLB↔NPB analog matching.",
+    "Speed, Stealing and Baserunning Aggressiveness must remain separate latent traits.",
+    "A poor analog match must remain missing or wide-range; no forced nearest neighbor is allowed.",
+    "PowerPro labels describe historical game appraisal behavior and cannot serve as physical ground truth.",
+    "The Show edition effects must be modeled separately rather than pooled without controls."
+  ],
+  "decision": {
+    "route_id": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+    "verdict": "MANDATORY_SP101_ROUTE",
+    "priority": "P0",
+    "next_step": "Build player-year common-feature panels for MLB and NPB, perform mutual-nearest-neighbor/optimal-transport matching with balance diagnostics, and emit player-specific analog receipts plus route-ablation QA."
+  }
+}
