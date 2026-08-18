@@ -1,0 +1,37 @@
+{
+  "schema_version": "speed_sp101_second_semantic_repair_state_20260819",
+  "generated_at": "2026-08-19",
+  "task_id": "SP-101",
+  "effective_status": "PARTIAL_INFERENCE_SEMANTICS_REPAIR_REQUIRED",
+  "execution_branch": "codex/speed-sp101-expanded-the-show-universe-20260818",
+  "audited_repair_commit": "ffb397775413a5e8b5ab23ff1bb5b1b221f6137e",
+  "second_audit_commit": "085058be7e9b7fed32dfd6cc73bf978b097b3624",
+  "repair_task_commit": "30e1623e948cf89e7e75ae3c9fa8a2ec3c35127b",
+  "second_audit": "docs/audits/sp101_second_independent_semantic_audit_20260819.md",
+  "repair_task": "docs/tasks/CODEX_SP101_INFERENCE_SEMANTIC_REPAIR_20260819.md",
+  "valid_foundation_preserved": [
+    "repaired identity reconciliation",
+    "official MLB regular-season appearance years",
+    "MLB shared-indicator collection",
+    "re-keyed The Show Live panel",
+    "actual MLB-vs-NPB transition source foundation",
+    "physical evidence and historical PowerPro context",
+    "owner lock and empty append-only SP-078 ledger"
+  ],
+  "blocking_findings": [
+    "MB-01 labels three methods but reuses one L2 nearest-candidate computation",
+    "MB-02 grouped and forward holdouts are receipts rather than executed held-out validation",
+    "MB-07 creates unsupported signed faster/slower edges from similarity, one-player community context, and transition direction",
+    "MB-16 multi-lane availability logic is incorrect and conflict logic does not implement the full lane semantics",
+    "MB-18 1800-cell matrix is not genuine route-removal-and-recompute ablation",
+    "SP-102 target freeze depends on the invalid MB-16/MB-18 outputs and must be regenerated"
+  ],
+  "governance": {
+    "owner_review_locked": true,
+    "sp078_owner_verdict_count_expected": 0,
+    "sp102_blocked": true,
+    "sp079_blocked": true,
+    "shoulder_blocked": true
+  },
+  "exact_next_step": "Continue the isolated SP-101 Codex worktree after fast-forwarding to the remote execution-branch HEAD, read CODEX_SP101_INFERENCE_SEMANTIC_REPAIR_20260819.md and execute only the targeted inference-semantic repair. Do not repeat the large MLB/The Show collection unless a source defect is demonstrated."
+}
