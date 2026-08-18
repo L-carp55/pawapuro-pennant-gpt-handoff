@@ -1,0 +1,30 @@
+{
+  "schema_version": "speed_sp101_activation_state_20260818",
+  "generated_at": "2026-08-18",
+  "task_id": "SP-101",
+  "status": "DISPATCH_READY",
+  "category": "data_external_game_identity_temporal_transition",
+  "owner_review_block": true,
+  "speed_gate_block": true,
+  "shoulder_block": true,
+  "active_review_branch": "review/opus-speed-pre-owner-review-wave-20260816",
+  "execution_branch": "codex/speed-sp101-expanded-the-show-universe-20260818",
+  "execution_branch_created_from_commit": "acc19e10a96c14a3433da9a251309c814594f398",
+  "task_specification": "docs/tasks/SP101_EXPANDED_THE_SHOW_NPB_UNIVERSE_20260818.md",
+  "owner_clarification": "docs/state/speed_owner_clarification_the_show_scope_20260818.md",
+  "lower_bound_census": "outputs/derived/sp101_the_show_npb_universe_census_20260818.json",
+  "proposal_supersession": "outputs/derived/sp078_proposal_supersession_receipt_sp101_20260818.json",
+  "canonical_owner_ledger": {
+    "path": "outputs/derived/sp078_owner_verdict_ledger_20260816.json",
+    "expected_records": 0,
+    "expected_owner_verdict_count": 0
+  },
+  "exact_next_step": "Dispatch the committed SP-101 task specification to Codex on the execution branch, require parallel sub-agents and GitHub-persisted outputs, then review the pushed branch before rebuilding the all-100 owner packet.",
+  "prohibited_next_steps": [
+    "approve or capture the superseded SP-078 proposal",
+    "run SP-079",
+    "start shoulder appraisal",
+    "treat 6/7, 47, or 79 as the eligible universe ceiling"
+  ],
+  "registry_materialization_note": "The SP-101 activation script and workflow are committed. Because connector-authored pushes did not materialize the generated registry transition during this session, this explicit state receipt, the owner-review lock, task specification, census, supersession receipt, and execution branch are the current durable SP-101 handoff. The task registry must be updated during SP-101 integration before owner review can unlock."
+}
