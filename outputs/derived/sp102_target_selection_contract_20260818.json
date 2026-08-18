@@ -1,0 +1,114 @@
+{
+  "schema_version": "sp102_target_selection_contract_20260818",
+  "generated_at": "2026-08-18",
+  "status": "CONTRACT_ONLY_WAITING_FOR_SP101",
+  "scope": "speed_only",
+  "prerequisites": [
+    "SP-101 is DONE_VALIDATED",
+    "all mandatory SP-101 P0 inference routes are executed or closed with measured negative findings",
+    "the current-100 multibridge evidence packet exists",
+    "the route-ablation and requirements-to-decision matrices exist",
+    "the canonical SP-078 owner ledger remains empty"
+  ],
+  "selection_timing": "Freeze target states only after SP-101 completion and before any video/comment search.",
+  "target_states": [
+    "TARGETED_LOW_CONFIDENCE",
+    "TARGETED_MATERIAL_CONFLICT",
+    "TARGETED_OWNER_OVERRIDE",
+    "NOT_TARGETED_SUFFICIENT_CONFIDENCE",
+    "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN"
+  ],
+  "target_eligibility": [
+    "final confidence LOW or VERY_LOW",
+    "uncertainty interval is in the widest predeclared tier",
+    "at least two independent route families disagree on direction or ordinal band",
+    "route-family ablation changes recommendation or practical band",
+    "acceleration/end-to-end evidence is materially missing and the decision remains sensitive",
+    "independent physical, The Show-implied and PowerPro-behavior estimates materially disagree",
+    "current injury/age/trajectory question remains unresolved",
+    "explicit owner override"
+  ],
+  "information_gain_factors": [
+    "confidence deficit",
+    "decision sensitivity under ablation",
+    "number and severity of route disagreements",
+    "missing evidence family that comments could plausibly illuminate",
+    "expected relevant video/comment availability",
+    "recency and event specificity",
+    "expected source independence"
+  ],
+  "not_targeted_rules": [
+    "Do not target merely because many videos exist.",
+    "Do not globally crawl high-confidence route-stable players.",
+    "Do not treat absence of relevant videos or disabled comments as evidence of slow speed.",
+    "Do not force a target when expected information gain is negligible."
+  ],
+  "source_layers": [
+    "VIDEO_NARRATION_OR_EDITORIAL",
+    "QUOTED_2CH_5CH_THREAD_TEXT",
+    "YOUTUBE_TOP_LEVEL_COMMENT",
+    "YOUTUBE_COMMENT_REPLY",
+    "LINKED_PRIMARY_SOURCE_DISCOVERED_IN_COMMENT"
+  ],
+  "semantic_classes": [
+    "CURRENT_REALWORLD_SPEED_PHYSICAL",
+    "CURRENT_INITIAL_ACCELERATION_OR_H2F",
+    "CURRENT_END_TO_END_OR_FULL_EFFORT",
+    "CURRENT_TECHNIQUE_CONTEXT",
+    "HISTORICAL_TRAJECTORY",
+    "INJURY_AGE_DECLINE_CONTEXT",
+    "RELATIVE_ORDINAL_COMPARISON",
+    "CURRENT_POWERPRO_RATING_OPINION",
+    "PRIMARY_SOURCE_DISCOVERY",
+    "AMBIGUOUS_TIME_OR_PLAYER",
+    "REPOST_OR_QUOTE_NOT_INDEPENDENT",
+    "MEME_SARCASM_JOKE",
+    "GENERAL_FANDOM_NO_SPEED_CLAIM",
+    "SPAM_OR_BOT"
+  ],
+  "allowed_decision_uses": [
+    "CHANGED_DIRECTION",
+    "SUPPORTED_EXISTING_DIRECTION",
+    "CONTRADICTED_EXISTING_DIRECTION",
+    "NARROWED_UNCERTAINTY",
+    "WIDENED_UNCERTAINTY",
+    "DISCOVERED_PRIMARY_SOURCE",
+    "AVAILABLE_NOT_DECISION_EFFECTIVE",
+    "NO_USABLE_EVIDENCE"
+  ],
+  "maximum_influence": {
+    "individual_comment": "LOW_CONTEXT_ONLY",
+    "independent_specific_time_aligned_clusters": "LOW_CONFIDENCE_DIRECTIONAL_RESCUE_MAXIMUM",
+    "high_confidence_verdict_from_comments_only": false,
+    "numeric_rating_from_comments_only": false,
+    "direct_physical_measurement_from_comments": false
+  },
+  "independence_unit": "player × referenced season/game/event × video × channel × thread × phrase-template × source-layer, with transient run-scoped same-author clustering",
+  "privacy_policy": {
+    "persist_public_username": false,
+    "persist_personal_profile": false,
+    "same_author_detection": "non-reversible run-scoped token only",
+    "raw_identifier_retention": "discard after QA unless platform policy and explicit necessity permit a bounded receipt"
+  },
+  "required_outputs": [
+    "outputs/derived/sp101_residual_low_confidence_target_set.json",
+    "outputs/derived/sp102_video_candidate_manifest.json",
+    "outputs/derived/sp102_video_comment_collection_manifest.json",
+    "outputs/derived/sp102_video_comment_normalized.jsonl",
+    "outputs/derived/sp102_origin_event_clusters.json",
+    "outputs/derived/sp102_player_evidence_summary.json",
+    "outputs/derived/sp102_primary_source_discovery_receipts.json",
+    "outputs/derived/sp102_decision_use_and_ablation.json",
+    "outputs/derived/sp102_coverage_qa.json",
+    "docs/audits/sp102_targeted_video_comment_rescue.md"
+  ],
+  "governance": {
+    "owner_review_block": true,
+    "speed_gate_block": true,
+    "sp079_block": true,
+    "shoulder_block": true,
+    "owner_verdict_count_expected": 0,
+    "zero_target_allowed": "only as a measured negative finding after SP-101",
+    "zero_usable_evidence_allowed": "only with explicit searched denominators and failure/missingness states"
+  }
+}
