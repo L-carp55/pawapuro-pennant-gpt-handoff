@@ -1,0 +1,43 @@
+{
+  "schema_version": "qa_sp101_multibridge_design_20260818",
+  "generated_at": "2026-08-18T05:18:40.383Z",
+  "status": "PASS",
+  "route_count": 18,
+  "p0_route_count": 12,
+  "p0_routes": [
+    "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+    "MB-02_DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS",
+    "MB-03_MULTI_TRAIT_LATENT_MEASUREMENT_MODEL",
+    "MB-04_WITHIN_PLAYER_TEMPORAL_DELTA",
+    "MB-05_LEAGUE_TRANSITION_FIXED_EFFECTS",
+    "MB-06_RATING_INERTIA_AND_STALENESS_MODEL",
+    "MB-07_PAIRWISE_ORDINAL_EVIDENCE_GRAPH",
+    "MB-08_DISTRIBUTION_AND_TAIL_CALIBRATION",
+    "MB-09_THE_SHOW_ROSTER_UPDATE_RESPONSE",
+    "MB-16_CROSS_SOURCE_CONSENSUS_AND_DISAGREEMENT",
+    "MB-17_NEGATIVE_CONTROL_AND_PLACEBO_SUITE",
+    "MB-18_DECISION_USE_AND_ABLATION_RECEIPT"
+  ],
+  "feasibility": {
+    "the_show_sprint_pearson_r": 0.8730270517881524,
+    "npb_analog_group_cv_r2": 0.5050631337071354,
+    "npb_analog_group_cv_mae": 8.171571461445634
+  },
+  "governance": {
+    "owner_review_locked": true,
+    "owner_verdict_count": 0,
+    "sp101_status": "PARTIAL",
+    "sp079_status": "BLOCKED_DEPENDENCY",
+    "shoulder_work": false
+  },
+  "source_hashes": {
+    "activation": "1034bae27b17e0c1636b5d23cdf916fd7b01a2042fe24860ce105c1b45e1832b",
+    "addendum": "dc9713aeb1a62592ff5b5819646b4721937185c8cc0dbde5ecf53cf5a5cbf30c",
+    "routes": "dd2731ab541683fc258c7aebd69cf51185447fcb31ebc10f197c2f9f963bec5c",
+    "feasibility": "10b94ae277c33488f7352297431ad99a5d37ff93c994245f291a604223f48ab3",
+    "feasibilityAudit": "e461f71d83f4f0d66484dd56ed2b70590b5e55194f4a4af477a5b33ac9a6ff46",
+    "registry": "e06977d91e69c1e2d0ce7ddabfd7ef1f52d3c4d598dfe4d192b57ef16af3631f",
+    "lock": "73311082d25d1a70ba00887f899ce6eefd3899b8577ef920683a30ff4b096e08",
+    "ledger": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0"
+  }
+}
