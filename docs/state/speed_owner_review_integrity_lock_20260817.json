@@ -1,13 +1,15 @@
 {
   "schema_version": "speed_owner_review_integrity_lock_20260817",
   "created_at": "2026-08-17",
-  "locked": false,
-  "reason_code": "COMMUNITY_SEMANTIC_FIELD_MAPPING_DROPPED_CONTEXT",
-  "summary": "A post-unlock human-readable priority review exposed a semantic field-mapping defect in the construct-complete Community lane: the canonical clean-X source uses owner_disposition/claim_lane/text_or_excerpt/published_at, while the construct builder classified legacy disposition/text/date fields. The lane object existed and structural QA passed, but physical/technique/rating subrows could be silently empty. No owner verdict was recorded. Owner review is re-locked until source-derived semantic multiset QA proves exact Community propagation and the construct queue is regenerated/rebound.",
+  "locked": true,
+  "reason_code": "THE_SHOW_ELIGIBLE_UNIVERSE_UNDERCOUNT_AND_EVIDENCE_UTILIZATION_INCOMPLETE",
+  "summary": "Owner clarification established that the prior 6-player/7-pair same-time MLB The Show comparison sample was incorrectly treated as if it bounded the usable player universe. It only bounded one unrestricted same-time numeric-bridge experiment. The eligible evidence universe includes every NPB-linked player with MLB promotion/appearance and eligible The Show history, including current-100 players, historical NPB-before-2026 players, Japanese NPB-to-MLB players, foreign MLB-to-NPB players, NPB-to-MLB-to-NPB returnees, and multi-cycle transitions. Existing local bridges are incomplete lower bounds, and the current SP-078 proposal did not consume this universe. The owner ledger remains empty. Owner review is re-locked pending SP-101 identity, temporal-transition, coverage, and requirements-to-decision utilization QA.",
   "invalidated_actions": [
-    "record new SP-078 owner verdicts until Community semantic propagation is revalidated",
-    "treat the current construct-complete queue as sufficient for owner decisions before semantic revalidation",
-    "run or close SP-079 final practical reappraisal",
+    "record new SP-078 owner verdicts until the expanded MLB The Show evidence universe is integrated and the all-100 review is rebuilt",
+    "approve or capture any verdict from outputs/derived/sp078_owner_verdict_proposal_20260818.json",
+    "treat 6 players / 7 pairs, 47 The Show bridge rows, or 79 MLB bridge rows as an eligibility ceiling",
+    "run or close SP-079 before SP-101 and a rebuilt all-100 utilization review are validated",
+    "claim all usable MLB The Show evidence has been consumed",
     "claim owner review ready or Speed Gate ready"
   ],
   "preserved_valid_work": [
@@ -20,55 +22,75 @@
     "SP-022 statistical/pairwise context",
     "SP-075 canonical owner-filtered Community source data",
     "SP-078 append-only infrastructure and its zero-verdict ledger",
-    "12-lane construct traceability contract"
+    "12-lane construct traceability infrastructure",
+    "direct Statcast Sprint Speed, T10, T30, T90 and other physical measurements already collected",
+    "MLB The Show source panels and audits in L-carp55/claude-code-hub",
+    "the active 100-row construct queue as evidence infrastructure, not an approval-complete packet"
   ],
   "construct_complete_candidate": "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json",
   "construct_complete_independent_qa": "outputs/derived/qa_sp077_construct_complete_owner_review_queue_v2_20260817.json",
   "community_semantic_qa": "outputs/derived/qa_sp077_community_semantic_propagation_20260817.json",
   "current_owner_verdict_count_expected": 0,
-  "relocked_at": "2026-08-17T09:40:00Z",
-  "relock_trigger": "priority23 packet showed known CURRENT_REALWORLD_SPEED_PHYSICAL rows as none",
+  "relocked_at": "2026-08-18T13:30:00+09:00",
+  "relock_trigger": "owner clarification: every MLB-promoted NPB-linked player and historical NPB/MLB transition cohort is eligible for role-appropriate MLB The Show use",
   "semantic_repair_conditions": [
     "construct builder maps clean-X canonical fields owner_disposition, claim_lane/source_claim_lane, text_or_excerpt, published_at and source_url",
     "source-derived Community semantic QA compares per-player record-id multisets of CURRENT_REALWORLD_SPEED_PHYSICAL, CURRENT_TECHNIQUE_CONTEXT and CURRENT_POWERPRO_RATING rows between clean-X source and construct queue",
-    "known regression fixtures include at least 中川圭太 physical, 古賀悠斗 physical, 山口航輝 physical+technique, 塩見泰隆 physical, 岩田幸宏 physical, 柳田悠岐 physical",
-    "regenerated construct queue passes semantic QA with zero missing/extra/misclassified source rows",
-    "SP-077 and SP-078 are revalidated/rebound while ledger remains empty",
-    "global construct traceability and registry QA pass after final unlock"
+    "known Community regression fixtures remain passing",
+    "Community semantic QA has zero missing, extra, or misclassified rows"
+  ],
+  "sp101_scope_clarification": "docs/state/speed_owner_clarification_the_show_scope_20260818.md",
+  "sp101_task": "docs/tasks/SP101_EXPANDED_THE_SHOW_NPB_UNIVERSE_20260818.md",
+  "sp101_lower_bound_census": "outputs/derived/sp101_the_show_npb_universe_census_20260818.json",
+  "sp101_unlock_conditions": [
+    "all NPB-before-2026 players are screened for MLB promotion/appearance and The Show Live history with an explicit denominator",
+    "all current-100 players receive an explicit MLB/The Show coverage state with no silent omission",
+    "canonical NPB, ProEye, MLBAM, The Show UUID and name crosswalk passes ambiguity and negative-control QA",
+    "NPB-to-MLB, MLB-to-NPB, NPB-to-MLB-to-NPB and multi-cycle transition segments are time-indexed rather than lifetime-averaged",
+    "The Show Live Speed remains separate from Stealing and Baserunning Aggressiveness, and non-Live cards are isolated",
+    "same-time, cross-time trajectory, transition-calibration, ordinal, and population-scale roles are separately represented",
+    "historical and cross-time The Show rows are discounted by time and transition context rather than discarded",
+    "requirements-to-decision utilization receipts prove both evidence availability and actual decision influence for all 100 players",
+    "all 100 players receive player-specific adjudication rather than generic pass-through rationale",
+    "a new SP-078 proposal is generated from the rebuilt review while the canonical ledger remains empty",
+    "registry, construct, identity, coverage, determinism, and SP-078 integrity QA all pass"
   ],
   "unlock_conditions": [
-    "all 12 required construct lanes remain INTEGRATED and represented on every current-100 queue row with explicit missingness where needed",
-    "independent construct-complete structural QA passes with zero failures",
-    "Community semantic propagation QA passes with zero failures and exact record-id/category/content propagation from canonical clean-X active rows",
-    "top speed remains one lane only and cannot substitute for acceleration/H2F/T90 or short-distance/historical physical lanes",
-    "source-specific hp_to_1b_sec provenance failure remains fail-closed without deleting independent H2F/acceleration evidence",
-    "SP-078 ledger remains records=[] and owner_verdict_count=0 before rebind",
-    "SP-078 is rebound to the exact regenerated construct-complete queue hash and append-only/binding QA passes",
-    "SP-077 and SP-078 are DONE_VALIDATED before lock transition",
-    "global construct traceability QA passes with locked=false",
+    "all original construct and Community semantic QA conditions remain passing",
+    "SP-101 expanded MLB The Show evidence universe is DONE_VALIDATED",
+    "the rebuilt current-100 packet includes every active requirement family or explicit bounded missingness/exclusion receipt",
+    "the superseded SP-078 proposal is not reused",
+    "SP-078 ledger remains records=[] and owner_verdict_count=0 before a new proposal and rebind",
     "task-registry QA reports zero owner-review dependency blockers",
     "no owner verdict is captured before all preceding conditions pass"
   ],
-  "owner_review_unlock_rule": "Changing locked=false by itself is invalid. Source-derived semantic record-id multiset QA is an additional mandatory unlock condition alongside the structural traceability gates, exact queue-hash ledger rebind, and final registry QA.",
-  "incident_audit": "docs/audits/speed_spec_drift_incident_and_permanent_guard_20260817.md",
+  "owner_review_unlock_rule": "Changing locked=false by itself is invalid. Unlock now requires the original construct/Community gates plus SP-101 expanded The Show universe coverage, transition and identity QA, all-100 evidence-utilization receipts, a rebuilt individual adjudication, an empty-ledger rebind, and final registry QA.",
+  "incident_audit": "docs/audits/speed_all100_evidence_utilization_gap_audit_20260818.md",
   "previous_unlock_receipt": {
     "unlocked_at": "2026-08-17T09:33:03.281Z",
     "queue_sha256": "39a10b64857732ad8089b1528240f3ba9bce3e69c2c14a4af8bfe315fba4d9d2",
     "owner_verdict_count_at_unlock": 0,
     "status": "SUPERSEDED_BY_SEMANTIC_RELOCK_BEFORE_ANY_OWNER_VERDICT"
   },
+  "superseded_unlock_receipt_20260818": {
+    "unlocked_at": "2026-08-17T14:39:01.358Z",
+    "unlock_status": "CONSTRUCT_TRACEABILITY_REVALIDATED_AND_SP078_REBOUND",
+    "active_owner_review_queue_sha256": "ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d",
+    "owner_verdict_count_at_unlock": 0,
+    "status": "SUPERSEDED_BY_SP101_THE_SHOW_SCOPE_RELOCK_BEFORE_ANY_OWNER_VERDICT"
+  },
   "active_owner_review_queue": "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json",
   "active_owner_verdict_ledger": "outputs/derived/sp078_owner_verdict_ledger_20260816.json",
   "unlocked_at": "2026-08-17T14:39:01.358Z",
-  "unlock_status": "CONSTRUCT_TRACEABILITY_REVALIDATED_AND_SP078_REBOUND",
+  "unlock_status": "RELOCKED_PENDING_SP101_EXPANDED_THE_SHOW_SCOPE",
   "active_owner_review_queue_sha256": "ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d",
   "owner_verdict_count_at_unlock": 0,
   "unlock_basis": [
     "12/12 mandatory construct lanes INTEGRATED",
     "independent queue QA 3255/3255 PASS",
-    "locked global traceability QA PASS",
+    "Community semantic QA 848/848 PASS",
     "SP-078 append-only self-test PASS",
     "empty ledger rebound to exact construct-complete queue SHA-256",
-    "SP-077 and SP-078 reclosed DONE_VALIDATED before unlock"
+    "these infrastructure gates remain preserved but are no longer sufficient for owner approval without SP-101"
   ]
 }
