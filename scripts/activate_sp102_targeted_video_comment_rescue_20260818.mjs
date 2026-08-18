@@ -13,6 +13,7 @@ const LEDGER = 'outputs/derived/sp078_owner_verdict_ledger_20260816.json';
 const TASK = 'docs/tasks/SP102_TARGETED_2CH_VIDEO_COMMENT_RESCUE_20260818.md';
 const CONTRACT = 'outputs/derived/sp102_target_selection_contract_20260818.json';
 const STATE = 'docs/state/speed_sp102_activation_state_20260818.json';
+const SP101_TARGET_FREEZE_NOTE = 'SP-101 completion must also freeze outputs/derived/sp101_residual_low_confidence_target_set.json for downstream SP-102, with one explicit target-selection state for every current-100 player.';
 
 const full = p => path.join(ROOT, p);
 const read = p => fs.readFileSync(full(p), 'utf8');
@@ -69,7 +70,8 @@ if (existing102) Object.assign(existing102, sp102);
 else rows.push(sp102);
 
 const sp101 = byId.get('SP-101');
-sp101.next_action_or_blocker = one(`${sp101.next_action_or_blocker} SP-101 completion must also freeze outputs/derived/sp101_residual_low_confidence_target_set.json for downstream SP-102, with one explicit target-selection state for every current-100 player.`);
+const sp101BaseNext = String(sp101.next_action_or_blocker ?? '').split(SP101_TARGET_FREEZE_NOTE).join(' ');
+sp101.next_action_or_blocker = one(`${sp101BaseNext} ${SP101_TARGET_FREEZE_NOTE}`);
 sp101.artifacts = uniq([...list(sp101.artifacts), TASK, CONTRACT]).join(';');
 
 const sp079 = byId.get('SP-079');
@@ -159,13 +161,16 @@ const verifyHead = verifyLines[0];
 const verifyRows = verifyLines.slice(1).map(c => Object.fromEntries(verifyHead.map((h,i)=>[h,c[i]])));
 const v102 = verifyRows.filter(r => r.task_id === 'SP-102');
 const v079 = verifyRows.find(r => r.task_id === 'SP-079');
+const v101 = verifyRows.find(r => r.task_id === 'SP-101');
 if (v102.length !== 1 || v102[0].status !== 'BLOCKED_DEPENDENCY') throw new Error('SP-102 registry activation failed');
 if (!v079 || !list(v079.depends_on).includes('SP-102')) throw new Error('SP-079 not rebound to SP-102');
+if ((v101?.next_action_or_blocker.match(/sp101_residual_low_confidence_target_set\.json/g) ?? []).length !== 1) throw new Error('SP-101 target-freeze note is not exactly once');
 
 console.log(JSON.stringify({
   status: 'PASS',
   sp102: {status:v102[0].status,depends_on:list(v102[0].depends_on)},
   sp079: {status:v079.status,depends_on:list(v079.depends_on)},
+  sp101_target_note_count: 1,
   owner_review_locked: lock.locked,
   owner_verdict_count: ledger.owner_verdict_count,
   global_comment_crawl_allowed: false
