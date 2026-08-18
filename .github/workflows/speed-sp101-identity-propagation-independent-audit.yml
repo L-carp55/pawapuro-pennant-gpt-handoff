@@ -1,0 +1,58 @@
+name: speed-sp101-identity-propagation-independent-audit
+
+on:
+  push:
+    branches:
+      - codex/speed-sp101-expanded-the-show-universe-20260818
+    paths:
+      - 'scripts/qa_sp101_identity_propagation_20260818.py'
+      - '.github/workflows/speed-sp101-identity-propagation-independent-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/speed-sp101-expanded-the-show-universe-20260818
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Freeze owner ledger
+        run: sha256sum outputs/derived/sp078_owner_verdict_ledger_20260816.json > /tmp/sp078.before.sha256
+      - name: Run independent identity audit and retain expected fail receipt
+        run: |
+          set +e
+          python scripts/qa_sp101_identity_propagation_20260818.py
+          code=$?
+          set -e
+          if [ "$code" -ne 2 ]; then
+            echo "Expected fail-closed identity contradiction exit=2, got $code"
+            exit 1
+          fi
+          test -s outputs/derived/qa_sp101_identity_propagation_20260818.json
+          test -s docs/audits/sp101_identity_propagation_independent_audit_20260818.md
+          python - <<'PY'
+          import json
+          x=json.load(open('outputs/derived/qa_sp101_identity_propagation_20260818.json',encoding='utf-8'))
+          assert x['status']=='FAIL_IDENTITY_PROPAGATION_REPAIR_REQUIRED'
+          assert x['independent_exact_npb_name_bridge_conflict_count'] >= 4
+          assert not x['canary_failures'], x['canary_failures']
+          assert x['downstream_diagnostics']['foreign_mlb_to_npb_names_represented_in_transition_panel'] == 0
+          print(json.dumps({'status':x['status'],'conflicts':x['independent_exact_npb_name_bridge_conflict_count'],'transition':x['downstream_diagnostics']},ensure_ascii=False))
+          PY
+          sha256sum --check /tmp/sp078.before.sha256
+      - name: Commit audit receipt
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add outputs/derived/qa_sp101_identity_propagation_20260818.json docs/audits/sp101_identity_propagation_independent_audit_20260818.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'audit(speed): fail SP-101 current100 identity propagation'
+          git pull --rebase origin codex/speed-sp101-expanded-the-show-universe-20260818
+          git push origin HEAD:codex/speed-sp101-expanded-the-show-universe-20260818
