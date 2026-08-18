@@ -1,5 +1,5 @@
 name: speed-task-registry-qa
-# 2026-08-18 adjudicated all-100 review verification trigger: run canonical registry/construct/ledger gates on the committed final recommendation state.
+# 2026-08-18: canonical QA plus one-time fail-closed activation of SP-101 expanded MLB The Show scope on the active review branch.
 
 on:
   push:
@@ -10,6 +10,7 @@ on:
       - 'docs/tasks/**'
       - 'docs/audits/**'
       - 'outputs/derived/**'
+      - 'scripts/activate_sp101_the_show_scope_rebuild_20260818.mjs'
       - 'scripts/qa_speed_task_registry.mjs'
       - 'scripts/qa_speed_construct_traceability_20260817.mjs'
       - 'scripts/qa_sp078_integrity_lock_20260817.mjs'
@@ -23,6 +24,7 @@ on:
       - 'docs/tasks/**'
       - 'docs/audits/**'
       - 'outputs/derived/**'
+      - 'scripts/activate_sp101_the_show_scope_rebuild_20260818.mjs'
       - 'scripts/qa_speed_task_registry.mjs'
       - 'scripts/qa_speed_construct_traceability_20260817.mjs'
       - 'scripts/qa_sp078_integrity_lock_20260817.mjs'
@@ -30,14 +32,62 @@ on:
       - '.github/workflows/speed-task-registry-qa.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
+  activate-sp101-if-needed:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/review/opus-speed-pre-owner-review-wave-20260816'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Materialize SP-101 transition only when absent
+        run: |
+          if grep -q '^SP-101\t' docs/state/speed_task_registry.tsv; then
+            echo 'SP-101 already materialized; no transition write needed.'
+            exit 0
+          fi
+          sha256sum outputs/derived/sp078_owner_verdict_ledger_20260816.json > /tmp/sp078.before.sha256
+          node scripts/activate_sp101_the_show_scope_rebuild_20260818.mjs
+          sha256sum --check /tmp/sp078.before.sha256
+          node scripts/qa_speed_task_registry.mjs
+          node scripts/qa_speed_construct_traceability_20260817.mjs
+          node scripts/qa_sp078_integrity_lock_20260817.mjs
+      - name: Commit and push transition when generated
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            docs/state/speed_owner_clarification_the_show_scope_20260818.md \
+            docs/tasks/SP101_EXPANDED_THE_SHOW_NPB_UNIVERSE_20260818.md \
+            outputs/derived/sp101_the_show_npb_universe_census_20260818.json \
+            outputs/derived/sp101_the_show_npb_universe_census_20260818.tsv \
+            docs/audits/sp101_the_show_npb_universe_census_20260818.md \
+            outputs/derived/sp078_proposal_supersession_receipt_sp101_20260818.json \
+            docs/audits/sp078_proposal_superseded_by_sp101_the_show_scope_20260818.md \
+            docs/state/speed_task_registry.tsv \
+            docs/state/speed_owner_review_integrity_lock_20260817.json
+          if git diff --cached --quiet; then
+            echo 'No generated SP-101 transition changes.'
+            exit 0
+          fi
+          git commit -m 'fix(speed): expand The Show scope and re-lock owner review'
+          git pull --rebase origin review/opus-speed-pre-owner-review-wave-20260816
+          git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
+
   verify-speed-state:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
       - name: Validate speed requirements and task registry
         run: node scripts/qa_speed_task_registry.mjs
       - name: Validate full speed construct reaches owner review
