@@ -1,0 +1,242 @@
+{
+  "ambiguous": [],
+  "ambiguous_exact_name_candidate_count": 0,
+  "canary_expected_false_negatives": [
+    "カリステ",
+    "ポランコ",
+    "モンテロ",
+    "サンタナ"
+  ],
+  "canary_failures": [],
+  "codex_claimed_coverage": {
+    "ELIGIBLE_MATCHED": 2,
+    "IDENTITY_UNRESOLVED": 1,
+    "NO_MLB_PROMOTION_FOUND": 97
+  },
+  "conflicts": [
+    {
+      "classification": "DETERMINISTIC_EXISTING_NPB_NAME_BRIDGE_NOT_PROPAGATED",
+      "current_coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "current_identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "current_show_source_rows": 0,
+      "current_stable_player_key": "PROEYE:93795157",
+      "downstream": {
+        "mb02_state": "BLOCKED_MISSING_DATA",
+        "mb04_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb05_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb09_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb16_state": "SUPPORTED_NO_CHANGE",
+        "residual_confidence": "MEDIUM",
+        "route_disagreement_state": "NO_MATERIAL_CONFLICT_DETECTED",
+        "sp102_target_reasons": [
+          "no_residual_trigger"
+        ],
+        "sp102_target_selection_state": "NOT_TARGETED_SUFFICIENT_CONFIDENCE",
+        "the_show_percentile_context": null
+      },
+      "historical_candidates": [
+        {
+          "cohort": "MLB_TO_NPB_FOREIGN",
+          "identity_state": "MLB_LOWER_BOUND_MATCH",
+          "mlb_evidence": "True",
+          "mlbam_ids": "",
+          "npb_name": "カリステ",
+          "npb_name_en": "Orlando Calixte",
+          "stable_player_key": "NPBNAME:カリステ",
+          "the_show_live_row_count": "0",
+          "the_show_seasons": "",
+          "the_show_uuid_count": "0"
+        }
+      ],
+      "mlb_promotion_false_negative": true,
+      "player": "カリステ",
+      "queue_order": 10,
+      "show_evidence_lost": false
+    },
+    {
+      "classification": "DETERMINISTIC_EXISTING_NPB_NAME_BRIDGE_NOT_PROPAGATED",
+      "current_coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "current_identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "current_show_source_rows": 0,
+      "current_stable_player_key": "PROEYE:63065155",
+      "downstream": {
+        "mb02_state": "BLOCKED_MISSING_DATA",
+        "mb04_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb05_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb09_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb16_state": "SUPPORTED_NO_CHANGE",
+        "residual_confidence": "MEDIUM",
+        "route_disagreement_state": "NO_MATERIAL_CONFLICT_DETECTED",
+        "sp102_target_reasons": [
+          "no_residual_trigger"
+        ],
+        "sp102_target_selection_state": "NOT_TARGETED_SUFFICIENT_CONFIDENCE",
+        "the_show_percentile_context": null
+      },
+      "historical_candidates": [
+        {
+          "cohort": "MLB_TO_NPB_FOREIGN",
+          "identity_state": "MLB_LOWER_BOUND_MATCH",
+          "mlb_evidence": "True",
+          "mlbam_ids": "570256",
+          "npb_name": "ポランコ",
+          "npb_name_en": "Gregory Polanco",
+          "stable_player_key": "NPBNAME:ポランコ",
+          "the_show_live_row_count": "21",
+          "the_show_seasons": "2021",
+          "the_show_uuid_count": "1"
+        }
+      ],
+      "mlb_promotion_false_negative": true,
+      "player": "ポランコ",
+      "queue_order": 29,
+      "show_evidence_lost": true
+    },
+    {
+      "classification": "DETERMINISTIC_EXISTING_NPB_NAME_BRIDGE_NOT_PROPAGATED",
+      "current_coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "current_identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "current_show_source_rows": 0,
+      "current_stable_player_key": "PROEYE:53955150",
+      "downstream": {
+        "mb02_state": "BLOCKED_MISSING_DATA",
+        "mb04_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb05_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb09_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb16_state": "SUPPORTED_NO_CHANGE",
+        "residual_confidence": "MEDIUM",
+        "route_disagreement_state": "NO_MATERIAL_CONFLICT_DETECTED",
+        "sp102_target_reasons": [
+          "no_residual_trigger"
+        ],
+        "sp102_target_selection_state": "NOT_TARGETED_SUFFICIENT_CONFIDENCE",
+        "the_show_percentile_context": null
+      },
+      "historical_candidates": [
+        {
+          "cohort": "MLB_TO_NPB_FOREIGN",
+          "identity_state": "MLB_LOWER_BOUND_MATCH",
+          "mlb_evidence": "True",
+          "mlbam_ids": "660707",
+          "npb_name": "モンテロ",
+          "npb_name_en": "Elehuris Montero",
+          "stable_player_key": "NPBNAME:モンテロ",
+          "the_show_live_row_count": "120",
+          "the_show_seasons": "2021,2022,2023,2024,2025",
+          "the_show_uuid_count": "5"
+        }
+      ],
+      "mlb_promotion_false_negative": true,
+      "player": "モンテロ",
+      "queue_order": 45,
+      "show_evidence_lost": true
+    },
+    {
+      "classification": "DETERMINISTIC_EXISTING_NPB_NAME_BRIDGE_NOT_PROPAGATED",
+      "current_coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "current_identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "current_show_source_rows": 0,
+      "current_stable_player_key": "PROEYE:53755153",
+      "downstream": {
+        "mb02_state": "BLOCKED_MISSING_DATA",
+        "mb04_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb05_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb09_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+        "mb16_state": "SUPPORTED_NO_CHANGE",
+        "residual_confidence": "MEDIUM",
+        "route_disagreement_state": "NO_MATERIAL_CONFLICT_DETECTED",
+        "sp102_target_reasons": [
+          "no_residual_trigger"
+        ],
+        "sp102_target_selection_state": "NOT_TARGETED_SUFFICIENT_CONFIDENCE",
+        "the_show_percentile_context": null
+      },
+      "historical_candidates": [
+        {
+          "cohort": "MLB_TO_NPB_FOREIGN",
+          "identity_state": "MLB_LOWER_BOUND_MATCH",
+          "mlb_evidence": "True",
+          "mlbam_ids": "",
+          "npb_name": "サンタナ",
+          "npb_name_en": "Domingo Santana",
+          "stable_player_key": "NPBNAME:サンタナ",
+          "the_show_live_row_count": "0",
+          "the_show_seasons": "",
+          "the_show_uuid_count": "0"
+        }
+      ],
+      "mlb_promotion_false_negative": true,
+      "player": "サンタナ",
+      "queue_order": 53,
+      "show_evidence_lost": false
+    }
+  ],
+  "downstream_diagnostics": {
+    "foreign_mlb_to_npb_names_represented_in_transition_panel": 0,
+    "foreign_transition_overlap_names": [],
+    "historical_foreign_mlb_to_npb_names_in_crosswalk": 77,
+    "powerpro_the_show_temporal_pair_rows": 13,
+    "powerpro_the_show_temporal_unique_players": 4,
+    "transition_direction_counts": {
+      "MLB_TO_NPB": 2,
+      "NPB_TO_MLB": 4
+    },
+    "transition_segment_rows": 6,
+    "transition_unique_players": 4
+  },
+  "generated_at": "2026-08-18",
+  "independent_exact_npb_name_bridge_conflict_count": 4,
+  "invalid_or_must_regenerate_after_identity_repair": [
+    "outputs/derived/sp101_current100_the_show_evidence.json",
+    "outputs/derived/sp101_current100_multibridge_evidence.json",
+    "outputs/derived/sp101_requirements_to_decision_utilization.json",
+    "outputs/derived/sp101_route_ablation_qa.json",
+    "outputs/derived/sp101_residual_low_confidence_target_set.json",
+    "outputs/derived/sp101_coverage_qa.json",
+    "outputs/derived/sp101_inference_route_execution_receipt.json",
+    "outputs/derived/sp101_npb_mlb_transition_segments.csv",
+    "outputs/derived/sp101_transition_effects.json",
+    "outputs/derived/sp101_powerpro_the_show_temporal_pairs.csv",
+    "outputs/derived/sp101_historical_npb_the_show_calibration_panel.csv",
+    "outputs/derived/sp101_pairwise_ordinal_graph.json",
+    "outputs/derived/sp101_latent_multitrait_speed_model.json"
+  ],
+  "positive_controls": [
+    {
+      "player": "秋山 翔吾",
+      "queue_order": 50,
+      "source_rows": 43,
+      "stable_player_key": "PROEYE:31135133"
+    },
+    {
+      "player": "筒香 嘉智",
+      "queue_order": 74,
+      "source_rows": 43,
+      "stable_player_key": "PROEYE:41945131"
+    }
+  ],
+  "preserved_work": [
+    "raw/pinned The Show source scan and normalized external panel rows (subject to identity rekey)",
+    "PowerPro source rows and current physical evidence sources",
+    "look-ahead quarantine and non-Live separation controls",
+    "append-only SP-078 infrastructure and empty ledger",
+    "the multibridge method definitions/design, but not current100 decision outputs generated from the broken entity map"
+  ],
+  "qa_gap": {
+    "coverage_qa_status": "PASS_WITH_BOUNDED_NEGATIVE_FINDINGS",
+    "execution_receipt_status": "DONE_VALIDATED_WITH_BOUNDED_NEGATIVE_FINDINGS",
+    "why_existing_qa_missed_it": "Existing QA checks 100 unique current rows and conservative name-only rejection, but has no referential-integrity assertion that a current NPB entity cannot be NO_MLB_PROMOTION_FOUND when the already-curated destination MLB bridge contains the same unique normalized NPB name with mlb_evidence=true."
+  },
+  "repair_requirements": [
+    "Canonicalize entity identity before loading any downstream evidence; do not create separate PROEYE and NPBNAME entities for the same uniquely resolved NPB player.",
+    "Use destination curated NPB-name→MLB-person bridges and verified English/MLBAM aliases as reconciliation evidence; do not use raw surname-only matching.",
+    "For every current100 row, fail closed if coverage=NO_MLB_PROMOTION_FOUND while any unique reconciled entity has mlb_evidence=true.",
+    "Positive canaries 秋山翔吾 and 筒香嘉智 must remain matched.",
+    "False-negative canaries カリステ, ポランコ, モンテロ, サンタナ must no longer be NO_MLB_PROMOTION_FOUND; propagate The Show rows where available and THE_SHOW_DATA_MISSING_AFTER_MLB_MATCH otherwise.",
+    "ソト remains unresolved unless independently resolved; do not guess from short name alone.",
+    "Rebuild transition, temporal-pair, current100 multibridge, decision-use, ablation, residual-target, coverage and execution receipts from the repaired entity graph.",
+    "Rerun determinism and all existing SP-077/SP-078 governance QA; owner ledger must remain empty; do not run SP-102/SP-079/shoulder."
+  ],
+  "schema_version": "qa_sp101_identity_propagation_20260818",
+  "status": "FAIL_IDENTITY_PROPAGATION_REPAIR_REQUIRED"
+}
