@@ -1,4 +1,5 @@
 name: speed-sp101-identity-propagation-independent-audit
+# Explicit trigger after workflow creation; expected result is a fail-closed audit receipt, not SP-101 acceptance.
 
 on:
   push:
