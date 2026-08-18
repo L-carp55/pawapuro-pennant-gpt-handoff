@@ -3,7 +3,7 @@
   "generated_at": "2026-08-18",
   "updated_at": "2026-08-18",
   "task_id": "SP-101",
-  "status": "DISPATCH_READY_WITH_MANDATORY_MULTI_BRIDGE_ADDENDUM",
+  "status": "REPAIR_DISPATCH_READY_AFTER_INDEPENDENT_AUDIT",
   "category": "data_external_game_identity_temporal_transition_and_multibridge_inference",
   "owner_review_block": true,
   "speed_gate_block": true,
@@ -11,6 +11,28 @@
   "active_review_branch": "review/opus-speed-pre-owner-review-wave-20260816",
   "execution_branch": "codex/speed-sp101-expanded-the-show-universe-20260818",
   "execution_branch_created_from_commit": "acc19e10a96c14a3433da9a251309c814594f398",
+  "wave1_codex_result": {
+    "submitted_sha": "127df6b07d39a36b94324e18386fd013b24ccd01",
+    "owner_side_verdict": "REJECT_DONE_VALIDATED_REPAIR_REQUIRED",
+    "preserve_useful_source_and_method_artifacts": true
+  },
+  "independent_audit": {
+    "canonical_review_audit": "docs/audits/sp101_codex_wave1_independent_review_20260818.md",
+    "execution_branch_identity_audit": "docs/audits/sp101_identity_propagation_independent_audit_20260818.md",
+    "execution_branch_identity_receipt": "outputs/derived/qa_sp101_identity_propagation_20260818.json",
+    "execution_branch_semantic_audit": "docs/audits/sp101_independent_semantic_execution_audit_20260818.md",
+    "identity_audit_commit": "5c6ea2f997dc83b874115f15d673469634ec458c",
+    "status": "FAIL_IDENTITY_PROPAGATION_REPAIR_REQUIRED",
+    "confirmed_current100_false_no_mlb": ["カリステ", "ポランコ", "モンテロ", "サンタナ"],
+    "lost_the_show_live_rows": {"ポランコ": 21, "モンテロ": 120},
+    "historical_mlb_to_npb_foreign_names": 77,
+    "foreign_names_represented_in_wave1_transition_panel": 0
+  },
+  "repair_task": {
+    "execution_branch_path": "docs/tasks/CODEX_SP101_IDENTITY_AND_SHARED_METRIC_REPAIR_20260818.md",
+    "repair_task_commit": "d1ae140de5e066a56344dc53ae6a0b82d7728b13",
+    "must_fast_forward_to_latest_remote_head_before_execution": true
+  },
   "task_specification": "docs/tasks/SP101_EXPANDED_THE_SHOW_NPB_UNIVERSE_20260818.md",
   "mandatory_task_addendum": "docs/tasks/SP101_MULTI_BRIDGE_INFERENCE_ADDENDUM_20260818.md",
   "inference_route_registry": "outputs/derived/sp101_inference_route_registry_20260818.json",
@@ -39,8 +61,19 @@
       "MB-17_NEGATIVE_CONTROL_AND_PLACEBO_SUITE",
       "MB-18_DECISION_USE_AND_ABLATION_RECEIPT"
     ],
-    "closure_rule": "Each P0 route must be executed or closed with a measured negative finding and a committed audit."
+    "closure_rule": "Each P0 route must be executed or closed with a measured negative finding after actual required data-collection attempts. File existence or a syntactically player-specific generic rationale is insufficient."
   },
+  "required_repair_focus": [
+    "canonical PROEYE/NPBNAME entity reconciliation before downstream evidence attachment",
+    "verified MLB regular-season appearance years independent of The Show observation years",
+    "external collection of reproducible MLB shared batting/baserunning indicators",
+    "genuine multi-feature MB-01 common-indicator matching",
+    "true dual MB-02 The Show-vs-MLB and PowerPro-vs-NPB behavior models",
+    "transition/temporal regeneration from actual league appearance states",
+    "MB-07 analog and Community/scouting ordinal edges",
+    "per-player evidence-consumption truth for MB-12/13/16/18",
+    "SP-102 residual target regeneration under the LOW/VERY_LOW confidence eligibility contract"
+  ],
   "required_final_player_architecture": [
     "independent physical estimate",
     "The Show-implied appraisal range",
@@ -48,16 +81,18 @@
     "contextual evidence summary",
     "route disagreement and decision-use receipt"
   ],
-  "exact_next_step": "Run SP-101 on the execution branch using both the original task specification and the mandatory multi-bridge addendum. Require separate parallel sub-agents for identity, The Show panel, NPB/PowerPro timeline, transitions, common-metric analog matching, game-behavior models, latent multi-trait/ordinal inference, temporal/inertia modeling, ensemble/ablation, and independent QA. Persist every important result and negative finding to GitHub, push the branch, then review the remote artifacts before rebuilding the all-100 owner packet.",
+  "exact_next_step": "Continue Codex on the existing execution branch after fast-forwarding to the latest remote HEAD. Read CODEX_SP101_IDENTITY_AND_SHARED_METRIC_REPAIR_20260818.md and the independent audit artifacts, repair only the invalid/under-executed SP-101 layers while preserving useful wave-1 source work, regenerate dependent artifacts, rerun all independent/canonical/determinism QA, commit/push, and report local/remote SHA equality. Do not run SP-102, SP-079, owner verdict capture, or shoulder work.",
   "prohibited_next_steps": [
+    "accept wave1 SHA 127df6b07d39a36b94324e18386fd013b24ccd01 as SP-101 DONE_VALIDATED",
+    "run SP-102 from the wave1 residual target file",
     "approve or capture the superseded SP-078 proposal",
     "run SP-079",
     "start shoulder appraisal",
-    "treat 6/7, 47, or 79 as the eligible universe ceiling",
+    "use The Show observation season as MLB appearance season",
     "treat direct same-player overlap as the only The Show evidence route",
     "copy The Show or PowerPro labels into the physical latent estimate",
     "force analog matches outside common support",
-    "close SP-101 after identity reconstruction without executing or measuring the P0 inference routes"
+    "close MB-01/02 merely because the destination DB lacks MLB shared indicators without attempting external collection"
   ],
-  "registry_materialization_note": "SP-101 is present in the canonical task registry and SP-079 is blocked on it. The execution branch must be advanced to the latest active-review HEAD before Codex implementation begins."
+  "registry_materialization_note": "The canonical review-branch registry already keeps SP-101 PARTIAL and SP-102/SP-079 blocked. This state receipt records the independent rejection of Codex wave1 and the targeted repair dispatch."
 }
