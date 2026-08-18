@@ -1,0 +1,71 @@
+{
+  "byte_identical": true,
+  "changed_outputs": [],
+  "contract": "frozen MLB payloads, fixed 2026-08-18 retrieval date, sorted rows, gzip mtime=0; no network in repair runner",
+  "critical_output_count": 22,
+  "generated_at": "2026-08-18",
+  "runs": [
+    {
+      "hashes": {
+        "data/manual/sp101_mlb_official_indicator_source_manifest_20260818.json": "15d356d624c2a4df421c769d294e6656251a434aca0cba5ff441afcf99509e7b",
+        "data/manual/sp101_mlb_sprint_speed_rows_20260818.json": "789766a4f1edda5951936d223c07d88934c8ea33550a9473408bcc6017ce132f",
+        "data/manual/sp101_mlb_stats_api_payloads_20260818.json": "0e494e61573d3975b0e4e9548585e6cd8713b8b230a4c3aa20f96609bb9b09e9",
+        "data/manual/sp101_npb_mlb_the_show_identity_crosswalk.csv": "f76def55b0d4ec217a26055f03e33bcb17d6799b6a5f3b41d6edd398362e59e6",
+        "docs/audits/sp101_identity_and_shared_metric_repair_20260818.md": "54875db1405867ec3a6a33ac92e867657a81fc01339277e276e3b52d98434cf0",
+        "outputs/derived/qa_sp101_identity_and_shared_metric_repair_20260818.json": "df1bc5b9d5acc4336f878aaf30d6c57724c570ba4af8d8f65339bf6dfdbf8843",
+        "outputs/derived/sp101_common_metric_feature_dictionary.tsv": "86ee6877a4215e87154c2c1266cc76edf5496af630e4e1d0a08bbfa110b166a7",
+        "outputs/derived/sp101_current100_multibridge_evidence.json": "4431716cff81096d114e495a5cc05cbcc0140c0cfcd24d6daea3d70f89f3d0ee",
+        "outputs/derived/sp101_current100_the_show_evidence.json": "13239624f0837e1e8397de267fcd983e10fe5afc57292020afbf6aba2ae2dee3",
+        "outputs/derived/sp101_dual_game_behavior_models.json": "cbf287d39df6535f04ec2361a61e77397f4618ecaa8cb946c60bd36b497687f8",
+        "outputs/derived/sp101_inference_route_execution_receipt.json": "80254b4e32a6a50c019ec78f8862ac55d787bfa3f208be8775904e94bbef3141",
+        "outputs/derived/sp101_metric_neighborhood_analog_pairs.csv.gz": "0cc9eb73add41904a56c448a163abef2e78e8f1dd9e7006dc8847653a5aa8197",
+        "outputs/derived/sp101_metric_neighborhood_player_summary.json": "350b68ee58d0cb3667410aee231aed87db144535413bdb1f71c2358bb88d2b81",
+        "outputs/derived/sp101_mlb_regular_season_appearance_years.csv": "e00916ff1628d2a4248fb7caae86b564dac1b9d0b16a7b744ccffd1f9979f2ee",
+        "outputs/derived/sp101_mlb_shared_indicator_player_seasons.csv.gz": "057b6689ee145c17a514c748910b77343b8584475428b0b763d847d5b669dfed",
+        "outputs/derived/sp101_npb_mlb_transition_segments.csv": "ccb16a9a81c7907816bec4057234661ac26d29c03f6e5d4d1a58f0fbd07ca90c",
+        "outputs/derived/sp101_pairwise_ordinal_graph.json": "5f8c86bc1046a57562b5d953ce0dbc7a4166909f376712c3600b3f0c73b081d2",
+        "outputs/derived/sp101_requirements_to_decision_utilization.json": "aabee62144aed74987c46048cadeea93d4c0210f8b8225255efb482afeeb9622",
+        "outputs/derived/sp101_residual_low_confidence_target_set.json": "67974a7fedfefd947ff897b89dc6ebe971b38fb26ef431ea53fd5c71f549682d",
+        "outputs/derived/sp101_route_ablation_qa.json": "dc1cd4e900c61e5cf0108c57e573a0abe9d5f762e0689edcf8216d56d025449e",
+        "outputs/derived/sp101_the_show_live_player_year_panel.jsonl.gz": "aba89c964fed77bd2525b77030ccdcc643e40311cb1218db8384d8cc3a9f51d5",
+        "outputs/derived/sp101_transition_effects.json": "b755c1c362598c41225a51d5456849d43da73107d804880b04d820a949823af3"
+      },
+      "returncode": 0,
+      "run": 1,
+      "stderr": "",
+      "stdout": "{\"ablation_cells\": 1800, \"appearance_rows\": 361, \"current100\": 100, \"mb01_valid_rows\": 211, \"owner_verdict_count\": 0, \"panel_rows\": 3604, \"shared_rows\": 361, \"status\": \"PASS\", \"target_states\": {\"NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN\": 70, \"NOT_TARGETED_SUFFICIENT_CONFIDENCE\": 2, \"TARGETED_LOW_CONFIDENCE\": 1, \"TARGETED_MATERIAL_CONFLICT\": 27}, \"transition_segments\": 80}"
+    },
+    {
+      "hashes": {
+        "data/manual/sp101_mlb_official_indicator_source_manifest_20260818.json": "15d356d624c2a4df421c769d294e6656251a434aca0cba5ff441afcf99509e7b",
+        "data/manual/sp101_mlb_sprint_speed_rows_20260818.json": "789766a4f1edda5951936d223c07d88934c8ea33550a9473408bcc6017ce132f",
+        "data/manual/sp101_mlb_stats_api_payloads_20260818.json": "0e494e61573d3975b0e4e9548585e6cd8713b8b230a4c3aa20f96609bb9b09e9",
+        "data/manual/sp101_npb_mlb_the_show_identity_crosswalk.csv": "f76def55b0d4ec217a26055f03e33bcb17d6799b6a5f3b41d6edd398362e59e6",
+        "docs/audits/sp101_identity_and_shared_metric_repair_20260818.md": "54875db1405867ec3a6a33ac92e867657a81fc01339277e276e3b52d98434cf0",
+        "outputs/derived/qa_sp101_identity_and_shared_metric_repair_20260818.json": "df1bc5b9d5acc4336f878aaf30d6c57724c570ba4af8d8f65339bf6dfdbf8843",
+        "outputs/derived/sp101_common_metric_feature_dictionary.tsv": "86ee6877a4215e87154c2c1266cc76edf5496af630e4e1d0a08bbfa110b166a7",
+        "outputs/derived/sp101_current100_multibridge_evidence.json": "4431716cff81096d114e495a5cc05cbcc0140c0cfcd24d6daea3d70f89f3d0ee",
+        "outputs/derived/sp101_current100_the_show_evidence.json": "13239624f0837e1e8397de267fcd983e10fe5afc57292020afbf6aba2ae2dee3",
+        "outputs/derived/sp101_dual_game_behavior_models.json": "cbf287d39df6535f04ec2361a61e77397f4618ecaa8cb946c60bd36b497687f8",
+        "outputs/derived/sp101_inference_route_execution_receipt.json": "80254b4e32a6a50c019ec78f8862ac55d787bfa3f208be8775904e94bbef3141",
+        "outputs/derived/sp101_metric_neighborhood_analog_pairs.csv.gz": "0cc9eb73add41904a56c448a163abef2e78e8f1dd9e7006dc8847653a5aa8197",
+        "outputs/derived/sp101_metric_neighborhood_player_summary.json": "350b68ee58d0cb3667410aee231aed87db144535413bdb1f71c2358bb88d2b81",
+        "outputs/derived/sp101_mlb_regular_season_appearance_years.csv": "e00916ff1628d2a4248fb7caae86b564dac1b9d0b16a7b744ccffd1f9979f2ee",
+        "outputs/derived/sp101_mlb_shared_indicator_player_seasons.csv.gz": "057b6689ee145c17a514c748910b77343b8584475428b0b763d847d5b669dfed",
+        "outputs/derived/sp101_npb_mlb_transition_segments.csv": "ccb16a9a81c7907816bec4057234661ac26d29c03f6e5d4d1a58f0fbd07ca90c",
+        "outputs/derived/sp101_pairwise_ordinal_graph.json": "5f8c86bc1046a57562b5d953ce0dbc7a4166909f376712c3600b3f0c73b081d2",
+        "outputs/derived/sp101_requirements_to_decision_utilization.json": "aabee62144aed74987c46048cadeea93d4c0210f8b8225255efb482afeeb9622",
+        "outputs/derived/sp101_residual_low_confidence_target_set.json": "67974a7fedfefd947ff897b89dc6ebe971b38fb26ef431ea53fd5c71f549682d",
+        "outputs/derived/sp101_route_ablation_qa.json": "dc1cd4e900c61e5cf0108c57e573a0abe9d5f762e0689edcf8216d56d025449e",
+        "outputs/derived/sp101_the_show_live_player_year_panel.jsonl.gz": "aba89c964fed77bd2525b77030ccdcc643e40311cb1218db8384d8cc3a9f51d5",
+        "outputs/derived/sp101_transition_effects.json": "b755c1c362598c41225a51d5456849d43da73107d804880b04d820a949823af3"
+      },
+      "returncode": 0,
+      "run": 2,
+      "stderr": "",
+      "stdout": "{\"ablation_cells\": 1800, \"appearance_rows\": 361, \"current100\": 100, \"mb01_valid_rows\": 211, \"owner_verdict_count\": 0, \"panel_rows\": 3604, \"shared_rows\": 361, \"status\": \"PASS\", \"target_states\": {\"NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN\": 70, \"NOT_TARGETED_SUFFICIENT_CONFIDENCE\": 2, \"TARGETED_LOW_CONFIDENCE\": 1, \"TARGETED_MATERIAL_CONFLICT\": 27}, \"transition_segments\": 80}"
+    }
+  ],
+  "schema_version": "sp101_repair_determinism_qa_20260818",
+  "status": "PASS"
+}

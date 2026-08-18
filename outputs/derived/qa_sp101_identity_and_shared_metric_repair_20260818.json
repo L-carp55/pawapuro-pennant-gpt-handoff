@@ -1,0 +1,295 @@
+{
+  "canaries": {
+    "カリステ": {
+      "coverage_state": "THE_SHOW_DATA_MISSING_AFTER_MLB_MATCH",
+      "mlb_years": [
+        2015,
+        2017
+      ],
+      "show_rows": 0,
+      "stable_key": "PROEYE:93795157"
+    },
+    "サンタナ": {
+      "coverage_state": "THE_SHOW_DATA_MISSING_AFTER_MLB_MATCH",
+      "mlb_years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "show_rows": 0,
+      "stable_key": "PROEYE:53755153"
+    },
+    "ソト": {
+      "coverage_state": "IDENTITY_UNRESOLVED",
+      "mlb_years": [],
+      "show_rows": 0,
+      "stable_key": "PROEYE:03505133"
+    },
+    "ポランコ": {
+      "coverage_state": "ELIGIBLE_MATCHED",
+      "mlb_years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "show_rows": 21,
+      "stable_key": "PROEYE:63065155"
+    },
+    "モンテロ": {
+      "coverage_state": "ELIGIBLE_MATCHED",
+      "mlb_years": [
+        2022,
+        2023,
+        2024
+      ],
+      "show_rows": 120,
+      "stable_key": "PROEYE:53955150"
+    },
+    "秋山 翔吾": {
+      "coverage_state": "ELIGIBLE_MATCHED",
+      "mlb_years": [
+        2020,
+        2021
+      ],
+      "show_rows": 43,
+      "stable_key": "PROEYE:31135133"
+    },
+    "筒香 嘉智": {
+      "coverage_state": "ELIGIBLE_MATCHED",
+      "mlb_years": [
+        2020,
+        2021,
+        2022
+      ],
+      "show_rows": 43,
+      "stable_key": "PROEYE:41945131"
+    }
+  },
+  "construct_guards": {
+    "non_live_primary_panel_rows": 0,
+    "powerpro_label_in_physical_path": false,
+    "raw_rate_cross_league_match_used": false,
+    "short_name_soto_promoted": false,
+    "show_speed_stealing_aggression_collapsed": false
+  },
+  "current100": {
+    "coverage_state_counts": {
+      "ELIGIBLE_MATCHED": 4,
+      "IDENTITY_UNRESOLVED": 1,
+      "NO_MLB_PROMOTION_FOUND": 93,
+      "THE_SHOW_DATA_MISSING_AFTER_MLB_MATCH": 2
+    },
+    "emitted": 100,
+    "no_mlb_promotion_contradictions": [],
+    "unique_orders": 100
+  },
+  "generated_at": "2026-08-18",
+  "governance": {
+    "ledger_unchanged": true,
+    "owner_review_locked": true,
+    "owner_verdict_count": 0,
+    "shoulder_work": false,
+    "sp079_run": false,
+    "sp102_run": false
+  },
+  "identity": {
+    "canaries": {
+      "カリステ": {
+        "current_candidates": [
+          "PROEYE:93795157"
+        ],
+        "repaired_keys": [
+          "PROEYE:93795157"
+        ],
+        "status": "RECONCILED"
+      },
+      "サンタナ": {
+        "current_candidates": [
+          "PROEYE:53755153"
+        ],
+        "repaired_keys": [
+          "PROEYE:53755153"
+        ],
+        "status": "RECONCILED"
+      },
+      "ポランコ": {
+        "current_candidates": [
+          "PROEYE:63065155"
+        ],
+        "repaired_keys": [
+          "PROEYE:63065155"
+        ],
+        "status": "RECONCILED"
+      },
+      "モンテロ": {
+        "current_candidates": [
+          "PROEYE:53955150"
+        ],
+        "repaired_keys": [
+          "PROEYE:53955150"
+        ],
+        "status": "RECONCILED"
+      }
+    },
+    "generated_at": "2026-08-18",
+    "hierarchy": [
+      "verified_proeye_or_production_id",
+      "verified_mlbam",
+      "curated_destination_bridge_plus_unique_exact_npb",
+      "verified_aliases_plus_team_season",
+      "ambiguity_unresolved"
+    ],
+    "old_to_new_key_count": 4,
+    "panel_rows_rekeyed": 141,
+    "schema_version": "sp101_identity_reconciliation_receipt_20260818",
+    "short_name_negative_control": {
+      "merged": false,
+      "player": "ソト",
+      "status": "AMBIGUOUS_NOT_FORCED"
+    },
+    "union_policy": "Current PROEYE key survives; NPB/English/MLB/MLBAM/Show UUID/evidence/notes are unioned and downstream indexes are rebuilt."
+  },
+  "important_negative_findings_persisted": [
+    "outputs/derived/qa_sp101_identity_propagation_20260818.json",
+    "docs/audits/sp101_identity_propagation_independent_audit_20260818.md",
+    "data/manual/sp101_mlb_official_indicator_source_manifest_20260818.json",
+    "docs/audits/sp101_identity_and_shared_metric_repair_20260818.md"
+  ],
+  "mb01": {
+    "balance_diagnostics": {
+      "candidate_rows_with_support": 67,
+      "methods_emitted": 3,
+      "target_rows_with_support": 97
+    },
+    "common_support": {
+      "no_valid_rows": 89,
+      "raw_rate_match_forbidden": true,
+      "valid_rows": 211
+    },
+    "feature_balance": {
+      "feature_ids": [
+        "SB_ATTEMPT_RATE",
+        "SB_SUCCESS_RATE",
+        "TRIPLE_RATE",
+        "GDP_RATE",
+        "RUN_RATE",
+        "SINGLE_RATE",
+        "DOUBLE_RATE",
+        "BIP_RATE"
+      ],
+      "minimum_valid_feature_count": 2,
+      "status": "COLLECTION_BACKED_MULTI_FEATURE",
+      "valid_row_feature_count_median": 8.0,
+      "valid_row_feature_count_min": 7
+    },
+    "methods": [
+      {
+        "caliper": 0.42,
+        "method": "MUTUAL_KNN",
+        "note": "mutual k-nearest neighbor over league-season normalized shared indicators"
+      },
+      {
+        "caliper": 1.25,
+        "method": "CALIPERED_MAHALANOBIS",
+        "note": "diagonal calipered Mahalanobis distance over league-season normalized shared indicators"
+      },
+      {
+        "caliper": 0.55,
+        "method": "OPTIMAL_TRANSPORT",
+        "note": "deterministic empirical quantile transport with common-support caliper"
+      }
+    ],
+    "mlb_candidate_player_denominator": 67,
+    "negative_finding": "MLB opportunity-conditioned infield-hit, advancement and UBR/BsR fields remain blocked; the valid analog subset is limited to collected common indicators and never treats a raw rate as a cross-league match.",
+    "physical_truth_guard": "The Show and MLB shared indicator routes remain external behavior/appraisal evidence and are not copied into the independent physical estimate.",
+    "route_id": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+    "schema_version": "sp101_metric_neighborhood_player_summary_repaired_20260818",
+    "target_denominator": 100
+  },
+  "mb02": {
+    "ablation_present": true,
+    "legacy_sprint_submodel_preserved": true,
+    "shared_model_rows": 260
+  },
+  "mb05": {
+    "actual_mlb_year_semantics": "MLB Stats API gameType=R appearance years only; The Show years are a separate axis and never stand in for MLB state.",
+    "cohort_denominators": {
+      "FOREIGN_MLB_TO_NPB": {
+        "missing": 17,
+        "represented": 60,
+        "screened": 77,
+        "screened_source": "first_wave_historical_foreign_identity_screen_77_names"
+      },
+      "JAPANESE_NPB_TO_MLB": {
+        "missing": 0,
+        "represented": 2,
+        "screened": 2
+      },
+      "MULTI_CYCLE": {
+        "represented": 23,
+        "screened": 62
+      },
+      "RETURNEE": {
+        "represented": 10,
+        "screened": 62
+      }
+    },
+    "direction_counts": {
+      "MLB_TO_NPB": 66,
+      "NPB_TO_MLB": 14
+    },
+    "negative_finding": "The 77-name historical foreign screen is no longer represented as zero by a broken Show-season proxy; actual MLB→NPB representation and bounded missingness are emitted.",
+    "player_fixed_effects": "DESCRIPTIVE_DIRECTIONAL_SEGMENTS_NOT_CAUSAL_EFFECT; age/injury controls are bounded missingness.",
+    "returnee_or_multi_cycle_count": 23,
+    "route_id": "MB-05_LEAGUE_TRANSITION_FIXED_EFFECTS",
+    "schema_version": "sp101_transition_effects_repaired_20260818",
+    "segment_denominator": 80,
+    "unique_transition_players": 62
+  },
+  "mb07": {
+    "edge_count": 8515,
+    "required_families_present": true,
+    "source_family_counts": {
+      "COMMUNITY_SCOUTING_ORDINAL": 12,
+      "DIRECT_PHYSICAL": 4552,
+      "MB01_MULTI_FEATURE_ANALOG": 96,
+      "POWERPRO_BEHAVIOR": 3792,
+      "TEMPORAL_TRANSITION": 62,
+      "THE_SHOW_LIVE": 1
+    }
+  },
+  "mb12_mb13": {
+    "all_have_evidence_or_explicit_missingness": true,
+    "unconditional_used_context_count": 0
+  },
+  "mb16_mb18": {
+    "ablation_cells": 1800,
+    "ablation_cells_have_evidence_ids": true,
+    "separate_output_lanes": true
+  },
+  "mlb_semantics": {
+    "actual_year_axis_separate_from_show": true,
+    "advanced_opportunity_features_blocked_and_receipted": true,
+    "appearance_year_rows": 361,
+    "shared_indicator_rows": 361,
+    "sprint_speed_non_null": 264
+  },
+  "schema_version": "sp101_identity_and_shared_metric_repair_qa_20260818",
+  "scope": "speed_only; SP-102 body, SP-078 owner verdict, SP-079 and shoulder not run",
+  "sp102_target_freeze": {
+    "low_info_gain_scores_present": true,
+    "one_state_per_current100": true,
+    "search_status": "SP-102_NOT_RUN",
+    "states_valid": true
+  },
+  "status": "PASS_REPAIRED"
+}

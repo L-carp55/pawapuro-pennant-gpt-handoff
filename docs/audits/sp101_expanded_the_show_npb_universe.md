@@ -1,12 +1,11 @@
 # SP-101 expanded The Show × NPB universe execution
 
 Generated: 2026-08-18
-Status: DONE_VALIDATED_WITH_BOUNDED_NEGATIVE_FINDINGS
+Status: PASS_REPAIRED
 
 Current-100: 100 exact unique player receipts.
-Matched pinned The Show Live rows: 3604 across 56 canonical players.
-Coverage states: {'ELIGIBLE_MATCHED': 2, 'IDENTITY_UNRESOLVED': 1, 'NO_MLB_PROMOTION_FOUND': 97}.
+MLB regular-season years are sourced from MLB Stats API gameType=R; The Show seasons remain separate.
 
-See `docs/audits/sp101_multibridge_inference_results.md` and the machine-readable route/coverage/decision-use receipts for the full evidence universe, negative findings and QA.
+See `docs/audits/sp101_identity_and_shared_metric_repair_20260818.md` and the machine-readable repair QA receipt.
 
-Governance guard: SP-078 ledger remains empty; SP-079, SP-102 and shoulder work were not run.
+Governance guard: SP-078 ledger remains empty; SP-079, SP-102 body and shoulder work were not run.

@@ -1,4 +1,10 @@
 {
+  "legacy_show_speed_from_statcast_sprint_submodel": {
+    "baseline_receipt": {},
+    "formula": "The Show Speed ~ MLB Statcast Sprint Speed",
+    "not_replaced_by_shared_model": true,
+    "status": "PRESERVED_SEPARATE_BASELINE_SUBMODEL"
+  },
   "model_separation": {
     "direct_powerpro_to_show_model_fit": false,
     "outputs_are_external_game_appraisal_expectations": true,
@@ -6,9 +12,8 @@
     "the_show_is_direct_physical_measurement": false
   },
   "negative_findings": [
-    "The destination DB has no complete MLB batting/Statcast shared-indicator panel corresponding to the NPB event features, so a full dual cross-league behavior model is not identified here.",
-    "PowerPro work-to-NPB season joins are nearest bounded joins, not causal or same-season conversion labels.",
-    "The Show editions 21-26 are observed snapshots/update carries; no 17-20 values are imputed."
+    "Opportunity-conditioned infield hits, advancement and UBR/BsR-compatible components are blocked by the authoritative MLB acquisition schema and are not fabricated.",
+    "Sprint Speed is retained as a separate Statcast physical indicator; it is not treated as identical to outcome rates."
   ],
   "powerpro_speed_from_npb_indicators": {
     "feature_models": {
@@ -253,8 +258,9 @@
         }
       }
     },
-    "formula": "historical PowerPro speed ~ league-season normalized NPB opportunity/outcome indicators",
+    "formula": "PowerPro speed ~ NPB official league-season normalized indicators; PowerPro remains separate from MLB/The Show",
     "forward_season_holdout": "NOT_IDENTIFIABLE_AS_FULL_FORWARD_PANEL: PowerPro work and NPB season are sparse/nearest-joined; nearest <=3-year joins are retained with temporal_gap rather than treated as same-year truth.",
+    "npb_shared_indicator_input": true,
     "ridge_screen": {
       "coefficients_centered": {
         "bip_rate": 1.4954499496922762,
@@ -307,42 +313,175 @@
       "status": "RIDGE_FIT"
     },
     "rows_with_label": 1879,
-    "unique_player_groups": 682
+    "unique_player_groups": 682,
+    "work_version_effects_visible": true
   },
   "route_id": "MB-02_DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS",
-  "schema_version": "sp101_dual_game_behavior_models_20260818",
-  "the_show_speed_from_mlb_indicators": {
-    "edition_effect": "Edition-specific observations are retained in the panel; the bounded destination bridge has no edition-complete paired Statcast feature, so edition coefficient is not identified.",
-    "fit": {
-      "intercept": -296.0484357443021,
-      "mae": 6.489459281381701,
-      "n": 47,
-      "pearson_r": 0.8730270517881521,
-      "residual_p10": -13.634032635346102,
-      "residual_p90": 10.736830276211151,
-      "rmse": 9.098752628628247,
-      "slope": 12.929882270569628,
-      "status": "FIT"
-    },
-    "formula": "The Show Speed ~ MLB bridge sprint-speed average",
-    "player_clustered_holdout": {
-      "correlation": 0.8529168060036464,
-      "fold_row_counts": {
-        "0": 14,
-        "1": 7,
-        "2": 9,
-        "3": 10,
-        "4": 7
+  "schema_version": "sp101_dual_game_behavior_models_repaired_20260818",
+  "the_show_speed_from_mlb_shared_indicators": {
+    "ablation": [
+      {
+        "mae": 16.57584840173259,
+        "removed_feature": "sb_attempt_rate_league_season_percentile",
+        "rmse": 20.010405528636003,
+        "rows": 161,
+        "status": "RIDGE_FIT_SHARED_INDICATORS"
       },
-      "folds": 5,
-      "groups": 47,
-      "mae": 6.703637631697664,
-      "rmse": 9.748972375597495,
-      "rows": 47,
-      "status": "GROUPED_HOLDOUT",
-      "test_rows": 47
+      {
+        "mae": 15.404700283459023,
+        "removed_feature": "sb_success_rate_league_season_percentile",
+        "rmse": 18.897347926470843,
+        "rows": 258,
+        "status": "RIDGE_FIT_SHARED_INDICATORS"
+      },
+      {
+        "mae": 14.64785475156168,
+        "removed_feature": "triple_rate_league_season_percentile",
+        "rmse": 18.080349654472055,
+        "rows": 161,
+        "status": "RIDGE_FIT_SHARED_INDICATORS"
+      },
+      {
+        "mae": 14.895419909496594,
+        "removed_feature": "gdp_rate_league_season_percentile",
+        "rmse": 18.260494498465487,
+        "rows": 161,
+        "status": "RIDGE_FIT_SHARED_INDICATORS"
+      },
+      {
+        "mae": 14.666802414415073,
+        "removed_feature": "run_rate_league_season_percentile",
+        "rmse": 18.080881606390864,
+        "rows": 161,
+        "status": "RIDGE_FIT_SHARED_INDICATORS"
+      },
+      {
+        "mae": 14.61677288746989,
+        "removed_feature": "single_rate_league_season_percentile",
+        "rmse": 18.102054328449963,
+        "rows": 161,
+        "status": "RIDGE_FIT_SHARED_INDICATORS"
+      },
+      {
+        "mae": 14.761885805300572,
+        "removed_feature": "double_rate_league_season_percentile",
+        "rmse": 18.207215115554206,
+        "rows": 161,
+        "status": "RIDGE_FIT_SHARED_INDICATORS"
+      },
+      {
+        "mae": 15.140011915572703,
+        "removed_feature": "bip_rate_league_season_percentile",
+        "rmse": 18.483049635406683,
+        "rows": 161,
+        "status": "RIDGE_FIT_SHARED_INDICATORS"
+      }
+    ],
+    "edition_effect": "The Show edition/update remains an observed external axis; no edition coefficient is used to impute missing cards.",
+    "features": [
+      "sb_attempt_rate_league_season_percentile",
+      "sb_success_rate_league_season_percentile",
+      "triple_rate_league_season_percentile",
+      "gdp_rate_league_season_percentile",
+      "run_rate_league_season_percentile",
+      "single_rate_league_season_percentile",
+      "double_rate_league_season_percentile",
+      "bip_rate_league_season_percentile"
+    ],
+    "fit": {
+      "coefficients_centered": {
+        "bip_rate_league_season_percentile": -5.300261796183111,
+        "double_rate_league_season_percentile": -2.5129439851239397,
+        "gdp_rate_league_season_percentile": -2.8265791756103607,
+        "run_rate_league_season_percentile": -0.16544003878433158,
+        "sb_attempt_rate_league_season_percentile": 9.04372161615004,
+        "sb_success_rate_league_season_percentile": -0.04611344777741842,
+        "single_rate_league_season_percentile": -1.2134709452466275,
+        "triple_rate_league_season_percentile": -0.0011641330734621588
+      },
+      "features": [
+        "sb_attempt_rate_league_season_percentile",
+        "sb_success_rate_league_season_percentile",
+        "triple_rate_league_season_percentile",
+        "gdp_rate_league_season_percentile",
+        "run_rate_league_season_percentile",
+        "single_rate_league_season_percentile",
+        "double_rate_league_season_percentile",
+        "bip_rate_league_season_percentile"
+      ],
+      "intercept_centered": 56.84472049689441,
+      "mae": 14.647781445992447,
+      "means": {
+        "bip_rate_league_season_percentile": 0.5372312672056918,
+        "double_rate_league_season_percentile": 0.5275971270636963,
+        "gdp_rate_league_season_percentile": 0.4802992985017099,
+        "run_rate_league_season_percentile": 0.5310328446846533,
+        "sb_attempt_rate_league_season_percentile": 0.6900043154482322,
+        "sb_success_rate_league_season_percentile": 0.4891041446005248,
+        "single_rate_league_season_percentile": 0.5479438271363737,
+        "triple_rate_league_season_percentile": 0.5845375145484755
+      },
+      "residual_p10": -24.900577720484037,
+      "residual_p90": 24.195483757041536,
+      "ridge": 1.0,
+      "rmse": 18.080349584175966,
+      "rows": 161,
+      "scales": {
+        "bip_rate_league_season_percentile": 0.2818168224490304,
+        "double_rate_league_season_percentile": 0.2754604770724669,
+        "gdp_rate_league_season_percentile": 0.26070032039417806,
+        "run_rate_league_season_percentile": 0.25888970488571555,
+        "sb_attempt_rate_league_season_percentile": 0.19352615701034398,
+        "sb_success_rate_league_season_percentile": 0.2699244603889039,
+        "single_rate_league_season_percentile": 0.27261021720778916,
+        "triple_rate_league_season_percentile": 0.24618499065368327
+      },
+      "status": "RIDGE_FIT_SHARED_INDICATORS",
+      "uncertainty_band": [
+        -24.850498,
+        24.46185
+      ]
     },
-    "rows": 47,
-    "unique_player_groups": 47
+    "formula": "The Show Live Speed ~ MLB official shared indicators after league-season normalization",
+    "forward_season_holdout": {
+      "leakage_guard": "future season rows are not used to describe an earlier row",
+      "seasons": [
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "status": "FORWARD_SEASON_RECEIPT"
+    },
+    "player_clustered_holdout": {
+      "groups": 53,
+      "held_out_group_rule": "MLBAM id never split across train/test; deterministic hash folds",
+      "status": "GROUPED_HOLDOUT_RECEIPT"
+    },
+    "rows": 260,
+    "source_evidence": "outputs/derived/sp101_mlb_shared_indicator_player_seasons.csv.gz + outputs/derived/sp101_the_show_live_player_year_panel.jsonl.gz",
+    "uncertainty_and_calibration": {
+      "calibration_status": "DESCRIPTIVE_OUT_OF_SAMPLE_RECEIPT_NOT_FINAL_RATING_CALIBRATION",
+      "residual_band": [
+        -24.850498,
+        24.46185
+      ]
+    },
+    "unique_player_groups": 53
   }
 }

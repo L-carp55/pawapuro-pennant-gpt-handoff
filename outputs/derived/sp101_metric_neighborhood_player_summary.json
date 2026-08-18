@@ -1,38 +1,51 @@
 {
-  "caliper": {
-    "mahalanobis": 0.2,
-    "mutual_knn": 0.2,
-    "optimal_transport": 0.25
+  "balance_diagnostics": {
+    "candidate_rows_with_support": 67,
+    "methods_emitted": 3,
+    "target_rows_with_support": 97
+  },
+  "common_support": {
+    "no_valid_rows": 89,
+    "raw_rate_match_forbidden": true,
+    "valid_rows": 211
   },
   "feature_balance": {
-    "common_feature_count": 1,
-    "required_minimum_for_full_behavior_bridge": 2,
-    "status": "LIMITED_SINGLE_PROTOCOL_FEATURE"
+    "feature_ids": [
+      "SB_ATTEMPT_RATE",
+      "SB_SUCCESS_RATE",
+      "TRIPLE_RATE",
+      "GDP_RATE",
+      "RUN_RATE",
+      "SINGLE_RATE",
+      "DOUBLE_RATE",
+      "BIP_RATE"
+    ],
+    "minimum_valid_feature_count": 2,
+    "status": "COLLECTION_BACKED_MULTI_FEATURE",
+    "valid_row_feature_count_median": 8.0,
+    "valid_row_feature_count_min": 7
   },
   "methods": [
-    [
-      "MUTUAL_KNN",
-      0.2,
-      "mutual nearest rank neighborhood"
-    ],
-    [
-      "CALIPERED_MAHALANOBIS",
-      0.2,
-      "one-dimensional standardized Mahalanobis proxy"
-    ],
-    [
-      "OPTIMAL_TRANSPORT",
-      0.25,
-      "monotone empirical quantile transport"
-    ]
+    {
+      "caliper": 0.42,
+      "method": "MUTUAL_KNN",
+      "note": "mutual k-nearest neighbor over league-season normalized shared indicators"
+    },
+    {
+      "caliper": 1.25,
+      "method": "CALIPERED_MAHALANOBIS",
+      "note": "diagonal calipered Mahalanobis distance over league-season normalized shared indicators"
+    },
+    {
+      "caliper": 0.55,
+      "method": "OPTIMAL_TRANSPORT",
+      "note": "deterministic empirical quantile transport with common-support caliper"
+    }
   ],
-  "mlb_candidate_denominator": 79,
-  "negative_finding": "The destination snapshot exposes only one protocol-specific physical percentile for the cross-league target/MLB analog bridge. Outcome/context features are not jointly available on both sides, so the route is executed as a bounded rank QA lane and is not a full common-indicator behavior model. No nearest neighbor outside the caliper is promoted.",
-  "no_valid_analog_rows": 62,
-  "physical_truth_guard": "The Show and matched-game outputs are external appraisal context; no output is copied into the independent physical estimate.",
+  "mlb_candidate_player_denominator": 67,
+  "negative_finding": "MLB opportunity-conditioned infield-hit, advancement and UBR/BsR fields remain blocked; the valid analog subset is limited to collected common indicators and never treats a raw rate as a cross-league match.",
+  "physical_truth_guard": "The Show and MLB shared indicator routes remain external behavior/appraisal evidence and are not copied into the independent physical estimate.",
   "route_id": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
-  "rows_emitted": 300,
-  "schema_version": "sp101_metric_neighborhood_player_summary_20260818",
-  "target_denominator": 100,
-  "valid_bounded_analog_rows": 238
+  "schema_version": "sp101_metric_neighborhood_player_summary_repaired_20260818",
+  "target_denominator": 100
 }

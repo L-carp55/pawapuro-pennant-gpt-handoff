@@ -1,0 +1,87 @@
+{
+  "ambiguous": [],
+  "ambiguous_exact_name_candidate_count": 0,
+  "canary_contract": "all four must be reconciled and must not be NO_MLB_PROMOTION_FOUND",
+  "canary_current_states": {
+    "カリステ": "THE_SHOW_DATA_MISSING_AFTER_MLB_MATCH",
+    "サンタナ": "THE_SHOW_DATA_MISSING_AFTER_MLB_MATCH",
+    "ポランコ": "ELIGIBLE_MATCHED",
+    "モンテロ": "ELIGIBLE_MATCHED"
+  },
+  "canary_failures": [],
+  "codex_claimed_coverage": {
+    "ELIGIBLE_MATCHED": 2,
+    "IDENTITY_UNRESOLVED": 1,
+    "NO_MLB_PROMOTION_FOUND": 97
+  },
+  "conflicts": [],
+  "downstream_diagnostics": {
+    "foreign_cohort_source": "first_wave_historical_foreign_identity_screen_77_names",
+    "foreign_mlb_to_npb_names_represented_in_transition_panel": 60,
+    "foreign_transition_overlap_names": [],
+    "historical_foreign_mlb_to_npb_names_in_crosswalk": 77,
+    "powerpro_the_show_temporal_pair_rows": 13,
+    "powerpro_the_show_temporal_unique_players": 4,
+    "transition_direction_counts": {
+      "MLB_TO_NPB": 66,
+      "NPB_TO_MLB": 14
+    },
+    "transition_segment_rows": 80,
+    "transition_unique_players": 62
+  },
+  "generated_at": "2026-08-18",
+  "historical_failure_receipt_retained": true,
+  "independent_exact_npb_name_bridge_conflict_count": 0,
+  "invalid_or_must_regenerate_after_identity_repair": [],
+  "mode": "repaired_run",
+  "positive_controls": [
+    {
+      "player": "ポランコ",
+      "queue_order": 29,
+      "source_rows": 21,
+      "stable_player_key": "PROEYE:63065155"
+    },
+    {
+      "player": "モンテロ",
+      "queue_order": 45,
+      "source_rows": 120,
+      "stable_player_key": "PROEYE:53955150"
+    },
+    {
+      "player": "秋山 翔吾",
+      "queue_order": 50,
+      "source_rows": 43,
+      "stable_player_key": "PROEYE:31135133"
+    },
+    {
+      "player": "筒香 嘉智",
+      "queue_order": 74,
+      "source_rows": 43,
+      "stable_player_key": "PROEYE:41945131"
+    }
+  ],
+  "preserved_work": [
+    "raw/pinned The Show source scan and normalized external panel rows (subject to identity rekey)",
+    "PowerPro source rows and current physical evidence sources",
+    "look-ahead quarantine and non-Live separation controls",
+    "append-only SP-078 infrastructure and empty ledger",
+    "the multibridge method definitions/design, but not current100 decision outputs generated from the broken entity map"
+  ],
+  "qa_gap": {
+    "coverage_qa_status": "PASS_WITH_BOUNDED_NEGATIVE_FINDINGS",
+    "execution_receipt_status": "DONE_VALIDATED_WITH_BOUNDED_NEGATIVE_FINDINGS",
+    "why_existing_qa_missed_it": "Existing QA checks 100 unique current rows and conservative name-only rejection, but has no referential-integrity assertion that a current NPB entity cannot be NO_MLB_PROMOTION_FOUND when the already-curated destination MLB bridge contains the same unique normalized NPB name with mlb_evidence=true."
+  },
+  "repair_requirements": [
+    "Canonicalize entity identity before loading any downstream evidence; do not create separate PROEYE and NPBNAME entities for the same uniquely resolved NPB player.",
+    "Use destination curated NPB-name→MLB-person bridges and verified English/MLBAM aliases as reconciliation evidence; do not use raw surname-only matching.",
+    "For every current100 row, fail closed if coverage=NO_MLB_PROMOTION_FOUND while any unique reconciled entity has mlb_evidence=true.",
+    "Positive canaries 秋山翔吾 and 筒香嘉智 must remain matched.",
+    "False-negative canaries カリステ, ポランコ, モンテロ, サンタナ must no longer be NO_MLB_PROMOTION_FOUND; propagate The Show rows where available and THE_SHOW_DATA_MISSING_AFTER_MLB_MATCH otherwise.",
+    "ソト remains unresolved unless independently resolved; do not guess from short name alone.",
+    "Rebuild transition, temporal-pair, current100 multibridge, decision-use, ablation, residual-target, coverage and execution receipts from the repaired entity graph.",
+    "Rerun determinism and all existing SP-077/SP-078 governance QA; owner ledger must remain empty; do not run SP-102/SP-079/shoulder."
+  ],
+  "schema_version": "qa_sp101_identity_propagation_repaired_20260818",
+  "status": "PASS_REPAIRED_NO_CONTRADICTION_FOUND"
+}

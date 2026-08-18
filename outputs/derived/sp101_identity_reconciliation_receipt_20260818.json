@@ -1,0 +1,57 @@
+{
+  "canaries": {
+    "カリステ": {
+      "current_candidates": [
+        "PROEYE:93795157"
+      ],
+      "repaired_keys": [
+        "PROEYE:93795157"
+      ],
+      "status": "RECONCILED"
+    },
+    "サンタナ": {
+      "current_candidates": [
+        "PROEYE:53755153"
+      ],
+      "repaired_keys": [
+        "PROEYE:53755153"
+      ],
+      "status": "RECONCILED"
+    },
+    "ポランコ": {
+      "current_candidates": [
+        "PROEYE:63065155"
+      ],
+      "repaired_keys": [
+        "PROEYE:63065155"
+      ],
+      "status": "RECONCILED"
+    },
+    "モンテロ": {
+      "current_candidates": [
+        "PROEYE:53955150"
+      ],
+      "repaired_keys": [
+        "PROEYE:53955150"
+      ],
+      "status": "RECONCILED"
+    }
+  },
+  "generated_at": "2026-08-18",
+  "hierarchy": [
+    "verified_proeye_or_production_id",
+    "verified_mlbam",
+    "curated_destination_bridge_plus_unique_exact_npb",
+    "verified_aliases_plus_team_season",
+    "ambiguity_unresolved"
+  ],
+  "old_to_new_key_count": 4,
+  "panel_rows_rekeyed": 141,
+  "schema_version": "sp101_identity_reconciliation_receipt_20260818",
+  "short_name_negative_control": {
+    "merged": false,
+    "player": "ソト",
+    "status": "AMBIGUOUS_NOT_FORCED"
+  },
+  "union_policy": "Current PROEYE key survives; NPB/English/MLB/MLBAM/Show UUID/evidence/notes are unioned and downstream indexes are rebuilt."
+}

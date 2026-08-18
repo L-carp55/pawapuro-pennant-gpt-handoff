@@ -5,10 +5,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "中川 圭太",
       "pre_rescue_confidence": "LOW",
       "queue_order": 1,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51255138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -18,10 +19,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "太田 椋",
       "pre_rescue_confidence": "LOW",
       "queue_order": 2,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91395138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -31,10 +33,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "宗 佑磨",
       "pre_rescue_confidence": "LOW",
       "queue_order": 3,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:11815130",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -44,10 +47,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "来田 涼斗",
       "pre_rescue_confidence": "LOW",
       "queue_order": 4,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51955153",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -58,10 +62,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "森 友哉",
       "pre_rescue_confidence": "LOW",
       "queue_order": 5,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91495139",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -71,10 +76,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "紅林 弘太郎",
       "pre_rescue_confidence": "LOW",
       "queue_order": 6,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91995151",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -84,10 +90,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "若月 健矢",
       "pre_rescue_confidence": "LOW",
       "queue_order": 7,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:41645139",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -97,10 +104,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "西川 龍馬",
       "pre_rescue_confidence": "LOW",
       "queue_order": 8,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:71475132",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -111,10 +119,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "西野 真弘",
       "pre_rescue_confidence": "LOW",
       "queue_order": 9,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91495130",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -125,23 +134,25 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.1,
       "player": "カリステ",
-      "pre_rescue_confidence": "MEDIUM",
+      "pre_rescue_confidence": "LOW",
       "queue_order": 10,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:93795157",
       "target_reasons": [
-        "no_residual_route_conflict_or_information_gain_trigger"
+        "MLB_MATCH_WITHOUT_PINNED_LIVE_THE_SHOW_OBSERVATION"
       ],
-      "target_selection_state": "NOT_TARGETED_SUFFICIENT_CONFIDENCE"
+      "target_selection_state": "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN"
     },
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "土田 龍空",
       "pre_rescue_confidence": "LOW",
       "queue_order": 11,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51455153",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -151,10 +162,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "大島 洋平",
       "pre_rescue_confidence": "LOW",
       "queue_order": 12,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:01305131",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -164,10 +176,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "岡林 勇希",
       "pre_rescue_confidence": "LOW",
       "queue_order": 13,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:81585151",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -177,10 +190,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "木下 拓哉",
       "pre_rescue_confidence": "LOW",
       "queue_order": 14,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:31735132",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -190,10 +204,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "村松 開人",
       "pre_rescue_confidence": "LOW",
       "queue_order": 15,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:03105157",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -203,10 +218,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "板山 祐太郎",
       "pre_rescue_confidence": "LOW",
       "queue_order": 16,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91395132",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -216,10 +232,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "田中 幹也",
       "pre_rescue_confidence": "LOW",
       "queue_order": 17,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:21025157",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -229,10 +246,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "石川 昂弥",
       "pre_rescue_confidence": "LOW",
       "queue_order": 18,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91195151",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -242,10 +260,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "福永 裕基",
       "pre_rescue_confidence": "LOW",
       "queue_order": 19,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:81685157",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -256,10 +275,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "細川 成也",
       "pre_rescue_confidence": "LOW",
       "queue_order": 20,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:31835134",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -270,10 +290,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "高橋 周平",
       "pre_rescue_confidence": "LOW",
       "queue_order": 21,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91095135",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -283,10 +304,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "奈良間 大己",
       "pre_rescue_confidence": "LOW",
       "queue_order": 22,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:31435157",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -296,10 +318,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "水野 達稀",
       "pre_rescue_confidence": "LOW",
       "queue_order": 23,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:63165155",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -310,10 +333,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "清宮 幸太郎",
       "pre_rescue_confidence": "LOW",
       "queue_order": 24,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:41545136",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -324,10 +348,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "田宮 裕涼",
       "pre_rescue_confidence": "LOW",
       "queue_order": 25,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51055138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -337,10 +362,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "郡司 裕也",
       "pre_rescue_confidence": "LOW",
       "queue_order": 26,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:21925151",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -351,10 +377,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "野村 佑希",
       "pre_rescue_confidence": "LOW",
       "queue_order": 27,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:31435138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -365,25 +392,26 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 1.0,
       "player": "ソト",
-      "pre_rescue_confidence": "LOW",
+      "pre_rescue_confidence": "VERY_LOW",
       "queue_order": 28,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:03505133",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
-        "IDENTITY_AMBIGUITY",
         "identity_resolution_required_before_game_evidence_use"
       ],
-      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+      "target_selection_state": "TARGETED_LOW_CONFIDENCE"
     },
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.0,
       "player": "ポランコ",
       "pre_rescue_confidence": "MEDIUM",
       "queue_order": 29,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:63065155",
       "target_reasons": [
         "no_residual_route_conflict_or_information_gain_trigger"
@@ -393,10 +421,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "佐藤 都志也",
       "pre_rescue_confidence": "LOW",
       "queue_order": 30,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:71075151",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -407,10 +436,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "友杉 篤輝",
       "pre_rescue_confidence": "LOW",
       "queue_order": 31,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:71275157",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -420,10 +450,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "安田 尚憲",
       "pre_rescue_confidence": "LOW",
       "queue_order": 32,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:81885136",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -433,10 +464,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "小川 龍成",
       "pre_rescue_confidence": "LOW",
       "queue_order": 33,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:11715153",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -446,10 +478,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "山口 航輝",
       "pre_rescue_confidence": "LOW",
       "queue_order": 34,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91895138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -460,10 +493,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "岡 大海",
       "pre_rescue_confidence": "LOW",
       "queue_order": 35,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:11515139",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -473,10 +507,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "藤原 恭大",
       "pre_rescue_confidence": "LOW",
       "queue_order": 36,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:31635138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -486,10 +521,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "藤岡 裕大",
       "pre_rescue_confidence": "LOW",
       "queue_order": 37,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:41645136",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -500,10 +536,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "髙部 瑛斗",
       "pre_rescue_confidence": "LOW",
       "queue_order": 38,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:11215151",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -513,10 +550,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "古賀 悠斗",
       "pre_rescue_confidence": "LOW",
       "queue_order": 39,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:81785155",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -526,10 +564,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "外崎 修汰",
       "pre_rescue_confidence": "LOW",
       "queue_order": 40,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:41245130",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -539,10 +578,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "源田 壮亮",
       "pre_rescue_confidence": "LOW",
       "queue_order": 41,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:71775134",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -552,10 +592,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "滝澤 夏央",
       "pre_rescue_confidence": "LOW",
       "queue_order": 42,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51255155",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -565,10 +606,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "石井 一成",
       "pre_rescue_confidence": "LOW",
       "queue_order": 43,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:21125134",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -578,37 +620,12 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "ファビアン",
       "pre_rescue_confidence": "LOW",
       "queue_order": 44,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:43745150",
-      "target_reasons": [
-        "acceleration_or_end_to_end_lane_missing"
-      ],
-      "target_selection_state": "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN"
-    },
-    {
-      "comment_search_allowed_in_SP102": false,
-      "expected_information_gain": "LOW",
-      "player": "モンテロ",
-      "pre_rescue_confidence": "MEDIUM",
-      "queue_order": 45,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
-      "stable_player_key": "PROEYE:53955150",
-      "target_reasons": [
-        "no_residual_route_conflict_or_information_gain_trigger"
-      ],
-      "target_selection_state": "NOT_TARGETED_SUFFICIENT_CONFIDENCE"
-    },
-    {
-      "comment_search_allowed_in_SP102": false,
-      "expected_information_gain": "LOW",
-      "player": "名原 典彦",
-      "pre_rescue_confidence": "LOW",
-      "queue_order": 46,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
-      "stable_player_key": "NPBNAME:名原典彦",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
       ],
@@ -617,10 +634,39 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.55,
+      "player": "モンテロ",
+      "pre_rescue_confidence": "LOW",
+      "queue_order": 45,
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
+      "stable_player_key": "PROEYE:53955150",
+      "target_reasons": [
+        "PHYSICAL_VS_THE_SHOW_PERCENTILE_DIFFERENCE_GE_0.20"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "comment_search_allowed_in_SP102": false,
+      "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
+      "player": "名原 典彦",
+      "pre_rescue_confidence": "LOW",
+      "queue_order": 46,
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
+      "stable_player_key": "PROEYE:",
+      "target_reasons": [
+        "acceleration_or_end_to_end_lane_missing"
+      ],
+      "target_selection_state": "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN"
+    },
+    {
+      "comment_search_allowed_in_SP102": true,
+      "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "坂倉 将吾",
       "pre_rescue_confidence": "LOW",
       "queue_order": 47,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:11915134",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -631,10 +677,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "小園 海斗",
       "pre_rescue_confidence": "LOW",
       "queue_order": 48,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:01705138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -645,10 +692,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "矢野 雅哉",
       "pre_rescue_confidence": "LOW",
       "queue_order": 49,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:93395153",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -659,13 +707,13 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.55,
       "player": "秋山 翔吾",
       "pre_rescue_confidence": "LOW",
       "queue_order": 50,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:31135133",
       "target_reasons": [
-        "PHYSICAL_VS_THE_SHOW_PERCENTILE_DIFFERENCE_GE_0.20",
         "PHYSICAL_VS_POWERPRO_PERCENTILE_DIFFERENCE_GE_0.20"
       ],
       "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
@@ -673,10 +721,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "菊池 涼介",
       "pre_rescue_confidence": "LOW",
       "queue_order": 51,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:61565135",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -686,10 +735,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "野間 峻祥",
       "pre_rescue_confidence": "LOW",
       "queue_order": 52,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:01405130",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -700,23 +750,25 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.1,
       "player": "サンタナ",
-      "pre_rescue_confidence": "MEDIUM",
+      "pre_rescue_confidence": "LOW",
       "queue_order": 53,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:53755153",
       "target_reasons": [
-        "no_residual_route_conflict_or_information_gain_trigger"
+        "MLB_MATCH_WITHOUT_PINNED_LIVE_THE_SHOW_OBSERVATION"
       ],
-      "target_selection_state": "NOT_TARGETED_SUFFICIENT_CONFIDENCE"
+      "target_selection_state": "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN"
     },
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "並木 秀尊",
       "pre_rescue_confidence": "LOW",
       "queue_order": 54,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91695153",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -726,10 +778,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "中村 悠平",
       "pre_rescue_confidence": "LOW",
       "queue_order": 55,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51255118",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -739,10 +792,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "丸山 和郁",
       "pre_rescue_confidence": "LOW",
       "queue_order": 56,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:93195155",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -753,10 +807,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "古賀 優大",
       "pre_rescue_confidence": "LOW",
       "queue_order": 57,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:01705134",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -767,10 +822,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "塩見 泰隆",
       "pre_rescue_confidence": "LOW",
       "queue_order": 58,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:71975136",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -780,10 +836,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "岩田 幸宏",
       "pre_rescue_confidence": "LOW",
       "queue_order": 59,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51355155",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -793,10 +850,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "長岡 秀樹",
       "pre_rescue_confidence": "LOW",
       "queue_order": 60,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51455151",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -806,10 +864,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "太田 光",
       "pre_rescue_confidence": "LOW",
       "queue_order": 61,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:71375138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -819,10 +878,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "村林 一輝",
       "pre_rescue_confidence": "LOW",
       "queue_order": 62,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:41845132",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -833,10 +893,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "浅村 栄斗",
       "pre_rescue_confidence": "LOW",
       "queue_order": 63,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51155118",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -846,10 +907,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "渡邊 佳明",
       "pre_rescue_confidence": "LOW",
       "queue_order": 64,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:73175138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -859,10 +921,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "鈴木 大地",
       "pre_rescue_confidence": "LOW",
       "queue_order": 65,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:81985135",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -872,10 +935,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "京田 陽太",
       "pre_rescue_confidence": "LOW",
       "queue_order": 66,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:81585134",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -886,10 +950,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "佐野 恵太",
       "pre_rescue_confidence": "LOW",
       "queue_order": 67,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91995134",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -899,10 +964,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "宮﨑 敏郎",
       "pre_rescue_confidence": "LOW",
       "queue_order": 68,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51455137",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -912,10 +978,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "山本 祐大",
       "pre_rescue_confidence": "LOW",
       "queue_order": 69,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:23125136",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -925,10 +992,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "度会 隆輝",
       "pre_rescue_confidence": "LOW",
       "queue_order": 70,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:33535159",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -938,10 +1006,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "林 琢真",
       "pre_rescue_confidence": "LOW",
       "queue_order": 71,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91695157",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -952,10 +1021,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "梶原 昂希",
       "pre_rescue_confidence": "LOW",
       "queue_order": 72,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51555155",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -965,10 +1035,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "牧 秀悟",
       "pre_rescue_confidence": "LOW",
       "queue_order": 73,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:13115153",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -976,25 +1047,27 @@
       "target_selection_state": "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN"
     },
     {
-      "comment_search_allowed_in_SP102": true,
-      "expected_information_gain": "HIGH",
+      "comment_search_allowed_in_SP102": false,
+      "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.0,
       "player": "筒香 嘉智",
-      "pre_rescue_confidence": "LOW",
+      "pre_rescue_confidence": "MEDIUM",
       "queue_order": 74,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:41945131",
       "target_reasons": [
-        "PHYSICAL_VS_THE_SHOW_PERCENTILE_DIFFERENCE_GE_0.20"
+        "no_residual_route_conflict_or_information_gain_trigger"
       ],
-      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+      "target_selection_state": "NOT_TARGETED_SUFFICIENT_CONFIDENCE"
     },
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "蝦名 達夫",
       "pre_rescue_confidence": "LOW",
       "queue_order": 75,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51555151",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -1005,10 +1078,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "今宮 健太",
       "pre_rescue_confidence": "LOW",
       "queue_order": 76,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:31335131",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -1019,10 +1093,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "周東 佑京",
       "pre_rescue_confidence": "LOW",
       "queue_order": 77,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:21925136",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1032,10 +1107,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "山川 穂高",
       "pre_rescue_confidence": "LOW",
       "queue_order": 78,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:21425139",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1045,10 +1121,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "柳田 悠岐",
       "pre_rescue_confidence": "LOW",
       "queue_order": 79,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:31835133",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1058,10 +1135,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "柳町 達",
       "pre_rescue_confidence": "LOW",
       "queue_order": 80,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:73175151",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1071,10 +1149,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "栗原 陵矢",
       "pre_rescue_confidence": "LOW",
       "queue_order": 81,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:01705130",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1084,10 +1163,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "正木 智也",
       "pre_rescue_confidence": "LOW",
       "queue_order": 82,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:81885155",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1097,10 +1177,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "海野 隆司",
       "pre_rescue_confidence": "LOW",
       "queue_order": 83,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:81385151",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1110,10 +1191,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "牧原 大成",
       "pre_rescue_confidence": "LOW",
       "queue_order": 84,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:61465133",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1123,10 +1205,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "近藤 健介",
       "pre_rescue_confidence": "LOW",
       "queue_order": 85,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:41745135",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1136,10 +1219,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "丸 佳浩",
       "pre_rescue_confidence": "LOW",
       "queue_order": 86,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:21425116",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1149,10 +1233,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "佐々木 俊輔",
       "pre_rescue_confidence": "LOW",
       "queue_order": 87,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:51955159",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1162,10 +1247,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "吉川 尚輝",
       "pre_rescue_confidence": "LOW",
       "queue_order": 88,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:73375134",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1175,10 +1261,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "大城 卓三",
       "pre_rescue_confidence": "LOW",
       "queue_order": 89,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:21325136",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1188,10 +1275,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "岸田 行倫",
       "pre_rescue_confidence": "LOW",
       "queue_order": 90,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:91595136",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -1202,10 +1290,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "松本 剛",
       "pre_rescue_confidence": "LOW",
       "queue_order": 91,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:21625135",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1215,10 +1304,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "中野 拓夢",
       "pre_rescue_confidence": "LOW",
       "queue_order": 92,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:41445153",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1228,10 +1318,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "伏見 寅威",
       "pre_rescue_confidence": "LOW",
       "queue_order": 93,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:61065137",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1241,10 +1332,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "佐藤 輝明",
       "pre_rescue_confidence": "LOW",
       "queue_order": 94,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:41045153",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1254,10 +1346,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "坂本 誠志郎",
       "pre_rescue_confidence": "LOW",
       "queue_order": 95,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:11915132",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1267,10 +1360,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "大山 悠輔",
       "pre_rescue_confidence": "LOW",
       "queue_order": 96,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:21325134",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1280,10 +1374,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "小幡 竜平",
       "pre_rescue_confidence": "LOW",
       "queue_order": 97,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:31535138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1293,10 +1388,11 @@
     {
       "comment_search_allowed_in_SP102": true,
       "expected_information_gain": "HIGH",
+      "expected_information_gain_score": 0.77,
       "player": "木浪 聖也",
       "pre_rescue_confidence": "LOW",
       "queue_order": 98,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:31735138",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing",
@@ -1307,10 +1403,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "梅野 隆太郎",
       "pre_rescue_confidence": "LOW",
       "queue_order": 99,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:21325139",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1320,10 +1417,11 @@
     {
       "comment_search_allowed_in_SP102": false,
       "expected_information_gain": "LOW",
+      "expected_information_gain_score": 0.22,
       "player": "森下 翔太",
       "pre_rescue_confidence": "LOW",
       "queue_order": 100,
-      "selection_basis": "post_SP101_route_residuals_not_comment_availability",
+      "selection_basis": "post_SP101_repaired_route_residuals_not_comment_availability",
       "stable_player_key": "PROEYE:43145157",
       "target_reasons": [
         "acceleration_or_end_to_end_lane_missing"
@@ -1336,16 +1434,17 @@
     "intended": 100,
     "unique_queue_orders": 100
   },
-  "schema_version": "sp101_residual_low_confidence_target_set_20260818",
+  "schema_version": "sp101_residual_low_confidence_target_set_repaired_20260818",
   "scope": "speed_only",
   "search_status": "SP-102_NOT_RUN",
   "selection_contract": "outputs/derived/sp102_target_selection_contract_20260818.json",
-  "selection_guard": "Targeting uses post-SP-101 residual uncertainty, route disagreement, missing acceleration/end-to-end evidence and expected information gain; comment availability is not used as a target criterion.",
-  "status": "FROZEN_AFTER_SP101_BEFORE_SP102",
+  "selection_guard": "Exactly one target state per current-100 player; LOW/VERY_LOW confidence is a trigger, and NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN includes a measurable expected_information_gain_score.",
+  "status": "FROZEN_AFTER_SP101_REPAIR_BEFORE_SP102",
   "target_state_counts": {
-    "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN": 68,
-    "NOT_TARGETED_SUFFICIENT_CONFIDENCE": 4,
-    "TARGETED_MATERIAL_CONFLICT": 28
+    "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN": 70,
+    "NOT_TARGETED_SUFFICIENT_CONFIDENCE": 2,
+    "TARGETED_LOW_CONFIDENCE": 1,
+    "TARGETED_MATERIAL_CONFLICT": 27
   },
   "target_state_vocabulary": [
     "TARGETED_LOW_CONFIDENCE",

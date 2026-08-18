@@ -1,0 +1,2099 @@
+{
+  "counts": {
+    "blocked_advanced_indicator_rows": 361,
+    "curated_candidates": 81,
+    "regular_season_appearance_rows": 361,
+    "regular_season_players": 75,
+    "resolved_mlbam_ids": 75,
+    "shared_indicator_rows": 361,
+    "sprint_speed_rows": 264
+  },
+  "determinism": "retrieval_date fixed to 2026-08-18; downstream uses frozen files; gzip mtime=0",
+  "downstream_consumers": [
+    "sp101_mlb_regular_season_appearance_years.csv",
+    "sp101_mlb_shared_indicator_player_seasons.csv.gz",
+    "sp101_current100_multibridge_evidence.json",
+    "sp101_npb_mlb_transition_segments.csv",
+    "sp101_requirements_to_decision_utilization.json",
+    "sp101_route_ablation_qa.json",
+    "sp101_residual_low_confidence_target_set.json"
+  ],
+  "failed_acquisition": [],
+  "feature_definitions": {
+    "approximate_common_construct": [
+      "SB_ATTEMPT_RATE",
+      "SB_SUCCESS_RATE",
+      "TRIPLE_RATE",
+      "GIDP_RATE",
+      "RUN_RATE",
+      "SINGLE_RATE",
+      "DOUBLE_RATE",
+      "STRIKEOUT_RATE",
+      "BIP_RATE"
+    ],
+    "blocked_missing_data": [
+      "infield_hit_rate_opportunity",
+      "first_to_third_success_rate",
+      "second_to_home_success_rate",
+      "ubr_bsr_compatible"
+    ],
+    "directly_comparable_after_league_normalization": [
+      "PA",
+      "AB",
+      "SB_ATTEMPTS",
+      "SB_SUCCESS",
+      "TRIPLES",
+      "GIDP",
+      "RUNS",
+      "HITS",
+      "SINGLES",
+      "DOUBLES",
+      "STRIKEOUTS",
+      "BIP",
+      "SPRINT_SPEED"
+    ],
+    "not_definitionally_comparable": [
+      "INFIELD_HIT_RATE_OPPORTUNITY",
+      "FIRST_TO_THIRD_SUCCESS_RATE",
+      "SECOND_TO_HOME_SUCCESS_RATE",
+      "UBR_BSR_COMPATIBLE"
+    ]
+  },
+  "generated_at": "2026-08-18",
+  "identity_repair_receipt": "outputs/derived/sp101_identity_reconciliation_receipt_20260818.json",
+  "identity_resolution": [
+    {
+      "candidate_ids": [
+        "500135"
+      ],
+      "http_receipt": {
+        "bytes": 48420,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "cbb32a1d67dff70000da252cb97d7d353eeab90c646e0419e75ae92e87bcdad8",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Rodr%C3%ADguez%2C%20Ronny"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "R.ロドリゲス",
+      "query": "Rodríguez, Ronny",
+      "selected_id": "500135"
+    },
+    {
+      "candidate_ids": [
+        "606157"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "アキーノ",
+      "query": "Aquino, Aristides",
+      "selected_id": "606157"
+    },
+    {
+      "candidate_ids": [
+        "542583"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "アギラー",
+      "query": "Aguilar, Jesús",
+      "selected_id": "542583"
+    },
+    {
+      "candidate_ids": [
+        "553902"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "アストゥディーヨ",
+      "query": "Astudillo, Willians",
+      "selected_id": "553902"
+    },
+    {
+      "candidate_ids": [
+        "665947"
+      ],
+      "http_receipt": {
+        "bytes": 1235,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "59d14d3ceed5d3e128d72601bca7bca563adf8819f18e1ed4f5a2040e092ec1a",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Apostel%2C%20Sherten"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "アポステル",
+      "query": "Apostel, Sherten",
+      "selected_id": "665947"
+    },
+    {
+      "candidate_ids": [
+        "570489"
+      ],
+      "http_receipt": {
+        "bytes": 11974,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "6c8569be98cb483532f2a3ac00e56d024b6ba9fdb84d06e0855ad9223bed00cd",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Alc%C3%A1ntara%2C%20Arismendy"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "アルカンタラ",
+      "query": "Alcántara, Arismendy",
+      "selected_id": "570489"
+    },
+    {
+      "candidate_ids": [
+        "645848"
+      ],
+      "http_receipt": {
+        "bytes": 47169,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "bc170ff34e38cba92f76cce37d0332d296f6895561deeec71932a041673ec3b0",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=%C3%81lvarez%2C%20Dariel"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "アルバレス",
+      "query": "Álvarez, Dariel",
+      "selected_id": "645848"
+    },
+    {
+      "candidate_ids": [
+        "444876"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "エスコバー",
+      "query": "Escobar, Alcides",
+      "selected_id": "444876"
+    },
+    {
+      "candidate_ids": [
+        "588751"
+      ],
+      "http_receipt": {
+        "bytes": 1280,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "3c240a29fde499a8626cb14cd27ab343ce94b90889566f0827ac8e6788daced3",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Hechavarr%C3%ADa%2C%20Adeiny"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "エチェバリア",
+      "query": "Hechavarría, Adeiny",
+      "selected_id": "588751"
+    },
+    {
+      "candidate_ids": [
+        "666464"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "エンカーナシオン",
+      "query": "Encarnacion, Jerar",
+      "selected_id": "666464"
+    },
+    {
+      "candidate_ids": [
+        "657434"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "オグレディ",
+      "query": "O'Grady, Brian",
+      "selected_id": "657434"
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 47985,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "792ab2153af990bb26ebff6897077c47ef43d227b517e3bf1488537d0046da7b",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Osuna%2C%20Jos%C3%A9"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "オスナ",
+      "query": "Osuna, José",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [
+        "658668"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "オリバレス",
+      "query": "Olivares, Edward",
+      "selected_id": "658668"
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 47892,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "51b0b1cb769a3f0f029743aefe5de6487e427acead10fcf34274297cd4ac0d8c",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Austin%2C%20Tyler"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "オースティン",
+      "query": "Austin, Tyler",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [
+        "628329"
+      ],
+      "http_receipt": {
+        "bytes": 48207,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "1929f74d1c17065dbd5775fe8d0bdcc1c9cec88aaab3d1ab54abd23ed4ba2aec",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Castillo%2C%20Rusney"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "カスティーヨ",
+      "query": "Castillo, Rusney",
+      "selected_id": "628329"
+    },
+    {
+      "candidate_ids": [
+        "666801"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "カストロ",
+      "query": "Castro, Rodolfo",
+      "selected_id": "666801"
+    },
+    {
+      "candidate_ids": [
+        "672744"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "カナリオ",
+      "query": "Canario, Alexander",
+      "selected_id": "672744"
+    },
+    {
+      "candidate_ids": [
+        "593525"
+      ],
+      "http_receipt": {
+        "bytes": 25544,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "e3dc18d3823013a4e5e42a79f78f8773a3440d946fe7f6a8500640be720ad6e3",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Calixte%2C%20Orlando"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "カリステ",
+      "query": "Calixte, Orlando",
+      "selected_id": "593525"
+    },
+    {
+      "candidate_ids": [
+        "520471"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ガルビス",
+      "query": "Galvis, Freddy",
+      "selected_id": "520471"
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 49745,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "7f513b13483f566d999db9925d463d9bba4e84df651f4ae96fba99d967a2c022",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Gerber%2C%20Mike"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "ガーバー",
+      "query": "Gerber, Mike",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [
+        "623182"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "キブレハン",
+      "query": "Kivlehan, Patrick",
+      "selected_id": "623182"
+    },
+    {
+      "candidate_ids": [
+        "663550"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "キャベッジ",
+      "query": "Cabbage, Trey",
+      "selected_id": "663550"
+    },
+    {
+      "candidate_ids": [
+        "656467"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ギッテンス",
+      "query": "Gittens, Chris",
+      "selected_id": "656467"
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 48198,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "6e9c782c69b8ef614a8ac0c2c3c2e83b2e890d6c0b41ded770eb6e69e4630509",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Cron%2C%20Kevin"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "クロン",
+      "query": "Cron, Kevin",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [
+        "614173"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "コルデロ",
+      "query": "Cordero, Franchy",
+      "selected_id": "614173"
+    },
+    {
+      "candidate_ids": [
+        "670768"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ゴンサレス",
+      "query": "González, Luis",
+      "selected_id": "670768"
+    },
+    {
+      "candidate_ids": [
+        "660757"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ゴンザレス",
+      "query": "Gonzalez, Oscar",
+      "selected_id": "660757"
+    },
+    {
+      "candidate_ids": [
+        "593934"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "サノー",
+      "query": "Sanó, Miguel",
+      "selected_id": "593934"
+    },
+    {
+      "candidate_ids": [
+        "543742"
+      ],
+      "http_receipt": {
+        "bytes": 50536,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "60860091f54b833782f11914f229277ee1ebdfa2939982b576f7533f2d68019c",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Sands%2C%20Jerry"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "サンズ",
+      "query": "Sands, Jerry",
+      "selected_id": "543742"
+    },
+    {
+      "candidate_ids": [
+        "570267"
+      ],
+      "http_receipt": {
+        "bytes": 36088,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "7c4ac8628062ff921489ab9ddcbac3240b8755f3546735389ff572634fd0a0f6",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Santana%2C%20Domingo"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "サンタナ",
+      "query": "Santana, Domingo",
+      "selected_id": "570267"
+    },
+    {
+      "candidate_ids": [
+        "501213"
+      ],
+      "http_receipt": {
+        "bytes": 20262,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "dc26aef96dc59aa3ee2d6db31c7c1634dcffd567ca4be04f3f6d2897b7c9420e",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Sierra%2C%20Mois%C3%A9s"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "シエラ",
+      "query": "Sierra, Moisés",
+      "selected_id": "501213"
+    },
+    {
+      "candidate_ids": [
+        "643524"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "シュウィンデル",
+      "query": "Schwindel, Frank",
+      "selected_id": "643524"
+    },
+    {
+      "candidate_ids": [
+        "676044"
+      ],
+      "http_receipt": {
+        "bytes": 50704,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "59071e261f8f57e3d61ea2422e0c177f7dbb16f46fcabd3893935b1282c272a4",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Seymour%2C%20Bob"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "シーモア",
+      "query": "Seymour, Bob",
+      "selected_id": "676044"
+    },
+    {
+      "candidate_ids": [
+        "430945"
+      ],
+      "http_receipt": {
+        "bytes": 46542,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "30c366756dd90f4c604156d96ec0760a66ad5aa4d9bfdb90eb12b3cef3cc29a4",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Jones%2C%20Adam"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "ジョーンズ",
+      "query": "Jones, Adam",
+      "selected_id": "430945"
+    },
+    {
+      "candidate_ids": [
+        "664057"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "スティーブンソン",
+      "query": "Stevenson, Andrew",
+      "selected_id": "664057"
+    },
+    {
+      "candidate_ids": [
+        "605486"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "スパンジェンバーグ",
+      "query": "Spangenberg, Cory",
+      "selected_id": "605486"
+    },
+    {
+      "candidate_ids": [
+        "475253"
+      ],
+      "http_receipt": {
+        "bytes": 48200,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "df4a287a3df3c49d8cee7ebe0538e7b18062c6d0964c7feedab5422351220d17",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Smoak%2C%20Justin"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "スモーク",
+      "query": "Smoak, Justin",
+      "selected_id": "475253"
+    },
+    {
+      "candidate_ids": [
+        "666915"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ダルベック",
+      "query": "Dalbec, Bobby",
+      "selected_id": "666915"
+    },
+    {
+      "candidate_ids": [
+        "656308"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "チェイビス",
+      "query": "Chavis, Michael",
+      "selected_id": "656308"
+    },
+    {
+      "candidate_ids": [
+        "519346"
+      ],
+      "http_receipt": {
+        "bytes": 48278,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "0d2adabd55d3e1f4929f4c71d23198dbbffe234d1bf77ebea5745eaf9055e5c1",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Thames%2C%20Eric"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "テームズ",
+      "query": "Thames, Eric",
+      "selected_id": "519346"
+    },
+    {
+      "candidate_ids": [
+        "672478"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ディアス",
+      "query": "Diaz, Jordan",
+      "selected_id": "672478"
+    },
+    {
+      "candidate_ids": [
+        "543105"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ディカーソン",
+      "query": "Dickerson, Alex",
+      "selected_id": "543105"
+    },
+    {
+      "candidate_ids": [
+        "641525"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ディクソン",
+      "query": "Dixon, Brandon",
+      "selected_id": "641525"
+    },
+    {
+      "candidate_ids": [
+        "571602"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "デビッドソン",
+      "query": "Davidson, Matt",
+      "selected_id": "571602"
+    },
+    {
+      "candidate_ids": [
+        "641505"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "デービス",
+      "query": "Davis, Jonathan",
+      "selected_id": "641505"
+    },
+    {
+      "candidate_ids": [
+        "642137"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "トーマス",
+      "query": "Thomas, Cody",
+      "selected_id": "642137"
+    },
+    {
+      "candidate_ids": [
+        "600524"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ヌニエス",
+      "query": "Núñez, Renato",
+      "selected_id": "600524"
+    },
+    {
+      "candidate_ids": [
+        "663527"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ネビン",
+      "query": "Nevin, Tyler",
+      "selected_id": "663527"
+    },
+    {
+      "candidate_ids": [
+        "641914"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ノイジー",
+      "query": "Neuse, Sheldon",
+      "selected_id": "641914"
+    },
+    {
+      "candidate_ids": [
+        "595981"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ハイネマン",
+      "query": "Heineman, Scott",
+      "selected_id": "595981"
+    },
+    {
+      "candidate_ids": [
+        "593700"
+      ],
+      "http_receipt": {
+        "bytes": 9937,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "e55a301daa531e54208273188cf7d9144b3319e593c9ed0b2975852a9501ec14",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Hanson%2C%20Alen"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "ハンソン",
+      "query": "Hanson, Alen",
+      "selected_id": "593700"
+    },
+    {
+      "candidate_ids": [
+        "591971"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "バレラ",
+      "query": "Valera, Breyvic",
+      "selected_id": "591971"
+    },
+    {
+      "candidate_ids": [
+        "467827"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "パーラ",
+      "query": "Parra, Gerardo",
+      "selected_id": "467827"
+    },
+    {
+      "candidate_ids": [
+        "669450"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ヒュンメル",
+      "query": "Hummel, Cooper",
+      "selected_id": "669450"
+    },
+    {
+      "candidate_ids": [
+        "570799"
+      ],
+      "http_receipt": {
+        "bytes": 49269,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "2853c1d33129f3897f48950d1170119c4f238d9b0ad3d842992c45cabfd33bb5",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Villanueva%2C%20Christian"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "ビヤヌエバ",
+      "query": "Villanueva, Christian",
+      "selected_id": "570799"
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 47874,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "a2220bf172877ec34bdbffd82244a30f451a2160b451bc2170cfeb4f526c6e8c",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Pirela%2C%20Jos%C3%A9"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "ピレラ",
+      "query": "Pirela, José",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [
+        "645801"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "フォード",
+      "query": "Ford, Mike",
+      "selected_id": "645801"
+    },
+    {
+      "candidate_ids": [
+        "596748"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "フランコ",
+      "query": "Franco, Maikel",
+      "selected_id": "596748"
+    },
+    {
+      "candidate_ids": [
+        "518466"
+      ],
+      "http_receipt": {
+        "bytes": 2074,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "3aae91663220fe8b21acdf3355c89efb7d683d410be393647f63e52aadb6d32b",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Blash%2C%20Jabari"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "ブラッシュ",
+      "query": "Blash, Jabari",
+      "selected_id": "518466"
+    },
+    {
+      "candidate_ids": [
+        "621446"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ブリンソン",
+      "query": "Brinson, Lewis",
+      "selected_id": "621446"
+    },
+    {
+      "candidate_ids": [
+        "592622"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ペイトン",
+      "query": "Payton, Mark",
+      "selected_id": "592622"
+    },
+    {
+      "candidate_ids": [
+        "572228"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ボイト",
+      "query": "Voit, Luke",
+      "selected_id": "572228"
+    },
+    {
+      "candidate_ids": [
+        "613564"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ボスラー",
+      "query": "Vosler, Jason",
+      "selected_id": "613564"
+    },
+    {
+      "candidate_ids": [
+        "571506"
+      ],
+      "http_receipt": {
+        "bytes": 48187,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "530659afcfc928f7ebff312d1fd183245f7ce625a381393f772a3c852782a2a1",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Bour%2C%20Justin"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "ボーア",
+      "query": "Bour, Justin",
+      "selected_id": "571506"
+    },
+    {
+      "candidate_ids": [
+        "570256"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "ポランコ",
+      "query": "Polanco, Gregory",
+      "selected_id": "570256"
+    },
+    {
+      "candidate_ids": [
+        "676950"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "マキノン",
+      "query": "MacKinnon, David",
+      "selected_id": "676950"
+    },
+    {
+      "candidate_ids": [
+        "643436"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "マクブルーム",
+      "query": "McBroom, Ryan",
+      "selected_id": "643436"
+    },
+    {
+      "candidate_ids": [
+        "527043"
+      ],
+      "http_receipt": {
+        "bytes": 23415,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "ac5cc644fe48ede3862af4d33c5bf4d7386820e45e759ea86010eb6cf7edf384",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Marte%2C%20Jefry"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "マルテ",
+      "query": "Marte, Jefry",
+      "selected_id": "527043"
+    },
+    {
+      "candidate_ids": [
+        "592530"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "マルモレホス",
+      "query": "Marmolejos, José",
+      "selected_id": "592530"
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 47238,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "719357c3878707442c5ba9f0334bffe8ae2796e255d3769ec521c7212a9f59ee",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Martin%2C%20Leonys"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "マーティン",
+      "query": "Martin, Leonys",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [
+        "570615"
+      ],
+      "http_receipt": {
+        "bytes": 47154,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "af89b69daf4ac6a5db350f144fa7ca1a0bead20315d676f00df63bb7ddaf436b",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Moya%2C%20Steven"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "モヤ",
+      "query": "Moya, Steven",
+      "selected_id": "570615"
+    },
+    {
+      "candidate_ids": [
+        "663796"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "モンテス",
+      "query": "Montes, Coco",
+      "selected_id": "663796"
+    },
+    {
+      "candidate_ids": [
+        "660707"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "モンテロ",
+      "query": "Montero, Elehuris",
+      "selected_id": "660707"
+    },
+    {
+      "candidate_ids": [
+        "592660"
+      ],
+      "http_receipt": {
+        "bytes": 4883,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "9735609799f5668e2414997ea7acd6d3deaf07ffa2179cae97a47f57553fc4c7",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Ravelo%2C%20Rangel"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "ラベロ",
+      "query": "Ravelo, Rangel",
+      "selected_id": "592660"
+    },
+    {
+      "candidate_ids": [
+        "614177"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "レイエス",
+      "query": "Reyes, Franmil",
+      "selected_id": "614177"
+    },
+    {
+      "candidate_ids": [
+        "608703"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "レイノルズ",
+      "query": "Reynolds, Matt",
+      "selected_id": "608703"
+    },
+    {
+      "candidate_ids": [
+        "807799"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "吉田 正尚",
+      "query": "Yoshida, Masataka",
+      "selected_id": "807799"
+    },
+    {
+      "candidate_ids": [
+        "673451"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "秋山 翔吾",
+      "query": "Shogo Akiyama",
+      "selected_id": "673451"
+    },
+    {
+      "candidate_ids": [
+        "660294"
+      ],
+      "method": "pinned_full_name_identity_bridge",
+      "npb_name": "筒香 嘉智",
+      "query": "Yoshitomo Tsutsugo",
+      "selected_id": "660294"
+    },
+    {
+      "candidate_ids": [
+        "673548"
+      ],
+      "method": "pinned_crosswalk_exact",
+      "npb_name": "鈴木 誠也",
+      "query": "Suzuki, Seiya",
+      "selected_id": "673548"
+    },
+    {
+      "candidate_ids": [
+        "493114"
+      ],
+      "http_receipt": {
+        "bytes": 1141,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "e13ef7f3e3bf14c4fbea37ccd3dd19542c2348c749411011bd0590dea539d19e",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Aoki%2C%20Norichika"
+      },
+      "method": "statsapi_exact_full_name",
+      "npb_name": "青木 宣親",
+      "query": "Aoki, Norichika",
+      "selected_id": "493114"
+    }
+  ],
+  "payload_file": "data/manual/sp101_mlb_stats_api_payloads_20260818.json",
+  "payload_file_sha256": "0e494e61573d3975b0e4e9548585e6cd8713b8b230a4c3aa20f96609bb9b09e9",
+  "schema_version": "sp101_mlb_official_indicator_source_manifest_20260818",
+  "short_name_negative_control": {
+    "attempted_sources": [
+      "data/pennant.db:current queue identity/team",
+      "data/normalized/player_identity_crosswalk.csv:Juan Soto/Gregory Soto/Livan Soto/Elliot Soto candidates",
+      "https://statsapi.mlb.com/api/v1/people/search?names=Soto"
+    ],
+    "candidate_mlbam_ids_not_adopted": [
+      "665742",
+      "642397",
+      "670869"
+    ],
+    "npb_name": "ソト",
+    "reason": "Short NPB surname is not an authoritative NPB↔MLB identity bridge; no candidate is promoted.",
+    "result": "UNRESOLVED_NO_SHORT_NAME_GUESS"
+  },
+  "sources": [
+    {
+      "definition": "gameType=R, sport=MLB, gamesPlayed>0 or plateAppearances>0; regular-season appearance only",
+      "endpoint_template": "https://statsapi.mlb.com/api/v1/people/{mlbam_id}/stats?stats=yearByYear&group=hitting&sportIds=1",
+      "receipts": [
+        {
+          "bytes": 13120,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "430945",
+          "response_sha256": "966d3960c029e52c2ef6d4dfb8c58174852ba40f2e1c16241417e5a8662fae28",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/430945/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 12246,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "444876",
+          "response_sha256": "09464652b91dedf1c61cbc4594480e86f50ffaee5864c842e642fe7025a6f224",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/444876/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 16560,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "467827",
+          "response_sha256": "b0e3cab74974cc700fdd5578741b4ad8e5f834f45cf1366d12a402956fbf0ec6",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/467827/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 13881,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "475253",
+          "response_sha256": "90c03814ce41a83cf3efbe130525c6a462d323f7085fda11652e8659d35b79b0",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/475253/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 8415,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "493114",
+          "response_sha256": "cafbffb325e10f364fcb8f365952732e954f611726379303af0feb2fa7e36af3",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/493114/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2115,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "500135",
+          "response_sha256": "3533d390efc5d0c7e6c4bfa1739730b5ad8ce2ee51f69ea0dd8512fefffa6951",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/500135/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 5681,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "501213",
+          "response_sha256": "0c3eb34db8cb310be6e6239c588862463b1f5600302a839159f2f373c84013b6",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/501213/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3002,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "518466",
+          "response_sha256": "1c72a6932b3d7aaaffa5275f9abab8c6f762da49f711a6d1f99b8a8592c338cb",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/518466/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 7527,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "519346",
+          "response_sha256": "635c643d85bf28d4e8fda104bba1052b8e816683af49c93af6b1c9c04ad15112",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/519346/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 12898,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "520471",
+          "response_sha256": "e8363bc603d3394ba907b3b55734c942ad8a408149c3661788823181e04cdc62",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/520471/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3923,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "527043",
+          "response_sha256": "6c1fc985abbbb8f24dfd38e45914bf02315e71d5dfa7560c24a6aeb06dc84d70",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/527043/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 12802,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "542583",
+          "response_sha256": "6ad9748f0f5117f8963562b2e2b4ccf682d33bdbbcf08d07e97a671b43d1f5f9",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/542583/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 7501,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "543105",
+          "response_sha256": "8b1ea601aaa90673da9736ec617316f79fd9262f69f9a2a83d04f6951b545e85",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/543105/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 4800,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "543742",
+          "response_sha256": "c057aef86996db2ae57aaa9fe45784fc64b68308577e157ad16be8cf50b6ab9a",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/543742/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 4829,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "553902",
+          "response_sha256": "4044d1e4a97d0453eeefa6bd96f8617b530e177141b1b82e48a28351fa27840a",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/553902/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 7646,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "570256",
+          "response_sha256": "fdb55c81c614f6a3a6a198ccea75cf327b8ca648659758896f991462b6f7f7bf",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/570256/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 8376,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "570267",
+          "response_sha256": "def1424cec8ad5cec70f0bc929ec4d4c754def67e4a1087386a0b02f883a3e98",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/570267/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3928,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "570489",
+          "response_sha256": "b239c2fa6d0a6c23774411b1cdd10418bdbe2db5fd447772dd928b5d3842176d",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/570489/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2974,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "570615",
+          "response_sha256": "9a9219c9424777d2c03d2e35258b8f3a5528bba2f0508e2031e28707cb428f6e",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/570615/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2123,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "570799",
+          "response_sha256": "eb68fa92eeee04cbcd8d9a52edd06510d23962d66c360cd2d717548a1d9bc354",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/570799/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 7514,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "571506",
+          "response_sha256": "211cbd3fdb8ecd9c5e499180f6448d6b08a7a4feb52da244adb3b14d45f41929",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/571506/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 7420,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "571602",
+          "response_sha256": "e834694f865ba524a3742cb19c82a37fd9166d41ca04f2c88dd42968c5476069",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/571602/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 10092,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "572228",
+          "response_sha256": "b9d37c027b2ef295bd013e6728e486c2a0d339f7d0aeda513f7a070bdcc891ef",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/572228/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 14647,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "588751",
+          "response_sha256": "b49f0d6ee3a5fdfc0437dffbaac339dec8f346a34598db4551a90f0d77ee32dc",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/588751/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 7337,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "591971",
+          "response_sha256": "e47dad032088e91216f209d9cb47acaf650869ea005617351c17c9d038288fad",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/591971/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2113,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "592530",
+          "response_sha256": "9e209c98e785c824e66f91ca368a28e4ba37070ca44db93a060199937c6717c8",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/592530/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2972,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "592622",
+          "response_sha256": "ec0805fc16e5eab3a7e63f712e7919353a1433f516f1997dbebe2323da22eb69",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/592622/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2099,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "592660",
+          "response_sha256": "25a3c17fa5619c9184f0bc4b66107077b4d40c285ca7434bd66887e6e41b1988",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/592660/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2093,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "593525",
+          "response_sha256": "ed1d7554bfd0ef96ba32f3383f98aae97be8aa61c0ddfa16575cfa769f14c0ef",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/593525/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 5605,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "593700",
+          "response_sha256": "985fb2e546d733fe0774f05ea6fbe3cd6344a9584935efa74210ef32d0d18744",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/593700/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 8492,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "593934",
+          "response_sha256": "fdd82c4e04abb432ec23c2aeeb42fa8f0e6220cdb270f1eec0556b4a2053a8f6",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/593934/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2993,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "595981",
+          "response_sha256": "2de039459f8eaa0c973117fda446a72667c947c061549280bcc6c3966726549c",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/595981/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 8570,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "596748",
+          "response_sha256": "bd94997cbc11bb469d58f94d1659e604a3314aec15e32b302b2342fc0114029b",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/596748/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 7489,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "600524",
+          "response_sha256": "c117386babdf22d56453c4fb96548ba92da8c2a5c6634f7e6dbf2a9bfd5949dc",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/600524/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 6669,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "605486",
+          "response_sha256": "31c352ca912cc46ef75b1843f3b44b88b1c85587966750a69945598837941032",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/605486/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 4831,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "606157",
+          "response_sha256": "512007c54852bad32969fbbd0e47347bed2cd4a581c81b39a16810f579fa03ff",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/606157/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 7445,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "608703",
+          "response_sha256": "624947f05d8264835e3bf67648d8b74928b38ab6f54b60bfae3985d6ab99ea6a",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/608703/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3909,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "613564",
+          "response_sha256": "ea8b9b71e3d0026f05115e7edc3d4cbdbacd443fb829c4fad198182379b2b85e",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/613564/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 6639,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "614173",
+          "response_sha256": "3ea922890911077dc7203be3aea4bb6331ac9f4e667a0208e2588a1805d0d75d",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/614173/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 9191,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "614177",
+          "response_sha256": "0ddc03ff6469e002415d9437ef0341f7e7014cdb24be15190d74cb7c0a8e3467",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/614177/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 5735,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "621446",
+          "response_sha256": "5c3fe9f0d9b7d38455880ca0fc6eda68cfe96271e76c007cb2e163f764c8eae2",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/621446/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 5636,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "623182",
+          "response_sha256": "735c23a923639639c716c02aa3498354267a637efa837c68a6d5f9e873b52093",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/623182/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2999,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "628329",
+          "response_sha256": "ef853c7ffeabfa7493a13f7f8ac42c93a7842fef99daa51e574c3122f0a3aa65",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/628329/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 7467,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "641505",
+          "response_sha256": "b7f5eab68df0a9a8ea6c18def1268ae220ea090d79779f3cfeeba526eb398f41",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/641505/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 4804,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "641525",
+          "response_sha256": "655d9f66673d77d62d98fcc296b8b2f5bc0c53d718de6c221166b5ed1731df43",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/641525/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3011,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "641914",
+          "response_sha256": "56afb07d08033f3beffb89ee4d6b059ae8dedb9397d1cb8f51305405f2a6c680",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/641914/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2088,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "642137",
+          "response_sha256": "e2bec443aa2b567e58a49a0067b38a5eb06e26e2caab47091102bd6526ea5c87",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/642137/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2994,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "643436",
+          "response_sha256": "f98577f8237659d54e8ae8385c41c29bab071a8d77cbeb033f25b51fba81c8b9",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/643436/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 4707,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "643524",
+          "response_sha256": "d7bba238241b9dea756288955ae6dae6dbed11a9a2fabe74691daaee65241e40",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/643524/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 9167,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "645801",
+          "response_sha256": "df92d711c4ee18de6b866212476a14ecb0abe8f58bf04a476b919bb7d50a9ecd",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/645801/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2087,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "645848",
+          "response_sha256": "ca9e8330f5fa9bbb9165ad4cd8013f3e0dea152c782ec4643a2891c423bebcf9",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/645848/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 6546,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "656308",
+          "response_sha256": "a145e7870ea87150a7971f67b9f24cc42c7f365eebc15404bdaac679eb380d3c",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/656308/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 1190,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "656467",
+          "response_sha256": "46ed2f566c3827e684bdf673a97fe1adda44ef4f65a9fc16ebd64cd660844fdf",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/656467/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2986,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "657434",
+          "response_sha256": "b413cf1b501f6c01fe9d8790228d5ae67a8249e4b389dec553ae861a6efeb349",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/657434/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 6555,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "658668",
+          "response_sha256": "2a3de9df4f2990b6f020a2527bf8dc537033f655af3dfd06360760a4055a140e",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/658668/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 5624,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "660294",
+          "response_sha256": "782371c0f77c9fd274a131f807ea1a67d25f0d1414daff1f39a3aac2a320bc3a",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/660294/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3033,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "660707",
+          "response_sha256": "69f8434f0ea67fe9a9a962e35140f79d978428a24df4b452b9e7e9779a07b70b",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/660707/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3026,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "660757",
+          "response_sha256": "12bc364cf8053dc46f0c6eacec5c465ea76c8010ef44db5c3823d4265e032b90",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/660757/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3910,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "663527",
+          "response_sha256": "ae3fa890ef311ab686247430ecd2e3f31c46961bdfe45bf5f4de54f77728bb75",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/663527/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2095,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "663550",
+          "response_sha256": "dc63668d0dfbe12f9045d35db7ce790904ed23d23455807ffc7f99e7ed491d08",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/663550/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2080,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "663796",
+          "response_sha256": "a2224d19b46a72dea7089daccd4f11346ef01ffb1724aa7ec2978b37d395256b",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/663796/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 5749,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "664057",
+          "response_sha256": "703d64cbb91ea68695ece6110f80c2f11a559dc483c3453a0d923c972f2c842d",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/664057/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 1183,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "665947",
+          "response_sha256": "4469738d53468e236a8cbf5fd22a31e81c1ec4aa92358954008dcc3626aea4eb",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/665947/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3934,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "666464",
+          "response_sha256": "61e37fab63d98e164c27af33d9ed4014761bf0cc38c566ef6ea9664fb51cc3ff",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/666464/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 4785,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "666801",
+          "response_sha256": "b46dce5819eadb80e43d6f7436258e8ed90025e8c4d97091f868c8908e05b5ec",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/666801/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 5717,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "666915",
+          "response_sha256": "2eca6b2552aa8100149e6bcd1bb20e58c7b259771e18ea9c261811f1e905e78e",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/666915/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 5642,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "669450",
+          "response_sha256": "0924e7572a50f94d3426783ff9ab01da57117a351d6a3666896ae8ea774b0db3",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/669450/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2998,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "670768",
+          "response_sha256": "e4e7d87f66022ba0f6964432476a1ea6162f6a17bcf98d32d0915aa800de069d",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/670768/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2102,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "672478",
+          "response_sha256": "4ab15ca52429618e930d8e20edaeefc0a18f6ca9a2d8860f6bead2c0fbd7ad7e",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/672478/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3004,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "672744",
+          "response_sha256": "78de828eea5179b44128184d7d1dd0bf84761ba38ca2f5c4d23bc50dda62bdef",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/672744/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2102,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "673451",
+          "response_sha256": "7275d7ac613be5d4e6dcb5ccc1f9f5e162c645ac6484ca14086f8caedac8ce0d",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/673451/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 4859,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "673548",
+          "response_sha256": "fc2471ba5dfbc86087930be1d55fadb8c40483608c458356265cc29770b83363",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/673548/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 1190,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "676044",
+          "response_sha256": "6f3ad16e22e717161570199dcfffdf4eaf22f24cfb3933938ceae7e0d40f988a",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/676044/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 2936,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "676950",
+          "response_sha256": "545555c67fa2b0148553bdcd7e99112e3e71c3810ef84cb9aeb2cecddab87bae",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/676950/stats?stats=yearByYear&group=hitting&sportIds=1"
+        },
+        {
+          "bytes": 3958,
+          "content_type": "application/json;charset=UTF-8",
+          "http_status": 200,
+          "mlbam_id": "807799",
+          "response_sha256": "8812b8ac8a782c28317271305fd3e10db9999d0011b6c69668fb0c659986f61d",
+          "retrieval_date": "2026-08-18",
+          "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING",
+          "url": "https://statsapi.mlb.com/api/v1/people/807799/stats?stats=yearByYear&group=hitting&sportIds=1"
+        }
+      ],
+      "source": "MLB_STATS_API_YEAR_BY_YEAR_HITTING"
+    },
+    {
+      "definition": "official Statcast Sprint Speed leaderboard, matched by MLBAM id and season",
+      "endpoint_template": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year={season}&position=&team=&min=10&csv=true",
+      "receipts": [
+        {
+          "bytes": 125,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "ad61bef2dda64fd70f7c0a241aeba2cfa4b74b0209c5f27eb0532a820016b672",
+          "retrieval_date": "2026-08-18",
+          "season": 2006,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2006&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 125,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "ad61bef2dda64fd70f7c0a241aeba2cfa4b74b0209c5f27eb0532a820016b672",
+          "retrieval_date": "2026-08-18",
+          "season": 2007,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2007&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 125,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "ad61bef2dda64fd70f7c0a241aeba2cfa4b74b0209c5f27eb0532a820016b672",
+          "retrieval_date": "2026-08-18",
+          "season": 2008,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2008&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 125,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "ad61bef2dda64fd70f7c0a241aeba2cfa4b74b0209c5f27eb0532a820016b672",
+          "retrieval_date": "2026-08-18",
+          "season": 2009,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2009&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 125,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "ad61bef2dda64fd70f7c0a241aeba2cfa4b74b0209c5f27eb0532a820016b672",
+          "retrieval_date": "2026-08-18",
+          "season": 2010,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2010&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 125,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "ad61bef2dda64fd70f7c0a241aeba2cfa4b74b0209c5f27eb0532a820016b672",
+          "retrieval_date": "2026-08-18",
+          "season": 2011,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2011&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 125,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "ad61bef2dda64fd70f7c0a241aeba2cfa4b74b0209c5f27eb0532a820016b672",
+          "retrieval_date": "2026-08-18",
+          "season": 2012,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2012&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 125,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "ad61bef2dda64fd70f7c0a241aeba2cfa4b74b0209c5f27eb0532a820016b672",
+          "retrieval_date": "2026-08-18",
+          "season": 2013,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2013&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 125,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "ad61bef2dda64fd70f7c0a241aeba2cfa4b74b0209c5f27eb0532a820016b672",
+          "retrieval_date": "2026-08-18",
+          "season": 2014,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2014&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 34427,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "454672159b0458c006b4bf919b8629a90464c73e55e87d7c2ba3e2979b2a8899",
+          "retrieval_date": "2026-08-18",
+          "season": 2015,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2015&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 34625,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "32e31677a0f3b3f35d4539a322bd5ed023a8f1f6e90b58620057d9ae4f944680",
+          "retrieval_date": "2026-08-18",
+          "season": 2016,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2016&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 34414,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "cf344cac9eb294f34b267b105c0a7cb07a2820f518035b4eeb7cc5ac594788bd",
+          "retrieval_date": "2026-08-18",
+          "season": 2017,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2017&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 34487,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "08fc246a6fd6cc84c99bd1c69dc096096f5791ae9dd0f010afae17575151bc30",
+          "retrieval_date": "2026-08-18",
+          "season": 2018,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2018&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 35631,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "f84a12e40a13130b2127800e33e5783d83538927cac1c9af37e00dbd046736ef",
+          "retrieval_date": "2026-08-18",
+          "season": 2019,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2019&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 28138,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "13d68b0e764f9869cfda8dd68ad5019c740bbc113f3632ffdc75da044ae3ba72",
+          "retrieval_date": "2026-08-18",
+          "season": 2020,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2020&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 34828,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "1855383eb13eae86bbeccdf31c49fd360a79973cae655b04de2d5ce761f9dd8a",
+          "retrieval_date": "2026-08-18",
+          "season": 2021,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2021&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 36703,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "fed69661d38aba3973a4c8b61403a003815a0b741ed3b294645ef8f918c86daa",
+          "retrieval_date": "2026-08-18",
+          "season": 2022,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2022&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 36416,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "2d3563acdc4ad4c704b1c8db595a70523542efb1fc899d9c0bfec9fe6d7453d1",
+          "retrieval_date": "2026-08-18",
+          "season": 2023,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2023&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 35328,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "a40d099dd2eaeb525ec26ba40805e24af7215c1706129add2bde63df438101a9",
+          "retrieval_date": "2026-08-18",
+          "season": 2024,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2024&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 36204,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "e57ba82e14fdd7024f393e30dc22118aa8503212ea0a970fad1d63abd8d3fab5",
+          "retrieval_date": "2026-08-18",
+          "season": 2025,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2025&position=&team=&min=10&csv=true"
+        },
+        {
+          "bytes": 33322,
+          "content_type": "text/csv; charset=utf-8",
+          "http_status": 200,
+          "response_sha256": "ad48e6fafe61019e263b5803cb7d3418e61bb38cd3fe4fe8dc3887fec04db0e3",
+          "retrieval_date": "2026-08-18",
+          "season": 2026,
+          "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED",
+          "url": "https://baseballsavant.mlb.com/leaderboard/sprint_speed?year=2026&position=&team=&min=10&csv=true"
+        }
+      ],
+      "source": "MLB_BASEBALL_SAVANT_STATCAST_SPRINT_SPEED"
+    },
+    {
+      "path": "/tmp/claude-code-hub-speed-history/data/normalized/player_identity_crosswalk.csv",
+      "role": "identity candidate only; never appearance evidence",
+      "sha256": "3c8afdc06ebd6ba6b734b59c785149f6dbd5060058000ed7bac5ab73cdb3a7c0",
+      "source": "PINNED_IDENTITY_CROSSWALK"
+    }
+  ],
+  "unresolved_identity_attempts": [
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 47985,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "792ab2153af990bb26ebff6897077c47ef43d227b517e3bf1488537d0046da7b",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Osuna%2C%20Jos%C3%A9"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "オスナ",
+      "query": "Osuna, José",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 47892,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "51b0b1cb769a3f0f029743aefe5de6487e427acead10fcf34274297cd4ac0d8c",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Austin%2C%20Tyler"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "オースティン",
+      "query": "Austin, Tyler",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 49745,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "7f513b13483f566d999db9925d463d9bba4e84df651f4ae96fba99d967a2c022",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Gerber%2C%20Mike"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "ガーバー",
+      "query": "Gerber, Mike",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 48198,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "6e9c782c69b8ef614a8ac0c2c3c2e83b2e890d6c0b41ded770eb6e69e4630509",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Cron%2C%20Kevin"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "クロン",
+      "query": "Cron, Kevin",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 47874,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "a2220bf172877ec34bdbffd82244a30f451a2160b451bc2170cfeb4f526c6e8c",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Pirela%2C%20Jos%C3%A9"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "ピレラ",
+      "query": "Pirela, José",
+      "selected_id": null
+    },
+    {
+      "candidate_ids": [],
+      "http_receipt": {
+        "bytes": 47238,
+        "content_type": "application/json;charset=UTF-8",
+        "http_status": 200,
+        "response_sha256": "719357c3878707442c5ba9f0334bffe8ae2796e255d3769ec521c7212a9f59ee",
+        "retrieval_date": "2026-08-18",
+        "url": "https://statsapi.mlb.com/api/v1/people/search?names=Martin%2C%20Leonys"
+      },
+      "method": "unresolved_ambiguous_or_missing",
+      "npb_name": "マーティン",
+      "query": "Martin, Leonys",
+      "selected_id": null
+    }
+  ]
+}

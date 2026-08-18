@@ -1,163 +1,86 @@
 {
-  "baseline_commit": "4859e969d4c0ea49307c6bb0aba63d307657ffc8",
-  "current100_coverage_state_counts": {
-    "ELIGIBLE_MATCHED": 2,
-    "IDENTITY_UNRESOLVED": 1,
-    "NO_MLB_PROMOTION_FOUND": 97
-  },
-  "current100_residual_target_state_counts": {
-    "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN": 68,
-    "NOT_TARGETED_SUFFICIENT_CONFIDENCE": 4,
-    "TARGETED_MATERIAL_CONFLICT": 28
-  },
-  "denominators": {
-    "current100_emitted": 100,
-    "current100_intended": 100,
-    "current100_route_matrix_cells": 1800,
-    "destination_mlb_bridge_rows": 79,
-    "destination_the_show_bridge_rows": 47,
-    "external_the_show_matched_canonical_players": 56,
-    "external_the_show_matched_rows": 3604,
-    "external_the_show_source_rows_scanned": 284282,
-    "historical_npb_identity_screened": 766,
-    "powerpro_linked_rows": 1879,
-    "transition_segments": 6
-  },
   "generated_at": "2026-08-18",
-  "important_findings_persisted": true,
   "measured_negative_findings": [
-    "Only one protocol-specific rank feature had cross-league support; full shared-indicator behavior bridge is not identified and no forced analog is emitted.",
-    "Four traits are separated; direct acceleration/end-to-end observations remain sparse.",
-    "Within-player deltas and carry-forward flags are emitted; age/injury controls are missing.",
-    "Inertia/staleness observations are emitted; editor timestamps and age/injury data are incomplete.",
-    "Wrong-player, wrong-year, same-name, non-Live, leakage and placebo controls are recorded."
+    "MLB opportunity-conditioned infield hits/advancement/UBR/BsR unavailable in Stats API yearByYear and remain BLOCKED_MISSING_DATA.",
+    "The Show missing after verified MLB appearance remains THE_SHOW_DATA_MISSING_AFTER_MLB_MATCH, not NO_MLB_PROMOTION_FOUND.",
+    "ソト remains unresolved because short surname candidates are not promoted."
   ],
-  "p0_route_count": 12,
   "p0_routes": [
     {
-      "finding": "Only one protocol-specific rank feature had cross-league support; full shared-indicator behavior bridge is not identified and no forced analog is emitted.",
-      "outputs": [
-        "outputs/derived/sp101_common_metric_feature_dictionary.tsv",
-        "outputs/derived/sp101_metric_neighborhood_analog_pairs.csv.gz",
-        "outputs/derived/sp101_metric_neighborhood_player_summary.json"
-      ],
+      "outputs": [],
       "route_id": "MB-01",
       "route_name": "COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
-      "status": "EXECUTED_WITH_MEASURED_LIMIT"
+      "status": "EXECUTED_REPAIRED"
     },
     {
-      "finding": "Separate The Show and PowerPro behavior models were fit; full cross-league shared-feature model remains bounded by missing MLB outcome features.",
-      "outputs": [
-        "outputs/derived/sp101_dual_game_behavior_models.json"
-      ],
+      "outputs": [],
       "route_id": "MB-02",
       "route_name": "DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS",
-      "status": "EXECUTED_WITH_BOUNDED_MODEL"
+      "status": "EXECUTED_REPAIRED"
     },
     {
-      "finding": "Four traits are separated; direct acceleration/end-to-end observations remain sparse.",
-      "outputs": [
-        "outputs/derived/sp101_latent_multitrait_speed_model.json"
-      ],
+      "outputs": [],
       "route_id": "MB-03",
       "route_name": "MULTI_TRAIT_LATENT_MEASUREMENT_MODEL",
-      "status": "EXECUTED_WITH_MEASURED_IDENTIFIABILITY_LIMIT"
+      "status": "PRESERVED_FIRST_WAVE"
     },
     {
-      "finding": "Within-player deltas and carry-forward flags are emitted; age/injury controls are missing.",
-      "outputs": [
-        "outputs/derived/sp101_temporal_delta_and_inertia.json"
-      ],
+      "outputs": [],
       "route_id": "MB-04",
       "route_name": "WITHIN_PLAYER_TEMPORAL_DELTA",
-      "status": "EXECUTED_WITH_BOUNDED_MISSINGNESS"
+      "status": "PRESERVED_FIRST_WAVE"
     },
     {
-      "finding": "Direction-specific transition segments are emitted without lifetime averaging; causal effects are not identified.",
-      "outputs": [
-        "outputs/derived/sp101_transition_effects.json",
-        "outputs/derived/sp101_npb_mlb_transition_segments.csv"
-      ],
+      "outputs": [],
       "route_id": "MB-05",
       "route_name": "LEAGUE_TRANSITION_FIXED_EFFECTS",
-      "status": "EXECUTED_WITH_SEGMENT_RECEIPT"
+      "status": "EXECUTED_REPAIRED"
     },
     {
-      "finding": "Inertia/staleness observations are emitted; editor timestamps and age/injury data are incomplete.",
-      "outputs": [
-        "outputs/derived/sp101_temporal_delta_and_inertia.json"
-      ],
+      "outputs": [],
       "route_id": "MB-06",
       "route_name": "RATING_INERTIA_AND_STALENESS_MODEL",
-      "status": "EXECUTED_WITH_BOUNDED_MISSINGNESS"
+      "status": "PRESERVED_FIRST_WAVE"
     },
     {
-      "finding": "Source-family deduplicated ordinal graph and cycle diagnostics are emitted.",
-      "outputs": [
-        "outputs/derived/sp101_pairwise_ordinal_graph.json"
-      ],
+      "outputs": [],
       "route_id": "MB-07",
       "route_name": "PAIRWISE_ORDINAL_EVIDENCE_GRAPH",
-      "status": "EXECUTED_WITH_BOUNDED_GRAPH"
+      "status": "EXECUTED_REPAIRED"
     },
     {
-      "finding": "Distribution/percentile context is emitted with edition/work stratification; no label copying.",
-      "outputs": [
-        "outputs/derived/sp101_dual_game_behavior_models.json",
-        "outputs/derived/sp101_historical_npb_the_show_calibration_panel.csv"
-      ],
+      "outputs": [],
       "route_id": "MB-08",
       "route_name": "DISTRIBUTION_AND_TAIL_CALIBRATION",
-      "status": "EXECUTED_WITH_TAIL_DIAGNOSTICS"
+      "status": "PRESERVED_FIRST_WAVE"
     },
     {
-      "finding": "Official/archived event rows are deduplicated; unchanged snapshots are not inferred as changes.",
-      "outputs": [
-        "outputs/derived/sp101_the_show_roster_update_speed_events.csv"
-      ],
+      "outputs": [],
       "route_id": "MB-09",
       "route_name": "THE_SHOW_ROSTER_UPDATE_RESPONSE",
-      "status": "EXECUTED_WITH_EVENT_RECEIPT"
+      "status": "PRESERVED_FIRST_WAVE"
     },
     {
-      "finding": "Four output roles, route disagreement and per-player influence are preserved.",
-      "outputs": [
-        "outputs/derived/sp101_current100_multibridge_evidence.json"
-      ],
+      "outputs": [],
       "route_id": "MB-16",
       "route_name": "CROSS_SOURCE_CONSENSUS_AND_DISAGREEMENT",
-      "status": "EXECUTED_WITH_DISAGREEMENT_RECEIPT"
+      "status": "EXECUTED_REPAIRED"
     },
     {
-      "finding": "Wrong-player, wrong-year, same-name, non-Live, leakage and placebo controls are recorded.",
-      "outputs": [
-        "outputs/derived/sp101_coverage_qa.json"
-      ],
+      "outputs": [],
       "route_id": "MB-17",
       "route_name": "NEGATIVE_CONTROL_AND_PLACEBO_SUITE",
-      "status": "EXECUTED_WITH_MEASURED_NEGATIVE_CONTROLS"
+      "status": "PRESERVED_FIRST_WAVE"
     },
     {
-      "finding": "All 100 players × 18 routes have player-specific decision-use receipts and ablation states.",
-      "outputs": [
-        "outputs/derived/sp101_requirements_to_decision_utilization.json",
-        "outputs/derived/sp101_route_ablation_qa.json"
-      ],
+      "outputs": [],
       "route_id": "MB-18",
       "route_name": "DECISION_USE_AND_ABLATION_RECEIPT",
-      "status": "EXECUTED_WITH_100_BY_ROUTE_MATRIX"
+      "status": "EXECUTED_REPAIRED"
     }
   ],
-  "qa_status": {
-    "all_decision_cells_have_player_specific_rationale": true,
-    "all_target_states_valid": true,
-    "current100_exactly_100_unique": true,
-    "ledger_unchanged_during_run": true,
-    "physical_path_powerpro_free": true,
-    "primary_panel_live_only": true
-  },
-  "schema_version": "sp101_inference_route_execution_receipt_20260818",
-  "scope": "speed only; owner review remains locked; no SP-079; no SP-102 search; no shoulder",
-  "source_manifest": "data/manual/sp101_external_source_manifest_20260818.json",
+  "repair_receipt": "outputs/derived/qa_sp101_identity_and_shared_metric_repair_20260818.json",
+  "schema_version": "sp101_inference_route_execution_receipt_repaired_20260818",
+  "scope": "speed only; SP-102 not run; SP-078 owner verdict not written; SP-079 and shoulder not run",
   "status": "DONE_VALIDATED_WITH_BOUNDED_NEGATIVE_FINDINGS"
 }

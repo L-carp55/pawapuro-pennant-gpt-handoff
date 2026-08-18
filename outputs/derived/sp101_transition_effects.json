@@ -1,14 +1,35 @@
 {
-  "age_injury_controls": "MISSING_BOUNDED",
-  "direction_counts": {
-    "MLB_TO_NPB": 2,
-    "NPB_TO_MLB": 4
+  "actual_mlb_year_semantics": "MLB Stats API gameType=R appearance years only; The Show years are a separate axis and never stand in for MLB state.",
+  "cohort_denominators": {
+    "FOREIGN_MLB_TO_NPB": {
+      "missing": 17,
+      "represented": 60,
+      "screened": 77,
+      "screened_source": "first_wave_historical_foreign_identity_screen_77_names"
+    },
+    "JAPANESE_NPB_TO_MLB": {
+      "missing": 0,
+      "represented": 2,
+      "screened": 2
+    },
+    "MULTI_CYCLE": {
+      "represented": 23,
+      "screened": 62
+    },
+    "RETURNEE": {
+      "represented": 10,
+      "screened": 62
+    }
   },
-  "negative_finding": "The available snapshot supports explicit transition segmentation and direction counts, but not a stable causal fixed-effect estimate after age/injury adjustment. Segment rows remain available for later evidence integration.",
-  "player_fixed_effects": "NOT_IDENTIFIABLE_AS_CAUSAL_EFFECT_WITH_SMALL_DIRECTIONAL_COHORTS; segment-level observations and gaps are emitted without lifetime averaging.",
-  "returnee_or_multi_cycle_count": 4,
+  "direction_counts": {
+    "MLB_TO_NPB": 66,
+    "NPB_TO_MLB": 14
+  },
+  "negative_finding": "The 77-name historical foreign screen is no longer represented as zero by a broken Show-season proxy; actual MLB→NPB representation and bounded missingness are emitted.",
+  "player_fixed_effects": "DESCRIPTIVE_DIRECTIONAL_SEGMENTS_NOT_CAUSAL_EFFECT; age/injury controls are bounded missingness.",
+  "returnee_or_multi_cycle_count": 23,
   "route_id": "MB-05_LEAGUE_TRANSITION_FIXED_EFFECTS",
-  "schema_version": "sp101_transition_effects_20260818",
-  "segment_denominator": 6,
-  "unique_transition_players": 4
+  "schema_version": "sp101_transition_effects_repaired_20260818",
+  "segment_denominator": 80,
+  "unique_transition_players": 62
 }
