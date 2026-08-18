@@ -1,4 +1,5 @@
 name: speed-sp101-multibridge-design-qa
+# Explicit trigger after workflow creation: validate route registry, feasibility receipt, governance and execution handoff.
 
 on:
   push:
