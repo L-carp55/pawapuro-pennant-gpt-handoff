@@ -1,5 +1,5 @@
 name: speed-task-registry-qa
-# 2026-08-18: canonical QA plus one-time fail-closed activation of SP-101 expanded MLB The Show scope on the active review branch.
+# 2026-08-18 retrigger: canonical QA plus fail-closed SP-101 expanded MLB The Show scope materialization on the active review branch.
 
 on:
   push:
