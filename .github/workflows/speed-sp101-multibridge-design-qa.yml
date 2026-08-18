@@ -1,0 +1,52 @@
+name: speed-sp101-multibridge-design-qa
+
+on:
+  push:
+    branches:
+      - review/opus-speed-pre-owner-review-wave-20260816
+    paths:
+      - 'docs/tasks/SP101_MULTI_BRIDGE_INFERENCE_ADDENDUM_20260818.md'
+      - 'docs/audits/sp101_common_metric_bridge_feasibility_20260818.md'
+      - 'outputs/derived/sp101_common_metric_bridge_feasibility_20260818.json'
+      - 'outputs/derived/sp101_inference_route_registry_20260818.json'
+      - 'docs/state/speed_sp101_activation_state_20260818.json'
+      - 'scripts/qa_sp101_multibridge_design_20260818.mjs'
+      - '.github/workflows/speed-sp101-multibridge-design-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Freeze canonical owner ledger
+        run: sha256sum outputs/derived/sp078_owner_verdict_ledger_20260816.json > /tmp/sp078.before.sha256
+      - name: Validate multi-bridge design contract
+        run: node scripts/qa_sp101_multibridge_design_20260818.mjs
+      - name: Re-run canonical governance gates
+        run: |
+          sha256sum --check /tmp/sp078.before.sha256
+          node scripts/qa_speed_task_registry.mjs
+          node scripts/qa_speed_construct_traceability_20260817.mjs
+          node scripts/qa_sp078_integrity_lock_20260817.mjs
+      - name: Commit QA receipt
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add outputs/derived/qa_sp101_multibridge_design_20260818.json
+          if git diff --cached --quiet; then
+            echo 'No QA receipt changes.'
+            exit 0
+          fi
+          git commit -m 'test(speed): validate SP-101 multi-bridge design contract'
+          git pull --rebase origin review/opus-speed-pre-owner-review-wave-20260816
+          git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
