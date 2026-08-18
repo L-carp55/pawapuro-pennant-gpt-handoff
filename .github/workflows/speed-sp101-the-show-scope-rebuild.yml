@@ -1,0 +1,87 @@
+name: speed-sp101-the-show-scope-rebuild
+
+on:
+  push:
+    branches:
+      - review/opus-speed-pre-owner-review-wave-20260816
+    paths:
+      - 'scripts/activate_sp101_the_show_scope_rebuild_20260818.mjs'
+      - '.github/workflows/speed-sp101-the-show-scope-rebuild.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  activate-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Freeze canonical owner ledger before transition
+        run: sha256sum outputs/derived/sp078_owner_verdict_ledger_20260816.json > /tmp/sp078.before.sha256
+      - name: Activate SP-101 scope correction and re-lock owner review
+        run: node scripts/activate_sp101_the_show_scope_rebuild_20260818.mjs
+      - name: Verify SP-101 census, registry transition and supersession
+        run: |
+          test -s docs/state/speed_owner_clarification_the_show_scope_20260818.md
+          test -s docs/tasks/SP101_EXPANDED_THE_SHOW_NPB_UNIVERSE_20260818.md
+          test -s outputs/derived/sp101_the_show_npb_universe_census_20260818.json
+          test -s outputs/derived/sp101_the_show_npb_universe_census_20260818.tsv
+          test -s docs/audits/sp101_the_show_npb_universe_census_20260818.md
+          test -s outputs/derived/sp078_proposal_supersession_receipt_sp101_20260818.json
+          test -s docs/audits/sp078_proposal_superseded_by_sp101_the_show_scope_20260818.md
+          sha256sum --check /tmp/sp078.before.sha256
+          node - <<'NODE'
+          const fs=require('fs');
+          const census=JSON.parse(fs.readFileSync('outputs/derived/sp101_the_show_npb_universe_census_20260818.json','utf8'));
+          const lock=JSON.parse(fs.readFileSync('docs/state/speed_owner_review_integrity_lock_20260817.json','utf8'));
+          const sup=JSON.parse(fs.readFileSync('outputs/derived/sp078_proposal_supersession_receipt_sp101_20260818.json','utf8'));
+          const ledger=JSON.parse(fs.readFileSync('outputs/derived/sp078_owner_verdict_ledger_20260816.json','utf8'));
+          const reg=fs.readFileSync('docs/state/speed_task_registry.tsv','utf8').trimEnd().split(/\r?\n/).map(x=>x.split('\t'));
+          const head=reg[0];
+          const rows=reg.slice(1).map(c=>Object.fromEntries(head.map((h,i)=>[h,c[i]])));
+          const sp101=rows.find(r=>r.task_id==='SP-101');
+          const sp079=rows.find(r=>r.task_id==='SP-079');
+          if(census.status!=='LOWER_BOUND_EXISTING_SNAPSHOT_NOT_COMPLETE_UNIVERSE') throw new Error('census status');
+          if(census.local_snapshot?.mlb_bridge?.rows<79||census.local_snapshot?.the_show_bridge?.rows<47) throw new Error('legacy lower bounds regressed');
+          if(census.local_snapshot?.the_show_rating?.rows<17000||census.local_snapshot?.the_show_rating?.live_series?.rows<10000) throw new Error('The Show local rating inventory unexpectedly small');
+          if(census.eligible_cohorts?.length<7||census.evidence_roles?.length<6) throw new Error('expanded scope incomplete');
+          if(!sp101||sp101.status!=='PARTIAL'||sp101.owner_review_block!=='1'||sp101.gate_block!=='1') throw new Error('SP-101 registry row invalid');
+          if(!sp079||sp079.status!=='BLOCKED_DEPENDENCY'||!sp079.depends_on.split(/[,;]/).includes('SP-101')) throw new Error('SP-079 dependency not rebound');
+          if(lock.locked!==true||lock.reason_code!=='THE_SHOW_ELIGIBLE_UNIVERSE_UNDERCOUNT_AND_EVIDENCE_UTILIZATION_INCOMPLETE') throw new Error('owner review not re-locked');
+          if(sup.status!=='SUPERSEDED_NOT_APPROVABLE_PENDING_SP101'||sup.correcting_task!=='SP-101') throw new Error('proposal supersession invalid');
+          if(ledger.owner_verdict_count!==0||ledger.records?.length!==0) throw new Error('owner ledger mutated');
+          console.log(JSON.stringify({status:'PASS',census:census.local_snapshot,current100:census.current100_bridge_diagnostic,sp101:sp101.status,sp079:sp079.status,locked:lock.locked,ledger:ledger.owner_verdict_count}));
+          NODE
+      - name: Run canonical task, construct and append-only ledger QA
+        run: |
+          node scripts/qa_speed_task_registry.mjs
+          node scripts/qa_speed_construct_traceability_20260817.mjs
+          node scripts/qa_sp078_integrity_lock_20260817.mjs
+      - name: Commit and push atomic SP-101 transition
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            docs/state/speed_owner_clarification_the_show_scope_20260818.md \
+            docs/tasks/SP101_EXPANDED_THE_SHOW_NPB_UNIVERSE_20260818.md \
+            outputs/derived/sp101_the_show_npb_universe_census_20260818.json \
+            outputs/derived/sp101_the_show_npb_universe_census_20260818.tsv \
+            docs/audits/sp101_the_show_npb_universe_census_20260818.md \
+            outputs/derived/sp078_proposal_supersession_receipt_sp101_20260818.json \
+            docs/audits/sp078_proposal_superseded_by_sp101_the_show_scope_20260818.md \
+            docs/state/speed_task_registry.tsv \
+            docs/state/speed_owner_review_integrity_lock_20260817.json
+          if git diff --cached --quiet; then
+            echo 'No transition changes'
+            exit 1
+          fi
+          git commit -m 'fix(speed): expand The Show scope and re-lock owner review'
+          git pull --rebase origin review/opus-speed-pre-owner-review-wave-20260816
+          git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
