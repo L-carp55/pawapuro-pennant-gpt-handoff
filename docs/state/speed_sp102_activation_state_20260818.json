@@ -1,0 +1,43 @@
+{
+  "schema_version": "speed_sp102_activation_state_20260818",
+  "generated_at": "2026-08-18",
+  "task_id": "SP-102",
+  "status": "BLOCKED_DEPENDENCY_WAITING_FOR_SP101",
+  "scope": "speed_only",
+  "task_specification": "docs/tasks/SP102_TARGETED_2CH_VIDEO_COMMENT_RESCUE_20260818.md",
+  "target_selection_contract": "outputs/derived/sp102_target_selection_contract_20260818.json",
+  "prerequisite_task": "SP-101",
+  "required_target_file": "outputs/derived/sp101_residual_low_confidence_target_set.json",
+  "sequence": [
+    "complete SP-101",
+    "freeze all-100 target-selection states",
+    "collect only residual low-confidence/material-conflict targets",
+    "separate and deduplicate source layers and event origins",
+    "promote linked primary sources into proper lanes",
+    "produce player-specific decision-use and before/after ablation receipts",
+    "rerun all-100 consistency QA",
+    "only then rebuild the SP-078 proposal"
+  ],
+  "maximum_comment_only_influence": "LOW_CONFIDENCE_DIRECTIONAL_RESCUE",
+  "prohibited": [
+    "global all-100 crawl before target freeze",
+    "comment volume as votes",
+    "comment-only numeric rating",
+    "comment-only high-confidence verdict",
+    "persisting usernames or commenter profiles",
+    "writing SP-078 owner verdicts",
+    "running SP-079",
+    "starting shoulder work"
+  ],
+  "governance": {
+    "owner_review_locked": true,
+    "owner_verdict_count_expected": 0,
+    "sp079_blocked": true,
+    "shoulder_blocked": true
+  },
+  "source_hashes": {
+    "task": "0e33c2c65787239602d5597ff0f5b58fdb8f3215467797014e7f548df74cd693",
+    "contract": "e30be2d21b673f4defb74d94b1d5c4a5990d550da184737dcc7e6d5526688c1c",
+    "ledger": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0"
+  }
+}

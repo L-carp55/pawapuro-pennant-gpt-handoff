@@ -10,7 +10,10 @@
     "treat 6 players / 7 pairs, 47 The Show bridge rows, or 79 MLB bridge rows as an eligibility ceiling",
     "run or close SP-079 before SP-101 and a rebuilt all-100 utilization review are validated",
     "claim all usable MLB The Show evidence has been consumed",
-    "claim owner review ready or Speed Gate ready"
+    "claim owner review ready or Speed Gate ready",
+    "generate a new SP-078 proposal before SP-102 closes after the SP-101 residual-target freeze",
+    "crawl all 100 players through 2ch/5ch-style video comments before SP-101 identifies residual low-confidence targets",
+    "treat comment volume, likes, replies, narration, quoted threads and comments as independent physical measurements"
   ],
   "preserved_valid_work": [
     "SP-016 current-year-first history policy",
@@ -62,7 +65,8 @@
     "the superseded SP-078 proposal is not reused",
     "SP-078 ledger remains records=[] and owner_verdict_count=0 before a new proposal and rebind",
     "task-registry QA reports zero owner-review dependency blockers",
-    "no owner verdict is captured before all preceding conditions pass"
+    "no owner verdict is captured before all preceding conditions pass",
+    "SP-102 targeted residual low-confidence Community rescue is DONE_VALIDATED or has a measured zero-target/zero-usable-evidence terminal finding after SP-101"
   ],
   "owner_review_unlock_rule": "Changing locked=false by itself is invalid. Unlock now requires the original construct/Community gates plus SP-101 expanded The Show universe coverage, transition and identity QA, all-100 evidence-utilization receipts, a rebuilt individual adjudication, an empty-ledger rebind, and final registry QA.",
   "incident_audit": "docs/audits/speed_all100_evidence_utilization_gap_audit_20260818.md",
@@ -92,5 +96,18 @@
     "SP-078 append-only self-test PASS",
     "empty ledger rebound to exact construct-complete queue SHA-256",
     "these infrastructure gates remain preserved but are no longer sufficient for owner approval without SP-101"
+  ],
+  "sp102_task": "docs/tasks/SP102_TARGETED_2CH_VIDEO_COMMENT_RESCUE_20260818.md",
+  "sp102_target_selection_contract": "outputs/derived/sp102_target_selection_contract_20260818.json",
+  "sp102_activation_state": "docs/state/speed_sp102_activation_state_20260818.json",
+  "sp102_unlock_conditions": [
+    "SP-101 is DONE_VALIDATED and all mandatory P0 routes are executed or closed with measured negative findings",
+    "outputs/derived/sp101_residual_low_confidence_target_set.json exists and assigns one selection state to all 100 players",
+    "SP-102 is DONE_VALIDATED, or closes DONE_NEGATIVE_FINDING with measured zero targets or zero usable evidence and explicit search denominators",
+    "video narration, quoted 2ch/5ch text, top-level comments, replies and linked primary sources remain separate source layers",
+    "event-origin deduplication, sarcasm/template, title-priming, privacy and missingness QA pass",
+    "no comment-only high-confidence or numeric verdict is produced",
+    "affected-player and all-100 decision-use/consistency QA are rerun",
+    "the canonical owner ledger remains empty before a rebuilt SP-078 proposal"
   ]
 }
