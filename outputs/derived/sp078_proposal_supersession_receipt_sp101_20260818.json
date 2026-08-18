@@ -1,0 +1,39 @@
+{
+  "schema_version": "sp078_proposal_supersession_receipt_sp101_20260818",
+  "generated_at": "2026-08-18",
+  "status": "SUPERSEDED_NOT_APPROVABLE_PENDING_SP101",
+  "superseded_artifacts": [
+    "outputs/derived/speed_all100_integrated_owner_review_20260818.json",
+    "outputs/derived/speed_all100_owner_review_adjudicated_20260818.json",
+    "outputs/derived/sp078_owner_verdict_proposal_20260818.json",
+    "docs/reports/sp078_owner_verdict_proposal_20260818.md"
+  ],
+  "reason_codes": [
+    "INCOMPLETE_REQUIREMENTS_TO_DECISION_UTILIZATION",
+    "THE_SHOW_ELIGIBLE_UNIVERSE_UNDERCOUNT",
+    "CURRENT100_AND_HISTORICAL_NPB_MLB_IDENTITY_CROSSWALK_INCOMPLETE",
+    "CROSS_TIME_AND_TRANSITION_EVIDENCE_NOT_PROPAGATED",
+    "ALL100_INDIVIDUAL_ADJUDICATION_NOT_PROVEN"
+  ],
+  "correcting_task": "SP-101",
+  "owner_clarification": "docs/state/speed_owner_clarification_the_show_scope_20260818.md",
+  "task_specification": "docs/tasks/SP101_EXPANDED_THE_SHOW_NPB_UNIVERSE_20260818.md",
+  "lower_bound_census": "outputs/derived/sp101_the_show_npb_universe_census_20260818.json",
+  "owner_verdict_ledger": {
+    "path": "outputs/derived/sp078_owner_verdict_ledger_20260816.json",
+    "records": 0,
+    "owner_verdict_count": 0,
+    "queue_sha256": "ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d",
+    "mutated_by_supersession": false
+  },
+  "active_queue": {
+    "path": "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json",
+    "sha256": "ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d",
+    "players": 100,
+    "preserved_as_evidence_infrastructure": true,
+    "approval_complete_packet": false
+  },
+  "replacement_rule": "Do not approve or capture the superseded proposal. Complete SP-101, rebuild the all-100 requirements-to-decision utilization review with player-specific rationales, then generate a new SP-078 proposal while the canonical ledger remains empty.",
+  "sp079_blocked": true,
+  "shoulder_blocked": true
+}
