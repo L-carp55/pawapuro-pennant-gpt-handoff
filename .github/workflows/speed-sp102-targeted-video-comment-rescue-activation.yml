@@ -1,0 +1,72 @@
+name: speed-sp102-targeted-video-comment-rescue-activation
+
+on:
+  push:
+    branches:
+      - review/opus-speed-pre-owner-review-wave-20260816
+    paths:
+      - 'docs/tasks/SP102_TARGETED_2CH_VIDEO_COMMENT_RESCUE_20260818.md'
+      - 'outputs/derived/sp102_target_selection_contract_20260818.json'
+      - 'scripts/activate_sp102_targeted_video_comment_rescue_20260818.mjs'
+      - '.github/workflows/speed-sp102-targeted-video-comment-rescue-activation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  activate-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/opus-speed-pre-owner-review-wave-20260816
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Freeze canonical owner ledger
+        run: sha256sum outputs/derived/sp078_owner_verdict_ledger_20260816.json > /tmp/sp078.before.sha256
+      - name: Activate SP-102 governance state
+        run: node scripts/activate_sp102_targeted_video_comment_rescue_20260818.mjs
+      - name: Verify SP-102 registry, lock and non-mutation
+        run: |
+          test -s docs/state/speed_sp102_activation_state_20260818.json
+          sha256sum --check /tmp/sp078.before.sha256
+          node scripts/qa_speed_task_registry.mjs
+          node scripts/qa_speed_construct_traceability_20260817.mjs
+          node scripts/qa_sp078_integrity_lock_20260817.mjs
+          node - <<'NODE'
+          const fs=require('fs');
+          const lines=fs.readFileSync('docs/state/speed_task_registry.tsv','utf8').replace(/^\uFEFF/,'').trimEnd().split(/\r?\n/).map(x=>x.split('\t'));
+          const h=lines[0];
+          const rows=lines.slice(1).map(c=>Object.fromEntries(h.map((k,i)=>[k,c[i]])));
+          const sp102=rows.filter(r=>r.task_id==='SP-102');
+          const sp101=rows.find(r=>r.task_id==='SP-101');
+          const sp079=rows.find(r=>r.task_id==='SP-079');
+          const lock=JSON.parse(fs.readFileSync('docs/state/speed_owner_review_integrity_lock_20260817.json','utf8'));
+          const state=JSON.parse(fs.readFileSync('docs/state/speed_sp102_activation_state_20260818.json','utf8'));
+          const ledger=JSON.parse(fs.readFileSync('outputs/derived/sp078_owner_verdict_ledger_20260816.json','utf8'));
+          if(sp102.length!==1||sp102[0].status!=='BLOCKED_DEPENDENCY'||sp102[0].owner_review_block!=='1'||sp102[0].gate_block!=='1') throw new Error('SP-102 registry state invalid');
+          if(!sp101?.next_action_or_blocker.includes('sp101_residual_low_confidence_target_set.json')) throw new Error('SP-101 target-freeze handoff missing');
+          if(!sp079||sp079.status!=='BLOCKED_DEPENDENCY'||!sp079.depends_on.split(/[,;]/).includes('SP-102')) throw new Error('SP-079 dependency invalid');
+          if(lock.locked!==true||!Array.isArray(lock.sp102_unlock_conditions)||lock.sp102_unlock_conditions.length<8) throw new Error('SP-102 lock conditions invalid');
+          if(state.status!=='BLOCKED_DEPENDENCY_WAITING_FOR_SP101'||state.maximum_comment_only_influence!=='LOW_CONFIDENCE_DIRECTIONAL_RESCUE') throw new Error('SP-102 activation state invalid');
+          if(ledger.owner_verdict_count!==0||ledger.records?.length!==0) throw new Error('owner ledger mutated');
+          console.log(JSON.stringify({status:'PASS',sp101:sp101.status,sp102:sp102[0].status,sp079:sp079.status,locked:lock.locked,ledger:ledger.owner_verdict_count}));
+          NODE
+      - name: Commit atomic activation state
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            docs/state/speed_task_registry.tsv \
+            docs/state/speed_owner_review_integrity_lock_20260817.json \
+            docs/state/speed_sp102_activation_state_20260818.json
+          if git diff --cached --quiet; then
+            echo 'SP-102 already activated.'
+            exit 0
+          fi
+          git commit -m 'state(speed): activate targeted residual video-comment rescue'
+          git pull --rebase origin review/opus-speed-pre-owner-review-wave-20260816
+          git push origin HEAD:review/opus-speed-pre-owner-review-wave-20260816
