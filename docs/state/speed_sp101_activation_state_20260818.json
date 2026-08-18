@@ -1,9 +1,10 @@
 {
   "schema_version": "speed_sp101_activation_state_20260818",
   "generated_at": "2026-08-18",
+  "updated_at": "2026-08-18",
   "task_id": "SP-101",
-  "status": "DISPATCH_READY",
-  "category": "data_external_game_identity_temporal_transition",
+  "status": "DISPATCH_READY_WITH_MANDATORY_MULTI_BRIDGE_ADDENDUM",
+  "category": "data_external_game_identity_temporal_transition_and_multibridge_inference",
   "owner_review_block": true,
   "speed_gate_block": true,
   "shoulder_block": true,
@@ -11,6 +12,10 @@
   "execution_branch": "codex/speed-sp101-expanded-the-show-universe-20260818",
   "execution_branch_created_from_commit": "acc19e10a96c14a3433da9a251309c814594f398",
   "task_specification": "docs/tasks/SP101_EXPANDED_THE_SHOW_NPB_UNIVERSE_20260818.md",
+  "mandatory_task_addendum": "docs/tasks/SP101_MULTI_BRIDGE_INFERENCE_ADDENDUM_20260818.md",
+  "inference_route_registry": "outputs/derived/sp101_inference_route_registry_20260818.json",
+  "common_metric_feasibility_audit": "docs/audits/sp101_common_metric_bridge_feasibility_20260818.md",
+  "common_metric_feasibility_receipt": "outputs/derived/sp101_common_metric_bridge_feasibility_20260818.json",
   "owner_clarification": "docs/state/speed_owner_clarification_the_show_scope_20260818.md",
   "lower_bound_census": "outputs/derived/sp101_the_show_npb_universe_census_20260818.json",
   "proposal_supersession": "outputs/derived/sp078_proposal_supersession_receipt_sp101_20260818.json",
@@ -19,12 +24,40 @@
     "expected_records": 0,
     "expected_owner_verdict_count": 0
   },
-  "exact_next_step": "Dispatch the committed SP-101 task specification to Codex on the execution branch, require parallel sub-agents and GitHub-persisted outputs, then review the pushed branch before rebuilding the all-100 owner packet.",
+  "mandatory_route_policy": {
+    "p0_routes": [
+      "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+      "MB-02_DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS",
+      "MB-03_MULTI_TRAIT_LATENT_MEASUREMENT_MODEL",
+      "MB-04_WITHIN_PLAYER_TEMPORAL_DELTA",
+      "MB-05_LEAGUE_TRANSITION_FIXED_EFFECTS",
+      "MB-06_RATING_INERTIA_AND_STALENESS_MODEL",
+      "MB-07_PAIRWISE_ORDINAL_EVIDENCE_GRAPH",
+      "MB-08_DISTRIBUTION_AND_TAIL_CALIBRATION",
+      "MB-09_THE_SHOW_ROSTER_UPDATE_RESPONSE",
+      "MB-16_CROSS_SOURCE_CONSENSUS_AND_DISAGREEMENT",
+      "MB-17_NEGATIVE_CONTROL_AND_PLACEBO_SUITE",
+      "MB-18_DECISION_USE_AND_ABLATION_RECEIPT"
+    ],
+    "closure_rule": "Each P0 route must be executed or closed with a measured negative finding and a committed audit."
+  },
+  "required_final_player_architecture": [
+    "independent physical estimate",
+    "The Show-implied appraisal range",
+    "historical PowerPro-behavior expectation range",
+    "contextual evidence summary",
+    "route disagreement and decision-use receipt"
+  ],
+  "exact_next_step": "Run SP-101 on the execution branch using both the original task specification and the mandatory multi-bridge addendum. Require separate parallel sub-agents for identity, The Show panel, NPB/PowerPro timeline, transitions, common-metric analog matching, game-behavior models, latent multi-trait/ordinal inference, temporal/inertia modeling, ensemble/ablation, and independent QA. Persist every important result and negative finding to GitHub, push the branch, then review the remote artifacts before rebuilding the all-100 owner packet.",
   "prohibited_next_steps": [
     "approve or capture the superseded SP-078 proposal",
     "run SP-079",
     "start shoulder appraisal",
-    "treat 6/7, 47, or 79 as the eligible universe ceiling"
+    "treat 6/7, 47, or 79 as the eligible universe ceiling",
+    "treat direct same-player overlap as the only The Show evidence route",
+    "copy The Show or PowerPro labels into the physical latent estimate",
+    "force analog matches outside common support",
+    "close SP-101 after identity reconstruction without executing or measuring the P0 inference routes"
   ],
-  "registry_materialization_note": "The SP-101 activation script and workflow are committed. Because connector-authored pushes did not materialize the generated registry transition during this session, this explicit state receipt, the owner-review lock, task specification, census, supersession receipt, and execution branch are the current durable SP-101 handoff. The task registry must be updated during SP-101 integration before owner review can unlock."
+  "registry_materialization_note": "SP-101 is present in the canonical task registry and SP-079 is blocked on it. The execution branch must be advanced to the latest active-review HEAD before Codex implementation begins."
 }
