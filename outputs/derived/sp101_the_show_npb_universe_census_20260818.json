@@ -1,0 +1,231 @@
+{
+  "schema_version": "sp101_the_show_npb_universe_census_20260818",
+  "generated_at": "2026-08-18",
+  "status": "LOWER_BOUND_EXISTING_SNAPSHOT_NOT_COMPLETE_UNIVERSE",
+  "owner_clarification": "The 6-player/7-pair same-time overlap is a narrow identifiability sample, not the MLB The Show eligible player universe.",
+  "active_current100": {
+    "source": "npb_plus_measurement season_label=2026途中 and top_speed_kmh non-null / active SP-077 queue",
+    "players": 100,
+    "unique_normalized_names": 100,
+    "active_queue_sha256": "ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d"
+  },
+  "local_snapshot": {
+    "database": "data/pennant.db equivalent snapshot verified from /mnt/data/07_pennant.db",
+    "mlb_bridge": {
+      "rows": 79,
+      "unique_npb_names": 79,
+      "nonempty_proeye_ids": 59,
+      "interpretation": "Historical lower-bound bridge, not complete MLB-promotion universe."
+    },
+    "the_show_bridge": {
+      "rows": 47,
+      "unique_npb_names": 47,
+      "nonempty_proeye_ids": 31,
+      "interpretation": "Historical lower-bound bridge, not complete The Show-eligible universe."
+    },
+    "the_show_rating": {
+      "rows": 17476,
+      "unique_name_keys": 5024,
+      "live_series": {
+        "rows": 10400,
+        "unique_name_keys": 4424
+      },
+      "editions": [
+        {"edition": "mlb21", "rows": 3115, "unique_name_keys": 2293},
+        {"edition": "mlb23", "rows": 4101, "unique_name_keys": 2468},
+        {"edition": "mlb24", "rows": 3636, "unique_name_keys": 2379},
+        {"edition": "mlb25", "rows": 3645, "unique_name_keys": 2421},
+        {"edition": "mlb26", "rows": 2979, "unique_name_keys": 2278}
+      ],
+      "non_live_examples": [
+        "Topps Now",
+        "Captain",
+        "All-Star",
+        "World Baseball Classic",
+        "Spotlight",
+        "Awards",
+        "Milestone",
+        "Finest",
+        "Monthly Awards"
+      ]
+    },
+    "powerpro_npb_history_universe": {
+      "pawapuro_full_rows": 3229,
+      "distinct_normalized_names": 943,
+      "works": 8,
+      "min_work": "2013",
+      "max_work": "2026",
+      "pawapuro_full_link_rows": 1879,
+      "unique_linked_proeye_ids": 682
+    }
+  },
+  "current100_bridge_diagnostic": {
+    "exact_production_id_overlap_with_mlb_bridge": 0,
+    "exact_production_id_overlap_with_the_show_bridge": 0,
+    "normalized_name_overlap_with_mlb_bridge": [
+      "モンテロ",
+      "カリステ",
+      "サンタナ",
+      "ポランコ"
+    ],
+    "normalized_name_overlap_with_the_show_bridge": [
+      "モンテロ",
+      "ポランコ"
+    ],
+    "known_current100_false_negatives_or_missing_examples": [
+      "ソト",
+      "秋山翔吾"
+    ],
+    "interpretation": "Zero exact-ID overlap and only 4/2 normalized-name overlaps diagnose an incomplete or stale crosswalk and ID-namespace mismatch. They do not bound MLB/The Show eligibility."
+  },
+  "owner_raised_examples": [
+    {
+      "player": "ソト",
+      "in_current100": true,
+      "in_local_mlb_bridge": false,
+      "in_local_the_show_bridge": false,
+      "role": "CURRENT_FOREIGN_MLB_TO_NPB_CANDIDATE_AND_CROSSWALK_FALSE_NEGATIVE"
+    },
+    {
+      "player": "サンタナ",
+      "in_current100": true,
+      "in_local_mlb_bridge": true,
+      "in_local_the_show_bridge": false,
+      "role": "CURRENT_FOREIGN_MLB_TO_NPB_CANDIDATE_WITH_PARTIAL_BRIDGE"
+    },
+    {
+      "player": "カリステ",
+      "in_current100": true,
+      "in_local_mlb_bridge": true,
+      "in_local_the_show_bridge": false,
+      "role": "CURRENT_FOREIGN_MLB_TO_NPB_CANDIDATE_WITH_PARTIAL_BRIDGE"
+    },
+    {
+      "player": "ポランコ",
+      "in_current100": true,
+      "in_local_mlb_bridge": true,
+      "in_local_the_show_bridge": true,
+      "role": "CURRENT_FOREIGN_MLB_TO_NPB_MATCHED_LOWER_BOUND"
+    },
+    {
+      "player": "モンテロ",
+      "in_current100": true,
+      "in_local_mlb_bridge": true,
+      "in_local_the_show_bridge": true,
+      "role": "CURRENT_FOREIGN_MLB_TO_NPB_MATCHED_LOWER_BOUND"
+    },
+    {
+      "player": "鈴木誠也",
+      "in_current100": false,
+      "in_local_mlb_bridge": true,
+      "role": "JAPANESE_NPB_TO_MLB_TRAJECTORY_AND_CALIBRATION_COHORT"
+    },
+    {
+      "player": "吉田正尚",
+      "in_current100": false,
+      "in_local_mlb_bridge": true,
+      "role": "JAPANESE_NPB_TO_MLB_TRAJECTORY_AND_CALIBRATION_COHORT"
+    }
+  ],
+  "eligible_cohorts": [
+    {
+      "cohort": "CURRENT100_MLB_PROMOTION_OR_APPEARANCE",
+      "inclusion": "Every current-100 player with any MLB regular-season promotion/appearance and eligible The Show Live roster history."
+    },
+    {
+      "cohort": "HISTORICAL_NPB_BEFORE_2026_WITH_MLB_THE_SHOW",
+      "inclusion": "Every player who appeared in NPB before 2026 and has MLB/The Show evidence, including players absent from current100."
+    },
+    {
+      "cohort": "NPB_TO_MLB_JAPANESE",
+      "inclusion": "Japanese NPB players who moved to MLB, including players still in MLB."
+    },
+    {
+      "cohort": "MLB_TO_NPB_FOREIGN",
+      "inclusion": "Foreign players with MLB/The Show history who later entered NPB."
+    },
+    {
+      "cohort": "NPB_TO_MLB_TO_NPB_RETURNEE",
+      "inclusion": "Japanese and foreign returnees with a before/after league-transition sequence."
+    },
+    {
+      "cohort": "MLB_TO_NPB_TO_MLB_OR_MULTI_CYCLE",
+      "inclusion": "Players with repeated league transitions; each segment must remain separate and time-indexed."
+    },
+    {
+      "cohort": "HISTORICAL_CALIBRATION_POPULATION",
+      "inclusion": "All historical NPB/PowerPro players with MLB/The Show overlap for scale-shape, ordinal, temporal-decay, and transition QA."
+    }
+  ],
+  "evidence_roles": [
+    {
+      "role": "DIRECT_PHYSICAL",
+      "source": "Statcast Sprint Speed, T10, T30, T90, or other direct measurements",
+      "use": "Physical evidence with season, protocol, and source controls."
+    },
+    {
+      "role": "SAME_OR_NEAR_TIME_CROSS_GAME_QA",
+      "source": "The Show Live Speed and PowerPro around the same season",
+      "use": "Strongest external game-appraisal comparison; player-clustered evaluation required."
+    },
+    {
+      "role": "CROSS_TIME_PLAYER_TRAJECTORY",
+      "source": "The Show before or after the NPB appraisal season",
+      "use": "Player-specific trajectory/prior with explicit temporal, age, injury, and league-transition discount."
+    },
+    {
+      "role": "TRANSITION_CALIBRATION",
+      "source": "NPB→MLB, MLB→NPB, returnee, and multi-cycle cohorts",
+      "use": "Estimate systematic transition effects and uncertainty by direction and time gap."
+    },
+    {
+      "role": "POPULATION_SCALE_SHAPE_QA",
+      "source": "Historical NPB/PowerPro × MLB measurements × The Show panel",
+      "use": "Test rating range, rank ordering, compression, nonlinearities, and tails without treating either game as truth."
+    },
+    {
+      "role": "TECHNIQUE_SEPARATION",
+      "source": "The Show Speed vs Stealing and Baserunning Aggressiveness",
+      "use": "Keep physical speed distinct from stealing skill and baserunning aggression."
+    }
+  ],
+  "external_source_receipts": [
+    {
+      "repository": "L-carp55/claude-code-hub",
+      "branch": "codex/mlb-the-show-speed-history",
+      "commit": "97c429521267cfb70ccdd61e40e11853d100e360",
+      "audit": "docs/audits/mlb_the_show_speed_history_audit.md",
+      "role": "LONGITUDINAL_SPEED_SOURCE_AND_IDENTITY_ASSETS"
+    },
+    {
+      "repository": "L-carp55/claude-code-hub",
+      "branch": "codex/mlb-the-show-speed-temporal-rescue",
+      "commit": "ab5adbfee656d69d0b378145fd66bf5789e0d1b4",
+      "role": "OFFICIAL_OR_ARCHIVED_ROSTER_UPDATE_SPEED_EVENTS"
+    },
+    {
+      "repository": "L-carp55/claude-code-hub",
+      "branch": "codex/mlb-the-show-full-attributes",
+      "commit_reference": "74d2a2278ab7bcea3f6368e1df6ba03e2dd82554",
+      "audit": "docs/audits/mlb_the_show_full_attribute_history_2017_2026.md",
+      "reported_observed_editions": ["MLB21", "MLB22", "MLB23", "MLB24", "MLB25", "MLB26"],
+      "reported_missing_editions": ["MLB17", "MLB18", "MLB19", "MLB20"],
+      "reported_live_rows": 12441,
+      "reported_unique_players": 11945,
+      "role": "LIVE_ROSTER_MULTI_ATTRIBUTE_PANEL"
+    }
+  ],
+  "negative_findings": [
+    "The local 79-row MLB bridge and 47-row The Show bridge are lower-bound historical snapshots, not complete NPB↔MLB universes.",
+    "Nonempty local bridge IDs are not compatible with the current100 production ID namespace as currently stored; exact current overlap is zero.",
+    "The Show special and non-Live cards cannot be mixed with the primary Live roster panel.",
+    "Multiple transition segments or editions for one player cannot be averaged into one lifetime value.",
+    "The prior 6-player/7-pair result remains a valid negative finding for an unrestricted direct numeric bridge but cannot justify excluding all other player-year evidence."
+  ],
+  "not_yet_identified": [
+    "Final count of all NPB-before-2026 players with MLB promotion/appearance and The Show Live history.",
+    "Complete current100 MLB-experience coverage after canonical identity reconstruction.",
+    "Complete NPB→MLB→NPB and multi-cycle transition taxonomy.",
+    "Player-season temporal alignment among NPB, MLB, PowerPro, The Show, age/injury, and direct physical measurements."
+  ]
+}
