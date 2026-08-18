@@ -1,0 +1,2831 @@
+{
+  "coverage_state_counts": {
+    "ELIGIBLE_MATCHED": 2,
+    "IDENTITY_UNRESOLVED": 1,
+    "NO_MLB_PROMOTION_FOUND": 97
+  },
+  "generated_at": "2026-08-18",
+  "live_panel_guard": {
+    "non_live_rows_in_primary_panel": 0,
+    "speed_stealing_aggression_collapsed": false
+  },
+  "negative_findings": [
+    "The 6-player/7-pair same-time sample is not used as an eligibility ceiling.",
+    "Cross-time rows remain in the player-year panel with visible temporal roles; no lifetime average is used as a current rating.",
+    "The Show values remain external game appraisal/context and are not copied to PowerPro or physical latent speed."
+  ],
+  "players": [
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 2,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "中川 圭太",
+      "queue_order": 1,
+      "stable_player_key": "PROEYE:51255138",
+      "team": "オリックス・バファローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "太田 椋",
+      "queue_order": 2,
+      "stable_player_key": "PROEYE:91395138",
+      "team": "オリックス・バファローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "宗 佑磨",
+      "queue_order": 3,
+      "stable_player_key": "PROEYE:11815130",
+      "team": "オリックス・バファローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "来田 涼斗",
+      "queue_order": 4,
+      "stable_player_key": "PROEYE:51955153",
+      "team": "オリックス・バファローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "森 友哉",
+      "queue_order": 5,
+      "stable_player_key": "PROEYE:91495139",
+      "team": "オリックス・バファローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "紅林 弘太郎",
+      "queue_order": 6,
+      "stable_player_key": "PROEYE:91995151",
+      "team": "オリックス・バファローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "若月 健矢",
+      "queue_order": 7,
+      "stable_player_key": "PROEYE:41645139",
+      "team": "オリックス・バファローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "西川 龍馬",
+      "queue_order": 8,
+      "stable_player_key": "PROEYE:71475132",
+      "team": "オリックス・バファローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "西野 真弘",
+      "queue_order": 9,
+      "stable_player_key": "PROEYE:91495130",
+      "team": "オリックス・バファローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 1,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "カリステ",
+      "queue_order": 10,
+      "stable_player_key": "PROEYE:93795157",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "土田 龍空",
+      "queue_order": 11,
+      "stable_player_key": "PROEYE:51455153",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 1,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "大島 洋平",
+      "queue_order": 12,
+      "stable_player_key": "PROEYE:01305131",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "岡林 勇希",
+      "queue_order": 13,
+      "stable_player_key": "PROEYE:81585151",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "木下 拓哉",
+      "queue_order": 14,
+      "stable_player_key": "PROEYE:31735132",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "村松 開人",
+      "queue_order": 15,
+      "stable_player_key": "PROEYE:03105157",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "板山 祐太郎",
+      "queue_order": 16,
+      "stable_player_key": "PROEYE:91395132",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "田中 幹也",
+      "queue_order": 17,
+      "stable_player_key": "PROEYE:21025157",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "石川 昂弥",
+      "queue_order": 18,
+      "stable_player_key": "PROEYE:91195151",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "福永 裕基",
+      "queue_order": 19,
+      "stable_player_key": "PROEYE:81685157",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "細川 成也",
+      "queue_order": 20,
+      "stable_player_key": "PROEYE:31835134",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "高橋 周平",
+      "queue_order": 21,
+      "stable_player_key": "PROEYE:91095135",
+      "team": "中日ドラゴンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "奈良間 大己",
+      "queue_order": 22,
+      "stable_player_key": "PROEYE:31435157",
+      "team": "北海道日本ハムファイターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "水野 達稀",
+      "queue_order": 23,
+      "stable_player_key": "PROEYE:63165155",
+      "team": "北海道日本ハムファイターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "清宮 幸太郎",
+      "queue_order": 24,
+      "stable_player_key": "PROEYE:41545136",
+      "team": "北海道日本ハムファイターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "田宮 裕涼",
+      "queue_order": 25,
+      "stable_player_key": "PROEYE:51055138",
+      "team": "北海道日本ハムファイターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 1,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "郡司 裕也",
+      "queue_order": 26,
+      "stable_player_key": "PROEYE:21925151",
+      "team": "北海道日本ハムファイターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "野村 佑希",
+      "queue_order": 27,
+      "stable_player_key": "PROEYE:31435138",
+      "team": "北海道日本ハムファイターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "IDENTITY_UNRESOLVED",
+      "identity_state": "AMBIGUOUS_SHORT_NPB_NAME_NOT_FORCED",
+      "player": "ソト",
+      "queue_order": 28,
+      "stable_player_key": "PROEYE:03505133",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 1,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "ポランコ",
+      "queue_order": 29,
+      "stable_player_key": "PROEYE:63065155",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "佐藤 都志也",
+      "queue_order": 30,
+      "stable_player_key": "PROEYE:71075151",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "友杉 篤輝",
+      "queue_order": 31,
+      "stable_player_key": "PROEYE:71275157",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 1,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "安田 尚憲",
+      "queue_order": 32,
+      "stable_player_key": "PROEYE:81885136",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "小川 龍成",
+      "queue_order": 33,
+      "stable_player_key": "PROEYE:11715153",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 2,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "山口 航輝",
+      "queue_order": 34,
+      "stable_player_key": "PROEYE:91895138",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "岡 大海",
+      "queue_order": 35,
+      "stable_player_key": "PROEYE:11515139",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 1,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "藤原 恭大",
+      "queue_order": 36,
+      "stable_player_key": "PROEYE:31635138",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "藤岡 裕大",
+      "queue_order": 37,
+      "stable_player_key": "PROEYE:41645136",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "髙部 瑛斗",
+      "queue_order": 38,
+      "stable_player_key": "PROEYE:11215151",
+      "team": "千葉ロッテマリーンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 2,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "古賀 悠斗",
+      "queue_order": 39,
+      "stable_player_key": "PROEYE:81785155",
+      "team": "埼玉西武ライオンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "外崎 修汰",
+      "queue_order": 40,
+      "stable_player_key": "PROEYE:41245130",
+      "team": "埼玉西武ライオンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "源田 壮亮",
+      "queue_order": 41,
+      "stable_player_key": "PROEYE:71775134",
+      "team": "埼玉西武ライオンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "滝澤 夏央",
+      "queue_order": 42,
+      "stable_player_key": "PROEYE:51255155",
+      "team": "埼玉西武ライオンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "石井 一成",
+      "queue_order": 43,
+      "stable_player_key": "PROEYE:21125134",
+      "team": "埼玉西武ライオンズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "ファビアン",
+      "queue_order": 44,
+      "stable_player_key": "PROEYE:43745150",
+      "team": "広島東洋カープ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "モンテロ",
+      "queue_order": 45,
+      "stable_player_key": "PROEYE:53955150",
+      "team": "広島東洋カープ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "名原 典彦",
+      "queue_order": 46,
+      "stable_player_key": "NPBNAME:名原典彦",
+      "team": "広島東洋カープ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "坂倉 将吾",
+      "queue_order": 47,
+      "stable_player_key": "PROEYE:11915134",
+      "team": "広島東洋カープ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "小園 海斗",
+      "queue_order": 48,
+      "stable_player_key": "PROEYE:01705138",
+      "team": "広島東洋カープ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "矢野 雅哉",
+      "queue_order": 49,
+      "stable_player_key": "PROEYE:93395153",
+      "team": "広島東洋カープ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": 41.0,
+          "stealing": 44.0
+        }
+      },
+      "coverage_state": "ELIGIBLE_MATCHED",
+      "identity_state": "MATCHED_ID_OR_HIGH_CONFIDENCE_NAME",
+      "player": "秋山 翔吾",
+      "queue_order": 50,
+      "stable_player_key": "PROEYE:31135133",
+      "team": "広島東洋カープ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": 41.0,
+        "range": [
+          58.0,
+          78.0
+        ],
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 43,
+        "speed_median": 68.0,
+        "speed_percentile_context": 0.8415411457637135,
+        "state": "AVAILABLE_EXTERNAL_GAME_APPRAISAL",
+        "stealing_median": 44.0
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "菊池 涼介",
+      "queue_order": 51,
+      "stable_player_key": "PROEYE:61565135",
+      "team": "広島東洋カープ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 2,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "野間 峻祥",
+      "queue_order": 52,
+      "stable_player_key": "PROEYE:01405130",
+      "team": "広島東洋カープ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "サンタナ",
+      "queue_order": 53,
+      "stable_player_key": "PROEYE:53755153",
+      "team": "東京ヤクルトスワローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "並木 秀尊",
+      "queue_order": 54,
+      "stable_player_key": "PROEYE:91695153",
+      "team": "東京ヤクルトスワローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "中村 悠平",
+      "queue_order": 55,
+      "stable_player_key": "PROEYE:51255118",
+      "team": "東京ヤクルトスワローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "丸山 和郁",
+      "queue_order": 56,
+      "stable_player_key": "PROEYE:93195155",
+      "team": "東京ヤクルトスワローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 1,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "古賀 優大",
+      "queue_order": 57,
+      "stable_player_key": "PROEYE:01705134",
+      "team": "東京ヤクルトスワローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 3,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "塩見 泰隆",
+      "queue_order": 58,
+      "stable_player_key": "PROEYE:71975136",
+      "team": "東京ヤクルトスワローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 2,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "岩田 幸宏",
+      "queue_order": 59,
+      "stable_player_key": "PROEYE:51355155",
+      "team": "東京ヤクルトスワローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "長岡 秀樹",
+      "queue_order": 60,
+      "stable_player_key": "PROEYE:51455151",
+      "team": "東京ヤクルトスワローズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "太田 光",
+      "queue_order": 61,
+      "stable_player_key": "PROEYE:71375138",
+      "team": "東北楽天ゴールデンイーグルス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "村林 一輝",
+      "queue_order": 62,
+      "stable_player_key": "PROEYE:41845132",
+      "team": "東北楽天ゴールデンイーグルス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "浅村 栄斗",
+      "queue_order": 63,
+      "stable_player_key": "PROEYE:51155118",
+      "team": "東北楽天ゴールデンイーグルス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "渡邊 佳明",
+      "queue_order": 64,
+      "stable_player_key": "PROEYE:73175138",
+      "team": "東北楽天ゴールデンイーグルス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "鈴木 大地",
+      "queue_order": 65,
+      "stable_player_key": "PROEYE:81985135",
+      "team": "東北楽天ゴールデンイーグルス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "京田 陽太",
+      "queue_order": 66,
+      "stable_player_key": "PROEYE:81585134",
+      "team": "横浜DeNAベイスターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "佐野 恵太",
+      "queue_order": 67,
+      "stable_player_key": "PROEYE:91995134",
+      "team": "横浜DeNAベイスターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "宮﨑 敏郎",
+      "queue_order": 68,
+      "stable_player_key": "PROEYE:51455137",
+      "team": "横浜DeNAベイスターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "山本 祐大",
+      "queue_order": 69,
+      "stable_player_key": "PROEYE:23125136",
+      "team": "横浜DeNAベイスターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "度会 隆輝",
+      "queue_order": 70,
+      "stable_player_key": "PROEYE:33535159",
+      "team": "横浜DeNAベイスターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "林 琢真",
+      "queue_order": 71,
+      "stable_player_key": "PROEYE:91695157",
+      "team": "横浜DeNAベイスターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "梶原 昂希",
+      "queue_order": 72,
+      "stable_player_key": "PROEYE:51555155",
+      "team": "横浜DeNAベイスターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "牧 秀悟",
+      "queue_order": 73,
+      "stable_player_key": "PROEYE:13115153",
+      "team": "横浜DeNAベイスターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": 12.0,
+          "stealing": 15.0
+        }
+      },
+      "coverage_state": "ELIGIBLE_MATCHED",
+      "identity_state": "MATCHED_ID_OR_HIGH_CONFIDENCE_NAME",
+      "player": "筒香 嘉智",
+      "queue_order": 74,
+      "stable_player_key": "PROEYE:41945131",
+      "team": "横浜DeNAベイスターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": 12.0,
+        "range": [
+          26.0,
+          46.0
+        ],
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 43,
+        "speed_median": 36.0,
+        "speed_percentile_context": 0.366806551241373,
+        "state": "AVAILABLE_EXTERNAL_GAME_APPRAISAL",
+        "stealing_median": 15.0
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "蝦名 達夫",
+      "queue_order": 75,
+      "stable_player_key": "PROEYE:51555151",
+      "team": "横浜DeNAベイスターズ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "今宮 健太",
+      "queue_order": 76,
+      "stable_player_key": "PROEYE:31335131",
+      "team": "福岡ソフトバンクホークス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "周東 佑京",
+      "queue_order": 77,
+      "stable_player_key": "PROEYE:21925136",
+      "team": "福岡ソフトバンクホークス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 2,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "山川 穂高",
+      "queue_order": 78,
+      "stable_player_key": "PROEYE:21425139",
+      "team": "福岡ソフトバンクホークス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 1,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "柳田 悠岐",
+      "queue_order": 79,
+      "stable_player_key": "PROEYE:31835133",
+      "team": "福岡ソフトバンクホークス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "柳町 達",
+      "queue_order": 80,
+      "stable_player_key": "PROEYE:73175151",
+      "team": "福岡ソフトバンクホークス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "栗原 陵矢",
+      "queue_order": 81,
+      "stable_player_key": "PROEYE:01705130",
+      "team": "福岡ソフトバンクホークス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "正木 智也",
+      "queue_order": 82,
+      "stable_player_key": "PROEYE:81885155",
+      "team": "福岡ソフトバンクホークス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "海野 隆司",
+      "queue_order": 83,
+      "stable_player_key": "PROEYE:81385151",
+      "team": "福岡ソフトバンクホークス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "牧原 大成",
+      "queue_order": 84,
+      "stable_player_key": "PROEYE:61465133",
+      "team": "福岡ソフトバンクホークス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "近藤 健介",
+      "queue_order": 85,
+      "stable_player_key": "PROEYE:41745135",
+      "team": "福岡ソフトバンクホークス",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "丸 佳浩",
+      "queue_order": 86,
+      "stable_player_key": "PROEYE:21425116",
+      "team": "読売ジャイアンツ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "佐々木 俊輔",
+      "queue_order": 87,
+      "stable_player_key": "PROEYE:51955159",
+      "team": "読売ジャイアンツ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "吉川 尚輝",
+      "queue_order": 88,
+      "stable_player_key": "PROEYE:73375134",
+      "team": "読売ジャイアンツ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "大城 卓三",
+      "queue_order": 89,
+      "stable_player_key": "PROEYE:21325136",
+      "team": "読売ジャイアンツ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "岸田 行倫",
+      "queue_order": 90,
+      "stable_player_key": "PROEYE:91595136",
+      "team": "読売ジャイアンツ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "松本 剛",
+      "queue_order": 91,
+      "stable_player_key": "PROEYE:21625135",
+      "team": "読売ジャイアンツ",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "中野 拓夢",
+      "queue_order": 92,
+      "stable_player_key": "PROEYE:41445153",
+      "team": "阪神タイガース",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "伏見 寅威",
+      "queue_order": 93,
+      "stable_player_key": "PROEYE:61065137",
+      "team": "阪神タイガース",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 2,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "佐藤 輝明",
+      "queue_order": 94,
+      "stable_player_key": "PROEYE:41045153",
+      "team": "阪神タイガース",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "坂本 誠志郎",
+      "queue_order": 95,
+      "stable_player_key": "PROEYE:11915132",
+      "team": "阪神タイガース",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "大山 悠輔",
+      "queue_order": 96,
+      "stable_player_key": "PROEYE:21325134",
+      "team": "阪神タイガース",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "小幡 竜平",
+      "queue_order": 97,
+      "stable_player_key": "PROEYE:31535138",
+      "team": "阪神タイガース",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 1,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "木浪 聖也",
+      "queue_order": 98,
+      "stable_player_key": "PROEYE:31735138",
+      "team": "阪神タイガース",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 0,
+        "community_state": "MISSING_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "梅野 隆太郎",
+      "queue_order": 99,
+      "stable_player_key": "PROEYE:21325139",
+      "team": "阪神タイガース",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    },
+    {
+      "contextual_evidence_summary": {
+        "age_state": "MISSING_BOUNDED",
+        "community_active_rows": 2,
+        "community_state": "AVAILABLE_BOUNDED",
+        "injury_state": "MISSING_BOUNDED",
+        "technique_separation": {
+          "aggression": null,
+          "stealing": null
+        }
+      },
+      "coverage_state": "NO_MLB_PROMOTION_FOUND",
+      "identity_state": "NO_MATCH_IN_SCREENED_MLB_AND_SHOW_CROSSWALKS",
+      "player": "森下 翔太",
+      "queue_order": 100,
+      "stable_player_key": "PROEYE:43145157",
+      "team": "阪神タイガース",
+      "the_show_implied_appraisal_range": {
+        "baserunning_aggressiveness_median": null,
+        "range": null,
+        "role": "external_game_appraisal_not_physical_measurement",
+        "source_rows": 0,
+        "speed_median": null,
+        "speed_percentile_context": null,
+        "state": "MISSING_BOUNDED",
+        "stealing_median": null
+      }
+    }
+  ],
+  "population": {
+    "emitted": 100,
+    "intended": 100,
+    "unique_queue_orders": 100
+  },
+  "schema_version": "sp101_current100_the_show_evidence_20260818"
+}

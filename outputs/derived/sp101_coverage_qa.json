@@ -1,0 +1,113 @@
+{
+  "construct_guards": {
+    "forced_analog_outside_support": 0,
+    "missingness_inferred_as_slow": false,
+    "non_live_contamination_primary_panel": 0,
+    "powerpro_label_in_physical_latent_features": false,
+    "speed_stealing_aggression_collapsed": false,
+    "top_speed_only_finalization": false
+  },
+  "current100_coverage_state_counts": {
+    "ELIGIBLE_MATCHED": 2,
+    "IDENTITY_UNRESOLVED": 1,
+    "NO_MLB_PROMOTION_FOUND": 97
+  },
+  "denominators": {
+    "current100_emitted": 100,
+    "current100_intended": 100,
+    "current100_route_matrix_cells": 1800,
+    "destination_mlb_bridge_rows": 79,
+    "destination_the_show_bridge_rows": 47,
+    "external_the_show_matched_canonical_players": 56,
+    "external_the_show_matched_rows": 3604,
+    "external_the_show_source_rows_scanned": 284282,
+    "historical_npb_identity_screened": 766,
+    "powerpro_linked_rows": 1879,
+    "transition_segments": 6
+  },
+  "generated_at": "2026-08-18",
+  "governance": {
+    "owner_review_locked": true,
+    "shoulder_work": false,
+    "sp078_ledger_sha_before": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0",
+    "sp078_owner_verdict_count": 0,
+    "sp079_run": false,
+    "sp102_run": false
+  },
+  "identity_qa": {
+    "current100_identity_ambiguity_count": 1,
+    "historical_crosswalk_rows": 766,
+    "name_only_matches_used_as_primary": 0,
+    "negative_controls": {
+      "duplicate_event_deduplication": {
+        "duplicate_events_removed": 0,
+        "result": "PASS"
+      },
+      "irrelevant_attribute_placebo": {
+        "attributes": [
+          "team_context",
+          "overall_batting_quality"
+        ],
+        "result": "PLACEBO_NOT_USED_AS_SPEED_TEACHER",
+        "status": "MEASURED_NEGATIVE_NO_DECISION_USE"
+      },
+      "lookahead_temporal_leakage": {
+        "quarantined_rows": 231,
+        "result": "PASS_FEATURE_NOT_USED"
+      },
+      "non_live_contamination": {
+        "non_live_rows": 0,
+        "primary_panel_rows": 3604,
+        "result": "PASS"
+      },
+      "same_name_join": {
+        "auto_join": false,
+        "candidate_names": [
+          "Domingo Santana",
+          "Carlos Santana"
+        ],
+        "fixture": "Santana/Montero-style surname collision",
+        "result": "REJECTED_NAME_ONLY_AMBIGUITY"
+      },
+      "speed_stealing_aggression_separation": {
+        "collapsed": false,
+        "result": "PASS"
+      },
+      "wrong_player_join": {
+        "auto_join": false,
+        "fixture": "Juan Soto short-name vs current NPB ソト",
+        "result": "REJECTED_IDENTITY_UNRESOLVED"
+      },
+      "wrong_year_join": {
+        "auto_join": false,
+        "fixture": "The Show 2023 row used as 2026 exact observation",
+        "result": "REJECTED_CROSS_TIME_ROLE_ONLY"
+      }
+    }
+  },
+  "route_qa": {
+    "common_support_caliper_enforced": true,
+    "deterministic_rerun_contract": "fixed source commits, fixed date, sorted rows, gzip mtime=0",
+    "edition_specific_effects_visible": true,
+    "feature_balance_visible": true,
+    "forced_analogs_outside_caliper": 0,
+    "forward_season_holdout": "BOUNDED_NOT_IDENTIFIABLE_FOR_FULL_CROSS_LEAGUE_PANEL",
+    "no_valid_analog_rows": 62,
+    "player_clustered_holdout": true,
+    "powerpro_work_version_visible": true,
+    "route_family_ablation_cells": 1800,
+    "transition_direction_specific": true,
+    "valid_analog_rows": 238
+  },
+  "schema_version": "sp101_coverage_qa_20260818",
+  "scope": "speed_only",
+  "status": "PASS_WITH_BOUNDED_NEGATIVE_FINDINGS",
+  "status_assertions": {
+    "all_decision_cells_have_player_specific_rationale": true,
+    "all_target_states_valid": true,
+    "current100_exactly_100_unique": true,
+    "ledger_unchanged_during_run": true,
+    "physical_path_powerpro_free": true,
+    "primary_panel_live_only": true
+  }
+}

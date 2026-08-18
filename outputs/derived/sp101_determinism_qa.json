@@ -1,0 +1,48 @@
+{
+  "contract": "same frozen inputs, source commits, sorted rows, fixed date and gzip mtime=0 produce byte-identical outputs",
+  "file_count": 25,
+  "generated_at": "2026-08-18",
+  "mismatches": [],
+  "runner": "scripts/sp101_execute_20260818.py",
+  "runs": {
+    "first": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"current100\": 100, \"historical_matched_players\": 56, \"owner_verdict_count\": 0, \"p0_routes\": 12, \"panel_rows\": 3604, \"status\": \"PASS\", \"target_states\": {\"NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN\": 68, \"NOT_TARGETED_SUFFICIENT_CONFIDENCE\": 4, \"TARGETED_MATERIAL_CONFLICT\": 28}, \"transition_segments\": 6}"
+    },
+    "second": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"current100\": 100, \"historical_matched_players\": 56, \"owner_verdict_count\": 0, \"p0_routes\": 12, \"panel_rows\": 3604, \"status\": \"PASS\", \"target_states\": {\"NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN\": 68, \"NOT_TARGETED_SUFFICIENT_CONFIDENCE\": 4, \"TARGETED_MATERIAL_CONFLICT\": 28}, \"transition_segments\": 6}"
+    }
+  },
+  "schema_version": "sp101_determinism_qa_20260818",
+  "sha256_after_second_run": {
+    "data/manual/sp101_external_source_manifest_20260818.json": "73d1bf943026343df102934c62c907c19b57165923947815c3faf749ad979402",
+    "data/manual/sp101_npb_mlb_the_show_identity_crosswalk.csv": "f33bcaf5599745a2ac31c3b561a8cc56867acb1d2133d9ac71ac151f08291e24",
+    "docs/audits/sp101_expanded_the_show_npb_universe.md": "18ea6fe1a6d451a0b089e3ab0b71851daafb54117bb0b9fc63fe44c84292a8dc",
+    "docs/audits/sp101_multibridge_inference_results.md": "5c29702de7ad7256d67ed43b7fd2faed3e58b2f08d5a6a0b9365354c81202eca",
+    "outputs/derived/sp101_common_metric_feature_dictionary.tsv": "1eba4c8923e22ef5fe0411fdbd40fa99c06b8e1905163ed94b685b6e64d8192d",
+    "outputs/derived/sp101_coverage_qa.json": "447bdef6d8b4ec965448c7209d9ea920109e5e5da86414d7b6e5d6ce9bacaec1",
+    "outputs/derived/sp101_current100_multibridge_evidence.json": "02ea49eda9d415c5d0f4c0a35ce417a847b9f9bea17a4876b1c518da86b2e3ec",
+    "outputs/derived/sp101_current100_the_show_evidence.json": "a54ed365ac3fbd70f693eeccd1c8609c8ee996320f8ccfa10ee6d0756f5f0e39",
+    "outputs/derived/sp101_dual_game_behavior_models.json": "4c871d474ee828762608f39e83aee18f1aa5f3fe00d93fca1b6e83586cdb7f60",
+    "outputs/derived/sp101_historical_npb_the_show_calibration_panel.csv": "aaf5dd8f44332881d12c39ea02504b81aed79f2bec003f04943bdd71bd12949e",
+    "outputs/derived/sp101_inference_route_execution_receipt.json": "0d4d76e029ffee30e128128e6b6e5b1dfb4df82efc603bef3443135d4c0a9901",
+    "outputs/derived/sp101_latent_multitrait_speed_model.json": "d484f27339ce1d1c5425a826a6dec7d71aa97a15856b6440ccbc1bfaf1610124",
+    "outputs/derived/sp101_metric_neighborhood_analog_pairs.csv.gz": "d7466223a9525cce03637c8240fa20191fc8a41a03e777b734cba62894c0a5d8",
+    "outputs/derived/sp101_metric_neighborhood_player_summary.json": "bc5814e94276c981620a51acc18ea50e4da7f854d8b0fb022f21c2edf480b6f3",
+    "outputs/derived/sp101_npb_mlb_transition_segments.csv": "a5c4f193644202b45c39b8d277aa7d36329c4928c685ebbc8498c2404b03361e",
+    "outputs/derived/sp101_pairwise_ordinal_graph.json": "b8353b3e5cd119e2e904e8ea04442a49b5a2a9ad7cc979efddeaa1d4e99496ca",
+    "outputs/derived/sp101_powerpro_the_show_temporal_pairs.csv": "7942f7d0abfc165656e02739f8e6d03b9b2a21267a1cd4a3f38490acde025354",
+    "outputs/derived/sp101_requirements_to_decision_utilization.json": "6b0e5f943b80360542be76657b8673abb4b0a7726fb5276b059494f5077b9771",
+    "outputs/derived/sp101_residual_low_confidence_target_set.json": "b18b54610b707b43c9d626ec5481ea9e6e57d35a913af8122ff27329f08d145c",
+    "outputs/derived/sp101_route_ablation_qa.json": "72b093e6e5166de131d4eea25760bd1684c400a925707b4df396f02b9f8ab6e8",
+    "outputs/derived/sp101_source_scan_summary_20260818.json": "a683efe262cf8a77a51a46fc88632116b26ddc3e8e83ff14a02d6fffa45619d3",
+    "outputs/derived/sp101_temporal_delta_and_inertia.json": "4d73166957d187a0c1561fe052bcc0b25f4a6c179529ca248285e82c600ae646",
+    "outputs/derived/sp101_the_show_live_player_year_panel.jsonl.gz": "edcb9ce72735caf1220a0e6d61077f0e38dd7f7508b3af80d01544db5238f897",
+    "outputs/derived/sp101_the_show_roster_update_speed_events.csv": "915c62505786276742a549b5358224fadf854adaff4104e218486fa3d946484b",
+    "outputs/derived/sp101_transition_effects.json": "c63e191c2ed8838248d6afe49ccb3e1535a4ffcb1eb822f71732f898a781f560"
+  },
+  "status": "PASS"
+}

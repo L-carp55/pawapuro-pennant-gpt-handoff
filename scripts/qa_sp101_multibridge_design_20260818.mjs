@@ -65,7 +65,8 @@ const header = lines[0];
 const rows = lines.slice(1).map(cells => Object.fromEntries(header.map((h,i) => [h,cells[i]])));
 const sp101 = rows.filter(r => r.task_id === 'SP-101');
 const sp079 = rows.find(r => r.task_id === 'SP-079');
-if (sp101.length !== 1 || sp101[0].status !== 'PARTIAL' || sp101[0].owner_review_block !== '1' || sp101[0].gate_block !== '1') throw new Error('canonical SP-101 row invalid');
+const allowedSp101Statuses = new Set(['PARTIAL', 'DONE_VALIDATED']);
+if (sp101.length !== 1 || !allowedSp101Statuses.has(sp101[0].status) || sp101[0].owner_review_block !== '1' || sp101[0].gate_block !== '1') throw new Error('canonical SP-101 row invalid');
 if (!sp079 || sp079.status !== 'BLOCKED_DEPENDENCY' || sp079.owner_review_block !== '1' || sp079.gate_block !== '1' || !sp079.depends_on.split(/[,;]/).includes('SP-101')) throw new Error('SP-079 dependency invalid');
 
 const addendum = read(paths.addendum);

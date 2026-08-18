@@ -1,0 +1,348 @@
+{
+  "model_separation": {
+    "direct_powerpro_to_show_model_fit": false,
+    "outputs_are_external_game_appraisal_expectations": true,
+    "powerpro_label_in_physical_path": false,
+    "the_show_is_direct_physical_measurement": false
+  },
+  "negative_findings": [
+    "The destination DB has no complete MLB batting/Statcast shared-indicator panel corresponding to the NPB event features, so a full dual cross-league behavior model is not identified here.",
+    "PowerPro work-to-NPB season joins are nearest bounded joins, not causal or same-season conversion labels.",
+    "The Show editions 21-26 are observed snapshots/update carries; no 17-20 values are imputed."
+  ],
+  "powerpro_speed_from_npb_indicators": {
+    "feature_models": {
+      "bip_rate": {
+        "fit": {
+          "intercept": 58.54176459677541,
+          "mae": 12.098443967672818,
+          "n": 421,
+          "pearson_r": 0.04328589904838406,
+          "residual_p10": -18.19305123648246,
+          "residual_p90": 20.14078852233709,
+          "rmse": 14.715102200065973,
+          "slope": 6.620085217360835,
+          "status": "FIT"
+        },
+        "grouped_player_holdout": {
+          "correlation": -0.202652017214872,
+          "fold_row_counts": {
+            "0": 105,
+            "1": 92,
+            "2": 105,
+            "3": 67,
+            "4": 52
+          },
+          "folds": 5,
+          "groups": 126,
+          "mae": 12.389587544413304,
+          "rmse": 15.05388097979725,
+          "rows": 421,
+          "status": "GROUPED_HOLDOUT",
+          "test_rows": 421
+        }
+      },
+      "double_rate": {
+        "fit": {
+          "intercept": 66.62931540214267,
+          "mae": 12.10876872205939,
+          "n": 421,
+          "pearson_r": -0.11280079023304565,
+          "residual_p10": -18.85106737490628,
+          "residual_p90": 19.370684597857334,
+          "rmse": 14.634901787098364,
+          "slope": -70.97160869576597,
+          "status": "FIT"
+        },
+        "grouped_player_holdout": {
+          "correlation": -0.03257268976432719,
+          "fold_row_counts": {
+            "0": 105,
+            "1": 92,
+            "2": 105,
+            "3": 67,
+            "4": 52
+          },
+          "folds": 5,
+          "groups": 126,
+          "mae": 12.331173922618492,
+          "rmse": 14.88961450978433,
+          "rows": 421,
+          "status": "GROUPED_HOLDOUT",
+          "test_rows": 421
+        }
+      },
+      "gdp_rate": {
+        "fit": {
+          "intercept": 66.04557740552282,
+          "mae": 11.908781403495965,
+          "n": 421,
+          "pearson_r": -0.1682833853591756,
+          "residual_p10": -18.46092564899859,
+          "residual_p90": 18.729019985397997,
+          "rmse": 14.51885323783662,
+          "slope": -111.60047283481501,
+          "status": "FIT"
+        },
+        "grouped_player_holdout": {
+          "correlation": 0.08124541699518513,
+          "fold_row_counts": {
+            "0": 105,
+            "1": 92,
+            "2": 105,
+            "3": 67,
+            "4": 52
+          },
+          "folds": 5,
+          "groups": 126,
+          "mae": 12.100313675912103,
+          "rmse": 14.742980832977496,
+          "rows": 421,
+          "status": "GROUPED_HOLDOUT",
+          "test_rows": 421
+        }
+      },
+      "run_rate": {
+        "fit": {
+          "intercept": 59.211592321103325,
+          "mae": 11.698942497772114,
+          "n": 421,
+          "pearson_r": 0.20697570215721536,
+          "residual_p10": -17.82557961117009,
+          "residual_p90": 20.103188374074954,
+          "rmse": 14.409968688522294,
+          "slope": 45.744777576168474,
+          "status": "FIT"
+        },
+        "grouped_player_holdout": {
+          "correlation": 0.07856296989437202,
+          "fold_row_counts": {
+            "0": 105,
+            "1": 92,
+            "2": 105,
+            "3": 67,
+            "4": 52
+          },
+          "folds": 5,
+          "groups": 126,
+          "mae": 11.997737513637247,
+          "rmse": 15.190208054474608,
+          "rows": 421,
+          "status": "GROUPED_HOLDOUT",
+          "test_rows": 421
+        }
+      },
+      "sb_attempt_rate": {
+        "fit": {
+          "intercept": 57.18564015436405,
+          "mae": 9.342506979470198,
+          "n": 421,
+          "pearson_r": 0.6018299299302983,
+          "residual_p10": -14.65541279593991,
+          "residual_p90": 13.814359845635948,
+          "rmse": 11.762862874890349,
+          "slope": 324.77510236722566,
+          "status": "FIT"
+        },
+        "grouped_player_holdout": {
+          "correlation": 0.5826853808269615,
+          "fold_row_counts": {
+            "0": 105,
+            "1": 92,
+            "2": 105,
+            "3": 67,
+            "4": 52
+          },
+          "folds": 5,
+          "groups": 126,
+          "mae": 9.435574019783443,
+          "rmse": 11.97711067792925,
+          "rows": 421,
+          "status": "GROUPED_HOLDOUT",
+          "test_rows": 421
+        }
+      },
+      "sb_success_rate": {
+        "fit": {
+          "intercept": 62.31308970290955,
+          "mae": 10.716040738066221,
+          "n": 289,
+          "pearson_r": 0.18848096232395542,
+          "residual_p10": -19.341970281209484,
+          "residual_p90": 17.64840285935722,
+          "rmse": 13.462061627263612,
+          "slope": 9.086641734899779,
+          "status": "FIT"
+        },
+        "grouped_player_holdout": {
+          "correlation": 0.07162570712910755,
+          "fold_row_counts": {
+            "0": 69,
+            "1": 72,
+            "2": 76,
+            "3": 40,
+            "4": 32
+          },
+          "folds": 5,
+          "groups": 107,
+          "mae": 11.053772555477895,
+          "rmse": 13.777926209368152,
+          "rows": 289,
+          "status": "GROUPED_HOLDOUT",
+          "test_rows": 289
+        }
+      },
+      "single_rate": {
+        "fit": {
+          "intercept": 55.25210649462838,
+          "mae": 11.791712631230492,
+          "n": 421,
+          "pearson_r": 0.2088615159734477,
+          "residual_p10": -18.863062588513685,
+          "residual_p90": 19.669665355306066,
+          "rmse": 14.404064514213866,
+          "slope": 49.38119719146469,
+          "status": "FIT"
+        },
+        "grouped_player_holdout": {
+          "correlation": 0.12196538861056135,
+          "fold_row_counts": {
+            "0": 105,
+            "1": 92,
+            "2": 105,
+            "3": 67,
+            "4": 52
+          },
+          "folds": 5,
+          "groups": 126,
+          "mae": 12.08293046063334,
+          "rmse": 14.691651961488285,
+          "rows": 421,
+          "status": "GROUPED_HOLDOUT",
+          "test_rows": 421
+        }
+      },
+      "triple_rate": {
+        "fit": {
+          "intercept": 63.21654122010283,
+          "mae": 12.000544637286865,
+          "n": 421,
+          "pearson_r": 0.09090019734480637,
+          "residual_p10": -18.216541220102833,
+          "residual_p90": 19.783458779897167,
+          "rmse": 14.667929649963677,
+          "slope": 96.15028410904976,
+          "status": "FIT"
+        },
+        "grouped_player_holdout": {
+          "correlation": -0.08603907413380765,
+          "fold_row_counts": {
+            "0": 105,
+            "1": 92,
+            "2": 105,
+            "3": 67,
+            "4": 52
+          },
+          "folds": 5,
+          "groups": 126,
+          "mae": 12.5325928246478,
+          "rmse": 17.647607383333227,
+          "rows": 421,
+          "status": "GROUPED_HOLDOUT",
+          "test_rows": 421
+        }
+      }
+    },
+    "formula": "historical PowerPro speed ~ league-season normalized NPB opportunity/outcome indicators",
+    "forward_season_holdout": "NOT_IDENTIFIABLE_AS_FULL_FORWARD_PANEL: PowerPro work and NPB season are sparse/nearest-joined; nearest <=3-year joins are retained with temporal_gap rather than treated as same-year truth.",
+    "ridge_screen": {
+      "coefficients_centered": {
+        "bip_rate": 1.4954499496922762,
+        "double_rate": -0.3764203469070814,
+        "gdp_rate": -2.9833431940780035,
+        "run_rate": -0.23402990076482733,
+        "sb_attempt_rate": 7.111742795460266,
+        "sb_success_rate": 0.7419847730094188,
+        "single_rate": 0.31267517163735037,
+        "triple_rate": 2.8974579105240426
+      },
+      "correlation": 0.6709602511108886,
+      "features": [
+        "sb_attempt_rate",
+        "sb_success_rate",
+        "triple_rate",
+        "gdp_rate",
+        "run_rate",
+        "bip_rate",
+        "single_rate",
+        "double_rate"
+      ],
+      "intercept_centered": 68.02768166089966,
+      "mae": 7.909702076517591,
+      "means": {
+        "bip_rate": 0.7981134884552039,
+        "double_rate": 0.042353503530804415,
+        "gdp_rate": 0.018709155416885434,
+        "run_rate": 0.1090713810668529,
+        "sb_attempt_rate": 0.02932927083489874,
+        "sb_success_rate": 0.6289003269537553,
+        "single_rate": 0.1879790618066018,
+        "triple_rate": 0.006019934226956223
+      },
+      "residual_p10": -13.119615303636671,
+      "residual_p90": 12.033414163640735,
+      "ridge": 1.0,
+      "rmse": 10.164238614013673,
+      "rows": 289,
+      "scales": {
+        "bip_rate": 0.06924474639740061,
+        "double_rate": 0.018479630556928764,
+        "gdp_rate": 0.012367031853068354,
+        "run_rate": 0.04229111340729579,
+        "sb_attempt_rate": 0.028556710931729762,
+        "sb_success_rate": 0.28433491265459016,
+        "single_rate": 0.041725408320856604,
+        "triple_rate": 0.007712014807602728
+      },
+      "status": "RIDGE_FIT"
+    },
+    "rows_with_label": 1879,
+    "unique_player_groups": 682
+  },
+  "route_id": "MB-02_DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS",
+  "schema_version": "sp101_dual_game_behavior_models_20260818",
+  "the_show_speed_from_mlb_indicators": {
+    "edition_effect": "Edition-specific observations are retained in the panel; the bounded destination bridge has no edition-complete paired Statcast feature, so edition coefficient is not identified.",
+    "fit": {
+      "intercept": -296.0484357443021,
+      "mae": 6.489459281381701,
+      "n": 47,
+      "pearson_r": 0.8730270517881521,
+      "residual_p10": -13.634032635346102,
+      "residual_p90": 10.736830276211151,
+      "rmse": 9.098752628628247,
+      "slope": 12.929882270569628,
+      "status": "FIT"
+    },
+    "formula": "The Show Speed ~ MLB bridge sprint-speed average",
+    "player_clustered_holdout": {
+      "correlation": 0.8529168060036464,
+      "fold_row_counts": {
+        "0": 14,
+        "1": 7,
+        "2": 9,
+        "3": 10,
+        "4": 7
+      },
+      "folds": 5,
+      "groups": 47,
+      "mae": 6.703637631697664,
+      "rmse": 9.748972375597495,
+      "rows": 47,
+      "status": "GROUPED_HOLDOUT",
+      "test_rows": 47
+    },
+    "rows": 47,
+    "unique_player_groups": 47
+  }
+}

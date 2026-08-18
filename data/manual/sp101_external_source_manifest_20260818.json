@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-08-18",
+  "large_raw_asset_policy": "Pinned source commits and per-file SHA-256 receipts are stored here; normalized matched evidence required downstream is stored in SP-101 outputs. Large raw source snapshots are not duplicated into this repository.",
+  "panel_rows_matched_to_npb_identity": 3604,
+  "schema_version": "sp101_external_source_manifest_20260818",
+  "source_repository": "L-carp55/claude-code-hub",
+  "source_scan_counts": {
+    "mlb_the_show_speed_history_2021.csv": 43932,
+    "mlb_the_show_speed_history_2022.csv": 43912,
+    "mlb_the_show_speed_history_2023.csv": 54990,
+    "mlb_the_show_speed_history_2024.csv": 48323,
+    "mlb_the_show_speed_history_2025.csv": 59612,
+    "mlb_the_show_speed_history_2026.csv": 33513
+  },
+  "sources": [
+    {
+      "branch": "codex/mlb-the-show-speed-history",
+      "commit": "97c429521267cfb70ccdd61e40e11853d100e360",
+      "path": "data/normalized/editions/mlb_the_show_speed_history_2021.csv",
+      "repository": "L-carp55/claude-code-hub",
+      "role": "official_live_speed_stealing_aggression_roster_update_panel",
+      "rows_scanned": 43932,
+      "sha256": "08d6771a6f2d23a837c22780a0117d666e511dd082f409d62ace59dd3832e3de"
+    },
+    {
+      "branch": "codex/mlb-the-show-speed-history",
+      "commit": "97c429521267cfb70ccdd61e40e11853d100e360",
+      "path": "data/normalized/editions/mlb_the_show_speed_history_2022.csv",
+      "repository": "L-carp55/claude-code-hub",
+      "role": "official_live_speed_stealing_aggression_roster_update_panel",
+      "rows_scanned": 43912,
+      "sha256": "74822b0305a4614d4bb0a1f70e19257bcb32953ec7d88250c668c4faf1476759"
+    },
+    {
+      "branch": "codex/mlb-the-show-speed-history",
+      "commit": "97c429521267cfb70ccdd61e40e11853d100e360",
+      "path": "data/normalized/editions/mlb_the_show_speed_history_2023.csv",
+      "repository": "L-carp55/claude-code-hub",
+      "role": "official_live_speed_stealing_aggression_roster_update_panel",
+      "rows_scanned": 54990,
+      "sha256": "647a5a5b371f4cd8fa597aca51f626701da7f068d6dccc38b2fec0d77298dae0"
+    },
+    {
+      "branch": "codex/mlb-the-show-speed-history",
+      "commit": "97c429521267cfb70ccdd61e40e11853d100e360",
+      "path": "data/normalized/editions/mlb_the_show_speed_history_2024.csv",
+      "repository": "L-carp55/claude-code-hub",
+      "role": "official_live_speed_stealing_aggression_roster_update_panel",
+      "rows_scanned": 48323,
+      "sha256": "e75590d232efd528907c1c0911e08a142694682b1d06b8a2c90db0e95f401622"
+    },
+    {
+      "branch": "codex/mlb-the-show-speed-history",
+      "commit": "97c429521267cfb70ccdd61e40e11853d100e360",
+      "path": "data/normalized/editions/mlb_the_show_speed_history_2025.csv",
+      "repository": "L-carp55/claude-code-hub",
+      "role": "official_live_speed_stealing_aggression_roster_update_panel",
+      "rows_scanned": 59612,
+      "sha256": "78463e3f5743486f95add27c5d27af14b887efc285353296d90fc6df69b603fb"
+    },
+    {
+      "branch": "codex/mlb-the-show-speed-history",
+      "commit": "97c429521267cfb70ccdd61e40e11853d100e360",
+      "path": "data/normalized/editions/mlb_the_show_speed_history_2026.csv",
+      "repository": "L-carp55/claude-code-hub",
+      "role": "official_live_speed_stealing_aggression_roster_update_panel",
+      "rows_scanned": 33513,
+      "sha256": "548af197060017dc017e13b4849a0d3730828a7f5d28904f661801140bede518"
+    },
+    {
+      "branch": "codex/mlb-the-show-speed-temporal-rescue",
+      "commit": "ab5adbfee656d69d0b378145fd66bf5789e0d1b4",
+      "path": "data/normalized/showdd_live_speed_update_history_2021_2026.csv",
+      "repository": "L-carp55/claude-code-hub",
+      "role": "official_or_archived_roster_update_event_and_temporal_qa",
+      "sha256": "fa9448cebf50136cc769ac597561828d2a1c78cc7367566ae2a9977fea996093"
+    },
+    {
+      "branch": "codex/mlb-the-show-speed-temporal-rescue",
+      "commit": "ab5adbfee656d69d0b378145fd66bf5789e0d1b4",
+      "path": "data/normalized/showdd_speed_temporal_model_dataset_2021_2026.csv",
+      "repository": "L-carp55/claude-code-hub",
+      "role": "official_or_archived_roster_update_event_and_temporal_qa",
+      "sha256": "25be710b87edbb4e0cfec0c9413c103ba109684e06bf0bc5df84cba08034dc17"
+    },
+    {
+      "branch": "codex/mlb-the-show-speed-history",
+      "commit": "97c429521267cfb70ccdd61e40e11853d100e360",
+      "path": "data/normalized/player_identity_crosswalk.csv",
+      "repository": "L-carp55/claude-code-hub",
+      "role": "conservative_MLBAM_identity_crosswalk",
+      "sha256": "3c8afdc06ebd6ba6b734b59c785149f6dbd5060058000ed7bac5ab73cdb3a7c0"
+    },
+    {
+      "branch": "codex/mlb-the-show-full-attributes",
+      "commit": "74d2a2278ab7bcea3f6368e1df6ba03e2dd82554",
+      "consumed": false,
+      "negative_finding": "The merged full-attribute panel has 2017-2026 scope labels but only MLB21-26 observed snapshots and no MLBAM IDs in the integrated rows. The pinned speed-history panel and conservative identity crosswalk were used for the primary speed join; editions 17-20 are not imputed.",
+      "path": "docs/audits/mlb_the_show_full_attribute_history_2017_2026.md",
+      "repository": "L-carp55/claude-code-hub",
+      "role": "source_audit_and_schema_cross_check",
+      "sha256": null
+    }
+  ],
+  "verified_remote_commits": {
+    "codex/mlb-the-show-full-attributes": "74d2a2278ab7bcea3f6368e1df6ba03e2dd82554",
+    "codex/mlb-the-show-speed-history": "97c429521267cfb70ccdd61e40e11853d100e360",
+    "codex/mlb-the-show-speed-temporal-rescue": "ab5adbfee656d69d0b378145fd66bf5789e0d1b4"
+  }
+}

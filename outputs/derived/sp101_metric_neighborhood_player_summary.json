@@ -1,0 +1,38 @@
+{
+  "caliper": {
+    "mahalanobis": 0.2,
+    "mutual_knn": 0.2,
+    "optimal_transport": 0.25
+  },
+  "feature_balance": {
+    "common_feature_count": 1,
+    "required_minimum_for_full_behavior_bridge": 2,
+    "status": "LIMITED_SINGLE_PROTOCOL_FEATURE"
+  },
+  "methods": [
+    [
+      "MUTUAL_KNN",
+      0.2,
+      "mutual nearest rank neighborhood"
+    ],
+    [
+      "CALIPERED_MAHALANOBIS",
+      0.2,
+      "one-dimensional standardized Mahalanobis proxy"
+    ],
+    [
+      "OPTIMAL_TRANSPORT",
+      0.25,
+      "monotone empirical quantile transport"
+    ]
+  ],
+  "mlb_candidate_denominator": 79,
+  "negative_finding": "The destination snapshot exposes only one protocol-specific physical percentile for the cross-league target/MLB analog bridge. Outcome/context features are not jointly available on both sides, so the route is executed as a bounded rank QA lane and is not a full common-indicator behavior model. No nearest neighbor outside the caliper is promoted.",
+  "no_valid_analog_rows": 62,
+  "physical_truth_guard": "The Show and matched-game outputs are external appraisal context; no output is copied into the independent physical estimate.",
+  "route_id": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+  "rows_emitted": 300,
+  "schema_version": "sp101_metric_neighborhood_player_summary_20260818",
+  "target_denominator": 100,
+  "valid_bounded_analog_rows": 238
+}

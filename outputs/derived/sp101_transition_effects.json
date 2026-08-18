@@ -1,0 +1,14 @@
+{
+  "age_injury_controls": "MISSING_BOUNDED",
+  "direction_counts": {
+    "MLB_TO_NPB": 2,
+    "NPB_TO_MLB": 4
+  },
+  "negative_finding": "The available snapshot supports explicit transition segmentation and direction counts, but not a stable causal fixed-effect estimate after age/injury adjustment. Segment rows remain available for later evidence integration.",
+  "player_fixed_effects": "NOT_IDENTIFIABLE_AS_CAUSAL_EFFECT_WITH_SMALL_DIRECTIONAL_COHORTS; segment-level observations and gaps are emitted without lifetime averaging.",
+  "returnee_or_multi_cycle_count": 4,
+  "route_id": "MB-05_LEAGUE_TRANSITION_FIXED_EFFECTS",
+  "schema_version": "sp101_transition_effects_20260818",
+  "segment_denominator": 6,
+  "unique_transition_players": 4
+}

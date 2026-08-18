@@ -1,6 +1,6 @@
 {
   "schema_version": "qa_sp101_multibridge_design_20260818",
-  "generated_at": "2026-08-18T05:19:32.352Z",
+  "generated_at": "2026-08-18T12:53:12.076Z",
   "status": "PASS",
   "route_count": 18,
   "p0_route_count": 12,
@@ -26,7 +26,7 @@
   "governance": {
     "owner_review_locked": true,
     "owner_verdict_count": 0,
-    "sp101_status": "PARTIAL",
+    "sp101_status": "DONE_VALIDATED",
     "sp079_status": "BLOCKED_DEPENDENCY",
     "shoulder_work": false
   },
@@ -36,8 +36,8 @@
     "routes": "dd2731ab541683fc258c7aebd69cf51185447fcb31ebc10f197c2f9f963bec5c",
     "feasibility": "10b94ae277c33488f7352297431ad99a5d37ff93c994245f291a604223f48ab3",
     "feasibilityAudit": "e461f71d83f4f0d66484dd56ed2b70590b5e55194f4a4af477a5b33ac9a6ff46",
-    "registry": "e06977d91e69c1e2d0ce7ddabfd7ef1f52d3c4d598dfe4d192b57ef16af3631f",
-    "lock": "73311082d25d1a70ba00887f899ce6eefd3899b8577ef920683a30ff4b096e08",
+    "registry": "056b21b153b81109f9958110b4b8256f70cbfe84551aa20b387ce745b950ae52",
+    "lock": "085514f8345223866abe3807d18264a9f26fa5bc42df128c08eb66084ff12675",
     "ledger": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0"
   }
 }

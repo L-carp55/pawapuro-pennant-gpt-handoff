@@ -1,0 +1,36 @@
+{
+  "age_and_injury": {
+    "age_join": "BLOCKED_MISSING_DATA",
+    "injury_join": "BLOCKED_MISSING_DATA",
+    "no_negative_inference": true
+  },
+  "lookahead_guard": {
+    "fullseason_lookahead_rows_quarantined": 231,
+    "quarantined_feature": "sprint_current_fullseason",
+    "used_for_model": false
+  },
+  "negative_findings": [
+    "Roster-update date is an operational snapshot date, not proof that every attribute changed on that date.",
+    "Carry-forward observations are retained but are not treated as exact changes.",
+    "No age-conditioned decay estimate is identified because the destination snapshot has no usable birthdate join.",
+    "No injury-conditioned decay estimate is identified because no structured date+body-part injury table is present."
+  ],
+  "route_ids": [
+    "MB-04_WITHIN_PLAYER_TEMPORAL_DELTA",
+    "MB-06_RATING_INERTIA_AND_STALENESS_MODEL",
+    "MB-09_THE_SHOW_ROSTER_UPDATE_RESPONSE"
+  ],
+  "schema_version": "sp101_temporal_delta_and_inertia_20260818",
+  "the_show_panel": {
+    "annual_delta_median": 0.0,
+    "annual_delta_p10": -43.0,
+    "annual_delta_p90": 30.0,
+    "annual_delta_rows": 100,
+    "carry_forward_rows": 0,
+    "event_delta_median": 15.5,
+    "explicit_event_rows": 10,
+    "matched_player_denominator": 56,
+    "matched_raw_rows": 3604,
+    "primary_event_rows": 0
+  }
+}

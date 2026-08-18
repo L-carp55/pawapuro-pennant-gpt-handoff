@@ -1,0 +1,17 @@
+{
+  "full_attribute_commit": "74d2a2278ab7bcea3f6368e1df6ba03e2dd82554",
+  "full_attribute_commit_verified_but_primary_speed_values_not_consumed": true,
+  "generated_at": "2026-08-18",
+  "history_files": 6,
+  "history_rows_matched": 3604,
+  "history_rows_scanned": 284282,
+  "history_unique_source_players": 156,
+  "identity_crosswalk_rows_scanned": 12441,
+  "schema_version": "sp101_source_scan_summary_20260818",
+  "temporal_counts": {
+    "lookahead_fullseason_quarantined": 231,
+    "matched_events": 10,
+    "rows_scanned": 235,
+    "unmatched_or_ambiguous": 225
+  }
+}

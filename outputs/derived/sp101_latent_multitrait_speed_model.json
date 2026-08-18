@@ -1,0 +1,3921 @@
+{
+  "current100": [
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.7074468085106383,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "右",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 4.01,
+            "sources": [
+              "https://pacificleague.com/news/32690"
+            ],
+            "z_within_sample_lower_is_faster": -0.3590721863195263
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7576,
+          "npb_plus_top_speed_kmh": 32.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "中川 圭太",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51255138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.4804964539007092,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.5253,
+          "npb_plus_top_speed_kmh": 31.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "太田 椋",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91395138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.7411347517730497,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.6061,
+          "npb_plus_top_speed_kmh": 31.9
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "宗 佑磨",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:11815130",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9202127659574468,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7071,
+          "npb_plus_top_speed_kmh": 32.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "来田 涼斗",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51955153",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5141843971631206,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3636,
+          "npb_plus_top_speed_kmh": 31.2
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "森 友哉",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91495139",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.25886524822695034,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.2626,
+          "npb_plus_top_speed_kmh": 30.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "紅林 弘太郎",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91995151",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.1524822695035461,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.2626,
+          "npb_plus_top_speed_kmh": 30.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "若月 健矢",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:41645139",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.6861702127659575,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3232,
+          "npb_plus_top_speed_kmh": 31.1
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "西川 龍馬",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:71475132",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.7411347517730497,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.4848,
+          "npb_plus_top_speed_kmh": 31.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "西野 真弘",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91495130",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3939,
+          "npb_plus_top_speed_kmh": 31.3
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "カリステ",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:93795157",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3636,
+          "npb_plus_top_speed_kmh": 31.2
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "土田 龍空",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51455153",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.7074468085106383,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "左",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 3.96,
+            "sources": [
+              "https://goetheweb.jp/person/article/20230907-yohei-oshima"
+            ],
+            "z_within_sample_lower_is_faster": 0.016701031921837733
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.5253,
+          "npb_plus_top_speed_kmh": 31.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "大島 洋平",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:01305131",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.8297872340425532,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7374,
+          "npb_plus_top_speed_kmh": 32.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "岡林 勇希",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:81585151",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.04609929078014184,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.0303,
+          "npb_plus_top_speed_kmh": 29.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "木下 拓哉",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:31735132",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.8102836879432624,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8889,
+          "npb_plus_top_speed_kmh": 33.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "村松 開人",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:03105157",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.6861702127659575,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.6364,
+          "npb_plus_top_speed_kmh": 32.0
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "板山 祐太郎",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91395132",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.8794326241134752,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.9293,
+          "npb_plus_top_speed_kmh": 33.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "田中 幹也",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:21025157",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.06382978723404255,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.2121,
+          "npb_plus_top_speed_kmh": 30.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "石川 昂弥",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91195151",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.4804964539007092,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8485,
+          "npb_plus_top_speed_kmh": 33.0
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "福永 裕基",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:81685157",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.34929078014184395,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7879,
+          "npb_plus_top_speed_kmh": 32.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "細川 成也",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:31835134",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.11879432624113476,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.0606,
+          "npb_plus_top_speed_kmh": 29.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "高橋 周平",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91095135",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.4804964539007092,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.5253,
+          "npb_plus_top_speed_kmh": 31.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "奈良間 大己",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:31435157",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.6648936170212766,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8889,
+          "npb_plus_top_speed_kmh": 33.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "水野 達稀",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:63165155",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.25886524822695034,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.5253,
+          "npb_plus_top_speed_kmh": 31.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "清宮 幸太郎",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:41545136",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5975177304964538,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7071,
+          "npb_plus_top_speed_kmh": 32.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "田宮 裕涼",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51055138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.3829787234042553,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7879,
+          "npb_plus_top_speed_kmh": 32.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "郡司 裕也",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:21925151",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.21099290780141844,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.5253,
+          "npb_plus_top_speed_kmh": 31.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "野村 佑希",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:31435138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.0909,
+          "npb_plus_top_speed_kmh": 30.1
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "ソト",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:03505133",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3232,
+          "npb_plus_top_speed_kmh": 31.1
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "ポランコ",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:63065155",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.6648936170212766,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3939,
+          "npb_plus_top_speed_kmh": 31.3
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "佐藤 都志也",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:71075151",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9432624113475178,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "右",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 3.73,
+            "sources": [
+              "https://4years.asahi.com/article/14723455"
+            ],
+            "z_within_sample_lower_is_faster": 1.7452578358321182
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7879,
+          "npb_plus_top_speed_kmh": 32.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "友杉 篤輝",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:71275157",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.11879432624113476,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.0707,
+          "npb_plus_top_speed_kmh": 29.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "安田 尚憲",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:81885136",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9326241134751773,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8889,
+          "npb_plus_top_speed_kmh": 33.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "小川 龍成",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:11715153",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.21099290780141844,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.6061,
+          "npb_plus_top_speed_kmh": 31.9
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "山口 航輝",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91895138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.8563829787234043,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7576,
+          "npb_plus_top_speed_kmh": 32.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "岡 大海",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:11515139",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9202127659574468,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "左",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 3.9,
+            "sources": [
+              "https://pacificleague.com/news/50792"
+            ],
+            "z_within_sample_lower_is_faster": 0.4676288938114766
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8485,
+          "npb_plus_top_speed_kmh": 33.0
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "藤原 恭大",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:31635138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5141843971631206,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.2929,
+          "npb_plus_top_speed_kmh": 30.8
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "藤岡 裕大",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:41645136",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9680851063829787,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.9495,
+          "npb_plus_top_speed_kmh": 33.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "髙部 瑛斗",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:11215151",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.1347517730496454,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.2121,
+          "npb_plus_top_speed_kmh": 30.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "古賀 悠斗",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:81785155",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5975177304964538,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "右",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 4.13,
+            "sources": [
+              "https://pacificleague.com/news/61236"
+            ],
+            "z_within_sample_lower_is_faster": -1.260927910098804
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.6869,
+          "npb_plus_top_speed_kmh": 32.3
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "外崎 修汰",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:41245130",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.8102836879432624,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "左",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 4,
+            "n_raw_records": 4,
+            "seconds": 3.8149999999999995,
+            "sources": [
+              "https://pacificleague.com/news/32690",
+              "https://pacificleague.com/news/32690",
+              "https://pacificleague.com/news/32690",
+              "https://pacificleague.com/news/61236"
+            ],
+            "z_within_sample_lower_is_faster": 1.1064433648218008
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8283,
+          "npb_plus_top_speed_kmh": 32.9
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "源田 壮亮",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:71775134",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9202127659574468,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8485,
+          "npb_plus_top_speed_kmh": 33.0
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "滝澤 夏央",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51255155",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.7960992907801419,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7576,
+          "npb_plus_top_speed_kmh": 32.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "石井 一成",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:21125134",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.4242,
+          "npb_plus_top_speed_kmh": 31.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "ファビアン",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:43745150",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.6061,
+          "npb_plus_top_speed_kmh": 31.9
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "モンテロ",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:53955150",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.9697,
+          "npb_plus_top_speed_kmh": 33.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "名原 典彦",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "NPBNAME:名原典彦",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5975177304964538,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.2121,
+          "npb_plus_top_speed_kmh": 30.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "坂倉 将吾",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:11915134",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.7960992907801419,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "左",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 4.05,
+            "sources": [
+              "https://goetheweb.jp/person/article/20241128-star-kozonokaito"
+            ],
+            "z_within_sample_lower_is_faster": -0.6596907609126189
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.4646,
+          "npb_plus_top_speed_kmh": 31.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "小園 海斗",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:01705138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.776595744680851,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.2626,
+          "npb_plus_top_speed_kmh": 30.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "矢野 雅哉",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:93395153",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.7570921985815603,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": 68.0,
+          "percentile_context": 0.8415411457637135,
+          "state": "AVAILABLE_EXTERNAL_APPRAISAL"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.4848,
+          "npb_plus_top_speed_kmh": 31.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "秋山 翔吾",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:31135133",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "AVAILABLE_SEPARATE_ATTRIBUTE",
+          "the_show_aggression_median": 41.0
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "AVAILABLE_SEPARATE_ATTRIBUTE",
+          "the_show_stealing_median": 44.0
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.6861702127659575,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.596,
+          "npb_plus_top_speed_kmh": 31.8
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "菊池 涼介",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:61565135",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9539007092198581,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.5253,
+          "npb_plus_top_speed_kmh": 31.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "野間 峻祥",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:01405130",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.2929,
+          "npb_plus_top_speed_kmh": 30.8
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "サンタナ",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:53755153",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9964539007092199,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "右",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 3.96,
+            "sources": [
+              "https://number.bunshun.jp/articles/-/846891?page=2"
+            ],
+            "z_within_sample_lower_is_faster": 0.016701031921837733
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.9798,
+          "npb_plus_top_speed_kmh": 33.8
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "並木 秀尊",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91695153",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.25886524822695034,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.1515,
+          "npb_plus_top_speed_kmh": 30.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "中村 悠平",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51255118",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9326241134751773,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "左",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 3.8,
+            "sources": [
+              "https://4years.asahi.com/article/12432940"
+            ],
+            "z_within_sample_lower_is_faster": 1.219175330294208
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7071,
+          "npb_plus_top_speed_kmh": 32.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "丸山 和郁",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:93195155",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.10150375939849623,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.6566,
+          "npb_plus_top_speed_kmh": 32.1
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "古賀 優大",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:01705134",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.8794326241134752,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "右",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 2,
+            "n_raw_records": 2,
+            "seconds": 4.205,
+            "sources": [
+              "https://number.bunshun.jp/articles/-/833298?page=2",
+              "https://number.bunshun.jp/articles/-/833298?page=2"
+            ],
+            "z_within_sample_lower_is_faster": -1.8245877374608535
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.6869,
+          "npb_plus_top_speed_kmh": 32.3
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "塩見 泰隆",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:71975136",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9893617021276596,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.9495,
+          "npb_plus_top_speed_kmh": 33.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "岩田 幸宏",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51355155",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.30851063829787234,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.4848,
+          "npb_plus_top_speed_kmh": 31.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "長岡 秀樹",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51455151",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.09219858156028368,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.1717,
+          "npb_plus_top_speed_kmh": 30.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "太田 光",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:71375138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.6187943262411347,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.9899,
+          "npb_plus_top_speed_kmh": 34.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "村林 一輝",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:41845132",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.026595744680851064,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.1717,
+          "npb_plus_top_speed_kmh": 30.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "浅村 栄斗",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51155118",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.18085106382978725,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.1212,
+          "npb_plus_top_speed_kmh": 30.3
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "渡邊 佳明",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:73175138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.16843971631205673,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.0,
+          "npb_plus_top_speed_kmh": 29.0
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "鈴木 大地",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:81985135",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.776595744680851,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3232,
+          "npb_plus_top_speed_kmh": 31.1
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "京田 陽太",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:81585134",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.1524822695035461,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.2121,
+          "npb_plus_top_speed_kmh": 30.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "佐野 恵太",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91995134",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.01773049645390071,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.1212,
+          "npb_plus_top_speed_kmh": 30.3
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "宮﨑 敏郎",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51455137",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.3829787234042553,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3131,
+          "npb_plus_top_speed_kmh": 31.0
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "山本 祐大",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:23125136",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5141843971631206,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.5253,
+          "npb_plus_top_speed_kmh": 31.7
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "度会 隆輝",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:33535159",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.8563829787234043,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.6364,
+          "npb_plus_top_speed_kmh": 32.0
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "林 琢真",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91695157",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9680851063829787,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "左",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 3.97,
+            "sources": [
+              "https://baseballking.jp/ns/297434/"
+            ],
+            "z_within_sample_lower_is_faster": -0.05845361172643707
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8889,
+          "npb_plus_top_speed_kmh": 33.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "梶原 昂希",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51555155",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5673758865248227,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.4848,
+          "npb_plus_top_speed_kmh": 31.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "牧 秀悟",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:13115153",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.10460992907801418,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": 36.0,
+          "percentile_context": 0.366806551241373,
+          "state": "AVAILABLE_EXTERNAL_APPRAISAL"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.101,
+          "npb_plus_top_speed_kmh": 30.2
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "筒香 嘉智",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:41945131",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "AVAILABLE_SEPARATE_ATTRIBUTE",
+          "the_show_aggression_median": 12.0
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "AVAILABLE_SEPARATE_ATTRIBUTE",
+          "the_show_stealing_median": 15.0
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.725177304964539,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.4242,
+          "npb_plus_top_speed_kmh": 31.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "蝦名 達夫",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51555151",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5372340425531915,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.1515,
+          "npb_plus_top_speed_kmh": 30.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "今宮 健太",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:31335131",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.9893617021276596,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "左",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 6,
+            "n_raw_records": 6,
+            "seconds": 3.8183333333333334,
+            "sources": [
+              "https://pacificleague.com/news/50792",
+              "https://pacificleague.com/news/50792",
+              "https://pacificleague.com/news/61236",
+              "https://pacificleague.com/news/61236",
+              "https://pacificleague.com/news/61236",
+              "https://goetheweb.jp/person/article/20230209-star-46"
+            ],
+            "z_within_sample_lower_is_faster": 1.081391816939039
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 1.0,
+          "npb_plus_top_speed_kmh": 35.0
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "周東 佑京",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:21925136",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.1347517730496454,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.0303,
+          "npb_plus_top_speed_kmh": 29.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "山川 穂高",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:21425139",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5673758865248227,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "左",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 3.98,
+            "sources": [
+              "https://goetheweb.jp/person/article/20210610-yuki_yanagita"
+            ],
+            "z_within_sample_lower_is_faster": -0.13360825537470855
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.6566,
+          "npb_plus_top_speed_kmh": 32.1
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "柳田 悠岐",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:31835133",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5673758865248227,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.4646,
+          "npb_plus_top_speed_kmh": 31.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "柳町 達",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:73175151",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.32978723404255317,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3939,
+          "npb_plus_top_speed_kmh": 31.3
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "栗原 陵矢",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:01705130",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.1524822695035461,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3232,
+          "npb_plus_top_speed_kmh": 31.1
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "正木 智也",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:81885155",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.21099290780141844,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.1212,
+          "npb_plus_top_speed_kmh": 30.3
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "海野 隆司",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:81385151",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.8563829787234043,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.9293,
+          "npb_plus_top_speed_kmh": 33.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "牧原 大成",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:61465133",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.4804964539007092,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.3636,
+          "npb_plus_top_speed_kmh": 31.2
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "近藤 健介",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:41745135",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5141843971631206,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.4242,
+          "npb_plus_top_speed_kmh": 31.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "丸 佳浩",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:21425116",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.7411347517730497,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8485,
+          "npb_plus_top_speed_kmh": 33.0
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "佐々木 俊輔",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:51955159",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.8102836879432624,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "左",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 2,
+            "n_raw_records": 2,
+            "seconds": 4.165,
+            "sources": [
+              "https://www.nikkansports.com/baseball/news/1658951.html",
+              "https://www.nikkansports.com/baseball/news/1658951.html"
+            ],
+            "z_within_sample_lower_is_faster": -1.5239691628677607
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.7374,
+          "npb_plus_top_speed_kmh": 32.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "吉川 尚輝",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:73375134",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.0017730496453900709,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.0202,
+          "npb_plus_top_speed_kmh": 29.2
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "大城 卓三",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:21325136",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.2393617021276596,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.0303,
+          "npb_plus_top_speed_kmh": 29.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "岸田 行倫",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:91595136",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.6187943262411347,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": {
+            "confidence": "LOW",
+            "handedness": "右",
+            "lane": "H2F_NORMAL_SWING_LOW_CONFIDENCE",
+            "n_independent_records": 1,
+            "n_raw_records": 1,
+            "seconds": 3.94,
+            "sources": [
+              "https://pacificleague.com/news/41022"
+            ],
+            "z_within_sample_lower_is_faster": 0.16701031921838402
+          },
+          "state": "AVAILABLE_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.4242,
+          "npb_plus_top_speed_kmh": 31.4
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "松本 剛",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:21625135",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.725177304964539,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8283,
+          "npb_plus_top_speed_kmh": 32.9
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "中野 拓夢",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:41445153",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.0549645390070922,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.0101,
+          "npb_plus_top_speed_kmh": 29.1
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "伏見 寅威",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:61065137",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.5975177304964538,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.6566,
+          "npb_plus_top_speed_kmh": 32.1
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "佐藤 輝明",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:41045153",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.25886524822695034,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.101,
+          "npb_plus_top_speed_kmh": 30.2
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "坂本 誠志郎",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:11915132",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.30851063829787234,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.1717,
+          "npb_plus_top_speed_kmh": 30.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "大山 悠輔",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:21325134",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.7570921985815603,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.8182,
+          "npb_plus_top_speed_kmh": 32.8
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "小幡 竜平",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:31535138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.32978723404255317,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.0808,
+          "npb_plus_top_speed_kmh": 30.0
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "木浪 聖也",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:31735138",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.28191489361702127,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.2121,
+          "npb_plus_top_speed_kmh": 30.6
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "梅野 隆太郎",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:21325139",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    },
+    {
+      "external_game_appraisal_observations": {
+        "POWERPRO_SPEED": {
+          "percentile": 0.34929078014184395,
+          "state": "AVAILABLE_HISTORICAL_APPRAISAL"
+        },
+        "THE_SHOW_SPEED": {
+          "median": null,
+          "percentile_context": null,
+          "state": "MISSING_BOUNDED"
+        }
+      },
+      "physical_latent_features": {
+        "INITIAL_ACCELERATION_END_TO_END_90FT": {
+          "h2f_or_t90_observations": null,
+          "state": "MISSING_BOUNDED"
+        },
+        "PEAK_SPEED": {
+          "npb_plus_percentile": 0.1717,
+          "npb_plus_top_speed_kmh": 30.5
+        }
+      },
+      "physical_path_powerpro_label_used": false,
+      "player": "森下 翔太",
+      "single_measurement_family_double_counting_guard": true,
+      "stable_player_key": "PROEYE:43145157",
+      "technique_and_aggression": {
+        "BASERUNNING_AGGRESSION_DECISION": {
+          "state": "MISSING_BOUNDED",
+          "the_show_aggression_median": null
+        },
+        "STEALING_TECHNIQUE": {
+          "state": "MISSING_BOUNDED",
+          "the_show_stealing_median": null
+        }
+      }
+    }
+  ],
+  "negative_findings": [
+    "Direct acceleration/end-to-end coverage remains sparse and cannot be converted from 30m/50m to T90 by linear scaling.",
+    "The Show editions 21-25 Stealing normalization is a source-field mapping, not a proof of identical historical semantics; it remains a separate appraisal attribute.",
+    "A single measurement family is not counted twice when describing confidence."
+  ],
+  "physical_latent_forbidden_features": [
+    "PowerPro speed",
+    "PowerPro percentile",
+    "PowerPro stealing/走塁 labels",
+    "unlabelled The Show game rating"
+  ],
+  "route_id": "MB-03_MULTI_TRAIT_LATENT_MEASUREMENT_MODEL",
+  "schema_version": "sp101_latent_multitrait_speed_model_20260818",
+  "source_roles": {
+    "BASERUNNING_AGGRESSION_DECISION": [
+      "The Show Baserunning Aggressiveness",
+      "attempt/advancement context"
+    ],
+    "INITIAL_ACCELERATION_END_TO_END_90FT": [
+      "H2F",
+      "T10",
+      "T30",
+      "T90",
+      "30m/50m timed tests"
+    ],
+    "PEAK_SPEED": [
+      "NPB_PLUS_TOP_SPEED_KMH",
+      "Statcast Sprint Speed when available",
+      "The Show Speed as external appraisal only"
+    ],
+    "STEALING_TECHNIQUE": [
+      "The Show Stealing",
+      "SB success conditioned on attempt opportunity"
+    ]
+  },
+  "status": "DESCRIPTIVE_MEASUREMENT_MODEL_WITH_BOUNDED_IDENTIFIABILITY",
+  "traits": [
+    "PEAK_SPEED",
+    "INITIAL_ACCELERATION_END_TO_END_90FT",
+    "STEALING_TECHNIQUE",
+    "BASERUNNING_AGGRESSION_DECISION"
+  ]
+}
