@@ -1,4 +1,5 @@
 name: speed-sp101-the-show-scope-rebuild
+# Explicit second push trigger: the workflow now exists before this commit is evaluated.
 
 on:
   push:
