@@ -1,4 +1,5 @@
 name: speed-sp102-targeted-video-comment-rescue-activation
+# Explicit trigger after workflow creation: materialize SP-102 registry and lock state.
 
 on:
   push:
