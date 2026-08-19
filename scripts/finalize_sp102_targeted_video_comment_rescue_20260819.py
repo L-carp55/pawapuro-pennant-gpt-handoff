@@ -34,7 +34,7 @@ sp['status']='DONE_NEGATIVE_FINDING' if qa['status']=='PASS_BOUNDED_ACQUISITION_
 sp['next_action_or_blocker']=(
     f"EVIDENCE_STATUS=MEASURED_BOUNDED_TARGETED_RESCUE; frozen post-SP101 residual target denominator=30, non-target=70 untouched. "
     f"Search queries={qa['counts']['search_queries']}, query_errors={qa['counts']['query_errors']}, selected video fetches={qa['counts']['video_fetches']}, fetch failures={qa['counts']['fetch_failures']}, "
-    f"layered evidence records={qa['counts']['evidence_records']}, usable low-influence records={qa['counts']['usable_low_influence_records']}, timed context records={qa['counts']['timed_context_records']}, event origins={qa['counts']['event_origins']}. "
+    f"layered evidence records={qa['counts']['evidence_records']}, usable low-influence records={qa['counts']['usable_low_influence_records']}, timed context records={qa['counts']['timed_context_records']}, event origins={qa['counts']['event_origins_raw']}. "
     "YouTube Data API provenance is explicit; comment/reply influence is capped low, 50m/H2F/T90/acceleration/baserunning remain separate, commenter identities are not persisted, no final speed rating or owner verdict was created. STOP here: do not run SP-079 or shoulder."
 )
 arts=[x for x in sp.get('artifacts','').replace(',', ';').split(';') if x]
