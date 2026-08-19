@@ -1,0 +1,1262 @@
+{
+  "generated_at": "2026-08-19",
+  "guard": "preflight only; no SP-102 external search executed",
+  "nontarget_count": 70,
+  "schema_version": "sp102_youtube_foundation_inventory_20260819",
+  "targeted_count": 30,
+  "targeted_players": [
+    {
+      "expected_information_gain": "HIGH",
+      "player": "来田 涼斗",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 4,
+      "stable_player_key": "PROEYE:51955153",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "西川 龍馬",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 8,
+      "stable_player_key": "PROEYE:71475132",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "西野 真弘",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 9,
+      "stable_player_key": "PROEYE:91495130",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "MEDIUM",
+      "player": "土田 龍空",
+      "pre_rescue_confidence": "LOW",
+      "queue_order": 11,
+      "stable_player_key": "PROEYE:51455153",
+      "target_reasons": [
+        "residual_confidence_low",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=2"
+      ],
+      "target_selection_state": "TARGETED_LOW_CONFIDENCE"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "福永 裕基",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 19,
+      "stable_player_key": "PROEYE:81685157",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "細川 成也",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 20,
+      "stable_player_key": "PROEYE:31835134",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "水野 達稀",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 23,
+      "stable_player_key": "PROEYE:63165155",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "清宮 幸太郎",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 24,
+      "stable_player_key": "PROEYE:41545136",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "郡司 裕也",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 26,
+      "stable_player_key": "PROEYE:21925151",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "野村 佑希",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 27,
+      "stable_player_key": "PROEYE:31435138",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "MEDIUM",
+      "player": "ソト",
+      "pre_rescue_confidence": "LOW",
+      "queue_order": 28,
+      "stable_player_key": "PROEYE:03505133",
+      "target_reasons": [
+        "residual_confidence_low",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=2"
+      ],
+      "target_selection_state": "TARGETED_LOW_CONFIDENCE"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "佐藤 都志也",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 30,
+      "stable_player_key": "PROEYE:71075151",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "山口 航輝",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 34,
+      "stable_player_key": "PROEYE:91895138",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "藤岡 裕大",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 37,
+      "stable_player_key": "PROEYE:41645136",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "MEDIUM",
+      "player": "ファビアン",
+      "pre_rescue_confidence": "LOW",
+      "queue_order": 44,
+      "stable_player_key": "PROEYE:43745150",
+      "target_reasons": [
+        "residual_confidence_low",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=2"
+      ],
+      "target_selection_state": "TARGETED_LOW_CONFIDENCE"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "モンテロ",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 45,
+      "stable_player_key": "PROEYE:53955150",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "坂倉 将吾",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 47,
+      "stable_player_key": "PROEYE:11915134",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "小園 海斗",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 48,
+      "stable_player_key": "PROEYE:01705138",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "矢野 雅哉",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 49,
+      "stable_player_key": "PROEYE:93395153",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "秋山 翔吾",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 50,
+      "stable_player_key": "PROEYE:31135133",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=4"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "野間 峻祥",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 52,
+      "stable_player_key": "PROEYE:01405130",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "丸山 和郁",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 56,
+      "stable_player_key": "PROEYE:93195155",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "古賀 優大",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 57,
+      "stable_player_key": "PROEYE:01705134",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "村林 一輝",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 62,
+      "stable_player_key": "PROEYE:41845132",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "京田 陽太",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 66,
+      "stable_player_key": "PROEYE:81585134",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "林 琢真",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 71,
+      "stable_player_key": "PROEYE:91695157",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "蝦名 達夫",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 75,
+      "stable_player_key": "PROEYE:51555151",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "今宮 健太",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 76,
+      "stable_player_key": "PROEYE:31335131",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "岸田 行倫",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 90,
+      "stable_player_key": "PROEYE:91595136",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    },
+    {
+      "expected_information_gain": "HIGH",
+      "player": "木浪 聖也",
+      "pre_rescue_confidence": "MEDIUM",
+      "queue_order": 98,
+      "stable_player_key": "PROEYE:31735138",
+      "target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "target_selection_state": "TARGETED_MATERIAL_CONFLICT"
+    }
+  ],
+  "youtube_api_key_present": false,
+  "youtube_api_key_value_recorded": false,
+  "youtube_related_files": [
+    {
+      "bytes": 4348,
+      "path": ".github/workflows/speed-sp102-targeted-video-comment-rescue-activation.yml",
+      "sample": [
+        "name: speed-sp102-targeted-video-comment-rescue-activation",
+        "# Explicit trigger after workflow creation: materialize SP-102 registry and lock state."
+      ]
+    },
+    {
+      "bytes": 1274,
+      "path": ".github/workflows/speed-sp102-youtube-foundation-preflight.yml",
+      "sample": [
+        "name: speed-sp102-youtube-foundation-preflight",
+        ""
+      ]
+    },
+    {
+      "bytes": 4611,
+      "path": "docs/audits/sp033_034_youtube_existing_classification_20260813.md",
+      "sample": [
+        "# SP-033 / 034 — 既存公式YouTubeコメントの分類",
+        ""
+      ]
+    },
+    {
+      "bytes": 4343,
+      "path": "docs/audits/speed_community_v3_terra_final_audit_20260815.md",
+      "sample": [
+        "# Community V3 final integration and semantic audit",
+        ""
+      ]
+    },
+    {
+      "bytes": 5950,
+      "path": "docs/audits/speed_community_v3_x_recollection_20260815.md",
+      "sample": [
+        "# SP-035 X recollection v3 — integrity cleanup（2026-08-15）",
+        ""
+      ]
+    },
+    {
+      "bytes": 5324,
+      "path": "docs/audits/speed_community_v3_youtube_20260814.md",
+      "sample": [
+        "# Speed Community Recollection V3 — YouTube lane audit",
+        ""
+      ]
+    },
+    {
+      "bytes": 9246,
+      "path": "docs/audits/speed_community_v3_youtube_semantic_qa_20260814.md",
+      "sample": [
+        "# YouTube semantic / candidate QA — Community Recollection V3",
+        ""
+      ]
+    },
+    {
+      "bytes": 11864,
+      "path": "docs/tasks/SP102_TARGETED_2CH_VIDEO_COMMENT_RESCUE_20260818.md",
+      "sample": [
+        "# SP-102 — Targeted 2ch/5ch-style baseball video comment rescue",
+        ""
+      ]
+    },
+    {
+      "bytes": 10285,
+      "path": "outputs/derived/_staging_speed_youtube_powerpro_run2.csv",
+      "sample": [
+        "record_id,player,canonical_player_id,game,edition,update_date,platform,source_type,source_url,video_id_or_post_id,parent_event_id,author_id_or_name,timestamp,text,likes,reply_count,classification,strength,independence_group,physical_or_rating_lane,target_rating_if_explicit,comparison_player_if_any,source_quality,notes,acceptance_status,acceptance_reason,acquisition_status,error,attempted_routes,collected_at,event_id,origin_count,comment_count,like_sum,top_like_count,video_title,video_published_at,player_game_update_mapping,missingness,user_input_requirement,api_state",
+        "PPYT-RUN2-VIDEO-wOjrANePk1c,,,PowerPro,PowerPro 2026-2027,,YouTube,YOUTUBE_OFFICIAL_CURRENT_EDITION_OPENING,https://www.youtube.com/watch?v=wOjrANePk1c,wOjrANePk1c,yt:video:wOjrANePk1c,パワプロ・プロスピ公式チャンネル (UCWzEh28vj3mQKpe0fzVTOUw),2026-03-12T02:55:00Z,『パワフルプロ野球2026-2027』オープニングムービー,20091,,UNCLASSIFIED_CONTEXT,CONTEXT,yt:video:wOjrANePk1c,RATING,,,OFFICIAL_CHANNEL_CONFIRMED,Current-edition opening movie; title does not itself identify a player ability or roster update. Public yt-dlp sample: 100 comments (default newest ordering); 0 broad speed+rating keyword candidates; 0 safely-name-mapped directional candidates. Comment/reaction volume remains event-level context only.,INSUFFICIENT,\"Retrieved 100 public comments; screened 0 broad speed+rating keyword candidates and found no safely current-master-name-mapped directional rating claim. This is only a sample-level insufficiency finding, not proof that no comment exists.\",METADATA_AND_PUBLIC_COMMENT_SAMPLE_COLLECTED,NONE,\"yt-dlp --no-update -"
+      ]
+    },
+    {
+      "bytes": 13775,
+      "path": "outputs/derived/_staging_speed_youtube_powerpro_run2.jsonl",
+      "sample": [
+        "{\"acceptance_reason\": \"Retrieved 100 public comments; screened 0 broad speed+rating keyword candidates and found no safely current-master-name-mapped directional rating claim. This is only a sample-level insufficiency finding, not proof that no comment exists.\", \"acceptance_status\": \"INSUFFICIENT\", \"acquisition_status\": \"METADATA_AND_PUBLIC_COMMENT_SAMPLE_COLLECTED\", \"api_state\": \"NOT_CONFIGURED_ENV; YouTube Data API key is not configured in the execution environment.\", \"attempted_routes\": \"yt-dlp --no-update --skip-download --no-playlist --write-info-json --write-comments --extractor-args youtube:max_comments=100,100,100,100 --output C:\\\\Users\\\\amila\\\\AppData\\\\Local\\\\Temp\\\\speed_youtube_powerpro_run2_04fvmoxo\\\\%(id)s.%(ext)s https://www.youtube.com/watch?v=wOjrANePk1c\", \"author_id_or_name\": \"パワプロ・プロスピ公式チャンネル (UCWzEh28vj3mQKpe0fzVTOUw)\", \"canonical_player_id\": \"\", \"classification\": \"UNCLASSIFIED_CONTEXT\", \"collected_at\": \"2026-08-13T11:09:20Z\", \"comment_count\": 100, \"comparison_player_",
+        "{\"acceptance_reason\": \"Retrieved 10 public comments; screened 0 broad speed+rating keyword candidates and found no safely current-master-name-mapped directional rating claim. This is only a sample-level insufficiency finding, not proof that no comment exists.\", \"acceptance_status\": \"INSUFFICIENT\", \"acquisition_status\": \"METADATA_AND_PUBLIC_COMMENT_SAMPLE_COLLECTED\", \"api_state\": \"NOT_CONFIGURED_ENV; YouTube Data API key is not configured in the execution environment.\", \"attempted_routes\": \"yt-dlp --no-update --skip-download --no-playlist --write-info-json --write-comments --extractor-args youtube:max_comments=100,100,100,100 --output C:\\\\Users\\\\amila\\\\AppData\\\\Local\\\\Temp\\\\speed_youtube_powerpro_run2_aoh_0c6_\\\\%(id)s.%(ext)s https://www.youtube.com/watch?v=lXJEdQqrU7E\", \"author_id_or_name\": \"パワプロ・プロスピ公式チャンネル (UCWzEh28vj3mQKpe0fzVTOUw)\", \"canonical_player_id\": \"\", \"classification\": \"UNCLASSIFIED_CONTEXT\", \"collected_at\": \"2026-08-13T11:09:30Z\", \"comment_count\": 10, \"comparison_player_if"
+      ]
+    },
+    {
+      "bytes": 185100,
+      "path": "outputs/derived/_staging_speed_youtube_prospi_run2.csv",
+      "sample": [
+        "record_id,player,canonical_player_id,game,edition,update_date,platform,source_type,source_url,video_id,video_id_or_post_id,parent_event_id,author_id_or_name,timestamp,text,likes,reply_count,classification,strength,independence_group,physical_or_rating_lane,target_rating_if_explicit,comparison_player_if_any,source_quality,notes,acceptance_status,acceptance_reason,collected_at,attempted_routes,error,title,published_at,target_player_mapping,update_mapping,missingness,required_user_input,official_verification,comments_retrieved,comment_count_reported,api_state",
+        "SP034-RUN2-VIDEO-sX8nl6eCua0,,,Pro Yakyuu Spirits A,2026/most-recent official channel inventory,2026-07-16,YouTube,official_youtube_video_inventory,https://www.youtube.com/watch?v=sX8nl6eCua0,sX8nl6eCua0,sX8nl6eCua0,youtube:sX8nl6eCua0,,2026-07-16T10:00:01Z,,,,\"[\"\"UNCLASSIFIED_CONTEXT\"\"]\",CONTEXT,youtube:sX8nl6eCua0,rating,,,OFFICIAL_YOUTUBE_CHANNEL,Prospi title match in latest-300 official channel inventory; comment_candidate=True.,INSUFFICIENT,Comments were retrieved and screened below; video-level inventory is not an independent speed-rating observation.,2026-08-13T11:05:43Z,yt-dlp direct official-channel collection; --ignore-config; --no-update; no --proxy argument,,福留孝介・糸井嘉男の新能力公開！ 福留×糸井 ホンネ！俺の実力話しますSP 後編【プロスピA】,2026-07-16T10:00:01Z,NO_CURRENT_100_PLAYER_FULL_NAME_MATCH,ability_or_update_title_marker,COMMENTS_BOUNDED_TO_YTDLP_MAX_300; full API pagination unavailable,\"For exhaustive/reproducible comment coverage, provide YouTube Data API commentThreads/replies JSON or CSV with vide"
+      ]
+    },
+    {
+      "bytes": 269070,
+      "path": "outputs/derived/_staging_speed_youtube_prospi_run2.jsonl",
+      "sample": [
+        "{\"record_id\":\"SP034-RUN2-VIDEO-sX8nl6eCua0\",\"player\":null,\"canonical_player_id\":null,\"game\":\"Pro Yakyuu Spirits A\",\"edition\":\"2026/most-recent official channel inventory\",\"update_date\":\"2026-07-16\",\"platform\":\"YouTube\",\"source_type\":\"official_youtube_video_inventory\",\"source_url\":\"https://www.youtube.com/watch?v=sX8nl6eCua0\",\"video_id\":\"sX8nl6eCua0\",\"video_id_or_post_id\":\"sX8nl6eCua0\",\"parent_event_id\":\"youtube:sX8nl6eCua0\",\"author_id_or_name\":null,\"timestamp\":\"2026-07-16T10:00:01Z\",\"text\":null,\"likes\":null,\"reply_count\":null,\"classification\":[\"UNCLASSIFIED_CONTEXT\"],\"strength\":\"CONTEXT\",\"independence_group\":\"youtube:sX8nl6eCua0\",\"physical_or_rating_lane\":\"rating\",\"target_rating_if_explicit\":null,\"comparison_player_if_any\":null,\"source_quality\":\"OFFICIAL_YOUTUBE_CHANNEL\",\"notes\":\"Prospi title match in latest-300 official channel inventory; comment_candidate=True.\",\"acceptance_status\":\"INSUFFICIENT\",\"acceptance_reason\":\"Comments were retrieved and screened below; video-level inventory i",
+        "{\"record_id\":\"SP034-RUN2-COMMENT-sX8nl6eCua0-UgwhXI8h9X6kfZEGenx4AaABAg.AZJto5kLmjVAZK4GZ6JrU6\",\"player\":null,\"canonical_player_id\":null,\"game\":\"Pro Yakyuu Spirits A\",\"edition\":\"2026/most-recent official channel inventory\",\"update_date\":\"2026-07-16\",\"platform\":\"YouTube\",\"source_type\":\"official_youtube_comment\",\"source_url\":\"https://www.youtube.com/watch?v=sX8nl6eCua0&lc=UgwhXI8h9X6kfZEGenx4AaABAg.AZJto5kLmjVAZK4GZ6JrU6\",\"video_id\":\"sX8nl6eCua0\",\"video_id_or_post_id\":\"UgwhXI8h9X6kfZEGenx4AaABAg.AZJto5kLmjVAZK4GZ6JrU6\",\"parent_event_id\":\"youtube:sX8nl6eCua0:UgwhXI8h9X6kfZEGenx4AaABAg\",\"author_id_or_name\":\"@sppsmath|UCNyX-KScPIBFs8WK26yrcAQ\",\"timestamp\":\"2026-07-23T00:00:00Z\",\"text\":\"弾道と特能の強さはプロスピやってないと分からんし、ミートや走力、守備適性や裏ステの数値はめっちゃ高いから妥当と感じる気がする\",\"likes\":12,\"reply_count\":\"NOT_PUBLICLY_RETURNED_BY_YTDLP\",\"classification\":[\"UNCLASSIFIED_CONTEXT\"],\"strength\":\"CONTEXT\",\"independence_group\":\"youtube:sX8nl6eCua0\",\"physical_or_rating_lane\":\"rating\",\"target_rating_if_explicit\":null,\"comparison_pl"
+      ]
+    },
+    {
+      "bytes": 1450,
+      "path": "outputs/derived/_staging_speed_youtube_prospi_run2_qa_exclusions.csv",
+      "sample": [
+        "record_id,source_url,original_classification,qa_disposition,corrected_classification_for_integration,reason,error",
+        "SP034-RUN2-COMMENT-lug1RWbPMwI-UgyAKBa20o5_ZE2mC2F4AaABAg,https://www.youtube.com/watch?v=lug1RWbPMwI&lc=UgyAKBa20o5_ZE2mC2F4AaABAg,\"[\"\"RATING_TOO_HIGH\"\"]\",DO_NOT_USE_FOR_CURRENT_100_PLAYER_RATING_CONSENSUS,UNCLASSIFIED_CONTEXT,\"The detector matched the character 足 inside 満足度 and 高すぎる refers to satisfaction, not speed or a game rating.\",No transport error; classification QA correction only."
+      ]
+    },
+    {
+      "bytes": 118478,
+      "path": "outputs/derived/sp033_034_surname_identity_resolution_20260814.json",
+      "sample": [
+        "{",
+        "  \"qa\": {"
+      ]
+    },
+    {
+      "bytes": 4382041,
+      "first_json_keys": [
+        "acceptance_status",
+        "canonical_player_id",
+        "comment_id",
+        "event_id",
+        "game",
+        "identity",
+        "independence_group",
+        "labels",
+        "likes",
+        "origin_count",
+        "player",
+        "reaction_volume",
+        "record_id",
+        "surname_candidate_note",
+        "surname_candidate_player",
+        "surname_candidate_player_id",
+        "text",
+        "video_id"
+      ],
+      "path": "outputs/derived/sp033_034_youtube_comment_classification_20260813.jsonl",
+      "sample": [
+        "{\"record_id\":\"YT-RECOVER-wOjrANePk1c-UgwGtkn43ODz9W1Gn_d4AaABAg\",\"video_id\":\"wOjrANePk1c\",\"comment_id\":\"UgwGtkn43ODz9W1Gn_d4AaABAg\",\"event_id\":\"youtube:wOjrANePk1c\",\"independence_group\":\"youtube:wOjrANePk1c\",\"text\":\"打球の軌道でイチローって分かるあたり、完璧な再現ですわ。\",\"likes\":600,\"game\":\"PowerPro\",\"labels\":[\"UNCLASSIFIED_CONTEXT\"],\"player\":null,\"canonical_player_id\":null,\"identity\":\"UNMAPPED\",\"surname_candidate_player\":null,\"surname_candidate_player_id\":null,\"surname_candidate_note\":null,\"acceptance_status\":\"INCONCLUSIVE\",\"origin_count\":0,\"reaction_volume\":100}",
+        "{\"record_id\":\"YT-RECOVER-wOjrANePk1c-UgwGtkn43ODz9W1Gn_d4AaABAg.AUMUfBRMLVCAXnVeYxOPZ0\",\"video_id\":\"wOjrANePk1c\",\"comment_id\":\"UgwGtkn43ODz9W1Gn_d4AaABAg.AUMUfBRMLVCAXnVeYxOPZ0\",\"event_id\":\"youtube:wOjrANePk1c\",\"independence_group\":\"youtube:wOjrANePk1c\",\"text\":\"ランナーがスタートしている！矢部がスタートしている!！があったってこともわかってしまう\",\"likes\":15,\"game\":\"PowerPro\",\"labels\":[\"UNCLASSIFIED_CONTEXT\"],\"player\":null,\"canonical_player_id\":null,\"identity\":\"UNMAPPED\",\"surname_candidate_player\":null,\"surname_candidate_player_id\":null,\"surname_candidate_note\":null,\"acceptance_status\":\"INCONCLUSIVE\",\"origin_count\":0,\"reaction_volume\":100}"
+      ]
+    },
+    {
+      "bytes": 2947,
+      "path": "outputs/derived/sp033_034_youtube_comment_classification_qa_20260813.json",
+      "sample": [
+        "{",
+        "  \"generated_at\": \"2026-08-13\","
+      ]
+    },
+    {
+      "bytes": 4603704,
+      "first_json_keys": [
+        "auto_accepted",
+        "canonical_player_id",
+        "claim",
+        "decision",
+        "event_id",
+        "identity_before",
+        "irony_flag",
+        "labels",
+        "origin_count",
+        "player",
+        "reaction_volume",
+        "reason",
+        "record_id",
+        "text",
+        "video_id",
+        "video_title"
+      ],
+      "path": "outputs/derived/sp033_034_youtube_events_by_player_claim_20260814.jsonl",
+      "sample": [
+        "{\"record_id\":\"YT-RECOVER-wOjrANePk1c-UgwGtkn43ODz9W1Gn_d4AaABAg\",\"video_id\":\"wOjrANePk1c\",\"video_title\":\"『パワフルプロ野球2026-2027』オープニングムービー\",\"text\":\"打球の軌道でイチローって分かるあたり、完璧な再現ですわ。\",\"labels\":[\"UNCLASSIFIED_CONTEXT\"],\"claim\":\"UNCLASSIFIED_CONTEXT\",\"identity_before\":\"UNMAPPED\",\"decision\":\"UNMAPPED\",\"player\":null,\"canonical_player_id\":null,\"reason\":\"no identity\",\"irony_flag\":false,\"event_id\":\"youtube:wOjrANePk1c:unmapped:UNCLASSIFIED_CONTEXT\",\"origin_count\":0,\"reaction_volume\":99,\"auto_accepted\":false}",
+        "{\"record_id\":\"YT-RECOVER-wOjrANePk1c-UgwGtkn43ODz9W1Gn_d4AaABAg.AUMUfBRMLVCAXnVeYxOPZ0\",\"video_id\":\"wOjrANePk1c\",\"video_title\":\"『パワフルプロ野球2026-2027』オープニングムービー\",\"text\":\"ランナーがスタートしている！矢部がスタートしている!！があったってこともわかってしまう\",\"labels\":[\"UNCLASSIFIED_CONTEXT\"],\"claim\":\"UNCLASSIFIED_CONTEXT\",\"identity_before\":\"UNMAPPED\",\"decision\":\"UNMAPPED\",\"player\":null,\"canonical_player_id\":null,\"reason\":\"no identity\",\"irony_flag\":false,\"event_id\":\"youtube:wOjrANePk1c:unmapped:UNCLASSIFIED_CONTEXT\",\"origin_count\":0,\"reaction_volume\":99,\"auto_accepted\":false}"
+      ]
+    },
+    {
+      "bytes": 6128,
+      "path": "outputs/derived/speed_community_rating_lane_powerpro_youtube_raw_20260813.jsonl",
+      "sample": [
+        "{\"record_id\":\"PPYT-DISCOVERY-001\",\"player\":null,\"canonical_player_id\":null,\"game\":\"PowerPro\",\"edition\":\"2026-2027 / 2024-2025\",\"update_date\":null,\"platform\":\"YouTube\",\"source_type\":\"YOUTUBE_OFFICIAL_CHANNEL_SEARCH\",\"source_url\":\"https://www.youtube.com/@pawapuroprospi/search?query=%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD%20%E9%81%B8%E6%89%8B%E8%83%BD%E5%8A%9B\",\"video_id_or_post_id\":null,\"parent_event_id\":\"yt:channel:UCWzEh28vj3mQKpe0fzVTOUw\",\"author_id_or_name\":\"パワプロ・プロスピ公式チャンネル\",\"timestamp\":\"2026-08-13T19:37:10.6851456+09:00\",\"text\":\"Official-channel title searches for パワプロ2026-2027, パワプロ2024-2025, パワプロ 選手能力, パワプロ 選手データ, and パワプロ アップデート found no official current-player speed-rating reveal or update-introduction video.\",\"likes\":null,\"reply_count\":null,\"classification\":[\"UNCLASSIFIED_CONTEXT\"],\"strength\":\"CONTEXT\",\"independence_group\":\"yt:channel:UCWzEh28vj3mQKpe0fzVTOUw:search:20260813\",\"physical_or_rating_lane\":\"RATING\",\"target_rating_if_explicit\":null,\"comparison_player_if_any\":null,\"sou",
+        "{\"record_id\":\"PPYT-VIDEO-wOjrANePk1c\",\"player\":null,\"canonical_player_id\":null,\"game\":\"PowerPro\",\"edition\":\"2026-2027\",\"update_date\":null,\"platform\":\"Nintendo Switch; PlayStation 4\",\"source_type\":\"YOUTUBE_OFFICIAL_VIDEO_METADATA_AND_COMMENT_SAMPLE\",\"source_url\":\"https://www.youtube.com/watch?v=wOjrANePk1c\",\"video_id_or_post_id\":\"wOjrANePk1c\",\"parent_event_id\":\"yt:video:wOjrANePk1c\",\"author_id_or_name\":\"パワプロ・プロスピ公式チャンネル (UCWzEh28vj3mQKpe0fzVTOUw)\",\"timestamp\":\"2026-03-12T02:55:00+00:00\",\"text\":\"『パワフルプロ野球2026-2027』オープニングムービー\",\"likes\":20087,\"reply_count\":null,\"classification\":[\"UNCLASSIFIED_CONTEXT\"],\"strength\":\"CONTEXT\",\"independence_group\":\"yt:video:wOjrANePk1c\",\"physical_or_rating_lane\":\"RATING\",\"target_rating_if_explicit\":null,\"comparison_player_if_any\":null,\"source_quality\":\"OFFICIAL_CHANNEL_CONFIRMED\",\"notes\":\"Official channel ID confirmed. Public extractor retrieved a top-sorted sample of 100 comments from an approximately 1,987-comment page; keyword review found no direct speed/ra"
+      ]
+    },
+    {
+      "bytes": 10873,
+      "path": "outputs/derived/speed_community_rating_lane_prospi_youtube_raw_20260813.jsonl",
+      "sample": [
+        "﻿{\"record_id\":\"SP034-PROSPI-YT-VIDEO--t3uaS6tKok\",\"player\":null,\"canonical_player_id\":null,\"game\":\"Pro Yakyuu Spirits A\",\"edition\":\"2024 Furuta-Satozaki Selection\",\"update_date\":\"2024-12-26\",\"platform\":\"YouTube\",\"source_type\":\"official_youtube_video_comment_collection\",\"source_url\":\"https://www.youtube.com/watch?v=-t3uaS6tKok\",\"video_id_or_post_id\":\"-t3uaS6tKok\",\"parent_event_id\":\"youtube:-t3uaS6tKok\",\"author_id_or_name\":null,\"timestamp\":\"2024-12-26T00:00:00+09:00\",\"text\":null,\"likes\":null,\"reply_count\":null,\"classification\":[\"UNCLASSIFIED_CONTEXT\"],\"strength\":\"CONTEXT\",\"independence_group\":\"youtube:-t3uaS6tKok\",\"physical_or_rating_lane\":\"rating\",\"target_rating_if_explicit\":null,\"comparison_player_if_any\":null,\"source_quality\":\"OFFICIAL_VIDEO_PUBLIC_COMMENTS\",\"notes\":\"Official ability-value announcement. Full public-comment retrieval returned 1,447 comments; four comments contained a broad speed-related term, but none supplied an accepted, explicit speed-rating criticism for a mapped 2",
+        "{\"record_id\":\"SP034-PROSPI-YT-COMMENT--t3uaS6tKok-Ugw4vIF_qAAvGDH9hut4AaABAg\",\"player\":\"糸井嘉男\",\"canonical_player_id\":null,\"game\":\"Pro Yakyuu Spirits A\",\"edition\":\"2024 Furuta-Satozaki Selection\",\"update_date\":\"2024-12-26\",\"platform\":\"YouTube\",\"source_type\":\"official_youtube_comment\",\"source_url\":\"https://www.youtube.com/watch?v=-t3uaS6tKok\\u0026lc=Ugw4vIF_qAAvGDH9hut4AaABAg\",\"video_id_or_post_id\":\"Ugw4vIF_qAAvGDH9hut4AaABAg\",\"parent_event_id\":\"youtube:-t3uaS6tKok:root\",\"author_id_or_name\":\"@GENESIS2144|UC2Vk4YTcEVkqRM3zlQKUVjQ\",\"timestamp\":\"2025-08-13T00:00:00+09:00\",\"text\":\"糸井もうちょい頑張ってくれたら嬉しかった、、、 走塁のとこチャンメとか、、、\",\"likes\":0,\"reply_count\":null,\"classification\":[\"UNCLASSIFIED_CONTEXT\"],\"strength\":\"CONTEXT\",\"independence_group\":\"youtube:-t3uaS6tKok\",\"physical_or_rating_lane\":\"rating\",\"target_rating_if_explicit\":null,\"comparison_player_if_any\":null,\"source_quality\":\"OFFICIAL_VIDEO_PUBLIC_COMMENT\",\"notes\":\"Retrieved from full public-comment enumeration. Preserved as screened context rather t"
+      ]
+    },
+    {
+      "bytes": 6699979,
+      "path": "outputs/derived/speed_community_v3_canonical_20260815.jsonl",
+      "sample": [
+        "{\"record_id\":\"YT-FINAL-PPV3-CONTEXT-CAND-Pm_Pyg54JV0-UgwIpi-OlUs3wjvbyhh4AaABAg\",\"platform\":\"YouTube\",\"source_product\":\"PowerPro\",\"source_type\":\"bounded_community_recovery\",\"source_url\":\"https://www.youtube.com/watch?v=Pm_Pyg54JV0&lc=UgwIpi-OlUs3wjvbyhh4AaABAg\",\"source_record_id\":\"PPV3-CONTEXT-CAND-Pm_Pyg54JV0-UgwIpi-OlUs3wjvbyhh4AaABAg\",\"source_post_or_video_id\":\"Pm_Pyg54JV0\",\"video_id_or_post_id\":\"Pm_Pyg54JV0\",\"parent_id\":null,\"root_thread_id\":\"UgwIpi-OlUs3wjvbyhh4AaABAg\",\"published_at\":\"2026-06-03\",\"text_or_excerpt\":\"すごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りない？？毎日30分ぐらいだけど、微課金で楽しくやれるよー😂人口増えますように。\",\"player_id\":null,\"player_name\":null,\"current_100\":false,\"identity_status\":\"UNRESOLVED\",\"identity_confidence\":\"LOW\",\"identity_method\":\"no_local_speed_subject\",\"source_player\":null,\"source_canonical_player_id\":null,\"source_claim_lane\":\"NOISE\",\"game\":\"PowerPro\",\"claim_lane\":\"NOISE\",\"direction\":\"UNCLEAR\",\"explicit_value\":null,\"speed_concept\":\"UNCLEAR\",\"discourse\":\"literal\",\"temporal_context\":\"2026-06-03",
+        "{\"record_id\":\"YT-FINAL-PPV3-CONTEXT-CAND-wOjrANePk1c-UgyxMxssOdjufZYvpvp4AaABAg\",\"platform\":\"YouTube\",\"source_product\":\"PowerPro\",\"source_type\":\"bounded_community_recovery\",\"source_url\":\"https://www.youtube.com/watch?v=wOjrANePk1c&lc=UgyxMxssOdjufZYvpvp4AaABAg\",\"source_record_id\":\"PPV3-CONTEXT-CAND-wOjrANePk1c-UgyxMxssOdjufZYvpvp4AaABAg\",\"source_post_or_video_id\":\"wOjrANePk1c\",\"video_id_or_post_id\":\"wOjrANePk1c\",\"parent_id\":null,\"root_thread_id\":\"UgyxMxssOdjufZYvpvp4AaABAg\",\"published_at\":\"2026-03-12\",\"text_or_excerpt\":\"外藤ニキの盗塁得点に結びついてなくてかなC\",\"player_id\":null,\"player_name\":null,\"current_100\":false,\"identity_status\":\"UNRESOLVED\",\"identity_confidence\":\"LOW\",\"identity_method\":\"no_local_speed_subject\",\"source_player\":null,\"source_canonical_player_id\":null,\"source_claim_lane\":\"GAMEPLAY_MECHANICS\",\"game\":\"PowerPro\",\"claim_lane\":\"STEALING_TECHNIQUE\",\"direction\":\"COMPARISON_ONLY\",\"explicit_value\":null,\"speed_concept\":\"STEALING\",\"discourse\":\"literal\",\"temporal_context\":\"2026-03-12\",\"comparison_"
+      ]
+    },
+    {
+      "bytes": 82531,
+      "path": "outputs/derived/speed_community_v3_consensus_20260815.json",
+      "sample": [
+        "{",
+        "  \"schema_version\": \"speed_community_v3_consensus_20260815\","
+      ]
+    },
+    {
+      "bytes": 11190,
+      "path": "outputs/derived/speed_community_v3_current100_player_summary_20260815.csv",
+      "sample": [
+        "player,player_id,team,usable_community_evidence,usable_claim_count,usable_source_event_count,attributable_author_origin_count,unattributed_source_event_count,youtube_rating_powerpro,youtube_rating_prospi,x_rating_powerpro,x_rating_prospi,physical_observation,aging_injury_recovery_context,gameplay_mechanics_only,baserunning_stealing_only,directional_rating_claim_count,community_verdict,powerpro_label_not_physical_teacher,community_not_numeric_speed_estimate",
+        "中川 圭太,51255138,オリックス・バファローズ,true,6,6,0,6,0,0,1,3,2,0,0,0,2,TOO_LOW,true,true"
+      ]
+    },
+    {
+      "bytes": 258539,
+      "path": "outputs/derived/speed_community_v3_official_channel_scan_20260814.json",
+      "sample": [
+        "{",
+        "  \"run\": \"speed_community_recollection_v3_youtube_discovery_20260814\","
+      ]
+    },
+    {
+      "bytes": 348913,
+      "path": "outputs/derived/speed_community_v3_official_video_inventory_20260814.csv",
+      "sample": [
+        "game,video_id,title,video_title,published_at,source_url,official_channel_id,discovery_method,matched_terms,relevant_reason,relevant_for_comment_collection,comments_available,comments_retrieved,platform_reported_comment_count,retrieval_method,retrieval_bound_or_missingness,metadata_status,metadata_error,description_short,already_in_old_inventory",
+        "PowerPro,PhQkyi8VjU4,「eBASEBALLパワフルプロ野球2020」オープニングムービー,「eBASEBALLパワフルプロ野球2020」オープニングムービー,2020-04-03,https://www.youtube.com/watch?v=PhQkyi8VjU4,UCWzEh28vj3mQKpe0fzVTOUw,official_channel_side_scan_then_per_video_metadata,パワプロ;パワフルプロ野球;ob,official_channel_title_or_description_powerpro_signal,false,UNKNOWN,,,,METADATA_ONLY_NOT_COMMENT_ATTEMPTED,OK,,※必ず視聴前にご確認下さい。 本動画は2021年3月31日以前に配信開始されており、一部、古い価格表記となっておりますので、最新の税込価格については、下記リンク先でご確認下さい。 https://www.konami.com/games/jp/ja/pages/price_list/ “パワプロで目指せ世界一！”「eBASEBALLパワフルプロ野球2020」（Nintendo Switch™・PlayStation®4）7月9日発売！ 公式サイト： https://www.konami.com/pawa/2020/ 「蒼の彼方へ」 幼い頃の夢 遠くまで見果てない景色 一瞬で通り抜けるビジョン 蒼と星の彼方に何が待ってる？ 想いの風を今背負って （羽ばたくよDreamer’s sky ） 旅に出るのさ 太陽の降る場所へ 僕らの全て連れて （It’s time to take a step up now） この魂で歌おう 世界に響け！ 重ねた日々が勇気へと変わってく 情熱が僕を奮い立たせる 世界はもうすぐそこ もう何も恐れないさ 未来を共に創ろう 光を放て！ 歌・作詞 國土佳音 作・編曲 米須優太郎 編曲 渡邊紀如 一般社団法人日本野球機構承認 日本プロ野球名球会公認 日本プロ野球OBクラブ公認 プロ野球フランチャイズ球場公認 ゲーム内に再現された球場内看板は、原則として2019年プロ野球ペナントシーズン中のデータを基に制作しています。 データ提供:共同通信デジタル データは（株）共同通"
+      ]
+    },
+    {
+      "bytes": 380144,
+      "first_json_keys": [
+        "_header"
+      ],
+      "path": "outputs/derived/speed_community_v3_official_video_metadata_20260814.jsonl",
+      "sample": [
+        "{\"_header\": {\"run\": \"speed_community_recollection_v3_youtube_metadata_20260814\", \"scanned_entries\": 199, \"max_workers\": 6, \"finished_at\": \"2026-08-14T16:05:30Z\", \"metadata_ok\": 197, \"metadata_error\": 2}}",
+        "{\"video_id\": \"Ms1zfS7gSmo\", \"url\": \"https://www.youtube.com/watch?v=Ms1zfS7gSmo\", \"title\": \"【ロマン開花學園解説】ロマン全開！才能開花！【パワプロアプリ】\", \"description\": \"新シナリオ #ロマン開花學園 編　7/30～配信開始！\\n配信開始に伴い、#解説 動画を公開！　\\n\\n【「ロマン開花學園」ストーリー概要】\\n100年以上の歴史を誇る伝統校、ロマン開花學園。\\nその野球部も、かつて何度も甲子園に行った古豪だが、近年の成績はイマイチだ。\\n学校は伝統を重んじる校風だけど、このままの体制でいいのだろうか・・・？\\nそう考えていたところに、刃（やいば）と名乗る新任の監督が現れる。\\n\\n今、変革を予感させる新風が、吹き始めようとしていた・・・\\n\\n詳細はアプリ内お知らせにてご確認ください。\\n#パワプロアプリ 公式X：https://x.com/pawa_app573\\n#パワプロアプリ 公式サイト：https://www.konami.com/pawa/app/\", \"channel_id\": \"UCWzEh28vj3mQKpe0fzVTOUw\", \"channel\": \"パワプロ・プロスピ公式チャンネル\", \"upload_date\": \"20260730\", \"timestamp\": 1785379516, \"duration\": 156, \"view_count\": 8874, \"like_count\": 78, \"comment_count\": 8, \"metadata_status\": \"OK\", \"proxy_variables_removed\": []}"
+      ]
+    },
+    {
+      "bytes": 7997,
+      "path": "outputs/derived/speed_community_v3_player_summary_20260814.csv",
+      "sample": [
+        "player,canonical_player_id,game,youtube_candidate_count,accepted_or_contextual_claim_count,independent_origin_count,rating_powerpro_count,rating_prospi_count,too_high_count,too_low_count,physical_observation_count,gameplay_mechanics_count,ambiguous_or_sarcastic_count,missingness",
+        "中川 圭太,51255138,,0,0,0,0,0,0,0,0,0,0,NO_CURRENT_100_YOUTUBE_CLAIM"
+      ]
+    },
+    {
+      "bytes": 1778525,
+      "path": "outputs/derived/speed_community_v3_powerpro_candidates_20260815.jsonl",
+      "sample": [
+        "{\"author\": \"@養豚牧場\", \"author_id\": \"UCp1iF6w5efhWYOw59qrtU_A\", \"candidate_reason\": \"recall-first speed/rating or explicit grade/value signal in video-title/thread context; not an acceptance decision\", \"canonical_player_id\": \"\", \"collected_at\": \"2026-08-14T16:12:35Z\", \"comment_id\": \"UgwIpi-OlUs3wjvbyhh4AaABAg\", \"comment_published_at\": 1781481600, \"context_for_review\": \"『パワプロアドベンチャーズ』3rdシナリオ カジナイトアカデミー紹介\\n3rdサクセスシナリオ カジナイトアカデミーの紹介です。 『鋼の如き心であれ』 主人公たちに足りないものは何なのか—― 答えを求めて、ハンマーを手にする🔨 打てよ黒鉄！叩いて鍛えて、強き心を手に入れろ！ #パワプロアドベンチャーズ #パワアド ダウンロードはこちら：https://konami-app.go.link/bQ12m 公式サイト：https://www.konami.com/pawa/adventures/ 公式X：https://x.com/pawa_adventures\\nすごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りない？？毎日30分ぐらいだけど、微課金で楽しくやれるよー😂人口増えますように。\\nすごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りない？？毎日30分ぐらいだけど、微課金で楽しくやれるよー😂人口増えますように。\\nすごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りない？？毎日30分ぐらいだけど、微課金で楽しくやれるよー😂人口増えますように。\\nすごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りない？？毎日30分ぐらいだけど、微課金で楽しくやれるよー😂人口増えますように。\", \"direct_thread_context\": [\"すごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りな",
+        "{\"author\": \"@jmjmist\", \"author_id\": \"UCuzgR0r04R5cwSBBdc8TIfQ\", \"candidate_reason\": \"recall-first speed/rating or explicit grade/value signal in video-title/thread context; not an acceptance decision\", \"canonical_player_id\": \"\", \"collected_at\": \"2026-08-14T16:14:20Z\", \"comment_id\": \"UgyxMxssOdjufZYvpvp4AaABAg\", \"comment_published_at\": 1776211200, \"context_for_review\": \"『パワフルプロ野球2026-2027』オープニングムービー\\n“歴史（サクセス）は、受け継がれる。” 「パワフルプロ野球2026-2027」（Nintendo Switch™・PlayStation®4）6月11日発売！ 公式サイト：https://www.konami.com/pawa/2026-2027/ 『Highlight』 Stand up now, we’re ready now Go! Stand up now, we’re ready now All set! 歓声が空揺らす Stand up now, we’re ready now Go! Stand up now, we’re ready now All set! その背に未来を 高鳴る鼓動を信じて 重なる熱量が 期待感と展開の煌めき 覚悟を決めてけ 何度も見失って 息飲むストーリー 奇跡的な証明に変わるさ 大丈夫信じて （ほら） 誰にも見せず （ずっと） 積み上げていた 負けないように向き合うように 静かな夜を越えてきた （ほら）気づけばそばに （いま）同じ痛みを 背負いながら駆け出す君 準備はもう出来たよね （胸を張って） はじめよう いま世界を駆けていけ 照らす 光の先 風に乗る夢 ひとりじゃない いま未来を駆けていこう 照らせ 光のように 掴み取ろう さあこの手で Stand up now, we’re ready now Go! Stand up now,"
+      ]
+    },
+    {
+      "bytes": 530576,
+      "path": "outputs/derived/speed_community_v3_powerpro_collection_log_20260815.jsonl",
+      "sample": [
+        "{\"date_from\": \"2024-01-01\", \"date_to\": \"2026-08-14\", \"discovery_source\": \"https://www.youtube.com/channel/UCWzEh28vj3mQKpe0fzVTOUw/videos\", \"event\": \"RUN_STARTED\", \"existing_inventory_read_only\": [\"outputs\\\\derived\\\\speed_youtube_official_video_inventory_powerpro_20260813.csv\", \"outputs\\\\derived\\\\speed_youtube_official_video_inventory_20260813.csv\"], \"forbidden_scope\": [\"X\", \"SP-035\", \"registry\", \"common final\", \"docs audit\", \"commit\", \"push\"], \"logged_at\": \"2026-08-14T16:00:59Z\", \"official_channel_id\": \"UCWzEh28vj3mQKpe0fzVTOUw\", \"official_channel_name\": \"パワプロ・プロスピ公式チャンネル\", \"old_inventory_id_count\": 5, \"output_boundary\": [\"outputs\\\\derived\\\\speed_community_v3_powerpro_inventory_20260815.csv\", \"outputs\\\\derived\\\\speed_community_v3_powerpro_raw_20260815.jsonl\", \"outputs\\\\derived\\\\speed_community_v3_powerpro_candidates_20260815.jsonl\", \"outputs\\\\derived\\\\speed_community_v3_powerpro_collection_log_20260815.jsonl\", \"outputs\\\\derived\\\\speed_community_v3_powerpro_qa_20260815.json\"], \"proxy_h",
+        "{\"channel_id\": \"UCWzEh28vj3mQKpe0fzVTOUw\", \"channel_title\": \"パワプロ・プロスピ公式チャンネル - Videos\", \"channel_url\": \"https://www.youtube.com/channel/UCWzEh28vj3mQKpe0fzVTOUw/videos\", \"discovery_command\": \"yt-dlp --ignore-config --no-update --no-warnings --flat-playlist --dump-single-json https://www.youtube.com/channel/UCWzEh28vj3mQKpe0fzVTOUw/videos\", \"discovery_method\": \"official_channel_flat_playlist\", \"event\": \"CHANNEL_LISTING_DISCOVERED\", \"flat_entry_count\": 199, \"logged_at\": \"2026-08-14T16:01:24Z\", \"note\": \"The official channel listing is the discovery source; old inventories are used only for overlap QA.\"}"
+      ]
+    },
+    {
+      "bytes": 3156084,
+      "path": "outputs/derived/speed_community_v3_powerpro_context_candidates_20260815.jsonl",
+      "sample": [
+        "{\"record_type\":\"candidate\",\"record_id\":\"PPV3-CONTEXT-CAND-Pm_Pyg54JV0-UgwIpi-OlUs3wjvbyhh4AaABAg\",\"platform\":\"YouTube\",\"game\":\"PowerPro\",\"source_type\":\"official_youtube_comment_recall_first_candidate\",\"source_url\":\"https://www.youtube.com/watch?v=Pm_Pyg54JV0&lc=UgwIpi-OlUs3wjvbyhh4AaABAg\",\"official_channel_id\":\"UCWzEh28vj3mQKpe0fzVTOUw\",\"video_id\":\"Pm_Pyg54JV0\",\"video_title\":\"『パワプロアドベンチャーズ』3rdシナリオ カジナイトアカデミー紹介\",\"published_at\":\"2026-06-03\",\"video_description_context_short\":\"3rdサクセスシナリオ カジナイトアカデミーの紹介です。 『鋼の如き心であれ』 主人公たちに足りないものは何なのか—― 答えを求めて、ハンマーを手にする🔨 打てよ黒鉄！叩いて鍛えて、強き心を手に入れろ！ #パワプロアドベンチャーズ #パワアド ダウンロードはこちら：https://konami-app.go.link/bQ12m 公式サイト：https://www.konami.com/pawa/adventures/ 公式X：https://x.com/pawa_adventures\",\"comment_id\":\"UgwIpi-OlUs3wjvbyhh4AaABAg\",\"parent_comment_id\":null,\"root_thread_id\":\"UgwIpi-OlUs3wjvbyhh4AaABAg\",\"author\":\"@養豚牧場\",\"author_id\":\"UCp1iF6w5efhWYOw59qrtU_A\",\"comment_published_at\":1781481600,\"text\":\"すごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りない？？毎日30分ぐらいだけど、微課金で楽しくやれるよー😂人口増え",
+        "{\"record_type\":\"candidate\",\"record_id\":\"PPV3-CONTEXT-CAND-wOjrANePk1c-UgxiuM9kw1ivdzKCf6F4AaABAg\",\"platform\":\"YouTube\",\"game\":\"PowerPro\",\"source_type\":\"official_youtube_comment_recall_first_candidate\",\"source_url\":\"https://www.youtube.com/watch?v=wOjrANePk1c&lc=UgxiuM9kw1ivdzKCf6F4AaABAg\",\"official_channel_id\":\"UCWzEh28vj3mQKpe0fzVTOUw\",\"video_id\":\"wOjrANePk1c\",\"video_title\":\"『パワフルプロ野球2026-2027』オープニングムービー\",\"published_at\":\"2026-03-12\",\"video_description_context_short\":\"“歴史（サクセス）は、受け継がれる。” 「パワフルプロ野球2026-2027」（Nintendo Switch™・PlayStation®4）6月11日発売！ 公式サイト：https://www.konami.com/pawa/2026-2027/ 『Highlight』 Stand up now, we’re ready now Go! Stand up now, we’re ready now All set! 歓声が空揺らす Stand up now, we’re ready now Go! Stand up now, we’re ready now All set! その背に未来を 高鳴る鼓動を信じて 重なる熱量が 期待感と展開の煌めき 覚悟を決めてけ 何度も見失って 息飲むストーリー 奇跡的な証明に変わるさ 大丈夫信じて （ほら） 誰にも見せず （ずっと） 積み上げていた 負けないように向き合うように 静かな夜を越えてきた （ほら）気づけばそばに （いま）同じ痛みを 背負いながら駆け出す君 準備はもう出来たよね （胸を張って） はじめよう いま世界を駆けていけ 照らす 光の先 風に乗る夢 ひとりじゃない いま未来を駆けていこう "
+      ]
+    },
+    {
+      "bytes": 6071,
+      "path": "outputs/derived/speed_community_v3_powerpro_context_collection_log_20260815.json",
+      "sample": [
+        "{",
+        "  \"task\": \"speed_community_recollection_v3_youtube_powerpro_context\","
+      ]
+    },
+    {
+      "bytes": 45652,
+      "path": "outputs/derived/speed_community_v3_powerpro_context_inventory_20260815.csv",
+      "sample": [
+        "game,video_id,title,description_short,published_at,source_url,official_channel_id,official_channel_name,discovery_method,matched_terms,relevant_reason,target_players_from_title_if_any,comments_available,comments_retrieved,comment_total_reported,retrieval_method,retrieval_bound_or_missingness,already_in_old_inventory,metadata_status,collection_attempted_at",
+        "PowerPro,Ms1zfS7gSmo,【ロマン開花學園解説】ロマン全開！才能開花！【パワプロアプリ】,新シナリオ #ロマン開花學園 編 7/30～配信開始！ 配信開始に伴い、#解説 動画を公開！ 【「ロマン開花學園」ストーリー概要】 100年以上の歴史を誇る伝統校、ロマン開花學園。 その野球部も、かつて何度も甲子園に行った古豪だが、近年の成績はイマイチだ。 学校は伝統を重んじる校風だけど、このままの体制でいいのだろうか・・・？ そう考えていたところに、刃（やいば）と名乗る新任の監督が現れる。 今、変革を予感させる新風が、吹き始めようとしていた・・・ 詳細はアプリ内お知らせにてご確認ください。 #パワプロアプリ 公式X：https://x.com/pawa_app573 #パワプロアプリ 公式サイト：https://www.konami.com/pawa/app/,2026-07-30,https://www.youtube.com/watch?v=Ms1zfS7gSmo,UCWzEh28vj3mQKpe0fzVTOUw,パワプロ・プロスピ公式チャンネル,official_channel_side_scan_then_bounded_context_recovery,,,,True,8,8,yt-dlp --get-comments,YTDLP_ALL_REQUESTED; completeness not independently verified; platform/client pagination may remain,,OK,2026-08-14T16:58:43Z"
+      ]
+    },
+    {
+      "bytes": 50151278,
+      "path": "outputs/derived/speed_community_v3_powerpro_context_raw_20260815.jsonl",
+      "sample": [
+        "{\"record_type\":\"comment_or_reply\",\"record_id\":\"PPV3-CONTEXT-RAW-Ms1zfS7gSmo-UgwShQ4b5rt6TNbD5mx4AaABAg\",\"platform\":\"YouTube\",\"game\":\"PowerPro\",\"source_type\":\"official_youtube_comment_or_reply\",\"source_url\":\"https://www.youtube.com/watch?v=Ms1zfS7gSmo&lc=UgwShQ4b5rt6TNbD5mx4AaABAg\",\"official_channel_id\":\"UCWzEh28vj3mQKpe0fzVTOUw\",\"video_id\":\"Ms1zfS7gSmo\",\"video_title\":\"【ロマン開花學園解説】ロマン全開！才能開花！【パワプロアプリ】\",\"published_at\":\"2026-07-30\",\"video_description_context_short\":\"新シナリオ #ロマン開花學園 編 7/30～配信開始！ 配信開始に伴い、#解説 動画を公開！ 【「ロマン開花學園」ストーリー概要】 100年以上の歴史を誇る伝統校、ロマン開花學園。 その野球部も、かつて何度も甲子園に行った古豪だが、近年の成績はイマイチだ。 学校は伝統を重んじる校風だけど、このままの体制でいいのだろうか・・・？ そう考えていたところに、刃（やいば）と名乗る新任の監督が現れる。 今、変革を予感させる新風が、吹き始めようとしていた・・・ 詳細はアプリ内お知らせにてご確認ください。 #パワプロアプリ 公式X：https://x.com/pawa_app573 #パワプロアプリ 公式サイト：https://www.konami.com/pawa/app/\",\"comment_id\":\"UgwShQ4b5rt6TNbD5mx4AaABAg\",\"parent_comment_id\":null,\"root_thread_id\":\"UgwShQ4b5rt6TNbD5mx4AaABAg\",\"author\":\"@今野なぁぁぁ\",\"author_id\":\"UCN4g9uqgQegGDL-_IfAuUZg\",\"comment_published_at\":17",
+        "{\"record_type\":\"comment_or_reply\",\"record_id\":\"PPV3-CONTEXT-RAW-Ms1zfS7gSmo-Ugwu50-V4VVb2a0NxZ94AaABAg\",\"platform\":\"YouTube\",\"game\":\"PowerPro\",\"source_type\":\"official_youtube_comment_or_reply\",\"source_url\":\"https://www.youtube.com/watch?v=Ms1zfS7gSmo&lc=Ugwu50-V4VVb2a0NxZ94AaABAg\",\"official_channel_id\":\"UCWzEh28vj3mQKpe0fzVTOUw\",\"video_id\":\"Ms1zfS7gSmo\",\"video_title\":\"【ロマン開花學園解説】ロマン全開！才能開花！【パワプロアプリ】\",\"published_at\":\"2026-07-30\",\"video_description_context_short\":\"新シナリオ #ロマン開花學園 編 7/30～配信開始！ 配信開始に伴い、#解説 動画を公開！ 【「ロマン開花學園」ストーリー概要】 100年以上の歴史を誇る伝統校、ロマン開花學園。 その野球部も、かつて何度も甲子園に行った古豪だが、近年の成績はイマイチだ。 学校は伝統を重んじる校風だけど、このままの体制でいいのだろうか・・・？ そう考えていたところに、刃（やいば）と名乗る新任の監督が現れる。 今、変革を予感させる新風が、吹き始めようとしていた・・・ 詳細はアプリ内お知らせにてご確認ください。 #パワプロアプリ 公式X：https://x.com/pawa_app573 #パワプロアプリ 公式サイト：https://www.konami.com/pawa/app/\",\"comment_id\":\"Ugwu50-V4VVb2a0NxZ94AaABAg\",\"parent_comment_id\":null,\"root_thread_id\":\"Ugwu50-V4VVb2a0NxZ94AaABAg\",\"author\":\"@今野なぁぁぁ\",\"author_id\":\"UCN4g9uqgQegGDL-_IfAuUZg\",\"comment_published_at\":17"
+      ]
+    },
+    {
+      "bytes": 309270,
+      "path": "outputs/derived/speed_community_v3_powerpro_inventory_20260815.csv",
+      "sample": [
+        "inventory_id,game,video_id,title,published_at,source_url,official_channel_id,official_channel_name,discovery_method,matched_terms,relevant_reason,relevant_for_comment_collection,target_players_from_title_if_any,comments_available,comments_retrieved,comment_total_reported,retrieval_method,retrieval_bound_or_missingness,already_in_old_inventory,date_status,metadata_status,description_context_short,error",
+        "PPV3-INV-0002,Official channel mixed catalog,sX8nl6eCua0,福留孝介・糸井嘉男の新能力公開！ 福留×糸井 ホンネ！俺の実力話しますSP 後編【プロスピA】,2026-07-16,https://www.youtube.com/watch?v=sX8nl6eCua0,UCWzEh28vj3mQKpe0fzVTOUw,パワプロ・プロスピ公式チャンネル,official_channel_flat_playlist_then_per_video_metadata,\"[\"\"プロスピ\"\",\"\"プロスピA\"\",\"\"能力\"\",\"\"能力公開\"\",\"\"アップデート\"\",\"\"新能力\"\",\"\"対決\"\"]\",PROSPI_ONLY_EXCLUDED_FROM_SP033: Prospi-only video excluded from SP-033 PowerPro lane.,false,[],,,,,,true,IN_SCOPE,OK,過去対決動画でのご共演などで息ピッタリの名コンビ福留孝介さんと糸井嘉男さんが番組にご出演！ ご自身のプロスピＡゲーム内の能力にホンネでトークいただき、 その内容を基に「新・福留孝介」「新・糸井嘉男」の能力をアップデート！ 後編動画では、「新・福留孝介」「新・糸井嘉男」の能力を大公開しました。 果たしてどのような能力になっているのか・・・気になる詳細は動画でご確認ください！ さらに、動画内では「新・福留孝介」「新・糸井嘉男」を実際に使用してリアルタイム対戦を実施！ 過去対決動画では、糸井さんの2勝でしたが、今回の結果はいかに・・・！？ 動画内で紹介しているプレゼントコードをパワスピ・ポイントクラブで入力すると10エナジーをプレゼント！ ▼パワスピ・ポイントクラブはこちら https://pawaspi-point.konami.net/news/detail?content_id=KON_news_702cc7e571c72221e5f090c2d8b93d92&p_code=CHOJIN ※プレゼントコードは、前編・後編共通となっております。重複して受け取ることはできませんのでご注意ください。 ▼プロスピA ダウンロードはこちら https://app.adjust.com/22tqy36x ▼プロスピ"
+      ]
+    },
+    {
+      "bytes": 23471,
+      "path": "outputs/derived/speed_community_v3_powerpro_qa_20260815.json",
+      "sample": [
+        "{",
+        "  \"generated_at\": \"2026-08-14T16:28:54Z\","
+      ]
+    },
+    {
+      "bytes": 62755,
+      "path": "outputs/derived/speed_community_v3_powerpro_raw_20260815.jsonl",
+      "sample": [
+        "{\"collected_at\": \"2026-08-14T16:12:18Z\", \"comment_sort\": \"new\", \"comment_total_reported\": 8, \"comments_available\": true, \"comments_retrieved\": 8, \"error\": \"\", \"game\": \"PowerPro\", \"official_channel_id\": \"UCWzEh28vj3mQKpe0fzVTOUw\", \"platform\": \"YouTube\", \"published_at\": \"2026-07-30\", \"record_id\": \"PPV3-VIDEO-Ms1zfS7gSmo\", \"record_type\": \"video_metadata\", \"requested_comment_bound\": \"all,all,all,all,all\", \"retrieval_bound_or_missingness\": \"YTDLP_ALL_REQUESTED; completeness not independently verified; platform/client pagination may remain\", \"retrieval_method\": \"yt-dlp --get-comments --dump-single-json\", \"retrieval_status\": \"OK\", \"source_type\": \"official_youtube_video_metadata\", \"source_url\": \"https://www.youtube.com/watch?v=Ms1zfS7gSmo\", \"unresolved_remainder_lower_bound\": 0, \"video_description_context_short\": \"新シナリオ #ロマン開花學園 編 7/30～配信開始！ 配信開始に伴い、#解説 動画を公開！ 【「ロマン開花學園」ストーリー概要】 100年以上の歴史を誇る伝統校、ロマン開花學園。 その野球部も、かつて何度も甲子園に行った古豪だが、近年の成績はイマイチだ。 学校は伝統を重んじる校風だけど、このままの体制でいいのだろうか・・・？ そう考えていたところに、刃（やいば",
+        "{\"collected_at\": \"2026-08-14T16:12:28Z\", \"comment_sort\": \"new\", \"comment_total_reported\": 10, \"comments_available\": true, \"comments_retrieved\": 10, \"error\": \"\", \"game\": \"PowerPro\", \"official_channel_id\": \"UCWzEh28vj3mQKpe0fzVTOUw\", \"platform\": \"YouTube\", \"published_at\": \"2026-07-01\", \"record_id\": \"PPV3-VIDEO-lXJEdQqrU7E\", \"record_type\": \"video_metadata\", \"requested_comment_bound\": \"all,all,all,all,all\", \"retrieval_bound_or_missingness\": \"YTDLP_ALL_REQUESTED; completeness not independently verified; platform/client pagination may remain\", \"retrieval_method\": \"yt-dlp --get-comments --dump-single-json\", \"retrieval_status\": \"OK\", \"source_type\": \"official_youtube_video_metadata\", \"source_url\": \"https://www.youtube.com/watch?v=lXJEdQqrU7E\", \"unresolved_remainder_lower_bound\": 0, \"video_description_context_short\": \"▼パワプロ・プロスピ公式Xはこちら https://x.com/pawapuro_pro “歴史（サクセス）は、受け継がれる。” 「パワフルプロ野球2026-2027」（Nintendo Switch™・PlayStation®4）6月11日発売！ 公式サイト： https://www.konami.com/pawa/2026-2027/ 一般社団法人日本野"
+      ]
+    },
+    {
+      "bytes": 171044,
+      "path": "outputs/derived/speed_community_v3_prospi_candidates_20260815.jsonl",
+      "sample": [
+        "{\"record_id\":\"SP034-V3-CANDIDATE-sX8nl6eCua0-UgzowpbEVK85J86TWdV4AaABAg\",\"raw_record_id\":\"SP034-V3-RAW-sX8nl6eCua0-UgzowpbEVK85J86TWdV4AaABAg\",\"platform\":\"YouTube\",\"game\":\"Prospi\",\"source_type\":\"official_youtube_speed_rating_candidate\",\"source_url\":\"https://www.youtube.com/watch?v=sX8nl6eCua0&lc=UgzowpbEVK85J86TWdV4AaABAg\",\"video_id\":\"sX8nl6eCua0\",\"video_title\":\"�����F��E����Òj�̐V�\\\\�͌��J�I �����~���� �z���l�I���̎��͘b���܂�SP ��ҁy�v���X�sA�z\",\"video_description_short\":\"過去対決動画でのご共演などで息ピッタリの名コンビ福留孝介さんと糸井嘉男さんが番組にご出演！\\n\\nご自身のプロスピＡゲーム内の能力にホンネでトークいただき、\\nその内容を基に「新・福留孝介」「新・糸井嘉男」の能力をアップデート！\\n\\n \\n後編動画では、「新・福留孝介」「新・糸井嘉男」の能力を大公開しました。\\n果たしてどのような能力になっているのか・・・気になる詳細は動画でご確認ください！\\nさらに、動画内では「新・福留孝介」「新・糸井嘉男」を実際に使用してリアルタイム対戦を実施！\\n過去対決動画では、糸井さんの2勝でしたが、今回の結果はいかに・・・！？\\n\\n動画内で紹介しているプレゼントコードをパワスピ・ポイントクラブで入力すると10エナジーをプレゼント！\\n▼パワスピ・ポイントクラブはこちら\\nhttps://pawaspi-point.konami.net/news/detail?content_id=KON_news_702cc7e571c72221e5f090c2d8b93d92&p_code=CHOJIN\\n※プレゼントコードは、前編・後編共通となっております。重複して受け取ることはできませんのでご注意ください。\\n\\n",
+        "{\"record_id\":\"SP034-V3-CANDIDATE-sX8nl6eCua0-UgztNQa9ut06C0txJ5V4AaABAg\",\"raw_record_id\":\"SP034-V3-RAW-sX8nl6eCua0-UgztNQa9ut06C0txJ5V4AaABAg\",\"platform\":\"YouTube\",\"game\":\"Prospi\",\"source_type\":\"official_youtube_speed_rating_candidate\",\"source_url\":\"https://www.youtube.com/watch?v=sX8nl6eCua0&lc=UgztNQa9ut06C0txJ5V4AaABAg\",\"video_id\":\"sX8nl6eCua0\",\"video_title\":\"�����F��E����Òj�̐V�\\\\�͌��J�I �����~���� �z���l�I���̎��͘b���܂�SP ��ҁy�v���X�sA�z\",\"video_description_short\":\"過去対決動画でのご共演などで息ピッタリの名コンビ福留孝介さんと糸井嘉男さんが番組にご出演！\\n\\nご自身のプロスピＡゲーム内の能力にホンネでトークいただき、\\nその内容を基に「新・福留孝介」「新・糸井嘉男」の能力をアップデート！\\n\\n \\n後編動画では、「新・福留孝介」「新・糸井嘉男」の能力を大公開しました。\\n果たしてどのような能力になっているのか・・・気になる詳細は動画でご確認ください！\\nさらに、動画内では「新・福留孝介」「新・糸井嘉男」を実際に使用してリアルタイム対戦を実施！\\n過去対決動画では、糸井さんの2勝でしたが、今回の結果はいかに・・・！？\\n\\n動画内で紹介しているプレゼントコードをパワスピ・ポイントクラブで入力すると10エナジーをプレゼント！\\n▼パワスピ・ポイントクラブはこちら\\nhttps://pawaspi-point.konami.net/news/detail?content_id=KON_news_702cc7e571c72221e5f090c2d8b93d92&p_code=CHOJIN\\n※プレゼントコードは、前編・後編共通となっております。重複して受け取ることはできませんのでご注意ください。\\n\\n"
+      ]
+    },
+    {
+      "bytes": 23127,
+      "path": "outputs/derived/speed_community_v3_prospi_collection_log_20260815.json",
+      "sample": [
+        "{",
+        "  \"task\": \"SP-034\","
+      ]
+    },
+    {
+      "bytes": 12697,
+      "path": "outputs/derived/speed_community_v3_prospi_inventory_20260815.csv",
+      "sample": [
+        "game,video_id,title,description_short,published_at,source_url,official_channel_id,channel_name,discovery_method,channel_position,matched_terms,relevant_reason,target_players_from_title_if_any,comments_available,comments_retrieved,platform_reported_comment_count,retrieval_method,retrieval_bound_or_missingness,already_in_old_inventory,old_inventory_sources,metadata_status,collection_attempted_at",
+        "Prospi,sX8nl6eCua0,�����F��E����Òj�̐V�\\�͌��J�I �����~���� �z���l�I���̎��͘b���܂�SP ��ҁy�v���X�sA�z,\"過去対決動画でのご共演などで息ピッタリの名コンビ福留孝介さんと糸井嘉男さんが番組にご出演！"
+      ]
+    },
+    {
+      "bytes": 7549315,
+      "path": "outputs/derived/speed_community_v3_prospi_raw_20260815.jsonl",
+      "sample": [
+        "{\"record_id\":\"SP034-V3-RAW-sX8nl6eCua0-UgxKAOqn21Uyr_YfySp4AaABAg\",\"platform\":\"YouTube\",\"source_type\":\"official_youtube_comment_or_reply\",\"game\":\"Prospi\",\"edition\":\"Prospi official YouTube lane\",\"source_url\":\"https://www.youtube.com/watch?v=sX8nl6eCua0&lc=UgxKAOqn21Uyr_YfySp4AaABAg\",\"video_id\":\"sX8nl6eCua0\",\"video_title\":\"�����F��E����Òj�̐V�\\\\�͌��J�I �����~���� �z���l�I���̎��͘b���܂�SP ��ҁy�v���X�sA�z\",\"video_description_short\":\"過去対決動画でのご共演などで息ピッタリの名コンビ福留孝介さんと糸井嘉男さんが番組にご出演！\\n\\nご自身のプロスピＡゲーム内の能力にホンネでトークいただき、\\nその内容を基に「新・福留孝介」「新・糸井嘉男」の能力をアップデート！\\n\\n \\n後編動画では、「新・福留孝介」「新・糸井嘉男」の能力を大公開しました。\\n果たしてどのような能力になっているのか・・・気になる詳細は動画でご確認ください！\\nさらに、動画内では「新・福留孝介」「新・糸井嘉男」を実際に使用してリアルタイム対戦を実施！\\n過去対決動画では、糸井さんの2勝でしたが、今回の結果はいかに・・・！？\\n\\n動画内で紹介しているプレゼントコードをパワスピ・ポイントクラブで入力すると10エナジーをプレゼント！\\n▼パワスピ・ポイントクラブはこちら\\nhttps://pawaspi-point.konami.net/news/detail?content_id=KON_news_702cc7e571c72221e5f090c2d8b93d92&p_code=CHOJIN\\n※プレゼントコードは、前編・後編共通となっております。重複して受け取ることはできませんのでご注意ください。\\n\\n\\n▼プロスピA ダウンロードはこちら\\nhttps://app.adjust.c",
+        "{\"record_id\":\"SP034-V3-RAW-sX8nl6eCua0-Ugz2tXwMVejZtQqWwr94AaABAg\",\"platform\":\"YouTube\",\"source_type\":\"official_youtube_comment_or_reply\",\"game\":\"Prospi\",\"edition\":\"Prospi official YouTube lane\",\"source_url\":\"https://www.youtube.com/watch?v=sX8nl6eCua0&lc=Ugz2tXwMVejZtQqWwr94AaABAg\",\"video_id\":\"sX8nl6eCua0\",\"video_title\":\"�����F��E����Òj�̐V�\\\\�͌��J�I �����~���� �z���l�I���̎��͘b���܂�SP ��ҁy�v���X�sA�z\",\"video_description_short\":\"過去対決動画でのご共演などで息ピッタリの名コンビ福留孝介さんと糸井嘉男さんが番組にご出演！\\n\\nご自身のプロスピＡゲーム内の能力にホンネでトークいただき、\\nその内容を基に「新・福留孝介」「新・糸井嘉男」の能力をアップデート！\\n\\n \\n後編動画では、「新・福留孝介」「新・糸井嘉男」の能力を大公開しました。\\n果たしてどのような能力になっているのか・・・気になる詳細は動画でご確認ください！\\nさらに、動画内では「新・福留孝介」「新・糸井嘉男」を実際に使用してリアルタイム対戦を実施！\\n過去対決動画では、糸井さんの2勝でしたが、今回の結果はいかに・・・！？\\n\\n動画内で紹介しているプレゼントコードをパワスピ・ポイントクラブで入力すると10エナジーをプレゼント！\\n▼パワスピ・ポイントクラブはこちら\\nhttps://pawaspi-point.konami.net/news/detail?content_id=KON_news_702cc7e571c72221e5f090c2d8b93d92&p_code=CHOJIN\\n※プレゼントコードは、前編・後編共通となっております。重複して受け取ることはできませんのでご注意ください。\\n\\n\\n▼プロスピA ダウンロードはこちら\\nhttps://app.adjust.c"
+      ]
+    },
+    {
+      "bytes": 9764394,
+      "path": "outputs/derived/speed_community_v3_prospi_remainder_candidates_20260815.jsonl",
+      "sample": [
+        "{\"record_id\":\"SP034-V3-REMAINDER-CANDIDATE-eaWfO7kRCwU-UgyVkjQfgY-vRr-QdPx4AaABAg\",\"raw_record_id\":\"SP034-V3-REMAINDER-RAW-eaWfO7kRCwU-UgyVkjQfgY-vRr-QdPx4AaABAg\",\"platform\":\"YouTube\",\"game\":\"Prospi\",\"source_type\":\"official_youtube_speed_rating_candidate\",\"source_url\":\"https://www.youtube.com/watch?v=eaWfO7kRCwU&lc=UgyVkjQfgY-vRr-QdPx4AaABAg\",\"video_id\":\"eaWfO7kRCwU\",\"video_title\":\"大谷翔平選手がパワプロ30周年×プロスピ20周年アンバサダーに！【メイキング+特別インタビュー】\",\"video_description_short\":\"#大谷翔平 選手が #パワプロ30周年 × #プロスピ20周年 アンバサダーに就任することが決定しました！\\nアンバサダー撮影の模様を公開！また、パワプロも大谷選手も今年で30歳ということで、30歳にちなんだ記念インタビューも行いました。\\n#WBC のユニフォームを着用した大谷選手の映像は必見です！\\n\\nアニバーサリーイヤーに合わせ、KONAMIの各野球ゲームで大谷翔平選手と様々な取り組みを実施予定です。\\n\\n今後の展開にご期待ください。\\n\\n周年公式サイト\\nhttps://www.konami.com/games/pawaspi_anniversary/\",\"official_channel_id\":\"UCWzEh28vj3mQKpe0fzVTOUw\",\"comment_id\":\"UgyVkjQfgY-vRr-QdPx4AaABAg\",\"parent_comment_id\":null,\"root_thread_id\":\"UgyVkjQfgY-vRr-QdPx4AaABAg\",\"candidate_text\":\"シーズン終わってからまたこのインタビュー見ると\\nほんと大谷有言実行しててすげえってなるわ\\n前人未到の50-50達成 地区優勝 ディビジョ",
+        "{\"record_id\":\"SP034-V3-REMAINDER-CANDIDATE-eaWfO7kRCwU-Ugygf88P3t7tHGR63Jx4AaABAg\",\"raw_record_id\":\"SP034-V3-REMAINDER-RAW-eaWfO7kRCwU-Ugygf88P3t7tHGR63Jx4AaABAg\",\"platform\":\"YouTube\",\"game\":\"Prospi\",\"source_type\":\"official_youtube_speed_rating_candidate\",\"source_url\":\"https://www.youtube.com/watch?v=eaWfO7kRCwU&lc=Ugygf88P3t7tHGR63Jx4AaABAg\",\"video_id\":\"eaWfO7kRCwU\",\"video_title\":\"大谷翔平選手がパワプロ30周年×プロスピ20周年アンバサダーに！【メイキング+特別インタビュー】\",\"video_description_short\":\"#大谷翔平 選手が #パワプロ30周年 × #プロスピ20周年 アンバサダーに就任することが決定しました！\\nアンバサダー撮影の模様を公開！また、パワプロも大谷選手も今年で30歳ということで、30歳にちなんだ記念インタビューも行いました。\\n#WBC のユニフォームを着用した大谷選手の映像は必見です！\\n\\nアニバーサリーイヤーに合わせ、KONAMIの各野球ゲームで大谷翔平選手と様々な取り組みを実施予定です。\\n\\n今後の展開にご期待ください。\\n\\n周年公式サイト\\nhttps://www.konami.com/games/pawaspi_anniversary/\",\"official_channel_id\":\"UCWzEh28vj3mQKpe0fzVTOUw\",\"comment_id\":\"Ugygf88P3t7tHGR63Jx4AaABAg\",\"parent_comment_id\":null,\"root_thread_id\":\"Ugygf88P3t7tHGR63Jx4AaABAg\",\"candidate_text\":\"だったら大谷の能力爆上げしてくれるよな(圧)\\n今でも強いけど、正直盗塁とかもう少し強くてもよくない？と思うところはある。\\n次元が違うから"
+      ]
+    },
+    {
+      "bytes": 21484,
+      "path": "outputs/derived/speed_community_v3_prospi_remainder_collection_log_20260815.json",
+      "sample": [
+        "{",
+        "  \"task\": \"speed_community_recollection_v3_youtube_prospi_remainder\","
+      ]
+    },
+    {
+      "bytes": 96871,
+      "path": "outputs/derived/speed_community_v3_prospi_remainder_inventory_20260815.csv",
+      "sample": [
+        "game,video_id,title,description_short,published_at,source_url,official_channel_id,channel_name,discovery_method,matched_terms,relevant_reason,target_players_from_title_if_any,comments_available,comments_retrieved,platform_reported_comment_count,retrieval_method,retrieval_bound_or_missingness,already_in_old_inventory,old_inventory_sources,metadata_status,collection_attempted_at",
+        "Prospi,0yNZ0wCRHs0,ニューイヤー特番！プロスピA お正月王決定戦【プロ野球スピリッツA】,\"2024年のラッキーボーイ・ラッキーガールを決める！"
+      ]
+    },
+    {
+      "bytes": 133,
+      "path": "outputs/derived/speed_community_v3_prospi_remainder_raw_20260815.jsonl",
+      "sample": [
+        "version https://git-lfs.github.com/spec/v1",
+        "oid sha256:2c4cb3fd4251c4cfe2354664d11ed2b1dcd6abc9476ad0343d8564d7d5234650"
+      ]
+    },
+    {
+      "bytes": 11087288,
+      "path": "outputs/derived/speed_community_v3_prospi_remainder_semantic_classified_20260815.jsonl",
+      "sample": [
+        "{\"record_id\":\"SP034-V3-REMAINDER-CANDIDATE-eaWfO7kRCwU-UgyVkjQfgY-vRr-QdPx4AaABAg\",\"raw_record_id\":\"SP034-V3-REMAINDER-RAW-eaWfO7kRCwU-UgyVkjQfgY-vRr-QdPx4AaABAg\",\"platform\":\"YouTube\",\"game\":\"Prospi\",\"source_type\":\"official_youtube_speed_rating_candidate\",\"source_url\":\"https://www.youtube.com/watch?v=eaWfO7kRCwU&lc=UgyVkjQfgY-vRr-QdPx4AaABAg\",\"video_id\":\"eaWfO7kRCwU\",\"video_title\":\"大谷翔平選手がパワプロ30周年×プロスピ20周年アンバサダーに！【メイキング+特別インタビュー】\",\"video_description_short\":\"#大谷翔平 選手が #パワプロ30周年 × #プロスピ20周年 アンバサダーに就任することが決定しました！\\nアンバサダー撮影の模様を公開！また、パワプロも大谷選手も今年で30歳ということで、30歳にちなんだ記念インタビューも行いました。\\n#WBC のユニフォームを着用した大谷選手の映像は必見です！\\n\\nアニバーサリーイヤーに合わせ、KONAMIの各野球ゲームで大谷翔平選手と様々な取り組みを実施予定です。\\n\\n今後の展開にご期待ください。\\n\\n周年公式サイト\\nhttps://www.konami.com/games/pawaspi_anniversary/\",\"official_channel_id\":\"UCWzEh28vj3mQKpe0fzVTOUw\",\"comment_id\":\"UgyVkjQfgY-vRr-QdPx4AaABAg\",\"parent_comment_id\":null,\"root_thread_id\":\"UgyVkjQfgY-vRr-QdPx4AaABAg\",\"candidate_text\":\"シーズン終わってからまたこのインタビュー見ると\\nほんと大谷有言実行しててすげえってなるわ\\n前人未到の50-50達成 地区優勝 ディビジョ",
+        "{\"record_id\":\"SP034-V3-REMAINDER-CANDIDATE-eaWfO7kRCwU-Ugygf88P3t7tHGR63Jx4AaABAg\",\"raw_record_id\":\"SP034-V3-REMAINDER-RAW-eaWfO7kRCwU-Ugygf88P3t7tHGR63Jx4AaABAg\",\"platform\":\"YouTube\",\"game\":\"Prospi\",\"source_type\":\"official_youtube_speed_rating_candidate\",\"source_url\":\"https://www.youtube.com/watch?v=eaWfO7kRCwU&lc=Ugygf88P3t7tHGR63Jx4AaABAg\",\"video_id\":\"eaWfO7kRCwU\",\"video_title\":\"大谷翔平選手がパワプロ30周年×プロスピ20周年アンバサダーに！【メイキング+特別インタビュー】\",\"video_description_short\":\"#大谷翔平 選手が #パワプロ30周年 × #プロスピ20周年 アンバサダーに就任することが決定しました！\\nアンバサダー撮影の模様を公開！また、パワプロも大谷選手も今年で30歳ということで、30歳にちなんだ記念インタビューも行いました。\\n#WBC のユニフォームを着用した大谷選手の映像は必見です！\\n\\nアニバーサリーイヤーに合わせ、KONAMIの各野球ゲームで大谷翔平選手と様々な取り組みを実施予定です。\\n\\n今後の展開にご期待ください。\\n\\n周年公式サイト\\nhttps://www.konami.com/games/pawaspi_anniversary/\",\"official_channel_id\":\"UCWzEh28vj3mQKpe0fzVTOUw\",\"comment_id\":\"Ugygf88P3t7tHGR63Jx4AaABAg\",\"parent_comment_id\":null,\"root_thread_id\":\"Ugygf88P3t7tHGR63Jx4AaABAg\",\"candidate_text\":\"だったら大谷の能力爆上げしてくれるよな(圧)\\n今でも強いけど、正直盗塁とかもう少し強くてもよくない？と思うところはある。\\n次元が違うから"
+      ]
+    },
+    {
+      "bytes": 203992,
+      "path": "outputs/derived/speed_community_v3_prospi_semantic_classified_20260815.jsonl",
+      "sample": [
+        "{\"record_id\":\"SP034-V3-CANDIDATE-sX8nl6eCua0-UgzowpbEVK85J86TWdV4AaABAg\",\"raw_record_id\":\"SP034-V3-RAW-sX8nl6eCua0-UgzowpbEVK85J86TWdV4AaABAg\",\"platform\":\"YouTube\",\"game\":\"Prospi\",\"source_type\":\"official_youtube_speed_rating_candidate\",\"source_url\":\"https://www.youtube.com/watch?v=sX8nl6eCua0&lc=UgzowpbEVK85J86TWdV4AaABAg\",\"video_id\":\"sX8nl6eCua0\",\"video_title\":\"�����F��E����Òj�̐V�\\\\�͌��J�I �����~���� �z���l�I���̎��͘b���܂�SP ��ҁy�v���X�sA�z\",\"video_description_short\":\"過去対決動画でのご共演などで息ピッタリの名コンビ福留孝介さんと糸井嘉男さんが番組にご出演！\\n\\nご自身のプロスピＡゲーム内の能力にホンネでトークいただき、\\nその内容を基に「新・福留孝介」「新・糸井嘉男」の能力をアップデート！\\n\\n \\n後編動画では、「新・福留孝介」「新・糸井嘉男」の能力を大公開しました。\\n果たしてどのような能力になっているのか・・・気になる詳細は動画でご確認ください！\\nさらに、動画内では「新・福留孝介」「新・糸井嘉男」を実際に使用してリアルタイム対戦を実施！\\n過去対決動画では、糸井さんの2勝でしたが、今回の結果はいかに・・・！？\\n\\n動画内で紹介しているプレゼントコードをパワスピ・ポイントクラブで入力すると10エナジーをプレゼント！\\n▼パワスピ・ポイントクラブはこちら\\nhttps://pawaspi-point.konami.net/news/detail?content_id=KON_news_702cc7e571c72221e5f090c2d8b93d92&p_code=CHOJIN\\n※プレゼントコードは、前編・後編共通となっております。重複して受け取ることはできませんのでご注意ください。\\n\\n",
+        "{\"record_id\":\"SP034-V3-CANDIDATE-sX8nl6eCua0-UgztNQa9ut06C0txJ5V4AaABAg\",\"raw_record_id\":\"SP034-V3-RAW-sX8nl6eCua0-UgztNQa9ut06C0txJ5V4AaABAg\",\"platform\":\"YouTube\",\"game\":\"Prospi\",\"source_type\":\"official_youtube_speed_rating_candidate\",\"source_url\":\"https://www.youtube.com/watch?v=sX8nl6eCua0&lc=UgztNQa9ut06C0txJ5V4AaABAg\",\"video_id\":\"sX8nl6eCua0\",\"video_title\":\"�����F��E����Òj�̐V�\\\\�͌��J�I �����~���� �z���l�I���̎��͘b���܂�SP ��ҁy�v���X�sA�z\",\"video_description_short\":\"過去対決動画でのご共演などで息ピッタリの名コンビ福留孝介さんと糸井嘉男さんが番組にご出演！\\n\\nご自身のプロスピＡゲーム内の能力にホンネでトークいただき、\\nその内容を基に「新・福留孝介」「新・糸井嘉男」の能力をアップデート！\\n\\n \\n後編動画では、「新・福留孝介」「新・糸井嘉男」の能力を大公開しました。\\n果たしてどのような能力になっているのか・・・気になる詳細は動画でご確認ください！\\nさらに、動画内では「新・福留孝介」「新・糸井嘉男」を実際に使用してリアルタイム対戦を実施！\\n過去対決動画では、糸井さんの2勝でしたが、今回の結果はいかに・・・！？\\n\\n動画内で紹介しているプレゼントコードをパワスピ・ポイントクラブで入力すると10エナジーをプレゼント！\\n▼パワスピ・ポイントクラブはこちら\\nhttps://pawaspi-point.konami.net/news/detail?content_id=KON_news_702cc7e571c72221e5f090c2d8b93d92&p_code=CHOJIN\\n※プレゼントコードは、前編・後編共通となっております。重複して受け取ることはできませんのでご注意ください。\\n\\n"
+      ]
+    },
+    {
+      "bytes": 2486,
+      "path": "outputs/derived/speed_community_v3_qa_20260814.json",
+      "sample": [
+        "{",
+        "  \"run\": \"speed_community_recollection_v3_youtube_20260814\","
+      ]
+    },
+    {
+      "bytes": 42590,
+      "path": "outputs/derived/speed_community_v3_semantic_audit_qa_20260815.json",
+      "sample": [
+        "{",
+        "  \"schema_version\": \"speed_community_v3_semantic_audit_qa_20260815\","
+      ]
+    },
+    {
+      "bytes": 773782,
+      "path": "outputs/derived/speed_community_v3_x_canonical_20260815.jsonl",
+      "sample": [
+        "{\"record_id\":\"AGC-C-026\",\"platform\":\"X\",\"source_type\":\"community\",\"source_url\":\"https://x.com/DrUekusa/status/1017416071685345281\",\"source_post_or_video_id\":\"1017416071685345281\",\"parent_event_id\":null,\"root_thread_id\":\"1017416071685345281\",\"published_at\":\"2018-07-12T14:31:08Z\",\"text_or_excerpt\":\"パワプロのアプデで吉川尚輝の走力と守備力がA80になってる。大卒2年目としては異例の扱いじゃね？\",\"player\":\"吉川 尚輝\",\"canonical_player_id\":\"73375134\",\"identity_method\":\"master_canonical_player_id\",\"identity_confidence\":\"HIGH\",\"game\":null,\"edition\":null,\"claim_lane\":\"RATING_POWERPRO\",\"rating_direction\":\"TOO_HIGH\",\"speed_concept\":\"GENERAL_SPEED\",\"discourse\":\"literal\",\"explicit_rating_value\":\"A80\",\"comparison_player\":null,\"event_id\":\"x:1017416071685345281:73375134:rating\",\"independence_group\":\"x:1017416071685345281:73375134\",\"reaction_volume\":1,\"likes\":1,\"source_quality\":\"community\",\"current_100\":true,\"notes\":\"2018年アプデ時点。若手への走力Aを異例=甘いと見る。 | agent_c_central_hits.jsonl\",\"handle\":null,\"replies\":null,\"quotes\":null,\"discovery_source\":\"agent_c_central",
+        "{\"record_id\":\"SPD-X-D-042\",\"platform\":\"X\",\"source_type\":\"X_POST\",\"source_url\":\"https://x.com/i/status/1022377862865670144\",\"source_post_or_video_id\":\"1022377862865670144\",\"parent_event_id\":null,\"root_thread_id\":\"1022377862865670144\",\"published_at\":\"2018-07-26T07:07:32Z\",\"text_or_excerpt\":\"岡大海トレード！パワプロくんで走力Sお兄さんじゃん\",\"player\":\"岡 大海\",\"canonical_player_id\":\"11515139\",\"identity_method\":\"master_canonical_player_id\",\"identity_confidence\":\"HIGH\",\"game\":\"PowerPro\",\"edition\":null,\"claim_lane\":\"RATING_POWERPRO\",\"rating_direction\":\"EXPLICIT_PROPOSED_VALUE\",\"speed_concept\":\"GENERAL_SPEED\",\"discourse\":\"literal\",\"explicit_rating_value\":\"S\",\"comparison_player\":null,\"event_id\":\"x:1022377862865670144:11515139:rating\",\"independence_group\":\"x:1022377862865670144:11515139\",\"reaction_volume\":0,\"likes\":0,\"source_quality\":\"community\",\"current_100\":true,\"notes\":\"2018-era. Confirm edition before using as current-year evidence. | agent_d_pacific_hits.jsonl\",\"handle\":null,\"replies\":null,\"quotes\":null,\"discovery_s"
+      ]
+    },
+    {
+      "bytes": 386641,
+      "first_json_keys": [
+        "canonical_player_id",
+        "claim_lane",
+        "comparison_player",
+        "current_100",
+        "discourse",
+        "discovery_source",
+        "edition",
+        "event_id",
+        "explicit_rating_value",
+        "game",
+        "handle",
+        "identity_confidence",
+        "identity_method",
+        "independence_group",
+        "likes",
+        "notes",
+        "parent_event_id",
+        "platform",
+        "player",
+        "published_at",
+        "quotes",
+        "rating_direction",
+        "reaction_volume",
+        "record_id",
+        "replies",
+        "root_thread_id",
+        "source_post_or_video_id",
+        "source_quality",
+        "source_type",
+        "source_url",
+        "speed_concept",
+        "text_or_excerpt"
+      ],
+      "path": "outputs/derived/speed_community_v3_x_classified_20260815.jsonl",
+      "sample": [
+        "{\"record_id\":\"X-V3-2081646323414224919-西川史礁\",\"platform\":\"x\",\"source_type\":\"community\",\"source_url\":\"https://x.com/komyusyot/status/2081646323414224919\",\"source_post_or_video_id\":\"2081646323414224919\",\"parent_event_id\":null,\"root_thread_id\":\"2081646323414224919\",\"published_at\":\"2026-07-27T07:42:13Z\",\"text_or_excerpt\":\"西川史礁プロスピでの走力低すぎんか？73はあるはずやろ\",\"player\":\"西川 史礁\",\"canonical_player_id\":null,\"identity_method\":\"full_name_not_in_100\",\"identity_confidence\":\"HIGH\",\"game\":\"ProspiA\",\"edition\":null,\"claim_lane\":\"RATING_PROSPI\",\"rating_direction\":\"TOO_LOW\",\"speed_concept\":\"GENERAL_SPEED\",\"discourse\":\"literal\",\"explicit_rating_value\":73,\"comparison_player\":null,\"event_id\":\"x:2081646323414224919:西川 史礁:TOO_LOW\",\"independence_group\":\"x:2081646323414224919\",\"reaction_volume\":0,\"likes\":null,\"source_quality\":\"community\",\"current_100\":false,\"notes\":\"西川史礁 is not current-100 (西川龍馬 is) | parent_x_tools\",\"handle\":\"komyusyot\",\"replies\":null,\"quotes\":null,\"discovery_source\":\"parent\"}",
+        "{\"record_id\":\"X-V3-2073903673978311123-野間峻祥\",\"platform\":\"x\",\"source_type\":\"community\",\"source_url\":\"https://x.com/Tigers32TSUBOI/status/2073903673978311123\",\"source_post_or_video_id\":\"2073903673978311123\",\"parent_event_id\":null,\"root_thread_id\":\"2073903673978311123\",\"published_at\":\"2026-07-05T22:55:41Z\",\"text_or_excerpt\":\"野間ってパワプロで走力A88(数年前までS91)の肩S90査定されるぐらいには足肩良いとは思えない\",\"player\":\"野間 峻祥\",\"canonical_player_id\":\"01405130\",\"identity_method\":\"full_name\",\"identity_confidence\":\"HIGH\",\"game\":\"PowerPro\",\"edition\":null,\"claim_lane\":\"RATING_POWERPRO\",\"rating_direction\":\"TOO_HIGH\",\"speed_concept\":\"GENERAL_SPEED\",\"discourse\":\"literal\",\"explicit_rating_value\":88,\"comparison_player\":null,\"event_id\":\"x:2073903673978311123:01405130:TOO_HIGH\",\"independence_group\":\"x:2073903673978311123\",\"reaction_volume\":0,\"likes\":null,\"source_quality\":\"community\",\"current_100\":true,\"notes\":\"also says previous S91; aging/stale flavor | parent_x_tools\",\"handle\":\"Tigers32TSUBOI\",\"replies\":null,\"quotes\":null,\"discovery_s"
+      ]
+    },
+    {
+      "bytes": 10586,
+      "path": "outputs/derived/speed_community_v3_x_integrity_qa_20260815.json",
+      "sample": [
+        "{",
+        "  \"generated_at\": \"2026-08-15\","
+      ]
+    },
+    {
+      "bytes": 38549,
+      "path": "outputs/derived/speed_community_v3_x_official_post_inventory_20260815.csv",
+      "sample": [
+        "post_id,record_id,handle,url,published_at,text,source_type,game,edition,player,canonical_player_id,current_100,event_id,independence_group",
+        "1659182055694151680,tierb_1659182055694151680,prospiA_PR,https://x.com/prospiA_PR/status/1659182055694151680,2023-05-18T13:00:02Z,プロスピA ドリームマッチ＠巨人 見どころ。③岡本選手が不満気なのは自身の走力と…？,tier_b_context_official_post,,,岡本和真,,0,x:1659182055694151680:name:岡本和真:rating,x:1659182055694151680:name:岡本和真"
+      ]
+    },
+    {
+      "bytes": 62999,
+      "first_json_keys": [
+        "canonical_player_id",
+        "current_100",
+        "edition",
+        "event_id",
+        "game",
+        "handle",
+        "independence_group",
+        "player",
+        "post_id",
+        "published_at",
+        "record_id",
+        "source_type",
+        "text",
+        "url"
+      ],
+      "path": "outputs/derived/speed_community_v3_x_official_post_inventory_20260815.jsonl",
+      "sample": [
+        "{\"post_id\":\"1659182055694151680\",\"record_id\":\"tierb_1659182055694151680\",\"handle\":\"prospiA_PR\",\"url\":\"https://x.com/prospiA_PR/status/1659182055694151680\",\"published_at\":\"2023-05-18T13:00:02Z\",\"text\":\"プロスピA ドリームマッチ＠巨人 見どころ。③岡本選手が不満気なのは自身の走力と…？\",\"source_type\":\"tier_b_context_official_post\",\"game\":null,\"edition\":null,\"player\":\"岡本和真\",\"canonical_player_id\":null,\"current_100\":false,\"event_id\":\"x:1659182055694151680:name:岡本和真:rating\",\"independence_group\":\"x:1659182055694151680:name:岡本和真\"}",
+        "{\"post_id\":\"1663470303425568768\",\"record_id\":\"tierb_1663470303425568768\",\"handle\":\"prospiA_PR\",\"url\":\"https://x.com/prospiA_PR/status/1663470303425568768\",\"published_at\":\"2023-05-30T09:00:00Z\",\"text\":\"エキサイティングプレイヤーセレクション第1弾 登場選手紹介。塩見選手の長所は？パンチ力・走力\",\"source_type\":\"tier_b_context_official_post\",\"game\":null,\"edition\":null,\"player\":\"塩見 泰隆\",\"canonical_player_id\":\"71975136\",\"current_100\":true,\"event_id\":\"x:1663470303425568768:71975136:noise\",\"independence_group\":\"x:1663470303425568768:71975136\"}"
+      ]
+    },
+    {
+      "bytes": 9062,
+      "path": "outputs/derived/speed_community_v3_x_player_summary_20260815.csv",
+      "sample": [
+        "player,player_id,team,current_100,n_records,origin_count,reaction_volume,n_rating,n_directional_rating,n_speed_specific_physical,n_general_context,top_directions",
+        "中川 圭太,51255138,オリックス・バファローズ,1,6,6,17,4,4,2,0,EXPLICIT_PROPOSED_VALUE|TOO_LOW|UNCLEAR|INJURY_NOT_REFLECTED"
+      ]
+    },
+    {
+      "bytes": 3696,
+      "path": "outputs/derived/speed_community_v3_x_qa_20260815.json",
+      "sample": [
+        "{",
+        "  \"generated_at\": \"2026-08-15\","
+      ]
+    },
+    {
+      "bytes": 44486,
+      "path": "outputs/derived/speed_community_v3_x_query_coverage_20260815.csv",
+      "sample": [
+        "query,tool,result,players,note,canonical_x_rows,canonical_directional_rating,canonical_speed_specific_physical,canonical_general_context",
+        "from:prospiA_PR (能力 OR 査定 OR 走力 OR 新能力 OR アップデート),x_keyword_search,HIT,,,,,,"
+      ]
+    },
+    {
+      "bytes": 446182,
+      "first_json_keys": [
+        "canonical_player_id",
+        "claim_lane",
+        "comparison_player",
+        "current_100",
+        "discourse",
+        "discovery_source",
+        "edition",
+        "event_id",
+        "explicit_rating_value",
+        "game",
+        "handle",
+        "identity_confidence",
+        "identity_method",
+        "independence_group",
+        "likes",
+        "notes",
+        "parent_event_id",
+        "platform",
+        "player",
+        "published_at",
+        "quotes",
+        "rating_direction",
+        "reaction_volume",
+        "record_id",
+        "replies",
+        "root_thread_id",
+        "source_post_or_video_id",
+        "source_quality",
+        "source_type",
+        "source_url",
+        "speed_concept",
+        "text_or_excerpt"
+      ],
+      "path": "outputs/derived/speed_community_v3_x_raw_20260815.jsonl",
+      "sample": [
+        "{\"record_id\":\"X-V3-2077694733518782866-福留孝介\",\"platform\":\"x\",\"source_type\":\"official_post\",\"source_url\":\"https://x.com/prospiA_PR/status/2077694733518782866\",\"source_post_or_video_id\":\"2077694733518782866\",\"parent_event_id\":null,\"root_thread_id\":\"2077694733518782866\",\"published_at\":\"2026-07-16T10:00:00Z\",\"text_or_excerpt\":\"福留×糸井のホンネ第2弾。アップデートされた福留孝介・糸井嘉男の新能力を先行公開\",\"player\":\"福留孝介\",\"canonical_player_id\":null,\"identity_method\":\"unmapped\",\"identity_confidence\":\"LOW\",\"game\":\"ProspiA\",\"edition\":\"2026\",\"claim_lane\":\"NOISE\",\"rating_direction\":\"UNCLEAR\",\"speed_concept\":\"UNCLEAR\",\"discourse\":\"literal\",\"explicit_rating_value\":null,\"comparison_player\":null,\"event_id\":\"x:2077694733518782866:福留孝介:unk\",\"independence_group\":\"x:2077694733518782866\",\"reaction_volume\":1549,\"likes\":1437,\"source_quality\":\"official\",\"current_100\":false,\"notes\":\"official promo; not a speed claim | parent_x_tools\",\"handle\":\"prospiA_PR\",\"replies\":42,\"quotes\":70,\"discovery_source\":\"parent\"}",
+        "{\"record_id\":\"X-V3-2077694733518782866-糸井嘉男\",\"platform\":\"x\",\"source_type\":\"official_post\",\"source_url\":\"https://x.com/prospiA_PR/status/2077694733518782866\",\"source_post_or_video_id\":\"2077694733518782866\",\"parent_event_id\":null,\"root_thread_id\":\"2077694733518782866\",\"published_at\":\"2026-07-16T10:00:00Z\",\"text_or_excerpt\":\"福留×糸井のホンネ第2弾。アップデートされた福留孝介・糸井嘉男の新能力を先行公開\",\"player\":\"糸井嘉男\",\"canonical_player_id\":null,\"identity_method\":\"unmapped\",\"identity_confidence\":\"LOW\",\"game\":\"ProspiA\",\"edition\":\"2026\",\"claim_lane\":\"NOISE\",\"rating_direction\":\"UNCLEAR\",\"speed_concept\":\"UNCLEAR\",\"discourse\":\"literal\",\"explicit_rating_value\":null,\"comparison_player\":null,\"event_id\":\"x:2077694733518782866:糸井嘉男:unk\",\"independence_group\":\"x:2077694733518782866\",\"reaction_volume\":1549,\"likes\":1437,\"source_quality\":\"official\",\"current_100\":false,\"notes\":\"official promo; not a speed claim | parent_x_tools\",\"handle\":\"prospiA_PR\",\"replies\":42,\"quotes\":70,\"discovery_source\":\"parent\"}"
+      ]
+    },
+    {
+      "bytes": 76339,
+      "path": "outputs/derived/speed_community_v3_x_supplemental_web_20260815.jsonl",
+      "sample": [
+        "{\"record_id\":\"AGC-C-008\",\"platform\":\"WEB\",\"source_type\":\"community\",\"source_url\":\"https://note.com/long_hippo421/n/ne2f8e91508ec\",\"source_post_or_video_id\":null,\"parent_event_id\":null,\"root_thread_id\":null,\"published_at\":null,\"text_or_excerpt\":\"チームトップの俊足は（あくまでパワプロの能力上）A84の樋口。次に田中幹也A83、津田A82、カリステA82と続く。カリステ！？\",\"player\":\"カリステ\",\"canonical_player_id\":\"93795157\",\"identity_method\":\"master_canonical_player_id\",\"identity_confidence\":\"HIGH\",\"game\":null,\"edition\":null,\"claim_lane\":\"RATING_POWERPRO\",\"rating_direction\":\"TOO_HIGH\",\"speed_concept\":\"PURE_SPEED\",\"discourse\":\"literal\",\"explicit_rating_value\":\"A82\",\"comparison_player\":null,\"event_id\":\"web:AGC-C-008:93795157:rating+speed_physical\",\"independence_group\":\"web:AGC-C-008:93795157\",\"reaction_volume\":0,\"likes\":null,\"source_quality\":\"community\",\"current_100\":true,\"notes\":\"中日代走比較でカリステA82に驚き。同一文に田中幹也A83。 | agent_c_central_hits.jsonl\",\"handle\":null,\"replies\":null,\"quotes\":null,\"discovery_source\":\"agent_c_central_hits.jsonl\",\"source_platform\":\"note\"",
+        "{\"record_id\":\"AGC-C-010\",\"platform\":\"WEB\",\"source_type\":\"community\",\"source_url\":\"https://note.com/long_hippo421/n/ne2f8e91508ec\",\"source_post_or_video_id\":null,\"parent_event_id\":null,\"root_thread_id\":null,\"published_at\":null,\"text_or_excerpt\":\"チームトップの俊足は（あくまでパワプロの能力上）A84の樋口。次に田中幹也A83、津田A82、カリステA82と続く。\",\"player\":\"田中 幹也\",\"canonical_player_id\":\"21025157\",\"identity_method\":\"master_canonical_player_id\",\"identity_confidence\":\"HIGH\",\"game\":null,\"edition\":null,\"claim_lane\":\"RATING_POWERPRO\",\"rating_direction\":\"COMPARISON_ONLY\",\"speed_concept\":\"PURE_SPEED\",\"discourse\":\"literal\",\"explicit_rating_value\":\"A83\",\"comparison_player\":null,\"event_id\":\"web:AGC-C-010:21025157:rating+speed_physical\",\"independence_group\":\"web:AGC-C-010:21025157\",\"reaction_volume\":0,\"likes\":null,\"source_quality\":\"community\",\"current_100\":true,\"notes\":\"パワプロ能力上の中日俊足序列。田中幹也をA83として列挙。 | agent_c_central_hits.jsonl\",\"handle\":null,\"replies\":null,\"quotes\":null,\"discovery_source\":\"agent_c_central_hits.jsonl\",\"source_platform\":\"note"
+      ]
+    },
+    {
+      "bytes": 13925917,
+      "path": "outputs/derived/speed_community_v3_youtube_candidates_20260814.jsonl",
+      "sample": [
+        "{\"author\": \"@養豚牧場\", \"author_id\": \"UCp1iF6w5efhWYOw59qrtU_A\", \"candidate_reason\": \"recall-first speed/rating or explicit grade/value signal in video-title/thread context; not an acceptance decision\", \"canonical_player_id\": \"\", \"collected_at\": \"2026-08-14T16:58:43Z\", \"comment_id\": \"UgwIpi-OlUs3wjvbyhh4AaABAg\", \"comment_published_at\": 1781481600, \"context_for_review\": \"『パワプロアドベンチャーズ』3rdシナリオ カジナイトアカデミー紹介\\n3rdサクセスシナリオ カジナイトアカデミーの紹介です。 『鋼の如き心であれ』 主人公たちに足りないものは何なのか—― 答えを求めて、ハンマーを手にする🔨 打てよ黒鉄！叩いて鍛えて、強き心を手に入れろ！ #パワプロアドベンチャーズ #パワアド ダウンロードはこちら：https://konami-app.go.link/bQ12m 公式サイト：https://www.konami.com/pawa/adventures/ 公式X：https://x.com/pawa_adventures\\nすごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りない？？毎日30分ぐらいだけど、微課金で楽しくやれるよー😂人口増えますように。\\nすごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りない？？毎日30分ぐらいだけど、微課金で楽しくやれるよー😂人口増えますように。\\nすごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りない？？毎日30分ぐらいだけど、微課金で楽しくやれるよー😂人口増えますように。\\nすごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りない？？毎日30分ぐらいだけど、微課金で楽しくやれるよー😂人口増えますように。\", \"direct_thread_context\": [\"すごく楽しいし、毎日ログインしてるけど、ガチ勢にとっては物足りな",
+        "{\"author\": \"@jmjmist\", \"author_id\": \"UCuzgR0r04R5cwSBBdc8TIfQ\", \"candidate_reason\": \"recall-first speed/rating or explicit grade/value signal in video-title/thread context; not an acceptance decision\", \"canonical_player_id\": \"\", \"collected_at\": \"2026-08-14T16:58:50Z\", \"comment_id\": \"UgyxMxssOdjufZYvpvp4AaABAg\", \"comment_published_at\": 1776211200, \"context_for_review\": \"『パワフルプロ野球2026-2027』オープニングムービー\\n“歴史（サクセス）は、受け継がれる。” 「パワフルプロ野球2026-2027」（Nintendo Switch™・PlayStation®4）6月11日発売！ 公式サイト：https://www.konami.com/pawa/2026-2027/ 『Highlight』 Stand up now, we’re ready now Go! Stand up now, we’re ready now All set! 歓声が空揺らす Stand up now, we’re ready now Go! Stand up now, we’re ready now All set! その背に未来を 高鳴る鼓動を信じて 重なる熱量が 期待感と展開の煌めき 覚悟を決めてけ 何度も見失って 息飲むストーリー 奇跡的な証明に変わるさ 大丈夫信じて （ほら） 誰にも見せず （ずっと） 積み上げていた 負けないように向き合うように 静かな夜を越えてきた （ほら）気づけばそばに （いま）同じ痛みを 背負いながら駆け出す君 準備はもう出来たよね （胸を張って） はじめよう いま世界を駆けていけ 照らす 光の先 風に乗る夢 ひとりじゃない いま未来を駆けていこう 照らせ 光のように 掴み取ろう さあこの手で Stand up now, we’re ready now Go! Stand up now,"
+      ]
+    },
+    {
+      "bytes": 134,
+      "path": "outputs/derived/speed_community_v3_youtube_raw_20260814.jsonl",
+      "sample": [
+        "version https://git-lfs.github.com/spec/v1",
+        "oid sha256:250970a875a0b348f61fdfe555dd90b199805bb88fc3c4ee027bffc65a86ff20"
+      ]
+    },
+    {
+      "bytes": 11664177,
+      "path": "outputs/derived/speed_community_v3_youtube_regression_20260814.json",
+      "sample": [
+        "{",
+        "  \"schema_version\": \"speed_community_v3_youtube_semantic_qa_v1\","
+      ]
+    },
+    {
+      "bytes": 10363407,
+      "path": "outputs/derived/speed_community_v3_youtube_semantic_classified_20260814.jsonl",
+      "sample": [
+        "{\"candidate_reasons\": [\"speed_term\", \"explicit_speed_grade_or_value\", \"fresh_integrated_candidate_preserved\"], \"canonical_player_id\": \"21925136\", \"claim_lane\": \"RATING_POWERPRO\", \"comparison_player\": null, \"context_sources_used\": [\"comment\", \"video_title\", \"parent\", \"root\", \"direct_replies\"], \"current_100\": true, \"direct_replies\": [{\"comment_id\": null, \"likes\": null, \"text\": \"矢部がフォアボール選んで走力Bなのに2023の周東をオマージュされてる。奇跡かよ。\"}], \"discourse\": \"literal\", \"edition\": \"2026-2027\", \"event_id\": \"youtube:wOjrANePk1c:21925136:RATING_POWERPRO:B\", \"explicit_rating_grade\": \"B\", \"explicit_rating_number\": null, \"explicit_rating_value\": \"B\", \"fresh_raw_record_id\": null, \"game\": \"PowerPro\", \"gameplay_claim_present\": false, \"identity_candidates\": [\"周東 佑京\"], \"identity_confidence\": \"MEDIUM\", \"identity_context\": {\"excerpt\": \"矢部がフォアボール選んで走力Bなのに2023の周東をオマージュされてる。奇跡かよ。\", \"matched\": \"周東 佑京\", \"source\": \"comment\"}, \"identity_method\": \"comment_surname\", \"independence_group\": \"youtube:wOjrANePk1c:UgzvQLSZSU1SMgElDAB4AaAB",
+        "{\"candidate_reasons\": [\"speed_term\", \"explicit_speed_grade_or_value\", \"rating_language\", \"gameplay_context\", \"fresh_integrated_candidate_preserved\"], \"canonical_player_id\": \"91095135\", \"claim_lane\": \"RATING_PROSPI\", \"comparison_player\": null, \"context_sources_used\": [\"comment\", \"video_title\", \"root\", \"direct_replies\"], \"current_100\": true, \"direct_replies\": [{\"comment_id\": \"UgwzgKtu11a_sJPcYrl4AaABAg.AZKIWzYYGWiAZKMQ4ub2Ic\", \"likes\": 1, \"text\": \"イチローの功績、成績考えたらこのくらいぶっ壊してもいいと思う笑\"}], \"discourse\": \"literal\", \"edition\": \"Prospi official YouTube lane\", \"event_id\": \"youtube:sX8nl6eCua0:91095135:RATING_PROSPI:93\", \"explicit_rating_grade\": null, \"explicit_rating_number\": 93, \"explicit_rating_value\": \"93\", \"fresh_raw_record_id\": \"SP034-V3-RAW-sX8nl6eCua0-UgwzgKtu11a_sJPcYrl4AaABAg\", \"game\": \"Pro Yakyuu Spirits A\", \"gameplay_claim_present\": true, \"identity_candidates\": [\"高橋 周平\"], \"identity_confidence\": \"MEDIUM\", \"identity_context\": {\"excerpt\": \"イチローこうなったらいいな\\n弾道イチロー  打球がすごくはやい。ゴロ時の野手のトンネル確率20%UP\\"
+      ]
+    },
+    {
+      "bytes": 8462211,
+      "first_json_keys": [
+        "author",
+        "author_id",
+        "collected_at",
+        "comment_id",
+        "event_id",
+        "game",
+        "independence_group",
+        "like_count",
+        "missingness",
+        "official_channel_id",
+        "parent",
+        "platform",
+        "prior_run2_comment_count",
+        "record_id",
+        "source_type",
+        "source_url",
+        "text",
+        "timestamp",
+        "video_id",
+        "video_title"
+      ],
+      "path": "outputs/derived/speed_youtube_official_comments_recovered_20260813.jsonl",
+      "sample": [
+        "{\"record_id\":\"YT-RECOVER-wOjrANePk1c-UgwGtkn43ODz9W1Gn_d4AaABAg\",\"game\":\"PowerPro\",\"platform\":\"YouTube\",\"source_type\":\"official_youtube_comment_recovered\",\"source_url\":\"https://www.youtube.com/watch?v=wOjrANePk1c&lc=UgwGtkn43ODz9W1Gn_d4AaABAg\",\"video_id\":\"wOjrANePk1c\",\"video_title\":\"『パワフルプロ野球2026-2027』オープニングムービー\",\"official_channel_id\":\"UCWzEh28vj3mQKpe0fzVTOUw\",\"comment_id\":\"UgwGtkn43ODz9W1Gn_d4AaABAg\",\"parent\":\"root\",\"author\":\"@Gilka-p1923\",\"author_id\":\"UCOCOriYA7C7VnqVxwFiiVdQ\",\"timestamp\":1776124800,\"text\":\"打球の軌道でイチローって分かるあたり、完璧な再現ですわ。\",\"like_count\":600,\"event_id\":\"youtube:wOjrANePk1c\",\"independence_group\":\"youtube:wOjrANePk1c\",\"collected_at\":\"2026-08-13T14:57:20Z\",\"missingness\":\"YTDLP_BOUNDED_PUBLIC_COMMENT_RECOVERY; not a YouTube Data API exhaustive dump\",\"prior_run2_comment_count\":100}",
+        "{\"record_id\":\"YT-RECOVER-wOjrANePk1c-UgwGtkn43ODz9W1Gn_d4AaABAg.AUMUfBRMLVCAXnVeYxOPZ0\",\"game\":\"PowerPro\",\"platform\":\"YouTube\",\"source_type\":\"official_youtube_comment_recovered\",\"source_url\":\"https://www.youtube.com/watch?v=wOjrANePk1c&lc=UgwGtkn43ODz9W1Gn_d4AaABAg.AUMUfBRMLVCAXnVeYxOPZ0\",\"video_id\":\"wOjrANePk1c\",\"video_title\":\"『パワフルプロ野球2026-2027』オープニングムービー\",\"official_channel_id\":\"UCWzEh28vj3mQKpe0fzVTOUw\",\"comment_id\":\"UgwGtkn43ODz9W1Gn_d4AaABAg.AUMUfBRMLVCAXnVeYxOPZ0\",\"parent\":\"UgwGtkn43ODz9W1Gn_d4AaABAg\",\"author\":\"@ahiru_shu\",\"author_id\":\"UCIUHCvN5QbUBxDMFg54wxew\",\"timestamp\":1781395200,\"text\":\"ランナーがスタートしている！矢部がスタートしている!！があったってこともわかってしまう\",\"like_count\":15,\"event_id\":\"youtube:wOjrANePk1c\",\"independence_group\":\"youtube:wOjrANePk1c\",\"collected_at\":\"2026-08-13T14:57:20Z\",\"missingness\":\"YTDLP_BOUNDED_PUBLIC_COMMENT_RECOVERY; not a YouTube Data API exhaustive dump\",\"prior_run2_comment_count\":100}"
+      ]
+    },
+    {
+      "bytes": 63445,
+      "path": "outputs/derived/speed_youtube_official_comments_recovery_manifest_20260813.json",
+      "sample": [
+        "{",
+        "  \"generated_at\": \"2026-08-13T14:57:01Z\","
+      ]
+    },
+    {
+      "bytes": 7374,
+      "path": "outputs/derived/speed_youtube_official_video_inventory_20260813.csv",
+      "sample": [
+        "lane_file,inventory_id,game,edition,video_id,video_url,official_channel_name,official_channel_id,title,published_at,player_game_update_mapping,source_type,source_url,collected_at,acquisition_status,api_state,comment_total_reported,comment_sample_size,comment_sort,acceptance_status,acceptance_reason,attempted_routes,required_user_input,notes,channel_name,channel_id,duration_seconds,target_player_mapping,update_mapping,official_verification,comment_count_reported,comments_retrieved,API_state",
+        "outputs\\derived\\speed_youtube_official_video_inventory_powerpro_20260813.csv,PPYT-INV-001,PowerPro,2026-2027,wOjrANePk1c,https://www.youtube.com/watch?v=wOjrANePk1c,パワプロ・プロスピ公式チャンネル,UCWzEh28vj3mQKpe0fzVTOUw,『パワフルプロ野球2026-2027』オープニングムービー,2026-03-12T02:55:00+00:00,NO_CURRENT_NPB_PLAYER_OR_RATING_MAPPING_IDENTIFIED,YOUTUBE_OFFICIAL_VIDEO,https://www.youtube.com/watch?v=wOjrANePk1c,2026-08-13T19:37:10.6851456+09:00,METADATA_AND_PUBLIC_COMMENT_SAMPLE_COLLECTED,NOT_CONFIGURED_ENV; official YouTube Data API not called,~1987 reported by public extractor during retrieval,100,top,INSUFFICIENT,Official current-edition video but no player ability/rating or update reveal; no direct running-rating claim in the top-100 public-comment sample.,official channel search; yt-dlp metadata; yt-dlp top-100 public comments; API-key env check; browser attempt unavailable,\"For API-paginated or full-reproducibility coverage, provide YouTube Data API commentThreads JSON/CSV or an authorized API export. No user inp"
+      ]
+    },
+    {
+      "bytes": 71646,
+      "path": "outputs/derived/speed_youtube_official_video_inventory_20260813_run2.csv",
+      "sample": [
+        "inventory_id,game,edition,video_id,video_url,official_channel_name,official_channel_id,title,published_at,player_game_update_mapping,source_type,source_url,collected_at,acquisition_status,api_state,comment_total_reported,comment_sample_size,comment_sort,acceptance_status,acceptance_reason,attempted_routes,required_user_input,notes,error,missingness",
+        "RUN2-YT-INV-001,PowerPro,PowerPro 2026-2027,wOjrANePk1c,https://www.youtube.com/watch?v=wOjrANePk1c,パワプロ・プロスピ公式チャンネル (UCWzEh28vj3mQKpe0fzVTOUw),UCWzEh28vj3mQKpe0fzVTOUw,『パワフルプロ野球2026-2027』オープニングムービー,2026-03-12T02:55:00Z,NO_SAFE_CURRENT_100_PLAYER_MAPPING_FROM_TITLE_OR_DESCRIPTION,YOUTUBE_OFFICIAL_CURRENT_EDITION_OPENING,https://www.youtube.com/watch?v=wOjrANePk1c,2026-08-13T11:09:20Z,METADATA_AND_PUBLIC_COMMENT_SAMPLE_COLLECTED,NOT_CONFIGURED_ENV; YouTube Data API key is not configured in the execution environment.,100,100,NOT_REPORTED,INSUFFICIENT,\"Retrieved 100 public comments; screened 0 broad speed+rating keyword candidates and found no safely current-master-name-mapped directional rating claim. This is only a sample-level insufficiency finding, not proof that no comment exists.\",\"yt-dlp --no-update --skip-download --no-playlist --write-info-json --write-comments --extractor-args youtube:max_comments=100,100,100,100 --output C:\\Users\\amila\\AppData\\Local\\Temp\\speed_youtube_powerpro_"
+      ]
+    },
+    {
+      "bytes": 2826,
+      "path": "outputs/derived/speed_youtube_official_video_inventory_powerpro_20260813.csv",
+      "sample": [
+        "﻿\"inventory_id\",\"game\",\"edition\",\"video_id\",\"video_url\",\"official_channel_name\",\"official_channel_id\",\"title\",\"published_at\",\"player_game_update_mapping\",\"source_type\",\"source_url\",\"collected_at\",\"acquisition_status\",\"api_state\",\"comment_total_reported\",\"comment_sample_size\",\"comment_sort\",\"acceptance_status\",\"acceptance_reason\",\"attempted_routes\",\"required_user_input\",\"notes\"",
+        "\"PPYT-INV-001\",\"PowerPro\",\"2026-2027\",\"wOjrANePk1c\",\"https://www.youtube.com/watch?v=wOjrANePk1c\",\"パワプロ・プロスピ公式チャンネル\",\"UCWzEh28vj3mQKpe0fzVTOUw\",\"『パワフルプロ野球2026-2027』オープニングムービー\",\"2026-03-12T02:55:00+00:00\",\"NO_CURRENT_NPB_PLAYER_OR_RATING_MAPPING_IDENTIFIED\",\"YOUTUBE_OFFICIAL_VIDEO\",\"https://www.youtube.com/watch?v=wOjrANePk1c\",\"2026-08-13T19:37:10.6851456+09:00\",\"METADATA_AND_PUBLIC_COMMENT_SAMPLE_COLLECTED\",\"NOT_CONFIGURED_ENV; official YouTube Data API not called\",\"~1987 reported by public extractor during retrieval\",\"100\",\"top\",\"INSUFFICIENT\",\"Official current-edition video but no player ability/rating or update reveal; no direct running-rating claim in the top-100 public-comment sample.\",\"official channel search; yt-dlp metadata; yt-dlp top-100 public comments; API-key env check; browser attempt unavailable\",\"For API-paginated or full-reproducibility coverage, provide YouTube Data API commentThreads JSON/CSV or an authorized API export. No user input is needed for this metadata row."
+      ]
+    },
+    {
+      "bytes": 4570,
+      "path": "outputs/derived/speed_youtube_official_video_inventory_prospi_20260813.csv",
+      "sample": [
+        "inventory_id,game,edition,source_type,channel_name,channel_id,video_id,source_url,title,published_at,duration_seconds,target_player_mapping,update_mapping,official_verification,comment_count_reported,comments_retrieved,acquisition_status,API_state,required_user_input,collected_at,acceptance_status,acceptance_reason,attempted_routes,notes",
+        "\"SP034-PROSPI-YT-VIDEO--t3uaS6tKok\",\"Pro Yakyuu Spirits A\",\"2024 Furuta-Satozaki Selection\",\"official_youtube_ability_value_announcement\",\"パワプロ・プロスピ公式チャンネル\",\"UCWzEh28vj3mQKpe0fzVTOUw\",\"-t3uaS6tKok\",\"https://www.youtube.com/watch?v=-t3uaS6tKok\",\"【プロ野球スピリッツA】古田・里崎セレクション 能力値発表編\",\"2024-12-26T12:20:38+09:00\",\"1849\",\"Historical 2024 Furuta-Satozaki Selection; no safe direct 2026 100-player mapping from title/metadata alone\",\"Selection ability-value announcement\",\"Uploader/channel match: パワプロ・プロスピ公式チャンネル / UCWzEh28vj3mQKpe0fzVTOUw\",\"1447\",\"1447\",\"COMMENTS_RETRIEVED_SCREENED_NO_ACCEPTED_SPEED_RATING_RECORD\",\"YouTube Data API key not configured; public comments retrieved via yt-dlp public YouTube endpoint\",\"NONE for this video; provide YouTube Data API export only if independent API provenance is required\",\"2026-08-13T10:38:43.9586406Z\",\"INSUFFICIENT\",\"Relevant official ability-value video, but no retrieved comment was both explicit on speed-rating direction and safely mapped to a 2026 100-play"
+      ]
+    },
+    {
+      "bytes": 2002,
+      "path": "outputs/derived/speed_youtube_powerpro_run2_execution_log.md",
+      "sample": [
+        "# SP-033 PowerPro official YouTube run2 execution log",
+        ""
+      ]
+    },
+    {
+      "bytes": 3313,
+      "path": "outputs/derived/speed_youtube_prospi_run2_execution_log.md",
+      "sample": [
+        "# SP-034 Prospi official YouTube collection — run2",
+        ""
+      ]
+    },
+    {
+      "bytes": 4352,
+      "path": "outputs/derived/speed_youtube_prospi_run2_qa.md",
+      "sample": [
+        "# SP-034 Prospi official YouTube run2 — QA",
+        ""
+      ]
+    },
+    {
+      "bytes": 9844,
+      "path": "scripts/activate_sp102_targeted_video_comment_rescue_20260818.mjs",
+      "sample": [
+        "// Idempotently activate SP-102 as a post-SP-101, low-confidence-only",
+        "// Community rescue lane. This script must not collect comments, write owner"
+      ]
+    },
+    {
+      "bytes": 86995,
+      "path": "scripts/build_speed_community_v3_terra_final_20260815.mjs",
+      "sample": [
+        "// Community V3 final semantic integration.  It is bounded and conservative:",
+        "// no network collection, no physical teacher, no automatic player rating change."
+      ]
+    },
+    {
+      "bytes": 22800,
+      "path": "scripts/build_speed_community_v3_x_20260815.mjs",
+      "sample": [
+        "// Build SP-035 v3 artifacts from parent X tool hits + optional agent scratch files.",
+        "import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';"
+      ]
+    },
+    {
+      "bytes": 47591,
+      "path": "scripts/cleanup_speed_community_v3_x_sp035_20260815.mjs",
+      "sample": [
+        "// SP-035 deterministic integrity cleanup.",
+        "// Reads the existing Grok artifacts only. It never searches, fetches, or edits raw evidence."
+      ]
+    },
+    {
+      "bytes": 24002,
+      "path": "scripts/collect_speed_youtube_powerpro_run2.py",
+      "sample": [
+        "# -*- coding: utf-8 -*-",
+        "\"\"\"Collect SP-033 PowerPro official-YouTube evidence into isolated run-2 staging files."
+      ]
+    },
+    {
+      "bytes": 21847,
+      "path": "scripts/collect_speed_youtube_prospi_run2.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "\"\"\"Collect the SP-034 Prospi official-YouTube lane without touching run1 data."
+      ]
+    },
+    {
+      "bytes": 2819,
+      "path": "scripts/inspect_sp102_youtube_foundation_20260819.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "from __future__ import annotations"
+      ]
+    },
+    {
+      "bytes": 9565,
+      "path": "scripts/qa_speed_youtube_prospi_run2.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "\"\"\"Validate SP-034 run2 staging without rewriting its append-only collection rows.\"\"\""
+      ]
+    },
+    {
+      "bytes": 7013,
+      "path": "scripts/recover_youtube_official_comments_known_videos.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "\"\"\"Recover already-identified official-YouTube comment texts."
+      ]
+    },
+    {
+      "bytes": 6963,
+      "path": "scripts/sp033_034_surname_identity_resolution.mjs",
+      "sample": [
+        "// SP-033/034 — 姓候補を video title / 一意姓 / 文脈で安全に解決する。",
+        "// 自動採用できないものは review lane。皮肉・反語は採用しない。"
+      ]
+    },
+    {
+      "bytes": 12154,
+      "path": "scripts/sp033_034_youtube_existing_classify.mjs",
+      "sample": [
+        "// SP-033/034 — 既存公式YouTubeコメントを分類する。新規動画探索はしない。",
+        "import { readFileSync, writeFileSync, existsSync } from 'node:fs';"
+      ]
+    },
+    {
+      "bytes": 2912,
+      "path": "scripts/speed_community_v3_youtube_discover.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "\"\"\"Scan the official YouTube channel for the V3 discovery window."
+      ]
+    },
+    {
+      "bytes": 31581,
+      "path": "scripts/speed_community_v3_youtube_integrate.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "\"\"\"Integrate the two lane-specific YouTube V3 outputs."
+      ]
+    },
+    {
+      "bytes": 4321,
+      "path": "scripts/speed_community_v3_youtube_metadata.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "\"\"\"Enrich the official-channel flat scan with publishedAt/description metadata."
+      ]
+    },
+    {
+      "bytes": 42246,
+      "path": "scripts/speed_community_v3_youtube_powerpro.py",
+      "sample": [
+        "# -*- coding: utf-8 -*-",
+        "\"\"\"SP-033 PowerPro official YouTube lane: fresh discovery and bounded recovery."
+      ]
+    },
+    {
+      "bytes": 12934,
+      "path": "scripts/speed_community_v3_youtube_powerpro_context.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "\"\"\"Recover row-level PowerPro comment/reply context for the V3 lane."
+      ]
+    },
+    {
+      "bytes": 60996,
+      "path": "scripts/speed_community_v3_youtube_prospi.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "\"\"\"SP-034 Prospi official YouTube lane for Community Recollection V3."
+      ]
+    },
+    {
+      "bytes": 17843,
+      "path": "scripts/speed_community_v3_youtube_prospi_remainder.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "\"\"\"Bounded completion pass for Prospi videos not finished by the primary worker."
+      ]
+    },
+    {
+      "bytes": 62139,
+      "path": "scripts/speed_community_v3_youtube_semantic.py",
+      "sample": [
+        "#!/usr/bin/env python3",
+        "\"\"\"V3 YouTube recall-first candidate extraction and semantic QA."
+      ]
+    }
+  ]
+}
