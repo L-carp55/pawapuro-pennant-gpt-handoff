@@ -1,0 +1,595 @@
+{
+  "generated_at": "2026-08-19",
+  "players": [
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "来田 涼斗",
+      "queue_order": 4,
+      "stable_player_key": "PROEYE:51955153"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "西川 龍馬",
+      "queue_order": 8,
+      "stable_player_key": "PROEYE:71475132"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "西野 真弘",
+      "queue_order": 9,
+      "stable_player_key": "PROEYE:91495130"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "LOW",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [],
+      "full_with_sp102": {
+        "confidence": "LOW",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "土田 龍空",
+      "queue_order": 11,
+      "stable_player_key": "PROEYE:51455153"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "福永 裕基",
+      "queue_order": 19,
+      "stable_player_key": "PROEYE:81685157"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "細川 成也",
+      "queue_order": 20,
+      "stable_player_key": "PROEYE:31835134"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "水野 達稀",
+      "queue_order": 23,
+      "stable_player_key": "PROEYE:63165155"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "清宮 幸太郎",
+      "queue_order": 24,
+      "stable_player_key": "PROEYE:41545136"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "郡司 裕也",
+      "queue_order": 26,
+      "stable_player_key": "PROEYE:21925151"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "野村 佑希",
+      "queue_order": 27,
+      "stable_player_key": "PROEYE:31435138"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "LOW",
+        "direction_band": "LOW",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "LOW",
+        "direction_band": "LOW",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "ソト",
+      "queue_order": 28,
+      "stable_player_key": "PROEYE:03505133"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "佐藤 都志也",
+      "queue_order": 30,
+      "stable_player_key": "PROEYE:71075151"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "山口 航輝",
+      "queue_order": 34,
+      "stable_player_key": "PROEYE:91895138"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "藤岡 裕大",
+      "queue_order": 37,
+      "stable_player_key": "PROEYE:41645136"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "LOW",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "LOW",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "ファビアン",
+      "queue_order": 44,
+      "stable_player_key": "PROEYE:43745150"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "モンテロ",
+      "queue_order": 45,
+      "stable_player_key": "PROEYE:53955150"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "坂倉 将吾",
+      "queue_order": 47,
+      "stable_player_key": "PROEYE:11915134"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "小園 海斗",
+      "queue_order": 48,
+      "stable_player_key": "PROEYE:01705138"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "矢野 雅哉",
+      "queue_order": 49,
+      "stable_player_key": "PROEYE:93395153"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "秋山 翔吾",
+      "queue_order": 50,
+      "stable_player_key": "PROEYE:31135133"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "野間 峻祥",
+      "queue_order": 52,
+      "stable_player_key": "PROEYE:01405130"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "丸山 和郁",
+      "queue_order": 56,
+      "stable_player_key": "PROEYE:93195155"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "古賀 優大",
+      "queue_order": 57,
+      "stable_player_key": "PROEYE:01705134"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "村林 一輝",
+      "queue_order": 62,
+      "stable_player_key": "PROEYE:41845132"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "京田 陽太",
+      "queue_order": 66,
+      "stable_player_key": "PROEYE:81585134"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "林 琢真",
+      "queue_order": 71,
+      "stable_player_key": "PROEYE:91695157"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "蝦名 達夫",
+      "queue_order": 75,
+      "stable_player_key": "PROEYE:51555151"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "今宮 健太",
+      "queue_order": 76,
+      "stable_player_key": "PROEYE:31335131"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "岸田 行倫",
+      "queue_order": 90,
+      "stable_player_key": "PROEYE:91595136"
+    },
+    {
+      "ablated_without_sp102_lane": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "use_state": "NO_USABLE_EVIDENCE"
+      },
+      "changed_fields": [
+        "use_state"
+      ],
+      "full_with_sp102": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "numeric_rating_change": false,
+      "owner_verdict_change": false,
+      "player": "木浪 聖也",
+      "queue_order": 98,
+      "stable_player_key": "PROEYE:31735138"
+    }
+  ],
+  "policy": "remove the entire SP-102 contextual lane and recompute its decision-use state; no final practical rating calculation",
+  "schema_version": "sp102_decision_use_and_ablation_20260819_v2"
+}

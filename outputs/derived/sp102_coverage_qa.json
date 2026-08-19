@@ -1,0 +1,102 @@
+{
+  "all100_selection_count": 100,
+  "canaries": {
+    "checks": {
+      "baserunning_technique_separate": true,
+      "powerpro_opinion_separate": true,
+      "sarcasm_or_meme_not_physical": true,
+      "title_priming_not_usable": true,
+      "wrong_season_historical": true
+    },
+    "classifications": {
+      "meme": "MEME_SARCASM_JOKE",
+      "rating_opinion": "CURRENT_POWERPRO_RATING_OPINION",
+      "sarcasm": "MEME_SARCASM_JOKE",
+      "technique": "CURRENT_TECHNIQUE_CONTEXT",
+      "title_priming": "AMBIGUOUS_TIME_OR_PLAYER",
+      "wrong_season": "HISTORICAL_TRAJECTORY"
+    },
+    "pass": true
+  },
+  "frozen_source_snapshot_hashes": {
+    "sp102_comment_evidence_records.jsonl.gz": "06f5649ecb3f8d32cb134f30ad41265a09e6b5c9d73dc7c47c56ca6c174dacae",
+    "sp102_event_dedup_registry.jsonl.gz": "ad312be8be66c53780f7f21bf86392718320169dda69424ab44ac3dfab2ca059",
+    "sp102_primary_source_records.jsonl.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "sp102_video_comment_search_ledger.jsonl.gz": "8136e88bb88a7e820eb8e7f26f47c9f5252d59f09c6aa0da724bf4348d48824f"
+  },
+  "frozen_target_count": 30,
+  "full100_consistency": "PASS_TARGET_SELECTION_DENOMINATOR_AND_NON_TARGET_IMMUTABILITY; ratings not rerun because SP-079 is explicitly prohibited",
+  "generated_at": "2026-08-19",
+  "independence_canaries": {
+    "near_duplicate_template_collapse": "PASS_BY_CONTAINMENT_OR_PREFIX_RULE",
+    "quoted_narration_comment_dependency_collapse": "PASS_BY_QUOTE_OR_SAME_VIDEO_RULE",
+    "same_author_cross_video_repeats_collapse": "PASS_BY_RUN_SCOPED_AUTHOR_RULE",
+    "same_video_repeated_claims_collapse": "PASS_BY_CONNECTED_COMPONENT_RULE"
+  },
+  "influence_guard": {
+    "comment_as_direct_measurement": false,
+    "comment_only_high_confidence": false,
+    "field_50m_to_sprint_speed": false,
+    "final_numeric_rating_created": false,
+    "likes_as_votes": false
+  },
+  "non_target_count": 70,
+  "non_target_keys_present_in_sp102_evidence": [],
+  "origin_event_cluster_count_refined": 54,
+  "primary_promotion": {
+    "discovered": 0,
+    "independently_fetched_validated": 0,
+    "promoted_to_primary_evidence": 0
+  },
+  "privacy": {
+    "commenter_origin_token_run_scoped_nonreversible": true,
+    "public_username_fields_persisted": false
+  },
+  "same_event_inflation_after_cluster": 0,
+  "schema_version": "sp102_coverage_qa_20260819",
+  "selection_state_counts": {
+    "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN": 70,
+    "TARGETED_LOW_CONFIDENCE": 3,
+    "TARGETED_MATERIAL_CONFLICT": 27
+  },
+  "semantic_class_guard": {
+    "allowed_classes": [
+      "AMBIGUOUS_TIME_OR_PLAYER",
+      "CURRENT_END_TO_END_OR_FULL_EFFORT",
+      "CURRENT_INITIAL_ACCELERATION_OR_H2F",
+      "CURRENT_POWERPRO_RATING_OPINION",
+      "CURRENT_REALWORLD_SPEED_PHYSICAL",
+      "CURRENT_TECHNIQUE_CONTEXT",
+      "GENERAL_FANDOM_NO_SPEED_CLAIM",
+      "HISTORICAL_TRAJECTORY",
+      "INJURY_AGE_DECLINE_CONTEXT",
+      "MEME_SARCASM_JOKE",
+      "PRIMARY_SOURCE_DISCOVERY",
+      "RELATIVE_ORDINAL_COMPARISON",
+      "REPOST_OR_QUOTE_NOT_INDEPENDENT",
+      "SPAM_OR_BOT"
+    ],
+    "observed_classes": [
+      "CURRENT_POWERPRO_RATING_OPINION",
+      "CURRENT_REALWORLD_SPEED_PHYSICAL",
+      "CURRENT_TECHNIQUE_CONTEXT",
+      "HISTORICAL_TRAJECTORY"
+    ]
+  },
+  "source_layer_guard": {
+    "allowed_layers": [
+      "LINKED_PRIMARY_SOURCE_DISCOVERED_IN_COMMENT",
+      "QUOTED_2CH_5CH_THREAD_TEXT",
+      "VIDEO_NARRATION_OR_EDITORIAL",
+      "YOUTUBE_COMMENT_REPLY",
+      "YOUTUBE_TOP_LEVEL_COMMENT"
+    ],
+    "layer_merge_forbidden": true,
+    "observed_layers": [
+      "YOUTUBE_COMMENT_REPLY",
+      "YOUTUBE_TOP_LEVEL_COMMENT"
+    ]
+  },
+  "status": "PASS",
+  "target_output_count": 30
+}

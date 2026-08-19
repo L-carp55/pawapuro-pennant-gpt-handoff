@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "name": "frozen_target_30_non_target_70",
+      "pass": true
+    },
+    {
+      "detail": {
+        "distribution": {
+          "6": 22,
+          "7": 4,
+          "8": 3,
+          "9": 1
+        },
+        "query_attempts": 193
+      },
+      "name": "every_target_at_least_three_queries",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "no_non_target_search",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "errors_explicit",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "api_provenance_explicit",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "evidence_targeted_only",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "comment_influence_low_no_direct_anchor",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "video_context_only_comment_not_directional",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "commenter_identity_sanitized",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "no_final_rating",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "50m_no_sprint_conversion",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "primary_not_promoted",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "event_registry_targeted_only",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "summary_scope_guard",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "owner_ledger_zero_lock_true",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "sp101_done_sp079_shoulder_blocked",
+      "pass": true
+    }
+  ],
+  "counts": {
+    "event_origins_raw": 55,
+    "evidence_records": 56,
+    "fetch_failures": 116,
+    "non_targeted": 70,
+    "primary_link_records": 0,
+    "query_errors": 0,
+    "search_queries": 193,
+    "targeted": 30,
+    "timed_context_records": 0,
+    "usable_low_influence_records": 56,
+    "video_fetches": 116
+  },
+  "fail_count": 0,
+  "generated_at": "2026-08-19",
+  "pass_count": 16,
+  "schema_version": "qa_sp102_targeted_video_comment_rescue_v2_20260819",
+  "status": "PASS_TARGETED_RESCUE_BOUNDED_VALIDATED"
+}

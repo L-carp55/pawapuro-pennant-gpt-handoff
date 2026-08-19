@@ -1,0 +1,2045 @@
+{
+  "generated_at": "2026-08-19",
+  "players": [
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-497ed24b4f546ce1be75"
+        ],
+        "record_ids": [
+          "SP102-EV-3baa9eb05846a7608076"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 1,
+      "linked_primary_sources_discovered": 0,
+      "player": "来田 涼斗",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"来田 涼斗\" 足 速い プロ野球",
+        "\"来田 涼斗\" 走力 比較",
+        "\"来田 涼斗\" 50m 一塁到達",
+        "\"来田 涼斗\" なんJ 反応集 足",
+        "\"来田涼斗\" オリックス 一塁到達 内野安打 加速 全力疾走",
+        "\"来田 涼斗\" オリックス 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 4,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 1
+      },
+      "stable_player_key": "PROEYE:51955153",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-4ce924e8aa334e6d4ae2",
+          "SP102-ORIGIN-67cde86c56f83cad3161",
+          "SP102-ORIGIN-b5011c0f75f030fdf92b",
+          "SP102-ORIGIN-c6a40cf59e5d60195bb4"
+        ],
+        "record_ids": [
+          "SP102-EV-706a4d3923f89858792c",
+          "SP102-EV-8ef185cb05c096e5b8c5",
+          "SP102-EV-df724d8f082d78114a05",
+          "SP102-EV-b4f0ecfa2f0e3ed9351f"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 4,
+      "linked_primary_sources_discovered": 0,
+      "player": "西川 龍馬",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 7,
+      "query_error_count": 0,
+      "query_set": [
+        "\"西川 龍馬\" 足 速い プロ野球",
+        "\"西川 龍馬\" 走力 比較",
+        "\"西川 龍馬\" 50m 一塁到達",
+        "\"西川 龍馬\" なんJ 反応集 足",
+        "\"西川龍馬\" オリックス 一塁到達 内野安打 加速 全力疾走",
+        "\"西川 龍馬\" オリックス 衰え 怪我 代走 足",
+        "\"西川 龍馬\" 広島 走力 足 速い"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN",
+        "FORMER_TEAM_CONTEXT"
+      ],
+      "queue_order": 8,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1,
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1,
+        "CURRENT_TECHNIQUE_CONTEXT": 1,
+        "HISTORICAL_TRAJECTORY": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 4
+      },
+      "stable_player_key": "PROEYE:71475132",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-e4f8f3d9806a4f0bdbe0",
+          "SP102-ORIGIN-f29d9c3f8c1f7acd8f53"
+        ],
+        "record_ids": [
+          "SP102-EV-0ad0e2c17a891343a61d",
+          "SP102-EV-858248b24dfd01d559a5"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 2,
+      "linked_primary_sources_discovered": 0,
+      "player": "西野 真弘",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"西野 真弘\" 足 速い プロ野球",
+        "\"西野 真弘\" 走力 比較",
+        "\"西野 真弘\" 50m 一塁到達",
+        "\"西野 真弘\" なんJ 反応集 足",
+        "\"西野真弘\" オリックス 一塁到達 内野安打 加速 全力疾走",
+        "\"西野 真弘\" オリックス 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 9,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1,
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 2
+      },
+      "stable_player_key": "PROEYE:91495130",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "LOW",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "NO_USABLE_EVIDENCE"
+      },
+      "before": {
+        "confidence": "LOW",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [],
+        "record_ids": []
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "NO_USABLE_EVIDENCE",
+      "independent_origin_event_cluster_count": 0,
+      "linked_primary_sources_discovered": 0,
+      "player": "土田 龍空",
+      "pre_rescue_confidence": "LOW",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"土田 龍空\" 足 速い プロ野球",
+        "\"土田 龍空\" 走力 比較",
+        "\"土田 龍空\" 50m 一塁到達",
+        "\"土田 龍空\" なんJ 反応集 足",
+        "\"土田龍空\" 中日 一塁到達 内野安打 加速 全力疾走",
+        "\"土田 龍空\" 中日 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 11,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {},
+      "source_layer_counts": {},
+      "stable_player_key": "PROEYE:51455153",
+      "target_reason": [
+        "residual_confidence_low",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=2"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "NO_USABLE_EVIDENCE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [],
+        "record_ids": []
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "NO_USABLE_EVIDENCE",
+      "independent_origin_event_cluster_count": 0,
+      "linked_primary_sources_discovered": 0,
+      "player": "福永 裕基",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"福永 裕基\" 足 速い プロ野球",
+        "\"福永 裕基\" 走力 比較",
+        "\"福永 裕基\" 50m 一塁到達",
+        "\"福永 裕基\" なんJ 反応集 足",
+        "\"福永裕基\" 中日 一塁到達 内野安打 加速 全力疾走",
+        "\"福永 裕基\" 中日 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 19,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {},
+      "source_layer_counts": {},
+      "stable_player_key": "PROEYE:81685157",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-7174e763cba7866927e1",
+          "SP102-ORIGIN-72babed8842a504d3115",
+          "SP102-ORIGIN-efd73b9745a0b817e523",
+          "SP102-ORIGIN-f8ae7fb9dcd38472a4be"
+        ],
+        "record_ids": [
+          "SP102-EV-264270fa66ab06005c58",
+          "SP102-EV-296220da1c7557a5614b",
+          "SP102-EV-5e4772fcb97b38479690",
+          "SP102-EV-9985acce43ed39ef4650"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 4,
+      "linked_primary_sources_discovered": 0,
+      "player": "細川 成也",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 7,
+      "query_error_count": 0,
+      "query_set": [
+        "\"細川 成也\" 足 速い プロ野球",
+        "\"細川 成也\" 走力 比較",
+        "\"細川 成也\" 50m 一塁到達",
+        "\"細川 成也\" なんJ 反応集 足",
+        "\"細川成也\" 中日 一塁到達 内野安打 加速 全力疾走",
+        "\"細川 成也\" 中日 衰え 怪我 代走 足",
+        "\"細川 成也\" DeNA 走力 足 速い"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN",
+        "FORMER_TEAM_CONTEXT"
+      ],
+      "queue_order": 20,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 2,
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 2
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 4
+      },
+      "stable_player_key": "PROEYE:31835134",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-61574dc5f1a0b9844ccf",
+          "SP102-ORIGIN-ca9c8d2f8079e0430848",
+          "SP102-ORIGIN-f6b8a543c34572c4b9f7"
+        ],
+        "record_ids": [
+          "SP102-EV-4c3b202bf210df688f85",
+          "SP102-EV-82e3d57dd261468ece25",
+          "SP102-EV-b61fe6b01f00200e5e79"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 3,
+      "linked_primary_sources_discovered": 0,
+      "player": "水野 達稀",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"水野 達稀\" 足 速い プロ野球",
+        "\"水野 達稀\" 走力 比較",
+        "\"水野 達稀\" 50m 一塁到達",
+        "\"水野 達稀\" なんJ 反応集 足",
+        "\"水野達稀\" 日本ハム 一塁到達 内野安打 加速 全力疾走",
+        "\"水野 達稀\" 日本ハム 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 23,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 3
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 3
+      },
+      "stable_player_key": "PROEYE:63165155",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-3916b46aa16d40f1006e",
+          "SP102-ORIGIN-fc914c636710f384a9b5"
+        ],
+        "record_ids": [
+          "SP102-EV-af61c8df30deae38a405",
+          "SP102-EV-f6c0a4f02b67cde9c234"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 2,
+      "linked_primary_sources_discovered": 0,
+      "player": "清宮 幸太郎",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"清宮 幸太郎\" 足 速い プロ野球",
+        "\"清宮 幸太郎\" 走力 比較",
+        "\"清宮 幸太郎\" 50m 一塁到達",
+        "\"清宮 幸太郎\" なんJ 反応集 足",
+        "\"清宮幸太郎\" 日本ハム 一塁到達 内野安打 加速 全力疾走",
+        "\"清宮 幸太郎\" 日本ハム 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 24,
+      "searched_video_denominator": 4,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1,
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 2
+      },
+      "stable_player_key": "PROEYE:41545136",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-39690f4131c5231ca316",
+          "SP102-ORIGIN-60fe45926edb7727cc37"
+        ],
+        "record_ids": [
+          "SP102-EV-61c9f63981979e81f1b5",
+          "SP102-EV-903854f91203c13b54f2"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 2,
+      "linked_primary_sources_discovered": 0,
+      "player": "郡司 裕也",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 7,
+      "query_error_count": 0,
+      "query_set": [
+        "\"郡司 裕也\" 足 速い プロ野球",
+        "\"郡司 裕也\" 走力 比較",
+        "\"郡司 裕也\" 50m 一塁到達",
+        "\"郡司 裕也\" なんJ 反応集 足",
+        "\"郡司裕也\" 日本ハム 一塁到達 内野安打 加速 全力疾走",
+        "\"郡司 裕也\" 日本ハム 衰え 怪我 代走 足",
+        "\"郡司 裕也\" 中日 走力 足 速い"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN",
+        "FORMER_TEAM_CONTEXT"
+      ],
+      "queue_order": 26,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1,
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 2
+      },
+      "stable_player_key": "PROEYE:21925151",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-3c7762ce501f52afd72b",
+          "SP102-ORIGIN-3fe11e57f80f76d58435"
+        ],
+        "record_ids": [
+          "SP102-EV-e68461b73b1fd06da107",
+          "SP102-EV-2f3d5375c4cb2c2cd438",
+          "SP102-EV-4579fe67f57af9b03c02"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 2,
+      "linked_primary_sources_discovered": 0,
+      "player": "野村 佑希",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"野村 佑希\" 足 速い プロ野球",
+        "\"野村 佑希\" 走力 比較",
+        "\"野村 佑希\" 50m 一塁到達",
+        "\"野村 佑希\" なんJ 反応集 足",
+        "\"野村佑希\" 日本ハム 一塁到達 内野安打 加速 全力疾走",
+        "\"野村 佑希\" 日本ハム 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 27,
+      "searched_video_denominator": 4,
+      "semantic_class_counts": {
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 3
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 3
+      },
+      "stable_player_key": "PROEYE:31435138",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "LOW",
+        "direction_band": "LOW",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "LOW",
+        "direction_band": "LOW",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-2bed9e43014a26a05aa5",
+          "SP102-ORIGIN-68ddce112f53fff3254e"
+        ],
+        "record_ids": [
+          "SP102-EV-e906c9704abde82d54ea",
+          "SP102-EV-fa485a7765369d3c1d0b"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 2,
+      "linked_primary_sources_discovered": 0,
+      "player": "ソト",
+      "pre_rescue_confidence": "LOW",
+      "query_denominator": 9,
+      "query_error_count": 0,
+      "query_set": [
+        "\"ソト\" 足 速い プロ野球",
+        "\"ソト\" 走力 比較",
+        "\"ソト\" 50m 一塁到達",
+        "\"ソト\" なんJ 反応集 足",
+        "\"ソト\" ロッテ 一塁到達 内野安打 加速 全力疾走",
+        "\"ソト\" ロッテ 衰え 怪我 代走 足",
+        "\"ソト\" DeNA 走力 足 速い",
+        "\"Neftali Soto\" baseball speed running",
+        "\"Neftalí Soto\" baseball speed running"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN",
+        "FORMER_TEAM_CONTEXT",
+        "ROMANIZED_OR_ENGLISH_ALIAS",
+        "ROMANIZED_OR_ENGLISH_ALIAS"
+      ],
+      "queue_order": 28,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1,
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 2
+      },
+      "stable_player_key": "PROEYE:03505133",
+      "target_reason": [
+        "residual_confidence_low",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=2"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-07204affccdf34856138",
+          "SP102-ORIGIN-436c0dcf91ac39e5f703",
+          "SP102-ORIGIN-89654d114263eae0d775"
+        ],
+        "record_ids": [
+          "SP102-EV-0b372f76e613e94b24b4",
+          "SP102-EV-4f19aa423d82c76b7e6e",
+          "SP102-EV-8965d97ae1ff77194dee",
+          "SP102-EV-f64e5b90b6ed00cd80c0"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 3,
+      "linked_primary_sources_discovered": 0,
+      "player": "佐藤 都志也",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"佐藤 都志也\" 足 速い プロ野球",
+        "\"佐藤 都志也\" 走力 比較",
+        "\"佐藤 都志也\" 50m 一塁到達",
+        "\"佐藤 都志也\" なんJ 反応集 足",
+        "\"佐藤都志也\" ロッテ 一塁到達 内野安打 加速 全力疾走",
+        "\"佐藤 都志也\" ロッテ 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 30,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 3,
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 4
+      },
+      "stable_player_key": "PROEYE:71075151",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-9e2b21ad53920ab46977"
+        ],
+        "record_ids": [
+          "SP102-EV-03cce8c1bbf462fd3550"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 1,
+      "linked_primary_sources_discovered": 0,
+      "player": "山口 航輝",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"山口 航輝\" 足 速い プロ野球",
+        "\"山口 航輝\" 走力 比較",
+        "\"山口 航輝\" 50m 一塁到達",
+        "\"山口 航輝\" なんJ 反応集 足",
+        "\"山口航輝\" ロッテ 一塁到達 内野安打 加速 全力疾走",
+        "\"山口 航輝\" ロッテ 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 34,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 1
+      },
+      "stable_player_key": "PROEYE:91895138",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-d9c3ed5391987bc64a63"
+        ],
+        "record_ids": [
+          "SP102-EV-e939766707c7bdc5d1be"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 1,
+      "linked_primary_sources_discovered": 0,
+      "player": "藤岡 裕大",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"藤岡 裕大\" 足 速い プロ野球",
+        "\"藤岡 裕大\" 走力 比較",
+        "\"藤岡 裕大\" 50m 一塁到達",
+        "\"藤岡 裕大\" なんJ 反応集 足",
+        "\"藤岡裕大\" ロッテ 一塁到達 内野安打 加速 全力疾走",
+        "\"藤岡 裕大\" ロッテ 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 37,
+      "searched_video_denominator": 4,
+      "semantic_class_counts": {
+        "HISTORICAL_TRAJECTORY": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 1
+      },
+      "stable_player_key": "PROEYE:41645136",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "LOW",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "LOW",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-556eed3d899ecefd953d",
+          "SP102-ORIGIN-6019621fc5701921b8ae",
+          "SP102-ORIGIN-9fb207cb2b4d624493df",
+          "SP102-ORIGIN-dfc963d30a36974e8bfc",
+          "SP102-ORIGIN-f2060fc3603d63e641a7"
+        ],
+        "record_ids": [
+          "SP102-EV-ac5311e384c28df1a838",
+          "SP102-EV-00e9289709e476767ef5",
+          "SP102-EV-f5b1df1f3b68a52fab66",
+          "SP102-EV-90c0b1951fd268662829",
+          "SP102-EV-f4ae0018592841362340"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 5,
+      "linked_primary_sources_discovered": 0,
+      "player": "ファビアン",
+      "pre_rescue_confidence": "LOW",
+      "query_denominator": 8,
+      "query_error_count": 0,
+      "query_set": [
+        "\"ファビアン\" 足 速い プロ野球",
+        "\"ファビアン\" 走力 比較",
+        "\"ファビアン\" 50m 一塁到達",
+        "\"ファビアン\" なんJ 反応集 足",
+        "\"ファビアン\" 広島 一塁到達 内野安打 加速 全力疾走",
+        "\"ファビアン\" 広島 衰え 怪我 代走 足",
+        "\"Sandro Fabian\" baseball speed running",
+        "\"Sandro Fabián\" baseball speed running"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN",
+        "ROMANIZED_OR_ENGLISH_ALIAS",
+        "ROMANIZED_OR_ENGLISH_ALIAS"
+      ],
+      "queue_order": 44,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 4,
+        "CURRENT_TECHNIQUE_CONTEXT": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_COMMENT_REPLY": 2,
+        "YOUTUBE_TOP_LEVEL_COMMENT": 3
+      },
+      "stable_player_key": "PROEYE:43745150",
+      "target_reason": [
+        "residual_confidence_low",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=2"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-44d3a176d3c8e694550b",
+          "SP102-ORIGIN-a7ec20abbc8aebb94f0d"
+        ],
+        "record_ids": [
+          "SP102-EV-e45550d340b81abea110",
+          "SP102-EV-546f4f3f3a8d7fbeab96"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 2,
+      "linked_primary_sources_discovered": 0,
+      "player": "モンテロ",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 8,
+      "query_error_count": 0,
+      "query_set": [
+        "\"モンテロ\" 足 速い プロ野球",
+        "\"モンテロ\" 走力 比較",
+        "\"モンテロ\" 50m 一塁到達",
+        "\"モンテロ\" なんJ 反応集 足",
+        "\"モンテロ\" 広島 一塁到達 内野安打 加速 全力疾走",
+        "\"モンテロ\" 広島 衰え 怪我 代走 足",
+        "\"モンテロ\" \"筒香 嘉智\" 足 どっちが速い 比較",
+        "\"Elehuris Montero\" baseball speed running"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN",
+        "EXPLICIT_PAIRWISE_COMPARISON",
+        "ROMANIZED_OR_ENGLISH_ALIAS"
+      ],
+      "queue_order": 45,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 2
+      },
+      "source_layer_counts": {
+        "YOUTUBE_COMMENT_REPLY": 1,
+        "YOUTUBE_TOP_LEVEL_COMMENT": 1
+      },
+      "stable_player_key": "PROEYE:53955150",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "NO_USABLE_EVIDENCE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [],
+        "record_ids": []
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "NO_USABLE_EVIDENCE",
+      "independent_origin_event_cluster_count": 0,
+      "linked_primary_sources_discovered": 0,
+      "player": "坂倉 将吾",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"坂倉 将吾\" 足 速い プロ野球",
+        "\"坂倉 将吾\" 走力 比較",
+        "\"坂倉 将吾\" 50m 一塁到達",
+        "\"坂倉 将吾\" なんJ 反応集 足",
+        "\"坂倉将吾\" 広島 一塁到達 内野安打 加速 全力疾走",
+        "\"坂倉 将吾\" 広島 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 47,
+      "searched_video_denominator": 4,
+      "semantic_class_counts": {},
+      "source_layer_counts": {},
+      "stable_player_key": "PROEYE:11915134",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "NO_USABLE_EVIDENCE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [],
+        "record_ids": []
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "NO_USABLE_EVIDENCE",
+      "independent_origin_event_cluster_count": 0,
+      "linked_primary_sources_discovered": 0,
+      "player": "小園 海斗",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"小園 海斗\" 足 速い プロ野球",
+        "\"小園 海斗\" 走力 比較",
+        "\"小園 海斗\" 50m 一塁到達",
+        "\"小園 海斗\" なんJ 反応集 足",
+        "\"小園海斗\" 広島 一塁到達 内野安打 加速 全力疾走",
+        "\"小園 海斗\" 広島 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 48,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {},
+      "source_layer_counts": {},
+      "stable_player_key": "PROEYE:01705138",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-c0dd73ccf80917a5372d"
+        ],
+        "record_ids": [
+          "SP102-EV-8e956991a0468dafe28a"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 1,
+      "linked_primary_sources_discovered": 0,
+      "player": "矢野 雅哉",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"矢野 雅哉\" 足 速い プロ野球",
+        "\"矢野 雅哉\" 走力 比較",
+        "\"矢野 雅哉\" 50m 一塁到達",
+        "\"矢野 雅哉\" なんJ 反応集 足",
+        "\"矢野雅哉\" 広島 一塁到達 内野安打 加速 全力疾走",
+        "\"矢野 雅哉\" 広島 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 49,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 1
+      },
+      "stable_player_key": "PROEYE:93395153",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-13aeffd54f57d9b18be2",
+          "SP102-ORIGIN-6787fe45a2a4682d94fe",
+          "SP102-ORIGIN-84942fa5117c8794e978",
+          "SP102-ORIGIN-a016c2f33556801ca7e8",
+          "SP102-ORIGIN-c3e2d4db495de303e2e1"
+        ],
+        "record_ids": [
+          "SP102-EV-1e241af3e6929ebd58a7",
+          "SP102-EV-3af87ca6c18921f2935f",
+          "SP102-EV-95e4562fba25df9f3524",
+          "SP102-EV-9b4d76421434a09911a6",
+          "SP102-EV-e08999e5c33f855c7c09"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 5,
+      "linked_primary_sources_discovered": 0,
+      "player": "秋山 翔吾",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 8,
+      "query_error_count": 0,
+      "query_set": [
+        "\"秋山 翔吾\" 足 速い プロ野球",
+        "\"秋山 翔吾\" 走力 比較",
+        "\"秋山 翔吾\" 50m 一塁到達",
+        "\"秋山 翔吾\" なんJ 反応集 足",
+        "\"秋山翔吾\" 広島 一塁到達 内野安打 加速 全力疾走",
+        "\"秋山 翔吾\" 広島 衰え 怪我 代走 足",
+        "\"秋山 翔吾\" 西武 走力 足 速い",
+        "\"秋山 翔吾\" \"ポランコ\" 足 どっちが速い 比較"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN",
+        "FORMER_TEAM_CONTEXT",
+        "EXPLICIT_PAIRWISE_COMPARISON"
+      ],
+      "queue_order": 50,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 4,
+        "HISTORICAL_TRAJECTORY": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 5
+      },
+      "stable_player_key": "PROEYE:31135133",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=4"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-0ae98890f1480fbee865",
+          "SP102-ORIGIN-9d8006d43ed0b375ad9f",
+          "SP102-ORIGIN-d46ed3c7b9d6bf19d89d"
+        ],
+        "record_ids": [
+          "SP102-EV-09cbcdf62cc303810936",
+          "SP102-EV-e0fe88c4108edd534a40",
+          "SP102-EV-e1e4dbea7b08fb073a7b"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 3,
+      "linked_primary_sources_discovered": 0,
+      "player": "野間 峻祥",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"野間 峻祥\" 足 速い プロ野球",
+        "\"野間 峻祥\" 走力 比較",
+        "\"野間 峻祥\" 50m 一塁到達",
+        "\"野間 峻祥\" なんJ 反応集 足",
+        "\"野間峻祥\" 広島 一塁到達 内野安打 加速 全力疾走",
+        "\"野間 峻祥\" 広島 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 52,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 2,
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 3
+      },
+      "stable_player_key": "PROEYE:01405130",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-52676e647879f4466095",
+          "SP102-ORIGIN-851aa98981a857058d43"
+        ],
+        "record_ids": [
+          "SP102-EV-63ffd9eb6f6cbf04ca60",
+          "SP102-EV-bf1c9bbce3cfd04dbf3e"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 2,
+      "linked_primary_sources_discovered": 0,
+      "player": "丸山 和郁",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"丸山 和郁\" 足 速い プロ野球",
+        "\"丸山 和郁\" 走力 比較",
+        "\"丸山 和郁\" 50m 一塁到達",
+        "\"丸山 和郁\" なんJ 反応集 足",
+        "\"丸山和郁\" ヤクルト 一塁到達 内野安打 加速 全力疾走",
+        "\"丸山 和郁\" ヤクルト 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 56,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1,
+        "CURRENT_TECHNIQUE_CONTEXT": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 2
+      },
+      "stable_player_key": "PROEYE:93195155",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-2e48613bd385a737d158"
+        ],
+        "record_ids": [
+          "SP102-EV-4cc93a4a9c25f11fe067"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 1,
+      "linked_primary_sources_discovered": 0,
+      "player": "古賀 優大",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"古賀 優大\" 足 速い プロ野球",
+        "\"古賀 優大\" 走力 比較",
+        "\"古賀 優大\" 50m 一塁到達",
+        "\"古賀 優大\" なんJ 反応集 足",
+        "\"古賀優大\" ヤクルト 一塁到達 内野安打 加速 全力疾走",
+        "\"古賀 優大\" ヤクルト 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 57,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 1
+      },
+      "stable_player_key": "PROEYE:01705134",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-6ea05c11655dc0c0fea3"
+        ],
+        "record_ids": [
+          "SP102-EV-03613f5d5e288488c5c5"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 1,
+      "linked_primary_sources_discovered": 0,
+      "player": "村林 一輝",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"村林 一輝\" 足 速い プロ野球",
+        "\"村林 一輝\" 走力 比較",
+        "\"村林 一輝\" 50m 一塁到達",
+        "\"村林 一輝\" なんJ 反応集 足",
+        "\"村林一輝\" 楽天 一塁到達 内野安打 加速 全力疾走",
+        "\"村林 一輝\" 楽天 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 62,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 1
+      },
+      "stable_player_key": "PROEYE:41845132",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-6a54e839ed773905eb28",
+          "SP102-ORIGIN-a7677de32b8d0ec60e07"
+        ],
+        "record_ids": [
+          "SP102-EV-548749666d7e935fadad",
+          "SP102-EV-ef1c1046cec7a49175ed"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 2,
+      "linked_primary_sources_discovered": 0,
+      "player": "京田 陽太",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 7,
+      "query_error_count": 0,
+      "query_set": [
+        "\"京田 陽太\" 足 速い プロ野球",
+        "\"京田 陽太\" 走力 比較",
+        "\"京田 陽太\" 50m 一塁到達",
+        "\"京田 陽太\" なんJ 反応集 足",
+        "\"京田陽太\" DeNA 一塁到達 内野安打 加速 全力疾走",
+        "\"京田 陽太\" DeNA 衰え 怪我 代走 足",
+        "\"京田 陽太\" 中日 走力 足 速い"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN",
+        "FORMER_TEAM_CONTEXT"
+      ],
+      "queue_order": 66,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1,
+        "CURRENT_TECHNIQUE_CONTEXT": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 2
+      },
+      "stable_player_key": "PROEYE:81585134",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "NO_USABLE_EVIDENCE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "HIGH",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [],
+        "record_ids": []
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "NO_USABLE_EVIDENCE",
+      "independent_origin_event_cluster_count": 0,
+      "linked_primary_sources_discovered": 0,
+      "player": "林 琢真",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"林 琢真\" 足 速い プロ野球",
+        "\"林 琢真\" 走力 比較",
+        "\"林 琢真\" 50m 一塁到達",
+        "\"林 琢真\" なんJ 反応集 足",
+        "\"林琢真\" DeNA 一塁到達 内野安打 加速 全力疾走",
+        "\"林 琢真\" DeNA 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 71,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {},
+      "source_layer_counts": {},
+      "stable_player_key": "PROEYE:91695157",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "NO_USABLE_EVIDENCE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "MID",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [],
+        "record_ids": []
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "NO_USABLE_EVIDENCE",
+      "independent_origin_event_cluster_count": 0,
+      "linked_primary_sources_discovered": 0,
+      "player": "蝦名 達夫",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"蝦名 達夫\" 足 速い プロ野球",
+        "\"蝦名 達夫\" 走力 比較",
+        "\"蝦名 達夫\" 50m 一塁到達",
+        "\"蝦名 達夫\" なんJ 反応集 足",
+        "\"蝦名達夫\" DeNA 一塁到達 内野安打 加速 全力疾走",
+        "\"蝦名 達夫\" DeNA 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 75,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {},
+      "source_layer_counts": {},
+      "stable_player_key": "PROEYE:51555151",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-501cb3572181bb727c33",
+          "SP102-ORIGIN-f479dc28f0c8938fdc91"
+        ],
+        "record_ids": [
+          "SP102-EV-50ed1864f8b4ac2594f8",
+          "SP102-EV-66e7628fd25e0bd2b0c9"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 2,
+      "linked_primary_sources_discovered": 0,
+      "player": "今宮 健太",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"今宮 健太\" 足 速い プロ野球",
+        "\"今宮 健太\" 走力 比較",
+        "\"今宮 健太\" 50m 一塁到達",
+        "\"今宮 健太\" なんJ 反応集 足",
+        "\"今宮健太\" ソフトバンク 一塁到達 内野安打 加速 全力疾走",
+        "\"今宮 健太\" ソフトバンク 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 76,
+      "searched_video_denominator": 5,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1,
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 2
+      },
+      "stable_player_key": "PROEYE:31335131",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-66cd618abd936e321819",
+          "SP102-ORIGIN-98738246d446c8b265cc"
+        ],
+        "record_ids": [
+          "SP102-EV-81ec1b1003e76d60f366",
+          "SP102-EV-f0e791a6e3bce8cc521c"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 2,
+      "linked_primary_sources_discovered": 0,
+      "player": "岸田 行倫",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"岸田 行倫\" 足 速い プロ野球",
+        "\"岸田 行倫\" 走力 比較",
+        "\"岸田 行倫\" 50m 一塁到達",
+        "\"岸田 行倫\" なんJ 反応集 足",
+        "\"岸田行倫\" 巨人 一塁到達 内野安打 加速 全力疾走",
+        "\"岸田 行倫\" 巨人 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 90,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1,
+        "CURRENT_REALWORLD_SPEED_PHYSICAL": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 2
+      },
+      "stable_player_key": "PROEYE:91595136",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    },
+    {
+      "after": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "numeric_interval_reason": "SP-102 contextual lane only",
+        "numeric_rating_interval": null,
+        "recommendation": "AVAILABLE_NOT_DECISION_EFFECTIVE"
+      },
+      "before": {
+        "confidence": "MEDIUM",
+        "direction_band": "LOW",
+        "numeric_interval_reason": "SP-079 prohibited",
+        "numeric_rating_interval": null,
+        "recommendation": "SP101_CONTEXT_STATE_ONLY"
+      },
+      "claim_event_source_provenance": {
+        "origin_event_cluster_ids": [
+          "SP102-ORIGIN-bb6bdea189cea98f09d4"
+        ],
+        "record_ids": [
+          "SP102-EV-eb42b7a5ccb02c84b7ee"
+        ]
+      },
+      "comment_only_high_confidence_verdict": false,
+      "comments_replies_retrieved": 0,
+      "contradictory_claims_present": false,
+      "final_numeric_rating_created": false,
+      "final_use_state": "AVAILABLE_NOT_DECISION_EFFECTIVE",
+      "independent_origin_event_cluster_count": 1,
+      "linked_primary_sources_discovered": 0,
+      "player": "木浪 聖也",
+      "pre_rescue_confidence": "MEDIUM",
+      "query_denominator": 6,
+      "query_error_count": 0,
+      "query_set": [
+        "\"木浪 聖也\" 足 速い プロ野球",
+        "\"木浪 聖也\" 走力 比較",
+        "\"木浪 聖也\" 50m 一塁到達",
+        "\"木浪 聖也\" なんJ 反応集 足",
+        "\"木浪聖也\" 阪神 一塁到達 内野安打 加速 全力疾走",
+        "\"木浪 聖也\" 阪神 衰え 怪我 代走 足"
+      ],
+      "query_variant_ids": [
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON",
+        "TIMED_RUNNING",
+        "REACTION_COMPILATION",
+        "ACCELERATION_FULL_EFFORT",
+        "DECLINE_INJURY_PINCHRUN"
+      ],
+      "queue_order": 98,
+      "searched_video_denominator": 3,
+      "semantic_class_counts": {
+        "CURRENT_POWERPRO_RATING_OPINION": 1
+      },
+      "source_layer_counts": {
+        "YOUTUBE_TOP_LEVEL_COMMENT": 1
+      },
+      "stable_player_key": "PROEYE:31735138",
+      "target_reason": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "videos_retrieved": 0
+    }
+  ],
+  "schema_version": "sp102_player_evidence_summary_20260819_v2",
+  "targeted_count": 30
+}

@@ -1,0 +1,650 @@
+{
+  "generated_at": "2026-08-19",
+  "guards": {
+    "final_rating_created": false,
+    "owner_verdict_written": false,
+    "sp101_frozen_target_only": true
+  },
+  "players": [
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:51955153|GENERIC_FOOT_SPEED||00a84bcd2c9f6958"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-3baa9eb05846a7608076"
+      ],
+      "player": "来田 涼斗",
+      "queue_order": 4,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:51955153"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:71475132|BASERUNNING_TECHNIQUE||4af6ec2e0406adea",
+        "COMMENT|PROEYE:71475132|GENERIC_FOOT_SPEED||0a8020128455a7d2",
+        "COMMENT|PROEYE:71475132|GENERIC_FOOT_SPEED||83756631ccbd9e27",
+        "COMMENT|PROEYE:71475132|GENERIC_FOOT_SPEED||af26637e3b934cc4"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-706a4d3923f89858792c",
+        "SP102-EV-8ef185cb05c096e5b8c5",
+        "SP102-EV-df724d8f082d78114a05",
+        "SP102-EV-b4f0ecfa2f0e3ed9351f"
+      ],
+      "player": "西川 龍馬",
+      "queue_order": 8,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:71475132"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:91495130|GENERIC_FOOT_SPEED||6d3a3c01a75ba721",
+        "COMMENT|PROEYE:91495130|GENERIC_FOOT_SPEED||d9b1aa296e67d347"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-0ad0e2c17a891343a61d",
+        "SP102-EV-858248b24dfd01d559a5"
+      ],
+      "player": "西野 真弘",
+      "queue_order": 9,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:91495130"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [],
+      "evidence_record_ids": [],
+      "player": "土田 龍空",
+      "queue_order": 11,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "residual_confidence_low",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=2"
+      ],
+      "sp101_target_state": "TARGETED_LOW_CONFIDENCE",
+      "sp102_post_rescue_context_status": "MEASURED_NO_USABLE_NEW_SPEED_CONTEXT",
+      "stable_player_key": "PROEYE:51455153"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [],
+      "evidence_record_ids": [],
+      "player": "福永 裕基",
+      "queue_order": 19,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "MEASURED_NO_USABLE_NEW_SPEED_CONTEXT",
+      "stable_player_key": "PROEYE:81685157"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:31835134|GENERIC_FOOT_SPEED||78151864a83cfe24",
+        "COMMENT|PROEYE:31835134|GENERIC_FOOT_SPEED||7901339b13d69983",
+        "COMMENT|PROEYE:31835134|GENERIC_FOOT_SPEED||9334f9b0281da4e8",
+        "COMMENT|PROEYE:31835134|GENERIC_FOOT_SPEED||9cba13a727ece882"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-264270fa66ab06005c58",
+        "SP102-EV-296220da1c7557a5614b",
+        "SP102-EV-5e4772fcb97b38479690",
+        "SP102-EV-9985acce43ed39ef4650"
+      ],
+      "player": "細川 成也",
+      "queue_order": 20,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:31835134"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:63165155|GENERIC_FOOT_SPEED||2449b7ab8e50df4e",
+        "COMMENT|PROEYE:63165155|GENERIC_FOOT_SPEED||8e1f6d8c615d308b",
+        "COMMENT|PROEYE:63165155|GENERIC_FOOT_SPEED||e2cffea92f50e1d7"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-4c3b202bf210df688f85",
+        "SP102-EV-82e3d57dd261468ece25",
+        "SP102-EV-b61fe6b01f00200e5e79"
+      ],
+      "player": "水野 達稀",
+      "queue_order": 23,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:63165155"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:41545136|ACCELERATION_EXPLOSIVENESS||6ee9c2aafc993726",
+        "COMMENT|PROEYE:41545136|GENERIC_FOOT_SPEED||66be3607099b769f"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-af61c8df30deae38a405",
+        "SP102-EV-f6c0a4f02b67cde9c234"
+      ],
+      "player": "清宮 幸太郎",
+      "queue_order": 24,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:41545136"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:21925151|GENERIC_FOOT_SPEED||1ce5eb01c064f9bd",
+        "COMMENT|PROEYE:21925151|GENERIC_FOOT_SPEED||abcf4a1e41ae55fe"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-61c9f63981979e81f1b5",
+        "SP102-EV-903854f91203c13b54f2"
+      ],
+      "player": "郡司 裕也",
+      "queue_order": 26,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:21925151"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:31435138|GENERIC_FOOT_SPEED|ucpvesw_bbiudhjpc3qgriaw|e2a308e0d1919704",
+        "COMMENT|PROEYE:31435138|GENERIC_FOOT_SPEED||e2a308e0d1919704",
+        "COMMENT|PROEYE:31435138|GENERIC_FOOT_SPEED||e7f61a79ed015184"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-e68461b73b1fd06da107",
+        "SP102-EV-2f3d5375c4cb2c2cd438",
+        "SP102-EV-4579fe67f57af9b03c02"
+      ],
+      "player": "野村 佑希",
+      "queue_order": 27,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:31435138"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:03505133|GENERIC_FOOT_SPEED||77f264678ec76eb7",
+        "COMMENT|PROEYE:03505133|GENERIC_FOOT_SPEED||828c9699d300e11b"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-e906c9704abde82d54ea",
+        "SP102-EV-fa485a7765369d3c1d0b"
+      ],
+      "player": "ソト",
+      "queue_order": 28,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "residual_confidence_low",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=2"
+      ],
+      "sp101_target_state": "TARGETED_LOW_CONFIDENCE",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:03505133"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:71075151|GENERIC_FOOT_SPEED||0be3586a22fe9e2c",
+        "COMMENT|PROEYE:71075151|GENERIC_FOOT_SPEED||8b8fa2be247b1aaa",
+        "COMMENT|PROEYE:71075151|GENERIC_FOOT_SPEED||c80cb775ba680d1f"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-0b372f76e613e94b24b4",
+        "SP102-EV-4f19aa423d82c76b7e6e",
+        "SP102-EV-8965d97ae1ff77194dee",
+        "SP102-EV-f64e5b90b6ed00cd80c0"
+      ],
+      "player": "佐藤 都志也",
+      "queue_order": 30,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:71075151"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:91895138|GENERIC_FOOT_SPEED||08213f740ccf2422"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-03cce8c1bbf462fd3550"
+      ],
+      "player": "山口 航輝",
+      "queue_order": 34,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:91895138"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:41645136|GENERIC_FOOT_SPEED||bf88e5fe6b55e000"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-e939766707c7bdc5d1be"
+      ],
+      "player": "藤岡 裕大",
+      "queue_order": 37,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:41645136"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:43745150|BASERUNNING_TECHNIQUE||fd6e679fde4b2b80",
+        "COMMENT|PROEYE:43745150|GENERIC_FOOT_SPEED||15b79232c6c1af25",
+        "COMMENT|PROEYE:43745150|GENERIC_FOOT_SPEED||3f1531e628918699",
+        "COMMENT|PROEYE:43745150|GENERIC_FOOT_SPEED||6dd825c00b34553c",
+        "COMMENT|PROEYE:43745150|GENERIC_FOOT_SPEED||a84866f083fa1270"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-ac5311e384c28df1a838",
+        "SP102-EV-00e9289709e476767ef5",
+        "SP102-EV-f5b1df1f3b68a52fab66",
+        "SP102-EV-90c0b1951fd268662829",
+        "SP102-EV-f4ae0018592841362340"
+      ],
+      "player": "ファビアン",
+      "queue_order": 44,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "residual_confidence_low",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=2"
+      ],
+      "sp101_target_state": "TARGETED_LOW_CONFIDENCE",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:43745150"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:53955150|GENERIC_FOOT_SPEED||d384ca5c5897e0d6",
+        "COMMENT|PROEYE:53955150|GENERIC_FOOT_SPEED||e422742dcaddbc3e"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-e45550d340b81abea110",
+        "SP102-EV-546f4f3f3a8d7fbeab96"
+      ],
+      "player": "モンテロ",
+      "queue_order": 45,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:53955150"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [],
+      "evidence_record_ids": [],
+      "player": "坂倉 将吾",
+      "queue_order": 47,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "MEASURED_NO_USABLE_NEW_SPEED_CONTEXT",
+      "stable_player_key": "PROEYE:11915134"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [],
+      "evidence_record_ids": [],
+      "player": "小園 海斗",
+      "queue_order": 48,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "MEASURED_NO_USABLE_NEW_SPEED_CONTEXT",
+      "stable_player_key": "PROEYE:01705138"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:93395153|GENERIC_FOOT_SPEED||ed61db75df8e2bd6"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-8e956991a0468dafe28a"
+      ],
+      "player": "矢野 雅哉",
+      "queue_order": 49,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:93395153"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:31135133|BASERUNNING_TECHNIQUE||55a3aca244ffb127",
+        "COMMENT|PROEYE:31135133|BASERUNNING_TECHNIQUE||fd1a8afb32bcb929",
+        "COMMENT|PROEYE:31135133|FIELD_50M||d88cde09c3ff141a",
+        "COMMENT|PROEYE:31135133|GENERIC_FOOT_SPEED||0253108939cfcf96",
+        "COMMENT|PROEYE:31135133|GENERIC_FOOT_SPEED||8a90239e3114ea17"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-1e241af3e6929ebd58a7",
+        "SP102-EV-3af87ca6c18921f2935f",
+        "SP102-EV-95e4562fba25df9f3524",
+        "SP102-EV-9b4d76421434a09911a6",
+        "SP102-EV-e08999e5c33f855c7c09"
+      ],
+      "player": "秋山 翔吾",
+      "queue_order": 50,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=4"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:31135133"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:01405130|FIELD_50M||5f41f7cbbf04af30",
+        "COMMENT|PROEYE:01405130|GENERIC_FOOT_SPEED||9c616f39963d449b",
+        "COMMENT|PROEYE:01405130|GENERIC_FOOT_SPEED||b5937439f8bdf13b"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-09cbcdf62cc303810936",
+        "SP102-EV-e0fe88c4108edd534a40",
+        "SP102-EV-e1e4dbea7b08fb073a7b"
+      ],
+      "player": "野間 峻祥",
+      "queue_order": 52,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:01405130"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:93195155|BASERUNNING_TECHNIQUE||a0295a981840c1c3",
+        "COMMENT|PROEYE:93195155|GENERIC_FOOT_SPEED||e702fc9fac7c4e43"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-63ffd9eb6f6cbf04ca60",
+        "SP102-EV-bf1c9bbce3cfd04dbf3e"
+      ],
+      "player": "丸山 和郁",
+      "queue_order": 56,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:93195155"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:01705134|GENERIC_FOOT_SPEED||88f244f4965b223a"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-4cc93a4a9c25f11fe067"
+      ],
+      "player": "古賀 優大",
+      "queue_order": 57,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:01705134"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:41845132|GENERIC_FOOT_SPEED||38f49b57a2cd240c"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-03613f5d5e288488c5c5"
+      ],
+      "player": "村林 一輝",
+      "queue_order": 62,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:41845132"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:81585134|BASERUNNING_TECHNIQUE||5938f016c463b2a8",
+        "COMMENT|PROEYE:81585134|GENERIC_FOOT_SPEED||c645a1b5175f47a2"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-548749666d7e935fadad",
+        "SP102-EV-ef1c1046cec7a49175ed"
+      ],
+      "player": "京田 陽太",
+      "queue_order": 66,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:81585134"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [],
+      "evidence_record_ids": [],
+      "player": "林 琢真",
+      "queue_order": 71,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "MEASURED_NO_USABLE_NEW_SPEED_CONTEXT",
+      "stable_player_key": "PROEYE:91695157"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [],
+      "evidence_record_ids": [],
+      "player": "蝦名 達夫",
+      "queue_order": 75,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "MEASURED_NO_USABLE_NEW_SPEED_CONTEXT",
+      "stable_player_key": "PROEYE:51555151"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:31335131|GENERIC_FOOT_SPEED||28e2651ffa998535",
+        "COMMENT|PROEYE:31335131|GENERIC_FOOT_SPEED||ad55591cfab4f815"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-50ed1864f8b4ac2594f8",
+        "SP102-EV-66e7628fd25e0bd2b0c9"
+      ],
+      "player": "今宮 健太",
+      "queue_order": 76,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:31335131"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:91595136|GENERIC_FOOT_SPEED||623d2cd81d7c81b9",
+        "COMMENT|PROEYE:91595136|GENERIC_FOOT_SPEED||cf7621403474759c"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-81ec1b1003e76d60f366",
+        "SP102-EV-f0e791a6e3bce8cc521c"
+      ],
+      "player": "岸田 行倫",
+      "queue_order": 90,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:91595136"
+    },
+    {
+      "conflict_resolved_to_final_rating": false,
+      "event_origin_keys": [
+        "COMMENT|PROEYE:31735138|GENERIC_FOOT_SPEED||b9619d6bfbdd253d"
+      ],
+      "evidence_record_ids": [
+        "SP102-EV-eb42b7a5ccb02c84b7ee"
+      ],
+      "player": "木浪 聖也",
+      "queue_order": 98,
+      "resolution_note": "SP-102 may add low-influence directional/timed context only. Final practical rating remains blocked in SP-079 and owner verdict remains untouched.",
+      "sp101_target_reasons": [
+        "genuine_multi_lane_material_conflict",
+        "plausibly_recoverable_evidence_family_missing",
+        "route_removal_sensitive_routes=3"
+      ],
+      "sp101_target_state": "TARGETED_MATERIAL_CONFLICT",
+      "sp102_post_rescue_context_status": "DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE",
+      "stable_player_key": "PROEYE:31735138"
+    }
+  ],
+  "schema_version": "sp102_sp101_resolution_linkage_20260819"
+}
