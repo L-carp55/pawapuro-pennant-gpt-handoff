@@ -2,16 +2,17 @@
   "generated_at": "2026-08-19",
   "logs_tail": {
     "sp102_collection.log": [
+      "{\"targeted\": 30, \"queries\": 120, \"video_fetches\": 90, \"evidence\": 56, \"events\": 55, \"api_key\": false, \"status_counts\": {\"DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE\": 24, \"MEASURED_NO_USABLE_NEW_SPEED_CONTEXT\": 6}}"
+    ],
+    "sp102_query_expansion.log": [
       "Traceback (most recent call last):",
-      "  File \"/home/runner/work/pawapuro-pennant-gpt-handoff/pawapuro-pennant-gpt-handoff/scripts/sp102_targeted_video_comment_rescue_20260819.py\", line 651, in <module>",
-      "    main()",
-      "  File \"/home/runner/work/pawapuro-pennant-gpt-handoff/pawapuro-pennant-gpt-handoff/scripts/sp102_targeted_video_comment_rescue_20260819.py\", line 633, in main",
-      "    \"video_fetch_attempts\":sum(r[\"ledger_type\"]==\"VIDEO_FETCH\" and r.get(\"video_id\") for r in search_ledger),",
-      "                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
-      "TypeError: unsupported operand type(s) for +: 'int' and 'str'"
+      "  File \"/home/runner/work/pawapuro-pennant-gpt-handoff/pawapuro-pennant-gpt-handoff/scripts/sp102_expand_query_contract_20260819.py\", line 103, in <module>",
+      "    print(json.dumps({'extra_queries':sum(len(x['extra_query_variants']) for x in coverage_receipts),'total_search_rows':sum(r.get('ledger_type')=='SEARCH_QUERY' for r in search),'extra_video_fetches':sum(r.get('binding_query_expansion') and r.get('ledger_type')=='VIDEO_FETCH' for r in search),'evidence':len(evidence)},ensure_ascii=False))",
+      "                                                                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      "TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'"
     ]
   },
   "schema_version": "sp102_video_comment_rescue_ci_failure_20260819",
-  "stage": "targeted_collection",
+  "stage": "binding_query_expansion",
   "yt_dlp_version": "2026.07.04"
 }
