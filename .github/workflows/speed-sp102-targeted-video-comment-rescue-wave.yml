@@ -122,7 +122,7 @@ jobs:
       - name: Re-materialize from same frozen source snapshot and prove determinism
         run: |
           echo canonical_determinism_rerun > /tmp/sp102_stage
-          xargs sha256sum --check < /tmp/sp102_source_snapshot.sha256
+          sha256sum --check /tmp/sp102_source_snapshot.sha256
           python scripts/materialize_sp102_canonical_contract_20260819.py > /tmp/sp102_materialize_second.log
           python scripts/refine_sp102_independence_and_decision_use_20260819.py > /tmp/sp102_refine_second.log
           python scripts/finalize_sp102_query_manifest_20260819.py > /tmp/sp102_query_manifest_second.log
