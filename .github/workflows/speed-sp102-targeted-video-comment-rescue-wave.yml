@@ -1,4 +1,5 @@
 name: speed-sp102-targeted-video-comment-rescue-wave
+# Trigger after workflow exists on branch.
 
 on:
   push:
@@ -88,7 +89,6 @@ jobs:
           sha256sum --check /tmp/sp078.before.sha256
           python - <<'PY'
           import csv,json
-          from pathlib import Path
           ledger=json.load(open('outputs/derived/sp078_owner_verdict_ledger_20260816.json',encoding='utf-8'))
           lock=json.load(open('docs/state/speed_owner_review_integrity_lock_20260817.json',encoding='utf-8'))
           qa=json.load(open('outputs/derived/qa_sp102_targeted_video_comment_rescue.json',encoding='utf-8'))
