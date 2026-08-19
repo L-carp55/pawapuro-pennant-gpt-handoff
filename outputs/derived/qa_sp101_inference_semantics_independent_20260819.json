@@ -1,0 +1,428 @@
+{
+  "checks": [
+    {
+      "detail": {
+        "mb01_shared_nearest_candidate_under_three_labels": true,
+        "mb02_row_order_overwrite": true,
+        "mb07_arbitrary_partner_selection": true,
+        "mb16_boolean_set_inversion": true,
+        "mb18_receipt_not_recompute": true
+      },
+      "name": "legacy_fail_before_canaries_detect_all_five_rejected_semantics",
+      "pass": true
+    },
+    {
+      "detail": [],
+      "name": "all_required_semantic_outputs_exist",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb01_honest_l2_baseline_named",
+      "pass": true
+    },
+    {
+      "detail": {
+        "algorithm": "bidirectional top-k membership",
+        "k": 5,
+        "method": "MUTUAL_KNN"
+      },
+      "name": "mb01_genuine_mutual_knn_declares_k",
+      "pass": true
+    },
+    {
+      "detail": {
+        "algorithm": "regularized covariance-aware quadratic distance",
+        "method": "CALIPERED_MAHALANOBIS",
+        "ridge": 1e-06,
+        "shrinkage": 0.1
+      },
+      "name": "mb01_mahalanobis_covariance_aware",
+      "pass": true
+    },
+    {
+      "detail": {
+        "algorithm": "entropic empirical transport coupling with uniform marginals",
+        "column_marginal_max_error": 1.734723475976807e-18,
+        "epsilon": 0.12,
+        "iterations": 11,
+        "method": "OPTIMAL_TRANSPORT_SINKHORN",
+        "row_marginal_max_error": 1.3610640392514028e-13,
+        "status": "CONVERGED",
+        "transport_cost": 0.3940919650657007
+      },
+      "name": "mb01_ot_real_coupling_or_measured_negative",
+      "pass": true
+    },
+    {
+      "detail": {
+        "methods": [
+          "CALIPERED_MAHALANOBIS",
+          "MUTUAL_KNN",
+          "NORMALIZED_L2_NEAREST_BASELINE",
+          "OPTIMAL_TRANSPORT_SINKHORN"
+        ],
+        "players": 100,
+        "rows": 400
+      },
+      "name": "mb01_four_methods_x_current100",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb01_method_specific_diagnostics_present",
+      "pass": true
+    },
+    {
+      "detail": {
+        "cross_time_fallback_policy": "NOT_USED_FOR_MB02_TRAINING; analog display may use nearest season only with explicit temporal_gap_years",
+        "non_live_rows_in_primary_target_input": 0,
+        "player_season_targets": 152,
+        "policy": "SEASON_MEDIAN_LIVE_SPEED",
+        "row_order_invariant": true,
+        "same_player_season_repeated_groups": 152
+      },
+      "name": "mb02_target_policy_explicit_season_median",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb02_no_silent_cross_time_training_fallback",
+      "pass": true
+    },
+    {
+      "detail": {
+        "correlation": 0.0070975612519347435,
+        "mae": 18.670349356755498,
+        "mean_error": -0.7883917897246768,
+        "n": 75,
+        "rmse": 23.682223319764557
+      },
+      "name": "mb02_clustered_holdout_executed_predictions_and_errors",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb02_clustered_holdout_zero_player_leakage",
+      "pass": true
+    },
+    {
+      "detail": {
+        "executed": 5,
+        "status": "EXECUTED_FORWARD_SEASON_HOLDOUT"
+      },
+      "name": "mb02_forward_holdout_executed_or_measured_insufficient",
+      "pass": true
+    },
+    {
+      "detail": {
+        "edition_residuals": {
+          "21": {
+            "mean_residual_vs_player_season_median": 0.0,
+            "n": 882
+          },
+          "22": {
+            "mean_residual_vs_player_season_median": 0.0,
+            "n": 880
+          },
+          "23": {
+            "mean_residual_vs_player_season_median": 0.0,
+            "n": 832
+          },
+          "24": {
+            "mean_residual_vs_player_season_median": 0.0,
+            "n": 483
+          },
+          "25": {
+            "mean_residual_vs_player_season_median": 0.0,
+            "n": 336
+          },
+          "26": {
+            "mean_residual_vs_player_season_median": 0.0,
+            "n": 105
+          }
+        },
+        "identifiable_edition_count_n_ge_5": 6,
+        "median_within_player_season_speed_span": 0.0,
+        "negative_finding": null,
+        "repeated_observation_rows": 3518,
+        "repeated_player_season_groups": 152,
+        "status": "MEASURED_EDITION_UPDATE_EFFECTS",
+        "target_policy": "SEASON_MEDIAN_LIVE_SPEED"
+      },
+      "name": "mb02_edition_update_effect_measured_or_negative",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb02_feature_ablation_uses_heldout_metrics",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb07_typed_graph_schema",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb07_no_similarity_signed_direction",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb07_transition_annotations_not_pairwise",
+      "pass": true
+    },
+    {
+      "detail": {
+        "analog_similarity_can_create_signed_edge": false,
+        "arbitrary_partner_selection_forbidden": true,
+        "single_player_community_can_create_two_player_edge": false,
+        "transition_context_can_create_signed_edge_without_speed_before_after": false
+      },
+      "name": "mb07_negative_guards_all_true",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb07_old_arbitrary_next_pattern_absent",
+      "pass": true
+    },
+    {
+      "detail": {
+        "checks": {
+          "evidence_present_negative_control_zero_effect": true,
+          "four_of_four_agree_consensus": true,
+          "l2_and_mahalanobis_distinct": true,
+          "one_of_four_insufficient": true,
+          "ot_uses_global_coupling_not_local_nearest": true,
+          "removing_conflicting_route_changes_state": true,
+          "two_of_four_agree_consensus": true,
+          "two_of_four_conflict": true,
+          "unsigned_analog_does_not_manufacture_consensus": true
+        },
+        "details": {
+          "l2_choice": 0,
+          "mahalanobis_choice": 1,
+          "negative_control_class": "NO_EFFECT_DESPITE_EVIDENCE_PRESENT",
+          "ot_diag": {
+            "column_marginal_max_error": 0.0,
+            "epsilon": 0.05,
+            "iterations": 500,
+            "row_marginal_max_error": 0.0004999323415149082,
+            "status": "MAX_ITER_REACHED",
+            "transport_cost": 0.15499500067658487
+          },
+          "ot_row0_choice": 1,
+          "show_ablation_class": "CHANGES_CONFLICT_CLASS"
+        },
+        "pass": true
+      },
+      "name": "semantic_synthetic_canaries_all_pass",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "current100_exact_100",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb16_explicit_lane_inventory_and_unsigned_analog",
+      "pass": true
+    },
+    {
+      "detail": [
+        "CONSENSUS_SUPPORTED",
+        "INSUFFICIENT_INDEPENDENT_LANES",
+        "MATERIAL_CONFLICT"
+      ],
+      "name": "mb16_consensus_states_from_comparable_lanes",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb18_exact_100x18_cells",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb18_full_and_ablated_state_recomputed",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mb18_present_evidence_can_have_zero_effect",
+      "pass": true
+    },
+    {
+      "detail": [
+        "CHANGES_BAND_OR_DIRECTION",
+        "CHANGES_CONFIDENCE_TIER",
+        "CHANGES_CONFLICT_CLASS",
+        "CHANGES_TARGET_ELIGIBILITY",
+        "NO_EFFECT_DESPITE_EVIDENCE_PRESENT",
+        "ROUTE_MISSING_NOT_APPLICABLE",
+        "SUPPORTS_SAME_STATE"
+      ],
+      "name": "mb18_required_influence_vocabulary",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "sp102_target_freeze_exact_100_one_state_each",
+      "pass": true
+    },
+    {
+      "detail": {
+        "actual": {
+          "ablation_sha256": "d123fbf6afb85f3de8cf5f3165c770cb8ffe46ec9c7a5c865f57b244ec214cca",
+          "analog_summary_sha256": "8a3c0498deb2e1c14c6b617dadaf9cf90d16c869a0028ef418ed70701506705e",
+          "dual_model_sha256": "88c63c407e011a7bbf478c2e0567f29ff8aa828fa90054d6a97ea26cc5c068d9",
+          "graph_sha256": "756a6d5e2e43aa202e2de0812342c8a23ea22e6e299eb034e679b0898dc321bc"
+        },
+        "stored": {
+          "ablation_sha256": "d123fbf6afb85f3de8cf5f3165c770cb8ffe46ec9c7a5c865f57b244ec214cca",
+          "analog_summary_sha256": "8a3c0498deb2e1c14c6b617dadaf9cf90d16c869a0028ef418ed70701506705e",
+          "dual_model_sha256": "88c63c407e011a7bbf478c2e0567f29ff8aa828fa90054d6a97ea26cc5c068d9",
+          "graph_sha256": "756a6d5e2e43aa202e2de0812342c8a23ea22e6e299eb034e679b0898dc321bc"
+        }
+      },
+      "name": "sp102_target_freeze_hash_bound_to_repaired_upstreams",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "sp102_search_not_run_during_sp101",
+      "pass": true
+    },
+    {
+      "detail": "PASS_REPAIRED",
+      "name": "prior_identity_repair_still_passes",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "prior_identity_canaries_still_resolved",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "mlb_appearance_axis_separate_from_show_year",
+      "pass": true
+    },
+    {
+      "detail": 0,
+      "name": "non_live_contamination_zero_in_primary_target",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "powerpro_label_absent_from_physical_path",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "sp078_owner_ledger_still_empty",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "name": "owner_review_lock_still_true",
+      "pass": true
+    },
+    {
+      "detail": {
+        "artifacts": "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json;outputs/derived/sp078_owner_verdict_ledger_20260816.json;docs/state/speed_owner_review_integrity_lock_20260817.json;docs/state/speed_owner_clarification_the_show_scope_20260818.md;docs/tasks/SP101_EXPANDED_THE_SHOW_NPB_UNIVERSE_20260818.md;outputs/derived/sp101_the_show_npb_universe_census_20260818.json;outputs/derived/sp101_the_show_npb_universe_census_20260818.tsv;docs/audits/sp101_the_show_npb_universe_census_20260818.md;outputs/derived/sp078_proposal_supersession_receipt_sp101_20260818.json;docs/audits/sp078_proposal_superseded_by_sp101_the_show_scope_20260818.md;docs/tasks/SP102_TARGETED_2CH_VIDEO_COMMENT_RESCUE_20260818.md;outputs/derived/sp102_target_selection_contract_20260818.json;docs/state/speed_sp102_activation_state_20260818.json",
+        "category": "appraisal",
+        "depends_on": "SP-015,SP-016,SP-078,SP-098,SP-100,SP-101,SP-102",
+        "gate_block": "1",
+        "next_action_or_blocker": "BLOCKED by SP-101 expanded multibridge evidence rebuild and SP-102 targeted residual low-confidence video-comment rescue. Do not generate final practical ratings or a new owner-verdict proposal until SP-101 is validated, the residual target set is frozen, SP-102 is DONE_VALIDATED or closes with a measured zero-target/zero-usable-evidence finding, and the all-100 consistency/decision-use QA is rerun.",
+        "owner_review_block": "1",
+        "requirement_ids": "SR-043,SR-053,SR-054",
+        "status": "BLOCKED_DEPENDENCY",
+        "task_id": "SP-079",
+        "title": "Final practical 100-player reappraisal"
+      },
+      "name": "sp079_remains_blocked",
+      "pass": true
+    },
+    {
+      "detail": "BLOCKED_DEPENDENCY",
+      "name": "shoulder_remains_blocked",
+      "pass": true
+    },
+    {
+      "detail": {
+        "files": [
+          {
+            "path": "outputs/derived/sp101_metric_neighborhood_analog_pairs.csv.gz",
+            "sha256": "411b56544eb5bd7201b03ba3d326192026aaf5cc612ffa07e3651098c414cb8e"
+          },
+          {
+            "path": "outputs/derived/sp101_metric_neighborhood_player_summary.json",
+            "sha256": "8a3c0498deb2e1c14c6b617dadaf9cf90d16c869a0028ef418ed70701506705e"
+          },
+          {
+            "path": "outputs/derived/sp101_dual_game_behavior_models.json",
+            "sha256": "88c63c407e011a7bbf478c2e0567f29ff8aa828fa90054d6a97ea26cc5c068d9"
+          },
+          {
+            "path": "outputs/derived/sp101_pairwise_ordinal_graph.json",
+            "sha256": "756a6d5e2e43aa202e2de0812342c8a23ea22e6e299eb034e679b0898dc321bc"
+          },
+          {
+            "path": "outputs/derived/sp101_current100_multibridge_evidence.json",
+            "sha256": "7d5aa1ad8a5cf9019cb4cf06791c99285a4bb68b9bf3a87508eb1ed3ce6e8b8f"
+          },
+          {
+            "path": "outputs/derived/sp101_requirements_to_decision_utilization.json",
+            "sha256": "a7ac6e36f4ff6ec7a5a4a01cf88a1c817c4703231cae6eeaddaf2a942ea2d603"
+          },
+          {
+            "path": "outputs/derived/sp101_route_ablation_qa.json",
+            "sha256": "d123fbf6afb85f3de8cf5f3165c770cb8ffe46ec9c7a5c865f57b244ec214cca"
+          },
+          {
+            "path": "outputs/derived/sp101_residual_low_confidence_target_set.json",
+            "sha256": "c6deacbb5e50daaf3d0e3f327039e8f026758d4e933982dd07d41e88657fa468"
+          },
+          {
+            "path": "outputs/derived/sp101_inference_route_execution_receipt.json",
+            "sha256": "bc88d121b0abc8dc91bfe3a685cc573e5b8f6ce7223dae9d46733efa3d899c85"
+          },
+          {
+            "path": "outputs/derived/qa_sp101_inference_semantic_repair_execution_20260819.json",
+            "sha256": "005089164142c8e70bee6105d0895dbdd1c4f5b896aab1df45d46374db51fa9e"
+          }
+        ],
+        "frozen_foundation_commit": "ffb397775413a5e8b5ab23ff1bb5b1b221f6137e",
+        "generated_at": "2026-08-19",
+        "mismatch_count": 0,
+        "schema_version": "sp101_semantic_repair_determinism_qa_20260819",
+        "status": "PASS_BYTE_IDENTICAL"
+      },
+      "name": "deterministic_rerun_byte_identical",
+      "pass": true
+    }
+  ],
+  "critical_governance": {
+    "owner_lock": true,
+    "owner_verdict_count": 0,
+    "shoulder": "BLOCKED_DEPENDENCY",
+    "sp079": "BLOCKED_DEPENDENCY"
+  },
+  "fail_count": 0,
+  "generated_at": "2026-08-19",
+  "legacy_fail_before_findings": {
+    "mb01_shared_nearest_candidate_under_three_labels": true,
+    "mb02_row_order_overwrite": true,
+    "mb07_arbitrary_partner_selection": true,
+    "mb16_boolean_set_inversion": true,
+    "mb18_receipt_not_recompute": true
+  },
+  "pass_count": 41,
+  "schema_version": "qa_sp101_inference_semantics_independent_20260819",
+  "scope": "speed_only",
+  "status": "PASS_INFERENCE_SEMANTICS_INDEPENDENT_AUDIT"
+}

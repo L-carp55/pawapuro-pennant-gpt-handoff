@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "path": "outputs/derived/sp101_metric_neighborhood_analog_pairs.csv.gz",
+      "sha256": "411b56544eb5bd7201b03ba3d326192026aaf5cc612ffa07e3651098c414cb8e"
+    },
+    {
+      "path": "outputs/derived/sp101_metric_neighborhood_player_summary.json",
+      "sha256": "8a3c0498deb2e1c14c6b617dadaf9cf90d16c869a0028ef418ed70701506705e"
+    },
+    {
+      "path": "outputs/derived/sp101_dual_game_behavior_models.json",
+      "sha256": "88c63c407e011a7bbf478c2e0567f29ff8aa828fa90054d6a97ea26cc5c068d9"
+    },
+    {
+      "path": "outputs/derived/sp101_pairwise_ordinal_graph.json",
+      "sha256": "756a6d5e2e43aa202e2de0812342c8a23ea22e6e299eb034e679b0898dc321bc"
+    },
+    {
+      "path": "outputs/derived/sp101_current100_multibridge_evidence.json",
+      "sha256": "7d5aa1ad8a5cf9019cb4cf06791c99285a4bb68b9bf3a87508eb1ed3ce6e8b8f"
+    },
+    {
+      "path": "outputs/derived/sp101_requirements_to_decision_utilization.json",
+      "sha256": "a7ac6e36f4ff6ec7a5a4a01cf88a1c817c4703231cae6eeaddaf2a942ea2d603"
+    },
+    {
+      "path": "outputs/derived/sp101_route_ablation_qa.json",
+      "sha256": "d123fbf6afb85f3de8cf5f3165c770cb8ffe46ec9c7a5c865f57b244ec214cca"
+    },
+    {
+      "path": "outputs/derived/sp101_residual_low_confidence_target_set.json",
+      "sha256": "c6deacbb5e50daaf3d0e3f327039e8f026758d4e933982dd07d41e88657fa468"
+    },
+    {
+      "path": "outputs/derived/sp101_inference_route_execution_receipt.json",
+      "sha256": "bc88d121b0abc8dc91bfe3a685cc573e5b8f6ce7223dae9d46733efa3d899c85"
+    },
+    {
+      "path": "outputs/derived/qa_sp101_inference_semantic_repair_execution_20260819.json",
+      "sha256": "005089164142c8e70bee6105d0895dbdd1c4f5b896aab1df45d46374db51fa9e"
+    }
+  ],
+  "frozen_foundation_commit": "ffb397775413a5e8b5ab23ff1bb5b1b221f6137e",
+  "generated_at": "2026-08-19",
+  "mismatch_count": 0,
+  "schema_version": "sp101_semantic_repair_determinism_qa_20260819",
+  "status": "PASS_BYTE_IDENTICAL"
+}

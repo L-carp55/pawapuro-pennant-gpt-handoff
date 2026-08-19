@@ -1,86 +1,51 @@
 {
-  "generated_at": "2026-08-18",
-  "measured_negative_findings": [
-    "MLB opportunity-conditioned infield hits/advancement/UBR/BsR unavailable in Stats API yearByYear and remain BLOCKED_MISSING_DATA.",
-    "The Show missing after verified MLB appearance remains THE_SHOW_DATA_MISSING_AFTER_MLB_MATCH, not NO_MLB_PROMOTION_FOUND.",
-    "ソト remains unresolved because short surname candidates are not promoted."
-  ],
-  "p0_routes": [
-    {
-      "outputs": [],
-      "route_id": "MB-01",
-      "route_name": "COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
-      "status": "EXECUTED_REPAIRED"
+  "generated_at": "2026-08-19",
+  "independent_semantic_audit": "outputs/derived/qa_sp101_inference_semantics_independent_20260819.json",
+  "independent_semantic_audit_status": "PASS_INFERENCE_SEMANTICS_INDEPENDENT_AUDIT",
+  "owner_verdict_count": 0,
+  "p0_routes": {
+    "MB-01": "EXECUTED_DISTINCT_L2_MUTUAL_KNN_COVARIANCE_MAHALANOBIS_AND_OT",
+    "MB-02": "EXECUTED_REAL_CLUSTERED_AND_FORWARD_HOLDOUTS",
+    "MB-07": "EXECUTED_TYPED_GRAPH_NO_ARBITRARY_PARTNERS",
+    "MB-16": "EXECUTED_INDEPENDENT_COMPARABLE_LANE_CONSENSUS",
+    "MB-18": "EXECUTED_100x18_REMOVAL_AND_RECOMPUTE"
+  },
+  "schema_version": "sp101_inference_route_execution_receipt_semantic_repair_20260819",
+  "scope": "speed_only; SP-102 search not run; SP-078 owner verdict not written; SP-079 and shoulder not run",
+  "semantic_canaries": {
+    "checks": {
+      "evidence_present_negative_control_zero_effect": true,
+      "four_of_four_agree_consensus": true,
+      "l2_and_mahalanobis_distinct": true,
+      "one_of_four_insufficient": true,
+      "ot_uses_global_coupling_not_local_nearest": true,
+      "removing_conflicting_route_changes_state": true,
+      "two_of_four_agree_consensus": true,
+      "two_of_four_conflict": true,
+      "unsigned_analog_does_not_manufacture_consensus": true
     },
-    {
-      "outputs": [],
-      "route_id": "MB-02",
-      "route_name": "DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS",
-      "status": "EXECUTED_REPAIRED"
+    "details": {
+      "l2_choice": 0,
+      "mahalanobis_choice": 1,
+      "negative_control_class": "NO_EFFECT_DESPITE_EVIDENCE_PRESENT",
+      "ot_diag": {
+        "column_marginal_max_error": 0.0,
+        "epsilon": 0.05,
+        "iterations": 500,
+        "row_marginal_max_error": 0.0004999323415149082,
+        "status": "MAX_ITER_REACHED",
+        "transport_cost": 0.15499500067658487
+      },
+      "ot_row0_choice": 1,
+      "show_ablation_class": "CHANGES_CONFLICT_CLASS"
     },
-    {
-      "outputs": [],
-      "route_id": "MB-03",
-      "route_name": "MULTI_TRAIT_LATENT_MEASUREMENT_MODEL",
-      "status": "PRESERVED_FIRST_WAVE"
-    },
-    {
-      "outputs": [],
-      "route_id": "MB-04",
-      "route_name": "WITHIN_PLAYER_TEMPORAL_DELTA",
-      "status": "PRESERVED_FIRST_WAVE"
-    },
-    {
-      "outputs": [],
-      "route_id": "MB-05",
-      "route_name": "LEAGUE_TRANSITION_FIXED_EFFECTS",
-      "status": "EXECUTED_REPAIRED"
-    },
-    {
-      "outputs": [],
-      "route_id": "MB-06",
-      "route_name": "RATING_INERTIA_AND_STALENESS_MODEL",
-      "status": "PRESERVED_FIRST_WAVE"
-    },
-    {
-      "outputs": [],
-      "route_id": "MB-07",
-      "route_name": "PAIRWISE_ORDINAL_EVIDENCE_GRAPH",
-      "status": "EXECUTED_REPAIRED"
-    },
-    {
-      "outputs": [],
-      "route_id": "MB-08",
-      "route_name": "DISTRIBUTION_AND_TAIL_CALIBRATION",
-      "status": "PRESERVED_FIRST_WAVE"
-    },
-    {
-      "outputs": [],
-      "route_id": "MB-09",
-      "route_name": "THE_SHOW_ROSTER_UPDATE_RESPONSE",
-      "status": "PRESERVED_FIRST_WAVE"
-    },
-    {
-      "outputs": [],
-      "route_id": "MB-16",
-      "route_name": "CROSS_SOURCE_CONSENSUS_AND_DISAGREEMENT",
-      "status": "EXECUTED_REPAIRED"
-    },
-    {
-      "outputs": [],
-      "route_id": "MB-17",
-      "route_name": "NEGATIVE_CONTROL_AND_PLACEBO_SUITE",
-      "status": "PRESERVED_FIRST_WAVE"
-    },
-    {
-      "outputs": [],
-      "route_id": "MB-18",
-      "route_name": "DECISION_USE_AND_ABLATION_RECEIPT",
-      "status": "EXECUTED_REPAIRED"
-    }
-  ],
-  "repair_receipt": "outputs/derived/qa_sp101_identity_and_shared_metric_repair_20260818.json",
-  "schema_version": "sp101_inference_route_execution_receipt_repaired_20260818",
-  "scope": "speed only; SP-102 not run; SP-078 owner verdict not written; SP-079 and shoulder not run",
-  "status": "DONE_VALIDATED_WITH_BOUNDED_NEGATIVE_FINDINGS"
+    "pass": true
+  },
+  "sp102_target_freeze_hashes": {
+    "ablation_sha256": "d123fbf6afb85f3de8cf5f3165c770cb8ffe46ec9c7a5c865f57b244ec214cca",
+    "analog_summary_sha256": "8a3c0498deb2e1c14c6b617dadaf9cf90d16c869a0028ef418ed70701506705e",
+    "dual_model_sha256": "88c63c407e011a7bbf478c2e0567f29ff8aa828fa90054d6a97ea26cc5c068d9",
+    "graph_sha256": "756a6d5e2e43aa202e2de0812342c8a23ea22e6e299eb034e679b0898dc321bc"
+  },
+  "status": "DONE_VALIDATED"
 }

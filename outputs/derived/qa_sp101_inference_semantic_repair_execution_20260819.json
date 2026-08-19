@@ -1,0 +1,161 @@
+{
+  "ablation": {
+    "cells": 1800,
+    "influence_class_counts": {
+      "CHANGES_BAND_OR_DIRECTION": 1,
+      "CHANGES_CONFIDENCE_TIER": 7,
+      "CHANGES_CONFLICT_CLASS": 285,
+      "CHANGES_TARGET_ELIGIBILITY": 4,
+      "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 402,
+      "ROUTE_MISSING_NOT_APPLICABLE": 981,
+      "SUPPORTS_SAME_STATE": 120
+    }
+  },
+  "consensus_counts": {
+    "CONSENSUS_SUPPORTED": 67,
+    "INSUFFICIENT_INDEPENDENT_LANES": 6,
+    "MATERIAL_CONFLICT": 27
+  },
+  "generated_at": "2026-08-19",
+  "graph_counts": {
+    "context_annotations": 80,
+    "population_band_relations": 195,
+    "signed_pairwise_edges": 6,
+    "similarity_links": 236,
+    "within_player_temporal_edges": 63
+  },
+  "mb01": {
+    "all_three_repaired_methods_same_candidate_count": 24,
+    "common_support": {
+      "no_valid_rows": 76,
+      "raw_rate_match_forbidden": true,
+      "valid_rows": 324
+    },
+    "covariance_subset_diagnostics": [
+      {
+        "condition_number_inf": 12.490065125351073,
+        "n": 121,
+        "p": 8,
+        "ridge": 1e-06,
+        "shrinkage": 0.1,
+        "status": "COVARIANCE_AWARE"
+      },
+      {
+        "condition_number_inf": 9.70896684016259,
+        "n": 163,
+        "p": 7,
+        "ridge": 1e-06,
+        "shrinkage": 0.1,
+        "status": "COVARIANCE_AWARE"
+      }
+    ],
+    "methods": [
+      {
+        "algorithm": "pairwise Euclidean/L2 over common normalized features",
+        "method": "NORMALIZED_L2_NEAREST_BASELINE",
+        "role": "honest_baseline"
+      },
+      {
+        "algorithm": "bidirectional top-k membership",
+        "k": 5,
+        "method": "MUTUAL_KNN"
+      },
+      {
+        "algorithm": "regularized covariance-aware quadratic distance",
+        "method": "CALIPERED_MAHALANOBIS",
+        "ridge": 1e-06,
+        "shrinkage": 0.1
+      },
+      {
+        "algorithm": "entropic empirical transport coupling with uniform marginals",
+        "column_marginal_max_error": 1.734723475976807e-18,
+        "epsilon": 0.12,
+        "iterations": 11,
+        "method": "OPTIMAL_TRANSPORT_SINKHORN",
+        "row_marginal_max_error": 1.3610640392514028e-13,
+        "status": "CONVERGED",
+        "transport_cost": 0.3940919650657007
+      }
+    ],
+    "mlb_candidate_player_denominator": 67,
+    "normalization": "within_league_season_percentile",
+    "physical_truth_guard": "Analog similarity is unsigned context; it cannot create a faster/slower edge.",
+    "route_id": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+    "schema_version": "sp101_metric_neighborhood_player_summary_semantic_repair_20260819",
+    "target_denominator": 100,
+    "transport_diagnostics": {
+      "column_marginal_max_error": 1.734723475976807e-18,
+      "epsilon": 0.12,
+      "iterations": 11,
+      "row_marginal_max_error": 1.3610640392514028e-13,
+      "status": "CONVERGED",
+      "transport_cost": 0.3940919650657007
+    },
+    "valid_rows_by_method": {
+      "CALIPERED_MAHALANOBIS": 88,
+      "MUTUAL_KNN": 60,
+      "NORMALIZED_L2_NEAREST_BASELINE": 88,
+      "OPTIMAL_TRANSPORT_SINKHORN": 88
+    }
+  },
+  "mb02_validation": {
+    "forward": {
+      "correlation": 0.03159316936786614,
+      "mae": 19.722757639185094,
+      "mean_error": -1.46068157204941,
+      "n": 54,
+      "rmse": 25.312653365013567
+    },
+    "grouped": {
+      "correlation": 0.0070975612519347435,
+      "mae": 18.670349356755498,
+      "mean_error": -0.7883917897246768,
+      "n": 75,
+      "rmse": 23.682223319764557
+    }
+  },
+  "schema_version": "sp101_semantic_repair_execution_qa_20260819",
+  "show_target_policy": {
+    "cross_time_fallback_policy": "NOT_USED_FOR_MB02_TRAINING; analog display may use nearest season only with explicit temporal_gap_years",
+    "non_live_rows_in_primary_target_input": 0,
+    "player_season_targets": 152,
+    "policy": "SEASON_MEDIAN_LIVE_SPEED",
+    "row_order_invariant": true,
+    "same_player_season_repeated_groups": 152
+  },
+  "status": "PASS_REPAIR_EXECUTION_PENDING_INDEPENDENT_AUDIT",
+  "synthetic_canaries": {
+    "checks": {
+      "evidence_present_negative_control_zero_effect": true,
+      "four_of_four_agree_consensus": true,
+      "l2_and_mahalanobis_distinct": true,
+      "one_of_four_insufficient": true,
+      "ot_uses_global_coupling_not_local_nearest": true,
+      "removing_conflicting_route_changes_state": true,
+      "two_of_four_agree_consensus": true,
+      "two_of_four_conflict": true,
+      "unsigned_analog_does_not_manufacture_consensus": true
+    },
+    "details": {
+      "l2_choice": 0,
+      "mahalanobis_choice": 1,
+      "negative_control_class": "NO_EFFECT_DESPITE_EVIDENCE_PRESENT",
+      "ot_diag": {
+        "column_marginal_max_error": 0.0,
+        "epsilon": 0.05,
+        "iterations": 500,
+        "row_marginal_max_error": 0.0004999323415149082,
+        "status": "MAX_ITER_REACHED",
+        "transport_cost": 0.15499500067658487
+      },
+      "ot_row0_choice": 1,
+      "show_ablation_class": "CHANGES_CONFLICT_CLASS"
+    },
+    "pass": true
+  },
+  "target_counts": {
+    "NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN": 70,
+    "TARGETED_LOW_CONFIDENCE": 3,
+    "TARGETED_MATERIAL_CONFLICT": 27
+  }
+}

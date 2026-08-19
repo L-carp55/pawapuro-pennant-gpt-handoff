@@ -1,20 +1,19 @@
 {
   "legacy_show_speed_from_statcast_sprint_submodel": {
-    "baseline_receipt": {},
-    "formula": "The Show Speed ~ MLB Statcast Sprint Speed",
+    "baseline_receipt": {
+      "baseline_receipt": {},
+      "formula": "The Show Speed ~ MLB Statcast Sprint Speed",
+      "not_replaced_by_shared_model": true,
+      "status": "PRESERVED_SEPARATE_BASELINE_SUBMODEL"
+    },
     "not_replaced_by_shared_model": true,
     "status": "PRESERVED_SEPARATE_BASELINE_SUBMODEL"
   },
   "model_separation": {
     "direct_powerpro_to_show_model_fit": false,
-    "outputs_are_external_game_appraisal_expectations": true,
     "powerpro_label_in_physical_path": false,
     "the_show_is_direct_physical_measurement": false
   },
-  "negative_findings": [
-    "Opportunity-conditioned infield hits, advancement and UBR/BsR-compatible components are blocked by the authoritative MLB acquisition schema and are not fabricated.",
-    "Sprint Speed is retained as a separate Statcast physical indicator; it is not treated as identical to outcome rates."
-  ],
   "powerpro_speed_from_npb_indicators": {
     "feature_models": {
       "bip_rate": {
@@ -312,72 +311,148 @@
       },
       "status": "RIDGE_FIT"
     },
+    "role": "SEPARATE_HISTORICAL_POWERPRO_BEHAVIOR_LANE",
     "rows_with_label": 1879,
     "unique_player_groups": 682,
     "work_version_effects_visible": true
   },
   "route_id": "MB-02_DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS",
-  "schema_version": "sp101_dual_game_behavior_models_repaired_20260818",
+  "schema_version": "sp101_dual_game_behavior_models_semantic_repair_20260819",
   "the_show_speed_from_mlb_shared_indicators": {
-    "ablation": [
+    "cross_time_fallback_used_for_training": false,
+    "edition_update_effects": {
+      "edition_residuals": {
+        "21": {
+          "mean_residual_vs_player_season_median": 0.0,
+          "n": 882
+        },
+        "22": {
+          "mean_residual_vs_player_season_median": 0.0,
+          "n": 880
+        },
+        "23": {
+          "mean_residual_vs_player_season_median": 0.0,
+          "n": 832
+        },
+        "24": {
+          "mean_residual_vs_player_season_median": 0.0,
+          "n": 483
+        },
+        "25": {
+          "mean_residual_vs_player_season_median": 0.0,
+          "n": 336
+        },
+        "26": {
+          "mean_residual_vs_player_season_median": 0.0,
+          "n": 105
+        }
+      },
+      "identifiable_edition_count_n_ge_5": 6,
+      "median_within_player_season_speed_span": 0.0,
+      "negative_finding": null,
+      "repeated_observation_rows": 3518,
+      "repeated_player_season_groups": 152,
+      "status": "MEASURED_EDITION_UPDATE_EFFECTS",
+      "target_policy": "SEASON_MEDIAN_LIVE_SPEED"
+    },
+    "feature_family_ablation_heldout": [
       {
-        "mae": 16.57584840173259,
+        "delta_heldout_mae_vs_full": 0.8418337936171234,
+        "heldout_metrics": {
+          "correlation": -0.12717595016043268,
+          "mae": 19.51218315037262,
+          "mean_error": -0.7127787801181658,
+          "n": 75,
+          "rmse": 24.82260579214916
+        },
         "removed_feature": "sb_attempt_rate_league_season_percentile",
-        "rmse": 20.010405528636003,
-        "rows": 161,
-        "status": "RIDGE_FIT_SHARED_INDICATORS"
+        "status": "EXECUTED_PLAYER_CLUSTERED_HOLDOUT"
       },
       {
-        "mae": 15.404700283459023,
+        "delta_heldout_mae_vs_full": -1.0940601134322279,
+        "heldout_metrics": {
+          "correlation": 0.2841682929721102,
+          "mae": 17.57628924332327,
+          "mean_error": -0.20464988196996772,
+          "n": 118,
+          "rmse": 21.999625101523673
+        },
         "removed_feature": "sb_success_rate_league_season_percentile",
-        "rmse": 18.897347926470843,
-        "rows": 258,
-        "status": "RIDGE_FIT_SHARED_INDICATORS"
+        "status": "EXECUTED_PLAYER_CLUSTERED_HOLDOUT"
       },
       {
-        "mae": 14.64785475156168,
+        "delta_heldout_mae_vs_full": -0.39852371885680427,
+        "heldout_metrics": {
+          "correlation": 0.05423757004533017,
+          "mae": 18.271825637898694,
+          "mean_error": -0.7797893839397002,
+          "n": 75,
+          "rmse": 23.16816674368614
+        },
         "removed_feature": "triple_rate_league_season_percentile",
-        "rmse": 18.080349654472055,
-        "rows": 161,
-        "status": "RIDGE_FIT_SHARED_INDICATORS"
+        "status": "EXECUTED_PLAYER_CLUSTERED_HOLDOUT"
       },
       {
-        "mae": 14.895419909496594,
+        "delta_heldout_mae_vs_full": 0.2046737361707045,
+        "heldout_metrics": {
+          "correlation": 0.012532149545642005,
+          "mae": 18.875023092926202,
+          "mean_error": -0.7875890757330346,
+          "n": 75,
+          "rmse": 23.264267516088506
+        },
         "removed_feature": "gdp_rate_league_season_percentile",
-        "rmse": 18.260494498465487,
-        "rows": 161,
-        "status": "RIDGE_FIT_SHARED_INDICATORS"
+        "status": "EXECUTED_PLAYER_CLUSTERED_HOLDOUT"
       },
       {
-        "mae": 14.666802414415073,
+        "delta_heldout_mae_vs_full": -0.10218674027012753,
+        "heldout_metrics": {
+          "correlation": 0.005967764425499276,
+          "mae": 18.56816261648537,
+          "mean_error": -0.6164777474719595,
+          "n": 75,
+          "rmse": 23.62570926946625
+        },
         "removed_feature": "run_rate_league_season_percentile",
-        "rmse": 18.080881606390864,
-        "rows": 161,
-        "status": "RIDGE_FIT_SHARED_INDICATORS"
+        "status": "EXECUTED_PLAYER_CLUSTERED_HOLDOUT"
       },
       {
-        "mae": 14.61677288746989,
+        "delta_heldout_mae_vs_full": -0.3959473937861162,
+        "heldout_metrics": {
+          "correlation": 0.015686889290734952,
+          "mae": 18.27440196296938,
+          "mean_error": -0.477802575572231,
+          "n": 75,
+          "rmse": 23.515733119717535
+        },
         "removed_feature": "single_rate_league_season_percentile",
-        "rmse": 18.102054328449963,
-        "rows": 161,
-        "status": "RIDGE_FIT_SHARED_INDICATORS"
+        "status": "EXECUTED_PLAYER_CLUSTERED_HOLDOUT"
       },
       {
-        "mae": 14.761885805300572,
+        "delta_heldout_mae_vs_full": -0.5157046286754401,
+        "heldout_metrics": {
+          "correlation": 0.0747623174715274,
+          "mae": 18.154644728080058,
+          "mean_error": -1.1092276433284731,
+          "n": 75,
+          "rmse": 22.587535050322998
+        },
         "removed_feature": "double_rate_league_season_percentile",
-        "rmse": 18.207215115554206,
-        "rows": 161,
-        "status": "RIDGE_FIT_SHARED_INDICATORS"
+        "status": "EXECUTED_PLAYER_CLUSTERED_HOLDOUT"
       },
       {
-        "mae": 15.140011915572703,
+        "delta_heldout_mae_vs_full": -0.7922503945653823,
+        "heldout_metrics": {
+          "correlation": 0.09370834646706365,
+          "mae": 17.878098962190116,
+          "mean_error": -0.3888318525675923,
+          "n": 75,
+          "rmse": 22.525160085098815
+        },
         "removed_feature": "bip_rate_league_season_percentile",
-        "rmse": 18.483049635406683,
-        "rows": 161,
-        "status": "RIDGE_FIT_SHARED_INDICATORS"
+        "status": "EXECUTED_PLAYER_CLUSTERED_HOLDOUT"
       }
     ],
-    "edition_effect": "The Show edition/update remains an observed external axis; no edition coefficient is used to impute missing cards.",
     "features": [
       "sb_attempt_rate_league_season_percentile",
       "sb_success_rate_league_season_percentile",
@@ -388,16 +463,16 @@
       "double_rate_league_season_percentile",
       "bip_rate_league_season_percentile"
     ],
-    "fit": {
+    "fit_all_rows_descriptive_only": {
       "coefficients_centered": {
-        "bip_rate_league_season_percentile": -5.300261796183111,
-        "double_rate_league_season_percentile": -2.5129439851239397,
-        "gdp_rate_league_season_percentile": -2.8265791756103607,
-        "run_rate_league_season_percentile": -0.16544003878433158,
-        "sb_attempt_rate_league_season_percentile": 9.04372161615004,
-        "sb_success_rate_league_season_percentile": -0.04611344777741842,
-        "single_rate_league_season_percentile": -1.2134709452466275,
-        "triple_rate_league_season_percentile": -0.0011641330734621588
+        "bip_rate_league_season_percentile": -1.7166099034665603,
+        "double_rate_league_season_percentile": -2.179606587256779,
+        "gdp_rate_league_season_percentile": -4.770409539142047,
+        "run_rate_league_season_percentile": 2.12851882213691,
+        "sb_attempt_rate_league_season_percentile": 5.3567438016719615,
+        "sb_success_rate_league_season_percentile": -2.6730999279119185,
+        "single_rate_league_season_percentile": -3.7565926500017386,
+        "triple_rate_league_season_percentile": -0.7630192017632167
       },
       "features": [
         "sb_attempt_rate_league_season_percentile",
@@ -409,79 +484,1881 @@
         "double_rate_league_season_percentile",
         "bip_rate_league_season_percentile"
       ],
-      "intercept_centered": 56.84472049689441,
-      "mae": 14.647781445992447,
+      "intercept_centered": 59.4,
+      "mae": 14.411247464634585,
       "means": {
-        "bip_rate_league_season_percentile": 0.5372312672056918,
-        "double_rate_league_season_percentile": 0.5275971270636963,
-        "gdp_rate_league_season_percentile": 0.4802992985017099,
-        "run_rate_league_season_percentile": 0.5310328446846533,
-        "sb_attempt_rate_league_season_percentile": 0.6900043154482322,
-        "sb_success_rate_league_season_percentile": 0.4891041446005248,
-        "single_rate_league_season_percentile": 0.5479438271363737,
-        "triple_rate_league_season_percentile": 0.5845375145484755
+        "bip_rate_league_season_percentile": 0.5410194429723841,
+        "double_rate_league_season_percentile": 0.5551314101431748,
+        "gdp_rate_league_season_percentile": 0.5012851258498318,
+        "run_rate_league_season_percentile": 0.5640758024993319,
+        "sb_attempt_rate_league_season_percentile": 0.6859728851022968,
+        "sb_success_rate_league_season_percentile": 0.4926984126984127,
+        "single_rate_league_season_percentile": 0.5510093532446474,
+        "triple_rate_league_season_percentile": 0.5370373613432438
       },
-      "residual_p10": -24.900577720484037,
-      "residual_p90": 24.195483757041536,
+      "residual_p10": -27.31621896928229,
+      "residual_p90": 22.417719006386058,
       "ridge": 1.0,
-      "rmse": 18.080349584175966,
-      "rows": 161,
+      "rmse": 18.14284213998994,
+      "rows": 75,
       "scales": {
-        "bip_rate_league_season_percentile": 0.2818168224490304,
-        "double_rate_league_season_percentile": 0.2754604770724669,
-        "gdp_rate_league_season_percentile": 0.26070032039417806,
-        "run_rate_league_season_percentile": 0.25888970488571555,
-        "sb_attempt_rate_league_season_percentile": 0.19352615701034398,
-        "sb_success_rate_league_season_percentile": 0.2699244603889039,
-        "single_rate_league_season_percentile": 0.27261021720778916,
-        "triple_rate_league_season_percentile": 0.24618499065368327
+        "bip_rate_league_season_percentile": 0.2993212505606387,
+        "double_rate_league_season_percentile": 0.25692813128363456,
+        "gdp_rate_league_season_percentile": 0.2630134964387771,
+        "run_rate_league_season_percentile": 0.2686016961416667,
+        "sb_attempt_rate_league_season_percentile": 0.1850268697025884,
+        "sb_success_rate_league_season_percentile": 0.26648534872498336,
+        "single_rate_league_season_percentile": 0.28767466989869495,
+        "triple_rate_league_season_percentile": 0.24667882295332624
       },
       "status": "RIDGE_FIT_SHARED_INDICATORS",
       "uncertainty_band": [
-        -24.850498,
-        24.46185
+        -23.637904,
+        22.785751
       ]
     },
-    "formula": "The Show Live Speed ~ MLB official shared indicators after league-season normalization",
+    "formula": "The Show Live Speed season median ~ MLB shared indicators after league-season normalization",
     "forward_season_holdout": {
-      "leakage_guard": "future season rows are not used to describe an earlier row",
-      "seasons": [
-        2008,
-        2009,
-        2010,
-        2011,
-        2012,
-        2013,
-        2014,
-        2015,
-        2016,
-        2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025,
-        2026
+      "aggregate_metrics": {
+        "correlation": 0.03159316936786614,
+        "mae": 19.722757639185094,
+        "mean_error": -1.46068157204941,
+        "n": 54,
+        "rmse": 25.312653365013567
+      },
+      "executed_season_count": 5,
+      "rule": "fit only seasons strictly before each test season",
+      "season_receipts": [
+        {
+          "status": "INSUFFICIENT_DATA",
+          "test_rows": 21,
+          "test_season": 2021,
+          "train_rows": 0
+        },
+        {
+          "metrics": {
+            "correlation": 0.07512313863614827,
+            "mae": 22.12629546081706,
+            "mean_error": 4.395794311302417,
+            "n": 23,
+            "rmse": 28.91378723439897
+          },
+          "predictions": [
+            {
+              "actual": 56.0,
+              "error": 11.38208298948301,
+              "mlbam_id": "444876",
+              "prediction": 67.38208298948301,
+              "season": 2022
+            },
+            {
+              "actual": 8.0,
+              "error": 37.65271927792858,
+              "mlbam_id": "542583",
+              "prediction": 45.65271927792858,
+              "season": 2022
+            },
+            {
+              "actual": 7.0,
+              "error": 61.454018635645696,
+              "mlbam_id": "553902",
+              "prediction": 68.4540186356457,
+              "season": 2022
+            },
+            {
+              "actual": 21.0,
+              "error": 79.81178511372478,
+              "mlbam_id": "571602",
+              "prediction": 100.81178511372478,
+              "season": 2022
+            },
+            {
+              "actual": 16.0,
+              "error": 31.99572055601238,
+              "mlbam_id": "572228",
+              "prediction": 47.99572055601238,
+              "season": 2022
+            },
+            {
+              "actual": 41.0,
+              "error": 32.425869864829934,
+              "mlbam_id": "593934",
+              "prediction": 73.42586986482993,
+              "season": 2022
+            },
+            {
+              "actual": 17.0,
+              "error": 33.47629580410506,
+              "mlbam_id": "596748",
+              "prediction": 50.47629580410506,
+              "season": 2022
+            },
+            {
+              "actual": 81.0,
+              "error": -13.366715823717456,
+              "mlbam_id": "606157",
+              "prediction": 67.63328417628254,
+              "season": 2022
+            },
+            {
+              "actual": 40.0,
+              "error": 2.1652617668992775,
+              "mlbam_id": "613564",
+              "prediction": 42.16526176689928,
+              "season": 2022
+            },
+            {
+              "actual": 78.0,
+              "error": -23.75235105016762,
+              "mlbam_id": "614173",
+              "prediction": 54.24764894983238,
+              "season": 2022
+            },
+            {
+              "actual": 42.0,
+              "error": -2.9259827407691574,
+              "mlbam_id": "614177",
+              "prediction": 39.07401725923084,
+              "season": 2022
+            },
+            {
+              "actual": 79.0,
+              "error": -16.87472092507906,
+              "mlbam_id": "621446",
+              "prediction": 62.12527907492094,
+              "season": 2022
+            },
+            {
+              "actual": 80.0,
+              "error": -4.06251127892935,
+              "mlbam_id": "641505",
+              "prediction": 75.93748872107065,
+              "season": 2022
+            },
+            {
+              "actual": 50.0,
+              "error": 13.825180440741867,
+              "mlbam_id": "641914",
+              "prediction": 63.82518044074187,
+              "season": 2022
+            },
+            {
+              "actual": 80.0,
+              "error": -19.621697959519658,
+              "mlbam_id": "656308",
+              "prediction": 60.37830204048034,
+              "season": 2022
+            },
+            {
+              "actual": 89.0,
+              "error": -11.114382884143225,
+              "mlbam_id": "658668",
+              "prediction": 77.88561711585677,
+              "season": 2022
+            },
+            {
+              "actual": 80.0,
+              "error": -16.921527239630898,
+              "mlbam_id": "660757",
+              "prediction": 63.0784727603691,
+              "season": 2022
+            },
+            {
+              "actual": 70.0,
+              "error": -23.86773707107021,
+              "mlbam_id": "666464",
+              "prediction": 46.13226292892979,
+              "season": 2022
+            },
+            {
+              "actual": 56.0,
+              "error": 0.8150979300034393,
+              "mlbam_id": "666801",
+              "prediction": 56.81509793000344,
+              "season": 2022
+            },
+            {
+              "actual": 69.0,
+              "error": -15.12998327879626,
+              "mlbam_id": "666915",
+              "prediction": 53.87001672120374,
+              "season": 2022
+            },
+            {
+              "actual": 80.0,
+              "error": -34.82755558454086,
+              "mlbam_id": "669450",
+              "prediction": 45.17244441545914,
+              "season": 2022
+            },
+            {
+              "actual": 70.0,
+              "error": -5.559170222707792,
+              "mlbam_id": "670768",
+              "prediction": 64.44082977729221,
+              "season": 2022
+            },
+            {
+              "actual": 74.0,
+              "error": -15.876427160346879,
+              "mlbam_id": "673548",
+              "prediction": 58.12357283965312,
+              "season": 2022
+            }
+          ],
+          "status": "EXECUTED",
+          "test_rows": 23,
+          "test_season": 2022,
+          "train_rows": 21
+        },
+        {
+          "metrics": {
+            "correlation": 0.04816177897948817,
+            "mae": 20.597354026358367,
+            "mean_error": -8.758849304749562,
+            "n": 14,
+            "rmse": 25.20378443568901
+          },
+          "predictions": [
+            {
+              "actual": 11.0,
+              "error": 37.02533964194496,
+              "mlbam_id": "572228",
+              "prediction": 48.02533964194496,
+              "season": 2023
+            },
+            {
+              "actual": 67.0,
+              "error": -3.0785090242330355,
+              "mlbam_id": "641505",
+              "prediction": 63.921490975766964,
+              "season": 2023
+            },
+            {
+              "actual": 61.0,
+              "error": -3.484445148015027,
+              "mlbam_id": "641525",
+              "prediction": 57.51555485198497,
+              "season": 2023
+            },
+            {
+              "actual": 80.0,
+              "error": -50.84785769335684,
+              "mlbam_id": "656308",
+              "prediction": 29.152142306643153,
+              "season": 2023
+            },
+            {
+              "actual": 75.0,
+              "error": -13.344057575504777,
+              "mlbam_id": "658668",
+              "prediction": 61.65594242449522,
+              "season": 2023
+            },
+            {
+              "actual": 26.0,
+              "error": 25.680576656282625,
+              "mlbam_id": "663527",
+              "prediction": 51.680576656282625,
+              "season": 2023
+            },
+            {
+              "actual": 59.0,
+              "error": 16.86217310572738,
+              "mlbam_id": "663550",
+              "prediction": 75.86217310572738,
+              "season": 2023
+            },
+            {
+              "actual": 88.0,
+              "error": -24.096774311917684,
+              "mlbam_id": "664057",
+              "prediction": 63.903225688082316,
+              "season": 2023
+            },
+            {
+              "actual": 55.0,
+              "error": -4.0118028116856905,
+              "mlbam_id": "666801",
+              "prediction": 50.98819718831431,
+              "season": 2023
+            },
+            {
+              "actual": 70.0,
+              "error": 3.3014436473066695,
+              "mlbam_id": "666915",
+              "prediction": 73.30144364730667,
+              "season": 2023
+            },
+            {
+              "actual": 79.0,
+              "error": -27.54578834097189,
+              "mlbam_id": "669450",
+              "prediction": 51.45421165902811,
+              "season": 2023
+            },
+            {
+              "actual": 65.0,
+              "error": -28.699947035211736,
+              "mlbam_id": "672478",
+              "prediction": 36.300052964788264,
+              "season": 2023
+            },
+            {
+              "actual": 71.0,
+              "error": -12.27022426818042,
+              "mlbam_id": "673548",
+              "prediction": 58.72977573181958,
+              "season": 2023
+            },
+            {
+              "actual": 74.0,
+              "error": -38.11401710867841,
+              "mlbam_id": "807799",
+              "prediction": 35.88598289132159,
+              "season": 2023
+            }
+          ],
+          "status": "EXECUTED",
+          "test_rows": 14,
+          "test_season": 2023,
+          "train_rows": 44
+        },
+        {
+          "metrics": {
+            "correlation": 0.29019869164656714,
+            "mae": 12.409564975577235,
+            "mean_error": -3.171610535195418,
+            "n": 9,
+            "rmse": 17.948074969640228
+          },
+          "predictions": [
+            {
+              "actual": 75.0,
+              "error": -39.627909193730154,
+              "mlbam_id": "658668",
+              "prediction": 35.372090806269846,
+              "season": 2024
+            },
+            {
+              "actual": 38.0,
+              "error": 2.1419584136661314,
+              "mlbam_id": "663527",
+              "prediction": 40.14195841366613,
+              "season": 2024
+            },
+            {
+              "actual": 59.0,
+              "error": 20.383831682077073,
+              "mlbam_id": "663550",
+              "prediction": 79.38383168207707,
+              "season": 2024
+            },
+            {
+              "actual": 62.0,
+              "error": 5.269721487694056,
+              "mlbam_id": "666464",
+              "prediction": 67.26972148769406,
+              "season": 2024
+            },
+            {
+              "actual": 70.0,
+              "error": -2.740529956069608,
+              "mlbam_id": "666915",
+              "prediction": 67.25947004393039,
+              "season": 2024
+            },
+            {
+              "actual": 79.0,
+              "error": -27.541452282963157,
+              "mlbam_id": "669450",
+              "prediction": 51.45854771703684,
+              "season": 2024
+            },
+            {
+              "actual": 68.0,
+              "error": 3.724785284919534,
+              "mlbam_id": "672744",
+              "prediction": 71.72478528491953,
+              "season": 2024
+            },
+            {
+              "actual": 74.0,
+              "error": -0.20539836571401793,
+              "mlbam_id": "673548",
+              "prediction": 73.79460163428598,
+              "season": 2024
+            },
+            {
+              "actual": 37.0,
+              "error": 10.050498113361378,
+              "mlbam_id": "807799",
+              "prediction": 47.05049811336138,
+              "season": 2024
+            }
+          ],
+          "status": "EXECUTED",
+          "test_rows": 9,
+          "test_season": 2024,
+          "train_rows": 58
+        },
+        {
+          "metrics": {
+            "correlation": -0.5975448504452284,
+            "mae": 19.34114801379745,
+            "mean_error": -6.426844691450854,
+            "n": 6,
+            "rmse": 21.331492457093177
+          },
+          "predictions": [
+            {
+              "actual": 81.0,
+              "error": -24.546314736624772,
+              "mlbam_id": "660757",
+              "prediction": 56.45368526337523,
+              "season": 2025
+            },
+            {
+              "actual": 49.0,
+              "error": 17.583627005439837,
+              "mlbam_id": "666464",
+              "prediction": 66.58362700543984,
+              "season": 2025
+            },
+            {
+              "actual": 79.0,
+              "error": -31.573506698390013,
+              "mlbam_id": "669450",
+              "prediction": 47.42649330160999,
+              "season": 2025
+            },
+            {
+              "actual": 64.0,
+              "error": -1.9461518704294036,
+              "mlbam_id": "672744",
+              "prediction": 62.053848129570596,
+              "season": 2025
+            },
+            {
+              "actual": 70.0,
+              "error": -19.23800481030073,
+              "mlbam_id": "673548",
+              "prediction": 50.76199518969927,
+              "season": 2025
+            },
+            {
+              "actual": 37.0,
+              "error": 21.159282961599956,
+              "mlbam_id": "807799",
+              "prediction": 58.159282961599956,
+              "season": 2025
+            }
+          ],
+          "status": "EXECUTED",
+          "test_rows": 6,
+          "test_season": 2025,
+          "train_rows": 67
+        },
+        {
+          "metrics": {
+            "correlation": -1.0,
+            "mae": 20.01409384260286,
+            "mean_error": 4.874689590667018,
+            "n": 2,
+            "rmse": 20.599188113755144
+          },
+          "predictions": [
+            {
+              "actual": 72.0,
+              "error": -15.139404251935844,
+              "mlbam_id": "673548",
+              "prediction": 56.860595748064156,
+              "season": 2026
+            },
+            {
+              "actual": 40.0,
+              "error": 24.88878343326988,
+              "mlbam_id": "807799",
+              "prediction": 64.88878343326988,
+              "season": 2026
+            }
+          ],
+          "status": "EXECUTED",
+          "test_rows": 2,
+          "test_season": 2026,
+          "train_rows": 73
+        }
       ],
-      "status": "FORWARD_SEASON_RECEIPT"
+      "status": "EXECUTED_FORWARD_SEASON_HOLDOUT"
     },
     "player_clustered_holdout": {
-      "groups": 53,
-      "held_out_group_rule": "MLBAM id never split across train/test; deterministic hash folds",
-      "status": "GROUPED_HOLDOUT_RECEIPT"
+      "aggregate_metrics": {
+        "correlation": 0.0070975612519347435,
+        "mae": 18.670349356755498,
+        "mean_error": -0.7883917897246768,
+        "n": 75,
+        "rmse": 23.682223319764557
+      },
+      "fold_count": 5,
+      "fold_rule": "sha256(MLBAM_ID)%5",
+      "folds": [
+        {
+          "fit_status": "RIDGE_FIT_SHARED_INDICATORS",
+          "fold": 0,
+          "metrics": {
+            "correlation": 0.05634121098462152,
+            "mae": 29.15117291152175,
+            "mean_error": 26.558608275027936,
+            "n": 11,
+            "rmse": 36.67771926110112
+          },
+          "player_overlap_count": 0,
+          "predictions": [
+            {
+              "actual": 8.0,
+              "error": 35.324831783807085,
+              "mlbam_id": "542583",
+              "prediction": 43.324831783807085,
+              "season": 2022
+            },
+            {
+              "actual": 7.0,
+              "error": 59.373668505091445,
+              "mlbam_id": "553902",
+              "prediction": 66.37366850509144,
+              "season": 2022
+            },
+            {
+              "actual": 21.0,
+              "error": 79.17249706345078,
+              "mlbam_id": "571602",
+              "prediction": 100.17249706345078,
+              "season": 2022
+            },
+            {
+              "actual": 59.0,
+              "error": -5.885731558217259,
+              "mlbam_id": "591971",
+              "prediction": 53.11426844178274,
+              "season": 2021
+            },
+            {
+              "actual": 42.0,
+              "error": 21.129053918893938,
+              "mlbam_id": "593934",
+              "prediction": 63.12905391889394,
+              "season": 2021
+            },
+            {
+              "actual": 41.0,
+              "error": 37.314716833590126,
+              "mlbam_id": "593934",
+              "prediction": 78.31471683359013,
+              "season": 2022
+            },
+            {
+              "actual": 17.0,
+              "error": 29.39284315192699,
+              "mlbam_id": "596748",
+              "prediction": 46.39284315192699,
+              "season": 2022
+            },
+            {
+              "actual": 61.0,
+              "error": 3.754824657359734,
+              "mlbam_id": "641525",
+              "prediction": 64.75482465735973,
+              "season": 2023
+            },
+            {
+              "actual": 50.0,
+              "error": 27.425166930270095,
+              "mlbam_id": "641914",
+              "prediction": 77.4251669302701,
+              "season": 2021
+            },
+            {
+              "actual": 50.0,
+              "error": 13.516193681633105,
+              "mlbam_id": "641914",
+              "prediction": 63.516193681633105,
+              "season": 2022
+            },
+            {
+              "actual": 70.0,
+              "error": -8.373373942498723,
+              "mlbam_id": "670768",
+              "prediction": 61.62662605750128,
+              "season": 2022
+            }
+          ],
+          "test_player_ids": [
+            "542583",
+            "553902",
+            "571602",
+            "591971",
+            "593934",
+            "596748",
+            "641525",
+            "641914",
+            "670768"
+          ],
+          "test_rows": 11,
+          "train_player_ids": [
+            "444876",
+            "467827",
+            "520471",
+            "543105",
+            "570256",
+            "572228",
+            "606157",
+            "613564",
+            "614173",
+            "614177",
+            "621446",
+            "641505",
+            "643524",
+            "656308",
+            "658668",
+            "660294",
+            "660757",
+            "663527",
+            "663550",
+            "664057",
+            "666464",
+            "666801",
+            "666915",
+            "669450",
+            "672478",
+            "672744",
+            "673451",
+            "673548",
+            "807799"
+          ],
+          "train_rows": 64
+        },
+        {
+          "fit_status": "RIDGE_FIT_SHARED_INDICATORS",
+          "fold": 1,
+          "metrics": {
+            "correlation": 0.4449293757535851,
+            "mae": 18.682768086841712,
+            "mean_error": 6.39063477342027,
+            "n": 16,
+            "rmse": 21.762018608554495
+          },
+          "player_overlap_count": 0,
+          "predictions": [
+            {
+              "actual": 56.0,
+              "error": 6.99690859901024,
+              "mlbam_id": "570256",
+              "prediction": 62.99690859901024,
+              "season": 2021
+            },
+            {
+              "actual": 16.0,
+              "error": 36.06102306119319,
+              "mlbam_id": "572228",
+              "prediction": 52.06102306119319,
+              "season": 2022
+            },
+            {
+              "actual": 11.0,
+              "error": 43.89537844265199,
+              "mlbam_id": "572228",
+              "prediction": 54.89537844265199,
+              "season": 2023
+            },
+            {
+              "actual": 64.0,
+              "error": 11.648178900662586,
+              "mlbam_id": "606157",
+              "prediction": 75.64817890066259,
+              "season": 2021
+            },
+            {
+              "actual": 81.0,
+              "error": -7.9842257777091845,
+              "mlbam_id": "606157",
+              "prediction": 73.01577422229082,
+              "season": 2022
+            },
+            {
+              "actual": 51.0,
+              "error": 11.816776950340781,
+              "mlbam_id": "613564",
+              "prediction": 62.81677695034078,
+              "season": 2021
+            },
+            {
+              "actual": 40.0,
+              "error": 25.448098757028873,
+              "mlbam_id": "613564",
+              "prediction": 65.44809875702887,
+              "season": 2022
+            },
+            {
+              "actual": 80.0,
+              "error": -10.838598786194964,
+              "mlbam_id": "614173",
+              "prediction": 69.16140121380504,
+              "season": 2021
+            },
+            {
+              "actual": 78.0,
+              "error": -5.361389640553298,
+              "mlbam_id": "614173",
+              "prediction": 72.6386103594467,
+              "season": 2022
+            },
+            {
+              "actual": 30.0,
+              "error": 30.2675028351058,
+              "mlbam_id": "660294",
+              "prediction": 60.2675028351058,
+              "season": 2021
+            },
+            {
+              "actual": 59.0,
+              "error": 15.30666256902903,
+              "mlbam_id": "663550",
+              "prediction": 74.30666256902903,
+              "season": 2023
+            },
+            {
+              "actual": 59.0,
+              "error": 19.146692767073375,
+              "mlbam_id": "663550",
+              "prediction": 78.14669276707338,
+              "season": 2024
+            },
+            {
+              "actual": 87.0,
+              "error": -26.969916608991127,
+              "mlbam_id": "664057",
+              "prediction": 60.03008339100887,
+              "season": 2021
+            },
+            {
+              "actual": 88.0,
+              "error": -25.846701716625347,
+              "mlbam_id": "664057",
+              "prediction": 62.15329828337465,
+              "season": 2023
+            },
+            {
+              "actual": 65.0,
+              "error": -14.427237503929327,
+              "mlbam_id": "672478",
+              "prediction": 50.57276249607067,
+              "season": 2023
+            },
+            {
+              "actual": 71.0,
+              "error": -6.9089964733682905,
+              "mlbam_id": "673451",
+              "prediction": 64.09100352663171,
+              "season": 2021
+            }
+          ],
+          "test_player_ids": [
+            "570256",
+            "572228",
+            "606157",
+            "613564",
+            "614173",
+            "660294",
+            "663550",
+            "664057",
+            "672478",
+            "673451"
+          ],
+          "test_rows": 16,
+          "train_player_ids": [
+            "444876",
+            "467827",
+            "520471",
+            "542583",
+            "543105",
+            "553902",
+            "571602",
+            "591971",
+            "593934",
+            "596748",
+            "614177",
+            "621446",
+            "641505",
+            "641525",
+            "641914",
+            "643524",
+            "656308",
+            "658668",
+            "660757",
+            "663527",
+            "666464",
+            "666801",
+            "666915",
+            "669450",
+            "670768",
+            "672744",
+            "673548",
+            "807799"
+          ],
+          "train_rows": 59
+        },
+        {
+          "fit_status": "RIDGE_FIT_SHARED_INDICATORS",
+          "fold": 2,
+          "metrics": {
+            "correlation": -0.013591746090984172,
+            "mae": 15.97155210993427,
+            "mean_error": -4.494054935568764,
+            "n": 16,
+            "rmse": 19.43232041427001
+          },
+          "player_overlap_count": 0,
+          "predictions": [
+            {
+              "actual": 42.0,
+              "error": 13.397610815938727,
+              "mlbam_id": "467827",
+              "prediction": 55.39761081593873,
+              "season": 2021
+            },
+            {
+              "actual": 42.0,
+              "error": 10.757703906173113,
+              "mlbam_id": "614177",
+              "prediction": 52.75770390617311,
+              "season": 2021
+            },
+            {
+              "actual": 42.0,
+              "error": -3.114589498970318,
+              "mlbam_id": "614177",
+              "prediction": 38.88541050102968,
+              "season": 2022
+            },
+            {
+              "actual": 68.0,
+              "error": -17.31481196622,
+              "mlbam_id": "656308",
+              "prediction": 50.68518803378,
+              "season": 2021
+            },
+            {
+              "actual": 80.0,
+              "error": -21.582600524006295,
+              "mlbam_id": "656308",
+              "prediction": 58.417399475993705,
+              "season": 2022
+            },
+            {
+              "actual": 80.0,
+              "error": -39.543733574603706,
+              "mlbam_id": "656308",
+              "prediction": 40.456266425396294,
+              "season": 2023
+            },
+            {
+              "actual": 26.0,
+              "error": 43.557214971655355,
+              "mlbam_id": "663527",
+              "prediction": 69.55721497165536,
+              "season": 2023
+            },
+            {
+              "actual": 38.0,
+              "error": 5.951394972455304,
+              "mlbam_id": "663527",
+              "prediction": 43.951394972455304,
+              "season": 2024
+            },
+            {
+              "actual": 70.0,
+              "error": -11.087239954121422,
+              "mlbam_id": "666464",
+              "prediction": 58.91276004587858,
+              "season": 2022
+            },
+            {
+              "actual": 62.0,
+              "error": -2.1733165298613244,
+              "mlbam_id": "666464",
+              "prediction": 59.826683470138676,
+              "season": 2024
+            },
+            {
+              "actual": 49.0,
+              "error": 18.156052728701553,
+              "mlbam_id": "666464",
+              "prediction": 67.15605272870155,
+              "season": 2025
+            },
+            {
+              "actual": 74.0,
+              "error": -8.387534504077266,
+              "mlbam_id": "673548",
+              "prediction": 65.61246549592273,
+              "season": 2022
+            },
+            {
+              "actual": 71.0,
+              "error": -16.049483381686784,
+              "mlbam_id": "673548",
+              "prediction": 54.950516618313216,
+              "season": 2023
+            },
+            {
+              "actual": 74.0,
+              "error": -11.477201845094825,
+              "mlbam_id": "673548",
+              "prediction": 62.522798154905175,
+              "season": 2024
+            },
+            {
+              "actual": 70.0,
+              "error": -13.881886301039309,
+              "mlbam_id": "673548",
+              "prediction": 56.11811369896069,
+              "season": 2025
+            },
+            {
+              "actual": 72.0,
+              "error": -19.11245828434302,
+              "mlbam_id": "673548",
+              "prediction": 52.88754171565698,
+              "season": 2026
+            }
+          ],
+          "test_player_ids": [
+            "467827",
+            "614177",
+            "656308",
+            "663527",
+            "666464",
+            "673548"
+          ],
+          "test_rows": 16,
+          "train_player_ids": [
+            "444876",
+            "520471",
+            "542583",
+            "543105",
+            "553902",
+            "570256",
+            "571602",
+            "572228",
+            "591971",
+            "593934",
+            "596748",
+            "606157",
+            "613564",
+            "614173",
+            "621446",
+            "641505",
+            "641525",
+            "641914",
+            "643524",
+            "658668",
+            "660294",
+            "660757",
+            "663550",
+            "664057",
+            "666801",
+            "666915",
+            "669450",
+            "670768",
+            "672478",
+            "672744",
+            "673451",
+            "807799"
+          ],
+          "train_rows": 59
+        },
+        {
+          "fit_status": "RIDGE_FIT_SHARED_INDICATORS",
+          "fold": 3,
+          "metrics": {
+            "correlation": 0.3055686159292469,
+            "mae": 21.878960512109735,
+            "mean_error": -20.081000987230603,
+            "n": 16,
+            "rmse": 25.424913280116993
+          },
+          "player_overlap_count": 0,
+          "predictions": [
+            {
+              "actual": 31.0,
+              "error": 9.253902896604572,
+              "mlbam_id": "520471",
+              "prediction": 40.25390289660457,
+              "season": 2021
+            },
+            {
+              "actual": 50.0,
+              "error": -1.799527646704803,
+              "mlbam_id": "543105",
+              "prediction": 48.2004723532952,
+              "season": 2021
+            },
+            {
+              "actual": 84.0,
+              "error": -37.510257429791054,
+              "mlbam_id": "621446",
+              "prediction": 46.489742570208946,
+              "season": 2021
+            },
+            {
+              "actual": 79.0,
+              "error": -0.60084592429304,
+              "mlbam_id": "621446",
+              "prediction": 78.39915407570696,
+              "season": 2022
+            },
+            {
+              "actual": 81.0,
+              "error": -25.149411941080047,
+              "mlbam_id": "658668",
+              "prediction": 55.85058805891995,
+              "season": 2021
+            },
+            {
+              "actual": 89.0,
+              "error": -24.663189195930073,
+              "mlbam_id": "658668",
+              "prediction": 64.33681080406993,
+              "season": 2022
+            },
+            {
+              "actual": 75.0,
+              "error": -21.846882927868684,
+              "mlbam_id": "658668",
+              "prediction": 53.153117072131316,
+              "season": 2023
+            },
+            {
+              "actual": 75.0,
+              "error": -35.71456880404475,
+              "mlbam_id": "658668",
+              "prediction": 39.28543119595525,
+              "season": 2024
+            },
+            {
+              "actual": 80.0,
+              "error": -32.840606897888264,
+              "mlbam_id": "660757",
+              "prediction": 47.159393102111736,
+              "season": 2022
+            },
+            {
+              "actual": 81.0,
+              "error": -34.63511847768355,
+              "mlbam_id": "660757",
+              "prediction": 46.36488152231645,
+              "season": 2025
+            },
+            {
+              "actual": 56.0,
+              "error": 5.129773302428511,
+              "mlbam_id": "666801",
+              "prediction": 61.12977330242851,
+              "season": 2022
+            },
+            {
+              "actual": 55.0,
+              "error": -10.278524909507134,
+              "mlbam_id": "666801",
+              "prediction": 44.721475090492866,
+              "season": 2023
+            },
+            {
+              "actual": 80.0,
+              "error": -11.65749540784175,
+              "mlbam_id": "669450",
+              "prediction": 68.34250459215825,
+              "season": 2022
+            },
+            {
+              "actual": 79.0,
+              "error": -27.77863907288411,
+              "mlbam_id": "669450",
+              "prediction": 51.22136092711589,
+              "season": 2023
+            },
+            {
+              "actual": 79.0,
+              "error": -35.19936407986558,
+              "mlbam_id": "669450",
+              "prediction": 43.80063592013442,
+              "season": 2024
+            },
+            {
+              "actual": 79.0,
+              "error": -36.00525927933986,
+              "mlbam_id": "669450",
+              "prediction": 42.99474072066014,
+              "season": 2025
+            }
+          ],
+          "test_player_ids": [
+            "520471",
+            "543105",
+            "621446",
+            "658668",
+            "660757",
+            "666801",
+            "669450"
+          ],
+          "test_rows": 16,
+          "train_player_ids": [
+            "444876",
+            "467827",
+            "542583",
+            "553902",
+            "570256",
+            "571602",
+            "572228",
+            "591971",
+            "593934",
+            "596748",
+            "606157",
+            "613564",
+            "614173",
+            "614177",
+            "641505",
+            "641525",
+            "641914",
+            "643524",
+            "656308",
+            "660294",
+            "663527",
+            "663550",
+            "664057",
+            "666464",
+            "666915",
+            "670768",
+            "672478",
+            "672744",
+            "673451",
+            "673548",
+            "807799"
+          ],
+          "train_rows": 59
+        },
+        {
+          "fit_status": "RIDGE_FIT_SHARED_INDICATORS",
+          "fold": 4,
+          "metrics": {
+            "correlation": 0.40181010014934215,
+            "mae": 10.94255052423447,
+            "mean_error": -3.770208554037035,
+            "n": 16,
+            "rmse": 14.369550436443832
+          },
+          "player_overlap_count": 0,
+          "predictions": [
+            {
+              "actual": 58.0,
+              "error": -7.8373817798640175,
+              "mlbam_id": "444876",
+              "prediction": 50.16261822013598,
+              "season": 2021
+            },
+            {
+              "actual": 56.0,
+              "error": 5.3642875315013825,
+              "mlbam_id": "444876",
+              "prediction": 61.36428753150138,
+              "season": 2022
+            },
+            {
+              "actual": 83.0,
+              "error": -23.015186709449623,
+              "mlbam_id": "641505",
+              "prediction": 59.98481329055038,
+              "season": 2021
+            },
+            {
+              "actual": 80.0,
+              "error": -11.868200882244238,
+              "mlbam_id": "641505",
+              "prediction": 68.13179911775576,
+              "season": 2022
+            },
+            {
+              "actual": 67.0,
+              "error": -1.5357623285317743,
+              "mlbam_id": "641505",
+              "prediction": 65.46423767146823,
+              "season": 2023
+            },
+            {
+              "actual": 39.0,
+              "error": 9.004951849917035,
+              "mlbam_id": "643524",
+              "prediction": 48.004951849917035,
+              "season": 2021
+            },
+            {
+              "actual": 68.0,
+              "error": -14.0917612627551,
+              "mlbam_id": "666915",
+              "prediction": 53.9082387372449,
+              "season": 2021
+            },
+            {
+              "actual": 69.0,
+              "error": -13.977375188070283,
+              "mlbam_id": "666915",
+              "prediction": 55.02262481192972,
+              "season": 2022
+            },
+            {
+              "actual": 70.0,
+              "error": -4.716821563820503,
+              "mlbam_id": "666915",
+              "prediction": 65.2831784361795,
+              "season": 2023
+            },
+            {
+              "actual": 70.0,
+              "error": -1.8981809287330123,
+              "mlbam_id": "666915",
+              "prediction": 68.10181907126699,
+              "season": 2024
+            },
+            {
+              "actual": 68.0,
+              "error": -3.2270783698272396,
+              "mlbam_id": "672744",
+              "prediction": 64.77292163017276,
+              "season": 2024
+            },
+            {
+              "actual": 64.0,
+              "error": 0.1644270884868746,
+              "mlbam_id": "672744",
+              "prediction": 64.16442708848687,
+              "season": 2025
+            },
+            {
+              "actual": 74.0,
+              "error": -35.53432361287625,
+              "mlbam_id": "807799",
+              "prediction": 38.46567638712375,
+              "season": 2023
+            },
+            {
+              "actual": 37.0,
+              "error": 5.359263891895068,
+              "mlbam_id": "807799",
+              "prediction": 42.35926389189507,
+              "season": 2024
+            },
+            {
+              "actual": 37.0,
+              "error": 14.541544627187157,
+              "mlbam_id": "807799",
+              "prediction": 51.54154462718716,
+              "season": 2025
+            },
+            {
+              "actual": 40.0,
+              "error": 22.94426077259196,
+              "mlbam_id": "807799",
+              "prediction": 62.94426077259196,
+              "season": 2026
+            }
+          ],
+          "test_player_ids": [
+            "444876",
+            "641505",
+            "643524",
+            "666915",
+            "672744",
+            "807799"
+          ],
+          "test_rows": 16,
+          "train_player_ids": [
+            "467827",
+            "520471",
+            "542583",
+            "543105",
+            "553902",
+            "570256",
+            "571602",
+            "572228",
+            "591971",
+            "593934",
+            "596748",
+            "606157",
+            "613564",
+            "614173",
+            "614177",
+            "621446",
+            "641525",
+            "641914",
+            "656308",
+            "658668",
+            "660294",
+            "660757",
+            "663527",
+            "663550",
+            "664057",
+            "666464",
+            "666801",
+            "669450",
+            "670768",
+            "672478",
+            "673451",
+            "673548"
+          ],
+          "train_rows": 59
+        }
+      ],
+      "no_player_crosses_train_test": true,
+      "predictions": [
+        {
+          "actual": 8.0,
+          "error": 35.324831783807085,
+          "mlbam_id": "542583",
+          "prediction": 43.324831783807085,
+          "season": 2022
+        },
+        {
+          "actual": 7.0,
+          "error": 59.373668505091445,
+          "mlbam_id": "553902",
+          "prediction": 66.37366850509144,
+          "season": 2022
+        },
+        {
+          "actual": 21.0,
+          "error": 79.17249706345078,
+          "mlbam_id": "571602",
+          "prediction": 100.17249706345078,
+          "season": 2022
+        },
+        {
+          "actual": 59.0,
+          "error": -5.885731558217259,
+          "mlbam_id": "591971",
+          "prediction": 53.11426844178274,
+          "season": 2021
+        },
+        {
+          "actual": 42.0,
+          "error": 21.129053918893938,
+          "mlbam_id": "593934",
+          "prediction": 63.12905391889394,
+          "season": 2021
+        },
+        {
+          "actual": 41.0,
+          "error": 37.314716833590126,
+          "mlbam_id": "593934",
+          "prediction": 78.31471683359013,
+          "season": 2022
+        },
+        {
+          "actual": 17.0,
+          "error": 29.39284315192699,
+          "mlbam_id": "596748",
+          "prediction": 46.39284315192699,
+          "season": 2022
+        },
+        {
+          "actual": 61.0,
+          "error": 3.754824657359734,
+          "mlbam_id": "641525",
+          "prediction": 64.75482465735973,
+          "season": 2023
+        },
+        {
+          "actual": 50.0,
+          "error": 27.425166930270095,
+          "mlbam_id": "641914",
+          "prediction": 77.4251669302701,
+          "season": 2021
+        },
+        {
+          "actual": 50.0,
+          "error": 13.516193681633105,
+          "mlbam_id": "641914",
+          "prediction": 63.516193681633105,
+          "season": 2022
+        },
+        {
+          "actual": 70.0,
+          "error": -8.373373942498723,
+          "mlbam_id": "670768",
+          "prediction": 61.62662605750128,
+          "season": 2022
+        },
+        {
+          "actual": 56.0,
+          "error": 6.99690859901024,
+          "mlbam_id": "570256",
+          "prediction": 62.99690859901024,
+          "season": 2021
+        },
+        {
+          "actual": 16.0,
+          "error": 36.06102306119319,
+          "mlbam_id": "572228",
+          "prediction": 52.06102306119319,
+          "season": 2022
+        },
+        {
+          "actual": 11.0,
+          "error": 43.89537844265199,
+          "mlbam_id": "572228",
+          "prediction": 54.89537844265199,
+          "season": 2023
+        },
+        {
+          "actual": 64.0,
+          "error": 11.648178900662586,
+          "mlbam_id": "606157",
+          "prediction": 75.64817890066259,
+          "season": 2021
+        },
+        {
+          "actual": 81.0,
+          "error": -7.9842257777091845,
+          "mlbam_id": "606157",
+          "prediction": 73.01577422229082,
+          "season": 2022
+        },
+        {
+          "actual": 51.0,
+          "error": 11.816776950340781,
+          "mlbam_id": "613564",
+          "prediction": 62.81677695034078,
+          "season": 2021
+        },
+        {
+          "actual": 40.0,
+          "error": 25.448098757028873,
+          "mlbam_id": "613564",
+          "prediction": 65.44809875702887,
+          "season": 2022
+        },
+        {
+          "actual": 80.0,
+          "error": -10.838598786194964,
+          "mlbam_id": "614173",
+          "prediction": 69.16140121380504,
+          "season": 2021
+        },
+        {
+          "actual": 78.0,
+          "error": -5.361389640553298,
+          "mlbam_id": "614173",
+          "prediction": 72.6386103594467,
+          "season": 2022
+        },
+        {
+          "actual": 30.0,
+          "error": 30.2675028351058,
+          "mlbam_id": "660294",
+          "prediction": 60.2675028351058,
+          "season": 2021
+        },
+        {
+          "actual": 59.0,
+          "error": 15.30666256902903,
+          "mlbam_id": "663550",
+          "prediction": 74.30666256902903,
+          "season": 2023
+        },
+        {
+          "actual": 59.0,
+          "error": 19.146692767073375,
+          "mlbam_id": "663550",
+          "prediction": 78.14669276707338,
+          "season": 2024
+        },
+        {
+          "actual": 87.0,
+          "error": -26.969916608991127,
+          "mlbam_id": "664057",
+          "prediction": 60.03008339100887,
+          "season": 2021
+        },
+        {
+          "actual": 88.0,
+          "error": -25.846701716625347,
+          "mlbam_id": "664057",
+          "prediction": 62.15329828337465,
+          "season": 2023
+        },
+        {
+          "actual": 65.0,
+          "error": -14.427237503929327,
+          "mlbam_id": "672478",
+          "prediction": 50.57276249607067,
+          "season": 2023
+        },
+        {
+          "actual": 71.0,
+          "error": -6.9089964733682905,
+          "mlbam_id": "673451",
+          "prediction": 64.09100352663171,
+          "season": 2021
+        },
+        {
+          "actual": 42.0,
+          "error": 13.397610815938727,
+          "mlbam_id": "467827",
+          "prediction": 55.39761081593873,
+          "season": 2021
+        },
+        {
+          "actual": 42.0,
+          "error": 10.757703906173113,
+          "mlbam_id": "614177",
+          "prediction": 52.75770390617311,
+          "season": 2021
+        },
+        {
+          "actual": 42.0,
+          "error": -3.114589498970318,
+          "mlbam_id": "614177",
+          "prediction": 38.88541050102968,
+          "season": 2022
+        },
+        {
+          "actual": 68.0,
+          "error": -17.31481196622,
+          "mlbam_id": "656308",
+          "prediction": 50.68518803378,
+          "season": 2021
+        },
+        {
+          "actual": 80.0,
+          "error": -21.582600524006295,
+          "mlbam_id": "656308",
+          "prediction": 58.417399475993705,
+          "season": 2022
+        },
+        {
+          "actual": 80.0,
+          "error": -39.543733574603706,
+          "mlbam_id": "656308",
+          "prediction": 40.456266425396294,
+          "season": 2023
+        },
+        {
+          "actual": 26.0,
+          "error": 43.557214971655355,
+          "mlbam_id": "663527",
+          "prediction": 69.55721497165536,
+          "season": 2023
+        },
+        {
+          "actual": 38.0,
+          "error": 5.951394972455304,
+          "mlbam_id": "663527",
+          "prediction": 43.951394972455304,
+          "season": 2024
+        },
+        {
+          "actual": 70.0,
+          "error": -11.087239954121422,
+          "mlbam_id": "666464",
+          "prediction": 58.91276004587858,
+          "season": 2022
+        },
+        {
+          "actual": 62.0,
+          "error": -2.1733165298613244,
+          "mlbam_id": "666464",
+          "prediction": 59.826683470138676,
+          "season": 2024
+        },
+        {
+          "actual": 49.0,
+          "error": 18.156052728701553,
+          "mlbam_id": "666464",
+          "prediction": 67.15605272870155,
+          "season": 2025
+        },
+        {
+          "actual": 74.0,
+          "error": -8.387534504077266,
+          "mlbam_id": "673548",
+          "prediction": 65.61246549592273,
+          "season": 2022
+        },
+        {
+          "actual": 71.0,
+          "error": -16.049483381686784,
+          "mlbam_id": "673548",
+          "prediction": 54.950516618313216,
+          "season": 2023
+        },
+        {
+          "actual": 74.0,
+          "error": -11.477201845094825,
+          "mlbam_id": "673548",
+          "prediction": 62.522798154905175,
+          "season": 2024
+        },
+        {
+          "actual": 70.0,
+          "error": -13.881886301039309,
+          "mlbam_id": "673548",
+          "prediction": 56.11811369896069,
+          "season": 2025
+        },
+        {
+          "actual": 72.0,
+          "error": -19.11245828434302,
+          "mlbam_id": "673548",
+          "prediction": 52.88754171565698,
+          "season": 2026
+        },
+        {
+          "actual": 31.0,
+          "error": 9.253902896604572,
+          "mlbam_id": "520471",
+          "prediction": 40.25390289660457,
+          "season": 2021
+        },
+        {
+          "actual": 50.0,
+          "error": -1.799527646704803,
+          "mlbam_id": "543105",
+          "prediction": 48.2004723532952,
+          "season": 2021
+        },
+        {
+          "actual": 84.0,
+          "error": -37.510257429791054,
+          "mlbam_id": "621446",
+          "prediction": 46.489742570208946,
+          "season": 2021
+        },
+        {
+          "actual": 79.0,
+          "error": -0.60084592429304,
+          "mlbam_id": "621446",
+          "prediction": 78.39915407570696,
+          "season": 2022
+        },
+        {
+          "actual": 81.0,
+          "error": -25.149411941080047,
+          "mlbam_id": "658668",
+          "prediction": 55.85058805891995,
+          "season": 2021
+        },
+        {
+          "actual": 89.0,
+          "error": -24.663189195930073,
+          "mlbam_id": "658668",
+          "prediction": 64.33681080406993,
+          "season": 2022
+        },
+        {
+          "actual": 75.0,
+          "error": -21.846882927868684,
+          "mlbam_id": "658668",
+          "prediction": 53.153117072131316,
+          "season": 2023
+        },
+        {
+          "actual": 75.0,
+          "error": -35.71456880404475,
+          "mlbam_id": "658668",
+          "prediction": 39.28543119595525,
+          "season": 2024
+        },
+        {
+          "actual": 80.0,
+          "error": -32.840606897888264,
+          "mlbam_id": "660757",
+          "prediction": 47.159393102111736,
+          "season": 2022
+        },
+        {
+          "actual": 81.0,
+          "error": -34.63511847768355,
+          "mlbam_id": "660757",
+          "prediction": 46.36488152231645,
+          "season": 2025
+        },
+        {
+          "actual": 56.0,
+          "error": 5.129773302428511,
+          "mlbam_id": "666801",
+          "prediction": 61.12977330242851,
+          "season": 2022
+        },
+        {
+          "actual": 55.0,
+          "error": -10.278524909507134,
+          "mlbam_id": "666801",
+          "prediction": 44.721475090492866,
+          "season": 2023
+        },
+        {
+          "actual": 80.0,
+          "error": -11.65749540784175,
+          "mlbam_id": "669450",
+          "prediction": 68.34250459215825,
+          "season": 2022
+        },
+        {
+          "actual": 79.0,
+          "error": -27.77863907288411,
+          "mlbam_id": "669450",
+          "prediction": 51.22136092711589,
+          "season": 2023
+        },
+        {
+          "actual": 79.0,
+          "error": -35.19936407986558,
+          "mlbam_id": "669450",
+          "prediction": 43.80063592013442,
+          "season": 2024
+        },
+        {
+          "actual": 79.0,
+          "error": -36.00525927933986,
+          "mlbam_id": "669450",
+          "prediction": 42.99474072066014,
+          "season": 2025
+        },
+        {
+          "actual": 58.0,
+          "error": -7.8373817798640175,
+          "mlbam_id": "444876",
+          "prediction": 50.16261822013598,
+          "season": 2021
+        },
+        {
+          "actual": 56.0,
+          "error": 5.3642875315013825,
+          "mlbam_id": "444876",
+          "prediction": 61.36428753150138,
+          "season": 2022
+        },
+        {
+          "actual": 83.0,
+          "error": -23.015186709449623,
+          "mlbam_id": "641505",
+          "prediction": 59.98481329055038,
+          "season": 2021
+        },
+        {
+          "actual": 80.0,
+          "error": -11.868200882244238,
+          "mlbam_id": "641505",
+          "prediction": 68.13179911775576,
+          "season": 2022
+        },
+        {
+          "actual": 67.0,
+          "error": -1.5357623285317743,
+          "mlbam_id": "641505",
+          "prediction": 65.46423767146823,
+          "season": 2023
+        },
+        {
+          "actual": 39.0,
+          "error": 9.004951849917035,
+          "mlbam_id": "643524",
+          "prediction": 48.004951849917035,
+          "season": 2021
+        },
+        {
+          "actual": 68.0,
+          "error": -14.0917612627551,
+          "mlbam_id": "666915",
+          "prediction": 53.9082387372449,
+          "season": 2021
+        },
+        {
+          "actual": 69.0,
+          "error": -13.977375188070283,
+          "mlbam_id": "666915",
+          "prediction": 55.02262481192972,
+          "season": 2022
+        },
+        {
+          "actual": 70.0,
+          "error": -4.716821563820503,
+          "mlbam_id": "666915",
+          "prediction": 65.2831784361795,
+          "season": 2023
+        },
+        {
+          "actual": 70.0,
+          "error": -1.8981809287330123,
+          "mlbam_id": "666915",
+          "prediction": 68.10181907126699,
+          "season": 2024
+        },
+        {
+          "actual": 68.0,
+          "error": -3.2270783698272396,
+          "mlbam_id": "672744",
+          "prediction": 64.77292163017276,
+          "season": 2024
+        },
+        {
+          "actual": 64.0,
+          "error": 0.1644270884868746,
+          "mlbam_id": "672744",
+          "prediction": 64.16442708848687,
+          "season": 2025
+        },
+        {
+          "actual": 74.0,
+          "error": -35.53432361287625,
+          "mlbam_id": "807799",
+          "prediction": 38.46567638712375,
+          "season": 2023
+        },
+        {
+          "actual": 37.0,
+          "error": 5.359263891895068,
+          "mlbam_id": "807799",
+          "prediction": 42.35926389189507,
+          "season": 2024
+        },
+        {
+          "actual": 37.0,
+          "error": 14.541544627187157,
+          "mlbam_id": "807799",
+          "prediction": 51.54154462718716,
+          "season": 2025
+        },
+        {
+          "actual": 40.0,
+          "error": 22.94426077259196,
+          "mlbam_id": "807799",
+          "prediction": 62.94426077259196,
+          "season": 2026
+        }
+      ],
+      "status": "EXECUTED_PLAYER_CLUSTERED_HOLDOUT",
+      "unique_player_groups": 38
     },
-    "rows": 260,
-    "source_evidence": "outputs/derived/sp101_mlb_shared_indicator_player_seasons.csv.gz + outputs/derived/sp101_the_show_live_player_year_panel.jsonl.gz",
-    "uncertainty_and_calibration": {
-      "calibration_status": "DESCRIPTIVE_OUT_OF_SAMPLE_RECEIPT_NOT_FINAL_RATING_CALIBRATION",
-      "residual_band": [
-        -24.850498,
-        24.46185
-      ]
-    },
-    "unique_player_groups": 53
+    "rows": 119,
+    "shared_rows_without_exact_same_season_show_target": 242,
+    "source_evidence": "sp101_mlb_shared_indicator_player_seasons.csv.gz + sp101_the_show_live_player_year_panel.jsonl.gz",
+    "target_definition": {
+      "cross_time_fallback_policy": "NOT_USED_FOR_MB02_TRAINING; analog display may use nearest season only with explicit temporal_gap_years",
+      "non_live_rows_in_primary_target_input": 0,
+      "player_season_targets": 152,
+      "policy": "SEASON_MEDIAN_LIVE_SPEED",
+      "row_order_invariant": true,
+      "same_player_season_repeated_groups": 152
+    }
   }
 }

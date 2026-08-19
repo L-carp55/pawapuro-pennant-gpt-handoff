@@ -1,51 +1,74 @@
 {
-  "balance_diagnostics": {
-    "candidate_rows_with_support": 67,
-    "methods_emitted": 3,
-    "target_rows_with_support": 97
-  },
+  "all_three_repaired_methods_same_candidate_count": 24,
   "common_support": {
-    "no_valid_rows": 89,
+    "no_valid_rows": 76,
     "raw_rate_match_forbidden": true,
-    "valid_rows": 211
+    "valid_rows": 324
   },
-  "feature_balance": {
-    "feature_ids": [
-      "SB_ATTEMPT_RATE",
-      "SB_SUCCESS_RATE",
-      "TRIPLE_RATE",
-      "GDP_RATE",
-      "RUN_RATE",
-      "SINGLE_RATE",
-      "DOUBLE_RATE",
-      "BIP_RATE"
-    ],
-    "minimum_valid_feature_count": 2,
-    "status": "COLLECTION_BACKED_MULTI_FEATURE",
-    "valid_row_feature_count_median": 8.0,
-    "valid_row_feature_count_min": 7
-  },
+  "covariance_subset_diagnostics": [
+    {
+      "condition_number_inf": 12.490065125351073,
+      "n": 121,
+      "p": 8,
+      "ridge": 1e-06,
+      "shrinkage": 0.1,
+      "status": "COVARIANCE_AWARE"
+    },
+    {
+      "condition_number_inf": 9.70896684016259,
+      "n": 163,
+      "p": 7,
+      "ridge": 1e-06,
+      "shrinkage": 0.1,
+      "status": "COVARIANCE_AWARE"
+    }
+  ],
   "methods": [
     {
-      "caliper": 0.42,
-      "method": "MUTUAL_KNN",
-      "note": "mutual k-nearest neighbor over league-season normalized shared indicators"
+      "algorithm": "pairwise Euclidean/L2 over common normalized features",
+      "method": "NORMALIZED_L2_NEAREST_BASELINE",
+      "role": "honest_baseline"
     },
     {
-      "caliper": 1.25,
+      "algorithm": "bidirectional top-k membership",
+      "k": 5,
+      "method": "MUTUAL_KNN"
+    },
+    {
+      "algorithm": "regularized covariance-aware quadratic distance",
       "method": "CALIPERED_MAHALANOBIS",
-      "note": "diagonal calipered Mahalanobis distance over league-season normalized shared indicators"
+      "ridge": 1e-06,
+      "shrinkage": 0.1
     },
     {
-      "caliper": 0.55,
-      "method": "OPTIMAL_TRANSPORT",
-      "note": "deterministic empirical quantile transport with common-support caliper"
+      "algorithm": "entropic empirical transport coupling with uniform marginals",
+      "column_marginal_max_error": 1.734723475976807e-18,
+      "epsilon": 0.12,
+      "iterations": 11,
+      "method": "OPTIMAL_TRANSPORT_SINKHORN",
+      "row_marginal_max_error": 1.3610640392514028e-13,
+      "status": "CONVERGED",
+      "transport_cost": 0.3940919650657007
     }
   ],
   "mlb_candidate_player_denominator": 67,
-  "negative_finding": "MLB opportunity-conditioned infield-hit, advancement and UBR/BsR fields remain blocked; the valid analog subset is limited to collected common indicators and never treats a raw rate as a cross-league match.",
-  "physical_truth_guard": "The Show and MLB shared indicator routes remain external behavior/appraisal evidence and are not copied into the independent physical estimate.",
+  "normalization": "within_league_season_percentile",
+  "physical_truth_guard": "Analog similarity is unsigned context; it cannot create a faster/slower edge.",
   "route_id": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
-  "schema_version": "sp101_metric_neighborhood_player_summary_repaired_20260818",
-  "target_denominator": 100
+  "schema_version": "sp101_metric_neighborhood_player_summary_semantic_repair_20260819",
+  "target_denominator": 100,
+  "transport_diagnostics": {
+    "column_marginal_max_error": 1.734723475976807e-18,
+    "epsilon": 0.12,
+    "iterations": 11,
+    "row_marginal_max_error": 1.3610640392514028e-13,
+    "status": "CONVERGED",
+    "transport_cost": 0.3940919650657007
+  },
+  "valid_rows_by_method": {
+    "CALIPERED_MAHALANOBIS": 88,
+    "MUTUAL_KNN": 60,
+    "NORMALIZED_L2_NEAREST_BASELINE": 88,
+    "OPTIMAL_TRANSPORT_SINKHORN": 88
+  }
 }
