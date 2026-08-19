@@ -1,5 +1,5 @@
 name: speed-sp101-inference-semantic-repair-wave2
-# Third push: cancel stale attempts and persist a diagnostic receipt if any stage fails.
+# Fourth push: execute both determinism passes from the same frozen ffb397 foundation.
 
 on:
   push:
@@ -44,12 +44,13 @@ jobs:
             scripts/sp101_inference_semantic_repair_20260819.py \
             scripts/qa_sp101_inference_semantics_20260819.py \
             scripts/finalize_sp101_inference_semantic_repair_20260819.py
+          bash -n scripts/run_sp101_inference_semantic_repair_frozen_20260819.sh
 
-      - name: Execute semantic repair once
+      - name: Execute semantic repair once from frozen foundation
         run: |
           echo first_repair_execution > /tmp/sp101_stage
           set -o pipefail
-          python scripts/sp101_inference_semantic_repair_20260819.py 2>&1 | tee /tmp/first_repair.log
+          bash scripts/run_sp101_inference_semantic_repair_frozen_20260819.sh 2>&1 | tee /tmp/first_repair.log
 
       - name: Snapshot repaired-output hashes
         run: |
@@ -68,11 +69,11 @@ jobs:
           EOF
           xargs sha256sum < /tmp/sp101_semantic_paths.txt > /tmp/sp101.first.sha256
 
-      - name: Re-run repair and prove byte determinism
+      - name: Re-run from same frozen foundation and prove byte determinism
         run: |
           echo deterministic_rerun > /tmp/sp101_stage
           set -o pipefail
-          python scripts/sp101_inference_semantic_repair_20260819.py 2>&1 | tee /tmp/second_repair.log
+          bash scripts/run_sp101_inference_semantic_repair_frozen_20260819.sh 2>&1 | tee /tmp/second_repair.log
           xargs sha256sum < /tmp/sp101_semantic_paths.txt > /tmp/sp101.second.sha256
           diff -u /tmp/sp101.first.sha256 /tmp/sp101.second.sha256
           python - <<'PY'
@@ -82,6 +83,7 @@ jobs:
           out={
             'schema_version':'sp101_semantic_repair_determinism_qa_20260819',
             'generated_at':'2026-08-19',
+            'frozen_foundation_commit':'ffb397775413a5e8b5ab23ff1bb5b1b221f6137e',
             'status':'PASS_BYTE_IDENTICAL' if first==second else 'FAIL_NONDETERMINISTIC',
             'mismatch_count':0 if first==second else sum(a!=b for a,b in zip(first,second)) + abs(len(first)-len(second)),
             'files':[{'sha256':line.split()[0],'path':line.split(maxsplit=1)[1]} for line in second],
@@ -163,7 +165,7 @@ jobs:
         run: |
           stage=$(cat /tmp/sp101_stage 2>/dev/null || echo unknown)
           python - <<'PY'
-          import json, pathlib, os
+          import json, pathlib
           root=pathlib.Path('.')
           logs={}
           for p in pathlib.Path('/tmp').glob('*.log'):
