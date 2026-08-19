@@ -1,34 +1,26 @@
 {
   "generated_at": "2026-08-19",
   "logs_tail": {
-    "registry_qa.log": [
-      "FAIL: speed task registry QA found 1 error(s)",
-      "- SP-102: closed while dependency SP-039 is PARTIAL"
-    ],
     "sp102_binding_qa.log": [
-      "{\"status\": \"PASS_SP102_BINDING_CONTRACT\", \"pass\": 39, \"fail\": 0}"
+      "{\"status\": \"FAIL_SP102_BINDING_CONTRACT\", \"pass\": 40, \"fail\": 1}"
     ],
     "sp102_collection.log": [
-      "{\"targeted\": 30, \"queries\": 120, \"video_fetches\": 90, \"evidence\": 56, \"events\": 55, \"api_key\": false, \"status_counts\": {\"DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE\": 24, \"MEASURED_NO_USABLE_NEW_SPEED_CONTEXT\": 6}}"
-    ],
-    "sp102_finalize.log": [
-      "{\"status\": \"DONE_VALIDATED\", \"qa\": \"PASS_TARGETED_RESCUE_BOUNDED_VALIDATED\", \"privacy\": \"PASS_COMMENTER_PRIVACY\", \"owner_verdict_count\": 0, \"SP-079\": \"BLOCKED_DEPENDENCY\", \"SP-082\": \"BLOCKED_DEPENDENCY\"}",
-      "{\"status\": \"DONE_VALIDATED\", \"binding_contract\": \"PASS_SP102_BINDING_CONTRACT\", \"SP-079\": \"BLOCKED_DEPENDENCY\", \"SP-082\": \"BLOCKED_DEPENDENCY\"}"
+      "{\"targeted\": 30, \"queries\": 120, \"video_fetches\": 90, \"evidence\": 0, \"events\": 0, \"api_key\": false, \"status_counts\": {\"MEASURED_NO_USABLE_NEW_SPEED_CONTEXT\": 30}}"
     ],
     "sp102_materialize.log": [
-      "{\"targets\": 30, \"canonical_records\": 56, \"clusters\": 55, \"primary\": 0, \"coverage\": \"PASS\", \"use_states\": {\"AVAILABLE_NOT_DECISION_EFFECTIVE\": 24, \"NO_USABLE_EVIDENCE\": 6}}"
+      "{\"targets\": 30, \"canonical_records\": 0, \"clusters\": 0, \"primary\": 0, \"coverage\": \"PASS\", \"use_states\": {\"NO_USABLE_EVIDENCE\": 30}}"
     ],
     "sp102_materialize_second.log": [
-      "{\"targets\": 30, \"canonical_records\": 56, \"clusters\": 55, \"primary\": 0, \"coverage\": \"PASS\", \"use_states\": {\"AVAILABLE_NOT_DECISION_EFFECTIVE\": 24, \"NO_USABLE_EVIDENCE\": 6}}"
+      "{\"targets\": 30, \"canonical_records\": 0, \"clusters\": 0, \"primary\": 0, \"coverage\": \"PASS\", \"use_states\": {\"NO_USABLE_EVIDENCE\": 30}}"
     ],
     "sp102_privacy.log": [
-      "{\"schema_version\": \"qa_sp102_commenter_privacy_20260819\", \"generated_at\": \"2026-08-19\", \"status\": \"PASS_COMMENTER_PRIVACY\", \"comment_rows\": 56, \"checks\": {\"no_raw_author_field\": true, \"no_raw_author_id_field\": true, \"commenter_profile_persisted_false\": true, \"origin_hash_only_when_available\": true}}"
+      "{\"schema_version\": \"qa_sp102_commenter_privacy_20260819\", \"generated_at\": \"2026-08-19\", \"status\": \"PASS_COMMENTER_PRIVACY\", \"comment_rows\": 0, \"checks\": {\"no_raw_author_field\": true, \"no_raw_author_id_field\": true, \"commenter_profile_persisted_false\": true, \"origin_hash_only_when_available\": true}}"
     ],
     "sp102_qa.log": [
-      "{\"status\": \"PASS_TARGETED_RESCUE_BOUNDED_VALIDATED\", \"pass\": 16, \"fail\": 0, \"counts\": {\"targeted\": 30, \"non_targeted\": 70, \"search_queries\": 193, \"query_errors\": 0, \"video_fetches\": 116, \"fetch_failures\": 116, \"evidence_records\": 56, \"usable_low_influence_records\": 56, \"timed_context_records\": 0, \"event_origins_raw\": 55, \"primary_link_records\": 0}}"
+      "{\"status\": \"PASS_BOUNDED_ACQUISITION_LIMITED_NEGATIVE_FINDING\", \"pass\": 17, \"fail\": 0, \"counts\": {\"targeted\": 30, \"non_targeted\": 70, \"search_queries\": 193, \"query_errors\": 0, \"video_fetches\": 116, \"fetch_failures\": 116, \"evidence_records\": 0, \"usable_low_influence_records\": 0, \"timed_context_records\": 0, \"event_origins_raw\": 0, \"primary_link_records\": 0}}"
     ],
     "sp102_query_expansion.log": [
-      "{\"extra_queries\": 73, \"total_search_rows\": 193, \"extra_video_fetches\": 26, \"evidence\": 56}"
+      "{\"extra_queries\": 73, \"total_search_rows\": 193, \"extra_video_fetches\": 26, \"evidence\": 0}"
     ],
     "sp102_query_manifest.log": [
       "{\"query_attempts\": 193, \"targets\": 30, \"per_target_distribution\": {\"6\": 22, \"7\": 4, \"9\": 1, \"8\": 3}}"
@@ -37,16 +29,16 @@
       "{\"query_attempts\": 193, \"targets\": 30, \"per_target_distribution\": {\"6\": 22, \"7\": 4, \"9\": 1, \"8\": 3}}"
     ],
     "sp102_refine.log": [
-      "{\"refined_clusters\": 54, \"use_states\": {\"AVAILABLE_NOT_DECISION_EFFECTIVE\": 24, \"NO_USABLE_EVIDENCE\": 6}}"
+      "{\"refined_clusters\": 0, \"use_states\": {\"NO_USABLE_EVIDENCE\": 30}}"
     ],
     "sp102_refine_second.log": [
-      "{\"refined_clusters\": 54, \"use_states\": {\"AVAILABLE_NOT_DECISION_EFFECTIVE\": 24, \"NO_USABLE_EVIDENCE\": 6}}"
+      "{\"refined_clusters\": 0, \"use_states\": {\"NO_USABLE_EVIDENCE\": 30}}"
     ],
     "sp102_sanitize.log": [
-      "{\"rows\": 56, \"comment_rows\": 56, \"raw_commenter_identity_fields_remaining\": 0}"
+      "{\"rows\": 0, \"comment_rows\": 0, \"raw_commenter_identity_fields_remaining\": 0}"
     ]
   },
   "schema_version": "sp102_video_comment_rescue_ci_failure_20260819",
-  "stage": "canonical_governance_qa",
+  "stage": "binding_contract_qa",
   "yt_dlp_version": "2026.07.04"
 }
