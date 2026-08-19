@@ -1,0 +1,35 @@
+{
+  "generated_artifacts": [
+    {
+      "bytes": 5132,
+      "exists": true,
+      "path": "outputs/derived/qa_sp101_inference_semantic_repair_execution_20260819.json"
+    },
+    {
+      "bytes": 0,
+      "exists": false,
+      "path": "outputs/derived/sp101_semantic_repair_determinism_qa_20260819.json"
+    },
+    {
+      "bytes": 0,
+      "exists": false,
+      "path": "outputs/derived/qa_sp101_inference_semantics_independent_20260819.json"
+    },
+    {
+      "bytes": 0,
+      "exists": false,
+      "path": "docs/audits/sp101_inference_semantics_independent_audit_20260819.md"
+    }
+  ],
+  "generated_at": "2026-08-19",
+  "logs_tail": {
+    "first_repair.log": [
+      "{\"ablation_cells\": 1800, \"current100\": 100, \"grouped_holdout\": {\"correlation\": 0.0070975612519347435, \"mae\": 18.670349356755498, \"mean_error\": -0.7883917897246768, \"n\": 75, \"rmse\": 23.682223319764557}, \"mb01_valid_by_method\": {\"CALIPERED_MAHALANOBIS\": 88, \"MUTUAL_KNN\": 60, \"NORMALIZED_L2_NEAREST_BASELINE\": 88, \"OPTIMAL_TRANSPORT_SINKHORN\": 88}, \"status\": \"PASS_REPAIR_EXECUTION_PENDING_INDEPENDENT_QA\", \"target_counts\": {\"NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN\": 70, \"TARGETED_LOW_CONFIDENCE\": 3, \"TARGETED_MATERIAL_CONFLICT\": 27}}"
+    ],
+    "second_repair.log": [
+      "{\"ablation_cells\": 1800, \"current100\": 100, \"grouped_holdout\": {\"correlation\": 0.0070975612519347435, \"mae\": 18.670349356755498, \"mean_error\": -0.7883917897246768, \"n\": 75, \"rmse\": 23.682223319764557}, \"mb01_valid_by_method\": {\"CALIPERED_MAHALANOBIS\": 88, \"MUTUAL_KNN\": 60, \"NORMALIZED_L2_NEAREST_BASELINE\": 88, \"OPTIMAL_TRANSPORT_SINKHORN\": 88}, \"status\": \"PASS_REPAIR_EXECUTION_PENDING_INDEPENDENT_QA\", \"target_counts\": {\"NOT_TARGETED_LOW_EXPECTED_INFORMATION_GAIN\": 70, \"TARGETED_LOW_CONFIDENCE\": 3, \"TARGETED_MATERIAL_CONFLICT\": 27}}"
+    ]
+  },
+  "schema_version": "sp101_semantic_repair_ci_failure_20260819",
+  "stage": "deterministic_rerun"
+}
