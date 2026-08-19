@@ -1,0 +1,137 @@
+name: speed-sp101-inference-semantic-repair-wave2
+
+on:
+  push:
+    branches:
+      - codex/speed-sp101-expanded-the-show-universe-20260818
+    paths:
+      - '.github/workflows/speed-sp101-inference-semantic-repair-wave2.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair-audit-finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/speed-sp101-expanded-the-show-universe-20260818
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Freeze protected governance state
+        run: |
+          sha256sum outputs/derived/sp078_owner_verdict_ledger_20260816.json > /tmp/sp078.before.sha256
+          cp docs/state/speed_owner_review_integrity_lock_20260817.json /tmp/owner_lock.before.json
+
+      - name: Syntax check semantic repair and independent audit
+        run: |
+          python -m py_compile \
+            scripts/sp101_inference_semantic_repair_20260819.py \
+            scripts/qa_sp101_inference_semantics_20260819.py \
+            scripts/finalize_sp101_inference_semantic_repair_20260819.py
+
+      - name: Execute semantic repair once
+        run: python scripts/sp101_inference_semantic_repair_20260819.py
+
+      - name: Snapshot repaired-output hashes
+        run: |
+          cat > /tmp/sp101_semantic_paths.txt <<'EOF'
+          outputs/derived/sp101_metric_neighborhood_analog_pairs.csv.gz
+          outputs/derived/sp101_metric_neighborhood_player_summary.json
+          outputs/derived/sp101_dual_game_behavior_models.json
+          outputs/derived/sp101_pairwise_ordinal_graph.json
+          outputs/derived/sp101_current100_multibridge_evidence.json
+          outputs/derived/sp101_requirements_to_decision_utilization.json
+          outputs/derived/sp101_route_ablation_qa.json
+          outputs/derived/sp101_residual_low_confidence_target_set.json
+          outputs/derived/sp101_inference_route_execution_receipt.json
+          outputs/derived/qa_sp101_inference_semantic_repair_execution_20260819.json
+          EOF
+          xargs sha256sum < /tmp/sp101_semantic_paths.txt > /tmp/sp101.first.sha256
+
+      - name: Re-run repair and prove byte determinism
+        run: |
+          python scripts/sp101_inference_semantic_repair_20260819.py
+          xargs sha256sum < /tmp/sp101_semantic_paths.txt > /tmp/sp101.second.sha256
+          diff -u /tmp/sp101.first.sha256 /tmp/sp101.second.sha256
+          python - <<'PY'
+          import json, pathlib
+          first=pathlib.Path('/tmp/sp101.first.sha256').read_text().splitlines()
+          second=pathlib.Path('/tmp/sp101.second.sha256').read_text().splitlines()
+          out={
+            'schema_version':'sp101_semantic_repair_determinism_qa_20260819',
+            'generated_at':'2026-08-19',
+            'status':'PASS_BYTE_IDENTICAL' if first==second else 'FAIL_NONDETERMINISTIC',
+            'mismatch_count':0 if first==second else sum(a!=b for a,b in zip(first,second)) + abs(len(first)-len(second)),
+            'files':[{'sha256':line.split()[0],'path':line.split(maxsplit=1)[1]} for line in second],
+          }
+          pathlib.Path('outputs/derived/sp101_semantic_repair_determinism_qa_20260819.json').write_text(json.dumps(out,ensure_ascii=False,sort_keys=True,indent=2)+'\n')
+          if out['status']!='PASS_BYTE_IDENTICAL': raise SystemExit(2)
+          PY
+
+      - name: Run independent semantic audit
+        run: python scripts/qa_sp101_inference_semantics_20260819.py
+
+      - name: Finalize SP-101 only after independent PASS
+        run: python scripts/finalize_sp101_inference_semantic_repair_20260819.py
+
+      - name: Run canonical speed governance QA
+        run: |
+          node scripts/qa_speed_task_registry.mjs
+          node scripts/qa_speed_construct_traceability_20260817.mjs
+          node scripts/qa_sp078_integrity_lock_20260817.mjs
+
+      - name: Verify protected scope and state
+        run: |
+          sha256sum --check /tmp/sp078.before.sha256
+          python - <<'PY'
+          import csv,json
+          from pathlib import Path
+          ledger=json.load(open('outputs/derived/sp078_owner_verdict_ledger_20260816.json',encoding='utf-8'))
+          lock=json.load(open('docs/state/speed_owner_review_integrity_lock_20260817.json',encoding='utf-8'))
+          qa=json.load(open('outputs/derived/qa_sp101_inference_semantics_independent_20260819.json',encoding='utf-8'))
+          rows={r['task_id']:r for r in csv.DictReader(open('docs/state/speed_task_registry.tsv',encoding='utf-8-sig'),delimiter='\t')}
+          assert ledger['owner_verdict_count']==0 and not ledger.get('records')
+          assert lock['locked'] is True
+          assert qa['status']=='PASS_INFERENCE_SEMANTICS_INDEPENDENT_AUDIT'
+          assert rows['SP-101']['status']=='DONE_VALIDATED'
+          assert rows['SP-102']['status']=='BLOCKED_DEPENDENCY'
+          assert rows['SP-079']['status']=='BLOCKED_DEPENDENCY'
+          assert rows.get('SP-082',{}).get('status') in {'BLOCKED_DEPENDENCY','NOT_STARTED'}
+          print(json.dumps({'status':'PASS','SP-101':rows['SP-101']['status'],'SP-102':rows['SP-102']['status'],'SP-079':rows['SP-079']['status'],'SP-082':rows.get('SP-082',{}).get('status'),'owner_verdict_count':ledger['owner_verdict_count']}))
+          PY
+
+      - name: Commit validated semantic repair artifacts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            outputs/derived/sp101_metric_neighborhood_analog_pairs.csv.gz \
+            outputs/derived/sp101_metric_neighborhood_player_summary.json \
+            outputs/derived/sp101_dual_game_behavior_models.json \
+            outputs/derived/sp101_pairwise_ordinal_graph.json \
+            outputs/derived/sp101_current100_multibridge_evidence.json \
+            outputs/derived/sp101_requirements_to_decision_utilization.json \
+            outputs/derived/sp101_route_ablation_qa.json \
+            outputs/derived/sp101_residual_low_confidence_target_set.json \
+            outputs/derived/sp101_inference_route_execution_receipt.json \
+            outputs/derived/qa_sp101_inference_semantic_repair_execution_20260819.json \
+            outputs/derived/sp101_semantic_repair_determinism_qa_20260819.json \
+            outputs/derived/qa_sp101_inference_semantics_independent_20260819.json \
+            docs/audits/sp101_inference_semantics_independent_audit_20260819.md \
+            docs/state/speed_task_registry.tsv
+          if git diff --cached --quiet; then
+            echo 'No generated semantic-repair changes to commit.'
+            exit 1
+          fi
+          git commit -m 'fix(speed): validate SP-101 inference semantics wave 2'
+          git pull --rebase origin codex/speed-sp101-expanded-the-show-universe-20260818
+          git push origin HEAD:codex/speed-sp101-expanded-the-show-universe-20260818
