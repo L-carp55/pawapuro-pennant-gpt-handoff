@@ -1,5 +1,5 @@
 name: speed-sp101-inference-semantic-repair-wave2
-# Second push after workflow creation: trigger the repair only after this workflow already exists on the branch.
+# Third push: cancel stale attempts and persist a diagnostic receipt if any stage fails.
 
 on:
   push:
@@ -11,6 +11,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: speed-sp101-inference-semantic-repair-wave2
+  cancel-in-progress: true
 
 jobs:
   repair-audit-finalize:
@@ -29,21 +33,27 @@ jobs:
 
       - name: Freeze protected governance state
         run: |
+          echo freeze_governance > /tmp/sp101_stage
           sha256sum outputs/derived/sp078_owner_verdict_ledger_20260816.json > /tmp/sp078.before.sha256
           cp docs/state/speed_owner_review_integrity_lock_20260817.json /tmp/owner_lock.before.json
 
       - name: Syntax check semantic repair and independent audit
         run: |
+          echo syntax_check > /tmp/sp101_stage
           python -m py_compile \
             scripts/sp101_inference_semantic_repair_20260819.py \
             scripts/qa_sp101_inference_semantics_20260819.py \
             scripts/finalize_sp101_inference_semantic_repair_20260819.py
 
       - name: Execute semantic repair once
-        run: python scripts/sp101_inference_semantic_repair_20260819.py
+        run: |
+          echo first_repair_execution > /tmp/sp101_stage
+          set -o pipefail
+          python scripts/sp101_inference_semantic_repair_20260819.py 2>&1 | tee /tmp/first_repair.log
 
       - name: Snapshot repaired-output hashes
         run: |
+          echo first_hash_snapshot > /tmp/sp101_stage
           cat > /tmp/sp101_semantic_paths.txt <<'EOF'
           outputs/derived/sp101_metric_neighborhood_analog_pairs.csv.gz
           outputs/derived/sp101_metric_neighborhood_player_summary.json
@@ -60,7 +70,9 @@ jobs:
 
       - name: Re-run repair and prove byte determinism
         run: |
-          python scripts/sp101_inference_semantic_repair_20260819.py
+          echo deterministic_rerun > /tmp/sp101_stage
+          set -o pipefail
+          python scripts/sp101_inference_semantic_repair_20260819.py 2>&1 | tee /tmp/second_repair.log
           xargs sha256sum < /tmp/sp101_semantic_paths.txt > /tmp/sp101.second.sha256
           diff -u /tmp/sp101.first.sha256 /tmp/sp101.second.sha256
           python - <<'PY'
@@ -79,19 +91,28 @@ jobs:
           PY
 
       - name: Run independent semantic audit
-        run: python scripts/qa_sp101_inference_semantics_20260819.py
+        run: |
+          echo independent_semantic_audit > /tmp/sp101_stage
+          set -o pipefail
+          python scripts/qa_sp101_inference_semantics_20260819.py 2>&1 | tee /tmp/independent_audit.log
 
       - name: Finalize SP-101 only after independent PASS
-        run: python scripts/finalize_sp101_inference_semantic_repair_20260819.py
+        run: |
+          echo finalize_sp101 > /tmp/sp101_stage
+          set -o pipefail
+          python scripts/finalize_sp101_inference_semantic_repair_20260819.py 2>&1 | tee /tmp/finalize.log
 
       - name: Run canonical speed governance QA
         run: |
-          node scripts/qa_speed_task_registry.mjs
-          node scripts/qa_speed_construct_traceability_20260817.mjs
-          node scripts/qa_sp078_integrity_lock_20260817.mjs
+          echo canonical_governance_qa > /tmp/sp101_stage
+          set -o pipefail
+          node scripts/qa_speed_task_registry.mjs 2>&1 | tee /tmp/registry_qa.log
+          node scripts/qa_speed_construct_traceability_20260817.mjs 2>&1 | tee /tmp/traceability_qa.log
+          node scripts/qa_sp078_integrity_lock_20260817.mjs 2>&1 | tee /tmp/owner_lock_qa.log
 
       - name: Verify protected scope and state
         run: |
+          echo protected_scope_verification > /tmp/sp101_stage
           sha256sum --check /tmp/sp078.before.sha256
           python - <<'PY'
           import csv,json
@@ -111,6 +132,7 @@ jobs:
 
       - name: Commit validated semantic repair artifacts
         run: |
+          echo validated_artifact_commit > /tmp/sp101_stage
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add \
@@ -135,3 +157,37 @@ jobs:
           git commit -m 'fix(speed): validate SP-101 inference semantics wave 2'
           git pull --rebase origin codex/speed-sp101-expanded-the-show-universe-20260818
           git push origin HEAD:codex/speed-sp101-expanded-the-show-universe-20260818
+
+      - name: Persist diagnostic receipt on failure
+        if: failure()
+        run: |
+          stage=$(cat /tmp/sp101_stage 2>/dev/null || echo unknown)
+          python - <<'PY'
+          import json, pathlib, os
+          root=pathlib.Path('.')
+          logs={}
+          for p in pathlib.Path('/tmp').glob('*.log'):
+            try:
+              lines=p.read_text(errors='replace').splitlines()
+              logs[p.name]=lines[-80:]
+            except Exception as e:
+              logs[p.name]=[f'log read failed: {e}']
+          generated=[]
+          for rel in [
+            'outputs/derived/qa_sp101_inference_semantic_repair_execution_20260819.json',
+            'outputs/derived/sp101_semantic_repair_determinism_qa_20260819.json',
+            'outputs/derived/qa_sp101_inference_semantics_independent_20260819.json',
+            'docs/audits/sp101_inference_semantics_independent_audit_20260819.md']:
+            p=root/rel
+            generated.append({'path':rel,'exists':p.exists(),'bytes':p.stat().st_size if p.exists() else 0})
+          out={'schema_version':'sp101_semantic_repair_ci_failure_20260819','generated_at':'2026-08-19','stage':pathlib.Path('/tmp/sp101_stage').read_text().strip() if pathlib.Path('/tmp/sp101_stage').exists() else 'unknown','logs_tail':logs,'generated_artifacts':generated}
+          p=root/'outputs/derived/sp101_semantic_repair_ci_failure_20260819.json'
+          p.parent.mkdir(parents=True,exist_ok=True)
+          p.write_text(json.dumps(out,ensure_ascii=False,sort_keys=True,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add outputs/derived/sp101_semantic_repair_ci_failure_20260819.json
+          git commit -m "audit(speed): persist SP-101 semantic repair failure at ${stage}" || true
+          git pull --rebase origin codex/speed-sp101-expanded-the-show-universe-20260818 || true
+          git push origin HEAD:codex/speed-sp101-expanded-the-show-universe-20260818 || true
