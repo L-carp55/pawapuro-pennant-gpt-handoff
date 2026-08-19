@@ -23,6 +23,7 @@ if ledger.get('owner_verdict_count')!=0 or ledger.get('records') or lock.get('lo
 summary=j(OUT/'sp102_target_post_rescue_summary.json')
 if summary.get('targeted_count')!=30 or summary.get('non_targeted_count')!=70:
     raise RuntimeError('SP-102 denominator drift')
+negative=qa['status']=='PASS_BOUNDED_ACQUISITION_LIMITED_NEGATIVE_FINDING'
 
 raw=REG.read_text(encoding='utf-8-sig').strip().splitlines(); head=raw[0].split('\t')
 rows=[dict(zip(head,line.split('\t'))) for line in raw[1:]]
@@ -32,12 +33,12 @@ if by['SP-079']['status']!='BLOCKED_DEPENDENCY': raise RuntimeError('SP-079 must
 if by['SP-082']['status']!='BLOCKED_DEPENDENCY': raise RuntimeError('shoulder must remain blocked')
 sp=by['SP-102']
 sp['depends_on']=SP102_DEPENDS_ON
-sp['status']='DONE_NEGATIVE_FINDING' if qa['status']=='PASS_BOUNDED_ACQUISITION_LIMITED_NEGATIVE_FINDING' else 'DONE_VALIDATED'
+sp['status']='DONE_NEGATIVE_FINDING' if negative else 'DONE_VALIDATED'
 sp['next_action_or_blocker']=(
-    f"EVIDENCE_STATUS=MEASURED_BOUNDED_TARGETED_RESCUE; frozen post-SP101 residual target denominator=30, non-target=70 untouched. "
+    f"EVIDENCE_STATUS={'MEASURED_NEGATIVE' if negative else 'MEASURED_BOUNDED_TARGETED_RESCUE'}; frozen post-SP101 residual target denominator=30, non-target=70 untouched. "
     f"Search queries={qa['counts']['search_queries']}, query_errors={qa['counts']['query_errors']}, selected video fetches={qa['counts']['video_fetches']}, fetch failures={qa['counts']['fetch_failures']}, "
     f"layered evidence records={qa['counts']['evidence_records']}, usable low-influence records={qa['counts']['usable_low_influence_records']}, timed context records={qa['counts']['timed_context_records']}, event origins={qa['counts']['event_origins_raw']}. "
-    "YouTube Data API provenance is explicit; comment/reply influence is capped low, 50m/H2F/T90/acceleration/baserunning remain separate, commenter identities are not persisted, no final speed rating or owner verdict was created. SP-039 remains an independent PARTIAL legacy lane and is not an SP-102 prerequisite. STOP here: do not run SP-079 or shoulder."
+    f"YouTube Data API provenance is explicit; prior-corpus candidates excluded={summary.get('prior_corpus_reuse', {}).get('excluded_from_sp102_canonical_evidence', 0)}, comment/reply influence is capped low, 50m/H2F/T90/acceleration/baserunning remain separate, commenter identities are not persisted, no final speed rating or owner verdict was created. SP-039 remains an independent PARTIAL legacy lane and is not an SP-102 prerequisite. {'No fresh usable video/comment evidence was obtained; retain this measured negative finding.' if negative else ''} STOP here: do not run SP-079 or shoulder."
 )
 arts=[x for x in sp.get('artifacts','').replace(',', ';').split(';') if x]
 for a in [
@@ -56,6 +57,6 @@ act['generated_at']='2026-08-19'; act['status']=sp['status']; act['prerequisite_
 act['frozen_target_count']=30; act['non_target_count_untouched']=70
 act['qa_status']=qa['status']; act['privacy_qa_status']=privacy['status']
 act['youtube_data_api_key_present']=summary.get('youtube_data_api_key_present'); act['youtube_data_api_called']=summary.get('youtube_data_api_called')
-act['completion_note']='Bounded targeted rescue complete. No SP-078 owner verdict, SP-079 appraisal, or shoulder work was performed.'
+act['completion_note']=('Bounded targeted rescue closed with measured zero fresh usable video/comment evidence. No SP-078 owner verdict, SP-079 appraisal, or shoulder work was performed.' if negative else 'Bounded targeted rescue complete. No SP-078 owner verdict, SP-079 appraisal, or shoulder work was performed.')
 wj(ACT,act)
 print(json.dumps({'status':sp['status'],'qa':qa['status'],'privacy':privacy['status'],'owner_verdict_count':ledger.get('owner_verdict_count'),'SP-079':by['SP-079']['status'],'SP-082':by['SP-082']['status']},ensure_ascii=False))

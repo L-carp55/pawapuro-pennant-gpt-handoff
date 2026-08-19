@@ -3,12 +3,14 @@ from __future__ import annotations
 import csv,json,sys
 from collections import Counter
 from pathlib import Path
+from urllib.parse import urlparse
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'outputs'/'derived';O=OUT/'qa_sp102_binding_contract_20260819.json'
 def j(p):return json.loads(p.read_text(encoding='utf-8'))
 def jl(p):return [json.loads(x) for x in p.read_text(encoding='utf-8').splitlines() if x.strip()]
 def reg():return {r['task_id']:r for r in csv.DictReader((ROOT/'docs/state/speed_task_registry.tsv').open(encoding='utf-8-sig'),delimiter='\t')}
 checks=[]
 def ck(n,ok,d=None):checks.append({'name':n,'pass':bool(ok),'detail':d})
+def youtube_url(url):return (urlparse(str(url or '')).hostname or '').lower() in {'youtube.com','www.youtube.com','m.youtube.com'}
 required=[OUT/'sp102_video_candidate_manifest.json',OUT/'sp102_video_comment_collection_manifest.json',OUT/'sp102_video_comment_normalized.jsonl',OUT/'sp102_origin_event_clusters.json',OUT/'sp102_player_evidence_summary.json',OUT/'sp102_primary_source_discovery_receipts.json',OUT/'sp102_decision_use_and_ablation.json',OUT/'sp102_coverage_qa.json',ROOT/'docs/audits/sp102_targeted_video_comment_rescue.md']
 ck('all_binding_outputs_exist',all(p.exists() and p.stat().st_size>0 for p in required),[str(p.relative_to(ROOT)) for p in required if not p.exists() or p.stat().st_size==0])
 target=j(OUT/'sp101_residual_low_confidence_target_set.json');targeted=[p for p in target['players'] if p.get('comment_search_allowed_in_SP102') is True];non=[p for p in target['players'] if not p.get('comment_search_allowed_in_SP102')];tkeys={p['stable_player_key'] for p in targeted};nkeys={p['stable_player_key'] for p in non}
@@ -30,6 +32,7 @@ ck('normalized_records_targeted_only',all(r.get('stable_player_key') in tkeys fo
 ck('source_layers_separate_and_valid',all(r.get('source_layer') in allowed_layers for r in norm),sorted({r.get('source_layer') for r in norm}))
 ck('semantic_classes_valid',all(r.get('semantic_class') in allowed_classes for r in norm),sorted({r.get('semantic_class') for r in norm}))
 comments=[r for r in norm if r.get('source_layer') in {'YOUTUBE_TOP_LEVEL_COMMENT','YOUTUBE_COMMENT_REPLY'}]
+ck('fresh_youtube_provenance_only',all(r.get('reused_existing_corpus') is False and r.get('source_origin')=='FRESH_TARGETED_YOUTUBE' and youtube_url(r.get('source_url')) for r in comments),[r.get('record_id') for r in comments if r.get('reused_existing_corpus') is not False or r.get('source_origin')!='FRESH_TARGETED_YOUTUBE' or not youtube_url(r.get('source_url'))])
 ck('no_public_username_profile_persistence',all(r.get('public_username_persisted') is False and 'author' not in r and 'author_id' not in r for r in comments))
 ck('comment_origin_token_is_only_cluster_token',all('commenter_origin_cluster_token' in r for r in comments))
 ck('comment_never_direct_measurement_or_numeric_rating',all(r.get('direct_physical_measurement') is False and r.get('final_numeric_rating_allowed') is False for r in comments))
@@ -60,6 +63,8 @@ ck('full100_consistency_rerun_pass',coverage.get('status')=='PASS' and coverage.
 ck('semantic_canaries_pass',coverage.get('canaries',{}).get('pass') is True,coverage.get('canaries'))
 ck('independence_canaries_present',all(str(v).startswith('PASS') for v in coverage.get('independence_canaries',{}).values()),coverage.get('independence_canaries'))
 ck('comment_high_confidence_and_powerpro_guards',coverage.get('influence_guard',{}).get('comment_only_high_confidence') is False and coverage.get('influence_guard',{}).get('field_50m_to_sprint_speed') is False and coverage.get('influence_guard',{}).get('final_numeric_rating_created') is False)
+not_found=[r for r in norm if str(r.get('text_excerpt') or '').startswith('NOT_FOUND:')]
+ck('missingness_not_classified_as_usable_claim',all(r.get('usable_directional_context') is False and r.get('semantic_class') in {'AMBIGUOUS_TIME_OR_PLAYER','GENERAL_FANDOM_NO_SPEED_CLAIM'} for r in not_found),[r.get('record_id') for r in not_found if r.get('usable_directional_context') is not False or r.get('semantic_class') not in {'AMBIGUOUS_TIME_OR_PLAYER','GENERAL_FANDOM_NO_SPEED_CLAIM'}])
 
 detp=OUT/'sp102_canonical_determinism_qa_20260819.json'
 ck('deterministic_given_frozen_source_snapshot',detp.exists() and j(detp).get('status')=='PASS_BYTE_IDENTICAL',j(detp) if detp.exists() else 'missing')

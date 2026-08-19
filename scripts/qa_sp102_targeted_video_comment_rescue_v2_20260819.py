@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv,gzip,json,sys
 from collections import Counter
 from pathlib import Path
+from urllib.parse import urlparse
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'outputs'/'derived';O=OUT/'qa_sp102_targeted_video_comment_rescue.json';AUD=ROOT/'docs/audits/sp102_targeted_video_comment_rescue_20260818.md'
 def j(p):return json.loads(p.read_text(encoding='utf-8'))
 def gz(p):
@@ -14,6 +15,7 @@ def gz(p):
 def reg():return {r['task_id']:r for r in csv.DictReader((ROOT/'docs/state/speed_task_registry.tsv').open(encoding='utf-8-sig'),delimiter='\t')}
 checks=[]
 def ck(n,o,d=None):checks.append({'name':n,'pass':bool(o),'detail':d})
+def youtube_url(url):return (urlparse(str(url or '')).hostname or '').lower() in {'youtube.com','www.youtube.com','m.youtube.com'}
 t=j(OUT/'sp101_residual_low_confidence_target_set.json');targets=[p for p in t['players'] if p.get('comment_search_allowed_in_SP102') is True];non=[p for p in t['players'] if not p.get('comment_search_allowed_in_SP102')];tk={p['stable_player_key'] for p in targets};nk={p['stable_player_key'] for p in non}
 search=gz(OUT/'sp102_video_comment_search_ledger.jsonl.gz');ev=gz(OUT/'sp102_comment_evidence_records.jsonl.gz');pr=gz(OUT/'sp102_primary_source_records.jsonl.gz');dd=gz(OUT/'sp102_event_dedup_registry.jsonl.gz');q=[r for r in search if r.get('ledger_type')=='SEARCH_QUERY'];qby=Counter(r['stable_player_key'] for r in q);fetch=[r for r in search if r.get('ledger_type')=='VIDEO_FETCH' and r.get('video_id')]
 ck('frozen_target_30_non_target_70',len(targets)==30 and len(non)==70 and not(tk&nk))
@@ -23,6 +25,7 @@ ck('errors_explicit',all('error' in r for r in q) and all('error' in r for r in 
 ck('api_provenance_explicit',all(r.get('youtube_data_api_called') is False for r in q))
 ck('evidence_targeted_only',all(r.get('stable_player_key') in tk for r in ev))
 comments=[r for r in ev if r.get('source_layer') in {'COMMENT','REPLY'}]
+ck('fresh_youtube_provenance_only',all(r.get('reused_existing_corpus') is False and r.get('source_origin')=='FRESH_TARGETED_YOUTUBE' and youtube_url(r.get('source_url')) for r in comments),[r.get('record_id') for r in comments if r.get('reused_existing_corpus') is not False or r.get('source_origin')!='FRESH_TARGETED_YOUTUBE' or not youtube_url(r.get('source_url'))])
 ck('comment_influence_low_no_direct_anchor',all(r.get('influence_cap') in {'LOW_DIRECTIONAL','LOW_CONTEXT_ONLY'} and r.get('direct_physical_anchor_allowed') is False for r in comments))
 ck('video_context_only_comment_not_directional',all(r.get('identity_basis')!='VIDEO_CONTEXT_ONLY' or r.get('usable_directional_context') is False for r in comments))
 ck('commenter_identity_sanitized',all('author' not in r and 'author_id' not in r and r.get('commenter_profile_persisted') is False for r in comments))

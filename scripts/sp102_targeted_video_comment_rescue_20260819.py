@@ -4,7 +4,8 @@
 Boundaries:
 - Reads the frozen post-SP101 residual target set and searches ONLY targets with
   comment_search_allowed_in_SP102=true.
-- Reuses prior YouTube/Community corpus before doing any fresh collection.
+- Audits prior YouTube/Community corpus for an exclusion receipt, but never
+  counts reused prior records as fresh SP-102 evidence.
 - Uses the public yt-dlp route when no official YouTube Data API key exists;
   the API availability state is recorded, never inferred.
 - Preserves comment/reply/subtitle/description/linked-primary layers separately.
@@ -298,10 +299,11 @@ def evidence_record(target: dict[str, Any], *, origin: str, layer: str, text: st
 
 
 def collect_prior_reuse(targets: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    records=[]
     seen=set()
     files=prior_corpus_files()
     rows_scanned=0
+    matched=0
+    domains=Counter()
     for p in files:
         for row in iter_jsonl(p):
             rows_scanned+=1
@@ -312,21 +314,20 @@ def collect_prior_reuse(targets: list[dict[str, Any]]) -> tuple[list[dict[str, A
             if not target:
                 continue
             url=source_url(row)
-            layer="REPLY" if row.get("parent") not in (None,"","root") or row.get("parent_id") else "COMMENT"
-            origin="PRIOR_COMMUNITY_CORPUS"
             key=(target["stable_player_key"],url,compact(text),str(row.get("author_id") or row.get("author_id_or_name") or row.get("author") or ""))
             if key in seen: continue
             seen.add(key)
-            records.append(evidence_record(
-                target,origin=origin,layer=layer,text=text,url=url,video_id=source_video(row),
-                author=str(row.get("author") or row.get("author_id_or_name") or ""),
-                author_id=str(row.get("author_id") or ""),
-                parent_id=str(row.get("parent_id") or row.get("parent") or ""),
-                published_at=row.get("published_at") or row.get("timestamp"),identity_basis=basis,
-                source_quality=str(row.get("source_quality") or "PRIOR_BOUNDED_YOUTUBE_CORPUS"),reused=True,
-                extra={"prior_record_id":row.get("record_id"),"prior_claim_lane":row.get("claim_lane"),"prior_speed_concept":row.get("speed_concept")}
-            ))
-    return records,{"files_scanned":[str(p.relative_to(ROOT)) for p in files],"rows_scanned":rows_scanned,"matched_speed_records":len(records)}
+            matched+=1
+            host=(urllib.parse.urlparse(url).hostname or "").lower() or "(missing)"
+            domains[host]+=1
+    return [],{
+        "files_scanned":[str(p.relative_to(ROOT)) for p in files],
+        "rows_scanned":rows_scanned,
+        "matched_speed_records":matched,
+        "excluded_from_sp102_canonical_evidence":matched,
+        "source_domain_counts":dict(sorted(domains.items())),
+        "exclusion_reason":"prior corpus is not a fresh targeted YouTube retrieval; source layers and semantic classes are not reused as SP-102 evidence",
+    }
 
 
 def run_search(query: str) -> tuple[list[dict[str, Any]], str | None, str]:
@@ -635,7 +636,7 @@ def main() -> None:
         "public_route":"yt-dlp public YouTube search/comment/subtitle route",
         "prior_corpus_reuse":prior_receipt,"evidence_record_count":len(evidence),"event_origin_count":len(dedup_registry),"linked_primary_record_count":len(primary_records),
         "players":summaries,"status_counts":dict(Counter(x["post_rescue_context_status"] for x in summaries)),
-        "guards":{"global_all100_crawl_performed":False,"non_target_players_searched":0,"field_50m_to_sprint_speed_conversion":False,"comment_only_direct_anchor":False,"final_player_rating_created":False,"owner_verdict_written":False},
+        "guards":{"global_all100_crawl_performed":False,"non_target_players_searched":0,"field_50m_to_sprint_speed_conversion":False,"comment_only_direct_anchor":False,"final_player_rating_created":False,"owner_verdict_written":False,"prior_corpus_evidence_excluded":True},
     }
 
     write_jsonl_gz(OUT/"sp102_video_comment_search_ledger.jsonl.gz",search_ledger)
