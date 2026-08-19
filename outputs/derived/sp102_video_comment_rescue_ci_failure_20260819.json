@@ -1,12 +1,9 @@
 {
   "generated_at": "2026-08-19",
   "logs_tail": {
-    "owner_lock_qa.log": [
-      "{\"qa\":\"PASS\",\"owner_review_locked\":true,\"construct_complete_queue_binding_verified\":true,\"locked_write_rejected\":true,\"ledger_byte_identical_after_rejection\":true,\"owner_verdict_count\":0}"
-    ],
     "registry_qa.log": [
-      "PASS: requirements=61, tasks=74, exclusions=25, open_exclusions=3, unresolved_terminal=2, owner_review_task_blockers=2, owner_review_dependency_task_blockers=0, owner_review_dependency_exclusion_blockers=0, owner_review_non_dependency_exclusion_blocks=3, gate_task_blockers=15, gate_exclusion_blockers=3",
-      "SP-077 is fail-closed on its declared dependencies; the global Speed Gate remains fail-closed until all gate blockers reach zero."
+      "FAIL: speed task registry QA found 1 error(s)",
+      "- SP-102: closed while dependency SP-039 is PARTIAL"
     ],
     "sp102_binding_qa.log": [
       "{\"status\": \"PASS_SP102_BINDING_CONTRACT\", \"pass\": 39, \"fail\": 0}"
@@ -14,7 +11,10 @@
     "sp102_collection.log": [
       "{\"targeted\": 30, \"queries\": 120, \"video_fetches\": 90, \"evidence\": 56, \"events\": 55, \"api_key\": false, \"status_counts\": {\"DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE\": 24, \"MEASURED_NO_USABLE_NEW_SPEED_CONTEXT\": 6}}"
     ],
-    "sp102_finalize.log": [],
+    "sp102_finalize.log": [
+      "{\"status\": \"DONE_VALIDATED\", \"qa\": \"PASS_TARGETED_RESCUE_BOUNDED_VALIDATED\", \"privacy\": \"PASS_COMMENTER_PRIVACY\", \"owner_verdict_count\": 0, \"SP-079\": \"BLOCKED_DEPENDENCY\", \"SP-082\": \"BLOCKED_DEPENDENCY\"}",
+      "{\"status\": \"DONE_VALIDATED\", \"binding_contract\": \"PASS_SP102_BINDING_CONTRACT\", \"SP-079\": \"BLOCKED_DEPENDENCY\", \"SP-082\": \"BLOCKED_DEPENDENCY\"}"
+    ],
     "sp102_materialize.log": [
       "{\"targets\": 30, \"canonical_records\": 56, \"clusters\": 55, \"primary\": 0, \"coverage\": \"PASS\", \"use_states\": {\"AVAILABLE_NOT_DECISION_EFFECTIVE\": 24, \"NO_USABLE_EVIDENCE\": 6}}"
     ],
@@ -44,15 +44,9 @@
     ],
     "sp102_sanitize.log": [
       "{\"rows\": 56, \"comment_rows\": 56, \"raw_commenter_identity_fields_remaining\": 0}"
-    ],
-    "traceability_qa.log": [
-      "WARNINGS:",
-      "- all required construct lanes are resolved while integrity lock remains true; independent review and explicit unlock transition are still required",
-      "PASS: construct_lanes=12, unresolved_required=0, owner_verdict_count=0, OWNER_REVIEW_LOCKED=1",
-      "CONSTRUCT_TRACEABILITY_READY_FOR_INDEPENDENT_UNLOCK_REVIEW=1; OWNER REVIEW REMAINS BLOCKED until lock transition and SP-078 rebind complete."
     ]
   },
   "schema_version": "sp102_video_comment_rescue_ci_failure_20260819",
-  "stage": "protected_scope_verification",
+  "stage": "canonical_governance_qa",
   "yt_dlp_version": "2026.07.04"
 }
