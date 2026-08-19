@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import csv,json,sys
+import csv,gzip,json,sys
 from collections import Counter
 from pathlib import Path
 from urllib.parse import urlparse
@@ -11,8 +11,15 @@ def reg():return {r['task_id']:r for r in csv.DictReader((ROOT/'docs/state/speed
 checks=[]
 def ck(n,ok,d=None):checks.append({'name':n,'pass':bool(ok),'detail':d})
 def youtube_url(url):return (urlparse(str(url or '')).hostname or '').lower() in {'youtube.com','www.youtube.com','m.youtube.com'}
-required=[OUT/'sp102_video_candidate_manifest.json',OUT/'sp102_video_comment_collection_manifest.json',OUT/'sp102_video_comment_normalized.jsonl',OUT/'sp102_origin_event_clusters.json',OUT/'sp102_player_evidence_summary.json',OUT/'sp102_primary_source_discovery_receipts.json',OUT/'sp102_decision_use_and_ablation.json',OUT/'sp102_coverage_qa.json',ROOT/'docs/audits/sp102_targeted_video_comment_rescue.md']
-ck('all_binding_outputs_exist',all(p.exists() and p.stat().st_size>0 for p in required),[str(p.relative_to(ROOT)) for p in required if not p.exists() or p.stat().st_size==0])
+normalized_path=OUT/'sp102_video_comment_normalized.jsonl'
+required=[OUT/'sp102_video_candidate_manifest.json',OUT/'sp102_video_comment_collection_manifest.json',normalized_path,OUT/'sp102_origin_event_clusters.json',OUT/'sp102_player_evidence_summary.json',OUT/'sp102_primary_source_discovery_receipts.json',OUT/'sp102_decision_use_and_ablation.json',OUT/'sp102_coverage_qa.json',ROOT/'docs/audits/sp102_targeted_video_comment_rescue.md']
+missing=[p for p in required if not p.exists()]
+empty_non_jsonl=[p for p in required if p != normalized_path and p.exists() and p.stat().st_size==0]
+ck('all_binding_outputs_exist',not missing and not empty_non_jsonl,[str(p.relative_to(ROOT)) for p in missing+empty_non_jsonl])
+raw_evidence_path=OUT/'sp102_comment_evidence_records.jsonl.gz'
+with gzip.open(raw_evidence_path,'rt',encoding='utf-8') as f:
+    raw_evidence_count=sum(bool(line.strip()) for line in f)
+ck('empty_normalized_jsonl_requires_zero_raw_evidence',normalized_path.exists() and (normalized_path.stat().st_size>0 or raw_evidence_count==0),{'raw_evidence_records':raw_evidence_count,'normalized_bytes':normalized_path.stat().st_size if normalized_path.exists() else None})
 target=j(OUT/'sp101_residual_low_confidence_target_set.json');targeted=[p for p in target['players'] if p.get('comment_search_allowed_in_SP102') is True];non=[p for p in target['players'] if not p.get('comment_search_allowed_in_SP102')];tkeys={p['stable_player_key'] for p in targeted};nkeys={p['stable_player_key'] for p in non}
 manifest=j(OUT/'sp102_video_candidate_manifest.json');attempts=manifest.get('search_attempts',[]);aby=Counter(r['stable_player_key'] for r in attempts)
 ck('frozen_30_70_contract',len(targeted)==30 and len(non)==70 and not(tkeys&nkeys))
@@ -27,7 +34,7 @@ foreign={'ソト','ファビアン','モンテロ'}
 ck('foreign_romanized_alias_queries_covered',all(p.get('romanized_english_aliases_searched') for p in qplayers if p['player'] in foreign),{p['player']:p.get('romanized_english_aliases_searched') for p in qplayers if p['player'] in foreign})
 ck('nickname_gap_not_fabricated',all('NO_CURATED_NICKNAME_SOURCE' in p.get('nickname_search_status','') for p in qplayers))
 
-norm=jl(OUT/'sp102_video_comment_normalized.jsonl');allowed_layers={'VIDEO_NARRATION_OR_EDITORIAL','QUOTED_2CH_5CH_THREAD_TEXT','YOUTUBE_TOP_LEVEL_COMMENT','YOUTUBE_COMMENT_REPLY'};allowed_classes={'CURRENT_REALWORLD_SPEED_PHYSICAL','CURRENT_INITIAL_ACCELERATION_OR_H2F','CURRENT_END_TO_END_OR_FULL_EFFORT','CURRENT_TECHNIQUE_CONTEXT','HISTORICAL_TRAJECTORY','INJURY_AGE_DECLINE_CONTEXT','RELATIVE_ORDINAL_COMPARISON','CURRENT_POWERPRO_RATING_OPINION','PRIMARY_SOURCE_DISCOVERY','AMBIGUOUS_TIME_OR_PLAYER','REPOST_OR_QUOTE_NOT_INDEPENDENT','MEME_SARCASM_JOKE','GENERAL_FANDOM_NO_SPEED_CLAIM','SPAM_OR_BOT'}
+norm=jl(normalized_path);allowed_layers={'VIDEO_NARRATION_OR_EDITORIAL','QUOTED_2CH_5CH_THREAD_TEXT','YOUTUBE_TOP_LEVEL_COMMENT','YOUTUBE_COMMENT_REPLY'};allowed_classes={'CURRENT_REALWORLD_SPEED_PHYSICAL','CURRENT_INITIAL_ACCELERATION_OR_H2F','CURRENT_END_TO_END_OR_FULL_EFFORT','CURRENT_TECHNIQUE_CONTEXT','HISTORICAL_TRAJECTORY','INJURY_AGE_DECLINE_CONTEXT','RELATIVE_ORDINAL_COMPARISON','CURRENT_POWERPRO_RATING_OPINION','PRIMARY_SOURCE_DISCOVERY','AMBIGUOUS_TIME_OR_PLAYER','REPOST_OR_QUOTE_NOT_INDEPENDENT','MEME_SARCASM_JOKE','GENERAL_FANDOM_NO_SPEED_CLAIM','SPAM_OR_BOT'}
 ck('normalized_records_targeted_only',all(r.get('stable_player_key') in tkeys for r in norm))
 ck('source_layers_separate_and_valid',all(r.get('source_layer') in allowed_layers for r in norm),sorted({r.get('source_layer') for r in norm}))
 ck('semantic_classes_valid',all(r.get('semantic_class') in allowed_classes for r in norm),sorted({r.get('semantic_class') for r in norm}))
