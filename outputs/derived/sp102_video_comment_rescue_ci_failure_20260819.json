@@ -2,7 +2,7 @@
   "generated_at": "2026-08-19",
   "logs_tail": {
     "sp102_binding_qa.log": [
-      "{\"status\": \"FAIL_SP102_BINDING_CONTRACT\", \"pass\": 40, \"fail\": 1}"
+      "{\"status\": \"FAIL_SP102_BINDING_CONTRACT\", \"pass\": 40, \"fail\": 1, \"failed_checks\": [{\"name\": \"all_binding_outputs_exist\", \"detail\": [\"outputs/derived/sp102_video_comment_normalized.jsonl\"]}]}"
     ],
     "sp102_collection.log": [
       "{\"targeted\": 30, \"queries\": 120, \"video_fetches\": 90, \"evidence\": 0, \"events\": 0, \"api_key\": false, \"status_counts\": {\"MEASURED_NO_USABLE_NEW_SPEED_CONTEXT\": 30}}"
