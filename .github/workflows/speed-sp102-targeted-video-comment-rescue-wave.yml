@@ -1,6 +1,7 @@
 name: speed-sp102-targeted-video-comment-rescue-wave
 # Binding-contract execution: frozen 30-target acquisition -> privacy -> deterministic canonical materialization -> independent QA.
 # Core collector enters through a fail-closed one-expression hotfix wrapper documented in scripts/run_sp102_targeted_video_comment_rescue_20260819.py.
+# Re-trigger after binding_query_expansion counter fix.
 
 on:
   push:
