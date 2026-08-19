@@ -12,8 +12,8 @@
       "{\"targeted\": 30, \"queries\": 120, \"video_fetches\": 90, \"evidence\": 0, \"events\": 0, \"api_key\": false, \"status_counts\": {\"MEASURED_NO_USABLE_NEW_SPEED_CONTEXT\": 30}}"
     ],
     "sp102_finalize.log": [
-      "{\"status\": \"DONE_NEGATIVE_FINDING\", \"qa\": \"PASS_BOUNDED_ACQUISITION_LIMITED_NEGATIVE_FINDING\", \"privacy\": \"PASS_COMMENTER_PRIVACY\", \"owner_verdict_count\": 0, \"SP-079\": \"BLOCKED_DEPENDENCY\", \"SP-082\": \"BLOCKED_DEPENDENCY\"}",
-      "{\"status\": \"DONE_NEGATIVE_FINDING\", \"binding_contract\": \"PASS_SP102_BINDING_CONTRACT\", \"SP-079\": \"BLOCKED_DEPENDENCY\", \"SP-082\": \"BLOCKED_DEPENDENCY\"}"
+      "{\"status\": \"DONE_VALIDATED\", \"qa\": \"PASS_TARGETED_RESCUE_BOUNDED_VALIDATED\", \"privacy\": \"PASS_COMMENTER_PRIVACY\", \"owner_verdict_count\": 0, \"SP-079\": \"BLOCKED_DEPENDENCY\", \"SP-082\": \"BLOCKED_DEPENDENCY\"}",
+      "{\"status\": \"DONE_VALIDATED\", \"binding_contract\": \"PASS_SP102_BINDING_CONTRACT\", \"SP-079\": \"BLOCKED_DEPENDENCY\", \"SP-082\": \"BLOCKED_DEPENDENCY\"}"
     ],
     "sp102_materialize.log": [
       "{\"targets\": 30, \"canonical_records\": 0, \"clusters\": 0, \"primary\": 0, \"coverage\": \"PASS\", \"use_states\": {\"NO_USABLE_EVIDENCE\": 30}}"
@@ -25,7 +25,7 @@
       "{\"schema_version\": \"qa_sp102_commenter_privacy_20260819\", \"generated_at\": \"2026-08-19\", \"status\": \"PASS_COMMENTER_PRIVACY\", \"comment_rows\": 0, \"checks\": {\"no_raw_author_field\": true, \"no_raw_author_id_field\": true, \"commenter_profile_persisted_false\": true, \"origin_hash_only_when_available\": true}}"
     ],
     "sp102_qa.log": [
-      "{\"status\": \"PASS_BOUNDED_ACQUISITION_LIMITED_NEGATIVE_FINDING\", \"pass\": 17, \"fail\": 0, \"counts\": {\"targeted\": 30, \"non_targeted\": 70, \"search_queries\": 193, \"query_errors\": 0, \"video_fetches\": 116, \"fetch_failures\": 116, \"evidence_records\": 0, \"usable_low_influence_records\": 0, \"timed_context_records\": 0, \"event_origins_raw\": 0, \"primary_link_records\": 0}}"
+      "{\"status\": \"PASS_TARGETED_RESCUE_BOUNDED_VALIDATED\", \"pass\": 17, \"fail\": 0, \"counts\": {\"targeted\": 30, \"non_targeted\": 70, \"search_queries\": 193, \"query_errors\": 0, \"video_fetches\": 116, \"fetch_failures\": 115, \"evidence_records\": 0, \"usable_low_influence_records\": 0, \"timed_context_records\": 0, \"event_origins_raw\": 0, \"primary_link_records\": 0}}"
     ],
     "sp102_query_expansion.log": [
       "{\"extra_queries\": 73, \"total_search_rows\": 193, \"extra_video_fetches\": 26, \"evidence\": 0}"
