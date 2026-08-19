@@ -48,7 +48,7 @@ const rows = lines.slice(1).filter(Boolean).map((line, i) => {
   return Object.fromEntries(header.map((h, j) => [h, cells[j]]));
 });
 const byId = new Map(rows.map(r => [r.task_id, r]));
-for (const id of ['SP-033','SP-035','SP-037','SP-039','SP-075','SP-079','SP-101']) {
+for (const id of ['SP-033','SP-035','SP-037','SP-075','SP-079','SP-101']) {
   if (!byId.has(id)) throw new Error(`required task missing: ${id}`);
 }
 
@@ -60,7 +60,10 @@ const sp102 = {
   requirement_ids: 'SR-014,SR-016,SR-019,SR-020,SR-022,SR-041,SR-043,SR-052',
   owner_review_block: '1',
   gate_block: '1',
-  depends_on: 'SP-033,SP-035,SP-037,SP-039,SP-075,SP-101',
+  // SP-039 is an independent legacy lane with no SP-102 input/consumer.
+  // Keep its PARTIAL state intact; it is not a prerequisite for this
+  // frozen-SP-101-target rescue.
+  depends_on: 'SP-033,SP-035,SP-037,SP-075,SP-101',
   title: 'Targeted 2ch/5ch-style baseball video-comment rescue for residual low-confidence speed appraisals',
   next_action_or_blocker: 'BLOCKED until SP-101 is DONE_VALIDATED and outputs/derived/sp101_residual_low_confidence_target_set.json is frozen. Then search only the residual low-confidence/material-conflict targets, preserve video narration / quoted thread / comments / replies / linked primary sources as separate layers, deduplicate by event-origin clusters, and produce player-specific decision-use receipts. Do not perform a global all-100 comment crawl.',
   artifacts: taskArtifacts.join(';'),

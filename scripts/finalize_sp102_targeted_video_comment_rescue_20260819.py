@@ -6,6 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'outputs'/'derived'
 REG=ROOT/'docs/state/speed_task_registry.tsv'
 ACT=ROOT/'docs/state/speed_sp102_activation_state_20260818.json'
+SP102_DEPENDS_ON='SP-033,SP-035,SP-037,SP-075,SP-101'
 
 def j(p): return json.loads(p.read_text(encoding='utf-8'))
 def wj(p,o): p.write_text(json.dumps(o,ensure_ascii=False,sort_keys=True,indent=2)+'\n',encoding='utf-8')
@@ -30,12 +31,13 @@ if by['SP-101']['status']!='DONE_VALIDATED': raise RuntimeError('SP-101 regresse
 if by['SP-079']['status']!='BLOCKED_DEPENDENCY': raise RuntimeError('SP-079 must remain blocked')
 if by['SP-082']['status']!='BLOCKED_DEPENDENCY': raise RuntimeError('shoulder must remain blocked')
 sp=by['SP-102']
+sp['depends_on']=SP102_DEPENDS_ON
 sp['status']='DONE_NEGATIVE_FINDING' if qa['status']=='PASS_BOUNDED_ACQUISITION_LIMITED_NEGATIVE_FINDING' else 'DONE_VALIDATED'
 sp['next_action_or_blocker']=(
     f"EVIDENCE_STATUS=MEASURED_BOUNDED_TARGETED_RESCUE; frozen post-SP101 residual target denominator=30, non-target=70 untouched. "
     f"Search queries={qa['counts']['search_queries']}, query_errors={qa['counts']['query_errors']}, selected video fetches={qa['counts']['video_fetches']}, fetch failures={qa['counts']['fetch_failures']}, "
     f"layered evidence records={qa['counts']['evidence_records']}, usable low-influence records={qa['counts']['usable_low_influence_records']}, timed context records={qa['counts']['timed_context_records']}, event origins={qa['counts']['event_origins_raw']}. "
-    "YouTube Data API provenance is explicit; comment/reply influence is capped low, 50m/H2F/T90/acceleration/baserunning remain separate, commenter identities are not persisted, no final speed rating or owner verdict was created. STOP here: do not run SP-079 or shoulder."
+    "YouTube Data API provenance is explicit; comment/reply influence is capped low, 50m/H2F/T90/acceleration/baserunning remain separate, commenter identities are not persisted, no final speed rating or owner verdict was created. SP-039 remains an independent PARTIAL legacy lane and is not an SP-102 prerequisite. STOP here: do not run SP-079 or shoulder."
 )
 arts=[x for x in sp.get('artifacts','').replace(',', ';').split(';') if x]
 for a in [

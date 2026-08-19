@@ -144,6 +144,7 @@ jobs:
       - name: Finalize SP-102 only after all QA passes
         run: |
           echo finalize_sp102 > /tmp/sp102_stage
+          set -o pipefail
           python scripts/finalize_sp102_targeted_video_comment_rescue_v2_20260819.py | tee /tmp/sp102_finalize.log
       - name: Run canonical speed governance QA
         run: |
