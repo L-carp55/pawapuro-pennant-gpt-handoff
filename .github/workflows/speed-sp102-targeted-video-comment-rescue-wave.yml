@@ -1,5 +1,5 @@
 name: speed-sp102-targeted-video-comment-rescue-wave
-# Trigger after workflow exists on branch.
+# Binding-contract execution: frozen 30-target acquisition -> privacy -> deterministic canonical materialization -> independent QA.
 
 on:
   push:
@@ -19,7 +19,7 @@ concurrency:
 jobs:
   collect-audit-finalize:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,16 +41,22 @@ jobs:
           echo freeze_governance > /tmp/sp102_stage
           sha256sum outputs/derived/sp078_owner_verdict_ledger_20260816.json > /tmp/sp078.before.sha256
           cp docs/state/speed_owner_review_integrity_lock_20260817.json /tmp/owner_lock.before.json
-      - name: Syntax check
+      - name: Syntax check all SP-102 stages
         run: |
           echo syntax_check > /tmp/sp102_stage
           python -m py_compile \
             scripts/sp102_targeted_video_comment_rescue_20260819.py \
+            scripts/sp102_expand_query_contract_20260819.py \
             scripts/sanitize_sp102_commenter_identity_20260819.py \
-            scripts/qa_sp102_targeted_video_comment_rescue_20260819.py \
+            scripts/materialize_sp102_canonical_contract_20260819.py \
+            scripts/refine_sp102_independence_and_decision_use_20260819.py \
+            scripts/finalize_sp102_query_manifest_20260819.py \
+            scripts/qa_sp102_targeted_video_comment_rescue_v2_20260819.py \
             scripts/qa_sp102_commenter_privacy_20260819.py \
-            scripts/finalize_sp102_targeted_video_comment_rescue_20260819.py
-      - name: Execute frozen-target SP-102 collection
+            scripts/qa_sp102_binding_contract_20260819.py \
+            scripts/finalize_sp102_targeted_video_comment_rescue_20260819.py \
+            scripts/finalize_sp102_targeted_video_comment_rescue_v2_20260819.py
+      - name: Execute frozen-target core search
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
@@ -59,23 +65,83 @@ jobs:
           echo targeted_collection > /tmp/sp102_stage
           set -o pipefail
           python scripts/sp102_targeted_video_comment_rescue_20260819.py 2>&1 | tee /tmp/sp102_collection.log
+      - name: Expand query coverage to binding task
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+        run: |
+          echo binding_query_expansion > /tmp/sp102_stage
+          set -o pipefail
+          python scripts/sp102_expand_query_contract_20260819.py 2>&1 | tee /tmp/sp102_query_expansion.log
       - name: Remove commenter identities before persistence
         run: |
           echo commenter_identity_sanitization > /tmp/sp102_stage
           python scripts/sanitize_sp102_commenter_identity_20260819.py | tee /tmp/sp102_sanitize.log
-      - name: Run independent SP-102 semantic QA
+      - name: Run raw acquisition QA
         run: |
-          echo independent_semantic_qa > /tmp/sp102_stage
+          echo raw_acquisition_qa > /tmp/sp102_stage
           set -o pipefail
-          python scripts/qa_sp102_targeted_video_comment_rescue_20260819.py 2>&1 | tee /tmp/sp102_qa.log
+          python scripts/qa_sp102_targeted_video_comment_rescue_v2_20260819.py 2>&1 | tee /tmp/sp102_qa.log
       - name: Enforce commenter privacy contract
         run: |
           echo commenter_privacy_qa > /tmp/sp102_stage
           python scripts/qa_sp102_commenter_privacy_20260819.py | tee /tmp/sp102_privacy.log
-      - name: Finalize SP-102 only after both QA passes
+      - name: Freeze collected source snapshot hashes
+        run: |
+          echo freeze_source_snapshot > /tmp/sp102_stage
+          cat > /tmp/sp102_source_snapshot_paths.txt <<'EOF'
+          outputs/derived/sp102_video_comment_search_ledger.jsonl.gz
+          outputs/derived/sp102_comment_evidence_records.jsonl.gz
+          outputs/derived/sp102_primary_source_records.jsonl.gz
+          outputs/derived/sp102_event_dedup_registry.jsonl.gz
+          outputs/derived/sp102_query_contract_coverage_20260819.json
+          EOF
+          xargs sha256sum < /tmp/sp102_source_snapshot_paths.txt > /tmp/sp102_source_snapshot.sha256
+      - name: Materialize binding-task canonical outputs
+        run: |
+          echo canonical_materialization_first > /tmp/sp102_stage
+          python scripts/materialize_sp102_canonical_contract_20260819.py | tee /tmp/sp102_materialize.log
+          python scripts/refine_sp102_independence_and_decision_use_20260819.py | tee /tmp/sp102_refine.log
+          python scripts/finalize_sp102_query_manifest_20260819.py | tee /tmp/sp102_query_manifest.log
+          cat > /tmp/sp102_canonical_paths.txt <<'EOF'
+          outputs/derived/sp102_video_candidate_manifest.json
+          outputs/derived/sp102_video_comment_collection_manifest.json
+          outputs/derived/sp102_video_comment_normalized.jsonl
+          outputs/derived/sp102_origin_event_clusters.json
+          outputs/derived/sp102_player_evidence_summary.json
+          outputs/derived/sp102_primary_source_discovery_receipts.json
+          outputs/derived/sp102_decision_use_and_ablation.json
+          outputs/derived/sp102_coverage_qa.json
+          docs/audits/sp102_targeted_video_comment_rescue.md
+          EOF
+          xargs sha256sum < /tmp/sp102_canonical_paths.txt > /tmp/sp102_canonical.first.sha256
+      - name: Re-materialize from same frozen source snapshot and prove determinism
+        run: |
+          echo canonical_determinism_rerun > /tmp/sp102_stage
+          xargs sha256sum --check < /tmp/sp102_source_snapshot.sha256
+          python scripts/materialize_sp102_canonical_contract_20260819.py > /tmp/sp102_materialize_second.log
+          python scripts/refine_sp102_independence_and_decision_use_20260819.py > /tmp/sp102_refine_second.log
+          python scripts/finalize_sp102_query_manifest_20260819.py > /tmp/sp102_query_manifest_second.log
+          xargs sha256sum < /tmp/sp102_canonical_paths.txt > /tmp/sp102_canonical.second.sha256
+          diff -u /tmp/sp102_canonical.first.sha256 /tmp/sp102_canonical.second.sha256
+          python - <<'PY'
+          import json,pathlib
+          a=pathlib.Path('/tmp/sp102_canonical.first.sha256').read_text().splitlines();b=pathlib.Path('/tmp/sp102_canonical.second.sha256').read_text().splitlines()
+          src=pathlib.Path('/tmp/sp102_source_snapshot.sha256').read_text().splitlines()
+          out={'schema_version':'sp102_canonical_determinism_qa_20260819','generated_at':'2026-08-19','status':'PASS_BYTE_IDENTICAL' if a==b else 'FAIL_NONDETERMINISTIC','mismatch_count':0 if a==b else 1,'source_snapshot_hashes':src,'canonical_hashes':b}
+          pathlib.Path('outputs/derived/sp102_canonical_determinism_qa_20260819.json').write_text(json.dumps(out,ensure_ascii=False,sort_keys=True,indent=2)+'\n')
+          if out['status']!='PASS_BYTE_IDENTICAL':raise SystemExit(2)
+          PY
+      - name: Run independent binding-contract QA
+        run: |
+          echo binding_contract_qa > /tmp/sp102_stage
+          set -o pipefail
+          python scripts/qa_sp102_binding_contract_20260819.py 2>&1 | tee /tmp/sp102_binding_qa.log
+      - name: Finalize SP-102 only after all QA passes
         run: |
           echo finalize_sp102 > /tmp/sp102_stage
-          python scripts/finalize_sp102_targeted_video_comment_rescue_20260819.py | tee /tmp/sp102_finalize.log
+          python scripts/finalize_sp102_targeted_video_comment_rescue_v2_20260819.py | tee /tmp/sp102_finalize.log
       - name: Run canonical speed governance QA
         run: |
           echo canonical_governance_qa > /tmp/sp102_stage
@@ -91,20 +157,22 @@ jobs:
           import csv,json
           ledger=json.load(open('outputs/derived/sp078_owner_verdict_ledger_20260816.json',encoding='utf-8'))
           lock=json.load(open('docs/state/speed_owner_review_integrity_lock_20260817.json',encoding='utf-8'))
-          qa=json.load(open('outputs/derived/qa_sp102_targeted_video_comment_rescue.json',encoding='utf-8'))
+          rawqa=json.load(open('outputs/derived/qa_sp102_targeted_video_comment_rescue.json',encoding='utf-8'))
           privacy=json.load(open('outputs/derived/qa_sp102_commenter_privacy_20260819.json',encoding='utf-8'))
+          binding=json.load(open('outputs/derived/qa_sp102_binding_contract_20260819.json',encoding='utf-8'))
           rows={r['task_id']:r for r in csv.DictReader(open('docs/state/speed_task_registry.tsv',encoding='utf-8-sig'),delimiter='\t')}
           assert ledger['owner_verdict_count']==0 and not ledger.get('records')
           assert lock['locked'] is True
-          assert str(qa['status']).startswith('PASS')
+          assert str(rawqa['status']).startswith('PASS')
           assert privacy['status']=='PASS_COMMENTER_PRIVACY'
+          assert binding['status']=='PASS_SP102_BINDING_CONTRACT'
           assert rows['SP-101']['status']=='DONE_VALIDATED'
           assert rows['SP-102']['status'] in {'DONE_VALIDATED','DONE_NEGATIVE_FINDING'}
           assert rows['SP-079']['status']=='BLOCKED_DEPENDENCY'
           assert rows['SP-082']['status']=='BLOCKED_DEPENDENCY'
           print(json.dumps({'SP-101':rows['SP-101']['status'],'SP-102':rows['SP-102']['status'],'SP-079':rows['SP-079']['status'],'SP-082':rows['SP-082']['status'],'owner_verdict_count':ledger['owner_verdict_count']}))
           PY
-      - name: Commit SP-102 bounded evidence and audit
+      - name: Commit complete SP-102 evidence, canonical contract, and audit
         run: |
           echo validated_artifact_commit > /tmp/sp102_stage
           git config user.name 'github-actions[bot]'
@@ -116,16 +184,28 @@ jobs:
             outputs/derived/sp102_event_dedup_registry.jsonl.gz \
             outputs/derived/sp102_target_post_rescue_summary.json \
             outputs/derived/sp102_sp101_resolution_linkage.json \
+            outputs/derived/sp102_query_contract_coverage_20260819.json \
             outputs/derived/qa_sp102_targeted_video_comment_rescue.json \
             outputs/derived/qa_sp102_commenter_privacy_20260819.json \
+            outputs/derived/sp102_video_candidate_manifest.json \
+            outputs/derived/sp102_video_comment_collection_manifest.json \
+            outputs/derived/sp102_video_comment_normalized.jsonl \
+            outputs/derived/sp102_origin_event_clusters.json \
+            outputs/derived/sp102_player_evidence_summary.json \
+            outputs/derived/sp102_primary_source_discovery_receipts.json \
+            outputs/derived/sp102_decision_use_and_ablation.json \
+            outputs/derived/sp102_coverage_qa.json \
+            outputs/derived/sp102_canonical_determinism_qa_20260819.json \
+            outputs/derived/qa_sp102_binding_contract_20260819.json \
             docs/audits/sp102_targeted_video_comment_rescue_20260818.md \
+            docs/audits/sp102_targeted_video_comment_rescue.md \
             docs/state/speed_sp102_activation_state_20260818.json \
             docs/state/speed_task_registry.tsv
           if git diff --cached --quiet; then
             echo 'No SP-102 changes to commit.'
             exit 1
           fi
-          git commit -m 'feat(speed): complete bounded SP-102 video-comment rescue'
+          git commit -m 'feat(speed): complete SP-102 binding-contract rescue'
           git pull --rebase origin codex/speed-sp102-targeted-video-comment-rescue-20260819
           git push origin HEAD:codex/speed-sp102-targeted-video-comment-rescue-20260819
       - name: Persist durable failure diagnosis
@@ -136,10 +216,10 @@ jobs:
           import json,pathlib
           logs={}
           for p in pathlib.Path('/tmp').glob('*.log'):
-            try: logs[p.name]=p.read_text(errors='replace').splitlines()[-100:]
+            try: logs[p.name]=p.read_text(errors='replace').splitlines()[-120:]
             except Exception as e: logs[p.name]=[repr(e)]
           out={'schema_version':'sp102_video_comment_rescue_ci_failure_20260819','generated_at':'2026-08-19','stage':pathlib.Path('/tmp/sp102_stage').read_text().strip() if pathlib.Path('/tmp/sp102_stage').exists() else 'unknown','yt_dlp_version':pathlib.Path('/tmp/ytdlp_version.txt').read_text().strip() if pathlib.Path('/tmp/ytdlp_version.txt').exists() else None,'logs_tail':logs}
-          p=pathlib.Path('outputs/derived/sp102_video_comment_rescue_ci_failure_20260819.json'); p.parent.mkdir(parents=True,exist_ok=True); p.write_text(json.dumps(out,ensure_ascii=False,sort_keys=True,indent=2)+'\n')
+          p=pathlib.Path('outputs/derived/sp102_video_comment_rescue_ci_failure_20260819.json');p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(out,ensure_ascii=False,sort_keys=True,indent=2)+'\n')
           PY
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
