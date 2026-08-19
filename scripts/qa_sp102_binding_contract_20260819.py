@@ -76,4 +76,5 @@ ck('sp079_and_shoulder_blocked',r.get('SP-079',{}).get('status')=='BLOCKED_DEPEN
 status='PASS_SP102_BINDING_CONTRACT' if all(c['pass'] for c in checks) else 'FAIL_SP102_BINDING_CONTRACT'
 out={'schema_version':'qa_sp102_binding_contract_20260819','generated_at':'2026-08-19','status':status,'pass_count':sum(c['pass'] for c in checks),'fail_count':sum(not c['pass'] for c in checks),'checks':checks}
 O.write_text(json.dumps(out,ensure_ascii=False,sort_keys=True,indent=2)+'\n',encoding='utf-8')
-print(json.dumps({'status':status,'pass':out['pass_count'],'fail':out['fail_count']},ensure_ascii=False));sys.exit(0 if status.startswith('PASS') else 2)
+failed=[{'name':c['name'],'detail':c.get('detail')} for c in checks if not c['pass']]
+print(json.dumps({'status':status,'pass':out['pass_count'],'fail':out['fail_count'],'failed_checks':failed},ensure_ascii=False));sys.exit(0 if status.startswith('PASS') else 2)
