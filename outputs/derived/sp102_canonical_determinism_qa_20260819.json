@@ -1,23 +1,23 @@
 {
   "canonical_hashes": [
-    "f759787dd4eed6833c917882da61e617dace47b288c142f0e0b5c10f50562c9f  outputs/derived/sp102_video_candidate_manifest.json",
-    "ac497da77ed2bb8b2d7593f98f9ac3a54cef23a285fd5e5fea3622098f9d6c8f  outputs/derived/sp102_video_comment_collection_manifest.json",
-    "19c2722746515cda71a365bb56a6ca5a3cc85273814d62431076f145b1298c4f  outputs/derived/sp102_video_comment_normalized.jsonl",
-    "e71112ee20f3d34e48dbf2203427dd918b2d8b0076a394f09a389ec7217b80ac  outputs/derived/sp102_origin_event_clusters.json",
-    "0abb58a9978cb513d85b4414a0e57775a05c18aa98e95a8035ca3c0bbda9bc4e  outputs/derived/sp102_player_evidence_summary.json",
+    "648e68c3c355f7915e0a43e427c9c0fd56ba50b99666baad3671576ccf2fa5a1  outputs/derived/sp102_video_candidate_manifest.json",
+    "e8aeab8f0d0a2898a7c0fb6a1ede5163f31af4418849adee1a269b7f1a49b3c0  outputs/derived/sp102_video_comment_collection_manifest.json",
+    "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  outputs/derived/sp102_video_comment_normalized.jsonl",
+    "040588ea60c7d809d32e43aab3ecd125d197c03c37bad483c2fdaa2916aeee9f  outputs/derived/sp102_origin_event_clusters.json",
+    "e2dc25d933c3e01b75cc4df6b0033083eeedfe014166d1f81c8b66d89ad50a44  outputs/derived/sp102_player_evidence_summary.json",
     "6e9e07eaff0a6dd90b31e544b5f2d36c653004ba19252f5e890e538cf4c72227  outputs/derived/sp102_primary_source_discovery_receipts.json",
-    "8fe9235cea43e8fe8220f0e94fb67cfc64f36f89832522f5580e42d2cd3895b8  outputs/derived/sp102_decision_use_and_ablation.json",
-    "b9f634429c3a0f29fa3808a588a6350c5d6ceb01646228d51fb9c16a4f52b303  outputs/derived/sp102_coverage_qa.json",
-    "50b523032b3b1b46dd9a96fbb1e3fc25f7845f52754272d0cbe3f68b2ea64f6e  docs/audits/sp102_targeted_video_comment_rescue.md"
+    "7cd5021946dbe28d9f79c9f7aa413edd396f89a283ffa253c20bb48bb10985f8  outputs/derived/sp102_decision_use_and_ablation.json",
+    "6cccbbd0718b8651e047c0ee2495325ad719dc375337fc2e4bceea9551aea206  outputs/derived/sp102_coverage_qa.json",
+    "80a8b51992acac86963260d1f9ce5255175df73feae7d64b09385f63cebfacea  docs/audits/sp102_targeted_video_comment_rescue.md"
   ],
   "generated_at": "2026-08-19",
   "mismatch_count": 0,
   "schema_version": "sp102_canonical_determinism_qa_20260819",
   "source_snapshot_hashes": [
-    "8136e88bb88a7e820eb8e7f26f47c9f5252d59f09c6aa0da724bf4348d48824f  outputs/derived/sp102_video_comment_search_ledger.jsonl.gz",
-    "06f5649ecb3f8d32cb134f30ad41265a09e6b5c9d73dc7c47c56ca6c174dacae  outputs/derived/sp102_comment_evidence_records.jsonl.gz",
+    "3adabc93f5c7f0c8c845daa23767f53241b91c26e9c60315e6f4b15c1c8a6844  outputs/derived/sp102_video_comment_search_ledger.jsonl.gz",
+    "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64  outputs/derived/sp102_comment_evidence_records.jsonl.gz",
     "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64  outputs/derived/sp102_primary_source_records.jsonl.gz",
-    "ad312be8be66c53780f7f21bf86392718320169dda69424ab44ac3dfab2ca059  outputs/derived/sp102_event_dedup_registry.jsonl.gz",
+    "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64  outputs/derived/sp102_event_dedup_registry.jsonl.gz",
     "62b162553f7625754ffefbbccb360c8e0032ecc49372c231e58082a1a781142a  outputs/derived/sp102_query_contract_coverage_20260819.json"
   ],
   "status": "PASS_BYTE_IDENTICAL"

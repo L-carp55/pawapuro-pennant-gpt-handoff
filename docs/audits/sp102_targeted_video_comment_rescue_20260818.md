@@ -1,11 +1,11 @@
 # SP-102 targeted video/comment rescue audit — raw acquisition QA
 
-Status: **PASS_TARGETED_RESCUE_BOUNDED_VALIDATED**
+Status: **PASS_BOUNDED_ACQUISITION_LIMITED_NEGATIVE_FINDING**
 
 - Frozen targets: **30**; non-targets: **70**, with no non-target search.
 - Query attempts: **193**; query errors: **0**; minimum per target: **6**.
 - Selected video fetches: **116**; failures: **116**.
-- Raw layered evidence records: **56**; usable low-influence records: **56**; timed context records: **0**.
+- Raw layered evidence records: **0**; usable low-influence records: **0**; timed context records: **0**.
 - Commenter raw identities are removed before this QA; comment evidence is never a direct physical anchor.
 - Binding-task canonical outputs and refined independence clustering are audited separately by qa_sp102_binding_contract_20260819.json.
 
@@ -17,6 +17,7 @@ Status: **PASS_TARGETED_RESCUE_BOUNDED_VALIDATED**
 - PASS — `errors_explicit`
 - PASS — `api_provenance_explicit`
 - PASS — `evidence_targeted_only`
+- PASS — `fresh_youtube_provenance_only`
 - PASS — `comment_influence_low_no_direct_anchor`
 - PASS — `video_context_only_comment_not_directional`
 - PASS — `commenter_identity_sanitized`

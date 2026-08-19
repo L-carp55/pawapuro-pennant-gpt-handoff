@@ -2,9 +2,9 @@
   "collection_route": "yt-dlp public YouTube search/comment/subtitle route",
   "fetch_rows": [
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_g14ydcbu/%(id)s.%(ext)s https://www.youtube.com/watch?v=Kkl_ns46Sas",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_9_arqq3e/%(id)s.%(ext)s https://www.youtube.com/watch?v=Kkl_ns46Sas",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] Kkl_ns46Sas: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:11Z",
+      "fetched_at": "2026-08-19T13:27:02Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "来田 涼斗",
       "queue_order": 4,
@@ -21,9 +21,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_cdo482hg/%(id)s.%(ext)s https://www.youtube.com/watch?v=1mj-Ejrbj3I",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ozwjrox1/%(id)s.%(ext)s https://www.youtube.com/watch?v=1mj-Ejrbj3I",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 1mj-Ejrbj3I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:12Z",
+      "fetched_at": "2026-08-19T13:27:04Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "来田 涼斗",
       "queue_order": 4,
@@ -40,9 +40,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_5tn1y9lw/%(id)s.%(ext)s https://www.youtube.com/watch?v=DA4nZi-wI_M",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] DA4nZi-wI_M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:13Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_9hxcwsvk/%(id)s.%(ext)s https://www.youtube.com/watch?v=m43xc-rB_RQ",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] m43xc-rB_RQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:05Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "来田 涼斗",
       "queue_order": 4,
@@ -53,15 +53,15 @@
       "stable_player_key": "PROEYE:51955153",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "【譲れぬ同級生対決】中森俊介 vs.来田涼斗『“明石商業”で甲子園沸かせた2人が…プロの世界でガチ対決！』",
-      "video_id": "DA4nZi-wI_M",
+      "title_from_search": "1年生の秋と比較し別人へと変貌！スター来田涼斗選手の1年間を見る！（画像は2年時）",
+      "video_id": "m43xc-rB_RQ",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_2pid1rbm/%(id)s.%(ext)s https://www.youtube.com/watch?v=Ws5a2OtyVbQ",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_3qknkt2_/%(id)s.%(ext)s https://www.youtube.com/watch?v=Ws5a2OtyVbQ",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] Ws5a2OtyVbQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:14Z",
+      "fetched_at": "2026-08-19T13:27:06Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "西川 龍馬",
       "queue_order": 8,
@@ -78,9 +78,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_2kpaabbk/%(id)s.%(ext)s https://www.youtube.com/watch?v=AcIBJX9gsy4",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_thil2svr/%(id)s.%(ext)s https://www.youtube.com/watch?v=AcIBJX9gsy4",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] AcIBJX9gsy4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:15Z",
+      "fetched_at": "2026-08-19T13:27:07Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "西川 龍馬",
       "queue_order": 8,
@@ -98,9 +98,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_yvnplbxh/%(id)s.%(ext)s https://www.youtube.com/watch?v=HayD01DvYkM",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_jsexxjj_/%(id)s.%(ext)s https://www.youtube.com/watch?v=HayD01DvYkM",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] HayD01DvYkM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:16Z",
+      "fetched_at": "2026-08-19T13:27:08Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "西川 龍馬",
       "queue_order": 8,
@@ -117,9 +117,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_5paz9eoy/%(id)s.%(ext)s https://www.youtube.com/watch?v=YvQa8JWtpho",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_08g8bhsr/%(id)s.%(ext)s https://www.youtube.com/watch?v=NGcfVU7P6qI",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] NGcfVU7P6qI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:10Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "西野 真弘",
+      "queue_order": 9,
+      "selected_from_variants": [
+        "REACTION_COMPILATION"
+      ],
+      "selection_score": 158,
+      "stable_player_key": "PROEYE:91495130",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "【神戸最終戦】終盤に粘りを見せたオリックス【西野真弘　好守備】",
+      "video_id": "NGcfVU7P6qI",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube__ms8g89x/%(id)s.%(ext)s https://www.youtube.com/watch?v=YvQa8JWtpho",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] YvQa8JWtpho: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:18Z",
+      "fetched_at": "2026-08-19T13:27:11Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "西野 真弘",
       "queue_order": 9,
@@ -136,9 +155,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_xw31ahca/%(id)s.%(ext)s https://www.youtube.com/watch?v=uY_CmRnIkzo",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ta02__rz/%(id)s.%(ext)s https://www.youtube.com/watch?v=uY_CmRnIkzo",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] uY_CmRnIkzo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:19Z",
+      "fetched_at": "2026-08-19T13:27:13Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "西野 真弘",
       "queue_order": 9,
@@ -155,28 +174,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_y5ti1p8r/%(id)s.%(ext)s https://www.youtube.com/watch?v=xcXln1mjViA",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] xcXln1mjViA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:20Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "西野 真弘",
-      "queue_order": 9,
-      "selected_from_variants": [
-        "REACTION_COMPILATION"
-      ],
-      "selection_score": 73,
-      "stable_player_key": "PROEYE:91495130",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "【速報】本日のロッテオリックス戦、何か変wwwwww【なんJ反応】",
-      "video_id": "xcXln1mjViA",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_2qdu0uxl/%(id)s.%(ext)s https://www.youtube.com/watch?v=SfyYSnrEXcs",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_pgqrksot/%(id)s.%(ext)s https://www.youtube.com/watch?v=SfyYSnrEXcs",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] SfyYSnrEXcs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:21Z",
+      "fetched_at": "2026-08-19T13:27:14Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "土田 龍空",
       "queue_order": 11,
@@ -193,9 +193,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_2jnd3e6s/%(id)s.%(ext)s https://www.youtube.com/watch?v=tjBRiHXKE4U",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_znb35hma/%(id)s.%(ext)s https://www.youtube.com/watch?v=tjBRiHXKE4U",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] tjBRiHXKE4U: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:22Z",
+      "fetched_at": "2026-08-19T13:27:15Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "土田 龍空",
       "queue_order": 11,
@@ -213,9 +213,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_npllrdxn/%(id)s.%(ext)s https://www.youtube.com/watch?v=5r8_LKsDd2w",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_av86mb0m/%(id)s.%(ext)s https://www.youtube.com/watch?v=5r8_LKsDd2w",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 5r8_LKsDd2w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:23Z",
+      "fetched_at": "2026-08-19T13:27:17Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "土田 龍空",
       "queue_order": 11,
@@ -232,9 +232,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_d9ow3caw/%(id)s.%(ext)s https://www.youtube.com/watch?v=MgUQpyuc2Ss",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_co8aympn/%(id)s.%(ext)s https://www.youtube.com/watch?v=MgUQpyuc2Ss",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] MgUQpyuc2Ss: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:24Z",
+      "fetched_at": "2026-08-19T13:27:18Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "福永 裕基",
       "queue_order": 19,
@@ -251,28 +251,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_bimlgju0/%(id)s.%(ext)s https://www.youtube.com/watch?v=3ZXE1KWZDT8",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 3ZXE1KWZDT8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:25Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_1830hv93/%(id)s.%(ext)s https://www.youtube.com/watch?v=obkCibj8WD4",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] obkCibj8WD4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:19Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "福永 裕基",
       "queue_order": 19,
       "selected_from_variants": [
         "REACTION_COMPILATION"
       ],
-      "selection_score": 74,
+      "selection_score": 94,
       "stable_player_key": "PROEYE:81685157",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "【強竜打線】中日2～5番、全員3割超えｗｗｗ【なんJ/なんG/プロ野球反応/2ch/5ch/まとめ】",
-      "video_id": "3ZXE1KWZDT8",
+      "title_from_search": "全ての元凶、カリステ＆福永のエラーｗｗｗｗ【2ch なんJ反応】",
+      "video_id": "obkCibj8WD4",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_7jz586jc/%(id)s.%(ext)s https://www.youtube.com/watch?v=cOvUGs0O1LA",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] cOvUGs0O1LA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:26Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_7erijayc/%(id)s.%(ext)s https://www.youtube.com/watch?v=3ZXE1KWZDT8",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 3ZXE1KWZDT8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:20Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "福永 裕基",
       "queue_order": 19,
@@ -283,15 +283,15 @@
       "stable_player_key": "PROEYE:81685157",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "【このまま優勝や！！】中日ドラゴンズ強すぎるｗｗｗｗｗｗｗ【反応集】【プロ野球反応集】【2chスレ】【5chスレ】",
-      "video_id": "cOvUGs0O1LA",
+      "title_from_search": "【強竜打線】中日2～5番、全員3割超えｗｗｗ【なんJ/なんG/プロ野球反応/2ch/5ch/まとめ】",
+      "video_id": "3ZXE1KWZDT8",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_cf_t5vm6/%(id)s.%(ext)s https://www.youtube.com/watch?v=-aa6tVPUskE",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_0dndyjff/%(id)s.%(ext)s https://www.youtube.com/watch?v=-aa6tVPUskE",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] -aa6tVPUskE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:27Z",
+      "fetched_at": "2026-08-19T13:27:22Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "細川 成也",
       "queue_order": 20,
@@ -308,9 +308,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ii9chh33/%(id)s.%(ext)s https://www.youtube.com/watch?v=oQ2XlCOUkLE",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_bhr_4or0/%(id)s.%(ext)s https://www.youtube.com/watch?v=5OMkELaglxo",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 5OMkELaglxo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:23Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "細川 成也",
+      "queue_order": 20,
+      "selected_from_variants": [
+        "RUNNING_COMPARISON"
+      ],
+      "selection_score": 184,
+      "stable_player_key": "PROEYE:31835134",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "細川成也スルーした球団wwwwwwwwww【なんJ反応】",
+      "video_id": "5OMkELaglxo",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_f4lomkof/%(id)s.%(ext)s https://www.youtube.com/watch?v=oQ2XlCOUkLE",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] oQ2XlCOUkLE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:28Z",
+      "fetched_at": "2026-08-19T13:27:24Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "細川 成也",
       "queue_order": 20,
@@ -327,28 +346,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_rahs9o7b/%(id)s.%(ext)s https://www.youtube.com/watch?v=5qDQZDcKPLY",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 5qDQZDcKPLY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:29Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "細川 成也",
-      "queue_order": 20,
-      "selected_from_variants": [
-        "RUNNING_COMPARISON"
-      ],
-      "selection_score": 148,
-      "stable_player_key": "PROEYE:31835134",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "【中日】細川成也のハマスタ登場にDeNＡファンからも拍手「本当にうれしかった」",
-      "video_id": "5qDQZDcKPLY",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_37ez1aio/%(id)s.%(ext)s https://www.youtube.com/watch?v=GwbEo5H_9yc",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_m5oyifxp/%(id)s.%(ext)s https://www.youtube.com/watch?v=GwbEo5H_9yc",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] GwbEo5H_9yc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:30Z",
+      "fetched_at": "2026-08-19T13:27:25Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "水野 達稀",
       "queue_order": 23,
@@ -365,9 +365,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_7a0a5egl/%(id)s.%(ext)s https://www.youtube.com/watch?v=AVVyck2qxdk",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_zrzpfdg9/%(id)s.%(ext)s https://www.youtube.com/watch?v=AVVyck2qxdk",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] AVVyck2qxdk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:31Z",
+      "fetched_at": "2026-08-19T13:27:26Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "水野 達稀",
       "queue_order": 23,
@@ -384,9 +384,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_da3j3gh1/%(id)s.%(ext)s https://www.youtube.com/watch?v=fDbuq1nubv8",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_rvy61xd6/%(id)s.%(ext)s https://www.youtube.com/watch?v=fDbuq1nubv8",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] fDbuq1nubv8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:32Z",
+      "fetched_at": "2026-08-19T13:27:28Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "水野 達稀",
       "queue_order": 23,
@@ -403,9 +403,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ysrtvxl8/%(id)s.%(ext)s https://www.youtube.com/watch?v=Y2pP0F-DaKY",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_yncuaekv/%(id)s.%(ext)s https://www.youtube.com/watch?v=hj6o0aQ1KEM",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] hj6o0aQ1KEM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:29Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "清宮 幸太郎",
+      "queue_order": 24,
+      "selected_from_variants": [
+        "RUNNING_COMPARISON"
+      ],
+      "selection_score": 183,
+      "stable_player_key": "PROEYE:41545136",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "【2chまとめ】【5戦4発】清宮幸太郎（5年目）←これ",
+      "video_id": "hj6o0aQ1KEM",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_pankx07b/%(id)s.%(ext)s https://www.youtube.com/watch?v=Y2pP0F-DaKY",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] Y2pP0F-DaKY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:33Z",
+      "fetched_at": "2026-08-19T13:27:30Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "清宮 幸太郎",
       "queue_order": 24,
@@ -422,9 +441,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_g0mzyd38/%(id)s.%(ext)s https://www.youtube.com/watch?v=i40AHTKdNRQ",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_bowogkno/%(id)s.%(ext)s https://www.youtube.com/watch?v=i40AHTKdNRQ",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] i40AHTKdNRQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:35Z",
+      "fetched_at": "2026-08-19T13:27:31Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "清宮 幸太郎",
       "queue_order": 24,
@@ -442,28 +461,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_uppomkmq/%(id)s.%(ext)s https://www.youtube.com/watch?v=tbwMzPdeocM",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] tbwMzPdeocM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:36Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "清宮 幸太郎",
-      "queue_order": 24,
-      "selected_from_variants": [
-        "RUNNING_COMPARISON"
-      ],
-      "selection_score": 153,
-      "stable_player_key": "PROEYE:41545136",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "【痛烈ヒットから…】清宮幸太郎『走塁意識が限界突破』【怪我気をつけて…】",
-      "video_id": "tbwMzPdeocM",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_3zrv9732/%(id)s.%(ext)s https://www.youtube.com/watch?v=KLYLYiXjHA4",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_5j0naee8/%(id)s.%(ext)s https://www.youtube.com/watch?v=KLYLYiXjHA4",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] KLYLYiXjHA4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:37Z",
+      "fetched_at": "2026-08-19T13:27:33Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "郡司 裕也",
       "queue_order": 26,
@@ -480,16 +480,16 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_20nv5xdp/%(id)s.%(ext)s https://www.youtube.com/watch?v=XE5Py29b6xc",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_co3ew135/%(id)s.%(ext)s https://www.youtube.com/watch?v=XE5Py29b6xc",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] XE5Py29b6xc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:38Z",
+      "fetched_at": "2026-08-19T13:27:34Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "郡司 裕也",
       "queue_order": 26,
       "selected_from_variants": [
         "RUNNING_COMPARISON"
       ],
-      "selection_score": 198,
+      "selection_score": 199,
       "stable_player_key": "PROEYE:21925151",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -499,9 +499,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_6auhlmdq/%(id)s.%(ext)s https://www.youtube.com/watch?v=yWGBdtt1vP4",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ewadmt7_/%(id)s.%(ext)s https://www.youtube.com/watch?v=yWGBdtt1vP4",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] yWGBdtt1vP4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:39Z",
+      "fetched_at": "2026-08-19T13:27:35Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "郡司 裕也",
       "queue_order": 26,
@@ -518,9 +518,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_axqggdn7/%(id)s.%(ext)s https://www.youtube.com/watch?v=e2QT2iE6nkg",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_w9o3tsze/%(id)s.%(ext)s https://www.youtube.com/watch?v=e2QT2iE6nkg",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] e2QT2iE6nkg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:40Z",
+      "fetched_at": "2026-08-19T13:27:36Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "野村 佑希",
       "queue_order": 27,
@@ -537,9 +537,29 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_xao1ui35/%(id)s.%(ext)s https://www.youtube.com/watch?v=j7O0tpeKJgQ",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube__jg287jl/%(id)s.%(ext)s https://www.youtube.com/watch?v=xbXLX7Jsf1g",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] xbXLX7Jsf1g: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:38Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "野村 佑希",
+      "queue_order": 27,
+      "selected_from_variants": [
+        "GENERIC_FOOT_SPEED",
+        "REACTION_COMPILATION"
+      ],
+      "selection_score": 143,
+      "stable_player_key": "PROEYE:31435138",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "【自信のJ】野村佑希『4番の役割を果たす2点タイムリー』",
+      "video_id": "xbXLX7Jsf1g",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_a8jpq1l0/%(id)s.%(ext)s https://www.youtube.com/watch?v=j7O0tpeKJgQ",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] j7O0tpeKJgQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:41Z",
+      "fetched_at": "2026-08-19T13:27:39Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "野村 佑希",
       "queue_order": 27,
@@ -556,28 +576,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_gy2iv1at/%(id)s.%(ext)s https://www.youtube.com/watch?v=-iy0TQnseHo",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] -iy0TQnseHo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:42Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "野村 佑希",
-      "queue_order": 27,
-      "selected_from_variants": [
-        "REACTION_COMPILATION"
-      ],
-      "selection_score": 73,
-      "stable_player_key": "PROEYE:31435138",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "【速報】日本ハム、また詰んだ…【なんJ反応】",
-      "video_id": "-iy0TQnseHo",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_pmhqhrc3/%(id)s.%(ext)s https://www.youtube.com/watch?v=eJrcFFAWHlw",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_jr971gu8/%(id)s.%(ext)s https://www.youtube.com/watch?v=eJrcFFAWHlw",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] eJrcFFAWHlw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:43Z",
+      "fetched_at": "2026-08-19T13:27:40Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "ソト",
       "queue_order": 28,
@@ -594,9 +595,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_0xaozmnr/%(id)s.%(ext)s https://www.youtube.com/watch?v=LPMYjNBF0SQ",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_iiutzf8m/%(id)s.%(ext)s https://www.youtube.com/watch?v=LPMYjNBF0SQ",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] LPMYjNBF0SQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:44Z",
+      "fetched_at": "2026-08-19T13:27:41Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "ソト",
       "queue_order": 28,
@@ -613,28 +614,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_og96vzuj/%(id)s.%(ext)s https://www.youtube.com/watch?v=JClG1Lznk9I",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] JClG1Lznk9I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:45Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_kk0hc87c/%(id)s.%(ext)s https://www.youtube.com/watch?v=SkCKmodB-eY",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] SkCKmodB-eY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:42Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "ソト",
       "queue_order": 28,
       "selected_from_variants": [
         "GENERIC_FOOT_SPEED"
       ],
-      "selection_score": 148,
+      "selection_score": 153,
       "stable_player_key": "PROEYE:03505133",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "2018.05.11 横浜DeNA 三塁ベース前で転ぶソト",
-      "video_id": "JClG1Lznk9I",
+      "title_from_search": "【フルスイング・スクイズ!?】ソト『ボテボテのゴロも…代走・友杉の好走塁で決勝打となる！』",
+      "video_id": "SkCKmodB-eY",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ekw3zg1t/%(id)s.%(ext)s https://www.youtube.com/watch?v=3CKxquDaxbk",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_zkp77_c3/%(id)s.%(ext)s https://www.youtube.com/watch?v=3CKxquDaxbk",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 3CKxquDaxbk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:46Z",
+      "fetched_at": "2026-08-19T13:27:43Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "佐藤 都志也",
       "queue_order": 30,
@@ -651,9 +652,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_kpt58cud/%(id)s.%(ext)s https://www.youtube.com/watch?v=kg-gxkQpyIM",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_0qsu7wxz/%(id)s.%(ext)s https://www.youtube.com/watch?v=kg-gxkQpyIM",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] kg-gxkQpyIM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:47Z",
+      "fetched_at": "2026-08-19T13:27:45Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "佐藤 都志也",
       "queue_order": 30,
@@ -670,9 +671,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_8vpszjsu/%(id)s.%(ext)s https://www.youtube.com/watch?v=gm-KiKZkKis",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ahbr43aw/%(id)s.%(ext)s https://www.youtube.com/watch?v=gm-KiKZkKis",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] gm-KiKZkKis: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:48Z",
+      "fetched_at": "2026-08-19T13:27:46Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "佐藤 都志也",
       "queue_order": 30,
@@ -689,16 +690,16 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_enkicbug/%(id)s.%(ext)s https://www.youtube.com/watch?v=8BkCToeZtdM",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_0ph8kc0j/%(id)s.%(ext)s https://www.youtube.com/watch?v=8BkCToeZtdM",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 8BkCToeZtdM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:49Z",
+      "fetched_at": "2026-08-19T13:27:47Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "山口 航輝",
       "queue_order": 34,
       "selected_from_variants": [
         "REACTION_COMPILATION"
       ],
-      "selection_score": 208,
+      "selection_score": 209,
       "stable_player_key": "PROEYE:91895138",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -708,9 +709,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_94hq4pcx/%(id)s.%(ext)s https://www.youtube.com/watch?v=I3dy2wVWC3k",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_m2ze21d2/%(id)s.%(ext)s https://www.youtube.com/watch?v=I3dy2wVWC3k",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] I3dy2wVWC3k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:50Z",
+      "fetched_at": "2026-08-19T13:27:49Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "山口 航輝",
       "queue_order": 34,
@@ -727,28 +728,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_5ri4kcg1/%(id)s.%(ext)s https://www.youtube.com/watch?v=zq8Nif1GBmA",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] zq8Nif1GBmA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:51Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_vylo1c83/%(id)s.%(ext)s https://www.youtube.com/watch?v=LtlfzyIV0aU",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] LtlfzyIV0aU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:50Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "山口 航輝",
       "queue_order": 34,
       "selected_from_variants": [
-        "GENERIC_FOOT_SPEED"
+        "RUNNING_COMPARISON"
       ],
-      "selection_score": 183,
+      "selection_score": 134,
       "stable_player_key": "PROEYE:91895138",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "【驚愕決勝弾】山口航輝『ゴツ過ぎるスイングまとめ』",
-      "video_id": "zq8Nif1GBmA",
+      "title_from_search": "【東京Dで炸裂】山口航輝『豪快に叩き込んだ！今季8号2ランで逆転に成功！』",
+      "video_id": "LtlfzyIV0aU",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube__82f39u7/%(id)s.%(ext)s https://www.youtube.com/watch?v=DvNah9fUzJQ",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] DvNah9fUzJQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:52Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_b_s5v0bw/%(id)s.%(ext)s https://www.youtube.com/watch?v=BDq4EiVYFHw",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] BDq4EiVYFHw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:51Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "藤岡 裕大",
       "queue_order": 37,
@@ -759,15 +760,15 @@
       "stable_player_key": "PROEYE:41645136",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "【走攻守タッチ】藤岡裕大 ”色々”躍動して猛アピール",
-      "video_id": "DvNah9fUzJQ",
+      "title_from_search": "【安田激走】藤岡裕大 “打撃ガッチリ” 貴重な追加点を奪う",
+      "video_id": "BDq4EiVYFHw",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_m_n0arhf/%(id)s.%(ext)s https://www.youtube.com/watch?v=OZ53ca9JRyk",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_wvmv1cpx/%(id)s.%(ext)s https://www.youtube.com/watch?v=OZ53ca9JRyk",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] OZ53ca9JRyk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:53Z",
+      "fetched_at": "2026-08-19T13:27:53Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "藤岡 裕大",
       "queue_order": 37,
@@ -784,9 +785,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_7ufw48e0/%(id)s.%(ext)s https://www.youtube.com/watch?v=AokHkRQBIgA",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] AokHkRQBIgA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:54Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_r3kamcyc/%(id)s.%(ext)s https://www.youtube.com/watch?v=DvNah9fUzJQ",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] DvNah9fUzJQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:27:54Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "藤岡 裕大",
       "queue_order": 37,
@@ -797,22 +798,22 @@
       "stable_player_key": "PROEYE:41645136",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "藤岡裕大 今季3号は『がっちり追撃ソロ弾』",
-      "video_id": "AokHkRQBIgA",
+      "title_from_search": "【走攻守タッチ】藤岡裕大 ”色々”躍動して猛アピール",
+      "video_id": "DvNah9fUzJQ",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_0ezms126/%(id)s.%(ext)s https://www.youtube.com/watch?v=b20B5XO6I60",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_oiygc260/%(id)s.%(ext)s https://www.youtube.com/watch?v=b20B5XO6I60",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] b20B5XO6I60: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:55Z",
+      "fetched_at": "2026-08-19T13:27:55Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "ファビアン",
       "queue_order": 44,
       "selected_from_variants": [
         "RUNNING_COMPARISON"
       ],
-      "selection_score": 219,
+      "selection_score": 218,
       "stable_player_key": "PROEYE:43745150",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -822,16 +823,16 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_g9q9zeof/%(id)s.%(ext)s https://www.youtube.com/watch?v=OZn6qVi-ZdY",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_09s_seen/%(id)s.%(ext)s https://www.youtube.com/watch?v=OZn6qVi-ZdY",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] OZn6qVi-ZdY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:56Z",
+      "fetched_at": "2026-08-19T13:27:56Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "ファビアン",
       "queue_order": 44,
       "selected_from_variants": [
         "REACTION_COMPILATION"
       ],
-      "selection_score": 193,
+      "selection_score": 194,
       "stable_player_key": "PROEYE:43745150",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -841,9 +842,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_190fai_3/%(id)s.%(ext)s https://www.youtube.com/watch?v=lpGF_HIchkg",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_lnode0l7/%(id)s.%(ext)s https://www.youtube.com/watch?v=lpGF_HIchkg",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] lpGF_HIchkg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:57Z",
+      "fetched_at": "2026-08-19T13:27:57Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "ファビアン",
       "queue_order": 44,
@@ -860,9 +861,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_gqrs2fi_/%(id)s.%(ext)s https://www.youtube.com/watch?v=mYPN1G8-OrI",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_am37qsbr/%(id)s.%(ext)s https://www.youtube.com/watch?v=mYPN1G8-OrI",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] mYPN1G8-OrI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:58Z",
+      "fetched_at": "2026-08-19T13:27:59Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "モンテロ",
       "queue_order": 45,
@@ -879,9 +880,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_jmyc52r3/%(id)s.%(ext)s https://www.youtube.com/watch?v=FgiXdaiokTk",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_iycjsec2/%(id)s.%(ext)s https://www.youtube.com/watch?v=LcMUQQDWW6g",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] LcMUQQDWW6g: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:00Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "モンテロ",
+      "queue_order": 45,
+      "selected_from_variants": [
+        "RUNNING_COMPARISON"
+      ],
+      "selection_score": 168,
+      "stable_player_key": "PROEYE:53955150",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "速報【モンテロ大失態】せっかくの本塁打が台無し！巨人と広島の明暗を分けた「怠慢走塁」の真実とは？ファン激怒のセルフジャッジに隠された慢心とチーム崩壊の予兆を徹底分析！！",
+      "video_id": "LcMUQQDWW6g",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_yjvep6ye/%(id)s.%(ext)s https://www.youtube.com/watch?v=FgiXdaiokTk",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] FgiXdaiokTk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:32:59Z",
+      "fetched_at": "2026-08-19T13:28:01Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "モンテロ",
       "queue_order": 45,
@@ -898,54 +918,35 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ephlzwgk/%(id)s.%(ext)s https://www.youtube.com/watch?v=D0JHufjlrwU",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] D0JHufjlrwU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:00Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_4mc7o6va/%(id)s.%(ext)s https://www.youtube.com/watch?v=tTnGoBpaVSI",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] tTnGoBpaVSI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:02Z",
       "ledger_type": "VIDEO_FETCH",
-      "player": "モンテロ",
-      "queue_order": 45,
+      "player": "坂倉 将吾",
+      "queue_order": 47,
+      "selected_from_variants": [
+        "RUNNING_COMPARISON"
+      ],
+      "selection_score": 149,
+      "stable_player_key": "PROEYE:11915134",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "【どんなボールでも後ろに逸らさない！】坂倉将吾捕手&中村奨成捕手（広島東洋カープ）　捕手練習！【２０２０ 広島カープ春季日南キャンプ】",
+      "video_id": "tTnGoBpaVSI",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_8rwk3d3z/%(id)s.%(ext)s https://www.youtube.com/watch?v=B6NDCsOV4iA",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] B6NDCsOV4iA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:03Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "坂倉 将吾",
+      "queue_order": 47,
       "selected_from_variants": [
         "RUNNING_COMPARISON"
       ],
       "selection_score": 133,
-      "stable_player_key": "PROEYE:53955150",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "【全カメラ見せます】モンテロ歓喜のサヨナラ押し出し",
-      "video_id": "D0JHufjlrwU",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_2pvqgm73/%(id)s.%(ext)s https://www.youtube.com/watch?v=0egigRBBh70",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 0egigRBBh70: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:01Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "坂倉 将吾",
-      "queue_order": 47,
-      "selected_from_variants": [
-        "RUNNING_COMPARISON"
-      ],
-      "selection_score": 148,
-      "stable_player_key": "PROEYE:11915134",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "野球選手フォーム集835広島 坂倉将吾の打撃フォーム (読売ジャイアンツVS.広島カープ2022/4/19)",
-      "video_id": "0egigRBBh70",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_plxlzezq/%(id)s.%(ext)s https://www.youtube.com/watch?v=B6NDCsOV4iA",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] B6NDCsOV4iA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:03Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "坂倉 将吾",
-      "queue_order": 47,
-      "selected_from_variants": [
-        "RUNNING_COMPARISON"
-      ],
-      "selection_score": 134,
       "stable_player_key": "PROEYE:11915134",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -955,9 +956,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_yuwonk94/%(id)s.%(ext)s https://www.youtube.com/watch?v=UORjN8jwndU",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_u9h7uswy/%(id)s.%(ext)s https://www.youtube.com/watch?v=UORjN8jwndU",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] UORjN8jwndU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:04Z",
+      "fetched_at": "2026-08-19T13:28:05Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "坂倉 将吾",
       "queue_order": 47,
@@ -974,9 +975,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_73_b6kdl/%(id)s.%(ext)s https://www.youtube.com/watch?v=hcTWjCFcujE",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_g69wovx2/%(id)s.%(ext)s https://www.youtube.com/watch?v=hcTWjCFcujE",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] hcTWjCFcujE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:05Z",
+      "fetched_at": "2026-08-19T13:28:06Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "小園 海斗",
       "queue_order": 48,
@@ -993,9 +994,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_yaz0ab5w/%(id)s.%(ext)s https://www.youtube.com/watch?v=FF2MA__6sOY",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] FF2MA__6sOY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:06Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_681f2blg/%(id)s.%(ext)s https://www.youtube.com/watch?v=QLPYfM0_Ekg",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] QLPYfM0_Ekg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:07Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "小園 海斗",
       "queue_order": 48,
@@ -1006,15 +1007,15 @@
       "stable_player_key": "PROEYE:01705138",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "【2018ドラフト1位候補】報徳学園・小園海斗3塁からのタッチアップが速い",
-      "video_id": "FF2MA__6sOY",
+      "title_from_search": "【小園海斗】小指2本でこの速さ…ノーエラーノックで鍛えた守備の極意全公開",
+      "video_id": "QLPYfM0_Ekg",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ql2ujsxt/%(id)s.%(ext)s https://www.youtube.com/watch?v=moSJE7mS5-k",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_rstac05y/%(id)s.%(ext)s https://www.youtube.com/watch?v=moSJE7mS5-k",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] moSJE7mS5-k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:07Z",
+      "fetched_at": "2026-08-19T13:28:08Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "小園 海斗",
       "queue_order": 48,
@@ -1031,16 +1032,17 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_eg2ug5b4/%(id)s.%(ext)s https://www.youtube.com/watch?v=TCRMSJLNEKQ",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_s6e5unxi/%(id)s.%(ext)s https://www.youtube.com/watch?v=TCRMSJLNEKQ",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] TCRMSJLNEKQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:08Z",
+      "fetched_at": "2026-08-19T13:28:09Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "矢野 雅哉",
       "queue_order": 49,
       "selected_from_variants": [
-        "GENERIC_FOOT_SPEED"
+        "GENERIC_FOOT_SPEED",
+        "RUNNING_COMPARISON"
       ],
-      "selection_score": 154,
+      "selection_score": 153,
       "stable_player_key": "PROEYE:93395153",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -1050,28 +1052,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_z2e9a3lu/%(id)s.%(ext)s https://www.youtube.com/watch?v=XD6747Ep7as",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] XD6747Ep7as: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:09Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "矢野 雅哉",
-      "queue_order": 49,
-      "selected_from_variants": [
-        "RUNNING_COMPARISON"
-      ],
-      "selection_score": 149,
-      "stable_player_key": "PROEYE:93395153",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "9裏ハイライト、魅せた矢野雅哉の守備力&韮澤もよく取ったナイスプレー！広島カープ連勝の瞬間 2023年6月7日",
-      "video_id": "XD6747Ep7as",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_7xaajl5u/%(id)s.%(ext)s https://www.youtube.com/watch?v=jPko-THo4Dc",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_9ft4_uj7/%(id)s.%(ext)s https://www.youtube.com/watch?v=jPko-THo4Dc",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] jPko-THo4Dc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:10Z",
+      "fetched_at": "2026-08-19T13:28:11Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "矢野 雅哉",
       "queue_order": 49,
@@ -1088,9 +1071,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_oqtqotb3/%(id)s.%(ext)s https://www.youtube.com/watch?v=wZBJachvQi4",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_0qjri_00/%(id)s.%(ext)s https://www.youtube.com/watch?v=daLumwySMTI",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] daLumwySMTI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:12Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "矢野 雅哉",
+      "queue_order": 49,
+      "selected_from_variants": [
+        "RUNNING_COMPARISON"
+      ],
+      "selection_score": 134,
+      "stable_player_key": "PROEYE:93395153",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "矢野雅哉の鬼気迫る盗塁!!ビデオ判定で覆った判定に客席からこの試合最高のどよめきが響く!!",
+      "video_id": "daLumwySMTI",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_pst7na7_/%(id)s.%(ext)s https://www.youtube.com/watch?v=wZBJachvQi4",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] wZBJachvQi4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:11Z",
+      "fetched_at": "2026-08-19T13:28:13Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "秋山 翔吾",
       "queue_order": 50,
@@ -1107,28 +1109,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_96n4evab/%(id)s.%(ext)s https://www.youtube.com/watch?v=OAdCuuw5S-Q",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] OAdCuuw5S-Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:12Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_272yo7kt/%(id)s.%(ext)s https://www.youtube.com/watch?v=Pt7ST8i8CVw",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] Pt7ST8i8CVw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:14Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "秋山 翔吾",
       "queue_order": 50,
       "selected_from_variants": [
         "RUNNING_COMPARISON"
       ],
-      "selection_score": 148,
+      "selection_score": 168,
       "stable_player_key": "PROEYE:31135133",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "メジャー帰りのさすがのコミュ力!!相手チームの助っ人外国人と流暢な英語で会話する秋山翔吾【広島東洋カープVS福岡ソフトバンクホークス】",
-      "video_id": "OAdCuuw5S-Q",
+      "title_from_search": "【なりきり盗塁】西武 55 秋山翔吾選手走力トライ１(対甲斐キャノン)",
+      "video_id": "Pt7ST8i8CVw",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_sjo581md/%(id)s.%(ext)s https://www.youtube.com/watch?v=RY5Kk4sgOzA",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_8x1azpn8/%(id)s.%(ext)s https://www.youtube.com/watch?v=RY5Kk4sgOzA",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] RY5Kk4sgOzA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:13Z",
+      "fetched_at": "2026-08-19T13:28:15Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "秋山 翔吾",
       "queue_order": 50,
@@ -1145,9 +1147,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_zbomj3k4/%(id)s.%(ext)s https://www.youtube.com/watch?v=kMFXsLPLKFw",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_9lyzhub1/%(id)s.%(ext)s https://www.youtube.com/watch?v=kMFXsLPLKFw",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] kMFXsLPLKFw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:13Z",
+      "fetched_at": "2026-08-19T13:28:16Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "野間 峻祥",
       "queue_order": 52,
@@ -1164,9 +1166,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube__niyc6jd/%(id)s.%(ext)s https://www.youtube.com/watch?v=3h5SmP8aKns",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_6si8n4m4/%(id)s.%(ext)s https://www.youtube.com/watch?v=3h5SmP8aKns",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 3h5SmP8aKns: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:14Z",
+      "fetched_at": "2026-08-19T13:28:18Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "野間 峻祥",
       "queue_order": 52,
@@ -1183,9 +1185,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_jomkp1ct/%(id)s.%(ext)s https://www.youtube.com/watch?v=N5tiVRQ6k6w",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_6tsjauag/%(id)s.%(ext)s https://www.youtube.com/watch?v=N5tiVRQ6k6w",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] N5tiVRQ6k6w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:15Z",
+      "fetched_at": "2026-08-19T13:28:19Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "野間 峻祥",
       "queue_order": 52,
@@ -1202,9 +1204,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_luql9a4e/%(id)s.%(ext)s https://www.youtube.com/watch?v=0ROH_refRuU",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_6hsmnmqy/%(id)s.%(ext)s https://www.youtube.com/watch?v=0ROH_refRuU",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 0ROH_refRuU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:16Z",
+      "fetched_at": "2026-08-19T13:28:20Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "丸山 和郁",
       "queue_order": 56,
@@ -1221,33 +1223,13 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ynzsql9k/%(id)s.%(ext)s https://www.youtube.com/watch?v=QHmZKQ4MJZQ",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] QHmZKQ4MJZQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:17Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "丸山 和郁",
-      "queue_order": 56,
-      "selected_from_variants": [
-        "REACTION_COMPILATION"
-      ],
-      "selection_score": 158,
-      "stable_player_key": "PROEYE:93195155",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "【東京ヤクルトスワローズ】 プリンスのスワローズ選手名鑑 　#4　丸山和郁選手【KOKOON】【ブルーレディ】",
-      "video_id": "QHmZKQ4MJZQ",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_u12o_aa6/%(id)s.%(ext)s https://www.youtube.com/watch?v=EvZU11PjKhI",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_2yzfdx6a/%(id)s.%(ext)s https://www.youtube.com/watch?v=EvZU11PjKhI",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] EvZU11PjKhI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:18Z",
+      "fetched_at": "2026-08-19T13:28:22Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "丸山 和郁",
       "queue_order": 56,
       "selected_from_variants": [
-        "GENERIC_FOOT_SPEED",
         "RUNNING_COMPARISON",
         "TIMED_RUNNING"
       ],
@@ -1261,9 +1243,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_8bnqtjlp/%(id)s.%(ext)s https://www.youtube.com/watch?v=C_YkzmGLim8",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_e3itxs3m/%(id)s.%(ext)s https://www.youtube.com/watch?v=hJ_pNaGffJk",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] hJ_pNaGffJk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:23Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "丸山 和郁",
+      "queue_order": 56,
+      "selected_from_variants": [
+        "GENERIC_FOOT_SPEED"
+      ],
+      "selection_score": 153,
+      "stable_player_key": "PROEYE:93195155",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "【一塁到達タイム】 1位(3 88秒)：丸山和郁 (前橋育英)【2017全国高校球児タイムランキング】",
+      "video_id": "hJ_pNaGffJk",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_nm04j_r4/%(id)s.%(ext)s https://www.youtube.com/watch?v=C_YkzmGLim8",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] C_YkzmGLim8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:20Z",
+      "fetched_at": "2026-08-19T13:28:24Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "古賀 優大",
       "queue_order": 57,
@@ -1280,9 +1281,28 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_xexyr2_j/%(id)s.%(ext)s https://www.youtube.com/watch?v=ujOf2X8JV_A",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_uv2u8ua1/%(id)s.%(ext)s https://www.youtube.com/watch?v=TSWv4Wxj1Ks",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] TSWv4Wxj1Ks: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:25Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "古賀 優大",
+      "queue_order": 57,
+      "selected_from_variants": [
+        "RUNNING_COMPARISON"
+      ],
+      "selection_score": 149,
+      "stable_player_key": "PROEYE:01705134",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "【ピックオフの古賀】ヤクルトの古賀優大捕手",
+      "video_id": "TSWv4Wxj1Ks",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_tfy903ia/%(id)s.%(ext)s https://www.youtube.com/watch?v=ujOf2X8JV_A",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] ujOf2X8JV_A: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:20Z",
+      "fetched_at": "2026-08-19T13:28:26Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "古賀 優大",
       "queue_order": 57,
@@ -1299,73 +1319,54 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_afkyea6g/%(id)s.%(ext)s https://www.youtube.com/watch?v=xP_xC2AZGtE",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] xP_xC2AZGtE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:22Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "古賀 優大",
-      "queue_order": 57,
-      "selected_from_variants": [
-        "RUNNING_COMPARISON"
-      ],
-      "selection_score": 149,
-      "stable_player_key": "PROEYE:01705134",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "捕手古賀悠斗vs捕手古賀優大【西武vsヤクルト】ライオンズ試合前スタメン発表 2023/6/9 セ・パ交流戦10戦目",
-      "video_id": "xP_xC2AZGtE",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_hba4kiz8/%(id)s.%(ext)s https://www.youtube.com/watch?v=CGdZRl3f_cM",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] CGdZRl3f_cM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:23Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "村林 一輝",
-      "queue_order": 62,
-      "selected_from_variants": [
-        "RUNNING_COMPARISON"
-      ],
-      "selection_score": 149,
-      "stable_player_key": "PROEYE:41845132",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "2019.7.31  楽天 村林一輝の打席",
-      "video_id": "CGdZRl3f_cM",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ig52nhx9/%(id)s.%(ext)s https://www.youtube.com/watch?v=8PeYzMFBrRI",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 8PeYzMFBrRI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:24Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_d19w_ylq/%(id)s.%(ext)s https://www.youtube.com/watch?v=Uug82TwExoI",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] Uug82TwExoI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:28Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "村林 一輝",
       "queue_order": 62,
       "selected_from_variants": [
         "REACTION_COMPILATION"
       ],
-      "selection_score": 74,
+      "selection_score": 158,
       "stable_player_key": "PROEYE:41845132",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "楽天打線が輝きを取り戻した理由ｗｗｗｗｗｗｗｗｗｗ【反応集】【プロ野球反応集】【2chスレ】【1分動画】【5chスレ】",
-      "video_id": "8PeYzMFBrRI",
+      "title_from_search": "【確変？覚醒？】楽天・村林一輝について知ってること【VOICEROID解説】",
+      "video_id": "Uug82TwExoI",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_l5vz9ehf/%(id)s.%(ext)s https://www.youtube.com/watch?v=6ICLibe_j30",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_p37gb5fo/%(id)s.%(ext)s https://www.youtube.com/watch?v=ia3cQYB5HmU",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] ia3cQYB5HmU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:29Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "村林 一輝",
+      "queue_order": 62,
+      "selected_from_variants": [
+        "RUNNING_COMPARISON"
+      ],
+      "selection_score": 149,
+      "stable_player_key": "PROEYE:41845132",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "東北楽天ゴールデンイーグルス 島内宏明選手と村林一輝選手の守備前キャッチボール VS オリックスバファローズ 2021/10/20",
+      "video_id": "ia3cQYB5HmU",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_y1u0z1f6/%(id)s.%(ext)s https://www.youtube.com/watch?v=6ICLibe_j30",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 6ICLibe_j30: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:25Z",
+      "fetched_at": "2026-08-19T13:28:30Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "村林 一輝",
       "queue_order": 62,
       "selected_from_variants": [
         "REACTION_COMPILATION"
       ],
-      "selection_score": 58,
+      "selection_score": 59,
       "stable_player_key": "PROEYE:41845132",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -1375,9 +1376,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_oehsbm1_/%(id)s.%(ext)s https://www.youtube.com/watch?v=tOUVw57PAXw",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_mrzelva5/%(id)s.%(ext)s https://www.youtube.com/watch?v=tOUVw57PAXw",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] tOUVw57PAXw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:26Z",
+      "fetched_at": "2026-08-19T13:28:31Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "京田 陽太",
       "queue_order": 66,
@@ -1394,9 +1395,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ts_dwcfu/%(id)s.%(ext)s https://www.youtube.com/watch?v=5Ad5LkrihBg",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_f3pk31t_/%(id)s.%(ext)s https://www.youtube.com/watch?v=5Ad5LkrihBg",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 5Ad5LkrihBg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:27Z",
+      "fetched_at": "2026-08-19T13:28:32Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "京田 陽太",
       "queue_order": 66,
@@ -1413,9 +1414,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_gz1nzlin/%(id)s.%(ext)s https://www.youtube.com/watch?v=aNHfdLAz40c",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_tyq9gey2/%(id)s.%(ext)s https://www.youtube.com/watch?v=aNHfdLAz40c",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] aNHfdLAz40c: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:28Z",
+      "fetched_at": "2026-08-19T13:28:33Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "京田 陽太",
       "queue_order": 66,
@@ -1432,9 +1433,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_fe6cja7d/%(id)s.%(ext)s https://www.youtube.com/watch?v=CwrCnAozsNQ",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_23_b2a_0/%(id)s.%(ext)s https://www.youtube.com/watch?v=CwrCnAozsNQ",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] CwrCnAozsNQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:29Z",
+      "fetched_at": "2026-08-19T13:28:35Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "林 琢真",
       "queue_order": 71,
@@ -1451,9 +1452,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_x8k_7nrt/%(id)s.%(ext)s https://www.youtube.com/watch?v=ENGvjUhCrVc",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_u2crhbiw/%(id)s.%(ext)s https://www.youtube.com/watch?v=ENGvjUhCrVc",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] ENGvjUhCrVc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:30Z",
+      "fetched_at": "2026-08-19T13:28:36Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "林 琢真",
       "queue_order": 71,
@@ -1470,9 +1471,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_un157oit/%(id)s.%(ext)s https://www.youtube.com/watch?v=MDs0nOtRkGE",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_jwh7zf4l/%(id)s.%(ext)s https://www.youtube.com/watch?v=MDs0nOtRkGE",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] MDs0nOtRkGE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:31Z",
+      "fetched_at": "2026-08-19T13:28:37Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "林 琢真",
       "queue_order": 71,
@@ -1489,9 +1490,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_4vmw61yb/%(id)s.%(ext)s https://www.youtube.com/watch?v=y7CaKo2VYbM",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_n3cy8azh/%(id)s.%(ext)s https://www.youtube.com/watch?v=y7CaKo2VYbM",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] y7CaKo2VYbM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:32Z",
+      "fetched_at": "2026-08-19T13:28:38Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "蝦名 達夫",
       "queue_order": 75,
@@ -1508,9 +1509,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_dqvwu93w/%(id)s.%(ext)s https://www.youtube.com/watch?v=MYZxldPpDR8",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_8cciq7sq/%(id)s.%(ext)s https://www.youtube.com/watch?v=MYZxldPpDR8",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] MYZxldPpDR8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:33Z",
+      "fetched_at": "2026-08-19T13:28:40Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "蝦名 達夫",
       "queue_order": 75,
@@ -1527,9 +1528,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_g2znqwzk/%(id)s.%(ext)s https://www.youtube.com/watch?v=c2fuphRyDzQ",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_fxzqhhli/%(id)s.%(ext)s https://www.youtube.com/watch?v=c2fuphRyDzQ",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] c2fuphRyDzQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:34Z",
+      "fetched_at": "2026-08-19T13:28:41Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "蝦名 達夫",
       "queue_order": 75,
@@ -1546,9 +1547,47 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_eob4kbbi/%(id)s.%(ext)s https://www.youtube.com/watch?v=H8lWtKC5ORA",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] H8lWtKC5ORA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:35Z",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_a6p2gkge/%(id)s.%(ext)s https://www.youtube.com/watch?v=bd6upy2zwjk",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] bd6upy2zwjk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:42Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "今宮 健太",
+      "queue_order": 76,
+      "selected_from_variants": [
+        "RUNNING_COMPARISON"
+      ],
+      "selection_score": 168,
+      "stable_player_key": "PROEYE:31335131",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "【なりきり盗塁】ソフトバンク 今宮健太選手走力トライ１(対大野)",
+      "video_id": "bd6upy2zwjk",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_mes0yxy8/%(id)s.%(ext)s https://www.youtube.com/watch?v=GDKjgVEfXko",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] GDKjgVEfXko: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:43Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "今宮 健太",
+      "queue_order": 76,
+      "selected_from_variants": [
+        "RUNNING_COMPARISON"
+      ],
+      "selection_score": 134,
+      "stable_player_key": "PROEYE:31335131",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "今宮健太の反射神経が分かる動画",
+      "video_id": "GDKjgVEfXko",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_88sscrc8/%(id)s.%(ext)s https://www.youtube.com/watch?v=mgU7KiPtUbM",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] mgU7KiPtUbM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:44Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "今宮 健太",
       "queue_order": 76,
@@ -1559,53 +1598,15 @@
       "stable_player_key": "PROEYE:31335131",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "捕ってからが速すぎる！今宮健太の打球処理【ホークス】",
-      "video_id": "H8lWtKC5ORA",
+      "title_from_search": "まるで【早送り】のような足の動き！ 今宮健太選手 守備練習 2019春編",
+      "video_id": "mgU7KiPtUbM",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_wi8zxhav/%(id)s.%(ext)s https://www.youtube.com/watch?v=w1GPjRLiJCA",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] w1GPjRLiJCA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:37Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "今宮 健太",
-      "queue_order": 76,
-      "selected_from_variants": [
-        "RUNNING_COMPARISON"
-      ],
-      "selection_score": 133,
-      "stable_player_key": "PROEYE:31335131",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "【超反応】今宮健太『とんでもないカーブ軌道…クセ凄すぎる“遊直”』",
-      "video_id": "w1GPjRLiJCA",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_2y_lr716/%(id)s.%(ext)s https://www.youtube.com/watch?v=afi31EUYpiM",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] afi31EUYpiM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:38Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "今宮 健太",
-      "queue_order": 76,
-      "selected_from_variants": [
-        "REACTION_COMPILATION"
-      ],
-      "selection_score": 74,
-      "stable_player_key": "PROEYE:31335131",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "【劇的サヨナラ勝ち！！】ソフトバンクホークス サヨナラ勝ち！！牧原最高や！！【反応集】【プロ野球反応集】【2chスレ】【5chスレ】",
-      "video_id": "afi31EUYpiM",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_bt0chrls/%(id)s.%(ext)s https://www.youtube.com/watch?v=spkSD55Wo-4",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_gmov_yha/%(id)s.%(ext)s https://www.youtube.com/watch?v=spkSD55Wo-4",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] spkSD55Wo-4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:39Z",
+      "fetched_at": "2026-08-19T13:28:46Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "岸田 行倫",
       "queue_order": 90,
@@ -1622,9 +1623,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_m9v6zlyh/%(id)s.%(ext)s https://www.youtube.com/watch?v=jHMHjOta4gY",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_3wfrsz2n/%(id)s.%(ext)s https://www.youtube.com/watch?v=jHMHjOta4gY",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] jHMHjOta4gY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:40Z",
+      "fetched_at": "2026-08-19T13:28:47Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "岸田 行倫",
       "queue_order": 90,
@@ -1641,9 +1642,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_jz53wtd7/%(id)s.%(ext)s https://www.youtube.com/watch?v=lvnZ28X0QDU",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_6gebdvqp/%(id)s.%(ext)s https://www.youtube.com/watch?v=lvnZ28X0QDU",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] lvnZ28X0QDU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:41Z",
+      "fetched_at": "2026-08-19T13:28:48Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "岸田 行倫",
       "queue_order": 90,
@@ -1660,28 +1661,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_biihdlgg/%(id)s.%(ext)s https://www.youtube.com/watch?v=xgl_yLCNKEQ",
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] xgl_yLCNKEQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:42Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "木浪 聖也",
-      "queue_order": 98,
-      "selected_from_variants": [
-        "REACTION_COMPILATION"
-      ],
-      "selection_score": 194,
-      "stable_player_key": "PROEYE:31735138",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "木浪聖也「岡田監督は僕の運命を変えてくれた人」【2ch なんJ反応】",
-      "video_id": "xgl_yLCNKEQ",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_v1ddiiyj/%(id)s.%(ext)s https://www.youtube.com/watch?v=92qF7KxH-88",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_vup6giqi/%(id)s.%(ext)s https://www.youtube.com/watch?v=92qF7KxH-88",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 92qF7KxH-88: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:43Z",
+      "fetched_at": "2026-08-19T13:28:50Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "木浪 聖也",
       "queue_order": 98,
@@ -1698,9 +1680,9 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_x7wnrmnr/%(id)s.%(ext)s https://www.youtube.com/watch?v=7c1IXX1pGP4",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_jribbgin/%(id)s.%(ext)s https://www.youtube.com/watch?v=7c1IXX1pGP4",
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 7c1IXX1pGP4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:33:44Z",
+      "fetched_at": "2026-08-19T13:28:51Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "木浪 聖也",
       "queue_order": 98,
@@ -1717,17 +1699,36 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_45ac9mw8/%(id)s.%(ext)s https://www.youtube.com/watch?v=jnq9Xw75D-Y",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_rp0wa_od/%(id)s.%(ext)s https://www.youtube.com/watch?v=5rdBasIBELk",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 5rdBasIBELk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:28:52Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "木浪 聖也",
+      "queue_order": 98,
+      "selected_from_variants": [
+        "REACTION_COMPILATION"
+      ],
+      "selection_score": 74,
+      "stable_player_key": "PROEYE:31735138",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "【ツヨイです】新井新監督「バウアーの球筋は十分研究して分かっている。脚で攻めていきたい」【反応集】【プロ野球反応集】【2chスレ】【1分動画】【5chスレ】",
+      "video_id": "5rdBasIBELk",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_fe3x3woe/%(id)s.%(ext)s https://www.youtube.com/watch?v=jnq9Xw75D-Y",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] jnq9Xw75D-Y: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:44Z",
+      "fetched_at": "2026-08-19T13:30:05Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "西川 龍馬",
       "queue_order": 8,
       "selected_from_variants": [
         "FORMER_TEAM_CONTEXT"
       ],
-      "selection_score": 133,
+      "selection_score": 134,
       "stable_player_key": "PROEYE:71475132",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -1737,10 +1738,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_k5mo_7lv/%(id)s.%(ext)s https://www.youtube.com/watch?v=ibJKz8yrjVI",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_38celg76/%(id)s.%(ext)s https://www.youtube.com/watch?v=ibJKz8yrjVI",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] ibJKz8yrjVI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:45Z",
+      "fetched_at": "2026-08-19T13:30:06Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "西川 龍馬",
       "queue_order": 8,
@@ -1757,10 +1758,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_65ssdhfn/%(id)s.%(ext)s https://www.youtube.com/watch?v=G0jt5gLrFmA",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_rqo3_9si/%(id)s.%(ext)s https://www.youtube.com/watch?v=G0jt5gLrFmA",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] G0jt5gLrFmA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:46Z",
+      "fetched_at": "2026-08-19T13:30:07Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "細川 成也",
       "queue_order": 20,
@@ -1777,10 +1778,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_6v4lhgih/%(id)s.%(ext)s https://www.youtube.com/watch?v=qW98iMGghT4",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_o5505k8j/%(id)s.%(ext)s https://www.youtube.com/watch?v=qW98iMGghT4",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] qW98iMGghT4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:47Z",
+      "fetched_at": "2026-08-19T13:30:09Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "細川 成也",
       "queue_order": 20,
@@ -1797,10 +1798,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_jp7t6lsn/%(id)s.%(ext)s https://www.youtube.com/watch?v=efUWeiMDgk0",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_jbuzege4/%(id)s.%(ext)s https://www.youtube.com/watch?v=efUWeiMDgk0",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] efUWeiMDgk0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:48Z",
+      "fetched_at": "2026-08-19T13:30:10Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "清宮 幸太郎",
       "queue_order": 24,
@@ -1817,17 +1818,37 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_od04c7dz/%(id)s.%(ext)s https://www.youtube.com/watch?v=OQSuaJE9kIM",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_0qidcisd/%(id)s.%(ext)s https://www.youtube.com/watch?v=R8SF9cQGUpM",
       "binding_query_expansion": true,
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] OQSuaJE9kIM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:49Z",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] R8SF9cQGUpM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:30:11Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "郡司 裕也",
       "queue_order": 26,
       "selected_from_variants": [
         "FORMER_TEAM_CONTEXT"
       ],
-      "selection_score": 34,
+      "selection_score": 134,
+      "stable_player_key": "PROEYE:21925151",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "【これが郡司センサーだ！！】ボール球は全っっっっっったく振らない 郡司裕也 の選球眼【プロ一年目で京田に「郡司の選球眼が欲しい」と言わせた男】",
+      "video_id": "R8SF9cQGUpM",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_pz2jlier/%(id)s.%(ext)s https://www.youtube.com/watch?v=OQSuaJE9kIM",
+      "binding_query_expansion": true,
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] OQSuaJE9kIM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:30:13Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "郡司 裕也",
+      "queue_order": 26,
+      "selected_from_variants": [
+        "FORMER_TEAM_CONTEXT"
+      ],
+      "selection_score": 33,
       "stable_player_key": "PROEYE:21925151",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -1837,30 +1858,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_tdw6g_ne/%(id)s.%(ext)s https://www.youtube.com/watch?v=HpME58cwJiY",
-      "binding_query_expansion": true,
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] HpME58cwJiY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:50Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "郡司 裕也",
-      "queue_order": 26,
-      "selected_from_variants": [
-        "FORMER_TEAM_CONTEXT"
-      ],
-      "selection_score": 13,
-      "stable_player_key": "PROEYE:21925151",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "【レーザービーム再び】中日ドラゴンズ 岡林勇希 1アウト満塁から髙橋宏斗を救う！現地より(22年8月7日 バンテリンドーム名古屋)",
-      "video_id": "HpME58cwJiY",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_lz6k916p/%(id)s.%(ext)s https://www.youtube.com/watch?v=aUNnyaLA8dY",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_pg9wm7_5/%(id)s.%(ext)s https://www.youtube.com/watch?v=aUNnyaLA8dY",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] aUNnyaLA8dY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:51Z",
+      "fetched_at": "2026-08-19T13:30:14Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "野村 佑希",
       "queue_order": 27,
@@ -1877,30 +1878,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_x4q4p45w/%(id)s.%(ext)s https://www.youtube.com/watch?v=FeZsbavXDHc",
-      "binding_query_expansion": true,
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] FeZsbavXDHc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:52Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "ソト",
-      "queue_order": 28,
-      "selected_from_variants": [
-        "FORMER_TEAM_CONTEXT"
-      ],
-      "selection_score": 148,
-      "stable_player_key": "PROEYE:03505133",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "【DeNA】ソト＆オースティンが10号アベック弾！ロッテとの打ち合いを制す＜DeNA 対 ロッテ＞",
-      "video_id": "FeZsbavXDHc",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_5ijn56hf/%(id)s.%(ext)s https://www.youtube.com/watch?v=O9bKe-EzU4Y",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_0ufhygxq/%(id)s.%(ext)s https://www.youtube.com/watch?v=O9bKe-EzU4Y",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] O9bKe-EzU4Y: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:53Z",
+      "fetched_at": "2026-08-19T13:30:15Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "ソト",
       "queue_order": 28,
@@ -1917,10 +1898,30 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_71uzyc1e/%(id)s.%(ext)s https://www.youtube.com/watch?v=eFkoZcktlNY",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_sjqcn0qd/%(id)s.%(ext)s https://www.youtube.com/watch?v=pwophvvlFWk",
+      "binding_query_expansion": true,
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] pwophvvlFWk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:30:17Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "ソト",
+      "queue_order": 28,
+      "selected_from_variants": [
+        "ROMANIZED_OR_ENGLISH_ALIAS"
+      ],
+      "selection_score": -1,
+      "stable_player_key": "PROEYE:03505133",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "Neftali Soto 🇵🇷🇵🇷🇵🇷🇵🇷 3rd Home Run (Pre-Season) 2020",
+      "video_id": "pwophvvlFWk",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_rkkegoid/%(id)s.%(ext)s https://www.youtube.com/watch?v=eFkoZcktlNY",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] eFkoZcktlNY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:54Z",
+      "fetched_at": "2026-08-19T13:30:18Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "藤岡 裕大",
       "queue_order": 37,
@@ -1937,10 +1938,30 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_1440gsod/%(id)s.%(ext)s https://www.youtube.com/watch?v=HwQd2jn4cok",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_nqo1vznj/%(id)s.%(ext)s https://www.youtube.com/watch?v=GRA6hgc2wMg",
+      "binding_query_expansion": true,
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] GRA6hgc2wMg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:30:20Z",
+      "ledger_type": "VIDEO_FETCH",
+      "player": "ファビアン",
+      "queue_order": 44,
+      "selected_from_variants": [
+        "ROMANIZED_OR_ENGLISH_ALIAS"
+      ],
+      "selection_score": -1,
+      "stable_player_key": "PROEYE:43745150",
+      "status": "FETCH_FAILED",
+      "targeted_scope_only": true,
+      "title_from_search": "Sandro Fabian goes yard",
+      "video_id": "GRA6hgc2wMg",
+      "youtube_data_api_called": false,
+      "youtube_data_api_key_present": false
+    },
+    {
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ob5nenmj/%(id)s.%(ext)s https://www.youtube.com/watch?v=HwQd2jn4cok",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] HwQd2jn4cok: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:55Z",
+      "fetched_at": "2026-08-19T13:30:21Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "ファビアン",
       "queue_order": 44,
@@ -1957,30 +1978,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_k5okc5vx/%(id)s.%(ext)s https://www.youtube.com/watch?v=i0dwkx8z0zo",
-      "binding_query_expansion": true,
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] i0dwkx8z0zo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:56Z",
-      "ledger_type": "VIDEO_FETCH",
-      "player": "ファビアン",
-      "queue_order": 44,
-      "selected_from_variants": [
-        "ROMANIZED_OR_ENGLISH_ALIAS"
-      ],
-      "selection_score": -1,
-      "stable_player_key": "PROEYE:43745150",
-      "status": "FETCH_FAILED",
-      "targeted_scope_only": true,
-      "title_from_search": "Augusta's Fabian clears the bases with a double",
-      "video_id": "i0dwkx8z0zo",
-      "youtube_data_api_called": false,
-      "youtube_data_api_key_present": false
-    },
-    {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_dqfmg5_2/%(id)s.%(ext)s https://www.youtube.com/watch?v=uSynvJSKNLk",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_h2z228j2/%(id)s.%(ext)s https://www.youtube.com/watch?v=uSynvJSKNLk",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] uSynvJSKNLk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:57Z",
+      "fetched_at": "2026-08-19T13:30:23Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "モンテロ",
       "queue_order": 45,
@@ -1997,10 +1998,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_4nptqj8p/%(id)s.%(ext)s https://www.youtube.com/watch?v=UshJ9KG6Kdc",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_v42vy_2q/%(id)s.%(ext)s https://www.youtube.com/watch?v=Cw7Ig4h4gdw",
       "binding_query_expansion": true,
-      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] UshJ9KG6Kdc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:34:59Z",
+      "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] Cw7Ig4h4gdw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
+      "fetched_at": "2026-08-19T13:30:25Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "モンテロ",
       "queue_order": 45,
@@ -2011,16 +2012,16 @@
       "stable_player_key": "PROEYE:53955150",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
-      "title_from_search": "Peoria's Montero plated the winning run with a triple",
-      "video_id": "UshJ9KG6Kdc",
+      "title_from_search": "2011/09/01 Montero's first career at-bat",
+      "video_id": "Cw7Ig4h4gdw",
       "youtube_data_api_called": false,
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_yxte3094/%(id)s.%(ext)s https://www.youtube.com/watch?v=u1M7DwZylyo",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_vf7_u7u5/%(id)s.%(ext)s https://www.youtube.com/watch?v=u1M7DwZylyo",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] u1M7DwZylyo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:00Z",
+      "fetched_at": "2026-08-19T13:30:26Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "坂倉 将吾",
       "queue_order": 47,
@@ -2037,17 +2038,17 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_c6ldcl0k/%(id)s.%(ext)s https://www.youtube.com/watch?v=tSGUK57MOr8",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_g6ujguit/%(id)s.%(ext)s https://www.youtube.com/watch?v=tSGUK57MOr8",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] tSGUK57MOr8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:01Z",
+      "fetched_at": "2026-08-19T13:30:27Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "秋山 翔吾",
       "queue_order": 50,
       "selected_from_variants": [
         "ACCELERATION_FULL_EFFORT"
       ],
-      "selection_score": 148,
+      "selection_score": 149,
       "stable_player_key": "PROEYE:31135133",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -2057,10 +2058,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_nokr_dyv/%(id)s.%(ext)s https://www.youtube.com/watch?v=Y2YzrEGPhCM",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_7n_jge8j/%(id)s.%(ext)s https://www.youtube.com/watch?v=Y2YzrEGPhCM",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] Y2YzrEGPhCM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:02Z",
+      "fetched_at": "2026-08-19T13:30:29Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "秋山 翔吾",
       "queue_order": 50,
@@ -2077,10 +2078,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_qt5svcyj/%(id)s.%(ext)s https://www.youtube.com/watch?v=8i8jNS1vjBA",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_77p4kkj4/%(id)s.%(ext)s https://www.youtube.com/watch?v=8i8jNS1vjBA",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] 8i8jNS1vjBA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:03Z",
+      "fetched_at": "2026-08-19T13:30:30Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "野間 峻祥",
       "queue_order": 52,
@@ -2097,10 +2098,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_wlbuo4q8/%(id)s.%(ext)s https://www.youtube.com/watch?v=Wkr9ulWIj28",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_8eipgxjx/%(id)s.%(ext)s https://www.youtube.com/watch?v=Wkr9ulWIj28",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] Wkr9ulWIj28: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:04Z",
+      "fetched_at": "2026-08-19T13:30:31Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "野間 峻祥",
       "queue_order": 52,
@@ -2117,17 +2118,17 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_tb2rsgts/%(id)s.%(ext)s https://www.youtube.com/watch?v=nCc2KDBJy0A",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_i6st85rv/%(id)s.%(ext)s https://www.youtube.com/watch?v=nCc2KDBJy0A",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] nCc2KDBJy0A: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:05Z",
+      "fetched_at": "2026-08-19T13:30:33Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "丸山 和郁",
       "queue_order": 56,
       "selected_from_variants": [
         "ACCELERATION_FULL_EFFORT"
       ],
-      "selection_score": 18,
+      "selection_score": 19,
       "stable_player_key": "PROEYE:93195155",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -2137,17 +2138,17 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_qm2dmimm/%(id)s.%(ext)s https://www.youtube.com/watch?v=BWDYNebwva4",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_o_duao46/%(id)s.%(ext)s https://www.youtube.com/watch?v=BWDYNebwva4",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] BWDYNebwva4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:06Z",
+      "fetched_at": "2026-08-19T13:30:34Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "丸山 和郁",
       "queue_order": 56,
       "selected_from_variants": [
         "ACCELERATION_FULL_EFFORT"
       ],
-      "selection_score": 14,
+      "selection_score": 13,
       "stable_player_key": "PROEYE:93195155",
       "status": "FETCH_FAILED",
       "targeted_scope_only": true,
@@ -2157,10 +2158,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_dz9_xkje/%(id)s.%(ext)s https://www.youtube.com/watch?v=Uh4gXHB5Plk",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_sg_vrnqr/%(id)s.%(ext)s https://www.youtube.com/watch?v=Uh4gXHB5Plk",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] Uh4gXHB5Plk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:07Z",
+      "fetched_at": "2026-08-19T13:30:35Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "京田 陽太",
       "queue_order": 66,
@@ -2177,10 +2178,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube__k6o4doj/%(id)s.%(ext)s https://www.youtube.com/watch?v=Wkjf1Q_oOPU",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ntmf0ac7/%(id)s.%(ext)s https://www.youtube.com/watch?v=Wkjf1Q_oOPU",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] Wkjf1Q_oOPU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:08Z",
+      "fetched_at": "2026-08-19T13:30:36Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "京田 陽太",
       "queue_order": 66,
@@ -2197,10 +2198,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_oyh1toir/%(id)s.%(ext)s https://www.youtube.com/watch?v=xWSIQkFJNDI",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_to9f482m/%(id)s.%(ext)s https://www.youtube.com/watch?v=xWSIQkFJNDI",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] xWSIQkFJNDI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:09Z",
+      "fetched_at": "2026-08-19T13:30:37Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "今宮 健太",
       "queue_order": 76,
@@ -2217,10 +2218,10 @@
       "youtube_data_api_key_present": false
     },
     {
-      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_1ykbtw6e/%(id)s.%(ext)s https://www.youtube.com/watch?v=KShik23_hHE",
+      "attempted_command": "yt-dlp --ignore-config --no-update --no-warnings --skip-download --write-info-json --write-comments --write-subs --write-auto-subs --sub-langs ja.*,ja --sub-format vtt --extractor-args youtube:max_comments=80,80,80,80 --output /tmp/sp102_youtube_ojr4bcpj/%(id)s.%(ext)s https://www.youtube.com/watch?v=KShik23_hHE",
       "binding_query_expansion": true,
       "error": "yt-dlp exit=1; no info JSON; stderr=ERROR: [youtube] KShik23_hHE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies\n",
-      "fetched_at": "2026-08-19T12:35:10Z",
+      "fetched_at": "2026-08-19T13:30:39Z",
       "ledger_type": "VIDEO_FETCH",
       "player": "今宮 健太",
       "queue_order": 76,

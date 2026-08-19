@@ -39,6 +39,11 @@
       "pass": true
     },
     {
+      "detail": [],
+      "name": "fresh_youtube_provenance_only",
+      "pass": true
+    },
+    {
       "detail": null,
       "name": "comment_influence_low_no_direct_anchor",
       "pass": true
@@ -90,8 +95,8 @@
     }
   ],
   "counts": {
-    "event_origins_raw": 55,
-    "evidence_records": 56,
+    "event_origins_raw": 0,
+    "evidence_records": 0,
     "fetch_failures": 116,
     "non_targeted": 70,
     "primary_link_records": 0,
@@ -99,12 +104,12 @@
     "search_queries": 193,
     "targeted": 30,
     "timed_context_records": 0,
-    "usable_low_influence_records": 56,
+    "usable_low_influence_records": 0,
     "video_fetches": 116
   },
   "fail_count": 0,
   "generated_at": "2026-08-19",
-  "pass_count": 16,
+  "pass_count": 17,
   "schema_version": "qa_sp102_targeted_video_comment_rescue_v2_20260819",
-  "status": "PASS_TARGETED_RESCUE_BOUNDED_VALIDATED"
+  "status": "PASS_BOUNDED_ACQUISITION_LIMITED_NEGATIVE_FINDING"
 }

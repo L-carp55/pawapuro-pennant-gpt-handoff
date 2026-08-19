@@ -19,14 +19,15 @@ Status before independent final QA: **PASS**
 
 ## Results
 
-- Normalized evidence records: **56**.
-- Independent origin/event clusters: **55**.
+- Normalized evidence records: **0**.
+- Independent origin/event clusters: **0**.
 - Linked primary-source discovery receipts: **0**; independently fetched/promoted: **0**.
-- Player use states: `{'AVAILABLE_NOT_DECISION_EFFECTIVE': 24, 'NO_USABLE_EVIDENCE': 6}`.
+- Player use states: `{'NO_USABLE_EVIDENCE': 30}`.
 
 ## Negative findings and limits
 
 - Official YouTube Data API was called: **False**; API key present in this execution: **False**.
+- Prior-corpus candidates scanned for this target set: **56**; all were excluded from SP-102 canonical evidence because they were not fresh targeted YouTube retrievals.
 - The public yt-dlp route is bounded rather than exhaustive API pagination. Failed searches/fetches are persisted and are not interpreted as absence of evidence.
 - On-screen-only text was not OCRed. Auto/manual subtitle text is narration/editorial unless an explicit thread-quote marker supports the quote layer.
 - A linked official-domain URL is only a discovery receipt until separately fetched and classified; this run promotes none automatically.
@@ -46,9 +47,9 @@ Status before independent final QA: **PASS**
 ## Refined independence pass
 
 - Same-video, same-channel, transient same-author, near-template, quoted-dependency, and same-timing relationships are collapsed by connected components.
-- Refined independent origin/event clusters: **54**.
+- Refined independent origin/event clusters: **0**.
 - Same-event inflation after clustering: **0 by construction and QA contract**.
-- Refined player use states: `{'AVAILABLE_NOT_DECISION_EFFECTIVE': 24, 'NO_USABLE_EVIDENCE': 6}`.
+- Refined player use states: `{'NO_USABLE_EVIDENCE': 30}`.
 
 ## Query-contract coverage
 
