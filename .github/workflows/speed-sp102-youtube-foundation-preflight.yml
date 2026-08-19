@@ -1,4 +1,5 @@
 name: speed-sp102-youtube-foundation-preflight
+# Trigger after workflow exists on branch.
 
 on:
   push:
