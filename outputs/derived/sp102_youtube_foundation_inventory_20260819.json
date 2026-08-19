@@ -408,11 +408,11 @@
       ]
     },
     {
-      "bytes": 1274,
+      "bytes": 1317,
       "path": ".github/workflows/speed-sp102-youtube-foundation-preflight.yml",
       "sample": [
         "name: speed-sp102-youtube-foundation-preflight",
-        ""
+        "# Trigger after workflow exists on branch."
       ]
     },
     {
@@ -571,6 +571,14 @@
       "sample": [
         "{\"record_id\":\"YT-RECOVER-wOjrANePk1c-UgwGtkn43ODz9W1Gn_d4AaABAg\",\"video_id\":\"wOjrANePk1c\",\"video_title\":\"『パワフルプロ野球2026-2027』オープニングムービー\",\"text\":\"打球の軌道でイチローって分かるあたり、完璧な再現ですわ。\",\"labels\":[\"UNCLASSIFIED_CONTEXT\"],\"claim\":\"UNCLASSIFIED_CONTEXT\",\"identity_before\":\"UNMAPPED\",\"decision\":\"UNMAPPED\",\"player\":null,\"canonical_player_id\":null,\"reason\":\"no identity\",\"irony_flag\":false,\"event_id\":\"youtube:wOjrANePk1c:unmapped:UNCLASSIFIED_CONTEXT\",\"origin_count\":0,\"reaction_volume\":99,\"auto_accepted\":false}",
         "{\"record_id\":\"YT-RECOVER-wOjrANePk1c-UgwGtkn43ODz9W1Gn_d4AaABAg.AUMUfBRMLVCAXnVeYxOPZ0\",\"video_id\":\"wOjrANePk1c\",\"video_title\":\"『パワフルプロ野球2026-2027』オープニングムービー\",\"text\":\"ランナーがスタートしている！矢部がスタートしている!！があったってこともわかってしまう\",\"labels\":[\"UNCLASSIFIED_CONTEXT\"],\"claim\":\"UNCLASSIFIED_CONTEXT\",\"identity_before\":\"UNMAPPED\",\"decision\":\"UNMAPPED\",\"player\":null,\"canonical_player_id\":null,\"reason\":\"no identity\",\"irony_flag\":false,\"event_id\":\"youtube:wOjrANePk1c:unmapped:UNCLASSIFIED_CONTEXT\",\"origin_count\":0,\"reaction_volume\":99,\"auto_accepted\":false}"
+      ]
+    },
+    {
+      "bytes": 122571,
+      "path": "outputs/derived/sp102_youtube_foundation_inventory_20260819.json",
+      "sample": [
+        "{",
+        "  \"generated_at\": \"2026-08-19\","
       ]
     },
     {
