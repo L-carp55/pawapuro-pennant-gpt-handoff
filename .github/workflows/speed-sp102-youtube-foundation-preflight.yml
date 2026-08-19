@@ -1,0 +1,35 @@
+name: speed-sp102-youtube-foundation-preflight
+
+on:
+  push:
+    branches:
+      - codex/speed-sp102-targeted-video-comment-rescue-20260819
+    paths:
+      - '.github/workflows/speed-sp102-youtube-foundation-preflight.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/speed-sp102-targeted-video-comment-rescue-20260819
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inventory target and existing YouTube corpus
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python scripts/inspect_sp102_youtube_foundation_20260819.py
+      - name: Commit preflight receipt
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add outputs/derived/sp102_youtube_foundation_inventory_20260819.json
+          git commit -m 'audit(speed): inventory SP-102 YouTube foundation'
+          git pull --rebase origin codex/speed-sp102-targeted-video-comment-rescue-20260819
+          git push origin HEAD:codex/speed-sp102-targeted-video-comment-rescue-20260819
