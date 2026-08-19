@@ -1,0 +1,149 @@
+name: speed-sp102-targeted-video-comment-rescue-wave
+
+on:
+  push:
+    branches:
+      - codex/speed-sp102-targeted-video-comment-rescue-20260819
+    paths:
+      - '.github/workflows/speed-sp102-targeted-video-comment-rescue-wave.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: speed-sp102-targeted-video-comment-rescue-wave
+  cancel-in-progress: true
+
+jobs:
+  collect-audit-finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/speed-sp102-targeted-video-comment-rescue-20260819
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install bounded public YouTube collector
+        run: |
+          echo install_ytdlp > /tmp/sp102_stage
+          python -m pip install --disable-pip-version-check --quiet --upgrade yt-dlp
+          yt-dlp --version | tee /tmp/ytdlp_version.txt
+      - name: Freeze protected governance state
+        run: |
+          echo freeze_governance > /tmp/sp102_stage
+          sha256sum outputs/derived/sp078_owner_verdict_ledger_20260816.json > /tmp/sp078.before.sha256
+          cp docs/state/speed_owner_review_integrity_lock_20260817.json /tmp/owner_lock.before.json
+      - name: Syntax check
+        run: |
+          echo syntax_check > /tmp/sp102_stage
+          python -m py_compile \
+            scripts/sp102_targeted_video_comment_rescue_20260819.py \
+            scripts/sanitize_sp102_commenter_identity_20260819.py \
+            scripts/qa_sp102_targeted_video_comment_rescue_20260819.py \
+            scripts/qa_sp102_commenter_privacy_20260819.py \
+            scripts/finalize_sp102_targeted_video_comment_rescue_20260819.py
+      - name: Execute frozen-target SP-102 collection
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+        run: |
+          echo targeted_collection > /tmp/sp102_stage
+          set -o pipefail
+          python scripts/sp102_targeted_video_comment_rescue_20260819.py 2>&1 | tee /tmp/sp102_collection.log
+      - name: Remove commenter identities before persistence
+        run: |
+          echo commenter_identity_sanitization > /tmp/sp102_stage
+          python scripts/sanitize_sp102_commenter_identity_20260819.py | tee /tmp/sp102_sanitize.log
+      - name: Run independent SP-102 semantic QA
+        run: |
+          echo independent_semantic_qa > /tmp/sp102_stage
+          set -o pipefail
+          python scripts/qa_sp102_targeted_video_comment_rescue_20260819.py 2>&1 | tee /tmp/sp102_qa.log
+      - name: Enforce commenter privacy contract
+        run: |
+          echo commenter_privacy_qa > /tmp/sp102_stage
+          python scripts/qa_sp102_commenter_privacy_20260819.py | tee /tmp/sp102_privacy.log
+      - name: Finalize SP-102 only after both QA passes
+        run: |
+          echo finalize_sp102 > /tmp/sp102_stage
+          python scripts/finalize_sp102_targeted_video_comment_rescue_20260819.py | tee /tmp/sp102_finalize.log
+      - name: Run canonical speed governance QA
+        run: |
+          echo canonical_governance_qa > /tmp/sp102_stage
+          set -o pipefail
+          node scripts/qa_speed_task_registry.mjs 2>&1 | tee /tmp/registry_qa.log
+          node scripts/qa_speed_construct_traceability_20260817.mjs 2>&1 | tee /tmp/traceability_qa.log
+          node scripts/qa_sp078_integrity_lock_20260817.mjs 2>&1 | tee /tmp/owner_lock_qa.log
+      - name: Verify forbidden downstream work remains untouched
+        run: |
+          echo protected_scope_verification > /tmp/sp102_stage
+          sha256sum --check /tmp/sp078.before.sha256
+          python - <<'PY'
+          import csv,json
+          from pathlib import Path
+          ledger=json.load(open('outputs/derived/sp078_owner_verdict_ledger_20260816.json',encoding='utf-8'))
+          lock=json.load(open('docs/state/speed_owner_review_integrity_lock_20260817.json',encoding='utf-8'))
+          qa=json.load(open('outputs/derived/qa_sp102_targeted_video_comment_rescue.json',encoding='utf-8'))
+          privacy=json.load(open('outputs/derived/qa_sp102_commenter_privacy_20260819.json',encoding='utf-8'))
+          rows={r['task_id']:r for r in csv.DictReader(open('docs/state/speed_task_registry.tsv',encoding='utf-8-sig'),delimiter='\t')}
+          assert ledger['owner_verdict_count']==0 and not ledger.get('records')
+          assert lock['locked'] is True
+          assert str(qa['status']).startswith('PASS')
+          assert privacy['status']=='PASS_COMMENTER_PRIVACY'
+          assert rows['SP-101']['status']=='DONE_VALIDATED'
+          assert rows['SP-102']['status'] in {'DONE_VALIDATED','DONE_NEGATIVE_FINDING'}
+          assert rows['SP-079']['status']=='BLOCKED_DEPENDENCY'
+          assert rows['SP-082']['status']=='BLOCKED_DEPENDENCY'
+          print(json.dumps({'SP-101':rows['SP-101']['status'],'SP-102':rows['SP-102']['status'],'SP-079':rows['SP-079']['status'],'SP-082':rows['SP-082']['status'],'owner_verdict_count':ledger['owner_verdict_count']}))
+          PY
+      - name: Commit SP-102 bounded evidence and audit
+        run: |
+          echo validated_artifact_commit > /tmp/sp102_stage
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            outputs/derived/sp102_video_comment_search_ledger.jsonl.gz \
+            outputs/derived/sp102_comment_evidence_records.jsonl.gz \
+            outputs/derived/sp102_primary_source_records.jsonl.gz \
+            outputs/derived/sp102_event_dedup_registry.jsonl.gz \
+            outputs/derived/sp102_target_post_rescue_summary.json \
+            outputs/derived/sp102_sp101_resolution_linkage.json \
+            outputs/derived/qa_sp102_targeted_video_comment_rescue.json \
+            outputs/derived/qa_sp102_commenter_privacy_20260819.json \
+            docs/audits/sp102_targeted_video_comment_rescue_20260818.md \
+            docs/state/speed_sp102_activation_state_20260818.json \
+            docs/state/speed_task_registry.tsv
+          if git diff --cached --quiet; then
+            echo 'No SP-102 changes to commit.'
+            exit 1
+          fi
+          git commit -m 'feat(speed): complete bounded SP-102 video-comment rescue'
+          git pull --rebase origin codex/speed-sp102-targeted-video-comment-rescue-20260819
+          git push origin HEAD:codex/speed-sp102-targeted-video-comment-rescue-20260819
+      - name: Persist durable failure diagnosis
+        if: failure()
+        run: |
+          stage=$(cat /tmp/sp102_stage 2>/dev/null || echo unknown)
+          python - <<'PY'
+          import json,pathlib
+          logs={}
+          for p in pathlib.Path('/tmp').glob('*.log'):
+            try: logs[p.name]=p.read_text(errors='replace').splitlines()[-100:]
+            except Exception as e: logs[p.name]=[repr(e)]
+          out={'schema_version':'sp102_video_comment_rescue_ci_failure_20260819','generated_at':'2026-08-19','stage':pathlib.Path('/tmp/sp102_stage').read_text().strip() if pathlib.Path('/tmp/sp102_stage').exists() else 'unknown','yt_dlp_version':pathlib.Path('/tmp/ytdlp_version.txt').read_text().strip() if pathlib.Path('/tmp/ytdlp_version.txt').exists() else None,'logs_tail':logs}
+          p=pathlib.Path('outputs/derived/sp102_video_comment_rescue_ci_failure_20260819.json'); p.parent.mkdir(parents=True,exist_ok=True); p.write_text(json.dumps(out,ensure_ascii=False,sort_keys=True,indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add outputs/derived/sp102_video_comment_rescue_ci_failure_20260819.json
+          git commit -m "audit(speed): persist SP-102 failure at ${stage}" || true
+          git pull --rebase origin codex/speed-sp102-targeted-video-comment-rescue-20260819 || true
+          git push origin HEAD:codex/speed-sp102-targeted-video-comment-rescue-20260819 || true
