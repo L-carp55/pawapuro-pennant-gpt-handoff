@@ -1,11 +1,19 @@
 {
   "generated_at": "2026-08-19",
   "logs_tail": {
+    "registry_qa.log": [
+      "FAIL: speed task registry QA found 1 error(s)",
+      "- SP-102: completion artifact missing/empty: outputs/derived/sp102_video_comment_normalized.jsonl"
+    ],
     "sp102_binding_qa.log": [
-      "{\"status\": \"FAIL_SP102_BINDING_CONTRACT\", \"pass\": 40, \"fail\": 1, \"failed_checks\": [{\"name\": \"all_binding_outputs_exist\", \"detail\": [\"outputs/derived/sp102_video_comment_normalized.jsonl\"]}]}"
+      "{\"status\": \"PASS_SP102_BINDING_CONTRACT\", \"pass\": 42, \"fail\": 0, \"failed_checks\": []}"
     ],
     "sp102_collection.log": [
       "{\"targeted\": 30, \"queries\": 120, \"video_fetches\": 90, \"evidence\": 0, \"events\": 0, \"api_key\": false, \"status_counts\": {\"MEASURED_NO_USABLE_NEW_SPEED_CONTEXT\": 30}}"
+    ],
+    "sp102_finalize.log": [
+      "{\"status\": \"DONE_NEGATIVE_FINDING\", \"qa\": \"PASS_BOUNDED_ACQUISITION_LIMITED_NEGATIVE_FINDING\", \"privacy\": \"PASS_COMMENTER_PRIVACY\", \"owner_verdict_count\": 0, \"SP-079\": \"BLOCKED_DEPENDENCY\", \"SP-082\": \"BLOCKED_DEPENDENCY\"}",
+      "{\"status\": \"DONE_NEGATIVE_FINDING\", \"binding_contract\": \"PASS_SP102_BINDING_CONTRACT\", \"SP-079\": \"BLOCKED_DEPENDENCY\", \"SP-082\": \"BLOCKED_DEPENDENCY\"}"
     ],
     "sp102_materialize.log": [
       "{\"targets\": 30, \"canonical_records\": 0, \"clusters\": 0, \"primary\": 0, \"coverage\": \"PASS\", \"use_states\": {\"NO_USABLE_EVIDENCE\": 30}}"
@@ -39,6 +47,6 @@
     ]
   },
   "schema_version": "sp102_video_comment_rescue_ci_failure_20260819",
-  "stage": "binding_contract_qa",
+  "stage": "canonical_governance_qa",
   "yt_dlp_version": "2026.07.04"
 }
