@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-08-19",
+  "logs_tail": {
+    "sp102_collection.log": [
+      "Traceback (most recent call last):",
+      "  File \"/home/runner/work/pawapuro-pennant-gpt-handoff/pawapuro-pennant-gpt-handoff/scripts/sp102_targeted_video_comment_rescue_20260819.py\", line 651, in <module>",
+      "    main()",
+      "  File \"/home/runner/work/pawapuro-pennant-gpt-handoff/pawapuro-pennant-gpt-handoff/scripts/sp102_targeted_video_comment_rescue_20260819.py\", line 633, in main",
+      "    \"video_fetch_attempts\":sum(r[\"ledger_type\"]==\"VIDEO_FETCH\" and r.get(\"video_id\") for r in search_ledger),",
+      "                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
+      "TypeError: unsupported operand type(s) for +: 'int' and 'str'"
+    ]
+  },
+  "schema_version": "sp102_video_comment_rescue_ci_failure_20260819",
+  "stage": "targeted_collection",
+  "yt_dlp_version": "2026.07.04"
+}
