@@ -1,5 +1,6 @@
 name: speed-sp102-targeted-video-comment-rescue-wave
 # Binding-contract execution: frozen 30-target acquisition -> privacy -> deterministic canonical materialization -> independent QA.
+# Core collector enters through a fail-closed one-expression hotfix wrapper documented in scripts/run_sp102_targeted_video_comment_rescue_20260819.py.
 
 on:
   push:
@@ -46,6 +47,7 @@ jobs:
           echo syntax_check > /tmp/sp102_stage
           python -m py_compile \
             scripts/sp102_targeted_video_comment_rescue_20260819.py \
+            scripts/run_sp102_targeted_video_comment_rescue_20260819.py \
             scripts/sp102_expand_query_contract_20260819.py \
             scripts/sanitize_sp102_commenter_identity_20260819.py \
             scripts/materialize_sp102_canonical_contract_20260819.py \
@@ -64,7 +66,7 @@ jobs:
         run: |
           echo targeted_collection > /tmp/sp102_stage
           set -o pipefail
-          python scripts/sp102_targeted_video_comment_rescue_20260819.py 2>&1 | tee /tmp/sp102_collection.log
+          python scripts/run_sp102_targeted_video_comment_rescue_20260819.py 2>&1 | tee /tmp/sp102_collection.log
       - name: Expand query coverage to binding task
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
