@@ -4,15 +4,29 @@
     "sp102_collection.log": [
       "{\"targeted\": 30, \"queries\": 120, \"video_fetches\": 90, \"evidence\": 56, \"events\": 55, \"api_key\": false, \"status_counts\": {\"DIRECTIONAL_CONTEXT_ADDED_LOW_INFLUENCE\": 24, \"MEASURED_NO_USABLE_NEW_SPEED_CONTEXT\": 6}}"
     ],
+    "sp102_materialize.log": [
+      "{\"targets\": 30, \"canonical_records\": 56, \"clusters\": 55, \"primary\": 0, \"coverage\": \"PASS\", \"use_states\": {\"AVAILABLE_NOT_DECISION_EFFECTIVE\": 24, \"NO_USABLE_EVIDENCE\": 6}}"
+    ],
+    "sp102_privacy.log": [
+      "{\"schema_version\": \"qa_sp102_commenter_privacy_20260819\", \"generated_at\": \"2026-08-19\", \"status\": \"PASS_COMMENTER_PRIVACY\", \"comment_rows\": 56, \"checks\": {\"no_raw_author_field\": true, \"no_raw_author_id_field\": true, \"commenter_profile_persisted_false\": true, \"origin_hash_only_when_available\": true}}"
+    ],
+    "sp102_qa.log": [
+      "{\"status\": \"PASS_TARGETED_RESCUE_BOUNDED_VALIDATED\", \"pass\": 16, \"fail\": 0, \"counts\": {\"targeted\": 30, \"non_targeted\": 70, \"search_queries\": 193, \"query_errors\": 0, \"video_fetches\": 116, \"fetch_failures\": 116, \"evidence_records\": 56, \"usable_low_influence_records\": 56, \"timed_context_records\": 0, \"event_origins_raw\": 55, \"primary_link_records\": 0}}"
+    ],
     "sp102_query_expansion.log": [
-      "Traceback (most recent call last):",
-      "  File \"/home/runner/work/pawapuro-pennant-gpt-handoff/pawapuro-pennant-gpt-handoff/scripts/sp102_expand_query_contract_20260819.py\", line 103, in <module>",
-      "    print(json.dumps({'extra_queries':sum(len(x['extra_query_variants']) for x in coverage_receipts),'total_search_rows':sum(r.get('ledger_type')=='SEARCH_QUERY' for r in search),'extra_video_fetches':sum(r.get('binding_query_expansion') and r.get('ledger_type')=='VIDEO_FETCH' for r in search),'evidence':len(evidence)},ensure_ascii=False))",
-      "                                                                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^",
-      "TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'"
+      "{\"extra_queries\": 73, \"total_search_rows\": 193, \"extra_video_fetches\": 26, \"evidence\": 56}"
+    ],
+    "sp102_query_manifest.log": [
+      "{\"query_attempts\": 193, \"targets\": 30, \"per_target_distribution\": {\"6\": 22, \"7\": 4, \"9\": 1, \"8\": 3}}"
+    ],
+    "sp102_refine.log": [
+      "{\"refined_clusters\": 54, \"use_states\": {\"AVAILABLE_NOT_DECISION_EFFECTIVE\": 24, \"NO_USABLE_EVIDENCE\": 6}}"
+    ],
+    "sp102_sanitize.log": [
+      "{\"rows\": 56, \"comment_rows\": 56, \"raw_commenter_identity_fields_remaining\": 0}"
     ]
   },
   "schema_version": "sp102_video_comment_rescue_ci_failure_20260819",
-  "stage": "binding_query_expansion",
+  "stage": "canonical_determinism_rerun",
   "yt_dlp_version": "2026.07.04"
 }
