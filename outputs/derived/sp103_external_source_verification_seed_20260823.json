@@ -42,6 +42,28 @@
       "construct_role": "mixed outcome proxy, not direct physical speed",
       "double_count_guard": "The formula overlaps with stolen-base and triple/outcome lanes already present in the project. Any use must test incremental information and avoid counting the same outcomes twice.",
       "next_action": "Inventory historical/current availability and test conditional incremental validity against independent physical evidence. Reject or downweight if it adds no information beyond its component proxies."
+    },
+    {
+      "evidence_id": "SP103-EXT-MLB-LEAD-DISTANCE",
+      "source": "MLB Statcast Lead Distance glossary / Basestealing Run Value leaderboard",
+      "url": "https://www.mlb.com/glossary/statcast/lead-distance",
+      "leaderboard_url": "https://baseballsavant.mlb.com/leaderboard/basestealing-run-value",
+      "verified_claim": "Statcast separately measures Lead Distance, and the basestealing leaderboard exposes Lead Distance Gained between the pitcher's first move and pitch release.",
+      "status": "SOURCE_CONFIRMED_NEW",
+      "construct_role": "stealing/start/lead technique context useful to deconfound stolen-base outcomes from physical running speed",
+      "bias_guard": "Lead distance is not physical speed. Its value is primarily in explaining why steal outcomes or steal times differ at similar physical speed.",
+      "next_action": "For MLB-experienced players, test whether lead/start variables explain stolen-base outcome residuals after physical speed; use them to separate technique rather than raise base speed directly."
+    },
+    {
+      "evidence_id": "SP103-EXT-MLB-BASERUN-RUN-VALUE",
+      "source": "MLB Statcast Baserunning Run Value glossary / Baseball Savant leaderboard",
+      "url": "https://www.mlb.com/glossary/statcast/baserunning",
+      "leaderboard_url": "https://baseballsavant.mlb.com/leaderboard/baserunning-run-value",
+      "verified_claim": "Statcast Baserunning Run Value evaluates stealing and/or extra-base decisions using opportunity-level context including runner speed, fielder arm and positioning; current leaderboard documentation exposes the combined outcome-value concept.",
+      "status": "SOURCE_CONFIRMED_NEW_OR_REOPENED",
+      "construct_role": "opportunity-adjusted baserunning/technique context, not pure physical speed",
+      "double_count_guard": "The metric itself uses runner speed as an input and overlaps with steal/advance outcomes. It must not be treated as independent physical ground truth or double-counted with Sprint Speed and advancement outcomes.",
+      "next_action": "Inventory eligible MLB coverage and test only for technique/context or residual information after direct physical speed, with explicit source-version definition because glossary/leaderboard formulations may differ by baserunning component."
     }
   ],
   "local_provenance_conflict": {
