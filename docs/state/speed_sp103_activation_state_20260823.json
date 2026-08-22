@@ -1,0 +1,30 @@
+{
+  "schema_version": "speed_sp103_activation_state_20260823",
+  "generated_at": "2026-08-23",
+  "task_id": "SP-103",
+  "status": "ACTIVE_PRE_SP079_COMPLETENESS_AUDIT",
+  "repository": "L-carp55/pawapuro-pennant-gpt-handoff",
+  "branch": "codex/speed-sp103-evidence-universe-completeness-20260823",
+  "base_commit": "a2808b080be0eaefe95ba41da47bbfe1cf93cacb",
+  "task_specification": "docs/tasks/SP103_SPEED_EVIDENCE_UNIVERSE_COMPLETENESS_20260823.md",
+  "seed_external_verification": "outputs/derived/sp103_external_source_verification_seed_20260823.json",
+  "upstream": {
+    "sp101": "DONE_VALIDATED",
+    "sp102": "DONE_NEGATIVE_FINDING",
+    "sp078_owner_verdict_count_expected": 0
+  },
+  "locks": {
+    "sp079": "BLOCKED_BY_SP103",
+    "owner_verdict_write": false,
+    "shoulder": "BLOCKED",
+    "final_numeric_speed_ratings": false
+  },
+  "required_first_actions": [
+    "Update the canonical task registry so SP-103 is explicit and SP-079 depends on SP-103.",
+    "Perform repository-wide local asset enumeration by schema/content rather than filename-only search.",
+    "Verify external sources independently; do not trust the seed receipt without rechecking.",
+    "Build the zero-based evidence universe and owner-feedback traceability.",
+    "Measure collected-but-unused assets and inference routes that exist but are not decision-effective."
+  ],
+  "transition_rule": "SP-079 may become eligible only after SP-103 independent QA emits READY_FOR_SP079 and the owner-verdict ledger remains empty. Do not start SP-079 automatically."
+}
