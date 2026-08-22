@@ -1,0 +1,57 @@
+{
+  "schema_version": "sp103_external_source_verification_seed_20260823",
+  "generated_at": "2026-08-23",
+  "status": "SEED_VERIFIED_REQUIRES_EXECUTION_WAVE",
+  "sources": [
+    {
+      "evidence_id": "SP103-EXT-NPBPLUS-H2F",
+      "source": "NPB+ official product page",
+      "url": "https://www.japan-baseball.jp/npb-plus/",
+      "verified_claim": "Current NPB+ player information separately lists Sprint Speed (スプリントスピード) and fastest time to first base (最速タイム（一塁到達）) as batter tracking fields.",
+      "status": "SOURCE_CONFIRMED_NEW_OR_REOPENED",
+      "provenance_guard": "This confirms current source availability only. It does not validate historical local npb_plus_measurement.hp_to_1b_sec values previously classified MISATTRIBUTED_SOURCE.",
+      "next_action": "Recollect exact current per-player H2F from the official NPB+ surface with value-level provenance; keep the old contaminated local field excluded until independently reconciled."
+    },
+    {
+      "evidence_id": "SP103-EXT-MLB-90FT-SPLITS",
+      "source": "MLB Statcast 90-foot Running Splits glossary / Baseball Savant leaderboard",
+      "url": "https://www.mlb.com/glossary/statcast/90-foot-running-splits",
+      "leaderboard_url": "https://baseballsavant.mlb.com/running_splits",
+      "verified_claim": "Statcast breaks qualifying home-to-first runs into cumulative five-foot increments through a standardized 90-foot time; the leaderboard exposes raw split times and percentile rankings. A 2017 leaderboard is currently accessible in addition to current seasons.",
+      "status": "SOURCE_CONFIRMED_NEW",
+      "construct_role": "initial acceleration shape plus standardized end-to-end running context; distinct from Sprint Speed",
+      "bias_guard": "The glossary notes raw home-to-first geometry differs by batting side and defines a standardized 90-foot extrapolation. Do not equate raw contact-to-first and standardized 90-foot time without preserving that distinction.",
+      "next_action": "Inventory available seasons and eligible NPB/MLB crosswalk players; collect split vectors and derive predeclared acceleration-shape features with player-clustered validation."
+    },
+    {
+      "evidence_id": "SP103-EXT-MLB-OF-JUMP-BURST",
+      "source": "Baseball Savant Statcast Outfielder Jump leaderboard",
+      "url": "https://baseballsavant.mlb.com/leaderboard/outfield_jump",
+      "verified_claim": "Outfielder Jump is exposed with separate Reaction, Burst, and Route components; historical player pages also expose annual component values.",
+      "status": "SOURCE_CONFIRMED_NEW",
+      "construct_role": "defensive-context burst/acceleration proxy for eligible outfielders only",
+      "bias_guard": "Use Burst separately. Do not collapse Reaction or Route into physical running speed, and do not generalize an outfielder-only context metric to all players without validation.",
+      "next_action": "Measure MLB-experienced outfielder coverage and same-player relation to Sprint Speed / 90-foot acceleration before deciding whether Burst adds independent information."
+    },
+    {
+      "evidence_id": "SP103-EXT-DELTA-SPD",
+      "source": "DELTA 1.02 Spd glossary",
+      "url": "https://1point02.jp/op/gnav/glossary/gls_explanation.aspx?ecd=204&eid=20047",
+      "verified_claim": "1.02 defines Spd (Speed Score) as a 0-10 index averaging four components: stolen-base success rate, stolen-base attempt frequency, triple rate, and scoring frequency.",
+      "status": "SOURCE_CONFIRMED_NEW_OR_UNUSED",
+      "construct_role": "mixed outcome proxy, not direct physical speed",
+      "double_count_guard": "The formula overlaps with stolen-base and triple/outcome lanes already present in the project. Any use must test incremental information and avoid counting the same outcomes twice.",
+      "next_action": "Inventory historical/current availability and test conditional incremental validity against independent physical evidence. Reject or downweight if it adds no information beyond its component proxies."
+    }
+  ],
+  "local_provenance_conflict": {
+    "artifact": "docs/audits/luna_npb_plus_provenance_contamination_20260814.md",
+    "issue": "Historical local hp_to_1b_sec was classified MISATTRIBUTED_SOURCE and removed from NPB+ direct interpretation.",
+    "resolution_policy": "REOPEN_SOURCE_AVAILABILITY_NOT_OLD_VALUES"
+  },
+  "governance": {
+    "sp079_allowed": false,
+    "owner_verdict_allowed": false,
+    "shoulder_allowed": false
+  }
+}
