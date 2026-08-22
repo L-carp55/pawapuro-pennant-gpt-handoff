@@ -1,0 +1,16 @@
+feedback_id	owner_requirement	minimum_acceptance_test	seed_existing_mapping	status
+OF-001	PowerProの既存値へ合わせに行かず、独立査定後のQA/文脈として使う	PowerPro current labelを除いてもphysical pathが成立し、最終値をPowerProへ自動修正する処理がない	SR-007;SP-101 powerpro_label_absent_from_physical_path	REQUIRES_SP103_TRACE
+OF-002	走力は盗塁技術・走塁判断とは分離し、純粋な野球上の足の速さを先に査定する	盗塁/走塁技術由来フィールドを除去してphysical estimateが成立し、技術系は別レーン/得能へ残る	SR-002	REQUIRES_SP103_TRACE
+OF-003	最高速度だけでなく加速・短距離・一塁到達・T90等を使う	final-appraisal preflightでtop-speed単独支配をablationし、加速/短距離laneの利用可否を全100人で明示	SR-008;SP-007;SP-017	REQUIRES_SP103_TRACE
+OF-004	直接T90、電子/光電管30m・50m、Sprint Speed、古いプロフィール50m、H2F等を証拠階層化し、不完全だから即捨てない	各metricのprotocol/time/confidence/rangeが保存され、変換不能と証拠無価値を分離	SR-004;SR-055;EX-020/021/023/025	REQUIRES_SP103_TRACE
+OF-005	2026だけでなく過去の十分な身体データから高信頼アンカーを大量に作る	current100外も含むhistorical physical-rich anchor populationを列挙しcoverageを計測	SP-021;SP-101 historical calibration	REQUIRES_SP103_TRACE
+OF-006	データ不足選手はデータ豊富アンカーとの速い/遅い・類似比較で補う	各sparse playerに利用可能anchor/transfer route、common support、uncertainty、利用不能理由を明示	SP-022;SP-101 MB-01/02/03/07/16/18	REQUIRES_FINAL_DECISION_USE_PROOF
+OF-007	Sprint Speed単独のtop-speed dominanceを避け、加速・短距離差と不確実性を保持する	top-speed removal ablationとlane-share/influence監査を最終査定前に実施	SP-100;SP-101 MB-18	REQUIRES_SP103_NEW_QA
+OF-008	MLB The Showは狭い6人/7pairだけでなくMLB昇格経験のある対象者全体へ使える可能性を検討する	eligible MLB appearance universeが列挙され、The Show matched/missing/unresolvedが全対象で明示	SR-023/024/025/026;SP-101	IMPLEMENTED_NEEDS_FINAL_USE_TRACE
+OF-009	過去NPB在籍選手、日本人NPB→MLB、外国人MLB→NPB、出戻り、多重移籍をThe Show/MLB比較に使う	各transition cohortがscreened/represented/missingで計測される	SP-101 MB-04/05/10	IMPLEMENTED_NEEDS_FINAL_USE_TRACE
+OF-010	The ShowとPowerProの能力推移・時系列変化も利用可能性を検討する	temporal gap/edition/update/trajectoryを保持し、current値への無制限直変換をしない	SR-005;SR-023/024;SP-101 MB-04/06/09	IMPLEMENTED_NEEDS_FINAL_USE_TRACE
+OF-011	不完全・古い・時点不明・主観的な方向証拠も慎重に最大限活用する	zero-info化を禁止しrange/confidence/downweight又はscoped exclusionを保存	SR-019;SR-022;SR-055;SR-058	REQUIRES_SP103_TRACE
+OF-012	SNS、動画、scouting、代走、Community等も物理証拠/文脈として使える範囲を調べる	収集coverageとdecision-useを別々に計測し、comment-only high confidenceを禁止	SR-014/016/019/020/022/052;SP-102	REQUIRES_SP103_TRACE
+OF-013	年齢・怪我・衰えを時系列補正/文脈に使う	age/injury available/missingと実際のdecision influenceを選手別に記録	SR-030/031;SP-101 MB-11	REQUIRES_SP103_TRACE
+OF-014	走力は50m走そのものではなく野球における足の速さとして査定する	constructをtop speed/acceleration/end-to-end/defensive burstと技術contextに分解し、単一陸上タイムを無制限変換しない	SR-002;SR-008;SR-055	REQUIRES_SP103_TRACE
+OF-015	使えるものを過度に切り捨てず、同時に同一情報の二重計上を避ける	全evidence familyにindependence/double-count riskとroute-removal ablationを付与	SR-055/057/058;SP-101 MB-18	REQUIRES_SP103_TRACE
