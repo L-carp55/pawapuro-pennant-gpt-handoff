@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "updated_at": "2026-08-24",
   "program": "Pawapuro Pennant World Simulation Design",
-  "phase": "DESIGN_DISCOVERY_AND_EXTERNAL_IDEA_MINING",
+  "phase": "DESIGN_DISCOVERY_EXTERNAL_RESEARCH_READY",
   "canonical_branch": "design/pennant-world-master-20260824",
   "authority_order": [
     "docs/state/pennant_feature_requirements_20260824.tsv",
@@ -33,7 +33,10 @@
   },
   "external_research": {
     "codex_news_idea_mining_spec": "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md",
-    "recommended_branch": "codex/pennant-news-idea-mining-20260824",
+    "execution_branch": "codex/pennant-news-idea-mining-20260824",
+    "branch_created": true,
+    "branch_verified_identical_to_design_baseline_at_creation": true,
+    "baseline_head_at_branch_creation": "8d52cd6a3c4c5fd307021ddbe7bae8b9f0218d68",
     "dispatch_ready": true,
     "purpose": "Find real baseball mechanisms/events not yet represented in the 235-row canonical feature ledger.",
     "must_not_directly_modify_canonical_pw_requirements": true,
@@ -63,9 +66,16 @@
     "shoulder": "DO_NOT_START_FROM_THIS_PROGRAM",
     "speed_design_and_pennant_design_are_separate": true
   },
+  "completed_in_this_baseline": [
+    "Persist 235-row granular feature ledger",
+    "Persist integrated human-readable master design",
+    "Persist wall-talk completeness audit",
+    "Persist Codex external-news/history research specification",
+    "Persist current-state handoff",
+    "Create and verify dedicated Codex research branch"
+  ],
   "next_sequence": [
-    "Verify wall-talk completeness baseline",
-    "Create Codex research branch from this design baseline",
+    "Dispatch Codex on codex/pennant-news-idea-mining-20260824",
     "Run broad baseball news/history idea mining with parallel subagents and independent QA",
     "Review new candidate mechanisms against canonical PW requirements",
     "Continue owner wall-talk on genuinely new/high-value ideas",
