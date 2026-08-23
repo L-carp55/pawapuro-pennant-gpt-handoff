@@ -1,0 +1,236 @@
+requirement_id	module	requirement	origin	status	implementation_gate
+PW-001	CORE	内部は深く表面操作はパワプロ程度に簡単にする	JOINT	BASELINE	DESIGN
+PW-002	CORE	数十年〜100年でも同じ攻略法・勢力図・制度に固定されない	JOINT	BASELINE	DESIGN
+PW-003	CORE	自然発生を優先しご都合覚醒・ジンクス等を避ける	JOINT	BASELINE	DESIGN
+PW-004	CORE	真の能力と観測成績を分ける	JOINT	BASELINE	DESIGN
+PW-005	CORE	組織実力と評判を分ける	OWNER	REQUESTED	DESIGN
+PW-006	CORE	CPUだけhidden truthを読まない	JOINT	BASELINE	DESIGN
+PW-007	CPU	全CPU球団は本気で長期的優勝を目指す	OWNER	ACCEPTED	DESIGN
+PW-008	CPU	勝つ気がない無気力経営はゲーム仕様として排除する	OWNER	ACCEPTED	DESIGN
+PW-009	CPU	低迷時は必ず戦略・人事・組織を再評価する	JOINT	BASELINE	DESIGN
+PW-010	UX	業務ごとに手動・方針指定・完全自動を切替可能	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-011	UX	自操作球団ではプレイヤーがGM/監督より最終決定権を持つ	OWNER	ACCEPTED	DESIGN
+PW-012	UX	任せた領域だけスタッフ能力・思想を反映する	JOINT	ACCEPTED	DESIGN
+PW-013	UX	重要案件だけ自動進行を停止できる	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-014	UX	全CPU観戦・途中から球団操作・観戦復帰を可能にする	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-015	LIFECYCLE	固定早熟/普通/晩成を人生の主決定変数にしない	JOINT	BASELINE	DESIGN
+PW-016	LIFECYCLE	能力別NPB実測aging curveを使用する	JOINT	BASELINE	RESEARCH
+PW-017	LIFECYCLE	persistent player-specific成長・衰え差を持つ	JOINT	BASELINE	RESEARCH
+PW-018	LIFECYCLE	小さいannual development shockを持つ	ASSISTANT	PROPOSED	RESEARCH
+PW-019	LIFECYCLE	将来性を固定能力capではなく確率分布として持つ	JOINT	BASELINE	DESIGN
+PW-020	LIFECYCLE	実在選手は開始時点までの履歴から本人傾向を更新可能	ASSISTANT	PROPOSED	RESEARCH
+PW-021	LIFECYCLE	generated rookieは実測母集団から個人差をsampleする	ASSISTANT	PROPOSED	RESEARCH
+PW-022	LIFECYCLE	単年成績悪化をそのまま能力低下にしない	JOINT	BASELINE	DESIGN
+PW-023	LIFECYCLE	調子・疲労・運とlatent abilityを分離する	JOINT	BASELINE	DESIGN
+PW-024	LIFECYCLE	遅咲き・期待外れ・急落・長寿・復活等を自然発生させる	OWNER	REQUESTED	DESIGN
+PW-025	DEVELOPMENT	一軍で高レベル相手にもがく経験をゲーム的に低効率扱いしない	OWNER	ACCEPTED	DESIGN
+PW-026	DEVELOPMENT	能力不足若手の一軍起用costは主に勝率・興行・財務へ出す	OWNER	ACCEPTED	DESIGN
+PW-027	DEVELOPMENT	一軍ベンチ漬けより二軍で大量実戦が育成上有利になり得る	JOINT	BASELINE	RESEARCH
+PW-028	DEVELOPMENT	出場経験効果は逓減し無限成長を防ぐ	ASSISTANT	PROPOSED	RESEARCH
+PW-029	DEVELOPMENT	登録日数でなく実打席/BF/IP/役割を見る	JOINT	BASELINE	DESIGN
+PW-030	DEVELOPMENT	二軍成績を能力成長の直接原因にしない	JOINT	BASELINE	DESIGN
+PW-031	DEVELOPMENT	二軍年度成績・通算・タイトル・昇格履歴を保存する	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-032	DEVELOPMENT	育成方針は自然成長方向へのbiasとして使う	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-033	DEVELOPMENT	全選手への毎年手動育成指定を不要にする	JOINT	BASELINE	DESIGN
+PW-034	DEVELOPMENT	特定選手のみ重点育成可能	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-035	DEVELOPMENT	重点育成対象が多すぎるとコーチ資源が薄まる	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-036	POSITION	強打一塁/外野/三塁を二遊間/捕手へ移して打撃そのまま無双する攻略を防ぐ	OWNER	ACCEPTED	DESIGN
+PW-037	POSITION	コンバートに守備習熟・身体負荷・認知負荷・練習負荷を持たせる	JOINT	BASELINE	RESEARCH
+PW-038	POSITION	守備負担が疲労等を介して実効打撃へ影響する	OWNER	REQUESTED	RESEARCH
+PW-039	POSITION	遊撃→三塁→一塁→代打等で選手寿命を延ばせる	JOINT	BASELINE	DESIGN
+PW-040	POSITION	捕手の高い負荷を打撃発揮・疲労へ反映する	OWNER	REQUESTED	RESEARCH
+PW-041	POSITION	投手の先発/救援転向に役割・育成方向の違いを持たせる	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-042	MECHANICS	投球フォーム変更を見た目だけでなく能力構造へ作用させる	OWNER	ACCEPTED	DESIGN
+PW-043	MECHANICS	160km/h投手を見た目変更だけで160km/hアンダーにできないようにする	OWNER	ACCEPTED	DESIGN
+PW-044	MECHANICS	arm slot/release/stride/extension等から球速・変化・制球等を再計算する	JOINT	BASELINE	RESEARCH
+PW-045	MECHANICS	アンダー等に固定最大球速capを置かず個体差を許す	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-046	MECHANICS	打撃フォーム変更にもコンタクト/長打/三振等への意味を持たせる	OWNER	ACCEPTED	DESIGN
+PW-047	MECHANICS	Cosmetic form changeとMechanical changeを分離する	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-048	CAMP	春季キャンプを技術改造の主要期間にする	JOINT	BASELINE	DESIGN
+PW-049	CAMP	春季キャンプに特別・臨時コーチを招聘できる	OWNER	REQUESTED	DESIGN
+PW-050	CAMP	臨時コーチは単純能力+ではなく改造適性発見・成功/撤退判断等に効く	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-051	PITCH	新球習得・既存球種改良を実装する	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-052	PITCH	新球習得は成功保証せず未定着・武器化等を持つ	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-053	DRAFT	ドラフトを長期人材供給システムとして扱う	JOINT	BASELINE	DESIGN
+PW-054	DRAFT	高校/大学/社会人/独立を固定成長型でなく年齢・完成度・情報量で差別化	JOINT	BASELINE	DESIGN
+PW-055	DRAFT	ドラフト候補の真の能力とスカウト評価を分離する	JOINT	BASELINE	DESIGN
+PW-056	DRAFT	CPUもhidden真値でなく自球団スカウト情報を使う	JOINT	BASELINE	DESIGN
+PW-057	DRAFT	全球団ごとに独自draft boardを持つ	JOINT	BASELINE	DESIGN
+PW-058	DRAFT	スカウトは能力/将来性をrangeとconfidenceで報告する	JOINT	BASELINE	DESIGN
+PW-059	DRAFT	調査を重ねるほどrangeが狭くなるが完全真値にはならない	JOINT	BASELINE	DESIGN
+PW-060	DRAFT	毎週細かなscout point操作を要求しない	JOINT	BASELINE	DESIGN
+PW-061	DRAFT	少数の重点調査候補を指定できる	JOINT	BASELINE	DESIGN
+PW-062	DRAFT	メディアprospect rankingを別系統で持つ	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-063	DRAFT	BPAとteam needsを両方考慮する	JOINT	BASELINE	DESIGN
+PW-064	DRAFT	上位指名ほどBPA寄り下位ほどneeds/role/lottery ticketを重視可能	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-065	DRAFT	competitive windowで即戦力/素材評価が変わる	JOINT	BASELINE	DESIGN
+PW-066	DRAFT	豊作/不作を固定ボーナスでなく生成結果として自然発生させる	JOINT	BASELINE	DESIGN
+PW-067	DRAFT	投手豊作・大学投手豊作等カテゴリ別豊作も自然発生	JOINT	BASELINE	DESIGN
+PW-068	DRAFT	能力間に現実的相関を持たせ万能超人乱造を防ぐ	JOINT	BASELINE	RESEARCH
+PW-069	DRAFT	選手タイプは生成templateより生成後の説明labelを基本にする	JOINT	BASELINE	DESIGN
+PW-070	DRAFT	アマ成績を簡略生成し観測情報として見せる	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-071	DRAFT	育成ドラフトで一芸型を重要候補にする	JOINT	BASELINE	DESIGN
+PW-072	DRAFT	指名漏れ選手を消さず大学/社会人/独立で再登場可能	JOINT	BASELINE	DESIGN
+PW-073	DRAFT	一度生成したprospectの人物史を永続化する	JOINT	BASELINE	DESIGN
+PW-074	DRAFT	ドラフト時の世間評価/自球団評価/指名順位を永久保存	JOINT	BASELINE	DESIGN
+PW-075	DRAFT	ドラフト世代の後年振り返りページを作る	JOINT	BASELINE	DESIGN
+PW-076	STAFF	GMと監督をCPU球団では別人格にする	OWNER	ACCEPTED	DESIGN
+PW-077	STAFF	自操作球団ではGM/監督の権限を自由に決める	OWNER	ACCEPTED	DESIGN
+PW-078	STAFF	GMに評価能力・戦略思想差を持たせる	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-079	STAFF	低能力GMをランダムAIではなく評価/計画誤差として表現	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-080	STAFF	監督能力と監督思想を分離する	JOINT	BASELINE	DESIGN
+PW-081	STAFF	コーチは本人自然成長より従属的な方向/効率効果にする	JOINT	BASELINE	DESIGN
+PW-082	STAFF	スカウトごとに現在/将来/投手/野手/外国人/怪我等の得意差	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-083	STAFF	引退選手の一部がコーチ/監督/GMへ転身する	JOINT	BASELINE	DESIGN
+PW-084	STAFF	名選手=名コーチにはしない	JOINT	BASELINE	DESIGN
+PW-085	STAFF	スタッフ人事で球団文化が形成される	JOINT	BASELINE	DESIGN
+PW-086	STAFF	CPUは現在戦力・GM思想等に合う監督を選ぶ	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-087	STAFF	監督解任は絶対順位でなく期待値比で評価する	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-088	CPU	competitive windowを球団ごとに持つ	JOINT	BASELINE	DESIGN
+PW-089	CPU	再建球団は若手/将来価値、優勝球団は即戦力を相対的に重視	JOINT	BASELINE	DESIGN
+PW-090	CPU	一度強くなって永久常勝するsnowballを自然な市場/年齢/人材流動で抑える	OWNER	REQUESTED	DESIGN
+PW-091	CPU	王朝や連覇そのものは許容する	JOINT	BASELINE	DESIGN
+PW-092	CPU	成功したプレイヤー球団の戦略をCPUが研究・模倣する	JOINT	BASELINE	DESIGN
+PW-093	CPU	CPU同士の革新・成功も他球団へ波及する	JOINT	BASELINE	DESIGN
+PW-094	CPU	成功した選手タイプの市場価格が上昇する	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-095	VALUE	選手価値を試合戦力だけでなく将来/mentor/leadership/info/commercial/fitへ広げる	OWNER	REQUESTED	DESIGN
+PW-096	VALUE	衰えたベテランを若手育成目的で獲得できる	OWNER	REQUESTED	DESIGN
+PW-097	VALUE	ベテランmentor効果を同ポジション/技能/接点/本人意欲等で限定する	JOINT	BASELINE	RESEARCH
+PW-098	VALUE	ムードメーカーを一軍ベンチに置く意味を持たせる	OWNER	REQUESTED	DESIGN
+PW-099	VALUE	ムードメーカー効果を全能力buffでなく適応・情報共有等へ間接作用	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-100	IDENTITY	選手ごとの性格と価値観を広い範囲で実装する	OWNER	ACCEPTED	DESIGN
+PW-101	IDENTITY	元々ファンだった球団をFA等で好むことがある	OWNER	REQUESTED	DESIGN
+PW-102	IDENTITY	海外志向をMLBだけでなく戦力外後の海外現役続行等まで広く持つ	OWNER	ACCEPTED	DESIGN
+PW-103	IDENTITY	年俸より出場機会を求めるFAを可能にする	OWNER	REQUESTED	DESIGN
+PW-104	IDENTITY	海外志向・家族・地元・優勝・安定・role等を選手ごとに異なるweightで持つ	JOINT	BASELINE	DESIGN
+PW-105	IDENTITY	球団との扱われ方履歴で愛着・信頼が変化する	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-106	IDENTITY	性格・価値観は完全固定でなくcareerと年齢で一部変化可能	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-107	IDENTITY	内面数値を完全可視化せず発言/報道/スカウトから不完全観測	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-108	REPUTATION	球団にも選手から見た評判を持たせる	OWNER	ACCEPTED	DESIGN
+PW-109	REPUTATION	功労者処遇・故障・雰囲気・育成実績等から評判が形成される	OWNER	REQUESTED	DESIGN
+PW-110	REPUTATION	評判は実績から動的に形成し永久固定球団特性にしない	JOINT	BASELINE	DESIGN
+PW-111	REPUTATION	悪評/好評はFA・代理人・若手の球団選好へ影響する	JOINT	BASELINE	DESIGN
+PW-112	KNOWLEDGE	移籍捕手等が旧リーグ/古巣の情報を持ち込む	OWNER	REQUESTED	DESIGN
+PW-113	KNOWLEDGE	古巣側も移籍選手の癖・傾向を熟知している可能性を持つ	OWNER	REQUESTED	DESIGN
+PW-114	KNOWLEDGE	情報価値は時間経過や環境変化で陳腐化する	JOINT	BASELINE	DESIGN
+PW-115	KNOWLEDGE	捕手だけでなく投手/打者/コーチ/スカウトの知識移転にも適用	JOINT	BASELINE	DESIGN
+PW-116	RESEARCH	2年目のジンクスを相手研究と本人再適応で自然発生させる	OWNER	ACCEPTED	DESIGN
+PW-117	RESEARCH	試合中の1巡目→2巡目→3巡目で相手学習を持つ	OWNER	REQUESTED	RESEARCH
+PW-118	RESEARCH	疲労によるTTOと打者の学習を分離する	ASSISTANT	PROPOSED	RESEARCH
+PW-119	RESEARCH	シーズン中に新人/新フォームの情報が蓄積する	OWNER	REQUESTED	DESIGN
+PW-120	RESEARCH	球団ごとに事前分析/映像/初見対応/試合中調整力を持つ	OWNER	REQUESTED	DESIGN
+PW-121	RESEARCH	特定打者/投手への重点対策をユーザーが指定可能	OWNER	REQUESTED	DESIGN
+PW-122	RESEARCH	研究資源を有限にして重点対象とのtrade-offを作る	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-123	RESEARCH	相手研究→対策→本人再適応→再研究cycleを持つ	JOINT	BASELINE	DESIGN
+PW-124	TRANSFER	移籍覚醒を出場機会/役割/コーチ/フォーム/球場/適応等から自然発生	OWNER	REQUESTED	DESIGN
+PW-125	TRANSFER	大型FA失敗も同じcontextual systemから自然発生	OWNER	REQUESTED	DESIGN
+PW-126	TRANSFER	真の能力と環境下の実効パフォーマンスを分離する	JOINT	BASELINE	DESIGN
+PW-127	TRANSFER	戦力外→海外→復活→NPB復帰を可能にする	OWNER	ACCEPTED	DESIGN
+PW-128	TRANSFER	戦力外後のKBO/CPBL/Mexico/独立等の進路を本人価値観で選択	OWNER	REQUESTED	DESIGN
+PW-129	CONTRACT	FA契約を金額だけでなく年数/role/優勝/愛着/地域等で選ぶ	OWNER	ACCEPTED	DESIGN
+PW-130	CONTRACT	起用約束を破ると本人不満・球団信頼低下	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-131	CONTRACT	代理人を独立人物として実装する	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-132	CONTRACT	代理人に交渉力/国際network/方針差を持たせる	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-133	CONTRACT	ポスティング希望→球団容認でも海外契約不成立なら残留する	OWNER	ACCEPTED	DESIGN
+PW-134	CONTRACT	ポスティング不成立理由を市場/条件/role/medical/制度等から生成	JOINT	BASELINE	DESIGN
+PW-135	CONTRACT	球団のposting friendliness評判を持つ	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-136	CONTRACT	一定以上の減俸提示に同意しなければ自由契約を選べる制度を実装	OWNER	ACCEPTED	DESIGN
+PW-137	CONTRACT	減額制限自由契約をFAとは別経路として扱う	JOINT	BASELINE	DESIGN
+PW-138	CONTRACT	長期高額契約が将来財務・若手起用を圧迫する	JOINT	BASELINE	DESIGN
+PW-139	CONTRACT	FA/契約市場価格を供給・年齢・希少性等で変動させる	JOINT	BASELINE	DESIGN
+PW-140	CONTRACT	高額契約へのsunk-cost biasを一部GM/監督の失敗要因として持つ	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-141	FINANCE	球団財務を選手年俸/スタッフ/スカウト/多軍/海外/R&D/医療等まで持つ	JOINT	BASELINE	DESIGN
+PW-142	FINANCE	売店価格等の細かすぎる経営操作は前面に出さない	JOINT	BASELINE	DESIGN
+PW-143	FINANCE	観客動員を勝率だけでなくスター/若手/地域/記録等から決める	OWNER	REQUESTED	DESIGN
+PW-144	FINANCE	優勝で収入増だけでなく年俸・期待・スタッフ価格等も上昇	JOINT	BASELINE	DESIGN
+PW-145	INNOVATION	球団固有の革新的な獲得・育成・分析施策を大量に導入する	OWNER	ACCEPTED	DESIGN
+PW-146	INNOVATION	固定tech treeでなく発見→実験→成功/失敗→拡大→模倣cycleにする	JOINT	BASELINE	DESIGN
+PW-147	INNOVATION	カープ型海外academyを作れる	OWNER	REQUESTED	DESIGN
+PW-148	INNOVATION	ドミニカ以外にも中南米/アジア/豪州/欧州/アフリカ等の発掘拠点を作れる	OWNER	ACCEPTED	DESIGN
+PW-149	INNOVATION	ソフトバンク型3軍/4軍制を作れる	OWNER	REQUESTED	DESIGN
+PW-150	INNOVATION	多軍制に選手数/試合機会メリットと大きな維持費を持たせる	JOINT	BASELINE	DESIGN
+PW-151	INNOVATION	MLB AA/海外大学/JUCO/独立等との新pipelineを構築可能	OWNER	ACCEPTED	DESIGN
+PW-152	INNOVATION	新しいwinter league派遣先を開拓可能	OWNER	ACCEPTED	DESIGN
+PW-153	INNOVATION	AI活用・AI開発・映像解析・scouting・mechanics等を継続革新領域にする	OWNER	ACCEPTED	DESIGN
+PW-154	INNOVATION	AIをLv1/2/3固定treeにしない	JOINT	BASELINE	DESIGN
+PW-155	INNOVATION	Network Capitalを蓄積し一朝一夕で海外pipelineを作れないようにする	JOINT	BASELINE	DESIGN
+PW-156	INNOVATION	Knowledge Capitalを人材・実績・研究で蓄積する	JOINT	BASELINE	DESIGN
+PW-157	INNOVATION	成功した組織人材を他球団が引き抜きノウハウが拡散する	OWNER	REQUESTED	DESIGN
+PW-158	INNOVATION	新施策をスタッフが提案しユーザーが承認/実験/却下可能	JOINT	BASELINE	DESIGN
+PW-159	INNOVATION	小規模球団も安価な新アイデア・先行発見でfirst mover advantageを取れる	JOINT	BASELINE	DESIGN
+PW-160	GLOBAL	海外を外国人候補生成器でなく生きたGlobal Baseball Worldにする	OWNER	ACCEPTED	DESIGN
+PW-161	GLOBAL	2026開始時の実在海外選手を可能な限り実装する	OWNER	ACCEPTED	RESEARCH
+PW-162	GLOBAL	MLB/AAA/AA/MiLB prospect/KBO/CPBL/Mexico/Cuba/独立等を優先収録	OWNER	REQUESTED	RESEARCH
+PW-163	GLOBAL	2026のAA有望株が後年MLB昇格・WBC代表になるcareerを可能にする	OWNER	REQUESTED	DESIGN
+PW-164	GLOBAL	衰えたMLBスターがNPB来日希望し争奪戦になるcareerを可能にする	OWNER	REQUESTED	DESIGN
+PW-165	GLOBAL	海外の全試合をNPB同等詳細にはせずleague別sim粒度を変える	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-166	GLOBAL	Real player universeから未来generated universeへ滑らかに移行	JOINT	BASELINE	DESIGN
+PW-167	GLOBAL	海外league qualityを固定せず長期変動させる	OWNER	ACCEPTED	DESIGN
+PW-168	GLOBAL	国・地域ごとに異なる契約/移籍/政府/連盟制度を持つ	OWNER	ACCEPTED	DESIGN
+PW-169	GLOBAL	キューバ選手の海外契約自由度・連盟関与等を制度stateとして持つ	OWNER	REQUESTED	DESIGN
+PW-170	GLOBAL	キューバ政府/連盟とNPB/MLBの交渉で制度が変化し得る	OWNER	REQUESTED	DESIGN
+PW-171	GLOBAL	キューバ等の国外移住/連盟離脱を高レベルcareer eventとして扱う	OWNER	REQUESTED	DESIGN
+PW-172	GLOBAL	国際制度は自由化だけでなく規制強化/協定終了/ビザ問題等もあり得る	JOINT	BASELINE	DESIGN
+PW-173	GLOBAL	海外制度変更がNPBの選手市場へ波及する	JOINT	BASELINE	DESIGN
+PW-174	WORLD_GROWTH	世界中で野球普及・競技人口増加・league発展を起こせる	OWNER	ACCEPTED	DESIGN
+PW-175	WORLD_GROWTH	国ごとに人気/競技人口/施設/指導/league quality等のecosystem stateを持つ	JOINT	BASELINE	DESIGN
+PW-176	WORLD_GROWTH	アフリカ等の新地域が数十年で有力選手供給地になり得る	OWNER	ACCEPTED	DESIGN
+PW-177	WORLD_GROWTH	NPB球団が海外academy/coach/scout等で世界普及へ関与できる	OWNER	REQUESTED	DESIGN
+PW-178	WORLD_GROWTH	市場を開拓した球団だけが永遠に独占せず他球団/MLBが参入する	JOINT	BASELINE	DESIGN
+PW-179	WORLD_GROWTH	十分な基盤が整えば新しいprofessional leagueが稀に誕生する	OWNER	REQUESTED	DESIGN
+PW-180	WORLD_GROWTH	league縮小/統合/停滞も可能にして世界全体無限成長を防ぐ	JOINT	BASELINE	DESIGN
+PW-181	INTERNATIONAL	WBC/Premier12/五輪/U-18/U-23等を意味ある大会として実装	OWNER	ACCEPTED	DESIGN
+PW-182	INTERNATIONAL	国際大会が人気/スカウト露出/海外評価/知識交流/国の普及へ影響	OWNER	ACCEPTED	DESIGN
+PW-183	INTERNATIONAL	国際大会疲労・故障影響をOFF/LIGHT/REALISTIC等でtoggle可能	OWNER	ACCEPTED	DESIGN
+PW-184	INTERNATIONAL	疲労OFFでも大会の名誉/人気/世界普及等の意味は残す	JOINT	BASELINE	DESIGN
+PW-185	INTERNATIONAL	オールスターに人気/名誉/交流/歴史価値を持たせる	OWNER	ACCEPTED	DESIGN
+PW-186	INTERNATIONAL	国際大会の躍進が国の人気→競技人口→将来選手供給へfeedback	OWNER	ACCEPTED	DESIGN
+PW-187	INTERNATIONAL	国際大会史・新しい国家間ライバル関係を保存する	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-188	GOVERNANCE	選手会を正式な制度主体として実装する	OWNER	ACCEPTED	DESIGN
+PW-189	GOVERNANCE	FA年数短縮等を選手会/球団/NPBの交渉で変更可能	OWNER	ACCEPTED	DESIGN
+PW-190	GOVERNANCE	DH/ABS/申告敬遠/牽制制限/base size/延長/tie-break等を変更可能	OWNER	ACCEPTED	DESIGN
+PW-191	GOVERNANCE	ボール反発係数やMLB球導入等の用具変更を可能にする	OWNER	ACCEPTED	DESIGN
+PW-192	GOVERNANCE	ルール変更は能力値直接補正でなくengine物理/確率条件へ作用	JOINT	BASELINE	DESIGN
+PW-193	GOVERNANCE	Rule Proposal Engineで提案主体/目的/試験/採決/施行/副作用/再改正を一般化	JOINT	BASELINE	DESIGN
+PW-194	GOVERNANCE	MiLB/二軍等で将来ルールを試験導入できる	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-195	GOVERNANCE	ドラフト制度を自由に変更可能なRule Engineにする	OWNER	ACCEPTED	DESIGN
+PW-196	GOVERNANCE	希望枠/自由入団枠/ウェイバー/lottery/NPB型抽選等を組替可能	OWNER	ACCEPTED	DESIGN
+PW-197	GOVERNANCE	draft pick trade/compensation/pick forfeiture等も制度軸にする	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-198	GOVERNANCE	制度変更に施行日・経過措置・対象世代を持たせる	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-199	GOVERNANCE	制度の抜け道をユーザー/CPUが利用し頻発すれば論争・改正へ進む	OWNER	ACCEPTED	DESIGN
+PW-200	GOVERNANCE	いわゆる制度趣旨との摩擦がある移籍経路をrule exploitとして一般化	OWNER	REQUESTED	DESIGN
+PW-201	GOVERNANCE	球団数12を初期条件とし14/16等への拡張を可能にする	OWNER	ACCEPTED	DESIGN
+PW-202	GOVERNANCE	拡張時にExpansion Draftを実施可能	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-203	GOVERNANCE	league/地区/CS/Japan Series/interleague/試合数を変更可能	OWNER	REQUESTED	DESIGN
+PW-204	GOVERNANCE	球団移転/売却/合併は低頻度の大事件として将来候補	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-205	INTEGRITY	組織のcompliance/discipline/internal reporting等を持つ	OWNER	REQUESTED	DESIGN
+PW-206	INTEGRITY	甘い組織では小問題が放置され大問題へ発展しやすい構造	OWNER	REQUESTED	DESIGN
+PW-207	INTEGRITY	規律違反/ハラスメント/窃盗/賭博/八百長/裏金等をスパイスとして扱う	OWNER	REQUESTED	DESIGN
+PW-208	INTEGRITY	重大不祥事は非常に低頻度・高影響に校正する	JOINT	BASELINE	DESIGN
+PW-209	INTEGRITY	不祥事に注意/謹慎/降格/出場停止/解除/pick剥奪/球団制裁等の結果を持つ	JOINT	BASELINE	DESIGN
+PW-210	INTEGRITY	実在人物に架空の重大犯罪/ハラスメントを標準生成しない	JOINT	BASELINE	DESIGN
+PW-211	INTEGRITY	generated人物は将来不祥事イベント対象にできる	JOINT	BASELINE	DESIGN
+PW-212	INTEGRITY	球団の隠蔽/厳正対応で長期評判影響を変える	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-213	HISTORY	選手のdraft/二軍/一軍/海外/受賞/移籍/契約/代表/引退後staffを一生涯保存	JOINT	BASELINE	DESIGN
+PW-214	HISTORY	球団の順位/人事/補強/革新/不祥事/制度議論等を球団史に保存	JOINT	BASELINE	DESIGN
+PW-215	HISTORY	通算・年度・球団記録を充実させる	OWNER	ACCEPTED	DESIGN
+PW-216	HISTORY	ニュースで数字を物語化する	JOINT	BASELINE	DESIGN
+PW-217	LEGENDS	過去名選手本人の転生は標準OFFにする	OWNER	ACCEPTED	DESIGN
+PW-218	LEGENDS	歴史的名選手に似た新人は自然発生し○○二世等と呼ばれる	JOINT	ACCEPTED	DESIGN
+PW-219	LEGENDS	元選手の子供が別人物としてprospect化することを可能にする	JOINT	ACCEPTED	DESIGN
+PW-220	LEGENDS	親子能力をコピーせず弱い相関+本人環境で別careerにする	JOINT	BASELINE	RESEARCH
+PW-221	LEGENDS	完全ファンタジー転生ONは将来optional modeとして残せる	JOINT	ACCEPTED	BACKLOG
+PW-222	INJURY	latent ability/短期調子/fatigue/injuryを分離する	JOINT	BASELINE	DESIGN
+PW-223	INJURY	短期/長期離脱・再発・恒久損失・rehabを別model化する	JOINT	BASELINE	OPEN_DESIGN
+PW-224	INJURY	投手酷使・ベテラン休養を育成/起用と接続する	JOINT	BASELINE	OPEN_DESIGN
+PW-225	QA	20/50/100年simulationで能力・年齢・career・talent equilibriumを検証	JOINT	BASELINE	QA
+PW-226	QA	球団別優勝回数/連覇/王朝duration/再建速度等を長期QA	JOINT	BASELINE	QA
+PW-227	QA	Super-GM Agentで熟練プレイヤーでも永久常勝できないか検証	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-228	QA	Exploit Search Agentで不自然な最強戦略を探索	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-229	QA	hidden rubber-band catch-up補正を使わない	JOINT	BASELINE	DESIGN
+PW-230	RESEARCH	NPB/MLB/海外の大きな野球ニュースをCodexで網羅探索し新機能案を発掘する	OWNER	ACCEPTED	NEXT
+PW-231	RESEARCH	ニュース探索結果を既存要件との差分として機械可読保存する	JOINT	BASELINE	NEXT
+PW-232	GOVERNANCE	現行制度だけでなく過去制度・海外制度・将来experimental ruleを候補に使う	OWNER	ACCEPTED	RESEARCH
+PW-233	GLOBAL	世界の大きな野球ニュース・技術・制度・事件をglobal simulationのidea sourceにする	OWNER	ACCEPTED	NEXT
+PW-234	PROJECT	大規模化したためここまでの壁打ちを一つも漏らさずGitHubへ正本化する	OWNER	ACCEPTED	DONE_THIS_BRANCH
+PW-235	PROJECT	このdesign discovery完了前にPD-001A等の実装Codexへ進まない	JOINT	BASELINE	DESIGN
