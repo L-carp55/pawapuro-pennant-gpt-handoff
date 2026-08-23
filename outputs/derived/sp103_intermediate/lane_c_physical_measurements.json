@@ -1,0 +1,1028 @@
+{
+  "as_of": "2026-08-23",
+  "database_snapshot": {
+    "available": true,
+    "path": "data/pennant.db",
+    "tables": {
+      "baserunning_advances": {
+        "columns": [
+          "season",
+          "park",
+          "kind",
+          "runner",
+          "runner_norm",
+          "outs",
+          "success",
+          "hc_x",
+          "hc_y",
+          "hit_location",
+          "description"
+        ],
+        "rows": 22459
+      },
+      "batting": {
+        "columns": [
+          "season",
+          "game_type",
+          "team",
+          "uniform_no",
+          "name",
+          "position",
+          "g",
+          "pa",
+          "ab",
+          "avg",
+          "obp",
+          "slg",
+          "ops",
+          "r",
+          "rbi",
+          "h",
+          "b1",
+          "b2",
+          "b3",
+          "hr",
+          "tb",
+          "sb",
+          "cs",
+          "bb",
+          "ibb",
+          "so",
+          "gdp",
+          "hbp",
+          "sh",
+          "sf",
+          "player_id"
+        ],
+        "rows": 17908
+      },
+      "bm_bat": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "pa",
+          "wraa",
+          "wrc_plus",
+          "ops",
+          "obp",
+          "slg",
+          "woba",
+          "iso",
+          "k_pct",
+          "bb_pct",
+          "babip",
+          "hr_fb_pct",
+          "gb_pct",
+          "ld_pct",
+          "offb_pct",
+          "iffb_pct"
+        ],
+        "rows": 5171
+      },
+      "bm_fld": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "pos",
+          "inn",
+          "tzr",
+          "rngr",
+          "dpr",
+          "arm",
+          "errr",
+          "pos_adj",
+          "framing",
+          "blocking"
+        ],
+        "rows": 14488
+      },
+      "bm_pd": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "zone",
+          "pitches",
+          "pitch_pct",
+          "overall",
+          "swing",
+          "take",
+          "swing_pct",
+          "contact_pct",
+          "wobacon"
+        ],
+        "rows": 52155
+      },
+      "bm_pit": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "role",
+          "war",
+          "ip",
+          "tbf",
+          "rsaa",
+          "k_bb_pct",
+          "k_pct",
+          "bb_pct",
+          "der",
+          "gb_pct",
+          "ld_pct",
+          "offb_pct",
+          "iffb_pct",
+          "hr_fb_pct",
+          "gmli",
+          "fip",
+          "xfip",
+          "tra",
+          "kwera",
+          "siera",
+          "fip_minus",
+          "xfip_minus",
+          "tra_minus",
+          "kwera_minus",
+          "siera_minus"
+        ],
+        "rows": 12164
+      },
+      "bm_player": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "team",
+          "name_ja",
+          "name_en",
+          "name_sponavi",
+          "war",
+          "bat_war",
+          "run_war",
+          "fld_war",
+          "pit_war",
+          "ubr",
+          "wsb",
+          "dpar",
+          "def_inn",
+          "tzr",
+          "rngr",
+          "dpr",
+          "arm",
+          "errr",
+          "pos_adj"
+        ],
+        "rows": 10431
+      },
+      "bm_pv": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "pitch_type",
+          "grade",
+          "pitches",
+          "pitch_pct",
+          "velo",
+          "xpv",
+          "xpv100",
+          "swstr_pct",
+          "whiff_pct",
+          "gb_pct",
+          "ld_pct",
+          "offb_pct",
+          "iffb_pct",
+          "xwobacon",
+          "wobacon",
+          "csw_pct",
+          "putaway_pct"
+        ],
+        "rows": 26214
+      },
+      "catcher_steal_event": {
+        "columns": [
+          "season",
+          "game_id",
+          "game_date",
+          "game_type",
+          "inning",
+          "catcher",
+          "pitcher",
+          "runner_1b",
+          "runner_2b",
+          "caught",
+          "from_pickoff",
+          "second_base_only",
+          "description"
+        ],
+        "rows": 9240
+      },
+      "fielding": {
+        "columns": [
+          "season",
+          "game_type",
+          "team",
+          "uniform_no",
+          "name",
+          "position",
+          "g",
+          "fpct",
+          "po",
+          "a",
+          "e",
+          "dp",
+          "pb",
+          "player_id"
+        ],
+        "rows": 20461
+      },
+      "fielding_plays": {
+        "columns": [
+          "season",
+          "fielder",
+          "pos",
+          "chances",
+          "throw_errors",
+          "field_errors",
+          "unknown_errors"
+        ],
+        "rows": 6091
+      },
+      "infield_grounder_events": {
+        "columns": [
+          "season",
+          "date",
+          "park",
+          "batter",
+          "batter_norm",
+          "bats",
+          "fielder",
+          "fielder_norm",
+          "pos",
+          "hc_x",
+          "hc_y",
+          "is_out",
+          "kind",
+          "has_runner",
+          "description"
+        ],
+        "rows": 31003
+      },
+      "mlb_bridge": {
+        "columns": [
+          "npb_name",
+          "npb_name_en",
+          "proeye_id",
+          "mlb_name",
+          "sprint_speed_avg",
+          "sprint_years",
+          "arm_mph_avg",
+          "arm_years",
+          "detail"
+        ],
+        "rows": 79
+      },
+      "mlb_catcher_bridge": {
+        "columns": [
+          "npb_name",
+          "npb_name_en",
+          "proeye_id",
+          "mlb_name",
+          "arm_mph_avg",
+          "exchange_avg",
+          "pop2b_avg",
+          "years",
+          "detail"
+        ],
+        "rows": 1
+      },
+      "nf3_direction": {
+        "columns": [
+          "season",
+          "name",
+          "name_norm",
+          "team",
+          "position",
+          "throw_hand",
+          "bat_hand",
+          "pull_rate",
+          "total",
+          "left_n",
+          "center_n",
+          "right_n",
+          "left_hit",
+          "left_hr",
+          "left_out",
+          "center_hit",
+          "center_hr",
+          "center_out",
+          "right_hit",
+          "right_hr",
+          "right_out"
+        ],
+        "rows": 5963
+      },
+      "nf3_link": {
+        "columns": [
+          "season",
+          "name_norm",
+          "proeye_id",
+          "proeye_name",
+          "method"
+        ],
+        "rows": 11709
+      },
+      "nf3_split": {
+        "columns": [
+          "season",
+          "name",
+          "name_norm",
+          "team",
+          "uniform",
+          "section",
+          "label",
+          "g",
+          "pa",
+          "ab",
+          "r",
+          "h",
+          "b2",
+          "b3",
+          "hr",
+          "tb",
+          "rbi",
+          "so",
+          "bb",
+          "ibb",
+          "hbp",
+          "sh",
+          "sf",
+          "sb",
+          "cs",
+          "e",
+          "ih",
+          "avg",
+          "obp",
+          "slg",
+          "ops",
+          "extra"
+        ],
+        "rows": 378829
+      },
+      "nf3_team_bat": {
+        "columns": [
+          "season",
+          "team",
+          "name",
+          "name_norm",
+          "bats",
+          "pa",
+          "ab",
+          "h",
+          "ih",
+          "ih_pct",
+          "risp_avg",
+          "so",
+          "bb",
+          "b2",
+          "b3",
+          "hr",
+          "sb",
+          "cs",
+          "gdp"
+        ],
+        "rows": 13993
+      },
+      "nf3_team_link": {
+        "columns": [
+          "season",
+          "name_norm",
+          "proeye_id",
+          "method"
+        ],
+        "rows": 12751
+      },
+      "npb_plus_measurement": {
+        "columns": [
+          "name",
+          "player_id",
+          "team",
+          "season_label",
+          "exit_velo_max",
+          "exit_velo_avg",
+          "distance_max",
+          "launch_angle_avg",
+          "swing_speed_avg",
+          "hard_hit_pct",
+          "barrel_pct",
+          "chase_pct",
+          "k_pct",
+          "bb_rate",
+          "ops",
+          "sb_success",
+          "top_speed_kmh",
+          "hp_to_1b_sec",
+          "throw_speed_kmh",
+          "source_images",
+          "source"
+        ],
+        "rows": 109
+      },
+      "npb_usage_2026": {
+        "columns": [
+          "name",
+          "plate_appearances",
+          "games",
+          "primary_pos",
+          "primary_pos_pitches",
+          "pos_breakdown"
+        ],
+        "rows": 490
+      },
+      "park_plate_appearances": {
+        "columns": [
+          "season",
+          "name",
+          "name_norm",
+          "park",
+          "plate_appearances"
+        ],
+        "rows": 20892
+      },
+      "pawapuro_full": {
+        "columns": [
+          "work",
+          "team",
+          "slot",
+          "name",
+          "name_norm",
+          "trajectory",
+          "meet",
+          "power",
+          "speed",
+          "arm",
+          "fielding",
+          "catching",
+          "ranked_json",
+          "plus_json",
+          "minus_json",
+          "n_ranked",
+          "n_plus",
+          "n_minus"
+        ],
+        "rows": 3229
+      },
+      "pawapuro_full_link": {
+        "columns": [
+          "pawa_rowid",
+          "work",
+          "team",
+          "pawa_name",
+          "proeye_id",
+          "proeye_name",
+          "method"
+        ],
+        "rows": 1879
+      },
+      "pawapuro_link": {
+        "columns": [
+          "name_norm",
+          "proeye_id",
+          "proeye_name",
+          "method"
+        ],
+        "rows": 381
+      },
+      "pawapuro_rating": {
+        "columns": [
+          "title",
+          "team",
+          "name",
+          "name_norm",
+          "trajectory",
+          "meet",
+          "power",
+          "speed",
+          "arm",
+          "fielding",
+          "catching"
+        ],
+        "rows": 405
+      },
+      "pitching": {
+        "columns": [
+          "season",
+          "game_type",
+          "team",
+          "uniform_no",
+          "name",
+          "w",
+          "l",
+          "sv",
+          "hld",
+          "hp",
+          "apps",
+          "ip_text",
+          "outs",
+          "win_pct",
+          "era",
+          "whip",
+          "r9",
+          "rg",
+          "h9",
+          "hr9",
+          "k9",
+          "bb9",
+          "kbb",
+          "bf",
+          "h",
+          "r",
+          "er",
+          "hr",
+          "so",
+          "bb",
+          "ibb",
+          "hbp",
+          "wp",
+          "bk",
+          "cg",
+          "sho",
+          "nbb",
+          "gs",
+          "gf",
+          "player_id"
+        ],
+        "rows": 8444
+      },
+      "player_link": {
+        "columns": [
+          "season",
+          "team",
+          "proeye_id",
+          "bm_id",
+          "name_proeye",
+          "name_bm",
+          "method"
+        ],
+        "rows": 4148
+      },
+      "the_show_bridge": {
+        "columns": [
+          "proeye_id",
+          "npb_name",
+          "mlb_name",
+          "name_key",
+          "editions",
+          "ovr_avg",
+          "contact_left_avg",
+          "contact_right_avg",
+          "power_left_avg",
+          "power_right_avg",
+          "plate_vision_avg",
+          "plate_discipline_avg",
+          "batting_clutch_avg",
+          "bunting_ability_avg",
+          "hitting_durability_avg",
+          "fielding_durability_avg",
+          "fielding_ability_avg",
+          "arm_strength_avg",
+          "arm_accuracy_avg",
+          "reaction_time_avg",
+          "blocking_avg",
+          "speed_avg",
+          "baserunning_ability_avg",
+          "baserunning_aggression_avg"
+        ],
+        "rows": 47
+      },
+      "the_show_rating": {
+        "columns": [
+          "edition",
+          "uuid",
+          "name",
+          "name_key",
+          "team",
+          "series",
+          "ovr",
+          "display_position",
+          "age",
+          "bat_hand",
+          "throw_hand",
+          "is_hitter",
+          "contact_left",
+          "contact_right",
+          "power_left",
+          "power_right",
+          "plate_vision",
+          "plate_discipline",
+          "batting_clutch",
+          "bunting_ability",
+          "hitting_durability",
+          "fielding_durability",
+          "fielding_ability",
+          "arm_strength",
+          "arm_accuracy",
+          "reaction_time",
+          "blocking",
+          "speed",
+          "baserunning_ability",
+          "baserunning_aggression"
+        ],
+        "rows": 17476
+      }
+    }
+  },
+  "evidence_candidates": [
+    {
+      "candidate_number": 1,
+      "construct": "peak_speed",
+      "coverage_denominator": {
+        "db_rows": 109,
+        "non_null": 100
+      },
+      "current_local_asset": "data/pennant.db:npb_plus_measurement.top_speed_kmh;outputs/derived/sp100_npb_raw_latent_speed.json",
+      "decision_use_status": "IMPLEMENTED_SEPARATE_FROM_POWERPRO",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-001",
+      "evidence_role": "PowerPro-free physical primary/context lane",
+      "existing_requirement_ids": [
+        "SR-003",
+        "SR-010",
+        "SR-061"
+      ],
+      "existing_sp_routes": [
+        "SP-100",
+        "SP-101"
+      ],
+      "family": "direct_physical",
+      "implementation_status": "IMPLEMENTED",
+      "independence_or_double_count_risk": "same-source and same-player dependency with other NPB+ fields",
+      "item": "NPB+ Hawk-Eye Sprint Speed / スプリントスピード",
+      "known_bias_or_confounding": "season/exposure and measurement-reliability are not identifiable in the current snapshot",
+      "next_action": "SP-100 N-primary only; no final practical numeric output",
+      "source_authority": "official NPB+ Hawk-Eye field; local raw table",
+      "source_or_metric": "NPB+ Hawk-Eye Sprint Speed / スプリントスピード",
+      "source_url_or_repo_artifact": [
+        "https://www.japan-baseball.jp/npb-plus/"
+      ],
+      "status": "IMPLEMENTED",
+      "validation_needed": "preserve raw provenance and keep reliability/exposure separate"
+    },
+    {
+      "candidate_number": 2,
+      "construct": "home_to_first_end_to_end",
+      "coverage_denominator": {
+        "current_value_rows": 0,
+        "old_local_rows": 100
+      },
+      "current_local_asset": "data/pennant.db:npb_plus_measurement.hp_to_1b_sec (old local field quarantined)",
+      "decision_use_status": [
+        "https://www.japan-baseball.jp/npb-plus/",
+        "docs/audits/luna_npb_plus_provenance_contamination_20260814.md"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-002",
+      "evidence_role": "separate current H2F discovery lane",
+      "existing_requirement_ids": [
+        "SR-004",
+        "SR-008",
+        "SR-055",
+        "SR-058"
+      ],
+      "existing_sp_routes": [
+        "SP-007",
+        "SP-100"
+      ],
+      "family": "direct_physical",
+      "implementation_status": "SOURCE_CONFIRMED_NEW",
+      "independence_or_double_count_risk": "H2F/90-foot may share contact and play context; do not double count",
+      "item": "NPB+ Hawk-Eye 最速タイム（一塁到達）",
+      "known_bias_or_confounding": "old local field is MISATTRIBUTED_SOURCE; current official player values were not retrieved",
+      "next_action": "SCOPED_REJECTED_OLD_VALUES; current source reopened only",
+      "source_authority": "official NPB+ product surface; current field availability verified, old local provenance invalid",
+      "source_or_metric": "NPB+ Hawk-Eye 最速タイム（一塁到達）",
+      "source_url_or_repo_artifact": [],
+      "status": "SOURCE_CONFIRMED_NEW",
+      "validation_needed": "recollect with per-player provenance, batting side, swing/bunt protocol and date"
+    },
+    {
+      "candidate_number": 3,
+      "construct": "peak_speed",
+      "coverage_denominator": {
+        "non_null": 264,
+        "rows": 264
+      },
+      "current_local_asset": "data/manual/sp101_mlb_sprint_speed_rows_20260818.json",
+      "decision_use_status": [
+        "https://baseballsavant.mlb.com/leaderboard/sprint_speed"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-003",
+      "evidence_role": "MLB physical bridge/anchor context",
+      "existing_requirement_ids": [
+        "SR-010",
+        "SR-011",
+        "SR-061"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-01",
+        "MB-02"
+      ],
+      "family": "direct_physical",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "same-system rows can be duplicated with 90-foot or H2F events",
+      "item": "MLB Statcast Sprint Speed",
+      "known_bias_or_confounding": "MLB population and NPB transfer are not exchangeable without support checks",
+      "next_action": "bridge/anchor only; no direct NPB final value",
+      "source_authority": "official Baseball Savant/Statcast",
+      "source_or_metric": "MLB Statcast Sprint Speed",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "player-clustered/forward holdout and common-support calibration"
+    },
+    {
+      "candidate_number": 4,
+      "construct": "acceleration_shape_and_end_to_end",
+      "coverage_denominator": {
+        "local_rows": 0,
+        "source_surface": "verified"
+      },
+      "current_local_asset": "no local player-level 90-foot split table found in tracked assets",
+      "decision_use_status": [
+        "https://www.mlb.com/glossary/statcast/90-foot-running-splits",
+        "https://baseballsavant.mlb.com/running_splits"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-004",
+      "evidence_role": "potential acceleration/standardized end-to-end bridge",
+      "existing_requirement_ids": [
+        "SR-008",
+        "SR-011",
+        "SR-055"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-12",
+        "MB-18"
+      ],
+      "family": "direct_physical",
+      "implementation_status": "SOURCE_CONFIRMED_NEW",
+      "independence_or_double_count_risk": "same plays may underlie Sprint Speed and HP-to-1B",
+      "item": "MLB Statcast 90-foot Running Splits and 5-foot cumulative splits",
+      "known_bias_or_confounding": "public surface defines metric but no frozen eligible row extraction exists",
+      "next_action": "NOT_COLLECTED_EXTERNAL_OPPORTUNITY",
+      "source_authority": "official MLB glossary and Baseball Savant running-splits surface",
+      "source_or_metric": "MLB Statcast 90-foot Running Splits and 5-foot cumulative splits",
+      "source_url_or_repo_artifact": [],
+      "status": "SOURCE_CONFIRMED_NEW",
+      "validation_needed": "collect 5-foot splits with season, batting side, qualifiers and raw denominators"
+    },
+    {
+      "candidate_number": 5,
+      "construct": "defensive_burst",
+      "coverage_denominator": {
+        "local_rows": 0,
+        "source_surface": "verified"
+      },
+      "current_local_asset": "no local player-level Jump Burst rows found",
+      "decision_use_status": [
+        "https://www.mlb.com/glossary/statcast/jump",
+        "https://baseballsavant.mlb.com/leaderboard/outfield_jump"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-005",
+      "evidence_role": "defensive context, not universal speed",
+      "existing_requirement_ids": [
+        "SR-008",
+        "SR-052",
+        "SR-055"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-15"
+      ],
+      "family": "direct_physical",
+      "implementation_status": "SOURCE_CONFIRMED_NEW",
+      "independence_or_double_count_risk": "Burst/Reaction/Route are components of one jump event and must be separated",
+      "item": "MLB Statcast Outfielder Jump Burst",
+      "known_bias_or_confounding": "availability for eligible outfielders is not yet preserved as a local row set",
+      "next_action": "NOT_COLLECTED_EXTERNAL_OPPORTUNITY",
+      "source_authority": "official MLB Statcast glossary/leaderboard",
+      "source_or_metric": "MLB Statcast Outfielder Jump Burst",
+      "source_url_or_repo_artifact": [],
+      "status": "SOURCE_CONFIRMED_NEW",
+      "validation_needed": "collect with Reaction, Burst, Route, position and season; never merge into base-speed point"
+    },
+    {
+      "candidate_number": 6,
+      "construct": "home_to_first_end_to_end",
+      "coverage_denominator": {
+        "records": 74
+      },
+      "current_local_asset": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+      "decision_use_status": [
+        "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+        "outputs/derived/sp017_physical_measurement_range_reclassification.json",
+        "data/manual/sprint_30m_measurements_curated.json",
+        "data/manual/npb_speed_physical_evidence_full_20260809.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-006",
+      "evidence_role": "historical range/context only",
+      "existing_requirement_ids": [
+        "SR-004",
+        "SR-008",
+        "SR-055"
+      ],
+      "existing_sp_routes": [
+        "SP-017",
+        "SP-101"
+      ],
+      "family": "direct_physical",
+      "implementation_status": "COLLECTED_BUT_UNUSED",
+      "independence_or_double_count_risk": "same measurement can be transcribed by multiple sources",
+      "item": "historical sourced home-to-first records",
+      "known_bias_or_confounding": "protocol/date/handedness are heterogeneous",
+      "next_action": "COLLECTED_BUT_UNUSED_RANGE_CONTEXT",
+      "source_authority": "curated historical articles/video/profile records",
+      "source_or_metric": "historical sourced home-to-first records",
+      "source_url_or_repo_artifact": [],
+      "status": "COLLECTED_BUT_UNUSED",
+      "validation_needed": "retain range/confidence and measurement cluster; no proportional T90 conversion"
+    },
+    {
+      "candidate_number": 7,
+      "construct": "short_distance_acceleration",
+      "coverage_denominator": {
+        "30m_or_50m_records": 232
+      },
+      "current_local_asset": "data/normalized/speed_historical_physical_measurements_2015_2026.json;outputs/derived/sp017_physical_measurement_range_reclassification.json",
+      "decision_use_status": [
+        "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+        "outputs/derived/sp017_physical_measurement_range_reclassification.json",
+        "data/manual/sprint_30m_measurements_curated.json",
+        "data/manual/npb_speed_physical_evidence_full_20260809.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-007",
+      "evidence_role": "historical acceleration/context lane",
+      "existing_requirement_ids": [
+        "SR-004",
+        "SR-008",
+        "SR-055",
+        "SR-056"
+      ],
+      "existing_sp_routes": [
+        "SP-017",
+        "SP-101",
+        "MB-12"
+      ],
+      "family": "direct_physical",
+      "implementation_status": "COLLECTED_BUT_UNUSED",
+      "independence_or_double_count_risk": "30m/50m is not T90 and can share the same athlete/profile source",
+      "item": "historical 30m / 50m physical tests",
+      "known_bias_or_confounding": "standing/flying start, protocol and date incomplete for many rows",
+      "next_action": "COLLECTED_BUT_UNUSED_RANGE_CONTEXT",
+      "source_authority": "curated physical measurement corpus",
+      "source_or_metric": "historical 30m / 50m physical tests",
+      "source_url_or_repo_artifact": [],
+      "status": "COLLECTED_BUT_UNUSED",
+      "validation_needed": "store intervals/protocol/date flags; forbid 30m/50m→T90 proportional transform"
+    },
+    {
+      "candidate_number": 8,
+      "construct": "end_to_end_basepath",
+      "coverage_denominator": {
+        "T90_records": 12
+      },
+      "current_local_asset": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+      "decision_use_status": [
+        "data/normalized/speed_historical_physical_measurements_2015_2026.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-008",
+      "evidence_role": "high-value direct physical lane when protocol is known",
+      "existing_requirement_ids": [
+        "SR-004",
+        "SR-008",
+        "SR-055"
+      ],
+      "existing_sp_routes": [
+        "SP-007",
+        "SP-101"
+      ],
+      "family": "direct_physical",
+      "implementation_status": "COLLECTED_BUT_UNUSED",
+      "independence_or_double_count_risk": "duplicate source and protocol variants require cluster/dedup",
+      "item": "direct timed T90 / basepath / full-effort run",
+      "known_bias_or_confounding": "coverage is small and current-year comparability is limited",
+      "next_action": "COLLECTED_BUT_UNUSED_LOW_COVERAGE",
+      "source_authority": "curated physical corpus",
+      "source_or_metric": "direct timed T90 / basepath / full-effort run",
+      "source_url_or_repo_artifact": [],
+      "status": "COLLECTED_BUT_UNUSED",
+      "validation_needed": "expand direct T90 with protocol and timepoint; retain current negative coverage finding"
+    },
+    {
+      "candidate_number": 9,
+      "construct": "event_running_speed",
+      "coverage_denominator": {
+        "reproducible_official_rows": 0
+      },
+      "current_local_asset": "outputs/derived/sp103_intermediate/lane_b_external_source_verification.json",
+      "decision_use_status": [
+        "https://www.japan-baseball.jp/npb-plus/"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-009",
+      "evidence_role": "bounded negative finding",
+      "existing_requirement_ids": [
+        "SR-047",
+        "SR-052",
+        "SR-058"
+      ],
+      "existing_sp_routes": [
+        "SP-101"
+      ],
+      "family": "direct_physical",
+      "implementation_status": "MEASURED_NEGATIVE",
+      "independence_or_double_count_risk": "event speed may duplicate Sprint Speed/90-foot fields",
+      "item": "reproducible NPB tracking-derived event-level baserunning speed",
+      "known_bias_or_confounding": "official navigation/field availability is not an event-level data extract",
+      "next_action": "MEASURED_NEGATIVE_BOUNDED_PUBLIC_SURFACE",
+      "source_authority": "official NPB+ product surface checked; no reproducible event-level export found",
+      "source_or_metric": "reproducible NPB tracking-derived event-level baserunning speed",
+      "source_url_or_repo_artifact": [],
+      "status": "MEASURED_NEGATIVE",
+      "validation_needed": "reopen only with a reproducible official endpoint/snapshot"
+    },
+    {
+      "candidate_number": 10,
+      "construct": "defensive_straight_line_speed",
+      "coverage_denominator": {
+        "separated_rows": 0
+      },
+      "current_local_asset": "outputs/derived/sp062_defensive_chase_close_20260814.json;data/pennant.db",
+      "decision_use_status": [
+        "outputs/derived/sp062_defensive_chase_close_20260814.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-010",
+      "evidence_role": "bounded negative finding",
+      "existing_requirement_ids": [
+        "SR-052",
+        "SR-055",
+        "SR-058"
+      ],
+      "existing_sp_routes": [
+        "SP-062",
+        "SP-101"
+      ],
+      "family": "direct_physical",
+      "implementation_status": "MEASURED_NEGATIVE",
+      "independence_or_double_count_risk": "RngR/UZR/Jump contain route, reaction, positioning or fielding skill",
+      "item": "defensive straight-line tracking isolated from reaction/route/positioning",
+      "known_bias_or_confounding": "no separated NPB fielder tracking row exists in local assets",
+      "next_action": "MEASURED_NEGATIVE_BOUNDED_LOCAL_UNIVERSE",
+      "source_authority": "repo-wide inventory and SP-062 input audit",
+      "source_or_metric": "defensive straight-line tracking isolated from reaction/route/positioning",
+      "source_url_or_repo_artifact": [],
+      "status": "MEASURED_NEGATIVE",
+      "validation_needed": "reopen only after a source exposes separable movement components"
+    }
+  ],
+  "execution_contract": "independent_process; no canonical SP-103 output is written by this lane",
+  "lane": "C",
+  "metric_counts": {
+    "30M_CURATED_SECONDS": 12,
+    "30M_PROFILE_SECONDS": 3,
+    "30M_STANDING_START_SECONDS": 2,
+    "50M_MANUAL_SECONDS": 3,
+    "50M_PROFILE_SECONDS": 42,
+    "50M_STANDING_START_SECONDS": 164,
+    "50m": 6,
+    "EVENT_MAX_SPEED_FTPS": 1,
+    "HP_TO_1B_AVG_SEC": 1,
+    "HP_TO_1B_BUNT_SEC": 1,
+    "HP_TO_1B_FASTEST_SEC": 1,
+    "HP_TO_1B_NORMAL_SEC": 1,
+    "HP_TO_1B_SEC": 1,
+    "HP_TO_1B_SECONDS": 71,
+    "MLB_SPRINT_SPEED_FTPS": 12,
+    "NPB_PLUS_SPRINT_SPEED_KMH": 100,
+    "NPB_PLUS_TOP_SPEED_KMH": 1,
+    "T10FT_SECONDS": 12,
+    "T30FT_SECONDS": 12,
+    "T90FT_SECONDS": 12,
+    "event_max_speed": 1
+  },
+  "negative_findings": [
+    "Old npb_plus_measurement.hp_to_1b_sec is not validated by the current official product page and remains fail-closed.",
+    "No official reproducible NPB event-level running export was found in the bounded search."
+  ],
+  "purpose": "direct and near-direct physical running evidence",
+  "schema_version": "sp103_lane_c_v1",
+  "sprint_speed_source_rows": 264
+}

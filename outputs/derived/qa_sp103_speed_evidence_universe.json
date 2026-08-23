@@ -1,0 +1,582 @@
+{
+  "as_of": "2026-08-23",
+  "checks": [
+    {
+      "check": "artifact_nonempty:outputs/derived/sp103_speed_evidence_universe.tsv",
+      "expected": ">0",
+      "observed": 62407,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp103_local_asset_inventory.json",
+      "expected": ">0",
+      "observed": 6143687,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp103_external_source_verification.json",
+      "expected": ">0",
+      "observed": 14135,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp103_collected_but_unused.json",
+      "expected": ">0",
+      "observed": 520640,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp103_inference_method_universe.json",
+      "expected": ">0",
+      "observed": 98751,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp103_owner_requirement_traceability.tsv",
+      "expected": ">0",
+      "observed": 50857,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp103_gap_and_remediation_plan.json",
+      "expected": ">0",
+      "observed": 14878,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp103_pre_sp079_readiness.json",
+      "expected": ">0",
+      "observed": 1074,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp103_materialization_manifest.json",
+      "expected": ">0",
+      "observed": 1627,
+      "passed": true
+    },
+    {
+      "check": "universe_zero_based_coverage_and_schema",
+      "expected": "66 mandatory unique candidates plus discovered rows; common schema and all guards",
+      "observed": {
+        "mandatory": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66
+        ],
+        "rows": 71
+      },
+      "passed": true
+    },
+    {
+      "check": "discovery_addendum_not_self_sealed",
+      "expected": ">=1",
+      "observed": 5,
+      "passed": true
+    },
+    {
+      "check": "status_vocabulary_measured",
+      "expected": "no unclassified candidate",
+      "observed": "all statuses in canonical vocabulary",
+      "passed": true
+    },
+    {
+      "check": "direct_numeric_promotion_guard",
+      "expected": "false for all candidates",
+      "observed": false,
+      "passed": true
+    },
+    {
+      "check": "npb_h2f_old_provenance_fail_closed",
+      "expected": "old values not implemented; current availability remains bounded",
+      "observed": [
+        "SOURCE_CONFIRMED_NEW",
+        "MEASURED_NEGATIVE"
+      ],
+      "passed": true
+    },
+    {
+      "check": "repo_wide_local_inventory_denominators",
+      "expected": "tracked>=1000, regular>=990, structured>=400, semantic>=900, sqlite db>=1/objects>=30",
+      "observed": {
+        "semantic_assets_found": 983,
+        "semantic_sqlite_objects": 36,
+        "sqlite_databases": 1,
+        "sqlite_objects": 38,
+        "structured_assets_scanned": 475,
+        "tracked_files": 1049,
+        "tracked_regular_files_scanned": 1039
+      },
+      "passed": true
+    },
+    {
+      "check": "local_sqlite_speed_and_proxy_assets",
+      "expected": "required physical/proxy/game tables present",
+      "observed": [
+        "baserunning_advances",
+        "batting",
+        "bm_bat",
+        "bm_fld",
+        "bm_pd",
+        "bm_pit",
+        "bm_player",
+        "bm_pv",
+        "catcher_steal_event",
+        "fielding",
+        "fielding_plays",
+        "infield_grounder_events",
+        "mlb_bridge",
+        "mlb_catcher_bridge",
+        "nf3_direction",
+        "nf3_link",
+        "nf3_split",
+        "nf3_team_bat",
+        "nf3_team_link",
+        "npb_plus_measurement",
+        "npb_usage_2026",
+        "park_plate_appearances",
+        "pawapuro_full",
+        "pawapuro_full_link",
+        "pawapuro_link",
+        "pawapuro_rating",
+        "pitching",
+        "player_link",
+        "sqlite_stat1",
+        "the_show_bridge",
+        "the_show_rating",
+        "v_batting",
+        "v_bm_bat",
+        "v_bm_by_player",
+        "v_bm_pit",
+        "v_bm_player",
+        "v_fielding",
+        "v_pitching"
+      ],
+      "passed": true
+    },
+    {
+      "check": "official_external_receipts_and_frozen_snapshots",
+      "expected": "10 HTTP 200 official/primary receipts with frozen hash manifest",
+      "observed": {
+        "hashes_match": true,
+        "receipts": 10
+      },
+      "passed": true
+    },
+    {
+      "check": "wbc_zero_rows_not_slow_inference",
+      "expected": "denominator recorded; zero running rows classified as acquisition limitation",
+      "observed": {
+        "coverage_status": {
+          "2023": "BLOCKED_EXTERNAL_PUBLIC_SEARCH_HAS_NO_RUNNING_RESULT_COLUMN",
+          "2026": "BLOCKED_EXTERNAL_PUBLIC_SEARCH_HAS_NO_RUNNING_RESULT_COLUMN"
+        },
+        "denominator": {
+          "2023_JPN_unique_player_ids": 15,
+          "2026_JPN_unique_player_ids": 30
+        },
+        "running_rows": {
+          "2023": 0,
+          "2026": 0
+        }
+      },
+      "passed": true
+    },
+    {
+      "check": "repository_collected_but_unused_scan",
+      "expected": "semantic scan and nonzero collected-but-unused classifications",
+      "observed": {
+        "collected_not_proven_used": 791,
+        "evidence_candidates_collected_or_incomplete": 46,
+        "route_referenced_or_upstream": 192
+      },
+      "passed": true
+    },
+    {
+      "check": "all_transfer_methods_have_leakage_support_holdout_uncertainty_fields",
+      "expected": "candidate 44-62 with all required method fields",
+      "observed": {
+        "method_count": 19,
+        "numbers": [
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62
+        ]
+      },
+      "passed": true
+    },
+    {
+      "check": "sp101_route_decision_use_receipts_recomputed",
+      "expected": "18 routes x 100 player receipts",
+      "observed": {
+        "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-02_DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-03_MULTI_TRAIT_LATENT_MEASUREMENT_MODEL": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-04_WITHIN_PLAYER_TEMPORAL_DELTA": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-05_LEAGUE_TRANSITION_FIXED_EFFECTS": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-06_RATING_INERTIA_AND_STALENESS_MODEL": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-07_PAIRWISE_ORDINAL_EVIDENCE_GRAPH": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-08_DISTRIBUTION_AND_TAIL_CALIBRATION": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-09_THE_SHOW_ROSTER_UPDATE_RESPONSE": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-10_RETURNEE_SYNTHETIC_CONTROL": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-11_AGE_CURVE_AND_TEMPORAL_DECAY": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-12_SCOUTING_GRADE_AND_TIMED_TEST_BRIDGE": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-13_PINCH_RUNNER_AND_USAGE_ROLE_CONTEXT": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-14_VIDEO_FRAME_TIMING": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-15_DEFENSIVE_RANGE_AND_CHASE_CONTEXT": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-16_CROSS_SOURCE_CONSENSUS_AND_DISAGREEMENT": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-17_NEGATIVE_CONTROL_AND_PLACEBO_SUITE": {
+          "players": 100,
+          "receipts": 100
+        },
+        "MB-18_DECISION_USE_AND_ABLATION_RECEIPT": {
+          "players": 100,
+          "receipts": 100
+        }
+      },
+      "passed": true
+    },
+    {
+      "check": "sp101_100x18_ablation_contract",
+      "expected": "exact 100x18 remove-and-recompute",
+      "observed": {
+        "all100x18_exact": true,
+        "cells": 1800,
+        "current100": 100,
+        "routes": 18
+      },
+      "passed": true
+    },
+    {
+      "check": "top_speed_dominance_component_ablation_preflight",
+      "expected": "100 cells, peak removal measured, final numeric generation not run",
+      "observed": {
+        "component_class_counts": {
+          "NEITHER": 1,
+          "PEAK_AND_ACCELERATION": 21,
+          "PEAK_ONLY": 78
+        },
+        "final_appraisal_recompute": "NOT_RUN",
+        "peak_and_acceleration_count": 21,
+        "state_changed_after_peak_removal_count": 78,
+        "top_speed_only_count": 78,
+        "top_speed_removal_status": "PASS_PRE_FINAL_APPRAISAL_COMPONENT_ABLATION"
+      },
+      "passed": true
+    },
+    {
+      "check": "all_baseline_and_owner_rows_exactly_traced",
+      "expected": "61 baseline + 15 owner seed rows, each mapped",
+      "observed": {
+        "owner_feedback": 15,
+        "requirements": 61,
+        "rows": 76
+      },
+      "passed": true
+    },
+    {
+      "check": "open_exclusion_negative_findings_preserved",
+      "expected": "open/reassess blockers remain visible",
+      "observed": [
+        "EX-004",
+        "EX-011",
+        "EX-013",
+        "EX-017",
+        "EX-018",
+        "EX-021",
+        "EX-023",
+        "EX-025"
+      ],
+      "passed": true
+    },
+    {
+      "check": "proxy_double_count_groups_and_direct_guard",
+      "expected": ">=3 groups with explicit guards; proxy candidates never direct-promoted",
+      "observed": 3,
+      "passed": true
+    },
+    {
+      "check": "owner_verdict_count_zero_and_capture_locked",
+      "expected": "0 and false",
+      "observed": {
+        "capture_allowed": false,
+        "ledger_count": 0
+      },
+      "passed": true
+    },
+    {
+      "check": "registry_sp103_gate_and_sp079_block",
+      "expected": "SP-103 dependency present and SP-079 blocked",
+      "observed": {
+        "sp079_dependencies": null,
+        "sp079_status": "BLOCKED_DEPENDENCY",
+        "sp103_status": "DONE_VALIDATED"
+      },
+      "passed": true
+    },
+    {
+      "check": "prior_sp101_sp102_statuses_unchanged",
+      "expected": "DONE_VALIDATED / DONE_NEGATIVE_FINDING",
+      "observed": {
+        "SP-101": "DONE_VALIDATED",
+        "SP-102": "DONE_NEGATIVE_FINDING"
+      },
+      "passed": true
+    },
+    {
+      "check": "deterministic_parent_rematerialization",
+      "expected": "byte-identical parent-materialized base outputs; readiness overlay is finalized separately",
+      "observed": {
+        "equal_hashes": true,
+        "hash_count": 8,
+        "readiness_overlay_excluded": true,
+        "returncode": 0
+      },
+      "passed": true
+    },
+    {
+      "check": "fail_before_fixtures_detected",
+      "expected": "all known unsafe/incomplete mutations fail",
+      "observed": [
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "remove_one_mandatory_candidate"
+        },
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "promote_legacy_h2f_to_direct"
+        },
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "remove_h2f_or_5foot_transfer_method"
+        },
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "drop_one_requirement_trace"
+        },
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "disable_100x18_route_ablation"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "decision_use_summary": {
+    "ablation_cells": 1800,
+    "current100": 100,
+    "route_count": 18,
+    "route_receipts": {
+      "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE": 100,
+      "MB-02_DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS": 100,
+      "MB-03_MULTI_TRAIT_LATENT_MEASUREMENT_MODEL": 100,
+      "MB-04_WITHIN_PLAYER_TEMPORAL_DELTA": 100,
+      "MB-05_LEAGUE_TRANSITION_FIXED_EFFECTS": 100,
+      "MB-06_RATING_INERTIA_AND_STALENESS_MODEL": 100,
+      "MB-07_PAIRWISE_ORDINAL_EVIDENCE_GRAPH": 100,
+      "MB-08_DISTRIBUTION_AND_TAIL_CALIBRATION": 100,
+      "MB-09_THE_SHOW_ROSTER_UPDATE_RESPONSE": 100,
+      "MB-10_RETURNEE_SYNTHETIC_CONTROL": 100,
+      "MB-11_AGE_CURVE_AND_TEMPORAL_DECAY": 100,
+      "MB-12_SCOUTING_GRADE_AND_TIMED_TEST_BRIDGE": 100,
+      "MB-13_PINCH_RUNNER_AND_USAGE_ROLE_CONTEXT": 100,
+      "MB-14_VIDEO_FRAME_TIMING": 100,
+      "MB-15_DEFENSIVE_RANGE_AND_CHASE_CONTEXT": 100,
+      "MB-16_CROSS_SOURCE_CONSENSUS_AND_DISAGREEMENT": 100,
+      "MB-17_NEGATIVE_CONTROL_AND_PLACEBO_SUITE": 100,
+      "MB-18_DECISION_USE_AND_ABLATION_RECEIPT": 100
+    },
+    "top_speed_removal_cells": 100
+  },
+  "fail_before_fixtures": [
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "remove_one_mandatory_candidate"
+    },
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "promote_legacy_h2f_to_direct"
+    },
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "remove_h2f_or_5foot_transfer_method"
+    },
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "drop_one_requirement_trace"
+    },
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "disable_100x18_route_ablation"
+    }
+  ],
+  "failed_checks": [],
+  "gate_locks": {
+    "final_numeric_generation": "NOT_RUN",
+    "owner_verdict_count": 0,
+    "shoulder": "NOT_STARTED",
+    "sp079_may_start_only_after_explicit_next_step": true,
+    "sp079_run": "NOT_RUN"
+  },
+  "independent_from": [
+    "scripts/sp103_materialize.py",
+    "scripts/sp103_lanes_c_to_g.py"
+  ],
+  "independent_lane": "H",
+  "negative_findings_committed": [
+    "WBC running rows are unavailable on the verified public result surface; zero is not a slow inference.",
+    "Current NPB+ H2F field listing does not validate the old local values; old hp_to_1b_sec remains fail-closed.",
+    "Direct NPB defensive straight-line movement separated from reaction/route/positioning remains measured negative in the local universe.",
+    "Open EX-004/EX-017/EX-018 blockers remain visible; SP-103 does not close them by relabeling."
+  ],
+  "ready_decision": "READY_FOR_SP079 only as a gate handoff; this QA process did not run SP-079 or any final appraisal.",
+  "schema_version": "qa_sp103_speed_evidence_universe_v1",
+  "status": "PASS_READY_FOR_SP079",
+  "worker_execution": {
+    "A": "separate_process_local_inventory",
+    "B": "separate_process_external_verification",
+    "C": "separate_process_physical",
+    "D": "separate_process_proxy",
+    "E": "separate_process_cross_game",
+    "F": "separate_process_transfer",
+    "G": "separate_process_owner_traceability",
+    "H": "this_independent_red_team_process"
+  }
+}

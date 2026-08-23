@@ -1,0 +1,371 @@
+{
+  "as_of": "2026-08-23",
+  "gap_count": 28,
+  "gaps": [
+    {
+      "candidate_number": 2,
+      "current_boundary": [
+        "https://www.japan-baseball.jp/npb-plus/",
+        "docs/audits/luna_npb_plus_provenance_contamination_20260814.md"
+      ],
+      "evidence_id": "SP103-EV-002",
+      "item": "NPB+ Hawk-Eye 最速タイム（一塁到達）",
+      "owner_review_or_gate": true,
+      "remediation": "SCOPED_REJECTED_OLD_VALUES; current source reopened only",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 4,
+      "current_boundary": [
+        "https://www.mlb.com/glossary/statcast/90-foot-running-splits",
+        "https://baseballsavant.mlb.com/running_splits"
+      ],
+      "evidence_id": "SP103-EV-004",
+      "item": "MLB Statcast 90-foot Running Splits and 5-foot cumulative splits",
+      "owner_review_or_gate": true,
+      "remediation": "NOT_COLLECTED_EXTERNAL_OPPORTUNITY",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 5,
+      "current_boundary": [
+        "https://www.mlb.com/glossary/statcast/jump",
+        "https://baseballsavant.mlb.com/leaderboard/outfield_jump"
+      ],
+      "evidence_id": "SP103-EV-005",
+      "item": "MLB Statcast Outfielder Jump Burst",
+      "owner_review_or_gate": true,
+      "remediation": "NOT_COLLECTED_EXTERNAL_OPPORTUNITY",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 6,
+      "current_boundary": [
+        "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+        "outputs/derived/sp017_physical_measurement_range_reclassification.json",
+        "data/manual/sprint_30m_measurements_curated.json",
+        "data/manual/npb_speed_physical_evidence_full_20260809.json"
+      ],
+      "evidence_id": "SP103-EV-006",
+      "item": "historical sourced home-to-first records",
+      "owner_review_or_gate": false,
+      "remediation": "COLLECTED_BUT_UNUSED_RANGE_CONTEXT",
+      "status": "COLLECTED_BUT_UNUSED"
+    },
+    {
+      "candidate_number": 7,
+      "current_boundary": [
+        "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+        "outputs/derived/sp017_physical_measurement_range_reclassification.json",
+        "data/manual/sprint_30m_measurements_curated.json",
+        "data/manual/npb_speed_physical_evidence_full_20260809.json"
+      ],
+      "evidence_id": "SP103-EV-007",
+      "item": "historical 30m / 50m physical tests",
+      "owner_review_or_gate": false,
+      "remediation": "COLLECTED_BUT_UNUSED_RANGE_CONTEXT",
+      "status": "COLLECTED_BUT_UNUSED"
+    },
+    {
+      "candidate_number": 8,
+      "current_boundary": [
+        "data/normalized/speed_historical_physical_measurements_2015_2026.json"
+      ],
+      "evidence_id": "SP103-EV-008",
+      "item": "direct timed T90 / basepath / full-effort run",
+      "owner_review_or_gate": false,
+      "remediation": "COLLECTED_BUT_UNUSED_LOW_COVERAGE",
+      "status": "COLLECTED_BUT_UNUSED"
+    },
+    {
+      "candidate_number": 9,
+      "current_boundary": [
+        "https://www.japan-baseball.jp/npb-plus/"
+      ],
+      "evidence_id": "SP103-EV-009",
+      "item": "reproducible NPB tracking-derived event-level baserunning speed",
+      "owner_review_or_gate": true,
+      "remediation": "MEASURED_NEGATIVE_BOUNDED_PUBLIC_SURFACE",
+      "status": "MEASURED_NEGATIVE"
+    },
+    {
+      "candidate_number": 10,
+      "current_boundary": [
+        "outputs/derived/sp062_defensive_chase_close_20260814.json"
+      ],
+      "evidence_id": "SP103-EV-010",
+      "item": "defensive straight-line tracking isolated from reaction/route/positioning",
+      "owner_review_or_gate": true,
+      "remediation": "MEASURED_NEGATIVE_BOUNDED_LOCAL_UNIVERSE",
+      "status": "MEASURED_NEGATIVE"
+    },
+    {
+      "candidate_number": 16,
+      "current_boundary": [
+        "https://1point02.jp/op/gnav/glossary/gls_explanation.aspx?ecd=204&eid=20047"
+      ],
+      "evidence_id": "SP103-EV-016",
+      "item": "DELTA / 1.02 Spd (Speed Score)",
+      "owner_review_or_gate": true,
+      "remediation": "SCOPED_NOT_COLLECTED_COMPOSITE_PROXY",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 18,
+      "current_boundary": [
+        "https://www.mlb.com/glossary/statcast/baserunning",
+        "https://baseballsavant.mlb.com/leaderboard/basestealing-run-value"
+      ],
+      "evidence_id": "SP103-EV-018",
+      "item": "Statcast Baserunning Run Value / analogous outcome value",
+      "owner_review_or_gate": true,
+      "remediation": "NOT_COLLECTED_CONTEXT_OPPORTUNITY",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 30,
+      "current_boundary": [
+        "docs/state/speed_requirements_baseline_20260813.tsv"
+      ],
+      "evidence_id": "SP103-EV-030",
+      "item": "console Prospi non-collection",
+      "owner_review_or_gate": true,
+      "remediation": "OWNER_RULING_SCOPED_REJECTED",
+      "status": "SCOPED_REJECTED"
+    },
+    {
+      "candidate_number": 32,
+      "current_boundary": [
+        "data/normalized/speed_historical_physical_measurements_2015_2026.json"
+      ],
+      "evidence_id": "SP103-EV-032",
+      "item": "draft / amateur timed-test reporting",
+      "owner_review_or_gate": false,
+      "remediation": "COLLECTED_BUT_UNUSED_OR_DUPLICATE_CONTROL",
+      "status": "COLLECTED_BUT_UNUSED"
+    },
+    {
+      "candidate_number": 42,
+      "current_boundary": [
+        "https://www.mlb.com/glossary/statcast/jump",
+        "https://baseballsavant.mlb.com/leaderboard/outfield_jump"
+      ],
+      "evidence_id": "SP103-EV-042",
+      "item": "Statcast Outfielder Jump Burst for MLB-experienced outfielders",
+      "owner_review_or_gate": true,
+      "remediation": "NOT_COLLECTED_EXTERNAL_OPPORTUNITY",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 43,
+      "current_boundary": [
+        "outputs/derived/sp062_defensive_chase_close_20260814.json",
+        "data/pennant.db"
+      ],
+      "evidence_id": "SP103-EV-043",
+      "item": "NPB tracking-derived fielder movement / straight-line speed separated from reaction/route/positioning",
+      "owner_review_or_gate": true,
+      "remediation": "MEASURED_NEGATIVE_BOUNDED_LOCAL_UNIVERSE",
+      "status": "MEASURED_NEGATIVE"
+    },
+    {
+      "candidate_number": 56,
+      "current_boundary": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "evidence_id": "SP103-EV-056",
+      "item": "leakage-safe anchor calibration",
+      "owner_review_or_gate": true,
+      "remediation": "design and independently validate before any final appraisal",
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "candidate_number": 58,
+      "current_boundary": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "evidence_id": "SP103-EV-058",
+      "item": "hierarchical partial pooling or interval transfer",
+      "owner_review_or_gate": true,
+      "remediation": "design and independently validate before any final appraisal",
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "candidate_number": 59,
+      "current_boundary": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "evidence_id": "SP103-EV-059",
+      "item": "physical-rich-only rank/quantile mapping",
+      "owner_review_or_gate": true,
+      "remediation": "design and independently validate before any final appraisal",
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "candidate_number": 60,
+      "current_boundary": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "evidence_id": "SP103-EV-060",
+      "item": "multiple-imputation / interval propagation",
+      "owner_review_or_gate": true,
+      "remediation": "design and independently validate before any final appraisal",
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "candidate_number": 61,
+      "current_boundary": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "evidence_id": "SP103-EV-061",
+      "item": "handedness/protocol-aware H2F calibration",
+      "owner_review_or_gate": true,
+      "remediation": "design and independently validate before any final appraisal",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 62,
+      "current_boundary": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "evidence_id": "SP103-EV-062",
+      "item": "MLB 5-foot acceleration-shape features",
+      "owner_review_or_gate": true,
+      "remediation": "design and independently validate before any final appraisal",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 64,
+      "current_boundary": [
+        "docs/tasks/SP103_SPEED_EVIDENCE_UNIVERSE_COMPLETENESS_20260823.md"
+      ],
+      "evidence_id": "SP103-EV-064",
+      "item": "ability-value → custom-engine movement-response bridge",
+      "owner_review_or_gate": true,
+      "remediation": "GATE_BLOCKED_PRE_SP079",
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "candidate_number": 65,
+      "current_boundary": [
+        "docs/tasks/SP103_SPEED_EVIDENCE_UNIVERSE_COMPLETENESS_20260823.md"
+      ],
+      "evidence_id": "SP103-EV-065",
+      "item": "league-distribution simulation QA",
+      "owner_review_or_gate": true,
+      "remediation": "GATE_BLOCKED_PRE_SP079",
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "candidate_number": 66,
+      "current_boundary": [
+        "docs/tasks/SP103_SPEED_EVIDENCE_UNIVERSE_COMPLETENESS_20260823.md"
+      ],
+      "evidence_id": "SP103-EV-066",
+      "item": "current-100 vs non-100 full-roster scale consistency",
+      "owner_review_or_gate": true,
+      "remediation": "GATE_BLOCKED_PRE_SP079",
+      "status": "NOT_COLLECTED"
+    },
+    {
+      "candidate_number": 67,
+      "current_boundary": "BLOCKED_EXTERNAL_PUBLIC_SURFACE",
+      "evidence_id": "SP103-DISC-001",
+      "item": "World Baseball Classic Statcast as an NPB-player bridge",
+      "owner_review_or_gate": true,
+      "remediation": "bounded external re-open; no numeric promotion",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 68,
+      "current_boundary": "NOT_COLLECTED_CONTEXT_ONLY",
+      "evidence_id": "SP103-DISC-002",
+      "item": "Statcast Lead Distance / Lead Distance Gained",
+      "owner_review_or_gate": true,
+      "remediation": "do not promote; preserve as separate technique candidate",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 69,
+      "current_boundary": "NOT_COLLECTED_EXTERNAL_OPPORTUNITY",
+      "evidence_id": "SP103-DISC-003",
+      "item": "Statcast Competitive Runs / Bolts / HP to 1B exposure fields",
+      "owner_review_or_gate": true,
+      "remediation": "source-confirmed opportunity, not local evidence yet",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 70,
+      "current_boundary": "NOT_COLLECTED_BOUNDED_SCOUTING",
+      "evidence_id": "SP103-DISC-004",
+      "item": "MLB Pipeline historical Run scouting grades",
+      "owner_review_or_gate": true,
+      "remediation": "check against existing SP-060 before adding further rows",
+      "status": "SOURCE_CONFIRMED_NEW"
+    },
+    {
+      "candidate_number": 71,
+      "current_boundary": "FAIL_CLOSED_LEGACY_VALUES",
+      "evidence_id": "SP103-DISC-005",
+      "item": "Current NPB+ fastest home-to-first availability versus legacy local provenance",
+      "owner_review_or_gate": true,
+      "remediation": "keep old values fail-closed and report scoped negative finding",
+      "status": "MEASURED_NEGATIVE"
+    }
+  ],
+  "open_exclusion_blockers": [
+    {
+      "evidence": "docs/audits/sp019_construct_validity_reaudit_v2_20260813.md;outputs/derived/sp060_scouting_inventory_20260814.json;outputs/derived/sp061_pinch_runner_weak_context_20260814.json;outputs/derived/sp062_defensive_chase_close_20260814.json;docs/audits/sp036_039_060_061_062_cleanup_20260814.md",
+      "exclusion_id": "EX-004",
+      "scope": "speed_proxy",
+      "task_ids": "SP-019,SP-060,SP-061,SP-062",
+      "verdict": "OVERBROAD_REOPEN"
+    },
+    {
+      "evidence": "outputs/derived/sp032_grok_x_150_reclassification_20260813.jsonl;outputs/derived/sp036_generic_label_sweep_20260814.json;docs/audits/sp036_039_060_061_062_cleanup_20260814.md;outputs/derived/sp036_generic_label_decision_v2_20260816.json;docs/audits/opus_speed_owner_blockers_wave_20260816.md",
+      "exclusion_id": "EX-011",
+      "scope": "community_physical",
+      "task_ids": "SP-036,SP-037",
+      "verdict": "NOT_IDENTIFIABLE_PROVISIONAL_CURRENT_BEHAVIOR"
+    },
+    {
+      "evidence": "outputs/derived/sp022_pairwise_range_20260814.json;docs/audits/sp063_090_098_043_022_072_074_075_20260814.md;outputs/derived/sp022_pairwise_range_v2_20260816.json;docs/audits/opus_speed_owner_blockers_wave_20260816.md",
+      "exclusion_id": "EX-013",
+      "scope": "pairwise",
+      "task_ids": "SP-022",
+      "verdict": "VALID_DOWNGRADE_NOT_ZERO"
+    },
+    {
+      "evidence": "outputs/derived/sp061_pinch_runner_weak_context_20260814.json;docs/audits/sp036_039_060_061_062_cleanup_20260814.md",
+      "exclusion_id": "EX-017",
+      "scope": "usage",
+      "task_ids": "SP-061",
+      "verdict": "REASSESS_REQUIRED"
+    },
+    {
+      "evidence": "outputs/derived/sp062_defensive_chase_close_20260814.json;docs/audits/sp036_039_060_061_062_cleanup_20260814.md",
+      "exclusion_id": "EX-018",
+      "scope": "defense_context",
+      "task_ids": "SP-062",
+      "verdict": "REASSESS_REQUIRED"
+    },
+    {
+      "evidence": "configs/ratings.json",
+      "exclusion_id": "EX-021",
+      "scope": "temporal",
+      "task_ids": "SP-020,SP-041,SP-042",
+      "verdict": "VALID_DOWNGRADE_NOT_ZERO"
+    },
+    {
+      "evidence": "docs/tasks/CODEX_SPEED_COMMUNITY_RATING_RESCUE_20260813.md",
+      "exclusion_id": "EX-023",
+      "scope": "community",
+      "task_ids": "SP-037",
+      "verdict": "VALID_DEDUP"
+    },
+    {
+      "evidence": "data/manual/npb_speed_physical_evidence_full_20260809.json;docs/audits/sp017_physical_measurement_range_reclassification_20260813.md",
+      "exclusion_id": "EX-025",
+      "scope": "provenance",
+      "task_ids": "SP-017",
+      "verdict": "VALID_NUMERIC_EXCLUSION"
+    }
+  ],
+  "remediation_policy": [
+    "No imperfect directional evidence is silently zeroed; preserve range/confidence/protocol or scoped rejection.",
+    "No PowerPro/The Show value is copied to a current NPB numeric speed value.",
+    "No old NPB+ H2F value is revived without current official per-player provenance.",
+    "No open exclusion blocker is hidden by changing its verdict during SP-103.",
+    "No gap remediation is allowed to execute SP-079, owner verdict capture, final numeric generation or shoulder work."
+  ],
+  "schema_version": "sp103_gap_and_remediation_plan_v1",
+  "status": "PASS_BOUNDED_REMEDIATION"
+}

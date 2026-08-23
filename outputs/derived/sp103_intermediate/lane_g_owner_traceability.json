@@ -1,0 +1,634 @@
+{
+  "as_of": "2026-08-23",
+  "baseline_requirement_count": 61,
+  "evidence_candidates": [
+    {
+      "candidate_number": 31,
+      "construct": "scouting_directional_context",
+      "coverage_denominator": {
+        "inventory_bytes": 9408,
+        "records": 2
+      },
+      "current_local_asset": "outputs/derived/sp060_scouting_inventory_20260814.json",
+      "decision_use_status": [
+        "outputs/derived/sp060_scouting_inventory_20260814.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-031",
+      "evidence_role": "dated directional context",
+      "existing_requirement_ids": [
+        "SR-031",
+        "SR-032",
+        "SR-052",
+        "SR-055"
+      ],
+      "existing_sp_routes": [
+        "SP-060",
+        "MB-12"
+      ],
+      "family": "human_context",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "scouting grades and prose may share evaluator/source lineage",
+      "item": "official scouting reports",
+      "known_bias_or_confounding": "coverage is sparse and age/role/year dependent",
+      "next_action": "COLLECTED_BOUNDED_SCOUTING_CONTEXT",
+      "source_authority": "official scouting inventory with broad sweep",
+      "source_or_metric": "official scouting reports",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "preserve source year/age and use only low-weight/context lane"
+    },
+    {
+      "candidate_number": 32,
+      "construct": "historical_short_distance_context",
+      "coverage_denominator": {
+        "protocol_uncertain_records": 0,
+        "related_records": 0
+      },
+      "current_local_asset": "data/normalized/speed_historical_physical_measurements_2015_2026.json;data/manual/sprint_30m_measurements_curated.json",
+      "decision_use_status": [
+        "data/normalized/speed_historical_physical_measurements_2015_2026.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-032",
+      "evidence_role": "historical range/context",
+      "existing_requirement_ids": [
+        "SR-004",
+        "SR-008",
+        "SR-055",
+        "SR-056"
+      ],
+      "existing_sp_routes": [
+        "SP-017",
+        "MB-12"
+      ],
+      "family": "human_context",
+      "implementation_status": "COLLECTED_BUT_UNUSED",
+      "independence_or_double_count_risk": "may duplicate 30m/50m profile measurements",
+      "item": "draft / amateur timed-test reporting",
+      "known_bias_or_confounding": "amateur timing protocol, age and selection effects",
+      "next_action": "COLLECTED_BUT_UNUSED_OR_DUPLICATE_CONTROL",
+      "source_authority": "repository physical measurement corpus and scouting search",
+      "source_or_metric": "draft / amateur timed-test reporting",
+      "source_url_or_repo_artifact": [],
+      "status": "COLLECTED_BUT_UNUSED",
+      "validation_needed": "retain interval and protocol flags; no universal conversion"
+    },
+    {
+      "candidate_number": 33,
+      "construct": "role_and_technique_context",
+      "coverage_denominator": {
+        "rows": 65,
+        "unique_rows": 29
+      },
+      "current_local_asset": "outputs/derived/sp061_pinch_runner_weak_context_20260814.json",
+      "decision_use_status": [
+        "outputs/derived/sp061_pinch_runner_weak_context_20260814.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-033",
+      "evidence_role": "weak role context; not direct speed",
+      "existing_requirement_ids": [
+        "SR-002",
+        "SR-052",
+        "SR-055",
+        "SR-058"
+      ],
+      "existing_sp_routes": [
+        "SP-061",
+        "MB-13"
+      ],
+      "family": "human_context",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "pinch-runner, steal and advance decisions overlap technique/opportunity",
+      "item": "pinch-runner usage",
+      "known_bias_or_confounding": "manager usage, roster role, score and injury confound",
+      "next_action": "BOUNDED_WEAK_CONTEXT_NOT_DIRECT_SPEED",
+      "source_authority": "SP-061 local sweep",
+      "source_or_metric": "pinch-runner usage",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "preserve weak directional context and never use as physical teacher"
+    },
+    {
+      "candidate_number": 34,
+      "construct": "visual_acceleration_context",
+      "coverage_denominator": {
+        "existing_asset_bytes": 0,
+        "sp102_usable_rows": 0
+      },
+      "current_local_asset": "outputs/derived/sp102_coverage_qa.json;outputs/derived/sp102_target_post_rescue_summary.json;outputs/derived/speed_2026_video_tiebreak_sources.json",
+      "decision_use_status": [
+        "outputs/derived/qa_sp102_targeted_video_comment_rescue.json",
+        "docs/audits/sp102_targeted_video_comment_rescue_20260818.md"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-034",
+      "evidence_role": "strict video/context lane",
+      "existing_requirement_ids": [
+        "SR-021",
+        "SR-022",
+        "SR-047",
+        "SR-055",
+        "SR-058"
+      ],
+      "existing_sp_routes": [
+        "SP-039",
+        "SP-102",
+        "MB-14"
+      ],
+      "family": "human_context",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "same clip/comment origin must be clustered",
+      "item": "video-frame timing / narration",
+      "known_bias_or_confounding": "camera angle, frame boundaries and narration subjective; SP-102 fetch failures are not evidence absence",
+      "next_action": "SP102_MEASURED_NEGATIVE_BOUNDED_ACQUISITION",
+      "source_authority": "existing video inventories plus SP-102 measured negative",
+      "source_or_metric": "video-frame timing / narration",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "retain negative finding and any future timed row with frame/provenance receipt"
+    },
+    {
+      "candidate_number": 35,
+      "construct": "directional_observation_context",
+      "coverage_denominator": {
+        "source_bytes": 11330816
+      },
+      "current_local_asset": "data/normalized/speed_2026_sns_consensus_sources_v2.json;outputs/derived/speed_community_v3_consensus_20260815.json;outputs/derived/speed_community_v3_youtube_semantic_classified_20260814.jsonl",
+      "decision_use_status": [
+        "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+        "outputs/derived/speed_community_v3_consensus_20260815.json",
+        "outputs/derived/speed_community_v3_youtube_semantic_classified_20260814.jsonl"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-035",
+      "evidence_role": "weak directional physical observation",
+      "existing_requirement_ids": [
+        "SR-014",
+        "SR-016",
+        "SR-018",
+        "SR-019",
+        "SR-020",
+        "SR-022"
+      ],
+      "existing_sp_routes": [
+        "SP-032",
+        "SP-036",
+        "SP-037",
+        "SP-102"
+      ],
+      "family": "human_context",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "same event/reaction volume is not independent evidence",
+      "item": "ordinary web / X / YouTube physical observations",
+      "known_bias_or_confounding": "source reliability, identity and timing are heterogeneous",
+      "next_action": "COLLECTED_BOUNDED_CONTEXT_NO_DIRECT_PROMOTION",
+      "source_authority": "community/social source inventories",
+      "source_or_metric": "ordinary web / X / YouTube physical observations",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "cluster origin, cap reaction volume and keep confidence/range"
+    },
+    {
+      "candidate_number": 36,
+      "construct": "appraisal_opinion_context",
+      "coverage_denominator": {
+        "source_bytes": 11330816
+      },
+      "current_local_asset": "data/normalized/speed_2026_sns_consensus_sources_v2.json;outputs/derived/speed_community_v3_consensus_20260815.json;outputs/derived/speed_community_v3_youtube_semantic_classified_20260814.jsonl",
+      "decision_use_status": [
+        "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+        "outputs/derived/speed_community_v3_consensus_20260815.json",
+        "outputs/derived/speed_community_v3_youtube_semantic_classified_20260814.jsonl"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-036",
+      "evidence_role": "opinion/context only",
+      "existing_requirement_ids": [
+        "SR-015",
+        "SR-019",
+        "SR-020",
+        "SR-022"
+      ],
+      "existing_sp_routes": [
+        "SP-032",
+        "SP-036",
+        "SP-037"
+      ],
+      "family": "human_context",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "multiple opinions from same origin can be duplicated",
+      "item": "rating-opinion / community evidence separate from physical claims",
+      "known_bias_or_confounding": "game-rating opinion and physical observation are semantically different",
+      "next_action": "SEMANTICALLY_SEPARATED_OPINION_CONTEXT",
+      "source_authority": "community normalized/QA assets",
+      "source_or_metric": "rating-opinion / community evidence separate from physical claims",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "store claim type and origin cluster; no comment-only high-confidence physical point"
+    },
+    {
+      "candidate_number": 37,
+      "construct": "temporal_physical_context",
+      "coverage_denominator": {
+        "current100": 100,
+        "state_field": "contextual_evidence_summary.injury_state"
+      },
+      "current_local_asset": "outputs/derived/sp101_current100_multibridge_evidence.json;docs/state/speed_requirements_baseline_20260813.tsv",
+      "decision_use_status": [
+        "outputs/derived/sp101_current100_multibridge_evidence.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-037",
+      "evidence_role": "temporal/context modifier",
+      "existing_requirement_ids": [
+        "SR-030",
+        "SR-031",
+        "SR-040",
+        "SR-054"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-11"
+      ],
+      "family": "human_context",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "injury observations may be repeated across reports and season panels",
+      "item": "injury / recovery",
+      "known_bias_or_confounding": "missingness and return-to-play timing limit causal interpretation",
+      "next_action": "BOUNDED_TEMPORAL_CONTEXT",
+      "source_authority": "SP-101 contextual state and local reports",
+      "source_or_metric": "injury / recovery",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "preserve available/missing states and never fabricate recovery timing"
+    },
+    {
+      "candidate_number": 38,
+      "construct": "temporal_physical_context",
+      "coverage_denominator": {
+        "current100": 100,
+        "transition_rows": 80
+      },
+      "current_local_asset": "outputs/derived/sp101_current100_multibridge_evidence.json;outputs/derived/sp101_npb_mlb_transition_segments.csv",
+      "decision_use_status": [
+        "outputs/derived/sp101_npb_mlb_transition_segments.csv"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-038",
+      "evidence_role": "temporal/context modifier",
+      "existing_requirement_ids": [
+        "SR-005",
+        "SR-006",
+        "SR-030",
+        "SR-040",
+        "SR-054"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-11"
+      ],
+      "family": "human_context",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "age is shared across all longitudinal player records",
+      "item": "age and longitudinal physical decline",
+      "known_bias_or_confounding": "age curves can import next-year or future information into current-year appraisal",
+      "next_action": "BOUNDED_TEMPORAL_CONTEXT_NO_AUTOMATIC_CARRYOVER",
+      "source_authority": "SP-101 transition/temporal panel",
+      "source_or_metric": "age and longitudinal physical decline",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "current-year-first, explicit time gap and forward holdout"
+    },
+    {
+      "candidate_number": 39,
+      "construct": "pairwise_directional_context",
+      "coverage_denominator": {
+        "current100": 100,
+        "route": "MB-07"
+      },
+      "current_local_asset": "outputs/derived/sp101_pairwise_ordinal_graph.json;outputs/derived/sp101_current100_multibridge_evidence.json",
+      "decision_use_status": [
+        "outputs/derived/sp101_pairwise_ordinal_graph.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-039",
+      "evidence_role": "ordinal constraint/context",
+      "existing_requirement_ids": [
+        "SR-032",
+        "SR-033",
+        "SR-055",
+        "SR-058"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-07"
+      ],
+      "family": "human_context",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "same source/event can create dependent comparisons",
+      "item": "explicit player-vs-player faster/slower claims with supported endpoints",
+      "known_bias_or_confounding": "unsupported endpoint or generic comparison cannot establish signed relation",
+      "next_action": "SP101_TYPED_GRAPH_BOUNDED",
+      "source_authority": "SP-101 typed pairwise graph and existing source inventory",
+      "source_or_metric": "explicit player-vs-player faster/slower claims with supported endpoints",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "require supported endpoints, typed edge, uncertainty and no fabricated partner"
+    },
+    {
+      "candidate_number": 40,
+      "construct": "weak_directional_context",
+      "coverage_denominator": {
+        "source_bytes": 11330816
+      },
+      "current_local_asset": "data/normalized/speed_2026_sns_consensus_sources_v2.json;outputs/derived/speed_community_v3_consensus_20260815.json;outputs/derived/speed_community_v3_youtube_semantic_classified_20260814.jsonl",
+      "decision_use_status": [
+        "data/normalized/speed_2026_sns_consensus_sources_v2.json",
+        "outputs/derived/speed_community_v3_consensus_20260815.json",
+        "outputs/derived/speed_community_v3_youtube_semantic_classified_20260814.jsonl"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-040",
+      "evidence_role": "weak directional evidence",
+      "existing_requirement_ids": [
+        "SR-019",
+        "SR-020",
+        "SR-055",
+        "SR-058"
+      ],
+      "existing_sp_routes": [
+        "SP-032",
+        "SP-037",
+        "MB-14"
+      ],
+      "family": "human_context",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "generic label may be repeated or refer to technique rather than physical speed",
+      "item": "generic fast/slow labels",
+      "known_bias_or_confounding": "no metric, protocol or endpoint; high uncertainty",
+      "next_action": "WEAK_DIRECTIONAL_NO_ZEROING",
+      "source_authority": "community/source semantic inventories",
+      "source_or_metric": "generic fast/slow labels",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "retain as low-confidence direction with origin cap; no numeric point"
+    },
+    {
+      "candidate_number": 41,
+      "construct": "defensive_range_context",
+      "coverage_denominator": {
+        "bm_fld_rows": 14488,
+        "bm_player_rows": 10431
+      },
+      "current_local_asset": "data/pennant.db:bm_fld/bm_player/v_bm_by_player",
+      "decision_use_status": [
+        "data/pennant.db"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-041",
+      "evidence_role": "structured defensive context",
+      "existing_requirement_ids": [
+        "SR-052",
+        "SR-055",
+        "SR-057"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-15"
+      ],
+      "family": "defensive_context",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "range metrics include positioning, reaction, fielding and opportunity",
+      "item": "RngR / UZR / UZR_1200 / UZR_200 / range_runs",
+      "known_bias_or_confounding": "not pure straight-line running speed",
+      "next_action": "DEFENSE_CONTEXT_NOT_BASE_SPEED",
+      "source_authority": "local Baseball Monster range assets",
+      "source_or_metric": "RngR / UZR / UZR_1200 / UZR_200 / range_runs",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "keep fielding context separate and use removal audit"
+    },
+    {
+      "candidate_number": 42,
+      "construct": "defensive_burst_context",
+      "coverage_denominator": {
+        "local_rows": 0,
+        "source_surface": "verified"
+      },
+      "current_local_asset": "no local eligible Jump Burst row set",
+      "decision_use_status": [
+        "https://www.mlb.com/glossary/statcast/jump",
+        "https://baseballsavant.mlb.com/leaderboard/outfield_jump"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-042",
+      "evidence_role": "defensive burst context",
+      "existing_requirement_ids": [
+        "SR-052",
+        "SR-055"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-15"
+      ],
+      "family": "defensive_context",
+      "implementation_status": "SOURCE_CONFIRMED_NEW",
+      "independence_or_double_count_risk": "duplicates candidate 5 at source-event level but role-specific universe row is retained",
+      "item": "Statcast Outfielder Jump Burst for MLB-experienced outfielders",
+      "known_bias_or_confounding": "reaction, route and position confound base running speed",
+      "next_action": "NOT_COLLECTED_EXTERNAL_OPPORTUNITY",
+      "source_authority": "official MLB Jump glossary/leaderboard",
+      "source_or_metric": "Statcast Outfielder Jump Burst for MLB-experienced outfielders",
+      "source_url_or_repo_artifact": [],
+      "status": "SOURCE_CONFIRMED_NEW",
+      "validation_needed": "collect separately with position/eligibility; never merge with universal sprint speed"
+    },
+    {
+      "candidate_number": 43,
+      "construct": "defensive_straight_line_speed",
+      "coverage_denominator": {
+        "separated_rows": 0,
+        "sp062_items": 4
+      },
+      "current_local_asset": "outputs/derived/sp062_defensive_chase_close_20260814.json;data/pennant.db",
+      "decision_use_status": [
+        "outputs/derived/sp062_defensive_chase_close_20260814.json",
+        "data/pennant.db"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-043",
+      "evidence_role": "bounded negative finding",
+      "existing_requirement_ids": [
+        "SR-047",
+        "SR-052",
+        "SR-055",
+        "SR-058"
+      ],
+      "existing_sp_routes": [
+        "SP-062",
+        "SP-101"
+      ],
+      "family": "defensive_context",
+      "implementation_status": "MEASURED_NEGATIVE",
+      "independence_or_double_count_risk": "any future movement feed may overlap Jump and range events",
+      "item": "NPB tracking-derived fielder movement / straight-line speed separated from reaction/route/positioning",
+      "known_bias_or_confounding": "current assets do not separate physical displacement from route/reaction/positioning",
+      "next_action": "MEASURED_NEGATIVE_BOUNDED_LOCAL_UNIVERSE",
+      "source_authority": "repo-wide SQLite/schema/source scan and SP-062 bounded result",
+      "source_or_metric": "NPB tracking-derived fielder movement / straight-line speed separated from reaction/route/positioning",
+      "source_url_or_repo_artifact": [],
+      "status": "MEASURED_NEGATIVE",
+      "validation_needed": "reopen only with separable official tracking fields"
+    },
+    {
+      "candidate_number": 63,
+      "construct": "display_scale",
+      "coverage_denominator": {
+        "status": "provisional"
+      },
+      "current_local_asset": "configs/ratings.json;docs/audits/sp099_scale_architecture_verdict_20260814.md",
+      "decision_use_status": [
+        "configs/ratings.json",
+        "docs/audits/sp099_scale_architecture_verdict_20260814.md"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-063",
+      "evidence_role": "calibration only; not player evidence",
+      "existing_requirement_ids": [
+        "SR-034",
+        "SR-035",
+        "SR-050"
+      ],
+      "existing_sp_routes": [
+        "SP-099"
+      ],
+      "family": "scale_engine",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "display scale can be mixed with physical units if applied at wrong layer",
+      "item": "provisional relative-to-display scale",
+      "known_bias_or_confounding": "PowerPro-derived scale and uncalibrated z-scale remain separate risks",
+      "next_action": "NOT_READY_FOR_FINAL_SCALE",
+      "source_authority": "existing scale audit and SP-099 repair",
+      "source_or_metric": "provisional relative-to-display scale",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "rerun scale QA after construct freeze; keep source and transform explicit"
+    },
+    {
+      "candidate_number": 64,
+      "construct": "engine_response",
+      "coverage_denominator": {
+        "new_runs": 0
+      },
+      "current_local_asset": "no new SP-103 engine output",
+      "decision_use_status": [
+        "docs/tasks/SP103_SPEED_EVIDENCE_UNIVERSE_COMPLETENESS_20260823.md"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-064",
+      "evidence_role": "calibration only",
+      "existing_requirement_ids": [
+        "SR-036",
+        "SR-044",
+        "SR-050"
+      ],
+      "existing_sp_routes": [
+        "SP-079"
+      ],
+      "family": "scale_engine",
+      "implementation_status": "NOT_COLLECTED",
+      "independence_or_double_count_risk": "engine response is downstream of evidence and cannot validate physical truth by itself",
+      "item": "ability-value → custom-engine movement-response bridge",
+      "known_bias_or_confounding": "no SP-103 run permitted to become final numeric generation",
+      "next_action": "GATE_BLOCKED_PRE_SP079",
+      "source_authority": "task/spec requirement; implementation not run in SP-103",
+      "source_or_metric": "ability-value → custom-engine movement-response bridge",
+      "source_url_or_repo_artifact": [],
+      "status": "NOT_COLLECTED",
+      "validation_needed": "run only after owner/gate scope explicitly allows it"
+    },
+    {
+      "candidate_number": 65,
+      "construct": "league_distribution_calibration",
+      "coverage_denominator": {
+        "new_runs": 0
+      },
+      "current_local_asset": "no new SP-103 simulation output",
+      "decision_use_status": [
+        "docs/tasks/SP103_SPEED_EVIDENCE_UNIVERSE_COMPLETENESS_20260823.md"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-065",
+      "evidence_role": "calibration only",
+      "existing_requirement_ids": [
+        "SR-036",
+        "SR-044",
+        "SR-050"
+      ],
+      "existing_sp_routes": [
+        "SP-079"
+      ],
+      "family": "scale_engine",
+      "implementation_status": "NOT_COLLECTED",
+      "independence_or_double_count_risk": "league distribution can conceal systematic source/scale mismatch",
+      "item": "league-distribution simulation QA",
+      "known_bias_or_confounding": "simulation is downstream and must not be mistaken for evidence discovery",
+      "next_action": "GATE_BLOCKED_PRE_SP079",
+      "source_authority": "task/spec requirement; no SP-103 simulation run",
+      "source_or_metric": "league-distribution simulation QA",
+      "source_url_or_repo_artifact": [],
+      "status": "NOT_COLLECTED",
+      "validation_needed": "run as a separate post-gate QA with frozen evidence and scale manifest"
+    },
+    {
+      "candidate_number": 66,
+      "construct": "population_scale_consistency",
+      "coverage_denominator": {
+        "new_runs": 0
+      },
+      "current_local_asset": "no new SP-103 full-roster scale output",
+      "decision_use_status": [
+        "docs/tasks/SP103_SPEED_EVIDENCE_UNIVERSE_COMPLETENESS_20260823.md"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-066",
+      "evidence_role": "calibration only",
+      "existing_requirement_ids": [
+        "SR-037",
+        "SR-050"
+      ],
+      "existing_sp_routes": [
+        "SP-079"
+      ],
+      "family": "scale_engine",
+      "implementation_status": "NOT_COLLECTED",
+      "independence_or_double_count_risk": "100-player-only normalization can create a separate scale",
+      "item": "current-100 vs non-100 full-roster scale consistency",
+      "known_bias_or_confounding": "no final 0-100 or shoulder work is permitted in this task",
+      "next_action": "GATE_BLOCKED_PRE_SP079",
+      "source_authority": "task/spec requirement; no SP-103 final scale run",
+      "source_or_metric": "current-100 vs non-100 full-roster scale consistency",
+      "source_url_or_repo_artifact": [],
+      "status": "NOT_COLLECTED",
+      "validation_needed": "run after evidence universe lock with all-roster denominator"
+    }
+  ],
+  "execution_contract": "independent_process; no canonical SP-103 output is written by this lane",
+  "lane": "G",
+  "negative_findings": [
+    "All 61 baseline rows and all 15 owner seed rows are mapped; mapping does not imply completion.",
+    "Scale/engine candidates 63-66 are explicitly downstream and gate-blocked in SP-103."
+  ],
+  "owner_feedback_count": 15,
+  "owner_feedback_status_counts": {
+    "REQUIRES_POST_SP103_DECISION_USE": 1,
+    "TRACED_BOUNDED": 8,
+    "TRACED_GAP_RECORDED": 2,
+    "TRACED_LOCKED": 4
+  },
+  "purpose": "owner feedback, baseline requirement traceability, human/defensive context and scale/engine boundary",
+  "schema_version": "sp103_lane_g_v1",
+  "traceability_row_count": 76
+}

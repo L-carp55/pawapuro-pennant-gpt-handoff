@@ -1,0 +1,1083 @@
+{
+  "as_of": "2026-08-23",
+  "cohort_guards": [
+    "current100=100 is retained; all eligible MLB-experienced rows are measured as matched/missing/unresolved, not silently reduced to the old 6/7-pair sample",
+    "The Show Speed, Stealing and Baserunning Aggressiveness remain separate",
+    "The Show/PowerPro values are not copied into current NPB final speed"
+  ],
+  "database_snapshot": {
+    "available": true,
+    "path": "data/pennant.db",
+    "tables": {
+      "baserunning_advances": {
+        "columns": [
+          "season",
+          "park",
+          "kind",
+          "runner",
+          "runner_norm",
+          "outs",
+          "success",
+          "hc_x",
+          "hc_y",
+          "hit_location",
+          "description"
+        ],
+        "rows": 22459
+      },
+      "batting": {
+        "columns": [
+          "season",
+          "game_type",
+          "team",
+          "uniform_no",
+          "name",
+          "position",
+          "g",
+          "pa",
+          "ab",
+          "avg",
+          "obp",
+          "slg",
+          "ops",
+          "r",
+          "rbi",
+          "h",
+          "b1",
+          "b2",
+          "b3",
+          "hr",
+          "tb",
+          "sb",
+          "cs",
+          "bb",
+          "ibb",
+          "so",
+          "gdp",
+          "hbp",
+          "sh",
+          "sf",
+          "player_id"
+        ],
+        "rows": 17908
+      },
+      "bm_bat": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "pa",
+          "wraa",
+          "wrc_plus",
+          "ops",
+          "obp",
+          "slg",
+          "woba",
+          "iso",
+          "k_pct",
+          "bb_pct",
+          "babip",
+          "hr_fb_pct",
+          "gb_pct",
+          "ld_pct",
+          "offb_pct",
+          "iffb_pct"
+        ],
+        "rows": 5171
+      },
+      "bm_fld": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "pos",
+          "inn",
+          "tzr",
+          "rngr",
+          "dpr",
+          "arm",
+          "errr",
+          "pos_adj",
+          "framing",
+          "blocking"
+        ],
+        "rows": 14488
+      },
+      "bm_pd": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "zone",
+          "pitches",
+          "pitch_pct",
+          "overall",
+          "swing",
+          "take",
+          "swing_pct",
+          "contact_pct",
+          "wobacon"
+        ],
+        "rows": 52155
+      },
+      "bm_pit": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "role",
+          "war",
+          "ip",
+          "tbf",
+          "rsaa",
+          "k_bb_pct",
+          "k_pct",
+          "bb_pct",
+          "der",
+          "gb_pct",
+          "ld_pct",
+          "offb_pct",
+          "iffb_pct",
+          "hr_fb_pct",
+          "gmli",
+          "fip",
+          "xfip",
+          "tra",
+          "kwera",
+          "siera",
+          "fip_minus",
+          "xfip_minus",
+          "tra_minus",
+          "kwera_minus",
+          "siera_minus"
+        ],
+        "rows": 12164
+      },
+      "bm_player": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "team",
+          "name_ja",
+          "name_en",
+          "name_sponavi",
+          "war",
+          "bat_war",
+          "run_war",
+          "fld_war",
+          "pit_war",
+          "ubr",
+          "wsb",
+          "dpar",
+          "def_inn",
+          "tzr",
+          "rngr",
+          "dpr",
+          "arm",
+          "errr",
+          "pos_adj"
+        ],
+        "rows": 10431
+      },
+      "bm_pv": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "pitch_type",
+          "grade",
+          "pitches",
+          "pitch_pct",
+          "velo",
+          "xpv",
+          "xpv100",
+          "swstr_pct",
+          "whiff_pct",
+          "gb_pct",
+          "ld_pct",
+          "offb_pct",
+          "iffb_pct",
+          "xwobacon",
+          "wobacon",
+          "csw_pct",
+          "putaway_pct"
+        ],
+        "rows": 26214
+      },
+      "catcher_steal_event": {
+        "columns": [
+          "season",
+          "game_id",
+          "game_date",
+          "game_type",
+          "inning",
+          "catcher",
+          "pitcher",
+          "runner_1b",
+          "runner_2b",
+          "caught",
+          "from_pickoff",
+          "second_base_only",
+          "description"
+        ],
+        "rows": 9240
+      },
+      "fielding": {
+        "columns": [
+          "season",
+          "game_type",
+          "team",
+          "uniform_no",
+          "name",
+          "position",
+          "g",
+          "fpct",
+          "po",
+          "a",
+          "e",
+          "dp",
+          "pb",
+          "player_id"
+        ],
+        "rows": 20461
+      },
+      "fielding_plays": {
+        "columns": [
+          "season",
+          "fielder",
+          "pos",
+          "chances",
+          "throw_errors",
+          "field_errors",
+          "unknown_errors"
+        ],
+        "rows": 6091
+      },
+      "infield_grounder_events": {
+        "columns": [
+          "season",
+          "date",
+          "park",
+          "batter",
+          "batter_norm",
+          "bats",
+          "fielder",
+          "fielder_norm",
+          "pos",
+          "hc_x",
+          "hc_y",
+          "is_out",
+          "kind",
+          "has_runner",
+          "description"
+        ],
+        "rows": 31003
+      },
+      "mlb_bridge": {
+        "columns": [
+          "npb_name",
+          "npb_name_en",
+          "proeye_id",
+          "mlb_name",
+          "sprint_speed_avg",
+          "sprint_years",
+          "arm_mph_avg",
+          "arm_years",
+          "detail"
+        ],
+        "rows": 79
+      },
+      "mlb_catcher_bridge": {
+        "columns": [
+          "npb_name",
+          "npb_name_en",
+          "proeye_id",
+          "mlb_name",
+          "arm_mph_avg",
+          "exchange_avg",
+          "pop2b_avg",
+          "years",
+          "detail"
+        ],
+        "rows": 1
+      },
+      "nf3_direction": {
+        "columns": [
+          "season",
+          "name",
+          "name_norm",
+          "team",
+          "position",
+          "throw_hand",
+          "bat_hand",
+          "pull_rate",
+          "total",
+          "left_n",
+          "center_n",
+          "right_n",
+          "left_hit",
+          "left_hr",
+          "left_out",
+          "center_hit",
+          "center_hr",
+          "center_out",
+          "right_hit",
+          "right_hr",
+          "right_out"
+        ],
+        "rows": 5963
+      },
+      "nf3_link": {
+        "columns": [
+          "season",
+          "name_norm",
+          "proeye_id",
+          "proeye_name",
+          "method"
+        ],
+        "rows": 11709
+      },
+      "nf3_split": {
+        "columns": [
+          "season",
+          "name",
+          "name_norm",
+          "team",
+          "uniform",
+          "section",
+          "label",
+          "g",
+          "pa",
+          "ab",
+          "r",
+          "h",
+          "b2",
+          "b3",
+          "hr",
+          "tb",
+          "rbi",
+          "so",
+          "bb",
+          "ibb",
+          "hbp",
+          "sh",
+          "sf",
+          "sb",
+          "cs",
+          "e",
+          "ih",
+          "avg",
+          "obp",
+          "slg",
+          "ops",
+          "extra"
+        ],
+        "rows": 378829
+      },
+      "nf3_team_bat": {
+        "columns": [
+          "season",
+          "team",
+          "name",
+          "name_norm",
+          "bats",
+          "pa",
+          "ab",
+          "h",
+          "ih",
+          "ih_pct",
+          "risp_avg",
+          "so",
+          "bb",
+          "b2",
+          "b3",
+          "hr",
+          "sb",
+          "cs",
+          "gdp"
+        ],
+        "rows": 13993
+      },
+      "nf3_team_link": {
+        "columns": [
+          "season",
+          "name_norm",
+          "proeye_id",
+          "method"
+        ],
+        "rows": 12751
+      },
+      "npb_plus_measurement": {
+        "columns": [
+          "name",
+          "player_id",
+          "team",
+          "season_label",
+          "exit_velo_max",
+          "exit_velo_avg",
+          "distance_max",
+          "launch_angle_avg",
+          "swing_speed_avg",
+          "hard_hit_pct",
+          "barrel_pct",
+          "chase_pct",
+          "k_pct",
+          "bb_rate",
+          "ops",
+          "sb_success",
+          "top_speed_kmh",
+          "hp_to_1b_sec",
+          "throw_speed_kmh",
+          "source_images",
+          "source"
+        ],
+        "rows": 109
+      },
+      "npb_usage_2026": {
+        "columns": [
+          "name",
+          "plate_appearances",
+          "games",
+          "primary_pos",
+          "primary_pos_pitches",
+          "pos_breakdown"
+        ],
+        "rows": 490
+      },
+      "park_plate_appearances": {
+        "columns": [
+          "season",
+          "name",
+          "name_norm",
+          "park",
+          "plate_appearances"
+        ],
+        "rows": 20892
+      },
+      "pawapuro_full": {
+        "columns": [
+          "work",
+          "team",
+          "slot",
+          "name",
+          "name_norm",
+          "trajectory",
+          "meet",
+          "power",
+          "speed",
+          "arm",
+          "fielding",
+          "catching",
+          "ranked_json",
+          "plus_json",
+          "minus_json",
+          "n_ranked",
+          "n_plus",
+          "n_minus"
+        ],
+        "rows": 3229
+      },
+      "pawapuro_full_link": {
+        "columns": [
+          "pawa_rowid",
+          "work",
+          "team",
+          "pawa_name",
+          "proeye_id",
+          "proeye_name",
+          "method"
+        ],
+        "rows": 1879
+      },
+      "pawapuro_link": {
+        "columns": [
+          "name_norm",
+          "proeye_id",
+          "proeye_name",
+          "method"
+        ],
+        "rows": 381
+      },
+      "pawapuro_rating": {
+        "columns": [
+          "title",
+          "team",
+          "name",
+          "name_norm",
+          "trajectory",
+          "meet",
+          "power",
+          "speed",
+          "arm",
+          "fielding",
+          "catching"
+        ],
+        "rows": 405
+      },
+      "pitching": {
+        "columns": [
+          "season",
+          "game_type",
+          "team",
+          "uniform_no",
+          "name",
+          "w",
+          "l",
+          "sv",
+          "hld",
+          "hp",
+          "apps",
+          "ip_text",
+          "outs",
+          "win_pct",
+          "era",
+          "whip",
+          "r9",
+          "rg",
+          "h9",
+          "hr9",
+          "k9",
+          "bb9",
+          "kbb",
+          "bf",
+          "h",
+          "r",
+          "er",
+          "hr",
+          "so",
+          "bb",
+          "ibb",
+          "hbp",
+          "wp",
+          "bk",
+          "cg",
+          "sho",
+          "nbb",
+          "gs",
+          "gf",
+          "player_id"
+        ],
+        "rows": 8444
+      },
+      "player_link": {
+        "columns": [
+          "season",
+          "team",
+          "proeye_id",
+          "bm_id",
+          "name_proeye",
+          "name_bm",
+          "method"
+        ],
+        "rows": 4148
+      },
+      "the_show_bridge": {
+        "columns": [
+          "proeye_id",
+          "npb_name",
+          "mlb_name",
+          "name_key",
+          "editions",
+          "ovr_avg",
+          "contact_left_avg",
+          "contact_right_avg",
+          "power_left_avg",
+          "power_right_avg",
+          "plate_vision_avg",
+          "plate_discipline_avg",
+          "batting_clutch_avg",
+          "bunting_ability_avg",
+          "hitting_durability_avg",
+          "fielding_durability_avg",
+          "fielding_ability_avg",
+          "arm_strength_avg",
+          "arm_accuracy_avg",
+          "reaction_time_avg",
+          "blocking_avg",
+          "speed_avg",
+          "baserunning_ability_avg",
+          "baserunning_aggression_avg"
+        ],
+        "rows": 47
+      },
+      "the_show_rating": {
+        "columns": [
+          "edition",
+          "uuid",
+          "name",
+          "name_key",
+          "team",
+          "series",
+          "ovr",
+          "display_position",
+          "age",
+          "bat_hand",
+          "throw_hand",
+          "is_hitter",
+          "contact_left",
+          "contact_right",
+          "power_left",
+          "power_right",
+          "plate_vision",
+          "plate_discipline",
+          "batting_clutch",
+          "bunting_ability",
+          "hitting_durability",
+          "fielding_durability",
+          "fielding_ability",
+          "arm_strength",
+          "arm_accuracy",
+          "reaction_time",
+          "blocking",
+          "speed",
+          "baserunning_ability",
+          "baserunning_aggression"
+        ],
+        "rows": 17476
+      }
+    }
+  },
+  "evidence_candidates": [
+    {
+      "candidate_number": 19,
+      "construct": "external_appraisal_speed",
+      "coverage_denominator": {
+        "panel_lines": 3604,
+        "rating_rows": 17476
+      },
+      "current_local_asset": "data/pennant.db:the_show_rating;outputs/derived/sp101_the_show_live_player_year_panel.jsonl.gz",
+      "decision_use_status": [
+        "outputs/derived/sp101_the_show_live_player_year_panel.jsonl.gz",
+        "data/pennant.db"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-019",
+      "evidence_role": "appraisal/context only",
+      "existing_requirement_ids": [
+        "SR-023",
+        "SR-024",
+        "SR-060"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-09"
+      ],
+      "family": "external_game",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "same player-edition fields correlate by construction and are not physical ground truth",
+      "item": "MLB The Show Live/base-roster Speed current and historical",
+      "known_bias_or_confounding": "edition timing, roster carry-forward and cross-time confounding",
+      "next_action": "SP101_CONTEXT_ONLY_NOT_FINAL_NUMERIC",
+      "source_authority": "local The Show database and SP-101 longitudinal panel",
+      "source_or_metric": "MLB The Show Live/base-roster Speed current and historical",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "retain current/historical values with edition/time gaps and no direct copy"
+    },
+    {
+      "candidate_number": 20,
+      "construct": "temporal_appraisal_delta",
+      "coverage_denominator": {
+        "events": 10
+      },
+      "current_local_asset": "outputs/derived/sp101_the_show_roster_update_speed_events.csv",
+      "decision_use_status": [
+        "outputs/derived/sp101_the_show_roster_update_speed_events.csv"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-020",
+      "evidence_role": "temporal context only",
+      "existing_requirement_ids": [
+        "SR-023",
+        "SR-024",
+        "SR-060"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-09"
+      ],
+      "family": "external_game",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "multiple updates may represent the same underlying editorial source",
+      "item": "MLB The Show roster-update Speed deltas",
+      "known_bias_or_confounding": "update timing and carry-forward labels are not a physical measurement",
+      "next_action": "SP101_CONTEXT_ONLY_NOT_FINAL_NUMERIC",
+      "source_authority": "local SP-101 roster-update events",
+      "source_or_metric": "MLB The Show roster-update Speed deltas",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "preserve event provenance and use only as bounded ordinal/context lane"
+    },
+    {
+      "candidate_number": 21,
+      "construct": "technique_context",
+      "coverage_denominator": {
+        "current100": 100,
+        "rating_rows": 17476
+      },
+      "current_local_asset": "data/pennant.db:the_show_rating.speed/baserunning_ability/baserunning_aggression;outputs/derived/sp101_current100_multibridge_evidence.json",
+      "decision_use_status": [
+        "data/pennant.db",
+        "outputs/derived/sp101_current100_multibridge_evidence.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-021",
+      "evidence_role": "separate technique/context fields",
+      "existing_requirement_ids": [
+        "SR-002",
+        "SR-023",
+        "SR-060"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-02",
+        "MB-16"
+      ],
+      "family": "external_game",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "Speed, Stealing and Aggression share game-editorial provenance but different constructs",
+      "item": "The Show Stealing and Baserunning Aggressiveness separate from Speed",
+      "known_bias_or_confounding": "game ratings are not physical truth",
+      "next_action": "SEMANTICALLY_SEPARATED_CONTEXT",
+      "source_authority": "local The Show fields and SP-101 semantic repair",
+      "source_or_metric": "The Show Stealing and Baserunning Aggressiveness separate from Speed",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "keep named fields separate and prohibit collapse into physical estimate"
+    },
+    {
+      "candidate_number": 22,
+      "construct": "league_transition_context",
+      "coverage_denominator": {
+        "transition_rows": 80
+      },
+      "current_local_asset": "outputs/derived/sp101_npb_mlb_transition_segments.csv;outputs/derived/sp101_mlb_regular_season_appearance_years.csv",
+      "decision_use_status": [
+        "outputs/derived/sp101_npb_mlb_transition_segments.csv"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-022",
+      "evidence_role": "transition/eligibility context",
+      "existing_requirement_ids": [
+        "SR-011",
+        "SR-023",
+        "SR-024",
+        "SR-060"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-05"
+      ],
+      "family": "cross_game_transition",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "transition rows can reuse the same player-year The Show and MLB metrics",
+      "item": "NPB→MLB Japanese-player transitions",
+      "known_bias_or_confounding": "selection into MLB, time gaps and age/injury confound transfer",
+      "next_action": "SP101_IMPLEMENTED_BOUNDED_CONTEXT",
+      "source_authority": "SP-101 transition panel and MLB appearance sources",
+      "source_or_metric": "NPB→MLB Japanese-player transitions",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "use explicit cohort and forward holdout; no lifetime average leakage"
+    },
+    {
+      "candidate_number": 23,
+      "construct": "league_transition_context",
+      "coverage_denominator": {
+        "transition_rows": 80
+      },
+      "current_local_asset": "outputs/derived/sp101_npb_mlb_transition_segments.csv",
+      "decision_use_status": [
+        "outputs/derived/sp101_npb_mlb_transition_segments.csv"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-023",
+      "evidence_role": "transition/eligibility context",
+      "existing_requirement_ids": [
+        "SR-011",
+        "SR-023",
+        "SR-024",
+        "SR-060"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-05"
+      ],
+      "family": "cross_game_transition",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "same player appears in multiple source systems and editions",
+      "item": "MLB→NPB foreign-player transitions",
+      "known_bias_or_confounding": "selection, league and time gaps are material",
+      "next_action": "SP101_IMPLEMENTED_BOUNDED_CONTEXT",
+      "source_authority": "SP-101 transition panel",
+      "source_or_metric": "MLB→NPB foreign-player transitions",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "report cohort denominator and missingness separately"
+    },
+    {
+      "candidate_number": 24,
+      "construct": "returnee_temporal_context",
+      "coverage_denominator": {
+        "transition_rows": 80
+      },
+      "current_local_asset": "outputs/derived/sp101_npb_mlb_transition_segments.csv;outputs/derived/sp101_transition_effects.json",
+      "decision_use_status": [
+        "outputs/derived/sp101_transition_effects.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-024",
+      "evidence_role": "returnee context/negative-control cohort",
+      "existing_requirement_ids": [
+        "SR-011",
+        "SR-023",
+        "SR-024",
+        "SR-054"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-10"
+      ],
+      "family": "cross_game_transition",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "same player has correlated repeated observations",
+      "item": "NPB→MLB→NPB returnees",
+      "known_bias_or_confounding": "return-to-league selection and injury/time gap",
+      "next_action": "SP101_IMPLEMENTED_BOUNDED_CONTEXT",
+      "source_authority": "SP-101 transition panel and returnee route",
+      "source_or_metric": "NPB→MLB→NPB returnees",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "synthetic-control design with pre-period holdout and uncertainty"
+    },
+    {
+      "candidate_number": 25,
+      "construct": "multi_cycle_temporal_context",
+      "coverage_denominator": {
+        "transition_rows": 80
+      },
+      "current_local_asset": "outputs/derived/sp101_npb_mlb_transition_segments.csv",
+      "decision_use_status": [
+        "outputs/derived/sp101_npb_mlb_transition_segments.csv"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-025",
+      "evidence_role": "multi-cycle context",
+      "existing_requirement_ids": [
+        "SR-011",
+        "SR-023",
+        "SR-024",
+        "SR-054"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-04",
+        "MB-05"
+      ],
+      "family": "cross_game_transition",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "repeated cycles are not independent evidence rows",
+      "item": "multi-cycle MLB/NPB players",
+      "known_bias_or_confounding": "temporal and selection confounding",
+      "next_action": "SP101_IMPLEMENTED_BOUNDED_CONTEXT",
+      "source_authority": "SP-101 transition panel",
+      "source_or_metric": "multi-cycle MLB/NPB players",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "cluster by player and retain cycle-specific gaps"
+    },
+    {
+      "candidate_number": 26,
+      "construct": "historical_anchor_context",
+      "coverage_denominator": {
+        "bridge_rows": 47,
+        "panel_rows": 156
+      },
+      "current_local_asset": "outputs/derived/sp101_historical_npb_the_show_calibration_panel.csv;data/pennant.db:the_show_bridge",
+      "decision_use_status": [
+        "outputs/derived/sp101_historical_npb_the_show_calibration_panel.csv"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-026",
+      "evidence_role": "historical context/anchor candidate",
+      "existing_requirement_ids": [
+        "SR-023",
+        "SR-024",
+        "SR-032",
+        "SR-060"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-01",
+        "MB-08"
+      ],
+      "family": "cross_game_transition",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "same identity may occur in bridge, game rating and MLB physical tables",
+      "item": "historical NPB players with The Show data outside current 100",
+      "known_bias_or_confounding": "historical cohort and temporal gap limit directness",
+      "next_action": "SP101_HISTORICAL_CONTEXT_NOT_FINAL_NUMERIC",
+      "source_authority": "SP-101 historical panel",
+      "source_or_metric": "historical NPB players with The Show data outside current 100",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "use only as bounded context or physical-anchored analog with support checks"
+    },
+    {
+      "candidate_number": 27,
+      "construct": "external_appraisal_context",
+      "coverage_denominator": {
+        "rows": 3229
+      },
+      "current_local_asset": "data/pennant.db:pawapuro_full;outputs/derived/sp100_npb_raw_latent_speed.json",
+      "decision_use_status": [
+        "data/pennant.db",
+        "docs/audits/sp100_owner_decision_20260816.md"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-027",
+      "evidence_role": "appraisal context only",
+      "existing_requirement_ids": [
+        "SR-005",
+        "SR-007",
+        "SR-010",
+        "SR-061"
+      ],
+      "existing_sp_routes": [
+        "SP-100",
+        "SP-101",
+        "MB-06"
+      ],
+      "family": "external_game",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "using PowerPro as teacher creates circularity and label copying",
+      "item": "PowerPro current value",
+      "known_bias_or_confounding": "editorial/game scale is not physical speed",
+      "next_action": "POWERPRO_CONTEXT_ONLY",
+      "source_authority": "local PowerPro panel and owner ruling",
+      "source_or_metric": "PowerPro current value",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "retain current label for comparison/QA, excluded from physical teacher path"
+    },
+    {
+      "candidate_number": 28,
+      "construct": "temporal_appraisal_context",
+      "coverage_denominator": {
+        "powerpro_rows": 3229,
+        "temporal_pairs": 13
+      },
+      "current_local_asset": "data/pennant.db:pawapuro_full;outputs/derived/sp101_powerpro_the_show_temporal_pairs.csv",
+      "decision_use_status": [
+        "outputs/derived/sp101_powerpro_the_show_temporal_pairs.csv"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-028",
+      "evidence_role": "stale/odd diagnostic context",
+      "existing_requirement_ids": [
+        "SR-005",
+        "SR-006",
+        "SR-007",
+        "SR-040"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-06",
+        "MB-11"
+      ],
+      "family": "external_game",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "trajectory fields share source/editorial inertia",
+      "item": "PowerPro longitudinal trajectory / inertia / stale detection",
+      "known_bias_or_confounding": "age/injury/current physical evidence must be joined before stale claim",
+      "next_action": "POWERPRO_CONTEXT_ONLY_NOT_FINAL_NUMERIC",
+      "source_authority": "local PowerPro panel and SP-101 temporal route",
+      "source_or_metric": "PowerPro longitudinal trajectory / inertia / stale detection",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "use separate diagnostic lane and preserve uncertainty"
+    },
+    {
+      "candidate_number": 29,
+      "construct": "external_appraisal_context",
+      "coverage_denominator": {
+        "candidate_asset_bytes": 244318
+      },
+      "current_local_asset": "outputs/derived/speed_prospi_gamex_current_20260813_run2.csv;outputs/derived/speed_prospi_gamex_current_20260813_run3.csv;outputs/derived/speed_community_v3_prospi_remainder_inventory_20260815.csv",
+      "decision_use_status": [
+        "outputs/derived/speed_prospi_gamex_current_20260813_run2.csv",
+        "outputs/derived/speed_prospi_gamex_current_20260813_run3.csv",
+        "outputs/derived/speed_community_v3_prospi_remainder_inventory_20260815.csv"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-029",
+      "evidence_role": "raw/context only; not independent PowerPro teacher",
+      "existing_requirement_ids": [
+        "SR-027",
+        "SR-028",
+        "SR-029",
+        "SR-059"
+      ],
+      "existing_sp_routes": [
+        "SP-101"
+      ],
+      "family": "external_game",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "same game-editorial scale and possible duplicate source families",
+      "item": "Prospi A raw data retained under owner ruling",
+      "known_bias_or_confounding": "Prospi A is explicitly not accepted for PowerPro stale/odd QA",
+      "next_action": "OWNER_RULING_CONTEXT_ONLY",
+      "source_authority": "local Prospi A artifacts and owner ruling",
+      "source_or_metric": "Prospi A raw data retained under owner ruling",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "preserve raw and ruling; no silent promotion"
+    },
+    {
+      "candidate_number": 30,
+      "construct": "external_appraisal_context",
+      "coverage_denominator": {
+        "collected_console_rows": 0
+      },
+      "current_local_asset": "docs/state/speed_requirements_baseline_20260813.tsv",
+      "decision_use_status": [
+        "docs/state/speed_requirements_baseline_20260813.tsv"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-030",
+      "evidence_role": "explicit non-collection",
+      "existing_requirement_ids": [
+        "SR-027",
+        "SR-028",
+        "SR-029",
+        "SR-059"
+      ],
+      "existing_sp_routes": [
+        "SP-101"
+      ],
+      "family": "external_game",
+      "implementation_status": "SCOPED_REJECTED",
+      "independence_or_double_count_risk": "console Prospi is expected to be near-duplicate of PowerPro and not independent",
+      "item": "console Prospi non-collection",
+      "known_bias_or_confounding": "collecting it would expand scope without independent information",
+      "next_action": "OWNER_RULING_SCOPED_REJECTED",
+      "source_authority": "owner ruling SR-059",
+      "source_or_metric": "console Prospi non-collection",
+      "source_url_or_repo_artifact": [],
+      "status": "SCOPED_REJECTED",
+      "validation_needed": "reopen only if a new source proves independent construct/provenance"
+    }
+  ],
+  "execution_contract": "independent_process; no canonical SP-103 output is written by this lane",
+  "lane": "E",
+  "observations": {
+    "powerpro_show_temporal_pairs": 13,
+    "prospi_candidate_bytes": 244318,
+    "show_panel_lines": 3604,
+    "show_roster_update_events": 10,
+    "transition_rows": 80
+  },
+  "purpose": "MLB The Show, PowerPro, Prospi and cross-league temporal evidence",
+  "schema_version": "sp103_lane_e_v1"
+}

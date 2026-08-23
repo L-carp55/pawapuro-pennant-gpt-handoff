@@ -1,0 +1,281 @@
+{
+  "discovery_candidates": [
+    "SP103-DISC-001",
+    "SP103-DISC-002",
+    "SP103-DISC-003",
+    "SP103-DISC-004",
+    "SP103-DISC-005"
+  ],
+  "generated_at": "2026-08-23",
+  "parent_materializer": "scripts/sp103_materialize.py",
+  "required_negative_findings": [
+    {
+      "denominator": {
+        "2023_JPN_unique_player_ids": 15,
+        "2026_JPN_unique_player_ids": 30
+      },
+      "finding_id": "WBC-RUNNING-VALUE-RETRIEVAL",
+      "guard": "Do not interpret zero rows as zero speed; preserve the official tracking-scope positive finding separately.",
+      "result": "No player-level Sprint Speed/90ft/H2F result rows were retrievable from the checked public search surface.",
+      "scope": "public Baseball Savant WBC search surface checked for 2023 and 2026 Japan selector universe",
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "artifact": "docs/audits/luna_npb_plus_provenance_contamination_20260814.md",
+      "finding_id": "NPBPLUS-OLD-H2F-PROVENANCE",
+      "result": "Current official field availability does not validate old local values; old values remain fail-closed under the local provenance ruling.",
+      "scope": "historical local npb_plus_measurement.hp_to_1b_sec",
+      "status": "REOPEN_SOURCE_AVAILABILITY_NOT_OLD_VALUES"
+    }
+  ],
+  "retrieval_policy": "Official/primary sources first; snapshots are frozen on first successful acquisition and reused for deterministic reruns.",
+  "schema_version": "sp103_external_source_verification_lane_b_v1",
+  "source_receipts": [
+    {
+      "bytes": 28127,
+      "claim": "The current official product page separately lists スプリントスピード and 最速タイム（一塁到達） under batter tracking data.",
+      "construct_role": "current direct/near-direct physical speed; Sprint Speed and H2F remain distinct",
+      "content_type": "text/html",
+      "error": null,
+      "evidence_id": "SP103-EXT-NPBPLUS-H2F",
+      "fetch_status": 200,
+      "fetched_this_run": true,
+      "retrieval_date": "2026-08-23",
+      "sha256": "f9fd9bb172f4860627165f74e67c07c7c3d70b3b7c8b1ab15bc90cd68afb05c7",
+      "snapshot": "npbplus_official.html",
+      "snapshot_path": "outputs/derived/sp103_sources/npbplus_official.html",
+      "source_locator": "HTML headings/list around player tracking fields; terms スプリントスピード and 最速タイム（一塁到達)",
+      "text_length": 23804,
+      "url": "https://www.japan-baseball.jp/npb-plus/"
+    },
+    {
+      "bytes": 819798,
+      "claim": "MLB defines 90-foot splits in five-foot cumulative increments and standardizes home-to-first to 90 feet; raw H2F geometry differs by batting side.",
+      "construct_role": "initial acceleration shape plus standardized end-to-end running context",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "evidence_id": "SP103-EXT-MLB-90FT-SPLITS",
+      "fetch_status": 200,
+      "fetched_this_run": true,
+      "retrieval_date": "2026-08-23",
+      "sha256": "9031c0fdc3c29305b2b713a765b02ef1fc03e3065836b37e3f08a05f3a02e008",
+      "snapshot": "mlb_90ft_glossary.html",
+      "snapshot_path": "outputs/derived/sp103_sources/mlb_90ft_glossary.html",
+      "source_locator": "Definition section: five-foot increments, bat-on-ball to first, 90-foot extrapolation",
+      "text_length": 819706,
+      "url": "https://www.mlb.com/glossary/statcast/90-foot-running-splits"
+    },
+    {
+      "bytes": 812528,
+      "claim": "MLB separates Outfielder Jump into Reaction (first 1.5 seconds), Burst (second 1.5 seconds) and Route (directional efficiency over three seconds).",
+      "construct_role": "defensive-context burst/acceleration only; not universal speed",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "evidence_id": "SP103-EXT-MLB-OF-JUMP-BURST",
+      "fetch_status": 200,
+      "fetched_this_run": true,
+      "retrieval_date": "2026-08-23",
+      "sha256": "be79cde4722140ae8e71a6deba20a0af0e15dd96410213fb69c612f31ddbdada",
+      "snapshot": "mlb_jump_glossary.html",
+      "snapshot_path": "outputs/derived/sp103_sources/mlb_jump_glossary.html",
+      "source_locator": "Definition and component bullets for Reaction, Burst and Route",
+      "text_length": 812424,
+      "url": "https://www.mlb.com/glossary/statcast/jump"
+    },
+    {
+      "bytes": 817922,
+      "claim": "Lead Distance measures runner distance from the base at the pitcher's first movement and is separate from maximum speed/acceleration and throwing variables.",
+      "construct_role": "stealing/start technique context; never a physical-speed booster",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "evidence_id": "SP103-EXT-MLB-LEAD-DISTANCE",
+      "fetch_status": 200,
+      "fetched_this_run": true,
+      "retrieval_date": "2026-08-23",
+      "sha256": "3a32bff7a6094520f6aa442d693192fe47e6d34c10f66912358435390dfa918f",
+      "snapshot": "mlb_lead_distance_glossary.html",
+      "snapshot_path": "outputs/derived/sp103_sources/mlb_lead_distance_glossary.html",
+      "source_locator": "Definition and explanatory paragraph on leads versus maximum speed/acceleration",
+      "text_length": 817830,
+      "url": "https://www.mlb.com/glossary/statcast/lead-distance"
+    },
+    {
+      "bytes": 476781,
+      "claim": "The official leaderboard defines basestealing opportunity/value and exposes Lead Distance Gained between pitcher first move and pitch release.",
+      "construct_role": "stealing technique/opportunity context; outcome proxy, not physical ground truth",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "evidence_id": "SP103-EXT-MLB-BASESTEALING",
+      "fetch_status": 200,
+      "fetched_this_run": true,
+      "retrieval_date": "2026-08-23",
+      "sha256": "ccc2895243dbea963fd328b8bed0744d0917e32c6087e48905271b8798ad3368",
+      "snapshot": "mlb_basestealing_leaderboard.html",
+      "snapshot_path": "outputs/derived/sp103_sources/mlb_basestealing_leaderboard.html",
+      "source_locator": "Leaderboard explanation around basestealing impact, Lead Distance Gained and qualifiers",
+      "text_length": 476703,
+      "url": "https://baseballsavant.mlb.com/leaderboard/basestealing-run-value"
+    },
+    {
+      "bytes": 368353,
+      "claim": "The official Sprint Speed leaderboard exposes Competitive Runs, Bolts, HP to 1B and Sprint Speed; Bolt is a cumulative >=30 ft/s run.",
+      "construct_role": "top-speed value plus reliability/exposure and end-to-end context",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "evidence_id": "SP103-EXT-MLB-SPRINT-EXPOSURE",
+      "fetch_status": 200,
+      "fetched_this_run": true,
+      "retrieval_date": "2026-08-23",
+      "sha256": "9654d88f76be7727510ca7f79e018a7320f7ca4172a643bd707e1b3648b743ec",
+      "snapshot": "mlb_sprint_speed_leaderboard.html",
+      "snapshot_path": "outputs/derived/sp103_sources/mlb_sprint_speed_leaderboard.html",
+      "source_locator": "Rendered table header and Sprint Speed/Bolt explanation",
+      "text_length": 368199,
+      "url": "https://baseballsavant.mlb.com/sprint_speed_leaderboard"
+    },
+    {
+      "bytes": 340596,
+      "claim": "1.02 defines Spd as the average of four capped components: stolen-base success, attempt frequency, triple rate and run rate.",
+      "construct_role": "mixed outcome proxy with technique/opportunity overlap; never direct physical evidence",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "evidence_id": "SP103-EXT-DELTA-SPD",
+      "fetch_status": 200,
+      "fetched_this_run": true,
+      "retrieval_date": "2026-08-23",
+      "sha256": "9acf459521262bdcd9ba6ff9da2dd93a5bc7c48a6100b2ded890bad8b48638b6",
+      "snapshot": "delta_102_spd_glossary.html",
+      "snapshot_path": "outputs/derived/sp103_sources/delta_102_spd_glossary.html",
+      "source_locator": "Spd definition and formula A-D",
+      "text_length": 331091,
+      "url": "https://1point02.jp/op/gnav/glossary/gls_explanation.aspx?ecd=204&eid=20047"
+    },
+    {
+      "bytes": 1003257,
+      "claim": "Official WBC Statcast search states pitch-level data begins in 2023 and the public player selector contains 2023 and 2026 Japan entries; the public result field surface exposes pitch/hitting/fielding/glossary context but no player-level Sprint Speed, 90-foot or H2F result column.",
+      "construct_role": "potential cross-league bridge; running-value acquisition currently bounded/blocked on public surface",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "evidence_id": "SP103-EXT-WBC-SEARCH",
+      "fetch_status": 200,
+      "fetched_this_run": true,
+      "retrieval_date": "2026-08-23",
+      "sha256": "a8c800f4f9f46dfaa739f61ed3e9f2556f1ef329f7a3a9fac9280678630897ed",
+      "snapshot": "mlb_wbc_statcast_search.html",
+      "snapshot_path": "outputs/derived/sp103_sources/mlb_wbc_statcast_search.html",
+      "source_locator": "World Baseball Classic Statcast Search description, season/player selectors and running glossary section",
+      "text_length": 1003021,
+      "url": "https://baseballsavant.mlb.com/statcast-search-world-baseball-classic"
+    },
+    {
+      "bytes": 321624,
+      "claim": "MLB states full Statcast tracking is available for WBC games, searchable for 2023 and available for the 2026 Classic.",
+      "construct_role": "tracking-scope confirmation only; does not prove running metric retrievability",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "evidence_id": "SP103-EXT-WBC-2026-CONTEXT",
+      "fetch_status": 200,
+      "fetched_this_run": true,
+      "retrieval_date": "2026-08-23",
+      "sha256": "cefcef253a673242bafc81d5bb6d77b946f782adbfb26c4e5742ae1cb3f118a8",
+      "snapshot": "mlb_wbc_2026_tracking_context.html",
+      "snapshot_path": "outputs/derived/sp103_sources/mlb_wbc_2026_tracking_context.html",
+      "source_locator": "Article paragraph describing full Statcast tracking and searchable 2023/2026 availability",
+      "text_length": 321555,
+      "url": "https://www.mlb.com/world-baseball-classic/news/world-baseball-classic-follow-ups-to-watch-in-2026"
+    },
+    {
+      "bytes": 1898776,
+      "claim": "MLB Pipeline prospect material exposes a 20-80 Run scouting component separately from the other tools.",
+      "construct_role": "historical scouting context, year/age stamped; not direct measurement",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "evidence_id": "SP103-EXT-MLB-PIPELINE-RUN",
+      "fetch_status": 200,
+      "fetched_this_run": true,
+      "retrieval_date": "2026-08-23",
+      "sha256": "586aec244976a529eef8088780ccaff8476299481b0fa22d458f5df6738df442",
+      "snapshot": "mlb_pipeline_kirilloff_2020.html",
+      "snapshot_path": "outputs/derived/sp103_sources/mlb_pipeline_kirilloff_2020.html",
+      "source_locator": "Prospect tools/Run field in the page snapshot; coverage is page-specific",
+      "text_length": 1897489,
+      "url": "https://www.mlb.com/prospects/2020/top100/alex-kirilloff-666135"
+    }
+  ],
+  "source_snapshot_manifest": [
+    {
+      "bytes": 340596,
+      "path": "outputs/derived/sp103_sources/delta_102_spd_glossary.html",
+      "sha256": "9acf459521262bdcd9ba6ff9da2dd93a5bc7c48a6100b2ded890bad8b48638b6"
+    },
+    {
+      "bytes": 819798,
+      "path": "outputs/derived/sp103_sources/mlb_90ft_glossary.html",
+      "sha256": "9031c0fdc3c29305b2b713a765b02ef1fc03e3065836b37e3f08a05f3a02e008"
+    },
+    {
+      "bytes": 476781,
+      "path": "outputs/derived/sp103_sources/mlb_basestealing_leaderboard.html",
+      "sha256": "ccc2895243dbea963fd328b8bed0744d0917e32c6087e48905271b8798ad3368"
+    },
+    {
+      "bytes": 812528,
+      "path": "outputs/derived/sp103_sources/mlb_jump_glossary.html",
+      "sha256": "be79cde4722140ae8e71a6deba20a0af0e15dd96410213fb69c612f31ddbdada"
+    },
+    {
+      "bytes": 817922,
+      "path": "outputs/derived/sp103_sources/mlb_lead_distance_glossary.html",
+      "sha256": "3a32bff7a6094520f6aa442d693192fe47e6d34c10f66912358435390dfa918f"
+    },
+    {
+      "bytes": 1898776,
+      "path": "outputs/derived/sp103_sources/mlb_pipeline_kirilloff_2020.html",
+      "sha256": "586aec244976a529eef8088780ccaff8476299481b0fa22d458f5df6738df442"
+    },
+    {
+      "bytes": 368353,
+      "path": "outputs/derived/sp103_sources/mlb_sprint_speed_leaderboard.html",
+      "sha256": "9654d88f76be7727510ca7f79e018a7320f7ca4172a643bd707e1b3648b743ec"
+    },
+    {
+      "bytes": 321624,
+      "path": "outputs/derived/sp103_sources/mlb_wbc_2026_tracking_context.html",
+      "sha256": "cefcef253a673242bafc81d5bb6d77b946f782adbfb26c4e5742ae1cb3f118a8"
+    },
+    {
+      "bytes": 1003257,
+      "path": "outputs/derived/sp103_sources/mlb_wbc_statcast_search.html",
+      "sha256": "a8c800f4f9f46dfaa739f61ed3e9f2556f1ef329f7a3a9fac9280678630897ed"
+    },
+    {
+      "bytes": 28127,
+      "path": "outputs/derived/sp103_sources/npbplus_official.html",
+      "sha256": "f9fd9bb172f4860627165f74e67c07c7c3d70b3b7c8b1ab15bc90cd68afb05c7"
+    }
+  ],
+  "status": "PASS",
+  "verification_scope": "official/primary source surface and bounded public retrieval; no zero-row inference",
+  "wbc_coverage": {
+    "coverage_status": {
+      "2023": "BLOCKED_EXTERNAL_PUBLIC_SEARCH_HAS_NO_RUNNING_RESULT_COLUMN",
+      "2026": "BLOCKED_EXTERNAL_PUBLIC_SEARCH_HAS_NO_RUNNING_RESULT_COLUMN"
+    },
+    "interpretation": "The denominator is the official WBC player-selector lower bound, not a claim that all tournament participants are listed. Zero running rows is an acquisition limitation, never a slow/zero inference.",
+    "player_level_running_rows_retrieved": {
+      "2023": 0,
+      "2026": 0
+    },
+    "player_selector_denominator": {
+      "2023_JPN_unique_player_ids": 15,
+      "2026_JPN_unique_player_ids": 30
+    },
+    "public_surface": "outputs/derived/sp103_sources/mlb_wbc_statcast_search.html",
+    "public_surface_running_tokens": {
+      "90ft_split": 1,
+      "home_to_first": 0,
+      "sprint_speed": 5
+    },
+    "source": "https://baseballsavant.mlb.com/statcast-search-world-baseball-classic"
+  }
+}

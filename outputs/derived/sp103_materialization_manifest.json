@@ -1,0 +1,34 @@
+{
+  "as_of": "2026-08-23",
+  "canonical_outputs": [
+    "outputs/derived/sp103_speed_evidence_universe.tsv",
+    "outputs/derived/sp103_local_asset_inventory.json",
+    "outputs/derived/sp103_external_source_verification.json",
+    "outputs/derived/sp103_collected_but_unused.json",
+    "outputs/derived/sp103_inference_method_universe.json",
+    "outputs/derived/sp103_owner_requirement_traceability.tsv",
+    "outputs/derived/sp103_gap_and_remediation_plan.json",
+    "outputs/derived/sp103_pre_sp079_readiness.json"
+  ],
+  "deterministic_transform": "sorted candidate numbers, fixed as_of, frozen external snapshots, stable JSON serialization",
+  "evidence_status_counts": {
+    "COLLECTED_BUT_UNUSED": 4,
+    "IMPLEMENTED": 1,
+    "IMPLEMENTED_INCOMPLETE": 42,
+    "MEASURED_NEGATIVE": 4,
+    "NOT_COLLECTED": 7,
+    "SCOPED_REJECTED": 1,
+    "SOURCE_CONFIRMED_NEW": 12
+  },
+  "independent_worker_contract": "lanes A-G executed as separate processes; H is the separate red-team/QA process",
+  "lane_files": {
+    "A": "outputs/derived/sp103_intermediate/lane_a_local_inventory.json",
+    "B": "outputs/derived/sp103_intermediate/lane_b_external_source_verification.json",
+    "C": "outputs/derived/sp103_intermediate/lane_c_physical_measurements.json",
+    "D": "outputs/derived/sp103_intermediate/lane_d_outcome_proxies.json",
+    "E": "outputs/derived/sp103_intermediate/lane_e_cross_game_temporal.json",
+    "F": "outputs/derived/sp103_intermediate/lane_f_transfer_methods.json",
+    "G": "outputs/derived/sp103_intermediate/lane_g_owner_traceability.json"
+  },
+  "schema_version": "sp103_materialization_manifest_v1"
+}

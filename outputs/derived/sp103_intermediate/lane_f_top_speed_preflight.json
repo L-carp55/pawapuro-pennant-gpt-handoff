@@ -1,0 +1,1299 @@
+{
+  "acceleration_available_count": 15,
+  "acceleration_end_to_end_state_counts": {
+    "AVAILABLE_BOUNDED": 6,
+    "MISSING": 1,
+    "MISSING_BOUNDED": 93
+  },
+  "acceleration_only_count": 0,
+  "as_of": "2026-08-23",
+  "component_class_counts": {
+    "NEITHER": 1,
+    "PEAK_AND_ACCELERATION": 21,
+    "PEAK_ONLY": 78
+  },
+  "final_appraisal_recompute": "NOT_RUN",
+  "method": "deterministic component ablation: remove peak-speed component from each independent physical state; preserve acceleration/end-to-end availability; no final player rating is generated",
+  "neither_count": 1,
+  "peak_and_acceleration_count": 21,
+  "population": 100,
+  "required_follow_up": "retain this component/influence receipt when final-appraisal preflight is authorized; preserve no PowerPro-copy path",
+  "route_influence_counts": {
+    "CHANGES_BAND_OR_DIRECTION": 1,
+    "CHANGES_CONFIDENCE_TIER": 7,
+    "CHANGES_CONFLICT_CLASS": 285,
+    "CHANGES_TARGET_ELIGIBILITY": 4,
+    "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 402,
+    "ROUTE_MISSING_NOT_APPLICABLE": 981,
+    "SUPPORTS_SAME_STATE": 120
+  },
+  "schema_version": "sp103_top_speed_dominance_preflight_v1",
+  "state_changed_after_peak_removal_count": 78,
+  "top_speed_available_count": 99,
+  "top_speed_field": "players[].independent_physical_estimate.peak_speed_kmh",
+  "top_speed_only_count": 78,
+  "top_speed_removal_cells": [
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51255138",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91395138",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:11815130",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51955153",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91495139",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91995151",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:41645139",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:71475132",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91495130",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "AVAILABLE_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:93795157",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51455153",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:01305131",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:81585151",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:31735132",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:03105157",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91395132",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:21025157",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91195151",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:81685157",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:31835134",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91095135",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:31435157",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:63165155",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:41545136",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51055138",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:21925151",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:31435138",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:03505133",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "AVAILABLE_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:63065155",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:71075151",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:71275157",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:81885136",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:11715153",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91895138",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:11515139",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:31635138",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:41645136",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:11215151",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:81785155",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:41245130",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:71775134",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51255155",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:21125134",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:43745150",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "AVAILABLE_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:53955150",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [],
+      "before_state": "NO_COMPONENT",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:11915134",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:01705138",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:93395153",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "AVAILABLE_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:31135133",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:61565135",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:01405130",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "AVAILABLE_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:53755153",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91695153",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51255118",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:93195155",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:01705134",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:71975136",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51355155",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51455151",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:71375138",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:41845132",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51155118",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:73175138",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:81985135",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:81585134",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91995134",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51455137",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:23125136",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:33535159",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91695157",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51555155",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:13115153",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "AVAILABLE_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:41945131",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51555151",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:31335131",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:21925136",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:21425139",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:31835133",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:73175151",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:01705130",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:81885155",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:81385151",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:61465133",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:41745135",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:21425116",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:51955159",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:73375134",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:21325136",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:91595136",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "after_peak_speed_removal_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "before_components": [
+        "PEAK_SPEED",
+        "ACCELERATION_OR_END_TO_END"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:21625135",
+      "state_changed": false
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:41445153",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:61065137",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:41045153",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:11915132",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:21325134",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:31535138",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:31735138",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:21325139",
+      "state_changed": true
+    },
+    {
+      "acceleration_end_to_end_state": "MISSING_BOUNDED",
+      "after_peak_speed_removal_components": [],
+      "after_peak_speed_removal_state": "NO_COMPONENT",
+      "before_components": [
+        "PEAK_SPEED"
+      ],
+      "before_state": "PHYSICAL_COMPONENT_AVAILABLE",
+      "final_numeric_rating_created": false,
+      "stable_player_key": "PROEYE:43145157",
+      "state_changed": true
+    }
+  ],
+  "top_speed_removal_status": "PASS_PRE_FINAL_APPRAISAL_COMPONENT_ABLATION"
+}

@@ -1,0 +1,964 @@
+{
+  "as_of": "2026-08-23",
+  "database_snapshot": {
+    "available": true,
+    "path": "data/pennant.db",
+    "tables": {
+      "baserunning_advances": {
+        "columns": [
+          "season",
+          "park",
+          "kind",
+          "runner",
+          "runner_norm",
+          "outs",
+          "success",
+          "hc_x",
+          "hc_y",
+          "hit_location",
+          "description"
+        ],
+        "rows": 22459
+      },
+      "batting": {
+        "columns": [
+          "season",
+          "game_type",
+          "team",
+          "uniform_no",
+          "name",
+          "position",
+          "g",
+          "pa",
+          "ab",
+          "avg",
+          "obp",
+          "slg",
+          "ops",
+          "r",
+          "rbi",
+          "h",
+          "b1",
+          "b2",
+          "b3",
+          "hr",
+          "tb",
+          "sb",
+          "cs",
+          "bb",
+          "ibb",
+          "so",
+          "gdp",
+          "hbp",
+          "sh",
+          "sf",
+          "player_id"
+        ],
+        "rows": 17908
+      },
+      "bm_bat": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "pa",
+          "wraa",
+          "wrc_plus",
+          "ops",
+          "obp",
+          "slg",
+          "woba",
+          "iso",
+          "k_pct",
+          "bb_pct",
+          "babip",
+          "hr_fb_pct",
+          "gb_pct",
+          "ld_pct",
+          "offb_pct",
+          "iffb_pct"
+        ],
+        "rows": 5171
+      },
+      "bm_fld": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "pos",
+          "inn",
+          "tzr",
+          "rngr",
+          "dpr",
+          "arm",
+          "errr",
+          "pos_adj",
+          "framing",
+          "blocking"
+        ],
+        "rows": 14488
+      },
+      "bm_pd": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "zone",
+          "pitches",
+          "pitch_pct",
+          "overall",
+          "swing",
+          "take",
+          "swing_pct",
+          "contact_pct",
+          "wobacon"
+        ],
+        "rows": 52155
+      },
+      "bm_pit": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "role",
+          "war",
+          "ip",
+          "tbf",
+          "rsaa",
+          "k_bb_pct",
+          "k_pct",
+          "bb_pct",
+          "der",
+          "gb_pct",
+          "ld_pct",
+          "offb_pct",
+          "iffb_pct",
+          "hr_fb_pct",
+          "gmli",
+          "fip",
+          "xfip",
+          "tra",
+          "kwera",
+          "siera",
+          "fip_minus",
+          "xfip_minus",
+          "tra_minus",
+          "kwera_minus",
+          "siera_minus"
+        ],
+        "rows": 12164
+      },
+      "bm_player": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "team",
+          "name_ja",
+          "name_en",
+          "name_sponavi",
+          "war",
+          "bat_war",
+          "run_war",
+          "fld_war",
+          "pit_war",
+          "ubr",
+          "wsb",
+          "dpar",
+          "def_inn",
+          "tzr",
+          "rngr",
+          "dpr",
+          "arm",
+          "errr",
+          "pos_adj"
+        ],
+        "rows": 10431
+      },
+      "bm_pv": {
+        "columns": [
+          "season",
+          "farm",
+          "player_id",
+          "pitch_type",
+          "grade",
+          "pitches",
+          "pitch_pct",
+          "velo",
+          "xpv",
+          "xpv100",
+          "swstr_pct",
+          "whiff_pct",
+          "gb_pct",
+          "ld_pct",
+          "offb_pct",
+          "iffb_pct",
+          "xwobacon",
+          "wobacon",
+          "csw_pct",
+          "putaway_pct"
+        ],
+        "rows": 26214
+      },
+      "catcher_steal_event": {
+        "columns": [
+          "season",
+          "game_id",
+          "game_date",
+          "game_type",
+          "inning",
+          "catcher",
+          "pitcher",
+          "runner_1b",
+          "runner_2b",
+          "caught",
+          "from_pickoff",
+          "second_base_only",
+          "description"
+        ],
+        "rows": 9240
+      },
+      "fielding": {
+        "columns": [
+          "season",
+          "game_type",
+          "team",
+          "uniform_no",
+          "name",
+          "position",
+          "g",
+          "fpct",
+          "po",
+          "a",
+          "e",
+          "dp",
+          "pb",
+          "player_id"
+        ],
+        "rows": 20461
+      },
+      "fielding_plays": {
+        "columns": [
+          "season",
+          "fielder",
+          "pos",
+          "chances",
+          "throw_errors",
+          "field_errors",
+          "unknown_errors"
+        ],
+        "rows": 6091
+      },
+      "infield_grounder_events": {
+        "columns": [
+          "season",
+          "date",
+          "park",
+          "batter",
+          "batter_norm",
+          "bats",
+          "fielder",
+          "fielder_norm",
+          "pos",
+          "hc_x",
+          "hc_y",
+          "is_out",
+          "kind",
+          "has_runner",
+          "description"
+        ],
+        "rows": 31003
+      },
+      "mlb_bridge": {
+        "columns": [
+          "npb_name",
+          "npb_name_en",
+          "proeye_id",
+          "mlb_name",
+          "sprint_speed_avg",
+          "sprint_years",
+          "arm_mph_avg",
+          "arm_years",
+          "detail"
+        ],
+        "rows": 79
+      },
+      "mlb_catcher_bridge": {
+        "columns": [
+          "npb_name",
+          "npb_name_en",
+          "proeye_id",
+          "mlb_name",
+          "arm_mph_avg",
+          "exchange_avg",
+          "pop2b_avg",
+          "years",
+          "detail"
+        ],
+        "rows": 1
+      },
+      "nf3_direction": {
+        "columns": [
+          "season",
+          "name",
+          "name_norm",
+          "team",
+          "position",
+          "throw_hand",
+          "bat_hand",
+          "pull_rate",
+          "total",
+          "left_n",
+          "center_n",
+          "right_n",
+          "left_hit",
+          "left_hr",
+          "left_out",
+          "center_hit",
+          "center_hr",
+          "center_out",
+          "right_hit",
+          "right_hr",
+          "right_out"
+        ],
+        "rows": 5963
+      },
+      "nf3_link": {
+        "columns": [
+          "season",
+          "name_norm",
+          "proeye_id",
+          "proeye_name",
+          "method"
+        ],
+        "rows": 11709
+      },
+      "nf3_split": {
+        "columns": [
+          "season",
+          "name",
+          "name_norm",
+          "team",
+          "uniform",
+          "section",
+          "label",
+          "g",
+          "pa",
+          "ab",
+          "r",
+          "h",
+          "b2",
+          "b3",
+          "hr",
+          "tb",
+          "rbi",
+          "so",
+          "bb",
+          "ibb",
+          "hbp",
+          "sh",
+          "sf",
+          "sb",
+          "cs",
+          "e",
+          "ih",
+          "avg",
+          "obp",
+          "slg",
+          "ops",
+          "extra"
+        ],
+        "rows": 378829
+      },
+      "nf3_team_bat": {
+        "columns": [
+          "season",
+          "team",
+          "name",
+          "name_norm",
+          "bats",
+          "pa",
+          "ab",
+          "h",
+          "ih",
+          "ih_pct",
+          "risp_avg",
+          "so",
+          "bb",
+          "b2",
+          "b3",
+          "hr",
+          "sb",
+          "cs",
+          "gdp"
+        ],
+        "rows": 13993
+      },
+      "nf3_team_link": {
+        "columns": [
+          "season",
+          "name_norm",
+          "proeye_id",
+          "method"
+        ],
+        "rows": 12751
+      },
+      "npb_plus_measurement": {
+        "columns": [
+          "name",
+          "player_id",
+          "team",
+          "season_label",
+          "exit_velo_max",
+          "exit_velo_avg",
+          "distance_max",
+          "launch_angle_avg",
+          "swing_speed_avg",
+          "hard_hit_pct",
+          "barrel_pct",
+          "chase_pct",
+          "k_pct",
+          "bb_rate",
+          "ops",
+          "sb_success",
+          "top_speed_kmh",
+          "hp_to_1b_sec",
+          "throw_speed_kmh",
+          "source_images",
+          "source"
+        ],
+        "rows": 109
+      },
+      "npb_usage_2026": {
+        "columns": [
+          "name",
+          "plate_appearances",
+          "games",
+          "primary_pos",
+          "primary_pos_pitches",
+          "pos_breakdown"
+        ],
+        "rows": 490
+      },
+      "park_plate_appearances": {
+        "columns": [
+          "season",
+          "name",
+          "name_norm",
+          "park",
+          "plate_appearances"
+        ],
+        "rows": 20892
+      },
+      "pawapuro_full": {
+        "columns": [
+          "work",
+          "team",
+          "slot",
+          "name",
+          "name_norm",
+          "trajectory",
+          "meet",
+          "power",
+          "speed",
+          "arm",
+          "fielding",
+          "catching",
+          "ranked_json",
+          "plus_json",
+          "minus_json",
+          "n_ranked",
+          "n_plus",
+          "n_minus"
+        ],
+        "rows": 3229
+      },
+      "pawapuro_full_link": {
+        "columns": [
+          "pawa_rowid",
+          "work",
+          "team",
+          "pawa_name",
+          "proeye_id",
+          "proeye_name",
+          "method"
+        ],
+        "rows": 1879
+      },
+      "pawapuro_link": {
+        "columns": [
+          "name_norm",
+          "proeye_id",
+          "proeye_name",
+          "method"
+        ],
+        "rows": 381
+      },
+      "pawapuro_rating": {
+        "columns": [
+          "title",
+          "team",
+          "name",
+          "name_norm",
+          "trajectory",
+          "meet",
+          "power",
+          "speed",
+          "arm",
+          "fielding",
+          "catching"
+        ],
+        "rows": 405
+      },
+      "pitching": {
+        "columns": [
+          "season",
+          "game_type",
+          "team",
+          "uniform_no",
+          "name",
+          "w",
+          "l",
+          "sv",
+          "hld",
+          "hp",
+          "apps",
+          "ip_text",
+          "outs",
+          "win_pct",
+          "era",
+          "whip",
+          "r9",
+          "rg",
+          "h9",
+          "hr9",
+          "k9",
+          "bb9",
+          "kbb",
+          "bf",
+          "h",
+          "r",
+          "er",
+          "hr",
+          "so",
+          "bb",
+          "ibb",
+          "hbp",
+          "wp",
+          "bk",
+          "cg",
+          "sho",
+          "nbb",
+          "gs",
+          "gf",
+          "player_id"
+        ],
+        "rows": 8444
+      },
+      "player_link": {
+        "columns": [
+          "season",
+          "team",
+          "proeye_id",
+          "bm_id",
+          "name_proeye",
+          "name_bm",
+          "method"
+        ],
+        "rows": 4148
+      },
+      "the_show_bridge": {
+        "columns": [
+          "proeye_id",
+          "npb_name",
+          "mlb_name",
+          "name_key",
+          "editions",
+          "ovr_avg",
+          "contact_left_avg",
+          "contact_right_avg",
+          "power_left_avg",
+          "power_right_avg",
+          "plate_vision_avg",
+          "plate_discipline_avg",
+          "batting_clutch_avg",
+          "bunting_ability_avg",
+          "hitting_durability_avg",
+          "fielding_durability_avg",
+          "fielding_ability_avg",
+          "arm_strength_avg",
+          "arm_accuracy_avg",
+          "reaction_time_avg",
+          "blocking_avg",
+          "speed_avg",
+          "baserunning_ability_avg",
+          "baserunning_aggression_avg"
+        ],
+        "rows": 47
+      },
+      "the_show_rating": {
+        "columns": [
+          "edition",
+          "uuid",
+          "name",
+          "name_key",
+          "team",
+          "series",
+          "ovr",
+          "display_position",
+          "age",
+          "bat_hand",
+          "throw_hand",
+          "is_hitter",
+          "contact_left",
+          "contact_right",
+          "power_left",
+          "power_right",
+          "plate_vision",
+          "plate_discipline",
+          "batting_clutch",
+          "bunting_ability",
+          "hitting_durability",
+          "fielding_durability",
+          "fielding_ability",
+          "arm_strength",
+          "arm_accuracy",
+          "reaction_time",
+          "blocking",
+          "speed",
+          "baserunning_ability",
+          "baserunning_aggression"
+        ],
+        "rows": 17476
+      }
+    }
+  },
+  "double_count_groups": [
+    {
+      "group_id": "SB_TECHNIQUE",
+      "guard": "never direct-speed-promote; keep lead/opportunity/technique separate",
+      "members": [
+        "SP103-EV-016",
+        "SP103-EV-017",
+        "SP103-EV-018"
+      ]
+    },
+    {
+      "group_id": "TRIPLE_AND_ADVANCE",
+      "guard": "same events may appear in multiple outcome proxies; route-removal and residualization required",
+      "members": [
+        "SP103-EV-013",
+        "SP103-EV-014",
+        "SP103-EV-015",
+        "SP103-EV-016"
+      ]
+    },
+    {
+      "group_id": "INFIELD_BALL_CONTEXT",
+      "guard": "batted-ball and fielder context must not become speed truth",
+      "members": [
+        "SP103-EV-011",
+        "SP103-EV-012",
+        "SP103-EV-013",
+        "SP103-EV-015"
+      ]
+    }
+  ],
+  "evidence_candidates": [
+    {
+      "candidate_number": 11,
+      "construct": "batted_ball_and_speed_mixed",
+      "coverage_denominator": {
+        "batting_rows": 17908,
+        "grounder_rows": 31003
+      },
+      "current_local_asset": "data/pennant.db:batting;data/pennant.db:infield_grounder_events;src/ratings/running.mjs",
+      "decision_use_status": [
+        "data/pennant.db",
+        "src/ratings/running.mjs",
+        "docs/audits/sp019_construct_validity_reaudit_v2_20260813.md"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-011",
+      "evidence_role": "mixed outcome proxy; current route retains it with guard",
+      "existing_requirement_ids": [
+        "SR-002",
+        "SR-008",
+        "SR-009",
+        "SR-057"
+      ],
+      "existing_sp_routes": [
+        "SP-019",
+        "MB-13"
+      ],
+      "family": "outcome_proxy",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "shared batted-ball and UBR/GDP opportunity information",
+      "item": "infield-hit rate / infield grounder outcomes",
+      "known_bias_or_confounding": "batted-ball direction, fielder and batter skill confound physical speed",
+      "next_action": "CURRENT_PROXY_WITH_OPEN_DECONFOUNDING",
+      "source_authority": "local batting and infield event database",
+      "source_or_metric": "infield-hit rate / infield grounder outcomes",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "residualize/stratify by ball context and preserve NOT_IDENTIFIABLE where unresolved"
+    },
+    {
+      "candidate_number": 12,
+      "construct": "opportunity_and_baserunning_proxy",
+      "coverage_denominator": {
+        "batting_rows": 17908
+      },
+      "current_local_asset": "data/pennant.db:batting.gdp;src/ratings/running.mjs",
+      "decision_use_status": [
+        "data/pennant.db",
+        "src/ratings/running.mjs"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-012",
+      "evidence_role": "outcome context; not direct speed",
+      "existing_requirement_ids": [
+        "SR-002",
+        "SR-009",
+        "SR-057"
+      ],
+      "existing_sp_routes": [
+        "SP-019",
+        "MB-13"
+      ],
+      "family": "outcome_proxy",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "shares plate-appearance, double-play and hitter-contact opportunity with other proxies",
+      "item": "GDP avoidance",
+      "known_bias_or_confounding": "batter speed, contact/groundball profile, runners/base state and defense are confounded",
+      "next_action": "CURRENT_PROXY_CONTEXT_ONLY",
+      "source_authority": "local batting database and running route",
+      "source_or_metric": "GDP avoidance",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "retain as bounded/shrunken context; do not promote to direct physical truth"
+    },
+    {
+      "candidate_number": 13,
+      "construct": "outcome_and_baserunning_proxy",
+      "coverage_denominator": {
+        "batting_rows": 17908
+      },
+      "current_local_asset": "data/pennant.db:batting.b3;configs/running_norms.json",
+      "decision_use_status": [
+        "data/pennant.db",
+        "docs/audits/sp019_proxy_deconfounding_reaudit_20260813.md"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-013",
+      "evidence_role": "mixed outcome proxy with separate legacy-control comparison",
+      "existing_requirement_ids": [
+        "SR-002",
+        "SR-009",
+        "SR-057"
+      ],
+      "existing_sp_routes": [
+        "SP-019",
+        "MB-13"
+      ],
+      "family": "outcome_proxy",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "triple rate overlaps park, batted ball, fielding and baserunning advances",
+      "item": "triple rate",
+      "known_bias_or_confounding": "raw outcome is not a pure leg-speed measure",
+      "next_action": "CURRENT_PROXY_CONTEXT_ONLY",
+      "source_authority": "local batting database and audited route",
+      "source_or_metric": "triple rate",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "keep component separation test and no direct promotion"
+    },
+    {
+      "candidate_number": 14,
+      "construct": "decision_and_baserunning_context",
+      "coverage_denominator": {
+        "advance_rows": 22459
+      },
+      "current_local_asset": "data/pennant.db:baserunning_advances;src/ratings/baserunning_advance.mjs",
+      "decision_use_status": [
+        "data/pennant.db",
+        "src/ratings/baserunning_advance.mjs",
+        "configs/running_norms.json"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-014",
+      "evidence_role": "bounded opportunity-aware context",
+      "existing_requirement_ids": [
+        "SR-009",
+        "SR-055",
+        "SR-056"
+      ],
+      "existing_sp_routes": [
+        "SP-018",
+        "MB-13"
+      ],
+      "family": "outcome_proxy",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "same runner events can feed UBR/BsR and extra-base outcomes",
+      "item": "extra-base advancement / baserunning advances",
+      "known_bias_or_confounding": "park, outs, hit location, fielder arm and choice are mixed",
+      "next_action": "CURRENT_SHRUNK_CONTEXT_ONLY",
+      "source_authority": "local event database with shrinkage repair",
+      "source_or_metric": "extra-base advancement / baserunning advances",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "retain low-opportunity observations with continuous shrinkage and uncertainty"
+    },
+    {
+      "candidate_number": 15,
+      "construct": "baserunning_outcome_value",
+      "coverage_denominator": {
+        "bm_player_rows": 10431
+      },
+      "current_local_asset": "data/pennant.db:bm_player.ubr/run_war;data/pennant.db:v_bm_by_player;src/ratings/running.mjs",
+      "decision_use_status": [
+        "data/pennant.db",
+        "src/ratings/running.mjs"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-015",
+      "evidence_role": "outcome/defense context, not direct truth",
+      "existing_requirement_ids": [
+        "SR-002",
+        "SR-009",
+        "SR-057"
+      ],
+      "existing_sp_routes": [
+        "SP-019",
+        "MB-13",
+        "MB-15"
+      ],
+      "family": "outcome_proxy",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "UBR/BsR overlaps advances, steals, baserunning decisions and opportunities",
+      "item": "UBR / BsR-compatible measures",
+      "known_bias_or_confounding": "model definition and league translation contain technique and context",
+      "next_action": "CURRENT_PROXY_CONTEXT_ONLY",
+      "source_authority": "Baseball Monster-style local data and route",
+      "source_or_metric": "UBR / BsR-compatible measures",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "use only as residual/context lane and audit removal effects"
+    },
+    {
+      "candidate_number": 16,
+      "construct": "composite_outcome_proxy",
+      "coverage_denominator": {
+        "local_rows": 0,
+        "source_definition": "verified"
+      },
+      "current_local_asset": "no direct local DELTA/Spd row; source definition preserved",
+      "decision_use_status": [
+        "https://1point02.jp/op/gnav/glossary/gls_explanation.aspx?ecd=204&eid=20047"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-016",
+      "evidence_role": "composite proxy only",
+      "existing_requirement_ids": [
+        "SR-002",
+        "SR-009",
+        "SR-057",
+        "SR-058"
+      ],
+      "existing_sp_routes": [
+        "SP-101"
+      ],
+      "family": "outcome_proxy",
+      "implementation_status": "SOURCE_CONFIRMED_NEW",
+      "independence_or_double_count_risk": "SB success, attempts, triples and run/scoring frequency overlap other candidates",
+      "item": "DELTA / 1.02 Spd (Speed Score)",
+      "known_bias_or_confounding": "technique, opportunity, lineup and scoring environment are embedded",
+      "next_action": "SCOPED_NOT_COLLECTED_COMPOSITE_PROXY",
+      "source_authority": "official 1.02 glossary",
+      "source_or_metric": "DELTA / 1.02 Spd (Speed Score)",
+      "source_url_or_repo_artifact": [],
+      "status": "SOURCE_CONFIRMED_NEW",
+      "validation_needed": "if collected, store components and never call it direct speed"
+    },
+    {
+      "candidate_number": 17,
+      "construct": "stealing_technique_and_opportunity",
+      "coverage_denominator": {
+        "batting_rows": 17908,
+        "steal_event_rows": 9240
+      },
+      "current_local_asset": "data/pennant.db:batting.sb/cs;data/pennant.db:catcher_steal_event",
+      "decision_use_status": [
+        "data/pennant.db",
+        "docs/state/speed_exclusion_reason_ledger.tsv"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-017",
+      "evidence_role": "technique/context lane separated from physical speed",
+      "existing_requirement_ids": [
+        "SR-002",
+        "SR-009",
+        "SR-019"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-13"
+      ],
+      "family": "outcome_proxy",
+      "implementation_status": "IMPLEMENTED_INCOMPLETE",
+      "independence_or_double_count_risk": "lead distance, pitcher/catcher, game state and decision overlap",
+      "item": "stolen-base outcomes / steal success",
+      "known_bias_or_confounding": "raw steals cannot identify pure running speed",
+      "next_action": "TECHNIQUE_CONTEXT_ONLY",
+      "source_authority": "local batting/catcher event data",
+      "source_or_metric": "stolen-base outcomes / steal success",
+      "source_url_or_repo_artifact": [],
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "validation_needed": "keep in technique lane; use physical estimate without direct SB input"
+    },
+    {
+      "candidate_number": 18,
+      "construct": "baserunning_outcome_value",
+      "coverage_denominator": {
+        "local_rows": 0,
+        "source_surface": "verified"
+      },
+      "current_local_asset": "no local eligible player-level Statcast run-value table",
+      "decision_use_status": [
+        "https://www.mlb.com/glossary/statcast/baserunning",
+        "https://baseballsavant.mlb.com/leaderboard/basestealing-run-value"
+      ],
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-018",
+      "evidence_role": "technique/context unless deconfounded",
+      "existing_requirement_ids": [
+        "SR-002",
+        "SR-052",
+        "SR-057"
+      ],
+      "existing_sp_routes": [
+        "SP-101",
+        "MB-13"
+      ],
+      "family": "outcome_proxy",
+      "implementation_status": "SOURCE_CONFIRMED_NEW",
+      "independence_or_double_count_risk": "official model incorporates runner speed and other contextual inputs, creating circularity risk",
+      "item": "Statcast Baserunning Run Value / analogous outcome value",
+      "known_bias_or_confounding": "not a pure physical metric and not reproducibly extracted for current NPB cohort",
+      "next_action": "NOT_COLLECTED_CONTEXT_OPPORTUNITY",
+      "source_authority": "official MLB glossary/leaderboard",
+      "source_or_metric": "Statcast Baserunning Run Value / analogous outcome value",
+      "source_url_or_repo_artifact": [],
+      "status": "SOURCE_CONFIRMED_NEW",
+      "validation_needed": "collect only with feature definition and deconfounding plan"
+    }
+  ],
+  "execution_contract": "independent_process; no canonical SP-103 output is written by this lane",
+  "lane": "D",
+  "negative_findings": [
+    "No proxy in this lane is allowed to become a direct physical measurement.",
+    "SP-019 remains NOT_IDENTIFIABLE_PROVISIONAL for the infield-hit/GB deconfounding question."
+  ],
+  "purpose": "outcome-derived proxy, technique and double-count audit",
+  "schema_version": "sp103_lane_d_v1"
+}

@@ -1,0 +1,1087 @@
+{
+  "ablation_contract": {
+    "all100x18_exact": true,
+    "cell_count": 1800,
+    "source": "outputs/derived/sp101_route_ablation_qa.json"
+  },
+  "as_of": "2026-08-23",
+  "current100_count": 100,
+  "evidence_candidates": [
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 44,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-044",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "normalized L2 analog matching",
+      "method_id": "TF-044",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 12,
+          "SUPPORTING_STATE_ONLY": 88
+        },
+        "evidence_count_total": 312,
+        "influence_classification_counts": {
+          "ROUTE_MISSING_NOT_APPLICABLE": 12,
+          "SUPPORTS_SAME_STATE": 88
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 12,
+          "SUPPORTED_NO_CHANGE": 88
+        }
+      },
+      "source_route": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 45,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-045",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "mutual kNN",
+      "method_id": "TF-045",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 12,
+          "SUPPORTING_STATE_ONLY": 88
+        },
+        "evidence_count_total": 312,
+        "influence_classification_counts": {
+          "ROUTE_MISSING_NOT_APPLICABLE": 12,
+          "SUPPORTS_SAME_STATE": 88
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 12,
+          "SUPPORTED_NO_CHANGE": 88
+        }
+      },
+      "source_route": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 46,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-046",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "covariance-aware Mahalanobis matching",
+      "method_id": "TF-046",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 12,
+          "SUPPORTING_STATE_ONLY": 88
+        },
+        "evidence_count_total": 312,
+        "influence_classification_counts": {
+          "ROUTE_MISSING_NOT_APPLICABLE": 12,
+          "SUPPORTS_SAME_STATE": 88
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 12,
+          "SUPPORTED_NO_CHANGE": 88
+        }
+      },
+      "source_route": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 47,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-047",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "optimal-transport distribution matching",
+      "method_id": "TF-047",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 12,
+          "SUPPORTING_STATE_ONLY": 88
+        },
+        "evidence_count_total": 312,
+        "influence_classification_counts": {
+          "ROUTE_MISSING_NOT_APPLICABLE": 12,
+          "SUPPORTS_SAME_STATE": 88
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 12,
+          "SUPPORTED_NO_CHANGE": 88
+        }
+      },
+      "source_route": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 48,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-048",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "shared-indicator prediction with player-clustered holdout",
+      "method_id": "TF-048",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "BAND_OR_DIRECTION": 1,
+          "CONFLICT_CLASS": 2,
+          "NONE": 96,
+          "TARGET_ELIGIBILITY": 1
+        },
+        "evidence_count_total": 4,
+        "influence_classification_counts": {
+          "CHANGES_BAND_OR_DIRECTION": 1,
+          "CHANGES_CONFLICT_CLASS": 2,
+          "CHANGES_TARGET_ELIGIBILITY": 1,
+          "ROUTE_MISSING_NOT_APPLICABLE": 96
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 96,
+          "USED_DIRECTLY": 4
+        }
+      },
+      "source_route": "MB-02_DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 49,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-049",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "multi-trait latent measurement model",
+      "method_id": "TF-049",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "CONFIDENCE_TIER": 5,
+          "CONFLICT_CLASS": 93,
+          "NONE": 1,
+          "TARGET_ELIGIBILITY": 1
+        },
+        "evidence_count_total": 99,
+        "influence_classification_counts": {
+          "CHANGES_CONFIDENCE_TIER": 5,
+          "CHANGES_CONFLICT_CLASS": 93,
+          "CHANGES_TARGET_ELIGIBILITY": 1,
+          "ROUTE_MISSING_NOT_APPLICABLE": 1
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 1,
+          "USED_DIRECTLY": 99
+        }
+      },
+      "source_route": "MB-03_MULTI_TRAIT_LATENT_MEASUREMENT_MODEL",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 50,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-050",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "within-player temporal delta",
+      "method_id": "TF-050",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 100
+        },
+        "evidence_count_total": 1,
+        "influence_classification_counts": {
+          "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 1,
+          "ROUTE_MISSING_NOT_APPLICABLE": 99
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 99,
+          "SUPPORTED_NO_CHANGE": 1
+        }
+      },
+      "source_route": "MB-04_WITHIN_PLAYER_TEMPORAL_DELTA",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 51,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-051",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "league-transition fixed-effects model",
+      "method_id": "TF-051",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 100
+        },
+        "evidence_count_total": 63,
+        "influence_classification_counts": {
+          "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 6,
+          "ROUTE_MISSING_NOT_APPLICABLE": 94
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 94,
+          "SUPPORTED_NO_CHANGE": 6
+        }
+      },
+      "source_route": "MB-05_LEAGUE_TRANSITION_FIXED_EFFECTS",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 52,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-052",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "returnee synthetic controls",
+      "method_id": "TF-052",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 100
+        },
+        "evidence_count_total": 35,
+        "influence_classification_counts": {
+          "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 3,
+          "ROUTE_MISSING_NOT_APPLICABLE": 97
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 97,
+          "SUPPORTED_NO_CHANGE": 3
+        }
+      },
+      "source_route": "MB-10_RETURNEE_SYNTHETIC_CONTROL",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 53,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-053",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "pairwise/ordinal constraint graph",
+      "method_id": "TF-053",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 88,
+          "SUPPORTING_STATE_ONLY": 12
+        },
+        "evidence_count_total": 12,
+        "influence_classification_counts": {
+          "ROUTE_MISSING_NOT_APPLICABLE": 88,
+          "SUPPORTS_SAME_STATE": 12
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 88,
+          "SUPPORTED_NO_CHANGE": 12
+        }
+      },
+      "source_route": "MB-07_PAIRWISE_ORDINAL_EVIDENCE_GRAPH",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 54,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-054",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "independent-lane consensus/conflict synthesis",
+      "method_id": "TF-054",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "CONFLICT_CLASS": 99,
+          "TARGET_ELIGIBILITY": 1
+        },
+        "evidence_count_total": 565,
+        "influence_classification_counts": {
+          "CHANGES_CONFLICT_CLASS": 99,
+          "CHANGES_TARGET_ELIGIBILITY": 1
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "CONTRADICTED": 27,
+          "USED_DIRECTLY": 73
+        }
+      },
+      "source_route": "MB-16_CROSS_SOURCE_CONSENSUS_AND_DISAGREEMENT",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "receipt-backed route ablation; not a final appraisal calibration error",
+      "candidate_number": 55,
+      "common_support_rule": "explicit comparable-lane/common-support checks; insufficient lanes remain visible",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-055",
+      "features": "physical, shared indicators, game/context fields according to route; PowerPro excluded from physical teacher path",
+      "holdout_design": "SP-101 clustered/forward holdout receipt or exact 100x18 ablation receipt",
+      "leakage_guard": "player clustering and/or forward holdout where applicable; no self-teaching partner fabrication",
+      "method": "route-removal ablation",
+      "method_id": "TF-055",
+      "next_action": "retain bounded diagnostic and rerun independent QA before SP-079",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 100
+        },
+        "evidence_count_total": 100,
+        "influence_classification_counts": {
+          "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 100
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "SUPPORTED_NO_CHANGE": 100
+        }
+      },
+      "source_route": "MB-18_DECISION_USE_AND_ABLATION_RECEIPT",
+      "status": "IMPLEMENTED_BOUNDED",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "player-level route state, confidence tier, consensus spread and ablated state preserved"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "not executed as a new final-appraisal calibration in SP-103; gap is explicit",
+      "candidate_number": 56,
+      "common_support_rule": "physical-rich anchor support only; fail closed outside overlap",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-056",
+      "features": "bounded common features only; H2F requires batting side/protocol; PowerPro labels prohibited as teacher",
+      "holdout_design": "new player-clustered and temporal holdout required before SP-079",
+      "leakage_guard": "leave-player-out/cross-fit required; anchor cannot teach its own target",
+      "method": "leakage-safe anchor calibration",
+      "method_id": "TF-056",
+      "next_action": "design and independently validate before any final appraisal",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 12,
+          "SUPPORTING_STATE_ONLY": 88
+        },
+        "evidence_count_total": 312,
+        "influence_classification_counts": {
+          "ROUTE_MISSING_NOT_APPLICABLE": 12,
+          "SUPPORTS_SAME_STATE": 88
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 12,
+          "SUPPORTED_NO_CHANGE": 88
+        }
+      },
+      "source_route": "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE",
+      "status": "REQUIRES_NEW_PREFLIGHT",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "must output interval/range and confidence; no forced point estimate"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "SP-101 MB-02 has real clustered/forward holdout receipt; final all-family cross-fit remains a gap",
+      "candidate_number": 57,
+      "common_support_rule": "physical-rich anchor support only; fail closed outside overlap",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-057",
+      "features": "bounded common features only; H2F requires batting side/protocol; PowerPro labels prohibited as teacher",
+      "holdout_design": "new player-clustered and temporal holdout required before SP-079",
+      "leakage_guard": "leave-player-out/cross-fit required; anchor cannot teach its own target",
+      "method": "cross-fitted / leave-player-out transfer",
+      "method_id": "TF-057",
+      "next_action": "design and independently validate before any final appraisal",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "BAND_OR_DIRECTION": 1,
+          "CONFLICT_CLASS": 2,
+          "NONE": 96,
+          "TARGET_ELIGIBILITY": 1
+        },
+        "evidence_count_total": 4,
+        "influence_classification_counts": {
+          "CHANGES_BAND_OR_DIRECTION": 1,
+          "CHANGES_CONFLICT_CLASS": 2,
+          "CHANGES_TARGET_ELIGIBILITY": 1,
+          "ROUTE_MISSING_NOT_APPLICABLE": 96
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 96,
+          "USED_DIRECTLY": 4
+        }
+      },
+      "source_route": "MB-02_DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS",
+      "status": "IMPLEMENTED_INCOMPLETE",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "must output interval/range and confidence; no forced point estimate"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "not executed as a new final-appraisal calibration in SP-103; gap is explicit",
+      "candidate_number": 58,
+      "common_support_rule": "physical-rich anchor support only; fail closed outside overlap",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-058",
+      "features": "bounded common features only; H2F requires batting side/protocol; PowerPro labels prohibited as teacher",
+      "holdout_design": "new player-clustered and temporal holdout required before SP-079",
+      "leakage_guard": "leave-player-out/cross-fit required; anchor cannot teach its own target",
+      "method": "hierarchical partial pooling or interval transfer",
+      "method_id": "TF-058",
+      "next_action": "design and independently validate before any final appraisal",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "CONFIDENCE_TIER": 5,
+          "CONFLICT_CLASS": 93,
+          "NONE": 1,
+          "TARGET_ELIGIBILITY": 1
+        },
+        "evidence_count_total": 99,
+        "influence_classification_counts": {
+          "CHANGES_CONFIDENCE_TIER": 5,
+          "CHANGES_CONFLICT_CLASS": 93,
+          "CHANGES_TARGET_ELIGIBILITY": 1,
+          "ROUTE_MISSING_NOT_APPLICABLE": 1
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 1,
+          "USED_DIRECTLY": 99
+        }
+      },
+      "source_route": "MB-03_MULTI_TRAIT_LATENT_MEASUREMENT_MODEL",
+      "status": "REQUIRES_NEW_PREFLIGHT",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "must output interval/range and confidence; no forced point estimate"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "not executed as a new final-appraisal calibration in SP-103; gap is explicit",
+      "candidate_number": 59,
+      "common_support_rule": "physical-rich anchor support only; fail closed outside overlap",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-059",
+      "features": "bounded common features only; H2F requires batting side/protocol; PowerPro labels prohibited as teacher",
+      "holdout_design": "new player-clustered and temporal holdout required before SP-079",
+      "leakage_guard": "leave-player-out/cross-fit required; anchor cannot teach its own target",
+      "method": "physical-rich-only rank/quantile mapping",
+      "method_id": "TF-059",
+      "next_action": "design and independently validate before any final appraisal",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "NONE": 100
+        },
+        "evidence_count_total": 96,
+        "influence_classification_counts": {
+          "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 94,
+          "ROUTE_MISSING_NOT_APPLICABLE": 6
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 6,
+          "SUPPORTED_NO_CHANGE": 94
+        }
+      },
+      "source_route": "MB-08_DISTRIBUTION_AND_TAIL_CALIBRATION",
+      "status": "REQUIRES_NEW_PREFLIGHT",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "must output interval/range and confidence; no forced point estimate"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "not executed as a new final-appraisal calibration in SP-103; gap is explicit",
+      "candidate_number": 60,
+      "common_support_rule": "physical-rich anchor support only; fail closed outside overlap",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-060",
+      "features": "bounded common features only; H2F requires batting side/protocol; PowerPro labels prohibited as teacher",
+      "holdout_design": "new player-clustered and temporal holdout required before SP-079",
+      "leakage_guard": "leave-player-out/cross-fit required; anchor cannot teach its own target",
+      "method": "multiple-imputation / interval propagation",
+      "method_id": "TF-060",
+      "next_action": "design and independently validate before any final appraisal",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "CONFIDENCE_TIER": 5,
+          "CONFLICT_CLASS": 93,
+          "NONE": 1,
+          "TARGET_ELIGIBILITY": 1
+        },
+        "evidence_count_total": 99,
+        "influence_classification_counts": {
+          "CHANGES_CONFIDENCE_TIER": 5,
+          "CHANGES_CONFLICT_CLASS": 93,
+          "CHANGES_TARGET_ELIGIBILITY": 1,
+          "ROUTE_MISSING_NOT_APPLICABLE": 1
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 1,
+          "USED_DIRECTLY": 99
+        }
+      },
+      "source_route": "MB-03_MULTI_TRAIT_LATENT_MEASUREMENT_MODEL",
+      "status": "REQUIRES_NEW_PREFLIGHT",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "must output interval/range and confidence; no forced point estimate"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "not executed as a new final-appraisal calibration in SP-103; gap is explicit",
+      "candidate_number": 61,
+      "common_support_rule": "only same protocol/handedness or same Statcast split definition; otherwise unavailable",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-061",
+      "features": "bounded common features only; H2F requires batting side/protocol; PowerPro labels prohibited as teacher",
+      "holdout_design": "new player-clustered and temporal holdout required before SP-079",
+      "leakage_guard": "leave-player-out/cross-fit required; anchor cannot teach its own target",
+      "method": "handedness/protocol-aware H2F calibration",
+      "method_id": "TF-061",
+      "next_action": "design and independently validate before any final appraisal",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "CONFIDENCE_TIER": 2,
+          "NONE": 78,
+          "SUPPORTING_STATE_ONLY": 20
+        },
+        "evidence_count_total": 52,
+        "influence_classification_counts": {
+          "CHANGES_CONFIDENCE_TIER": 2,
+          "ROUTE_MISSING_NOT_APPLICABLE": 78,
+          "SUPPORTS_SAME_STATE": 20
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 78,
+          "SUPPORTED_NO_CHANGE": 20,
+          "USED_DIRECTLY": 2
+        }
+      },
+      "source_route": "MB-12_SCOUTING_GRADE_AND_TIMED_TEST_BRIDGE",
+      "status": "BLOCKED_BY_SOURCE_COVERAGE",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "must output interval/range and confidence; no forced point estimate"
+    },
+    {
+      "actual_decision_use": "SP-101 preliminary evidence/decision-use only; no SP-079 final value",
+      "calibration_error_or_status": "not executed as a new final-appraisal calibration in SP-103; gap is explicit",
+      "candidate_number": 62,
+      "common_support_rule": "only same protocol/handedness or same Statcast split definition; otherwise unavailable",
+      "direct_numeric_promotion_allowed": false,
+      "evidence_id": "SP103-EV-062",
+      "features": "bounded common features only; H2F requires batting side/protocol; PowerPro labels prohibited as teacher",
+      "holdout_design": "new player-clustered and temporal holdout required before SP-079",
+      "leakage_guard": "leave-player-out/cross-fit required; anchor cannot teach its own target",
+      "method": "MLB 5-foot acceleration-shape features",
+      "method_id": "TF-062",
+      "next_action": "design and independently validate before any final appraisal",
+      "route_receipt": {
+        "decision_effect_counts": {
+          "CONFIDENCE_TIER": 2,
+          "NONE": 78,
+          "SUPPORTING_STATE_ONLY": 20
+        },
+        "evidence_count_total": 52,
+        "influence_classification_counts": {
+          "CHANGES_CONFIDENCE_TIER": 2,
+          "ROUTE_MISSING_NOT_APPLICABLE": 78,
+          "SUPPORTS_SAME_STATE": 20
+        },
+        "player_count": 100,
+        "receipt_count": 100,
+        "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+        "state_counts": {
+          "BLOCKED_MISSING_DATA": 78,
+          "SUPPORTED_NO_CHANGE": 20,
+          "USED_DIRECTLY": 2
+        }
+      },
+      "source_route": "MB-12_SCOUTING_GRADE_AND_TIMED_TEST_BRIDGE",
+      "status": "BLOCKED_BY_SOURCE_COVERAGE",
+      "target_construct": "latent physical speed percentile/range, not PowerPro label and not final 0-100",
+      "target_population": "current NPB 100 sparse or partially observed players; cohort is route-specific",
+      "training_population": "SP-101 physical-rich / shared-indicator / eligible transition cohort as route permits",
+      "uncertainty": "must output interval/range and confidence; no forced point estimate"
+    }
+  ],
+  "execution_contract": "independent_process; no canonical SP-103 output is written by this lane",
+  "global_influence_counts": {
+    "CHANGES_BAND_OR_DIRECTION": 1,
+    "CHANGES_CONFIDENCE_TIER": 7,
+    "CHANGES_CONFLICT_CLASS": 285,
+    "CHANGES_TARGET_ELIGIBILITY": 4,
+    "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 402,
+    "ROUTE_MISSING_NOT_APPLICABLE": 981,
+    "SUPPORTS_SAME_STATE": 120
+  },
+  "lane": "F",
+  "negative_findings": [
+    "SP-101 receipts prove route execution and decision-use/ablation semantics, not readiness of final practical numeric appraisal.",
+    "New anchor/partial-pooling/H2F/5-foot transfer methods remain explicit gaps; no silent fallback is permitted."
+  ],
+  "purpose": "data-rich to data-poor transfer and inference method universe",
+  "schema_version": "sp103_lane_f_v1",
+  "sp101_route_receipts": {
+    "MB-01_COMMON_METRIC_NEIGHBORHOOD_BRIDGE": {
+      "decision_effect_counts": {
+        "NONE": 12,
+        "SUPPORTING_STATE_ONLY": 88
+      },
+      "evidence_count_total": 312,
+      "influence_classification_counts": {
+        "ROUTE_MISSING_NOT_APPLICABLE": 12,
+        "SUPPORTS_SAME_STATE": 88
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 12,
+        "SUPPORTED_NO_CHANGE": 88
+      }
+    },
+    "MB-02_DUAL_SHARED_INDICATOR_BEHAVIOR_MODELS": {
+      "decision_effect_counts": {
+        "BAND_OR_DIRECTION": 1,
+        "CONFLICT_CLASS": 2,
+        "NONE": 96,
+        "TARGET_ELIGIBILITY": 1
+      },
+      "evidence_count_total": 4,
+      "influence_classification_counts": {
+        "CHANGES_BAND_OR_DIRECTION": 1,
+        "CHANGES_CONFLICT_CLASS": 2,
+        "CHANGES_TARGET_ELIGIBILITY": 1,
+        "ROUTE_MISSING_NOT_APPLICABLE": 96
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 96,
+        "USED_DIRECTLY": 4
+      }
+    },
+    "MB-03_MULTI_TRAIT_LATENT_MEASUREMENT_MODEL": {
+      "decision_effect_counts": {
+        "CONFIDENCE_TIER": 5,
+        "CONFLICT_CLASS": 93,
+        "NONE": 1,
+        "TARGET_ELIGIBILITY": 1
+      },
+      "evidence_count_total": 99,
+      "influence_classification_counts": {
+        "CHANGES_CONFIDENCE_TIER": 5,
+        "CHANGES_CONFLICT_CLASS": 93,
+        "CHANGES_TARGET_ELIGIBILITY": 1,
+        "ROUTE_MISSING_NOT_APPLICABLE": 1
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 1,
+        "USED_DIRECTLY": 99
+      }
+    },
+    "MB-04_WITHIN_PLAYER_TEMPORAL_DELTA": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 1,
+      "influence_classification_counts": {
+        "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 1,
+        "ROUTE_MISSING_NOT_APPLICABLE": 99
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 99,
+        "SUPPORTED_NO_CHANGE": 1
+      }
+    },
+    "MB-05_LEAGUE_TRANSITION_FIXED_EFFECTS": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 63,
+      "influence_classification_counts": {
+        "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 6,
+        "ROUTE_MISSING_NOT_APPLICABLE": 94
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 94,
+        "SUPPORTED_NO_CHANGE": 6
+      }
+    },
+    "MB-06_RATING_INERTIA_AND_STALENESS_MODEL": {
+      "decision_effect_counts": {
+        "CONFLICT_CLASS": 91,
+        "NONE": 8,
+        "TARGET_ELIGIBILITY": 1
+      },
+      "evidence_count_total": 92,
+      "influence_classification_counts": {
+        "CHANGES_CONFLICT_CLASS": 91,
+        "CHANGES_TARGET_ELIGIBILITY": 1,
+        "ROUTE_MISSING_NOT_APPLICABLE": 8
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 8,
+        "USED_DIRECTLY": 92
+      }
+    },
+    "MB-07_PAIRWISE_ORDINAL_EVIDENCE_GRAPH": {
+      "decision_effect_counts": {
+        "NONE": 88,
+        "SUPPORTING_STATE_ONLY": 12
+      },
+      "evidence_count_total": 12,
+      "influence_classification_counts": {
+        "ROUTE_MISSING_NOT_APPLICABLE": 88,
+        "SUPPORTS_SAME_STATE": 12
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 88,
+        "SUPPORTED_NO_CHANGE": 12
+      }
+    },
+    "MB-08_DISTRIBUTION_AND_TAIL_CALIBRATION": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 96,
+      "influence_classification_counts": {
+        "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 94,
+        "ROUTE_MISSING_NOT_APPLICABLE": 6
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 6,
+        "SUPPORTED_NO_CHANGE": 94
+      }
+    },
+    "MB-09_THE_SHOW_ROSTER_UPDATE_RESPONSE": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 1,
+      "influence_classification_counts": {
+        "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 1,
+        "ROUTE_MISSING_NOT_APPLICABLE": 99
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 99,
+        "SUPPORTED_NO_CHANGE": 1
+      }
+    },
+    "MB-10_RETURNEE_SYNTHETIC_CONTROL": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 35,
+      "influence_classification_counts": {
+        "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 3,
+        "ROUTE_MISSING_NOT_APPLICABLE": 97
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 97,
+        "SUPPORTED_NO_CHANGE": 3
+      }
+    },
+    "MB-11_AGE_CURVE_AND_TEMPORAL_DECAY": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 0,
+      "influence_classification_counts": {
+        "ROUTE_MISSING_NOT_APPLICABLE": 100
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 100
+      }
+    },
+    "MB-12_SCOUTING_GRADE_AND_TIMED_TEST_BRIDGE": {
+      "decision_effect_counts": {
+        "CONFIDENCE_TIER": 2,
+        "NONE": 78,
+        "SUPPORTING_STATE_ONLY": 20
+      },
+      "evidence_count_total": 52,
+      "influence_classification_counts": {
+        "CHANGES_CONFIDENCE_TIER": 2,
+        "ROUTE_MISSING_NOT_APPLICABLE": 78,
+        "SUPPORTS_SAME_STATE": 20
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 78,
+        "SUPPORTED_NO_CHANGE": 20,
+        "USED_DIRECTLY": 2
+      }
+    },
+    "MB-13_PINCH_RUNNER_AND_USAGE_ROLE_CONTEXT": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 580,
+      "influence_classification_counts": {
+        "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 97,
+        "ROUTE_MISSING_NOT_APPLICABLE": 3
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 3,
+        "SUPPORTED_NO_CHANGE": 97
+      }
+    },
+    "MB-14_VIDEO_FRAME_TIMING": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 0,
+      "influence_classification_counts": {
+        "ROUTE_MISSING_NOT_APPLICABLE": 100
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 100
+      }
+    },
+    "MB-15_DEFENSIVE_RANGE_AND_CHASE_CONTEXT": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 0,
+      "influence_classification_counts": {
+        "ROUTE_MISSING_NOT_APPLICABLE": 100
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "BLOCKED_MISSING_DATA": 100
+      }
+    },
+    "MB-16_CROSS_SOURCE_CONSENSUS_AND_DISAGREEMENT": {
+      "decision_effect_counts": {
+        "CONFLICT_CLASS": 99,
+        "TARGET_ELIGIBILITY": 1
+      },
+      "evidence_count_total": 565,
+      "influence_classification_counts": {
+        "CHANGES_CONFLICT_CLASS": 99,
+        "CHANGES_TARGET_ELIGIBILITY": 1
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "CONTRADICTED": 27,
+        "USED_DIRECTLY": 73
+      }
+    },
+    "MB-17_NEGATIVE_CONTROL_AND_PLACEBO_SUITE": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 100,
+      "influence_classification_counts": {
+        "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 100
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "SUPPORTED_NO_CHANGE": 100
+      }
+    },
+    "MB-18_DECISION_USE_AND_ABLATION_RECEIPT": {
+      "decision_effect_counts": {
+        "NONE": 100
+      },
+      "evidence_count_total": 100,
+      "influence_classification_counts": {
+        "NO_EFFECT_DESPITE_EVIDENCE_PRESENT": 100
+      },
+      "player_count": 100,
+      "receipt_count": 100,
+      "source_artifact": "outputs/derived/sp101_current100_multibridge_evidence.json:players[].decision_use_receipt",
+      "state_counts": {
+        "SUPPORTED_NO_CHANGE": 100
+      }
+    }
+  }
+}
