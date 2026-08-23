@@ -1,16 +1,35 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "updated_at": "2026-08-24",
   "program": "Pawapuro Pennant World Simulation Design",
-  "phase": "DESIGN_DISCOVERY_EXTERNAL_RESEARCH_READY",
+  "phase": "DESIGN_DISCOVERY_SECOND_PASS_PRESERVED_EXTERNAL_RESEARCH_READY",
   "canonical_branch": "design/pennant-world-master-20260824",
   "authority_order": [
     "docs/state/pennant_feature_requirements_20260824.tsv",
+    "docs/state/pennant_feature_requirements_addendum_20260824.tsv",
     "docs/design/PENNANT_WORLD_SIMULATION_MASTER_20260824.md",
+    "docs/reference/pennant_owner_examples_and_rationale_20260824.md",
+    "docs/audits/pennant_walltalk_second_pass_gap_audit_20260824.md",
     "docs/audits/pennant_walltalk_completeness_audit_20260824.md",
     "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md"
   ],
-  "feature_requirement_count": 235,
+  "feature_requirement_inventory": {
+    "base_file": "docs/state/pennant_feature_requirements_20260824.tsv",
+    "base_ids": "PW-001..PW-235",
+    "base_count": 235,
+    "second_pass_addendum_file": "docs/state/pennant_feature_requirements_addendum_20260824.tsv",
+    "second_pass_ids": "PW-236..PW-260",
+    "second_pass_count": 25,
+    "combined_count": 260,
+    "examples_and_rationale_file": "docs/reference/pennant_owner_examples_and_rationale_20260824.md"
+  },
+  "completeness": {
+    "initial_235_row_claim": "SUPERSEDED_FOR_STRICT_COMPLETENESS",
+    "reason": "The initial baseline generalized away concrete owner examples/rationales and omitted several proposed/pre-existing requirements such as dedicated trade design, national-team player agency, and long-run absolute-vs-relative skill scale.",
+    "second_pass_audit": "docs/audits/pennant_walltalk_second_pass_gap_audit_20260824.md",
+    "current_available_walltalk_status": "SECOND_PASS_PRESERVED",
+    "absolute_all_historical_chat_completeness": "NOT_PROVABLE_WITHOUT_AUTHORITATIVE_FULL_CHAT_EXPORT"
+  },
   "design_principles": {
     "all_cpu_clubs_try_seriously_to_win": true,
     "user_controlled_club_has_final_authority_over_delegated_staff": true,
@@ -35,10 +54,9 @@
     "codex_news_idea_mining_spec": "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md",
     "execution_branch": "codex/pennant-news-idea-mining-20260824",
     "branch_created": true,
-    "branch_verified_identical_to_design_baseline_at_creation": true,
-    "baseline_head_at_branch_creation": "8d52cd6a3c4c5fd307021ddbe7bae8b9f0218d68",
-    "dispatch_ready": true,
-    "purpose": "Find real baseball mechanisms/events not yet represented in the 235-row canonical feature ledger.",
+    "branch_requires_fast_forward_after_second_pass_repair": true,
+    "dispatch_ready": false,
+    "purpose": "Find real baseball mechanisms/events not yet represented in the combined 260-requirement inventory.",
     "must_not_directly_modify_canonical_pw_requirements": true,
     "owner_synthesis_required_after_research": true
   },
@@ -58,7 +76,11 @@
     "player_association_bargaining_mechanics",
     "expansion_relocation_governance",
     "future_technology_proposal_generation",
-    "real_world_overseas_player_data_and_licensing_feasibility"
+    "real_world_overseas_player_data_and_licensing_feasibility",
+    "trade_and_transaction_market_detailed_model",
+    "active_draft_detailed_model",
+    "foreign_player_roster_registration_rules",
+    "absolute_vs_era_relative_skill_scale_policy"
   ],
   "appraisal_lane_guards": {
     "sp078_owner_verdict": "DO_NOT_TOUCH",
@@ -67,17 +89,22 @@
     "speed_design_and_pennant_design_are_separate": true
   },
   "completed_in_this_baseline": [
-    "Persist 235-row granular feature ledger",
+    "Persist 235-row base feature ledger",
     "Persist integrated human-readable master design",
-    "Persist wall-talk completeness audit",
+    "Persist first-pass wall-talk audit",
     "Persist Codex external-news/history research specification",
     "Persist current-state handoff",
-    "Create and verify dedicated Codex research branch"
+    "Create dedicated Codex research branch",
+    "Perform stricter second-pass audit against available wall-talk",
+    "Persist 25 recovered requirements as PW-236..PW-260",
+    "Persist concrete owner examples/rationales with fact/perception cautions",
+    "Supersede strict-completeness claim of initial 235-row audit"
   ],
   "next_sequence": [
-    "Dispatch Codex on codex/pennant-news-idea-mining-20260824",
+    "Fast-forward codex/pennant-news-idea-mining-20260824 to this repaired design HEAD",
+    "Update/read Codex research task against combined 260-requirement authority plus examples/rationale reference",
     "Run broad baseball news/history idea mining with parallel subagents and independent QA",
-    "Review new candidate mechanisms against canonical PW requirements",
+    "Review new candidate mechanisms against combined canonical requirements",
     "Continue owner wall-talk on genuinely new/high-value ideas",
     "Prioritize modules and define MVP/phase ordering",
     "Only then authorize implementation/data-calibration tasks"
