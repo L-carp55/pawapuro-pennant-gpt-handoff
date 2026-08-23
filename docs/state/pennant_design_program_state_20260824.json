@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-08-24",
+  "program": "Pawapuro Pennant World Simulation Design",
+  "phase": "DESIGN_DISCOVERY_AND_EXTERNAL_IDEA_MINING",
+  "canonical_branch": "design/pennant-world-master-20260824",
+  "authority_order": [
+    "docs/state/pennant_feature_requirements_20260824.tsv",
+    "docs/design/PENNANT_WORLD_SIMULATION_MASTER_20260824.md",
+    "docs/audits/pennant_walltalk_completeness_audit_20260824.md",
+    "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md"
+  ],
+  "feature_requirement_count": 235,
+  "design_principles": {
+    "all_cpu_clubs_try_seriously_to_win": true,
+    "user_controlled_club_has_final_authority_over_delegated_staff": true,
+    "no_hidden_rubber_band": true,
+    "future_player_outcomes_are_uncertain": true,
+    "cpu_cannot_read_hidden_truth_unfairly": true,
+    "world_rules_and_institutions_can_change": true,
+    "global_baseball_world_is_alive_outside_npb": true,
+    "reincarnated_legend_players_default": "OFF",
+    "international_tournament_physical_load": "USER_TOGGLE_REQUIRED",
+    "surface_complexity_target": "POWERPRO_LIKE_SIMPLE_UI_WITH_DEEP_INTERNAL_SIM"
+  },
+  "implementation": {
+    "authorized": false,
+    "reason": "Owner requested continued feature wall-talk and broad external news/history idea mining before implementation prioritization.",
+    "pd001a_age_dataset_spec_exists": true,
+    "pd001a_dispatch_status": "HOLD_NOT_DISPATCHED",
+    "pd001b_status": "BLOCKED_BY_PD001A_AND_DESIGN_DISCOVERY",
+    "game_feature_coding_status": "DO_NOT_START"
+  },
+  "external_research": {
+    "codex_news_idea_mining_spec": "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md",
+    "recommended_branch": "codex/pennant-news-idea-mining-20260824",
+    "dispatch_ready": true,
+    "purpose": "Find real baseball mechanisms/events not yet represented in the 235-row canonical feature ledger.",
+    "must_not_directly_modify_canonical_pw_requirements": true,
+    "owner_synthesis_required_after_research": true
+  },
+  "open_design_domains": [
+    "injury_fatigue_condition_detailed_model",
+    "stadium_new_stadium_and_renovation",
+    "fan_media_sponsor_popularity_detailed_model",
+    "club_finance_formulas_and_budget_rules",
+    "agent_market_detailed_model",
+    "minimal_contract_clause_set",
+    "national_team_eligibility_and_selection_rules",
+    "global_simulation_granularity_and_performance_budget",
+    "scandal_frequency_and_governance_calibration",
+    "family_children_generation_policy",
+    "coaching_and_mentorship_effect_calibration",
+    "staff_labor_market",
+    "player_association_bargaining_mechanics",
+    "expansion_relocation_governance",
+    "future_technology_proposal_generation",
+    "real_world_overseas_player_data_and_licensing_feasibility"
+  ],
+  "appraisal_lane_guards": {
+    "sp078_owner_verdict": "DO_NOT_TOUCH",
+    "sp079": "DO_NOT_START_FROM_THIS_PROGRAM",
+    "shoulder": "DO_NOT_START_FROM_THIS_PROGRAM",
+    "speed_design_and_pennant_design_are_separate": true
+  },
+  "next_sequence": [
+    "Verify wall-talk completeness baseline",
+    "Create Codex research branch from this design baseline",
+    "Run broad baseball news/history idea mining with parallel subagents and independent QA",
+    "Review new candidate mechanisms against canonical PW requirements",
+    "Continue owner wall-talk on genuinely new/high-value ideas",
+    "Prioritize modules and define MVP/phase ordering",
+    "Only then authorize implementation/data-calibration tasks"
+  ]
+}
