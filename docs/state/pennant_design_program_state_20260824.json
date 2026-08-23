@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.4",
+  "schema_version": "1.5",
   "updated_at": "2026-08-24",
   "program": "Pawapuro Pennant World Simulation Design",
-  "phase": "DESIGN_DISCOVERY_SECOND_PASS_PRESERVED_EXTERNAL_RESEARCH_READY",
+  "phase": "DESIGN_DISCOVERY_THIRD_PASS_OPEN_DOMAIN_AUDIT_COMPLETE",
   "canonical_branch": "design/pennant-world-master-20260824",
   "authority_order": [
     "docs/state/pennant_feature_requirements_20260824.tsv",
@@ -11,7 +11,7 @@
     "docs/design/PENNANT_WORLD_SIMULATION_MASTER_SECOND_PASS_ADDENDUM_20260824.md",
     "docs/reference/pennant_owner_examples_and_rationale_20260824.md",
     "docs/audits/pennant_walltalk_second_pass_gap_audit_20260824.md",
-    "docs/audits/pennant_walltalk_completeness_audit_20260824.md",
+    "docs/audits/pennant_open_domain_third_pass_audit_20260824.md",
     "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md",
     "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_SECOND_PASS_ADDENDUM_20260824.md"
   ],
@@ -29,9 +29,9 @@
   },
   "completeness": {
     "initial_235_row_claim": "SUPERSEDED_FOR_STRICT_COMPLETENESS",
-    "reason": "The initial baseline generalized away concrete owner examples/rationales and omitted several proposed/pre-existing requirements such as dedicated trade design, national-team player agency, and long-run absolute-vs-relative skill scale.",
-    "second_pass_audit": "docs/audits/pennant_walltalk_second_pass_gap_audit_20260824.md",
-    "current_available_walltalk_status": "SECOND_PASS_PRESERVED",
+    "second_pass_walltalk_status": "CURRENT_AVAILABLE_WALLTALK_PRESERVED",
+    "third_pass_open_domain_status": "OPEN_DOMAIN_LIST_EXPANDED",
+    "third_pass_audit": "docs/audits/pennant_open_domain_third_pass_audit_20260824.md",
     "absolute_all_historical_chat_completeness": "NOT_PROVABLE_WITHOUT_AUTHORITATIVE_FULL_CHAT_EXPORT"
   },
   "design_principles": {
@@ -48,22 +48,16 @@
   },
   "implementation": {
     "authorized": false,
-    "reason": "Owner requested continued feature wall-talk and broad external news/history idea mining before implementation prioritization.",
-    "pd001a_age_dataset_spec_exists": true,
     "pd001a_dispatch_status": "HOLD_NOT_DISPATCHED",
-    "pd001b_status": "BLOCKED_BY_PD001A_AND_DESIGN_DISCOVERY",
     "game_feature_coding_status": "DO_NOT_START"
   },
   "external_research": {
     "codex_news_idea_mining_spec": "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md",
     "second_pass_addendum": "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_SECOND_PASS_ADDENDUM_20260824.md",
     "execution_branch": "codex/pennant-news-idea-mining-20260824",
-    "branch_created": true,
-    "dispatch_ready": true,
-    "dispatch_rule": "Immediately before Codex starts, verify execution branch is identical to canonical design branch; if not, fast-forward only.",
-    "purpose": "Find real baseball mechanisms/events not yet represented in the combined 260-requirement inventory.",
-    "must_not_directly_modify_canonical_pw_requirements": true,
-    "owner_synthesis_required_after_research": true
+    "dispatch_ready": false,
+    "dispatch_blocker": "Fast-forward Codex branch to the latest third-pass audited design HEAD and verify refs are identical.",
+    "purpose": "Find real baseball mechanisms/events not yet represented in the combined 260-requirement inventory and the explicit OPEN-domain audits."
   },
   "open_design_domains": [
     "injury_fatigue_condition_detailed_model",
@@ -85,7 +79,27 @@
     "trade_and_transaction_market_detailed_model",
     "active_draft_detailed_model",
     "foreign_player_roster_registration_rules",
-    "absolute_vs_era_relative_skill_scale_policy"
+    "absolute_vs_era_relative_skill_scale_policy",
+    "game_day_lineup_rotation_bullpen_deployment_ai",
+    "in_game_tactical_decision_engine",
+    "retirement_continuation_and_comeback_decision_model",
+    "special_abilities_traits_lifecycle",
+    "player_morale_relationships_and_clubhouse_social_dynamics",
+    "trade_request_holdout_and_role_conflict_behavior",
+    "roster_rights_waiver_options_assignment_service_time_model",
+    "farm_minor_third_fourth_team_competition_structure",
+    "amateur_pipeline_eligibility_progression_and_draft_rights",
+    "season_calendar_schedule_postponement_travel_rescheduling_engine",
+    "weather_climate_and_day_to_day_ballpark_environment",
+    "awards_hall_of_fame_retired_numbers_and_legacy_selection",
+    "league_economy_salary_inflation_currency_and_cross_league_market_levels",
+    "labor_stoppage_lockout_strike_and_shortened_season_model",
+    "league_wide_strategy_and_metagame_evolution",
+    "information_visibility_and_scouting_fog_model",
+    "physical_maturation_body_and_conditioning_development",
+    "officiating_umpire_and_abs_transition_model",
+    "rare_external_shock_model",
+    "ownership_sale_succession_parent_company_and_local_market_evolution"
   ],
   "appraisal_lane_guards": {
     "sp078_owner_verdict": "DO_NOT_TOUCH",
@@ -93,26 +107,12 @@
     "shoulder": "DO_NOT_START_FROM_THIS_PROGRAM",
     "speed_design_and_pennant_design_are_separate": true
   },
-  "completed_in_this_baseline": [
-    "Persist 235-row base feature ledger",
-    "Persist integrated human-readable master design",
-    "Persist first-pass wall-talk audit",
-    "Persist Codex external-news/history research specification",
-    "Persist current-state handoff",
-    "Create dedicated Codex research branch",
-    "Perform stricter second-pass audit against available wall-talk",
-    "Persist 25 recovered requirements as PW-236..PW-260",
-    "Persist concrete owner examples/rationales with fact/perception cautions",
-    "Persist human-readable second-pass master addendum",
-    "Persist mandatory second-pass Codex task addendum",
-    "Supersede strict-completeness claim of initial 235-row audit"
-  ],
   "next_sequence": [
-    "Verify codex/pennant-news-idea-mining-20260824 is identical to canonical design branch immediately before dispatch",
+    "Fast-forward codex/pennant-news-idea-mining-20260824 to latest design HEAD",
+    "Verify design and Codex refs are identical",
     "Run both Codex news/history task files with parallel subagents and independent QA",
-    "Review new candidate mechanisms against combined canonical requirements",
-    "Continue owner wall-talk on genuinely new/high-value ideas",
-    "Prioritize modules and define MVP/phase ordering",
-    "Only then authorize implementation/data-calibration tasks"
+    "Require Codex to treat third-pass OPEN domains as known gaps rather than rediscovering them as new features",
+    "Review genuinely new candidate mechanisms with owner",
+    "Continue wall-talk on high-priority OPEN domains before implementation"
   ]
 }
