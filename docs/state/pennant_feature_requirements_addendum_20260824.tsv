@@ -1,0 +1,26 @@
+requirement_id	module	requirement	origin	status	implementation_gate
+PW-236	TRADE	トレードを独立した中核システムとして設計しteam need・契約・年齢・将来価値・competitive windowを統合する	OWNER	BASELINE	OPEN_DESIGN
+PW-237	TRADE	CPUは他球団で出場機会を失っている有望株や余剰戦力を認識し能動的にトレード獲得を狙う	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-238	TRANSACTION	現役ドラフトをFA・通常トレード・戦力外とは別の選手移動経路として扱い制度自体も変更可能にする	JOINT	BASELINE	OPEN_DESIGN
+PW-239	GLOBAL	NPBの外国人候補一覧は世界から切り離されたランダム生成ではなくGlobal Baseball Worldに実在する選手からスカウト結果として作る	JOINT	BASELINE	DESIGN
+PW-240	GLOBAL	同一の海外選手をNPB・MLB・KBO・CPBL等の複数市場が同時に評価・交渉しNPBが常に獲得できるわけではない	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-241	GLOBAL	海外選手を他球団より早く発見・関係構築すること自体に情報優位と価格優位を持たせる	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-242	GLOBAL	外国人のNPB適応を固定のNPB適応能力1個で決めず underlying skill・役割・league差・環境適応等から自然発生させる	ASSISTANT	PROPOSED	RESEARCH
+PW-243	INTERNATIONAL	代表参加意思・辞退を選手の代表意識・健康・海外露出志向・所属状況等から個別に判断できるようにする	ASSISTANT	PROPOSED	OPEN_DESIGN
+PW-244	INTERNATIONAL	自操作球団で代表参加を選手意思に任せるかユーザー最終決定にするか選択可能にする案を保持する	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-245	SCALE	世界全体の野球水準が長期向上しても表示能力が無限インフレしないようabsolute baseball skillとera/league-relative PowerPro表示尺度の分離を検討する	ASSISTANT	PROPOSED	RESEARCH
+PW-246	INNOVATION	2026時点のカープアカデミーやソフトバンク多軍制等は初期組織資産として再現しても永久の球団専用buffにはせず他球団の模倣・元球団の縮小も可能にする	JOINT	BASELINE	DESIGN
+PW-247	FINANCE	球団ごとの市場規模・資金力差は残すが資金は選択肢を増やす要因であり勝利を自動保証せず小規模球団にも合理的な勝ち筋を残す	ASSISTANT	PROPOSED	OPEN_DESIGN
+PW-248	OWNERSHIP	オーナー/経営陣は短期長期・投資姿勢・リスク・革新志向等で個性を持っても全球団で勝利意欲自体は高く固定する	JOINT	BASELINE	DESIGN
+PW-249	FINANCE	球団成績へのファン・経営評価は絶対順位だけでなくcompetitive windowと事前期待との差でも変える	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-250	CPU	長期低迷時に改革は必ず検討するが改革成功を保証せず人事・補強・draft等を外して暗黒期が続くことも許す	JOINT	BASELINE	DESIGN
+PW-251	DEVELOPMENT	重点育成は能力の直接交換ではなく有限な練習注意資源の配分trade-offと選手ごとの隠れた反応差を持つ案を保持する	ASSISTANT	PROPOSED	RESEARCH
+PW-252	STAFF	スタッフcareerにコーチ→二軍監督→一軍監督等の昇格経路を持たせ引退選手全員がstaff化せず球界外・他職へ進む経路も持つ	ASSISTANT	PROPOSED	OPEN_DESIGN
+PW-253	CONTRACT	FA直前だけでなく権利取得前の早期延長契約・残留交渉を可能にしroleや将来posting方針も交渉材料にできる案を保持する	ASSISTANT	PROPOSED	OPEN_DESIGN
+PW-254	AGENT	代理人は金額交渉だけでなく交渉時期・市場形成・メディアへの情報発信等で差を持ち得る	ASSISTANT	PROPOSED	OPEN_DESIGN
+PW-255	REPUTATION	戦力外・伸び悩み選手を何度も再生した球団には結果から再生工場的な評判が自然形成される	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-256	GOVERNANCE	外国人枠・一軍登録可能数・支配下/育成等のroster制度もRule Proposal Engineで将来変更可能にする	ASSISTANT	PROPOSED	OPEN_DESIGN
+PW-257	INTERNATIONAL	オールスター・代表活動で生まれた他球団選手/コーチとの関係や知識交換が大会後のcareerや移籍判断へ弱く持続し得る	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-258	GOVERNANCE	自操作球団もNPBの制度提案・採決・ロビー活動で賛否や条件付き支持を表明できるようにする案を保持する	ASSISTANT	PROPOSED	OWNER_REVIEW
+PW-259	PRESSURE	大型FA・高額年俸・高い世間期待は能力値を直接下げず心理適応・起用・ファン/メディア評価を介して成績文脈に作用させる	ASSISTANT	PROPOSED	RESEARCH
+PW-260	PROSPECT	世界中の全アマ選手を個体生成せずdraft圏内と周辺のprospect universeを個体化・永続化して計算量と人物史を両立する	ASSISTANT	PROPOSED	ARCHITECTURE
