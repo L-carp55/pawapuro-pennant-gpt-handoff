@@ -1,0 +1,32 @@
+{
+  "as_of": "2026-08-24",
+  "batting_side_and_protocol": "not available because no current per-player value row was exported",
+  "bounded_alternative": "The official page was checked and frozen, but its public page does not expose a reproducible per-player current value table. No uncontrolled scrape or inferred value is substituted.",
+  "numeric_promotion_allowed": false,
+  "observed_field_terms": {
+    "スプリントスピード": 1,
+    "一塁到達": 1,
+    "最速タイム": 1
+  },
+  "old_local_field_policy": "FAIL_CLOSED_QUARANTINED; data/pennant.db npb_plus_measurement.hp_to_1b_sec is not used",
+  "old_local_npplus_hp_to_1b_values_read": false,
+  "player_value_export_reproducible": false,
+  "player_value_rows_retrieved": 0,
+  "schema_version": "sp104_npbplus_h2f_recollection_receipt_v1",
+  "source_receipt": {
+    "bytes": 28127,
+    "content_type": "text/html",
+    "error": null,
+    "export_headers": [],
+    "fetch_status": 200,
+    "query": {},
+    "raw_row_count": 0,
+    "retrieval_mode": "FROZEN_LOCAL_SNAPSHOT",
+    "sha256": "f9fd9bb172f4860627165f74e67c07c7c3d70b3b7c8b1ab15bc90cd68afb05c7",
+    "snapshot_path": "outputs/derived/sp104_sources/npbplus_current_surface.html",
+    "surface": "official NPB+ product page",
+    "url": "https://www.japan-baseball.jp/npb-plus/"
+  },
+  "source_url": "https://www.japan-baseball.jp/npb-plus/",
+  "status": "BLOCKED_EXTERNAL_CURRENT_VALUE_SURFACE"
+}

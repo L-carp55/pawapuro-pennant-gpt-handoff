@@ -171,8 +171,9 @@ def main() -> None:
     by_id = {r.get("task_id"): r for r in registry}
     sp079 = by_id.get("SP-079", {})
     sp103 = by_id.get("SP-103", {})
-    registry_ok = "SP-103" in str(sp079.get("depends_on", "")).split(",") and sp079.get("status") in {"BLOCKED", "BLOCKED_DEPENDENCY"} and sp103.get("status") in {"PARTIAL", "DONE_VALIDATED"}
-    record(checks, "registry_sp103_gate_and_sp079_block", registry_ok, {"sp079_status": sp079.get("status"), "sp079_dependencies": sp079.get("dependencies"), "sp103_status": sp103.get("status")}, "SP-103 dependency present and SP-079 blocked")
+    sp079_depends_on = {item for item in str(sp079.get("depends_on", "")).split(",") if item}
+    registry_ok = {"SP-103", "SP-104"}.issubset(sp079_depends_on) and sp079.get("status") in {"BLOCKED", "BLOCKED_DEPENDENCY"} and sp103.get("status") in {"PARTIAL", "DONE_VALIDATED"}
+    record(checks, "registry_sp103_sp104_gate_and_sp079_block", registry_ok, {"sp079_status": sp079.get("status"), "sp079_depends_on": sp079.get("depends_on"), "sp103_status": sp103.get("status")}, "SP-103 and SP-104 dependencies present in actual depends_on field and SP-079 blocked")
     record(checks, "prior_sp101_sp102_statuses_unchanged", by_id.get("SP-101", {}).get("status") == "DONE_VALIDATED" and by_id.get("SP-102", {}).get("status") == "DONE_NEGATIVE_FINDING", {"SP-101": by_id.get("SP-101", {}).get("status"), "SP-102": by_id.get("SP-102", {}).get("status")}, "DONE_VALIDATED / DONE_NEGATIVE_FINDING")
 
     # Determinism: the independent QA process asks the parent to materialize

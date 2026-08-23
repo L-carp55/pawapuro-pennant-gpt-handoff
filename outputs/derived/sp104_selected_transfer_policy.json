@@ -1,0 +1,38 @@
+{
+  "as_of": "2026-08-24",
+  "candidate_method_ids": [
+    "TF-056",
+    "TF-057",
+    "TF-058",
+    "TF-059",
+    "TF-060",
+    "TF-061",
+    "TF-062"
+  ],
+  "candidate_result_states": {
+    "TF-056": "BOUNDED_CONTEXT",
+    "TF-057": "NO_COMMON_SUPPORT",
+    "TF-058": "NO_COMMON_SUPPORT",
+    "TF-059": "NO_COMMON_SUPPORT",
+    "TF-060": "BOUNDED_CONTEXT",
+    "TF-061": "NO_COMMON_SUPPORT",
+    "TF-062": "BOUNDED_CONTEXT"
+  },
+  "current100_common_support_count": 99,
+  "current100_receipt_count": 100,
+  "direct_numeric_promotion_allowed": false,
+  "hard_guards": [
+    "NO_COMMON_SUPPORT is valid and fail-closed",
+    "same-player seasons are clustered in holdout",
+    "30m/50m is never converted to T90",
+    "old local NPB+ hp_to_1b_sec is not read or promoted",
+    "MLB raw HP-to-1B remains distinct from standardized 90-foot split",
+    "Reaction/Route are not Burst and Jump is defensive context only"
+  ],
+  "production_use": false,
+  "schema_version": "sp104_selected_transfer_policy_v1",
+  "selected_method_id": null,
+  "selection_rule": "The simplest method is selectable only after independent player-clustered validation and common support; this run records candidates and does not promote one.",
+  "status": "NO_PRODUCTION_TRANSFER_PRE_SP079",
+  "target_definition": "bounded physical evidence/range only; never a PowerPro label and never a final 0-100 speed value"
+}

@@ -1,0 +1,54 @@
+{
+  "as_of": "2026-08-24",
+  "final_speed_numeric_generation": "NOT_RUN",
+  "gate_decision": "SP079_BLOCKED_PENDING_SP104_HIGH_VALUE_REMEDIATION",
+  "independent_qa_status": "PASS_PARTIAL_BLOCKED",
+  "no_final_0_100": true,
+  "npbplus_h2f": "BLOCKED_EXTERNAL_CURRENT_VALUE_SURFACE",
+  "official_running_collection": {
+    "eligible_mlbam_ids": 55,
+    "not_current100_only": true,
+    "running_rows": 129,
+    "sprint_rows": 209
+  },
+  "outfielder_jump": "COLLECTED_BOUNDED_CONTEXT_ONLY",
+  "owner_verdict_count": 0,
+  "physical_canonical_summary": {
+    "canonical_counts": {
+      "30M_50M": 231,
+      "H2F": 74,
+      "T90": 12
+    },
+    "canonical_record_count": 458,
+    "current100_canonical_rows": 256,
+    "dedup_key": "same_measurement_cluster_id + metric + normalized player + raw value + unit",
+    "deduped_raw_record_count": 1,
+    "identity_state_counts": {
+      "AMBIGUOUS_NAME_NOT_FORCED": 3,
+      "CURRENT100_EXACT_NAME": 256,
+      "UNRESOLVED_ANCHOR_NAME_ONLY": 199
+    },
+    "overlay_path": "outputs/derived/sp017_physical_measurement_range_reclassification.json",
+    "raw_baseline_counts": {
+      "30M_50M": 232,
+      "H2F": 74,
+      "T90": 12
+    },
+    "raw_record_count": 459,
+    "source_path": "data/normalized/speed_historical_physical_measurements_2015_2026.json"
+  },
+  "schema_version": "sp104_pre_sp079_readiness_v1",
+  "shoulder_status": "NOT_STARTED",
+  "sp079_run_status": "NOT_RUN",
+  "sp104_execution_state": "P0_A_P0_B_P0_C_P0_D_COMPLETE_P1_BOUNDED_P1_A_BLOCKED",
+  "status": "PARTIAL_BLOCKED",
+  "stop_boundary": "SP-104 only; do not run SP-079, SP-078 owner verdict, final speed value generation, shoulder, engine/simulation/scale work.",
+  "transfer_benchmark": {
+    "candidate_methods": 7,
+    "production_transfer": false,
+    "result_states": {
+      "BOUNDED_CONTEXT": 3,
+      "NO_COMMON_SUPPORT": 4
+    }
+  }
+}

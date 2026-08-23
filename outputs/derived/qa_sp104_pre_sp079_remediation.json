@@ -1,0 +1,449 @@
+{
+  "as_of": "2026-08-24",
+  "checks": [
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_historical_physical_canonical.jsonl",
+      "expected": ">0",
+      "observed": 1150348,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:data/manual/sp104_mlb_running_splits.csv",
+      "expected": ">0",
+      "observed": 94832,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:data/manual/sp104_mlb_sprint_exposure_h2f.csv",
+      "expected": ">0",
+      "observed": 119998,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_mlb_running_collection_manifest.json",
+      "expected": ">0",
+      "observed": 46350,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_mlb_npb_running_crosswalk_coverage.json",
+      "expected": ">0",
+      "observed": 90759,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_transfer_method_benchmark.json",
+      "expected": ">0",
+      "observed": 12786,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_anchor_to_sparse_player_receipts.jsonl",
+      "expected": ">0",
+      "observed": 313973,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_selected_transfer_policy.json",
+      "expected": ">0",
+      "observed": 1389,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_current100_physical_state_before_after.json",
+      "expected": ">0",
+      "observed": 215693,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_component_decision_use_ablation.json",
+      "expected": ">0",
+      "observed": 300457,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_npbplus_h2f_recollection_receipt.json",
+      "expected": ">0",
+      "observed": 1424,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_outfielder_jump_burst_context.json",
+      "expected": ">0",
+      "observed": 75864,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:outputs/derived/sp104_pre_sp079_readiness.json",
+      "expected": ">0",
+      "observed": 1867,
+      "passed": true
+    },
+    {
+      "check": "artifact_nonempty:docs/audits/sp104_pre_sp079_high_value_remediation.md",
+      "expected": ">0",
+      "observed": 2115,
+      "passed": true
+    },
+    {
+      "check": "recompute_p0a_raw_baseline_counts",
+      "expected": {
+        "H2F": 74,
+        "SHORT": 232,
+        "T90": 12
+      },
+      "observed": {
+        "H2F": 74,
+        "OTHER": 141,
+        "SHORT": 232,
+        "T90": 12
+      },
+      "passed": true
+    },
+    {
+      "check": "p0a_canonical_raw_provenance_and_dedup",
+      "expected": "all raw IDs retained in unique canonical provenance groups",
+      "observed": {
+        "canonical": 458,
+        "dedup_groups": 1,
+        "raw": 459,
+        "raw_id_union": 459
+      },
+      "passed": true
+    },
+    {
+      "check": "p0a_canonical_counts_recomputed",
+      "expected": {
+        "H2F": 74,
+        "SHORT": 231,
+        "T90": 12
+      },
+      "observed": {
+        "H2F": 74,
+        "OTHER": 141,
+        "SHORT": 231,
+        "T90": 12
+      },
+      "passed": true
+    },
+    {
+      "check": "p0a_row_level_field_preservation",
+      "expected": "identity/date/year/range/source/cluster/metric/raw/protocol/start/side/context/confidence",
+      "observed": [
+        "batting_side",
+        "confidence",
+        "identity_state",
+        "measurement_date",
+        "measurement_year",
+        "metric",
+        "raw_unit",
+        "raw_value",
+        "same_measurement_cluster_id",
+        "source_urls",
+        "stable_player_key",
+        "start_protocol",
+        "swing_context",
+        "timing_method",
+        "value_range"
+      ],
+      "passed": true
+    },
+    {
+      "check": "p0a_unknown_date_or_protocol_stays_bounded",
+      "expected": "no unknown row is treated as exact",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "check": "p0a_no_30m50m_to_t90",
+      "expected": "short-distance rows carry a hard no-conversion guard",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "check": "p0b_full_crosswalk_not_current100_only",
+      "expected": "all exact crosswalk MLBAM IDs, with current100 included but not used as the denominator",
+      "observed": {
+        "coverage": 55,
+        "current100": 100,
+        "eligible_ids": 55
+      },
+      "passed": true
+    },
+    {
+      "check": "p0b_physical_rich_anchor_universe_recomputed",
+      "expected": "full physical-rich anchor name universe with explicit unresolved/name-only guard",
+      "observed": {
+        "coverage_names": 235,
+        "raw_names": 235,
+        "raw_records": 459
+      },
+      "passed": true
+    },
+    {
+      "check": "p0b_export_schema_has_required_physical_fields",
+      "expected": "90ft/five-foot/side/exposure/Sprint/Bolts/H2F/id/source fields",
+      "observed": {
+        "running_missing": [],
+        "sprint_missing": []
+      },
+      "passed": true
+    },
+    {
+      "check": "p0b_exports_identity_joined_by_exact_id",
+      "expected": "no name-only or ambiguous identity join",
+      "observed": {
+        "running_ids": 41,
+        "sprint_ids": 55
+      },
+      "passed": true
+    },
+    {
+      "check": "p0b_official_exports_frozen_with_receipts",
+      "expected": "12 years x 3 official CSV surfaces with frozen hashes",
+      "observed": {
+        "hashes_ok": true,
+        "receipts": 36
+      },
+      "passed": true
+    },
+    {
+      "check": "p0b_missing_rows_not_slow",
+      "expected": "absence is missing exposure, never zero/slow",
+      "observed": {
+        "missing_running_ids": 14,
+        "missing_sprint_ids": 0
+      },
+      "passed": true
+    },
+    {
+      "check": "p0b_bolts_require_exposure",
+      "expected": "Bolts are interpreted only with Competitive Runs",
+      "observed": 0,
+      "passed": true
+    },
+    {
+      "check": "p0b_raw_h2f_distinct_from_standardized_90ft",
+      "expected": "raw HP-to-1B is not silently treated as 90-foot",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "check": "p0c_seven_candidate_methods_and_leakage_contract",
+      "expected": "TF-056..TF-062 with player-clustered holdout/common support/uncertainty",
+      "observed": [
+        "TF-056",
+        "TF-057",
+        "TF-058",
+        "TF-059",
+        "TF-060",
+        "TF-061",
+        "TF-062"
+      ],
+      "passed": true
+    },
+    {
+      "check": "p0c_powerpro_absent_from_teacher_features_and_targets",
+      "expected": "physical/range teacher only",
+      "observed": {
+        "powerpro": false,
+        "the_show": false
+      },
+      "passed": true
+    },
+    {
+      "check": "p0c_current100_anchor_receipts_exactly_100",
+      "expected": "one bounded receipt per current100 player",
+      "observed": {
+        "receipts": 100
+      },
+      "passed": true
+    },
+    {
+      "check": "p0c_target_player_and_seasons_clustered",
+      "expected": "no same-player season leakage",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "check": "p0d_before_after_all100_lanes",
+      "expected": "all 100 before/after lanes present and technique/proxy separate",
+      "observed": {
+        "population": 100,
+        "rows": 100
+      },
+      "passed": true
+    },
+    {
+      "check": "p0d_component_ablation_all100x6",
+      "expected": "top/historical/MLB-transfer/selected/The-Show/proxy ablations without final values",
+      "observed": {
+        "cells": 600,
+        "population": 100
+      },
+      "passed": true
+    },
+    {
+      "check": "p1a_current_npbplus_h2f_bounded_negative",
+      "expected": "current per-player surface unavailable; legacy values fail-closed",
+      "observed": {
+        "rows": 0,
+        "status": "BLOCKED_EXTERNAL_CURRENT_VALUE_SURFACE"
+      },
+      "passed": true
+    },
+    {
+      "check": "p1b_jump_reaction_burst_route_separation",
+      "expected": "Burst is defensive context; Reaction/Route cannot enter Burst",
+      "observed": {
+        "rows": 60,
+        "status": "COLLECTED_BOUNDED_CONTEXT_ONLY",
+        "used": false
+      },
+      "passed": true
+    },
+    {
+      "check": "registry_sp079_actual_depends_on_contains_sp104",
+      "expected": "SP-079 is blocked by actual SP-103 and SP-104 dependencies",
+      "observed": {
+        "SP-079": {
+          "depends_on": "SP-015,SP-016,SP-078,SP-098,SP-100,SP-101,SP-102,SP-103,SP-104",
+          "status": "BLOCKED_DEPENDENCY"
+        },
+        "SP-103": {
+          "depends_on": "SP-101,SP-102",
+          "status": "DONE_VALIDATED"
+        },
+        "SP-104": {
+          "depends_on": "SP-103",
+          "status": "PARTIAL"
+        }
+      },
+      "passed": true
+    },
+    {
+      "check": "old_sp103_diagnostic_uses_depends_on_field",
+      "expected": "diagnostic reads the registry depends_on field",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "check": "owner_verdict_count_zero_and_downstream_locks",
+      "expected": "owner 0, SP-079 not run, shoulder not started",
+      "observed": {
+        "owner_verdict_count": 0,
+        "sp079": "NOT_RUN"
+      },
+      "passed": true
+    },
+    {
+      "check": "no_final_numeric_or_shoulder_payload",
+      "expected": "no final speed/rating/owner/shoulder value",
+      "observed": true,
+      "passed": true
+    },
+    {
+      "check": "fail_before_fixtures_detected",
+      "expected": "unsafe mutations are rejected",
+      "observed": [
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "remove_sp104_from_actual_depends_on"
+        },
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "inject_30m50m_to_t90_derived_field"
+        },
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "allow_target_in_teacher_features"
+        },
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "merge_reaction_route_into_burst"
+        },
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "turn_missing_row_into_zero_speed"
+        },
+        {
+          "detected_failure": true,
+          "expected_failure": true,
+          "fixture": "use_powerpro_as_physical_teacher"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "check": "deterministic_offline_rematerialization",
+      "expected": "byte-identical frozen-snapshot rerun",
+      "observed": {
+        "equal_hashes": true,
+        "hash_count": 14,
+        "returncode": 0
+      },
+      "passed": true
+    }
+  ],
+  "decision": "SP-079 remains blocked pending explicit downstream authorization; this QA did not run downstream work.",
+  "fail_before_fixtures": [
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "remove_sp104_from_actual_depends_on"
+    },
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "inject_30m50m_to_t90_derived_field"
+    },
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "allow_target_in_teacher_features"
+    },
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "merge_reaction_route_into_burst"
+    },
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "turn_missing_row_into_zero_speed"
+    },
+    {
+      "detected_failure": true,
+      "expected_failure": true,
+      "fixture": "use_powerpro_as_physical_teacher"
+    }
+  ],
+  "failed_checks": [],
+  "finalizer_returncode": 0,
+  "finalizer_stdout": "{\"benchmark_states\": {\"BOUNDED_CONTEXT\": 3, \"NO_COMMON_SUPPORT\": 4}, \"jump\": \"COLLECTED_BOUNDED_CONTEXT_ONLY\", \"npbplus_h2f\": \"BLOCKED_EXTERNAL_CURRENT_VALUE_SURFACE\", \"offline\": true, \"physical\": {\"canonical_counts\": {\"30M_50M\": 231, \"H2F\": 74, \"T90\": 12}, \"canonical_record_count\": 458, \"current100_canonical_rows\": 256, \"dedup_key\": \"same_measurement_cluster_id + metric + normalized player + raw value + unit\", \"deduped_raw_record_count\": 1, \"identity_state_counts\": {\"AMBIGUOUS_NAME_NOT_FORCED\": 3, \"CURRENT100_EXACT_NAME\": 256, \"UNRESOLVED_ANCHOR_NAME_ONLY\": 199}, \"overlay_path\": \"outputs/derived/sp017_physical_measurement_range_reclassification.json\", \"raw_baseline_counts\": {\"30M_50M\": 232, \"H2F\": 74, \"T90\": 12}, \"raw_record_count\": 459, \"source_path\": \"data/normalized/speed_historical_physical_measurements_2015_2026.json\"}, \"policy\": \"NO_PRODUCTION_TRANSFER_PRE_SP079\", \"running_rows\": 129, \"sprint_rows\": 209, \"status\": \"PARTIAL_BLOCKED\"}",
+  "gate_locks": {
+    "final_speed_numeric_generation": "NOT_RUN",
+    "owner_verdict_count": 0,
+    "shoulder": "NOT_STARTED",
+    "sp079_run": "NOT_RUN"
+  },
+  "independent_from": [
+    "scripts/sp104_pre_sp079_remediation.py",
+    "scripts/qa_sp103_speed_evidence_universe.py",
+    "SP-079",
+    "SP-078 owner verdict"
+  ],
+  "independent_lane": "QA-2",
+  "schema_version": "qa_sp104_pre_sp079_remediation_v1",
+  "status": "PASS_PARTIAL_BLOCKED",
+  "summary": {
+    "fixture_count": 6,
+    "passed_checks": 42,
+    "total_checks": 42
+  }
+}

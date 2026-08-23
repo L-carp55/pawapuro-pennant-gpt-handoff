@@ -1,0 +1,3304 @@
+{
+  "as_of": "2026-08-24",
+  "crosswalk_rows_with_exact_mlbam_id": 55,
+  "crosswalk_source": "data/manual/sp101_npb_mlb_the_show_identity_crosswalk.csv",
+  "crosswalk_total_rows": 763,
+  "eligible_mlbam_id_count": 55,
+  "eligible_selection": {
+    "all_crosswalk_rows_with_mlbam_id": true,
+    "current100_keys_with_mlbam_id": 6,
+    "current100_stable_keys": 100,
+    "not_current100_only": true,
+    "physical_canonical_rows": 458,
+    "physical_rich_anchor_names": 235
+  },
+  "identity_guards": {
+    "ambiguous_ids_forced": false,
+    "export_ids_all_crosswalk_backed": true,
+    "mlbam_ids_unique_in_crosswalk": true,
+    "name_only_join_used": false
+  },
+  "missingness_policy": {
+    "leaderboard_absence": "MISSING_EXPOSURE_NOT_SLOW",
+    "raw_bolts_without_competitive_runs": 0,
+    "raw_hp_to_1b_is_standardized_90ft": false
+  },
+  "physical_rich_anchor_universe": {
+    "distinct_normalized_names": 235,
+    "exact_crosswalk_or_current100_names": 100,
+    "name_only_match_allowed": false,
+    "names_with_mlbam_ids": 6,
+    "rows": [
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "Isobata Yohei"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "isobatayohei",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "Namiki Hidekazu"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "namikihidekazu",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "Yazawa Koutaro"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "yazawakoutaro",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "イチロー"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "イチロー",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:93795157"
+        ],
+        "display_names": [
+          "カリステ"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [
+          "593525"
+        ],
+        "name_only_match_allowed": false,
+        "normalized_name": "カリステ",
+        "raw_record_count": 9,
+        "stable_candidates": [
+          "PROEYE:93795157"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:53755153"
+        ],
+        "display_names": [
+          "サンタナ"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [
+          "570267"
+        ],
+        "name_only_match_allowed": false,
+        "normalized_name": "サンタナ",
+        "raw_record_count": 9,
+        "stable_candidates": [
+          "PROEYE:53755153"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:03505133"
+        ],
+        "display_names": [
+          "ソト"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "ソト",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:03505133"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:43745150"
+        ],
+        "display_names": [
+          "ファビアン"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "ファビアン",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:43745150"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "ブランドン・レアード"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "ブランドンレアード",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:63065155"
+        ],
+        "display_names": [
+          "ポランコ"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [
+          "570256"
+        ],
+        "name_only_match_allowed": false,
+        "normalized_name": "ポランコ",
+        "raw_record_count": 9,
+        "stable_candidates": [
+          "PROEYE:63065155"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:53955150"
+        ],
+        "display_names": [
+          "モンテロ"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [
+          "660707"
+        ],
+        "name_only_match_allowed": false,
+        "normalized_name": "モンテロ",
+        "raw_record_count": 9,
+        "stable_candidates": [
+          "PROEYE:53955150"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "三好元気"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "三好元気",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "三森大貴"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "三森大貴",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "上崎彰吾"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "上崎彰吾",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "上田希由翔"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "上田希由翔",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91695153"
+        ],
+        "display_names": [
+          "並木 秀尊",
+          "並木秀尊"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "並木秀尊",
+        "raw_record_count": 6,
+        "stable_candidates": [
+          "PROEYE:91695153"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "中山優月"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "中山優月",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "中島大輔"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "中島大輔",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51255138"
+        ],
+        "display_names": [
+          "中川 圭太",
+          "中川圭太"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "中川圭太",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:51255138"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51255118"
+        ],
+        "display_names": [
+          "中村 悠平"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "中村悠平",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:51255118"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "中田翔"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "中田翔",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:41445153"
+        ],
+        "display_names": [
+          "中野 拓夢"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "中野拓夢",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:41445153"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:21425116"
+        ],
+        "display_names": [
+          "丸 佳浩"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "丸佳浩",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:21425116"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "丸山一喜"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "丸山一喜",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:93195155"
+        ],
+        "display_names": [
+          "丸山 和郁"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "丸山和郁",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:93195155"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "井上和輝"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "井上和輝",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "井坪陽生"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "井坪陽生",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:81585134"
+        ],
+        "display_names": [
+          "京田 陽太"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "京田陽太",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:81585134"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:31335131"
+        ],
+        "display_names": [
+          "今宮 健太"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "今宮健太",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:31335131"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "今津慶介"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "今津慶介",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "伊藤雄紀"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "伊藤雄紀",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:61065137"
+        ],
+        "display_names": [
+          "伏見 寅威"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "伏見寅威",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:61065137"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51955159"
+        ],
+        "display_names": [
+          "佐々木 俊輔"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "佐々木俊輔",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:51955159"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "佐々木泰"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "佐々木泰",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "佐藤悠太"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "佐藤悠太",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:41045153"
+        ],
+        "display_names": [
+          "佐藤 輝明",
+          "佐藤輝明"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "佐藤輝明",
+        "raw_record_count": 4,
+        "stable_candidates": [
+          "PROEYE:41045153"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:71075151"
+        ],
+        "display_names": [
+          "佐藤 都志也"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "佐藤都志也",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:71075151"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91995134"
+        ],
+        "display_names": [
+          "佐野 恵太"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "佐野恵太",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:91995134"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "光弘帆高"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "光弘帆高",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "前嶋藍"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "前嶋藍",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "前田健伸"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "前田健伸",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "勝田成"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "勝田成",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:71275157"
+        ],
+        "display_names": [
+          "友杉 篤輝",
+          "友杉篤輝"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "友杉篤輝",
+        "raw_record_count": 5,
+        "stable_candidates": [
+          "PROEYE:71275157"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "友田佑卓"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "友田佑卓",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:01705134"
+        ],
+        "display_names": [
+          "古賀 優大"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "古賀優大",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:01705134"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:81785155"
+        ],
+        "display_names": [
+          "古賀 悠斗"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "古賀悠斗",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:81785155"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:73375134"
+        ],
+        "display_names": [
+          "吉川 尚輝"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "吉川尚輝",
+        "raw_record_count": 4,
+        "stable_candidates": [
+          "PROEYE:73375134"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "吉田元登"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "吉田元登",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "吉田祐大"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "吉田祐大",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:"
+        ],
+        "display_names": [
+          "名原 典彦"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "名原典彦",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "NPBNAME:名原典彦",
+          "PROEYE:"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:21925136"
+        ],
+        "display_names": [
+          "周東 佑京",
+          "周東佑京"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "周東佑京",
+        "raw_record_count": 24,
+        "stable_candidates": [
+          "PROEYE:21925136"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "和田康士朗"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "和田康士朗",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51455153"
+        ],
+        "display_names": [
+          "土田 龍空"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "土田龍空",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:51455153"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:11915134"
+        ],
+        "display_names": [
+          "坂倉 将吾"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "坂倉将吾",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:11915134"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:11915132"
+        ],
+        "display_names": [
+          "坂本 誠志郎"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "坂本誠志郎",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:11915132"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "坪井蒼汰"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "坪井蒼汰",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:71975136"
+        ],
+        "display_names": [
+          "塩見 泰隆",
+          "塩見泰隆"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "塩見泰隆",
+        "raw_record_count": 5,
+        "stable_candidates": [
+          "PROEYE:71975136"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "境亮陽"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "境亮陽",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:41245130"
+        ],
+        "display_names": [
+          "外崎 修汰",
+          "外崎修汰"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "外崎修汰",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:41245130"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:21325136"
+        ],
+        "display_names": [
+          "大城 卓三"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "大城卓三",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:21325136"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "大塚瑠晏"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "大塚瑠晏",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:21325134"
+        ],
+        "display_names": [
+          "大山 悠輔"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "大山悠輔",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:21325134"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:01305131"
+        ],
+        "display_names": [
+          "大島 洋平"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "大島洋平",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:01305131"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "大谷翔平"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "大谷翔平",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:71375138"
+        ],
+        "display_names": [
+          "太田 光"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "太田光",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:71375138"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91395138"
+        ],
+        "display_names": [
+          "太田 椋"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "太田椋",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:91395138"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:31435157"
+        ],
+        "display_names": [
+          "奈良間 大己",
+          "奈良間大己"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "奈良間大己",
+        "raw_record_count": 4,
+        "stable_candidates": [
+          "PROEYE:31435157"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "宇草孔基"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "宇草孔基",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:81885136"
+        ],
+        "display_names": [
+          "安田 尚憲"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "安田尚憲",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:81885136"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:11815130"
+        ],
+        "display_names": [
+          "宗 佑磨"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "宗佑磨",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:11815130"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "宗山塁"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "宗山塁",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "宮崎一樹"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "宮崎一樹",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "宮澤圭汰"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "宮澤圭汰",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51455137"
+        ],
+        "display_names": [
+          "宮﨑 敏郎"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "宮﨑敏郎",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:51455137"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "寺尾拳聖"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "寺尾拳聖",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "小中健蔵"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "小中健蔵",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:01705138"
+        ],
+        "display_names": [
+          "小園 海斗",
+          "小園海斗"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "小園海斗",
+        "raw_record_count": 4,
+        "stable_candidates": [
+          "PROEYE:01705138"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "小島大河"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "小島大河",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "小島慎也"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "小島慎也",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:11715153"
+        ],
+        "display_names": [
+          "小川 龍成"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "小川龍成",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:11715153"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:31535138"
+        ],
+        "display_names": [
+          "小幡 竜平",
+          "小幡竜平"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "小幡竜平",
+        "raw_record_count": 4,
+        "stable_candidates": [
+          "PROEYE:31535138"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "小林隼翔"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "小林隼翔",
+        "raw_record_count": 4,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "小深田大翔"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "小深田大翔",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "小郷裕哉"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "小郷裕哉",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "尾瀬雄大"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "尾瀬雄大",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "山下滉介"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "山下滉介",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91895138"
+        ],
+        "display_names": [
+          "山口 航輝"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "山口航輝",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:91895138"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:21425139"
+        ],
+        "display_names": [
+          "山川 穂高"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "山川穂高",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:21425139"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:23125136"
+        ],
+        "display_names": [
+          "山本 祐大"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "山本祐大",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:23125136"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "山田健太"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "山田健太",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "山田哲人"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "山田哲人",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "山里宝"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "山里宝",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "岡城快生"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "岡城快生",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:11515139"
+        ],
+        "display_names": [
+          "岡 大海"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "岡大海",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:11515139"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:81585151"
+        ],
+        "display_names": [
+          "岡林 勇希"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "岡林勇希",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:81585151"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "岡田啓吾"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "岡田啓吾",
+        "raw_record_count": 4,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "岡田幸文"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "岡田幸文",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51355155"
+        ],
+        "display_names": [
+          "岩田 幸宏"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "岩田幸宏",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:51355155"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "岩田悠聖"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "岩田悠聖",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91595136"
+        ],
+        "display_names": [
+          "岸田 行倫"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "岸田行倫",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:91595136"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "島田海吏"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "島田海吏",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "川合錬磨"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "川合錬磨",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "市橋昂士"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "市橋昂士",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "平川蓮"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "平川蓮",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:33535159"
+        ],
+        "display_names": [
+          "度会 隆輝"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "度会隆輝",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:33535159"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "廣瀬隆太"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "廣瀬隆太",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "徳丸快晴"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "徳丸快晴",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "新保玖和"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "新保玖和",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "星野大和"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "星野大和",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "春山陽登"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "春山陽登",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "有馬諒"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "有馬諒",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:31735132"
+        ],
+        "display_names": [
+          "木下 拓哉"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "木下拓哉",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:31735132"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "木切倉稜真"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "木切倉稜真",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "木本圭一"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "木本圭一",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "木津寿哉"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "木津寿哉",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:31735138"
+        ],
+        "display_names": [
+          "木浪 聖也"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "木浪聖也",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:31735138"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "杉浦有祐"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "杉浦有祐",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "杉澤龍"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "杉澤龍",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:03105157"
+        ],
+        "display_names": [
+          "村松 開人",
+          "村松開人"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "村松開人",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:03105157"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:41845132"
+        ],
+        "display_names": [
+          "村林 一輝",
+          "村林一輝"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "村林一輝",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:41845132"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51955153"
+        ],
+        "display_names": [
+          "来田 涼斗"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "来田涼斗",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:51955153"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "松下豪佑"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "松下豪佑",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "松山優太"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "松山優太",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "松川玲央"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "松川玲央",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:21625135"
+        ],
+        "display_names": [
+          "松本 剛",
+          "松本剛"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "松本剛",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:21625135"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "松浦佑星"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "松浦佑星",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91395132"
+        ],
+        "display_names": [
+          "板山 祐太郎"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "板山祐太郎",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:91395132"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "林大心"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "林大心",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91695157"
+        ],
+        "display_names": [
+          "林 琢真",
+          "林琢真"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "林琢真",
+        "raw_record_count": 4,
+        "stable_candidates": [
+          "PROEYE:91695157"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "林純司"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "林純司",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:31835133"
+        ],
+        "display_names": [
+          "柳田 悠岐"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "柳田悠岐",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:31835133"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:73175151"
+        ],
+        "display_names": [
+          "柳町 達"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "柳町達",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:73175151"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:01705130"
+        ],
+        "display_names": [
+          "栗原 陵矢"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "栗原陵矢",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:01705130"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "栗山雅也"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "栗山雅也",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "梅澤蒼空"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "梅澤蒼空",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:21325139"
+        ],
+        "display_names": [
+          "梅野 隆太郎"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "梅野隆太郎",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:21325139"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51555155"
+        ],
+        "display_names": [
+          "梶原 昂希"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "梶原昂希",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:51555155"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:43145157"
+        ],
+        "display_names": [
+          "森下 翔太"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "森下翔太",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:43145157"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91495139"
+        ],
+        "display_names": [
+          "森 友哉"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "森友哉",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:91495139"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "榊原七斗"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "榊原七斗",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "横田慎太郎"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "横田慎太郎",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:81885155"
+        ],
+        "display_names": [
+          "正木 智也"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "正木智也",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:81885155"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "水島滉陽"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "水島滉陽",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:63165155"
+        ],
+        "display_names": [
+          "水野 達稀"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "水野達稀",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:63165155"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "江越大賀"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "江越大賀",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51155118"
+        ],
+        "display_names": [
+          "浅村 栄斗"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "浅村栄斗",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:51155118"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "浦田俊輔"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "浦田俊輔",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:81385151"
+        ],
+        "display_names": [
+          "海野 隆司"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "海野隆司",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:81385151"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:41545136"
+        ],
+        "display_names": [
+          "清宮 幸太郎"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "清宮幸太郎",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:41545136"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "渡辺憩"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "渡辺憩",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:73175138"
+        ],
+        "display_names": [
+          "渡邊 佳明"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "渡邊佳明",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:73175138"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "渡邊晃希"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "渡邊晃希",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "渡部海"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "渡部海",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "渡部聖弥"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "渡部聖弥",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:71775134"
+        ],
+        "display_names": [
+          "源田 壮亮",
+          "源田壮亮"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "源田壮亮",
+        "raw_record_count": 11,
+        "stable_candidates": [
+          "PROEYE:71775134"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51255155"
+        ],
+        "display_names": [
+          "滝澤 夏央"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "滝澤夏央",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:51255155"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "熊谷陸"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "熊谷陸",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:61465133"
+        ],
+        "display_names": [
+          "牧原 大成"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "牧原大成",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:61465133"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:13115153"
+        ],
+        "display_names": [
+          "牧 秀悟"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "牧秀悟",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:13115153"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "田上夏衣"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "田上夏衣",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:21025157"
+        ],
+        "display_names": [
+          "田中 幹也"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "田中幹也",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:21025157"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51055138"
+        ],
+        "display_names": [
+          "田宮 裕涼"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "田宮裕涼",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:51055138"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "皆川岳飛"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "皆川岳飛",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "眞邉麗生"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "眞邉麗生",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "真鍋慧"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "真鍋慧",
+        "raw_record_count": 3,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "矢澤宏太"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "矢澤宏太",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:93395153"
+        ],
+        "display_names": [
+          "矢野 雅哉",
+          "矢野雅哉"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "矢野雅哉",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:93395153"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:21125134"
+        ],
+        "display_names": [
+          "石井 一成"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "石井一成",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:21125134"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91195151"
+        ],
+        "display_names": [
+          "石川 昂弥"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "石川昂弥",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:91195151"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "石毛大地"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "石毛大地",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "神田剛志"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "神田剛志",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "福原聖矢"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "福原聖矢",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:81685157"
+        ],
+        "display_names": [
+          "福永 裕基"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "福永裕基",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:81685157"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "福田周平"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "福田周平",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "福田秀平"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "福田秀平",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "秋山俊"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "秋山俊",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:31135133"
+        ],
+        "display_names": [
+          "秋山 翔吾",
+          "秋山翔吾"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [
+          "673451"
+        ],
+        "name_only_match_allowed": false,
+        "normalized_name": "秋山翔吾",
+        "raw_record_count": 9,
+        "stable_candidates": [
+          "PROEYE:31135133"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "立石正広"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "立石正広",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "笹田海風"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "笹田海風",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:41945131"
+        ],
+        "display_names": [
+          "筒香 嘉智",
+          "筒香嘉智"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [
+          "660294"
+        ],
+        "name_only_match_allowed": false,
+        "normalized_name": "筒香嘉智",
+        "raw_record_count": 9,
+        "stable_candidates": [
+          "PROEYE:41945131"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "米津煌太"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "米津煌太",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91995151"
+        ],
+        "display_names": [
+          "紅林 弘太郎"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "紅林弘太郎",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:91995151"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:31835134"
+        ],
+        "display_names": [
+          "細川 成也",
+          "細川成也"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "細川成也",
+        "raw_record_count": 3,
+        "stable_candidates": [
+          "PROEYE:31835134"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "緒方漣"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "緒方漣",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "繁永晟"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "繁永晟",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "若山空蒼"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "若山空蒼",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:41645139"
+        ],
+        "display_names": [
+          "若月 健矢"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "若月健矢",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:41645139"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "茶野篤政"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "茶野篤政",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "草部真秀"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "草部真秀",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "荒木郁也"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "荒木郁也",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:61565135"
+        ],
+        "display_names": [
+          "菊池 涼介"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "菊池涼介",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:61565135"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "萩尾匡也"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "萩尾匡也",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "落合智哉"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "落合智哉",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "蓑尾海斗"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "蓑尾海斗",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:31635138"
+        ],
+        "display_names": [
+          "藤原 恭大",
+          "藤原恭大"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "藤原恭大",
+        "raw_record_count": 4,
+        "stable_candidates": [
+          "PROEYE:31635138"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:41645136"
+        ],
+        "display_names": [
+          "藤岡 裕大"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "藤岡裕大",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:41645136"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "藤森康淳"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "藤森康淳",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "藤澤涼介"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "藤澤涼介",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "蛭間拓哉"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "蛭間拓哉",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "蜷川大"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "蜷川大",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51555151"
+        ],
+        "display_names": [
+          "蝦名 達夫"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "蝦名達夫",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:51555151"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:71475132"
+        ],
+        "display_names": [
+          "西川 龍馬"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "西川龍馬",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:71475132"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "西浦真平"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "西浦真平",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "西野啓也"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "西野啓也",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91495130"
+        ],
+        "display_names": [
+          "西野 真弘"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "西野真弘",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:91495130"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "谷端将伍"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "谷端将伍",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "赤堀颯"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "赤堀颯",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "赤星憲広"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "赤星憲広",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "辰己涼介"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "辰己涼介",
+        "raw_record_count": 4,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "辻井心"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "辻井心",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "辻本倫太郎"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "辻本倫太郎",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "近本光司"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "近本光司",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:41745135"
+        ],
+        "display_names": [
+          "近藤 健介"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "近藤健介",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:41745135"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "進藤勇也"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "進藤勇也",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "道原慧"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "道原慧",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "那波賢人"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "那波賢人",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:21925151"
+        ],
+        "display_names": [
+          "郡司 裕也"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "郡司裕也",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:21925151"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "酒井成真"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "酒井成真",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "重信慎之介"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "重信慎之介",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "野口泰司"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "野口泰司",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:31435138"
+        ],
+        "display_names": [
+          "野村 佑希"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "野村佑希",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:31435138"
+        ]
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:01405130"
+        ],
+        "display_names": [
+          "野間 峻祥"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "野間峻祥",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:01405130"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "金子侑司"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "金子侑司",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:81985135"
+        ],
+        "display_names": [
+          "鈴木 大地"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "鈴木大地",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:81985135"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "鈴木斗偉"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "鈴木斗偉",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "鈴木湧陽"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "鈴木湧陽",
+        "raw_record_count": 2,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:51455151"
+        ],
+        "display_names": [
+          "長岡 秀樹"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "長岡秀樹",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:51455151"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "飯森太慈"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "飯森太慈",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "高寺望夢"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "高寺望夢",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:91095135"
+        ],
+        "display_names": [
+          "高橋 周平"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "高橋周平",
+        "raw_record_count": 1,
+        "stable_candidates": [
+          "PROEYE:91095135"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "高部瑛斗"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "高部瑛斗",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "髙岡新時"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "髙岡新時",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [
+          "PROEYE:11215151"
+        ],
+        "display_names": [
+          "髙部 瑛斗"
+        ],
+        "identity_state": "EXACT_CROSSWALK_OR_CURRENT100",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "髙部瑛斗",
+        "raw_record_count": 2,
+        "stable_candidates": [
+          "PROEYE:11215151"
+        ]
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "黒田義信"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "黒田義信",
+        "raw_record_count": 4,
+        "stable_candidates": []
+      },
+      {
+        "current100_stable_keys": [],
+        "display_names": [
+          "齊藤大輝"
+        ],
+        "identity_state": "UNRESOLVED_NAME_ONLY",
+        "mlbam_ids": [],
+        "name_only_match_allowed": false,
+        "normalized_name": "齊藤大輝",
+        "raw_record_count": 1,
+        "stable_candidates": []
+      }
+    ],
+    "source": "data/normalized/speed_historical_physical_measurements_2015_2026.json",
+    "unresolved_name_only_names": 135
+  },
+  "running_splits": {
+    "export_rows": 129,
+    "season_max": 2026,
+    "season_min": 2015,
+    "unique_current100_keys_observed": 5,
+    "unique_mlbam_ids": 41
+  },
+  "schema_version": "sp104_mlb_npb_running_crosswalk_coverage_v1",
+  "sprint_exposure_h2f": {
+    "export_rows": 209,
+    "season_max": 2026,
+    "season_min": 2015,
+    "unique_current100_keys_observed": 6,
+    "unique_mlbam_ids": 55
+  }
+}
