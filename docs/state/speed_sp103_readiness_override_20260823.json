@@ -1,0 +1,37 @@
+{
+  "schema_version": "speed_sp103_readiness_override_20260823_v1",
+  "generated_at": "2026-08-23",
+  "reviewed_commit": "7cbb0eec61eb65e88ec43c90a9b6fa6da594db4d",
+  "sp103_completeness_status": "ACCEPTED_DONE_VALIDATED",
+  "superseded_readiness": "READY_FOR_SP079_WITH_BOUNDED_GAPS",
+  "effective_readiness": "SP079_BLOCKED_PENDING_SP104_HIGH_VALUE_REMEDIATION",
+  "reason_codes": [
+    "TOP_SPEED_DOMINANCE_78_OF_100_PEAK_ONLY",
+    "LOCAL_PHYSICAL_EVIDENCE_COLLECTED_BUT_UNUSED",
+    "FEASIBLE_OFFICIAL_90FT_AND_H2F_EXPOSURE_SOURCES_NOT_COLLECTED",
+    "PRE_FINAL_TRANSFER_METHODS_NOT_YET_VALIDATED"
+  ],
+  "measured_state": {
+    "peak_only_players": 78,
+    "peak_and_acceleration_players": 21,
+    "neither_players": 1,
+    "historical_h2f_records_collected_but_unused": 74,
+    "historical_30m_50m_records_collected_but_unused": 232,
+    "direct_t90_records_collected_but_unused": 12
+  },
+  "child_task": {
+    "task_id": "SP-104",
+    "title": "Pre-SP079 high-value physical evidence remediation",
+    "task_spec": "docs/tasks/SP104_PRE_SP079_HIGH_VALUE_EVIDENCE_REMEDIATION_20260823.md",
+    "branch": "codex/speed-sp104-pre-sp079-high-value-remediation-20260823"
+  },
+  "locks": {
+    "sp079": "BLOCKED_BY_SP104",
+    "owner_verdict_write": false,
+    "owner_verdict_count_expected": 0,
+    "final_numeric_speed_ratings": false,
+    "shoulder": "BLOCKED"
+  },
+  "non_reopen_rule": "Do not roll back the accepted SP-103 evidence-universe inventory. SP-104 is a bounded remediation of material feasible gaps only.",
+  "audit": "docs/audits/sp103_browser_independent_review_20260823.md"
+}
