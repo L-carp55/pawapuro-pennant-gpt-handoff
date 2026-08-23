@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-08-23",
+  "initiative": "PD-001 player lifecycle: growth, peak, decline",
+  "critical_path": [
+    "PD-001A",
+    "PD-001B",
+    "PD-001C",
+    "PD-001D",
+    "PD-001E"
+  ],
+  "current_task": "PD-001A",
+  "tasks": {
+    "PD-001A": {
+      "title": "Age Dataset Foundation",
+      "status": "PLANNED",
+      "dispatch_ready": true,
+      "branch": "codex/pd001a-age-dataset-foundation-20260823",
+      "task_spec": "docs/tasks/CODEX_PD001A_AGE_DATASET_FOUNDATION_20260823.md",
+      "design": "docs/design/pd001_player_lifecycle_v0_20260823.md",
+      "blocks": ["PD-001B"],
+      "terminal_states": [
+        "DONE_VALIDATED_READY_FOR_PD001B",
+        "DONE_WITH_BOUNDED_MISSINGNESS_READY_FOR_PD001B",
+        "PARTIAL_BLOCKED"
+      ]
+    },
+    "PD-001B": {
+      "title": "Empirical Aging Curves",
+      "status": "PLANNED",
+      "blocked_by": ["PD-001A"]
+    },
+    "PD-001C": {
+      "title": "Individual Development Engine",
+      "status": "PLANNED",
+      "blocked_by": ["PD-001B"]
+    },
+    "PD-001D": {
+      "title": "Injury / Availability / Retirement",
+      "status": "PLANNED",
+      "blocked_by": ["PD-001C"]
+    },
+    "PD-001E": {
+      "title": "Long-run QA",
+      "status": "PLANNED",
+      "blocked_by": ["PD-001C", "PD-001D"]
+    }
+  },
+  "pd001a_target_baseline": {
+    "database": "data/pennant.db",
+    "season_start": 2006,
+    "season_end": 2025,
+    "population_definition": "union of first-team official batting and pitching player-seasons; Codex must recompute from branch DB",
+    "observed_unique_players": 2743,
+    "observed_player_seasons": 13192,
+    "counts_are_canaries_not_forced_acceptance_values": true
+  },
+  "source_policy": {
+    "primary": "ProEYE Player Registry exact PlayerID -> Birthdate",
+    "primary_url": "https://proeyekyuu.com/player-registry/",
+    "secondary": "Wikidata exact P4260 -> P569 cross-check",
+    "npb_official_as_data_source": "FORBIDDEN_BY_PROJECT_POLICY",
+    "name_only_production_match": "FORBIDDEN",
+    "draft_year_birthdate_inference": "FORBIDDEN_FOR_PRODUCTION",
+    "historical_annual_roster_csv_from_nippon_baseball_data_repository": "DO_NOT_USE_AS_HISTORICAL_SNAPSHOT"
+  },
+  "age_definition": {
+    "representative_date": "July 1 of season",
+    "completed_field": "age_july1_completed",
+    "decimal_field": "age_july1_decimal",
+    "decimal_formula": "days(YYYY-07-01 - birth_date) / 365.2425",
+    "source_displayed_age_is_canonical": false
+  },
+  "governance": {
+    "pd001_is_separate_from_speed_owner_review": true,
+    "do_not_modify_sp078_owner_verdict": true,
+    "do_not_run_sp079": true,
+    "do_not_start_shoulder": true,
+    "do_not_start_pd001b_before_independent_review": true
+  },
+  "next_action": "Dispatch Codex using docs/tasks/CODEX_PD001A_AGE_DATASET_FOUNDATION_20260823.md, then change PD-001A status from PLANNED to DISPATCHED. After Codex pushes, inspect remote commit and audit directly from GitHub before moving to PD-001B."
+}
