@@ -1,0 +1,46 @@
+{
+  "schema_version": "speed_sp104_activation_state_20260823_v1",
+  "generated_at": "2026-08-23",
+  "task_id": "SP-104",
+  "status": "ACTIVE_PRE_SP079_HIGH_VALUE_REMEDIATION",
+  "repository": "L-carp55/pawapuro-pennant-gpt-handoff",
+  "branch": "codex/speed-sp104-pre-sp079-high-value-remediation-20260823",
+  "base_commit": "7cbb0eec61eb65e88ec43c90a9b6fa6da594db4d",
+  "parent_sp103": {
+    "completeness": "DONE_VALIDATED_ACCEPTED",
+    "original_readiness": "READY_FOR_SP079_WITH_BOUNDED_GAPS",
+    "effective_readiness": "SUPERSEDED_BLOCKED_PENDING_SP104",
+    "override": "docs/state/speed_sp103_readiness_override_20260823.json"
+  },
+  "task_specification": "docs/tasks/SP104_PRE_SP079_HIGH_VALUE_EVIDENCE_REMEDIATION_20260823.md",
+  "independent_review": "docs/audits/sp103_browser_independent_review_20260823.md",
+  "priority_scope": {
+    "p0": [
+      "decision-effective historical H2F/30m/50m/T90 canonicalization",
+      "official MLB 90ft five-foot split plus Sprint exposure/HP-to-1B collection",
+      "leakage-safe anchor-to-sparse transfer benchmark and selection",
+      "all-100 post-remediation component coverage and ablation"
+    ],
+    "p1": [
+      "bounded current NPB+ fastest-H2F recollection attempt",
+      "bounded Outfielder Jump Burst context collection if overlap is material"
+    ],
+    "p2_non_blocking": [
+      "WBC running values if still unavailable",
+      "Lead Distance beyond technique context",
+      "1.02 Spd beyond proxy control",
+      "broad new MLB Pipeline scouting",
+      "new generic community collection",
+      "engine/league/full-roster scale calibration"
+    ]
+  },
+  "locks": {
+    "sp079": "BLOCKED_BY_SP104",
+    "owner_verdict_write": false,
+    "owner_verdict_count_expected": 0,
+    "final_numeric_speed_ratings": false,
+    "shoulder": "BLOCKED"
+  },
+  "required_first_action": "Update canonical speed_task_registry.tsv to register SP-104 and add SP-104 to SP-079 depends_on, then run registry QA before collection/model work.",
+  "stop_rule": "Stop after SP-104 independent QA and push. Do not start SP-079 automatically."
+}
