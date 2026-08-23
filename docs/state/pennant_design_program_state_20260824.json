@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.5",
+  "schema_version": "1.6",
   "updated_at": "2026-08-24",
   "program": "Pawapuro Pennant World Simulation Design",
-  "phase": "DESIGN_DISCOVERY_THIRD_PASS_OPEN_DOMAIN_AUDIT_COMPLETE",
+  "phase": "DESIGN_DISCOVERY_THIRD_PASS_OPEN_DOMAIN_AUDIT_COMPLETE_EXTERNAL_RESEARCH_READY",
   "canonical_branch": "design/pennant-world-master-20260824",
   "authority_order": [
     "docs/state/pennant_feature_requirements_20260824.tsv",
@@ -55,9 +55,9 @@
     "codex_news_idea_mining_spec": "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md",
     "second_pass_addendum": "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_SECOND_PASS_ADDENDUM_20260824.md",
     "execution_branch": "codex/pennant-news-idea-mining-20260824",
-    "dispatch_ready": false,
-    "dispatch_blocker": "Fast-forward Codex branch to the latest third-pass audited design HEAD and verify refs are identical.",
-    "purpose": "Find real baseball mechanisms/events not yet represented in the combined 260-requirement inventory and the explicit OPEN-domain audits."
+    "dispatch_ready": true,
+    "dispatch_rule": "Immediately before Codex starts, verify execution branch is identical to canonical design branch; if not, fast-forward only.",
+    "purpose": "Find real baseball mechanisms/events not yet represented in the combined 260-requirement inventory and explicit OPEN-domain audits."
   },
   "open_design_domains": [
     "injury_fatigue_condition_detailed_model",
@@ -108,8 +108,7 @@
     "speed_design_and_pennant_design_are_separate": true
   },
   "next_sequence": [
-    "Fast-forward codex/pennant-news-idea-mining-20260824 to latest design HEAD",
-    "Verify design and Codex refs are identical",
+    "Verify codex/pennant-news-idea-mining-20260824 is identical to canonical design branch immediately before dispatch",
     "Run both Codex news/history task files with parallel subagents and independent QA",
     "Require Codex to treat third-pass OPEN domains as known gaps rather than rediscovering them as new features",
     "Review genuinely new candidate mechanisms with owner",
