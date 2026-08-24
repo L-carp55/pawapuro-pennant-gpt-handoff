@@ -25,7 +25,7 @@ at decision-use/range state, and the downstream SP-079 gate remains blocked.
 
 ## Independent QA
 
-**PASS_PARTIAL_BLOCKED** (42/42 checks; 6 fail-before fixtures)
+**PASS_PARTIAL_BLOCKED** (43/43 checks; 6 fail-before fixtures)
 
 The independent QA artifact is
 outputs/derived/qa_sp104_pre_sp079_remediation.json.

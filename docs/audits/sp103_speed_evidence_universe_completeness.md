@@ -69,7 +69,7 @@ The independent H lane passed all checks and five fail-before fixtures:
 - dropping a requirement trace row; and
 - disabling the exact 100×18 route ablation.
 
-The parent materializer was rerun from frozen inputs and produced byte-identical base canonical outputs; the readiness file is intentionally a separate finalizer overlay changing from `PENDING_INDEPENDENT_QA` to `READY_FOR_SP079`. Owner verdict count remained 0 and owner capture remained locked. The registry retains SP-079 as dependency-blocked on SP-103; SP-101 and SP-102 statuses remain unchanged.
+The parent materializer was rerun from frozen inputs and produced byte-identical canonical outputs. Owner verdict count remained 0 and owner capture remained locked. The registry retains SP-079 as dependency-blocked on SP-103; SP-101 and SP-102 statuses remain unchanged.
 
 ## Execution isolation
 

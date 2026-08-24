@@ -328,6 +328,16 @@
       "passed": true
     },
     {
+      "check": "sp103_diagnostic_artifact_records_actual_depends_on",
+      "expected": "SP-103 QA diagnostic records depends_on, not nonexistent dependencies",
+      "observed": {
+        "sp079_depends_on": "SP-015,SP-016,SP-078,SP-098,SP-100,SP-101,SP-102,SP-103,SP-104",
+        "sp079_status": "BLOCKED_DEPENDENCY",
+        "sp103_status": "DONE_VALIDATED"
+      },
+      "passed": true
+    },
+    {
       "check": "owner_verdict_count_zero_and_downstream_locks",
       "expected": "owner 0, SP-079 not run, shoulder not started",
       "observed": {
@@ -443,7 +453,7 @@
   "status": "PASS_PARTIAL_BLOCKED",
   "summary": {
     "fixture_count": 6,
-    "passed_checks": 42,
-    "total_checks": 42
+    "passed_checks": 43,
+    "total_checks": 43
   }
 }

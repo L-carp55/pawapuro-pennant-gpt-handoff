@@ -432,10 +432,10 @@
       "passed": true
     },
     {
-      "check": "registry_sp103_gate_and_sp079_block",
-      "expected": "SP-103 dependency present and SP-079 blocked",
+      "check": "registry_sp103_sp104_gate_and_sp079_block",
+      "expected": "SP-103 and SP-104 dependencies present in actual depends_on field and SP-079 blocked",
       "observed": {
-        "sp079_dependencies": null,
+        "sp079_depends_on": "SP-015,SP-016,SP-078,SP-098,SP-100,SP-101,SP-102,SP-103,SP-104",
         "sp079_status": "BLOCKED_DEPENDENCY",
         "sp103_status": "DONE_VALIDATED"
       },

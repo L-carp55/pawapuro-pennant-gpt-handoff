@@ -374,6 +374,25 @@ def main() -> None:
     check(checks, "registry_sp079_actual_depends_on_contains_sp104", registry_gate_ok(registry), {row.get("task_id"): {"status": row.get("status"), "depends_on": row.get("depends_on")} for row in registry if row.get("task_id") in {"SP-079", "SP-103", "SP-104"}}, "SP-079 is blocked by actual SP-103 and SP-104 dependencies")
     old_qa_script = (ROOT / "scripts/qa_sp103_speed_evidence_universe.py").read_text(encoding="utf-8")
     check(checks, "old_sp103_diagnostic_uses_depends_on_field", "sp079_depends_on" in old_qa_script and 'get("dependencies")' not in old_qa_script, True, "diagnostic reads the registry depends_on field")
+    sp103_qa = load_json("outputs/derived/qa_sp103_speed_evidence_universe.json")
+    sp103_registry_check = next(
+        (
+            row
+            for row in sp103_qa.get("checks", [])
+            if row.get("check") == "registry_sp103_sp104_gate_and_sp079_block"
+        ),
+        {},
+    )
+    sp103_registry_observed = sp103_registry_check.get("observed", {})
+    check(
+        checks,
+        "sp103_diagnostic_artifact_records_actual_depends_on",
+        sp103_registry_check.get("passed") is True
+        and bool(sp103_registry_observed.get("sp079_depends_on"))
+        and "sp079_dependencies" not in sp103_registry_observed,
+        sp103_registry_observed,
+        "SP-103 QA diagnostic records depends_on, not nonexistent dependencies",
+    )
     old_ledger = load_json("outputs/derived/sp078_owner_verdict_ledger_20260816.json")
     check(checks, "owner_verdict_count_zero_and_downstream_locks", old_ledger.get("owner_verdict_count") == 0 and load_json("outputs/derived/sp104_pre_sp079_readiness.json").get("sp079_run_status") == "NOT_RUN" and load_json("outputs/derived/sp104_pre_sp079_readiness.json").get("shoulder_status") == "NOT_STARTED", {"owner_verdict_count": old_ledger.get("owner_verdict_count"), "sp079": load_json("outputs/derived/sp104_pre_sp079_readiness.json").get("sp079_run_status")}, "owner 0, SP-079 not run, shoulder not started")
     payloads = [benchmark, load_json("outputs/derived/sp104_selected_transfer_policy.json"), before_after, ablation, npb, jump, load_json("outputs/derived/sp104_pre_sp079_readiness.json")]
