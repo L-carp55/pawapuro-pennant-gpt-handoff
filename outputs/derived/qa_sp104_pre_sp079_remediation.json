@@ -52,7 +52,7 @@
     {
       "check": "artifact_nonempty:outputs/derived/sp104_current100_physical_state_before_after.json",
       "expected": ">0",
-      "observed": 215693,
+      "observed": 217467,
       "passed": true
     },
     {
@@ -76,13 +76,13 @@
     {
       "check": "artifact_nonempty:outputs/derived/sp104_pre_sp079_readiness.json",
       "expected": ">0",
-      "observed": 1867,
+      "observed": 3017,
       "passed": true
     },
     {
       "check": "artifact_nonempty:docs/audits/sp104_pre_sp079_high_value_remediation.md",
       "expected": ">0",
-      "observed": 2115,
+      "observed": 2668,
       "passed": true
     },
     {
@@ -275,6 +275,25 @@
       "passed": true
     },
     {
+      "check": "p0d_top_speed_dominance_recomputed_and_baseline_reconciled",
+      "expected": "accepted SP-103 78/21/1 baseline is reconciled and SP-104 after-state dominance is measured without optimization",
+      "observed": {
+        "after": {
+          "NEITHER": 1,
+          "PEAK_AND_ACCELERATION": 49,
+          "PEAK_ONLY": 50
+        },
+        "after_peak_removal_state_changes": 50,
+        "baseline_reconciliation": true,
+        "before": {
+          "NEITHER": 1,
+          "PEAK_AND_ACCELERATION": 21,
+          "PEAK_ONLY": 78
+        }
+      },
+      "passed": true
+    },
+    {
       "check": "p0d_component_ablation_all100x6",
       "expected": "top/historical/MLB-transfer/selected/The-Show/proxy ablations without final values",
       "observed": {
@@ -453,7 +472,7 @@
   "status": "PASS_PARTIAL_BLOCKED",
   "summary": {
     "fixture_count": 6,
-    "passed_checks": 43,
-    "total_checks": 43
+    "passed_checks": 44,
+    "total_checks": 44
   }
 }

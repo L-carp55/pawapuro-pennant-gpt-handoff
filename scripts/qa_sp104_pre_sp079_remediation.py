@@ -363,6 +363,24 @@ def main() -> None:
     before_after = load_json("outputs/derived/sp104_current100_physical_state_before_after.json")
     ablation = load_json("outputs/derived/sp104_component_decision_use_ablation.json")
     check(checks, "p0d_before_after_all100_lanes", before_after.get("population") == 100 and len(before_after.get("players", [])) == 100 and all({"peak_speed", "acceleration_h2f", "end_to_end_t90", "historical_range", "selected_anchor_transfer", "technique_context", "outcome_proxy_context", "missing_common_support"}.issubset(row.get("before", {})) and {"peak_speed", "acceleration_h2f", "end_to_end_t90", "historical_range", "selected_anchor_transfer", "technique_context", "outcome_proxy_context", "missing_common_support"}.issubset(row.get("after", {})) for row in before_after.get("players", [])), {"population": before_after.get("population"), "rows": len(before_after.get("players", []))}, "all 100 before/after lanes present and technique/proxy separate")
+    dominance = before_after.get("top_speed_dominance_diagnostic", {})
+    before_counts = dominance.get("before", {}).get("component_class_counts", {})
+    after_counts = dominance.get("after", {}).get("component_class_counts", {})
+    check(
+        checks,
+        "p0d_top_speed_dominance_recomputed_and_baseline_reconciled",
+        dominance.get("baseline_reconciliation") is True
+        and before_counts == {"NEITHER": 1, "PEAK_AND_ACCELERATION": 21, "PEAK_ONLY": 78}
+        and sum(after_counts.values()) == 100
+        and dominance.get("optimization_target") is False,
+        {
+            "before": before_counts,
+            "after": after_counts,
+            "baseline_reconciliation": dominance.get("baseline_reconciliation"),
+            "after_peak_removal_state_changes": dominance.get("after", {}).get("state_changed_after_peak_removal_count"),
+        },
+        "accepted SP-103 78/21/1 baseline is reconciled and SP-104 after-state dominance is measured without optimization",
+    )
     check(checks, "p0d_component_ablation_all100x6", ablation.get("population") == 100 and ablation.get("all100x6_exact") is True and len(ablation.get("ablation_cells", [])) == 600 and all(cell.get("final_speed_value_created") is False for cell in ablation.get("ablation_cells", [])), {"population": ablation.get("population"), "cells": len(ablation.get("ablation_cells", []))}, "top/historical/MLB-transfer/selected/The-Show/proxy ablations without final values")
 
     npb = load_json("outputs/derived/sp104_npbplus_h2f_recollection_receipt.json")

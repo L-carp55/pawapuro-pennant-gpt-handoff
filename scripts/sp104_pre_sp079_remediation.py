@@ -68,6 +68,12 @@ H2F_METRICS = {
     "HP_TO_1B_NORMAL_SEC",
 }
 T90_METRICS = {"T90FT_SECONDS"}
+AVAILABLE_ACCELERATION_STATES = {
+    "AVAILABLE",
+    "AVAILABLE_BOUNDED",
+    "MEASURED",
+    "MEASURED_BOUNDED",
+}
 
 
 def load_json(path: Path, default: Any = None) -> Any:
@@ -1370,9 +1376,11 @@ def build_policy(benchmark: dict[str, Any], receipts: list[dict[str, Any]]) -> d
 
 def state_from_old_player(player: dict[str, Any]) -> dict[str, Any]:
     estimate = player.get("independent_physical_estimate") or {}
+    acceleration_state = str(estimate.get("acceleration_end_to_end_state", "MISSING_BOUNDED"))
+    acceleration_available = bool(estimate.get("acceleration_evidence")) or acceleration_state in AVAILABLE_ACCELERATION_STATES
     return {
         "peak_speed": "AVAILABLE_BOUNDED" if estimate.get("peak_speed_kmh") is not None else "MISSING_BOUNDED",
-        "acceleration_h2f": estimate.get("acceleration_end_to_end_state", "MISSING_BOUNDED"),
+        "acceleration_h2f": "AVAILABLE_BOUNDED_EXISTING_PHYSICAL_EVIDENCE" if acceleration_available else acceleration_state,
         "end_to_end_t90": "MISSING_OR_BOUNDED",
         "historical_range": "AVAILABLE_BOUNDED" if player.get("physical_percentile") is not None else "MISSING_BOUNDED",
         "selected_anchor_transfer": "SP103_PRELIMINARY_BOUNDED_ONLY",
@@ -1380,6 +1388,41 @@ def state_from_old_player(player: dict[str, Any]) -> dict[str, Any]:
         "technique_context": "SEPARATE_CONTEXT_ONLY",
         "outcome_proxy_context": "SEPARATE_CONTEXT_ONLY",
         "missing_common_support": "NOT_RECOMPUTED_FOR_SP103",
+    }
+
+
+def physical_component_class(state: dict[str, Any]) -> str:
+    peak_available = state.get("peak_speed") != "MISSING_BOUNDED"
+    acceleration_available = not str(state.get("acceleration_h2f", "")).startswith("MISSING")
+    end_to_end_available = state.get("end_to_end_t90") == "DIRECT_T90_ROW_PRESENT_BOUNDED"
+    if peak_available and (acceleration_available or end_to_end_available):
+        return "PEAK_AND_ACCELERATION"
+    if peak_available:
+        return "PEAK_ONLY"
+    if acceleration_available or end_to_end_available:
+        return "ACCELERATION_ONLY"
+    return "NEITHER"
+
+
+def summarize_physical_states(players: list[dict[str, Any]], phase: str) -> dict[str, Any]:
+    states = [row[phase] for row in players]
+    component_classes = Counter(physical_component_class(state) for state in states)
+    peak_speed_count = sum(state.get("peak_speed") != "MISSING_BOUNDED" for state in states)
+    acceleration_h2f_count = sum(
+        not str(state.get("acceleration_h2f", "")).startswith("MISSING")
+        for state in states
+    )
+    end_to_end_t90_count = sum(
+        state.get("end_to_end_t90") == "DIRECT_T90_ROW_PRESENT_BOUNDED"
+        for state in states
+    )
+    return {
+        "component_class_counts": dict(sorted(component_classes.items())),
+        "peak_speed_count": peak_speed_count,
+        "acceleration_h2f_count": acceleration_h2f_count,
+        "end_to_end_t90_count": end_to_end_t90_count,
+        "state_changed_after_peak_removal_count": component_classes.get("PEAK_ONLY", 0),
+        "state_summary_phase": phase,
     }
 
 
@@ -1456,6 +1499,15 @@ def build_before_after(
         "as_of": AS_OF,
         "population": len(players),
         "players": players,
+        "top_speed_dominance_diagnostic": {
+            "before": summarize_physical_states(players, "before"),
+            "after": summarize_physical_states(players, "after"),
+            "baseline_source": "outputs/derived/sp103_intermediate/lane_f_top_speed_preflight.json",
+            "baseline_component_class_counts": dict(sorted((preflight.get("component_class_counts") or {}).items())),
+            "baseline_reconciliation": summarize_physical_states(players, "before")["component_class_counts"] == dict(sorted((preflight.get("component_class_counts") or {}).items())),
+            "optimization_target": False,
+            "interpretation": "Coverage/dominance diagnostic only; do not optimize toward a desired peak-only count and do not generate final ratings.",
+        },
         "lane_definitions": {
             "peak_speed": "current NPB+ Sprint Speed context; one component only",
             "acceleration_h2f": "H2F/5-foot context with protocol and side separation",
@@ -1584,6 +1636,7 @@ def build_readiness(
     benchmark: dict[str, Any],
     npb_receipt: dict[str, Any],
     jump_payload: dict[str, Any],
+    before_after: dict[str, Any],
     qa_payload: dict[str, Any] | None,
 ) -> dict[str, Any]:
     qa_status = (qa_payload or {}).get("status", "PENDING_INDEPENDENT_QA")
@@ -1606,6 +1659,7 @@ def build_readiness(
             "result_states": dict(Counter(row["result_state"] for row in benchmark["methods"])),
             "production_transfer": False,
         },
+        "top_speed_dominance_diagnostic": before_after.get("top_speed_dominance_diagnostic", {}),
         "npbplus_h2f": npb_receipt["status"],
         "outfielder_jump": jump_payload["status"],
         "owner_verdict_count": 0,
@@ -1651,6 +1705,19 @@ at decision-use/range state, and the downstream SP-079 gate remains blocked.
   finding; the legacy local H2F field remains fail-closed.
 - P1-B: Outfielder Jump is retained as separate defensive context; Reaction,
   Burst, and Route are not merged.
+
+## P0-D top-speed dominance diagnostic
+
+The frozen SP-103 baseline and the SP-104 recomputation are recorded as
+coverage diagnostics, not optimization targets:
+
+- Before SP-104: `{json.dumps(readiness.get('top_speed_dominance_diagnostic', {}).get('before', {}).get('component_class_counts', {}), ensure_ascii=False, sort_keys=True)}`
+- After SP-104: `{json.dumps(readiness.get('top_speed_dominance_diagnostic', {}).get('after', {}).get('component_class_counts', {}), ensure_ascii=False, sort_keys=True)}`
+- Acceleration/H2F rows: `{readiness.get('top_speed_dominance_diagnostic', {}).get('after', {}).get('acceleration_h2f_count', 'pending')}`; direct T90 rows: `{readiness.get('top_speed_dominance_diagnostic', {}).get('after', {}).get('end_to_end_t90_count', 'pending')}`
+- Peak-removal state changes after remediation: `{readiness.get('top_speed_dominance_diagnostic', {}).get('after', {}).get('state_changed_after_peak_removal_count', 'pending')}`
+
+The baseline reconciliation is required to match the accepted SP-103
+preflight; no player-level final speed value is created.
 
 ## Independent QA
 
@@ -1710,6 +1777,7 @@ def main() -> None:
         benchmark,
         npb_receipt,
         jump_payload,
+        before_after,
         existing_qa,
     )
     build_audit(readiness, existing_qa)

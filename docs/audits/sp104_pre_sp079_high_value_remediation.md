@@ -23,9 +23,22 @@ at decision-use/range state, and the downstream SP-079 gate remains blocked.
 - P1-B: Outfielder Jump is retained as separate defensive context; Reaction,
   Burst, and Route are not merged.
 
+## P0-D top-speed dominance diagnostic
+
+The frozen SP-103 baseline and the SP-104 recomputation are recorded as
+coverage diagnostics, not optimization targets:
+
+- Before SP-104: `{"NEITHER": 1, "PEAK_AND_ACCELERATION": 21, "PEAK_ONLY": 78}`
+- After SP-104: `{"NEITHER": 1, "PEAK_AND_ACCELERATION": 49, "PEAK_ONLY": 50}`
+- Acceleration/H2F rows: `49`; direct T90 rows: `6`
+- Peak-removal state changes after remediation: `50`
+
+The baseline reconciliation is required to match the accepted SP-103
+preflight; no player-level final speed value is created.
+
 ## Independent QA
 
-**PASS_PARTIAL_BLOCKED** (43/43 checks; 6 fail-before fixtures)
+**PASS_PARTIAL_BLOCKED** (44/44 checks; 6 fail-before fixtures)
 
 The independent QA artifact is
 outputs/derived/qa_sp104_pre_sp079_remediation.json.

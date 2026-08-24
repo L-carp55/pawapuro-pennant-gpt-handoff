@@ -43,6 +43,41 @@
   "sp104_execution_state": "P0_A_P0_B_P0_C_P0_D_COMPLETE_P1_BOUNDED_P1_A_BLOCKED",
   "status": "PARTIAL_BLOCKED",
   "stop_boundary": "SP-104 only; do not run SP-079, SP-078 owner verdict, final speed value generation, shoulder, engine/simulation/scale work.",
+  "top_speed_dominance_diagnostic": {
+    "after": {
+      "acceleration_h2f_count": 49,
+      "component_class_counts": {
+        "NEITHER": 1,
+        "PEAK_AND_ACCELERATION": 49,
+        "PEAK_ONLY": 50
+      },
+      "end_to_end_t90_count": 6,
+      "peak_speed_count": 99,
+      "state_changed_after_peak_removal_count": 50,
+      "state_summary_phase": "after"
+    },
+    "baseline_component_class_counts": {
+      "NEITHER": 1,
+      "PEAK_AND_ACCELERATION": 21,
+      "PEAK_ONLY": 78
+    },
+    "baseline_reconciliation": true,
+    "baseline_source": "outputs/derived/sp103_intermediate/lane_f_top_speed_preflight.json",
+    "before": {
+      "acceleration_h2f_count": 21,
+      "component_class_counts": {
+        "NEITHER": 1,
+        "PEAK_AND_ACCELERATION": 21,
+        "PEAK_ONLY": 78
+      },
+      "end_to_end_t90_count": 0,
+      "peak_speed_count": 99,
+      "state_changed_after_peak_removal_count": 78,
+      "state_summary_phase": "before"
+    },
+    "interpretation": "Coverage/dominance diagnostic only; do not optimize toward a desired peak-only count and do not generate final ratings.",
+    "optimization_target": false
+  },
   "transfer_benchmark": {
     "candidate_methods": 7,
     "production_transfer": false,
