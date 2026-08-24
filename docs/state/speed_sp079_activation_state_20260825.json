@@ -1,0 +1,33 @@
+{
+  "schema_version": "speed_sp079_activation_state_20260825",
+  "generated_at": "2026-08-25",
+  "task_id": "SP-079",
+  "status": "AUTHORIZED_NOT_RUN",
+  "repository": "L-carp55/pawapuro-pennant-gpt-handoff",
+  "branch": "codex/speed-sp079-final-practical-reappraisal-20260825",
+  "base_commit": "18b06ed78821a6f4658b30b1a9bc834fcf228a21",
+  "task_specification": "docs/tasks/SP079_FINAL_PRACTICAL_100_PLAYER_REAPPRAISAL_20260825.md",
+  "upstream": {
+    "SP-101": "DONE_VALIDATED",
+    "SP-102": "DONE_NEGATIVE_FINDING",
+    "SP-103": "DONE_VALIDATED",
+    "SP-104_effective": "DONE_VALIDATED_READY_FOR_SP079_WITH_BOUNDED_EXTERNAL_NPBPLUS_H2F",
+    "SP-104_browser_override": "docs/state/speed_sp104_readiness_override_20260825.json",
+    "owner_verdict_count_expected": 0
+  },
+  "locks": {
+    "owner_verdict_write": false,
+    "shoulder": "BLOCKED",
+    "SP-080": "NOT_AUTHORIZED_IN_SP079",
+    "SP-081": "NOT_AUTHORIZED_IN_SP079",
+    "engine_absolute_scale_claim": false
+  },
+  "required_first_actions": [
+    "Reconcile speed_task_registry.tsv: SP-104 DONE_VALIDATED, SP-079 PARTIAL while executing; run registry QA.",
+    "Hash-bind SP-103/SP-104/SP-101 mandatory inputs and freeze exact current100 identity set.",
+    "Materialize appraisal policy before generating any player rating.",
+    "Generate all 100 practical rows with per-player evidence/decision-use/missingness receipts.",
+    "Run final-value full recomputation ablations and independent red-team QA."
+  ],
+  "stop_rule": "Stop after SP-079 independent audit and push. Do not write owner verdicts or start SP-080/SP-081/shoulder."
+}
