@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.6",
-  "updated_at": "2026-08-24",
+  "schema_version": "1.7",
+  "updated_at": "2026-08-25",
   "program": "Pawapuro Pennant World Simulation Design",
-  "phase": "DESIGN_DISCOVERY_THIRD_PASS_OPEN_DOMAIN_AUDIT_COMPLETE_EXTERNAL_RESEARCH_READY",
+  "phase": "DESIGN_DISCOVERY_EXTERNAL_RESEARCH_WAVE2_OWNER_SYNTHESIS_READY",
   "canonical_branch": "design/pennant-world-master-20260824",
   "authority_order": [
     "docs/state/pennant_feature_requirements_20260824.tsv",
@@ -12,6 +12,7 @@
     "docs/reference/pennant_owner_examples_and_rationale_20260824.md",
     "docs/audits/pennant_walltalk_second_pass_gap_audit_20260824.md",
     "docs/audits/pennant_open_domain_third_pass_audit_20260824.md",
+    "research branch commit 34ef644dc3c8c5017fc46b68f24dec1096227f7a",
     "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md",
     "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_SECOND_PASS_ADDENDUM_20260824.md"
   ],
@@ -52,12 +53,34 @@
     "game_feature_coding_status": "DO_NOT_START"
   },
   "external_research": {
-    "codex_news_idea_mining_spec": "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md",
-    "second_pass_addendum": "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_SECOND_PASS_ADDENDUM_20260824.md",
     "execution_branch": "codex/pennant-news-idea-mining-20260824",
-    "dispatch_ready": true,
-    "dispatch_rule": "Immediately before Codex starts, verify execution branch is identical to canonical design branch; if not, fast-forward only.",
-    "purpose": "Find real baseball mechanisms/events not yet represented in the combined 260-requirement inventory and explicit OPEN-domain audits."
+    "wave1_commit": "881096ec374080316c7314fb93ab525f4470d2d7",
+    "wave2_commit": "34ef644dc3c8c5017fc46b68f24dec1096227f7a",
+    "wave1_event_count": 59,
+    "wave2_added_event_count": 43,
+    "merged_event_count": 102,
+    "coverage_matrix_cells": 323,
+    "coverage_status": {
+      "SEARCHED_SATURATED": 68,
+      "SEARCHED_NEEDS_MORE": 245,
+      "BLOCKED": 10
+    },
+    "qa_verdict": "PASS_WITH_BLOCKERS",
+    "semantic_mapping_rows": 1028,
+    "semantic_mapping_actions": 407,
+    "semantic_mapping_removed": 106,
+    "semantic_mapping_added": 301,
+    "partial_candidates": ["PNC-001","PNC-002","PNC-003","PNC-004","PNC-005","PNC-006","PNC-007","PNC-008"],
+    "new_candidates": ["PNC-009"],
+    "pnc009_summary": "Optional regional promotion/relegation/qualification tier movement; new because league growth/contraction/structure requirements did not explicitly cover recurring tier movement.",
+    "research_status": "PAUSE_BROAD_SEARCH_FOR_OWNER_SYNTHESIS",
+    "reason": "Wave 2 produced a useful map of remaining evidence gaps. Pursuing all 245 NEEDS_MORE cells before owner synthesis would create unbounded research expansion. Use targeted Wave 3 only for design decisions that need stronger evidence.",
+    "remaining_blockers": [
+      "thin-region and pre-1990 primary archives",
+      "NPB private contract and medical evidence",
+      "Cuba/Puerto Rico/Africa source depth",
+      "Wave 1 current-year boundary revalidation before implementation"
+    ]
   },
   "open_design_domains": [
     "injury_fatigue_condition_detailed_model",
@@ -108,10 +131,10 @@
     "speed_design_and_pennant_design_are_separate": true
   },
   "next_sequence": [
-    "Verify codex/pennant-news-idea-mining-20260824 is identical to canonical design branch immediately before dispatch",
-    "Run both Codex news/history task files with parallel subagents and independent QA",
-    "Require Codex to treat third-pass OPEN domains as known gaps rather than rediscovering them as new features",
-    "Review genuinely new candidate mechanisms with owner",
-    "Continue wall-talk on high-priority OPEN domains before implementation"
+    "Continue owner wall-talk on high-priority OPEN domains",
+    "Synthesize PNC-001..PNC-009 only when the related design domain is discussed",
+    "Use targeted research Wave 3 only where owner decisions require stronger evidence",
+    "Prioritize modules after design wall-talk stabilizes",
+    "Only then authorize implementation/data-calibration tasks"
   ]
 }
