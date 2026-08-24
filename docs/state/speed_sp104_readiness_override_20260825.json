@@ -1,0 +1,49 @@
+{
+  "schema_version": "speed_sp104_readiness_override_20260825",
+  "generated_at": "2026-08-25",
+  "reviewed_commit": "693902e8b7ab089033028e7475ae5d911498d246",
+  "review_artifact": "docs/audits/sp104_browser_independent_review_20260825.md",
+  "worker_reported_status": "PARTIAL_BLOCKED",
+  "effective_status": "DONE_VALIDATED_READY_FOR_SP079_WITH_BOUNDED_EXTERNAL_NPBPLUS_H2F",
+  "effective_gate_decision": "READY_FOR_SP079",
+  "reason": "All P0-A through P0-D blocking remediation was executed and independently validated. The only remaining cited gap is P1-A current NPB+ fastest-H2F per-player value acquisition; the parent SP-104 specification explicitly says to close this as BLOCKED_EXTERNAL_CURRENT_VALUE_SURFACE and proceed when values are not reproducibly obtainable. PARTIAL/BLOCKED is reserved for a material feasible P0 gap remaining untested.",
+  "accepted_measurements": {
+    "historical_physical_raw_rows": 459,
+    "historical_physical_canonical_rows": 458,
+    "h2f_rows": 74,
+    "short_30m_50m_rows": 231,
+    "t90_rows": 12,
+    "mlb_exact_crosswalk_ids": 55,
+    "mlb_running_split_rows": 129,
+    "mlb_sprint_exposure_h2f_rows": 209,
+    "independent_qa_checks": "44/44",
+    "fail_before_fixtures": "6/6"
+  },
+  "top_speed_dominance": {
+    "before": {"PEAK_ONLY": 78, "PEAK_AND_ACCELERATION": 21, "NEITHER": 1},
+    "after": {"PEAK_ONLY": 50, "PEAK_AND_ACCELERATION": 49, "NEITHER": 1},
+    "interpretation": "diagnostic only; do not optimize toward a target count"
+  },
+  "transfer_policy": {
+    "production_transfer_selected": false,
+    "bounded_context": ["TF-056", "TF-060", "TF-062"],
+    "no_common_support": ["TF-057", "TF-058", "TF-059", "TF-061"],
+    "guard": "SP-079 must not silently promote a non-selected transfer method into a point estimate"
+  },
+  "bounded_external_gap": {
+    "source": "NPB+ current fastest H2F per-player values",
+    "status": "BLOCKED_EXTERNAL_CURRENT_VALUE_SURFACE",
+    "current_rows_retrieved": 0,
+    "legacy_local_values": "FAIL_CLOSED_QUARANTINED",
+    "sp079_policy": "preserve as missing current acceleration evidence; do not infer or resurrect legacy values"
+  },
+  "locks": {
+    "sp079_run_in_this_commit": false,
+    "owner_verdict_write": false,
+    "owner_verdict_count_expected": 0,
+    "final_numeric_speed_generation_in_this_commit": false,
+    "shoulder": "BLOCKED"
+  },
+  "registry_reconciliation_required_before_sp079_execution": true,
+  "next_step": "A separately authorized SP-079 execution must first reconcile docs/state/speed_task_registry.tsv so SP-104 is terminal-ready under this override, then run final practical 100-player appraisal with final-value all-100 consistency/decision-use ablation."
+}
