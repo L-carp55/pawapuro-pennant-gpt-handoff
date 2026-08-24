@@ -1,0 +1,341 @@
+{
+  "schema_version": "2.0",
+  "research_date": "2026-08-25",
+  "baseline_challenge_source": "outputs/derived/pennant_news_design_challenges_20260824.json",
+  "canonical_requirements_edited": false,
+  "known_open_domains_are_not_new": true,
+  "design_challenges": [
+    {
+      "challenge_id": "PNDC-001",
+      "title": "Rule and measurement transitions create coupled adaptation lag",
+      "evidence_event_ids": [
+        "PNN-010",
+        "PNN-017",
+        "PNN-018",
+        "PNN-019",
+        "PNN-020",
+        "PNN-031",
+        "PNW2-005",
+        "PNW2-008",
+        "PNW2-013",
+        "PNW2-020",
+        "PNW2-029"
+      ],
+      "corrected_existing_requirement_ids": [
+        "PW-145",
+        "PW-153",
+        "PW-158",
+        "PW-190",
+        "PW-191",
+        "PW-192",
+        "PW-193",
+        "PW-194"
+      ],
+      "open_domains": [
+        "OPEN-02",
+        "OPEN-11",
+        "OPEN-15",
+        "OPEN-18"
+      ],
+      "issue": "Changed rules/measurement can create uneven retraining, role value, and market-price transitions.",
+      "owner_decision": "Decide whether adaptation lag is lifecycle, latent modifier, or era marker.",
+      "candidate_links": [
+        "PNC-001",
+        "PNC-006"
+      ],
+      "risk": "HIGH",
+      "wave2_status": "RETAINED_WITH_CORRECTED_MAPPING"
+    },
+    {
+      "challenge_id": "PNDC-002",
+      "title": "Development networks can be expanded, shared, or reconfigured",
+      "evidence_event_ids": [
+        "PNN-005",
+        "PNN-006",
+        "PNN-015",
+        "PNN-021",
+        "PNN-022",
+        "PNN-033",
+        "PNN-034",
+        "PNN-035",
+        "PNW2-003",
+        "PNW2-009",
+        "PNW2-011",
+        "PNW2-015",
+        "PNW2-018",
+        "PNW2-025",
+        "PNW2-039"
+      ],
+      "corrected_existing_requirement_ids": [
+        "PW-149",
+        "PW-150",
+        "PW-151",
+        "PW-155",
+        "PW-156",
+        "PW-157",
+        "PW-168",
+        "PW-175",
+        "PW-177",
+        "PW-179",
+        "PW-180"
+      ],
+      "open_domains": [
+        "OPEN-08",
+        "OPEN-17"
+      ],
+      "issue": "Farm, academy, college, winter, and regional systems have capacity and knowledge-flow states not yet bounded.",
+      "owner_decision": "Choose a small capacity/network state without spreadsheet overhead.",
+      "candidate_links": [
+        "PNC-002",
+        "PNC-008"
+      ],
+      "risk": "HIGH",
+      "wave2_status": "RETAINED_WITH_CORRECTED_MAPPING"
+    },
+    {
+      "challenge_id": "PNDC-003",
+      "title": "Institutional player-access routes can reverse",
+      "evidence_event_ids": [
+        "PNN-002",
+        "PNN-008",
+        "PNN-024",
+        "PNN-025",
+        "PNN-026",
+        "PNN-027",
+        "PNN-028",
+        "PNN-030",
+        "PNW2-006",
+        "PNW2-022",
+        "PNW2-023",
+        "PNW2-032",
+        "PNW2-033",
+        "PNW2-034",
+        "PNW2-035"
+      ],
+      "corrected_existing_requirement_ids": [
+        "PW-103",
+        "PW-104",
+        "PW-133",
+        "PW-134",
+        "PW-135",
+        "PW-168",
+        "PW-170",
+        "PW-171",
+        "PW-172",
+        "PW-173",
+        "PW-238",
+        "PW-240",
+        "PW-241",
+        "PW-242",
+        "PW-256"
+      ],
+      "open_domains": [
+        "OPEN-03",
+        "OPEN-06",
+        "OPEN-07",
+        "OPEN-09"
+      ],
+      "issue": "Posting, foreign slots, transfer, draft eligibility, and travel gates can open, expire, reverse, or grandfather a cohort.",
+      "owner_decision": "Set abstraction and grandfathering rules for institutional reversals.",
+      "candidate_links": [
+        "PNC-003"
+      ],
+      "risk": "HIGH",
+      "wave2_status": "RETAINED_WITH_CORRECTED_MAPPING"
+    },
+    {
+      "challenge_id": "PNDC-004",
+      "title": "Media and stadium resilience can decouple resources from wins",
+      "evidence_event_ids": [
+        "PNN-043",
+        "PNN-044",
+        "PNN-045",
+        "PNN-046",
+        "PNW2-001",
+        "PNW2-002",
+        "PNW2-007",
+        "PNW2-010",
+        "PNW2-016",
+        "PNW2-041"
+      ],
+      "corrected_existing_requirement_ids": [
+        "PW-141",
+        "PW-143",
+        "PW-144",
+        "PW-204",
+        "PW-247",
+        "PW-249"
+      ],
+      "open_domains": [
+        "OPEN-02",
+        "OPEN-13",
+        "OPEN-20"
+      ],
+      "issue": "Stadium, merger, media-rights failure, and league fallback can change resources independently of wins.",
+      "owner_decision": "Decide whether resilience is rare default, owner toggle, or background-only.",
+      "candidate_links": [
+        "PNC-004"
+      ],
+      "risk": "MEDIUM",
+      "wave2_status": "RETAINED_WITH_CORRECTED_MAPPING"
+    },
+    {
+      "challenge_id": "PNDC-005",
+      "title": "Integrity governance must cover officials and institutional response",
+      "evidence_event_ids": [
+        "PNN-007",
+        "PNN-051",
+        "PNN-052",
+        "PNN-053",
+        "PNN-054",
+        "PNN-055",
+        "PNN-056",
+        "PNN-057",
+        "PNW2-005",
+        "PNW2-024",
+        "PNW2-029",
+        "PNW2-033",
+        "PNW2-034",
+        "PNW2-038"
+      ],
+      "corrected_existing_requirement_ids": [
+        "PW-190",
+        "PW-191",
+        "PW-193",
+        "PW-205",
+        "PW-206",
+        "PW-207",
+        "PW-208",
+        "PW-209",
+        "PW-210",
+        "PW-211",
+        "PW-212"
+      ],
+      "open_domains": [
+        "OPEN-04",
+        "OPEN-13",
+        "OPEN-18",
+        "OPEN-20"
+      ],
+      "issue": "Integrity needs evidence tiers, official scope, investigation duration, differentiated sanctions, and trust repair.",
+      "owner_decision": "Set safe content boundary and simulation-safe official/equipment cases.",
+      "candidate_links": [
+        "PNC-005"
+      ],
+      "risk": "HIGH",
+      "wave2_status": "RETAINED_WITH_CORRECTED_MAPPING"
+    },
+    {
+      "challenge_id": "PNDC-006",
+      "title": "Era markers are needed for statistical and legacy comparability",
+      "evidence_event_ids": [
+        "PNN-007",
+        "PNN-010",
+        "PNN-019",
+        "PNN-031",
+        "PNN-036",
+        "PNN-058",
+        "PNN-059",
+        "PNW2-001",
+        "PNW2-004",
+        "PNW2-005",
+        "PNW2-006",
+        "PNW2-029",
+        "PNW2-043"
+      ],
+      "corrected_existing_requirement_ids": [
+        "PW-190",
+        "PW-191",
+        "PW-192",
+        "PW-193",
+        "PW-198",
+        "PW-213",
+        "PW-214",
+        "PW-216",
+        "PW-225",
+        "PW-226"
+      ],
+      "open_domains": [
+        "OPEN-10",
+        "OPEN-11",
+        "OPEN-12",
+        "OPEN-18"
+      ],
+      "issue": "Rule, ball, weather-format, and labor-calendar transitions make raw records incomparable without erasing history.",
+      "owner_decision": "Choose visibility of transition markers in default history/news views.",
+      "candidate_links": [
+        "PNC-006"
+      ],
+      "risk": "MEDIUM",
+      "wave2_status": "RETAINED_WITH_CORRECTED_MAPPING"
+    },
+    {
+      "challenge_id": "PNDC-007",
+      "title": "Contract timing and governance clauses affect the competitive window",
+      "evidence_event_ids": [
+        "PNN-047",
+        "PNN-048",
+        "PNN-050",
+        "PNW2-006",
+        "PNW2-024"
+      ],
+      "corrected_existing_requirement_ids": [
+        "PW-129",
+        "PW-130",
+        "PW-131",
+        "PW-132",
+        "PW-138",
+        "PW-139",
+        "PW-140",
+        "PW-141",
+        "PW-247",
+        "PW-253",
+        "PW-254",
+        "PW-259"
+      ],
+      "open_domains": [
+        "OPEN-03",
+        "OPEN-06",
+        "OPEN-13",
+        "OPEN-20"
+      ],
+      "issue": "Nominal value, cash timing, options, opt-outs, and governance contingencies are contract/finance mechanisms.",
+      "owner_decision": "Decide whether timing/clauses affect finance only or negotiation and competitive windows.",
+      "candidate_links": [
+        "PNC-007"
+      ],
+      "risk": "HIGH",
+      "wave2_status": "RETAINED_WITH_CORRECTED_MAPPING"
+    },
+    {
+      "challenge_id": "PNDC-008",
+      "title": "Tiered competition and promotion/relegation are a global false-negative repair",
+      "evidence_event_ids": [
+        "PNN-033",
+        "PNW2-036",
+        "PNW2-037"
+      ],
+      "corrected_existing_requirement_ids": [
+        "PW-168",
+        "PW-174",
+        "PW-175",
+        "PW-178",
+        "PW-179",
+        "PW-180",
+        "PW-181",
+        "PW-203"
+      ],
+      "open_domains": [
+        "OPEN-15",
+        "OPEN-20"
+      ],
+      "issue": "Wave 1 found European promotion/relegation but absorbed it into broad league-growth IDs; explicit tier movement is not stated in the ledger.",
+      "owner_decision": "Decide whether tier movement is background-only or an owner-toggle regional system.",
+      "candidate_links": [
+        "PNC-009"
+      ],
+      "risk": "MEDIUM",
+      "wave2_status": "NEW_FALSE_NEGATIVE_REPAIR"
+    }
+  ]
+}

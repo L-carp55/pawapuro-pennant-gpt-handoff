@@ -1,0 +1,68 @@
+{
+  "schema_version": "2.0",
+  "research_date": "2026-08-25",
+  "cutoff_date": "2026-08-24",
+  "wave1_baseline": {
+    "event_count": 59,
+    "candidate_count": 8,
+    "commit": "881096ec374080316c7314fb93ab525f4470d2d7",
+    "source_index": "outputs/research/pennant_baseball_news_event_index_20260824.tsv"
+  },
+  "wave2": {
+    "retained_event_records": 43,
+    "novelty_counts": {
+      "PARTIAL_EXTENSION": 41,
+      "ALREADY_COVERED": 1,
+      "NEW_CANDIDATE": 1
+    },
+    "new_candidate_count": 1
+  },
+  "merged": {
+    "event_count": 102,
+    "candidate_count": 9,
+    "records_with_semantic_corrections": 57
+  },
+  "candidate_change": {
+    "retained_partial_candidates": [
+      "PNC-001",
+      "PNC-002",
+      "PNC-003",
+      "PNC-004",
+      "PNC-005",
+      "PNC-006",
+      "PNC-007",
+      "PNC-008"
+    ],
+    "newly_promoted_candidates": [
+      "PNC-009"
+    ],
+    "demoted_candidates": [],
+    "split_candidates": [],
+    "merged_candidates": []
+  },
+  "coverage_matrix_status_counts": {
+    "SEARCHED_SATURATED": 68,
+    "SEARCHED_NEEDS_MORE": 245,
+    "BLOCKED": 10
+  },
+  "remaining_blind_spots": [
+    "NPB private contract/medical records and club-by-club pre-1990 histories remain source-thin.",
+    "Pre-1990 Europe, Africa, Caribbean, and local-language club archives are not saturated.",
+    "Cuba and Puerto Rico need stronger federation/archive evidence for several cells.",
+    "Current 2026 proposals and farm structures are time-sensitive and not permanent facts.",
+    "Equipment/ball and officiating histories need more primary archival depth outside MLB/NPB."
+  ],
+  "blocked_source_areas": [
+    "Cuba player movement/integrity: primary-source access and policy-sensitive evidence.",
+    "Africa club-level contract/medical/integrity records: federation reports exist, club archives are sparse.",
+    "Puerto Rico medical/integrity cells: no safe primary evidence retained.",
+    "NPB private contract and medical records: public official sources insufficient for broad claims."
+  ],
+  "scope_guard": {
+    "pw_001_to_pw_260_direct_changes": false,
+    "game_feature_implementation_started": false,
+    "pd_001a_started": false,
+    "sp_079_started": false,
+    "shoulder_or_speed_canonical_ledgers_touched": false
+  }
+}

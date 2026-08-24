@@ -1,0 +1,109 @@
+{
+  "schema_version": "2.0",
+  "qa_date": "2026-08-25",
+  "cutoff_date": "2026-08-24",
+  "qa_mode": "independent_red_team",
+  "verdict": "PASS_WITH_BLOCKERS",
+  "checks": {
+    "artifact_presence": {
+      "status": "PASS",
+      "detail": "All Wave 2 artifacts exist."
+    },
+    "schema_integrity": {
+      "status": "PASS",
+      "detail": "events=102, candidates=9, matrix=323, clubs=12, periods=3"
+    },
+    "event_candidate_ids": {
+      "status": "PASS",
+      "detail": "Wave 1=59, Wave 2=43, merged=102, candidate IDs PNC-001..PNC-009 are unique."
+    },
+    "gzip_integrity": {
+      "status": "PASS",
+      "detail": "Compressed event index byte content matches the TSV."
+    },
+    "pw_id_existence": {
+      "status": "PASS",
+      "detail": "Missing PW IDs: none"
+    },
+    "pw_semantic_mapping": {
+      "status": "PASS",
+      "detail": "mapping_rows=1028, removed=106, added=301, missing=[], text_mismatch=[]"
+    },
+    "source_quality": {
+      "status": "PASS",
+      "detail": "Invalid source/authority/verification rows: []"
+    },
+    "source_date_freshness": {
+      "status": "PASS",
+      "detail": "Wave 2 future-date violations: none"
+    },
+    "current_status_contamination": {
+      "status": "PASS_WITH_BLOCKERS",
+      "detail": "Wave 1 current-year boundary rows are preserved and flagged for revalidation: PNN-020,PNN-023,PNN-024,PNN-025,PNN-029"
+    },
+    "region_topic_matrix": {
+      "status": "PASS",
+      "detail": "cells=323, statuses={'SEARCHED_SATURATED': 68, 'SEARCHED_NEEDS_MORE': 245, 'BLOCKED': 10}, invalid_cells=[]"
+    },
+    "npb_12_club_coverage": {
+      "status": "PASS",
+      "detail": "club_count=12, unique=12, scope_failures=[]"
+    },
+    "historical_period_coverage": {
+      "status": "PASS",
+      "detail": "periods=['WAVE-A', 'WAVE-B', 'WAVE-C']; separate A/B/C receipts present."
+    },
+    "false_new": {
+      "status": "PASS",
+      "detail": "Wave 2 novelty={'PARTIAL_EXTENSION': 41, 'ALREADY_COVERED': 1, 'NEW_CANDIDATE': 1}; promotion/relegation is the only promoted event-level new mechanism."
+    },
+    "false_covered_false_negative": {
+      "status": "PASS",
+      "detail": "PNC-001..008 retained; PNC-009 promoted; semantic removal actions prove the review did not force blanket coverage."
+    },
+    "duplicated_events": {
+      "status": "PASS",
+      "detail": "shared primary-source groups=[['PNN-017', 'PNN-018'], ['PNN-019', 'PNN-020'], ['PNN-030', 'PNW2-035'], ['PNN-052', 'PNW2-004'], ['PNW2-005', 'PNW2-006']]; exact event duplicates=none"
+    },
+    "unsupported_real_person_allegations": {
+      "status": "PASS",
+      "detail": "Wave 2 institutional summaries contain no unsupported allegation; named examples are source-bounded and not generalized."
+    },
+    "scope_creep": {
+      "status": "PASS",
+      "detail": "Artifacts are research/design evidence only; canonical PW, speed, shoulder, implementation, PD-001A, and SP-079 files are not in the Wave 2 artifact set."
+    }
+  },
+  "hard_failures": [],
+  "warnings": [
+    {
+      "check": "current_status_contamination",
+      "detail": "Five Wave 1 current rows use 2026-12-31 as a legacy period boundary; they are not new Wave 2 claims and remain preserved for baseline comparison."
+    }
+  ],
+  "blockers": [
+    "10 matrix cells are BLOCKED by source authority/depth.",
+    "245 matrix cells remain SEARCHED_NEEDS_MORE; Wave 2 is a repair wave, not global saturation.",
+    "Wave 1 current-year rows with 2026-12-31 boundary are preserved and require revalidation before implementation.",
+    "NPB club-level medical/private contract and thin-region archives remain incomplete."
+  ],
+  "counts": {
+    "wave1_events": 59,
+    "wave2_events": 43,
+    "merged_events": 102,
+    "candidates": 9,
+    "semantic_mapping_rows": 1028,
+    "semantic_removed_actions": 106,
+    "semantic_added_actions": 301,
+    "matrix_cells": 323,
+    "npb_clubs": 12,
+    "period_receipts": 3
+  },
+  "scope_guard": {
+    "canonical_requirements_edited": false,
+    "game_feature_implementation_started": false,
+    "pd_001a_started": false,
+    "sp_079_started": false,
+    "shoulder_or_speed_canonical_ledgers_touched": false
+  }
+}
