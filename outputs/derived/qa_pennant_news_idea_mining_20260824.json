@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "qa_run_date": "2026-08-24",
+  "status": "DONE_WITH_BOUNDED_BLIND_SPOTS_READY_FOR_OWNER_SYNTHESIS",
+  "verdict": "PASS_WITH_BOUNDED_BLIND_SPOTS",
+  "checks": [
+    {
+      "check_id": "QA-001",
+      "name": "event index schema",
+      "result": "PASS",
+      "evidence": "29 header columns; 59 data rows; every data row has 29 fields."
+    },
+    {
+      "check_id": "QA-002",
+      "name": "candidate ledger schema",
+      "result": "PASS",
+      "evidence": "16 header columns; 8 data rows; every data row has 16 fields."
+    },
+    {
+      "check_id": "QA-003",
+      "name": "deterministic IDs and source references",
+      "result": "PASS",
+      "evidence": "59 unique event IDs, 8 unique candidate IDs, and every candidate source_event_id resolves to the event index."
+    },
+    {
+      "check_id": "QA-004",
+      "name": "canonical PW reference integrity",
+      "result": "PASS",
+      "evidence": "All PW IDs referenced by event and candidate artifacts resolve to the two canonical requirement ledgers; no PW-261+ ID was introduced."
+    },
+    {
+      "check_id": "QA-005",
+      "name": "compressed artifact integrity",
+      "result": "PASS",
+      "evidence": "gzip integrity check passed for pennant_baseball_news_event_index_20260824.tsv.gz."
+    },
+    {
+      "check_id": "QA-006",
+      "name": "source authority and currentness",
+      "result": "PASS_WITH_LIMITS",
+      "evidence": "43 PRIMARY_OFFICIAL, 10 PRIMARY_PLUS_SECONDARY, 41 VERIFIED_PRIMARY rows; 4 CURRENT_STATUS_CHECK rows are explicitly marked for revalidation."
+    },
+    {
+      "check_id": "QA-007",
+      "name": "known OPEN false-new audit",
+      "result": "PASS",
+      "evidence": "Active Draft, KBO 2nd Draft, Rule 5, farm structure, WBC/All-Star carryover, international access, ABS, weather, labor stoppage, and integrity families were mapped to existing PW/OPEN references."
+    },
+    {
+      "check_id": "QA-008",
+      "name": "allegation and evidence safety",
+      "result": "PASS_WITH_LIMITS",
+      "evidence": "PNN-057 CPBL history and PNN-032 FEPCUBE remain INSUFFICIENT_EVIDENCE and are not candidate inputs; no unsupported named allegation is promoted."
+    },
+    {
+      "check_id": "QA-009",
+      "name": "scope guard",
+      "result": "PASS",
+      "evidence": "No game implementation, PD-001A dispatch, SP-079 work, shoulder work, speed canonical work, or PW ledger edits are present in the package."
+    },
+    {
+      "check_id": "QA-010",
+      "name": "independent red-team review",
+      "result": "PASS",
+      "evidence": "The independent lane challenged the eight partial candidates and retained zero defensible NEW_CANDIDATE rows."
+    }
+  ],
+  "false_new_watchlist": [
+    "NPB Active Draft",
+    "KBO 2nd Draft",
+    "MLB Rule 5",
+    "MLB draft lottery and CBA service-time incentives",
+    "farm/minor/third-team structures",
+    "WBC/Olympics/Premier12 selection and relationship carryover",
+    "foreign-player slots and international access agreements",
+    "ABS and technology adoption",
+    "weather, schedule, and labor stoppages",
+    "integrity/scandal response"
+  ],
+  "sampled_rows": {
+    "primary_and_current": ["PNN-002", "PNN-003", "PNN-006", "PNN-010", "PNN-020", "PNN-024", "PNN-029", "PNN-046", "PNN-055"],
+    "partial_extensions": ["PNN-005", "PNN-008", "PNN-014", "PNN-017", "PNN-023", "PNN-043", "PNN-047", "PNN-056"],
+    "insufficient_evidence": ["PNN-032", "PNN-057"]
+  },
+  "remaining_blind_spots": [
+    "Complete 12-club NPB organization histories were not claimed.",
+    "Private contract clauses, proprietary models, medical thresholds, and internal staff outcomes were excluded.",
+    "Some CPBL and historical labor material requires deeper primary archival research.",
+    "Current 2026 rule/status claims should be reverified before owner adoption."
+  ],
+  "terminal_state": "DONE_WITH_BOUNDED_BLIND_SPOTS_READY_FOR_OWNER_SYNTHESIS"
+}

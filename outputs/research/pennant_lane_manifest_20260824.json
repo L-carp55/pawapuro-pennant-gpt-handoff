@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "research_date": "2026-08-24",
+  "package_status": "DONE_WITH_BOUNDED_BLIND_SPOTS_READY_FOR_OWNER_SYNTHESIS",
+  "canonical_merge_policy": "Parent merge only; canonical PW ledgers are read-only for this package.",
+  "lanes": [
+    {"lane_id":"NPB_RULES_LABOR_TRANSACTIONS","receipt":"outputs/research/pennant_lane_receipts/01_NPB_RULES_LABOR_TRANSACTIONS.md","event_ids":["PNN-001","PNN-002","PNN-003","PNN-004","PNN-005","PNN-006","PNN-007"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"NPB_ORG_PLAYER_DEVELOPMENT","receipt":"outputs/research/pennant_lane_receipts/02_NPB_ORG_PLAYER_DEVELOPMENT.md","event_ids":["PNN-008","PNN-009"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"MLB_MILB_RULES_CBA_DRAFT","receipt":"outputs/research/pennant_lane_receipts/03_MLB_MILB_RULES_CBA_DRAFT.md","event_ids":["PNN-010","PNN-011","PNN-012","PNN-013","PNN-014","PNN-015","PNN-016","PNN-058","PNN-059"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"MLB_PLAYER_DEVELOPMENT_TECH","receipt":"outputs/research/pennant_lane_receipts/04_MLB_PLAYER_DEVELOPMENT_TECH.md","event_ids":["PNN-017","PNN-018","PNN-019","PNN-020"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"EAST_ASIA_KBO_CPBL","receipt":"outputs/research/pennant_lane_receipts/05_EAST_ASIA_KBO_CPBL.md","event_ids":["PNN-021","PNN-022","PNN-023","PNN-024","PNN-025","PNN-026"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"LATAM_CUBA_MEXICO_CARIBBEAN","receipt":"outputs/research/pennant_lane_receipts/06_LATAM_CUBA_MEXICO_CARIBBEAN.md","event_ids":["PNN-027","PNN-028","PNN-029","PNN-030","PNN-031","PNN-032"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"EUROPE_AFRICA_OCEANIA_WBSC","receipt":"outputs/research/pennant_lane_receipts/07_EUROPE_AFRICA_OCEANIA_WBSC.md","event_ids":["PNN-033","PNN-034","PNN-035","PNN-036","PNN-037"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"INTERNATIONAL_TOURNAMENTS_GLOBALIZATION","receipt":"outputs/research/pennant_lane_receipts/08_INTERNATIONAL_TOURNAMENTS_GLOBALIZATION.md","event_ids":["PNN-038","PNN-039","PNN-040","PNN-041","PNN-042"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"BUSINESS_STADIUM_EXPANSION_MEDIA","receipt":"outputs/research/pennant_lane_receipts/09_BUSINESS_STADIUM_EXPANSION_MEDIA.md","event_ids":["PNN-043","PNN-044","PNN-045","PNN-046"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"PLAYER_CAREER_CONTRACT_AGENT_CASES","receipt":"outputs/research/pennant_lane_receipts/10_PLAYER_CAREER_CONTRACT_AGENT_CASES.md","event_ids":["PNN-047","PNN-048","PNN-049","PNN-050"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"INTEGRITY_SCANDAL_RULE_EXPLOIT","receipt":"outputs/research/pennant_lane_receipts/11_INTEGRITY_SCANDAL_RULE_EXPLOIT.md","event_ids":["PNN-051","PNN-052","PNN-053","PNN-054","PNN-055","PNN-056","PNN-057"],"status":"complete_with_bounded_blind_spots"},
+    {"lane_id":"INDEPENDENT_COVERAGE_QA_RED_TEAM","receipt":"outputs/research/pennant_lane_receipts/12_INDEPENDENT_COVERAGE_QA_RED_TEAM.md","event_ids":[],"status":"complete_after_merge"}
+  ],
+  "canonical_outputs": {
+    "event_index_gzip":"outputs/research/pennant_baseball_news_event_index_20260824.tsv.gz",
+    "candidate_ledger":"outputs/derived/pennant_news_new_feature_candidates_20260824.tsv",
+    "design_challenges":"outputs/derived/pennant_news_design_challenges_20260824.json",
+    "coverage":"outputs/derived/pennant_news_research_coverage_20260824.json",
+    "qa":"outputs/derived/qa_pennant_news_idea_mining_20260824.json",
+    "synthesis":"docs/research/pennant_baseball_news_idea_mining_20260824.md",
+    "independent_audit":"docs/audits/pennant_news_idea_mining_independent_audit_20260824.md"
+  }
+}
