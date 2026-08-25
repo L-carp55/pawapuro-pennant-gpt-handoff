@@ -1,0 +1,177 @@
+{
+  "schema_version": "sp079_frozen_input_manifest_v1",
+  "task_id": "SP-079",
+  "frozen_at": "2026-08-25",
+  "policy_sha256": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+  "input_files": {
+    "policy": {
+      "path": "outputs/derived/sp079_appraisal_policy.json",
+      "sha256": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3"
+    },
+    "sp100": {
+      "path": "outputs/derived/sp100_owner_approved_production_wiring_20260816.json",
+      "sha256": "585a8c18e77b33c5161a5a44aaa0edf6e7915ea68231fd03ab3da3207b24dc47"
+    },
+    "sp101": {
+      "path": "outputs/derived/sp101_current100_multibridge_evidence.json",
+      "sha256": "57367f06e521cd298c03d973c98d9ecfbfcc23f1658ef905775dc21dee5535bd"
+    },
+    "sp101Show": {
+      "path": "outputs/derived/sp101_current100_the_show_evidence.json",
+      "sha256": "13239624f0837e1e8397de267fcd983e10fe5afc57292020afbf6aba2ae2dee3"
+    },
+    "sp101Graph": {
+      "path": "outputs/derived/sp101_pairwise_ordinal_graph.json",
+      "sha256": "756a6d5e2e43aa202e2de0812342c8a23ea22e6e299eb034e679b0898dc321bc"
+    },
+    "sp104Physical": {
+      "path": "outputs/derived/sp104_historical_physical_canonical.jsonl",
+      "sha256": "65d9d1ea882f54f9c2674fde04e938a39293bc7772ef2762932dd26fe1313e1c"
+    },
+    "sp104State": {
+      "path": "outputs/derived/sp104_current100_physical_state_before_after.json",
+      "sha256": "4fdce04c65e933a4457fb395872272b19cc00891cfbcb63bf21ab962a51e815e"
+    },
+    "sp104TransferPolicy": {
+      "path": "outputs/derived/sp104_selected_transfer_policy.json",
+      "sha256": "dadd25d22980b0af6b966bfd2dc64fa9c9808bd27e123fb7d7cd3c88fa70f049"
+    },
+    "sp104TransferBenchmark": {
+      "path": "outputs/derived/sp104_transfer_method_benchmark.json",
+      "sha256": "5cdb36c8a12f7474bf1e8d6eede61b9d3610a454337b32eb5870e788e3a3a98a"
+    },
+    "sp104Receipts": {
+      "path": "outputs/derived/sp104_anchor_to_sparse_player_receipts.jsonl",
+      "sha256": "ec0f32a32b8891bed9581cc4576b6745cf9e1427afef233d908cf3e8d6c62696"
+    },
+    "mlbRunning": {
+      "path": "data/manual/sp104_mlb_running_splits.csv",
+      "sha256": "1fe17ef153d72a7aef4f5150caf0d7beaf4a62ed0eb6cefdccc5e96792eee562"
+    },
+    "mlbExposure": {
+      "path": "data/manual/sp104_mlb_sprint_exposure_h2f.csv",
+      "sha256": "e1fba2480c3eb209ab31049eb5001ecc47b67f1768a08b53accd77b3c0dbd43e"
+    },
+    "sp077": {
+      "path": "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json",
+      "sha256": "ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d"
+    },
+    "sp103Universe": {
+      "path": "outputs/derived/sp103_speed_evidence_universe.tsv",
+      "sha256": "b0e5f79d234e68bd0cf7b3f0f36acb5f44818138e1dac6ea912c46777251bb73"
+    },
+    "sp103Traceability": {
+      "path": "outputs/derived/sp103_owner_requirement_traceability.tsv",
+      "sha256": "904c2d1bad47a82c89fb1b6974eeece8e1f2b939aea6b4cd236891391c161eba"
+    },
+    "sp103Gaps": {
+      "path": "outputs/derived/sp103_gap_and_remediation_plan.json",
+      "sha256": "6457d93618c88f31a7d8dcc64fda86392cce62ed3bfeab91f28ad51d2853da0f"
+    },
+    "sp103Methods": {
+      "path": "outputs/derived/sp103_inference_method_universe.json",
+      "sha256": "af05b65b6323603f14bef3d6d707ae7b173985864aefb4b5d857bae59dcec3b9"
+    },
+    "baseline": {
+      "path": "outputs/derived/speed_2026_100_owner_review_master_20260813.json",
+      "sha256": "e47d4c8c7326d16bc481ca099abb27f14d71e65d4eeef251e5286890ccb176cf"
+    },
+    "ownerLedger": {
+      "path": "outputs/derived/sp078_owner_verdict_ledger_20260816.json",
+      "sha256": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0"
+    },
+    "registry": {
+      "path": "docs/state/speed_task_registry.tsv",
+      "sha256": "1a6982f1c244ce199d2c06ce1534c9025150090e634626c8e6975d48ded5a8a6"
+    }
+  },
+  "population": {
+    "current100_count": 100,
+    "current100_stable_key_sha256": "9769b164f88978f17d3a4ab8f9a908ee6709b5b1d9fbbe36e11e9d51f7c5add3",
+    "base_evidence_row_count": 100
+  },
+  "upstream_evidence_counts": {
+    "sp103_evidence_universe_rows": 71,
+    "sp103_traceability_rows": 76,
+    "sp104_canonical_rows": 458,
+    "sp104_mlb_running_rows": 129,
+    "sp104_mlb_exposure_rows": 209,
+    "sp101_the_show_rows": 100,
+    "sp104_anchor_receipts": 100
+  },
+  "registry_snapshot_before_finalization": {
+    "SP-079": {
+      "status": "DONE_VALIDATED",
+      "owner_review_block": "1",
+      "gate_block": "1"
+    },
+    "SP-080": {
+      "status": "NOT_STARTED",
+      "owner_review_block": "0",
+      "gate_block": "1"
+    },
+    "SP-081": {
+      "status": "NOT_STARTED",
+      "owner_review_block": "0",
+      "gate_block": "0"
+    },
+    "SP-082": {
+      "status": "BLOCKED_DEPENDENCY",
+      "owner_review_block": "0",
+      "gate_block": "0"
+    },
+    "SP-103": {
+      "status": "DONE_VALIDATED",
+      "owner_review_block": "0",
+      "gate_block": "1"
+    },
+    "SP-104": {
+      "status": "DONE_VALIDATED",
+      "owner_review_block": "0",
+      "gate_block": "1"
+    }
+  },
+  "owner_review_integrity": {
+    "owner_verdict_count": 0,
+    "owner_records_count": 0,
+    "owner_ledger_sha256": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0",
+    "owner_input_used_in_synthesis": false,
+    "owner_verdicts_written": false
+  },
+  "forbidden_input_guards": {
+    "legacy_npb_plus_h2f_field_read": false,
+    "powerpro_as_synthesis_feature": false,
+    "powerpro_loaded_for_posthoc_only": true,
+    "show_numeric_copy": false,
+    "thirty_or_fifty_meter_to_t90_conversion": false,
+    "target_player_self_teaching": false,
+    "season_leakage": false,
+    "technique_in_physical_point": false,
+    "selected_production_transfer": false,
+    "sp080_read_as_input": false,
+    "sp081_read_as_input": false,
+    "shoulder_read_as_input": false
+  },
+  "input_data_sha256": {
+    "policy": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+    "sp100": "585a8c18e77b33c5161a5a44aaa0edf6e7915ea68231fd03ab3da3207b24dc47",
+    "sp101": "57367f06e521cd298c03d973c98d9ecfbfcc23f1658ef905775dc21dee5535bd",
+    "sp101Show": "13239624f0837e1e8397de267fcd983e10fe5afc57292020afbf6aba2ae2dee3",
+    "sp101Graph": "756a6d5e2e43aa202e2de0812342c8a23ea22e6e299eb034e679b0898dc321bc",
+    "sp104Physical": "65d9d1ea882f54f9c2674fde04e938a39293bc7772ef2762932dd26fe1313e1c",
+    "sp104State": "4fdce04c65e933a4457fb395872272b19cc00891cfbcb63bf21ab962a51e815e",
+    "sp104TransferPolicy": "dadd25d22980b0af6b966bfd2dc64fa9c9808bd27e123fb7d7cd3c88fa70f049",
+    "sp104TransferBenchmark": "5cdb36c8a12f7474bf1e8d6eede61b9d3610a454337b32eb5870e788e3a3a98a",
+    "sp104Receipts": "ec0f32a32b8891bed9581cc4576b6745cf9e1427afef233d908cf3e8d6c62696",
+    "mlbRunning": "1fe17ef153d72a7aef4f5150caf0d7beaf4a62ed0eb6cefdccc5e96792eee562",
+    "mlbExposure": "e1fba2480c3eb209ab31049eb5001ecc47b67f1768a08b53accd77b3c0dbd43e",
+    "sp077": "ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d",
+    "sp103Universe": "b0e5f79d234e68bd0cf7b3f0f36acb5f44818138e1dac6ea912c46777251bb73",
+    "sp103Traceability": "904c2d1bad47a82c89fb1b6974eeece8e1f2b939aea6b4cd236891391c161eba",
+    "sp103Gaps": "6457d93618c88f31a7d8dcc64fda86392cce62ed3bfeab91f28ad51d2853da0f",
+    "sp103Methods": "af05b65b6323603f14bef3d6d707ae7b173985864aefb4b5d857bae59dcec3b9",
+    "baseline": "e47d4c8c7326d16bc481ca099abb27f14d71e65d4eeef251e5286890ccb176cf",
+    "ownerLedger": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0",
+    "registry": "1a6982f1c244ce199d2c06ce1534c9025150090e634626c8e6975d48ded5a8a6"
+  }
+}

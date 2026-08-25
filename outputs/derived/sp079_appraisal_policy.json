@@ -1,0 +1,165 @@
+{
+  "schema_version": "sp079_appraisal_policy_v1",
+  "task_id": "SP-079",
+  "as_of": "2026-08-25",
+  "status": "FROZEN_BEFORE_PLAYER_REAPPRAISAL",
+  "purpose": "Baseball-relevant practical running speed appraisal for the frozen current NPB+ 100-player universe; peak speed remains a distinct lane and is not treated as the complete construct.",
+  "population": {
+    "denominator": 100,
+    "identity_source": "outputs/derived/sp100_owner_approved_production_wiring_20260816.json",
+    "ordering_source": "SP100 queue row order, with stable_player_key as deterministic tie-break",
+    "display_scope": "PROVISIONAL_CURRENT100_COHORT_RELATIVE_DIAGNOSTIC",
+    "display_scope_guard": "The current100 denominator is not a full baseball-population calibration and is not an engine-final scale."
+  },
+  "evidence_hierarchy": [
+    {
+      "tier": "A",
+      "role": "Current direct physical evidence",
+      "examples": ["NPB+ current peak speed", "direct T90/90ft when independently sourced", "same-player official MLB standardized 90ft when identity and season are explicit"]
+    },
+    {
+      "tier": "B",
+      "role": "Protocol-bounded historical or same-player external evidence",
+      "examples": ["historical H2F", "30m/50m short-distance ranges", "MLB running-split and Statcast context"]
+    },
+    {
+      "tier": "C",
+      "role": "Leakage-safe ordinal, analog, and transition context",
+      "examples": ["SP101 full The Show universe", "valid shared-indicator analogs", "league transitions", "signed ordinal links"]
+    },
+    {
+      "tier": "D",
+      "role": "Bounded context only",
+      "examples": ["community/scouting/video/usage", "defensive jump-burst context", "age/injury when missingness is explicit"]
+    },
+    {
+      "tier": "E",
+      "role": "Mixed statistical or outcome proxies",
+      "examples": ["same-time batted-ball and baserunning outcomes", "pairwise proxy context"]
+    }
+  ],
+  "construct_lanes": {
+    "peak_speed": {
+      "source": "SP100 owner-approved NPB+ current top_speed_kmh and current_cohort.percentile_faster_than",
+      "use": "PEAK_LANE_ONLY",
+      "reliability": "NOT_IDENTIFIABLE; exposure is a context and interval-width qualifier, never a shrinkage or additive score",
+      "forbidden": ["current NPB+ hp_to_1b field", "historical NPB+ peak duplicate as a second vote"]
+    },
+    "acceleration_h2f": {
+      "source": "SP104 canonical independently sourced H2F, T10/T30 acceleration context, and official MLB raw HP-to-1B context",
+      "use": "BOUNDED_PHYSICAL_CONTEXT; H2F is not T90",
+      "current_npb_plus": "NO_CURRENT_OFFICIAL_VALUE_ROWS; preserve as missing, not slow",
+      "forbidden": ["legacy NPB+ hp_to_1b field", "30m/50m to T90 conversion", "technique-only bunt or stealing evidence as pure speed"]
+    },
+    "end_to_end_90ft": {
+      "source": "SP104 canonical direct T90 and official MLB standardized 90ft same-player rows",
+      "use": "DIRECT_WHEN_PRESENT; otherwise missing or bounded context",
+      "guard": "Raw MLB HP-to-1B remains a separate H2F field and is never silently relabeled as standardized 90ft."
+    },
+    "short_distance": {
+      "source": "SP104 canonical 30m/50m ranges",
+      "use": "SHORT_DISTANCE_CONTEXT_ONLY",
+      "guard": "Retain native distance/protocol and never transform 30m or 50m into T90/90ft."
+    },
+    "mlb_statcast_running": {
+      "source": "SP104 official MLB running splits and sprint exposure exports",
+      "use": "same-player season-bounded physical context; no selected production transfer",
+      "guard": "Use exact stable identity and preserve year; absent rows are not slow."
+    },
+    "the_show": {
+      "source": "SP101 full eligible The Show universe and its semantic audit",
+      "use": "trajectory/update/transition/ordinal/relative/context lanes; interval and conflict context only",
+      "forbidden": ["direct numeric copy into practical speed", "PowerPro teacher role", "stealing or baserunning aggression as pure speed"]
+    },
+    "analog_ordinal_transition": {
+      "source": "SP101 analog receipts, pairwise ordinal graph, and SP104 transfer benchmark",
+      "use": "bounded interval/confidence/context only",
+      "transfer": "TF056, TF060, TF062 remain BOUNDED_CONTEXT; TF057, TF058, TF059, TF061 remain NO_COMMON_SUPPORT; no production numeric transfer and no forced point."
+    },
+    "proxies_and_context": {
+      "source": "SP077/SP101 statistical, community, scouting, video, usage, age/injury, and defensive context",
+      "use": "change confidence, conflict, missingness explanation, or interval width only; no pure-speed teacher",
+      "technique": "stealing, lead, aggression, sliding, bunt, and baserunning judgment stay in a separate technique lane"
+    }
+  },
+  "synthesis": {
+    "physical_families": ["PEAK", "ACCELERATION_H2F", "END_TO_END_90FT", "SHORT_DISTANCE"],
+    "weighting_rule": "EQUAL_AVAILABLE_CONSTRUCT_FAMILIES",
+    "weighting_detail": "Each available independent physical construct family receives 1/n; peak has no fixed privileged coefficient. Peak-only output is a transparent missingness state, not an imposed peak-dominant target.",
+    "same_cluster_rule": "One measurement cluster contributes once; duplicate canonical or MLB fields cannot create multiple independent votes.",
+    "point_rule": "Use the midpoint of each bounded evidence interval, then the arithmetic mean across available independent physical families; no target ratings, owner verdicts, PowerPro values, The Show values, or engine output are used.",
+    "interval_rule": "Union the contributing family intervals, add declared protocol/time/conflict uncertainty, clamp to [0,1], and keep the point inside the interval.",
+    "rating_mapping": "round(100 * latent_speed_percentile_point), with interval endpoints mapped by the same monotone rule",
+    "scale_status": "PROVISIONAL_PENDING_SP071_SP072"
+  },
+  "missingness_and_conflict": {
+    "missing_is_slow": false,
+    "missing_policy": "Missing current H2F, T90, short-distance, MLB, Show, age, injury, or community evidence widens uncertainty or lowers confidence; it never supplies a slow direction.",
+    "conflict_policy": "Direct physical family disagreement over 0.30 latent percentile or unresolved identity/protocol conflict produces UNRESOLVED and a wide interval. Low-tier context cannot override direct physical evidence.",
+    "end_states": [
+      "DIRECT_MULTI_CONSTRUCT",
+      "DIRECT_PEAK_PLUS_BOUNDED_OTHER",
+      "DIRECT_PEAK_ONLY_WITH_CONTEXT",
+      "SUPPORTED_ANALOG_OR_ORDINAL_RANGE",
+      "NO_COMMON_SUPPORT_WIDE_INTERVAL",
+      "UNRESOLVED"
+    ]
+  },
+  "powerpro_posthoc": {
+    "allowed": true,
+    "stage": "AFTER_FINAL_VALUES_ARE_FROZEN",
+    "role": "QA_ONLY",
+    "teacher": false,
+    "optimization": false,
+    "owner_verdict_input": false
+  },
+  "ablation": {
+    "components": [
+      "peak_speed",
+      "acceleration_h2f_t90_90ft",
+      "historical_physical",
+      "mlb_statcast_running_bridge",
+      "the_show_context",
+      "analog_ordinal_transition",
+      "statistical_proxies",
+      "scouting_community_video_usage_context"
+    ],
+    "method": "For every player and component, remove that component from the frozen evidence object and rerun the full synthesis function. Relabeling or copying the full result is invalid.",
+    "required_fields": ["point", "interval", "rank", "confidence", "conflict_state"]
+  },
+  "forbidden_inputs": [
+    "owner verdicts or owner preferred ratings",
+    "individual PowerPro current or historical labels as features",
+    "direct The Show numeric copy",
+    "legacy NPB+ H2F field",
+    "30m/50m to T90 conversion",
+    "missingness interpreted as slow",
+    "target-player self-teaching or season leakage",
+    "stealing/BR aggression/lead/technique as pure speed",
+    "SP-080",
+    "SP-081",
+    "shoulder strength"
+  ],
+  "qa_contract": {
+    "owner_verdict_count": 0,
+    "sp080_status": "NOT_STARTED",
+    "sp081_status": "NOT_STARTED",
+    "shoulder_status": "BLOCKED_DEPENDENCY",
+    "deterministic_stages": "Byte-identical for identical frozen inputs, policy, and code.",
+    "independent_red_team": true,
+    "fail_before_fixtures": [
+      "powerpro_teacher_leakage",
+      "direct_show_copy",
+      "legacy_h2f",
+      "short_distance_to_t90",
+      "missing_to_slow",
+      "target_self_teaching_or_season_leakage",
+      "technique_as_speed",
+      "proxy_double_count",
+      "fake_ablation",
+      "omitted_row",
+      "hard_coded_peak_dominance",
+      "owner_write_or_shoulder"
+    ]
+  }
+}

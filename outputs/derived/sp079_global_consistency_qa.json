@@ -1,0 +1,94 @@
+{
+  "schema_version": "sp079_global_consistency_qa_v1",
+  "task_id": "SP-079",
+  "status": "PASS_INDEPENDENT_RED_TEAM",
+  "checks": [
+    {
+      "id": "population_exact_100",
+      "pass": true,
+      "detail": {
+        "count": 100
+      }
+    },
+    {
+      "id": "policy_frozen_before_rows",
+      "pass": true,
+      "detail": "FROZEN_BEFORE_PLAYER_REAPPRAISAL"
+    },
+    {
+      "id": "owner_verdict_count_zero",
+      "pass": true,
+      "detail": {
+        "owner_verdict_count": 0
+      }
+    },
+    {
+      "id": "powerpro_teacher_false",
+      "pass": true,
+      "detail": "all final rows"
+    },
+    {
+      "id": "show_copy_false",
+      "pass": true,
+      "detail": "all final rows"
+    },
+    {
+      "id": "short_distance_guard",
+      "pass": true,
+      "detail": "all final rows"
+    },
+    {
+      "id": "missing_not_slow",
+      "pass": true,
+      "detail": "all final rows"
+    },
+    {
+      "id": "technique_guard",
+      "pass": true,
+      "detail": "all final rows"
+    },
+    {
+      "id": "actual_ablation_cells",
+      "pass": true,
+      "detail": {
+        "cells": 800
+      }
+    },
+    {
+      "id": "component_weight_rule",
+      "pass": true,
+      "detail": "equal available family weights"
+    },
+    {
+      "id": "registry_scope",
+      "pass": true,
+      "detail": "SP-080/SP-081/shoulder unchanged"
+    },
+    {
+      "id": "sp103_universe_present",
+      "pass": true,
+      "detail": 71
+    },
+    {
+      "id": "sp104_effective_ready",
+      "pass": true,
+      "detail": "NO_PRODUCTION_TRANSFER_PRE_SP079"
+    }
+  ],
+  "output_row_count": 100,
+  "ablation_cell_count": 800,
+  "generated_at": "2026-08-25",
+  "top_speed_dominance_diagnostic": {
+    "current100_peak_correlation_pearson": 0.9141263638277773,
+    "current100_peak_correlation_spearman": 0.9127394363990148,
+    "final_rank_peak_correlation_spearman": 0.9127394363990148,
+    "peak_only_player_count": 52,
+    "peak_removal_non_peak_eligible_count": 48,
+    "peak_removal_changed_player_count": 100,
+    "hard_coded_peak_weight": false,
+    "interpretation": "Descriptive diagnostics only; no target correlation or peak-dominance objective was optimized."
+  },
+  "independent_qa_status": "PASS_INDEPENDENT_RED_TEAM",
+  "independent_qa_path": "outputs/derived/qa_sp079_final_practical_reappraisal.json",
+  "independent_qa_check_count": 50
+}

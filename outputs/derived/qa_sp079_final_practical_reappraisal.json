@@ -1,0 +1,513 @@
+{
+  "schema_version": "qa_sp079_final_practical_reappraisal_v1",
+  "task_id": "SP-079",
+  "status": "PASS_INDEPENDENT_RED_TEAM",
+  "generated_at": "2026-08-25",
+  "scale_status": "PROVISIONAL_PENDING_SP071_SP072",
+  "owner_verdict_count": 0,
+  "checks": [
+    {
+      "id": "required:outputs/derived/sp079_appraisal_policy.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_frozen_input_manifest.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_player_evidence_synthesis.jsonl",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_final_practical_speed_100.csv",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_final_practical_speed_100.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_final_value_component_ablation.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_powerpro_posthoc_qa.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_global_consistency_qa.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:docs/reports/sp079_final_practical_speed_100.md",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "population:exact_100",
+      "pass": true,
+      "detail": {
+        "count": 100
+      }
+    },
+    {
+      "id": "population:queue_order",
+      "pass": true,
+      "detail": "queue_order 1..100"
+    },
+    {
+      "id": "population:jsonl",
+      "pass": true,
+      "detail": {
+        "count": 100
+      }
+    },
+    {
+      "id": "population:csv",
+      "pass": true,
+      "detail": {
+        "count": 100
+      }
+    },
+    {
+      "id": "population:cross_format",
+      "pass": true,
+      "detail": "JSON/CSV key order agrees"
+    },
+    {
+      "id": "schema:required_player_fields",
+      "pass": true,
+      "detail": "point/interval/confidence/state/scale"
+    },
+    {
+      "id": "schema:monotone_mapping",
+      "pass": true,
+      "detail": "rating is the declared monotone mapping"
+    },
+    {
+      "id": "schema:point_inside_interval",
+      "pass": true,
+      "detail": "latent point inside interval"
+    },
+    {
+      "id": "schema:interval_clamped",
+      "pass": true,
+      "detail": "latent interval [0,1]"
+    },
+    {
+      "id": "policy:frozen",
+      "pass": true,
+      "detail": "EQUAL_AVAILABLE_CONSTRUCT_FAMILIES"
+    },
+    {
+      "id": "policy:scale",
+      "pass": true,
+      "detail": "PROVISIONAL_PENDING_SP071_SP072"
+    },
+    {
+      "id": "policy:population_guard",
+      "pass": true,
+      "detail": {
+        "denominator": 100,
+        "identity_source": "outputs/derived/sp100_owner_approved_production_wiring_20260816.json",
+        "ordering_source": "SP100 queue row order, with stable_player_key as deterministic tie-break",
+        "display_scope": "PROVISIONAL_CURRENT100_COHORT_RELATIVE_DIAGNOSTIC",
+        "display_scope_guard": "The current100 denominator is not a full baseball-population calibration and is not an engine-final scale."
+      }
+    },
+    {
+      "id": "manifest:policy_hash",
+      "pass": true,
+      "detail": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3"
+    },
+    {
+      "id": "manifest:owner_zero",
+      "pass": true,
+      "detail": {
+        "owner_verdict_count": 0,
+        "owner_records_count": 0,
+        "owner_ledger_sha256": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0",
+        "owner_input_used_in_synthesis": false,
+        "owner_verdicts_written": false
+      }
+    },
+    {
+      "id": "owner:ledger_zero",
+      "pass": true,
+      "detail": {
+        "count": 0
+      }
+    },
+    {
+      "id": "owner:ledger_hash_unchanged",
+      "pass": true,
+      "detail": "ledger hash matches frozen manifest"
+    },
+    {
+      "id": "scope:sp079_closed",
+      "pass": true,
+      "detail": "SP-079 registry close follows independent QA"
+    },
+    {
+      "id": "scope:registry_locks",
+      "pass": true,
+      "detail": "SP-080/SP-081/shoulder unchanged"
+    },
+    {
+      "id": "guard:powerpro_teacher",
+      "pass": true,
+      "detail": "PowerPro posthoc only"
+    },
+    {
+      "id": "guard:show_copy",
+      "pass": true,
+      "detail": "The Show direct copy false"
+    },
+    {
+      "id": "guard:legacy_h2f",
+      "pass": true,
+      "detail": "legacy NPB+ H2F absent"
+    },
+    {
+      "id": "guard:short_distance",
+      "pass": true,
+      "detail": "30m/50m retained native"
+    },
+    {
+      "id": "guard:missingness",
+      "pass": true,
+      "detail": "missing is not slow"
+    },
+    {
+      "id": "guard:self_teaching_season",
+      "pass": true,
+      "detail": "no target leakage"
+    },
+    {
+      "id": "guard:technique",
+      "pass": true,
+      "detail": "technique separate"
+    },
+    {
+      "id": "guard:production_transfer",
+      "pass": true,
+      "detail": "no SP104 transfer promoted"
+    },
+    {
+      "id": "source:synthesis_excludes_powerpro",
+      "pass": true,
+      "detail": "synthesis function has no PowerPro reference"
+    },
+    {
+      "id": "source:synthesis_excludes_show_numeric",
+      "pass": true,
+      "detail": "synthesis function has no The Show numeric feature"
+    },
+    {
+      "id": "source:equal_family_weight",
+      "pass": true,
+      "detail": "no fixed peak coefficient"
+    },
+    {
+      "id": "guard:proxy_not_physical_point",
+      "pass": true,
+      "detail": "proxy context only"
+    },
+    {
+      "id": "guard:shared_play_double_count",
+      "pass": true,
+      "detail": "shared MLB play fields are context-only when overlapping"
+    },
+    {
+      "id": "ablation:800_cells",
+      "pass": true,
+      "detail": {
+        "cells": 800,
+        "components": 8
+      }
+    },
+    {
+      "id": "ablation:actual_recompute",
+      "pass": true,
+      "detail": "not relabel-only"
+    },
+    {
+      "id": "ablation:material_effect_exists",
+      "pass": true,
+      "detail": "at least one actual component effect"
+    },
+    {
+      "id": "ablation:summary_consistent",
+      "pass": true,
+      "detail": {
+        "peak_speed": {
+          "cell_count": 100,
+          "changed_player_count": 100,
+          "changed_fraction": 1
+        },
+        "acceleration_h2f_t90_90ft": {
+          "cell_count": 100,
+          "changed_player_count": 68,
+          "changed_fraction": 0.68
+        },
+        "historical_physical": {
+          "cell_count": 100,
+          "changed_player_count": 94,
+          "changed_fraction": 0.94
+        },
+        "mlb_statcast_running_bridge": {
+          "cell_count": 100,
+          "changed_player_count": 17,
+          "changed_fraction": 0.17
+        },
+        "the_show_context": {
+          "cell_count": 100,
+          "changed_player_count": 0,
+          "changed_fraction": 0
+        },
+        "analog_ordinal_transition": {
+          "cell_count": 100,
+          "changed_player_count": 77,
+          "changed_fraction": 0.77
+        },
+        "statistical_proxies": {
+          "cell_count": 100,
+          "changed_player_count": 80,
+          "changed_fraction": 0.8
+        },
+        "scouting_community_video_usage_context": {
+          "cell_count": 100,
+          "changed_player_count": 0,
+          "changed_fraction": 0
+        }
+      }
+    },
+    {
+      "id": "diagnostic:peak_not_fixed_dominance",
+      "pass": true,
+      "detail": {
+        "current100_peak_correlation_pearson": 0.9141263638277773,
+        "current100_peak_correlation_spearman": 0.9127394363990148,
+        "final_rank_peak_correlation_spearman": 0.9127394363990148,
+        "peak_only_player_count": 52,
+        "peak_removal_non_peak_eligible_count": 48,
+        "peak_removal_changed_player_count": 100,
+        "hard_coded_peak_weight": false,
+        "interpretation": "Descriptive diagnostics only; no target correlation or peak-dominance objective was optimized."
+      }
+    },
+    {
+      "id": "posthoc:attached_after_freeze",
+      "pass": true,
+      "detail": "PASS_POSTHOC_ONLY"
+    },
+    {
+      "id": "posthoc:diff_matches",
+      "pass": true,
+      "detail": "posthoc diff is a copied QA field, not an input"
+    },
+    {
+      "id": "determinism:rerun_exit_zero",
+      "pass": true,
+      "detail": {
+        "status": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "id": "determinism:byte_identical",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "red_team:all_fail_before_fixtures",
+      "pass": true,
+      "detail": [
+        {
+          "id": "powerpro_teacher_leakage",
+          "detected": true,
+          "pass": true,
+          "detail": "a PowerPro feature in a teacher feature list must be detected"
+        },
+        {
+          "id": "direct_show_copy",
+          "detected": true,
+          "pass": true,
+          "detail": "a direct The Show copy flag must be detected"
+        },
+        {
+          "id": "legacy_h2f",
+          "detected": true,
+          "pass": true,
+          "detail": "the quarantined legacy H2F field marker must be detected"
+        },
+        {
+          "id": "short_distance_to_t90",
+          "detected": true,
+          "pass": true,
+          "detail": "a 50m to T90 transform must be detected"
+        },
+        {
+          "id": "missing_to_slow",
+          "detected": true,
+          "pass": true,
+          "detail": "missingness-as-slow must be detected"
+        },
+        {
+          "id": "target_self_teaching_or_season_leakage",
+          "detected": true,
+          "pass": true,
+          "detail": "target/teacher overlap must be detected"
+        },
+        {
+          "id": "technique_as_speed",
+          "detected": true,
+          "pass": true,
+          "detail": "technique in a pure-speed feature list must be detected"
+        },
+        {
+          "id": "proxy_double_count",
+          "detected": true,
+          "pass": true,
+          "detail": "a repeated proxy source event must be detected"
+        },
+        {
+          "id": "fake_ablation",
+          "detected": true,
+          "pass": true,
+          "detail": "a copied full result would be detected when the fixture component is removed"
+        },
+        {
+          "id": "omitted_row",
+          "detected": true,
+          "pass": true,
+          "detail": "a 99-row output must be detected"
+        },
+        {
+          "id": "hard_coded_peak_dominance",
+          "detected": true,
+          "pass": true,
+          "detail": "a fixed peak weighting policy must be detected"
+        },
+        {
+          "id": "owner_write_or_shoulder",
+          "detected": true,
+          "pass": true,
+          "detail": "owner write or shoulder mutation must be detected"
+        }
+      ]
+    }
+  ],
+  "fail_before_fixtures": [
+    {
+      "id": "powerpro_teacher_leakage",
+      "detected": true,
+      "pass": true,
+      "detail": "a PowerPro feature in a teacher feature list must be detected"
+    },
+    {
+      "id": "direct_show_copy",
+      "detected": true,
+      "pass": true,
+      "detail": "a direct The Show copy flag must be detected"
+    },
+    {
+      "id": "legacy_h2f",
+      "detected": true,
+      "pass": true,
+      "detail": "the quarantined legacy H2F field marker must be detected"
+    },
+    {
+      "id": "short_distance_to_t90",
+      "detected": true,
+      "pass": true,
+      "detail": "a 50m to T90 transform must be detected"
+    },
+    {
+      "id": "missing_to_slow",
+      "detected": true,
+      "pass": true,
+      "detail": "missingness-as-slow must be detected"
+    },
+    {
+      "id": "target_self_teaching_or_season_leakage",
+      "detected": true,
+      "pass": true,
+      "detail": "target/teacher overlap must be detected"
+    },
+    {
+      "id": "technique_as_speed",
+      "detected": true,
+      "pass": true,
+      "detail": "technique in a pure-speed feature list must be detected"
+    },
+    {
+      "id": "proxy_double_count",
+      "detected": true,
+      "pass": true,
+      "detail": "a repeated proxy source event must be detected"
+    },
+    {
+      "id": "fake_ablation",
+      "detected": true,
+      "pass": true,
+      "detail": "a copied full result would be detected when the fixture component is removed"
+    },
+    {
+      "id": "omitted_row",
+      "detected": true,
+      "pass": true,
+      "detail": "a 99-row output must be detected"
+    },
+    {
+      "id": "hard_coded_peak_dominance",
+      "detected": true,
+      "pass": true,
+      "detail": "a fixed peak weighting policy must be detected"
+    },
+    {
+      "id": "owner_write_or_shoulder",
+      "detected": true,
+      "pass": true,
+      "detail": "owner write or shoulder mutation must be detected"
+    }
+  ],
+  "deterministic_hashes_before": {
+    "outputs/derived/sp079_appraisal_policy.json": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+    "outputs/derived/sp079_frozen_input_manifest.json": "fbb5632da62f7483f6116f736b18875569a8641a3d628a7295848de3b0f19ff1",
+    "outputs/derived/sp079_player_evidence_synthesis.jsonl": "e79dcb1efdb8d6e7bb866ad906f2351aaba65e07e9c513a757e52c325448de3a",
+    "outputs/derived/sp079_final_practical_speed_100.csv": "a4106442a1bae58fcc0004c8fd87f0feb454c00d928a4551976efa5c9cc6a7fa",
+    "outputs/derived/sp079_final_practical_speed_100.json": "f9e56cf6ab925b36cfcc379bb4dd04812409de63da39c80d12dcff0a4ce5838e",
+    "outputs/derived/sp079_final_value_component_ablation.json": "23321cea90549686dc55edb4ff02d89b88b91ed6555256096df88f7fd98d979e",
+    "outputs/derived/sp079_powerpro_posthoc_qa.json": "7fbd94e17e5d67623ff9e732c3d21b5e5b1a062b80a827e8f4b39ee87146c46a",
+    "outputs/derived/sp079_global_consistency_qa.json": "7b7992b84490ab0271e94659b9767aa1e75d106e155b4940b3136db63b1d322b",
+    "docs/reports/sp079_final_practical_speed_100.md": "98d4406bfdefd3e89013268e8a8d5c2ffa68245de239e79076ed9028acbcecc4"
+  },
+  "deterministic_hashes_after": {
+    "outputs/derived/sp079_appraisal_policy.json": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+    "outputs/derived/sp079_frozen_input_manifest.json": "fbb5632da62f7483f6116f736b18875569a8641a3d628a7295848de3b0f19ff1",
+    "outputs/derived/sp079_player_evidence_synthesis.jsonl": "e79dcb1efdb8d6e7bb866ad906f2351aaba65e07e9c513a757e52c325448de3a",
+    "outputs/derived/sp079_final_practical_speed_100.csv": "a4106442a1bae58fcc0004c8fd87f0feb454c00d928a4551976efa5c9cc6a7fa",
+    "outputs/derived/sp079_final_practical_speed_100.json": "f9e56cf6ab925b36cfcc379bb4dd04812409de63da39c80d12dcff0a4ce5838e",
+    "outputs/derived/sp079_final_value_component_ablation.json": "23321cea90549686dc55edb4ff02d89b88b91ed6555256096df88f7fd98d979e",
+    "outputs/derived/sp079_powerpro_posthoc_qa.json": "7fbd94e17e5d67623ff9e732c3d21b5e5b1a062b80a827e8f4b39ee87146c46a",
+    "outputs/derived/sp079_global_consistency_qa.json": "7b7992b84490ab0271e94659b9767aa1e75d106e155b4940b3136db63b1d322b",
+    "docs/reports/sp079_final_practical_speed_100.md": "98d4406bfdefd3e89013268e8a8d5c2ffa68245de239e79076ed9028acbcecc4"
+  },
+  "deterministic_mismatches": [],
+  "output_row_count": 100,
+  "ablation_cell_count": 800,
+  "scope_lock": {
+    "sp080": "NOT_STARTED",
+    "sp081": "NOT_STARTED",
+    "shoulder": "BLOCKED_DEPENDENCY"
+  }
+}
