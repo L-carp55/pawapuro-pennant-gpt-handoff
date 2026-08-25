@@ -7,9 +7,10 @@
 - Starting branch SHA: `2e4a3db520fb7a46986e8ab3bf07eba12f33c6e0`
 - User-specified base SHA: `721a5f50c3c680b3e5d2fe5e8c6b7ed77c410c37` (ancestor verified)
 - Research branch: `codex/pennant-player-sentiment-wave3-20260825`
-- Final local SHA: `PENDING_FINAL_COMMIT`
-- Final remote SHA: `PENDING_FINAL_PUSH`
-- Final worktree state: `PENDING_FINAL_GIT_CHECK`
+- Substantive research artifact commit SHA: `853c6c55eb2abc2f64987bab0133654fe8622d56`
+- Final local/remote branch SHA: verified at handoff after the metadata commit and reported in the completion message.
+- Final worktree state: verified clean at handoff after the metadata commit.
+- Note: the branch-head SHA is intentionally reported at handoff rather than embedded in this file; changing an embedded head SHA would create a new head SHA.
 - Independent QA: `PASS_WITH_LIMITATIONS` (see [independent_qa.md](./independent_qa.md))
 
 ## Counts
