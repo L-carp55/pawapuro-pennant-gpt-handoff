@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.7",
+  "schema_version": "1.8",
   "updated_at": "2026-08-25",
   "program": "Pawapuro Pennant World Simulation Design",
   "phase": "DESIGN_DISCOVERY_EXTERNAL_RESEARCH_WAVE2_OWNER_SYNTHESIS_READY",
@@ -9,6 +9,11 @@
     "docs/state/pennant_feature_requirements_addendum_20260824.tsv",
     "docs/design/PENNANT_WORLD_SIMULATION_MASTER_20260824.md",
     "docs/design/PENNANT_WORLD_SIMULATION_MASTER_SECOND_PASS_ADDENDUM_20260824.md",
+    "docs/design/PENNANT_INFORMATION_DEFENSE_DEPLOYMENT_WALLTALK_20260825.md",
+    "docs/design/PENNANT_TRADE_MARKET_GOVERNANCE_WALLTALK_20260825.md",
+    "docs/design/PENNANT_FA_CONTRACT_AGENT_MARKET_WALLTALK_20260825.md",
+    "docs/design/PENNANT_CLUBHOUSE_CULTURE_FA_FIT_WALLTALK_20260825.md",
+    "docs/design/PENNANT_LONG_RUN_GLOBAL_BASEBALL_GROWTH_WALLTALK_20260825.md",
     "docs/reference/pennant_owner_examples_and_rationale_20260824.md",
     "docs/audits/pennant_walltalk_second_pass_gap_audit_20260824.md",
     "docs/audits/pennant_open_domain_third_pass_audit_20260824.md",
@@ -43,6 +48,9 @@
     "cpu_cannot_read_hidden_truth_unfairly": true,
     "world_rules_and_institutions_can_change": true,
     "global_baseball_world_is_alive_outside_npb": true,
+    "global_long_run_baseball_growth_default": "POSITIVE_SECULAR_TREND_WITH_LOCAL_DECLINE_AND_CYCLES",
+    "global_growth_does_not_fix_2026_league_hierarchy": true,
+    "absolute_skill_separate_from_display_rating": true,
     "reincarnated_legend_players_default": "OFF",
     "international_tournament_physical_load": "USER_TOGGLE_REQUIRED",
     "surface_complexity_target": "POWERPRO_LIKE_SIMPLE_UI_WITH_DEEP_INTERNAL_SIM"
