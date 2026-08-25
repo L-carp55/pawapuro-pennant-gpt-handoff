@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.8",
-  "updated_at": "2026-08-25",
+  "schema_version": "1.9",
+  "updated_at": "2026-08-26",
   "program": "Pawapuro Pennant World Simulation Design",
-  "phase": "DESIGN_DISCOVERY_EXTERNAL_RESEARCH_WAVE2_OWNER_SYNTHESIS_READY",
+  "phase": "DESIGN_DISCOVERY_OWNER_WALLTALK_WAVE3_REVIEWED",
   "canonical_branch": "design/pennant-world-master-20260824",
   "authority_order": [
     "docs/state/pennant_feature_requirements_20260824.tsv",
@@ -14,12 +14,26 @@
     "docs/design/PENNANT_FA_CONTRACT_AGENT_MARKET_WALLTALK_20260825.md",
     "docs/design/PENNANT_CLUBHOUSE_CULTURE_FA_FIT_WALLTALK_20260825.md",
     "docs/design/PENNANT_LONG_RUN_GLOBAL_BASEBALL_GROWTH_WALLTALK_20260825.md",
+    "docs/audits/pennant_player_sentiment_wave3_browser_independent_review_20260826.md",
+    "docs/design/PENNANT_PLAYER_GRIEVANCE_RELATIONSHIP_TRADE_REQUEST_WALLTALK_20260826.md",
+    "docs/design/PENNANT_INJURY_MEDICAL_REHAB_TREATMENT_CHOICE_WALLTALK_20260826.md",
+    "docs/design/PENNANT_RETIREMENT_CONTINUATION_COMEBACK_WALLTALK_20260826.md",
+    "docs/design/PENNANT_SPECIAL_ABILITIES_TRAITS_LIFECYCLE_WALLTALK_20260826.md",
+    "docs/design/PENNANT_ROSTER_RIGHTS_WAIVERS_OPTIONS_SERVICE_TIME_WALLTALK_20260826.md",
+    "docs/design/PENNANT_FARM_MINOR_THIRD_FOURTH_TEAM_STRUCTURE_WALLTALK_20260826.md",
+    "docs/design/PENNANT_AMATEUR_PIPELINE_DRAFT_ELIGIBILITY_RIGHTS_WALLTALK_20260826.md",
+    "docs/design/PENNANT_CLUB_FINANCE_LEAGUE_ECONOMY_INFLATION_WALLTALK_20260826.md",
+    "docs/design/PENNANT_INFORMATION_VISIBILITY_SCOUTING_FOG_WALLTALK_20260826.md",
+    "docs/design/PENNANT_AWARDS_HALL_OF_FAME_RETIRED_NUMBERS_LEGACY_WALLTALK_20260826.md",
+    "docs/design/PENNANT_SEASON_CALENDAR_SCHEDULE_TRAVEL_WEATHER_WALLTALK_20260826.md",
     "docs/reference/pennant_owner_examples_and_rationale_20260824.md",
     "docs/audits/pennant_walltalk_second_pass_gap_audit_20260824.md",
     "docs/audits/pennant_open_domain_third_pass_audit_20260824.md",
     "research branch commit 34ef644dc3c8c5017fc46b68f24dec1096227f7a",
+    "research branch codex/pennant-player-sentiment-wave3-20260825 @ 7ab859518fce0cd436599245c13fa1abe010d870",
     "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_20260824.md",
-    "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_SECOND_PASS_ADDENDUM_20260824.md"
+    "docs/tasks/CODEX_BASEBALL_NEWS_IDEA_MINING_SECOND_PASS_ADDENDUM_20260824.md",
+    "docs/tasks/CODEX_PENNANT_PLAYER_SENTIMENT_MINING_WAVE3_20260825.md"
   ],
   "feature_requirement_inventory": {
     "base_file": "docs/state/pennant_feature_requirements_20260824.tsv",
@@ -38,6 +52,7 @@
     "second_pass_walltalk_status": "CURRENT_AVAILABLE_WALLTALK_PRESERVED",
     "third_pass_open_domain_status": "OPEN_DOMAIN_LIST_EXPANDED",
     "third_pass_audit": "docs/audits/pennant_open_domain_third_pass_audit_20260824.md",
+    "current_20260826_walltalk_status": "MAJOR_OPEN_DOMAINS_ADVANCED_AND_PRESERVED; OWNER_REVIEW_AND_CALIBRATION_STILL_ALLOWED",
     "absolute_all_historical_chat_completeness": "NOT_PROVABLE_WITHOUT_AUTHORITATIVE_FULL_CHAT_EXPORT"
   },
   "design_principles": {
@@ -82,13 +97,75 @@
     "new_candidates": ["PNC-009"],
     "pnc009_summary": "Optional regional promotion/relegation/qualification tier movement; new because league growth/contraction/structure requirements did not explicitly cover recurring tier movement.",
     "research_status": "PAUSE_BROAD_SEARCH_FOR_OWNER_SYNTHESIS",
-    "reason": "Wave 2 produced a useful map of remaining evidence gaps. Pursuing all 245 NEEDS_MORE cells before owner synthesis would create unbounded research expansion. Use targeted Wave 3 only for design decisions that need stronger evidence.",
+    "reason": "Wave 2 produced a useful map of remaining evidence gaps. Pursuing all 245 NEEDS_MORE cells before owner synthesis would create unbounded research expansion. Use targeted research only for design decisions that need stronger evidence.",
     "remaining_blockers": [
       "thin-region and pre-1990 primary archives",
       "NPB private contract and medical evidence",
       "Cuba/Puerto Rico/Africa source depth",
       "Wave 1 current-year boundary revalidation before implementation"
-    ]
+    ],
+    "player_sentiment_wave3": {
+      "task": "docs/tasks/CODEX_PENNANT_PLAYER_SENTIMENT_MINING_WAVE3_20260825.md",
+      "branch": "codex/pennant-player-sentiment-wave3-20260825",
+      "substantive_commit": "853c6c55eb2abc2f64987bab0133654fe8622d56",
+      "remote_head": "7ab859518fce0cd436599245c13fa1abe010d870",
+      "evidence_rows": 98,
+      "unique_urls": 76,
+      "independence_groups": 53,
+      "themes": 34,
+      "codex_qa": "PASS_WITH_LIMITATIONS",
+      "browser_independent_review": "docs/audits/pennant_player_sentiment_wave3_browser_independent_review_20260826.md",
+      "browser_verdict": "PASS_WITH_LIMITATIONS",
+      "merge_status": "DO_NOT_AUTO_MERGE_RESEARCH_BRANCH",
+      "priority_effect": "NO_MAJOR_REORDER; CONTINUE OWNER_WALLTALK",
+      "semantic_correction": "T21 deployment AI should be treated as PARTIAL_EXTENSION/MOSTLY_COVERED by 2026-08-25 information/deployment wall-talk, not wholly NEW"
+    }
+  },
+  "recent_walltalk_progress": {
+    "player_morale_relationships_and_trade_request": {
+      "status": "WALLTALK_DRAFT_STABILIZED",
+      "doc": "docs/design/PENNANT_PLAYER_GRIEVANCE_RELATIONSHIP_TRADE_REQUEST_WALLTALK_20260826.md"
+    },
+    "injury_medical_rehab_treatment_choice": {
+      "status": "CORE_WALLTALK_STABILIZED; CALIBRATION_AND_RULE_DATA_OPEN",
+      "doc": "docs/design/PENNANT_INJURY_MEDICAL_REHAB_TREATMENT_CHOICE_WALLTALK_20260826.md"
+    },
+    "retirement_continuation_comeback": {
+      "status": "WALLTALK_DRAFT_STABILIZED",
+      "doc": "docs/design/PENNANT_RETIREMENT_CONTINUATION_COMEBACK_WALLTALK_20260826.md"
+    },
+    "special_abilities_traits_lifecycle": {
+      "status": "CORE_WALLTALK_STABILIZED; ABILITY_BY_ABILITY_EFFECT_CONTRACTS_OPEN",
+      "doc": "docs/design/PENNANT_SPECIAL_ABILITIES_TRAITS_LIFECYCLE_WALLTALK_20260826.md"
+    },
+    "roster_rights_waivers_options_service_time": {
+      "status": "CORE_ARCHITECTURE_STABILIZED; LEAGUE_RULE_DATA_REVALIDATION_OPEN",
+      "doc": "docs/design/PENNANT_ROSTER_RIGHTS_WAIVERS_OPTIONS_SERVICE_TIME_WALLTALK_20260826.md"
+    },
+    "farm_minor_third_fourth_team_structure": {
+      "status": "CORE_WALLTALK_STABILIZED; SCHEDULE_AND_COST_CALIBRATION_OPEN",
+      "doc": "docs/design/PENNANT_FARM_MINOR_THIRD_FOURTH_TEAM_STRUCTURE_WALLTALK_20260826.md"
+    },
+    "amateur_pipeline_draft_rights": {
+      "status": "CORE_WALLTALK_STABILIZED; LEAGUE_RULE_DATA_REVALIDATION_OPEN",
+      "doc": "docs/design/PENNANT_AMATEUR_PIPELINE_DRAFT_ELIGIBILITY_RIGHTS_WALLTALK_20260826.md"
+    },
+    "club_finance_league_economy": {
+      "status": "CORE_ARCHITECTURE_STABILIZED; FORMULA_CALIBRATION_OPEN",
+      "doc": "docs/design/PENNANT_CLUB_FINANCE_LEAGUE_ECONOMY_INFLATION_WALLTALK_20260826.md"
+    },
+    "information_visibility_scouting_fog": {
+      "status": "CORE_WALLTALK_STABILIZED; UX_DETAIL_OPEN",
+      "doc": "docs/design/PENNANT_INFORMATION_VISIBILITY_SCOUTING_FOG_WALLTALK_20260826.md"
+    },
+    "awards_hall_of_fame_legacy": {
+      "status": "CORE_WALLTALK_STABILIZED; INITIAL_RULE_DATA_OPEN",
+      "doc": "docs/design/PENNANT_AWARDS_HALL_OF_FAME_RETIRED_NUMBERS_LEGACY_WALLTALK_20260826.md"
+    },
+    "season_calendar_schedule_travel_weather": {
+      "status": "CORE_ARCHITECTURE_STABILIZED; SCHEDULE_GENERATOR_AND_EFFECT_CALIBRATION_OPEN",
+      "doc": "docs/design/PENNANT_SEASON_CALENDAR_SCHEDULE_TRAVEL_WEATHER_WALLTALK_20260826.md"
+    }
   },
   "open_design_domains": [
     "injury_fatigue_condition_detailed_model",
@@ -139,9 +216,10 @@
     "speed_design_and_pennant_design_are_separate": true
   },
   "next_sequence": [
-    "Continue owner wall-talk on high-priority OPEN domains",
+    "Continue owner wall-talk on remaining unresolved high-priority domains; next candidate: governance / player-association / Rule Proposal / labor-stoppage interactions",
+    "Keep recently stabilized wall-talk domains open for owner corrections, calibration and initial-rule revalidation rather than treating them as implementation-ready",
     "Synthesize PNC-001..PNC-009 only when the related design domain is discussed",
-    "Use targeted research Wave 3 only where owner decisions require stronger evidence",
+    "Use targeted research only where owner decisions require stronger evidence",
     "Prioritize modules after design wall-talk stabilizes",
     "Only then authorize implementation/data-calibration tasks"
   ]
