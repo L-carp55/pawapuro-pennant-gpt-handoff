@@ -1,0 +1,36 @@
+{
+  "schema_version": "speed_sp105_activation_state_20260826",
+  "generated_at": "2026-08-26",
+  "task_id": "SP-105",
+  "status": "ACTIVE_SP079_SYNTHESIS_CALIBRATION_REPAIR",
+  "repository": "L-carp55/pawapuro-pennant-gpt-handoff",
+  "branch": "codex/speed-sp105-sp079-synthesis-calibration-repair-20260826",
+  "base_commit": "be3588b26e3ce0818880f80c4a0350764886bb6f",
+  "browser_review": "docs/audits/sp079_browser_independent_review_20260826.md",
+  "task_specification": "docs/tasks/SP105_SP079_SYNTHESIS_CALIBRATION_REPAIR_20260826.md",
+  "effective_upstream_state": {
+    "sp079_registry_claim": "DONE_VALIDATED",
+    "sp079_browser_override": "PARTIAL_BLOCKED_BY_SP105",
+    "sp104": "DONE_VALIDATED",
+    "sp103": "DONE_VALIDATED",
+    "sp102": "DONE_NEGATIVE_FINDING",
+    "sp101": "DONE_VALIDATED"
+  },
+  "locks": {
+    "owner_verdict_write": false,
+    "owner_verdict_count_expected": 0,
+    "sp080": "NOT_STARTED",
+    "sp081": "NOT_STARTED",
+    "shoulder": "BLOCKED",
+    "broad_new_collection": false,
+    "powerpro_physical_teacher": false
+  },
+  "required_first_actions": [
+    "Reconcile the canonical task registry so SP-079 is PARTIAL/effectively blocked by SP-105 and SP-105 is explicit.",
+    "Run canonical registry QA before synthesis work.",
+    "Reproduce the frozen be3588b SP-079 baseline byte-identically.",
+    "Benchmark synthesis/calibration policies using physical-only held-out validation.",
+    "Rematerialize all 100 rows and richer point/rank/interval/confidence decision-use ablation."
+  ],
+  "transition_rule": "Stop after SP-105. Do not run SP-080/SP-081 or shoulder even if SP-105 validates. Browser reacceptance of SP-079 is required."
+}
