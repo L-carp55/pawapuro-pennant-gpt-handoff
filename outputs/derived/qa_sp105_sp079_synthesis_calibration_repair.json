@@ -1,0 +1,833 @@
+{
+  "schema_version": "qa_sp105_sp079_synthesis_calibration_repair_v1",
+  "task_id": "SP-105",
+  "status": "PASS_INDEPENDENT_RED_TEAM",
+  "generated_at": "2026-08-29",
+  "scale_status": "PROVISIONAL_PENDING_SP071_SP072",
+  "owner_verdict_count": 0,
+  "checks": [
+    {
+      "id": "determinism:canonical_seed_exit_zero",
+      "pass": true,
+      "detail": {
+        "status": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "id": "required:outputs/derived/sp105_cross_family_calibration_receipts.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp105_frozen_input_manifest.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp105_selected_synthesis_policy.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp105_synthesis_policy_benchmark.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp105_context_decision_use_100.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp105_final_practical_speed_100.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp105_final_practical_speed_100.csv",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp105_final_value_component_ablation.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp105_powerpro_posthoc_qa.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp105_global_consistency_qa.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp105_player_evidence_synthesis.jsonl",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:docs/reports/sp105_final_practical_speed_100.md",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:scripts/sp105_synthesis_calibration_repair.mjs",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_appraisal_policy.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_frozen_input_manifest.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_player_evidence_synthesis.jsonl",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_final_practical_speed_100.csv",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_final_practical_speed_100.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_final_value_component_ablation.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_powerpro_posthoc_qa.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp079_global_consistency_qa.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/qa_sp079_final_practical_reappraisal.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:docs/reports/sp079_final_practical_speed_100.md",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:docs/audits/sp079_final_practical_reappraisal_independent_audit.md",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:docs/state/speed_task_registry.tsv",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "required:outputs/derived/sp078_owner_verdict_ledger_20260816.json",
+      "pass": true,
+      "detail": "exists and non-empty"
+    },
+    {
+      "id": "population:exact_100_unique",
+      "pass": true,
+      "detail": {
+        "count": 100
+      }
+    },
+    {
+      "id": "population:queue_order_1_to_100",
+      "pass": true,
+      "detail": "JSON queue order"
+    },
+    {
+      "id": "population:rank_is_bounded_and_eligible",
+      "pass": true,
+      "detail": "all final rows have bounded rank; ties are permitted"
+    },
+    {
+      "id": "population:synthesis_jsonl_100",
+      "pass": true,
+      "detail": {
+        "count": 100
+      }
+    },
+    {
+      "id": "population:csv_100",
+      "pass": true,
+      "detail": {
+        "count": 100
+      }
+    },
+    {
+      "id": "population:cross_format_order",
+      "pass": true,
+      "detail": "JSON/CSV/JSONL key order agrees"
+    },
+    {
+      "id": "schema:required_fields",
+      "pass": true,
+      "detail": "point/interval/display/provenance/context fields present"
+    },
+    {
+      "id": "schema:point_semantics_allowed",
+      "pass": true,
+      "detail": [
+        "DEFENSIBLE_POINT_ESTIMATE",
+        "DISPLAY_MIDPOINT_ONLY_NOT_POINT_ESTIMATE",
+        "NO_DEFENSIBLE_POINT"
+      ]
+    },
+    {
+      "id": "schema:point_semantics_consistent",
+      "pass": true,
+      "detail": "semantic labels agree with point fields"
+    },
+    {
+      "id": "schema:rating_is_declared_display_mapping",
+      "pass": true,
+      "detail": "rating maps from point only"
+    },
+    {
+      "id": "schema:point_inside_interval",
+      "pass": true,
+      "detail": "point inside bounded interval"
+    },
+    {
+      "id": "schema:interval_bounded",
+      "pass": true,
+      "detail": "latent interval [0,1]"
+    },
+    {
+      "id": "schema:provisional_scale_status",
+      "pass": true,
+      "detail": "PROVISIONAL_PENDING_SP071_SP072"
+    },
+    {
+      "id": "schema:provenance_receipts",
+      "pass": true,
+      "detail": "every physical record has source/provenance/reference population"
+    },
+    {
+      "id": "comparison:pre_sp105_and_pre_sp079_fields",
+      "pass": true,
+      "detail": "frozen SP-079 and pre-SP-079 project comparison fields are separate"
+    },
+    {
+      "id": "policy:selected_conservative_anchor",
+      "pass": true,
+      "detail": "CONSERVATIVE_TIER_A_ANCHOR_LOWER_TIER_BOUNDED_CONSTRAINT"
+    },
+    {
+      "id": "policy:physical_only_no_owner_or_powerpro",
+      "pass": true,
+      "detail": "selection is physical-only"
+    },
+    {
+      "id": "policy:hash_receipts_match",
+      "pass": true,
+      "detail": "selected policy hash is stable in all receipts"
+    },
+    {
+      "id": "policy:manifest_hash_receipts_match",
+      "pass": true,
+      "detail": "input manifest hash is stable in all receipts"
+    },
+    {
+      "id": "policy:lower_tier_point_weight_zero",
+      "pass": true,
+      "detail": "no Tier-B equal override"
+    },
+    {
+      "id": "policy:point_reference_population_is_anchor_only",
+      "pass": true,
+      "detail": "no uncalibrated reference-population mixing in point"
+    },
+    {
+      "id": "guard:all_final_rows_false",
+      "pass": true,
+      "detail": "row and aggregate guards"
+    },
+    {
+      "id": "guard:source_forbids_legacy_npBplus_h2f",
+      "pass": true,
+      "detail": "old local NPB+ hp_to_1b_sec is absent"
+    },
+    {
+      "id": "guard:official_shared_season_not_additive",
+      "pass": true,
+      "detail": "same-player same-season H2F/90ft fields are not additive"
+    },
+    {
+      "id": "guard:synthesis_function_no_powerpro",
+      "pass": true,
+      "detail": "PowerPro absent from physical synthesis function"
+    },
+    {
+      "id": "guard:synthesis_function_no_show_numeric",
+      "pass": true,
+      "detail": "The Show numeric appraisal absent from physical synthesis function"
+    },
+    {
+      "id": "guard:powerpro_loaded_after_core_freeze",
+      "pass": true,
+      "detail": "baseline/PowerPro comparison is read after core hash"
+    },
+    {
+      "id": "calibration:actual_loo_receipts",
+      "pass": true,
+      "detail": {
+        "receipt_count": 12
+      }
+    },
+    {
+      "id": "calibration:common_support_no_extrapolated_prediction",
+      "pass": true,
+      "detail": "unsupported holdouts have no calibrated prediction"
+    },
+    {
+      "id": "calibration:not_promoted",
+      "pass": true,
+      "detail": "no cross-family mapping promoted across required families"
+    },
+    {
+      "id": "benchmark:all_candidates_and_physical_target",
+      "pass": true,
+      "detail": "A/B/C/D benchmark contract"
+    },
+    {
+      "id": "benchmark:baseline_control_and_selected_D",
+      "pass": true,
+      "detail": "equal-family/B/C are diagnostics; D is conservative selection"
+    },
+    {
+      "id": "benchmark:C_prediction_only_inside_support",
+      "pass": true,
+      "detail": "C has no out-of-support calibrated point"
+    },
+    {
+      "id": "ablation:actual_800_cells",
+      "pass": true,
+      "detail": {
+        "cells": 800
+      }
+    },
+    {
+      "id": "ablation:actual_full_recompute",
+      "pass": true,
+      "detail": "not relabel-only"
+    },
+    {
+      "id": "ablation:separate_effect_counts",
+      "pass": true,
+      "detail": "point/display/rank/interval/confidence/conflict/evidence counts are separate"
+    },
+    {
+      "id": "ablation:summary_matches_cells",
+      "pass": true,
+      "detail": "summary counts/effect magnitudes match actual cells"
+    },
+    {
+      "id": "ablation:interval_only_not_point",
+      "pass": true,
+      "detail": "interval-only changes are not point changes"
+    },
+    {
+      "id": "ablation:zero_effect_is_not_material",
+      "pass": true,
+      "detail": "present zero-effect cells are explicit"
+    },
+    {
+      "id": "diagnostic:top_speed_and_leave_peak_out_descriptive_only",
+      "pass": true,
+      "detail": {
+        "schema_version": "sp105_top_speed_descriptive_diagnostics_v1",
+        "top_speed_reference_population": "SP100_CURRENT100_NPB_PLUS_2026",
+        "peak_vs_native_family": [
+          {
+            "family": "ACCELERATION_H2F",
+            "paired_player_count": 22,
+            "pearson_correlation": -0.010353,
+            "rank_correlation": -0.00511,
+            "reference_population_note": "family-native percentiles are not assumed commensurate; descriptive correlation only",
+            "selection_use": false,
+            "production_use": false
+          },
+          {
+            "family": "END_TO_END_90FT",
+            "paired_player_count": 6,
+            "pearson_correlation": 0.198131,
+            "rank_correlation": 0.257143,
+            "reference_population_note": "family-native percentiles are not assumed commensurate; descriptive correlation only",
+            "selection_use": false,
+            "production_use": false
+          },
+          {
+            "family": "SHORT_DISTANCE",
+            "paired_player_count": 36,
+            "pearson_correlation": 0.562616,
+            "rank_correlation": 0.555061,
+            "reference_population_note": "family-native percentiles are not assumed commensurate; descriptive correlation only",
+            "selection_use": false,
+            "production_use": false
+          }
+        ],
+        "leave_peak_out": {
+          "method": "ACTUAL_FULL_SYNTHESIS_RERUN_WITH_CURRENT_TIER_A_PEAK_REMOVED",
+          "selection_use": false,
+          "production_use": false,
+          "cell_count": 100,
+          "point_semantics_distribution": {
+            "DISPLAY_MIDPOINT_ONLY_NOT_POINT_ESTIMATE": 48,
+            "NO_DEFENSIBLE_POINT": 52
+          },
+          "point_defined_after_removal_count": 48,
+          "display_only_after_removal_count": 48,
+          "no_defensible_point_after_removal_count": 52,
+          "rank_eligible_after_removal_count": 0,
+          "point_invalidation_count": 52,
+          "rank_eligibility_invalidation_count": 100,
+          "note": "This is a descriptive stress test of Tier-A dependence, not a claim that lower-family fallback points are calibrated."
+        },
+        "calibration_receipt_count": 4,
+        "hard_coded_peak_weight": false,
+        "descriptive_only": true,
+        "generated_at": "2026-08-29"
+      }
+    },
+    {
+      "id": "context:four_lanes_and_removal_cells",
+      "pass": true,
+      "detail": {
+        "rows": 100
+      }
+    },
+    {
+      "id": "context:zero_effect_not_material",
+      "pass": true,
+      "detail": "loaded zero-effect lanes are not claimed material"
+    },
+    {
+      "id": "context:no_numeric_copy_or_point_transfer",
+      "pass": true,
+      "detail": "context lanes remain non-point numeric inputs"
+    },
+    {
+      "id": "context:aggregate_matches_rows",
+      "pass": true,
+      "detail": {
+        "the_show_context": {
+          "NOT_APPLICABLE": 96,
+          "PRESENT_NO_DECISION_EFFECT": 4
+        },
+        "analog_ordinal_transition": {
+          "INTERVAL_CHANGED": 96,
+          "NOT_APPLICABLE": 4
+        },
+        "statistical_proxies": {
+          "INTERVAL_CHANGED": 98,
+          "NOT_APPLICABLE": 2
+        },
+        "scouting_community_video_usage_context": {
+          "INTERVAL_CHANGED": 18,
+          "NOT_APPLICABLE": 82
+        }
+      }
+    },
+    {
+      "id": "posthoc:only_after_core_freeze",
+      "pass": true,
+      "detail": "PASS_POSTHOC_ONLY"
+    },
+    {
+      "id": "posthoc:diff_receipts_match",
+      "pass": true,
+      "detail": "posthoc difference is not an input"
+    },
+    {
+      "id": "baseline:be3588_exact_reproduction",
+      "pass": true,
+      "detail": {
+        "schema_version": "sp105_sp079_baseline_reproduction_v1",
+        "reference_commit": "be3588b26e3ce0818880f80c4a0350764886bb6f",
+        "frozen_manifest_used": true,
+        "frozen_equal_family_policy_preserved_as_control_only": true,
+        "isolated_reproduction_execution": {
+          "fresh_isolated_clone": true,
+          "original_generator": "scripts/sp079_final_practical_reappraisal_20260825.mjs",
+          "independent_qa": "scripts/qa_sp079_final_practical_reappraisal_20260825.mjs",
+          "output": "100 rows / 800 cells / owner verdict count 0",
+          "rerun_status": "BYTE_IDENTICAL"
+        },
+        "artifacts": {
+          "policy": {
+            "path": "outputs/derived/sp079_appraisal_policy.json",
+            "expected_sha256": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+            "observed_sha256": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+            "byte_identical": true
+          },
+          "sp079FrozenManifest": {
+            "path": "outputs/derived/sp079_frozen_input_manifest.json",
+            "expected_sha256": "fbb5632da62f7483f6116f736b18875569a8641a3d628a7295848de3b0f19ff1",
+            "observed_sha256": "fbb5632da62f7483f6116f736b18875569a8641a3d628a7295848de3b0f19ff1",
+            "byte_identical": true
+          },
+          "sp079FrozenSynthesis": {
+            "path": "outputs/derived/sp079_player_evidence_synthesis.jsonl",
+            "expected_sha256": "e79dcb1efdb8d6e7bb866ad906f2351aaba65e07e9c513a757e52c325448de3a",
+            "observed_sha256": "e79dcb1efdb8d6e7bb866ad906f2351aaba65e07e9c513a757e52c325448de3a",
+            "byte_identical": true
+          },
+          "sp079FrozenCsv": {
+            "path": "outputs/derived/sp079_final_practical_speed_100.csv",
+            "expected_sha256": "a4106442a1bae58fcc0004c8fd87f0feb454c00d928a4551976efa5c9cc6a7fa",
+            "observed_sha256": "a4106442a1bae58fcc0004c8fd87f0feb454c00d928a4551976efa5c9cc6a7fa",
+            "byte_identical": true
+          },
+          "sp079FrozenJson": {
+            "path": "outputs/derived/sp079_final_practical_speed_100.json",
+            "expected_sha256": "d067c436478ff74cd1b883b78e89b995411b4fddaff86401ec006e91c8eb61d0",
+            "observed_sha256": "d067c436478ff74cd1b883b78e89b995411b4fddaff86401ec006e91c8eb61d0",
+            "byte_identical": true
+          },
+          "sp079FrozenAblation": {
+            "path": "outputs/derived/sp079_final_value_component_ablation.json",
+            "expected_sha256": "23321cea90549686dc55edb4ff02d89b88b91ed6555256096df88f7fd98d979e",
+            "observed_sha256": "23321cea90549686dc55edb4ff02d89b88b91ed6555256096df88f7fd98d979e",
+            "byte_identical": true
+          },
+          "sp079FrozenPowerpro": {
+            "path": "outputs/derived/sp079_powerpro_posthoc_qa.json",
+            "expected_sha256": "7fbd94e17e5d67623ff9e732c3d21b5e5b1a062b80a827e8f4b39ee87146c46a",
+            "observed_sha256": "7fbd94e17e5d67623ff9e732c3d21b5e5b1a062b80a827e8f4b39ee87146c46a",
+            "byte_identical": true
+          },
+          "sp079FrozenGlobalQa": {
+            "path": "outputs/derived/sp079_global_consistency_qa.json",
+            "expected_sha256": "0307088230e7b3574b26b5f60410d5825a13a6604b588ad0de52f3acae44fce4",
+            "observed_sha256": "0307088230e7b3574b26b5f60410d5825a13a6604b588ad0de52f3acae44fce4",
+            "byte_identical": true
+          },
+          "sp079FrozenQa": {
+            "path": "outputs/derived/qa_sp079_final_practical_reappraisal.json",
+            "expected_sha256": "fed02eb76521a27324fdceba4ce398d3e02cc9006723b9300ee13a9ed59cb2bd",
+            "observed_sha256": "fed02eb76521a27324fdceba4ce398d3e02cc9006723b9300ee13a9ed59cb2bd",
+            "byte_identical": true
+          },
+          "sp079FrozenReport": {
+            "path": "docs/reports/sp079_final_practical_speed_100.md",
+            "expected_sha256": "98d4406bfdefd3e89013268e8a8d5c2ffa68245de239e79076ed9028acbcecc4",
+            "observed_sha256": "98d4406bfdefd3e89013268e8a8d5c2ffa68245de239e79076ed9028acbcecc4",
+            "byte_identical": true
+          },
+          "sp079FrozenAudit": {
+            "path": "docs/audits/sp079_final_practical_reappraisal_independent_audit.md",
+            "expected_sha256": "ec8fb82960cdb1e284464456834b7c9b4fc25d6465afe70ad284166a8a1956c9",
+            "observed_sha256": "ec8fb82960cdb1e284464456834b7c9b4fc25d6465afe70ad284166a8a1956c9",
+            "byte_identical": true
+          }
+        },
+        "exact_byte_identical": true,
+        "example_regression": {
+          "player": "中川 圭太",
+          "current_npb_plus_peak_percentile": 0.7576,
+          "historical_bounded_h2f_percentile": 0.126761,
+          "frozen_equal_family_point": 0.442181,
+          "frozen_equal_family_rating": 44,
+          "retained_as_regression_case": true
+        },
+        "generated_at": "2026-08-29"
+      }
+    },
+    {
+      "id": "baseline:frozen_equal_family_control_retained",
+      "pass": true,
+      "detail": "baseline control only"
+    },
+    {
+      "id": "baseline:core_hash_present",
+      "pass": true,
+      "detail": {
+        "core_values_built_before_baseline_powerpro_read": true,
+        "posthoc_fields_are_separate": true,
+        "core_values_sha256": "f1484b22eafd51d8e368c505138fdfbd4325cd317c2eb60483f1a22bd678ec4b"
+      }
+    },
+    {
+      "id": "scope:owner_zero",
+      "pass": true,
+      "detail": {
+        "owner_verdict_count": 0
+      }
+    },
+    {
+      "id": "scope:registry_locks",
+      "pass": true,
+      "detail": "SP-079/SP-105 remain browser-gated; downstream untouched"
+    },
+    {
+      "id": "scope:upstream_validated_states_unchanged",
+      "pass": true,
+      "detail": "SP-101..104 statuses unchanged"
+    },
+    {
+      "id": "scope:no_downstream_output_paths",
+      "pass": true,
+      "detail": "SP-080/SP-081/shoulder outputs absent from SP-105 artifact set"
+    },
+    {
+      "id": "global:internal_qa_passed_pre_independent",
+      "pass": true,
+      "detail": "PASS_PRE_INDEPENDENT_QA"
+    },
+    {
+      "id": "determinism:generator_exit_zero",
+      "pass": true,
+      "detail": {
+        "status": 0,
+        "stderr": ""
+      }
+    },
+    {
+      "id": "determinism:all_canonical_outputs_byte_identical",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "red_team:all_13_fail_before_fixtures_detected",
+      "pass": true,
+      "detail": [
+        {
+          "id": "tier_b_equal_override",
+          "detected": true,
+          "pass": true,
+          "detail": "a lower-tier equal point vote without validation must be rejected"
+        },
+        {
+          "id": "uncalibrated_reference_population_mix",
+          "detected": true,
+          "pass": true,
+          "detail": "unmapped native percentiles must not be averaged as one scale"
+        },
+        {
+          "id": "powerpro_teacher",
+          "detected": true,
+          "pass": true,
+          "detail": "PowerPro teacher/selection use must be rejected"
+        },
+        {
+          "id": "target_self_teaching",
+          "detected": true,
+          "pass": true,
+          "detail": "target player must be excluded from calibration training"
+        },
+        {
+          "id": "same_player_season_leakage",
+          "detected": true,
+          "pass": true,
+          "detail": "same-player held-out season leakage must be detected"
+        },
+        {
+          "id": "the_show_direct_copy",
+          "detected": true,
+          "pass": true,
+          "detail": "The Show appraisal must not be copied into physical point"
+        },
+        {
+          "id": "loaded_zero_effect_marked_material",
+          "detected": true,
+          "pass": true,
+          "detail": "a loaded zero-effect lane cannot be called material"
+        },
+        {
+          "id": "interval_only_counted_as_point",
+          "detected": true,
+          "pass": true,
+          "detail": "interval-only changes must not be counted as point changes"
+        },
+        {
+          "id": "unresolved_row_defensible_point",
+          "detected": true,
+          "pass": true,
+          "detail": "unresolved rows must not retain ordinary defensible-point semantics"
+        },
+        {
+          "id": "legacy_npb_plus_h2f",
+          "detected": true,
+          "pass": true,
+          "detail": "legacy NPB+ H2F field must remain quarantined"
+        },
+        {
+          "id": "short_distance_to_t90",
+          "detected": true,
+          "pass": true,
+          "detail": "30m/50m must not be converted to T90"
+        },
+        {
+          "id": "missing_to_zero_or_slow",
+          "detected": true,
+          "pass": true,
+          "detail": "missingness must not become zero/slow evidence"
+        },
+        {
+          "id": "owner_sp080_sp081_shoulder_scope",
+          "detected": true,
+          "pass": true,
+          "detail": "owner write and downstream SP-080/SP-081/shoulder work must be detected"
+        }
+      ]
+    }
+  ],
+  "fail_before_fixtures": [
+    {
+      "id": "tier_b_equal_override",
+      "detected": true,
+      "pass": true,
+      "detail": "a lower-tier equal point vote without validation must be rejected"
+    },
+    {
+      "id": "uncalibrated_reference_population_mix",
+      "detected": true,
+      "pass": true,
+      "detail": "unmapped native percentiles must not be averaged as one scale"
+    },
+    {
+      "id": "powerpro_teacher",
+      "detected": true,
+      "pass": true,
+      "detail": "PowerPro teacher/selection use must be rejected"
+    },
+    {
+      "id": "target_self_teaching",
+      "detected": true,
+      "pass": true,
+      "detail": "target player must be excluded from calibration training"
+    },
+    {
+      "id": "same_player_season_leakage",
+      "detected": true,
+      "pass": true,
+      "detail": "same-player held-out season leakage must be detected"
+    },
+    {
+      "id": "the_show_direct_copy",
+      "detected": true,
+      "pass": true,
+      "detail": "The Show appraisal must not be copied into physical point"
+    },
+    {
+      "id": "loaded_zero_effect_marked_material",
+      "detected": true,
+      "pass": true,
+      "detail": "a loaded zero-effect lane cannot be called material"
+    },
+    {
+      "id": "interval_only_counted_as_point",
+      "detected": true,
+      "pass": true,
+      "detail": "interval-only changes must not be counted as point changes"
+    },
+    {
+      "id": "unresolved_row_defensible_point",
+      "detected": true,
+      "pass": true,
+      "detail": "unresolved rows must not retain ordinary defensible-point semantics"
+    },
+    {
+      "id": "legacy_npb_plus_h2f",
+      "detected": true,
+      "pass": true,
+      "detail": "legacy NPB+ H2F field must remain quarantined"
+    },
+    {
+      "id": "short_distance_to_t90",
+      "detected": true,
+      "pass": true,
+      "detail": "30m/50m must not be converted to T90"
+    },
+    {
+      "id": "missing_to_zero_or_slow",
+      "detected": true,
+      "pass": true,
+      "detail": "missingness must not become zero/slow evidence"
+    },
+    {
+      "id": "owner_sp080_sp081_shoulder_scope",
+      "detected": true,
+      "pass": true,
+      "detail": "owner write and downstream SP-080/SP-081/shoulder work must be detected"
+    }
+  ],
+  "deterministic_hashes_before": {
+    "outputs/derived/sp105_cross_family_calibration_receipts.json": "a6fb5e429a7889c54f48e14470dd3ea0cddf94c770a6288a6614db64deac78a4",
+    "outputs/derived/sp105_frozen_input_manifest.json": "d616792d20f26bf7cef3ed02d80e8517b848737c98dd61a654aaac32c938cb03",
+    "outputs/derived/sp105_selected_synthesis_policy.json": "c72896c90dac871b14df885547252a4765fd7130da9e464fad496ea2c6da6e7e",
+    "outputs/derived/sp105_synthesis_policy_benchmark.json": "da70347ac3c4b533a4a898ccb120031ef7cc495134287ec2dcb8859e97685e3b",
+    "outputs/derived/sp105_context_decision_use_100.json": "7ec8edc5c4c7f69a45e5489370eebf101342371e3f82a25c18433ef69fb902ea",
+    "outputs/derived/sp105_final_practical_speed_100.json": "48c2d13c10e673fe6db391e9a56db7e41a851d1d985c11e2744cd54a32b64061",
+    "outputs/derived/sp105_final_practical_speed_100.csv": "2a6edf38dfaf643e053d55acd4b7dc2372b2fc5501474e20e9c6632cceda8d1a",
+    "outputs/derived/sp105_final_value_component_ablation.json": "6da79770354f7500e437a9b6dcfe1da851b300d052ce51eaa8555c9990f2b568",
+    "outputs/derived/sp105_powerpro_posthoc_qa.json": "6a4d127ddeac207e9437d4256c711f18d270975218c8ea8cefbc7c1fce7411ea",
+    "outputs/derived/sp105_global_consistency_qa.json": "36770d5788cc9f3c60c3b458ec464b0f0560766d9557f4e4cb9250c8c12b9a09",
+    "outputs/derived/sp105_player_evidence_synthesis.jsonl": "9f39d7cff8d0ba48eaadd19870abf087c1c57e01702bdd3f443346016bbd20d2",
+    "docs/reports/sp105_final_practical_speed_100.md": "a21511562a684bfad6690cdfd58b695d1956771effb8b6886831916059e83cf9"
+  },
+  "deterministic_hashes_after": {
+    "outputs/derived/sp105_cross_family_calibration_receipts.json": "a6fb5e429a7889c54f48e14470dd3ea0cddf94c770a6288a6614db64deac78a4",
+    "outputs/derived/sp105_frozen_input_manifest.json": "d616792d20f26bf7cef3ed02d80e8517b848737c98dd61a654aaac32c938cb03",
+    "outputs/derived/sp105_selected_synthesis_policy.json": "c72896c90dac871b14df885547252a4765fd7130da9e464fad496ea2c6da6e7e",
+    "outputs/derived/sp105_synthesis_policy_benchmark.json": "da70347ac3c4b533a4a898ccb120031ef7cc495134287ec2dcb8859e97685e3b",
+    "outputs/derived/sp105_context_decision_use_100.json": "7ec8edc5c4c7f69a45e5489370eebf101342371e3f82a25c18433ef69fb902ea",
+    "outputs/derived/sp105_final_practical_speed_100.json": "48c2d13c10e673fe6db391e9a56db7e41a851d1d985c11e2744cd54a32b64061",
+    "outputs/derived/sp105_final_practical_speed_100.csv": "2a6edf38dfaf643e053d55acd4b7dc2372b2fc5501474e20e9c6632cceda8d1a",
+    "outputs/derived/sp105_final_value_component_ablation.json": "6da79770354f7500e437a9b6dcfe1da851b300d052ce51eaa8555c9990f2b568",
+    "outputs/derived/sp105_powerpro_posthoc_qa.json": "6a4d127ddeac207e9437d4256c711f18d270975218c8ea8cefbc7c1fce7411ea",
+    "outputs/derived/sp105_global_consistency_qa.json": "36770d5788cc9f3c60c3b458ec464b0f0560766d9557f4e4cb9250c8c12b9a09",
+    "outputs/derived/sp105_player_evidence_synthesis.jsonl": "9f39d7cff8d0ba48eaadd19870abf087c1c57e01702bdd3f443346016bbd20d2",
+    "docs/reports/sp105_final_practical_speed_100.md": "a21511562a684bfad6690cdfd58b695d1956771effb8b6886831916059e83cf9"
+  },
+  "deterministic_mismatches": [],
+  "output_row_count": 100,
+  "ablation_cell_count": 800,
+  "selected_policy_id": "CONSERVATIVE_TIER_A_ANCHOR_LOWER_TIER_BOUNDED_CONSTRAINT",
+  "context_aggregate": {
+    "the_show_context": {
+      "NOT_APPLICABLE": 96,
+      "PRESENT_NO_DECISION_EFFECT": 4
+    },
+    "analog_ordinal_transition": {
+      "INTERVAL_CHANGED": 96,
+      "NOT_APPLICABLE": 4
+    },
+    "statistical_proxies": {
+      "INTERVAL_CHANGED": 98,
+      "NOT_APPLICABLE": 2
+    },
+    "scouting_community_video_usage_context": {
+      "INTERVAL_CHANGED": 18,
+      "NOT_APPLICABLE": 82
+    }
+  },
+  "scope_lock": {
+    "sp079": "PARTIAL",
+    "sp080": "NOT_STARTED",
+    "sp081": "NOT_STARTED",
+    "shoulder": "BLOCKED_DEPENDENCY"
+  }
+}

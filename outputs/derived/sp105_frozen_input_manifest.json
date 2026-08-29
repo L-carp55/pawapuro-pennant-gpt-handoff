@@ -1,0 +1,371 @@
+{
+  "schema_version": "sp105_frozen_input_manifest_v1",
+  "task_id": "SP-105",
+  "frozen_at": "2026-08-29",
+  "base_sp079_commit": "be3588b26e3ce0818880f80c4a0350764886bb6f",
+  "input_files": {
+    "policy": {
+      "path": "outputs/derived/sp079_appraisal_policy.json",
+      "sha256": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3"
+    },
+    "sp100": {
+      "path": "outputs/derived/sp100_owner_approved_production_wiring_20260816.json",
+      "sha256": "585a8c18e77b33c5161a5a44aaa0edf6e7915ea68231fd03ab3da3207b24dc47"
+    },
+    "sp101": {
+      "path": "outputs/derived/sp101_current100_multibridge_evidence.json",
+      "sha256": "57367f06e521cd298c03d973c98d9ecfbfcc23f1658ef905775dc21dee5535bd"
+    },
+    "sp101Show": {
+      "path": "outputs/derived/sp101_current100_the_show_evidence.json",
+      "sha256": "13239624f0837e1e8397de267fcd983e10fe5afc57292020afbf6aba2ae2dee3"
+    },
+    "sp101Graph": {
+      "path": "outputs/derived/sp101_pairwise_ordinal_graph.json",
+      "sha256": "756a6d5e2e43aa202e2de0812342c8a23ea22e6e299eb034e679b0898dc321bc"
+    },
+    "sp104Physical": {
+      "path": "outputs/derived/sp104_historical_physical_canonical.jsonl",
+      "sha256": "65d9d1ea882f54f9c2674fde04e938a39293bc7772ef2762932dd26fe1313e1c"
+    },
+    "sp104State": {
+      "path": "outputs/derived/sp104_current100_physical_state_before_after.json",
+      "sha256": "4fdce04c65e933a4457fb395872272b19cc00891cfbcb63bf21ab962a51e815e"
+    },
+    "sp104TransferPolicy": {
+      "path": "outputs/derived/sp104_selected_transfer_policy.json",
+      "sha256": "dadd25d22980b0af6b966bfd2dc64fa9c9808bd27e123fb7d7cd3c88fa70f049"
+    },
+    "sp104TransferBenchmark": {
+      "path": "outputs/derived/sp104_transfer_method_benchmark.json",
+      "sha256": "5cdb36c8a12f7474bf1e8d6eede61b9d3610a454337b32eb5870e788e3a3a98a"
+    },
+    "sp104Receipts": {
+      "path": "outputs/derived/sp104_anchor_to_sparse_player_receipts.jsonl",
+      "sha256": "ec0f32a32b8891bed9581cc4576b6745cf9e1427afef233d908cf3e8d6c62696"
+    },
+    "mlbRunning": {
+      "path": "data/manual/sp104_mlb_running_splits.csv",
+      "sha256": "1fe17ef153d72a7aef4f5150caf0d7beaf4a62ed0eb6cefdccc5e96792eee562"
+    },
+    "mlbExposure": {
+      "path": "data/manual/sp104_mlb_sprint_exposure_h2f.csv",
+      "sha256": "e1fba2480c3eb209ab31049eb5001ecc47b67f1768a08b53accd77b3c0dbd43e"
+    },
+    "sp077": {
+      "path": "outputs/derived/sp077_construct_complete_owner_review_queue_20260817.json",
+      "sha256": "ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d"
+    },
+    "sp103Universe": {
+      "path": "outputs/derived/sp103_speed_evidence_universe.tsv",
+      "sha256": "b0e5f79d234e68bd0cf7b3f0f36acb5f44818138e1dac6ea912c46777251bb73"
+    },
+    "sp103Traceability": {
+      "path": "outputs/derived/sp103_owner_requirement_traceability.tsv",
+      "sha256": "904c2d1bad47a82c89fb1b6974eeece8e1f2b939aea6b4cd236891391c161eba"
+    },
+    "sp103Gaps": {
+      "path": "outputs/derived/sp103_gap_and_remediation_plan.json",
+      "sha256": "6457d93618c88f31a7d8dcc64fda86392cce62ed3bfeab91f28ad51d2853da0f"
+    },
+    "sp103Methods": {
+      "path": "outputs/derived/sp103_inference_method_universe.json",
+      "sha256": "af05b65b6323603f14bef3d6d707ae7b173985864aefb4b5d857bae59dcec3b9"
+    },
+    "ownerLedger": {
+      "path": "outputs/derived/sp078_owner_verdict_ledger_20260816.json",
+      "sha256": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0"
+    },
+    "registry": {
+      "path": "docs/state/speed_task_registry.tsv",
+      "sha256": "ff639da7e3c345c08e1fd62c06b88945d2c29280e920e09a0955b43a8f45da3e"
+    },
+    "browserReview": {
+      "path": "docs/audits/sp079_browser_independent_review_20260826.md",
+      "sha256": "35e85e625ee8b079667ea7af9647665e7b0057b2db32b1c50ce92bce26f895a1"
+    },
+    "taskSpec": {
+      "path": "docs/tasks/SP105_SP079_SYNTHESIS_CALIBRATION_REPAIR_20260826.md",
+      "sha256": "9fd286092bed86cfecf7eca260ac5c8f36c85519a203e01d0adab5a6c28925c0"
+    },
+    "activationState": {
+      "path": "docs/state/speed_sp105_activation_state_20260826.json",
+      "sha256": "d170c4263ba0a2909ca6e4249a0a20a14a7824e5faceb31dfcc3361fa5c17f7b"
+    },
+    "sp079FrozenPolicy": {
+      "path": "outputs/derived/sp079_appraisal_policy.json",
+      "sha256": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3"
+    },
+    "sp079FrozenManifest": {
+      "path": "outputs/derived/sp079_frozen_input_manifest.json",
+      "sha256": "fbb5632da62f7483f6116f736b18875569a8641a3d628a7295848de3b0f19ff1"
+    },
+    "sp079FrozenSynthesis": {
+      "path": "outputs/derived/sp079_player_evidence_synthesis.jsonl",
+      "sha256": "e79dcb1efdb8d6e7bb866ad906f2351aaba65e07e9c513a757e52c325448de3a"
+    },
+    "sp079FrozenCsv": {
+      "path": "outputs/derived/sp079_final_practical_speed_100.csv",
+      "sha256": "a4106442a1bae58fcc0004c8fd87f0feb454c00d928a4551976efa5c9cc6a7fa"
+    },
+    "sp079FrozenJson": {
+      "path": "outputs/derived/sp079_final_practical_speed_100.json",
+      "sha256": "d067c436478ff74cd1b883b78e89b995411b4fddaff86401ec006e91c8eb61d0"
+    },
+    "sp079FrozenAblation": {
+      "path": "outputs/derived/sp079_final_value_component_ablation.json",
+      "sha256": "23321cea90549686dc55edb4ff02d89b88b91ed6555256096df88f7fd98d979e"
+    },
+    "sp079FrozenPowerpro": {
+      "path": "outputs/derived/sp079_powerpro_posthoc_qa.json",
+      "sha256": "7fbd94e17e5d67623ff9e732c3d21b5e5b1a062b80a827e8f4b39ee87146c46a"
+    },
+    "sp079FrozenQa": {
+      "path": "outputs/derived/qa_sp079_final_practical_reappraisal.json",
+      "sha256": "fed02eb76521a27324fdceba4ce398d3e02cc9006723b9300ee13a9ed59cb2bd"
+    },
+    "sp079FrozenGlobalQa": {
+      "path": "outputs/derived/sp079_global_consistency_qa.json",
+      "sha256": "0307088230e7b3574b26b5f60410d5825a13a6604b588ad0de52f3acae44fce4"
+    },
+    "sp079FrozenReport": {
+      "path": "docs/reports/sp079_final_practical_speed_100.md",
+      "sha256": "98d4406bfdefd3e89013268e8a8d5c2ffa68245de239e79076ed9028acbcecc4"
+    },
+    "sp079FrozenAudit": {
+      "path": "docs/audits/sp079_final_practical_reappraisal_independent_audit.md",
+      "sha256": "ec8fb82960cdb1e284464456834b7c9b4fc25d6465afe70ad284166a8a1956c9"
+    }
+  },
+  "generated_policy": {
+    "path": "outputs/derived/sp105_selected_synthesis_policy.json",
+    "sha256": "c72896c90dac871b14df885547252a4765fd7130da9e464fad496ea2c6da6e7e"
+  },
+  "population": {
+    "current100_count": 100,
+    "current100_stable_key_sha256": "9769b164f88978f17d3a4ab8f9a908ee6709b5b1d9fbbe36e11e9d51f7c5add3",
+    "base_evidence_row_count": 100
+  },
+  "upstream_evidence_counts": {
+    "sp103UniverseRows": 71,
+    "sp103TraceabilityRows": 76,
+    "canonicalRows": 458,
+    "canonicalCurrent100Rows": 103,
+    "mlbRunningRows": 129,
+    "mlbExposureRows": 209,
+    "sp101ShowRows": 100,
+    "sp101OrdinalEdges": 6,
+    "sp101TransitionAnnotations": 80,
+    "sp104Receipts": 100,
+    "sp104TransferPolicy": "NO_PRODUCTION_TRANSFER_PRE_SP079"
+  },
+  "registry_snapshot_after_reconciliation": {
+    "SP-079": {
+      "status": "PARTIAL",
+      "owner_review_block": "1",
+      "gate_block": "1",
+      "depends_on": "SP-015,SP-016,SP-078,SP-098,SP-100,SP-101,SP-102,SP-103,SP-104"
+    },
+    "SP-105": {
+      "status": "PARTIAL",
+      "owner_review_block": "0",
+      "gate_block": "1",
+      "depends_on": "SP-079,SP-104"
+    },
+    "SP-080": {
+      "status": "NOT_STARTED",
+      "owner_review_block": "0",
+      "gate_block": "1",
+      "depends_on": "SP-071,SP-079"
+    },
+    "SP-081": {
+      "status": "NOT_STARTED",
+      "owner_review_block": "0",
+      "gate_block": "0",
+      "depends_on": "SP-079,SP-080"
+    },
+    "SP-082": {
+      "status": "BLOCKED_DEPENDENCY",
+      "owner_review_block": "0",
+      "gate_block": "0",
+      "depends_on": ""
+    },
+    "SP-101": {
+      "status": "DONE_VALIDATED",
+      "owner_review_block": "1",
+      "gate_block": "1",
+      "depends_on": "SP-050,SP-051,SP-052,SP-077"
+    },
+    "SP-102": {
+      "status": "DONE_NEGATIVE_FINDING",
+      "owner_review_block": "1",
+      "gate_block": "1",
+      "depends_on": "SP-033,SP-035,SP-037,SP-075,SP-101"
+    },
+    "SP-103": {
+      "status": "DONE_VALIDATED",
+      "owner_review_block": "0",
+      "gate_block": "1",
+      "depends_on": "SP-101,SP-102"
+    },
+    "SP-104": {
+      "status": "DONE_VALIDATED",
+      "owner_review_block": "0",
+      "gate_block": "1",
+      "depends_on": "SP-103"
+    }
+  },
+  "owner_review_integrity": {
+    "owner_verdict_count": 0,
+    "owner_records_count": 0,
+    "owner_ledger_sha256": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0",
+    "owner_input_used_in_synthesis": false,
+    "owner_verdicts_written": false
+  },
+  "baseline_reproduction": {
+    "schema_version": "sp105_sp079_baseline_reproduction_v1",
+    "reference_commit": "be3588b26e3ce0818880f80c4a0350764886bb6f",
+    "frozen_manifest_used": true,
+    "frozen_equal_family_policy_preserved_as_control_only": true,
+    "isolated_reproduction_execution": {
+      "fresh_isolated_clone": true,
+      "original_generator": "scripts/sp079_final_practical_reappraisal_20260825.mjs",
+      "independent_qa": "scripts/qa_sp079_final_practical_reappraisal_20260825.mjs",
+      "output": "100 rows / 800 cells / owner verdict count 0",
+      "rerun_status": "BYTE_IDENTICAL"
+    },
+    "artifacts": {
+      "policy": {
+        "path": "outputs/derived/sp079_appraisal_policy.json",
+        "expected_sha256": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+        "observed_sha256": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+        "byte_identical": true
+      },
+      "sp079FrozenManifest": {
+        "path": "outputs/derived/sp079_frozen_input_manifest.json",
+        "expected_sha256": "fbb5632da62f7483f6116f736b18875569a8641a3d628a7295848de3b0f19ff1",
+        "observed_sha256": "fbb5632da62f7483f6116f736b18875569a8641a3d628a7295848de3b0f19ff1",
+        "byte_identical": true
+      },
+      "sp079FrozenSynthesis": {
+        "path": "outputs/derived/sp079_player_evidence_synthesis.jsonl",
+        "expected_sha256": "e79dcb1efdb8d6e7bb866ad906f2351aaba65e07e9c513a757e52c325448de3a",
+        "observed_sha256": "e79dcb1efdb8d6e7bb866ad906f2351aaba65e07e9c513a757e52c325448de3a",
+        "byte_identical": true
+      },
+      "sp079FrozenCsv": {
+        "path": "outputs/derived/sp079_final_practical_speed_100.csv",
+        "expected_sha256": "a4106442a1bae58fcc0004c8fd87f0feb454c00d928a4551976efa5c9cc6a7fa",
+        "observed_sha256": "a4106442a1bae58fcc0004c8fd87f0feb454c00d928a4551976efa5c9cc6a7fa",
+        "byte_identical": true
+      },
+      "sp079FrozenJson": {
+        "path": "outputs/derived/sp079_final_practical_speed_100.json",
+        "expected_sha256": "d067c436478ff74cd1b883b78e89b995411b4fddaff86401ec006e91c8eb61d0",
+        "observed_sha256": "d067c436478ff74cd1b883b78e89b995411b4fddaff86401ec006e91c8eb61d0",
+        "byte_identical": true
+      },
+      "sp079FrozenAblation": {
+        "path": "outputs/derived/sp079_final_value_component_ablation.json",
+        "expected_sha256": "23321cea90549686dc55edb4ff02d89b88b91ed6555256096df88f7fd98d979e",
+        "observed_sha256": "23321cea90549686dc55edb4ff02d89b88b91ed6555256096df88f7fd98d979e",
+        "byte_identical": true
+      },
+      "sp079FrozenPowerpro": {
+        "path": "outputs/derived/sp079_powerpro_posthoc_qa.json",
+        "expected_sha256": "7fbd94e17e5d67623ff9e732c3d21b5e5b1a062b80a827e8f4b39ee87146c46a",
+        "observed_sha256": "7fbd94e17e5d67623ff9e732c3d21b5e5b1a062b80a827e8f4b39ee87146c46a",
+        "byte_identical": true
+      },
+      "sp079FrozenGlobalQa": {
+        "path": "outputs/derived/sp079_global_consistency_qa.json",
+        "expected_sha256": "0307088230e7b3574b26b5f60410d5825a13a6604b588ad0de52f3acae44fce4",
+        "observed_sha256": "0307088230e7b3574b26b5f60410d5825a13a6604b588ad0de52f3acae44fce4",
+        "byte_identical": true
+      },
+      "sp079FrozenQa": {
+        "path": "outputs/derived/qa_sp079_final_practical_reappraisal.json",
+        "expected_sha256": "fed02eb76521a27324fdceba4ce398d3e02cc9006723b9300ee13a9ed59cb2bd",
+        "observed_sha256": "fed02eb76521a27324fdceba4ce398d3e02cc9006723b9300ee13a9ed59cb2bd",
+        "byte_identical": true
+      },
+      "sp079FrozenReport": {
+        "path": "docs/reports/sp079_final_practical_speed_100.md",
+        "expected_sha256": "98d4406bfdefd3e89013268e8a8d5c2ffa68245de239e79076ed9028acbcecc4",
+        "observed_sha256": "98d4406bfdefd3e89013268e8a8d5c2ffa68245de239e79076ed9028acbcecc4",
+        "byte_identical": true
+      },
+      "sp079FrozenAudit": {
+        "path": "docs/audits/sp079_final_practical_reappraisal_independent_audit.md",
+        "expected_sha256": "ec8fb82960cdb1e284464456834b7c9b4fc25d6465afe70ad284166a8a1956c9",
+        "observed_sha256": "ec8fb82960cdb1e284464456834b7c9b4fc25d6465afe70ad284166a8a1956c9",
+        "byte_identical": true
+      }
+    },
+    "exact_byte_identical": true,
+    "example_regression": {
+      "player": "中川 圭太",
+      "current_npb_plus_peak_percentile": 0.7576,
+      "historical_bounded_h2f_percentile": 0.126761,
+      "frozen_equal_family_point": 0.442181,
+      "frozen_equal_family_rating": 44,
+      "retained_as_regression_case": true
+    },
+    "generated_at": "2026-08-29"
+  },
+  "cross_family_calibration": {
+    "status": "PARTIAL_IDENTIFIABLE_MAPPING_BUT_NOT_SELECTED",
+    "production_selected": false,
+    "receipt_sha256": "988876d51000f39f91f1bda1779f0fbba2e9aa46092dec8251f6cdc908244b8c"
+  },
+  "forbidden_input_guards": {
+    "legacy_npb_plus_h2f_field_read": false,
+    "powerpro_as_synthesis_feature": false,
+    "powerpro_loaded_for_posthoc_only": true,
+    "show_numeric_copy": false,
+    "thirty_or_fifty_meter_to_t90_conversion": false,
+    "target_player_self_teaching": false,
+    "season_leakage": false,
+    "technique_in_physical_point": false,
+    "selected_production_transfer": false,
+    "sp080_read_as_input": false,
+    "sp081_read_as_input": false,
+    "shoulder_read_as_input": false
+  },
+  "input_data_sha256": {
+    "policy": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+    "sp100": "585a8c18e77b33c5161a5a44aaa0edf6e7915ea68231fd03ab3da3207b24dc47",
+    "sp101": "57367f06e521cd298c03d973c98d9ecfbfcc23f1658ef905775dc21dee5535bd",
+    "sp101Show": "13239624f0837e1e8397de267fcd983e10fe5afc57292020afbf6aba2ae2dee3",
+    "sp101Graph": "756a6d5e2e43aa202e2de0812342c8a23ea22e6e299eb034e679b0898dc321bc",
+    "sp104Physical": "65d9d1ea882f54f9c2674fde04e938a39293bc7772ef2762932dd26fe1313e1c",
+    "sp104State": "4fdce04c65e933a4457fb395872272b19cc00891cfbcb63bf21ab962a51e815e",
+    "sp104TransferPolicy": "dadd25d22980b0af6b966bfd2dc64fa9c9808bd27e123fb7d7cd3c88fa70f049",
+    "sp104TransferBenchmark": "5cdb36c8a12f7474bf1e8d6eede61b9d3610a454337b32eb5870e788e3a3a98a",
+    "sp104Receipts": "ec0f32a32b8891bed9581cc4576b6745cf9e1427afef233d908cf3e8d6c62696",
+    "mlbRunning": "1fe17ef153d72a7aef4f5150caf0d7beaf4a62ed0eb6cefdccc5e96792eee562",
+    "mlbExposure": "e1fba2480c3eb209ab31049eb5001ecc47b67f1768a08b53accd77b3c0dbd43e",
+    "sp077": "ff822cb44874a1021723e0c962ead7a16871d185586fd894ed29824456ca464d",
+    "sp103Universe": "b0e5f79d234e68bd0cf7b3f0f36acb5f44818138e1dac6ea912c46777251bb73",
+    "sp103Traceability": "904c2d1bad47a82c89fb1b6974eeece8e1f2b939aea6b4cd236891391c161eba",
+    "sp103Gaps": "6457d93618c88f31a7d8dcc64fda86392cce62ed3bfeab91f28ad51d2853da0f",
+    "sp103Methods": "af05b65b6323603f14bef3d6d707ae7b173985864aefb4b5d857bae59dcec3b9",
+    "ownerLedger": "f3fc60b93f2d258ce58e1b343a0259cce9ad294ce8731404e4acf937681f23d0",
+    "registry": "ff639da7e3c345c08e1fd62c06b88945d2c29280e920e09a0955b43a8f45da3e",
+    "browserReview": "35e85e625ee8b079667ea7af9647665e7b0057b2db32b1c50ce92bce26f895a1",
+    "taskSpec": "9fd286092bed86cfecf7eca260ac5c8f36c85519a203e01d0adab5a6c28925c0",
+    "activationState": "d170c4263ba0a2909ca6e4249a0a20a14a7824e5faceb31dfcc3361fa5c17f7b",
+    "sp079FrozenPolicy": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+    "sp079FrozenManifest": "fbb5632da62f7483f6116f736b18875569a8641a3d628a7295848de3b0f19ff1",
+    "sp079FrozenSynthesis": "e79dcb1efdb8d6e7bb866ad906f2351aaba65e07e9c513a757e52c325448de3a",
+    "sp079FrozenCsv": "a4106442a1bae58fcc0004c8fd87f0feb454c00d928a4551976efa5c9cc6a7fa",
+    "sp079FrozenJson": "d067c436478ff74cd1b883b78e89b995411b4fddaff86401ec006e91c8eb61d0",
+    "sp079FrozenAblation": "23321cea90549686dc55edb4ff02d89b88b91ed6555256096df88f7fd98d979e",
+    "sp079FrozenPowerpro": "7fbd94e17e5d67623ff9e732c3d21b5e5b1a062b80a827e8f4b39ee87146c46a",
+    "sp079FrozenQa": "fed02eb76521a27324fdceba4ce398d3e02cc9006723b9300ee13a9ed59cb2bd",
+    "sp079FrozenGlobalQa": "0307088230e7b3574b26b5f60410d5825a13a6604b588ad0de52f3acae44fce4",
+    "sp079FrozenReport": "98d4406bfdefd3e89013268e8a8d5c2ffa68245de239e79076ed9028acbcecc4",
+    "sp079FrozenAudit": "ec8fb82960cdb1e284464456834b7c9b4fc25d6465afe70ad284166a8a1956c9",
+    "selectedPolicy": "c72896c90dac871b14df885547252a4765fd7130da9e464fad496ea2c6da6e7e"
+  }
+}

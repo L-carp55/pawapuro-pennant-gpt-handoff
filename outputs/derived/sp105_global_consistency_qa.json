@@ -1,0 +1,166 @@
+{
+  "schema_version": "sp105_global_consistency_qa_v1",
+  "task_id": "SP-105",
+  "status": "PASS_PRE_INDEPENDENT_QA",
+  "checks": [
+    {
+      "id": "population_exact_100_unique",
+      "pass": true,
+      "detail": {
+        "count": 100
+      }
+    },
+    {
+      "id": "queue_order_exact_1_to_100",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "id": "selected_policy_is_conservative_anchor",
+      "pass": true,
+      "detail": "CONSERVATIVE_TIER_A_ANCHOR_LOWER_TIER_BOUNDED_CONSTRAINT"
+    },
+    {
+      "id": "point_semantics_present_and_allowed",
+      "pass": true,
+      "detail": {
+        "allowed": [
+          "DEFENSIBLE_POINT_ESTIMATE",
+          "DISPLAY_MIDPOINT_ONLY_NOT_POINT_ESTIMATE",
+          "NO_DEFENSIBLE_POINT"
+        ]
+      }
+    },
+    {
+      "id": "point_semantics_consistent",
+      "pass": true,
+      "detail": "unresolved/display-only rows are separated"
+    },
+    {
+      "id": "tier_b_cannot_equal_tier_a_point",
+      "pass": true,
+      "detail": "selected point influence"
+    },
+    {
+      "id": "no_uncalibrated_reference_population_mixing_in_selected_point",
+      "pass": true,
+      "detail": "anchor reference population only"
+    },
+    {
+      "id": "physical_only_selection",
+      "pass": true,
+      "detail": "physical evidence only"
+    },
+    {
+      "id": "owner_zero",
+      "pass": true,
+      "detail": {
+        "owner_verdict_count": 0
+      }
+    },
+    {
+      "id": "show_direct_copy_false",
+      "pass": true,
+      "detail": "all rows"
+    },
+    {
+      "id": "legacy_h2f_false",
+      "pass": true,
+      "detail": "all rows"
+    },
+    {
+      "id": "short_distance_transform_false",
+      "pass": true,
+      "detail": "all rows"
+    },
+    {
+      "id": "missing_not_slow",
+      "pass": true,
+      "detail": "all rows"
+    },
+    {
+      "id": "technique_separate",
+      "pass": true,
+      "detail": "all rows"
+    },
+    {
+      "id": "production_transfer_false",
+      "pass": true,
+      "detail": "all rows"
+    },
+    {
+      "id": "ablation_exact_800_actual",
+      "pass": true,
+      "detail": {
+        "cells": 800
+      }
+    },
+    {
+      "id": "ablation_summary_has_separate_effect_counts",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "id": "interval_only_not_point",
+      "pass": true,
+      "detail": "field-level ablation semantics"
+    },
+    {
+      "id": "context_use_measured_from_removal_cells",
+      "pass": true,
+      "detail": {
+        "rows": 100
+      }
+    },
+    {
+      "id": "zero_effect_context_not_claimed_material",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "id": "baseline_byte_reproduction",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "id": "scale_status",
+      "pass": true,
+      "detail": "PROVISIONAL_PENDING_SP071_SP072"
+    },
+    {
+      "id": "sp080_sp081_shoulder_unchanged",
+      "pass": true,
+      "detail": "scope locks"
+    },
+    {
+      "id": "sp079_superseded_by_sp105",
+      "pass": true,
+      "detail": "registry terminal boundary remains browser reacceptance"
+    },
+    {
+      "id": "upstream_counts_frozen",
+      "pass": true,
+      "detail": {
+        "sp103UniverseRows": 71,
+        "sp103TraceabilityRows": 76,
+        "canonicalRows": 458,
+        "canonicalCurrent100Rows": 103,
+        "mlbRunningRows": 129,
+        "mlbExposureRows": 209,
+        "sp101ShowRows": 100,
+        "sp101OrdinalEdges": 6,
+        "sp101TransitionAnnotations": 80,
+        "sp104Receipts": 100,
+        "sp104TransferPolicy": "NO_PRODUCTION_TRANSFER_PRE_SP079"
+      }
+    }
+  ],
+  "output_row_count": 100,
+  "ablation_cell_count": 800,
+  "owner_verdict_count": 0,
+  "selected_policy_id": "CONSERVATIVE_TIER_A_ANCHOR_LOWER_TIER_BOUNDED_CONSTRAINT",
+  "generated_at": "2026-08-29",
+  "independent_qa_status": "PASS_INDEPENDENT_RED_TEAM",
+  "independent_qa_path": "outputs/derived/qa_sp105_sp079_synthesis_calibration_repair.json",
+  "independent_qa_check_count": 84
+}

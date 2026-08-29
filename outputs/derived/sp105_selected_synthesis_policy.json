@@ -1,0 +1,97 @@
+{
+  "schema_version": "sp105_selected_synthesis_policy_v1",
+  "task_id": "SP-105",
+  "status": "SELECTED_DONE_NEGATIVE_FINDING_READY_FOR_SP079_REACCEPTANCE",
+  "selected_policy_id": "CONSERVATIVE_TIER_A_ANCHOR_LOWER_TIER_BOUNDED_CONSTRAINT",
+  "selected_policy_name": "Conservative Tier-A anchor + lower-tier native-scale bounded constraints",
+  "physical_only_selection": true,
+  "point_anchor": {
+    "family": "PEAK",
+    "source": "SP100 current NPB+ top_speed_kmh percentile within frozen current100 cohort",
+    "reference_population": "SP100_CURRENT100_NPB_PLUS_2026",
+    "point_weight": 1,
+    "role": "TIER_A_CURRENT_DIRECT_PHYSICAL_ANCHOR"
+  },
+  "lower_tier_policy": {
+    "families": [
+      "ACCELERATION_H2F",
+      "END_TO_END_90FT",
+      "SHORT_DISTANCE"
+    ],
+    "point_weight": 0,
+    "constraint_weight": "native_scale_interval_and_uncertainty_only",
+    "direct_cross_family_union": false,
+    "unresolved_reference_population_mix": "explicitly retained as noncommensurate, never averaged"
+  },
+  "decision": {
+    "tier_a_point_weight": 1,
+    "lower_tier_point_weight": 0,
+    "current_high_tier_influence": "POINT_ANCHOR",
+    "historical_bounded_influence": "CONSTRAINT_INTERVAL_CONFLICT_AND_UNCERTAINTY_ONLY",
+    "equal_family_average": "BASELINE_CONTROL_ONLY",
+    "no_manual_player_adjustments": true
+  },
+  "calibration": {
+    "common_scale_mapping_attempted": true,
+    "common_scale_mapping_selected": false,
+    "receipt_path": "outputs/derived/sp105_cross_family_calibration_receipts.json",
+    "production_rule": "NO_MAPPING_WITHOUT_PLAYER_CLUSTERED_LOO_COMMON_SUPPORT_AND_PREDECLARED_IDENTIFIABILITY",
+    "mapping_states": {
+      "ACCELERATION_H2F": {
+        "calibration_receipt_family": "ACCELERATION_H2F",
+        "production_point_use": false,
+        "selected_role": "NATIVE_SCALE_CONSTRAINT_ONLY",
+        "common_scale_mapping_selected": false,
+        "reason": "insufficient_or_heterogeneous_player-clustered_common_support"
+      },
+      "END_TO_END_90FT": {
+        "calibration_receipt_family": "END_TO_END_90FT",
+        "production_point_use": false,
+        "selected_role": "NATIVE_SCALE_CONSTRAINT_ONLY",
+        "common_scale_mapping_selected": false,
+        "reason": "insufficient_or_heterogeneous_player-clustered_common_support"
+      },
+      "SHORT_DISTANCE": {
+        "calibration_receipt_family": "SHORT_DISTANCE",
+        "production_point_use": false,
+        "selected_role": "NATIVE_SCALE_CONSTRAINT_ONLY",
+        "common_scale_mapping_selected": false,
+        "reason": "insufficient_or_heterogeneous_player-clustered_common_support"
+      }
+    }
+  },
+  "interval_rule": {
+    "anchor_interval": "SP100 peak native interval",
+    "lower_tier": "retain each family native interval separately; do not union unlike percentiles",
+    "uncertainty": "bounded additive uncertainty for missing construct and context; point remains anchor",
+    "point_inside_interval": true
+  },
+  "point_semantics_rule": {
+    "anchor_with_no_same_scale_conflict": "DEFENSIBLE_POINT_ESTIMATE",
+    "no_tier_a_anchor": "DISPLAY_MIDPOINT_ONLY_NOT_POINT_ESTIMATE",
+    "unresolved_same_scale_conflict": "DISPLAY_MIDPOINT_ONLY_NOT_POINT_ESTIMATE",
+    "no_physical_evidence": "NO_DEFENSIBLE_POINT"
+  },
+  "prohibited_inputs": {
+    "powerpro_in_weight_or_calibration": false,
+    "owner_verdict_in_weight_or_calibration": false,
+    "the_show_numeric_copy": false,
+    "legacy_npb_plus_h2f": false,
+    "thirty_or_fifty_meter_to_t90": false,
+    "missing_to_slow": false,
+    "production_transfer_from_sp104": false,
+    "sp080": false,
+    "sp081": false,
+    "shoulder": false
+  },
+  "benchmark_summary": {
+    "selected_candidate": "CONSERVATIVE_TIER_A_ANCHOR_LOWER_TIER_BOUNDED_CONSTRAINT",
+    "equal_family_baseline_reproduced": true,
+    "cross_family_mapping_production_identifiable": false,
+    "simpler_policy_preferred": true
+  },
+  "powerpro_used_for_selection": false,
+  "owner_verdict_used_for_selection": false,
+  "manifest_hash_attached_after_generation": null,
+  "generated_at": "2026-08-29"
+}

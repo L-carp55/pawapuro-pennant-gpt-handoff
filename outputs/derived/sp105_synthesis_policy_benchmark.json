@@ -1,0 +1,341 @@
+{
+  "schema_version": "sp105_synthesis_policy_benchmark_v1",
+  "task_id": "SP-105",
+  "status": "PASS_PHYSICAL_ONLY_POLICY_BENCHMARK",
+  "baseline_reproduction": {
+    "schema_version": "sp105_sp079_baseline_reproduction_v1",
+    "reference_commit": "be3588b26e3ce0818880f80c4a0350764886bb6f",
+    "frozen_manifest_used": true,
+    "frozen_equal_family_policy_preserved_as_control_only": true,
+    "isolated_reproduction_execution": {
+      "fresh_isolated_clone": true,
+      "original_generator": "scripts/sp079_final_practical_reappraisal_20260825.mjs",
+      "independent_qa": "scripts/qa_sp079_final_practical_reappraisal_20260825.mjs",
+      "output": "100 rows / 800 cells / owner verdict count 0",
+      "rerun_status": "BYTE_IDENTICAL"
+    },
+    "artifacts": {
+      "policy": {
+        "path": "outputs/derived/sp079_appraisal_policy.json",
+        "expected_sha256": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+        "observed_sha256": "f901959fee00c74c0c46d9f3be04a2ff79fcbd30bbb42b5b9efe58fa697fc4e3",
+        "byte_identical": true
+      },
+      "sp079FrozenManifest": {
+        "path": "outputs/derived/sp079_frozen_input_manifest.json",
+        "expected_sha256": "fbb5632da62f7483f6116f736b18875569a8641a3d628a7295848de3b0f19ff1",
+        "observed_sha256": "fbb5632da62f7483f6116f736b18875569a8641a3d628a7295848de3b0f19ff1",
+        "byte_identical": true
+      },
+      "sp079FrozenSynthesis": {
+        "path": "outputs/derived/sp079_player_evidence_synthesis.jsonl",
+        "expected_sha256": "e79dcb1efdb8d6e7bb866ad906f2351aaba65e07e9c513a757e52c325448de3a",
+        "observed_sha256": "e79dcb1efdb8d6e7bb866ad906f2351aaba65e07e9c513a757e52c325448de3a",
+        "byte_identical": true
+      },
+      "sp079FrozenCsv": {
+        "path": "outputs/derived/sp079_final_practical_speed_100.csv",
+        "expected_sha256": "a4106442a1bae58fcc0004c8fd87f0feb454c00d928a4551976efa5c9cc6a7fa",
+        "observed_sha256": "a4106442a1bae58fcc0004c8fd87f0feb454c00d928a4551976efa5c9cc6a7fa",
+        "byte_identical": true
+      },
+      "sp079FrozenJson": {
+        "path": "outputs/derived/sp079_final_practical_speed_100.json",
+        "expected_sha256": "d067c436478ff74cd1b883b78e89b995411b4fddaff86401ec006e91c8eb61d0",
+        "observed_sha256": "d067c436478ff74cd1b883b78e89b995411b4fddaff86401ec006e91c8eb61d0",
+        "byte_identical": true
+      },
+      "sp079FrozenAblation": {
+        "path": "outputs/derived/sp079_final_value_component_ablation.json",
+        "expected_sha256": "23321cea90549686dc55edb4ff02d89b88b91ed6555256096df88f7fd98d979e",
+        "observed_sha256": "23321cea90549686dc55edb4ff02d89b88b91ed6555256096df88f7fd98d979e",
+        "byte_identical": true
+      },
+      "sp079FrozenPowerpro": {
+        "path": "outputs/derived/sp079_powerpro_posthoc_qa.json",
+        "expected_sha256": "7fbd94e17e5d67623ff9e732c3d21b5e5b1a062b80a827e8f4b39ee87146c46a",
+        "observed_sha256": "7fbd94e17e5d67623ff9e732c3d21b5e5b1a062b80a827e8f4b39ee87146c46a",
+        "byte_identical": true
+      },
+      "sp079FrozenGlobalQa": {
+        "path": "outputs/derived/sp079_global_consistency_qa.json",
+        "expected_sha256": "0307088230e7b3574b26b5f60410d5825a13a6604b588ad0de52f3acae44fce4",
+        "observed_sha256": "0307088230e7b3574b26b5f60410d5825a13a6604b588ad0de52f3acae44fce4",
+        "byte_identical": true
+      },
+      "sp079FrozenQa": {
+        "path": "outputs/derived/qa_sp079_final_practical_reappraisal.json",
+        "expected_sha256": "fed02eb76521a27324fdceba4ce398d3e02cc9006723b9300ee13a9ed59cb2bd",
+        "observed_sha256": "fed02eb76521a27324fdceba4ce398d3e02cc9006723b9300ee13a9ed59cb2bd",
+        "byte_identical": true
+      },
+      "sp079FrozenReport": {
+        "path": "docs/reports/sp079_final_practical_speed_100.md",
+        "expected_sha256": "98d4406bfdefd3e89013268e8a8d5c2ffa68245de239e79076ed9028acbcecc4",
+        "observed_sha256": "98d4406bfdefd3e89013268e8a8d5c2ffa68245de239e79076ed9028acbcecc4",
+        "byte_identical": true
+      },
+      "sp079FrozenAudit": {
+        "path": "docs/audits/sp079_final_practical_reappraisal_independent_audit.md",
+        "expected_sha256": "ec8fb82960cdb1e284464456834b7c9b4fc25d6465afe70ad284166a8a1956c9",
+        "observed_sha256": "ec8fb82960cdb1e284464456834b7c9b4fc25d6465afe70ad284166a8a1956c9",
+        "byte_identical": true
+      }
+    },
+    "exact_byte_identical": true,
+    "example_regression": {
+      "player": "中川 圭太",
+      "current_npb_plus_peak_percentile": 0.7576,
+      "historical_bounded_h2f_percentile": 0.126761,
+      "frozen_equal_family_point": 0.442181,
+      "frozen_equal_family_rating": 44,
+      "retained_as_regression_case": true
+    },
+    "generated_at": "2026-08-29"
+  },
+  "held_out_design": {
+    "target": "physical_evidence_only",
+    "player_clustered": true,
+    "leave_player_out": true,
+    "same_player_seasons_held_together": true,
+    "target_self_teaching": false,
+    "common_support_required_for_mapping": true,
+    "no_extrapolation": true,
+    "note": "A/B are retained as diagnostics despite uncalibrated reference-population mixing. D intentionally emits no cross-family numeric prediction for this validation target and uses a full bounded interval."
+  },
+  "case_count": 112,
+  "candidate_order": [
+    "A_FROZEN_EQUAL_FAMILY_BASELINE",
+    "B_TIER_AWARE_UNCALIBRATED_RELIABILITY",
+    "C_LOO_COMMON_SCALE_ISOTONIC",
+    "D_CONSERVATIVE_TIER_A_ANCHOR"
+  ],
+  "candidates": {
+    "A_FROZEN_EQUAL_FAMILY_BASELINE": {
+      "policy_id": "A_FROZEN_EQUAL_FAMILY_BASELINE",
+      "role": "BASELINE_CONTROL_ONLY",
+      "point_rule": "arithmetic mean of available native percentiles",
+      "reference_population_mixing": "UNVALIDATED",
+      "metrics": {
+        "case_count": 112,
+        "point_case_count": 112,
+        "held_out_mae": 0.272125,
+        "held_out_rmse": 0.335604,
+        "held_out_rank_error": 0.295849,
+        "held_out_rank_correlation": 0.20865568631452808,
+        "interval_coverage": 0.142857,
+        "mean_interval_width": 0.127381,
+        "common_support_case_count": 0,
+        "common_support_coverage": 0
+      },
+      "selected": false,
+      "physical_only_validation": true,
+      "validity": "CONTROL_ONLY_NOT_ACCEPTED"
+    },
+    "B_TIER_AWARE_UNCALIBRATED_RELIABILITY": {
+      "policy_id": "B_TIER_AWARE_UNCALIBRATED_RELIABILITY",
+      "role": "DIAGNOSTIC_CANDIDATE",
+      "point_rule": "predeclared source/protocol/time/interval reliability weights, but no common-scale mapping",
+      "reference_population_mixing": "UNVALIDATED",
+      "weights": {
+        "PEAK": {
+          "tier": "A",
+          "base": 1,
+          "role": "CURRENT_DIRECT_PHYSICAL_ANCHOR"
+        },
+        "END_TO_END_90FT": {
+          "tier": "A_OR_B",
+          "base": 0.72,
+          "role": "DIRECT_OR_STANDARDIZED_90FT_WHEN_EXPLICIT"
+        },
+        "ACCELERATION_H2F": {
+          "tier": "B",
+          "base": 0.34,
+          "role": "H2F_ACCELERATION_CONTEXT_NOT_T90"
+        },
+        "SHORT_DISTANCE": {
+          "tier": "B",
+          "base": 0.28,
+          "role": "NATIVE_SHORT_DISTANCE_CONTEXT"
+        }
+      },
+      "metrics": {
+        "case_count": 112,
+        "point_case_count": 112,
+        "held_out_mae": 0.274077,
+        "held_out_rmse": 0.339664,
+        "held_out_rank_error": 0.290621,
+        "held_out_rank_correlation": 0.2395656026131218,
+        "interval_coverage": 0.142857,
+        "mean_interval_width": 0.127381,
+        "common_support_case_count": 0,
+        "common_support_coverage": 0
+      },
+      "selected": false,
+      "physical_only_validation": true,
+      "validity": "NOT_PRODUCTION_SAFE_WHILE_PERCENTILES_REMAIN_NONCOMMENSURATE"
+    },
+    "C_LOO_COMMON_SCALE_ISOTONIC": {
+      "policy_id": "C_LOO_COMMON_SCALE_ISOTONIC",
+      "role": "DIAGNOSTIC_CANDIDATE",
+      "point_rule": "player-clustered leave-one-player-out monotone mapping within held-out common support",
+      "reference_population_mixing": "CALIBRATED_ONLY_WHEN_RECEIPT_ELIGIBLE",
+      "metrics": {
+        "case_count": 112,
+        "point_case_count": 80,
+        "held_out_mae": 0.216624,
+        "held_out_rmse": 0.259565,
+        "held_out_rank_error": 0.258544,
+        "held_out_rank_correlation": 0.4146108156337949,
+        "interval_coverage": 0.75,
+        "mean_interval_width": 0.668218,
+        "common_support_case_count": 80,
+        "common_support_coverage": 0.714286
+      },
+      "selected": false,
+      "physical_only_validation": true,
+      "eligible_mapping_count": 1,
+      "total_mapping_count": 12,
+      "validity": "NOT_IDENTIFIABLE_FOR_ALL_REQUIRED_FAMILIES"
+    },
+    "D_CONSERVATIVE_TIER_A_ANCHOR": {
+      "policy_id": "CONSERVATIVE_TIER_A_ANCHOR_LOWER_TIER_BOUNDED_CONSTRAINT",
+      "role": "SELECTED_CONSERVATIVE_POLICY",
+      "point_rule": "current Tier-A NPB+ peak anchors point; lower families remain native-scale constraints/uncertainty only",
+      "reference_population_mixing": "NONE_IN_POINT",
+      "metrics": {
+        "case_count": 112,
+        "point_case_count": 0,
+        "held_out_mae": null,
+        "held_out_rmse": null,
+        "held_out_rank_error": null,
+        "held_out_rank_correlation": null,
+        "interval_coverage": 1,
+        "mean_interval_width": 1,
+        "common_support_case_count": 112,
+        "common_support_coverage": 1
+      },
+      "selected": true,
+      "physical_only_validation": true,
+      "validity": "DEFENSIBLE_WHEN_CROSS_FAMILY_CALIBRATION_IS_NOT_IDENTIFIABLE",
+      "point_prediction_count": 0,
+      "interval_only_fallback": true
+    }
+  },
+  "selected_policy_id": "CONSERVATIVE_TIER_A_ANCHOR_LOWER_TIER_BOUNDED_CONSTRAINT",
+  "selection_rule": {
+    "physical_only": true,
+    "reject_equal_family_point_override": true,
+    "reject_uncalibrated_reference_population_mixing": true,
+    "require_common_support_for_mapping": true,
+    "prefer_simpler_policy_when_held_out_performance_is_indistinguishable": true,
+    "selected_because": "No single cross-family mapping is production-identifiable across sparse T90 and heterogeneous H2F/short-distance references; the Tier-A anchor preserves current direct evidence while lower tiers remain visible bounded constraints."
+  },
+  "source_removal_stability": {
+    "peak_speed": {
+      "point_changed_count": 100,
+      "rank_changed_count": 100,
+      "interval_changed_count": 100,
+      "confidence_changed_count": 52
+    },
+    "acceleration_h2f_t90_90ft": {
+      "point_changed_count": 0,
+      "rank_changed_count": 0,
+      "interval_changed_count": 22,
+      "confidence_changed_count": 0
+    },
+    "historical_physical": {
+      "point_changed_count": 0,
+      "rank_changed_count": 0,
+      "interval_changed_count": 45,
+      "confidence_changed_count": 0
+    },
+    "mlb_statcast_running_bridge": {
+      "point_changed_count": 0,
+      "rank_changed_count": 0,
+      "interval_changed_count": 0,
+      "confidence_changed_count": 0
+    },
+    "the_show_context": {
+      "point_changed_count": 0,
+      "rank_changed_count": 0,
+      "interval_changed_count": 0,
+      "confidence_changed_count": 0
+    },
+    "analog_ordinal_transition": {
+      "point_changed_count": 0,
+      "rank_changed_count": 0,
+      "interval_changed_count": 96,
+      "confidence_changed_count": 0
+    },
+    "statistical_proxies": {
+      "point_changed_count": 0,
+      "rank_changed_count": 0,
+      "interval_changed_count": 98,
+      "confidence_changed_count": 0
+    },
+    "scouting_community_video_usage_context": {
+      "point_changed_count": 0,
+      "rank_changed_count": 0,
+      "interval_changed_count": 18,
+      "confidence_changed_count": 0
+    }
+  },
+  "descriptive_diagnostics": {
+    "schema_version": "sp105_top_speed_descriptive_diagnostics_v1",
+    "top_speed_reference_population": "SP100_CURRENT100_NPB_PLUS_2026",
+    "peak_vs_native_family": [
+      {
+        "family": "ACCELERATION_H2F",
+        "paired_player_count": 22,
+        "pearson_correlation": -0.010353,
+        "rank_correlation": -0.00511,
+        "reference_population_note": "family-native percentiles are not assumed commensurate; descriptive correlation only",
+        "selection_use": false,
+        "production_use": false
+      },
+      {
+        "family": "END_TO_END_90FT",
+        "paired_player_count": 6,
+        "pearson_correlation": 0.198131,
+        "rank_correlation": 0.257143,
+        "reference_population_note": "family-native percentiles are not assumed commensurate; descriptive correlation only",
+        "selection_use": false,
+        "production_use": false
+      },
+      {
+        "family": "SHORT_DISTANCE",
+        "paired_player_count": 36,
+        "pearson_correlation": 0.562616,
+        "rank_correlation": 0.555061,
+        "reference_population_note": "family-native percentiles are not assumed commensurate; descriptive correlation only",
+        "selection_use": false,
+        "production_use": false
+      }
+    ],
+    "leave_peak_out": {
+      "method": "ACTUAL_FULL_SYNTHESIS_RERUN_WITH_CURRENT_TIER_A_PEAK_REMOVED",
+      "selection_use": false,
+      "production_use": false,
+      "cell_count": 100,
+      "point_semantics_distribution": {
+        "DISPLAY_MIDPOINT_ONLY_NOT_POINT_ESTIMATE": 48,
+        "NO_DEFENSIBLE_POINT": 52
+      },
+      "point_defined_after_removal_count": 48,
+      "display_only_after_removal_count": 48,
+      "no_defensible_point_after_removal_count": 52,
+      "rank_eligible_after_removal_count": 0,
+      "point_invalidation_count": 52,
+      "rank_eligibility_invalidation_count": 100,
+      "note": "This is a descriptive stress test of Tier-A dependence, not a claim that lower-family fallback points are calibrated."
+    },
+    "calibration_receipt_count": 4,
+    "hard_coded_peak_weight": false,
+    "descriptive_only": true,
+    "generated_at": "2026-08-29"
+  },
+  "powerpro_used_for_selection": false,
+  "owner_verdict_used_for_selection": false,
+  "generated_at": "2026-08-29"
+}
